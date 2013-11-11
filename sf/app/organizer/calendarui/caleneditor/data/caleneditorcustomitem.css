@@ -1,0 +1,22 @@
+CalenEditorCustomItem[!hasIcon][expandItem]:landscape
+{
+    layout:layout_portrait_without_icon;
+}
+
+CalenEditorCustomItem[hasIcon][expandItem]:landscape
+{
+    layout:layout_portrait_with_icon;
+}
+
+CalenEditorCustomItem[expandItem]::dataItem_Label:landscape
+{
+    size-policy-horizontal:preferred;
+}
+
+CalenEditorCustomItem[expandItem]::DataItem_ContentWidget:landscape
+{
+    top: -var(hb-param-margin-gene-top);
+    left:-var(hb-param-margin-gene-left);
+    right:var(hb-param-margin-gene-right);
+    bottom:var(hb-param-margin-gene-bottom);
+}

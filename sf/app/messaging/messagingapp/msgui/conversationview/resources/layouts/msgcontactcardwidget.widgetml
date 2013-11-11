@@ -1,0 +1,14 @@
+<hbwidget version="0.1">
+  <layout name="layout-msg-mycard" type="mesh">
+    <meshitem src="avatar" srcEdge="LEFT" dst="" dstEdge="LEFT"/>
+    <meshitem src="avatar" srcEdge="TOP" dst="" dstEdge="TOP"/>
+    <meshitem src="avatar" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM"/>
+
+    <meshitem src="presence" srcEdge="CENTERV" dst="addressText" dstEdge="CENTERV"/>
+    <meshitem src="presence" srcEdge="RIGHT" dst="" dstEdge="RIGHT"/>
+
+    <meshitem src="addressText" srcEdge="LEFT" dst="avatar" dstEdge="RIGHT"/>
+    <meshitem src="addressText" srcEdge="RIGHT" dst="presence" dstEdge="LEFT"/>
+    <meshitem src="addressText" srcEdge="CENTERV" dst="" dstEdge="CENTERV"/>
+  </layout>
+</hbwidget>

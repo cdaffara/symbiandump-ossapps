@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<repository xmlns="http://www.s60.com/xml/cenrep/1" uidName="KCRCntSettings" uidValue="0x2002FF54" owner="0x20022EF9">
+  <access type="R" capabilities="AlwaysPass"/>
+  <key ref="KCRCntSettings/KCntNameOrdering" backup="true" name="Name ordering in lists" int="0x00000001" type="int">
+    <access type="R" capabilities="AlwaysPass"/>
+    <access type="W" capabilities="WriteDeviceData"/>
+  </key>
+  <key ref="KCRCntSettings/KCntNameListRowSetting" backup="true" name="Row presentation in names list" int="0x00000002" type="int">
+    <access type="R" capabilities="AlwaysPass"/>
+    <access type="W" capabilities="WriteDeviceData"/>
+  </key>  
+</repository>

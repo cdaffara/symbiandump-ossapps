@@ -1,0 +1,49 @@
+<layers>
+	<visual>
+		<param name="opacity" type="anim">
+			<duration>1.5</duration>
+			<keyframe at="0.0">1.0</keyframe>
+			<keyframe at="1.0">0.0</keyframe>
+			<style>linear</style>
+		</param>
+		<param name="rotation_angle" type="anim">
+			<style>outquad</style>
+			<duration>1.5</duration>
+			<keyframe at="0.0">0.0</keyframe>
+			<keyframe at="1.0">60.0</keyframe>
+		</param>
+		<param name="rotation_origin_x" ref="visual.width">0.5</param>
+		<param name="rotation_origin_y" ref="visual.height">0.5</param>
+		<param name="rotation_axis_x">1</param>
+		<param name="scale_x" type="anim">
+			<style>outquad</style>
+			<duration>1.5</duration>
+			<keyframe at="0.0">1.0</keyframe>
+			<keyframe at="1.0">0.5</keyframe>
+		</param>
+		<param name="scale_origin_x" ref="visual.width">0.5</param>
+		<param name="scale_origin_y" ref="visual.height">0.5</param>
+		<param name="scale_y" type="anim">
+			<style>outquad</style>
+			<duration>1.5</duration>
+			<keyframe at="0.0">1.0</keyframe>
+			<keyframe at="1.0">0.5</keyframe>
+		</param>
+	    <param name="translation_y" type="anim">
+	        <duration>1.5</duration>
+    			<style>inoutquad</style>
+	        <keyframe at="0.0">0.0</keyframe>
+	        <keyframe at="1.0">-1.0</keyframe>
+	        <start ref="visual.top">1.0</start>
+	        <end ref="screen.bottom">1.0</end>
+	    </param>
+	    	  <param name="translation_x" type="anim">
+	        <duration>1.5</duration>
+    			<style>outquad</style>
+	        <keyframe at="0.0">0.0</keyframe>
+	        <keyframe at="1.0">1.0</keyframe>
+	        <start ref="visual.left">1.0</start>
+	        <end ref="screen.left">1.0</end>
+	        </param>
+	</visual>
+</layers>

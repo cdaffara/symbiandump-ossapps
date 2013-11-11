@@ -1,0 +1,64 @@
+/*
+* Copyright (c)  Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+
+
+#include <platform_paths.hrh>
+
+
+TARGET                  irpresetplugin.dll
+TARGETTYPE              PLUGIN
+UID                     0x10009D8D 0X2002FFC7
+
+CAPABILITY              CAP_ECOM_PLUGIN
+VENDORID                VID_DEFAULT
+
+PAGED
+
+SOURCEPATH              ../src
+SOURCE                  irpresetimpl.cpp
+SOURCE                  irpresetpluginproxy.cpp
+
+// RESOURCE
+SOURCEPATH              ../data
+START RESOURCE          irpresetplugin.rss
+TARGET                  irpresetplugin.rsc
+END // RESOURCE
+
+USERINCLUDE   ../inc
+USERINCLUDE   ../../inc
+USERINCLUDE   ../../ircommon/inc
+USERINCLUDE   ../../../presetserver/clientinc
+USERINCLUDE   ../../../presetserver/serverinc
+
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE           OS_LAYER_PUBLIC_EXPORT_PATH(ecom)
+
+SMPSAFE
+
+LIBRARY                 bafl.lib
+LIBRARY                 estor.lib
+LIBRARY                 euser.lib
+LIBRARY                 irdatastructures.lib
+LIBRARY                 psclient100.lib
+LIBRARY                 flogger.lib
+
+#if defined WINSCW
+DEFFILE                 ../bwinscw/
+#else
+DEFFILE                 ../bmarm/
+#endif

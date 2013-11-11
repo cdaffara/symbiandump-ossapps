@@ -1,0 +1,65 @@
+/*
+* Copyright (c) 2008-2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   Build information for project mgallery.
+*
+*/
+
+
+
+#include <platform_paths.hrh>    //APP_LAYER_DOMAIN_EXPORT_PATH
+
+PRJ_EXPORTS
+//todo ../rom/glxgallery.iby                   CORE_APP_LAYER_IBY_EXPORT_PATH(glxgallery.iby)
+//todo ../rom/glxgallery_resources.iby         LANGUAGE_APP_LAYER_IBY_EXPORT_PATH(glxgallery_resources.iby)
+
+
+
+../inc/glxgallery.hrh                    /epoc32/include/platform/app/glxgallery.hrh
+../inc/glxcollectionpluginpriority.hrh  /epoc32/include/platform/app/glxcollectionpluginpriority.hrh
+../inc/glxcollectionplugintype.hrh      /epoc32/include/platform/app/glxcollectionplugintype.hrh
+../inc/glxcollectiongeneraldefs.h       /epoc32/include/platform/app/glxcollectiongeneraldefs.h
+../inc/glxthumbnailinfo.h               /epoc32/include/platform/app/glxthumbnailinfo.h
+../inc/glxthumbnailattributeinfo.h      /epoc32/include/platform/app/glxthumbnailattributeinfo.h
+../inc/glxthumbnailattributeinfo.inl    /epoc32/include/platform/app/glxthumbnailattributeinfo.inl
+../inc/glxmediageneraldefs.h            /epoc32/include/platform/app/glxmediageneraldefs.h
+../inc/glxexternalinterfacedefs.h
+
+
+#ifdef APP_LAYER_LOC_EXPORT_PATH
+// export engineering english loc file
+../gallery/loc/glxgallery.loc  			APP_LAYER_LOC_EXPORT_PATH(glxgallery.loc)
+../gallery/loc/shwslideshow.loc  		APP_LAYER_LOC_EXPORT_PATH(shwslideshow.loc)
+#endif 
+
+
+// Include the glxlogging.dll
+#include "../loggers/logging/group/bld.inf"
+
+// Include the glxcommon dll
+#include "../commonutilities/common/group/bld.inf"
+// Include the glximageviewermanager dll
+#include "../commonutilities/imageviewer/group/bld.inf"
+
+// Include the glxcommonui dll
+ #include "../commonui/group/bld.inf"
+
+// include the collection framework subsystem
+#include "../engine/collectionframework/group/bld.inf"
+
+#include "../ui/uiengine/drmutility/group/bld.inf"
+#include "../ui/uiengine/medialists/group/bld.inf"
+
+#include "../tvout/tvoutengine/group/bld.inf"
+
+#include "../memoryplugin/group/bld.inf"

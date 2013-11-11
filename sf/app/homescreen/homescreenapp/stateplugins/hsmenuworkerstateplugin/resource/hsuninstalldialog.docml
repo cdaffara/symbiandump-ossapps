@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="1.1">
+    <object name="qtl_dialog_softkey_2_left" type="HbAction">
+        <string name="role" value="HbDialog:primaryAction"/>
+		<string locid="txt_common_button_ok" name="text"/>
+    </object>
+    <object name="qtl_dialog_softkey_2_right" type="HbAction">
+        <string name="role" value="HbDialog:secondaryAction"/>
+        <string locid="txt_common_button_cancel" name="text"/>
+    </object>
+    <widget name="uninstall_dialog" type="HbDialog">
+        <sizehint height="55un" type="PREFERRED" width="49.73un"/>
+        <contentsmargins bottom="var(hb-param-margin-view-bottom)" left="var(hb-param-margin-view-left)" right="var(hb-param-margin-view-right)" top="var(hb-param-margin-view-top)"/>
+        <enums name="dismissPolicy" value="NoDismiss"/>
+        <widget name="confirmation_dialog_label_large_graphic" role="HbDialog:contentWidget" type="HbScrollArea">
+            <widget name="scrollAreaContents" role="HbScrollArea:contents" type="HbWidget">
+                <widget name="common_confirmation" type="HbWidget">
+                    <widget name="icon" type="HbLabel">
+                        <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+                        <icon iconName="qtg_large_info" name="icon"/>
+                        <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+                        <sizehint height="var(hb-param-graphic-size-primary-large)" type="FIXED" width="var(hb-param-graphic-size-primary-large)"/>
+                        <bool name="visible" value="TRUE"/>
+                    </widget>
+                    <widget name="confirmation_dialog_label" type="HbLabel">
+                        <enums name="textWrapping" value="TextWordWrap"/>
+                        <bool name="visible" value="TRUE"/>
+                        <string locid="txt_applib_info_delete_1_all_its_shortcuts_and" name="plainText"/>
+                        <fontspec name="fontSpec" role="Primary" textheight="var(hb-param-text-height-primary)"/>
+                    </widget>
+                    <real name="z" value="0"/>
+                    <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+                    <layout orientation="Horizontal" spacing="var(hb-param-margin-gene-popup)" type="linear">
+                        <contentsmargins bottom="var(hb-param-margin-gene-popup)" left="var(hb-param-margin-gene-popup)" right="var(hb-param-margin-gene-popup)" top="var(hb-param-margin-gene-popup)"/>
+                        <linearitem itemname="icon"/>
+                        <linearitem itemname="confirmation_dialog_label"/>
+                    </layout>
+                </widget>
+                <widget name="list_label" type="HbLabel">
+                    <enums name="textWrapping" value="TextWordWrap"/>
+                    <bool name="visible" value="TRUE"/>
+                    <string locid="txt_applib_info_following_applications_will_be_rem" name="plainText"/>
+                    <fontspec name="fontSpec" role="Secondary" textheight="var(hb-param-text-height-secondary)"/>
+                </widget>
+                <widget name="delete_message_label" type="HbLabel">
+                    <enums name="textWrapping" value="TextWordWrap"/>
+                    <bool name="visible" value="TRUE"/>
+                    <string name="plainText" value="Delete message details"/>
+                </widget>
+                <widget name="list_view_label" type="HbLabel">
+                    <bool name="visible" value="TRUE"/>
+                    <string name="plainText" value=""/>
+                </widget>
+                <layout orientation="Vertical" spacing="var(hb-param-margin-gene-popup)" type="linear">
+                    <contentsmargins bottom="var(hb-param-margin-gene-popup)" left="var(hb-param-margin-gene-popup)" right="var(hb-param-margin-gene-popup)" top="var(hb-param-margin-gene-popup)"/>
+                    <linearitem itemname="common_confirmation"/>
+                    <linearitem itemname="list_label"/>
+                    <linearitem itemname="list_view_label"/>
+                    <linearitem itemname="delete_message_label"/>
+                </layout>
+            </widget>
+        </widget>
+        <ref object="qtl_dialog_softkey_2_left" role="HbWidget:addAction"/>
+        <ref object="qtl_dialog_softkey_2_right" role="HbWidget:addAction"/>
+    </widget>
+    <section name="uninstallDialogDefinition02">
+        <widget name="uninstall_dialog" type="HbDialog">
+            <widget name="confirmation_dialog_label_large_graphic" role="HbDialog:contentWidget" type="HbScrollArea">
+                <widget name="scrollAreaContents" role="HbScrollArea:contents" type="HbWidget">
+                    <widget name="common_confirmation" type="HbWidget">
+                        <widget name="icon" type="HbLabel">
+                            <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+                            <icon iconName="qtg_large_info" name="icon"/>
+                            <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+                            <sizehint height="var(hb-param-graphic-size-primary-large)" type="FIXED" width="var(hb-param-graphic-size-primary-large)"/>
+                            <bool name="visible" value="TRUE"/>
+                        </widget>
+                        <widget name="confirmation_dialog_label" type="HbLabel">
+                            <enums name="textWrapping" value="TextWordWrap"/>
+                            <bool name="visible" value="TRUE"/>
+                            <string locid="txt_applib_info_delete_1_all_its_shortcuts_and" name="plainText"/>
+                            <fontspec name="fontSpec" role="Primary" textheight="var(hb-param-text-height-primary)"/>
+                        </widget>
+                        <real name="z" value="0"/>
+                        <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+                        <layout orientation="Horizontal" spacing="var(hb-param-margin-gene-popup)" type="linear">
+                            <contentsmargins bottom="var(hb-param-margin-gene-popup)" left="var(hb-param-margin-gene-popup)" right="var(hb-param-margin-gene-popup)" top="var(hb-param-margin-gene-popup)"/>
+                            <linearitem itemname="icon"/>
+                            <linearitem itemname="confirmation_dialog_label"/>
+                        </layout>
+                    </widget>
+                    <widget name="list_label" type="HbLabel">
+                        <enums name="textWrapping" value="TextWordWrap"/>
+                        <bool name="visible" value="TRUE"/>
+                        <string locid="txt_applib_info_following_applications_will_be_rem" name="plainText"/>
+                        <fontspec name="fontSpec" role="Secondary" textheight="var(hb-param-text-height-secondary)"/>
+                    </widget>
+                    <widget name="delete_message_label" type="HbLabel">
+                        <enums name="textWrapping" value="TextWordWrap"/>
+                        <bool name="visible" value="TRUE"/>
+                        <string name="plainText" value="Delete message details"/>
+                    </widget>
+                    <widget name="list_view_label" type="HbLabel">
+                        <bool name="visible" value="TRUE"/>
+                        <string name="plainText" value=""/>
+                    </widget>
+                    <layout orientation="Vertical" spacing="var(hb-param-margin-gene-popup)" type="linear">
+                        <contentsmargins bottom="var(hb-param-margin-gene-popup)" left="var(hb-param-margin-gene-popup)" right="var(hb-param-margin-gene-popup)" top="var(hb-param-margin-gene-popup)"/>
+                        <linearitem itemname="common_confirmation"/>
+                        <linearitem itemname="list_label"/>
+                        <linearitem itemname="list_view_label"/>
+                        <linearitem itemname="delete_message_label"/>
+                    </layout>
+                </widget>
+            </widget>
+            <sizehint height="50un" type="PREFERRED" width="49.73un"/>
+            <contentsmargins bottom="var(hb-param-margin-view-bottom)" left="var(hb-param-margin-view-left)" right="var(hb-param-margin-view-right)" top="var(hb-param-margin-view-top)"/>
+            <ref object="qtl_dialog_softkey_2_left" role="HbWidget:addAction"/>
+            <ref object="qtl_dialog_softkey_2_right" role="HbWidget:addAction"/>
+        </widget>
+    </section>
+    <section name="uninstallDialogDefinition03">
+        <widget name="uninstall_dialog" type="HbDialog">
+            <widget name="confirmation_dialog_label_large_graphic" role="HbDialog:contentWidget" type="HbScrollArea">
+                <widget name="scrollAreaContents" role="HbScrollArea:contents" type="HbWidget">
+                    <widget name="common_confirmation" type="HbWidget">
+                        <widget name="icon" type="HbLabel">
+                            <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+                            <icon iconName="qtg_large_info" name="icon"/>
+                            <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+                            <sizehint height="var(hb-param-graphic-size-primary-large)" type="FIXED" width="var(hb-param-graphic-size-primary-large)"/>
+                            <bool name="visible" value="TRUE"/>
+                        </widget>
+                        <widget name="confirmation_dialog_label" type="HbLabel">
+                            <enums name="textWrapping" value="TextWordWrap"/>
+                            <bool name="visible" value="TRUE"/>
+                            <string locid="txt_applib_info_delete_1_all_its_shortcuts_and" name="plainText"/>
+                            <fontspec name="fontSpec" role="Primary" textheight="var(hb-param-text-height-primary)"/>
+                        </widget>
+                        <real name="z" value="0"/>
+                        <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+                        <layout orientation="Horizontal" spacing="var(hb-param-margin-gene-popup)" type="linear">
+                            <contentsmargins bottom="var(hb-param-margin-gene-popup)" left="var(hb-param-margin-gene-popup)" right="var(hb-param-margin-gene-popup)" top="var(hb-param-margin-gene-popup)"/>
+                            <linearitem itemname="icon"/>
+                            <linearitem itemname="confirmation_dialog_label"/>
+                        </layout>
+                    </widget>
+                    <widget name="list_label" type="HbLabel">
+                        <enums name="textWrapping" value="TextWordWrap"/>
+                        <bool name="visible" value="TRUE"/>
+                        <string locid="txt_applib_info_following_applications_will_be_rem" name="plainText"/>
+                        <fontspec name="fontSpec" role="Secondary" textheight="var(hb-param-text-height-secondary)"/>
+                    </widget>
+                    <widget name="list_view_label" type="HbLabel">
+                        <bool name="visible" value="TRUE"/>
+                        <string name="plainText" value=""/>
+                    </widget>
+                    <widget name="delete_message_label" type="HbLabel">
+                        <enums name="textWrapping" value="TextWordWrap"/>
+                        <bool name="visible" value="FALSE"/>
+                        <string name="plainText" value="Delete message details"/>
+                    </widget>
+                    <layout orientation="Vertical" spacing="var(hb-param-margin-gene-popup)" type="linear">
+                        <contentsmargins bottom="var(hb-param-margin-gene-popup)" left="var(hb-param-margin-gene-popup)" right="var(hb-param-margin-gene-popup)" top="var(hb-param-margin-gene-popup)"/>
+                        <linearitem itemname="common_confirmation"/>
+                        <linearitem itemname="list_label"/>
+                        <linearitem itemname="list_view_label"/>
+                    </layout>
+                </widget>
+            </widget>
+            <sizehint height="50un" type="PREFERRED" width="49.73un"/>
+            <contentsmargins bottom="var(hb-param-margin-view-bottom)" left="var(hb-param-margin-view-left)" right="var(hb-param-margin-view-right)" top="var(hb-param-margin-view-top)"/>
+            <ref object="qtl_dialog_softkey_2_left" role="HbWidget:addAction"/>
+            <ref object="qtl_dialog_softkey_2_right" role="HbWidget:addAction"/>
+        </widget>
+    </section>
+    <section name="uninstallDialogDefinition04">
+        <widget name="uninstall_dialog" type="HbDialog">
+            <widget name="confirmation_dialog_label_large_graphic" role="HbDialog:contentWidget" type="HbScrollArea">
+                <widget name="scrollAreaContents" role="HbScrollArea:contents" type="HbWidget">
+                    <widget name="common_confirmation" type="HbWidget">
+                        <widget name="icon" type="HbLabel">
+                            <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+                            <icon iconName="qtg_large_info" name="icon"/>
+                            <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+                            <sizehint height="var(hb-param-graphic-size-primary-large)" type="FIXED" width="var(hb-param-graphic-size-primary-large)"/>
+                            <bool name="visible" value="TRUE"/>
+                        </widget>
+                        <widget name="confirmation_dialog_label" type="HbLabel">
+                            <enums name="textWrapping" value="TextWordWrap"/>
+                            <bool name="visible" value="TRUE"/>
+                            <string locid="txt_applib_info_delete_1_all_its_shortcuts_and" name="plainText"/>
+                            <fontspec name="fontSpec" role="Primary" textheight="var(hb-param-text-height-primary)"/>
+                        </widget>
+                        <real name="z" value="0"/>
+                        <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+                        <layout orientation="Horizontal" spacing="var(hb-param-margin-gene-popup)" type="linear">
+                            <contentsmargins bottom="var(hb-param-margin-gene-popup)" left="var(hb-param-margin-gene-popup)" right="var(hb-param-margin-gene-popup)" top="var(hb-param-margin-gene-popup)"/>
+                            <linearitem itemname="icon"/>
+                            <linearitem itemname="confirmation_dialog_label"/>
+                        </layout>
+                    </widget>
+                    <widget name="list_label" type="HbLabel">
+                        <enums name="textWrapping" value="TextWordWrap"/>
+                        <bool name="visible" value="FALSE"/>
+                        <string locid="txt_applib_info_following_applications_will_be_rem" name="plainText"/>
+                        <fontspec name="fontSpec" role="Secondary" textheight="var(hb-param-text-height-secondary)"/>
+                    </widget>
+                    <widget name="delete_message_label" type="HbLabel">
+                        <enums name="textWrapping" value="TextWordWrap"/>
+                        <bool name="visible" value="TRUE"/>
+                        <string name="plainText" value="Delete message details"/>
+                    </widget>
+                    <widget name="list_view_label" type="HbLabel">
+                        <bool name="visible" value="FALSE"/>
+                        <string name="plainText" value=""/>
+                    </widget>
+                    <layout orientation="Vertical" spacing="var(hb-param-margin-gene-popup)" type="linear">
+                        <contentsmargins bottom="var(hb-param-margin-gene-popup)" left="var(hb-param-margin-gene-popup)" right="var(hb-param-margin-gene-popup)" top="var(hb-param-margin-gene-popup)"/>
+                        <linearitem itemname="common_confirmation"/>
+                        <linearitem itemname="delete_message_label"/>
+                    </layout>
+                </widget>
+            </widget>
+            <sizehint height="50un" type="PREFERRED" width="49.73un"/>
+            <contentsmargins bottom="var(hb-param-margin-view-bottom)" left="var(hb-param-margin-view-left)" right="var(hb-param-margin-view-right)" top="var(hb-param-margin-view-top)"/>
+            <ref object="qtl_dialog_softkey_2_left" role="HbWidget:addAction"/>
+            <ref object="qtl_dialog_softkey_2_right" role="HbWidget:addAction"/>
+        </widget>
+    </section>
+    <metadata activeUIState="Common ui state" display="NHD-3.2-inch_portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+        <uistate name="Variant1" sections="#common uninstallDialogDefinition02"/>
+        <uistate name="Variant2" sections="#common uninstallDialogDefinition03"/>
+        <uistate name="Variant3" sections="#common uninstallDialogDefinition04"/>
+    </metadata>
+</hbdocument>

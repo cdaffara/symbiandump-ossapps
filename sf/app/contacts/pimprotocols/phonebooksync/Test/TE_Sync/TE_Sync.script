@@ -1,0 +1,453 @@
+// Copyright (c) 2002-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+RUN_SCRIPT z:\TestData\Scripts\TE_Sync_Setup.script
+
+LOAD_SUITE TE_Sync
+
+//!@file
+START_TESTCASE PIM-PHBKSYNC-NA-0001
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-0001
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test connection and disconnection test
+//!@SYMTestPriority High
+//!@SYMTestActions Connects and disconnects
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_Sync TestOpen
+
+END_TESTCASE PIM-PHBKSYNC-NA-0001
+
+START_TESTCASE PIM-PHBKSYNC-NA-0002
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-0002
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Do Synchronisation test
+//!@SYMTestPriority High
+//!@SYMTestActions Synchronises
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_Sync TestDoSynchronisation
+
+END_TESTCASE PIM-PHBKSYNC-NA-0002
+
+START_TESTCASE PIM-PHBKSYNC-NA-0003
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-0003
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test writing of contact to ICC
+//!@SYMTestPriority High
+//!@SYMTestActions Writes Contact to ICC
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_Sync TestWriteContactToICCTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-0003
+
+START_TESTCASE PIM-PHBKSYNC-NA-0004
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-0004
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test writing of Contact to ICC - Overwrite existing entry
+//!@SYMTestPriority High
+//!@SYMTestActions Writes Contact to ICC
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_Sync TestWriteContactToICCOverwriteTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-0004
+
+START_TESTCASE PIM-PHBKSYNC-NA-0005
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-0005
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test writing of a new entry to the ICC.  The index field is 
+//!                 not specified
+//!@SYMTestPriority High
+//!@SYMTestActions Writes a new entry to the ICC
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_Sync TestWriteContactToICCNoSlotTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-0005
+
+START_TESTCASE PIM-PHBKSYNC-NA-0006
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-0006
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test writing Contact to ICC - Invalid Slot number test
+//!@SYMTestPriority High
+//!@SYMTestActions Writes Contact to ICC
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_Sync TestWriteContactToICCInvalidSlotTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-0006
+
+START_TESTCASE PIM-PHBKSYNC-NA-0007
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-0007
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test writing of Contact to ICC - Blank Number test
+//!@SYMTestPriority High
+//!@SYMTestActions Writes Contact to ICC
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_Sync TestWriteContactToICCBlankNumTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-0007
+
+START_TESTCASE PIM-PHBKSYNC-NA-0008
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-0008
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test writing of Contact to ICC - Blank Name test
+//!@SYMTestPriority High
+//!@SYMTestActions Writes Contact to ICC
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_Sync TestWriteContactToICCBlankNameTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-0008
+
+START_TESTCASE PIM-PHBKSYNC-NA-0009
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-0009
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test writing of Contact to ICC - Exceed Max Number test
+//!@SYMTestPriority High
+//!@SYMTestActions Writes Contact to ICC
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_Sync TestWriteContactToICCExceedMaxNumTest
+
+//
+// TestWriteContactToICCExceedMaxNameTest cannot be run at the moment since
+// SIMTSY doesn't support this test yet.
+//
+
+END_TESTCASE PIM-PHBKSYNC-NA-0009
+
+START_TESTCASE PIM-PHBKSYNC-NA-0010
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-0010
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test writing of Contact to ICC - Max Number test
+//!@SYMTestPriority High
+//!@SYMTestActions Writes Contact to ICC
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_Sync TestWriteContactToICCMaxNumTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-0010
+
+START_TESTCASE PIM-PHBKSYNC-NA-0011
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-0011
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test writing of Contact to ICC - Max Name test
+//!@SYMTestPriority High
+//!@SYMTestActions Writes Contact to ICC
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_Sync TestWriteContactToICCMaxNameTest
+
+//
+// TestWriteContactToICCNumLettersTest cannot be run at the moment since
+// SIMTSY doesn't support this test yet.
+//
+
+END_TESTCASE PIM-PHBKSYNC-NA-0011
+
+START_TESTCASE PIM-PHBKSYNC-NA-0012
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-0012
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test writing of Contact to ICC - Name with non-alphabetical 
+//!                 characters test
+//!@SYMTestPriority High
+//!@SYMTestActions Writes Contact to ICC
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_Sync TestWriteContactToICCObsecureTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-0012
+
+START_TESTCASE PIM-PHBKSYNC-NA-0013
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-0013
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test validating of Contact
+//!@SYMTestPriority High
+//!@SYMTestActions Validates Contact
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_Sync TestValidateContact
+
+END_TESTCASE PIM-PHBKSYNC-NA-0013
+
+START_TESTCASE PIM-PHBKSYNC-NA-0014
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-0014
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test validating of Contact - ICC PIN locked test
+//!@SYMTestPriority High
+//!@SYMTestActions Validates Contact
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_Sync TestValidateContactAccessLockedTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-0014
+
+START_TESTCASE PIM-PHBKSYNC-NA-0015
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-0015
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test validating of Contact - Invalid UID test
+//!@SYMTestPriority High
+//!@SYMTestActions Validates Contac
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_Sync TestValidateContactInvalidUIDTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-0015
+
+START_TESTCASE PIM-PHBKSYNC-NA-0016
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-0016
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test updating of look-up table - Failure test
+//!@SYMTestPriority High
+//!@SYMTestActions Updates look-up table
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_Sync TestUpdateLookUpTableFailure
+
+END_TESTCASE PIM-PHBKSYNC-NA-0016
+
+START_TESTCASE PIM-PHBKSYNC-NA-0017
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-0017
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test updating of look-up table - Success test
+//!@SYMTestPriority High
+//!@SYMTestActions Updates look-up table
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_Sync TestUpdateLookUpTableSuccess
+
+END_TESTCASE PIM-PHBKSYNC-NA-0017
+
+START_TESTCASE PIM-PHBKSYNC-NA-0018
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-0018
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test getting of Sync Mode
+//!@SYMTestPriority High
+//!@SYMTestActions Gets Sync Mode
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_Sync TestGetSyncMode
+
+END_TESTCASE PIM-PHBKSYNC-NA-0018
+
+START_TESTCASE PIM-PHBKSYNC-NA-0019
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-0019
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test setting of Sync Mode - Auto/Same/Manual test
+//!@SYMTestPriority High
+//!@SYMTestActions Sets Sync Mode
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_Sync TestSetSyncMode
+
+END_TESTCASE PIM-PHBKSYNC-NA-0019
+
+START_TESTCASE PIM-PHBKSYNC-NA-0020
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-0020
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test deleting of Contact from ICC
+//!@SYMTestPriority High
+//!@SYMTestActions Deletes Contact from ICC test
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_Sync TestDeleteContactFromICC
+
+END_TESTCASE PIM-PHBKSYNC-NA-0020
+
+START_TESTCASE PIM-PHBKSYNC-NA-0021
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-0021
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test deleting of Contact with invalid ID from ICC test
+//!@SYMTestPriority High
+//!@SYMTestActions Deletes Contact
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_Sync TestDeleteContactInvalidIdFromICC
+
+END_TESTCASE PIM-PHBKSYNC-NA-0021
+
+START_TESTCASE PIM-PHBKSYNC-NA-0022
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-0022
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Get Contact Format test.  This method gets the current 
+//!                 contact format. The expected output test results may not be 
+//!                 valid for different ICCs/Phones
+//!@SYMTestPriority High
+//!@SYMTestActions Gets Contact Format
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_Sync TestGetContactFormat
+
+END_TESTCASE PIM-PHBKSYNC-NA-0022
+
+START_TESTCASE PIM-PHBKSYNC-NA-0023
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-0023
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Get Cache state test
+//!@SYMTestPriority High
+//!@SYMTestActions Gets Cache state
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_Sync TestGetPhoneBookCacheState
+
+END_TESTCASE PIM-PHBKSYNC-NA-0023
+
+START_TESTCASE PIM-PHBKSYNC-NA-0024
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-0024
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test Version
+//!@SYMTestPriority High
+//!@SYMTestActions Gets version number of PhBkSync
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_Sync TestVersionTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-0024
+
+START_TESTCASE PIM-PHBKSYNC-NA-0025
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-0025
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc GetLastSyncError function test
+//!@SYMTestPriority High
+//!@SYMTestActions Gets last synchronisation error
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_Sync TestGetLastSyncError
+
+END_TESTCASE PIM-PHBKSYNC-NA-0025
+
+START_TESTCASE PIM-PHBKSYNC-NA-0026
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-0026
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test notifying of cache state change
+//!@SYMTestPriority High
+//!@SYMTestActions Notifyies of cache state change
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_Sync TestNotifyCacheStateChange
+
+END_TESTCASE PIM-PHBKSYNC-NA-0026
+
+START_TESTCASE PIM-PHBKSYNC-NA-0027
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-0027
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test getting PhoneBook Id Test
+//!@SYMTestPriority High
+//!@SYMTestActions Gets PhoneBook Id
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_Sync TestGetPhoneBookId
+
+END_TESTCASE PIM-PHBKSYNC-NA-0027
+
+START_TESTCASE PIM-PHBKSYNC-NA-0028
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-0028
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Reset test
+//!@SYMTestPriority High
+//!@SYMTestActions Resets test
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_Sync TestReset
+
+END_TESTCASE PIM-PHBKSYNC-NA-0028
+
+START_TESTCASE PIM-PHBKSYNC-NA-0029
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-0029
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Slot Handling Test
+//!@SYMTestPriority High
+//!@SYMTestActions Gets slots number, gets free slots, and gets slots id 
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_Sync TestSlotHandlingTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-0029
+
+START_TESTCASE PIM-PHBKSYNC-NA-0030
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-0030
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test writing  to slot
+//!@SYMTestPriority High
+//!@SYMTestActions Writes to slot
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_Sync TestWriteToSlotTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-0030
+
+START_TESTCASE PIM-PHBKSYNC-NA-0031
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-0031
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test cancelling of write request
+//!@SYMTestPriority High
+//!@SYMTestActions Cancels write request
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_Sync TestCancelWriteRequest
+
+END_TESTCASE PIM-PHBKSYNC-NA-0031
+
+START_TESTCASE PIM-PHBKSYNC-NA-0032
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-0032
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test cancelling of delete request
+//!@SYMTestPriority High
+//!@SYMTestActions Cancels delete request
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_Sync TestCancelDeleteRequest
+
+END_TESTCASE PIM-PHBKSYNC-NA-0032
+
+START_TESTCASE PIM-PHBKSYNC-NA-0033
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-0033
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test cancelling of DoSync request
+//!@SYMTestPriority High
+//!@SYMTestActions Cancels DoSync request
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_Sync TestCancelDoSyncRequest
+
+END_TESTCASE PIM-PHBKSYNC-NA-0033
+
+START_TESTCASE PIM-PHBKSYNC-NA-0034
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-0034
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test connection and disconnection
+//!@SYMTestPriority High
+//!@SYMTestActions Connects and disconnects
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_Sync TestConnectionTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-0034
+
+START_TESTCASE PIM-PHBKSYNC-NA-0035
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-0035
+//!@SYMREQ DEF067688
+//!@SYMTestCaseDesc Tests startup when the TSY fails to open.
+//!@SYMTestPriority High
+//!@SYMTestActions Attempts to connect, fails and then shuts down.
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_Sync TestFailedPhoneStartup
+END_TESTCASE PIM-PHBKSYNC-NA-0035
+

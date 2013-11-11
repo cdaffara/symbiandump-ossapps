@@ -1,0 +1,109 @@
+===============================================================================
+
+RELEASE NOTES - PERFORMANCE MONITOR v1.2.2
+RELEASED 24th September 2010 
+
+SUPPORTS S60 3.0+
+
+===============================================================================
+
+Product Description:
+====================
+PerfMon is an S60 UI application that you can use to monitor and log CPU load
+in a device. You can also use it to monitor and log the consumption of memory
+(RAM and disk drives) in a device. 
+
+Main Features:
+==============
+- Three different monitor views for CPU load, RAM and disk usage:
+  - Values
+  - Graphs
+  - Popup (always on top) 
+- Supports CPU load sampling via a null thread CPU counter or with NOPs
+- Source selections for graphs, popup and logging
+- Heartbeat and thread priority configurable via settings
+- Logging to RDebug and/or to a file
+
+===============================================================================
+
+What's New in v1.2.1
+====================
+- Fix: Datapopup's location handling  
+
+===============================================================================
+
+Installation Notes:
+===================
+PerfMon is typically preinstalled on ROM. If not, it can be added to the
+ROM with the .iby file. Alternatively, the .sis file can be found under the
+sis-directory, but the user need to sign it with their own developer
+certificate. In Nokia R&D environment, you can use directly the R&D-signed .sis
+file under the internal\sis directory.
+
+When signing with own developer certificate, the following capabilities are
+needed:
+  WriteDeviceData
+  
+When builing PerfMon against S60 3.0 or 3.1, you may need to patch your SDK
+environment first with some fixes. For more information, please refer to the
+instructions under the "envpatcher" directory.  
+
+===============================================================================
+
+System Requirements:
+====================
+Basic Requirements:
+- Any S60 3.x device or emulator environment
+
+===============================================================================
+
+Compatibility Issues:
+=====================
+N/A
+
+===============================================================================
+
+Known Issues:
+=============
+- Datapopup can make Orbit's main menu difficult to use. Works better 
+	in landscape mode.
+
+===============================================================================
+
+Version History:
+
+================
+Version 1.2.1 - 10th September 2010
+-----------------------------------
+- Feature: Power usage analysis for Symbian^4 devices 
+- Feature: Datapopup can be set to visible
+
+Version 1.2.0 - 26th August 2010 
+--------------------------------
+- Feature: Support for multiple CPUs in the device
+- Feature: Power usage analysis in watts
+- Fix: Log to file, data sources not according to selected ones
+
+Version 1.1.1 - 21st May 2010 
+-----------------------------
+- Feature: Improved Orbit UI
+- Fix: Values not shown on UI
+
+Version 1.1.0 - 8th April 2010
+------------------------------
+- Initial Orbit version
+
+Version 1.0.0 - 6th March 2008
+------------------------------
+- Initial version
+ 
+===============================================================================
+
+Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+All rights reserved.
+
+This component and the accompanying materials are made available
+under the terms of "Eclipse Public License v1.0"
+which accompanies this distribution, and is available
+at the URL "http://www.eclipse.org/legal/epl-v10.html".
+

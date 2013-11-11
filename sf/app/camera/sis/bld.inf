@@ -1,0 +1,24 @@
+/*
+* ============================================================================
+*  Name        : bld.inf
+*  Part of     : camerax
+*  Description : Build file for exporting camerax stub sis file to the ROM
+*  Version     : %version: 1 % << Don't touch! Updated by Synergy at check-out.
+*
+*  Copyright © 2010 Nokia and/or its subsidiary(-ies).  All rights reserved.
+*  This material, including documentation and any related computer
+*  programs, is protected by copyright controlled by Nokia.  All
+*  rights are reserved.  Copying, including reproducing, storing,
+*  adapting or translating, any or all of this material requires the
+*  prior written consent of Nokia.  This material also contains
+*  confidential information which may not be disclosed to others
+*  without the prior written consent of Nokia.
+* ============================================================================
+* Template version: 4.2
+*/
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+camerax_stub.sis   \epoc32\data\z\system\install\camerax_stub.sis

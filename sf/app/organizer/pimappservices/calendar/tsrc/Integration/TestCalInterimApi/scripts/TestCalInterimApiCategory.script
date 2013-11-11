@@ -1,0 +1,159 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//
+PRINT Run all TestCalInterimApi recurrence entry tests
+//
+//RUN_UTILS DeleteFile c:\private\101f5027\AlarmServer.ini
+
+
+LOAD_SUITE TestCalInterimApiSuite
+//
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-Sec_4.1-0001-0002
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-Sec_4.1-0001-0002
+//! @SYMTestCaseDesc 		This test step creates entries which are required for section 4.1 based on the data 
+//!				read from the text file.
+//! @SYMFssID			<App-Engines>/<CalInterimApi>
+//! @SYMREQ			REQ5770: Calendar Non-functional maintainability, REQ5771: Calendar Non-functional //!		
+//!				architecture			
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Create entries based on the data read from the text file 
+//!					TestCalInterimApiCategorydata.txt
+//! @SYMTestExpectedResults 	All the entries are created successfully
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiReadData	\CITCalInterimApi\TestCalInterimApiCategory.ini ReadData
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiGetCategoryList \CITCalInterimApi\TestCalInterimApiCategory.ini GetCategoryForParent1
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiGetCategoryList \CITCalInterimApi\TestCalInterimApiCategory.ini GetCategoryForChild1
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiGetCategoryList \CITCalInterimApi\TestCalInterimApiCategory.ini GetCategoryFoParent2
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiGetCategoryList \CITCalInterimApi\TestCalInterimApiCategory.ini GetCategoryTestForParent
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiGetCategoryList \CITCalInterimApi\TestCalInterimApiCategory.ini GetCategoryTestForChild1
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiGetCategoryList \CITCalInterimApi\TestCalInterimApiCategory.ini GetCategoryTestForChild2
+
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-Sec_4.1-0001-0002
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0003-0005
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0003-0005
+//! @SYMTestCaseDesc 		Copy the entry that has category with copy type as EDontCopyId and delete the category in the 
+//!				original entry
+//! @SYMFssID			<App-Engines>/<CalInterimApi>
+//! @SYMREQ			REQ5770: Calendar Non-functional maintainability, REQ5771: Calendar Non-functional 
+//!				architecture			
+//! @SYMPREQ			1090
+//! @SYMDEF			DEF080553
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Create an entry and add the category to the entry.
+//!				2.	Copy the entry to another entry using CopyFromL function with CopyType as 		
+//!					EDontCopyId.
+//!				3.	Delete the category present in the original entry and check that the category is not 	
+//!					deleted in the copied entry.
+//!				4.	Verify that the category in the original entry is deleted by getting the category 	
+//!					list in the entry
+//! @SYMTestExpectedResults 	The entry and its contents are copied successfully and the category is deleted successfully
+//!				from the original entry.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCopyEntry \CITCalInterimApi\TestCalInterimApiCategory.ini CopyEntryWithCategory1
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiDeleteCategory \CITCalInterimApi\TestCalInterimApiCategory.ini DeleteCategoryAfterDontCopyId
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiGetCategoryList \CITCalInterimApi\TestCalInterimApiCategory.ini GetCategory3
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiGetCategoryList \CITCalInterimApi\TestCalInterimApiCategory.ini GetCategory
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0003-0005
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0004-0005
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0004-0005
+//! @SYMTestCaseDesc 		Copy the entry that has category with copy type as ECopyAll and delete the category in the 
+//!				original entry
+//! @SYMFssID			<App-Engines>/<CalInterimApi>
+//! @SYMREQ			REQ5770: Calendar Non-functional maintainability, REQ5771: Calendar Non-functional 	
+//!				architecture			
+//! @SYMPREQ			1090
+//! @SYMDEF			DEF080553
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Create an entry and add the category to the entry.
+//!				2.	Copy the entry to another entry using CopyFromL function with CopyType as ECopyAll.
+//!				3.	Delete the category present in the copied entry and store it.
+//!				4.	Check that the source is updated by getting the list of category from the entry.
+//! @SYMTestExpectedResults 	All the entries are created successfully
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCopyEntry \CITCalInterimApi\TestCalInterimApiCategory.ini CopyEntryWithCategory2
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiDeleteCategory \CITCalInterimApi\TestCalInterimApiCategory.ini DeleteCategoryAfterCopyAll
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiGetCategoryList \CITCalInterimApi\TestCalInterimApiCategory.ini GetCategory4
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0004-0005
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiDeleteCategory \CITCalInterimApi\TestCalInterimApiCategory.ini DeleteParentCategory
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiGetCategoryList \CITCalInterimApi\TestCalInterimApiCategory.ini GetParentCategory5
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiDeleteCategory \CITCalInterimApi\TestCalInterimApiCategory.ini DeleteChildCategory
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiGetCategoryList \CITCalInterimApi\TestCalInterimApiCategory.ini GetChildCategory5
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0027
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0027
+//! @SYMTestCaseDesc 		Copy the entry with copytype as ECopyAll and check the local uid of the entry	
+//!				original entry
+//! @SYMFssID			<App-Engines>/<CalInterimApi>
+//! @SYMREQ			REQ5770: Calendar Non-functional maintainability, REQ5771: Calendar Non-functional 
+//!				architecture			
+//! @SYMPREQ			1090
+//! @SYMDEF			DEF080454
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Create an entry and store it.
+//!				2.	Get the local uid of the source entry.
+//!				3.	Copy the entry and store it.
+//!				4.	Get the local id of the entry.
+
+
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCopyEntry \CITCalInterimApi\TestCalInterimApiCategory.ini CopyEntry1
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCopyEntry \CITCalInterimApi\TestCalInterimApiCategory.ini CopyEntry2
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0027
+
+
+PRINT Completed TestCalInterimApi_Tests
+
+PREFIX RUN_UTILS 
+MakeReadWrite 	c:\private\10003a5b\vCalFile.dat
+DeleteFile		c:\private\10003a5b\vCalFile.dat
+MakeReadWrite 	c:\private\10003a5b\vcalfile.datIdx
+DeleteFile		c:\private\10003a5b\vcalfile.datIdx
+REMOVE_PREFIX

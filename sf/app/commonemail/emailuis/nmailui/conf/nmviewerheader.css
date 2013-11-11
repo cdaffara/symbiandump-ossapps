@@ -1,0 +1,30 @@
+NmViewerHeader{
+  layout:customheader;
+}
+
+NmViewerHeader::sent{
+  fixed-height: var(hb-param-text-height-secondary);   
+  font-variant: secondary; 
+  text-align: left;
+}
+
+NmViewerHeader::subject{
+  text-height:var(hb-param-text-height-primary);
+  font-variant:primary;
+  text-align: left;
+  text-line-count-min:1;
+  text-line-count-max:3;
+}
+
+NmViewerHeader::prioicon{
+  pref-height: var(hb-param-graphic-size-secondary);
+  pref-width: var(hb-param-graphic-size-secondary); 
+  size-policy: fixed fixed;   
+}
+
+HbTextEdit#toField::text{
+    left: 4;
+    right: 4;
+    top: 0;
+    bottom: 0;
+}

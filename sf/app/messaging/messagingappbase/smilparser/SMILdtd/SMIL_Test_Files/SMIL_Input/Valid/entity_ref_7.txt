@@ -1,0 +1,14 @@
+<!-- Focus of this test: CDataSections -->
+
+<?xml version="1.0" ?>
+<!DOCTYPE SMIL PUBLIC "-//W3C//DTD SMIL 2.0 Basic//EN"
+"http://www.w3.org/TR/REC-smil/2000/SMIL20Basic.dtd">
+
+<smil xmlns="http://www.w3.org/TR/REC-smil/2000/SMIL20/Basic">
+    <body>
+        <a dur="1<![CDATA[0]]>s" href="http://www.ex<![CDATA[am]]>ple.org/presentationB#next" 
+	id="Pre<![CDATA[loads of CDATA <>><><> """ ]]>sBLink" title="Blue&apos;" xml:lang="en-GB">
+            <img region="source" src="source.jpg"/>
+        </a>
+    </body>
+</smil>

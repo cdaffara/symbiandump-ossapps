@@ -1,0 +1,81 @@
+EXPORTS
+	_ZN23CImapProtocolController11DisconnectLER14TRequestStatus @ 1 NONAME
+	_ZN23CImapProtocolController12CopyToLocalLER14TRequestStatusRK18CMsvEntrySelectionl @ 2 NONAME
+	_ZN23CImapProtocolController12MoveToLocalLER14TRequestStatusRK18CMsvEntrySelectionl @ 3 NONAME
+	_ZN23CImapProtocolController13DeleteFolderLER14TRequestStatusRK18CMsvEntrySelection @ 4 NONAME
+	_ZN23CImapProtocolController14CopyFromLocalLER14TRequestStatusRK18CMsvEntrySelectionl @ 5 NONAME
+	_ZN23CImapProtocolController14MoveFromLocalLER14TRequestStatusRK18CMsvEntrySelectionl @ 6 NONAME
+	_ZN23CImapProtocolController15FullSyncFolderLER14TRequestStatusl @ 7 NONAME
+	_ZN23CImapProtocolController15SynchroniseAllLER14TRequestStatus @ 8 NONAME
+	_ZN23CImapProtocolController16CancelAndCleanupEv @ 9 NONAME
+	_ZN23CImapProtocolController16SynchroniseTreeLER14TRequestStatus @ 10 NONAME
+	_ZN23CImapProtocolController17WaitForBackgroundER14TRequestStatus @ 11 NONAME
+	_ZN23CImapProtocolController18CopyWithinServiceLER14TRequestStatusRK18CMsvEntrySelectionl @ 12 NONAME
+	_ZN23CImapProtocolController18MoveWithinServiceLER14TRequestStatusRK18CMsvEntrySelectionl @ 13 NONAME
+	_ZN23CImapProtocolController18NewOnlySyncFolderLER14TRequestStatus @ 14 NONAME
+	_ZN23CImapProtocolController20CancelBackgroundSyncER14TRequestStatus @ 15 NONAME
+	_ZN23CImapProtocolController20SetLocalSubscriptionEli @ 16 NONAME
+	_ZN23CImapProtocolController22BackgroundSyncCompleteEi @ 17 NONAME
+	_ZN23CImapProtocolController22ConnectAndSynchroniseLER14TRequestStatusR18CMsvEntrySelection @ 18 NONAME
+	_ZN23CImapProtocolController23FullSyncSelectedFolderLER14TRequestStatus @ 19 NONAME
+	_ZN23CImapProtocolController4NewLER15CMsvServerEntryR19CImapOfflineControl @ 20 NONAME
+	_ZN23CImapProtocolController6DoRunLEv @ 21 NONAME
+	_ZN23CImapProtocolController7CreateLER14TRequestStatuslRK7TDesC16i @ 22 NONAME
+	_ZN23CImapProtocolController7DeleteLER14TRequestStatusRK18CMsvEntrySelection @ 23 NONAME
+	_ZN23CImapProtocolController7RenameLER14TRequestStatuslRK7TDesC16 @ 24 NONAME
+	_ZN23CImapProtocolController7SelectLER14TRequestStatusl @ 25 NONAME
+	_ZN23CImapProtocolController8ConnectLER14TRequestStatusR18CMsvEntrySelection @ 26 NONAME
+	_ZN23CImapProtocolController8ProgressEv @ 27 NONAME
+	_ZN23CImapProtocolController9PopulateLER14TRequestStatusRK18CMsvEntrySelection26TImImap4GetPartialMailInfo @ 28 NONAME
+	_ZNK23CImapProtocolController24BackgroundSyncInProgressEv @ 29 NONAME
+	_ZNK23CImapProtocolController4BusyEv @ 30 NONAME
+	_ZNK23CImapProtocolController9ConnectedEv @ 31 NONAME
+	_ZTI14CImapOperation @ 32 NONAME ; #<TI>#
+	_ZTI16CImapOpFetchBody @ 33 NONAME ; #<TI>#
+	_ZTI17CImapCompoundBase @ 34 NONAME ; #<TI>#
+	_ZTI19CImapCompoundCreate @ 35 NONAME ; #<TI>#
+	_ZTI19CImapCompoundDelete @ 36 NONAME ; #<TI>#
+	_ZTI19CImapCompoundRename @ 37 NONAME ; #<TI>#
+	_ZTI19CImapCompoundSelect @ 38 NONAME ; #<TI>#
+	_ZTI19CImapIdleController @ 39 NONAME ; #<TI>#
+	_ZTI21CImapCompoundSyncTree @ 40 NONAME ; #<TI>#
+	_ZTI21CImapOpBackgroundSync @ 41 NONAME ; #<TI>#
+	_ZTI23CImapCompoundDisconnect @ 42 NONAME ; #<TI>#
+	_ZTI23CImapCompoundSyncFolder @ 43 NONAME ; #<TI>#
+	_ZTI23CImapProtocolController @ 44 NONAME ; #<TI>#
+	_ZTI24CImapCompoundCopyToLocal @ 45 NONAME ; #<TI>#
+	_ZTI24CImapCompoundSyncService @ 46 NONAME ; #<TI>#
+	_ZTI25CImapCompoundDeleteFolder @ 47 NONAME ; #<TI>#
+	_ZTI26CImapCompoundCopyFromLocal @ 48 NONAME ; #<TI>#
+	_ZTI30CImapCompoundCopyWithinService @ 49 NONAME ; #<TI>#
+	_ZTV14CImapOperation @ 50 NONAME ; #<VT>#
+	_ZTV16CImapOpFetchBody @ 51 NONAME ; #<VT>#
+	_ZTV17CImapCompoundBase @ 52 NONAME ; #<VT>#
+	_ZTV19CImapCompoundCreate @ 53 NONAME ; #<VT>#
+	_ZTV19CImapCompoundDelete @ 54 NONAME ; #<VT>#
+	_ZTV19CImapCompoundRename @ 55 NONAME ; #<VT>#
+	_ZTV19CImapCompoundSelect @ 56 NONAME ; #<VT>#
+	_ZTV19CImapIdleController @ 57 NONAME ; #<VT>#
+	_ZTV21CImapCompoundSyncTree @ 58 NONAME ; #<VT>#
+	_ZTV21CImapOpBackgroundSync @ 59 NONAME ; #<VT>#
+	_ZTV23CImapCompoundDisconnect @ 60 NONAME ; #<VT>#
+	_ZTV23CImapCompoundSyncFolder @ 61 NONAME ; #<VT>#
+	_ZTV23CImapProtocolController @ 62 NONAME ; #<VT>#
+	_ZTV24CImapCompoundCopyToLocal @ 63 NONAME ; #<VT>#
+	_ZTV24CImapCompoundSyncService @ 64 NONAME ; #<VT>#
+	_ZTV25CImapCompoundDeleteFolder @ 65 NONAME ; #<VT>#
+	_ZTV26CImapCompoundCopyFromLocal @ 66 NONAME ; #<VT>#
+	_ZTV30CImapCompoundCopyWithinService @ 67 NONAME ; #<VT>#
+	_ZThn32_N23CImapProtocolController22BackgroundSyncCompleteEi @ 68 NONAME ; #<thunk>#
+	_ZTIN4Meta11TMetaVarLenI5RBuf8EE @ 69 NONAME ABSENT
+	_ZTIN4Meta11TMetaVarLenI6RBuf16EE @ 70 NONAME ABSENT
+	_ZTIN4Meta12TMetaVarLen8I5RBuf8EE @ 71 NONAME ABSENT
+	_ZTIN4Meta13TMetaVarLen16I6RBuf16EE @ 72 NONAME ABSENT
+	_ZTVN4Meta11TMetaVarLenI5RBuf8EE @ 73 NONAME ABSENT
+	_ZTVN4Meta11TMetaVarLenI6RBuf16EE @ 74 NONAME ABSENT
+	_ZTVN4Meta12TMetaVarLen8I5RBuf8EE @ 75 NONAME ABSENT
+	_ZTVN4Meta13TMetaVarLen16I6RBuf16EE @ 76 NONAME ABSENT
+	_ZNK23CImapProtocolController29GetAccessPointIdForConnectionERm @ 77 NONAME
+	_ZN23CImapProtocolController11UpdateFlagLER14TRequestStatus @ 78 NONAME
+	_ZN23CImapProtocolController18UpdateEntriesFlagLER14TRequestStatusRK18CMsvEntrySelectioni @ 79 NONAME
+

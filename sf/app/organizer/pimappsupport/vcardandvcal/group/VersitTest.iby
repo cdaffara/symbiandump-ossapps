@@ -1,0 +1,280 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+#ifndef __VERSITTEST_IBY__
+#define __VERSITTEST_IBY__
+
+REM - Include libraries that offer language support
+#include <Charconv_Chinese_Simplfied.iby>
+#include <Charconv_Chinese_Traditional.iby >
+#include <Charconv_Japanese.iby>
+REM Versit Parsers
+file=ABI_DIR\BUILD_DIR\tperformance.EXE		System\Programs\VersitTest\TPERFORMANCE.EXE
+file=ABI_DIR\BUILD_DIR\tversit.EXE			System\Programs\VersitTest\TVERSIT.EXE
+file=ABI_DIR\BUILD_DIR\tvgen.EXE			System\Programs\VersitTest\TVGEN.EXE
+file=ABI_DIR\BUILD_DIR\tcharsetvcard.EXE	System\Programs\VersitTest\TCHARSETVCARD.EXE
+//file=ABI_DIR\BUILD_DIR\tbenchmark.EXE		System\Programs\VersitTest\TBENCHMARK.EXE
+file=ABI_DIR\BUILD_DIR\tbugfix.EXE			System\Programs\VersitTest\TBUGFIX.EXE
+file=ABI_DIR\BUILD_DIR\toom.EXE				System\Programs\VersitTest\TOOM.EXE
+file=ABI_DIR\BUILD_DIR\tdefaultcharset.EXE	System\Programs\VersitTest\Tdefaultcharset.EXE
+file=ABI_DIR\BUILD_DIR\tjapanesesoundproperty.exe	System\Programs\VersitTest\TJapaneseSoundProperty.exe
+
+file=ABI_DIR\BUILD_DIR\test_saveloadbin.EXE				System\Programs\VersitTest\test_saveloadbin.EXE
+file=ABI_DIR\BUILD_DIR\test_saveloadbinoom.EXE			System\Programs\VersitTest\test_saveloadbinoom.EXE
+file=ABI_DIR\BUILD_DIR\test_recognizer.EXE				System\Programs\VersitTest\test_recognizer.EXE
+
+// PREQ1375 Unit tests for PBAPSupport
+file=ABI_DIR\BUILD_DIR\TestExternalize.EXE		System\Programs\VersitTest\TestExternalize.EXE
+
+data=DATAZ_\testvcards\encoded\1.vcf			\testvcards\encoded\1.vcf
+data=DATAZ_\testvcards\encoded\2.vcf			\testvcards\encoded\2.vcf
+data=DATAZ_\testvcards\encoded\3.vcf			\testvcards\encoded\3.vcf
+data=DATAZ_\testvcards\encoded\4.vcf			\testvcards\encoded\4.vcf
+data=DATAZ_\testvcards\encoded\5.vcf			\testvcards\encoded\5.vcf
+data=DATAZ_\testvcards\encoded\6.vcf			\testvcards\encoded\6.vcf
+data=DATAZ_\testvcards\encoded\7.vcf			\testvcards\encoded\7.vcf
+
+data=DATAZ_\testvcards\epoc\1.vcf				\testvcards\epoc\1.vcf
+data=DATAZ_\testvcards\epoc\2.vcf				\testvcards\epoc\2.vcf
+data=DATAZ_\testvcards\epoc\3.vcf				\testvcards\epoc\3.vcf
+data=DATAZ_\testvcards\epoc\4.vcf				\testvcards\epoc\4.vcf
+data=DATAZ_\testvcards\epoc\5.vcf				\testvcards\epoc\5.vcf
+data=DATAZ_\testvcards\epoc\6.vcf				\testvcards\epoc\6.vcf
+data=DATAZ_\testvcards\epoc\7.vcf				\testvcards\epoc\7.vcf
+data=DATAZ_\testvcards\epoc\8.vcf				\testvcards\epoc\8.vcf
+
+data=DATAZ_\testvcards\er5regression\1.vcf		\testvcards\er5regression\1.vcf
+data=DATAZ_\testvcards\er5regression\2.vcf		\testvcards\er5regression\2.vcf
+data=DATAZ_\testvcards\er5regression\3.vcf		\testvcards\er5regression\3.vcf
+data=DATAZ_\testvcards\er5regression\4.vcf		\testvcards\er5regression\4.vcf
+data=DATAZ_\testvcards\er5regression\5.vcf		\testvcards\er5regression\5.vcf
+
+data=DATAZ_\testvcards\invalid\1.vcf			\testvcards\invalid\1.vcf	
+data=DATAZ_\testvcards\invalid\2.vcf			\testvcards\invalid\2.vcf	
+data=DATAZ_\testvcards\invalid\3.vcf			\testvcards\invalid\3.vcf	
+data=DATAZ_\testvcards\invalid\4.vcf			\testvcards\invalid\4.vcf	
+data=DATAZ_\testvcards\invalid\5.vcf			\testvcards\invalid\5.vcf	
+data=DATAZ_\testvcards\invalid\6.vcf			\testvcards\invalid\6.vcf	
+data=DATAZ_\testvcards\invalid\7.vcf			\testvcards\invalid\7.vcf	
+data=DATAZ_\testvcards\invalid\8.vcf			\testvcards\invalid\8.vcf	
+
+data=DATAZ_\testvcards\various\1.vcf			\testvcards\various\1.vcf	
+data=DATAZ_\testvcards\various\2.vcf			\testvcards\various\2.vcf	
+data=DATAZ_\testvcards\various\3.vcf			\testvcards\various\3.vcf	
+data=DATAZ_\testvcards\various\4.vcf			\testvcards\various\4.vcf	
+data=DATAZ_\testvcards\various\5.vcf			\testvcards\various\5.vcf	
+data=DATAZ_\testvcards\various\6.vcf			\testvcards\various\6.vcf	
+data=DATAZ_\testvcards\various\7.vcf			\testvcards\various\7.vcf	
+data=DATAZ_\testvcards\various\8.vcf			\testvcards\various\8.vcf	
+data=DATAZ_\testvcards\various\9.vcf			\testvcards\various\9.vcf	
+data=DATAZ_\testvcards\various\10.vcf			\testvcards\various\10.vcf
+data=DATAZ_\testvcards\various\11.vcf			\testvcards\various\11.vcf
+data=DATAZ_\testvcards\various\12.vcf			\testvcards\various\12.vcf
+data=DATAZ_\testvcards\various\nulldate.vcf		\testvcards\various\nulldate.vcf
+data=DATAZ_\testvcards\various\HugeVCard.vcf		\testvcards\various\HugeVCard.vcf
+
+REM TBugfix the number of files=90
+data=DATAZ_\testvcards\various\6.vcs			\testvcards\various\6.vcs
+data=DATAZ_\testfiles\cshjises.vcf				\testfiles\cshjises.vcf			
+data=DATAZ_\testfiles\ctabs.vcs				\testfiles\ctabs.vcs				
+data=DATAZ_\testfiles\ishjises.vcf				\testfiles\ishjises.vcf			
+data=DATAZ_\testfiles\itabs.vcs				\testfiles\itabs.vcs				
+data=DATAZ_\testfiles\itimeper.vcs				\testfiles\itimeper.vcs			
+data=DATAZ_\testfiles\iDalarm.vcs				\testfiles\iDalarm.vcs			
+data=DATAZ_\testfiles\cDalarm.vcs				\testfiles\cDalarm.vcs			
+data=DATAZ_\testfiles\iagent.vcf				\testfiles\iagent.vcf				
+data=DATAZ_\testfiles\ibase64.vcf				\testfiles\ibase64.vcf			
+data=DATAZ_\testfiles\idalarm2.vcs				\testfiles\idalarm2.vcs			
+data=DATAZ_\testfiles\iwrap.vcs				\testfiles\iwrap.vcs				
+data=DATAZ_\testfiles\cagent.vcf				\testfiles\cagent.vcf		    	
+data=DATAZ_\testfiles\cbase64.vcf				\testfiles\cbase64.vcf			
+data=DATAZ_\testfiles\cdalarm2.vcs				\testfiles\cdalarm2.vcs			
+data=DATAZ_\testfiles\cwrap.vcs				\testfiles\cwrap.vcs			    
+data=DATAZ_\testfiles\Test5_ASCII_Input.vcf	\testfiles\Test5_ASCII_Input.vcf	
+data=DATAZ_\testfiles\iAsciiLineFolding.vcf	\testfiles\iAsciiLineFolding.vcf	
+data=DATAZ_\testfiles\cAsciiLineFolding.vcf	\testfiles\cAsciiLineFolding.vcf	
+data=DATAZ_\testfiles\iBase64LineFolding.vcf	\testfiles\iBase64LineFolding.vcf	
+data=DATAZ_\testfiles\cBase64LineFolding.vcf	\testfiles\cBase64LineFolding.vcf	
+data=DATAZ_\testfiles\cBase64NoSpaceLineFolding.vcf	\testfiles\cBase64NoSpaceLineFolding.vcf	
+data=DATAZ_\testfiles\iQPLineFolding.vcf		\testfiles\iQPLineFolding.vcf		
+data=DATAZ_\testfiles\cQPLineFolding.vcf		\testfiles\cQPLineFolding.vcf		
+data=DATAZ_\testfiles\iTest7.vcf				\testfiles\iTest7.vcf				
+data=DATAZ_\testfiles\iTestVcard.vcf			\testfiles\iTestVcard.vcf			
+data=DATAZ_\testfiles\iTestVcal.vcs			\testfiles\iTestVcal.vcs			
+data=DATAZ_\testfiles\cTestVcard.vcf			\testfiles\cTestVcard.vcf			
+data=DATAZ_\testfiles\cTestVcal.vcs			\testfiles\cTestVcal.vcs			
+data=DATAZ_\testfiles\iGroupedProperty.vcf		\testfiles\iGroupedProperty.vcf	
+data=DATAZ_\testfiles\iTimeZoneN.vcs			\testfiles\iTimeZoneN.vcs			
+data=DATAZ_\testfiles\cTimeZoneN.vcs			\testfiles\cTimeZoneN.vcs			
+data=DATAZ_\testfiles\iTimeZoneP.vcs			\testfiles\iTimeZoneP.vcs			
+data=DATAZ_\testfiles\cTimeZoneP.vcs			\testfiles\cTimeZoneP.vcs			
+data=DATAZ_\testfiles\Igbk.vcf					\testfiles\Igbk.vcf				
+data=DATAZ_\testfiles\IShiftJis.VCS			\testfiles\IShiftJis.VCS			
+data=DATAZ_\testfiles\CShiftJis.VCS			\testfiles\CShiftJis.VCS			
+data=DATAZ_\testfiles\IvCard.VCF				\testfiles\IvCard.VCF				
+data=DATAZ_\testfiles\CvCard.VCF				\testfiles\CvCard.VCF				
+data=DATAZ_\testfiles\IvCal.VCS				\testfiles\IvCal.VCS
+data=DATAZ_\testfiles\IRDailyvCal.VCS			\testfiles\IRDailyvCal.VCS		
+data=DATAZ_\testfiles\CvCal.VCS				\testfiles\CvCal.VCS				
+data=DATAZ_\testfiles\NoEnd.VCF				\testfiles\NoEnd.VCF				
+data=DATAZ_\testfiles\HalfLine.VCF				\testfiles\HalfLine.VCF			
+data=DATAZ_\testfiles\Feb29.VCS				\testfiles\Feb29.VCS				
+data=DATAZ_\testfiles\EnName1.VCS				\testfiles\EnName1.VCS			
+data=DATAZ_\testfiles\EnName2.VCS				\testfiles\EnName2.VCS			
+data=DATAZ_\testfiles\EnName3.VCF				\testfiles\EnName3.VCF			
+data=DATAZ_\testfiles\EnName4.VCF				\testfiles\EnName4.VCF			
+data=DATAZ_\testfiles\Begin2.VCF				\testfiles\Begin2.VCF				
+data=DATAZ_\testfiles\Begin3.VCS				\testfiles\Begin3.VCS				
+data=DATAZ_\testfiles\End2.VCF					\testfiles\End2.VCF				
+data=DATAZ_\testfiles\IEndBa64.VCS				\testfiles\IEndBa64.VCS			
+data=DATAZ_\testfiles\CEndBa64.VCS				\testfiles\CEndBa64.VCS			
+data=DATAZ_\testfiles\CNullPar.VCS				\testfiles\CNullPar.VCS	 		
+data=DATAZ_\testfiles\CTZone.VCS				\testfiles\CTZone.VCS				
+data=DATAZ_\testfiles\CTZone2.VCS				\testfiles\CTZone2.VCS	 		
+data=DATAZ_\testfiles\CWrap2.VCS				\testfiles\CWrap2.VCS				
+data=DATAZ_\testfiles\IESlash.VCF				\testfiles\IESlash.VCF	 		
+data=DATAZ_\testfiles\CESlash.VCF				\testfiles\CESlash.VCF			
+data=DATAZ_\testfiles\INullPar.VCS				\testfiles\INullPar.VCS	 		
+data=DATAZ_\testfiles\ITZone.VCS				\testfiles\ITZone.VCS				
+data=DATAZ_\testfiles\ITZone2.VCS				\testfiles\ITZone2.VCS	 		
+data=DATAZ_\testfiles\IWrap2.VCS				\testfiles\IWrap2.VCS				
+data=DATAZ_\testfiles\Base64.VCF				\testfiles\Base64.VCF				
+data=DATAZ_\testfiles\vCard.VCF				\testfiles\vCard.VCF				
+data=DATAZ_\testfiles\IAutoD.VCF				\testfiles\IAutoD.VCF				
+data=DATAZ_\testfiles\IAutoD2.VCS				\testfiles\IAutoD2.VCS			
+data=DATAZ_\testfiles\CAutoD.VCF				\testfiles\CAutoD.VCF				
+data=DATAZ_\testfiles\CAutoD2.VCS				\testfiles\CAutoD2.VCS			
+data=DATAZ_\testfiles\IYenEsc1.VCF				\testfiles\IYenEsc1.VCF			
+data=DATAZ_\testfiles\IYenEsc2.VCF				\testfiles\IYenEsc2.VCF			
+data=DATAZ_\testfiles\IParamE.VCF				\testfiles\IParamE.VCF			
+data=DATAZ_\testfiles\CYenEsc1.VCF				\testfiles\CYenEsc1.VCF			
+data=DATAZ_\testfiles\CYenEsc2.VCF				\testfiles\CYenEsc2.VCF			
+data=DATAZ_\testfiles\CParamE.VCF				\testfiles\CParamE.VCF			
+data=DATAZ_\testfiles\IUK.VCS					\testfiles\IUK.VCS				
+data=DATAZ_\testfiles\INewYork.VCS				\testfiles\INewYork.VCS			
+data=DATAZ_\testfiles\IJapan.VCS				\testfiles\IJapan.VCS				
+data=DATAZ_\testfiles\CUK.VCS					\testfiles\CUK.VCS				
+data=DATAZ_\testfiles\CNewYork.VCS				\testfiles\CNewYork.VCS			
+data=DATAZ_\testfiles\CJapan.VCS				\testfiles\CJapan.VCS				
+data=DATAZ_\testfiles\IFred.VCF				\testfiles\IFred.VCF				
+data=DATAZ_\testfiles\iNonStandardAgent.VCF	\testfiles\iNonStandardAgent.VCF	
+data=DATAZ_\testfiles\cNonStandardAgent.VCF	\testfiles\cNonStandardAgent.VCF	
+data=DATAZ_\testfiles\iRRule.vcs				\testfiles\iRRule.vcs
+data=DATAZ_\testfiles\iBlankLines.VCF			\testfiles\iBlankLines.VCF
+data=DATAZ_\testfiles\cBlankLines.VCF			\testfiles\cBlankLines.VCF
+data=DATAZ_\testfiles\iLineFeed.vcs			\testfiles\iLineFeed.vcs
+data=DATAZ_\testfiles\cLineFeed.vcs			\testfiles\cLineFeed.vcs
+data=DATAZ_\testfiles\iBase64ws.vcf			\testfiles\iBase64ws.vcf
+data=DATAZ_\testfiles\cBase64ws.vcf			\testfiles\cBase64ws.vcf
+data=DATAZ_\testfiles\IJunkLine.vcs			\testfiles\IJunkLine.vcs
+data=DATAZ_\testfiles\CJunkLine.vcs			\testfiles\CJunkLine.vcs
+data=DATAZ_\testfiles\iAttachment.vcs			\testfiles\iAttachment.vcs			
+data=DATAZ_\testfiles\cAttachment.vcs			\testfiles\cAttachment.vcs
+data=DATAZ_\testfiles\iAlarmRepeatCount.vcs		\testfiles\iAlarmRepeatCount.vcs
+data=DATAZ_\testfiles\DefaultCharSetInput.vcf		\testfiles\DefaultCharSetInput.vcf
+data=DATAZ_\testfiles\inewbase64.vcf				\testfiles\inewbase64.vcf
+data=DATAZ_\testfiles\inewbase64.vcs				\testfiles\inewbase64.vcs
+data=DATAZ_\testfiles\ivtrigger.vcf					\testfiles\ivtrigger.vcf
+data=DATAZ_\testfiles\cnewbase64.vcf				\testfiles\cnewbase64.vcf
+data=DATAZ_\testfiles\cnewbase64.vcs				\testfiles\cnewbase64.vcs
+data=DATAZ_\testfiles\cvtrigger.vcf					\testfiles\cvtrigger.vcf
+data=DATAZ_\testfiles\nolf.vcs						\testfiles\nolf.vcs				
+data=DATAZ_\testfiles\nestedagent.vcf						\testfiles\nestedagent.vcf	
+
+// TPerformance number of files=21
+data=DATAZ_\TPerFormance\inputFile\Line_short.vcf			\TPerFormance\inputFile\Line_short.vcf							
+data=DATAZ_\TPerFormance\inputFile\Line_photo.vcf			\TPerFormance\inputFile\Line_photo.vcf						
+data=DATAZ_\TPerFormance\inputFile\Line_long.vcf			\TPerFormance\inputFile\Line_long.vcf					
+data=DATAZ_\TPerFormance\inputFile\Line_alarm.vcs			\TPerFormance\inputFile\Line_alarm.vcs						
+data=DATAZ_\TPerFormance\inputFile\FileUTF8_QP.vcf			\TPerFormance\inputFile\FileUTF8_QP.vcf		
+data=DATAZ_\TPerFormance\inputFile\FileUTF8_Base64.vcf		\TPerFormance\inputFile\FileUTF8_Base64.vcf	
+data=DATAZ_\TPerFormance\inputFile\FileShiftJIS_QP.vcf		\TPerFormance\inputFile\FileShiftJIS_QP.vcf	
+data=DATAZ_\TPerFormance\inputFile\FileShiftJIS_Base64.vcf	\TPerFormance\inputFile\FileShiftJIS_Base64.vcf	
+data=DATAZ_\TPerFormance\inputFile\FileGBK_QP.vcf			\TPerFormance\inputFile\FileGBK_QP.vcf			
+data=DATAZ_\TPerFormance\inputFile\FileGBK_Base64.vcf		\TPerFormance\inputFile\FileGBK_Base64.vcf		
+data=DATAZ_\TPerFormance\inputFile\FileASCII_QP.vcf		\TPerFormance\inputFile\FileASCII_QP.vcf		
+data=DATAZ_\TPerFormance\inputFile\FileASCII_None.vcf		\TPerFormance\inputFile\FileASCII_None.vcf		
+data=DATAZ_\TPerFormance\inputFile\FileASCII_Base64.vcf	\TPerFormance\inputFile\FileASCII_Base64.vcf	
+data=DATAZ_\TPerFormance\inputFile\File05entity.vcs		\TPerFormance\inputFile\File05entity.vcs		
+data=DATAZ_\TPerFormance\inputFile\File10entity.vcs		\TPerFormance\inputFile\File10entity.vcs		
+data=DATAZ_\TPerFormance\inputFile\File15entity.vcs		\TPerFormance\inputFile\File15entity.vcs		
+data=DATAZ_\TPerFormance\inputFile\File20entity.vcs		\TPerFormance\inputFile\File20entity.vcs		
+data=DATAZ_\TPerFormance\inputFile\File25entity.vcs		\TPerFormance\inputFile\File25entity.vcs		
+data=DATAZ_\TPerFormance\inputFile\File30entity.vcs		\TPerFormance\inputFile\File30entity.vcs		
+data=DATAZ_\TPerFormance\inputFile\File35entity.vcs		\TPerFormance\inputFile\File35entity.vcs		
+data=DATAZ_\TPerFormance\inputFile\File40entity.vcs		\TPerFormance\inputFile\File40entity.vcs		
+		
+// Shift-JIS and other data files=34	
+data=DATAZ_\k3data\ITest01.VCF				\k3data\ITest01.VCF	
+data=DATAZ_\k3data\ITest02.VCF				\k3data\ITest02.VCF	
+data=DATAZ_\k3data\ITest03.VCS				\k3data\ITest03.VCS	
+data=DATAZ_\k3data\ITest04.VCF				\k3data\ITest04.VCF	
+data=DATAZ_\k3data\ITest05.VCF				\k3data\ITest05.VCF	
+data=DATAZ_\k3data\ITest06.VCF				\k3data\ITest06.VCF	
+data=DATAZ_\k3data\ITest07.VCF				\k3data\ITest07.VCF	
+data=DATAZ_\k3data\ITest08.VCF				\k3data\ITest08.VCF	
+data=DATAZ_\k3data\ITest09.VCF				\k3data\ITest09.VCF	
+data=DATAZ_\k3data\ITest10.VCF				\k3data\ITest10.VCF	
+data=DATAZ_\k3data\ITest11.VCF				\k3data\ITest11.VCF	
+data=DATAZ_\k3data\STest01.VCF				\k3data\STest01.VCF	
+data=DATAZ_\k3data\STest02.VCF				\k3data\STest02.VCF	
+data=DATAZ_\k3data\STest03.VCS				\k3data\STest03.VCS	
+data=DATAZ_\k3data\STest04.VCF				\k3data\STest04.VCF	
+data=DATAZ_\k3data\STest05.VCF				\k3data\STest05.VCF	
+data=DATAZ_\k3data\STest06.VCF				\k3data\STest06.VCF	
+data=DATAZ_\k3data\STest07.VCF				\k3data\STest07.VCF	
+data=DATAZ_\k3data\STest08.VCF				\k3data\STest08.VCF	
+data=DATAZ_\k3data\STest09.VCF				\k3data\STest09.VCF	
+data=DATAZ_\k3data\STest10.VCF				\k3data\STest10.VCF	
+data=DATAZ_\k3data\STest11.VCF				\k3data\STest11.VCF	
+									
+data=DATAZ_\VersitJapaneseVCards\amano.vcf					\VersitJapaneseVCards\amano.vcf
+data=DATAZ_\VersitJapaneseVCards\aoki.vcf					\VersitJapaneseVCards\aoki.vcf
+data=DATAZ_\VersitJapaneseVCards\barbara.vcf				\VersitJapaneseVCards\barbara.vcf
+data=DATAZ_\VersitJapaneseVCards\Digit1.vcf				\VersitJapaneseVCards\Digit1.vcf
+data=DATAZ_\VersitJapaneseVCards\Digit2.vcf				\VersitJapaneseVCards\Digit2.vcf
+data=DATAZ_\VersitJapaneseVCards\haga.vcf					\VersitJapaneseVCards\haga.vcf
+data=DATAZ_\VersitJapaneseVCards\kasai.vcf					\VersitJapaneseVCards\kasai.vcf
+data=DATAZ_\VersitJapaneseVCards\kitajima.vcf				\VersitJapaneseVCards\kitajima.vcf
+data=DATAZ_\VersitJapaneseVCards\Longest.vcf				\VersitJapaneseVCards\Longest.vcf
+data=DATAZ_\VersitJapaneseVCards\matsui.vcf				\VersitJapaneseVCards\matsui.vcf
+data=DATAZ_\VersitJapaneseVCards\miyazaki.vcf				\VersitJapaneseVCards\miyazaki.vcf
+data=DATAZ_\VersitJapaneseVCards\nakai.vcf					\VersitJapaneseVCards\nakai.vcf
+data=DATAZ_\VersitJapaneseVCards\powell.vcf				\VersitJapaneseVCards\powell.vcf
+data=DATAZ_\VersitJapaneseVCards\prolongedsound.vcf		\VersitJapaneseVCards\prolongedsound.vcf
+data=DATAZ_\VersitJapaneseVCards\SpecialCharacter1.vcf		\VersitJapaneseVCards\SpecialCharacter1.vcf
+data=DATAZ_\VersitJapaneseVCards\SpecialCharacter2.vcf		\VersitJapaneseVCards\SpecialCharacter2.vcf
+data=DATAZ_\VersitJapaneseVCards\takashiro.vcf				\VersitJapaneseVCards\takashiro.vcf
+data=DATAZ_\VersitJapaneseVCards\escaped.vcf				\VersitJapaneseVCards\escaped.vcf
+data=DATAZ_\VersitJapaneseVCards\Multiplesounds.vcf		\VersitJapaneseVCards\Multiplesounds.vcf
+
+// PREQ1375 Unit testdata for PBAPSupport
+data=DATAZ_\PBAPSupport\CBase64LineFolding.vcf			\PBAPSupport\CBase64LineFolding.vcf
+data=DATAZ_\PBAPSupport\CBinaryEncoding.vcf			\PBAPSupport\CBinaryEncoding.vcf
+data=DATAZ_\PBAPSupport\CDisableCharset.vcf			\PBAPSupport\CDisableCharset.vcf
+data=DATAZ_\PBAPSupport\CEscapeBackslash.vcf			\PBAPSupport\CEscapeBackslash.vcf
+data=DATAZ_\PBAPSupport\CEscapeComma.vcf			\PBAPSupport\CEscapeComma.vcf
+data=DATAZ_\PBAPSupport\CEscapeSemicolon.vcf			\PBAPSupport\CEscapeSemicolon.vcf
+data=DATAZ_\PBAPSupport\CLongPropertyName.vcf			\PBAPSupport\CLongPropertyName.vcf
+data=DATAZ_\PBAPSupport\CLongPropertyParam.vcf			\PBAPSupport\CLongPropertyParam.vcf
+data=DATAZ_\PBAPSupport\CLongPropertyValue.vcf			\PBAPSupport\CLongPropertyValue.vcf
+data=DATAZ_\PBAPSupport\CQPEncodingTest1.vcf			\PBAPSupport\CQPEncodingTest1.vcf
+data=DATAZ_\PBAPSupport\CQPEncodingTest2.vcf			\PBAPSupport\CQPEncodingTest2.vcf
+data=DATAZ_\PBAPSupport\CShortAsciiLine.vcf			\PBAPSupport\CShortAsciiLine.vcf
+data=DATAZ_\PBAPSupport\CUseUTF8.vcf				\PBAPSupport\CUseUTF8.vcf
+data=DATAZ_\PBAPSupport\IBase64LineFolding.vcf			\PBAPSupport\IBase64LineFolding.vcf
+
+#endif

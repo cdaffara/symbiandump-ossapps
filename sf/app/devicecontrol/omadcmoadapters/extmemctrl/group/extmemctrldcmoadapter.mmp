@@ -1,0 +1,52 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  ExtMemCtrl plug-in adapter for DCMO
+*
+*/
+
+#include <platform_paths.hrh>
+
+TARGET extmemctrldcmoadapter.dll
+TARGETTYPE PLUGIN
+
+// ECom Dll recognition UID followed by the unique UID for this dll
+UID 0x10009D8D 0x2002132B
+VENDORID VID_DEFAULT
+CAPABILITY  CAP_ECOM_PLUGIN
+
+SOURCEPATH				../src
+SOURCE						extmemctrldcmoadapter.cpp
+SOURCE						extmemctrldcmoadapterproxy.cpp
+
+USERINCLUDE 			../inc 
+
+APP_LAYER_SYSTEMINCLUDE
+
+SYSTEMINCLUDE 		/epoc32/include/ecom
+SYSTEMINCLUDE 	/epoc32/include/mw/hb/hbwidgets
+SYSTEMINCLUDE 	/epoc32/include/mw/hb/hbcore
+
+SOURCEPATH				../data
+start resource 2002132B.rss
+TARGET extmemctrldcmoadapter.rsc
+LANGUAGE_IDS
+end
+
+LIBRARY 			euser.lib ecom.lib efsrv.lib bafl.lib  etul.lib
+LIBRARY       centralrepository.lib
+LIBRARY       PlatformEnv.lib
+LIBRARY 			CommonEngine.lib               // Series 60 common components library
+LIBRARY       HbCore.lib HbWidgets.lib
+
+SMPSAFE

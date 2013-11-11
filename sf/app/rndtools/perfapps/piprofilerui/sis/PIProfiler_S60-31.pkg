@@ -1,0 +1,37 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description: 
+;
+&EN
+
+; Standard SIS file header
+#{"PIProfilerUI"},(0x2001E5AE),2,2,01,TYPE=SA, RU
+
+; Supports S60 v 3.0 and 5.0
+[0x101F7961], 0, 0, 0, {"S60ProductID"}
+
+; Non-localised vendor name
+:"Nokia Corporation"
+
+; Localised vendor names
+%{"Nokia Corporation"}
+
+; normal stuff:
+"\epoc32\RELEASE\armv5\urel\PIProfilerUI.exe"-"!:\sys\bin\PIProfilerUI.exe"
+"\epoc32\data\z\Resource\apps\piprofilerui_aif.mif"-"!:\Resource\Apps\piprofilerui_aif.mif"
+"\epoc32\data\z\Resource\apps\piprofilerui_ExtraIcons.mif"-"!:\Resource\Apps\piprofilerui_ExtraIcons.mif"
+"\epoc32\data\z\Resource\apps\piprofilerui.rsc"-"!:\Resource\Apps\piprofilerui.rsc"
+"\epoc32\data\z\PRIVATE\10003A3F\APPS\piprofilerui_reg.rsc"-"!:\private\10003a3f\import\apps\piprofilerui_reg.rsc"
+"..\ui\avkon\group\backup_registration.xml"-"!:\private\2001E5AE\backup_registration.xml"
+

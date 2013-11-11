@@ -1,0 +1,35 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+#ifndef __Cap_PARAM_SVR_SUITENAME_IBY__
+#define __Cap_PARAM_SVR_SUITENAME_IBY__
+
+data=ABI_DIR\DEBUG_DIR\Cap_PARAM_SVR_SUITENAME.EXE Sys\bin\Cap_PARAM_SVR_SUITENAME.EXE
+
+data=EPOCROOT##Epoc32\data\c\testdata\scripts\PARAM_SVR_SUITENAME.script	testdata\scripts\PARAM_SVR_SUITENAME.script
+
+PARAM_FOREACH_CAP_BEGIN
+data=EPOCROOT##Epoc32\data\c\testdata\scripts\Cap_PARAM_FOREACH_HEX_CAPABILITY_PARAM_SVR_SUITENAMESub.script	testdata\scripts\Cap_PARAM_FOREACH_HEX_CAPABILITY_PARAM_SVR_SUITENAMESub.script
+PARAM_FOREACH_CAP_END
+
+// Batch file that runs the tests
+data=EPOCROOT##Epoc32\tools\PARAM_SVR_SUITENAME.bat	PARAM_SVR_SUITENAME.bat
+
+// Other dependencies
+#include <testexecute.iby>
+#include <setcap.iby>
+
+#endif

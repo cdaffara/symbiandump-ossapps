@@ -1,0 +1,39 @@
+/*
+ * Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+ * All rights reserved.
+ * This component and the accompanying materials are made available
+ * under the terms of "Eclipse Public License v1.0"
+ * which accompanies this distribution, and is available
+ * at the URL "http://www.eclipse.org/legal/epl-v10.html".
+ *
+ * Initial Contributors:
+ * Nokia Corporation - initial contribution.
+ *
+ * Contributors: 
+ *
+ * Description:
+ * The iby file for calendarplugin component
+ *
+ */
+
+#ifndef CALENDARPLUGIN_IBY
+#define CALENDARPLUGIN_IBY
+
+//#ifdef FF_CALENDAR_WIDGET
+
+file=ABI_DIR\BUILD_DIR\calendarwidgetplugin.dll    SHARED_LIB_DIR\calendarwidgetplugin.dll
+
+data=ZPRIVATE\20022F35\import\widgetregistry\2002C35A\calendarwidgetplugin.qtplugin   private\20022f35\import\widgetregistry\2002C35A\calendarwidgetplugin.qtplugin
+data=ZPRIVATE\20022F35\import\widgetregistry\2002C35A\calendarwidgetplugin.manifest   private\20022f35\import\widgetregistry\2002C35A\calendarwidgetplugin.manifest
+data=ZPRIVATE\20022F35\import\widgetregistry\2002C35A\qtg_large_calendar.png          private\20022f35\import\widgetregistry\2002C35A\qtg_large_calendar.png
+data=ZPRIVATE\20022F35\import\widgetregistry\2002C35A\qtg_graf_hswidget_preview_calendar.svg      private\20022f35\import\widgetregistry\2002C35A\qtg_graf_hswidget_preview_calendar.svg
+data=ZPRIVATE\20022F35\import\widgetregistry\2002C35A\calendarwidgetplugin.xml        private\20022f35\import\widgetregistry\2002C35A\calendarwidgetplugin.xml
+
+data=DATAZ_\resource\gestures.xml    \resource\gestures.xml
+data=ZSYSTEM\Install\calendarwidget_stub.sis               \system\install\calendarwidget_stub.sis
+
+//#endif //FF_CALENDAR_WIDGET
+
+#endif // CALENDARPLUGIN_IBY
+
+// End of file -- Don't remove this.

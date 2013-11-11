@@ -1,0 +1,36 @@
+// Copyright (c) 1999-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// t_impc01.mmp
+//
+
+TARGET			t_impc01.exe
+TARGETTYPE		exe
+
+CAPABILITY All -TCB
+UID				0x1000007A 0x10274059
+SOURCEPATH		../src
+SOURCE			T_impc01.cpp
+USERINCLUDE   	../../inc ../inc 
+USERINCLUDE		../../../../pop3andsmtpmtm/servermtmutils/inc
+USERINCLUDE		../../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/base/inc
+USERINCLUDE		../../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/email/inc
+USERINCLUDE		../../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/server/inc
+USERINCLUDE		../../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/sms/inc
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+LIBRARY			euser.lib msgs.lib efsrv.lib imcm.lib 
+LIBRARY			emailtestutils.lib msvtestutils.lib	bafl.lib
+EPOCSTACKSIZE	0x4000
+VENDORID 0x70000001
+
+SMPSAFE

@@ -1,0 +1,494 @@
+EXPORTS
+	NewL__14CPop3ClientMtmR17CRegisteredMtmDllR11CMsvSession @ 1 NONAME R3UNUSED ; CPop3ClientMtm::NewL(CRegisteredMtmDll &, CMsvSession &)
+	NewL__14CSmtpClientMtmR17CRegisteredMtmDllR11CMsvSession @ 2 NONAME R3UNUSED ; CSmtpClientMtm::NewL(CRegisteredMtmDll &, CMsvSession &)
+	NewL__15CImap4ClientMtmR17CRegisteredMtmDllR11CMsvSession @ 3 NONAME R3UNUSED ; CImap4ClientMtm::NewL(CRegisteredMtmDll &, CMsvSession &)
+	__vc__13CImQueuedListi @ 4 NONAME R3UNUSED ; CImQueuedList::operator[](int)
+	AcknowledgeReceipts__C16CImImap4Settings @ 5 NONAME R3UNUSED ; CImImap4Settings::AcknowledgeReceipts(void) const
+	AddAttachmentL__15CImEmailMessagelRC7TDesC16R14TRequestStatus @ 6 NONAME ; CImEmailMessage::AddAttachmentL(long, TDesC16 const &, TRequestStatus &)
+	AddEncodingInfoL__9CImHeaderR21TImHeaderEncodingInfo @ 7 NONAME R3UNUSED ; CImHeader::AddEncodingInfoL(TImHeaderEncodingInfo &)
+	AddMessageAsAttachmentL__15CImEmailMessagellR14TRequestStatus @ 8 NONAME ; CImEmailMessage::AddMessageAsAttachmentL(long, long, TRequestStatus &)
+	AddRelatedPartL__15CImEmailMessagelRC7TDesC16R14TRequestStatuslRC6TDesC8 @ 9 NONAME ; CImEmailMessage::AddRelatedPartL(long, TDesC16 const &, TRequestStatus &, long, TDesC8 const &)
+	AddSignatureToEmail__C15CImSmtpSettings @ 10 NONAME R3UNUSED ; CImSmtpSettings::AddSignatureToEmail(void) const
+	AddVCardToEmail__C15CImSmtpSettings @ 11 NONAME R3UNUSED ; CImSmtpSettings::AddVCardToEmail(void) const
+	Apop__C15CImPop3Settings @ 12 NONAME R3UNUSED ; CImPop3Settings::Apop(void) const
+	AppendComment__6CImLogRC6TDesC8 @ 13 NONAME R3UNUSED ; CImLog::AppendComment(TDesC8 const &)
+	AppendError__6CImLogRC6TDesC8i @ 14 NONAME R3UNUSED ; CImLog::AppendError(TDesC8 const &, int)
+	AppendL__13CImQueuedListR16TQueuedOperation @ 15 NONAME R3UNUSED ; CImQueuedList::AppendL(TQueuedOperation &)
+	AppendOperationL__13CImQueuedListRC19CImOffLineOperation @ 16 NONAME R3UNUSED ; CImQueuedList::AppendOperationL(CImOffLineOperation const &)
+	AppendOut__6CImLogRC6TDesC8 @ 17 NONAME R3UNUSED ; CImLog::AppendOut(TDesC8 const &)
+	AppendResponse__6CImLogRC6TDesC8 @ 18 NONAME R3UNUSED ; CImLog::AppendResponse(TDesC8 const &)
+	AttachmentSelection__C15CImEmailMessage @ 19 NONAME R3UNUSED ; CImEmailMessage::AttachmentSelection(void) const
+	AutoSendOnConnect__C15CImPop3Settings @ 20 NONAME R3UNUSED ; CImPop3Settings::AutoSendOnConnect(void) const
+	AutoSendOnConnect__C16CImImap4Settings @ 21 NONAME R3UNUSED ; CImImap4Settings::AutoSendOnConnect(void) const
+	BodyEncoding__C15CImSmtpSettings @ 22 NONAME R3UNUSED ; CImSmtpSettings::BodyEncoding(void) const
+	BodyEncoding__C9CImHeader @ 23 NONAME R3UNUSED ; CImHeader::BodyEncoding(void) const
+	Charset__C9CImHeader @ 24 NONAME R3UNUSED ; CImHeader::Charset(void) const
+	CloseFile__17TImAttachmentFile @ 25 NONAME R3UNUSED ; TImAttachmentFile::CloseFile(void)
+	ConstructL__15CImCacheManager @ 26 NONAME R3UNUSED ; CImCacheManager::ConstructL(void)
+	ConstructL__24CImOffLineOperationArray @ 27 NONAME R3UNUSED ; CImOffLineOperationArray::ConstructL(void)
+	ContentBase__C13CImMimeHeader @ 28 NONAME R3UNUSED ; CImMimeHeader::ContentBase(void) const
+	ContentDescription__C13CImMimeHeader @ 29 NONAME R3UNUSED ; CImMimeHeader::ContentDescription(void) const
+	ContentDisposition__C13CImMimeHeader @ 30 NONAME R3UNUSED ; CImMimeHeader::ContentDisposition(void) const
+	ContentID__C13CImMimeHeader @ 31 NONAME R3UNUSED ; CImMimeHeader::ContentID(void) const
+	ContentLocation__C13CImMimeHeader @ 32 NONAME R3UNUSED ; CImMimeHeader::ContentLocation(void) const
+	ContentSubType__C13CImMimeHeader @ 33 NONAME R3UNUSED ; CImMimeHeader::ContentSubType(void) const
+	ContentTransferEncoding__C13CImMimeHeader @ 34 NONAME R3UNUSED ; CImMimeHeader::ContentTransferEncoding(void) const
+	ContentTransferEncoding__C13CImMimeHeaderR5TDes8 @ 35 NONAME R3UNUSED ; CImMimeHeader::ContentTransferEncoding(TDes8 &) const
+	ContentType__C13CImMimeHeader @ 36 NONAME R3UNUSED ; CImMimeHeader::ContentType(void) const
+	ConvertFromOurCharsetL__18CImConvertCharconvRC7TDesC16R5TDes8RiT3 @ 37 NONAME ; CImConvertCharconv::ConvertFromOurCharsetL(TDesC16 const &, TDes8 &, int &, int &)
+	ConvertToOurCharsetL__18CImConvertCharconvRC6TDesC8R6TDes16RiT3 @ 38 NONAME ; CImConvertCharconv::ConvertToOurCharsetL(TDesC8 const &, TDes16 &, int &, int &)
+	CopyL__15CImPop3SettingsRC15CImPop3Settings @ 39 NONAME R3UNUSED ; CImPop3Settings::CopyL(CImPop3Settings const &)
+	CopyL__15CImSmtpSettingsRC15CImSmtpSettings @ 40 NONAME R3UNUSED ; CImSmtpSettings::CopyL(CImSmtpSettings const &)
+	CopyL__16CImImap4SettingsRC16CImImap4Settings @ 41 NONAME R3UNUSED ; CImImap4Settings::CopyL(CImImap4Settings const &)
+	CopyL__16CImSSmtpSettingsRC16CImSSmtpSettings @ 42 NONAME R3UNUSED ; CImSSmtpSettings::CopyL(CImSSmtpSettings const &)
+	CopyL__16TQueuedOperationRC16TQueuedOperation @ 43 NONAME R3UNUSED ; TQueuedOperation::CopyL(TQueuedOperation const &)
+	CopyL__19CImOffLineOperationRC19CImOffLineOperation @ 44 NONAME R3UNUSED ; CImOffLineOperation::CopyL(CImOffLineOperation const &)
+	CopyL__20CImBaseEmailSettingsRC20CImBaseEmailSettings @ 45 NONAME R3UNUSED ; CImBaseEmailSettings::CopyL(CImBaseEmailSettings const &)
+	CountOperations__C13CImQueuedList @ 46 NONAME R3UNUSED ; CImQueuedList::CountOperations(void) const
+	Count__17CImMessageCounter @ 47 NONAME R3UNUSED ; CImMessageCounter::Count(void)
+	CreateAttachmentL__14CPop3ClientMtmRlRt4TBuf1i256 @ 48 NONAME R3UNUSED ; CPop3ClientMtm::CreateAttachmentL(long &, TBuf<256> &)
+	CreateAttachmentL__14CSmtpClientMtmRlRt4TBuf1i256 @ 49 NONAME R3UNUSED ; CSmtpClientMtm::CreateAttachmentL(long &, TBuf<256> &)
+	CreateAttachmentL__15CImap4ClientMtmRlRt4TBuf1i256 @ 50 NONAME R3UNUSED ; CImap4ClientMtm::CreateAttachmentL(long &, TBuf<256> &)
+	CreateFile__17TImAttachmentFileRC7TDesC16T1 @ 51 NONAME R3UNUSED ; TImAttachmentFile::CreateFile(TDesC16 const &, TDesC16 const &)
+	CreateForwardAsAttachmentL__17CImEmailOperationR14TRequestStatusR11CMsvSessionllUiRCUiG4TUid @ 52 NONAME ; CImEmailOperation::CreateForwardAsAttachmentL(TRequestStatus &, CMsvSession &, long, long, unsigned int, unsigned int const &, TUid)
+	CreateForwardL__17CImEmailOperationR14TRequestStatusR11CMsvSessionllUiRC7TDesC16RCUiG4TUid @ 53 NONAME ; CImEmailOperation::CreateForwardL(TRequestStatus &, CMsvSession &, long, long, unsigned int, TDesC16 const &, unsigned int const &, TUid)
+	CreateForwardL__17CImEmailOperationR14TRequestStatusR11CMsvSessionllUiRCUiG4TUid @ 54 NONAME ; CImEmailOperation::CreateForwardL(TRequestStatus &, CMsvSession &, long, long, unsigned int, unsigned int const &, TUid)
+	CreateForwardL__9CImHeaderR9CImHeaderR7TDesC16 @ 55 NONAME R3UNUSED ; CImHeader::CreateForwardL(CImHeader &, TDesC16 &)
+	CreateMessageL__14CPop3ClientMtml @ 56 NONAME R3UNUSED ; CPop3ClientMtm::CreateMessageL(long)
+	CreateMessageL__14CSmtpClientMtml @ 57 NONAME R3UNUSED ; CSmtpClientMtm::CreateMessageL(long)
+	CreateMessageL__15CImap4ClientMtml @ 58 NONAME R3UNUSED ; CImap4ClientMtm::CreateMessageL(long)
+	CreateNewL__17CImEmailOperationR14TRequestStatusR11CMsvSessionlUiRCUiG4TUid @ 59 NONAME ; CImEmailOperation::CreateNewL(TRequestStatus &, CMsvSession &, long, unsigned int, unsigned int const &, TUid)
+	CreateReceiptL__17CImEmailOperationR14TRequestStatusR11CMsvSessionllUiRC7TDesC16RCUiG4TUid @ 60 NONAME ; CImEmailOperation::CreateReceiptL(TRequestStatus &, CMsvSession &, long, long, unsigned int, TDesC16 const &, unsigned int const &, TUid)
+	CreateReceiptL__17CImEmailOperationR14TRequestStatusR11CMsvSessionllUiRCUiG4TUid @ 61 NONAME ; CImEmailOperation::CreateReceiptL(TRequestStatus &, CMsvSession &, long, long, unsigned int, unsigned int const &, TUid)
+	CreateReceiptL__9CImHeaderR9CImHeaderR7TDesC16 @ 62 NONAME R3UNUSED ; CImHeader::CreateReceiptL(CImHeader &, TDesC16 &)
+	CreateReplyL__17CImEmailOperationR14TRequestStatusR11CMsvSessionllUiRC7TDesC16RCUiG4TUid @ 63 NONAME ; CImEmailOperation::CreateReplyL(TRequestStatus &, CMsvSession &, long, long, unsigned int, TDesC16 const &, unsigned int const &, TUid)
+	CreateReplyL__17CImEmailOperationR14TRequestStatusR11CMsvSessionllUiRCUiG4TUid @ 64 NONAME ; CImEmailOperation::CreateReplyL(TRequestStatus &, CMsvSession &, long, long, unsigned int, unsigned int const &, TUid)
+	CreateReplyL__9CImHeaderR9CImHeaderQ29CImHeader8TReplyToR7TDesC16 @ 65 NONAME ; CImHeader::CreateReplyL(CImHeader &, CImHeader::TReplyTo, TDesC16 &)
+	DataSize__9CImHeader @ 66 NONAME R3UNUSED ; CImHeader::DataSize(void)
+	DecrementSendTotal__15TImSmtpProgress @ 67 NONAME R3UNUSED ; TImSmtpProgress::DecrementSendTotal(void)
+	DefaultMsgCharSet__C15CImSmtpSettings @ 68 NONAME R3UNUSED ; CImSmtpSettings::DefaultMsgCharSet(void) const
+	DeleteAttachedMessageL__15CImEmailMessagellR14TRequestStatus @ 69 NONAME ; CImEmailMessage::DeleteAttachedMessageL(long, long, TRequestStatus &)
+	DeleteAttachmentL__14CPop3ClientMtmll @ 70 NONAME R3UNUSED ; CPop3ClientMtm::DeleteAttachmentL(long, long)
+	DeleteAttachmentL__14CSmtpClientMtmll @ 71 NONAME R3UNUSED ; CSmtpClientMtm::DeleteAttachmentL(long, long)
+	DeleteAttachmentL__15CImEmailMessagellR14TRequestStatus @ 72 NONAME ; CImEmailMessage::DeleteAttachmentL(long, long, TRequestStatus &)
+	DeleteAttachmentL__15CImap4ClientMtmll @ 73 NONAME R3UNUSED ; CImap4ClientMtm::DeleteAttachmentL(long, long)
+	DeleteAttachment__17TImAttachmentFileRC7TDesC16T1 @ 74 NONAME R3UNUSED ; TImAttachmentFile::DeleteAttachment(TDesC16 const &, TDesC16 const &)
+	DeleteBuffer__19CImOffLineOperation @ 75 NONAME R3UNUSED ; CImOffLineOperation::DeleteBuffer(void)
+	DeleteEmailsWhenDisconnecting__C15CImPop3Settings @ 76 NONAME R3UNUSED ; CImPop3Settings::DeleteEmailsWhenDisconnecting(void) const
+	DeleteEmailsWhenDisconnecting__C16CImImap4Settings @ 77 NONAME R3UNUSED ; CImImap4Settings::DeleteEmailsWhenDisconnecting(void) const
+	DeleteL__21CImOperationQueueListi @ 78 NONAME R3UNUSED ; CImOperationQueueList::DeleteL(int)
+	Delete__13CImQueuedListi @ 79 NONAME R3UNUSED ; CImQueuedList::Delete(int)
+	DetachMtmParameters__19CImOffLineOperation @ 80 NONAME R3UNUSED ; CImOffLineOperation::DetachMtmParameters(void)
+	DisconnectedOperation__C14TMsvEmailEntry @ 81 NONAME R3UNUSED ; TMsvEmailEntry::DisconnectedOperation(void) const
+	DisconnectedUserMode__C15CImPop3Settings @ 82 NONAME R3UNUSED ; CImPop3Settings::DisconnectedUserMode(void) const
+	DisconnectedUserMode__C16CImImap4Settings @ 83 NONAME R3UNUSED ; CImImap4Settings::DisconnectedUserMode(void) const
+	DoCancel__15CImCacheManager @ 84 NONAME R3UNUSED ; CImCacheManager::DoCancel(void)
+	EmailAddress__C15CImSmtpSettings @ 85 NONAME R3UNUSED ; CImSmtpSettings::EmailAddress(void) const
+	EmailAddress__C16CImSSmtpSettings @ 86 NONAME R3UNUSED ; CImSSmtpSettings::EmailAddress(void) const
+	EmailAlias__C15CImSmtpSettings @ 87 NONAME R3UNUSED ; CImSmtpSettings::EmailAlias(void) const
+	Equals__C19CImOffLineOperationRC19CImOffLineOperation @ 88 NONAME R3UNUSED ; CImOffLineOperation::Equals(CImOffLineOperation const &) const
+	Error__C15TImSmtpProgress @ 89 NONAME R3UNUSED ; TImSmtpProgress::Error(void) const
+	ExpungeDeletedOperationsL__21CImOperationQueueList @ 90 NONAME R3UNUSED ; CImOperationQueueList::ExpungeDeletedOperationsL(void)
+	ExternalizeL__C13CImMimeHeaderR15RMsvWriteStream @ 91 NONAME R3UNUSED ; CImMimeHeader::ExternalizeL(RMsvWriteStream &) const
+	ExternalizeL__C15CImPop3SettingsR15RMsvWriteStream @ 92 NONAME R3UNUSED ; CImPop3Settings::ExternalizeL(RMsvWriteStream &) const
+	ExternalizeL__C15CImSmtpSettingsR15RMsvWriteStream @ 93 NONAME R3UNUSED ; CImSmtpSettings::ExternalizeL(RMsvWriteStream &) const
+	ExternalizeL__C16CImImap4SettingsR15RMsvWriteStream @ 94 NONAME R3UNUSED ; CImImap4Settings::ExternalizeL(RMsvWriteStream &) const
+	ExternalizeL__C16CImSSmtpSettingsR15RMsvWriteStream @ 95 NONAME R3UNUSED ; CImSSmtpSettings::ExternalizeL(RMsvWriteStream &) const
+	ExternalizeL__C19CImOffLineOperationR15RMsvWriteStream @ 96 NONAME R3UNUSED ; CImOffLineOperation::ExternalizeL(RMsvWriteStream &) const
+	ExternalizeL__C20CImBaseEmailSettingsR15RMsvWriteStream @ 97 NONAME R3UNUSED ; CImBaseEmailSettings::ExternalizeL(RMsvWriteStream &) const
+	ExternalizeL__C20CImOffLineArrayStoreR15RMsvWriteStream @ 98 NONAME R3UNUSED ; CImOffLineArrayStore::ExternalizeL(RMsvWriteStream &) const
+	ExternalizeL__C21TImHeaderEncodingInfoR12RWriteStream @ 99 NONAME R3UNUSED ; TImHeaderEncodingInfo::ExternalizeL(RWriteStream &) const
+	ExternalizeL__C9CImHeaderR15RMsvWriteStream @ 100 NONAME R3UNUSED ; CImHeader::ExternalizeL(RMsvWriteStream &) const
+	FailedToSend__C15TImSmtpProgress @ 101 NONAME R3UNUSED ; TImSmtpProgress::FailedToSend(void) const
+	FinalProgress__14CImPOP3GetMail @ 102 NONAME R3UNUSED ; CImPOP3GetMail::FinalProgress(void)
+	FinalProgress__17CImEmailOperation @ 103 NONAME R3UNUSED ; CImEmailOperation::FinalProgress(void)
+	FindFirstHTMLPageL__15CImEmailMessagelR14TRequestStatus @ 104 NONAME R3UNUSED ; CImEmailMessage::FindFirstHTMLPageL(long, TRequestStatus &)
+	FindFirstL__9CImFinderlR14TRequestStatus @ 105 NONAME R3UNUSED ; CImFinder::FindFirstL(long, TRequestStatus &)
+	FindInBodyL__17CImClientMTMUtilsRC7TDesC16R9CRichTextUi @ 106 NONAME ; CImClientMTMUtils::FindInBodyL(TDesC16 const &, CRichText &, unsigned int)
+	FindInHeaderL__17CImClientMTMUtilsRC7TDesC16R9CImHeaderUi @ 107 NONAME ; CImClientMTMUtils::FindInHeaderL(TDesC16 const &, CImHeader &, unsigned int)
+	FindL__17CImClientMTMUtilsRC7TDesC16R9CRichTextR9CImHeaderUiRUi @ 108 NONAME ; CImClientMTMUtils::FindL(TDesC16 const &, CRichText &, CImHeader &, unsigned int, unsigned int &)
+	FindNextL__9CImFinderR14TRequestStatus @ 109 NONAME R3UNUSED ; CImFinder::FindNextL(TRequestStatus &)
+	FindUniversalResourceIdentifierL__15CImEmailMessagelRC7TDesC16T2R14TRequestStatus @ 110 NONAME ; CImEmailMessage::FindUniversalResourceIdentifierL(long, TDesC16 const &, TDesC16 const &, TRequestStatus &)
+	FolderPath__C16CImImap4Settings @ 111 NONAME R3UNUSED ; CImImap4Settings::FolderPath(void) const
+	From__C9CImHeader @ 112 NONAME R3UNUSED ; CImHeader::From(void) const
+	GetAttachmentsListL__15CImEmailMessageR14TRequestStatuslQ215CImEmailMessage17TImAttachmentTypeQ215CImEmailMessage17TImEmailEntryType @ 113 NONAME ; CImEmailMessage::GetAttachmentsListL(TRequestStatus &, long, CImEmailMessage::TImAttachmentType, CImEmailMessage::TImEmailEntryType)
+	GetBodyTextL__15CImEmailMessageR14TRequestStatuslQ215CImEmailMessage17TImEmailEntryTypeR9CRichTextR16CParaFormatLayerR16CCharFormatLayer @ 114 NONAME ; CImEmailMessage::GetBodyTextL(TRequestStatus &, long, CImEmailMessage::TImEmailEntryType, CRichText &, CParaFormatLayer &, CCharFormatLayer &)
+	GetContentTypeValue__C13CImMimeHeaderRC6TDesC8 @ 115 NONAME R3UNUSED ; CImMimeHeader::GetContentTypeValue(TDesC8 const &) const
+	GetIMAP4Flags__14TMsvEmailEntryRiN61 @ 116 NONAME ; TMsvEmailEntry::GetIMAP4Flags(int &, int &, int &, int &, int &, int &, int &)
+	GetMailL__14CImPOP3GetMailR14CPop3ClientMtmR14TRequestStatusRC18CMsvEntrySelectionR5TDes8Q214CImPOP3GetMail18TImPOP3GetMailType @ 117 NONAME ; CImPOP3GetMail::GetMailL(CPop3ClientMtm &, TRequestStatus &, CMsvEntrySelection const &, TDes8 &, CImPOP3GetMail::TImPOP3GetMailType)
+	GetMailL__15CImImap4GetMailiR15CImap4ClientMtmRC18CMsvEntrySelectionR5TDes8R14TRequestStatus @ 118 NONAME ; CImImap4GetMail::GetMailL(int, CImap4ClientMtm &, CMsvEntrySelection const &, TDes8 &, TRequestStatus &)
+	GetMailOptions__C15CImPop3Settings @ 119 NONAME R3UNUSED ; CImPop3Settings::GetMailOptions(void) const
+	GetMailOptions__C16CImImap4Settings @ 120 NONAME R3UNUSED ; CImImap4Settings::GetMailOptions(void) const
+	GetMessageDigestEntriesL__15CImEmailMessageR14TRequestStatusl @ 121 NONAME R3UNUSED ; CImEmailMessage::GetMessageDigestEntriesL(TRequestStatus &, long)
+	GetMimeCharsetTextStringL__C18CImConvertCharconvRCUi @ 122 NONAME R3UNUSED ; CImConvertCharconv::GetMimeCharsetTextStringL(unsigned int const &) const
+	GetMimeCharsetUidL__C18CImConvertCharconvRC6TDesC8 @ 123 NONAME R3UNUSED ; CImConvertCharconv::GetMimeCharsetUidL(TDesC8 const &) const
+	GetUniversalResourceIdentifierL__C15CImEmailMessageRlRi @ 124 NONAME R3UNUSED ; CImEmailMessage::GetUniversalResourceIdentifierL(long &, int &) const
+	GetValidAlias__15TImMessageFieldRC7TDesC16 @ 125 NONAME R3UNUSED ; TImMessageField::GetValidAlias(TDesC16 const &)
+	GetValidAlias__15TImMessageFieldRC7TDesC16Ri @ 126 NONAME R3UNUSED ; TImMessageField::GetValidAlias(TDesC16 const &, int &)
+	GetValidComment__15TImMessageFieldRC7TDesC16 @ 127 NONAME R3UNUSED ; TImMessageField::GetValidComment(TDesC16 const &)
+	GetValidComment__15TImMessageFieldRC7TDesC16Ri @ 128 NONAME R3UNUSED ; TImMessageField::GetValidComment(TDesC16 const &, int &)
+	GetValidInternetEmailAddressFromString__15TImMessageFieldRC7TDesC16 @ 129 NONAME R3UNUSED ; TImMessageField::GetValidInternetEmailAddressFromString(TDesC16 const &)
+	GetValidInternetEmailAddressFromString__15TImMessageFieldRC7TDesC16Ri @ 130 NONAME R3UNUSED ; TImMessageField::GetValidInternetEmailAddressFromString(TDesC16 const &, int &)
+	GetValidInternetEmailAddressFromString__15TImMessageFieldRC7TDesC16RiN22 @ 131 NONAME ; TImMessageField::GetValidInternetEmailAddressFromString(TDesC16 const &, int &, int &, int &)
+	GetValidInternetEmailAddressFromString__15TImMessageFieldRC7TDesC16RiT2 @ 132 NONAME ; TImMessageField::GetValidInternetEmailAddressFromString(TDesC16 const &, int &, int &)
+	ImMsgId__C9CImHeader @ 133 NONAME R3UNUSED ; CImHeader::ImMsgId(void) const
+	Imap4Settings__C15CImap4ClientMtm @ 134 NONAME R3UNUSED ; CImap4ClientMtm::Imap4Settings(void) const
+	InReplyTo__C9CImHeader @ 135 NONAME R3UNUSED ; CImHeader::InReplyTo(void) const
+	InitialiseTotal__15TImSmtpProgressRCi @ 136 NONAME R3UNUSED ; TImSmtpProgress::InitialiseTotal(int const &)
+	InsertOperationL__24CImOffLineOperationArrayR19CImOffLineOperationi @ 137 NONAME R3UNUSED ; CImOffLineOperationArray::InsertOperationL(CImOffLineOperation &, int)
+	InternalizeL__13CImMimeHeaderR14RMsvReadStream @ 138 NONAME R3UNUSED ; CImMimeHeader::InternalizeL(RMsvReadStream &)
+	InternalizeL__15CImPop3SettingsR14RMsvReadStream @ 139 NONAME R3UNUSED ; CImPop3Settings::InternalizeL(RMsvReadStream &)
+	InternalizeL__15CImSmtpSettingsR14RMsvReadStream @ 140 NONAME R3UNUSED ; CImSmtpSettings::InternalizeL(RMsvReadStream &)
+	InternalizeL__16CImImap4SettingsR14RMsvReadStream @ 141 NONAME R3UNUSED ; CImImap4Settings::InternalizeL(RMsvReadStream &)
+	InternalizeL__16CImSSmtpSettingsR14RMsvReadStream @ 142 NONAME R3UNUSED ; CImSSmtpSettings::InternalizeL(RMsvReadStream &)
+	InternalizeL__19CImOffLineOperationR14RMsvReadStream @ 143 NONAME R3UNUSED ; CImOffLineOperation::InternalizeL(RMsvReadStream &)
+	InternalizeL__20CImBaseEmailSettingsR14RMsvReadStream @ 144 NONAME R3UNUSED ; CImBaseEmailSettings::InternalizeL(RMsvReadStream &)
+	InternalizeL__20CImOffLineArrayStoreR14RMsvReadStream @ 145 NONAME R3UNUSED ; CImOffLineArrayStore::InternalizeL(RMsvReadStream &)
+	InternalizeL__21TImHeaderEncodingInfoR11RReadStream @ 146 NONAME R3UNUSED ; TImHeaderEncodingInfo::InternalizeL(RReadStream &)
+	InternalizeL__9CImHeaderR14RMsvReadStream @ 147 NONAME R3UNUSED ; CImHeader::InternalizeL(RMsvReadStream &)
+	LoginName__C15CImPop3Settings @ 148 NONAME R3UNUSED ; CImPop3Settings::LoginName(void) const
+	LoginName__C16CImImap4Settings @ 149 NONAME R3UNUSED ; CImImap4Settings::LoginName(void) const
+	MakeDir__17TImAttachmentFileRC7TDesC16 @ 150 NONAME R3UNUSED ; TImAttachmentFile::MakeDir(TDesC16 const &)
+	MaxEmailSize__C15CImPop3Settings @ 151 NONAME R3UNUSED ; CImPop3Settings::MaxEmailSize(void) const
+	MaxEmailSize__C16CImImap4Settings @ 152 NONAME R3UNUSED ; CImImap4Settings::MaxEmailSize(void) const
+	MessageFolderType__C14TMsvEmailEntry @ 153 NONAME R3UNUSED ; TMsvEmailEntry::MessageFolderType(void) const
+	MimeCharset__C13CImMimeHeader @ 154 NONAME R3UNUSED ; CImMimeHeader::MimeCharset(void) const
+	MsgNo__C15TImSmtpProgress @ 155 NONAME R3UNUSED ; TImSmtpProgress::MsgNo(void) const
+	NewLC__13CImMimeHeader @ 156 NONAME R3UNUSED ; CImMimeHeader::NewLC(void)
+	NewLC__14CImEntryFinderR9CMsvEntry @ 157 NONAME R3UNUSED ; CImEntryFinder::NewLC(CMsvEntry &)
+	NewLC__15CImEmailMessageR9CMsvEntry @ 158 NONAME R3UNUSED ; CImEmailMessage::NewLC(CMsvEntry &)
+	NewLC__15CImPruneMessageR9CMsvEntryR3RFs @ 159 NONAME R3UNUSED ; CImPruneMessage::NewLC(CMsvEntry &, RFs &)
+	NewLC__16CImMessageFinderR9CMsvEntry @ 160 NONAME R3UNUSED ; CImMessageFinder::NewLC(CMsvEntry &)
+	NewLC__17CImMessageCounterR9CMsvEntry @ 161 NONAME R3UNUSED ; CImMessageCounter::NewLC(CMsvEntry &)
+	NewLC__9CImHeader @ 162 NONAME R3UNUSED ; CImHeader::NewLC(void)
+	NewL__13CImMimeHeader @ 163 NONAME R3UNUSED ; CImMimeHeader::NewL(void)
+	NewL__13CImQueuedList @ 164 NONAME R3UNUSED ; CImQueuedList::NewL(void)
+	NewL__14CImEntryFinderR9CMsvEntry @ 165 NONAME R3UNUSED ; CImEntryFinder::NewL(CMsvEntry &)
+	NewL__15CImEmailMessageR9CMsvEntry @ 166 NONAME R3UNUSED ; CImEmailMessage::NewL(CMsvEntry &)
+	NewL__15CImPruneMessageR9CMsvEntryR3RFs @ 167 NONAME R3UNUSED ; CImPruneMessage::NewL(CMsvEntry &, RFs &)
+	NewL__16CImMessageFinderR9CMsvEntry @ 168 NONAME R3UNUSED ; CImMessageFinder::NewL(CMsvEntry &)
+	NewL__16TQueuedOperationliRC19CImOffLineOperation @ 169 NONAME R3UNUSED ; TQueuedOperation::NewL(long, int, CImOffLineOperation const &)
+	NewL__17CImClientMTMUtils @ 170 NONAME R3UNUSED ; CImClientMTMUtils::NewL(void)
+	NewL__17CImMessageCounterR9CMsvEntry @ 171 NONAME R3UNUSED ; CImMessageCounter::NewL(CMsvEntry &)
+	NewL__18CImConvertCharconvR25CCnvCharacterSetConverterR3RFs @ 172 NONAME R3UNUSED ; CImConvertCharconv::NewL(CCnvCharacterSetConverter &, RFs &)
+	NewL__21CImOperationQueueListR9CMsvEntryP23MImUndoOffLineOperation @ 173 NONAME R3UNUSED ; CImOperationQueueList::NewL(CMsvEntry &, MImUndoOffLineOperation *)
+	NewL__24CImOffLineOperationArray @ 174 NONAME R3UNUSED ; CImOffLineOperationArray::NewL(void)
+	NewL__6CImLogRC7TDesC1614TImLogOpenMode @ 175 NONAME R3UNUSED ; CImLog::NewL(TDesC16 const &, TImLogOpenMode)
+	NewL__6CImLogi @ 176 NONAME R3UNUSED ; CImLog::NewL(int)
+	NotSent__C15TImSmtpProgress @ 177 NONAME R3UNUSED ; TImSmtpProgress::NotSent(void) const
+	OpenFile__17TImAttachmentFileRC7TDesC16T1 @ 178 NONAME R3UNUSED ; TImAttachmentFile::OpenFile(TDesC16 const &, TDesC16 const &)
+	Operation__C13CImQueuedListi @ 179 NONAME R3UNUSED ; CImQueuedList::Operation(int) const
+	ParseDateField__18TImRfc822DateFieldRC6TDesC8R5TTime @ 180 NONAME R3UNUSED ; TImRfc822DateField::ParseDateField(TDesC8 const &, TTime &)
+	Password__C15CImPop3Settings @ 181 NONAME R3UNUSED ; CImPop3Settings::Password(void) const
+	Password__C16CImImap4Settings @ 182 NONAME R3UNUSED ; CImImap4Settings::Password(void) const
+	PathSeparator__C16CImImap4Settings @ 183 NONAME R3UNUSED ; CImImap4Settings::PathSeparator(void) const
+	PhoneNumber__C16CImSSmtpSettings @ 184 NONAME R3UNUSED ; CImSSmtpSettings::PhoneNumber(void) const
+	Port__C20CImBaseEmailSettings @ 185 NONAME R3UNUSED ; CImBaseEmailSettings::Port(void) const
+	PrepareToConvertToFromOurCharsetL__18CImConvertCharconvUi @ 186 NONAME R3UNUSED ; CImConvertCharconv::PrepareToConvertToFromOurCharsetL(unsigned int)
+	ProgressL__15CImCacheManager @ 187 NONAME R3UNUSED ; CImCacheManager::ProgressL(void)
+	ProgressL__C15CImEmailMessage @ 188 NONAME R3UNUSED ; CImEmailMessage::ProgressL(void) const
+	QueueListL__15CImap4ClientMtmR9CMsvEntry @ 189 NONAME R3UNUSED ; CImap4ClientMtm::QueueListL(CMsvEntry &)
+	ReadFile__17TImAttachmentFileR5TDes8i @ 190 NONAME R3UNUSED ; TImAttachmentFile::ReadFile(TDes8 &, int)
+	ReceiptAddress__C15CImSmtpSettings @ 191 NONAME R3UNUSED ; CImSmtpSettings::ReceiptAddress(void) const
+	ReceiptAddress__C9CImHeader @ 192 NONAME R3UNUSED ; CImHeader::ReceiptAddress(void) const
+	RelativePath__C13CImMimeHeader @ 193 NONAME R3UNUSED ; CImMimeHeader::RelativePath(void) const
+	ReplyToAddress__C15CImSmtpSettings @ 194 NONAME R3UNUSED ; CImSmtpSettings::ReplyToAddress(void) const
+	ReplyTo__C9CImHeader @ 195 NONAME R3UNUSED ; CImHeader::ReplyTo(void) const
+	RequestReceipts__C15CImSmtpSettings @ 196 NONAME R3UNUSED ; CImSmtpSettings::RequestReceipts(void) const
+	ResentFrom__C9CImHeader @ 197 NONAME R3UNUSED ; CImHeader::ResentFrom(void) const
+	ResentMsgId__C9CImHeader @ 198 NONAME R3UNUSED ; CImHeader::ResentMsgId(void) const
+	ResetLineCounter__13CImQueuedList @ 199 NONAME R3UNUSED ; CImQueuedList::ResetLineCounter(void)
+	Reset__13CImMimeHeader @ 200 NONAME R3UNUSED ; CImMimeHeader::Reset(void)
+	Reset__13CImQueuedList @ 201 NONAME R3UNUSED ; CImQueuedList::Reset(void)
+	Reset__15CImPop3Settings @ 202 NONAME R3UNUSED ; CImPop3Settings::Reset(void)
+	Reset__15CImSmtpSettings @ 203 NONAME R3UNUSED ; CImSmtpSettings::Reset(void)
+	Reset__16CImImap4Settings @ 204 NONAME R3UNUSED ; CImImap4Settings::Reset(void)
+	Reset__16CImSSmtpSettings @ 205 NONAME R3UNUSED ; CImSSmtpSettings::Reset(void)
+	Reset__20CImBaseEmailSettings @ 206 NONAME R3UNUSED ; CImBaseEmailSettings::Reset(void)
+	Reset__9CImHeader @ 207 NONAME R3UNUSED ; CImHeader::Reset(void)
+	RestoreL__13CImMimeHeaderR9CMsvStore @ 208 NONAME R3UNUSED ; CImMimeHeader::RestoreL(CMsvStore &)
+	RestoreL__15CImPop3SettingsR9CMsvStore @ 209 NONAME R3UNUSED ; CImPop3Settings::RestoreL(CMsvStore &)
+	RestoreL__15CImSmtpSettingsR9CMsvStore @ 210 NONAME R3UNUSED ; CImSmtpSettings::RestoreL(CMsvStore &)
+	RestoreL__16CImImap4SettingsR9CMsvStore @ 211 NONAME R3UNUSED ; CImImap4Settings::RestoreL(CMsvStore &)
+	RestoreL__16CImSSmtpSettingsR9CMsvStore @ 212 NONAME R3UNUSED ; CImSSmtpSettings::RestoreL(CMsvStore &)
+	RestoreL__20CImBaseEmailSettingsR9CMsvStore @ 213 NONAME R3UNUSED ; CImBaseEmailSettings::RestoreL(CMsvStore &)
+	RestoreL__20CImOffLineArrayStoreRC9CMsvStore @ 214 NONAME R3UNUSED ; CImOffLineArrayStore::RestoreL(CMsvStore const &)
+	RestoreL__9CImHeaderR9CMsvStore @ 215 NONAME R3UNUSED ; CImHeader::RestoreL(CMsvStore &)
+	RestoreSettingsL__14CPop3ClientMtm @ 216 NONAME R3UNUSED ; CPop3ClientMtm::RestoreSettingsL(void)
+	RestoreSettingsL__14CSmtpClientMtm @ 217 NONAME R3UNUSED ; CSmtpClientMtm::RestoreSettingsL(void)
+	RestoreSettingsL__15CImap4ClientMtm @ 218 NONAME R3UNUSED ; CImap4ClientMtm::RestoreSettingsL(void)
+	RunL__15CImCacheManager @ 219 NONAME R3UNUSED ; CImCacheManager::RunL(void)
+	SecureSockets__C20CImBaseEmailSettings @ 220 NONAME R3UNUSED ; CImBaseEmailSettings::SecureSockets(void) const
+	Selection__C15CImEmailMessage @ 221 NONAME R3UNUSED ; CImEmailMessage::Selection(void) const
+	SendCopyToSelf__C15CImSmtpSettings @ 222 NONAME R3UNUSED ; CImSmtpSettings::SendCopyToSelf(void) const
+	SendMessageOption__C15CImSmtpSettings @ 223 NONAME R3UNUSED ; CImSmtpSettings::SendMessageOption(void) const
+	SendTotal__C15TImSmtpProgress @ 224 NONAME R3UNUSED ; TImSmtpProgress::SendTotal(void) const
+	Sent__C15TImSmtpProgress @ 225 NONAME R3UNUSED ; TImSmtpProgress::Sent(void) const
+	ServerAddress__C20CImBaseEmailSettings @ 226 NONAME R3UNUSED ; CImBaseEmailSettings::ServerAddress(void) const
+	SetAcknowledgeReceipts__15CImPop3Settingsi @ 227 NONAME R3UNUSED ; CImPop3Settings::SetAcknowledgeReceipts(int)
+	SetAcknowledgeReceipts__16CImImap4Settingsi @ 228 NONAME R3UNUSED ; CImImap4Settings::SetAcknowledgeReceipts(int)
+	SetAddSignatureToEmail__15CImSmtpSettingsi @ 229 NONAME R3UNUSED ; CImSmtpSettings::SetAddSignatureToEmail(int)
+	SetAddVCardToEmail__15CImSmtpSettingsi @ 230 NONAME R3UNUSED ; CImSmtpSettings::SetAddVCardToEmail(int)
+	SetApop__15CImPop3Settingsi @ 231 NONAME R3UNUSED ; CImPop3Settings::SetApop(int)
+	SetAutoSendOnConnect__15CImPop3Settingsi @ 232 NONAME R3UNUSED ; CImPop3Settings::SetAutoSendOnConnect(int)
+	SetAutoSendOnConnect__16CImImap4Settingsi @ 233 NONAME R3UNUSED ; CImImap4Settings::SetAutoSendOnConnect(int)
+	SetBodyEncoding__15CImSmtpSettings22TMsgOutboxBodyEncoding @ 234 NONAME R3UNUSED ; CImSmtpSettings::SetBodyEncoding(TMsgOutboxBodyEncoding)
+	SetBodyEncoding__9CImHeader22TMsgOutboxBodyEncoding @ 235 NONAME R3UNUSED ; CImHeader::SetBodyEncoding(TMsgOutboxBodyEncoding)
+	SetCharset__9CImHeaderUi @ 236 NONAME R3UNUSED ; CImHeader::SetCharset(unsigned int)
+	SetContentBaseL__13CImMimeHeaderRC6TDesC8 @ 237 NONAME R3UNUSED ; CImMimeHeader::SetContentBaseL(TDesC8 const &)
+	SetContentDescriptionL__13CImMimeHeaderRC6TDesC8 @ 238 NONAME R3UNUSED ; CImMimeHeader::SetContentDescriptionL(TDesC8 const &)
+	SetContentDispositionL__13CImMimeHeaderRC6TDesC8 @ 239 NONAME R3UNUSED ; CImMimeHeader::SetContentDispositionL(TDesC8 const &)
+	SetContentIDL__13CImMimeHeaderRC6TDesC8 @ 240 NONAME R3UNUSED ; CImMimeHeader::SetContentIDL(TDesC8 const &)
+	SetContentLocationL__13CImMimeHeaderRC7TDesC16 @ 241 NONAME R3UNUSED ; CImMimeHeader::SetContentLocationL(TDesC16 const &)
+	SetContentSubTypeL__13CImMimeHeaderRC6TDesC8 @ 242 NONAME R3UNUSED ; CImMimeHeader::SetContentSubTypeL(TDesC8 const &)
+	SetContentTransferEncodingL__13CImMimeHeaderRC6TDesC8 @ 243 NONAME R3UNUSED ; CImMimeHeader::SetContentTransferEncodingL(TDesC8 const &)
+	SetContentTypeL__13CImMimeHeaderRC6TDesC8 @ 244 NONAME R3UNUSED ; CImMimeHeader::SetContentTypeL(TDesC8 const &)
+	SetDate__18TImRfc822DateFieldRC5TTimeR5TDes8 @ 245 NONAME R3UNUSED ; TImRfc822DateField::SetDate(TTime const &, TDes8 &)
+	SetDefaultMsgCharSet__15CImSmtpSettingsG4TUid @ 246 NONAME R3UNUSED ; CImSmtpSettings::SetDefaultMsgCharSet(TUid)
+	SetDeleteEmailsWhenDisconnecting__15CImPop3Settingsi @ 247 NONAME R3UNUSED ; CImPop3Settings::SetDeleteEmailsWhenDisconnecting(int)
+	SetDeleteEmailsWhenDisconnecting__16CImImap4Settingsi @ 248 NONAME R3UNUSED ; CImImap4Settings::SetDeleteEmailsWhenDisconnecting(int)
+	SetDisconnectedOperation__14TMsvEmailEntry28TImDisconnectedOperationType @ 249 NONAME R3UNUSED ; TMsvEmailEntry::SetDisconnectedOperation(TImDisconnectedOperationType)
+	SetDisconnectedUserMode__15CImPop3Settingsi @ 250 NONAME R3UNUSED ; CImPop3Settings::SetDisconnectedUserMode(int)
+	SetDisconnectedUserMode__16CImImap4Settingsi @ 251 NONAME R3UNUSED ; CImImap4Settings::SetDisconnectedUserMode(int)
+	SetEmailAddressL__15CImSmtpSettingsRC7TDesC16 @ 252 NONAME R3UNUSED ; CImSmtpSettings::SetEmailAddressL(TDesC16 const &)
+	SetEmailAddressL__16CImSSmtpSettingsRC7TDesC16 @ 253 NONAME R3UNUSED ; CImSSmtpSettings::SetEmailAddressL(TDesC16 const &)
+	SetEmailAliasL__15CImSmtpSettingsRC7TDesC16 @ 254 NONAME R3UNUSED ; CImSmtpSettings::SetEmailAliasL(TDesC16 const &)
+	SetError__15TImSmtpProgressi @ 255 NONAME R3UNUSED ; TImSmtpProgress::SetError(int)
+	SetFolderPathL__16CImImap4SettingsRC6TDesC8 @ 256 NONAME R3UNUSED ; CImImap4Settings::SetFolderPathL(TDesC8 const &)
+	SetFolder__13CImQueuedListl @ 257 NONAME R3UNUSED ; CImQueuedList::SetFolder(long)
+	SetFromL__9CImHeaderRC6TDesC8 @ 258 NONAME R3UNUSED ; CImHeader::SetFromL(TDesC8 const &)
+	SetFromL__9CImHeaderRC7TDesC16 @ 259 NONAME R3UNUSED ; CImHeader::SetFromL(TDesC16 const &)
+	SetGetMailOptions__15CImPop3Settings19TPop3GetMailOptions @ 260 NONAME R3UNUSED ; CImPop3Settings::SetGetMailOptions(TPop3GetMailOptions)
+	SetGetMailOptions__16CImImap4Settings20TImap4GetMailOptions @ 261 NONAME R3UNUSED ; CImImap4Settings::SetGetMailOptions(TImap4GetMailOptions)
+	SetIMAP4Flags__14TMsvEmailEntryiiiiiii @ 262 NONAME ; TMsvEmailEntry::SetIMAP4Flags(int, int, int, int, int, int, int)
+	SetImMsgIdL__9CImHeaderRC6TDesC8 @ 263 NONAME R3UNUSED ; CImHeader::SetImMsgIdL(TDesC8 const &)
+	SetImap4SettingsL__15CImap4ClientMtmRC16CImImap4Settings @ 264 NONAME R3UNUSED ; CImap4ClientMtm::SetImap4SettingsL(CImImap4Settings const &)
+	SetInReplyToL__9CImHeaderRC6TDesC8 @ 265 NONAME R3UNUSED ; CImHeader::SetInReplyToL(TDesC8 const &)
+	SetLoginNameL__15CImPop3SettingsRC6TDesC8 @ 266 NONAME R3UNUSED ; CImPop3Settings::SetLoginNameL(TDesC8 const &)
+	SetLoginNameL__16CImImap4SettingsRC6TDesC8 @ 267 NONAME R3UNUSED ; CImImap4Settings::SetLoginNameL(TDesC8 const &)
+	SetMaxEmailSize__15CImPop3Settingsi @ 268 NONAME R3UNUSED ; CImPop3Settings::SetMaxEmailSize(int)
+	SetMaxEmailSize__16CImImap4SettingsUi @ 269 NONAME R3UNUSED ; CImImap4Settings::SetMaxEmailSize(unsigned int)
+	SetMessageFolderType__14TMsvEmailEntry18TImEmailFolderType @ 270 NONAME R3UNUSED ; TMsvEmailEntry::SetMessageFolderType(TImEmailFolderType)
+	SetMimeCharset__13CImMimeHeaderUi @ 271 NONAME R3UNUSED ; CImMimeHeader::SetMimeCharset(unsigned int)
+	SetMsgNo__15TImSmtpProgressi @ 272 NONAME R3UNUSED ; TImSmtpProgress::SetMsgNo(int)
+	SetMtmSpecificCommandL__19CImOffLineOperationlliRC6TDesC8 @ 273 NONAME ; CImOffLineOperation::SetMtmSpecificCommandL(long, long, int, TDesC8 const &)
+	SetOperation__19CImOffLineOperationQ219CImOffLineOperation14TOffLineOpTypell @ 274 NONAME ; CImOffLineOperation::SetOperation(CImOffLineOperation::TOffLineOpType, long, long)
+	SetOperation__19CImOffLineOperationQ219CImOffLineOperation14TOffLineOpTypelliP6HBufC8 @ 275 NONAME ; CImOffLineOperation::SetOperation(CImOffLineOperation::TOffLineOpType, long, long, int, HBufC8 *)
+	SetPasswordL__15CImPop3SettingsRC6TDesC8 @ 276 NONAME R3UNUSED ; CImPop3Settings::SetPasswordL(TDesC8 const &)
+	SetPasswordL__16CImImap4SettingsRC6TDesC8 @ 277 NONAME R3UNUSED ; CImImap4Settings::SetPasswordL(TDesC8 const &)
+	SetPathSeparator__16CImImap4SettingsUc @ 278 NONAME R3UNUSED ; CImImap4Settings::SetPathSeparator(unsigned char)
+	SetPhoneNumberL__16CImSSmtpSettingsRC7TDesC16 @ 279 NONAME R3UNUSED ; CImSSmtpSettings::SetPhoneNumberL(TDesC16 const &)
+	SetPort__20CImBaseEmailSettingsUi @ 280 NONAME R3UNUSED ; CImBaseEmailSettings::SetPort(unsigned int)
+	SetReceiptAddressL__15CImSmtpSettingsRC7TDesC16 @ 281 NONAME R3UNUSED ; CImSmtpSettings::SetReceiptAddressL(TDesC16 const &)
+	SetReceiptAddressL__9CImHeaderRC6TDesC8 @ 282 NONAME R3UNUSED ; CImHeader::SetReceiptAddressL(TDesC8 const &)
+	SetReceiptAddressL__9CImHeaderRC7TDesC16 @ 283 NONAME R3UNUSED ; CImHeader::SetReceiptAddressL(TDesC16 const &)
+	SetRelativePathL__13CImMimeHeaderRC6TDesC8 @ 284 NONAME R3UNUSED ; CImMimeHeader::SetRelativePathL(TDesC8 const &)
+	SetReplyToAddressL__15CImSmtpSettingsRC7TDesC16 @ 285 NONAME R3UNUSED ; CImSmtpSettings::SetReplyToAddressL(TDesC16 const &)
+	SetReplyToL__9CImHeaderRC6TDesC8 @ 286 NONAME R3UNUSED ; CImHeader::SetReplyToL(TDesC8 const &)
+	SetReplyToL__9CImHeaderRC7TDesC16 @ 287 NONAME R3UNUSED ; CImHeader::SetReplyToL(TDesC16 const &)
+	SetRequestReceipts__15CImSmtpSettingsi @ 288 NONAME R3UNUSED ; CImSmtpSettings::SetRequestReceipts(int)
+	SetResentFromL__9CImHeaderRC7TDesC16 @ 289 NONAME R3UNUSED ; CImHeader::SetResentFromL(TDesC16 const &)
+	SetResentMsgIdL__9CImHeaderRC6TDesC8 @ 290 NONAME R3UNUSED ; CImHeader::SetResentMsgIdL(TDesC8 const &)
+	SetSecureSockets__20CImBaseEmailSettingsi @ 291 NONAME R3UNUSED ; CImBaseEmailSettings::SetSecureSockets(int)
+	SetSendCopyToSelf__15CImSmtpSettings21TImSMTPSendCopyToSelf @ 292 NONAME R3UNUSED ; CImSmtpSettings::SetSendCopyToSelf(TImSMTPSendCopyToSelf)
+	SetSendMessageOption__15CImSmtpSettings24TImSMTPSendMessageOption @ 293 NONAME R3UNUSED ; CImSmtpSettings::SetSendMessageOption(TImSMTPSendMessageOption)
+	SetServerAddressL__20CImBaseEmailSettingsRC7TDesC16 @ 294 NONAME R3UNUSED ; CImBaseEmailSettings::SetServerAddressL(TDesC16 const &)
+	SetSettingsL__14CPop3ClientMtmRC15CImPop3Settings @ 295 NONAME R3UNUSED ; CPop3ClientMtm::SetSettingsL(CImPop3Settings const &)
+	SetSettingsL__14CSmtpClientMtmRC15CImSmtpSettings @ 296 NONAME R3UNUSED ; CSmtpClientMtm::SetSettingsL(CImSmtpSettings const &)
+	SetStatus__15TImSmtpProgress21TMsgImOutboxSendState @ 297 NONAME R3UNUSED ; TImSmtpProgress::SetStatus(TMsgImOutboxSendState)
+	SetSubjectL__14CSmtpClientMtmRC7TDesC16 @ 298 NONAME R3UNUSED ; CSmtpClientMtm::SetSubjectL(TDesC16 const &)
+	SetSubjectL__9CImHeaderRC6TDesC8 @ 299 NONAME R3UNUSED ; CImHeader::SetSubjectL(TDesC8 const &)
+	SetSubjectL__9CImHeaderRC7TDesC16 @ 300 NONAME R3UNUSED ; CImHeader::SetSubjectL(TDesC16 const &)
+	SetSubscribe__16CImImap4Settings20TFolderSubscribeType @ 301 NONAME R3UNUSED ; CImImap4Settings::SetSubscribe(TFolderSubscribeType)
+	SetSynchronise__16CImImap4Settings15TFolderSyncType @ 302 NONAME R3UNUSED ; CImImap4Settings::SetSynchronise(TFolderSyncType)
+	SetUserAddressL__20CImBaseEmailSettingsRC7TDesC16 @ 303 NONAME R3UNUSED ; CImBaseEmailSettings::SetUserAddressL(TDesC16 const &)
+	DummyExport01__Fv @ 304 NONAME R3UNUSED ; DummyExport01(void)
+	Settings__C14CPop3ClientMtm @ 305 NONAME R3UNUSED ; CPop3ClientMtm::Settings(void) const
+	Settings__C14CSmtpClientMtm @ 306 NONAME R3UNUSED ; CSmtpClientMtm::Settings(void) const
+	Size__13CImMimeHeader @ 307 NONAME R3UNUSED ; CImMimeHeader::Size(void)
+	StartL__15CImCacheManagerlR14TRequestStatus @ 308 NONAME R3UNUSED ; CImCacheManager::StartL(long, TRequestStatus &)
+	StartL__15CImPruneMessagelR14TRequestStatus @ 309 NONAME R3UNUSED ; CImPruneMessage::StartL(long, TRequestStatus &)
+	Status__C15TImSmtpProgress @ 310 NONAME R3UNUSED ; TImSmtpProgress::Status(void) const
+	StoreBodyTextL__15CImEmailMessagelR9CRichTextR14TRequestStatus @ 311 NONAME ; CImEmailMessage::StoreBodyTextL(long, CRichText &, TRequestStatus &)
+	StoreL__C13CImMimeHeaderR9CMsvStore @ 312 NONAME R3UNUSED ; CImMimeHeader::StoreL(CMsvStore &) const
+	StoreL__C15CImPop3SettingsR9CMsvStore @ 313 NONAME R3UNUSED ; CImPop3Settings::StoreL(CMsvStore &) const
+	StoreL__C15CImSmtpSettingsR9CMsvStore @ 314 NONAME R3UNUSED ; CImSmtpSettings::StoreL(CMsvStore &) const
+	StoreL__C16CImImap4SettingsR9CMsvStore @ 315 NONAME R3UNUSED ; CImImap4Settings::StoreL(CMsvStore &) const
+	StoreL__C16CImSSmtpSettingsR9CMsvStore @ 316 NONAME R3UNUSED ; CImSSmtpSettings::StoreL(CMsvStore &) const
+	StoreL__C20CImBaseEmailSettingsR9CMsvStore @ 317 NONAME R3UNUSED ; CImBaseEmailSettings::StoreL(CMsvStore &) const
+	StoreL__C20CImOffLineArrayStoreR9CMsvStore @ 318 NONAME R3UNUSED ; CImOffLineArrayStore::StoreL(CMsvStore &) const
+	StoreL__C9CImHeaderR9CMsvStore @ 319 NONAME R3UNUSED ; CImHeader::StoreL(CMsvStore &) const
+	StoreSettingsL__14CPop3ClientMtm @ 320 NONAME R3UNUSED ; CPop3ClientMtm::StoreSettingsL(void)
+	StoreSettingsL__14CSmtpClientMtm @ 321 NONAME R3UNUSED ; CSmtpClientMtm::StoreSettingsL(void)
+	StoreSettingsL__15CImap4ClientMtm @ 322 NONAME R3UNUSED ; CImap4ClientMtm::StoreSettingsL(void)
+	SubjectL__C14CSmtpClientMtm @ 323 NONAME R3UNUSED ; CSmtpClientMtm::SubjectL(void) const
+	Subject__C9CImHeader @ 324 NONAME R3UNUSED ; CImHeader::Subject(void) const
+	Subscribe__C16CImImap4Settings @ 325 NONAME R3UNUSED ; CImImap4Settings::Subscribe(void) const
+	Synchronise__C16CImImap4Settings @ 326 NONAME R3UNUSED ; CImImap4Settings::Synchronise(void) const
+	UpdateFailedToSend__15TImSmtpProgress @ 327 NONAME R3UNUSED ; TImSmtpProgress::UpdateFailedToSend(void)
+	UpdateSent__15TImSmtpProgress @ 328 NONAME R3UNUSED ; TImSmtpProgress::UpdateSent(void)
+	UserAddress__C20CImBaseEmailSettings @ 329 NONAME R3UNUSED ; CImBaseEmailSettings::UserAddress(void) const
+	ValidAliasName__15TImMessageFieldRC7TDesC16 @ 330 NONAME R3UNUSED ; TImMessageField::ValidAliasName(TDesC16 const &)
+	ValidAliasName__15TImMessageFieldRC7TDesC16Ri @ 331 NONAME R3UNUSED ; TImMessageField::ValidAliasName(TDesC16 const &, int &)
+	ValidInternetEmailAddressChar__15TImMessageFieldRC5TChar @ 332 NONAME R3UNUSED ; TImMessageField::ValidInternetEmailAddressChar(TChar const &)
+	ValidInternetEmailAddress__15TImMessageFieldRC7TDesC16 @ 333 NONAME R3UNUSED ; TImMessageField::ValidInternetEmailAddress(TDesC16 const &)
+	ValidInternetEmailAddress__15TImMessageFieldRC7TDesC16Ri @ 334 NONAME R3UNUSED ; TImMessageField::ValidInternetEmailAddress(TDesC16 const &, int &)
+	ValidInternetEmailAddress__15TImMessageFieldRC7TDesC16RiN22 @ 335 NONAME ; TImMessageField::ValidInternetEmailAddress(TDesC16 const &, int &, int &, int &)
+	ValidInternetEmailAddress__15TImMessageFieldRC7TDesC16RiT2 @ 336 NONAME ; TImMessageField::ValidInternetEmailAddress(TDesC16 const &, int &, int &)
+	ValidSubjectLineChar__15TImMessageFieldRC5TChar @ 337 NONAME R3UNUSED ; TImMessageField::ValidSubjectLineChar(TChar const &)
+	ValidSubjectLine__15TImMessageFieldRC7TDesC16 @ 338 NONAME R3UNUSED ; TImMessageField::ValidSubjectLine(TDesC16 const &)
+	ValidSubjectLine__15TImMessageFieldRC7TDesC16Ri @ 339 NONAME R3UNUSED ; TImMessageField::ValidSubjectLine(TDesC16 const &, int &)
+	Version__C20CImBaseEmailSettings @ 340 NONAME R3UNUSED ; CImBaseEmailSettings::Version(void) const
+	WriteFile__17TImAttachmentFileRC6TDesC8 @ 341 NONAME R3UNUSED ; TImAttachmentFile::WriteFile(TDesC8 const &)
+	WriteFile__17TImAttachmentFileRC7TDesC16 @ 342 NONAME R3UNUSED ; TImAttachmentFile::WriteFile(TDesC16 const &)
+	"_._13CImMimeHeader" @ 343 NONAME R3UNUSED ; CImMimeHeader::~CImMimeHeader(void)
+	"_._13CImQueuedList" @ 344 NONAME R3UNUSED ; CImQueuedList::~CImQueuedList(void)
+	"_._14CImPOP3GetMail" @ 345 NONAME R3UNUSED ; CImPOP3GetMail::~CImPOP3GetMail(void)
+	"_._15CImCacheManager" @ 346 NONAME R3UNUSED ; CImCacheManager::~CImCacheManager(void)
+	"_._15CImEmailMessage" @ 347 NONAME R3UNUSED ; CImEmailMessage::~CImEmailMessage(void)
+	"_._15CImPop3Settings" @ 348 NONAME R3UNUSED ; CImPop3Settings::~CImPop3Settings(void)
+	"_._15CImSmtpSettings" @ 349 NONAME R3UNUSED ; CImSmtpSettings::~CImSmtpSettings(void)
+	"_._16CImImap4Settings" @ 350 NONAME R3UNUSED ; CImImap4Settings::~CImImap4Settings(void)
+	"_._16CImSSmtpSettings" @ 351 NONAME R3UNUSED ; CImSSmtpSettings::~CImSSmtpSettings(void)
+	"_._17CImClientMTMUtils" @ 352 NONAME R3UNUSED ; CImClientMTMUtils::~CImClientMTMUtils(void)
+	"_._17CImEmailOperation" @ 353 NONAME R3UNUSED ; CImEmailOperation::~CImEmailOperation(void)
+	"_._17TImAttachmentFile" @ 354 NONAME R3UNUSED ; TImAttachmentFile::~TImAttachmentFile(void)
+	"_._19CImOffLineOperation" @ 355 NONAME R3UNUSED ; CImOffLineOperation::~CImOffLineOperation(void)
+	"_._20CImBaseEmailSettings" @ 356 NONAME R3UNUSED ; CImBaseEmailSettings::~CImBaseEmailSettings(void)
+	"_._21CImOperationQueueList" @ 357 NONAME R3UNUSED ; CImOperationQueueList::~CImOperationQueueList(void)
+	"_._24CImOffLineOperationArray" @ 358 NONAME R3UNUSED ; CImOffLineOperationArray::~CImOffLineOperationArray(void)
+	"_._6CImLog" @ 359 NONAME R3UNUSED ; CImLog::~CImLog(void)
+	"_._9CImFinder" @ 360 NONAME R3UNUSED ; CImFinder::~CImFinder(void)
+	"_._9CImHeader" @ 361 NONAME R3UNUSED ; CImHeader::~CImHeader(void)
+	__14TMsvEmailEntry @ 362 NONAME R3UNUSED ; TMsvEmailEntry::TMsvEmailEntry(void)
+	__14TMsvEmailEntryRC9TMsvEntry @ 363 NONAME R3UNUSED ; TMsvEmailEntry::TMsvEmailEntry(TMsvEntry const &)
+	__15CImCacheManagerR11CMsvSessionR14TRequestStatus @ 364 NONAME R3UNUSED ; CImCacheManager::CImCacheManager(CMsvSession &, TRequestStatus &)
+	__15CImPop3Settings @ 365 NONAME R3UNUSED ; CImPop3Settings::CImPop3Settings(void)
+	__15CImSmtpSettings @ 366 NONAME R3UNUSED ; CImSmtpSettings::CImSmtpSettings(void)
+	__16CImImap4Settings @ 367 NONAME R3UNUSED ; CImImap4Settings::CImImap4Settings(void)
+	__16CImSSmtpSettings @ 368 NONAME R3UNUSED ; CImSSmtpSettings::CImSSmtpSettings(void)
+	__16TQueuedOperation @ 369 NONAME R3UNUSED ; TQueuedOperation::TQueuedOperation(void)
+	__17TImAttachmentFileR3RFs @ 370 NONAME R3UNUSED ; TImAttachmentFile::TImAttachmentFile(RFs &)
+	__19CImOffLineOperation @ 371 NONAME R3UNUSED ; CImOffLineOperation::CImOffLineOperation(void)
+	__19TQueuedOperationKeyR13CImQueuedList @ 372 NONAME R3UNUSED ; TQueuedOperationKey::TQueuedOperationKey(CImQueuedList &)
+	__20CImBaseEmailSettings @ 373 NONAME R3UNUSED ; CImBaseEmailSettings::CImBaseEmailSettings(void)
+	__20TQueuedOperationSwapR13CImQueuedList @ 374 NONAME R3UNUSED ; TQueuedOperationSwap::TQueuedOperationSwap(CImQueuedList &)
+	__21TImHeaderEncodingInfo @ 375 NONAME R3UNUSED ; TImHeaderEncodingInfo::TImHeaderEncodingInfo(void)
+	__21TImHeaderEncodingInfoRC21TImHeaderEncodingInfo @ 376 NONAME R3UNUSED ; TImHeaderEncodingInfo::TImHeaderEncodingInfo(TImHeaderEncodingInfo const &)
+	__eq__C14TMsvEmailEntryRC14TMsvEmailEntry @ 377 NONAME R3UNUSED ; TMsvEmailEntry::operator==(TMsvEmailEntry const &) const
+	__eq__C14TMsvEmailEntryRC9TMsvEntry @ 378 NONAME R3UNUSED ; TMsvEmailEntry::operator==(TMsvEntry const &) const
+	__eq__C15CImPop3SettingsRC15CImPop3Settings @ 379 NONAME R3UNUSED ; CImPop3Settings::operator==(CImPop3Settings const &) const
+	__eq__C15CImSmtpSettingsRC15CImSmtpSettings @ 380 NONAME R3UNUSED ; CImSmtpSettings::operator==(CImSmtpSettings const &) const
+	__eq__C16CImImap4SettingsRC16CImImap4Settings @ 381 NONAME R3UNUSED ; CImImap4Settings::operator==(CImImap4Settings const &) const
+	__eq__C16CImSSmtpSettingsRC16CImSSmtpSettings @ 382 NONAME R3UNUSED ; CImSSmtpSettings::operator==(CImSSmtpSettings const &) const
+	__eq__C19CImOffLineOperationRC19CImOffLineOperation @ 383 NONAME R3UNUSED ; CImOffLineOperation::operator==(CImOffLineOperation const &) const
+	__eq__C20CImBaseEmailSettingsRC20CImBaseEmailSettings @ 384 NONAME R3UNUSED ; CImBaseEmailSettings::operator==(CImBaseEmailSettings const &) const
+	__ne__16TQueuedOperationRC16TQueuedOperation @ 385 NONAME R3UNUSED ; TQueuedOperation::operator!=(TQueuedOperation const &)
+	AcknowledgeReceipts__C15CImPop3Settings @ 386 NONAME R3UNUSED ; CImPop3Settings::AcknowledgeReceipts(void) const
+	CreateForwardAsAttachmentL__17CImEmailOperationR14TRequestStatusR11CMsvSessionlllUiRCUiG4TUidi @ 387 NONAME ; CImEmailOperation::CreateForwardAsAttachmentL(TRequestStatus &, CMsvSession &, long, long, long, unsigned int, unsigned int const &, TUid, int)
+	CreateForwardL__17CImEmailOperationR14TRequestStatusR11CMsvSessionlllUiRCUiG4TUidi @ 388 NONAME ; CImEmailOperation::CreateForwardL(TRequestStatus &, CMsvSession &, long, long, long, unsigned int, unsigned int const &, TUid, int)
+	CreateNewL__17CImEmailOperationR14TRequestStatusR11CMsvSessionllUiRCUiG4TUidi @ 389 NONAME ; CImEmailOperation::CreateNewL(TRequestStatus &, CMsvSession &, long, long, unsigned int, unsigned int const &, TUid, int)
+	CreateReceiptL__17CImEmailOperationR14TRequestStatusR11CMsvSessionllUiRCUiG4TUidi @ 390 NONAME ; CImEmailOperation::CreateReceiptL(TRequestStatus &, CMsvSession &, long, long, unsigned int, unsigned int const &, TUid, int)
+	CreateReplyL__17CImEmailOperationR14TRequestStatusR11CMsvSessionllUiRCUiG4TUidi @ 391 NONAME ; CImEmailOperation::CreateReplyL(TRequestStatus &, CMsvSession &, long, long, unsigned int, unsigned int const &, TUid, int)
+	StoreWithoutCommitL__C13CImMimeHeaderR9CMsvStore @ 392 NONAME R3UNUSED ; CImMimeHeader::StoreWithoutCommitL(CMsvStore &) const
+	StoreWithoutCommitL__C9CImHeaderR9CMsvStore @ 393 NONAME R3UNUSED ; CImHeader::StoreWithoutCommitL(CMsvStore &) const
+	AddIAPL__17CImIAPPreferencesG12TImIAPChoicei @ 394 NONAME ; CImIAPPreferences::AddIAPL(TImIAPChoice, int)
+	AttachmentEncoding__C24TImEmailTransformingInfo @ 395 NONAME R3UNUSED ; TImEmailTransformingInfo::AttachmentEncoding(void) const
+	BodyTextCharset__C24TImEmailTransformingInfo @ 396 NONAME R3UNUSED ; TImEmailTransformingInfo::BodyTextCharset(void) const
+	BodyTextEncoding__C24TImEmailTransformingInfo @ 397 NONAME R3UNUSED ; TImEmailTransformingInfo::BodyTextEncoding(void) const
+	DefaultCharset__C18CImConvertCharconv @ 398 NONAME R3UNUSED ; CImConvertCharconv::DefaultCharset(void) const
+	ExternalizeL__C24TImEmailTransformingInfoR12RWriteStream @ 399 NONAME R3UNUSED ; TImEmailTransformingInfo::ExternalizeL(RWriteStream &) const
+	FindIAPL__C17CImIAPPreferencesUlRi @ 400 NONAME R3UNUSED ; CImIAPPreferences::FindIAPL(unsigned long, int &) const
+	HTMLCharset__C24TImEmailTransformingInfo @ 401 NONAME R3UNUSED ; TImEmailTransformingInfo::HTMLCharset(void) const
+	HTMLEncoding__C24TImEmailTransformingInfo @ 402 NONAME R3UNUSED ; TImEmailTransformingInfo::HTMLEncoding(void) const
+	HeaderCharset__C24TImEmailTransformingInfo @ 403 NONAME R3UNUSED ; TImEmailTransformingInfo::HeaderCharset(void) const
+	HeaderEncoding__C24TImEmailTransformingInfo @ 404 NONAME R3UNUSED ; TImEmailTransformingInfo::HeaderEncoding(void) const
+	IAPPreference__C17CImIAPPreferencesi @ 405 NONAME R3UNUSED ; CImIAPPreferences::IAPPreference(int) const
+	InternalizeL__24TImEmailTransformingInfoR11RReadStream @ 406 NONAME R3UNUSED ; TImEmailTransformingInfo::InternalizeL(RReadStream &)
+	NewLC__17CImIAPPreferences @ 407 NONAME R3UNUSED ; CImIAPPreferences::NewLC(void)
+	NumberOfIAPs__C17CImIAPPreferences @ 408 NONAME R3UNUSED ; CImIAPPreferences::NumberOfIAPs(void) const
+	RemoveIAPL__17CImIAPPreferencesi @ 409 NONAME R3UNUSED ; CImIAPPreferences::RemoveIAPL(int)
+	ReplaceIAPL__17CImIAPPreferencesiG12TImIAPChoice @ 410 NONAME ; CImIAPPreferences::ReplaceIAPL(int, TImIAPChoice)
+	RestoreL__17CImIAPPreferencesR9CMsvStore @ 411 NONAME R3UNUSED ; CImIAPPreferences::RestoreL(CMsvStore &)
+	RestoreL__24TImEmailTransformingInfoR9CMsvStore @ 412 NONAME R3UNUSED ; TImEmailTransformingInfo::RestoreL(CMsvStore &)
+	SendMethod__C24TImEmailTransformingInfo @ 413 NONAME R3UNUSED ; TImEmailTransformingInfo::SendMethod(void) const
+	SetAttachmentEncoding__24TImEmailTransformingInfo15TImEncodingType @ 414 NONAME R3UNUSED ; TImEmailTransformingInfo::SetAttachmentEncoding(TImEncodingType)
+	SetBodyTextCharset__24TImEmailTransformingInfoUi @ 415 NONAME R3UNUSED ; TImEmailTransformingInfo::SetBodyTextCharset(unsigned int)
+	SetBodyTextEncoding__24TImEmailTransformingInfo15TImEncodingType @ 416 NONAME R3UNUSED ; TImEmailTransformingInfo::SetBodyTextEncoding(TImEncodingType)
+	SetHTMLCharset__24TImEmailTransformingInfoUi @ 417 NONAME R3UNUSED ; TImEmailTransformingInfo::SetHTMLCharset(unsigned int)
+	SetHTMLEncoding__24TImEmailTransformingInfo15TImEncodingType @ 418 NONAME R3UNUSED ; TImEmailTransformingInfo::SetHTMLEncoding(TImEncodingType)
+	SetHeaderAndBodyCharset__24TImEmailTransformingInfoUi @ 419 NONAME R3UNUSED ; TImEmailTransformingInfo::SetHeaderAndBodyCharset(unsigned int)
+	SetHeaderCharset__24TImEmailTransformingInfoUi @ 420 NONAME R3UNUSED ; TImEmailTransformingInfo::SetHeaderCharset(unsigned int)
+	SetHeaderEncodingB__24TImEmailTransformingInfo @ 421 NONAME R3UNUSED ; TImEmailTransformingInfo::SetHeaderEncodingB(void)
+	SetHeaderEncodingQ__24TImEmailTransformingInfo @ 422 NONAME R3UNUSED ; TImEmailTransformingInfo::SetHeaderEncodingQ(void)
+	SetSendMethod__24TImEmailTransformingInfo13TImSendMethod @ 423 NONAME R3UNUSED ; TImEmailTransformingInfo::SetSendMethod(TImSendMethod)
+	SetToDefault__24TImEmailTransformingInfo13TImSendMethod @ 424 NONAME R3UNUSED ; TImEmailTransformingInfo::SetToDefault(TImSendMethod)
+	StoreL__C17CImIAPPreferencesR9CMsvStore @ 425 NONAME R3UNUSED ; CImIAPPreferences::StoreL(CMsvStore &) const
+	StoreL__C24TImEmailTransformingInfoR9CMsvStore @ 426 NONAME R3UNUSED ; TImEmailTransformingInfo::StoreL(CMsvStore &) const
+	SystemDefaultCharset__C18CImConvertCharconv @ 427 NONAME R3UNUSED ; CImConvertCharconv::SystemDefaultCharset(void) const
+	Version__C17CImIAPPreferences @ 428 NONAME R3UNUSED ; CImIAPPreferences::Version(void) const
+	"_._17CImIAPPreferences" @ 429 NONAME R3UNUSED ; CImIAPPreferences::~CImIAPPreferences(void)
+	__as__24TImEmailTransformingInfoRC24TImEmailTransformingInfo @ 430 NONAME R3UNUSED ; TImEmailTransformingInfo::operator=(TImEmailTransformingInfo const &)
+	__eq__24TImEmailTransformingInfoRC24TImEmailTransformingInfo @ 431 NONAME R3UNUSED ; TImEmailTransformingInfo::operator==(TImEmailTransformingInfo const &)
+	StartL__15CImCacheManagerRC18CMsvEntrySelectionR14TRequestStatus @ 432 NONAME R3UNUSED ; CImCacheManager::StartL(CMsvEntrySelection const &, TRequestStatus &)
+	InboxSynchronisationLimit__C16CImImap4Settings @ 433 NONAME R3UNUSED ; CImImap4Settings::InboxSynchronisationLimit(void) const
+	MailboxSynchronisationLimit__C16CImImap4Settings @ 434 NONAME R3UNUSED ; CImImap4Settings::MailboxSynchronisationLimit(void) const
+	SetInboxSynchronisationLimit__16CImImap4Settingsl @ 435 NONAME R3UNUSED ; CImImap4Settings::SetInboxSynchronisationLimit(long)
+	SetMailboxSynchronisationLimit__16CImImap4Settingsl @ 436 NONAME R3UNUSED ; CImImap4Settings::SetMailboxSynchronisationLimit(long)
+	LoginName__C15CImSmtpSettings @ 437 NONAME R3UNUSED ; CImSmtpSettings::LoginName(void) const
+	Password__C15CImSmtpSettings @ 438 NONAME R3UNUSED ; CImSmtpSettings::Password(void) const
+	SetLoginNameL__15CImSmtpSettingsRC6TDesC8 @ 439 NONAME R3UNUSED ; CImSmtpSettings::SetLoginNameL(TDesC8 const &)
+	SetPasswordL__15CImSmtpSettingsRC6TDesC8 @ 440 NONAME R3UNUSED ; CImSmtpSettings::SetPasswordL(TDesC8 const &)
+	InboxSynchronisationLimit__C15CImPop3Settings @ 441 NONAME R3UNUSED ; CImPop3Settings::InboxSynchronisationLimit(void) const
+	SetInboxSynchronisationLimit__15CImPop3Settingsl @ 442 NONAME R3UNUSED ; CImPop3Settings::SetInboxSynchronisationLimit(long)
+	ServiceId__C15TImSmtpProgress @ 443 NONAME R3UNUSED ; TImSmtpProgress::ServiceId(void) const
+	SetServiceId__15TImSmtpProgressl @ 444 NONAME R3UNUSED ; TImSmtpProgress::SetServiceId(long)
+	InboxLoginDetails__C15CImSmtpSettings @ 445 NONAME R3UNUSED ; CImSmtpSettings::InboxLoginDetails(void) const
+	SMTPAuth__C15CImSmtpSettings @ 446 NONAME R3UNUSED ; CImSmtpSettings::SMTPAuth(void) const
+	SetInboxLoginDetails__15CImSmtpSettingsi @ 447 NONAME R3UNUSED ; CImSmtpSettings::SetInboxLoginDetails(int)
+	SetSMTPAuth__15CImSmtpSettingsi @ 448 NONAME R3UNUSED ; CImSmtpSettings::SetSMTPAuth(int)
+	SetUpdatingSeenFlags__16CImImap4Settingsi @ 449 NONAME R3UNUSED ; CImImap4Settings::SetUpdatingSeenFlags(int)
+	UpdatingSeenFlags__C16CImImap4Settings @ 450 NONAME R3UNUSED ; CImImap4Settings::UpdatingSeenFlags(void) const
+	SSLWrapper__C20CImBaseEmailSettings @ 451 NONAME R3UNUSED ; CImBaseEmailSettings::SSLWrapper(void) const
+	SetSSLWrapper__20CImBaseEmailSettingsi @ 452 NONAME R3UNUSED ; CImBaseEmailSettings::SetSSLWrapper(int)
+	ConnectionIAP__C13TPop3Progress @ 453 NONAME R3UNUSED ; TPop3Progress::ConnectionIAP(void) const
+	ConnectionIAP__C15TImSmtpProgress @ 454 NONAME R3UNUSED ; TImSmtpProgress::ConnectionIAP(void) const
+	ConnectionIAP__C21TImap4GenericProgress @ 455 NONAME R3UNUSED ; TImap4GenericProgress::ConnectionIAP(void) const
+	ConnectionState__C13TPop3Progress @ 456 NONAME R3UNUSED ; TPop3Progress::ConnectionState(void) const
+	ConnectionState__C15TImSmtpProgress @ 457 NONAME R3UNUSED ; TImSmtpProgress::ConnectionState(void) const
+	ConnectionState__C21TImap4GenericProgress @ 458 NONAME R3UNUSED ; TImap4GenericProgress::ConnectionState(void) const
+	SetConnectionIAP__15TImSmtpProgressi @ 459 NONAME R3UNUSED ; TImSmtpProgress::SetConnectionIAP(int)
+	GetAttachmentsListL__15CImEmailMessagelQ215CImEmailMessage17TImAttachmentTypeQ215CImEmailMessage17TImEmailEntryType @ 460 NONAME ; CImEmailMessage::GetAttachmentsListL(long, CImEmailMessage::TImAttachmentType, CImEmailMessage::TImEmailEntryType)
+	GetBodyTextL__15CImEmailMessagelQ215CImEmailMessage17TImEmailEntryTypeR9CRichTextR16CParaFormatLayerR16CCharFormatLayer @ 461 NONAME ; CImEmailMessage::GetBodyTextL(long, CImEmailMessage::TImEmailEntryType, CRichText &, CParaFormatLayer &, CCharFormatLayer &)
+	SetSyncRateL__16CImImap4Settingsi @ 462 NONAME R3UNUSED ; CImImap4Settings::SetSyncRateL(int)
+	SyncRate__C16CImImap4Settings @ 463 NONAME R3UNUSED ; CImImap4Settings::SyncRate(void) const
+	GetCharacterSetL__15CImEmailMessagelRUiRi @ 464 NONAME ; CImEmailMessage::GetCharacterSetL(long, unsigned int &, int &)
+	SetCharacterSetL__15CImEmailMessagelUi @ 465 NONAME R3UNUSED ; CImEmailMessage::SetCharacterSetL(long, unsigned int)
+	GetAttachmentName__C15CImEmailMessagei @ 466 NONAME R3UNUSED ; CImEmailMessage::GetAttachmentName(int) const
+	OverrideCharset__C9CImHeader @ 467 NONAME R3UNUSED ; CImHeader::OverrideCharset(void) const
+	ReDecodeL__9CImHeaderR3RFs @ 468 NONAME R3UNUSED ; CImHeader::ReDecodeL(RFs &)
+	SaveEncodedHeadersL__9CImHeader @ 469 NONAME R3UNUSED ; CImHeader::SaveEncodedHeadersL(void)
+	SetOverrideCharset__9CImHeaderUi @ 470 NONAME R3UNUSED ; CImHeader::SetOverrideCharset(unsigned int)
+	FetchSize__C16CImImap4Settings @ 471 NONAME R3UNUSED ; CImImap4Settings::FetchSize(void) const
+	SetFetchSizeL__16CImImap4SettingsUi @ 472 NONAME R3UNUSED ; CImImap4Settings::SetFetchSizeL(unsigned int)
+	ImapIdleTimeout__C16CImImap4Settings @ 473 NONAME R3UNUSED ; CImImap4Settings::ImapIdleTimeout(void) const
+	ImapIdle__C16CImImap4Settings @ 474 NONAME R3UNUSED ; CImImap4Settings::ImapIdle(void) const
+	SetImapIdleTimeoutL__16CImImap4Settingsi @ 475 NONAME R3UNUSED ; CImImap4Settings::SetImapIdleTimeoutL(int)
+	SetImapIdle__16CImImap4Settingsi @ 476 NONAME R3UNUSED ; CImImap4Settings::SetImapIdle(int)
+	AttachmentSizeLimit__C16CImImap4Settings @ 477 NONAME R3UNUSED ; CImImap4Settings::AttachmentSizeLimit(void) const
+	BodyTextSizeLimit__C16CImImap4Settings @ 478 NONAME R3UNUSED ; CImImap4Settings::BodyTextSizeLimit(void) const
+	PartialDownloaded__C14TMsvEmailEntry @ 479 NONAME R3UNUSED ; TMsvEmailEntry::PartialDownloaded(void) const
+	PartialMailOptions__C16CImImap4Settings @ 480 NONAME R3UNUSED ; CImImap4Settings::PartialMailOptions(void) const
+	SetAttachmentSizeLimitL__16CImImap4Settingsl @ 481 NONAME R3UNUSED ; CImImap4Settings::SetAttachmentSizeLimitL(long)
+	SetBodyTextSizeLimitL__16CImImap4Settingsl @ 482 NONAME R3UNUSED ; CImImap4Settings::SetBodyTextSizeLimitL(long)
+	SetPartialDownloaded__14TMsvEmailEntryi @ 483 NONAME R3UNUSED ; TMsvEmailEntry::SetPartialDownloaded(int)
+	SetPartialMailOptionsL__16CImImap4Settings26TImImap4PartialMailOptions @ 484 NONAME R3UNUSED ; CImImap4Settings::SetPartialMailOptionsL(TImImap4PartialMailOptions)
+	MaxEmailSize__22TImPop3PopulateOptions @ 485 NONAME R3UNUSED ; TImPop3PopulateOptions::MaxEmailSize(void)
+	PopulationLimit__22TImPop3PopulateOptions @ 486 NONAME R3UNUSED ; TImPop3PopulateOptions::PopulationLimit(void)
+	PopulationLimit__C15CImPop3Settings @ 487 NONAME R3UNUSED ; CImPop3Settings::PopulationLimit(void) const
+	SetMaxEmailSize__22TImPop3PopulateOptionsi @ 488 NONAME R3UNUSED ; TImPop3PopulateOptions::SetMaxEmailSize(int)
+	SetPopulationLimitL__15CImPop3Settingsl @ 489 NONAME R3UNUSED ; CImPop3Settings::SetPopulationLimitL(long)
+	SetPopulationLimit__22TImPop3PopulateOptionsi @ 490 NONAME R3UNUSED ; TImPop3PopulateOptions::SetPopulationLimit(int)
+	UnpackL__22TImPop3PopulateOptionsRC6TDesC8R22TImPop3PopulateOptions @ 491 NONAME R3UNUSED ; TImPop3PopulateOptions::UnpackL(TDesC8 const &, TImPop3PopulateOptions &)
+	__22TImPop3PopulateOptions @ 492 NONAME R3UNUSED ; TImPop3PopulateOptions::TImPop3PopulateOptions(void)
+

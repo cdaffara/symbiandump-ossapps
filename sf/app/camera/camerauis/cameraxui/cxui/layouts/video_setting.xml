@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cxui>
+    <!--
+    - CxUi video mode settings definition.
+    -->
+    <settings>
+
+        <!-- Video Show post-capture (setting list) -->
+        <setting_list id="video_showcaptured" heading="txt_cam_title_show_captured_video"
+                                 preview="0" type="SingleLineListBox" setting_icon="">
+            <lnItem string="txt_cam_list_ln_sec_video" lnValue="2"  value="2000" icon="" />
+            <lnItem string="txt_cam_list_ln_sec_video" lnValue="4"  value="4000" icon="" />
+            <lnItem string="txt_cam_list_ln_sec_video" lnValue="10" value="10000" icon="" />
+            <item string="txt_cam_list_continuous_video" value="-1" icon="" />
+            <item string="txt_cam_list_not_video" value="0" icon="" />
+        </setting_list>
+
+        <!-- White balance (setting list) -->
+        <setting_list id="white_balance"
+                      heading="txt_cam_title_white_balance"
+                      preview="1"
+                      type="SingleLineListBox"
+                      setting_icon="">
+            <item string="txt_cam_list_automatic_whitebal" value="0" icon="" />
+            <item string="txt_cam_list_sunny"              value="1" icon="" />
+            <item string="txt_cam_list_cloudy"             value="2" icon="" />
+            <item string="txt_cam_list_incandescent"       value="3" icon="" />
+            <item string="txt_cam_list_fluorescent"        value="4" icon="" />
+        </setting_list>
+
+        <!-- Color tone (setting list) -->
+        <setting_list id="color_tone"
+                      heading="txt_cam_title_color_tone"
+                      preview="1"
+                      type="SingleLineListBox"
+                      setting_icon="">
+            <item string="txt_cam_list_normal"   value="0" icon="" />
+            <item string="txt_cam_list_sepia"    value="1" icon="" />
+            <item string="txt_cam_list_white"    value="3" icon="" />
+            <item string="txt_cam_list_vivid"    value="4" icon="" />
+        </setting_list>
+
+        <!-- Video scene modes -->
+        <setting_list id="video_scene_mode"
+                      heading="txt_cam_title_scene_mode_video"
+                      preview="0"
+                      type="SingleLineListBox">
+
+            <item string="txt_cam_list_automatic_scene_video" value="video_scene_auto"           icon="qtg_mono_automatic" />
+            <item string="txt_cam_list_low_light"         value="video_scene_low_light"          icon="qtg_mono_low_light" />
+            <item string="txt_cam_list_night_video"       value="video_scene_night"        icon="qtg_mono_night" />
+        </setting_list>
+        
+        <!-- GeoTagging (setting list) -->
+        <setting_list id="geotagging"
+                      heading="txt_cam_title_geotagging"
+                      preview="0"
+                      type="SingleLineListBox"
+                      setting_icon="">
+            <item string="txt_cam_list_geotagging_on"   value="1" icon="" />
+            <item string="txt_cam_list_geotagging_off"    value="0" icon="" />
+        </setting_list>        
+
+        <!-- Exposure compensation (setting slider) -->
+        <setting_slider id="ev_compensation_value" heading="txt_cam_title_exposure_compensation" setting_icon="">
+            <setup min="txt_cam_slidervalue_l1_minus" max="txt_cam_slidervalue_l1_plus" l1Value="2" minorStep="0.5" majorStep="1"/>
+        </setting_slider>
+
+    </settings>
+</cxui>

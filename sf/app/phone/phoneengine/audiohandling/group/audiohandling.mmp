@@ -1,0 +1,88 @@
+/*
+* Copyright (c) 2004-2010 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project specification file for Audio Handling dll
+*
+*/
+
+#include <data_caging_paths.hrh>
+#include <platform_paths.hrh>
+
+TARGET          audiohandling.dll    
+TARGETTYPE      DLL                
+UID             0x1000008D 0x1000A832        
+VENDORID        VID_DEFAULT
+VERSION         10.0
+
+CAPABILITY  CAP_GENERAL_DLL
+
+
+#ifndef WINSCW 
+EpocAllowDllData
+#endif
+
+
+//MACRO     UNIT_TESTING    //defined if running T_AudoHandlingMT tests
+SOURCEPATH      ../src
+    
+SOURCE          cpeaudiodata.cpp        
+SOURCE          cpegsmaudiodata.cpp
+SOURCE          cpeaudiodtmftoneplayer.cpp
+SOURCE          cpeaudioinbandtoneplayer.cpp
+SOURCE          cpeaudioroutingmonitor.cpp
+SOURCE          peaudiohandlingpanic.cpp
+SOURCE        cpecallaudioroutinghandler.cpp
+SOURCE          cpeaudiofactory.cpp
+SOURCE        cpeaudiotoneutilityimpl.cpp 
+SOURCE        cpeaudioeffect.cpp
+
+START RESOURCE  ../data/defaultbeep.rss
+TARGETPATH      RESOURCE_FILES_DIR
+HEADER
+END
+
+USERINCLUDE     ../inc
+
+APP_LAYER_SYSTEMINCLUDE         // Application layer domain APIs
+SYSTEMINCLUDE   ../../inc       // PhoneEngine private headers
+SYSTEMINCLUDE   ../../../inc    // Telephony internal headers
+SYSTEMINCLUDE   /epoc32/include/mda/client
+SYSTEMINCLUDE   /epoc32/include/mmf/server
+SYSTEMINCLUDE   /epoc32/include/mmf/common
+
+
+MW_LAYER_SYSTEMINCLUDE
+OS_LAYER_LIBC_SYSTEMINCLUDE
+OS_LAYER_GLIB_SYSTEMINCLUDE
+SYSTEMINCLUDE /epoc32/include/stdapis/stlport
+
+LIBRARY         bafl.lib
+LIBRARY         cce.lib
+LIBRARY         telephonyaudiorouting.lib
+LIBRARY         efsrv.lib
+LIBRARY         engineinfo.lib
+LIBRARY         etel.lib
+LIBRARY         euser.lib 
+LIBRARY         flogger.lib
+LIBRARY         mediaclientaudio.lib
+LIBRARY         mmfdevsound.lib
+
+LIBRARY         featdiscovery.lib
+LIBRARY         tmsfactory.lib
+LIBRARY         tmsapi.lib
+LIBRARY         libglib.lib
+
+LANG            SC
+
+SMPSAFE
+

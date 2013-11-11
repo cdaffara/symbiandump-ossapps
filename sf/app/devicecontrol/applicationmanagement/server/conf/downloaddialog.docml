@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="0.9">
+    <object name="qtl_dialog_softkey_2_left" type="HbAction">
+        <string name="role" value="HbDialog:primaryAction"/>
+        <string name="text" value="OK"/>
+    </object>
+    <object name="qtl_dialog_softkey_2_right" type="HbAction">
+        <string name="role" value="HbDialog:secondaryAction"/>
+        <string name="text" value="Cancel"/>
+    </object>
+    <widget name="dialog" type="HbDialog">
+        <sizehint height="42.08955un" type="PREFERRED" width="50.5un"/>
+        <widget name="qtl_dialog_pri_heading" role="HbDialog:headingWidget" type="HbLabel">
+            <contentsmargins bottom="var(hb-param-margin-gene-popup)" left="var(hb-param-margin-gene-popup)" right="var(hb-param-margin-gene-popup)" top="var(hb-param-margin-gene-popup)"/>
+            <string name="plainText" value="Popup title"/>
+            <fontspec name="fontSpec" role="Primary" textheight="var(hb-param-text-height-primary)"/>
+        </widget>
+        <widget name="qtl_dialog_pri5_large_graphic" role="HbDialog:contentWidget" type="HbWidget">
+            <widget name="container" type="HbWidget">
+                <widget name="qtl_dialog_pri5" type="HbLabel">
+                    <enums name="textWrapping" value="TextWordWrap"/>
+                    <sizehint height="4.62687un" type="PREFERRED" width="36.41791un"/>
+                    <bool name="visible" value="TRUE"/>
+                    <string name="plainText" value="Lorem ipsum sed dolor sit amet. Consectetur adipiscing. Proin auctor ante dolorr sit amet. Consectetur adipiscing."/>
+                    <fontspec name="fontSpec" role="Primary" textheight="var(hb-param-text-height-primary)"/>
+                </widget>
+                <widget name="icon" type="HbLabel">
+                    <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+                    <icon iconName="note_warning" name="icon"/>
+                    <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+                    <sizehint height="var(hb-param-graphic-size-primary-large)" type="FIXED" width="var(hb-param-graphic-size-primary-large)"/>
+                    <bool name="visible" value="TRUE"/>
+                </widget>
+                <widget name="qtl_dialog_pri5_1" type="HbLabel">
+                    <enums name="textWrapping" value="TextWordWrap"/>
+                    <real name="z" value="1"/>
+                    <sizehint height="5.22388un" type="PREFERRED" width="36.41791un"/>
+                    <bool name="visible" value="TRUE"/>
+                    <string name="plainText" value="Lorem ipsum sed dolor sit amet. Consectetur adipiscing. Proin auctor ante dolorr sit amet. Consectetur adipiscing."/>
+                    <fontspec name="fontSpec" role="Primary" textheight="var(hb-param-text-height-primary)"/>
+                </widget>
+                <real name="z" value="0"/>
+                <sizehint height="20.8806un" type="PREFERRED" width="23.8806un"/>
+                <layout type="anchor">
+                    <anchoritem dst="qtl_dialog_pri5" dstEdge="TOP" spacing="4.32836un" src="" srcEdge="TOP"/>
+                    <anchoritem dst="qtl_dialog_pri5" dstEdge="RIGHT" spacing="-1.22388un" src="" srcEdge="RIGHT"/>
+                    <anchoritem dst="icon" dstEdge="LEFT" spacing="1.04478un" src="" srcEdge="LEFT"/>
+                    <anchoritem dst="icon" dstEdge="TOP" spacing="6.41791un" src="" srcEdge="TOP"/>
+                    <anchoritem dst="qtl_dialog_pri5_1" dstEdge="TOP" spacing="10.74627un" src="" srcEdge="TOP"/>
+                    <anchoritem dst="qtl_dialog_pri5_1" dstEdge="RIGHT" spacing="-1.22388un" src="" srcEdge="RIGHT"/>
+                </layout>
+            </widget>
+            <real name="z" value="0"/>
+            <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+            <layout type="grid">
+                <griditem column="0" itemname="container" row="0"/>
+            </layout>
+        </widget>
+        <ref object="qtl_dialog_softkey_2_left" role="HbWidget:addAction"/>
+        <ref object="qtl_dialog_softkey_2_right" role="HbWidget:addAction"/>
+    </widget>
+    <metadata activeUIState="Common ui state" display="NHD-3.2-inch_portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+    </metadata>
+</hbdocument>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SystemDefinition schema="3.0.0" xmlns:qt="http://www.nokia.com/qt">
+ <package id="organizer" name="Organizer Application Suite" levels="support services engine ui app">
+  <collection id="organizer_pub" name="Organizer Application Suite Public Interfaces" level="app">
+   <component id="calendar_interim_utils2_api" name="Calendar Interim Utils 2 API" class="api" filter="s60">
+    <meta rel="Api" href="organizer_pub/calendar_interim_utils2_api/calendar_interim_utils2_api.metaxml"/>
+    <unit bldFile="organizer_pub/calendar_interim_utils2_api/group"/>
+   </component>
+  </collection>
+  <collection id="organizer_plat" name="Organizer Application Suite Platform Interfaces" level="app">
+   <component id="agenda_versit_2_api" name="Agenda Versit 2 API" class="api" filter="s60">
+    <meta rel="Api" href="organizer_plat/agenda_versit_2_api/agenda_versit_2_api.metaxml"/>
+    <unit bldFile="organizer_plat/agenda_versit_2_api/group"/>
+   </component>
+   <component id="calendar_exporter_api" name="Calendar Exporter API" class="api" filter="s60">
+    <meta rel="Api" href="organizer_plat/calendar_exporter_api/calendar_exporter_api.metaxml"/>
+    <unit bldFile="organizer_plat/calendar_exporter_api/group"/>
+   </component>
+   <component id="calendar_importer_api" name="Calendar Importer API" class="api" filter="s60">
+    <meta rel="Api" href="organizer_plat/calendar_importer_api/calendar_importer_api.metaxml"/>
+    <unit bldFile="organizer_plat/calendar_importer_api/group"/>
+   </component>
+   <component id="calendar_launcher_api" name="Calendar Launcher API" class="api" filter="s60">
+    <unit bldFile="organizer_plat/calendar_launcher_api"/>
+   </component>
+   <component id="agenda_interface_api" name="Agenda Interface API" class="api" filter="s60" introduced="^4">
+    <unit bldFile="organizer_plat/agenda_interface_api"/>
+   </component>
+   <component id="calendar_editor_api" name="Calendar Editor API" class="api" filter="s60" introduced="^4">
+    <unit bldFile="organizer_plat/calendar_editor_api"/>
+   </component>
+   <component id="notes_editor_api" name="Notes Editor API" class="api" filter="s60" introduced="^4">
+    <unit bldFile="organizer_plat/notes_editor_api"/>
+   </component>
+   <component id="clock_settingsview_plugin_api" name="Clock Settings View Plugin API" class="api" filter="s60" introduced="^4">
+    <unit bldFile="organizer_plat/clock_settingsview_plugin_api"/>
+   </component>
+   <component id="clock_settings_keys_api" name="Clock Settings Keys API" class="api" filter="s60" introduced="^4">
+    <unit bldFile="organizer_plat/clock_settings_keys_api"/>
+   </component>
+   <component id="calendar_settings_keys_api" name="Calendar Settings Keys API" class="api" filter="s60" introduced="^4">
+    <unit bldFile="organizer_plat/calendar_settings_keys_api"/>
+   </component>
+   <component id="eventviewer_plugin_api" name="Event Viewer Plugin API" class="api" filter="s60" introduced="^4">
+    <unit bldFile="organizer_plat/eventviewer_plugin_api"/>
+   </component>
+  </collection>
+  <collection id="agendainterface" name="Agenda Interface" level="services">
+   <!-- collection is really a component, should move down a directory -->
+   <component id="agendainterface_build" filter="s60" name="Agenda Interface Build">
+    <unit bldFile="agendainterface" qt:proFile="agendainterface.pro"/>
+   </component>
+  </collection>
+  <collection id="calendarui" name="Calendar UI" level="ui">
+   <component id="commonutils" filter="s60" name="Calendar Common Utils">
+    <unit bldFile="calendarui/commonutils" qt:proFile="commonutils.pro"/>
+   </component>
+   <component id="calenlauncher" filter="s60" name="Calendar Launcher">
+    <unit bldFile="calendarui/calenlauncher" qt:proFile="calenlauncher.pro"/>
+   </component>
+   <component id="caleneditor" filter="s60" name="Calendar Editor" introduced="^4">
+    <unit bldFile="calendarui/caleneditor" qt:proFile="caleneditor.pro"/>
+   </component>   
+   <component id="agendaeventviewer" filter="s60" name="Agenda Event Viewer" introduced="^4" >
+    <unit bldFile="calendarui/agendaeventviewer" qt:proFile="agendaeventviewer.pro"/>
+   </component>
+   <component id="globaldata" filter="s60" name="Calendar Global Data">
+    <unit bldFile="calendarui/globaldata" qt:proFile="globaldata.pro"/>
+   </component>
+   <component id="settings" filter="s60" name="Calendar Settings">
+    <unit bldFile="calendarui/settings"  qt:proFile="settings.pro"/>
+   </component>
+   <component id="calenplugins" filter="s60" name="Calendar Plugins" introduced="^4"  class="plugin">
+    <unit bldFile="calendarui/calenplugins" qt:proFile="calenplugins.pro"/>
+   </component>
+   <component id="customisationmanager" filter="s60" name="Calendar Customisation Manager">
+    <unit bldFile="calendarui/customisationmanager" qt:proFile="customisationmanager.pro"/>
+   </component>
+   <component id="calendarui_views" filter="s60" name="Calendar Views">
+    <unit bldFile="calendarui/views" qt:proFile="views.pro"/>
+   </component>
+   <component id="calendarui_controller" filter="s60" name="Calendar Controller">
+    <unit bldFile="calendarui/controller" qt:proFile="controller.pro"/>
+   </component>
+   <component id="calendarui_application" filter="s60" name="Calendar Application">
+    <unit bldFile="calendarui/application" qt:proFile="application.pro"/>
+   </component>
+   <component id="regionalplugins" name="Regional Plugins" filter="s60" introduced="^4" class="plugin">
+      <unit bldFile="calendarui/regionalplugins" qt:proFile="regionalplugins.pro"/>
+   </component>
+   <component id="calenviewerservice" name="Calendar Viewer Service" filter="s60" introduced="^4" class="plugin">
+      <unit bldFile="calendarui/calenviewerservice" qt:proFile="calenviewerservice.pro"/>
+   </component>
+   <component id="caldav" filter="sf_build" name="CalDAV" class="plugin" introduced="^3">
+      <meta rel="config">
+       <defined condition="FF_CALDAV_SUPPORT"/>
+      </meta>
+    <!-- not yet delivered in S^4 <unit bldFile="calendarui/caldav/group"/>-->
+   </component>
+  </collection>
+  <collection id="notes" name="Notes" level="ui">
+   <component id="notes_build" filter="s60" name="Notes Build" introduced="^4">
+    <unit bldFile="notes" qt:proFile="notes.pro"/>
+   </component>
+  </collection>
+<collection id="calendarengines" name="Calendar Engines" level="engine">
+   <component id="versit2" filter="s60" name="Versit 2 iCal Parser" introduced="9.2">
+    <unit bldFile="calendarengines/versit2/group"/>
+   </component>
+   <component id="agnversit2" filter="s60" name="Versit 2 Agenda Interface" class="plugin" introduced="9.2">
+    <unit bldFile="calendarengines/agnversit2/group"/>
+   </component>
+   <component id="caleninterimutils" filter="s60" name="Calendar Interim Utils" introduced="9.1">
+    <unit bldFile="calendarengines/caleninterimutils/group"/>
+   </component>
+   <component id="calenimp" filter="s60" name="Calendar Import Wrapper" introduced="7.0s">
+    <unit bldFile="calendarengines/calenimp/group"/>
+   </component>
+   <component id="caldavsrv" filter="sf_build" name="CalDAV Server" introduced="^3">
+      <meta rel="config">
+       <defined condition="FF_CALDAV_SUPPORT"/>
+      </meta>
+    <!-- Not yet delivered in S^4 <unit bldFile="calendarengines/caldav/group"/> -->
+   </component>
+  </collection>
+  <collection id="clock" name="Clock" level="app">
+   <component id="clockengines" filter="s60" name="Clock Engines">
+    <unit bldFile="clock/clockengines" qt:proFile="clockengines.pro"/>
+   </component>
+   <component id="clockmw" filter="s60" name="Clock Middleware" introduced="^4">
+    <unit bldFile="clock/clockmw" qt:proFile="clockmw.pro"/>
+   </component>
+   <component id="clockui" filter="s60" name="Clock UI">
+    <unit bldFile="clock/clockui" qt:proFile="clockui.pro"/>
+   </component>
+   <component id="clock_config" filter="s60" name="Clock Config" class="config">
+    <unit bldFile="clock/group"/>
+   </component>
+  </collection>
+  <collection id="pimappservices" name="PIM Application Services" level="services">
+   <component id="calendar" name="Calendar" introduced="9.2" purpose="optional" filter="s60">
+    <unit version="2" bldFile="pimappservices/calendar/group" mrp="pimappservices/calendar/group/app-engines_calendar.mrp"/>
+   </component>
+   <component id="calendarvcalplugin" name="Calendar vCal Plugin" introduced="8.1" purpose="optional" class="plugin" filter="s60">
+    <unit version="2" bldFile="pimappservices/calendarvcalplugin/group" mrp="pimappservices/calendarvcalplugin/group/app-engines_agnversit2.mrp"/>
+   </component>
+   <component id="appenginesdocs" name="Application Engines Documentation" purpose="development" class="doc">
+    <unit mrp="pimappservices/appenginesdocs/app-engines_documentation.mrp"/>
+   </component>
+  </collection>
+  <collection id="pimappsupport" name="PIM Application Support" level="support">
+   <component id="vcardandvcal" name="vCard and vCal" introduced="ER5" purpose="optional" filter="s60">
+    <unit bldFile="pimappsupport/vcardandvcal/group" mrp="pimappsupport/vcardandvcal/group/app-services_versit.mrp"/>
+   </component>
+   <component id="chinesecalendarconverter" name="Chinese Calendar Converter" introduced="6.1" purpose="optional" filter="s60">
+    <unit bldFile="pimappsupport/chinesecalendarconverter/group" mrp="pimappsupport/chinesecalendarconverter/group/app-services_calcon.mrp"/>
+   </component>
+   <component id="chinesecalendaralg" name="Chinese Calendar Algorithm" introduced="^2" purpose="optional" class="plugin" filter="s60">
+    <unit bldFile="pimappsupport/chinesecalendaralg/group" mrp="pimappsupport/chinesecalendaralg/group/app-services_chinesecalendaralgorithm.mrp"/>
+   </component>
+  </collection>
+  <collection id="alarmui" name="Alarm UI" level="app">
+   <!-- collection is really a component, should move down a directory -->
+   <component id="alarmui_build" filter="s60" name="Alarm UI Build">
+    <unit bldFile="alarmui" qt:proFile="alarmui.pro"/>
+   </component>
+  </collection>
+  <collection id="organizer_info" name="Organizer Application Suite Info" level="app">
+   <component id="organizer_metadata" name="Organizer Application Suite Metadata" class="config" introduced="^2" purpose="development" target="desktop">
+    <unit mrp="organizer_info/organizer_metadata/organizer_metadata.mrp"/>
+   </component>
+  </collection>
+ </package>
+</SystemDefinition>

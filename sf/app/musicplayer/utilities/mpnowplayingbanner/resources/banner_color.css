@@ -1,0 +1,24 @@
+/* Colors for different now playing bannner label states for text */
+
+HbLabel#bannerLabel[state = "normal"]::text
+{
+    color:var(qtc_multimedia_trans_normal);
+}
+
+HbLabel#bannerLabel[state = "pressed"]::text
+{
+    color:var(qtc_multimedia_trans_pressed);
+}
+
+
+/* Colors for different now playing bannner label states for mono icon */
+
+HbLabel#bannerLabel[state = "normal"]::icon
+{
+    color:var(qtc_multimedia_trans_normal);
+}
+
+HbLabel#bannerLabel[state = "pressed"]::icon
+{
+    color:var(qtc_multimedia_trans_pressed);
+}

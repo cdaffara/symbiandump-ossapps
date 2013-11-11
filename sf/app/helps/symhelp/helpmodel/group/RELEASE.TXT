@@ -1,0 +1,396 @@
+HELP MODEL RELEASE NOTES
+========================
+Release:044
+Release by: Waiman Tang
+Date:23/12/2009
+------------------
+* fix for defect : PDEF134629: ONB : Fix for some leavescan errors in defect_misc build
+------------------
+Release:043
+Release by: Shazia Murtaza
+Date:23/12/2008
+------------------
+* fix for defect : DEF131491: hlpmodel - manual test TDUMPER fails.
+------------------
+Release:042
+Release by: James Aley
+Date:25/09/2008
+------------------
+* fix for defect : DEF126532: [Coverity] - SYMBIAN.CLEANUP - app-services/hlpmodel/
+------------------
+Release:041
+Release by: Prabodh Depala
+Date:06/11/2007
+------------------
+* fix for defect : PDEF113759: It appears HlpLauncher does not work properly
+------------------
+Release:040
+Release by: Waiman Tang
+Date:27/02/2007
+------------------
+* fix for defect : PDEF100094: HlpLauncher class description inaccurate
+------------------
+Release:039
+Release by: Konstantin Zheludev
+Date:29/09/2006
+------------------
+* fix for defect : DEF093327: Tag Scan Error Report for Pim component
+------------------
+Release:038
+Release by: Shazia Murtaza
+Date:09/05/2006
+------------------
+* fix for defect : DEF085630: Help application does not switch to the correct language for helpfiles. 
+------------------
+Release:037
+Release by: Peter Chan
+Date:10/03/2006
+------------------
+* fix for defect :  DEF082340: STAB-Agenda (Calendar) help can crash
+- prevent a new search starting when one is currently being conducted.
+------------------
+Release:036
+Release by: Kelly Hon
+Date:15/12/2005
+-------------------
+* fix for defect :  DEF075741: STAB-Agenda (Calendar) help can crash.
+
+Release:035
+Release by: Daniel Yuen
+Date:23/11/2005
+------------------
+* fix for defect :DEF074050: Helpmodel has never been updated for multi-digit locale codes
+
+KHlpFileSpec now uses *.h* instead of *.h?? for multi-digit locale search.
+------------------
+Release:034
+Release by: Krishna Vasudevan
+Date:27/05/2005
+-------------------
+* fix for defect : DEF061683  CHlpDatabase::FileName doesn't work 
+-------------------
+Release:033
+Release by: Krishna Vasudevan
+Date:17/05/2005
+-------------------
+* fix for defect : INC057477 - HlpLaunch hard-codes application path
+
+The resource file is included into the hlpmodel's IBY File.
+The hlplaunch MMP file contains the resource file information.
+There is a error check on return value of RFs::Connect().
+The Resource File literal name is made unique.
+-------------------
+Release:032
+Release by: Robert Williamson
+Date:18/03/2005
+-------------------
+* fix for defect : INC057477 - HlpLaunch hard-codes application path
+
+Path is now stored in lch.rss. The path set in lch.rss in this change
+is "z:\\sys\\bin\\cshelp.exe".
+-------------------
+Release:031
+Release by: Prabodh Depala
+Date:15/02/2005
+-------------------
+* fix for defect : INC051624 - NTT App-services\hlpmodel\ test case tsearch fails.
+-------------------
+Release:030
+Release by: Loughlin Spollen
+Date:03/02/2005
+-------------------
+* fix for defect : DEF049948 - Core Apps Test Server improvement
+-------------------
+Release:029
+Release by: Steve Childerley
+Date:11/11/2004
+-------------------
+Minor Change TSearch  - modified to handle different drives encountered in Lubbock & H2
+The major changes made within SearchOrderTest.CPP & H
+
+Release:028
+Release by: Steve Childerley
+Date:07/10/2004
+-------------------
+Modified TSearch to include test for PlatSec drive search order.
+The added test is only run when __SECURE_DATA__ is defined.
+
+Release: 027
+Release by: Johan Nareskog
+Date: 11/10/2004
+-------------------
+DEF050046 - THelpView and TLCH don't start
+-------------------
+
+Release: 026
+Release by: Nikolay Budantsev
+Date: 11/09/2004
+-------------------
+MS3.1.1  GT0215   PREQ277 PS6.4 Replacement APIs (Also PS8.1)
+MS3.6    GT0215   PREQ728 Base API Improvements
+-------------------
+
+Release: 025
+Release by: Nichola Turner
+Date: 26/11/2003
+-------------------
+* fix for defect : DEF040449 - Missing copyright statements in files
+-------------------
+Release: 024
+Release by: Dominic Pinkman
+Date: 17/11/2003
+-------------------
+* fix for defect : DEF039936 - Mistakes in Doxygen tagging
+-------------------
+Release: 023
+Release by: Andy Newman
+Date: 08/10/2003
+-------------------
+* fix for defect : DEF038750 - build file errors
+-------------------
+Release: 022
+Release by: Andy Newman
+Date: 17/09/2003
+-------------------
+* fix for defect : DEF037970 - TSearch looks for files on C, not Z, on lubbock and assabet
+-------------------
+Release: 021
+Release by: Johan Nareskog 
+Date: 09/15/2003
+-------------------
+* fix for defect : DEF037971  hlpmodel/tloader - missed from hlpmodelTest.iby file
+-------------------
+Release: 020
+Release by: Bob Rosenberg
+Date: 06/20/2002
+-------------------
+* fix for defect : INC035325 - TSTORE fails in Lubbock (urel)
+
+-------------------
+Release: 019
+Release by: Sindhu Melkote
+Date: 05/12/2002
+-------------------
+* fix for defect : INC002647 - Help:Results of a search are still displayed after search is cancelled
+
+-------------------
+Release: 018
+Release by: NicholaT
+Date: 28/02/2002
+-------------------
+* fix for defect "Cannot add 3'rd party help files"
+  (PEN-55HDL6)
+
+-------------------
+Release: 017
+Release by: NicholaT
+Date: 30/01/2002
+-------------------
+* fix for defect "Exported headers #include "" non-exported headers"
+  (BAD-56VLDN)
+
+-------------------
+Release: 016
+Release by: NicholaT
+Date: 28/01/2002
+-------------------
+* fix for defect "Cannot add 3'rd party help files"
+  (PEN-55HDL6)
+
+-------------------
+Release: 015
+Release by: NicholaT
+Date: 06/09/2001
+-------------------
+* Fix for defect "duplicate UIDs"
+  (TUR-4ZWFHV)
+
+-------------------
+Release: 014
+Release by: GeraldoT
+Date: 06/08/2001
+-------------------
+* Fix for defect "HlpModel: Javadoc Symbian OS release version number are incorrect"
+  (WIR-4YYN4E)
+
+-------------------
+Release: 013
+Release by: AlexW
+Date: 13/07/2001
+-------------------
+* Fix for defect "HlpModel: zooming rounding errors producing strange 
+  zoomed bitmaps" (WIR-4YLK77)
+
+-------------------
+Release: 012
+Release by: NicholaT
+Date: 04/07/2001
+-------------------
+* Added support for localisable language downgrade path of help files
+
+  - all drives are scanned for any help files.
+  - for each file found, it's nearest language file is loaded by using
+    BaflUtils::NearestLanguageFile.
+
+* New test help files added
+
+  - test help files for various locales added
+
+-------------------
+Release: 011
+Release by: AlexW
+Date: 08/06/2001
+-------------------
+* Added multiple bitmap zooming support. 
+
+  - If an MBM file contains 1 bitmap, then only regular zooming is available.
+  - If an MBM file contains 2 bitmaps, then again, only regular bitmap zooming
+    is available (i.e. GDI stretches the bitmap as its drawn at different zoom
+    sizes).
+  - If an MBM file contains 3 bitmaps, then depending on the zoom size the
+    help model is in, the corresponding bitmap is drawn to the screen without
+    any streching.
+  - If an MBM file contains more than 3 bitmaps then only the first 3 are utilized.
+
+* New API's
+  - See GT109 API documentation.
+
+-------------------
+Release: 010
+Release by: AlexW
+Date: 21/07/2000
+-------------------
+* Removed extra notification that a CategoryUidSearch is complete. This is 
+  not required and results in *EXACTLY* two Search complete messages being 
+  reported to the model observer (in the case where a match is found, or 
+  *EXACTLY* one notification in the case where no match is found). Updated 
+  TSearch to verify that only one notification is ever sent regardless of
+  how many help files are present, or how many help files are searched.
+
+-------------------
+Release: 009
+Release by: AlexW
+Date: 14/07/2000
+-------------------
+* Implemented fix for defect "hlpmodel allows 3rd party app writer to override internal help file"
+  (EDNAMIE-4LXJJ2)
+* Implemented fix for defect "HlpModel will ignore foreign locale help files" (EDNAWIR-4LZG56)
+* In both cases, these fixes were merged in from TLoader
+* Updated TLoader to support optional logging
+
+-------------------
+Release: 008
+Release by: AlexW
+Date: 10/07/2000
+-------------------
+* NOTE: HELP FILES WILL NEED REBUILDING AS THIS IS NOT A DATA-COMPATIBLE RELEASE. 
+  Data compatibility had to be broken to fix defect "Getting topics from an 
+  index won't work" (EDNGHAS-4LVEJV)
+* Fix for defect "CHlpModel should produce only one ETopicListAvailable event
+  for each call to CHlpModel::CategoryUIDSearchL?" (EDNMPEN-4LNDJ8)
+* Fix for defect "Getting topics from an index won't work" (EDNGHAS-4LVEJV)
+* Fix for defect "Missing CleanupStack interaction in DbWriter" (EDNAWIR-4LVEXY)
+* TSearch has been updated to include better checking of help model search results.
+* Removed image files from Test source data as these are generated by the compiler.
+
+-------------------
+Release: 007
+Release by: AlexW
+Date: 07/07/2000
+-------------------
+* Another attempt at fixing defect "CHlpModel should produce only one ETopicListAvailable event 
+  for each call to CHlpModel::CategoryUIDSearchL?" (EDNMPEN-4LNDJ8)
+  This time, added extra ReportEventL(ESearchComplete)
+* Improved TSearch full text searching to panic when in the case where the help model
+  returns incorrect results for the test help files.
+
+-------------------
+Release: 006
+Release by: AlexW
+Date: 04/07/2000
+-------------------
+* Updated fix for defect "Epoc currently assumes one help file language" (EDNJHET-4HGNYZ)
+  The previous fix was not tested for the use case where D: contains a file which is
+  subsequently overridden by a better file on C:
+  
+  E.g. D:\System\Help\SomeHelp.hlp
+       C:\System\Help\SomeHelp.h01 (this is better than the D: counterpart)
+
+  This required the insertion of a missing 'break' statement in the loading code. This has
+  been tested by running TLoader using this use-case setup.
+* Changed CHlpModel::CategoryUIDSearchL(TUid aCategoryUID) to use DoSearchL(...) directly
+  because previous release called SearchL() which was over-writing the transient category
+  uid value
+
+-------------------
+Release: 005
+Release by: AlexW
+Date: 29/06/2000
+-------------------
+* Fix for defect "CHlpModel should produce only one ETopicListAvailable event 
+  for each call to CHlpModel::CategoryUIDSearchL?" (EDNMPEN-4LNDJ8)
+* Fix for defect "Loading an index list fails in HlpModel" (EDNAWIR-4LPE8Q)
+* Fix for defect "Link warnings from hlpmodel" (EDNSCHM-4L2P7H)
+* Fix for defect "Epoc currently assumes one help file language" (EDNJHET-4HGNYZ)
+* The last defect requires that all help files are named *.h?? where ?? can be hlp or 
+  a locale specific two digit code (e.g. 01 for UK English). 
+
+
+-------------------
+Release: 004
+Release by: AlexW
+Date: 02/06/2000
+-------------------
+* Fix for defect "hlpmodel returns the same help topic for the same 
+  TopicId in different help databases" (EDNJHET-4HLH8N)
+* 2nd and 3rd Uids switched, so all help files will need to be rebuilt.	
+* Added export to allow an asynchronous search to be cancelled.
+* Fixed full text searching so that asynchronous searching is now enabled.
+* Help application authors should take note of the new exports to CHlpItem
+  and the new topic location export in CHlpModel as this is the *ONLY* means of
+  restoring a help entry.
+* Source & BC
+
+
+-------------------
+Release: 003
+Release by: AlexW
+Date: 16/05/2000
+-------------------
+* Fix for defect "HlpModel panics if help requested when no helpfiles installed"
+  (EDNJHET-4KDEP4)
+
+
+-------------------
+Release: 002
+Release by: AlexW
+Date: 04/05/2000
+-------------------
+  Major update to support pictures in rich text. Most recent changes first:-
+
+* Updated DBWriter to provide more robust long text column writing (without leading length bytes).* Updated HlpModel to read using corresponding new schema.* Updated TDumper to extract further content from the help file.* Updated THelpView to reset the contents of the search window after a search has been completed.
+* Changed the DB writer to allow longer synonynms (now have a max length of 200 chars).* Updated the KHlpMaxTextColLength constant to 200 just in case (was 120).
+* Slight optimisation in the help file loading code which checks to see that  the model is not attempting to load a directory(!).* Added zooming support to reference help viewer
+* Remove bad code from CHlpModel::LoadTopicL() which was not using the correct  column name* In THelpView, added extra call to ensure that the rich text edwin's scrollbars  are resized after loading a new topic.* Removed commented out code from CHlpPict.cpp
+* Updated mmp file to link against CONE - this is required in order to retrieve the  current screen device without changing source compatibility. This might have to  be updated to something a little more sensible in the near future.* Fix for defect "HlpModel poor performance when obtaining lists   of topics from the help databases" (EDNJHET-4HGMPF)* Added an __ASSERT_DEBUG that meta data uid's read from the help  file must not duplicate each other (context Id's must be unique).
+* The version breaks file compatibilty in order to add improved picture and  rich text restoration. All help files will need to be regenerated.* Added new picture restoration code to help model so that a glass door   viewing application is no longer required.* Added new code to the context sensitive help backend to write picture Id's  to the CHelpPicture header. Pictures are now externalised as rows in a help  files image table. This reduces the size of help files by preventing multiple  copies of the same image from appearing multiple times in a help file. Images  are now looked up in the Image table.* Extended TContext to perform more testing* Cleaned-up HlpModel and THelpView
+* Fix for defect "Context search in hlpmodel does not seem to work" (EDNAFRD-4HQE7H)* Added completed test for context sensitive searching (TContext)
+* Updated DBWriter to provide more robust long text column writing (without leading length bytes).* Updated HlpModel to read using corresponding new schema.* Updated TDumper to extract further content from the help file.* Updated THelpView to reset the contents of the search window after a search has been completed.
+* Changed the DB writer to allow longer synonynms (now have a max length of 200 chars).* Updated the KHlpMaxTextColLength constant to 200 just in case (was 120).
+* Slight optimisation in the help file loading code which checks to see that  the model is not attempting to load a directory(!).* Added zooming support to reference help viewer
+* Remove bad code from CHlpModel::LoadTopicL() which was not using the correct  column name* In THelpView, added extra call to ensure that the rich text edwin's scrollbars  are resized after loading a new topic.* Removed commented out code from CHlpPict.cpp
+* Updated mmp file to link against CONE - this is required in order to retrieve the  current screen device without changing source compatibility. This might have to  be updated to something a little more sensible in the near future.* Fix for defect "HlpModel poor performance when obtaining lists   of topics from the help databases" (EDNJHET-4HGMPF)* Added an __ASSERT_DEBUG that meta data uid's read from the help  file must not duplicate each other (context Id's must be unique).
+* The version breaks file compatibilty in order to add improved picture and  rich text restoration. All help files will need to be regenerated.* Added new picture restoration code to help model so that a glass door   viewing application is no longer required.* Added new code to the context sensitive help backend to write picture Id's  to the CHelpPicture header. Pictures are now externalised as rows in a help  files image table. This reduces the size of help files by preventing multiple  copies of the same image from appearing multiple times in a help file. Images  are now looked up in the Image table.* Extended TContext to perform more testing* Cleaned-up HlpModel and THelpView
+* Fix for defect "Context search in hlpmodel does not seem to work" (EDNAFRD-4HQE7H)* Added completed test for context sensitive searching (TContext)
+
+
+-------------------
+Release: 001
+Release by: AlexW
+Date: 03/04/2000
+-------------------
+* Fixed the incorrect implementation of defect "hlpmodel recognises   help databases by filename" (EDNJHET-4HGNDS)* Finished TDumper project to dump contents of a help database to a text file for  inspection* Minor update to THelpView to adjust comments* Updated bld.inf to export TContext.dat (help database file used in test code)
+* Fix CHlpTopic::RestoreL(...) so that it can also read the rich text stored   in the db.* Now retrieves rich text from the model (excluding pictures)
+* New test project THelpView, a minimal EIKON help file viewer* Updated CHlpDatabase to no longer maintain an in memory handle   to the database stream dictionary* Fixed some memory leaks in DbWriter* Added new function SetObserver to CHlpModel* Appended new export to def files
+* Improved test code for topic listing and category listing.* Implementation for one of the missing functions (CHlpModel::OpenFileL(...))* Added new panic code (EHlpNoCriterion)* Fixed "Non-standard extension used" warning in CHlpTopic::RestoreL(RDbView* aView)  - this is actually part of defect "Various code defects in hlpmodel"  (EDNJHET-4HGP3S)* Added assert always to check for null category list * Fixed another part of defect "Various code defects in hlpmodel" (EDNJHET-4HGP3S)  - CHlpModel::MatchUidL(TUid aUid)* Made some internal functions inline and converted to references.* Optimised CHlpDatabase to used an array key on the iUids array.* Removed trailing L off of non leaving functions* Fixed a potential resource leak in CHlpDatabase whereby internal 'R'  classes were't closed.
+* Changed panic code THlpPanic::ENoRowAtCursor to EHlpNoRowAtCursor* Boiler plated header* Removed dodgy tabbing* Made CHlpDatabase::ViewHasRecordsL() inline (it was anyway, it just didn't  explicitly say inline).

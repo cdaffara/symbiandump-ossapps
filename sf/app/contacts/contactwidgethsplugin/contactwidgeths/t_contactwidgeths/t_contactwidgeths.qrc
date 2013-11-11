@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/">
+        <!-- Large test files are not included here to keep app size smaller.
+        They are loaded using absolute paths, so they must be exported to app's private folder
+        in .pro file.
+        -->
+        <file alias="test1_avatar.jpg">resource/test1_avatar.jpg</file>
+        <file alias="background_ok.png">resource/background_ok.png</file>
+        <file alias="test_avkeys_800x600.jpg">resource/test_avkeys_800x600.jpg</file>
+        <file alias="test_avkeys_600x800.jpg">resource/test_avkeys_600x800.jpg</file>
+        <file alias="test_avatar_640x480.jpg">resource/test_avatar_640x480.jpg</file>
+        <file alias="test_avatar_32x24.jpg">resource/test_avatar_32x24.jpg</file>
+        <file alias="test_avatar_type_text.txt">resource/test_avatar_type_text.txt</file>
+        <file alias="commlauncherwidget.docml">resource/commlauncherwidget.docml</file>
+        <file alias="friend_expand_tl.fxml">resource/friend_expand_tl.fxml</file>
+        <file alias="friend_expand_bl.fxml">resource/friend_expand_bl.fxml</file>
+        <file alias="friend_expand_tr.fxml">resource/friend_expand_tr.fxml</file>
+        <file alias="friend_expand_br.fxml">resource/friend_expand_br.fxml</file>
+        <file alias="friend_minimize.fxml">resource/friend_minimize.fxml</file>
+    </qresource>
+</RCC>

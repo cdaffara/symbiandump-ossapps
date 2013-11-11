@@ -1,0 +1,90 @@
+/*
+* Copyright (c) 2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   GlxErrorManager unit test project file
+*
+*/
+
+
+
+#include "../../../../../group/glxbuildcommon.mmh"
+
+TARGET          ut_glxerrormanager.dll
+TARGETTYPE      dll
+UID             0x1000af5a 0x01700000
+
+CAPABILITY              ALL -TCB
+
+#ifndef WINSCW
+EPOCALLOWDLLDATA
+#endif
+
+SOURCEPATH              ../ut_glxerrormanager
+SOURCE                  ut_glxerrormanager.cpp
+
+// Sources required by the test suite
+SOURCE                  ut_glxerrormanager_DllMain.cpp
+
+// Sources needed by the test
+SOURCEPATH              ../../src
+SOURCE                  glxattributecontext.cpp
+SOURCE                  glxcachemanager.cpp
+SOURCE                  glxerrormanager.cpp
+SOURCE                  glxfetcherror.cpp
+SOURCE                  glxfetcherrorarray.cpp
+SOURCE                  glxfetchcontextremover.cpp
+SOURCE                  glxgarbagecollector.cpp
+SOURCE                  glxcache.cpp
+SOURCE                  glxitemlist.cpp
+SOURCE                  glxlistutils.cpp
+SOURCE                  glxlistwindow.cpp
+SOURCE                  glxmedia.cpp
+SOURCE                  glxmedialist.cpp
+SOURCE                  glxmedialistiterator.cpp
+SOURCE                  glxnavigablelist.cpp
+SOURCE                  glxstaticitemlist.cpp
+SOURCE                  glxthumbnailcontext.cpp
+SOURCE                  glxthumbnailutility.cpp
+SOURCE                  mglxcache.cpp
+SOURCE                  mglxmedialist.cpp
+SOURCE                  glxmedialistarray.cpp
+
+USERINCLUDE             ../ut_glxerrormanager
+
+SYSTEMINCLUDE           ../../inc
+SYSTEMINCLUDE           ../../../../inc
+SYSTEMINCLUDE           ../../../../commonui/inc
+SYSTEMINCLUDE           ../../../../common/inc
+SYSTEMINCLUDE           ../../../drmutility/inc
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE           /epoc32/include/Digia/EUnit
+
+LIBRARY                 apparc.lib
+LIBRARY                 bafl.lib
+LIBRARY                 cone.lib
+LIBRARY                 edbms.lib
+LIBRARY                 efsrv.lib
+LIBRARY                 eikcore.lib
+LIBRARY                 estor.lib
+LIBRARY                 EUnit.lib
+LIBRARY                 euser.lib
+LIBRARY                 fbscli.lib
+LIBRARY                 glxcommonui.lib
+LIBRARY                 glxcommon.lib
+LIBRARY                 mpxcollectionutility.lib
+LIBRARY                 mpxcommon.lib
+LIBRARY                 lbs.lib // TCoordinate
+
+EXPORTUNFROZEN
+SMPSAFE
+// End of file

@@ -1,0 +1,66 @@
+<configuration xmlns="http://www.s60.com/xml/confml/1" name="Camerax variation">
+  <feature ref="CxRuntimeFeaturesCrUid" name="CameraX Runtime Variation">
+    <desc>CameraX Runtime Variation</desc>
+
+    <setting ref="PrimaryCameraCaptureKeysCr" name="primary camera capture keys" type="string" readOnly="true">
+      <desc>PrimaryCameraCaptureKeysCr defines the capture keys for primary camera.
+            Both key code and scan code are needed for full functionality.
+      </desc>
+    </setting>
+
+    <setting ref="SecondaryCameraCaptureKeysCr" name="secondary camera capture keys" type="string" readOnly="true">
+      <desc>SecondaryCameraCaptureKeysCr defines the key scan codes that are configured
+            as capture keys for secondary camera.
+      </desc>
+    </setting>
+
+    <setting ref="PrimaryCameraAutofocusKeysCr" name="primary camera autofocus keys" type="string" readOnly="true">
+      <desc>PrimaryCameraAutofocusKeysCr defines the autofocus keys for primary camera.
+            Both key code and scan code are needed for full functionality.
+      </desc>
+    </setting>
+
+    <setting ref="FreeMemoryLevelsCr" name="free memory levels" type="string" readOnly="true">
+      <desc>FreeMemoryLevelsCr defines the trigger levels for freeing memory and required levels of free memory.
+            All values are defined in bytes. There are 4 items in comma-separated list. Items are defined as follows:
+            1. Trigger level of free RAM when camera is started. If free RAM is below this, more free memory is requested.
+            2. Level of free RAM requested and required for camera to start, if trigger level (item 1) is met.
+      </desc>
+    </setting>
+
+    <setting ref="StillMaxZoomValuesCr" name="Maximum still zoom values" type="string" readOnly="true">
+      <desc>Key defines maximum zoom limit specific to each image quality. The first item represent max zoom limit
+            for highest still resoultion and so on. We have only 5 entries, since we dont expect to have more than 5 still resoultions
+            in any product. Use -1 when zoom limit is not supported for a particular resolution.
+            Note: ECAM already has some limits which should be taken into account.
+      </desc>
+    </setting>
+
+    <setting ref="VideoMaxZoomValuesCr" name="Maximum video zoom values" type="string" readOnly="true">
+      <desc>Key defines maximum zoom limit specific to each video quality. The first item represent max zoom limit
+            for highest video resoultion and so on. We have only 5 entries, since we dont expect to have more than 5 video resoultions
+            in any product. Use -1 when zoom limit is not supported for a particular resolution.
+            Note: ECAM already has some limits which should be taken into account.
+      </desc>
+    </setting>
+
+    <setting ref="UseRasterGraphicsSystemCr" name="Use Qt raster graphics system" type="int" readOnly="true">
+      <desc>Force the use of Qt raster graphics system instead of the default graphics system.
+      </desc>
+    </setting>
+
+  </feature>
+
+  <data>
+    <CxRuntimeFeaturesCrUid>
+      <PrimaryCameraCaptureKeysCr>0xab,0xf849</PrimaryCameraCaptureKeysCr>
+      <SecondaryCameraCaptureKeysCr>0xab,0xa7</SecondaryCameraCaptureKeysCr>
+      <PrimaryCameraAutofocusKeysCr>0xe2,0xf880</PrimaryCameraAutofocusKeysCr>
+      <FreeMemoryLevelsCr>8000000,10000000</FreeMemoryLevelsCr>
+      <StillMaxZoomValuesCr>32,32,32,32,32</StillMaxZoomValuesCr>
+      <VideoMaxZoomValuesCr>40,40,40,-1,-1</VideoMaxZoomValuesCr>
+      <UseRasterGraphicsSystemCr>1</UseRasterGraphicsSystemCr>
+    </CxRuntimeFeaturesCrUid>
+  </data>
+
+</configuration>

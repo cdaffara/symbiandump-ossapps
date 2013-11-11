@@ -1,0 +1,665 @@
+NAME ORBT
+
+#include <appinfo.rh>
+#include <eikon.rh>
+#include <eikon.rsg>
+
+RESOURCE RSS_SIGNATURE { }
+
+RESOURCE ARRAY r_data_firstnames
+    {
+    items=
+        {
+        LBUF { txt="John"; },
+        LBUF { txt="Francis"; },
+        LBUF { txt="Andrew"; },
+        LBUF { txt="Lawrence"; },
+        LBUF { txt="Gregory"; },
+        LBUF { txt="Fulke"; },
+        LBUF { txt="Thomas"; },
+        LBUF { txt="Nicholas"; },
+        LBUF { txt="Hakle"; },
+        LBUF { txt="Roger"; },
+        LBUF { txt="Nathaniel"; },
+        LBUF { txt="Luke"; },
+        LBUF { txt="William"; },
+        LBUF { txt="Ralph"; },
+        LBUF { txt="Leonar"; },
+        LBUF { txt="Daniel"; },
+        LBUF { txt="Aban"; },
+        LBUF { txt="Mathias"; },
+        LBUF { txt="Robert"; },
+        LBUF { txt="Christopher"; },
+        LBUF { txt="Martin"; },
+        LBUF { txt="Michael"; },
+        LBUF { txt="Barnaby"; },
+        LBUF { txt="Tobias"; },
+        LBUF { txt="Richard"; },
+        LBUF { txt="Anthony"; },
+        LBUF { txt="Simon"; },
+        LBUF { txt="Samuel"; },
+        LBUF { txt="Geoffrey"; },
+        LBUF { txt="Isaac"; },
+        LBUF { txt="Henry"; },
+        LBUF { txt="Matthew"; },
+        LBUF { txt="Peter"; },
+        LBUF { txt="Allen"; },
+        LBUF { txt="Reynold"; },
+        LBUF { txt="Jerome"; },
+        LBUF { txt="Elizabeth"; },
+        LBUF { txt="Catherine"; },
+        LBUF { txt="Frances"; },
+        LBUF { txt="Cecily"; },
+        LBUF { txt="Millicent"; },
+        LBUF { txt="Audrey"; },
+        LBUF { txt="Joan"; },
+        LBUF { txt="Elinor"; },
+        LBUF { txt="Joyce"; },
+        LBUF { txt="Frideswide"; },
+        LBUF { txt="Rose"; },
+        LBUF { txt="Helen"; },
+        LBUF { txt="Margaret"; },
+        LBUF { txt="Isabel"; },
+        LBUF { txt="Bridget"; },
+        LBUF { txt="Grace"; },
+        LBUF { txt="Thomasin"; },
+        LBUF { txt="Janet"; },
+        LBUF { txt="Agnes"; },
+        LBUF { txt="Dorothy"; },
+        LBUF { txt="Christian"; },
+        LBUF { txt="Amy"; },
+        LBUF { txt="Fortune"; },
+        LBUF { txt="Sybil"; },
+        LBUF { txt="Alice"; },
+        LBUF { txt="Margery"; },
+        LBUF { txt="Edith"; },
+        LBUF { txt="Barbara"; },
+        LBUF { txt="Gillian"; },
+        LBUF { txt="Ursula"; }
+        };
+    }
+
+RESOURCE ARRAY r_data_surnames
+    {
+    items=
+        {
+        LBUF { txt="Lux"; },
+        LBUF { txt="Mandot"; },
+        LBUF { txt="Mansfield"; },
+        LBUF { txt="Mayberry"; },
+        LBUF { txt="McCarrel"; },
+        LBUF { txt="McDaniel"; },
+        LBUF { txt="Mefford"; },
+        LBUF { txt="Metcalf"; },
+        LBUF { txt="Metchell"; },
+        LBUF { txt="Moller"; },
+        LBUF { txt="Margan"; },
+        LBUF { txt="Keaney"; },
+        LBUF { txt="Kenyon"; },
+        LBUF { txt="Kesler"; },
+        LBUF { txt="Kinman"; },
+        LBUF { txt="Kreinert"; },
+        LBUF { txt="Kummerlin"; },
+        LBUF { txt="Lamgley"; },
+        LBUF { txt="Leas"; },
+        LBUF { txt="Leighton"; },
+        LBUF { txt="Lillie"; },
+        LBUF { txt="Hilms"; },
+        LBUF { txt="Holt"; },
+        LBUF { txt="Hosier"; },
+        LBUF { txt="Howard"; },
+        LBUF { txt="Hypes"; },
+        LBUF { txt="Jacmor"; },
+        LBUF { txt="Behnson"; },
+        LBUF { txt="Kammer"; },
+        LBUF { txt="Patts"; },
+        LBUF { txt="West"; },
+        LBUF { txt="Wilbar"; },
+        LBUF { txt="Witsan"; },
+        LBUF { txt="Gillams"; },
+        LBUF { txt="Good"; },
+        LBUF { txt="Wreght"; },
+        LBUF { txt="Worthley"; },
+        LBUF { txt="Adams"; },
+        LBUF { txt="Allen"; },
+        LBUF { txt="Ansley"; },
+        LBUF { txt="Ayries"; },
+        LBUF { txt="Bartlett"; },
+        LBUF { txt="Barton"; },
+        LBUF { txt="Payne"; },
+        LBUF { txt="Pintard"; },
+        LBUF { txt="Prence"; },
+        LBUF { txt="Richards"; },
+        LBUF { txt="Dillman"; },
+        LBUF { txt="Dory"; },
+        LBUF { txt="Edgards"; },
+        LBUF { txt="Engell"; },
+        LBUF { txt="Farprington"; },
+        LBUF { txt="Fisher"; },
+        LBUF { txt="Foed"; },
+        LBUF { txt="Burges"; },
+        LBUF { txt="Childwall"; },
+        LBUF { txt="Smith"; },
+        LBUF { txt="Sipon"; },
+        LBUF { txt="Simmons"; },
+        LBUF { txt="Stewert"; },
+        LBUF { txt="Stiles"; },
+        LBUF { txt="Stratton"; },
+        LBUF { txt="Dennis"; },
+        LBUF { txt="Talmot"; }
+        };
+    }
+
+RESOURCE ARRAY r_data_companies
+    {
+    items=
+        {
+        LBUF { txt="CDP"; },
+        LBUF { txt="Exbox"; },
+        LBUF { txt="Munro"; },
+        LBUF { txt="Majaka"; },
+        LBUF { txt="Bitzumi"; },
+        LBUF { txt="Melroy"; },
+        LBUF { txt="Matal"; },
+        LBUF { txt="Japponi"; },
+        LBUF { txt="Siwaka"; },
+        LBUF { txt="Keiku"; },
+        LBUF { txt="Naamate"; },
+        LBUF { txt="Remonti"; },
+        LBUF { txt="Melleva"; },
+        LBUF { txt="WEX"; },
+        LBUF { txt="Chataz"; },
+        LBUF { txt="Ponly"; },
+        LBUF { txt="Alriva"; },
+        LBUF { txt="Giate"; },
+        LBUF { txt="Kesso"; },
+        LBUF { txt="Nyssa"; },
+        LBUF { txt="Peger"; },
+        LBUF { txt="Metrio"; },
+        LBUF { txt="Mitchitatchi"; },
+        LBUF { txt="Neppari"; },
+        LBUF { txt="Amcuila"; },
+        LBUF { txt="Muipitsu"; },
+        LBUF { txt="Redex"; },
+        LBUF { txt="Maariz"; },
+        LBUF { txt="Swerck"; },
+        LBUF { txt="Makiac"; },
+        LBUF { txt="Dumpia"; },
+        LBUF { txt="Worldmom"; },
+        LBUF { txt="Renfaul"; },
+        LBUF { txt="Kmartissori"; },
+        LBUF { txt="Findo"; },
+        LBUF { txt="Samsanc"; },
+        LBUF { txt="Dellervo"; },
+        LBUF { txt="Manrel"; },
+        LBUF { txt="WSMRL"; },
+        LBUF { txt="Eripox"; },
+        LBUF { txt="Abiturien"; },
+        LBUF { txt="Vesus"; },
+        LBUF { txt="MI4"; },
+        LBUF { txt="Overhiba"; },
+        LBUF { txt="Tridune"; },
+        LBUF { txt="Kyomcera"; },
+        LBUF { txt="Praston"; },
+        LBUF { txt="Gapmis"; },
+        LBUF { txt="WPPDCD"; }
+        };
+    }
+
+RESOURCE ARRAY r_data_addresses
+    {
+    items=
+        {
+        LBUF { txt="Barnes Street"; },
+        LBUF { txt="Barnes Place"; },
+        LBUF { txt="Eastman Street"; },
+        LBUF { txt="West Park"; },
+        LBUF { txt="South Park"; },
+        LBUF { txt="Park Avenue"; },
+        LBUF { txt="Richards Court"; },
+        LBUF { txt="Pukershire Avenue"; },
+        LBUF { txt="Ellis Avenue"; },
+        LBUF { txt="East Mountain"; },
+        LBUF { txt="Chestnut Hill"; },
+        LBUF { txt="Plains Road"; },
+        LBUF { txt="Fremont Street"; },
+        LBUF { txt="Heritage Court"; },
+        LBUF { txt="Highland Avenue Extension"; },
+        LBUF { txt="Maple Heights"; },
+        LBUF { txt="McKenzie Avenue"; },
+        LBUF { txt="McKenzie Lane"; },
+        LBUF { txt="West Terrace Street"; },
+        LBUF { txt="Windsor Avenue"; },
+        LBUF { txt="Windsor Road"; },
+        LBUF { txt="Mechanic Street Extension"; },
+        LBUF { txt="Granite Place"; },
+        LBUF { txt="Meadow Street"; },
+        LBUF { txt="Sugar River"; }
+        };
+    }
+
+RESOURCE ARRAY r_data_cities
+    {
+    items=
+        {
+        LBUF { txt="Kuopio"; },       
+        LBUF { txt="Los Angeles"; },        
+        LBUF { txt="Lappeenranta"; },
+        LBUF { txt="London"; },        
+        LBUF { txt="Bangkok"; },
+        LBUF { txt="St. Michel"; },                
+        LBUF { txt="St. Petersburg"; },        
+        LBUF { txt="Tokyo"; },
+        LBUF { txt="Helsinki"; },
+        LBUF { txt="Trondheim"; },        
+        LBUF { txt="Nairobi"; },
+        LBUF { txt="Havana"; }        
+        };
+    }
+
+RESOURCE ARRAY r_data_countries
+    {
+    items=
+        {
+        LBUF { txt="Finland"; },
+        LBUF { txt="Cuba"; },
+        LBUF { txt="United States of America"; },
+        LBUF { txt="Thailand"; },
+        LBUF { txt="Sweden"; },
+        LBUF { txt="Russia"; },
+        LBUF { txt="Japan"; },
+        LBUF { txt="Norway"; },
+        LBUF { txt="Kenya"; }                
+        };
+    }
+
+RESOURCE ARRAY r_data_postcodes
+    {
+    items=
+        {
+        LBUF { txt="00310"; },
+        LBUF { txt="FI-70100"; },
+        LBUF { txt="99002"; },
+        LBUF { txt="11233"; }            
+        };
+    }
+
+RESOURCE ARRAY r_data_states
+    {
+    items=
+        {
+        LBUF { txt="California state"; }, 
+        LBUF { txt="Alaska state"; },
+        LBUF { txt="Florida state"; }
+        };
+    }
+
+RESOURCE ARRAY r_data_poboxes
+    {
+    items=
+        {
+        LBUF { txt="P.O BOX 5532"; },
+        LBUF { txt="P.O BOX 701"; },
+        LBUF { txt="99"; },
+        LBUF { txt="1133"; },
+        LBUF { txt="P.O. BOX 113322"; },
+        LBUF { txt="112"; }
+        };
+    }
+
+RESOURCE ARRAY r_data_prefixes
+    {
+    items=
+        {
+        LBUF { txt="Ms."; },
+        LBUF { txt="Mrs."; }, 
+        LBUF { txt="Mr."; },
+        LBUF { txt="Dr."; }
+        
+        };
+    }
+
+RESOURCE ARRAY r_data_suffixes
+    {
+    items=
+        {
+        LBUF { txt="Jr."; },
+        LBUF { txt="Sr."; }        
+        };
+    }
+
+RESOURCE ARRAY r_data_jobtitles
+    {
+    items=
+        {
+        LBUF { txt="Doctor"; },
+        LBUF { txt="SW Engineer"; },
+        LBUF { txt="Administrative Assistant"; },
+        LBUF { txt="Bookkeeper"; },
+        LBUF { txt="Credit Controller"; },
+        LBUF { txt="Data Entry Operator"; },
+        LBUF { txt="Payroll Officer"; },
+        LBUF { txt="Receptionist"; },
+        LBUF { txt="Trainee"; },
+        LBUF { txt="Accounts Clerk"; },
+        LBUF { txt="Administrator"; },
+        LBUF { txt="Taxation Assistant"; },
+        LBUF { txt="Financial Director"; },
+        LBUF { txt="Bank Manager"; },
+        LBUF { txt="Mobile Lending"; },
+        LBUF { txt="Overseas Transactions"; },
+        LBUF { txt="Restructuring"; },
+        LBUF { txt="Business Analyst"; },
+        LBUF { txt="Call Centre Manager"; },
+        LBUF { txt="Administration"; },
+        LBUF { txt="Manager"; },
+        LBUF { txt="Student"; },
+        LBUF { txt="Mail Sorter"; },
+        LBUF { txt="Mayor"; },
+        LBUF { txt="Account Servicing"; },
+        LBUF { txt="Management"; },
+        LBUF { txt="Media Consultant"; },
+        LBUF { txt="Newsagent"; },
+        LBUF { txt="Librarian"; },
+        LBUF { txt="Creative Director"; },
+        LBUF { txt="Announcer"; },
+        LBUF { txt="Copywriter"; },
+        LBUF { txt="Presenter"; },
+        LBUF { txt="Promotions Manager"; },
+        LBUF { txt="Advertising Sales Representative"; },
+        LBUF { txt="Editor"; },
+        LBUF { txt="Marketing, Sales & Publicity"; },
+        LBUF { txt="Publisher"; },
+        LBUF { txt="Gallery Assistant"; },
+        LBUF { txt="Photographer"; },
+        LBUF { txt="Storyboard Artist"; },
+        LBUF { txt="Events Manager"; },
+        LBUF { txt="Cameraman"; },
+        LBUF { txt="Technician"; },
+        LBUF { txt="Producer"; }
+        };
+    }
+
+RESOURCE ARRAY r_data_phonenumbers
+    {
+    items=
+        {
+        LBUF { txt="0307834387"; },
+        LBUF { txt="0230328732"; },
+        LBUF { txt="0430365562"; },
+        LBUF { txt="0530328732"; },
+        LBUF { txt="0433032865"; },
+        LBUF { txt="0542306532"; },
+        LBUF { txt="0342303777"; },
+        LBUF { txt="0250235603"; },
+        LBUF { txt="0492303652"; },
+        LBUF { txt="0542303286"; },
+        LBUF { txt="0543656546"; },
+        LBUF { txt="0545545454"; },
+        LBUF { txt="0543444454"; },
+        LBUF { txt="0776463255"; },
+        LBUF { txt="0432443343"; },
+        LBUF { txt="0243334344"; },
+        LBUF { txt="0544543443"; },
+        LBUF { txt="0231343243"; },
+        LBUF { txt="0213443434"; },
+        LBUF { txt="0143234476"; },
+        LBUF { txt="0785434444"; },
+        LBUF { txt="0454445345"; },
+        LBUF { txt="0342443433"; },
+        LBUF { txt="0432434454"; },
+        LBUF { txt="0455454454"; },
+        LBUF { txt="0656565655"; },
+        LBUF { txt="0343434443"; },
+        LBUF { txt="0565645455"; },
+        LBUF { txt="0343243243"; },
+        LBUF { txt="0565466565"; },
+        LBUF { txt="0465565655"; },
+        LBUF { txt="0435445454"; },
+        LBUF { txt="+35854553456"; },
+        LBUF { txt="+35878453486"; },
+        LBUF { txt="+35876653456"; },
+        LBUF { txt="+35834435486"; },
+        LBUF { txt="+35876766466"; },
+        LBUF { txt="+4465665456"; },
+        LBUF { txt="+4432434334"; },
+        LBUF { txt="+4488776776"; },
+        LBUF { txt="+4465655656"; },
+        LBUF { txt="+4443433434"; },
+        LBUF { txt="+4465656565"; },
+        LBUF { txt="+4454454354"; }
+        };
+    }
+
+RESOURCE ARRAY r_data_groupnames
+    {
+    items=
+        {
+        LBUF { txt="Nice guys"; },
+        LBUF { txt="Repairs"; },
+        LBUF { txt="Office works"; },
+        LBUF { txt="The buddies"; },
+        LBUF { txt="Football team"; },
+        LBUF { txt="Gold club"; },
+        LBUF { txt="Silver club"; },
+        LBUF { txt="Bronze club"; },
+        LBUF { txt="Best buddies"; },
+        LBUF { txt="Rockers"; },
+        LBUF { txt="Science group"; }
+        };
+    }
+
+RESOURCE ARRAY r_data_meetingreasons
+    {
+    items=
+        {
+        LBUF { txt="Security issues"; },
+        LBUF { txt="Team meeting"; },
+        LBUF { txt="Discussion about"; },
+        LBUF { txt="Work plans"; },
+        LBUF { txt="Meeting with the professor"; },
+        LBUF { txt="Meeting with the boss"; },
+        LBUF { txt="Work issues"; },
+        LBUF { txt="New workers"; }
+        };
+    }
+
+RESOURCE ARRAY r_data_meetingplaces
+    {
+    items=
+        {
+        LBUF { txt="Room"; },
+        LBUF { txt="Home"; },
+        LBUF { txt="Auditorium"; },
+        LBUF { txt="Company"; }
+        };
+    }
+
+RESOURCE ARRAY r_data_landmark_names
+    {
+    items=
+        {
+        LBUF { txt="Good place to fish";},
+        LBUF { txt="Uncle over board";},
+        LBUF { txt="Best food ever!";},
+        LBUF { txt="Nice beach";},
+        LBUF { txt="Good hamburgers";},
+        LBUF { txt="Nice view";},
+        LBUF { txt="John's home";},
+        LBUF { txt="Carage";},
+        LBUF { txt="Gas station";},
+        LBUF { txt="Food store";},
+        LBUF { txt="Car wash";},
+        LBUF { txt="Summer cottage";},
+        LBUF { txt="My home";},
+        LBUF { txt="Bank";},
+        LBUF { txt="Hospital";},
+        LBUF { txt="Ice hall";},
+        LBUF { txt="Work place";}
+        };
+    }
+
+RESOURCE ARRAY r_data_landmark_descriptions
+    {
+    items=
+        {
+        LBUF { txt="The salmons were really big here!";},        
+        LBUF { txt="Delicious strawberries sold here. Must visit again sometime!";},
+        LBUF { txt="Place looks really nice.";},
+        LBUF { txt="This is my favorite place";},
+        LBUF { txt="Words are not enough to describe this landmark";},        
+        LBUF { txt="What a shocking place to visit! Remember to bring camera next time :-)";}
+        };
+    }
+
+RESOURCE ARRAY r_data_memos
+    {
+    items=
+        {
+        LBUF { txt="No work today!"; },
+        LBUF { txt="Movies tonight"; },
+        LBUF { txt="Ship new binaries"; },
+        LBUF { txt="New works"; },
+        LBUF { txt="Exam"; },
+        LBUF { txt="Community service"; },
+        LBUF { txt="Volunteer work"; },
+        LBUF { txt="Don't forget the dinner at the restaurant"; },
+        LBUF { txt="Go the bank"; },
+        LBUF { txt="Go to the store"; },
+        LBUF { txt="Buy goods"; },
+        LBUF { txt="Buy food"; },
+        LBUF { txt="Buy new pair of socks"; },
+        LBUF { txt="Buy vegetables"; },
+        LBUF { txt="Buy fruits"; },
+        LBUF { txt="Umbrella"; },
+        LBUF { txt="New shoes"; },
+        LBUF { txt="New suit"; },
+        LBUF { txt="Buy flowers"; },
+        LBUF { txt="School day"; }
+        };
+    }
+RESOURCE ARRAY r_data_anniversaries
+    {
+    items=
+        {
+        LBUF { txt="birthday"; },
+        LBUF { txt="anniversary"; }
+        };
+    }
+
+RESOURCE ARRAY r_data_todos
+    {
+    items=
+        {
+        LBUF { txt="Watch for gum on my shoe"; },
+        LBUF { txt="Watch my step in the hall"; },
+        LBUF { txt="Always think big"; },
+        LBUF { txt="Don't ever think small"; },
+        LBUF { txt="Keep pedaling my bike"; },
+        LBUF { txt="Watch for bees in my pop"; },
+        LBUF { txt="Keep moving forward"; },
+        LBUF { txt="Don't ever stop"; },
+        LBUF { txt="Keep my sled underneath me"; },
+        LBUF { txt="Keep my stick on the ice"; },
+        LBUF { txt="Don't swim in a whirlpool"; },
+        LBUF { txt="Don't look for a fight"; },
+        LBUF { txt="Don't spit in the wind"; },
+        LBUF { txt="Just do what is right"; },
+        LBUF { txt="Go out in the world"; },
+        LBUF { txt="Enjoy a warm rain"; },
+        LBUF { txt="Don't worship TV"; },
+        LBUF { txt="Keep my oars in the water"; },
+        LBUF { txt="Point my boat right downstream"; },
+        LBUF { txt="Face head on my problems"; },
+        LBUF { txt="Change underwear daily"; },
+        LBUF { txt="Believe myself first"; },
+        LBUF { txt="Go out and have fun"; },
+        LBUF { txt="Turn the cards one by one"; },
+        LBUF { txt="Get out and do something"; }
+        };
+    }
+
+RESOURCE ARRAY r_data_reminders
+    {
+    items=
+        {
+        LBUF { txt="Remeber to fix car"; },
+        LBUF { txt="Remeber to eat vegetables"; },
+        LBUF { txt="Remeber to go shopping"; },
+        LBUF { txt="Remeber to buy boxes for moving"; },
+        LBUF { txt="Remeber to fix bike"; },
+        LBUF { txt="Remeber to buy christmast presents"; },
+        LBUF { txt="Remeber to send flowers to grandmother"; },
+        LBUF { txt="Remeber to talk with son"; },
+        LBUF { txt="Remeber to cut hedge"; },
+        LBUF { txt="Remeber to bumper potatoes"; },
+        LBUF { txt="Remeber to harvest corn field"; },
+        LBUF { txt="Remeber to sleep enaugh"; },
+        LBUF { txt="Remeber to wash teeths ewery morning"; },
+        LBUF { txt="Remeber to get sleep early"; },
+        LBUF { txt="Remeber to give some wather to flowers"; },
+        LBUF { txt="Remeber to wax snowboard"; },
+        LBUF { txt="Remeber to wax skiis"; },
+        LBUF { txt="Remeber to wax cross country skiis"; },
+        LBUF { txt="Remeber to call mother"; },
+        LBUF { txt="Remeber to call father"; },
+        LBUF { txt="Remeber to call brother"; },
+        LBUF { txt="Remeber to call sister"; },
+        LBUF { txt="Remeber to call daughter"; },
+        LBUF { txt="Remeber to call son"; },
+        LBUF { txt="Remeber to rent villa"; }
+        };
+    }
+
+RESOURCE ARRAY r_data_messagesubjects
+    {
+    items=
+        {
+        LBUF { txt="Whaaasssaaap!!??"; },
+        LBUF { txt="Hello"; },
+        LBUF { txt="How are you doing?"; },
+        LBUF { txt="You will win the battle, GUARANTEED!"; },
+        LBUF { txt="Why pay more for something if you don't have to?"; },
+        LBUF { txt="You can afford health care now"; },
+        LBUF { txt="Re: *Buddy* *Lists*!!~ (it's soooo cool)!!~"; },
+        LBUF { txt="Weedmon say: call, we be open 7 days, mon"; },
+        LBUF { txt="Want her to look better?"; },
+        LBUF { txt="Good Morning andyw, how are you?"; },
+        LBUF { txt="Happy Assumption"; },
+        LBUF { txt="There is NO Risk involved"; },
+        LBUF { txt="Free Bottle Offer!"; },
+        LBUF { txt="Introduction on MDSL"; },
+        LBUF { txt="Theres Help out there for you"; },
+        LBUF { txt="hello there - check this out"; },
+        LBUF { txt="Darling"; },
+        LBUF { txt="It doesn't have to be that way"; },
+        LBUF { txt="Webmaster, Free health insurance quotes!"; },
+        LBUF { txt="Join us at the OSGi 2003 World Congress"; },
+        LBUF { txt="Put your subject line here"; },
+        LBUF { txt="You are not protected"; },
+        LBUF { txt="Please try again"; },
+        LBUF { txt="you didn't reply my email ? why ? ???"; },
+        LBUF { txt="A very funny game"; },
+        LBUF { txt="Meeting notice"; },
+        LBUF { txt="Opportunities"; }
+        };
+    }
+
+RESOURCE ARRAY r_data_messagetexts
+    {
+    items=
+        {
+        LBUF { txt="The contents of these pages are copyrighted. Any rights not expressly granted herein are reserved. The use of this site is permitted to private use."; },
+        LBUF { txt="Reproduction, transfer, distribution or storage of part or all of the contents in any form without the prior written permission is prohibited."; },
+        LBUF { txt="We consents to you browsing the pages on your computer or printing copies of extracts from these pages for your personal use only."; },
+        LBUF { txt="If you place an order for a product, request a service or submit content to this site, we may need to contact you for additional information."; },
+        LBUF { txt="The use of press releases and other documents classified as public is permitted in public communications if the source for the information has been stated."; },
+        LBUF { txt="For your easy accessibility we may include links to sites on the Internet that are owned or operated by third parties."; },
+        LBUF { txt="You also agree that we have no control over the content of that site and cannot assume any responsibility for material by such third-party sites."; },
+        LBUF { txt="In addition, a link to a such site does not imply that we endorses the site or the products or services referenced in such third party site."; },
+        LBUF { txt="In order to respond to your questions or manage interactive customer programs, it may be necessary to ask for personal information."; },
+        LBUF { txt="We may use this information to respond to your requests, or to contact you via mail, e-mail or phone to inform you of new products."; },
+        LBUF { txt="If you place an order for a product, request a service or submit content to this site, we may need to contact you for additional information."; }
+        };
+    }
+

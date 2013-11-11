@@ -1,0 +1,29 @@
+/*
+* ==============================================================================
+*  Name        : mmsopt.mph
+*  Part of     : mmsengine
+*  Description : common control for all mms engine options
+*  Version     :
+*
+*  Copyright (c) 2003 Nokia Corporation.
+*  This material, including documentation and any related 
+*  computer programs, is protected by copyright controlled by 
+*  Nokia Corporation. All rights are reserved. Copying, 
+*  including reproducing, storing, adapting or translating, any 
+*  or all of this material requires the prior written consent of 
+*  Nokia Corporation. This material also contains confidential 
+*  information which may not be disclosed to others without the 
+*  prior written consent of Nokia Corporation.
+* ==============================================================================
+*/
+
+// define these to remove logging from MMS components
+// the first is used in source code the second is defined
+// for mmp files (so you can #ifdef in/out flogger.lib)
+
+// comment these two out to enable logging in release mode
+// (debug mode and wins log always)
+#ifndef WINS
+MACRO _MMS_ALL_LOGGING_OFF_
+#define  _MMS_ALL_LOGGING_OFF_
+#endif

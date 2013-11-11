@@ -1,0 +1,56 @@
+;
+; Copyright (c) 2006-2008 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:  Stub Package file for omadsextensions
+;
+
+; Languages
+&EN
+
+; Header
+; Name, UID for installation, Maj.Ver., Min.Ver., Variant, FLAG TO SPECIFY UNICODE, System component
+#{"Omads"}, (0x2002E6D9), 1, 0, 0, TYPE=SA
+
+; Localised Vendor name
+%{"Nokia"}
+
+; Unique Vendor name
+:"Nokia"
+
+; DLLs
+
+; from omadsextensions/dsutils
+""-"z:\sys\bin\nsmlcontactsdatastoreextension.dll"
+""-"z:\sys\bin\nsmlCGIScriptParser.dll"
+
+; from omadsextensions
+""-"z:\sys\bin\nsmldatamod.dll"
+
+; Ecom plugin
+; from ds
+""-"z:\sys\bin\nsmlcontactsdataprovider.dll"
+""-"z:\resource\plugin\nsmlcontactsdataprovider.r*"
+
+""-"z:\sys\bin\nsmlagendadataprovider.dll"
+""-"z:\resource\plugin\nsmlagendadataprovider.r*"
+
+""-"z:\sys\bin\nsmlnotepaddataprovider.dll"
+""-"z:\resource\plugin\nsmlnotepaddataprovider.r*"
+
+
+;Resource files
+""-"z:\resource\NSmlContactsDataStoreFormat_1_1_2.r*"
+""-"z:\resource\NSmlContactsDataStoreFormat_1_2.r*"
+""-"z:\resource\NSmlAgendaDataStore_1_1_2.r*"
+""-"z:\resource\NSmlAgendaDataStore_1_2.r*"
+""-"z:\resource\NSmlNotepadDataStoreFormat.r*"

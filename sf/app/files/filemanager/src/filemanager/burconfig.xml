@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="iso-8859-1"?>                    
+<fmbackup>                                                                      
+    <backup_drivesAndOperations>                                                
+        <drivesAndOperation>                                                    
+            <drive>EBkupDeviceMemories|EBkupInternalMassStorages</drive>        
+            <type>EMMCScBkupOwnerDataTypeDataOwner</type>                       
+        </drivesAndOperation>                                                   
+                                                                                
+        <drivesAndOperation>                                                    
+            <drive>EBkupDeviceMemories|EBkupInternalMassStorages</drive>        
+            <type>EMMCScBkupOwnerDataTypeJavaData</type>                        
+        </drivesAndOperation>                                                   
+                                                                                
+        <drivesAndOperation>                                                    
+            <drive>EBkupDeviceMemories|EBkupInternalMassStorages</drive>        
+            <type>EMMCScBkupOwnerDataTypePublicData</type>                      
+        </drivesAndOperation>                                                   
+                                                                                
+        <drivesAndOperation>                                                    
+            <drive>EBkupDeviceMemories|EBkupInternalMassStorages</drive>        
+            <type>EMMCScBkupOwnerDataTypeSystemData</type>                      
+        </drivesAndOperation>                                                   
+                                                                                
+        <drivesAndOperation>                                                    
+            <drive>EBkupDeviceMemories|EBkupInternalMassStorages</drive>        
+            <type>EMMCScBkupOwnerDataTypeActiveData</type>                      
+        </drivesAndOperation>                                                   
+                                                                                
+        <drivesAndOperation>                                                    
+            <drive>EBkupDeviceMemories|EBkupInternalMassStorages</drive>        
+            <type>EMMCScBkupOwnerDataTypePassiveData</type>                     
+        </drivesAndOperation>                                                   
+    </backup_drivesAndOperations>                                               
+                                                                                
+    <backup_categories>                                                         
+        <backupCategory>                                                        
+            <category>EBUCatAllInOne</category>                                 
+            <archive_name>Backup.arc</archive_name>                             
+            <special_flags>EBUCatSpecAll</special_flags>                        
+            <exclude_special_flags>EBUCatSpecNone</exclude_special_flags>       
+            <uids></uids>                                                       
+            <exclude_uids></exclude_uids>                                       
+        </backupCategory>                                                       
+                                                                                
+        <backupCategory>                                                        
+            <category>EBUCatSettings</category>                                 
+            <archive_name>Settings.arc</archive_name>                           
+            <special_flags>EBUCatSpecAll</special_flags>                        
+            <exclude_special_flags>EBUCatSpecSystem+EBUCatSpecJava</exclude_special_flags>  
+            <uids></uids>                                                                   
+            <exclude_uids>0x1000484b</exclude_uids> <!--Message store (EBUCatMessages)-->   
+            <exclude_uids>0x100058db</exclude_uids> <!--MMS-settings (EBUCatMessages)-->    
+            <exclude_uids>0x100058eb</exclude_uids> <!--E-mail-settings (EBUCatMessages)--> 
+            <exclude_uids>0x2001FE79</exclude_uids> <!--Messaging 101 (EBUCatMessages)-->   
+            <exclude_uids>0x2002A542</exclude_uids> <!--CsServer.exe (EBUCatMessages)-->    
+            <exclude_uids>0x10003a73</exclude_uids> <!--Contacts model (EBUCatContacts)-->  
+            <exclude_uids>0x20022EF9</exclude_uids> <!--Phonebook-app (EBUCatContacts) changed from 0x101f4cce-->   
+            <exclude_uids>0x10003a5b</exclude_uids> <!--Agenda model (EBUCatCalendar)-->    
+            <exclude_uids>0x10005901</exclude_uids> <!--Calendar-app (EBUCatCalendar)-->    
+            <exclude_uids>0x10008d38</exclude_uids> <!--Bookmarks (EBUCatBookmarks)-->      
+            <exclude_uids>0x101f401d</exclude_uids> <!--Logs (EBUCatUserFiles)-->           
+            <exclude_uids>0x101f8599</exclude_uids> <!--MediaGallery, i.e. basically all user data (EBUCatUserFiles)-->   
+            <exclude_uids>0x101f84eb</exclude_uids> <!--FileManager-->                      
+            <exclude_uids>0x20029f80</exclude_uids> <!--Notepad (EBUCatUserFiles) changed from 0x10005907-->        
+            <exclude_uids>0x1028246F</exclude_uids> <!--Java Backup process-->              
+            <exclude_uids>0x10282475</exclude_uids> <!--Java Registry process-->            
+            <exclude_uids>0x102033E6</exclude_uids> <!--MIDP2 Runtime process-->            
+        </backupCategory>                                                                   
+                                                                                            
+        <backupCategory>                                                                    
+            <category>EBUCatMessages</category>                                             
+            <archive_name>Messages.arc</archive_name>                                       
+            <special_flags>EBUCatSpecNone</special_flags>                                   
+            <exclude_special_flags>EBUCatSpecNone</exclude_special_flags>                   
+            <uids>0x1000484b</uids><!--Message store-->                                     
+            <uids>0x100058db</uids><!--MMS-settings-->                                      
+            <uids>0x100058eb</uids><!--E-mail-settings-->                                   
+            <uids>0x2001FE79</uids><!--Messaging 101  -->                                   
+            <uids>0x2002A542</uids><!--CsServer.exe   -->                                   
+            <exclude_uids></exclude_uids>                                                   
+        </backupCategory>                                                                   
+                                                                                            
+        <backupCategory>                                                                    
+            <category>EBUCatContacts</category>                                             
+            <archive_name>Contacts.arc</archive_name>                                       
+            <special_flags>EBUCatSpecNone</special_flags>                                   
+            <exclude_special_flags>EBUCatSpecNone</exclude_special_flags>                   
+            <uids>0x10003a73</uids><!--Contacts model-->                                    
+            <uids>0x20022EF9</uids><!--Phonebook-app changed from 0x101f4cce-->                                     
+            <exclude_uids></exclude_uids>                                                   
+        </backupCategory>                                                                   
+                                                                                            
+        <backupCategory>                                                                    
+            <category>EBUCatCalendar</category>                                             
+            <archive_name>Calendar.arc</archive_name>                                       
+            <special_flags>EBUCatSpecNone</special_flags>                                   
+            <exclude_special_flags>EBUCatSpecNone</exclude_special_flags>                   
+            <uids>0x10003a5b</uids><!--Agenda model-->                                      
+            <uids>0x10005901</uids><!--Calendar-app-->                                      
+            <exclude_uids></exclude_uids>                                                   
+        </backupCategory>                                                                   
+                                                                                            
+        <backupCategory>                                                                    
+            <category>EBUCatBookmarks</category>                                            
+            <archive_name>Bookmarks.arc</archive_name>                                      
+            <special_flags>EBUCatSpecNone</special_flags>                                   
+            <exclude_special_flags>EBUCatSpecNone</exclude_special_flags>                   
+            <uids>0x10008d38</uids>                                                         
+            <exclude_uids></exclude_uids>                                                   
+        </backupCategory>                                                                   
+                                                                                            
+        <backupCategory>                                                                    
+            <category>EBUCatUserFiles</category>                                            
+            <archive_name>UserFiles.arc</archive_name>                                      
+            <special_flags>EBUCatSpecSystem+EBUCatSpecJava</special_flags>                  
+            <exclude_special_flags>EBUCatSpecNone</exclude_special_flags>                   
+            <uids>0x101f401d</uids><!--Logs-->                                              
+            <!-- removed MediaGallery <uids>0x101f8599</uids>MediaGallery, i.e. basically all user data-->    
+            <uids>0x2002bcc0</uids><!--FileManager instead of MediaGallery backup c:/data/ -->              
+            <uids>0x20029f80</uids><!--Notepad changed from 0x10005907-->                                           
+            <uids>0x1028246F</uids><!--Java Backup process-->                               
+            <uids>0x200211DC</uids><!--Java Captain. And Java registry process removed-->                             
+            <uids>0x102033E6</uids><!--MIDP2 Runtime process-->                             
+            <exclude_uids></exclude_uids>                                                   
+        </backupCategory>                                                                   
+    </backup_categories>                                                                    
+</fmbackup>

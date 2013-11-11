@@ -1,0 +1,76 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors: 
+*
+* Description:
+* The iby file for clock application
+*
+*/
+
+#ifndef CLOCK_IBY
+#define CLOCK_IBY
+
+// Clock application executables.
+S60_APP_EXE(clock)
+
+// Backup registration file
+data = ZPRIVATE\10005906\backup_registration.xml  PRIVATE\10005906\backup_registration.xml
+data = ZPRIVATE\200159A2\backup_registration.xml  PRIVATE\200159A2\backup_registration.xml
+data = ZPRIVATE\10005903\backup_registration.xml  PRIVATE\10005903\backup_registration.xml
+
+
+// Clock application registration file.
+data=DATAZ_\private\10003a3f\import\apps\clock_reg.rsc					\private\10003a3f\import\apps\clock_reg.rsc
+
+// Resource files.
+#ifdef __ROM_HIDE_JERUSALEM
+data=DATAZ_\resource\timezonelocalization\timezones_tel_aviv.rsc		RESOURCE_FILES_DIR\timezonelocalization\timezones.rsc
+#else
+data=DATAZ_\resource\timezonelocalization\timezones.rsc					RESOURCE_FILES_DIR\timezonelocalization\timezones.rsc
+#endif
+
+#ifdef FF__ROM_HIDE_ISRAEL
+data=DATAZ_\resource\timezonelocalization\timezonegroups_jerusalem.rsc	RESOURCE_FILES_DIR\timezonelocalization\timezonegroups.rsc
+#else
+data=DATAZ_\resource\timezonelocalization\timezonegroups.rsc			RESOURCE_FILES_DIR\timezonelocalization\timezonegroups.rsc
+#endif
+
+data=DATAZ_\resource\mcc\mcc.rsc										RESOURCE_FILES_DIR\mcc\mcc.rsc
+
+// Stub sis
+data=DATAZ_\system\install\clock_stub.sis        						\System\Install\clock_stub.sis
+
+data=ZRESOURCE\hb\splashml\clockapplication.splashml  					RESOURCE_FILES_DIR\hb\splashml\clockapplication.splashml
+data=ZRESOURCE\hb\splashml\clockapplication.docml  						RESOURCE_FILES_DIR\hb\splashml\clockapplication.docml
+
+// Binaries.
+file=ABI_DIR\BUILD_DIR\clockalarmclient.dll								SHARED_LIB_DIR\clockalarmclient.dll
+file=ABI_DIR\BUILD_DIR\timezoneclient.dll								SHARED_LIB_DIR\timezoneclient.dll
+file=ABI_DIR\BUILD_DIR\clocksettingsutility.dll							SHARED_LIB_DIR\clocksettingsutility.dll
+file=ABI_DIR\BUILD_DIR\clocksettingsview.dll							SHARED_LIB_DIR\clocksettingsview.dll
+file=ABI_DIR\BUILD_DIR\clockcityselectionlist.dll						SHARED_LIB_DIR\clockcityselectionlist.dll
+file=ABI_DIR\BUILD_DIR\clockalarmeditor.dll								SHARED_LIB_DIR\clockalarmeditor.dll
+file=ABI_DIR\BUILD_DIR\clockappcontroller.dll							SHARED_LIB_DIR\clockappcontroller.dll
+file=ABI_DIR\BUILD_DIR\clockviewmanager.dll								SHARED_LIB_DIR\clockviewmanager.dll
+file=ABI_DIR\BUILD_DIR\clockviews.dll									SHARED_LIB_DIR\clockviews.dll
+file=ABI_DIR\BUILD_DIR\clockwidget.dll									SHARED_LIB_DIR\clockwidget.dll
+file=ABI_DIR\BUILD_DIR\clockwidgetplugin.dll							SHARED_LIB_DIR\clockwidgetplugin.dll
+
+file=ABI_DIR\BUILD_DIR\datetimesettingsplugin.dll				        SHARED_LIB_DIR\datetimesettingsplugin.dll
+data=\epoc32\data\c\resource\qt\plugins\controlpanel\datetimesettingsplugin.qtplugin					resource\qt\plugins\controlpanel\datetimesettingsplugin.qtplugin
+
+file=ABI_DIR\BUILD_DIR\clocksettingsviewplugin.dll				        SHARED_LIB_DIR\clocksettingsviewplugin.dll
+data=\epoc32\data\z\resource\qt\plugins\clock\clocksettingsviewplugin.qtplugin             resource\qt\plugins\clock\clocksettingsviewplugin.qtplugin
+
+#endif // CLOCK_IBY
+
+// End of file  --Don't remove this.

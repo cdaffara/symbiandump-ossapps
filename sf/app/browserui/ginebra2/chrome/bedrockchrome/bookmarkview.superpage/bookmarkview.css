@@ -1,0 +1,100 @@
+body {
+    padding : 0px;
+    margin : 0px;
+    height:100%;
+    background-color: #889cbf;
+}
+
+#BottomPad {
+ padding: 8px 10px 8px 10px;
+ height: 54px;
+}
+
+.bookmarkList li.selected {
+    background-image: url(icons/list_itembg_pressed.png);
+    font-weight: bold;
+}
+
+/* DogEar open, unselected */
+.bookmarkList .dogEar {
+    height: 70px;
+    background-repeat: no-repeat;
+    float: left;
+    background-image: url(icons/dogear_open.png);
+    width: 67px;
+}
+
+/* DogEarBox open, unselected */
+.bookmarkList .dogEarBox {
+    height: 70px;
+    background-repeat: repeat-x;
+    background-image: url(icons/dogear_open_bg.png);
+    float:right;
+    z-index:30;
+}
+
+.bookmarkList .dogEar.selected {
+    background-image: url(icons/dogear_pressed.png);
+}
+
+.bookmarkList .dogEarBox.selected {
+    background-image: url(icons/dogear_open_bg_pressed.png);
+}
+
+.bookmarkList .dogEar.closed {
+    background-image: url(icons/dogear.png);
+    width: 51px;
+}
+
+.bookmarkList .dogEarBox.closed {
+    width: 51px;
+}
+
+div.bookmarkList ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    font-family: "Nokia Sans";
+    overflow: hidden;
+}
+
+.bookmarkList li {
+    height: 70px;
+    background-image: url(icons/list_itembg.png);
+    background-repeat: repeat-x;
+    overflow: hidden;
+  -webkit-user-select: none;
+}
+
+
+div.bookmarkItem {
+    color: #000;
+    margin-top: 15px;
+    float:left;
+    z-index:28;
+    background-repeat: no-repeat;
+    background-position: 10px 15px;
+    padding-left: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+.bookmarkList div.bookmarkItem:active {
+    font-weight: bold;
+}
+
+span.aTitle{
+    font-size: 20px;
+}
+
+span.aUrl{
+    color: #999999;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.hiddenLoadImages { 
+    background-image: url(icons/dogear_open.png);
+    visibility: hidden;
+}

@@ -1,0 +1,45 @@
+HbWidget
+{
+  margin-left: 0un;
+  margin-top: 0un;
+}
+
+UniViewerDetailsWidget
+{
+  layout:layout-default;
+}
+
+UniViewerDetailsWidget::timeLabel
+{
+  left:-var(hb-param-margin-gene-left);
+  top:-var(hb-param-margin-gene-top);
+  right:0.5un;
+  bottom:var(hb-param-margin-gene-middle-vertical);
+  font-variant:secondary;
+  text-height:var(hb-param-text-height-secondary);
+  text-line-count-min:1;
+  text-line-count-max:1;
+  text-align:left center;
+ }
+
+UniViewerDetailsWidget::subjectLabel
+{
+  left:-var(hb-param-margin-gene-left);
+  right:var(hb-param-margin-gene-right);
+  bottom:var(hb-param-margin-gene-bottom);
+  font-variant:primary;
+  text-height:var(hb-param-text-height-primary);
+  text-line-count-min:1;
+  text-line-count-max:10;
+  text-align:left center;
+}
+
+UniViewerDetailsWidget::priorityIcon
+{
+  top:-var(hb-param-margin-gene-top);
+  right:var(hb-param-margin-gene-right);
+  pref-width:var(hb-param-graphic-size-secondary);
+  pref-height:var(hb-param-graphic-size-secondary);
+  size-policy:fixed fixed;
+}
+

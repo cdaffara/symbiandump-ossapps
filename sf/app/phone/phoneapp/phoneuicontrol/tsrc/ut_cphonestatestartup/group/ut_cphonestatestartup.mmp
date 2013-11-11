@@ -1,0 +1,99 @@
+/*
+* Copyright (c) 2005-2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*
+*/
+
+
+#include <data_caging_paths.hrh>
+#include <platform_paths.hrh>
+#include <digia/eunit/eunitcaps.h>
+
+TARGET          ut_cphonestatestartup.dll
+TARGETTYPE      dll
+UID             0x1000af5a 0x01700000
+
+CAPABILITY      EUNIT_CAPS
+VENDORID        VID_DEFAULT
+
+SOURCEPATH      ../../../../../internal/mocks/phoneengine/engineinfo
+SOURCE          mock_cpeengineinfoimpl.cpp
+ 
+SOURCEPATH      ../../../../internal/mocks/phoneuicontrol
+SOURCE          mock_cphonestate.cpp
+SOURCE          mock_cphonestatemachine.cpp
+SOURCE          mock_cphonestateincall.cpp
+SOURCE          mock_cphonedtmfwaitchartimer.cpp
+
+SOURCEPATH      ../../../../internal/mocks/phoneuistates
+SOURCE         mock_cphonegsmincall.cpp
+SOURCE         mock_cphonestatemachinegsm.cpp
+
+SOURCEPATH      ../../../../internal/mocks/phoneuiutils
+SOURCE          mock_cphonelogger.cpp
+SOURCE          mock_cphonepubsubproxy.cpp
+SOURCE          mock_cphonemainresourceresolver.cpp
+
+SOURCEPATH      ../../../../internal/mocks/phoneuiview
+SOURCE          mock_cphoneviewcommandhandle.cpp
+
+SOURCEPATH      ../../../../../internal/mocks/eikmenupane
+SOURCE          mock_coemain.cpp
+SOURCE          mock_coecntrl.cpp
+
+SOURCEPATH      ../../../../internal/mocks/
+SOURCE          mock_featmgr.cpp
+SOURCE          mock_StringLoader.cpp
+
+SOURCEPATH      ../src
+SOURCE          ut_cphonestatestartup.cpp
+
+SOURCEPATH      ../../../src     // phoneuicontrol src
+SOURCE          cphonestatestartup.cpp
+
+SOURCEPATH      ../../../../../phoneengine/engineinfo/src
+SOURCE          cpeengineinfo.cpp
+
+// Sources required by the test suite
+SOURCEPATH      ../src
+SOURCE          ut_cphonestatestartup_dllmain.cpp
+
+USERINCLUDE     ../../../../../phoneengine/engineinfo/inc
+USERINCLUDE     ../../../../phoneuiview/inc
+USERINCLUDE     ../../../../phoneuicontrol/inc
+USERINCLUDE     ../../../../phoneuistates/inc
+USERINCLUDE     ../../../../phonemediatorcenter/inc
+USERINCLUDE     ../../../../phoneuiutils/inc
+USERINCLUDE     ../../../../phoneui2/srcdata
+USERINCLUDE     ../../../../phoneuiqtviewadapter/inc
+USERINCLUDE     ../../../../internal/mocks/phoneuiview
+
+APP_LAYER_SYSTEMINCLUDE
+
+SYSTEMINCLUDE   /epoc32/include/Digia/EUnit
+SYSTEMINCLUDE	../../../../../inc       // phone inc
+
+LIBRARY         EUnit.lib
+LIBRARY         EUnitUtil.lib
+LIBRARY         euser.lib
+LIBRARY         avkon.lib       // AknTextUtils
+LIBRARY         cone.lib
+LIBRARY         phoneuiutils.lib
+LIBRARY         apgrfx.lib
+LIBRARY         symbianmock.lib
+LIBRARY         efsrv.lib
+LIBRARY         ws32.lib        // RWsSession
+LIBRARY         gdi.lib         // TZoomFactor
+LIBRARY         bafl.lib        // CBaActiveScheduler
+

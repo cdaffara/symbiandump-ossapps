@@ -1,0 +1,15 @@
+// Created by TraceCompiler 2.2.3
+// DO NOT EDIT, CHANGES WILL BE LOST
+
+#ifndef __NOTESEDITORDOCLOADERTRACES_H__
+#define __NOTESEDITORDOCLOADERTRACES_H__
+
+#define KOstTraceComponentID 0x20029f82
+
+#define NOTESEDITORDOCLOADER_CREATEOBJECT_ENTRY 0x8a0046
+
+
+#endif
+
+// End of file
+

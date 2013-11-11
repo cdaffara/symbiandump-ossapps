@@ -1,0 +1,16 @@
+EXPORTS
+	??0TNSmlCGIScriptParser@@QAE@XZ @ 1 NONAME ; TNSmlCGIScriptParser::TNSmlCGIScriptParser(void)
+	?AddL@CNSmlCGIScript@@QAEXPAUTNSmlCGIScriptPart@@@Z @ 2 NONAME ; void CNSmlCGIScript::AddL(struct TNSmlCGIScriptPart *)
+	?CGIScript@CNSmlCGIScript@@QBEPAVHBufC16@@XZ @ 3 NONAME ; class HBufC16 * CNSmlCGIScript::CGIScript(void) const
+	?Clear@CNSmlCGIScript@@QAEXXZ @ 4 NONAME ; void CNSmlCGIScript::Clear(void)
+	?Count@CNSmlCGIScript@@QBEHXZ @ 5 NONAME ; int CNSmlCGIScript::Count(void) const
+	?GenerateL@TNSmlCGIScriptParser@@QBEXAAVCNSmlCGIScript@@@Z @ 6 NONAME ; void TNSmlCGIScriptParser::GenerateL(class CNSmlCGIScript &) const
+	?Get@CNSmlCGIScript@@QBEPBUTNSmlCGIScriptPart@@H@Z @ 7 NONAME ; struct TNSmlCGIScriptPart const * CNSmlCGIScript::Get(int) const
+	?LogicalOperator@CNSmlCGIScript@@QBE?AW4TNSmlCGIScriptLogicalOperator@@XZ @ 8 NONAME ; enum TNSmlCGIScriptLogicalOperator CNSmlCGIScript::LogicalOperator(void) const
+	?NewL@CNSmlCGIScript@@SAPAV1@XZ @ 9 NONAME ; class CNSmlCGIScript * CNSmlCGIScript::NewL(void)
+	?NewLC@CNSmlCGIScript@@SAPAV1@XZ @ 10 NONAME ; class CNSmlCGIScript * CNSmlCGIScript::NewLC(void)
+	?ParseL@TNSmlCGIScriptParser@@QBEXAAVCNSmlCGIScript@@ABV?$CArrayPtr@UTNSmlDataTypesForCGIScriptNames@@@@@Z @ 11 NONAME ; void TNSmlCGIScriptParser::ParseL(class CNSmlCGIScript &, class CArrayPtr<struct TNSmlDataTypesForCGIScriptNames> const &) const
+	?Remove@CNSmlCGIScript@@QAEPAUTNSmlCGIScriptPart@@H@Z @ 12 NONAME ; struct TNSmlCGIScriptPart * CNSmlCGIScript::Remove(int)
+	?SetCGIScriptL@CNSmlCGIScript@@QAEXABVTDesC16@@@Z @ 13 NONAME ; void CNSmlCGIScript::SetCGIScriptL(class TDesC16 const &)
+	?SetLogicalOperator@CNSmlCGIScript@@QAEXW4TNSmlCGIScriptLogicalOperator@@@Z @ 14 NONAME ; void CNSmlCGIScript::SetLogicalOperator(enum TNSmlCGIScriptLogicalOperator)
+

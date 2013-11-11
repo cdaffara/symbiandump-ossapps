@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE SystemDefinition SYSTEM "sysdef_1_5_1.dtd" [
+  <!ENTITY layer_real_source_path "sf/app/calendarwidget" >
+]>
+
+<SystemDefinition name="calendarwidget" schema="1.5.1">
+  <systemModel>
+    <layer name="app_layer">
+      <module name="calendarwidget">
+        <unit unitID="calendarwidget_qt" mrp="" bldFile="&layer_real_source_path;" name="calendarwidget_qt" proFile="calendarwidget.pro" qmakeArgs="-r" filter="dfs_build" />
+      </module>
+      <module name="t_calendarwidget">
+        <unit unitID="t_calendarwidget_qt" mrp="" bldFile="&layer_real_source_path;/calendarwidgetplugin/tsrc" name="t_calendarwidget_qt" proFile="tsrc.pro" qmakeArgs="-r" filter="dfs_build" />
+      </module>
+    </layer>
+  </systemModel>
+</SystemDefinition>
+
+

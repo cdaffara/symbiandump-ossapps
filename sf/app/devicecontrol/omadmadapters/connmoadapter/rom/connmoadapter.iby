@@ -1,0 +1,34 @@
+/*
+* ============================================================================
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+* 
+* Description:
+*
+* ============================================================================
+*/
+
+#include <bldvariant.hrh>
+
+#ifndef __CONNMOADAPTER_IBY__
+#define __CONNMOADAPTER_IBY__
+
+#ifdef __SYNCML_DM // nothing should be installed from this .iby file if __SYNCML_DM feature is not selected
+#ifdef FF_DM_CONNMO_ADAPTER // nothing should be installed from this .iby file if this flag is not specified.
+														 // old internet adapter is used in that case for access point provisioning.
+
+ECOM_PLUGIN(connmoadapter.dll,connmoadapter.rsc)
+
+#endif FF_DM_CONNMO_ADAPTER 
+#endif // __SYNCML_DM_WLAN 
+
+#endif //__CONNMOADAPTER_IBY__

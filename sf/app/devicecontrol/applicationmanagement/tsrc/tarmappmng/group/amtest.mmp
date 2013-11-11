@@ -1,0 +1,66 @@
+/*
+* Copyright (c) 2002 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: Implementation of applicationmanagement components
+*
+*/
+
+
+// To get the APP_LAYER_SYSTEMINCLUDE-definition
+#include <platform_paths.hrh>
+
+TARGET          amtest.dll
+TARGETTYPE      dll
+UID             0x1000008D 0x101FB3E3
+CAPABILITY      ALL -TCB
+
+//TARGETPATH    
+DEFFILE         amtest.def
+
+SOURCEPATH      ../src
+SOURCE          dmatest.cpp
+SOURCE          TestDmDDFObject.cpp
+SOURCE          amtest.cpp
+SOURCE          amtestBlocks.cpp
+
+USERINCLUDE     ../inc 
+USERINCLUDE     ../../../inc
+
+
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE   /epoc32/include 
+
+SYSTEMINCLUDE 	/epoc32/include/ecom
+#ifdef __TARM_SYMBIAN_CONVERGENCY
+SYSTEMINCLUDE 	/epoc32/include/devman
+#else
+// nothing
+#endif
+
+LIBRARY         euser.lib
+LIBRARY         stiftestinterface.lib 
+LIBRARY					ApplicationManagement.lib
+LIBRARY         efsrv.lib 
+LIBRARY         SWInstCli.lib
+LIBRARY					ecom.lib
+LIBRARY         apgrfx.lib
+LIBRARY         apmime.lib
+LIBRARY         estor.lib 
+
+LANG			      SC
+
+
+
+SMPSAFE
+// End of File
+

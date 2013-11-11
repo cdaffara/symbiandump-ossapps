@@ -1,0 +1,47 @@
+// Copyright (c) 2004-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+rls_string STRING_forward_formatting_string1 "Fwd: %S" 
+rls_string STRING_reply_formatting_string1 "Re: %S" 
+rls_string STRING_receipt_formatting_string1 "Receipt of message: %S" 
+rls_string STRING_email_address_formatting_string1 "\"%S\" <%S>" 
+rls_string STRING_forward_body_header1 <0x2029><0x2029>"_______________ Forward Header _______________"<0x2029> // Header used in Body for Forwarded message
+rls_string STRING_forward_body_header2 "Subject:"<0x0009>"%S"<0x2029> 
+rls_string STRING_forward_body_header3 "Author:"<0x0009>"%S"<0x2029> 
+rls_string STRING_forward_body_header4 "Date:"<0x0009><0x0009>"%S"<0x2029> 
+rls_string STRING_forward_body_header5 "To:"<0x0009><0x0009>"%S"<0x2029> 
+rls_string STRING_forward_body_header6 "CC:"<0x0009><0x0009>"%S"<0x2029> 
+rls_string STRING_reply_body_header1 <0x2029><0x2029>"________________ Reply Header ________________"<0x2029> // Header used in Body for Replied message
+rls_string STRING_reply_body_header2 "Subject:"<0x0009>"%S"<0x2029> 
+rls_string STRING_reply_body_header3 "Author:"<0x0009>"%S"<0x2029> 
+rls_string STRING_reply_body_header4 "Date:"<0x0009><0x0009>"%S"<0x2029> 
+rls_string STRING_reply_body_header5 "To:"<0x0009><0x0009>"%S"<0x2029> 
+rls_string STRING_reply_body_header6 "CC:"<0x0009><0x0009>"%S"<0x2029> 
+rls_string STRING_body_header1 <0x2029><0x2029>"_______________ Message Header _______________"<0x2029> // Header used in Body for message
+rls_string STRING_body_header2 "Subject:"<0x0009>"%S"<0x2029> 
+rls_string STRING_body_header3 "Author:"<0x0009>"%S"<0x2029> 
+rls_string STRING_body_header4 "Recipient:"<0x0009>"%S"<0x2029> 
+rls_string STRING_body_header5 "Date:"<0x0009><0x0009>"%S"<0x2029> 
+rls_string STRING_removed_attachment_tag1 "Attachment not available : " 
+rls_string STRING_retained_attachment_tag1 "Attached file : " 
+rls_string STRING_default_attachment_name1 "Attachment" 
+rls_string STRING_product_name1 "EPOC Email Version 2.10" 
+rls_string STRING_timeout_dialog_title1 "Remote mailbox closed automatically" 
+rls_string STRING_timeout_dialog_text1 "Remote mailbox has been idle for specified time" 
+rls_string STRING_default_vcard_name1 "vcard" 
+rls_string STRING_body_header_datetime_format "%D%X%N%Y%1 %2 %3 %-B%:0%J%:1%T%:3%+B" // DateTime format used in forward/reply body header. This string is substituted in the %s paramter in STRING_forward_body_header4 and STRING_reply_body_header4.
+rls_string STRING_partial_download_footer_message "This message has not been fully downloaded. There is still %d KB of text to be retrieved."
+rls_string STRING_default_system_charset "ISO-8859-1"
+

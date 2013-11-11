@@ -1,0 +1,17 @@
+SnsrSwipeWidget {
+    layout:layout-portrait;
+    margin-left: 0un;
+    margin-top: 0un;
+}
+
+SnsrSwipeWidget::slideLabel {
+    pref-height: expr(var(hb-param-text-height-tiny)+0.1un);
+    zvalue: 0;
+}
+
+
+SnsrSwipeWidget::slideIcon {
+    pref-height:10.6un; 
+    pref-width:35un;
+    zvalue: 1;
+}

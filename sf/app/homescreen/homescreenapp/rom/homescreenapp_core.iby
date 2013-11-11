@@ -1,0 +1,93 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: homescreen core iby file
+*
+*/
+#ifndef __HOMESCREENAPP_CORE_IBY__
+#define __HOMESCREENAPP_CORE_IBY__
+
+// ---- hsapplication --------------------------------------------
+file=ABI_DIR\BUILD_DIR\hsapplicationlauncher.exe                PROGRAMS_DIR\hsapplicationlauncher.exe
+file=ABI_DIR\BUILD_DIR\hsapplication.exe                        PROGRAMS_DIR\hsapplication.exe
+data=ZPRIVATE\10003a3f\import\apps\hsapplication_reg.rsc        private\10003a3f\import\apps\hsapplication_reg.rsc
+data=\epoc32\data\z\resource\apps\hsapplication.mif             resource\apps\hsapplication.mif
+data=ZPRIVATE\20022f35\homescreen.db                            private\20022f35\homescreen.db
+data=ZPRIVATE\20022f35\wallpapers\scene\default_portrait.png    private\20022f35\wallpapers\scene\default_portrait.png
+data=ZPRIVATE\20022f35\wallpapers\scene\default_landscape.png   private\20022f35\wallpapers\scene\default_landscape.png
+data=ZPRIVATE\20022f35\wallpapers\page\default_portrait.png     private\20022f35\wallpapers\page\default_portrait.png
+data=ZPRIVATE\20022f35\wallpapers\page\default_landscape.png    private\20022f35\wallpapers\page\default_landscape.png
+data=ZPRIVATE\20022f35\wallpapers\page\1_portrait.png           private\20022f35\wallpapers\page\1_portrait.png
+data=ZPRIVATE\20022f35\wallpapers\page\1_landscape.png          private\20022f35\wallpapers\page\1_landscape.png
+data=ZPRIVATE\20022f35\wallpapers\page\2_portrait.png           private\20022f35\wallpapers\page\2_portrait.png
+data=ZPRIVATE\20022f35\wallpapers\page\2_landscape.png          private\20022f35\wallpapers\page\2_landscape.png
+data=ZPRIVATE\20022f35\wallpapers\page\3_portrait.png           private\20022f35\wallpapers\page\3_portrait.png
+data=ZPRIVATE\20022f35\wallpapers\page\3_landscape.png          private\20022f35\wallpapers\page\3_landscape.png
+data=ZPRIVATE\20022f35\wallpapers\originals\car.png             private\20022f35\wallpapers\originals\car.png
+data=ZPRIVATE\20022f35\wallpapers\originals\shapes.png          private\20022f35\wallpapers\originals\shapes.png
+data=ZPRIVATE\20022f35\wallpapers\originals\shoes.png           private\20022f35\wallpapers\originals\shoes.png
+
+// ---- hswidgetuninstaller --------------------------------------------
+file=ABI_DIR\BUILD_DIR\hswidgetuninstaller.exe            PROGRAMS_DIR\hswidgetuninstaller.exe
+data=ZPRIVATE\10003a3f\import\apps\hswidgetuninstaller_reg.rsc private\10003a3f\import\apps\hswidgetuninstaller_reg.rsc
+data=\epoc32\data\z\resource\apps\hswidgetuninstaller.rsc resource\apps\hswidgetuninstaller.rsc
+
+// ---- hsutils --------------------------------------------
+file=ABI_DIR\BUILD_DIR\hsutils.dll  SHARED_LIB_DIR\hsutils.dll
+
+// ---- hsdomainmodel --------------------------------------------
+file=ABI_DIR\BUILD_DIR\hsdomainmodel.dll  SHARED_LIB_DIR\hsdomainmodel.dll
+
+// ---- Client plugins --------------------------------------------
+
+// -------- hshomescreenclientplugin
+file=ABI_DIR\BUILD_DIR\hshomescreenclientplugin.dll                        SHARED_LIB_DIR\hshomescreenclientplugin.dll
+data=\epoc32\data\z\resource\qt\plugins\hshomescreenclientplugin.qtplugin  resource\qt\plugins\hshomescreenclientplugin.qtplugin
+
+// -------- hsmenuclientplugin
+file=ABI_DIR\BUILD_DIR\hsmenuclientplugin.dll                           SHARED_LIB_DIR\hsmenuclientplugin.dll
+data=\epoc32\data\z\resource\qt\plugins\hsmenuclientplugin.qtplugin     resource\qt\plugins\hsmenuclientplugin.qtplugin
+
+// ---- serviceproviders --------------------------------------------
+
+// -------- hsmenuserviceprovider
+file=ABI_DIR\BUILD_DIR\hsmenuserviceprovider.dll  SHARED_LIB_DIR\hsmenuserviceprovider.dll
+
+// ---- stateplugins --------------------------------------------
+
+// -------- hsapplibrarystateplugin
+file=ABI_DIR\BUILD_DIR\hsapplibrarystateplugin.dll                            SHARED_LIB_DIR\hsapplibrarystateplugin.dll
+data=DATAZ_\RESOURCE_FILES_DIR\qt\plugins\homescreen\hsapplibrarystateplugin.qtplugin  RESOURCE_FILES_DIR\qt\plugins\homescreen\hsapplibrarystateplugin.qtplugin
+
+// -------- hshomescreenstateplugin
+file=ABI_DIR\BUILD_DIR\hshomescreenstateplugin.dll                            SHARED_LIB_DIR\hshomescreenstateplugin.dll
+data=DATAZ_\RESOURCE_FILES_DIR\qt\plugins\homescreen\hshomescreenstateplugin.qtplugin  RESOURCE_FILES_DIR\qt\plugins\homescreen\hshomescreenstateplugin.qtplugin
+
+// -------- hsmenuworkerstateplugin
+file=ABI_DIR\BUILD_DIR\hsmenuworkerstateplugin.dll                            SHARED_LIB_DIR\hsmenuworkerstateplugin.dll
+data=DATAZ_\RESOURCE_FILES_DIR\qt\plugins\homescreen\hsmenuworkerstateplugin.qtplugin  RESOURCE_FILES_DIR\qt\plugins\homescreen\hsmenuworkerstateplugin.qtplugin
+
+// ---- widgetplugins --------------------------------------------
+
+// -------- hsshortcutwidgetplugin
+file=ABI_DIR\BUILD_DIR\hsshortcutwidgetplugin.dll                                      SHARED_LIB_DIR\hsshortcutwidgetplugin.dll
+data=DATAZ_\RESOURCE_FILES_DIR\qt\plugins\homescreen\hsshortcutwidgetplugin.qtplugin  RESOURCE_FILES_DIR\qt\plugins\homescreen\hsshortcutwidgetplugin.qtplugin
+data=ZPRIVATE\20022F35\import\widgetregistry\20022F46\hsshortcutwidgetplugin.manifest  private\20022f35\import\widgetregistry\20022F46\hsshortcutwidgetplugin.manifest
+
+// -------- hsclockwidgetplugin
+file=ABI_DIR\BUILD_DIR\hsclockwidgetplugin.dll                                          SHARED_LIB_DIR\hsclockwidgetplugin.dll
+data=DATAZ_\RESOURCE_FILES_DIR\qt\plugins\homescreen\hsclockwidgetplugin.qtplugin       RESOURCE_FILES_DIR\qt\plugins\homescreen\hsclockwidgetplugin.qtplugin
+data=ZPRIVATE\20022f35\import\widgetregistry\20022F6C\hsclockwidgetplugin.manifest      private\20022f35\import\widgetregistry\20022F6C\hsclockwidgetplugin.manifest
+data=ZPRIVATE\20022f35\import\widgetregistry\20022F6C\qtg_graf_hswidget_preview_clock.svg private\20022f35\import\widgetregistry\20022F6C\qtg_graf_hswidget_preview_clock.svg
+
+#endif //__HOMESCREENAPP_CORE_IBY__

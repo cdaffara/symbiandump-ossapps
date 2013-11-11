@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SystemDefinition schema="3.0.0" xmlns:qt="http://www.nokia.com/qt">
+ <package id="messaging" name="Messaging Apps" levels="plugin eng base app api">
+  <collection id="msg_plat" name="Messaging Apps Platform APIs" level="api">
+   <component id="messaging_media_resolver_api" name="Messaging Media Resolver API" class="api" filter="s60">
+    <meta rel="Api" href="msg_plat/messaging_media_resolver_api/messaging_media_resolver_api.metaxml"/>
+    <unit base="msg_plat/messaging_media_resolver_api"/>
+   </component>
+   <component id="mms_application_api" name="MMS Application API" class="api" filter="s60">
+    <meta rel="Api" href="msg_plat/mms_application_api/mms_application_api.metaxml"/>
+    <unit base="msg_plat/mms_application_api"/>
+   </component>
+   <component id="mms_codec_client_api" name="MMS Codec Client API" class="api" filter="s60">
+    <meta rel="Api" href="msg_plat/mms_codec_client_api/mms_codec_client_api.metaxml"/>
+    <unit base="msg_plat/mms_codec_client_api"/>
+   </component>
+   <component id="mms_conformance_api" name="MMS Conformance API" class="api" filter="s60">
+    <meta rel="Api" href="msg_plat/mms_conformance_api/mms_conformance_api.metaxml"/>
+    <unit base="msg_plat/mms_conformance_api"/>
+   </component>
+   <component id="mms_engine_settings_api" name="MMS Engine Settings API" class="api" filter="s60">
+    <meta rel="Api" href="msg_plat/mms_engine_settings_api/mms_engine_settings_api.metaxml"/>
+    <unit base="msg_plat/mms_engine_settings_api"/>
+   </component>
+   <component id="mms_server_settings_api" name="MMS Server Settings API" class="api" filter="s60">
+    <meta rel="Api" href="msg_plat/mms_server_settings_api/mms_server_settings_api.metaxml"/>
+    <unit base="msg_plat/mms_server_settings_api"/>
+   </component>
+   <component id="conversation_services_client_api" name="Conversation Services Client API" class="api" filter="s60" introduced="^4">
+    <unit base="msg_plat/conversation_services_client_api"/>
+   </component>
+   <component id="conversation_services_plugin_api" name="Conversation Services Plugin API" class="api" filter="s60" introduced="^4">
+    <unit base="msg_plat/conversation_services_plugin_api"/>
+   </component>
+   <component id="conversation_services_utilities_api" name="Conversation Services Utilities API" class="api" filter="s60" introduced="^4">
+    <unit base="msg_plat/conversation_services_utilities_api"/>
+   </component>
+   <component id="shareui_api" name="Share UI API" class="api" filter="s60" introduced="^4">
+    <unit base="msg_plat/shareui_api"/>
+   </component>
+   <component id="messaging_history_api" name="Messaging History API" class="api" filter="s60" introduced="^4">
+    <unit base="msg_plat/messaging_history_api"/>
+   </component>
+   <component id="msg_plat_build" name="Messaging Apps Platform APIs Build" class="api" filter="s60" introduced="^4">
+	<!-- break this up into the above units and replace their base attributes with bldFile, etc -->
+    <unit bldFile="msg_plat" qt:proFile="msg_plat.pro"/>
+   </component>
+  </collection>
+  <collection id="msg_pub" name="Messaging Apps Public APIs" level="api">
+   <component id="mms_client_mtm_api" name="MMS Client MTM API" class="api" filter="s60">
+    <meta rel="Api" href="msg_pub/mms_client_mtm_api/mms_client_mtm_api.metaxml"/>
+    <unit base="msg_pub/mms_client_mtm_api"/>
+   </component>
+   <component id="msg_smil_dtd_api" name="Messaging SMIL DTD API" class="api" filter="s60" introduced="^4">
+    <unit base="msg_pub/msg_smil_dtd_api"/>
+   </component>
+   <component id="msg_pub_build" name="Messaging Apps Public APIs Build" class="api" filter="s60" introduced="^4">
+	<!-- break this up into the above units and replace their base attributes with bldFile, etc -->
+    <unit bldFile="msg_pub" qt:proFile="msg_pub.pro"/>
+   </component>
+  </collection>
+  <collection id="mobilemessaging" name="Mobile Messaging" level="plugin">
+   <component id="smsmtm" name="SMS MTM" purpose="optional" class="plugin" filter="s60">
+    <unit bldFile="mobilemessaging/smsmtm/group" mrp="mobilemessaging/smsmtm/group/messaging_sms.mrp"/>
+   </component>
+  </collection>
+  <collection id="messagingappbase" name="Messaging App Base" level="base">
+   <component id="messagingappbase_build" filter="s60" name="Messaging App Base Build"  introduced="^4">
+	<!-- break this up into the below components -->
+    <unit bldFile="messagingappbase" qt:proFile="messagingappbase.pro"/>
+   </component>
+   <component id="msgmedia" filter="s60" name="Message Media">
+      <unit base="messagingappbase/msgmedia"/>
+   </component>
+   <component id="smilparser" name="SMIL Parser" introduced="7.0s" purpose="optional" filter="s60">
+    <unit bldFile="messagingappbase/smilparser/GROUP" mrp="messagingappbase/smilparser/GROUP/messaging_gmxml.mrp"/>
+   </component>
+   <component id="obexmtms" name="OBEX MTMs" introduced="7.0s" purpose="optional" class="plugin" filter="s60">
+    <unit bldFile="messagingappbase/obexmtms/Group" mrp="messagingappbase/obexmtms/Group/messaging_obex.mrp"/>
+   </component>
+  </collection>
+  <collection id="mmsengine" name="MMS Engine" level="eng">
+   <component id="mmsconninit" filter="s60" name="MMS Connection Initiator">
+    <unit bldFile="mmsengine/mmsconninit/bld"/>
+   </component>
+   <component id="genutils" filter="s60" name="General Utils">
+    <unit bldFile="mmsengine/genutils/bld"/>
+   </component>
+   <component id="mmsserversettings" filter="s60" name="MMS Server Settings">
+    <unit bldFile="mmsengine/mmsserversettings/bld"/>
+   </component>
+   <component id="mmsmessage" filter="s60" name="MMS Message">
+    <unit bldFile="mmsengine/mmsmessage/bld"/>
+   </component>
+   <component id="mmshttptransport" filter="s60" name="MMS HTTP Transport">
+    <unit bldFile="mmsengine/mmshttptransport/bld"/>
+   </component>
+   <component id="mmscodec" filter="s60" name="MMS Codec">
+    <unit bldFile="mmsengine/mmscodec/bld"/>
+   </component>
+   <component id="mmsserver" filter="s60" name="MMS Server">
+    <unit bldFile="mmsengine/mmsserver/bld"/>
+   </component>
+   <component id="clientmtm" filter="s60" name="MMS Client MTM" class="plugin">
+    <unit bldFile="mmsengine/clientmtm/bld"/>
+   </component>
+   <component id="mmswatcher" filter="s60" name="MMS Watcher" class="plugin">
+    <unit bldFile="mmsengine/mmswatcher/bld"/>
+   </component>
+   <component id="mmspushhandler" filter="s60" name="MMS Push Handler" class="plugin">
+    <unit bldFile="mmsengine/mmspushhandler/bld"/>
+   </component>
+   <component id="applicationadapter" filter="s60" name="MMS Application Adapter">
+    <unit bldFile="mmsengine/applicationadapter/bld"/>
+   </component>
+   <component id="mmscodecclient" filter="s60" name="MMS Codec Client">
+    <unit bldFile="mmsengine/mmscodecclient/bld"/>
+   </component>
+   <component id="mmssettings" name="MMS Settings" introduced="9.2" purpose="optional" filter="s60">
+    <unit bldFile="mmsengine/mmssettings/group" mrp="mmsengine/mmssettings/group/messaging_mmssettings.mrp"/>
+   </component>
+   <component id="mmsconf" name="MMS Configuration" purpose="optional" filter="s60">
+    <unit bldFile="mmsengine/mmsconf" mrp="mmsengine/mmsconf/messaging_mmssettings-config.mrp"/>
+   </component>
+   <component id="mmsengine_build" filter="s60" name="MMS Engine Build">
+    <unit bldFile="mmsengine/group"/>
+   </component>
+  </collection>
+  <collection id="messagingapp" name="Messaging Application" level="app">
+   <component id="messaging_conf" filter="s60" name="Messaging Application Configuration" class="config" introduced="^4">
+    <unit bldFile="messagingapp/conf" qt:proFile="messaging_conf.pro"/>
+   </component>
+     <component id="msgutils" filter="s60" name="Messaging Utils" introduced="^4">
+      <unit bldFile="messagingapp/msgutils" qt:proFile="msgutils.pro"/>
+     </component>
+     <component id="msgappfw" filter="s60" name="Messaging Application Framework" introduced="^4">
+      <unit bldFile="messagingapp/msgappfw" qt:proFile="msgappfw.pro"/>
+     </component>
+     <component id="msgsettings" filter="s60" name="Messaging Settings" introduced="^4">
+      <unit bldFile="messagingapp/msgsettings" qt:proFile="msgsettings.pro"/>
+     </component>
+     <component id="msgnotifications" filter="s60" name="Messaging Notifications" introduced="^4">
+      <unit bldFile="messagingapp/msgnotifications" qt:proFile="msgnotifications.pro"/>
+     </component>
+     <component id="smartmessaging" filter="s60" name="Smart Messaging">
+      <unit bldFile="messagingapp/smartmessaging" qt:proFile="smartmessaging.pro"/>
+     </component>
+     <component id="shareui" filter="s60" name="Shared UI" introduced="^4">
+      <unit bldFile="messagingapp/shareui" qt:proFile="shareui.pro"/>
+     </component>
+     <component id="msgui" filter="s60" name="Messaging UI" introduced="^4">
+      <unit bldFile="messagingapp/msgui" qt:proFile="msgui.pro"/>
+     </component>
+     <component id="msgservices" filter="s60" name="Messaging Services" introduced="^4">
+      <unit bldFile="messagingapp/msgservices" qt:proFile="msgservices.pro"/>
+     </component>
+  </collection>
+  <collection id="email" name="Email" level="plugin">
+   <!-- use commonemail instead -->
+   <component id="pop3andsmtpmtm" name="POP3 and SMTP MTM" purpose="optional" class="plugin" deprecated="^3" filter="s60">
+    <unit bldFile="email/pop3andsmtpmtm/group" mrp="email/pop3andsmtpmtm/group/messaging_email.mrp"/>
+   </component>
+   <component id="imap4mtm" name="IMAP4 MTM" introduced="9.2" purpose="optional" class="plugin" deprecated="^3" filter="s60">
+    <unit bldFile="email/imap4mtm/group" mrp="email/imap4mtm/group/messaging_email_imap.mrp"/>
+   </component>
+  </collection>
+  <collection id="messaging_info" name="Messaging Apps Info" level="api">
+   <component id="messaging_metadata" name="Messaging Apps Metadata" class="config" introduced="^2" purpose="development" target="desktop">
+    <unit mrp="messaging_info/messaging_metadata/messaging_metadata.mrp"/>
+   </component>
+  </collection>
+ </package>
+</SystemDefinition>

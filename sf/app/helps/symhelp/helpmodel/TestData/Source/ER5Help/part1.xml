@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE cshproj PUBLIC "/EPOC32/tools/cshlpcmp/dtd/CSHproj.dtd" "SYSTEM">
+<?xml:stylesheet href="/EPOC32/tools/cshlpcmp/xsl/CSHproj.xsl" title="CS-Help project" type="text/xsl"?>
+<cshproj>
+  <helpfileUID>0x10006000</helpfileUID>
+  <directories>
+    <input>\hlpmodel\TestData\Source\ER5Help\</input>
+    <output>\epoc32\wins\c\system\help\</output>
+    <graphics>\hlpmodel\TestData\Source\ER5Help\</graphics>
+    <working>\hlpmodel\TestData\Source\ER5Help\Temp\</working>
+  </directories>
+  <files>
+    <source>
+      <file>jott-hlp.rtf</file>
+      <file>prog-hlp.rtf</file>
+      <file>rec--hlp.rtf</file>
+      <file>shet-hlp.rtf</file>
+      <file>sket-hlp.rtf</file>
+      <file>spel-hlp.rtf</file>
+      <file>syst-hlp.rtf</file>
+      <file>time-hlp.rtf</file>
+      <file>word-hlp.rtf</file>
+      <file>xtra-hlp.rtf</file>
+
+    </source>
+    <destination>ER5Help_Part1.hlp</destination>
+    <customization>\hlpmodel\TestData\Source\ER5Help\uk.alc.xml</customization>
+  </files>
+</cshproj>

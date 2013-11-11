@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="1.1">
+    <widget name="NmMessageListView" type="HbView">
+        <widget name="content" role="HbView:widget" type="HbWidget">
+            <widget name="MessageTreeList" type="HbTreeView">
+                <fontspec name="fontSpec" role="Secondary" textheight="var(hb-param-text-height-secondary)"/>
+            </widget>
+            <widget name="MessageListNoMessages" type="HbLabel">
+                <enums name="alignment" value="AlignLeft|AlignVCenter|AlignHCenter|AlignLeading"/>
+                <string locid="txt_mail_dblist_no_messages" name="plainText"/>
+                <fontspec name="fontSpec" role="Primary" textheight="var(hb-param-text-height-primary)"/>
+            </widget>
+            <widget name="labelGroupBox" type="HbGroupBox">
+                <sizehint height="6un" type="PREFERRED" width="52un"/>
+                <bool name="collapsable" value="FALSE"/>
+                <bool name="enabled" value="FALSE"/>
+            </widget>
+            <real name="z" value="0"/>
+            <layout type="anchor">
+                <anchoritem dst="MessageListNoMessages" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="MessageListNoMessages" dstEdge="TOP" spacing="20un" src="" srcEdge="TOP"/>
+                <anchoritem dst="MessageListNoMessages" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="labelGroupBox" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="labelGroupBox" dstEdge="TOP" spacing="0un" src="" srcEdge="TOP"/>
+                <anchoritem dst="labelGroupBox" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="MessageTreeList" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="MessageTreeList" dstEdge="TOP" spacing="0un" src="labelGroupBox" srcEdge="BOTTOM"/>
+                <anchoritem dst="MessageTreeList" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="MessageTreeList" dstEdge="BOTTOM" spacing="0un" src="" srcEdge="BOTTOM"/>
+            </layout>
+        </widget>
+        <string name="title" value="View"/>
+    </widget>
+    <metadata activeUIState="Common ui state" display="NHD-3.2-inch_portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+        <dummydata objectName="MessageTreeList" section="#common" value="0"/>
+    </metadata>
+</hbdocument>

@@ -1,0 +1,33 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+#ifndef __RADIOHSWIDGET_IBY__
+#define __RADIOHSWIDGET_IBY__
+
+// Use standard macros
+#include <data_caging_paths_for_iby.hrh>
+
+file=ABI_DIR\BUILD_DIR\fmradiohswidget.dll                                                      SHARED_LIB_DIR\fmradiohswidget.dll
+file=ABI_DIR\BUILD_DIR\fmradiowidgetsplugin.dll                     				SHARED_LIB_DIR\fmradiowidgetsplugin.dll       PAGED
+data=\epoc32\data\z\private\20022F35\import\widgetregistry\2002E6D6\fmradiohswidget.qtplugin    resource\plugins\fmradiowidgetsplugin.qtplugin
+data=ZPRIVATE\20022f35\import\widgetregistry\2002E6D6\fmradiohswidget.qtplugin                  private\20022f35\import\widgetregistry\2002E6D6\fmradiohswidget.qtplugin
+data=ZPRIVATE\20022f35\import\widgetregistry\2002E6D6\fmradiohswidget.xml                       private\20022f35\import\widgetregistry\2002E6D6\fmradiohswidget.xml
+data=ZPRIVATE\20022f35\import\widgetregistry\2002E6D6\fmradiohswidget.manifest                  private\20022f35\import\widgetregistry\2002E6D6\fmradiohswidget.manifest
+
+data=\epoc32\data\z\system\install\fmradiohswidget_stub.sis                                     system\install\fmradiohswidget_stub.sis
+
+#endif //__RADIOHSWIDGET_IBY__

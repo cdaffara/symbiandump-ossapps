@@ -1,0 +1,73 @@
+/*
+* Copyright (c) 2005 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  mmp file for DS agenda adapter
+*
+*/
+
+
+#include <platform_paths.hrh>
+#include <defaultcaps.hrh>
+#include <data_caging_paths.hrh>
+
+TARGET		nsmlagendadataprovider.dll
+TARGETTYPE	PLUGIN
+UID			0x10009d8d 0x101F6DDE
+CAPABILITY	CAP_ECOM_PLUGIN
+VENDORID	VID_DEFAULT
+
+#if defined(EABI)
+DEFFILE		./def/eabinsmlagendadataprovider
+#elif defined(WINSCW)
+DEFFILE		./def/bwinscwnsmlagendadataprovider
+#endif
+
+SOURCEPATH		../src
+SOURCE			nsmlagendadataprovider.cpp
+SOURCE			nsmlagendadatastore.cpp
+SOURCE			nsmlagendaprogressview.cpp
+
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE	/epoc32/include/syncml 
+SYSTEMINCLUDE	/epoc32/include/ecom
+SYSTEMINCLUDE	../../inc
+
+USERINCLUDE		../inc
+USERINCLUDE		../../../datamod/inc
+
+START RESOURCE 101F6DD7.rss
+HEADER
+TARGET		nsmlagendadataprovider.rsc
+LANGUAGE_IDS
+END
+
+START RESOURCE NSmlAgendaDataStore_1_1_2.rss
+HEADER
+TARGETPATH	RESOURCE_FILES_DIR
+LANGUAGE_IDS
+END 
+
+START RESOURCE NSmlAgendaDataStore_1_2.rss
+HEADER
+TARGETPATH	RESOURCE_FILES_DIR
+LANGUAGE_IDS
+END 
+
+LIBRARY		ECom.lib euser.lib efsrv.lib estor.lib smlstoreformat.lib
+LIBRARY		nsmldebug.lib smldataprovider.lib nsmldatamod.lib
+LIBRARY		nsmlchangefinder.lib wbxmllib.lib bafl.lib sysutil.lib
+LIBRARY		CalInterimAPI.lib msgs.lib CalenImp.lib CalenInterimUtils2.lib
+LIBRARY 	versit.lib
+
+
+SMPSAFE

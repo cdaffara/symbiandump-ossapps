@@ -1,0 +1,128 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//
+PRINT Run all TestCalInterimApi Suite Tests
+//
+LOAD_SUITE TestCalInterimApiSuite
+
+// Initialise test to use London time zone
+START_TESTCASE  PIM-APP-ENGINES-CALINTERIMAPI-CIT-LONDONTIMEZONE-0001
+//! @SYMTestCaseID  PIM-APP-ENGINES-CALINTERIMAPI-CIT-LONDONTIMEZONE-0001
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini london
+END_TESTCASE  PIM-APP-ENGINES-CALINTERIMAPI-CIT-LONDONTIMEZONE-0001
+//
+
+START_TESTCASE  PIM-APP-ENGINES-CALINTERIMAPI-CIT-HP-0001-0006
+//!@file
+//! @SYMTestCaseID			PIM-APP-ENGINES-CALINTERIMAPI-CIT-HP-0001-0006
+//! @SYMTestType			CIT
+//! @SYMTestPriority		Medium
+//! @SYMFssID				FileDataAccess 3.2.1
+//! @SYMTestCaseDesc		Does calendar file functions
+//! @SYMTestActions			Creates, tests, lists and deletes calendar files
+//! @SYMTestExpectedResults	The request completes with KErrNone
+RUN_TEST_STEP	100	TestCalInterimApiSuite	TestCalInterimApiFileAccess	\CITCalInterimApi\TestCalInterimApiSuite.ini	ApiFileAccess
+END_TESTCASE  PIM-APP-ENGINES-CALINTERIMAPI-CIT-HP-0001-0006
+
+START_TESTCASE  PIM-APP-ENGINES-CALINTERIMAPI-CIT-HP-00020-0033
+//!@file
+//! @SYMTestCaseID			PIM-APP-ENGINES-CALINTERIMAPI-CIT-HP-00020-0033
+//! @SYMTestType			CIT
+//! @SYMTestPriority		Medium
+//! @SYMFssID				RepeatRuleHandling 3.2.8
+//! @SYMTestCaseDesc Does	Repeat Rule Handling functions
+//! @SYMTestActions			Creates and tests Repeat Rules for an Event,ToDo, Anniversary, Appointment and Reminder
+//! @SYMTestExpectedResults	The request completes with KErrNone
+RUN_TEST_STEP	190	TestCalInterimApiSuite	TestCalInterimApiReadData		\CITCalInterimApi\TestCalInterimApiSuite.ini	ReadWeekRptRule
+END_TESTCASE  PIM-APP-ENGINES-CALINTERIMAPI-CIT-HP-00020-0033
+
+START_TESTCASE  PIM-APP-ENGINES-CALINTERIMAPI-SECTION-0004
+//!@file
+//! @SYMTestCaseID			PIM-APP-ENGINES-CALINTERIMAPI-SECTION-0004
+//! @SYMTestType			CIT
+//! @SYMTestPriority		Medium
+//! @SYMFssID Entry			Data Access 3.2.6
+//! @SYMTestCaseDesc		Adds all types of entries and sets their Attributes
+//! @SYMTestActions			Read the text file and add the entry ot the calendar file
+//! @SYMTestExpectedResults	All entries will be added to the new calendar  file
+RUN_TEST_STEP	100	TestCalInterimApiSuite	TestCalInterimApiReadData		\CITCalInterimApi\TestCalInterimApiSuite.ini	ReadData1
+END_TESTCASE  PIM-APP-ENGINES-CALINTERIMAPI-SECTION-0004
+
+START_TESTCASE  PIM-CIT-CallnterimAPI-1098AP-13-0001
+//!@file
+//! @SYMTestCaseID			PIM-CIT-CallnterimAPI-1098AP-13-0001
+//! @SYMTestType			CIT
+//! @SYMTestPriority		Medium
+//! @SYMFssID				Iterators 3.2.13
+//! @SYMTestCaseDesc		Iterating through entries using an iterator 
+//! @SYMTestActions			Iterate through entries by moving through the calendar file
+//! @SYMTestExpectedResults	The Iteration should move through the calendar file successfully
+RUN_TEST_STEP	100	TestCalInterimApiSuite	TestCalInterimApiIterator	\CITCalInterimApi\TestCalInterimApiSuite.ini	ApiIterator1
+END_TESTCASE  PIM-CIT-CallnterimAPI-1098AP-13-0001
+
+START_TESTCASE  PIM-CIT-CallnterimAPI-1098AP-13-0002
+//!@file
+//! @SYMTestCaseID			PIM-CIT-CallnterimAPI-1098AP-13-0002
+//! @SYMTestType			CIT
+//! @SYMTestPriority		Medium
+//! @SYMFssID				Iterators 3.2.13
+//! @SYMTestCaseDesc		Iterating through entries using an iterator 
+//! @SYMTestActions			Iterate through entries by moving through the calendar file
+//! @SYMTestExpectedResults	The Iteration should move through the calendar file successfully
+RUN_TEST_STEP	100	TestCalInterimApiSuite	TestCalInterimApiIterator	\CITCalInterimApi\TestCalInterimApiSuite.ini	ApiIterator2
+END_TESTCASE  PIM-CIT-CallnterimAPI-1098AP-13-0002
+
+START_TESTCASE  PIM-CIT-CallnterimAPI-1098AP-0011
+//!@file
+//! @SYMTestCaseID			PIM-CIT-CallnterimAPI-1098AP-0011
+//! @SYMTestType			CIT
+//! @SYMTestPriority		Medium
+//! @SYMFssID Filter		3.2.16
+//! @SYMTestCaseDesc		Setting the filter for fetching entries
+//! @SYMTestActions			Open calendar file and fetch filterd entries
+//! @SYMTestExpectedResults	The entries fetched should be filtered
+RUN_TEST_STEP	300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiSuite.ini	ApiFilter1
+RUN_TEST_STEP	300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiSuite.ini	ApiFilter2
+RUN_TEST_STEP	300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiSuite.ini	ApiFilter3
+RUN_TEST_STEP	300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiSuite.ini	ApiFilter4
+RUN_TEST_STEP	300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiSuite.ini	ApiFilter5
+RUN_TEST_STEP	300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiSuite.ini	ApiFilter6
+RUN_TEST_STEP	300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiSuite.ini	ApiFilter7
+END_TESTCASE  PIM-CIT-CallnterimAPI-1098AP-0011
+
+
+START_TESTCASE  PIM-CIT-CallnterimAPI-DEF064928
+//! @SYMTestCaseID  PIM-CIT-CallnterimAPI-DEF064928
+//! @SYMTestType CIT
+//! @SYMTestPriority Medium
+//! @SYMTestCaseDesc Exporting and storing exception date for repeat rule
+//! @SYMTestActions Create an appointment entry with repeat rule and exception date, store and export the entry, and the import the vCal from the exported file
+//! @SYMTestExpectedResults The imported entry has same exception as the stored entry
+RUN_TEST_STEP 	100 	TestCalInterimApiSuite TestCalInterimApiDEF064928Step
+END_TESTCASE  PIM-CIT-CallnterimAPI-DEF064928
+
+PRINT Completed TestCalInterimApi_Tests
+
+PREFIX RUN_UTILS 
+MakeReadWrite 	c:\tcal_dataexchange_export.vcs
+DeleteFile		c:\tcal_dataexchange_export.vcs
+MakeReadWrite 	c:\private\10003a5b\CITFileAccess.vcs
+DeleteFile		c:\private\10003a5b\CITFileAccess.vcs
+MakeReadWrite 	c:\private\10003a5b\CITVCal.dat
+DeleteFile		c:\private\10003a5b\CITVCal.dat
+MakeReadWrite 	c:\private\10003a5b\citvcal.datIdx
+DeleteFile		c:\private\10003a5b\citvcal.datIdx
+REMOVE_PREFIX

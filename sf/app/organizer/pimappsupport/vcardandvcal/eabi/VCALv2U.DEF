@@ -1,0 +1,142 @@
+EXPORTS
+	_ZN11CParserVCal11MakeEntityLEiP7HBufC16 @ 1 NONAME
+	_ZN11CParserVCal12ExternalizeLER12RWriteStream @ 2 NONAME
+	_ZN11CParserVCal12InternalizeLER11RReadStream @ 3 NONAME
+	_ZN11CParserVCal4NewLEv @ 4 NONAME
+	_ZN11CParserVCal9Reserved1Ev @ 5 NONAME
+	_ZN11CParserVCal9Reserved2Ev @ 6 NONAME
+	_ZN12CVersitAlarm4NewLEP15TVersitDateTimeP5TTimeiRK7TDesC16S6_ @ 7 NONAME
+	_ZN12CVersitAlarmD0Ev @ 8 NONAME
+	_ZN12CVersitAlarmD1Ev @ 9 NONAME
+	_ZN12CVersitAlarmD2Ev @ 10 NONAME
+	_ZN13CWeekDayArray12ExternalizeLER12RWriteStream @ 11 NONAME
+	_ZN13CWeekDayArrayC1Ev @ 12 NONAME
+	_ZN13CWeekDayArrayC2Ev @ 13 NONAME
+	_ZN13CWeekDayArrayD0Ev @ 14 NONAME
+	_ZN13CWeekDayArrayD1Ev @ 15 NONAME
+	_ZN13CWeekDayArrayD2Ev @ 16 NONAME
+	_ZN17CParserVCalEntity12ExternalizeLER12RWriteStream @ 17 NONAME
+	_ZN17CParserVCalEntity18MakePropertyValueLERK4TUidRP7HBufC16 @ 18 NONAME
+	_ZN17CParserVCalEntity23MakePropertyValueAlarmLE6TPtr16 @ 19 NONAME
+	_ZN17CParserVCalEntity4NewLEv @ 20 NONAME
+	_ZN17CParserVCalEntity9Reserved1Ev @ 21 NONAME
+	_ZN17CParserVCalEntity9Reserved2Ev @ 22 NONAME
+	_ZN17CParserVCalEntityD0Ev @ 23 NONAME
+	_ZN17CParserVCalEntityD1Ev @ 24 NONAME
+	_ZN17CParserVCalEntityD2Ev @ 25 NONAME
+	_ZN17CRecurrenceParser28MakePropertyValueRecurrenceLER6TDes16 @ 26 NONAME
+	_ZN17CRecurrenceParser9Reserved1Ev @ 27 NONAME
+	_ZN17CRecurrenceParser9Reserved2Ev @ 28 NONAME
+	_ZN17CRecurrenceParserC1Ei @ 29 NONAME
+	_ZN17CRecurrenceParserC2Ei @ 30 NONAME
+	_ZN17CVersitRecurrenceC2EiiP15TVersitDateTime @ 31 NONAME
+	_ZN17CVersitRecurrenceD0Ev @ 32 NONAME
+	_ZN17CVersitRecurrenceD1Ev @ 33 NONAME
+	_ZN17CVersitRecurrenceD2Ev @ 34 NONAME
+	_ZN22CVersitRecurrenceDailyC1EiiP15TVersitDateTime @ 35 NONAME
+	_ZN22CVersitRecurrenceDailyC2EiiP15TVersitDateTime @ 36 NONAME
+	_ZN23CVersitRecurrenceWeeklyC1EiiP15TVersitDateTimeP13CWeekDayArray @ 37 NONAME
+	_ZN23CVersitRecurrenceWeeklyC2EiiP15TVersitDateTimeP13CWeekDayArray @ 38 NONAME
+	_ZN23CVersitRecurrenceWeeklyD0Ev @ 39 NONAME
+	_ZN23CVersitRecurrenceWeeklyD1Ev @ 40 NONAME
+	_ZN23CVersitRecurrenceWeeklyD2Ev @ 41 NONAME
+	_ZN25CParserPropertyValueAlarm12ExternalizeLER12RWriteStreamRKN6Versit19TEncodingAndCharsetEi @ 42 NONAME
+	_ZN25CParserPropertyValueAlarm25ConvertAllDateTimesToUTCLERK20TTimeIntervalSecondsPK15CVersitDaylight @ 43 NONAME
+	_ZN25CParserPropertyValueAlarm29IsAsciiCharacterSetSufficientEv @ 44 NONAME
+	_ZN25CParserPropertyValueAlarm37ConvertAllUTCDateTimesToMachineLocalLERK20TTimeIntervalSeconds @ 45 NONAME
+	_ZN25CParserPropertyValueAlarmC1EP12CVersitAlarm @ 46 NONAME
+	_ZN25CParserPropertyValueAlarmC2EP12CVersitAlarm @ 47 NONAME
+	_ZN25CParserPropertyValueAlarmD0Ev @ 48 NONAME
+	_ZN25CParserPropertyValueAlarmD1Ev @ 49 NONAME
+	_ZN25CParserPropertyValueAlarmD2Ev @ 50 NONAME
+	_ZN28CVersitRecurrenceYearlyByDayC1EiiP15TVersitDateTimeP9CArrayFixIiE @ 51 NONAME
+	_ZN28CVersitRecurrenceYearlyByDayC2EiiP15TVersitDateTimeP9CArrayFixIiE @ 52 NONAME
+	_ZN28CVersitRecurrenceYearlyByDayD0Ev @ 53 NONAME
+	_ZN28CVersitRecurrenceYearlyByDayD1Ev @ 54 NONAME
+	_ZN28CVersitRecurrenceYearlyByDayD2Ev @ 55 NONAME
+	_ZN29CVersitRecurrenceMonthlyByDayC1EiiP15TVersitDateTimeP9CArrayFixIiES4_i @ 56 NONAME
+	_ZN29CVersitRecurrenceMonthlyByDayC2EiiP15TVersitDateTimeP9CArrayFixIiES4_i @ 57 NONAME
+	_ZN29CVersitRecurrenceMonthlyByDayD0Ev @ 58 NONAME
+	_ZN29CVersitRecurrenceMonthlyByDayD1Ev @ 59 NONAME
+	_ZN29CVersitRecurrenceMonthlyByDayD2Ev @ 60 NONAME
+	_ZN29CVersitRecurrenceMonthlyByPos14CMonthPositionD0Ev @ 61 NONAME
+	_ZN29CVersitRecurrenceMonthlyByPos14CMonthPositionD1Ev @ 62 NONAME
+	_ZN29CVersitRecurrenceMonthlyByPos14CMonthPositionD2Ev @ 63 NONAME
+	_ZN29CVersitRecurrenceMonthlyByPosC1EiiP15TVersitDateTimeP13CArrayPtrFlatINS_14CMonthPositionEE @ 64 NONAME
+	_ZN29CVersitRecurrenceMonthlyByPosC2EiiP15TVersitDateTimeP13CArrayPtrFlatINS_14CMonthPositionEE @ 65 NONAME
+	_ZN29CVersitRecurrenceMonthlyByPosD0Ev @ 66 NONAME
+	_ZN29CVersitRecurrenceMonthlyByPosD1Ev @ 67 NONAME
+	_ZN29CVersitRecurrenceMonthlyByPosD2Ev @ 68 NONAME
+	_ZN30CParserPropertyValueRecurrence12ExternalizeLER12RWriteStreamRKN6Versit19TEncodingAndCharsetEi @ 69 NONAME
+	_ZN30CParserPropertyValueRecurrence25ConvertAllDateTimesToUTCLERK20TTimeIntervalSecondsPK15CVersitDaylight @ 70 NONAME
+	_ZN30CParserPropertyValueRecurrence37ConvertAllUTCDateTimesToMachineLocalLERK20TTimeIntervalSeconds @ 71 NONAME
+	_ZN30CParserPropertyValueRecurrenceC1EP17CVersitRecurrence @ 72 NONAME
+	_ZN30CParserPropertyValueRecurrenceC2EP17CVersitRecurrence @ 73 NONAME
+	_ZN30CParserPropertyValueRecurrenceD0Ev @ 74 NONAME
+	_ZN30CParserPropertyValueRecurrenceD1Ev @ 75 NONAME
+	_ZN30CParserPropertyValueRecurrenceD2Ev @ 76 NONAME
+	_ZN30CVersitRecurrenceYearlyByMonthC1EiiP15TVersitDateTimeP9CArrayFixI6TMonthE @ 77 NONAME
+	_ZN30CVersitRecurrenceYearlyByMonthC2EiiP15TVersitDateTimeP9CArrayFixI6TMonthE @ 78 NONAME
+	_ZN30CVersitRecurrenceYearlyByMonthD0Ev @ 79 NONAME
+	_ZN30CVersitRecurrenceYearlyByMonthD1Ev @ 80 NONAME
+	_ZN30CVersitRecurrenceYearlyByMonthD2Ev @ 81 NONAME
+	_ZNK11CParserVCal14RecognizeTokenERK6TDesC8 @ 82 NONAME
+	_ZNK11CParserVCal19RecognizeEntityNameEv @ 83 NONAME
+	_ZNK17CParserVCalEntity14RecognizeTokenERK6TDesC8 @ 84 NONAME
+	_ZNK22CVersitRecurrenceDaily27ExternalizeOccurrenceListsLER12RWriteStream @ 85 NONAME
+	_ZNK23CVersitRecurrenceWeekly27ExternalizeOccurrenceListsLER12RWriteStream @ 86 NONAME
+	_ZNK28CVersitRecurrenceYearlyByDay27ExternalizeOccurrenceListsLER12RWriteStream @ 87 NONAME
+	_ZNK29CVersitRecurrenceMonthlyByDay27ExternalizeOccurrenceListsLER12RWriteStream @ 88 NONAME
+	_ZNK29CVersitRecurrenceMonthlyByPos27ExternalizeOccurrenceListsLER12RWriteStream @ 89 NONAME
+	_ZNK30CVersitRecurrenceYearlyByMonth27ExternalizeOccurrenceListsLER12RWriteStream @ 90 NONAME
+	_ZTI11CParserVCal @ 91 NONAME ; #<TI>#
+	_ZTI13CWeekDayArray @ 92 NONAME ; #<TI>#
+	_ZTI17CParserVCalEntity @ 93 NONAME ; #<TI>#
+	_ZTI17CRecurrenceParser @ 94 NONAME ; #<TI>#
+	_ZTI17CVersitRecurrence @ 95 NONAME ; #<TI>#
+	_ZTI22CVersitRecurrenceDaily @ 96 NONAME ; #<TI>#
+	_ZTI23CVersitRecurrenceWeekly @ 97 NONAME ; #<TI>#
+	_ZTI25CParserPropertyValueAlarm @ 98 NONAME ; #<TI>#
+	_ZTI28CVersitRecurrenceYearlyByDay @ 99 NONAME ; #<TI>#
+	_ZTI29CVersitRecurrenceMonthlyByDay @ 100 NONAME ; #<TI>#
+	_ZTI29CVersitRecurrenceMonthlyByPos @ 101 NONAME ; #<TI>#
+	_ZTI30CParserPropertyValueRecurrence @ 102 NONAME ; #<TI>#
+	_ZTI30CVersitRecurrenceYearlyByMonth @ 103 NONAME ; #<TI>#
+	_ZTIN29CVersitRecurrenceMonthlyByPos14CMonthPositionE @ 104 NONAME ; #<TI>#
+	_ZTV11CParserVCal @ 105 NONAME ; #<VT>#
+	_ZTV13CWeekDayArray @ 106 NONAME ; #<VT>#
+	_ZTV17CParserVCalEntity @ 107 NONAME ; #<VT>#
+	_ZTV17CRecurrenceParser @ 108 NONAME ; #<VT>#
+	_ZTV17CVersitRecurrence @ 109 NONAME ; #<VT>#
+	_ZTV22CVersitRecurrenceDaily @ 110 NONAME ; #<VT>#
+	_ZTV23CVersitRecurrenceWeekly @ 111 NONAME ; #<VT>#
+	_ZTV25CParserPropertyValueAlarm @ 112 NONAME ; #<VT>#
+	_ZTV28CVersitRecurrenceYearlyByDay @ 113 NONAME ; #<VT>#
+	_ZTV29CVersitRecurrenceMonthlyByDay @ 114 NONAME ; #<VT>#
+	_ZTV29CVersitRecurrenceMonthlyByPos @ 115 NONAME ; #<VT>#
+	_ZTV30CParserPropertyValueRecurrence @ 116 NONAME ; #<VT>#
+	_ZTV30CVersitRecurrenceYearlyByMonth @ 117 NONAME ; #<VT>#
+	_ZTVN29CVersitRecurrenceMonthlyByPos14CMonthPositionE @ 118 NONAME ; #<VT>#
+	_ZTI12CVersitAlarm @ 119 NONAME ; #<TI>#
+	_ZTV12CVersitAlarm @ 120 NONAME ; #<VT>#
+	_ZN17CParserVCalEntity31MakePropertyValueExtendedAlarmLE6TPtr16 @ 121 NONAME
+	_ZN17CParserVCalEntity31MakePropertyValueExtendedAlarmLER7CBufSeg @ 122 NONAME
+	_ZN20CVersitExtendedAlarm4NewLERK6TDesC8S2_NS_12TDispositionE @123 NONAME
+	_ZN20CVersitExtendedAlarmD0Ev @ 124 NONAME
+	_ZN20CVersitExtendedAlarmD1Ev @ 125 NONAME
+	_ZN20CVersitExtendedAlarmD2Ev @ 126 NONAME
+	_ZN33CParserPropertyValueExtendedAlarm12ExternalizeLER12RWriteStreamRKN6Versit19TEncodingAndCharsetEi @ 127 NONAME
+	_ZN33CParserPropertyValueExtendedAlarm25ConvertAllDateTimesToUTCLERK20TTimeIntervalSecondsPK15CVersitDaylight @ 128 NONAME
+	_ZN33CParserPropertyValueExtendedAlarm29IsAsciiCharacterSetSufficientEv @ 129 NONAME
+	_ZN33CParserPropertyValueExtendedAlarm37ConvertAllUTCDateTimesToMachineLocalLERK20TTimeIntervalSeconds @ 130 NONAME
+	_ZN33CParserPropertyValueExtendedAlarmC1EP20CVersitExtendedAlarm @ 131 NONAME
+	_ZN33CParserPropertyValueExtendedAlarmC2EP20CVersitExtendedAlarm @ 132 NONAME
+	_ZN33CParserPropertyValueExtendedAlarmD0Ev @ 133 NONAME
+	_ZN33CParserPropertyValueExtendedAlarmD1Ev @ 134 NONAME
+	_ZN33CParserPropertyValueExtendedAlarmD2Ev @ 135 NONAME
+	_ZNK17CParserVCalEntity17DecodeDispositionERK6TDesC8 @ 136 NONAME
+	_ZTI20CVersitExtendedAlarm @ 137 NONAME ; #<TI>#
+	_ZTI33CParserPropertyValueExtendedAlarm @ 138 NONAME ; #<TI>#
+	_ZTV20CVersitExtendedAlarm @ 139 NONAME ; #<VT>#
+	_ZTV33CParserPropertyValueExtendedAlarm @ 140 NONAME ; #<VT>#
+

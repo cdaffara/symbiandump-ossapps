@@ -1,0 +1,49 @@
+// Copyright (c) 2007-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// Class0Sms UI Notier
+// 
+//
+
+/**
+ @file
+*/
+
+TARGET		class0smsuinotifier.dll
+TARGETTYPE	PLUGIN
+
+USERINCLUDE	    ../inc 
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+
+UID	 0x10009D8D 0x2000C382  
+
+VENDORID 0x70000001
+CAPABILITY ALL -TCB
+
+SOURCEPATH	../src
+SOURCE		class0smsUInotifier.cpp
+
+LIBRARY		euser.lib eiksrv.lib ecom.lib efsrv.lib smcm.lib estor.lib
+	
+
+START resource 2000C382.rss
+TARGET		class0smsuinotifier.rsc
+end
+
+#ifdef WINS 
+DEFFILE		./v2_wins.def
+#else
+DEFFILE		./v2_eabi.def
+#endif
+
+SMPSAFE

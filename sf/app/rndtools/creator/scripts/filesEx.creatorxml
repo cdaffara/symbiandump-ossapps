@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<creatorscript schemaVersion="1.0" scriptVersion="1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="creator.xsd">
+
+
+<!-- Create one jpg image file -->
+<file>
+    <fields>
+        <type>JPEG-25kB</type>
+        <directory>c:\data\images</directory>
+    </fields>
+</file>
+
+<!-- Create two midi files with DRM Forward Lock protection -->
+<file amount="2">
+    <fields>
+        <type>MIDI-10kB</type>
+        <directory>c:\data\Sounds</directory>
+        <encryption type="DRM-FL">
+        </encryption>
+    </fields>
+</file>
+
+<!-- Create one DRM protected 3GPP video file with specific access constraints -->
+<file>
+    <fields>
+        <type>3GPP-70kB</type>
+        <directory>c:\data\Videos</directory>
+        <!-- Define DRM Combined Delivery encryption type -->
+        <encryption type="DRM-CD">
+            <right type="play">
+                <!-- Define 21min 1s accumulated time constraint -->
+                <accumulated>P0Y0M0DT0H21M1S</accumulated>
+                <!-- Define that the content can only be played twice -->
+                <count>2</count>
+            </right>
+        </encryption>
+    </fields>
+</file>
+
+<!-- Create one DRM protected gif image file with specific access constraints -->
+<file>
+    <fields>
+        <type>GIF-2kB</type>
+        <directory>c:\data\Images</directory>
+        <!-- Define DRM Combined Delivery encryption type -->
+        <encryption type="DRM-CD">            
+            <right type="display">
+                <!-- Define that the content can be accessed 1,5h after first access -->
+                <interval>P0Y0M0DT1H30M0S</interval>
+                <!-- Define timeframe in which the content can be accessed -->
+                <starttime>2008-09-26T13:49:57</starttime>
+                <endtime>2009-03-27T16:15:00</endtime>
+            </right>
+        </encryption>
+    </fields>
+</file>
+
+</creatorscript>

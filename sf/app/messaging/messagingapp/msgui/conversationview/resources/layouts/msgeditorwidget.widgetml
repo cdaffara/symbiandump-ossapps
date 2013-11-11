@@ -1,0 +1,19 @@
+<hbwidget version="0.1">
+  <layout name="layout-msg-editor" type="mesh">
+
+    <meshitem src="msgEditor" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+    <meshitem src="msgEditor" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="msgEditor" srcEdge="RIGHT" dst="sendButton" dstEdge="LEFT" />
+    <meshitem src="msgEditor" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+    
+    <meshitem src="sendButton" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+    <meshitem src="sendButton" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+    
+    <meshitem src="charCounter" srcEdge="CENTERH" dst="charCounterFrame" dstEdge="CENTERH" />
+    <meshitem src="charCounter" srcEdge="CENTERV" dst="charCounterFrame" dstEdge="CENTERV" />
+
+    <meshitem src="charCounterFrame" srcEdge="TOP" dst="msgEditor" dstEdge="TOP" />
+    <meshitem src="charCounterFrame" srcEdge="RIGHT" dst="msgEditor" dstEdge="RIGHT" />
+    
+  </layout>
+</hbwidget>

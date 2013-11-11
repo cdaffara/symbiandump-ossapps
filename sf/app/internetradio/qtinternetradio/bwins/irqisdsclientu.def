@@ -1,0 +1,47 @@
+EXPORTS
+	??_EIRQIsdsClient@@UAE@I@Z @ 1  NONAME ; IRQIsdsClient::~IRQIsdsClient(unsigned int)
+	?isdsIsConstructSucceed@IRQIsdsClient@@QBE_NXZ @ 2  NONAME ; bool IRQIsdsClient::isdsIsConstructSucceed(void) const
+	?isdsLogoDownSendRequest@IRQIsdsClient@@QAEXPAVIRQPreset@@HHH@Z @ 3  NONAME ; void IRQIsdsClient::isdsLogoDownSendRequest(class IRQPreset *, int, int, int)
+	?isdsLogoDownCancelTransaction@IRQIsdsClient@@QAEXXZ @ 4  NONAME ; void IRQIsdsClient::isdsLogoDownCancelTransaction(void)
+	?metaObject@IRQIsdsClient@@UBEPBUQMetaObject@@XZ @ 5  NONAME ; struct QMetaObject const * IRQIsdsClient::metaObject(void) const
+	?presetLogoDownloadError@IRQIsdsClient@@IAEXXZ @ 6  NONAME ; void IRQIsdsClient::presetLogoDownloadError(void)
+	?qt_metacall@IRQIsdsClient@@UAEHW4Call@QMetaObject@@HPAPAX@Z @ 7  NONAME ; int IRQIsdsClient::qt_metacall(enum QMetaObject::Call, int, void * *)
+	?isdsGetBrowseBanner@IRQIsdsClient@@QAEXAAVQString@@0@Z @ 8  NONAME ; void IRQIsdsClient::isdsGetBrowseBanner(class QString &, class QString &)
+	?isdsCategoryRequest@IRQIsdsClient@@QAEXW4IRQIsdsClientInterfaceIDs@1@AA_N@Z @ 9  NONAME ; void IRQIsdsClient::isdsCategoryRequest(enum IRQIsdsClient::IRQIsdsClientInterfaceIDs, bool &)
+	?syncPresetResult@IRQIsdsClient@@IAEXW4IRQSycPresetStatus@@PAVIRQPreset@@@Z @ 10  NONAME ; void IRQIsdsClient::syncPresetResult(enum IRQSycPresetStatus, class IRQPreset *)
+	?getStaticMetaObject@IRQIsdsClient@@SAABUQMetaObject@@XZ @ 11  NONAME ; struct QMetaObject const & IRQIsdsClient::getStaticMetaObject(void)
+	?staticMetaObject@IRQIsdsClient@@2UQMetaObject@@B @ 12  NONAME ; struct QMetaObject const IRQIsdsClient::staticMetaObject
+	?isdsGetIRID@IRQIsdsClient@@QAEXXZ @ 13  NONAME ; void IRQIsdsClient::isdsGetIRID(void)
+	?isdsCancelRequest@IRQIsdsClient@@QAEXXZ @ 14  NONAME ; void IRQIsdsClient::isdsCancelRequest(void)
+	?openInstance@IRQIsdsClient@@SAPAV1@XZ @ 15  NONAME ; class IRQIsdsClient * IRQIsdsClient::openInstance(void)
+	?isdsLogoDownCheckCacheLogo@IRQIsdsClient@@QAEXABVQString@@AAH@Z @ 16  NONAME ; void IRQIsdsClient::isdsLogoDownCheckCacheLogo(class QString const &, int &)
+	?categoryItemsChanged@IRQIsdsClient@@IAEXPAV?$QList@PAVIRQBrowseCategoryItem@@@@@Z @ 17  NONAME ; void IRQIsdsClient::categoryItemsChanged(class QList<class IRQBrowseCategoryItem *> *)
+	?isdsLogoDownIsRunning@IRQIsdsClient@@QBE_NXZ @ 18  NONAME ; bool IRQIsdsClient::isdsLogoDownIsRunning(void) const
+	?isdsIsChannelCached@IRQIsdsClient@@QAE_NH@Z @ 19  NONAME ; bool IRQIsdsClient::isdsIsChannelCached(int)
+	?mMutex@IRQIsdsClient@@0VQMutex@@A @ 20  NONAME ; class QMutex IRQIsdsClient::mMutex
+	?trUtf8@IRQIsdsClient@@SA?AVQString@@PBD0H@Z @ 21  NONAME ; class QString IRQIsdsClient::trUtf8(char const *, char const *, int)
+	?mRef@IRQIsdsClient@@0HA @ 22  NONAME ; int IRQIsdsClient::mRef
+	?isdsMultSearch@IRQIsdsClient@@QAEXVQString@@000@Z @ 23  NONAME ; void IRQIsdsClient::isdsMultSearch(class QString, class QString, class QString, class QString)
+	?isdsSearchRequest@IRQIsdsClient@@QAEXABVQString@@@Z @ 24  NONAME ; void IRQIsdsClient::isdsSearchRequest(class QString const &)
+	?tr@IRQIsdsClient@@SA?AVQString@@PBD0H@Z @ 25  NONAME ; class QString IRQIsdsClient::tr(char const *, char const *, int)
+	?operationException@IRQIsdsClient@@IAEXW4IRQError@@@Z @ 26  NONAME ; void IRQIsdsClient::operationException(enum IRQError)
+	?iridReceived@IRQIsdsClient@@IAEXVQString@@@Z @ 27  NONAME ; void IRQIsdsClient::iridReceived(class QString)
+	?isdsIsChannelBanner@IRQIsdsClient@@QAE_NXZ @ 28  NONAME ; bool IRQIsdsClient::isdsIsChannelBanner(void)
+	?mInstance@IRQIsdsClient@@0PAV1@A @ 29  NONAME ; class IRQIsdsClient * IRQIsdsClient::mInstance
+	?isdsLogoDownSendCacheLogo@IRQIsdsClient@@QAEAAVTDesC8@@XZ @ 30  NONAME ; class TDesC8 & IRQIsdsClient::isdsLogoDownSendCacheLogo(void)
+	?isdsListenRequest@IRQIsdsClient@@QAEXH_N@Z @ 31  NONAME ; void IRQIsdsClient::isdsListenRequest(int, bool)
+	??0IRQIsdsClient@@AAE@XZ @ 32  NONAME ; IRQIsdsClient::IRQIsdsClient(void)
+	?isdsChannelRequest@IRQIsdsClient@@QAEXHAA_N@Z @ 33  NONAME ; void IRQIsdsClient::isdsChannelRequest(int, bool &)
+	?tr@IRQIsdsClient@@SA?AVQString@@PBD0@Z @ 34  NONAME ; class QString IRQIsdsClient::tr(char const *, char const *)
+	?isdsSyncPreset@IRQIsdsClient@@QAEHHABVQString@@PAVIRQFavoritesDB@@@Z @ 35  NONAME ; int IRQIsdsClient::isdsSyncPreset(int, class QString const &, class IRQFavoritesDB *)
+	?presetResponse@IRQIsdsClient@@IAEXPAVIRQPreset@@@Z @ 36  NONAME ; void IRQIsdsClient::presetResponse(class IRQPreset *)
+	?presetLogoDownloaded@IRQIsdsClient@@IAEXPAVIRQPreset@@@Z @ 37  NONAME ; void IRQIsdsClient::presetLogoDownloaded(class IRQPreset *)
+	?isdsIsLogoCached@IRQIsdsClient@@QAE_NPAVIRQPreset@@HH@Z @ 38  NONAME ; bool IRQIsdsClient::isdsIsLogoCached(class IRQPreset *, int, int)
+	?isdsIsCategoryCached@IRQIsdsClient@@QAE_NW4IRQIsdsClientInterfaceIDs@1@@Z @ 39  NONAME ; bool IRQIsdsClient::isdsIsCategoryCached(enum IRQIsdsClient::IRQIsdsClientInterfaceIDs)
+	?channelItemsChanged@IRQIsdsClient@@IAEXPAV?$QList@PAVIRQChannelItem@@@@@Z @ 40  NONAME ; void IRQIsdsClient::channelItemsChanged(class QList<class IRQChannelItem *> *)
+	??1IRQIsdsClient@@EAE@XZ @ 41  NONAME ; IRQIsdsClient::~IRQIsdsClient(void)
+	?closeInstance@IRQIsdsClient@@QAEXXZ @ 42  NONAME ; void IRQIsdsClient::closeInstance(void)
+	?isdsPostLog@IRQIsdsClient@@QAEXABVQString@@@Z @ 43  NONAME ; void IRQIsdsClient::isdsPostLog(class QString const &)
+	?trUtf8@IRQIsdsClient@@SA?AVQString@@PBD0@Z @ 44  NONAME ; class QString IRQIsdsClient::trUtf8(char const *, char const *)
+	?isdsIsCategoryBanner@IRQIsdsClient@@QAE_NXZ @ 45  NONAME ; bool IRQIsdsClient::isdsIsCategoryBanner(void)
+	?qt_metacast@IRQIsdsClient@@UAEPAXPBD@Z @ 46  NONAME ; void * IRQIsdsClient::qt_metacast(char const *)

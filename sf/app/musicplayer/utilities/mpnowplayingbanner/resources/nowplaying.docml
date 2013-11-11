@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<hbdocument version="0.9">
+
+    <widget name="nowPlayingContainer" type="HbWidget">
+
+        <widget name="playPause" type="HbLabel">
+            <sizehint height="var(hb-param-graphic-size-function)" type="MAXIMUM"/>
+            <sizehint height="var(hb-param-graphic-size-function)" type="MINIMUM"/>
+            <sizehint width="var(hb-param-graphic-size-function)" type="MAXIMUM"/>
+            <sizehint width="var(hb-param-graphic-size-function)" type="MINIMUM"/>                   
+        </widget>
+        
+        <widget name="primaryText" type="HbLabel">   
+            <fontspec name="fontSpec" role="Primary"/>            
+        </widget>
+        
+        <widget name="secondaryText" type="HbLabel">
+            <fontspec name="fontSpec" role="Secondary"/>
+        </widget>
+
+        <layout type="anchor">       
+            <anchoritem dst="playPause" dstEdge="RIGHT" spacing="-var(hb-param-margin-gene-screen)" src="" srcEdge="RIGHT"/>
+            <anchoritem dst="playPause" dstEdge="TOP" spacing="expr(((2*var(hb-param-margin-gene-middle-vertical) + var(hb-param-text-height-primary) + var(hb-param-text-height-secondary))/2) - (var(hb-param-graphic-size-function)/2))" src="" srcEdge="TOP"/>
+            
+            <anchoritem dst="primaryText" dstEdge="LEFT" spacing="var(hb-param-margin-gene-screen)" src="" srcEdge="LEFT"/>
+            <anchoritem dst="primaryText" dstEdge="RIGHT" spacing="-var(hb-param-margin-gene-screen)" src="playPause" srcEdge="LEFT"/>
+            <anchoritem dst="primaryText" dstEdge="TOP" spacing="var(hb-param-margin-gene-middle-vertical)" src="" srcEdge="TOP"/>
+            
+            <anchoritem dst="secondaryText" dstEdge="LEFT" spacing="var(hb-param-margin-gene-screen)" src="" srcEdge="LEFT"/>
+            <anchoritem dst="secondaryText" dstEdge="RIGHT" spacing="-var(hb-param-margin-gene-screen)" src="playPause" srcEdge="LEFT"/>
+            <anchoritem dst="secondaryText" dstEdge="BOTTOM" spacing="-var(hb-param-margin-gene-middle-vertical)" src="" srcEdge="BOTTOM"/>
+       </layout>
+          
+    </widget>
+    
+</hbdocument>

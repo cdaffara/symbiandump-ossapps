@@ -1,0 +1,27 @@
+/*
+* Copyright (c) 2006-2006 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Resource headers for project ?myapp
+*
+*/
+
+
+#ifndef IRGENERALSETTINGS_HRH
+#define IRGENERALSETTINGS_HRH
+
+/** The UID of the general settings plugin DLL. */
+#define IRGENERAL_SETTINGS_PLUGIN_DLL_UID       0x2001A930 // This id is take from the mmp file,SS file is name after this.
+/** The UID of the general settings plugin interface implementation. */
+#define IRGENERAL_SETTINGS_INTERFACE_IMPL_UID   0x0FF75A22 // RSS file is name after this.Variable is in rss file.
+
+#endif //  IRGENERALSETTINGS_HRH

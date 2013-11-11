@@ -1,0 +1,31 @@
+HbWidget {
+    margin-left: 0un;
+    margin-top: 0un;
+}
+
+SnsrOledClockWidget {
+    layout: layout_1;
+}
+
+SnsrOledClockWidget::oled_clock_background {
+    pref-height: 32.8un;
+    pref-width: 32.8un;
+    zvalue: 0;
+}
+
+SnsrOledClockWidget::oled_clock_hour_hand {
+    pref-height: 32.8un;
+    pref-width: 32.8un;
+    zvalue: 3;
+}
+
+SnsrOledClockWidget::oled_clock_minute_hand {
+    pref-height: 32.8un;
+    pref-width: 32.8un;
+    zvalue: 2;
+}
+
+SnsrOledAnalogClockWidget::oled_clock_am_pm_label {
+    /* font spec etc are set in code as setting them here didn't seem to work properly */
+    zvalue: 1;
+}

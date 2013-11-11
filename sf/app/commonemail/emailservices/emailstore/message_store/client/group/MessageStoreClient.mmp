@@ -1,0 +1,88 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Message store client project file.
+*
+*/
+
+
+#include <platform_paths.hrh>
+//<qmail>
+//#include "../../../../../inc/emailversionnumbers.hrh" // KEmailBinaryVersionNumber
+//</qmail>
+#include "../../../inc/EmailStoreUids.hrh"
+
+TARGET        MessageStoreClient.dll
+TARGETTYPE    dll
+UID           KUidSharedLibrary KUidMessageStoreClient
+SECUREID      KUidMessageStoreClient
+CAPABILITY    CAP_CLIENT_DLL
+VENDORID      VID_DEFAULT
+
+//<qmail>
+//VERSION       KEmailBinaryVersionNumber
+//</qmail>
+KEmailBinaryDemandPaging
+
+MACRO DEBUG_USE_PROJECT_LOGGING_OPTIONS
+MACRO DEBUG_LOG_OPTION_ENTER
+MACRO DEBUG_LOG_OPTION_EXIT
+MACRO DEBUG_LOG_OPTION_ERRORS
+//MACRO DEBUG_LOG_OPTION_INFO
+
+USERINCLUDE   ../api
+USERINCLUDE   ../inc
+USERINCLUDE   ../../../inc
+USERINCLUDE   ../../common/inc
+
+// TEMPORARY MOVED STUFF FROM IsMsgStorePropertyKeys.h USED BY MSGSTORE TO MsgStorePropertyKeys.h
+//because of the IsMsgStorePropertyKeys.h there is now dependency and I'd rather keep it in its
+//original location because of the merges and the fact that it logically belongs there.
+//USERINCLUDE   ../../../../Intellisyncengine/client_symbian_s60_freestyle/sync/inc
+
+USERINCLUDE ../../../../../inc
+APP_LAYER_SYSTEMINCLUDE
+
+SOURCEPATH    ../src
+//SOURCE        MessageStoreClient.cpp
+SOURCE        MsgStorePropertyContainer.cpp
+SOURCE        MsgStoreWritablePropertyContainer.cpp
+SOURCE        MsgStorePropertyContainerWithContent.cpp
+SOURCE        RMessageStoreSession.cpp
+SOURCE        MsgStoreSessionContext.cpp
+SOURCE        MsgStorePropertyContainersArray.cpp
+SOURCE		  MsgStoreAccount.cpp
+SOURCE        MsgStoreMessagePart.cpp
+SOURCE        MsgStoreMessage.cpp
+SOURCE        MsgStoreFolder.cpp
+SOURCE        MsgStoreSearchCriteria.cpp
+SOURCE        MsgStoreSortCriteria.cpp
+SOURCE        MsgStoreSortResultIterator.cpp
+SOURCE        MsgStoreMailBox.cpp
+SOURCE        MsgStoreSearchHandler.cpp
+SOURCE        MsgStoreObserverHandler.cpp
+SOURCE        MsgStore.cpp
+SOURCE        MsgStoreFolderUtils.cpp
+SOURCE        MsgStoreAddress.cpp
+
+SOURCEPATH    ../../common/src
+SOURCE        PropertiesSerializer.cpp
+SOURCE        AccountsSerializer.cpp
+
+LIBRARY  euser.lib
+LIBRARY	 estor.lib 
+LIBRARY  efsrv.lib
+LIBRARY  debuglog.lib
+LIBRARY  MessageStoreServer.lib
+
+SMPSAFE

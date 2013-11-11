@@ -1,0 +1,68 @@
+// Copyright (c) 1997-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// CalInterimAPI.dll Interim API for Agenda client
+// 
+//
+
+// Include Calendar logging, if enabled
+#include "callogging.mmh"
+
+TARGET			calinterimapi.dll
+TARGETTYPE		DLL
+CAPABILITY   	All -TCB
+
+UID				0X1000008D 0x102075e4
+VENDORID		0x70000001
+
+sourcepath		../client/src
+
+userinclude		../inc ../client/inc ../shared/inc ../server/inc
+
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+
+source			calsession.cpp calsessionimpl.cpp
+source			calinstance.cpp calinstanceimpl.cpp
+source			calinstanceview.cpp calinstanceviewimpl.cpp 
+source			calentry.cpp calentryimpl.cpp
+source			calentryview.cpp calentryviewimpl.cpp
+source 			calcategory.cpp calcategoryimpl.cpp 
+source			calcategorymanager.cpp calcategorymanagerimpl.cpp
+source			caluser.cpp caluserimpl.cpp
+source			caliterator.cpp caliteratorimpl.cpp calrrule.cpp caltime.cpp
+source			caldataexchange.cpp caldataexchangeimpl.cpp calalarm.cpp
+source			calcommonimpl.cpp calchangecallback.cpp
+source			calcontent.cpp calattachment.cpp calattachmentmanager.cpp
+source			calasynctask.cpp calattachmentmanagerimpl.cpp
+source			calclient.cpp
+source			calinstanceiteratorall.cpp calinstanceiteratoruid.cpp calinstanceiterator.cpp
+#ifdef SYMBIAN_CALENDAR_ENHANCEDSEARCHANDSORT
+source 			calsortedinstanceiterator.cpp
+#endif
+source			calcalendarinfo.cpp calcalendarinfoimpl.cpp
+source			calcalendariterator.cpp calcalendariteratorimpl.cpp calfilechangenotification.cpp
+
+library			agnmodel.lib bafl.lib efsrv.lib estor.lib euser.lib
+
+library			ecom.lib
+#ifdef SYMBIAN_CALENDAR_ENHANCEDSEARCHANDSORT
+deffile			calinterimapi.def
+#else
+deffile			calinterimapiv3.def
+#endif
+START WINS
+BASEADDRESS		0x7d340000
+END
+
+SMPSAFE
+

@@ -1,0 +1,34 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+#include "../../group/buildflags.hrh"
+
+#include <platform_paths.hrh>
+
+PRJ_PLATFORMS
+WINSCW ARMV5
+
+PRJ_EXPORTS
+
+backup_registration.xml /epoc32/data/z/private/2002FF52/backup_registration.xml
+
+../cenrep/2002FF52.txt  /epoc32/data/z/private/10202be9/2002FF52.txt
+../cenrep/2002FF52.txt  /epoc32/RELEASE/winscw/UDEB/Z/private/10202be9/2002FF52.txt
+../cenrep/2002FF52.txt  /epoc32/RELEASE/winscw/UREL/Z/private/10202be9/2002FF52.txt
+
+PRJ_MMPFILES
+radioenginesettings.mmp

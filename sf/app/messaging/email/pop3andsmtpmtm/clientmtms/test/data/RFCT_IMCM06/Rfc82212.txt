@@ -1,0 +1,47 @@
+Date: Thu, 4 Sep 1997 18:06:19 +0100
+To: keith-de-mendonca@psion.com
+From: Test message <abf75@dial.pipex.com>
+Subject: MIME Message - Multipart/related, 3 parts
+MIME-Version: 1.0
+Content-Type: multipart/related
+ ; boundary="_boundary___________________level_1"
+
+--_boundary___________________level_1
+Subject: Level 1: part 1
+
+Level 1: part 1
+
+--_boundary___________________level_1
+Subject: Level 1: part 2 - Multipart/related, 4 parts 
+Content-Type: multipart/related
+ ; boundary="_boundary___________________level_2"
+
+--_boundary___________________level_2
+Subject: Level 2: part 1
+
+Level 2: part 1
+
+--_boundary___________________level_2
+Subject: Level 2: part 2
+
+Level 2: part 2
+
+--_boundary___________________level_2
+Subject: Level 2: part 3
+
+Level 2: part 3
+
+--_boundary___________________level_2
+Subject: Level 2: part 4
+
+Level 2: part 4
+
+--_boundary___________________level_2--
+
+--_boundary___________________level_1
+Subject: Level 1: part 3
+
+Level 1: part 3
+
+--_boundary___________________level_1--
+

@@ -1,0 +1,87 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+* 
+* Description: MMP file of UITestServerStarter.
+*
+*/
+
+#include <platform_paths.hrh>
+
+SMPSAFE
+
+TARGET			UITestServerStarter.exe
+TARGETTYPE		exe
+UID		  		0x100039CE 0x2000F8E8
+VENDORID		0x101FB657
+SECUREID		0x2000F8E8
+CAPABILITY		ALL -TCB
+
+START RESOURCE	../data/UITestServerStarter.rss
+	HEADER
+	TARGETPATH resource/apps
+END
+
+SOURCEPATH		../data
+START RESOURCE	UITestServerStarter_reg.rss
+	DEPENDS uitestserverstarter.rsg
+	TARGETPATH		/private/10003a3f/apps
+END
+
+SOURCEPATH		../src
+
+SOURCE			TestServerThreadStarter.cpp
+SOURCE			UITestServerStarter.cpp 
+SOURCE			UITestServerStarterAppView.cpp
+SOURCE			UITestServerStarterAppUi.cpp
+SOURCE			AknUiEnvProxy.cpp
+SOURCE			EventUtil.cpp
+SOURCE			UITestServerStarterApplication.cpp
+SOURCE			UITestServerStarterDocument.cpp
+SOURCE			UITestServerStarterAppContainer.cpp
+
+USERINCLUDE ../inc
+
+APP_LAYER_SYSTEMINCLUDE
+
+LIBRARY		   euser.lib
+LIBRARY		   apparc.lib
+LIBRARY		   cone.lib
+LIBRARY		   eikcore.lib
+LIBRARY		   avkon.lib
+LIBRARY		   commonengine.lib
+LIBRARY		   efsrv.lib 
+LIBRARY		   estor.lib
+LIBRARY        aknnotify.lib
+LIBRARY        hlplch.lib
+LIBRARY        apgrfx.lib 
+LIBRARY        ws32.lib
+LIBRARY        aknskins.lib 
+LIBRARY        aknskinsrv.lib
+
+LIBRARY         stiftestserver.lib
+
+START WINS      
+// ?wins_specific_information
+END
+
+START MARM
+// ?marm_specific_information
+END
+
+/* Test Server requires large stack. In case of change update also thread creation parameters
+   in "void CTestServerThreadStarter::RunL" method.
+*/
+EPOCSTACKSIZE   40960
+EPOCHEAPSIZE 	0x001000 0x400000
+
+// End of File

@@ -1,0 +1,66 @@
+/*
+* Copyright (c) 2004 - 2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  videoteleng build information file.
+*
+*/
+
+#include <platform_paths.hrh>
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_TESTEXPORTS
+
+PRJ_EXPORTS
+
+
+../Inc/Base/VtEngEvents.h                    |../../../inc/vtengevents.h
+../Inc/Base/CVtEngModel.h                    |../../../inc/cvtengmodel.h
+../Inc/Base/MVtEngEventObserver.h            |../../../inc/mvtengeventobserver.h
+../Inc/Commands/vtengcommands.h              |../../../inc/vtengcommands.h
+../Inc/Commands/MVtEngCommandHandler.h       |../../../inc/mvtengcommandhandler.h
+../Inc/Commands/MVtEngCommandObserver.h      |../../../inc/mvtengcommandobserver.h
+../Inc/Session/MVtEngSessionInfo.h           |../../../inc/mvtengsessioninfo.h
+../Inc/Audio/MVtEngAudio.h                   |../../../inc/mvtengaudio.h
+../Inc/Media/MVtEngMedia.h                   |../../../inc/mvtengmedia.h
+../Inc/Media/MVtEngFrameObserver.h           |../../../inc/mvtengframeobserver.h
+../Inc/Media/TVtEngRendering.h               |../../../inc/tvtengrendering.h
+../Inc/Media/TVtEngRendering.inl             |../../../inc/tvtengrendering.inl
+../Inc/Media/TVtEngRenderingDSA.h            |../../../inc/tvtengrenderingdsa.h
+../Inc/Media/TVtEngRenderingDSA.inl          |../../../inc/tvtengrenderingdsa.inl
+../Inc/Media/TVtEngRenderingDP.h             |../../../inc/tvtengrenderingdp.h
+../Inc/Media/TVtEngRenderingDP.inl           |../../../inc/tvtengrenderingdp.inl
+../Inc/Media/TVtEngRenderingNGA.h             |../../../inc/tvtengrenderingnga.h
+../Inc/Media/TVtEngRenderingNGA.inl           |../../../inc/tvtengrenderingnga.inl
+../Inc/Extensions/MVtEngCameraPreferences.h  |../../../inc/mvtengcamerapreferences.h
+../Inc/Extensions/mvtengrecord2file.h  		 |../../../inc/mvtengrecord2file.h
+
+
+../data/videoteleng_stub.SIS                 /epoc32/data/z/system/install/videoteleng_stub.sis
+
+../Logger/Inc/cvtlogger.h                    |../../../inc/cvtlogger.h
+../Logger/Inc/vtlogger.hrh                   |../../../inc/vtlogger.hrh
+
+// Export IBY file
+../Rom/videoteleng.iby                       CORE_APP_LAYER_IBY_EXPORT_PATH(videoteleng.iby)
+
+PRJ_MMPFILES
+
+../Logger/Group/vtlogger.mmp
+../CallCtrl/Group/videocallctrl.mmp
+../Group/videoteleng.mmp
+
+
+
+// End of File

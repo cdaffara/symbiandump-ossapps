@@ -1,0 +1,51 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+#ifndef __HLPMODELTEST_IBY__
+#define __HLPMODELTEST_IBY__
+
+#include <hlpmodel.iby>
+
+#include <CoreAppsTest.iby>
+
+REM help model test
+
+file=ABI_DIR\BUILD_DIR\DBWRITER.dll	System\Libs\DBWRITER.dll
+
+file=ABI_DIR\BUILD_DIR\TSTORE.exe	System\Programs\THlpmodel\TSTORE.exe
+file=ABI_DIR\BUILD_DIR\TDUMPER.exe	System\Programs\THlpmodel\TDUMPER.exe
+file=ABI_DIR\BUILD_DIR\TSEARCH.exe	System\Programs\THlpmodel\TSEARCH.exe
+file=ABI_DIR\BUILD_DIR\TLOADER.exe	System\Programs\THlpmodel\TLOADER.exe
+
+
+file=ABI_DIR\BUILD_DIR\THelpView.EXE	sys\bin\THelpView.EXE
+
+data=MULTI_LINGUIFY(RSC EPOCROOT##epoc32\data\Z\resource\Apps\THelpView  resource\Apps\THelpView)
+data=MULTI_LINGUIFY(RSC EPOCROOT##epoc32\data\Z\private\10003a3f\apps\THelpView_reg  private\10003a3f\apps\THelpView_reg)
+
+
+define HELP_PATH Resource\help
+
+data=EPOCROOT##epoc32\winscw\c\##HELP_PATH##\Boss-1.hlp		HELP_PATH##\Boss-1.hlp
+data=EPOCROOT##epoc32\winscw\c\##HELP_PATH##\Boss-2.hlp		HELP_PATH##\Boss-2.hlp
+data=EPOCROOT##epoc32\winscw\c\##HELP_PATH##\ER5Help_Part1.hlp	HELP_PATH##\ER5Help_Part1.hlp
+
+data=ZRESOURCE\Help\PlatSecSearchTest.hlp			Resource\Help\PlatSecSearchTest.hlp
+data=ZSYSTEM\Data\THlpmodel\PlatSecSearchTestC.hlp		System\Data\THlpmodel\PlatSecSearchTestC.hlp	
+data=ZSYSTEM\Data\THlpmodel\PlatSecSearchTestF.hlp		System\Data\THlpmodel\PlatSecSearchTestF.hlp
+
+#endif

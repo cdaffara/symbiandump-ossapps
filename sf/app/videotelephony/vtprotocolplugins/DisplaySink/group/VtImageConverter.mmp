@@ -1,0 +1,43 @@
+/*
+* Copyright (c) 2004 - 2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:    Project definition file for Display Sink subsystem
+*
+*/
+
+
+
+#include        <platform_paths.hrh>
+#include        "../inc/VtImageConverterUids.hrh"
+
+TARGET          vtimageconverter.dll
+TARGETTYPE      dll
+VENDORID        VID_DEFAULT
+    
+UID             KSharedLibraryUidDefine KUidVtImageConverterLibrary
+
+USERINCLUDE     ../inc
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE   /epoc32/include/libc
+
+SOURCEPATH      ../src
+SOURCE          CVtImageConverter.cpp
+
+LIBRARY         gdi.lib
+LIBRARY         euser.lib
+LIBRARY         fbscli.lib
+
+CAPABILITY      CAP_GENERAL_DLL
+
+// End of File
+

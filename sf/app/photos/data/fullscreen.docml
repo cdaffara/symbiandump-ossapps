@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="1.1">
+    <widget name="mGlxFullscreenView" type="HbView">
+        <widget name="mcontent" role="HbView:widget" type="HbWidget">
+            <widget name="mCoverFlow" type="HbWidget">
+                <real name="z" value="5"/>
+            </widget>
+            <widget name="mImageStrip" type="HbGridView">
+                <bool name="itemRecycling" value="TRUE"/>
+                <bool name="textVisible" value="FALSE"/>
+                <bool name="uniformItemSizes" value="TRUE"/>
+                <enums name="scrollDirections" value="Horizontal"/>
+                <real name="z" value="7"/>
+                <integer name="columnCount" value="1"/>
+                <sizehint height="11.50546un" type="PREFERRED" width="53.731343un"/>
+                <bool name="frictionEnabled" value="TRUE"/>
+                <integer name="rowCount" value="1"/>
+            </widget>
+            <widget name="toolBar" type="HbToolBar">
+                <enums name="layoutDirection" value="RightToLeft"/>
+                <real name="z" value="7"/>
+                <real name="opacity" value="1"/>
+                <sizehint height="60.44776un" type="PREFERRED" width="9.40299un"/>
+                <enums name="orientation" value="Vertical"/>
+                <bool name="visible" value="FALSE"/>
+            </widget>
+            <widget name="glxZoomWidget" type="HbWidget">
+                <string name="alignment" value="AlignVCenter|AlignHCenter"/>
+                <string name="scrollDirections" value="Horizontal|Vertical"/>
+                <bool name="frictionEnabled" value="TRUE"/>
+            </widget>
+            <string name="toolTipText"/>
+            <bool name="visible" value="TRUE"/>
+            <layout type="anchor">
+                <anchoritem dst="mCoverFlow" dstEdge="LEFT" spacing="var(hb-param-margin-view-left)" src="" srcEdge="LEFT"/>
+                <anchoritem dst="mCoverFlow" dstEdge="TOP" spacing="var(hb-param-margin-view-top)" src="" srcEdge="TOP"/>
+                <anchoritem dst="mCoverFlow" dstEdge="RIGHT" spacing="var(hb-param-margin-view-right)" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="mCoverFlow" dstEdge="BOTTOM" spacing="var(hb-param-margin-view-bottom)" src="" srcEdge="BOTTOM"/>
+                <anchoritem dst="mImageStrip" dstEdge="LEFT" spacing="var(hb-param-margin-view-left)" src="" srcEdge="LEFT"/>
+                <anchoritem dst="mImageStrip" dstEdge="TOP" spacing="84.016928un" src="" srcEdge="TOP"/>
+                <anchoritem dst="mImageStrip" dstEdge="RIGHT" spacing="var(hb-param-margin-view-right)" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="mImageStrip" dstEdge="BOTTOM" spacing="var(hb-param-margin-view-bottom)" src="" srcEdge="BOTTOM"/>
+                <anchoritem dst="toolBar" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="toolBar" dstEdge="TOP" spacing="17.46269un" src="" srcEdge="TOP"/>
+                <anchoritem dst="glxZoomWidget" dstEdge="LEFT" spacing="var(hb-param-margin-view-left)" src="" srcEdge="LEFT"/>
+                <anchoritem dst="glxZoomWidget" dstEdge="TOP" spacing="var(hb-param-margin-view-top)" src="" srcEdge="TOP"/>
+                <anchoritem dst="glxZoomWidget" dstEdge="RIGHT" spacing="var(hb-param-margin-view-right)" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="glxZoomWidget" dstEdge="BOTTOM" spacing="var(hb-param-margin-view-bottom)" src="" srcEdge="BOTTOM"/>
+            </layout>
+        </widget>
+        <string locid="txt_photos_title_photos" name="title" value="Photos"/>
+        <bool name="contentFullScreen" value="TRUE"/>
+    </widget>
+    <section name="portrait">
+        <widget name="mImageStrip" type="HbGridView">
+            <integer name="columnCount" value="4"/>
+            <integer name="rowCount" value="1"/>
+            <sizehint height="11.50546un" type="PREFERRED" width="53.731343un"/>
+        </widget>
+        <widget name="toolBar" type="HbToolBar">
+            <sizehint height="58.50746un" type="PREFERRED" width="9.40299un"/>
+        </widget>
+        <widget name="mcontent" role="HbView:widget" type="HbWidget">
+            <layout type="anchor">
+                <anchoritem dst="mCoverFlow" dstEdge="LEFT" spacing="var(hb-param-margin-view-left)" src="" srcEdge="LEFT"/>
+                <anchoritem dst="mCoverFlow" dstEdge="TOP" spacing="var(hb-param-margin-view-top)" src="" srcEdge="TOP"/>
+                <anchoritem dst="mCoverFlow" dstEdge="RIGHT" spacing="var(hb-param-margin-view-right)" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="mCoverFlow" dstEdge="BOTTOM" spacing="var(hb-param-margin-view-bottom)" src="" srcEdge="BOTTOM"/>
+                <anchoritem dst="mImageStrip" dstEdge="LEFT" spacing="var(hb-param-margin-view-left)" src="" srcEdge="LEFT"/>
+                <anchoritem dst="mImageStrip" dstEdge="TOP" spacing="84.016928un" src="" srcEdge="TOP"/>
+                <anchoritem dst="mImageStrip" dstEdge="RIGHT" spacing="var(hb-param-margin-view-right)" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="mImageStrip" dstEdge="BOTTOM" spacing="var(hb-param-margin-view-bottom)" src="" srcEdge="BOTTOM"/>
+                <anchoritem dst="toolBar" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="toolBar" dstEdge="TOP" spacing="18.13433un" src="" srcEdge="TOP"/>
+                <anchoritem dst="glxZoomWidget" dstEdge="LEFT" spacing="var(hb-param-margin-view-left)" src="" srcEdge="LEFT"/>
+                <anchoritem dst="glxZoomWidget" dstEdge="TOP" spacing="var(hb-param-margin-view-top)" src="" srcEdge="TOP"/>
+                <anchoritem dst="glxZoomWidget" dstEdge="RIGHT" spacing="var(hb-param-margin-view-right)" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="glxZoomWidget" dstEdge="BOTTOM" spacing="var(hb-param-margin-view-bottom)" src="" srcEdge="BOTTOM"/>
+            </layout>
+        </widget>
+    </section>
+    <section name="landscape">
+        <widget name="mGlxFullscreenView" type="HbView">
+            <real name="z" value="0"/>
+            <string name="HbVkbHost"/>
+        </widget>
+        <widget name="mImageStrip" type="HbGridView">
+            <integer name="columnCount" value="6"/>
+            <integer name="rowCount" value="1"/>
+            <sizehint height="12.2811un" type="PREFERRED" width="85.970158un"/>
+        </widget>
+        <widget name="toolBar" type="HbToolBar">
+            <sizehint height="46.71642un" type="PREFERRED" width="9.4427un"/>
+        </widget>
+        <widget name="mcontent" role="HbView:widget" type="HbWidget">
+            <layout type="anchor">
+                <anchoritem dst="mCoverFlow" dstEdge="LEFT" spacing="var(hb-param-margin-view-left)" src="" srcEdge="LEFT"/>
+                <anchoritem dst="mCoverFlow" dstEdge="TOP" spacing="var(hb-param-margin-view-top)" src="" srcEdge="TOP"/>
+                <anchoritem dst="mCoverFlow" dstEdge="RIGHT" spacing="var(hb-param-margin-view-right)" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="mCoverFlow" dstEdge="BOTTOM" spacing="var(hb-param-margin-view-bottom)" src="" srcEdge="BOTTOM"/>
+                <anchoritem dst="mImageStrip" dstEdge="LEFT" spacing="9.55223un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="mImageStrip" dstEdge="TOP" spacing="41.450243un" src="" srcEdge="TOP"/>
+                <anchoritem dst="mImageStrip" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="mImageStrip" dstEdge="BOTTOM" spacing="0un" src="" srcEdge="BOTTOM"/>
+                <anchoritem dst="toolBar" dstEdge="TOP" spacing="9.7015un" src="" srcEdge="TOP"/>
+                <anchoritem dst="toolBar" dstEdge="BOTTOM" spacing="0un" src="" srcEdge="BOTTOM"/>
+                <anchoritem dst="toolBar" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="toolBar" dstEdge="RIGHT" spacing="0un" src="mImageStrip" srcEdge="LEFT"/>
+                <anchoritem dst="glxZoomWidget" dstEdge="LEFT" spacing="var(hb-param-margin-view-left)" src="" srcEdge="LEFT"/>
+                <anchoritem dst="glxZoomWidget" dstEdge="TOP" spacing="var(hb-param-margin-view-top)" src="" srcEdge="TOP"/>
+                <anchoritem dst="glxZoomWidget" dstEdge="RIGHT" spacing="var(hb-param-margin-view-right)" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="glxZoomWidget" dstEdge="BOTTOM" spacing="var(hb-param-margin-view-bottom)" src="" srcEdge="BOTTOM"/>
+            </layout>
+        </widget>
+    </section>
+    <metadata activeUIState="Common ui state" display="NHD-3.2-inch_portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+        <uistate name="portrait" sections="#common portrait"/>
+        <uistate name="landscape" sections="#common landscape"/>
+        <dummydata objectName="mImageStrip" section="#common" value="app_grid_template2"/>
+    </metadata>
+</hbdocument>

@@ -1,0 +1,196 @@
+
+/* The entire snippet. */
+.ContextMenu
+{
+  color: #283f52;
+  -webkit-user-select: none;
+  margin: 0px;
+  padding: 0px;
+  font-weight:bold;
+  font-size: large;
+}
+
+/* The main wrapper div. */
+.ContextMenuDiv
+{
+  color: #283f52;
+  background-color: transparent;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  border: none; 
+}
+
+.TabsDiv
+{
+  margin-right: 1px;
+}
+
+.TabsUl
+{
+  margin-top: 0px;
+  margin-left: 0px;
+  padding: 0px;
+}
+
+.MenuDiv
+{
+  margin-left: -40px;
+  margin-right: 3px;
+  margin-top: -16px;
+  padding: 0px;
+}
+
+.MenuUl
+{
+  margin-bottom: 0px;
+}
+
+/* All list items, tabs and menu items. */
+.ContextMenu li
+{
+    list-style-type: none;
+}
+
+/*
+.ContextMenu li:hover
+{
+  background: -webkit-gradient(linear, left top, left bottom, from(#677fa8), to(#7692c2), color-stop(0.0, #aab));
+}
+*/
+
+/* Tab items. */
+.ContextMenu .TabsDiv ul li
+{
+  display: inline-block;
+  color: #fff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 16px;
+  border-top: solid 3px #373f4f;
+  border-left: solid 3px #373f4f;
+  border-bottom: solid 3px #373f4f;
+  margin-bottom: -2px;
+}
+
+/* The first tab item. */
+.ContextMenu .TabsDiv ul li:first-child
+{
+  -webkit-border-top-left-radius: 7px;
+}
+
+/* The last tab item. */
+.ContextMenu .TabsDiv ul li:last-child
+{
+  -webkit-border-top-right-radius: 7px;
+  border-right: solid 3px #373f4f;
+}
+
+/* Normal tabs, ie. not highlighted. */
+.ViewContext_NormalTab {
+  background: -webkit-gradient(linear, left top, left bottom, from(#a2acc5), to(#b5c0d8), color-stop(0.0, #aab));
+}
+
+/* Hide the text in normal tabs. */
+.ViewContext_NormalTab * a {
+  display: none;
+}
+
+.ViewContext_NormalTab div {
+  margin-top: 0px;
+}
+
+/* Highlighted tab. */
+.ViewContext_HighlightedTab {
+  background: -webkit-gradient(linear, left top, left bottom, from(#43577c), to(#2f3c58), color-stop(0.0, #aab));
+  -webkit-border-top-left-radius: 7px;
+  -webkit-border-top-right-radius: 7px;
+}
+
+/* Make the highlighted tab slightly taller. */
+.ViewContext_HighlightedTab div {
+  margin-top: 6px;
+}
+
+/* Show text in higlighted tab. */
+.ViewContext_HighlightedTab div * a {
+  display: block;
+}
+
+.ViewContext_DisabledTab {
+  color: #ddd;
+}
+
+/* Menu items. */
+.ContextMenu .MenuDiv ul li
+{
+  border-color: #374358;
+  border-bottom: 1px solid #d0d5de;
+  background: #fff;
+}
+
+/* Special case for regular menu Li (not row) */
+.ContextMenu .MenuDiv ul li.RegularMenuLi
+{ 
+  padding: 10px;
+}
+
+/* Special case for top-level menu Li (not row Li) */
+.ContextMenu .MenuDiv ul li.MenuLi
+{ 
+  border-right: 3px solid;
+  border-left: 3px solid;
+}
+
+.ViewContext_DisabledMenuItem {
+  color: #888;
+}
+
+/* If menu item has a row */
+.ContextMenu .MenuDiv ul li ul.MenuRowUl
+{ 
+  padding: 0px;
+  margin: 0px;
+  background: #f00;
+  list-style-type: none;
+  display: table;
+  width: 100%;
+  border: none;
+}
+
+.ContextMenu .MenuDiv ul li ul li.MenuRowLi
+{ 
+  border: none;
+  border-left: 1px solid #d0d5de;
+  padding: 10px;
+  margin: 0px;
+  display: table-cell;
+}
+
+/* Last top-level menu item. */
+.ContextMenu .MenuDiv ul li.MenuLi:last-child
+{
+  -webkit-border-bottom-right-radius: 7px;
+  -webkit-border-bottom-left-radius: 7px;
+  border-bottom: 3px solid #374358;
+}
+
+/* Menu item during mouse over. */
+.ContextMenu .MenuDiv ul li.MouseOverItem
+{
+  background: #d8dfed;
+}
+
+/* Item icons. */
+.ContextMenu ul li img
+{
+  vertical-align: middle;
+}
+
+/* Item text. */
+.ContextMenu ul li a
+{
+  vertical-align: middle;
+  margin-left: 10px;
+}

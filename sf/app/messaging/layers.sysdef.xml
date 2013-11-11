@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE SystemDefinition SYSTEM "sysdef_1_5_1.dtd"
+[
+  <!ENTITY layer_real_source_path "sf/app/messaging" >
+]>
+<SystemDefinition name="messaging"
+                  schema="1.5.1">
+  <systemModel>
+    <layer name="app_layer">
+      <module name="messaging">
+        <unit unitID="Medo.messaging"
+              mrp=""
+              bldFile="&layer_real_source_path;"
+              name="messaging"
+              proFile="messaging.pro"
+              qmakeArgs="-r" />        
+      <unit unitID="mmssettings" bldFile="&layer_real_source_path;/mmsengine/mmssettings/group" mrp="mmsengine/mmssettings/group/messaging_mmssettings.mrp" name="mmssettings"/>
+    	<unit unitID="mmsconf" bldFile="&layer_real_source_path;/mmsengine/mmsconf" mrp="mmsengine/mmsconf/messaging_mmssettings-config.mrp" name="mmsconf"/>
+      <unit unitID="messagingappbase" bldFile="&layer_real_source_path;/messagingappbase/smilparser/GROUP" mrp="messagingappbase/smilparser/GROUP/messaging_gmxml.mrp" name="messagingappbase"/>
+      <unit unitID="pop3andsmtpmtm" bldFile="&layer_real_source_path;/email/pop3andsmtpmtm/group" mrp="email/pop3andsmtpmtm/group/messaging_email.mrp" name="pop3andsmtpmtm"/>
+      <unit unitID="imap4mtm" bldFile="&layer_real_source_path;/email/imap4mtm/group" mrp="email/imap4mtm/group/messaging_email_imap.mrp" name="imap4mtm"/>
+      <unit unitID="obexmtms" bldFile="&layer_real_source_path;/messagingappbase/obexmtms/Group" mrp="messagingappbase/obexmtms/Group/messaging_obex.mrp" name="obexmtms"/>
+      <unit unitID="smsmtm" bldFile="&layer_real_source_path;/mobilemessaging/smsmtm/group" mrp="mobilemessaging/smsmtm/group/messaging_sms.mrp" name="smsmtm"/>
+
+
+      </module>
+     
+    </layer>
+  </systemModel>
+</SystemDefinition>

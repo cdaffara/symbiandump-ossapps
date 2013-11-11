@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="1.1">
+    <object name="allNotesAction" type="HbAction">
+        <icon iconName="qtg_mono_notes_all" name="icon"/>
+    </object>
+    <object name="collectionsViewAction" type="HbAction">
+        <icon iconName="qtg_mono_notes_collections" name="icon"/>
+    </object>
+    <object name="newNoteAction" type="HbAction">
+        <icon iconName="qtg_mono_create_event" name="icon"/>
+    </object>
+    <widget name="view" type="HbView">
+        <widget name="content" role="HbView:widget" type="HbWidget">
+        </widget>
+        <widget name="viewMenu" role="HbView:menu" type="HbMenu">
+        </widget>
+        <string locid="txt_notes_title_notes" name="title" value="Notes"/>
+        <widget name="viewToolbar" role="HbView:toolBar" type="HbToolBar">
+            <enums name="orientation" value="Horizontal"/>
+            <ref object="allNotesAction" role="HbWidget:addAction"/>
+            <ref object="collectionsViewAction" role="HbWidget:addAction"/>
+            <ref object="newNoteAction" role="HbWidget:addAction"/>
+        </widget>
+    </widget>
+    <metadata activeUIState="Common ui state" display="NHD portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+    </metadata>
+</hbdocument>

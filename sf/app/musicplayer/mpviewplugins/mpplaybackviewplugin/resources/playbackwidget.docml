@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<hbdocument version="1.2">
+    <widget name="playbackWidgetContainer" type="HbWidget">
+        
+        <widget name="albumArt" type="MpAlbumCoverWidget">
+            <sizehint height="var(hb-param-screen-width)" type="FIXED" width="var(hb-param-screen-width)"/>
+            <sizepolicy horizontalPolicy="Fixed"  verticalPolicy="Fixed" />
+        </widget>
+        
+        <widget name="artistRow" type="HbWidget">
+            <sizehint type="FIXED" width="expr(var(hb-param-screen-width) -2*var(hb-param-margin-gene-screen))"/>
+            <sizepolicy horizontalPolicy="Fixed" />
+            
+                <widget name="realAudio" type="HbLabel">
+                    <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+                    <sizehint height="var(hb-param-graphic-size-primary-small)" type="FIXED" width="var(hb-param-graphic-size-primary-small)"/>
+                    <bool name="visible" value="FALSE"/>
+                    <!-- resource name is correct, but does not show up -->
+                    <icon iconName="qtg_large_realplayer" name="icon"/>
+                </widget> 
+
+                <widget name="artistText" type="HbLabel">
+                    <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+                    <fontspec name="fontSpec" role="Secondary"/>
+                    <sizehint type="FIXED" width="expr(var(hb-param-screen-width)-2*(var(hb-param-margin-gene-screen)+var(hb-param-graphic-size-primary-small)+var(hb-param-margin-gene-middle-horizontal)))"/>
+                    <sizepolicy horizontalPolicy="Fixed" />
+                </widget>
+
+                <widget name="repeatIcon" type="HbLabel">
+                    <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+                    <sizehint height="var(hb-param-graphic-size-primary-small)" type="FIXED" width="var(hb-param-graphic-size-primary-small)"/>
+                    <icon iconName="qtg_small_repeat" name="icon"/>
+                </widget>
+
+            <layout type="anchor">       
+                <anchoritem dst="realAudio" dstEdge="LEFT" spacing="0" src="" srcEdge="LEFT"/>
+                <anchoritem dst="realAudio" dstEdge="TOP" spacing="0" src="" srcEdge="TOP"/>
+                
+                <anchoritem dst="artistText" dstEdge="LEFT" spacing="var(hb-param-margin-gene-middle-horizontal)" src="realAudio" srcEdge="RIGHT"/>
+                <anchoritem dst="artistText" dstEdge="RIGHT" spacing="-var(hb-param-margin-gene-middle-horizontal)" src="repeatIcon" srcEdge="LEFT"/>
+                <anchoritem dst="artistText" dstEdge="CENTERV" spacing="0" src="" srcEdge="CENTERV"/>
+                
+                <anchoritem dst="repeatIcon" dstEdge="RIGHT" spacing="0" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="repeatIcon" dstEdge="TOP" spacing="0" src="" srcEdge="TOP"/>
+            </layout>
+           
+        </widget>
+        
+        <widget name="songText" type="HbLabel">
+            <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+            <fontspec name="fontSpec" role="Primary"/>             
+        </widget>
+        
+        <widget name="albumText" type="HbLabel">
+            <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+            <fontspec name="fontSpec" role="Secondary"/>            
+        </widget>
+        
+        <widget name="progressBar" type="HbProgressSlider">
+            <fontspec name="fontSpec" role="PrimarySmall"/>
+            <contentsmargins  top="1.0un"/>
+        </widget>
+
+        <widget name="textContainer" type="HbWidget">
+            <layout type="linear" orientation="Vertical"  spacing="var(hb-param-margin-gene-middle-vertical)" >
+            <contentsmargins bottom="var(hb-param-margin-gene-screen)" left="var(hb-param-margin-gene-screen)" right="var(hb-param-margin-gene-screen)" top="0.0un"/>
+            <linearitem itemname="artistRow"/>
+            <linearitem itemname="songText"/>
+            <linearitem itemname="albumText"/>
+            <linearitem itemname="progressBar"/>
+           </layout>
+        </widget>
+    
+        <layout orientation="Vertical" spacing="var(hb-param-margin-gene-middle-vertical)"  type="linear" >
+            <contentsmargins bottom="var(hb-param-margin-view-bottom)" left="var(hb-param-margin-view-left)" right="var(hb-param-margin-view-right)" top="var(hb-param-margin-view-top)"/>   
+            <linearitem itemname="albumArt"/>                        
+            <linearitem itemname="textContainer"/>
+        </layout>
+    
+    </widget>
+</hbdocument>

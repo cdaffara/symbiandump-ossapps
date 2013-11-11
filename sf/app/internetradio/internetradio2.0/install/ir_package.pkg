@@ -1,0 +1,323 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:
+;
+; InternetRadio package.pkg
+
+; Languages, currently 61, same order as in directory listing!
+&01,02,03,04,05,
+06,07,08,09,10,
+129,13,14,15,157,
+158,159,16,160,161,
+17,18,25,26,27,
+28,29,30,31,32,
+326,327,33,37,39,
+401,402,42,44,45,
+49,50,51,54,57,
+59,67,68,70,
+76,78,79,83,93,
+94,96,102,103,129,
+160,230
+
+; Header
+; Component name is required for each language
+; this can be found from loc files with identifier qtn_apps_ir_swins:
+; Make sure that these are in the exact same order than the language codes above!
+#{
+"Internet radio", "Radio Internet", "Internetradio", "Radio por Internet","Radio Internet", 
+"Internetradio", "Internetradio", "Internett-radio", "Internet-radio","Internet radio",
+"Internet radio", "Rádio Internet", "İnternet radyosu", "Netútvarp", "Internet radio",
+"Internet radio", "Internet radio", "Интернет-радио", "Internet radio", "Internet radio",
+"Internetes rádió", "Internetradio", "Internetové rádio", "Internetové rádio", "Radio internetowe",
+"Spletni radio", "網際網路收音機", "互聯網收音機", "网络电台", "ｲﾝﾀｰﾈｯﾄﾗｼﾞｵ",
+"Radio Internet", "Radio Internet", "วิทยุ​อินเทอร์เน็ต", "راديو الإنترنت", "Internet radio", 
+"Internet irratia", "Radio por Internet", "Интернет радио", "Ràdio d'Internet", "Internetski radio", 
+"Interneti-raadio", "رادیو اینترنتی", "Radio Internet", "Ραδιόφωνο Διαδικτ.", "רדיו אינטרנט", 
+"Radio Internet","Interneta radio", "Interneto radijas", "Radio Internet", 
+"Rádio na Internet", "Radio Internet", "Internet radio", "Radio de Internet", "Інтернет-радіо", 
+"انٹرنیٹ ریڈیو", "Radio internet","Internet irratia","Radio por Internet","Internet radio",
+"Internet radio","Internet radio"},(0x2002ffac),1,1,0,TYPE=SA,RU
+
+; Properties describing the version number
+;+(0=1, 1=1, 2=0)
+
+; S60 3.0 Platform dependency, just to suppress the warning
+;[0x101F7961], 0, 0, 0, { "S60 3.0" }
+;[0x101F7961], 0, 0, 0, {
+;"S60 3.2","S60 3.2","S60 3.2","S60 3.2","S60 3.2",
+;"S60 3.2","S60 3.2","S60 3.2","S60 3.2","S60 3.2",
+;"S60 3.2","S60 3.2","S60 3.2","S60 3.2","S60 3.2",
+;"S60 3.2","S60 3.2","S60 3.2","S60 3.2","S60 3.2",
+;"S60 3.2","S60 3.2","S60 3.2","S60 3.2","S60 3.2",
+;"S60 3.2","S60 3.2","S60 3.2","S60 3.2","S60 3.2",
+;"S60 3.2","S60 3.2","S60 3.2","S60 3.2","S60 3.2",
+;"S60 3.2","S60 3.2","S60 3.2","S60 3.2","S60 3.2",
+;"S60 3.2","S60 3.2","S60 3.2","S60 3.2","S60 3.2",
+;"S60 3.2","S60 3.2","S60 3.2","S60 3.2","S60 3.2",
+;"S60 3.2","S60 3.2","S60 3.2","S60 3.2","S60 3.2",
+;"S60 3.2","S60 3.2","S60 3.2","S60 3.2","S60 3.2",
+;"S60 3.2"}
+
+; Localised Vendor name
+%{
+"Nokia","Nokia","Nokia","Nokia","Nokia",
+"Nokia","Nokia","Nokia","Nokia","Nokia",
+"Nokia","Nokia","Nokia","Nokia","Nokia",
+"Nokia","Nokia","Nokia","Nokia","Nokia",
+"Nokia","Nokia","Nokia","Nokia","Nokia",
+"Nokia","Nokia","Nokia","Nokia","Nokia",
+"Nokia","Nokia","Nokia","Nokia","Nokia",
+"Nokia","Nokia","Nokia","Nokia","Nokia",
+"Nokia","Nokia","Nokia","Nokia","Nokia",
+"Nokia","Nokia","Nokia","Nokia","Nokia",
+"Nokia","Nokia","Nokia","Nokia","Nokia",
+"Nokia","Nokia","Nokia","Nokia","Nokia",
+"Nokia"
+}
+
+;Unique Vendor name
+:"Nokia"
+
+; Resources
+;"\Epoc32\data\z\resource\apps\InternetRadio.rsc"			-"!:\resource\apps\InternetRadio.rsc"
+;"\Epoc32\data\z\resource\apps\irnetworkcontroller.rsc"			-"!:\resource\apps\irnetworkcontroller.rsc"
+;"\Epoc32\Data\Z\resource\plugins\IRMediaEngine.RSC" 			-"!:\resource\plugins\IRMediaEngine.RSC"
+"\Epoc32\Data\Z\resource\plugins\irpresetplugin.RSC"			-"!:\resource\plugins\irpresetplugin.RSC"
+"\epoc32\data\z\resource\plugins\irrfsplugin.rsc"			-"!:\resource\plugins\irrfsplugin.rsc"
+"\Epoc32\Data\Z\resource\plugins\IRFileRecognizer.RSC"			-"!:\resource\plugins\IRFileRecognizer.RSC"
+;"\epoc32\data\z\resource\irsettings.rsc" 				-"!:\resource\irsettings.rsc"
+;"\epoc32\Data\Z\resource\plugins\irgeneralsettings200.rsc"		-"!:\resource\plugins\irgeneralsettings200.rsc"
+;"\epoc32\data\z\resource\irgeneralsettings.rsc" 			-"!:\resource\irgeneralsettings.rsc"
+
+;"\epoc32\Data\Z\resource\plugins\IRActiveIdle.RSC"			-"!:\resource\plugins\IRActiveIdle.RSC"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r01"			-"!:\resource\apps\InternetRadio.r01"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r02"			-"!:\resource\apps\InternetRadio.r02"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r03"			-"!:\resource\apps\InternetRadio.r03"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r04"			-"!:\resource\apps\InternetRadio.r04"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r05"			-"!:\resource\apps\InternetRadio.r05"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r06"			-"!:\resource\apps\InternetRadio.r06"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r07"			-"!:\resource\apps\InternetRadio.r07"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r08"			-"!:\resource\apps\InternetRadio.r08"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r09"			-"!:\resource\apps\InternetRadio.r09"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r10"			-"!:\resource\apps\InternetRadio.r10"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r13"			-"!:\resource\apps\InternetRadio.r13"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r14"			-"!:\resource\apps\InternetRadio.r14"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r15"			-"!:\resource\apps\InternetRadio.r15"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r16"			-"!:\resource\apps\InternetRadio.r16"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r17"			-"!:\resource\apps\InternetRadio.r17"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r18"			-"!:\resource\apps\InternetRadio.r18"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r25"			-"!:\resource\apps\InternetRadio.r25"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r26"			-"!:\resource\apps\InternetRadio.r26"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r27"			-"!:\resource\apps\InternetRadio.r27"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r28"			-"!:\resource\apps\InternetRadio.r28"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r29"			-"!:\resource\apps\InternetRadio.r29"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r30"			-"!:\resource\apps\InternetRadio.r30"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r31"			-"!:\resource\apps\InternetRadio.r31"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r32"			-"!:\resource\apps\InternetRadio.r32"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r33"			-"!:\resource\apps\InternetRadio.r33"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r37"			-"!:\resource\apps\InternetRadio.r37"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r39"			-"!:\resource\apps\InternetRadio.r39"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r42"			-"!:\resource\apps\InternetRadio.r42"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r44"			-"!:\resource\apps\InternetRadio.r44"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r45"			-"!:\resource\apps\InternetRadio.r45"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r49"			-"!:\resource\apps\InternetRadio.r49"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r50"			-"!:\resource\apps\InternetRadio.r50"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r51"			-"!:\resource\apps\InternetRadio.r51"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r54"			-"!:\resource\apps\InternetRadio.r54"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r57"			-"!:\resource\apps\InternetRadio.r57"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r59"			-"!:\resource\apps\InternetRadio.r59"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r67"			-"!:\resource\apps\InternetRadio.r67"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r68"			-"!:\resource\apps\InternetRadio.r68"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r70"			-"!:\resource\apps\InternetRadio.r70"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r76"			-"!:\resource\apps\InternetRadio.r76"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r78"			-"!:\resource\apps\InternetRadio.r78"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r79"			-"!:\resource\apps\InternetRadio.r79"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r83"			-"!:\resource\apps\InternetRadio.r83"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r93"			-"!:\resource\apps\InternetRadio.r93"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r94"			-"!:\resource\apps\InternetRadio.r94"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r96"			-"!:\resource\apps\InternetRadio.r96"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r102"			-"!:\resource\apps\InternetRadio.r102"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r103"			-"!:\resource\apps\InternetRadio.r103"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r129"			-"!:\resource\apps\InternetRadio.r129"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r157"			-"!:\resource\apps\InternetRadio.r157"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r158"			-"!:\resource\apps\InternetRadio.r158"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r159"			-"!:\resource\apps\InternetRadio.r159"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r160"			-"!:\resource\apps\InternetRadio.r160"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r161"			-"!:\resource\apps\InternetRadio.r161"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r230"			-"!:\resource\apps\InternetRadio.r230"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r326"			-"!:\resource\apps\InternetRadio.r326"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r327"			-"!:\resource\apps\InternetRadio.r327"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r401"			-"!:\resource\apps\InternetRadio.r401"
+;"\Epoc32\data\z\resource\apps\InternetRadio.r402"			-"!:\resource\apps\InternetRadio.r402"
+
+;"\epoc32\data\z\private\10003a3f\import\apps\InternetRadio_reg.rsc"	-"!:\private\10003a3f\import\apps\InternetRadio_reg.rsc"
+
+; Graphics
+;"\Epoc32\data\z\resource\apps\InternetRadio_aif.mif"		-"!:\resource\apps\InternetRadio_aif.mif"
+;"\Epoc32\data\z\resource\apps\InternetRadio.mif"		-"!:\resource\apps\InternetRadio.mif"
+
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r01"-"!:\resource\plugins\irgeneralsettings200.r01"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r02"-"!:\resource\plugins\irgeneralsettings200.r02"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r03"-"!:\resource\plugins\irgeneralsettings200.r03"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r04"-"!:\resource\plugins\irgeneralsettings200.r04"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r05"-"!:\resource\plugins\irgeneralsettings200.r05"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r06"-"!:\resource\plugins\irgeneralsettings200.r06"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r07"-"!:\resource\plugins\irgeneralsettings200.r07"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r08"-"!:\resource\plugins\irgeneralsettings200.r08"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r09"-"!:\resource\plugins\irgeneralsettings200.r09"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r10"-"!:\resource\plugins\irgeneralsettings200.r10"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r13"-"!:\resource\plugins\irgeneralsettings200.r13"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r14"-"!:\resource\plugins\irgeneralsettings200.r14"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r15"-"!:\resource\plugins\irgeneralsettings200.r15"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r16"-"!:\resource\plugins\irgeneralsettings200.r16"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r17"-"!:\resource\plugins\irgeneralsettings200.r17"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r18"-"!:\resource\plugins\irgeneralsettings200.r18"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r25"-"!:\resource\plugins\irgeneralsettings200.r25"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r26"-"!:\resource\plugins\irgeneralsettings200.r26"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r27"-"!:\resource\plugins\irgeneralsettings200.r27"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r28"-"!:\resource\plugins\irgeneralsettings200.r28"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r29"-"!:\resource\plugins\irgeneralsettings200.r29"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r30"-"!:\resource\plugins\irgeneralsettings200.r30"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r31"-"!:\resource\plugins\irgeneralsettings200.r31"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r32"-"!:\resource\plugins\irgeneralsettings200.r32"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r33"-"!:\resource\plugins\irgeneralsettings200.r33"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r37"-"!:\resource\plugins\irgeneralsettings200.r37"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r39"-"!:\resource\plugins\irgeneralsettings200.r39"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r42"-"!:\resource\plugins\irgeneralsettings200.r42"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r44"-"!:\resource\plugins\irgeneralsettings200.r44"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r45"-"!:\resource\plugins\irgeneralsettings200.r45"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r49"-"!:\resource\plugins\irgeneralsettings200.r49"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r50"-"!:\resource\plugins\irgeneralsettings200.r50"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r51"-"!:\resource\plugins\irgeneralsettings200.r51"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r54"-"!:\resource\plugins\irgeneralsettings200.r54"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r57"-"!:\resource\plugins\irgeneralsettings200.r57"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r59"-"!:\resource\plugins\irgeneralsettings200.r59"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r67"-"!:\resource\plugins\irgeneralsettings200.r67"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r68"-"!:\resource\plugins\irgeneralsettings200.r68"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r70"-"!:\resource\plugins\irgeneralsettings200.r70"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r76"-"!:\resource\plugins\irgeneralsettings200.r76"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r78"-"!:\resource\plugins\irgeneralsettings200.r78"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r79"-"!:\resource\plugins\irgeneralsettings200.r79"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r83"-"!:\resource\plugins\irgeneralsettings200.r83"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r93"-"!:\resource\plugins\irgeneralsettings200.r93"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r94"-"!:\resource\plugins\irgeneralsettings200.r94"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r96"-"!:\resource\plugins\irgeneralsettings200.r96"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r102"-"!:\resource\plugins\irgeneralsettings200.r102"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r103"-"!:\resource\plugins\irgeneralsettings200.r103"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r129"-"!:\resource\plugins\irgeneralsettings200.r129"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r157"-"!:\resource\plugins\irgeneralsettings200.r157"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r158"-"!:\resource\plugins\irgeneralsettings200.r158"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r159"-"!:\resource\plugins\irgeneralsettings200.r159"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r160"-"!:\resource\plugins\irgeneralsettings200.r160"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r161"-"!:\resource\plugins\irgeneralsettings200.r161"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r230"-"!:\resource\plugins\irgeneralsettings200.r230"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r326"-"!:\resource\plugins\irgeneralsettings200.r326"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r327"-"!:\resource\plugins\irgeneralsettings200.r327"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r401"-"!:\resource\plugins\irgeneralsettings200.r401"
+;"\epoc32\data\z\resource\plugins\irgeneralsettings200.r402"-"!:\resource\plugins\irgeneralsettings200.r402"
+
+; EXE/DLL
+"\Epoc32\release\armv5\urel\IRDataStructures.dll"	-"!:\sys\bin\IRDataStructures.dll"
+"\Epoc32\release\armv5\urel\IRDataProvider.dll"		-"!:\sys\bin\IRDataProvider.dll"
+"\Epoc32\release\armv5\urel\IRXMLParser.dll"		-"!:\sys\bin\IRXMLParser.dll"	
+"\Epoc32\release\armv5\urel\isdsclientinterface.dll"	-"!:\sys\bin\isdsclientinterface.dll"		
+;"\Epoc32\release\armv5\urel\IRStreamSource.dll"		-"!:\sys\bin\IRStreamSource.dll"
+;"\Epoc32\release\armv5\urel\IRMediaEngine.dll"		-"!:\sys\bin\IRMediaEngine.dll"
+"\Epoc32\release\armv5\urel\IRFileRecognizer.dll"	-"!:\sys\bin\IRFileRecognizer.dll"
+"\Epoc32\release\armv5\urel\irpresetplugin.dll"		-"!:\sys\bin\irpresetplugin.dll"
+"\epoc32\release\armv5\urel\irrfsplugin.dll"		-"!:\sys\bin\irrfsplugin.dll"
+"\Epoc32\release\armv5\urel\IRFavoritesDb.dll"		-"!:\sys\bin\IRFavoritesDb.dll"
+;"\Epoc32\release\armv5\urel\IRCommandChannel.dll"	-"!:\sys\bin\IRCommandChannel.dll"
+"\Epoc32\release\armv5\urel\IRCacheMgmt.dll"		-"!:\sys\bin\IRCacheMgmt.dll"
+"\Epoc32\release\armv5\urel\IRNetworkController.dll"	-"!:\sys\bin\IRNetworkController.dll"
+"\Epoc32\release\armv5\urel\irsettings.dll"		-"!:\sys\bin\irsettings.dll"
+"\Epoc32\release\armv5\urel\IRSessionLog.dll"		-"!:\sys\bin\IRSessionLog.dll"
+;"\Epoc32\release\armv5\urel\IRSettingsView.dll"		-"!:\sys\bin\IRSettingsView.dll"
+;"\Epoc32\release\armv5\urel\irgeneralsettings200.dll"	-"!:\sys\bin\irgeneralsettings200.dll"
+;"\Epoc32\release\armv5\urel\IRActiveIdleEngine.dll"	-"!:\sys\bin\IRActiveIdleEngine.dll"
+;"\Epoc32\release\armv5\urel\IRActiveIdle.dll"		-"!:\sys\bin\IRActiveIdle.dll"
+ 
+
+
+
+; Backup & Restore
+;"..\group\backup_registration.xml"	-"!:\private\2002ffac\backup_registration.xml"
+
+; Animation script files
+;"..\mbm\qgn_ir_loading.svg"		-"!:\resource\apps\qgn_ir_loading.svg"
+;"..\mbm\qgn_ir_buffering_anim.svg"	-"!:\resource\apps\qgn_ir_buffering_anim.svg"
+
+; Help
+;"..\help\iraap.hlp"			-"!:\resource\help\iraap.hlp"
+
+; Terms of service
+;"\epoc32\data\z\private\2002ffac\terms_01.html" -"!:\private\2002ffac\terms_01.html"
+;"\epoc32\data\z\private\2002ffac\terms_02.html" -"!:\private\2002ffac\terms_02.html"
+;"\epoc32\data\z\private\2002ffac\terms_03.html" -"!:\private\2002ffac\terms_03.html"
+;"\epoc32\data\z\private\2002ffac\terms_04.html" -"!:\private\2002ffac\terms_04.html"
+;"\epoc32\data\z\private\2002ffac\terms_05.html" -"!:\private\2002ffac\terms_05.html"
+;"\epoc32\data\z\private\2002ffac\terms_06.html" -"!:\private\2002ffac\terms_06.html"
+;"\epoc32\data\z\private\2002ffac\terms_07.html" -"!:\private\2002ffac\terms_07.html"
+;"\epoc32\data\z\private\2002ffac\terms_08.html" -"!:\private\2002ffac\terms_08.html"
+;"\epoc32\data\z\private\2002ffac\terms_09.html" -"!:\private\2002ffac\terms_09.html"
+;"\epoc32\data\z\private\2002ffac\terms_10.html" -"!:\private\2002ffac\terms_10.html"
+;"\epoc32\data\z\private\2002ffac\terms_13.html" -"!:\private\2002ffac\terms_13.html"
+;"\epoc32\data\z\private\2002ffac\terms_14.html" -"!:\private\2002ffac\terms_14.html"
+;"\epoc32\data\z\private\2002ffac\terms_15.html" -"!:\private\2002ffac\terms_15.html"
+;"\epoc32\data\z\private\2002ffac\terms_16.html" -"!:\private\2002ffac\terms_16.html"
+;"\epoc32\data\z\private\2002ffac\terms_17.html" -"!:\private\2002ffac\terms_17.html"
+;"\epoc32\data\z\private\2002ffac\terms_18.html" -"!:\private\2002ffac\terms_18.html"
+;"\epoc32\data\z\private\2002ffac\terms_25.html" -"!:\private\2002ffac\terms_25.html"
+;"\epoc32\data\z\private\2002ffac\terms_26.html" -"!:\private\2002ffac\terms_26.html"
+;"\epoc32\data\z\private\2002ffac\terms_27.html" -"!:\private\2002ffac\terms_27.html"
+;"\epoc32\data\z\private\2002ffac\terms_18.html" -"!:\private\2002ffac\terms_28.html"
+;"\epoc32\data\z\private\2002ffac\terms_29.html" -"!:\private\2002ffac\terms_29.html"
+;"\epoc32\data\z\private\2002ffac\terms_30.html" -"!:\private\2002ffac\terms_30.html"
+;"\epoc32\data\z\private\2002ffac\terms_31.html" -"!:\private\2002ffac\terms_31.html"
+;"\epoc32\data\z\private\2002ffac\terms_32.html" -"!:\private\2002ffac\terms_32.html"
+;"\epoc32\data\z\private\2002ffac\terms_33.html" -"!:\private\2002ffac\terms_33.html"
+;"\epoc32\data\z\private\2002ffac\terms_37.html" -"!:\private\2002ffac\terms_37.html"
+;"\epoc32\data\z\private\2002ffac\terms_39.html" -"!:\private\2002ffac\terms_39.html"
+;"\epoc32\data\z\private\2002ffac\terms_42.html" -"!:\private\2002ffac\terms_42.html"
+;"\epoc32\data\z\private\2002ffac\terms_44.html" -"!:\private\2002ffac\terms_44.html"
+;"\epoc32\data\z\private\2002ffac\terms_45.html" -"!:\private\2002ffac\terms_45.html"
+;"\epoc32\data\z\private\2002ffac\terms_49.html" -"!:\private\2002ffac\terms_49.html"
+;"\epoc32\data\z\private\2002ffac\terms_50.html" -"!:\private\2002ffac\terms_50.html"
+;"\epoc32\data\z\private\2002ffac\terms_51.html" -"!:\private\2002ffac\terms_51.html"
+;"\epoc32\data\z\private\2002ffac\terms_54.html" -"!:\private\2002ffac\terms_54.html"
+;"\epoc32\data\z\private\2002ffac\terms_57.html" -"!:\private\2002ffac\terms_57.html"
+;"\epoc32\data\z\private\2002ffac\terms_59.html" -"!:\private\2002ffac\terms_59.html"
+;"\epoc32\data\z\private\2002ffac\terms_67.html" -"!:\private\2002ffac\terms_67.html"
+;"\epoc32\data\z\private\2002ffac\terms_68.html" -"!:\private\2002ffac\terms_68.html"
+;"\epoc32\data\z\private\2002ffac\terms_70.html" -"!:\private\2002ffac\terms_70.html"
+;"\epoc32\data\z\private\2002ffac\terms_76.html" -"!:\private\2002ffac\terms_76.html"
+;"\epoc32\data\z\private\2002ffac\terms_78.html" -"!:\private\2002ffac\terms_78.html"
+;"\epoc32\data\z\private\2002ffac\terms_79.html" -"!:\private\2002ffac\terms_79.html"
+;"\epoc32\data\z\private\2002ffac\terms_83.html" -"!:\private\2002ffac\terms_83.html"
+;"\epoc32\data\z\private\2002ffac\terms_93.html" -"!:\private\2002ffac\terms_93.html"
+;"\epoc32\data\z\private\2002ffac\terms_94.html" -"!:\private\2002ffac\terms_94.html"
+;"\epoc32\data\z\private\2002ffac\terms_96.html" -"!:\private\2002ffac\terms_96.html"
+;"\epoc32\data\z\private\2002ffac\terms_157.html"-"!:\private\2002ffac\terms_157.html"
+;"\epoc32\data\z\private\2002ffac\terms_158.html"-"!:\private\2002ffac\terms_158.html"
+;"\epoc32\data\z\private\2002ffac\terms_159.html"-"!:\private\2002ffac\terms_159.html"
+;"\epoc32\data\z\private\2002ffac\terms_161.html"-"!:\private\2002ffac\terms_161.html"
+;"\epoc32\data\z\private\2002ffac\terms_326.html"-"!:\private\2002ffac\terms_326.html"
+;"\epoc32\data\z\private\2002ffac\terms_327.html"-"!:\private\2002ffac\terms_327.html"
+;"\epoc32\data\z\private\2002ffac\terms_401.html"-"!:\private\2002ffac\terms_401.html"
+;"\epoc32\data\z\private\2002ffac\terms_402.html"-"!:\private\2002ffac\terms_402.html"
+
+; Cenrep update
+@"cenrep.sis",(0x10202be9)
+
+;"\Epoc32\release\armv5\urel\InternetRadio.exe"		-"!:\sys\bin\InternetRadio.exe"

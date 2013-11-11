@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<service>
+   <name>internet_radio_10_1</name>
+   <filepath>No path</filepath>
+   <description>InternetRadio Services</description>
+   <interface>
+      <name>com.nokia.symbian.IFileView</name>
+      <version>1.0</version>
+      <description>Interface for viewing .pls file and .m3u file</description>
+   </interface>
+   <interface>
+      <name>com.nokia.symbian.IInternetRadioControl</name>
+      <version>1.0</version>
+      <description>Interface to control internet radio playback</description>
+   </interface>
+   <interface>
+      <name>com.nokia.symbian.IInternetRadioMonitor</name>
+      <version>1.0</version>
+      <description>Interface to monitor internet radio status changes</description>
+   </interface>
+</service>

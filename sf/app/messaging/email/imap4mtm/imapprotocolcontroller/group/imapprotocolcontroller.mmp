@@ -1,0 +1,71 @@
+// Copyright (c) 2006-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// impapprotocolcontroller.mmp
+//
+
+TARGET			impapprotocolcontroller.dll
+TARGETTYPE		dll
+
+CAPABILITY		ReadDeviceData WriteDeviceData ProtServ NetworkControl NetworkServices LocalServices ReadUserData WriteUserData
+TARGETPATH		/system/libs
+UID			0x1000008D 0x10281D1F
+VENDORID		0x70000001
+SOURCEPATH		../src
+SOURCE			cimapcompoundbase.cpp
+SOURCE			cimapcompoundcopyfromlocal.cpp
+SOURCE			cimapcompoundcopytolocal.cpp
+SOURCE			cimapcompoundcopywithinservice.cpp
+SOURCE			cimapcompoundcreate.cpp
+SOURCE			cimapcompounddelete.cpp
+SOURCE			cimapcompounddeletefolder.cpp
+SOURCE			cimapcompounddisconnect.cpp
+SOURCE			cimapcompoundrename.cpp
+SOURCE			cimapcompoundselect.cpp
+SOURCE			cimapcompoundsyncfolder.cpp
+SOURCE			cimapcompoundsynctree.cpp
+SOURCE			cimapcompoundsyncservice.cpp
+SOURCE			cimapidlecontroller.cpp
+SOURCE			cimapopbackgroundsync.cpp
+SOURCE			cimapoperation.cpp
+SOURCE			cimapopfetchbody.cpp
+SOURCE			cimapprotocolcontroller.cpp
+SOURCE			cimapupdateflagoperation.cpp
+USERINCLUDE		../inc ../../../pop3andsmtpmtm/clientmtms/inc
+USERINCLUDE		../../imapsession/inc
+USERINCLUDE		../../imapmailstore/inc
+USERINCLUDE		../../imapsyncmanager/inc
+USERINCLUDE		../../imapsettings/inc
+USERINCLUDE		../../imaputils/inc
+USERINCLUDE		../../imapofflinecontrol/inc
+USERINCLUDE		../../imaptransporthandler/inc
+USERINCLUDE		../../../pop3andsmtpmtm/servermtmutils/inc
+USERINCLUDE     ../../../pop3andsmtpmtm/servermtmutils/mobilitytestframework/inc
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+LIBRARY			euser.lib msgs.lib 
+LIBRARY                 bafl.lib efsrv.lib 
+LIBRARY			imcm.lib imut.lib
+LIBRARY			imapsettings.lib 
+LIBRARY			imapsession.lib 
+LIBRARY			imapsyncmanager.lib 
+LIBRARY			imapofflinecontrol.lib
+LIBRARY			imapmailstore.lib
+LIBRARY			imaputils.lib
+LIBRARY 		charconv.lib 
+LIBRARY 		netmeta.lib
+
+#ifdef __MOBILITY_TEST_FRAMEWORK
+LIBRARY mobilitytestframework.lib
+#endif //__MOBILITY_TEST_FRAMEWORK
+
+SMPSAFE

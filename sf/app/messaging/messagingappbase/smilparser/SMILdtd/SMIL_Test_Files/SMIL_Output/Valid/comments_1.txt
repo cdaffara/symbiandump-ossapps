@@ -1,0 +1,49 @@
+<?XML version="1.0" ?>
+<!DOCTYPE SMIL PUBLIC "-//W3C//DTD SMIL 2.0 Basic//EN"
+"http://www.w3.org/TR/REC-smil/2000/SMIL20Basic.dtd">
+
+<!-- Focus of this test: text element, attribute variations -->
+<!-- Focus of this test: text element, attribute variations -->
+<!-- Comments everywhere -->
+<!-- Comments everywhere -->
+<!-- Comments everywhere -->
+<smil xmlns="http://www.w3.org/TR/REC-smil/2000/SMIL20/Basic">
+   <!-- Comments everywhere -->
+   <head>
+      <!-- This is a "landscape" screen -->
+      <layout>
+         <!-- Comments everywhere -->
+         <root-layout width="352" height="144"/>
+         <!-- Comments everywhere -->
+         <!-- Comments everywhere -->
+         <region id="Image" width="176" height="144" left="0" top="0"/>
+         <region id="Text" width="176" height="144" left="176" top="0"/>
+      </layout>
+      <!-- Comments everywhere -->
+   </head>
+   <body>
+      <!-- Comments everywhere -->
+      <par dur="1000s">
+         <!-- Comments everywhere -->
+         <img src="FirstImage.jpg" region="Image"/>
+         <text src="Text1.txt" type="txt" fill="hold" system-captions="on" system-overdub-or-caption="overdub" region="Text"/>
+         <!-- Comments everywhere -->
+         <audio src="FirstSound.amr"/>
+         <!-- Comments everywhere -->
+      </par>
+      <par dur="7s">
+         <img src="SecondImage.jpg" region="Image"/>
+         <text src="SecondText.txt" region="Text"/>
+         <audio src="SecondSound.amr"/>
+      </par>
+      <!-- Comments everywhere -->
+      <!-- Comments everywhere -->
+      <par dur="4s">
+         <img src="ThirdImage.jpg" region="Image"/>
+         <text src="ThirdText.txt" region="Text"/>
+         <audio src="ThirdSound.amr"/>
+         <!-- Comments everywhere -->
+      </par>
+   </body>
+</smil>
+<!-- Comments everywhere -->

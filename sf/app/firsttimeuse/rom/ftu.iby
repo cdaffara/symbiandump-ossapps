@@ -1,0 +1,47 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  The FTU iby file.
+*
+*/
+
+
+#ifndef __FTU_IBY__
+#define __FTU_IBY__
+
+
+// ---- ftuapplication --------------------------------------------------------
+
+file=ABI_DIR/BUILD_DIR/ftuapplication.exe                   PROGRAMS_DIR/ftuapplication.exe
+data=/epoc32/data/z/resource/apps/ftuapplication.r01        resource/apps/ftuapplication.rsc
+data=ZPRIVATE/10003a3f/import/apps/ftuapplication_reg.rsc   private/10003a3f/import/apps/ftuapplication_reg.rsc
+
+// ---- fturuntimeservices ----------------------------------------------------
+
+file=ABI_DIR/BUILD_DIR/fturuntimeservices.dll               SHARED_LIB_DIR/fturuntimeservices.dll
+
+// ---- ftudefaultruntimeprovider ---------------------------------------------
+
+file=ABI_DIR/BUILD_DIR/ftudefaultruntimeprovider.dll        SHARED_LIB_DIR/ftudefaultruntimeprovider.dll
+data=/epoc32/data/z/fturesources/plugins/runtimeproviders/ftudefaultruntimeprovider.qtplugin        fturesources/plugins/runtimeproviders/ftudefaultruntimeprovider.qtplugin
+data=/epoc32/data/z/fturesources/plugins/runtimeproviders/ftudefaultruntimeprovider.xml        fturesources/plugins/runtimeproviders/ftudefaultruntimeprovider.xml
+
+// ---- ftuwizardprovider -----------------------------------------------------
+
+file=ABI_DIR/BUILD_DIR/ftuwizardprovider.dll                SHARED_LIB_DIR/ftuwizardprovider.dll
+
+// ---- ftustateprovider ------------------------------------------------------
+
+file=ABI_DIR/BUILD_DIR/ftustateprovider.dll                 SHARED_LIB_DIR/ftustateprovider.dll
+
+#endif //__FTU_IBY__

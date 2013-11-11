@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="0.8">
+
+    <widget name="effectsContainer" type="HbWidget">
+    
+        <widget name="balanceContainer" type="HbWidget">                      
+
+            <widget name="balanceTitle" type="HbLabel">
+                <fontspec name="fontSpec" role="Primary"/>
+            </widget>
+
+            <widget name="balanceSlider" type="HbSlider">
+                <integer name="majorTickInterval" value="100"/>
+                <integer name="minorTickInterval" value="25"/>
+                <integer name="sliderPosition" value="0"/>
+                <integer name="singleStep" value="25"/>
+                <integer name="minimum" value="-100"/>
+                <integer name="maximum" value="100"/>
+                <string name="orientation" value="Horizontal"/>
+                <bool name="toolTipVisible" value="FALSE"/>
+            </widget>
+        
+            <widget name="balanceLeftLabel" type="HbLabel">
+                <fontspec name="fontSpec" role="Secondary"/>
+                <enums name="alignment" value="AlignLeft"/>
+            </widget>
+        
+            <widget name="balanceRightLabel" type="HbLabel">
+                <fontspec name="fontSpec" role="Secondary"/>
+                <enums name="alignment" value="AlignRight"/>
+            </widget>
+               
+            <layout type="grid" spacing="0.0">
+                <contentsmargins bottom="0.0" left="0.0" right="0.0" top="0.0"/>
+                <griditem column="0" column_span="2" itemname="balanceTitle" row="0"/>
+                <griditem column="0" column_span="2" itemname="balanceSlider" row="1"/>
+                <griditem column="0" itemname="balanceLeftLabel" row="2"/>
+                <griditem column="1" itemname="balanceRightLabel" row="2"/>
+            </layout>
+        </widget>
+        
+        <layout type="linear" orientation="Vertical"  spacing="0.0">
+            <linearitem itemname="balanceContainer"/>
+            <stretchitem stretchfactor="1"/>
+        </layout>
+        
+    </widget>
+    
+</hbdocument>

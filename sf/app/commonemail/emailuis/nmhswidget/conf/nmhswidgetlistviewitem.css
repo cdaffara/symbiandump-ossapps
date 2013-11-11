@@ -1,0 +1,52 @@
+NmHsWidgetListViewItem{
+  layout:portrait;
+}
+
+NmHsWidgetListViewItem:landscape {
+  layout:portrait;
+}
+
+NmHsWidgetListViewItem::sender {
+  top: -var(hb-param-margin-gene-middle-vertical);
+  fixed-height: var(hb-param-text-height-secondary);
+  text-height: var(hb-param-text-height-secondary);
+  text-align: left;
+  text-wrap-mode: no-wrap;
+}
+
+NmHsWidgetListViewItem::time {
+  fixed-height: var(hb-param-text-height-tiny);
+  text-height: var(hb-param-text-height-tiny);
+  fixed-width: 12un;
+  text-align: right;
+  text-wrap-mode: no-wrap;
+}
+
+NmHsWidgetListViewItem::subject {
+  fixed-height: var(hb-param-text-height-secondary);
+  text-height: var(hb-param-text-height-secondary);
+  text-align: left;
+  text-wrap-mode: no-wrap;
+}
+
+NmHsWidgetListViewItem::icon1 {
+  alignment: right;
+  fixed-height: var(hb-param-graphic-size-secondary);
+  fixed-width: var(hb-param-graphic-size-secondary);
+}
+
+NmHsWidgetListViewItem::icon2 {
+  alignment: right;
+  fixed-height: var(hb-param-graphic-size-secondary);
+  fixed-width: var(hb-param-graphic-size-secondary);
+}
+
+NmHsWidgetListViewItem::separator {
+  left: -2px;
+  right: 2px;
+  top: 0;
+  aspect-ratio: ignore;
+  size-polizy-vertical: fixed;
+  size-polizy-horizontal: ignored;
+  fixed-height: 2px;
+}

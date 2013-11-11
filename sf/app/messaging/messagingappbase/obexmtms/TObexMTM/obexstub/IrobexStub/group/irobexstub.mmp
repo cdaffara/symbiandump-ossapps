@@ -1,0 +1,104 @@
+// Copyright (c) 1997-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// Obex running over Bluetooth and IrDA 
+// MODIFIED FROM BTIROBEX.MMP FOR BT/IR OBEX STUB
+// oscarg, September 2003
+// OPTION CW   -w off
+// 
+//
+
+// NB: For BC this must be called irobex.dll even though it uses Bluetooth and IrDA
+TARGET			irobex.dll
+TARGETTYPE		dll
+
+CAPABILITY All -TCB
+
+// The UID2 here is for a shared library (statically linked DLL)
+// Need to change UID3 because of this
+UID		0x1000008d 0x10003d57
+VENDORID 0x70000001
+
+
+#ifdef WINS
+
+//this code builds against the binary interface of irobex
+//for it to build successfully,
+//the relative path to master/common/generic/infra-red/.... must be changed to match your
+//respective perforce client spec. setting 
+
+DEFFILE		../../../../../../../../../master/common/generic/infra-red/irda/bwins/irobex2.def
+//DEFFILE		../../../../../../../infra-red/irda/bwins/irobex2.def
+
+#else
+
+DEFFILE		../../../../../../../../../master/common/generic/infra-red/irda/bmarm/irobex2.def
+
+#endif
+
+// Source files modified by the stub
+SOURCEPATH	../irobex
+SOURCE		obex.cpp
+SOURCE		obex_client.cpp
+SOURCE		obex_server.cpp
+
+// Source files for exsiting irobex.dll
+SOURCEPATH	../../../../../../../../../master/common/generic/infra-red/irda/irobex
+SOURCE		obexobjectexpandedbaseobject.cpp
+SOURCE		obexheader.cpp
+SOURCE		obexheaderset.cpp
+SOURCE		obexconstants.cpp
+SOURCE		obexheaderutil.cpp
+SOURCE		obexobjects.cpp
+SOURCE 	obexasyncfilewriter.cpp
+SOURCE		obexsyncfilewriter.cpp
+SOURCE		trans.cpp
+SOURCE		irdattp.cpp
+SOURCE		sockconn.cpp
+SOURCE		obexutil.cpp
+SOURCE		authentication.cpp
+SOURCE		rfcomm.cpp
+SOURCE		usbconn.cpp
+
+// Source files for the obex header utils class, used by the stub and t_obexmtm test harness
+SOURCEPATH	../../../testutils/headerutils/src
+SOURCE		cobextestbaseheaderlist.cpp
+SOURCE		cobextestheaderlist.cpp
+
+
+USERINCLUDE		../../../../../../../../../master/common/generic/infra-red/irda/irobex
+USERINCLUDE		../../../../../../../../../master/common/generic/infra-red/irda/inc
+USERINCLUDE		../../../inc
+USERINCLUDE		../../../testutils/msgth/inc
+USERINCLUDE		../../../testutils/headerutils/inc
+
+SYSTEMINCLUDE	/epoc32/include
+
+LIBRARY	euser.lib
+LIBRARY	efsrv.lib
+LIBRARY	esock.lib 
+LIBRARY	hash.lib
+LIBRARY	charconv.lib
+LIBRARY	irda.lib
+LIBRARY	Estor.lib
+
+DEBUGLIBRARY	flogger.lib
+
+START WINS
+    BASEADDRESS 0x73900000
+END
+
+//MACRO TRANSPORT_BLUETOOTH
+MACRO TRANSPORT_IRDA
+
+SMPSAFE

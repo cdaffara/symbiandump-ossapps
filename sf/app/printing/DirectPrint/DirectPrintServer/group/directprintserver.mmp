@@ -1,0 +1,69 @@
+/*
+* Copyright (c) 2010 Kanrikogaku Kenkyusho, Ltd.
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the License "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Kanrikogaku Kenkyusho, Ltd. - Initial contribution
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+
+#include <platform_paths.hrh>
+#include <bldvariant.hrh>
+#include <data_caging_paths.hrh>
+
+#include "../../inc/logdef.h"
+#include "../../inc/directprintserveruid.h"
+
+TARGET        	directprintserver.exe
+TARGETTYPE 		exe
+CAPABILITY		ALL -TCB
+
+UID           	0x1000008D KDIRECTPRINTSERVERUID3
+EPOCSTACKSIZE	0x5000
+EPOCHEAPSIZE	0x1000 0x1000000
+
+APP_LAYER_SYSTEMINCLUDE	 
+
+USERINCLUDE     . ../inc
+USERINCLUDE		../../ImagePrintLibrary/inc
+USERINCLUDE     ../../inc
+
+SOURCEPATH      ../src
+
+SOURCE          main.cpp
+SOURCE          directprintserver.cpp
+SOURCE          directprintsession.cpp
+SOURCE			directprintbody.cpp
+SOURCE			directprintscheduler.cpp
+SOURCE 			directprintprotocolsloader.cpp
+SOURCE			directprintrsimageparser.cpp
+SOURCE			directprintserverjobguard.cpp
+SOURCE			directprintnumofcopies.cpp
+SOURCE			directprintmessage.cpp
+
+SOURCE			directprintprotocolinfo.cpp
+
+STATICLIBRARY   clog.lib
+LIBRARY	flogger.lib
+
+LIBRARY       	euser.lib
+LIBRARY 		efsrv.lib
+LIBRARY			fbscli.lib
+LIBRARY         ecom.lib 
+LIBRARY	    	centralrepository.lib
+
+#ifdef _DIRECTPRINT_USE_USB
+LIBRARY 		usbman.lib
+LIBRARY         usbwatcher.lib
+#endif // _DIRECTPRINT_USE_USB
+
+// End of File

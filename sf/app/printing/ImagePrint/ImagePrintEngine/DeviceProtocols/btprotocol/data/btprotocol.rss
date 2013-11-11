@@ -1,0 +1,215 @@
+/*
+* Copyright (c) 2002-2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*
+*/
+
+
+#include "imageprint.rh"
+#include "printcapabilitycodes.h"
+
+enum PrinterClass  // should come from ImgPrintKonst.h
+{
+	EDefault = 0,
+	EBigAdaptive = 1,
+	ESmallAdaptive = 2,
+	EDesk = 3,
+	EOPP = 4,
+	ELinked = 99
+};
+
+RESOURCE RS_CAPABILITIES bt_Capabilities
+{
+	capabilities =
+	{
+		RS_CAPABILITY
+		{
+			printerclass=EDefault;
+			capabilityid=EPrintCapabPaperSize;
+			type=1;
+			defaultvalue=EPrintCapabPaperSize4x6;
+			low=0;
+			high=0;
+			enumcodes={
+				EPrintCapabPaperSizeLetter,1,
+				EPrintCapabPaperSizeA4,1,
+				EPrintCapabPaperSize5x7,4,
+				EPrintCapabPaperSizeA6,4,
+				EPrintCapabPaperSize4x6,4,
+				EPrintCapabPaperSizeSticker,5
+				};
+			linkid=0;
+		},
+		RS_CAPABILITY
+		{
+			printerclass=EBigAdaptive;
+			capabilityid=EPrintCapabPaperSize;
+			type=1;
+			defaultvalue=EPrintCapabPaperSize4x6;
+			low=0;
+			high=0;
+			enumcodes={
+				EPrintCapabPaperSizeLetter,1,
+				EPrintCapabPaperSizeA4,1,
+				EPrintCapabPaperSize5x7,2,
+				EPrintCapabPaperSizeA6,2,
+				EPrintCapabPaperSize4x6,2,
+				EPrintCapabPaperSizeSticker,5
+				};
+			linkid=0;
+		},
+		RS_CAPABILITY
+		{
+			printerclass=ESmallAdaptive;
+			capabilityid=EPrintCapabPaperSize;
+			type=1;
+			defaultvalue=EPrintCapabPaperSize4x6;
+			low=0;
+			high=0;
+			enumcodes={
+				EPrintCapabPaperSizeA6,2,
+				EPrintCapabPaperSize4x6,2,
+				EPrintCapabPaperSizeSticker,5
+				};
+			linkid=0;
+		},
+		RS_CAPABILITY
+		{
+			printerclass=EDesk;
+			capabilityid=EPrintCapabPaperSize;
+			type=1;
+			defaultvalue=EPrintCapabPaperSize4x6;
+			low=0;
+			high=0;
+			enumcodes={
+				EPrintCapabPaperSizeLetter,1,
+				EPrintCapabPaperSizeA4,1,
+				EPrintCapabPaperSize5x7,4,
+				EPrintCapabPaperSizeA6,3,
+				EPrintCapabPaperSize4x6,3,
+				EPrintCapabPaperSizeSticker,5
+				};
+			linkid=0;
+		},
+		RS_CAPABILITY
+		{
+			printerclass=ELinked;
+			capabilityid=EPrintCapabLayout;
+			type=1;
+			defaultvalue=EPrintCapabLayout1UpBorderless;
+			low=0;
+			high=0;
+			enumcodes={
+				EPrintCapabLayout1UpBorderless,0,
+				EPrintCapabLayout1Up,0,
+				EPrintCapabLayout2Up,0,
+				EPrintCapabLayout4Up,0,
+				EPrintCapabLayout12Up,0
+			};
+			linkid=1;
+		},
+		RS_CAPABILITY
+		{
+			printerclass=ELinked;
+			capabilityid=EPrintCapabLayout;
+			type=1;
+			defaultvalue=EPrintCapabLayout1UpBorderless;
+			low=0;
+			high=0;
+			enumcodes={
+				EPrintCapabLayout1UpBorderless,0,
+				EPrintCapabLayout1UpBorder,0,
+				EPrintCapabLayout2Up,0,
+				EPrintCapabLayout4Up,0,
+				EPrintCapabLayout12Up,0
+				};
+			linkid=2;
+		},
+		RS_CAPABILITY
+		{
+			printerclass=ELinked;
+			capabilityid=EPrintCapabLayout;
+			type=1;
+			defaultvalue=EPrintCapabLayout1UpBorderless;
+			low=0;
+			high=0;
+			enumcodes={
+				EPrintCapabLayout1UpBorderless,0,
+				EPrintCapabLayout1UpBorder,0,
+				EPrintCapabLayout12Up,0
+				};
+			linkid=3;
+		},
+		RS_CAPABILITY
+		{
+			printerclass=ELinked;
+			capabilityid=EPrintCapabLayout;
+			type=1;
+			defaultvalue=EPrintCapabLayout1UpBorderless;
+			low=0;
+			high=0;
+			enumcodes={
+				EPrintCapabLayout1UpBorderless,0,
+				EPrintCapabLayout1UpBorder,0,
+				EPrintCapabLayout2Up,0,
+				EPrintCapabLayout4Up,0,
+				EPrintCapabLayout12Up,0
+				};
+			linkid=4;
+		},
+		RS_CAPABILITY
+		{
+			printerclass=ELinked;
+			capabilityid=EPrintCapabLayout;
+			type=1;
+			defaultvalue=EPrintCapabLayout1UpStick;
+			low=0;
+			high=0;
+			enumcodes={
+				EPrintCapabLayout1UpStick,0,
+				EPrintCapabLayout4UpStick,0,
+				EPrintCapabLayout16UpStick,0
+				};
+			linkid=5;
+		},
+		RS_CAPABILITY
+		{
+			printerclass=ELinked;
+			capabilityid=EPrintCapabLayout;
+			type=1;
+			defaultvalue=EPrintCapabLayout1UpBorderless;
+			low=0;
+			high=0;
+			enumcodes={
+				EPrintCapabLayout1UpBorderless,0
+				};
+			linkid=10;
+		},
+		RS_CAPABILITY
+		{
+			printerclass=EOPP;
+			capabilityid=EPrintCapabPaperSize;
+			type=1;
+			defaultvalue=EPrintCapabPaperSizeAuto;
+			low=0;
+			high=0;
+			enumcodes={
+				EPrintCapabPaperSizeAuto,10
+				};
+			linkid=0;
+		}
+	};
+}
+
+//End of file

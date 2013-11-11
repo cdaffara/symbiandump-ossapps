@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<api id="2aae7dd276f8b3a7c5a03e7978caf582" dataversion="2.0">
+  <name>MMS Conformance API</name>
+  <description>API for checking the OMA MMS conformance of media type or media content.</description>
+  <type>c++</type>
+  <collection>mobilemessaging</collection>
+  <libs>
+    <lib name="MsgMedia.lib" />
+  </libs>
+  <release category="platform"/>
+  <attributes>
+     <!-- This indicates wether the api provedes separate html documentation -->
+     <!-- or is the additional documentation generated from headers. -->
+     <!-- If you are unsuere then the value is "no" -->
+     <htmldocprovided>no</htmldocprovided>
+     <adaptation>no</adaptation>
+  </attributes>
+</api>

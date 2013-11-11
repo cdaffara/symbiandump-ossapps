@@ -1,0 +1,125 @@
+<< * OK Microsoft Exchange 2000 IMAP4rev1 server version 6.0.6249.0 (lon-cn-exchng2k.msexchange2k.closedtest.intra) ready.
+>> 1 CAPABILITY
+<< * CAPABILITY IMAP4 IMAP4rev1 IDLE LOGIN-REFERRALS MAILBOX-REFERRALS NAMESPACE LITERAL+ UIDPLUS CHILDREN AUTH=NTLM
+<< 1 OK CAPABILITY completed.
+>> 2 LOGIN ralphs ralphs
+<< 2 OK LOGIN completed.
+>> 3 SELECT "INBOX"
+<< * 1 EXISTS
+<< * 0 RECENT
+<< * FLAGS (\Seen \Answered \Flagged \Deleted \Draft $MDNSent)
+<< * OK [PERMANENTFLAGS (\Seen \Answered \Flagged \Deleted \Draft $MDNSent)] Permanent flags
+<< * OK [UNSEEN 1] Is the first unseen message
+<< * OK [UIDVALIDITY 1913] UIDVALIDITY value
+<< 3 OK [READ-WRITE] SELECT completed.
+>> 4 UID FETCH 1:* (UID FLAGS BODYSTRUCTURE BODY.PEEK[HEADER.FIELDS (Received Date Subject From Priority X-Priority X-MSMail-Priority Importance)])
+<< * 1 FETCH (UID 118 FLAGS () BODYSTRUCTURE (("TEXT" "PLAIN" ("charset" "iso-8859-1") NIL NIL "QUOTED-PRINTABLE" 164 3 NIL NIL NIL)("TEXT" "HTML" ("charset" "iso-8859-1") NIL NIL "QUOTED-PRINTABLE" 785 14 NIL NIL NIL) "alternative" ("boundary" "----=_NextPart_000_0009_01C53F6D.916815F0") NIL NIL) BODY[HEADER.FIELDS (Received Date Subject From)] {315}
+<< Received: from RONMARTINP02 (ron-martinp02.ron.uiq.intra [10.80.181.57])
+<<           by ron-jonasp02 with SMTP (Mailtraq/2.1.0.1302) id ___15151358
+<<           for test@ron-jonasp02; Tue, 12 Apr 2005 05:40:28 -0700
+<< Date: Tue, 12 Apr 2005 14:40:27 +0200
+<< Subject: parser-objekt
+<< From: "JonasP" <test@ron-jonasp02>
+<< 
+<< )
+<< 4 OK FETCH completed.
+>> 5 LIST "" "%"
+<< * LIST (\HasNoChildren) "/" Calendar
+<< * LIST (\HasNoChildren) "/" Contacts
+<< * LIST (\HasNoChildren) "/" "Deleted Items"
+<< * LIST (\Marked \HasNoChildren) "/" Drafts
+<< * LIST (\Marked \HasNoChildren) "/" INBOX
+<< * LIST (\HasNoChildren) "/" Journal
+<< * LIST (\HasNoChildren) "/" Notes
+<< * LIST (\HasNoChildren) "/" Outbox
+<< * LIST (\Marked \HasNoChildren) "/" "Sent Items"
+<< * LIST (\HasNoChildren) "/" Tasks
+<< * LIST (\Noselect) "/" "Public Folders/"
+<< 5 OK LIST completed.
+>> 6 LIST "" "Calendar/%"
+<< 6 OK LIST completed.
+>> 7 LIST "" "Contacts/%"
+<< 7 OK LIST completed.
+>> 8 LIST "" "Deleted Items/%"
+<< 8 OK LIST completed.
+>> 9 LIST "" "Drafts/%"
+<< 9 OK LIST completed.
+>> 10 LIST "" "INBOX/%"
+<< 10 OK LIST completed.
+>> 11 LIST "" "Journal/%"
+<< 11 OK LIST completed.
+>> 12 LIST "" "Notes/%"
+<< 12 OK LIST completed.
+>> 13 LIST "" "Outbox/%"
+<< 13 OK LIST completed.
+>> 14 LIST "" "Sent Items/%"
+<< 14 OK LIST completed.
+>> 15 LIST "" "Tasks/%"
+<< 15 OK LIST completed.
+>> 16 LIST "" "Public Folders//%"
+<< 16 NO This a special mailbox and can not be selected or used as the destination for mailbox operations.
+>> 17 IDLE
+<< + IDLE accepted, awaiting DONE command.
+>> DONE
+<< 17 OK IDLE completed.
+>> 18 UID FETCH 118 (UID FLAGS BODYSTRUCTURE BODY.PEEK[HEADER.FIELDS (Received Date Subject From Reply-to To Cc Bcc Message-ID Return-Receipt-To X-Return-Receipt-To Disposition-Notification-To Disposition-Notification-Options Priority X-Priority X-MSMail-Priority Importance)])
+<< * 1 FETCH (UID 118 FLAGS () BODYSTRUCTURE (("TEXT" "PLAIN" ("charset" "iso-8859-1") NIL NIL "QUOTED-PRINTABLE" 164 3 NIL NIL NIL)("TEXT" "HTML" ("charset" "iso-8859-1") NIL NIL "QUOTED-PRINTABLE" 785 14 NIL NIL NIL) "alternative" ("boundary" "----=_NextPart_000_0009_01C53F6D.916815F0") NIL NIL) BODY[HEADER.FIELDS (Received Date Subject From Reply-to To Cc Bcc Message-ID Return-Receipt-To X-Return-Receipt-To Disposition-Notification-To Disposition-Notification-Options Priority X-Priority X-MSMail-Priority Importance)] {442}
+<< Received: from RONMARTINP02 (ron-martinp02.ron.uiq.intra [10.80.181.57])
+<<           by ron-jonasp02 with SMTP (Mailtraq/2.1.0.1302) id ___15151358
+<<           for test@ron-jonasp02; Tue, 12 Apr 2005 05:40:28 -0700
+<< Date: Tue, 12 Apr 2005 14:40:27 +0200
+<< Subject: parser-objekt
+<< From: "JonasP" <test@ron-jonasp02>
+<< To: <test@ron-jonasp02>
+<< Message-ID: <000c01c53f5c$cde8e2e0$39b5500a@ron.uiq.intra>
+<< X-Priority: 3
+<< X-MSMail-Priority: Normal
+<< 
+<< )
+>> 19 UID FETCH 118 (BODY[1]<0.20480> BODY[1.MIME])
+<< 18 OK FETCH completed.
+<< * 1 FETCH (BODY[1]<0> {166}
+<< 0705555542
+<< 
+<< 
+<< 
+<< ________________________________________________________________________
+<< Delivered using the Free Personal Edition of Mailtraq (www.mailtraq.com)
+<<  BODY[1.MIME] {97}
+<< Content-Type: text/plain;
+<< 	charset="iso-8859-1"
+<< Content-Transfer-Encoding: quoted-printable
+<< 
+<<  UID 118 FLAGS (\Seen))
+<< 19 OK FETCH completed.
+>> 20 UID FETCH 118 (BODY[2]<0.20480> BODY[2.MIME])
+<< * 1 FETCH (BODY[2] {785}
+<< <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<< <HTML><HEAD>
+<< <META content=3D"text/html; charset=3Diso-8859-1" =
+<< http-equiv=3DContent-Type>
+<< <META content=3D"MSHTML 5.00.3700.6699" name=3DGENERATOR>
+<< <STYLE></STYLE>
+<< </HEAD>
+<< <BODY bgColor=3D#ffffff>
+<< <DIV><FONT face=3DArial size=3D2>0705555542</FONT></DIV>
+<< <DIV>&nbsp;</DIV><a style=3D"text-decoration: none" href=3Dhttp://www.mailtraq.com><p =
+<< style=3D"font-size: 8pt; font-family: Verdana, sans-serif; color: =
+<< #aaaaaa; text-decor
+<< ation: none; border-color: #dddddd; border-style: =
+<< solid; border-top-width: 1px; border-right-width: 0px; border-bottom-width: =
+<< 0px; border-left-width: 0px; line-height: 9pt">
+<< Delivered using the Free Personal Edition of Mailtraq (www.mailtraq.com)</font></a></BODY></HTML> BODY[2.MIME] {96}
+<< Content-Type: text/html;
+<< 	charset="iso-8859-1"
+<< Content-Transfer-Encoding: quoted-printable
+<< 
+<<  UID 118)
+<< 20 OK FETCH completed.
+>> 21 IDLE
+<< + IDLE accepted, awaiting DONE command.
+>> DONE
+<< 21 OK IDLE completed.
+>> 22 LOGOUT
+<< * BYE Microsoft Exchange 2000 IMAP4rev1 server version 6.0.6249.0 signing off.
+<< 22 OK LOGOUT completed.

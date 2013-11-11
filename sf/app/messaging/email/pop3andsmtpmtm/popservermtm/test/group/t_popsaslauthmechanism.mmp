@@ -1,0 +1,76 @@
+// Copyright (c) 2008-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// t_popsaslauth.mmp
+//
+
+TARGET			t_popsaslauth.exe
+TARGETTYPE		exe
+UID				0x200204FB 0x1000484B
+
+CAPABILITY 		NetworkServices LocalServices ReadUserData ReadDeviceData WriteDeviceData NetworkControl ProtServ
+
+SOURCEPATH		../src
+SOURCE			t_popsaslauthmechanism.cpp
+SOURCE		  	ctestpopsaslauthhelper.cpp
+SOURCE		  	cactivewaiter.cpp
+
+
+
+SOURCEPATH		../../src
+SOURCE		  	POPS.CPP
+SOURCE		  	POPSOP.CPP
+SOURCE		  	cpopsaslauthhelper.cpp
+
+
+SOURCEPATH   	../../../servermtmutils/src
+SOURCE          IMCVCODC.CPP
+SOURCE          IMUTDLL.CPP
+SOURCE          imcvrecv.cpp
+SOURCE			CMsvPlainBodyTextEntry.CPP
+SOURCE			IMCVUTIL.CPP
+SOURCE			IMSK.CPP
+SOURCE			IMSKSCR.CPP
+SOURCE			imutcon.cpp
+SOURCE			cimsocketidletimer.cpp
+
+STATICLIBRARY	tefunit.lib
+
+USERINCLUDE		../inc 
+USERINCLUDE   	../../inc
+USERINCLUDE   	../../../../pop3andsmtpmtm/servermtmutils/inc
+
+USERINCLUDE		../../../../../../../mw/messagingmw/messagingfw/msgsrvnstore/server/inc
+USERINCLUDE		../../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/base/inc
+USERINCLUDE		../../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/email/inc
+USERINCLUDE		../../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/server/inc
+USERINCLUDE		../../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/sms/inc
+USERINCLUDE		../../../../../../../mw/messagingmw/messagingfw/msgtest/tools/spoofserver/inc
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+OS_LAYER_ESTLIB_SYSTEMINCLUDE  
+
+LIBRARY     	euser.lib msgs.lib efsrv.lib emailtestutils.lib msvtestutils.lib imcm.lib imut.lib pops.lib
+LIBRARY     	hash.lib logwrap.lib esock.lib securesocket.lib commdb.lib insock.lib 
+
+LIBRARY			testexecuteutils.lib 
+LIBRARY			testexecutelogclient.lib
+LIBRARY			estor.lib
+LIBRARY			rfileloggerclient.lib 
+LIBRARY     	bafl.lib etext.lib charconv.lib centralrepository.lib 
+LIBRARY     	flogger.lib
+
+EPOCSTACKSIZE 	0x4000
+
+VENDORID 		0x70000001
+
+SMPSAFE

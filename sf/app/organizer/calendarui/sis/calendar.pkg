@@ -1,0 +1,70 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description: pkg file  of Calendar Application for IAD.
+;
+
+; Language
+&EN
+
+; standard SIS file header
+#{"Calendar"}, (0x10005901), 1, 0, 0, TYPE=SA, RU
+
+; Localised vendor name
+%{"Nokia"}
+
+; Unique vendor name
+:"Nokia"
+
+;Calendar engine part
+"/epoc32/release/armv5/urel/AgnVersit2.dll"                             - "!:/sys/bin/AgnVersit2.dll"
+"/epoc32/release/armv5/urel/CalenImp.dll"		                        - "!:/sys/bin/CalenImp.dll"
+"/epoc32/release/armv5/urel/CalenInterimUtils2.dll" 					- "!:/sys/bin/CalenInterimUtils2.dll"
+"/epoc32/release/armv5/urel/Versit2.dll"							    - "!:/sys/bin/Versit2.dll"
+"/epoc32/data/z/resource/agnversit2strings.rsc"							- "!:/resource/agnversit2strings.rsc"
+"/epoc32/data/z/resource/plugins/AGNVERSIT2.rsc"						- "!:/resource/plugins/AGNVERSIT2.rsc"
+
+;Agenda Interface file to be installed
+"/epoc32/release/armv5/urel/agendainterface.dll"						- "!:/sys/bin/agendainterface.dll"
+
+; Calendar executable and default resource files
+
+"/epoc32/release/armv5/urel/calendar.exe"							- "!:/sys/bin/calendar.exe"
+"/epoc32/data/Z/private/10003a3f/import/apps/calendar_reg.rsc"		- "!:/private/10003a3f/import/apps/calendar_reg.rsc"
+"/epoc32/data/z/resource/apps/calendar.r01"                         - "!:/resource/apps/calendar.rsc"
+"/epoc32/data/z/resource/qt/translations/calendar_en.qm"            - "!:/resource/qt/translations/calendar.qm"
+
+"/epoc32/release/armv5/urel/calenviewerservice.exe"							- "!:/sys/bin/calenviewerservice.exe"
+"/epoc32/data/Z/private/10003a3f/import/apps/calenviewerservice_reg.rsc"		- "!:/private/10003a3f/import/apps/calenviewerservice_reg.rsc"
+"/epoc32/data/z/resource/apps/calenviewerservice.rsc"                         - "!:/resource/apps/calenviewerservice.rsc"
+
+"/epoc32/release/armv5/urel/calenviews.dll"					        - "!:/sys/bin/calenviews.dll"
+"/epoc32/release/armv5/urel/calensettings.dll"      				- "!:/sys/bin/calensettings.dll"
+"/epoc32/release/armv5/urel/calenglobaldata.dll"					- "!:/sys/bin/calenglobaldata.dll"
+"/epoc32/release/armv5/urel/calencustomisationmanager.dll"			- "!:/sys/bin/calencustomisationmanager.dll"
+"/epoc32/release/armv5/urel/calencontroller.dll"					- "!:/sys/bin/calencontroller.dll"
+"/epoc32/release/armv5/urel/calencommonutils.dll"					- "!:/sys/bin/calencommonutils.dll"
+"/epoc32/release/armv5/urel/calenlauncher.dll"						- "!:/sys/bin/calenlauncher.dll"
+"/epoc32/release/armv5/urel/caleneditor.dll"						- "!:/sys/bin/caleneditor.dll"
+"/epoc32/release/armv5/urel/agendaeventviewer.dll"					- "!:/sys/bin/agendaeventviewer.dll"
+"/epoc32/release/armv5/urel/calenregionalutil.dll"					- "!:/sys/bin/calenregionalutil.dll"
+
+;ECom files to be installed
+"/epoc32/release/armv5/urel/calenlunarchineseplugin.dll"			- "!:/sys/bin/calenlunarchineseplugin.dll"
+"/epoc32/data/z/resource/plugins/calenlunarchineseplugin.rsc"				- "!:/resource/plugins/calenlunarchineseplugin.rsc"
+
+;Qt plugin files to be installed
+"/epoc32/release/armv5/urel/agendaeventviewerplugin.dll"			- "!:/sys/bin/agendaeventviewerplugin.dll"
+"/epoc32/data/z/resource/qt/plugins/calendar/agendaeventviewerplugin.qtplugin"				- "!:/resource/qt/plugins/calendar/agendaeventviewerplugin.qtplugin"
+
+;END OF FILE

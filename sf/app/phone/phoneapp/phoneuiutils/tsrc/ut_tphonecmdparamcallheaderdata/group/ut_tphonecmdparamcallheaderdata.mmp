@@ -1,0 +1,59 @@
+/*
+* Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: 
+*
+*/
+/*
+-----------------------------------------------------------------------------
+This file has been generated with EUnit Pro
+http://www.sysopendigia.com/qualitykit
+-----------------------------------------------------------------------------
+*/
+#include <platform_paths.hrh>
+
+TARGET          ut_tphonecmdparamcallheaderdata.dll
+TARGETTYPE      dll
+UID             0x1000af5a 0x01700000
+
+CAPABILITY      ALL -TCB
+VENDORID        VID_DEFAULT
+
+SOURCEPATH      ../src
+SOURCE          ut_tphonecmdparamcallheaderdata.cpp
+SOURCE          ut_tphonecmdparamcallheaderdata_dllmain.cpp
+
+// Sources required by the test suite
+SOURCEPATH      ../../../src
+SOURCE          tphonecmdparamcallheaderdata.cpp
+SOURCE          tphonecommandparam.cpp
+
+
+USERINCLUDE             ../src
+
+// User include folders required by the tested code
+USERINCLUDE    ../../../inc
+USERINCLUDE    ../../../../../inc
+USERINCLUDE    ../../../../phoneui2/srcdata
+USERINCLUDE    ../../../src
+
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE    /epoc32/include/Digia/EUnit
+SYSTEMINCLUDE    ../../../../../inc
+
+
+LIBRARY                 EUnit.lib
+LIBRARY                 EUnitUtil.lib
+LIBRARY                 euser.lib
+
+// Libraries required by the tested code

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration xmlns="http://www.s60.com/xml/confml/1" name="Contacts" version="1">
+  <feature ref="KCRCntSettings" name="Contacts app ui settings">
+    <desc>Contacts app ui settings</desc>
+    <setting ref="KCntNameOrdering" name="Name ordering in lists" type="selection">
+      <desc>Displays name label order in names lists</desc>
+      <option name="name order Lastname Firstname" value="0"/>
+      <option name="name order Lastname, Firstname" value="1"/>
+      <option name="name order Firstname Lastname" value="2"/>
+    </setting>
+    <setting ref="KCntNameListRowSetting" name="Row presentation in names list" type="selection">
+      <desc>One or two rows in the name list item</desc>
+      <option name="one row: name only" value="0"/>
+      <option name="two rows: name and phone number" value="1"/>
+    </setting>    
+  </feature>
+  
+  <feature ref="KSimImport" name="">
+    <setting ref="KImportSim1Imsi" name="Sim1 IMSI" type="string"/>
+    <setting ref="KImportSim1Date" name="Sim1 import date" type="int"/>
+    <setting ref="KImportSim2Imsi" name="Sim2 IMSI" type="string"/>
+    <setting ref="KImportSim2Date" name="Sim2 import date" type="int"/>
+    <setting ref="KImportSim3Imsi" name="Sim3 IMSI" type="string"/>
+    <setting ref="KImportSim3Date" name="Sim3 import date" type="int"/>
+    <setting ref="KImportSim4Imsi" name="Sim4 IMSI" type="string"/>
+    <setting ref="KImportSim4Date" name="Sim4 import date" type="int"/>
+    <setting ref="KImportSim5Imsi" name="Sim5 IMSI" type="string"/>
+    <setting ref="KImportSim5Date" name="Sim5 import date" type="int"/>
+  </feature>
+  
+  <data>
+    <KCRCntSettings>
+      <KCntNameOrdering>2</KCntNameOrdering>
+      <KCntNameListRowSetting>1</KCntNameListRowSetting>
+    </KCRCntSettings>
+    <KSimImport>
+      <KImportSim1Date>0</KImportSim1Date>
+      <KImportSim2Date>0</KImportSim2Date>
+      <KImportSim3Date>0</KImportSim3Date>
+      <KImportSim4Date>0</KImportSim4Date>
+      <KImportSim5Date>0</KImportSim5Date>
+    </KSimImport>
+  </data>
+  <rfs>
+    <KCRCntSettings>
+      <KCntNameOrdering>true</KCntNameOrdering>
+      <KCntNameListRowSetting>true</KCntNameListRowSetting>
+    </KCRCntSettings>
+    <KSimImport>
+      <KImportSim1Imsi>false</KImportSim1Imsi>
+      <KImportSim1Date>false</KImportSim1Date>
+      <KImportSim2Imsi>false</KImportSim2Imsi>
+      <KImportSim2Date>false</KImportSim2Date>
+      <KImportSim3Imsi>false</KImportSim3Imsi>
+      <KImportSim3Date>false</KImportSim3Date>
+      <KImportSim4Imsi>false</KImportSim4Imsi>
+      <KImportSim4Date>false</KImportSim4Date>
+      <KImportSim5Imsi>false</KImportSim5Imsi>
+      <KImportSim5Date>false</KImportSim5Date>
+    </KSimImport>
+  </rfs>
+</configuration>

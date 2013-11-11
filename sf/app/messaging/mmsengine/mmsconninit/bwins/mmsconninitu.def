@@ -1,0 +1,8 @@
+EXPORTS
+	?ConnectL@CMmsConnectionInitiator@@QAEXAAVRConnection@@AAV?$CArrayFixFlat@K@@AAVTRequestStatus@@@Z @ 1 NONAME ; void CMmsConnectionInitiator::ConnectL(class RConnection &, class CArrayFixFlat<unsigned long> &, class TRequestStatus &)
+	?GetParametersL@CMmsConnectionInitiator@@SAXKAAKAAPAVHBufC16@@AAHAAPAVHBufC8@@@Z @ 2 NONAME ; void CMmsConnectionInitiator::GetParametersL(unsigned long, unsigned long &, class HBufC16 * &, int &, class HBufC8 * &)
+	?NewL@CMmsConnectionInitiator@@SAPAV1@XZ @ 3 NONAME ; class CMmsConnectionInitiator * CMmsConnectionInitiator::NewL(void)
+	?NetworkMode@CMmsPhoneClient@@QAE?AW4TMobilePhoneNetworkMode@RMobilePhone@@XZ @ 4 NONAME ; enum RMobilePhone::TMobilePhoneNetworkMode CMmsPhoneClient::NetworkMode(void)
+	?NewL@CMmsPhoneClient@@SAPAV1@XZ @ 5 NONAME ; class CMmsPhoneClient * CMmsPhoneClient::NewL(void)
+	?Roaming@CMmsPhoneClient@@QAEXAAVTRequestStatus@@@Z @ 6 NONAME ; void CMmsPhoneClient::Roaming(class TRequestStatus &)
+

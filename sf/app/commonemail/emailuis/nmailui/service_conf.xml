@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<service>
+  <name>nmail</name>
+  <filepath>No path</filepath>
+  <description>Nmail</description>
+  <interface>
+    <name>com.nokia.symbian.IFileShare</name>
+    <version>1.0</version>
+    <description>Send interface</description>
+    <customproperty key="txt_aiw_action_text">Attach to new email</customproperty>
+    <customproperty key="aiw_action_text_file">mail</customproperty>
+    <customproperty key="aiw_action_text">txt_mail_shareui_send_as_mail</customproperty>
+    <customproperty key="aiw_action_icon">qtg_large_email</customproperty>
+  </interface>
+  <interface>
+    <name>com.nokia.symbian.IUriView</name>
+    <version>1.0</version>
+    <description>Uri interface</description>
+    <customproperty key="schemes">mailto</customproperty>
+  </interface>
+  <interface>
+    <name>com.nokia.symbian.IEmailMessageSend</name>
+    <version>1.0</version>
+    <description>Send interface</description>
+  </interface>
+  <interface>
+    <name>com.nokia.symbian.IEmailInboxView</name>
+    <version>1.0</version>
+    <description>Email inbox interface</description>
+  </interface>
+  <interface>
+    <name>com.nokia.symbian.IEmailMessageView</name>
+    <version>1.0</version>
+    <description>Email message interface</description>
+  </interface>
+</service>

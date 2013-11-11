@@ -1,0 +1,18 @@
+HbPushButton#playButton[stretched][icon][text][!additionalText]
+{
+	layout: ir_custom_layout;
+}
+
+HbPushButton#playButton[stretched][icon][text][!additionalText]::icon
+{
+    right: var(hb-param-margin-gene-middle-horizontal);
+    left: -var(hb-param-margin-gene-left);
+    fixed-width: var(hb-param-graphic-size-function);
+    fixed-height: var(hb-param-graphic-size-function);
+}
+
+HbPushButton#playButton[stretched][icon][text][!additionalText]::text
+{
+    right: var(hb-param-margin-gene-right);
+    size-policy-horizontal: preferred;
+}

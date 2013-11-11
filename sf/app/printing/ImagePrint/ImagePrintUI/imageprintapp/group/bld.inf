@@ -1,0 +1,45 @@
+/*
+* Copyright (c) 2004-2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*
+*/
+
+
+PRJ_EXPORTS
+
+PRJ_EXPORTS
+// Export localised loc file
+../loc/imageprintapp.loc        APP_LAYER_LOC_EXPORT_PATH(imageprintapp.loc)
+PRJ_MMPFILES
+
+imageprintapp.mmp
+
+PRJ_TESTMMPFILES
+
+PRJ_EXTENSIONS
+START EXTENSION s60/mifconv
+OPTION TARGETFILE imgprintbitmaps.mif
+OPTION HEADERFILE imgprintbitmaps.mbg
+OPTION SOURCEDIR ../data	  
+OPTION SOURCES -c8,8 qgn_prop_print_slider_bar.svg -c8,8 qgn_prop_print_slider_bar_short.svg -c8,8 qgn_prop_print_slider_handle.svg -c8,8 qgn_prop_print_slider_left.svg -c8,8 qgn_prop_print_slider_right.svg -c8,8 qgn_indi_print_cached.svg -c8,8 qgn_prop_print_bt.svg -c8,8 qgn_prop_print_kiosk.svg -c8,8 qgn_prop_print_mmc.svg -c8,8 qgn_prop_print_usb.svg -c8,8 qgn_prop_print_wlan.svg  
+END
+
+PRJ_EXTENSIONS
+START EXTENSION s60/mifconv
+OPTION TARGETFILE imageprintapp_aif.mif
+OPTION SOURCEDIR ../data
+OPTION SOURCES -c8,8 qgn_menu_print.svg  
+END 
+
+//  End of File

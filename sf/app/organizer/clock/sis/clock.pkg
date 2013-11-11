@@ -1,0 +1,71 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description: pkg file  of Clock Application for IAD.
+;
+
+; Language
+&EN
+
+; standard SIS file header
+#{"Clock"}, (0x10005903), 1, 0, 0, TYPE=SA, RU
+
+; Localised vendor name
+%{"Nokia"}
+
+; Unique vendor name
+:"Nokia"
+
+; Clock engine components
+"/epoc32/release/armv5/urel/clockserver.exe"							- "!:/sys/bin/clockserver.exe"
+"/epoc32/release/armv5/urel/clockserverclient.dll"						- "!:/sys/bin/clockserverclient.dll"
+"/epoc32/release/armv5/urel/clocktimezoneresolver.dll"					- "!:/sys/bin/clocktimezoneresolver.dll"
+"/epoc32/release/armv5/urel/clocktimesourceinterface.dll"				- "!:/sys/bin/clocktimesourceinterface.dll"
+"/epoc32/release/armv5/urel/clockecomlistener.dll"						- "!:/sys/bin/clockecomlistener.dll"
+
+; Clock nitz Ecom plugin
+"/epoc32/release/armv5/urel/clocknitzplugin.dll"        				- "!:/sys/bin/clocknitzplugin.dll"
+"/epoc32/data/z/resource/plugins/clocknitzplugin.rsc"   				- "!:/resource/plugins/clocknitzplugin.rsc"
+
+; Clock executable and default resource files
+
+"/epoc32/release/armv5/urel/clock.exe"									- "!:/sys/bin/clock.exe"
+"/epoc32/data/Z/private/10003a3f/import/apps/clock_reg.rsc"				- "!:/private/10003a3f/import/apps/clock_reg.rsc"
+"/epoc32/data/z/resource/apps/clock.rsc"                          		- "!:/resource/apps/clock.rsc"
+"/epoc32/data/z/resource/qt/translations/clock_en.qm"            		- "!:/resource/qt/translations/clock_en.qm"
+
+
+"/epoc32/release/armv5/urel/clockalarmclient.dll"						- "!:/sys/bin/clockalarmclient.dll"
+"/epoc32/release/armv5/urel/timezoneclient.dll"				    		- "!:/sys/bin/timezoneclient.dll"
+"/epoc32/release/armv5/urel/clocksettingsutility.dll"					- "!:/sys/bin/clocksettingsutility.dll"
+"/epoc32/release/armv5/urel/clocksettingsview.dll"			    		- "!:/sys/bin/clocksettingsview.dll"
+"/epoc32/release/armv5/urel/clockcityselectionlist.dll"             	- "!:/sys/bin/clockcityselectionlist.dll"
+"/epoc32/release/armv5/urel/clockalarmeditor.dll"						- "!:/sys/bin/clockalarmeditor.dll"
+"/epoc32/release/armv5/urel/clockappcontroller.dll"             		- "!:/sys/bin/clockappcontroller.dll"
+"/epoc32/release/armv5/urel/clockviewmanager.dll"						- "!:/sys/bin/clockviewmanager.dll"
+"/epoc32/release/armv5/urel/clockviews.dll"             				- "!:/sys/bin/clockviews.dll"
+"/epoc32/release/armv5/urel/clockwidget.dll"							- "!:/sys/bin/clockwidget.dll"
+"/epoc32/release/armv5/urel/clockwidgetplugin.dll"             			- "!:/sys/bin/clockwidgetplugin.dll"
+
+"/epoc32/data/Z/resource/mcc/mcc.rsc"									-"!:/resource/mcc/mcc.rsc"
+"/epoc32/data/Z/resource/timezonelocalization/timezones.rsc"			-"!:/resource/timezonelocalization/timezones.rsc"
+"/epoc32/data/Z/resource/timezonelocalization/timezonegroups.rsc"		-"!:/resource/timezonelocalization/timezonegroups.rsc"
+
+;Qt plugin files to be installed
+"/epoc32/release/armv5/urel/datetimesettingsplugin.dll"					- "!:/sys/bin/datetimesettingsplugin.dll"
+"/epoc32/data/c/resource/qt/plugins/controlpanel/datetimesettingsplugin.qtplugin"		- "!:/resource/qt/plugins/controlpanel/datetimesettingsplugin.qtplugin"
+
+"/epoc32/release/armv5/urel/clocksettingsviewplugin.dll"					- "!:/sys/bin/clocksettingsviewplugin.dll"
+"/epoc32/data/z/resource/qt/plugins/clock/clocksettingsviewplugin.qtplugin"		- "!:/resource/qt/plugins/clock/clocksettingsviewplugin.qtplugin"
+
+;END OF FILE

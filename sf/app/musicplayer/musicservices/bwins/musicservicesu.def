@@ -1,0 +1,21 @@
+EXPORTS
+	?currentService@MusicServices@@QAE?AW4MusicService@1@XZ @ 1 NONAME ; enum MusicServices::MusicService MusicServices::currentService(void)
+	?trUtf8@MusicServices@@SA?AVQString@@PBD0@Z @ 2 NONAME ; class QString MusicServices::trUtf8(char const *, char const *)
+	?qt_metacast@MusicServices@@UAEPAXPBD@Z @ 3 NONAME ; void * MusicServices::qt_metacast(char const *)
+	?trUtf8@MusicServices@@SA?AVQString@@PBD0H@Z @ 4 NONAME ; class QString MusicServices::trUtf8(char const *, char const *, int)
+	?qt_metacall@MusicServices@@UAEHW4Call@QMetaObject@@HPAPAX@Z @ 5 NONAME ; int MusicServices::qt_metacall(enum QMetaObject::Call, int, void * *)
+	?contextTitle@MusicServices@@QBE?AVQString@@XZ @ 6 NONAME ; class QString MusicServices::contextTitle(void) const
+	??0MusicServices@@QAE@XZ @ 7 NONAME ; MusicServices::MusicServices(void)
+	??_EMusicServices@@UAE@I@Z @ 8 NONAME ; MusicServices::~MusicServices(unsigned int)
+	?serviceActive@MusicServices@@IAEXI@Z @ 9 NONAME ; void MusicServices::serviceActive(unsigned int)
+	?itemSelected@MusicServices@@QAEXVQString@@@Z @ 10 NONAME ; void MusicServices::itemSelected(class QString)
+	?playReady@MusicServices@@IAEXABVXQSharableFile@@@Z @ 11 NONAME ; void MusicServices::playReady(class XQSharableFile const &)
+	?tr@MusicServices@@SA?AVQString@@PBD0H@Z @ 12 NONAME ; class QString MusicServices::tr(char const *, char const *, int)
+	?tr@MusicServices@@SA?AVQString@@PBD0@Z @ 13 NONAME ; class QString MusicServices::tr(char const *, char const *)
+	?getStaticMetaObject@MusicServices@@SAABUQMetaObject@@XZ @ 14 NONAME ; struct QMetaObject const & MusicServices::getStaticMetaObject(void)
+	?metaObject@MusicServices@@UBEPBUQMetaObject@@XZ @ 15 NONAME ; struct QMetaObject const * MusicServices::metaObject(void) const
+	?setCurrentService@MusicServices@@QAEXW4MusicService@1@@Z @ 16 NONAME ; void MusicServices::setCurrentService(enum MusicServices::MusicService)
+	?staticMetaObject@MusicServices@@2UQMetaObject@@B @ 17 NONAME ; struct QMetaObject const MusicServices::staticMetaObject
+	??1MusicServices@@UAE@XZ @ 18 NONAME ; MusicServices::~MusicServices(void)
+	?playReady@MusicServices@@IAEXABVQString@@@Z @ 19 NONAME ; void MusicServices::playReady(class QString const &)
+

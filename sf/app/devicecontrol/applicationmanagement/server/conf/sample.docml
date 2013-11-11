@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="1.1">
+    <object name="qtl_dialog_softkey_2_left" type="HbAction">
+        <string name="text" value="OK"/>
+    </object>
+    <object name="qtl_dialog_softkey_2_right" type="HbAction">
+        <string name="text" value="Cancel"/>
+    </object>
+    <widget name="dialog" type="HbDialog">
+        <sizehint height="42.08955un" type="PREFERRED" width="50.5un"/>
+        <widget name="qtl_dialog_pri_heading" role="HbDialog:headingWidget" type="HbLabel">
+            <contentsmargins bottom="var(hb-param-margin-gene-popup)" left="var(hb-param-margin-gene-popup)" right="var(hb-param-margin-gene-popup)" top="var(hb-param-margin-gene-popup)"/>
+            <string name="plainText" value="Popup title"/>
+            <fontspec name="fontSpec" role="Primary" textheight="var(hb-param-text-height-primary)"/>
+        </widget>
+        <widget name="qtl_dialog_pri5_large_graphic" role="HbDialog:contentWidget" type="HbWidget">
+            <widget name="qtl_dialog_pri5" type="HbLabel">
+                <real name="z" value="6"/>
+                <sizehint height="3.8806un" type="PREFERRED" width="34.77612un"/>
+                <bool name="visible" value="TRUE"/>
+                <string name="plainText"/>
+            </widget>
+            <widget name="combobox" type="HbComboBox">
+                <real name="z" value="7"/>
+                <sizehint type="PREFERRED" width="44.02985un"/>
+                <bool name="visible" value="TRUE"/>
+            </widget>
+            <widget name="container" type="HbWidget">
+                <widget name="label_1" type="HbLabel">
+                    <real name="z" value="3"/>
+                    <sizehint height="3.78158un" type="PREFERRED" width="23.15381un"/>
+                    <bool name="visible" value="TRUE"/>
+                    <string name="plainText"/>
+                </widget>
+                <widget name="icon" type="HbLabel">
+                    <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+                    <icon iconName="note_warning" name="icon"/>
+                    <real name="z" value="1"/>
+                    <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+                    <sizehint height="var(hb-param-graphic-size-primary-large)" type="FIXED" width="var(hb-param-graphic-size-primary-large)"/>
+                    <bool name="visible" value="TRUE"/>
+                    <string name="plainText"/>
+                </widget>
+                <widget name="label" type="HbLabel">
+                    <enums name="textWrapping" value="TextWordWrap"/>
+                    <real name="z" value="2"/>
+                    <sizehint height="8un" type="PREFERRED" width="22.99545un"/>
+                    <bool name="visible" value="TRUE"/>
+                    <string name="plainText"/>
+                    <fontspec name="fontSpec" role="Primary" textheight="var(hb-param-text-height-primary)"/>
+                </widget>
+                <real name="z" value="0"/>
+                <sizehint height="9.8806un" type="PREFERRED" width="23.8806un"/>
+                <layout type="anchor">
+                    <anchoritem dst="icon" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                    <anchoritem dst="icon" dstEdge="TOP" spacing="0un" src="" srcEdge="TOP"/>
+                    <anchoritem dst="label" dstEdge="LEFT" spacing="2un" src="icon" srcEdge="RIGHT"/>
+                    <anchoritem dst="label" dstEdge="TOP" spacing="0un" src="" srcEdge="TOP"/>
+                    <anchoritem dst="label" dstEdge="RIGHT" spacing="-1un" src="" srcEdge="RIGHT"/>
+                    <anchoritem dst="label" dstEdge="BOTTOM" spacing="0un" src="icon" srcEdge="CENTERV"/>
+                    <anchoritem dst="label_1" dstEdge="LEFT" spacing="2un" src="icon" srcEdge="RIGHT"/>
+                    <anchoritem dst="label_1" dstEdge="TOP" spacing="1un" src="icon" srcEdge="CENTERV"/>
+                    <anchoritem dst="label_1" dstEdge="RIGHT" spacing="-1un" src="" srcEdge="RIGHT"/>
+                </layout>
+            </widget>
+            <real name="z" value="0"/>
+            <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+            <layout type="grid">
+                <contentsmargins bottom="1.04328un" left="1.34328un" right="1.34328un" top="1.34328un"/>
+                <griditem column="0" column_span="2" itemname="container" row="0"/>
+                <griditem column="0" column_span="2" itemname="qtl_dialog_pri5" row="1"/>
+                <griditem column="0" column_span="2" itemname="combobox" row="2"/>
+            </layout>
+        </widget>
+        <ref object="qtl_dialog_softkey_2_left" role="HbWidget:addAction"/>
+        <ref object="qtl_dialog_softkey_2_right" role="HbWidget:addAction"/>
+    </widget>
+    <metadata activeUIState="Common ui state" display="NHD-3.2-inch_portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+    </metadata>
+</hbdocument>

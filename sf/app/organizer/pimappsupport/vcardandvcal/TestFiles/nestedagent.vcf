@@ -1,0 +1,41 @@
+BEGIN:VCARD
+VERSION:2.1
+AAA.ADR:;;AThe Street;London;;;UK
+AAA.DDD.EE.FFFF.GHIJKL.TITLE:AMonster
+AAA.N:AX;Bob
+BBBB.N:BX;Bob
+BBBB.TITLE:BMonster
+BBBB.ADR:;;BThe Street;London;;;UK
+CC.ADR:;;CThe Street;London;;;UK
+CC.TITLE:CMonster
+N:X;Bob
+ADR:;;The Street;London;;;UK
+TITLE;X-DEF=abc\;def;X-DEFa=ghi;X-DEFb=jkl\;mno:Monster
+
+AGENT:
+BEGIN:VCARD
+VERSION:2.1
+N:Bond,James
+ADR:;;10 Downing Street;London;;;UK
+TITLE:Sir
+TEL:007
+AGENT:
+BEGIN:VCARD
+VERSION:2.1
+N:Penny,Money
+ADR:;;10 Downing Street;London;;;UK
+TITLE:Ms
+TEL:00234561156
+END:VCARD
+END:VCARD
+
+AGENT:
+BEGIN:VCARD
+VERSION:2.1
+N:Scarlet;;Captain
+ADR:;;Space City;London;;;UK
+TITLE:StillAlive
+TEL:009
+END:VCARD
+
+END:VCARD

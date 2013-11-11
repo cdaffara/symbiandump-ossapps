@@ -1,0 +1,55 @@
+[test1]
+
+# Sim.tsy accepts a message sent from the emulator, checks that it is what is expected, and then ACK's.
+# The message should be of the form User name<user@domain1.domain2>
+# ie UserName<testE@test.com>(SubjectEmailTest_2_2)TestText
+
+IndicatorCheckPeriod= 1
+NetworkInfo= TEST, Network0, Test, Test, Test, 5
+RegStatus= 5,5
+
+NotifySignalStrengthChangeCap= 1
+
+SmsControlCaps= 34
+SmsTx= 35000B914411111111F10000AD1D54747A0E4ACF4161D03CDD86B3CB207A194F07B5CBF379F85C06 , +447785016005, 1, 0x0000020C, 0
+	#         r**********        ccm***********************
+	# r =Recipients= +44111111111
+	# cc = message count
+	# m = Message= UserName<testE@test.com>(SubjectEmailTest_2_2)TestText
+	# Note exta E in message to make the number of hex bytes even.
+	#  +447802000332 =  sca = service centre address and is not actually used by the sim.tsy for anything (at the moment).
+	# 1 = MsgRef
+	# 02070100 = SubmitReportPdu. Basically an ACK	
+	# SmsTx	<pdu>, <sca>, <MsgRef> <SubmitReportPdu> <ExpectedError>
+	
+#
+# Should have recieved above message from the emulator to kick off the sending of the next message.
+# This sends a simulated SMS message to the emulator.
+#
+
+SmsControlCaps= 68
+	#SmsControlCaps= caps in DECIMAL
+
+SmsPhoneStoreCaps= 0xFC000000
+	#SmsPhoneStoreCaps= TMobilePhoneCaps in the smsStore in hexadecimal
+SmsStartRxDelay= 4207, 1, 1
+
+#working simple message
+#SmsRx= 240C915348801455820004108071417314801E74657374206D6573736167652C2038626974732C206C656E677468203330, 358405202000
+#contains reply address
+#SmsRx= 640C91534880145582000410807141731480540A22080C914457382957495265706C792061646472657373206D6573736167652E20204D6573736167652077696C6C2062652073656E7420746F206F746865722061646472657373207468616E2073656E646572, 358405202000
+
+#Receive with one of each type of special message IE
+#Voice=8,Fax=3,Email=1,Enhanced=2
+SmsRx= 640C9153488014558200041080714173148071100102800801028103010282010102870254686973206D6573736167652069732061207370656369616C206D6573736167652077616974696E67206D6573736167652E20596F7520686176652061207370656369616C206D6573736167652077616974696E6720666F7220796F75203A29, 358405202000 
+
+
+
+
+	#    ******rec*******                  cc********mes**************
+	# Recipients (rec)= +44111111111
+	# Message (cc (count), mess)= TestTextE_1_2
+
+	# +447802000332 = service centre address.
+
+

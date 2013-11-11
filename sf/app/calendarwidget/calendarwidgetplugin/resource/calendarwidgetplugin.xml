@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service>
+    <name>calendarwidgetplugin</name>
+    <filepath>calendarwidgetplugin</filepath>
+    <description>CalendarWidget</description>
+    <interface>
+        <name>com.nokia.symbian.IHomeScreenWidget</name>
+        <version>1.0</version>
+        <description>Calendar widget shows current calendar events/description>
+        <capabilities></capabilities>
+        <customproperty key="iconuri">calendarwidgetplugin.png</customproperty>
+        <customproperty key="title">CalendarWidget</customproperty>
+    </interface>
+</service>

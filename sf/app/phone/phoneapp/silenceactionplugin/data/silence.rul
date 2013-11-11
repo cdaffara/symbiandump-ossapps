@@ -1,0 +1,133 @@
+<script xmlns="http://www.nokia.com/ns/cep/script/1.0/"
+xmlns:cep="http://www.nokia.com/ns/cep/1.0/">
+    <!-- Must have sensor interaction active -->
+    <if>
+        <equals>
+            <contextRef source='Sensor' type='Setting.Active'/>
+            <string>Off</string>
+        </equals>
+        <actions>
+        </actions>
+    </if>
+    <!-- Check if we have incoming call and we receive a double tap event -->
+    <elseIf>
+        <and>
+            <!-- Must have a ringin call and receive new double tap event or orientation event from sensor -->
+            <equals>
+                <contextRef source='Call' type='State'/>
+                <string>Ringing</string>
+            </equals>
+            <or>
+                <and>
+                    <!-- Check that double tap interaction is set -->
+                    <equals>
+                        <contextRef source='Sensor' type='Setting.TappingInteraction.SilenceCalls'/>
+                        <string>On</string>
+                    </equals>
+                    <contextUpdated>
+                        <contextRef source='Sensor' type='Event.DoubleTap'/>
+        	          </contextUpdated>
+                </and>
+    	          <and>
+                    <!-- Check that turning interaction is set -->
+                    <equals>
+                        <contextRef source='Sensor' type='Setting.TurningInteraction.SilenceCalls'/>
+                        <string>On</string>
+                    </equals>
+                    <!-- ...and previous orientation is not 'Undefined' ... -->
+                    <notEqual>
+                        <contextRef source='Sensor' type='Event.Orientation.Previous'/>
+                        <string>Undefined</string>
+                    </notEqual>
+		                <contextChanged>
+		                    <contextRef source='Sensor' type='Event.Orientation'/>
+		    	    	    </contextChanged>
+    	        	    <equals>
+                        <contextRef source='Sensor' type='Event.Orientation'/>
+                    	  <string>DisplayDownwards</string>
+    	              </equals>
+    	          </and>
+            </or>
+        </and>
+        <actions>
+            <!-- Silence ringing tone -->
+            <Phone Command='Silence'/>
+            <!-- Vibra feedback -->
+            <Vibra Mode='Start' Delay='0' Repeats='2' RepeatInterval='200' Duration='50' Intensity='50'/>
+        </actions>
+    </elseIf>
+    <!-- Check if we just have incoming call -->
+    <elseIf>
+        <and>
+            <!-- Check that the feature has not yet been enabled -->
+            <notEqual>
+                <contextRef source='Sensor' type='Event.AutoRotateAndDoubleTap'/>
+                <string>Enabled</string>
+            </notEqual>
+            <equals>
+                <contextRef source='Call' type='State'/>
+                <string>Ringing</string>
+            </equals>
+        </and>
+        <actions>
+            <!-- Activate double tap events from sensor -->
+            <publishContext>
+                <contextRef source='Sensor'
+                    type='Event'
+                    value='DoubleTap.Activate'/>
+            </publishContext>
+            <!-- Activate orientation events from sensor -->
+            <publishContext>
+                <contextRef source='Sensor'
+                    type='Event'
+                    value='Orientation.Activate'/>
+            </publishContext>
+            
+            <!-- Mark feature as 'Enabled' -->
+            <publishContext>
+                <contextRef source="Sensor" type="Event.AutoRotateAndDoubleTap" value="Enabled"/>
+            </publishContext>
+        
+        </actions>
+    </elseIf>
+    <!-- If we have call in 'Connected' or 'Disconnected' state -->
+    <elseIf>
+        <!-- Check that the feature has not already been disabled -->
+        <and>
+            <notEqual>
+                <contextRef source='Sensor' type='Event.AutoRotateAndDoubleTap'/>
+                <string>Disabled</string>
+            </notEqual>
+            <or>
+                <equals>
+                    <contextRef source='Call' type='State'/>
+                    <string>Connected</string>
+                </equals>
+                <equals>
+                    <contextRef source='Call' type='State'/>
+                    <string>Disconnected</string>
+                </equals>
+            </or>
+        </and>
+        <actions>
+            <!-- Deactivate double tap events from sensor -->
+            <publishContext>
+                <contextRef source='Sensor'
+                    type='Event'
+                    value='DoubleTap.Deactivate'/>
+            </publishContext>
+            <!-- Deactivate orientation events from sensor -->
+            <publishContext>
+                <contextRef source='Sensor'
+                    type='Event'
+                    value='Orientation.Deactivate'/>
+            </publishContext>
+            
+            <!-- Mark feature as 'Disabled' -->
+            <publishContext>
+                <contextRef source="Sensor" type="Event.AutoRotateAndDoubleTap" value="Disabled"/>
+            </publishContext>
+        
+        </actions>
+    </elseIf>
+</script>

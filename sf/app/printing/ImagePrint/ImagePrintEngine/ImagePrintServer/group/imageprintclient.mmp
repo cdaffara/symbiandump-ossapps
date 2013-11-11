@@ -1,0 +1,53 @@
+/*
+* Copyright (c) 2004-2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*
+*/
+
+
+#include <platform_paths.hrh>
+#include <bldvariant.hrh>
+#include <data_caging_paths.hrh>
+
+#include "../../inc/logdef.h"
+
+deffile imageprintclient.def
+
+TARGET          imageprintclient.dll
+TARGETTYPE      dll
+CAPABILITY 		CAP_CLIENT_DLL
+UID             0x1000008D 0x101FFAA5
+
+APP_LAYER_SYSTEMINCLUDE	
+
+USERINCLUDE     . ../inc 
+USERINCLUDE 	../src/client 
+USERINCLUDE 	../src/server
+USERINCLUDE		../../ImagePrintLibrary/inc
+USERINCLUDE     ../../inc
+USERINCLUDE		../../../clog/inc
+
+SOURCEPATH      ../src/client
+
+SOURCE          rimageprintclient.cpp
+SOURCE			cidleguard.cpp
+SOURCE			cdiscoveryguard.cpp
+SOURCE			cjobguard.cpp
+
+STATICLIBRARY   clog.lib
+DEBUGLIBRARY	flogger.lib
+
+LIBRARY       	euser.lib
+
+// End of File

@@ -1,0 +1,46 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:
+;
+
+
+; Language - standard language definitions
+&EN
+
+; Standard SIS file header
+#{"MemSpyUI"},(0x2002129F),1,0,0
+
+; Non-localised vendor name
+:"Nokia Corporation"
+
+; Localised vendor names
+%{"Nokia Corporation"}
+
+; Engine:
+""-"z:\sys\bin\MemSpyDriver.ldd"
+""-"z:\sys\bin\MemSpyDriverClient.dll"
+""-"z:\sys\bin\MemSpyEngine.dll"
+""-"z:\sys\bin\MemSpy.exe"
+""-"z:\sys\bin\MemSpyConsole.exe"
+""-"z:\private\2002129E\MemSpyEComInterfaceIds.xml"
+""-"z:\private\2002129E\MemSpyProcessMemoryTrackingAutoStartConfig.xml"
+
+; UI:
+""-"z:\sys\bin\MemSpyUI.exe"
+""-"z:\Resource\Apps\MemSpyUI_aif.mif"
+""-"z:\Resource\Apps\MemSpyUI.rsc"
+""-"z:\private\10003a3f\import\apps\MemSpyUI_reg.rsc"
+""-"z:\private\2002129F\MemSpyEComInterfaceIds.xml"
+""-"z:\private\2002129F\MemSpyProcessMemoryTrackingAutoStartConfig.xml"
+""-"z:\sys\bin\memspywindowserverhelper.dll"

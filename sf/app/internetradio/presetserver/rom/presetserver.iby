@@ -1,0 +1,30 @@
+/*
+* Copyright (c) 2007-2007 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Image description file for project PresetServer
+*
+*/
+
+
+#ifndef PRESETSERVER_IBY
+#define PRESETSERVER_IBY
+
+S60_APP_EXE(psserver)
+
+file = ABI_DIR\BUILD_DIR\psclient100.dll            SHARED_LIB_DIR\psclient100.dll
+
+data = ZPRIVATE\10281cb5\backup_registration.xml    PRIVATE\10281cb5\backup_registration.xml
+
+ECOM_PLUGIN(psrfsplugin.dll, 10282bb2.rsc)
+
+#endif // PRESETSERVER_IBY

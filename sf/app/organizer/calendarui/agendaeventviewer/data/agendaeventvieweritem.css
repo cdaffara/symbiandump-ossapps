@@ -1,0 +1,55 @@
+AgendaEventViewerItem {
+	layout: layout-eventvieweritem;
+}
+
+AgendaEventViewerItem:portrait {		
+	fixed-width: var(hb-param-screen-width);
+}
+
+AgendaEventViewerItem:landscape {		
+	fixed-width: var(hb-param-screen-width);
+}
+
+AgendaEventViewerItem::primaryLeftIconItem {
+	fixed-width:var(hb-param-graphic-size-primary-small);
+	fixed-height:var(hb-param-graphic-size-primary-small);
+	top: -var(hb-param-margin-gene-top);
+	left: -var(hb-param-margin-gene-left);		
+}
+
+AgendaEventViewerItem::primaryTextItem {
+	text-height: var(hb-param-text-height-primary);
+    font-variant: primary;
+	text-align: left;
+	top: -var(hb-param-margin-gene-top);
+	right: var(hb-param-margin-gene-middle-horizontal);
+	left: -var(hb-param-margin-gene-middle-horizontal);		
+}
+
+AgendaEventViewerItem::primaryRightIconItem  {
+	fixed-width:var(hb-param-graphic-size-secondary);
+	fixed-height:var(hb-param-graphic-size-secondary);
+	right: var(hb-param-margin-gene-right);
+}
+
+AgendaEventViewerItem::secondaryLeftIconItem  {
+	fixed-width:var(hb-param-graphic-size-primary-small);
+	fixed-height:var(hb-param-graphic-size-primary-small);	
+	left: -var(hb-param-margin-gene-left);	
+}
+
+AgendaEventViewerItem::secondaryTextItem  {
+	text-height: var(hb-param-text-height-secondary);
+	font-variant: secondary;
+	text-align: left;        
+	right: var(hb-param-margin-gene-middle-horizontal);
+	bottom: var(hb-param-margin-gene-bottom);		
+	top: -var(hb-param-margin-gene-middle-vertical);
+	left: -var(hb-param-margin-gene-middle-horizontal);
+}
+
+AgendaEventViewerItem::secondaryRightIconItem  {
+	fixed-width:var(hb-param-graphic-size-secondary);
+	fixed-height:var(hb-param-graphic-size-secondary);
+	right: var(hb-param-margin-gene-right);		
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<service>
+  <name>logs</name>
+  <filepath>No path</filepath>
+  <description>Logs service</description>
+  <interface>
+     <name>com.nokia.symbian.ILogsView</name>
+     <version>1.0</version>
+     <description>Interface to open a view of logs application</description>
+  </interface>
+  <interface>
+     <name>starter</name>
+     <version>1.0</version>
+     <description>Deprecated logs starter interface</description>
+     <customproperty key="deprecatedsn">com.nokia.services.logsservices</customproperty>
+  </interface>
+</service>

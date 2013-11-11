@@ -1,0 +1,69 @@
+/*
+* Copyright (c) 2007-2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+ *
+*/
+
+
+
+TARGET          t_glxresolutionutilitiy.dll
+TARGETTYPE      dll
+UID             0x1000af5a 0x01700000
+
+CAPABILITY              ALL -TCB
+VENDORID                0x00000000
+
+// Sources required by the test suite
+SOURCEPATH              ../t_glxresolutionutilitiy
+SOURCE                  t_glxresolutionutilitiy_DllMain.cpp
+SOURCE                  t_glxresolutionutilitiy.cpp
+
+// Code under test
+SOURCEPATH              ../../src
+SOURCE                  glxresolutionmanager.cpp
+SOURCE                  glxresolutionutility.cpp
+
+
+USERINCLUDE             ../../inc // glxresolutionmanager
+
+SYSTEMINCLUDE           ../../../inc
+SYSTEMINCLUDE           ../../../common/inc
+
+APP_LAYER_SYSTEMINCLUDE
+
+SYSTEMINCLUDE           /epoc32/include/Digia/EUnit
+
+
+LIBRARY                 eunit.lib
+LIBRARY                 eunitutil.lib
+LIBRARY                 euser.lib                       
+LIBRARY                 avkon.lib                       // for AppUi
+LIBRARY                 cone.lib                        // for CCoeEnv
+LIBRARY                 eikcoctl.lib                    // for eikcoctl
+LIBRARY                 glxuiutilities.lib
+LIBRARY                 bafl.lib
+LIBRARY                 efsrv.lib
+LIBRARY                 estor.lib
+LIBRARY                 glxcommon.lib
+
+
+// GLX Libraries
+LIBRARY                 glxlogging.lib                  // for logging
+
+// allow writable static data
+#ifndef WINSCW
+EPOCALLOWDLLDATA
+#endif
+SMPSAFE
+// End of file

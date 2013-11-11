@@ -1,0 +1,34 @@
+/*
+* Copyright (c) 2008 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: 
+*     Contains mailbox specified always online logic
+*
+*/
+
+
+#ifndef IPSSOSAOPLUGIN_HRH
+#define IPSSOSAOPLUGIN_HRH
+
+const TInt KIpsSosAOMaxStateCycles = 50;
+const TInt KIpsSosAOStartDelaySeconds = 60;
+const TInt KIpsSosAOReTryInterval = 60;
+const TInt KIpsSosAOMaxReTryTimes = 3;
+const TInt KIpsSosAOSuspendWatchdogTime = 300;
+const TInt KIpsSosAOContinueWaitTime = 5;
+const TInt KAODefaultInboxSyncTimeSecs = 3600;
+const TInt IpsSosAODefaultGranularity = 2;
+
+
+
+#endif /*IPSSOSAOPLUGIN_HRH*/

@@ -1,0 +1,43 @@
+# Copyright (c) 2002-2009 Nokia Corporation and/or its subsidiary(-ies).
+# All rights reserved.
+# This component and the accompanying materials are made available
+# under the terms of "Eclipse Public License v1.0"
+# which accompanies this distribution, and is available
+# at the URL "http://www.eclipse.org/legal/epl-v10.html".
+#
+# Initial Contributors:
+# Nokia Corporation - initial contribution.
+#
+# Contributors:
+#
+# Description:
+# SIM TSY configuration file for TE_SYNC.
+# Note that WriteContactToICCExceedMaxNameTestL and 
+# WriteContactToICCNumLettersTestL need to be commented out with this config file
+# as there are some defects in the SIM TSY.
+# 
+#
+
+[test0]
+PhBkStore= S7, 200, 99, 235
+PhBkStoreEntry= S7, 1, 07700900000, Name2Local
+PhBkStoreEntry= S7, 2, +447700900012, Name2Internet
+PhBkStoreEntry= S7, 3, 07700901212, Name2
+PhBkStoreEntry= S7, 4, +447700902112, Test2
+PhBkStoreEntry= S7, 5, 07700903412, Test5
+PhBkStoreEntry= S7, 6, +447700935012, Name1
+PhBkStoreEntry= S7, 7, 07700900099, Hello
+PhBkStoreEntry= S7, 8, +447700901299, Someone
+PhBkStoreEntry= S7, 9, 07700903299, Test2 Mobile
+PhBkStoreEntry= S7, 10, +447700967099, Test5 Mobile
+PhBkStoreEntry= S7, 11, 07700934099, Name1 Mobile
+PhBkStoreEntry= S7, 12, +447700934099, Alex
+PhBkStoreEntry= S7, 13, 07700947099, Mr TestA
+PhBkStoreEntry= S7, 14, +447700948099, Mr TestA Mobile
+PhBkStoreEntry= S7, 15, 07700919099, Test1B Brown
+PhBkStoreEntry= S7, 16, +447700901234, Test1B Mobile
+PhBkStoreEntry= S7, 17, 07700911134, Someone else
+PhBkStoreEntry= S7, 20, +447700909874, Friend
+
+PhBkStoreIndividualReqPause= 1
+PhBkStoreBatchReqPause= 1

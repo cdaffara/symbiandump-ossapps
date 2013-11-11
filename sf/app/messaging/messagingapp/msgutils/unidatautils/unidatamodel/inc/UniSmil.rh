@@ -1,0 +1,76 @@
+/*
+* Copyright (c) 2005 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: 
+*     This file contains declarations for resources of smilapi.
+*     The file can be included in C++ or resource file.
+*     
+*
+*/
+
+
+#ifndef __UNISMIL_RH
+#define __UNISMIL_RH
+
+#include "UniSmil.hrh"
+
+//----------------------------------------------------  
+//    COMPOSE_PARAMS
+//    Parameters to define how to do composing
+//
+//----------------------------------------------------
+//
+STRUCT COMPOSE_PARAMS
+{
+    WORD    r_root_layout_compose   = ESmilNoRootLayout;
+    WORD    r_display_width         = 0;
+    WORD    r_display_height        = 0;
+    WORD    r_compose_xmlns         = 0;
+    WORD    r_top_padding           = 0;
+    WORD    r_region_padding        = 0;
+    WORD    r_bottom_padding        = 0;
+}
+
+//----------------------------------------------------  
+//    REGION
+//    Values for composing
+//
+//----------------------------------------------------
+//
+STRUCT REGION
+   {
+   LTEXT        r_id            =   "";
+   LTEXT        r_fit           =   "";
+   WORD         r_max_height    =   0;
+   WORD         r_min_height    =   0;
+   WORD         r_max_width     =   0;
+   WORD         r_min_width     =   0;
+   WORD         r_top           =   0;
+   WORD         r_left          =   0;
+   }
+
+//----------------------------------------------------
+//    SLIDE
+//    Values for composing
+//
+//----------------------------------------------------
+//
+STRUCT SLIDE    
+   {
+   WORD r_default_duration_milliseconds =   0; 
+   WORD r_default_when_audio_milliseconds   =   0; 
+   }
+
+#endif // __UNISMIL_RH
+
+// End of File

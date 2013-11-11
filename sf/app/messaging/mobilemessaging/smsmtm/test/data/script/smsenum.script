@@ -1,0 +1,175 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+[All]
+Defaults= defaults.script
+Type= Deliver
+
+[Message]
+Message= Hello From Script, Encoding 7
+
+[Message]
+Message= Hello From Script, 2 Recipients, Encoding 7
+Recipients= Default|Default
+
+[Message]
+Message= Hello From Script, Submit Type, 2 Recipients, Encoding 7
+Recipients= +919849446750|+9886269510
+Type= Submit
+
+[Message]
+Message= This is a 200 char mesge
+This is a 200 char mesge
+This is a 200 char mesge
+This is a 200 char mesge
+This is a 200 char mesge
+This is a 200 char mesge
+This is a 200 char mesge
+This is a 200 char mesge
+Encoding= 7
+
+[Message]
+Message= Hello From Script, Encoding 8
+Encoding= 8
+
+[Message]
+Message= This is a 200 8bit mesge
+This is a 200 8bit mesge
+This is a 200 8bit mesge
+This is a 200 8bit mesge
+This is a 200 8bit mesge
+This is a 200 8bit mesge
+This is a 200 8bit mesge
+This is a 200 8bit mesge
+Encoding= 8
+
+[test0]
+DiallingPauseDuration= 3
+ConnectingPauseDuration= 1
+DisconnectingPauseDuration= 5
+AnswerIncomingPauseDuration= 5
+
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+
+# SmsTx = <pdu>, <sca>, <MsgRef>, <SubmitReportPdu>, <ExpectedError>
+
+[test1]
+DiallingPauseDuration= 3
+ConnectingPauseDuration= 1
+DisconnectingPauseDuration= 5
+AnswerIncomingPauseDuration= 5
+
+SmsTx= 00, 0, 0, 00, 0
+SmsTx= 00, 0, 0, 00, 0
+
+# SmsTx = <pdu>, <sca>, <MsgRef>, <SubmitReportPdu>, <ExpectedError>
+
+endscript

@@ -1,0 +1,38 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:  
+;
+; Language
+
+&EN
+
+; SIS header: name, uid, version
+#{"logscenrepeditor"},(0xE8316BDD),1,0,0
+
+; List of localised vendor names
+%{"Vendor-EN"}
+
+; The non-localised, globally unique vendor name (mandatory)
+:"Nokia OY"
+;Supports Series 60 v 3.x
+;This line indicates that this installation is for the Series 60 platform v3.x
+;This line must appear _exactly_ as shown below in the sis file
+;If this line is missing or incorrect, the sis file will not be able
+;to be installed on Series 60 v3.x platforms
+(0x101F7961), 0, 0, 0, {"Series60ProductID"}
+
+; Executable and default resource files
+"\epoc32\release\armv5\urel\logscenrepeditor.exe"    - "!:\sys\bin\logscenrepeditor.exe"
+"\epoc32\data\z\resource\apps\logscenrepeditor.rsc"    - "!:\resource\apps\logscenrepeditor.rsc"
+"\epoc32\data\z\private\10003a3f\import\apps\logscenrepeditor_reg.rsc"    - "!:\private\10003a3f\import\apps\logscenrepeditor_reg.rsc"

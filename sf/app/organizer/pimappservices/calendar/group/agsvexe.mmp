@@ -1,0 +1,59 @@
+// Copyright (c) 2006-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// agsvexe.exe Agenda server (no external interfaces)
+// 
+//
+
+// Include Calendar logging, if enabled
+#include "callogging.mmh"
+
+target          agsvexe.exe
+targettype      exe
+
+CAPABILITY   readuserdata  writeuserdata writeDeviceData protserv 
+
+UID	0x1000008C 0X10003A5B
+VENDORID 0x70000001
+
+userinclude	../server/inc ../shared/inc ../client/inc ../inc
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+
+sourcepath	../server/src
+
+source agsalarm.cpp agsasyncdelete.cpp 
+source agsentrymodel.cpp agsentrymanager.cpp 
+source agsstreamidset.cpp agsuidindex.cpp 
+source agsextractor.cpp agsiterator.cpp
+source agsindex.cpp agsindexbase.cpp agsindexiterator.cpp agsindexkey.cpp 
+source agsver.cpp agssort.cpp agssortinstance.cpp agsfileconverter.cpp
+source agscategoryindex.cpp agscategorylist.cpp
+source agsattachmentindex.cpp
+source agsvexe.cpp agsmain.cpp agspermanentdata.cpp
+source agsfilemanager.cpp agssess.cpp agsfilesearch.cpp 
+source agsbackuprestoreagent.cpp agstzruleindex.cpp
+source agsinstanceiterator.cpp agsinstancesorter.cpp
+#ifdef SYMBIAN_SYSTEM_STATE_MANAGEMENT
+source agssystemstateobserver.cpp
+#endif
+
+
+library  euser.lib estor.lib efsrv.lib tzclient.lib apparc.lib etext.lib
+library  agnmodel.lib alarmclient.lib alarmshared.lib bafl.lib centralrepository.lib
+#ifdef SYMBIAN_SYSTEM_STATE_MANAGEMENT
+library  ssmcmn.lib
+#endif
+
+SMPSAFE
+
+

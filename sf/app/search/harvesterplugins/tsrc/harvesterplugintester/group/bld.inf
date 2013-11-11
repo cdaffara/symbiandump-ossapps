@@ -1,0 +1,87 @@
+/*
+* Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+* 
+* Description:
+*
+*/
+
+PRJ_PLATFORMS
+// specify the platforms your component needs to be built for here
+// defaults to WINS MARM so you can ignore this if you just build these
+	
+	DEFAULT
+
+PRJ_TESTEXPORTS
+// NOTE: If using ARS requirements all export operations should be done under this.
+// 'abld test export'
+../conf/harvesterplugintester.cfg /epoc32/winscw/c/TestFramework/harvesterplugintester.cfg
+../conf/testframework.ini /epoc32/winscw/c/TestFramework/testframework.ini
+../conf/notestest.txt              /epoc32/winscw/c/TestFramework/notestest.txt
+../conf/notesalphanumerictest.txt  /epoc32/winscw/c/TestFramework/notesalphanumerictest.txt
+../conf/noteslongtest.txt          /epoc32/winscw/c/TestFramework/noteslongtest.txt
+../conf/testattachment.txt         /epoc32/winscw/c/TestFramework/testattachment.txt
+../conf/testfile.txt				/epoc32/winscw/c/data/testfile.txt
+../conf/eagle_landed.mp3           /epoc32/winscw/c/data/eagle_landed.mp3
+../conf/niagara.wmv           	  /epoc32/winscw/c/data/niagara.wmv
+../conf/square.jpg           	  /epoc32/winscw/c/data/square.jpg
+../data/cpixmediatest/audio1.mp3  /epoc32/winscw/c/data/cpixmediatest/audio1.mp3
+../data/cpixmediatest/song.wma    /epoc32/winscw/c/data/cpixmediatest/song.wma
+../data/cpixmediatest/kodak-dc210.jpg  /epoc32/winscw/c/data/cpixmediatest/kodak-dc210.jpg
+../data/cpixmediatest/nokia_logo.png  /epoc32/winscw/c/data/cpixmediatest/nokia_logo.png
+../data/cpixmediatest/3GPP-70kB.3gpp  /epoc32/winscw/c/data/cpixmediatest/3GPP-70kB.3gpp 
+
+//Note: Export for ROM build 
+../conf/testframework.ini         z:/system/data/testframework.ini
+../conf/harvesterplugintester.cfg z:/ids/harvesterplugintester.cfg
+../conf/notestest.txt             z:/ids/notestest.txt
+../conf/notesalphanumerictest.txt z:/ids/notesalphanumerictest.txt
+../conf/noteslongtest.txt         z:/ids/noteslongtest.txt
+../conf/testattachment.txt        z:/ids/testattachment.txt
+../conf/testfile.txt        	  z:/ids/testfile.txt
+../conf/eagle_landed.mp3          z:/ids/eagle_landed.mp3
+../conf/niagara.wmv           	  z:/ids/niagara.wmv
+
+PRJ_EXPORTS
+// Specify the source file followed by its destination here
+// copy will be used to copy the source file to its destination
+// If there's no destination then the source file will be copied
+// to the same name in /epoc32/include
+// Example: 
+/*
+/agnmodel/inc/AGMCOMON.H
+*/
+//../conf/HarvesterPluginTester.cfg /epoc32/winscw/c/TestFramework/HarvesterPluginTester.cfg
+
+PRJ_TESTMMPFILES
+../src/capsmod_exe/group/capsmod_exe.mmp
+harvesterplugintester.mmp
+
+PRJ_MMPFILES
+
+//	HarvesterPluginTester_nrm.mmp
+
+// Specify the .mmp files required for building the important component
+// releasables.
+//
+// Specify "tidy" if the component you need to build doesn't need to be
+// released. Specify "ignore" if the MMP file exists but should be
+// ignored.
+// Example:
+/*
+/agnmodel/group/agnmodel.mmp
+#if defined(MARM)
+/agnmodel/group/agsvexe.mmp
+#endif
+*/
+
+//  End of File

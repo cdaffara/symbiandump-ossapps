@@ -1,0 +1,55 @@
+/*
+* Copyright (c) 2002 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   This is project specification file for the CalenImp.
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+//Activate this macro to get traces
+//MACRO           TRACE_ENTRY_EXIT_POINT
+//MACRO           TRACE_ENTRY_CALENIMP
+
+//Macros to save the iCal/vCal to file
+//MACRO           TRACE_TO_FILE_IMPORT
+//MACRO           TRACE_TO_FILE_EXPORT
+
+
+TARGET          calenimp.dll
+TARGETTYPE      dll
+UID             0x1000008C 0x100059A9
+
+USERINCLUDE     ../inc
+USERINCLUDE     ../../inc
+
+//System include macro
+APP_LAYER_SYSTEMINCLUDE
+
+SOURCEPATH      ../src
+SOURCE          CalenImporter.cpp
+SOURCE          CalenExporter.cpp
+
+LIBRARY         agnmodel.lib
+LIBRARY         efsrv.lib
+LIBRARY         estor.lib
+LIBRARY         euser.lib
+LIBRARY         featmgr.lib
+LIBRARY         sysutil.lib
+LIBRARY         calinterimapi.lib 
+LIBRARY         ecom.lib
+
+CAPABILITY CAP_GENERAL_DLL
+
+// End of File

@@ -1,0 +1,40 @@
+CntContactCardDetailItem{
+    layout:customLayout;
+}
+
+CntContactCardDetailItem::icon{
+    fixed-width:var(hb-param-graphic-size-primary-large);
+		fixed-height:var(hb-param-graphic-size-primary-large);
+}
+
+CntContactCardDetailItem::secondaryIcon{
+    fixed-width:var(hb-param-graphic-size-secondary);
+    fixed-height:var(hb-param-graphic-size-secondary);
+}
+
+
+CntContactCardDetailItem::text{
+    text-height:var(hb-param-text-height-primary);
+    font-variant:primary;
+    text-align:left;
+}
+
+CntContactCardDetailItem::valueText{
+    text-height:var(hb-param-text-height-secondary);
+    font-variant:secondary;
+    text-align:left;
+}
+
+CntContactCardDetailItem::background{
+    left:0.0un;
+    right:0.0un;
+    top:0.0un;
+    bottom:0.0un;
+}
+
+CntContactCardDetailItem::highlight{
+    left: 0.0un;
+    right: 0.0un;
+    top: 0.0un;
+    bottom: 0.0un;
+}

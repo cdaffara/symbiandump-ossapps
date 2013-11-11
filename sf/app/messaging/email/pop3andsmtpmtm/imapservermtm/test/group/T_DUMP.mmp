@@ -1,0 +1,39 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+TARGET        T_DUMP.EXE
+TARGETTYPE    exe
+
+CAPABILITY All -TCB
+SOURCEPATH	..\src
+SOURCE        T_DUMP.CPP T_LOG.CPP
+USERINCLUDE   ..\inc
+USERINCLUDE   ..\..\inc
+USERINCLUDE		../../../../../../../mw/messagingmw/messagingfw/msgsrvnstore/server/inc
+USERINCLUDE		../../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/base/inc
+USERINCLUDE		../../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/email/inc
+USERINCLUDE		../../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/server/inc
+USERINCLUDE		../../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/sms/inc
+USERINCLUDE		../../../../../../../mw/messagingmw/messagingfw/msgtest/tools/spoofserver/inc
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+OS_LAYER_ESTLIB_SYSTEMINCLUDE  
+
+LIBRARY       euser.lib etext.lib efsrv.lib imcm.lib msgs.lib
+
+VENDORID 0x70000001
+
+SMPSAFE

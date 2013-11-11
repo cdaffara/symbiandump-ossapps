@@ -1,0 +1,28 @@
+EXPORTS
+	?setAvatarPath@LogsCntEntry@@QAEXABVQString@@@Z @ 1 NONAME ; void LogsCntEntry::setAvatarPath(class QString const &)
+	?getEntry@LogsCntFinder@@QBEPAVLogsCntEntry@@ABVQObject@@@Z @ 2 NONAME ; class LogsCntEntry * LogsCntFinder::getEntry(class QObject const &) const
+	?deleteEntry@LogsCntFinder@@QAEXABVQObject@@@Z @ 3 NONAME ; void LogsCntFinder::deleteEntry(class QObject const &)
+	?contactId@LogsCntEntry@@QBEIXZ @ 4 NONAME ; unsigned int LogsCntEntry::contactId(void) const
+	?setFirstName@LogsCntEntry@@QAEXABVQString@@@Z @ 5 NONAME ; void LogsCntEntry::setFirstName(class QString const &)
+	??0LogsCntEntry@@QAE@AAVQObject@@I@Z @ 6 NONAME ; LogsCntEntry::LogsCntEntry(class QObject &, unsigned int)
+	?speedDial@LogsCntEntry@@QBEABVQString@@XZ @ 7 NONAME ; class QString const & LogsCntEntry::speedDial(void) const
+	??0LogsCntFinder@@QAE@AAVQContactManager@QtMobility@@_N@Z @ 8 NONAME ; LogsCntFinder::LogsCntFinder(class QtMobility::QContactManager &, bool)
+	?predictiveSearchQuery@LogsCntFinder@@QAEXABVQString@@@Z @ 9 NONAME ; void LogsCntFinder::predictiveSearchQuery(class QString const &)
+	?avatarPath@LogsCntEntry@@QBEABVQString@@XZ @ 10 NONAME ; class QString const & LogsCntEntry::avatarPath(void) const
+	?richText@LogsCntText@@QBE?AVQString@@V2@0@Z @ 11 NONAME ; class QString LogsCntText::richText(class QString, class QString) const
+	?setPreferDefaultNumber@LogsCntFinder@@QAEX_N@Z @ 12 NONAME ; void LogsCntFinder::setPreferDefaultNumber(bool)
+	?preferDefaultNumber@LogsCntFinder@@QBE_NXZ @ 13 NONAME ; bool LogsCntFinder::preferDefaultNumber(void) const
+	?setLastName@LogsCntEntry@@QAEXABVQString@@@Z @ 14 NONAME ; void LogsCntEntry::setLastName(class QString const &)
+	?insertEntry@LogsCntFinder@@QAEXHPAVLogsCntEntry@@@Z @ 15 NONAME ; void LogsCntFinder::insertEntry(int, class LogsCntEntry *)
+	?resultsCount@LogsCntFinder@@QBEHXZ @ 16 NONAME ; int LogsCntFinder::resultsCount(void) const
+	?phoneNumber@LogsCntEntry@@QBEABVLogsCntText@@XZ @ 17 NONAME ; class LogsCntText const & LogsCntEntry::phoneNumber(void) const
+	?type@LogsCntEntry@@QBE?AW4EntryType@1@XZ @ 18 NONAME ; enum LogsCntEntry::EntryType LogsCntEntry::type(void) const
+	??0LogsCntFinder@@QAE@_N@Z @ 19 NONAME ; LogsCntFinder::LogsCntFinder(bool)
+	?resultAt@LogsCntFinder@@QAEABVLogsCntEntry@@H@Z @ 20 NONAME ; class LogsCntEntry const & LogsCntFinder::resultAt(int)
+	?lastName@LogsCntEntry@@QBEABV?$QList@VLogsCntText@@@@XZ @ 21 NONAME ; class QList<class LogsCntText> const & LogsCntEntry::lastName(void) const
+	?handle@LogsCntEntry@@QBEPAVQObject@@XZ @ 22 NONAME ; class QObject * LogsCntEntry::handle(void) const
+	?firstName@LogsCntEntry@@QBEABV?$QList@VLogsCntText@@@@XZ @ 23 NONAME ; class QList<class LogsCntText> const & LogsCntEntry::firstName(void) const
+	??1LogsCntFinder@@UAE@XZ @ 24 NONAME ; LogsCntFinder::~LogsCntFinder(void)
+	?setPhoneNumber@LogsCntEntry@@QAEXABVQString@@@Z @ 25 NONAME ; void LogsCntEntry::setPhoneNumber(class QString const &)
+	?resetResults@LogsCntFinder@@QAEXXZ @ 26 NONAME ; void LogsCntFinder::resetResults(void)
+

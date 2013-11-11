@@ -1,0 +1,79 @@
+// Copyright (c) 2004-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// bld.inf
+//
+
+#include <platform_paths.hrh>
+PRJ_EXPORTS
+
+../inc/MIUTHDR.H 	SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(miuthdr.h)
+../inc/MIUTHDR.INL 	SYMBIAN_APP_LAYER_PLATFORM_EXPORT_PATH(miuthdr.inl)
+../inc/MIUTSET.H 	SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(miutset.h)
+../inc/MIUTPARS.H 	SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(miutpars.h)
+../inc/POP3SET.H 	SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(pop3set.h)
+../inc/POP3CMDS.H 	SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(pop3cmds.h)
+../inc/SMTPSET.H 	SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(smtpset.h)
+../inc/SMTPCMDS.H 	SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(smtpcmds.h)
+../inc/IMAPSET.H 	SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(imapset.h)
+../inc/IMAPCMDS.H 	SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(imapcmds.h)
+../inc/MIUTATCH.H 	SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(miutatch.h)
+../inc/MIUTLOG.H SYMBIAN_APP_LAYER_PLATFORM_EXPORT_PATH(miutlog.h)
+../inc/MIUT_ERR.H SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(miut_err.h)
+../inc/OFFOP.H SYMBIAN_APP_LAYER_PLATFORM_EXPORT_PATH(offop.h)
+../inc/OFFOP.INL SYMBIAN_APP_LAYER_PLATFORM_EXPORT_PATH(offop.inl)
+../inc/MIUTMSG.H SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(miutmsg.h)
+../inc/MIUTDEF.H SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(miutdef.h)
+../inc/MIUTSTD.HRH /epoc32/include/miutstd.hrh
+../inc/MIUTCONV.H SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(miutconv.h)
+../inc/IMCMMAIN.H SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(imcmmain.h)
+../inc/POPCMTM.H SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(popcmtm.h)
+../inc/SMTCMTM.H SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(smtcmtm.h)
+../inc/CACHEMAN.H SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(cacheman.h)
+../inc/IMPCMTM.H SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(impcmtm.h)
+../inc/ImapConnectionObserver.H SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(imapconnectionobserver.h)
+../inc/ImapConnectCompletionStates.H SYMBIAN_APP_LAYER_PLATFORM_EXPORT_PATH(imapconnectcompletionstates.h)
+../inc/IMCMUTIL.H SYMBIAN_APP_LAYER_PLATFORM_EXPORT_PATH(imcmutil.h)
+../inc/IAPPrefs.h SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(iapprefs.h)
+../inc/CIMPLAINBODYTEXT.H SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(cimplainbodytext.h)
+../inc/CImAttachmentWaiter.h SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(cimattachmentwaiter.h) 
+../inc/cemailaccounts.h SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(cemailaccounts.h)
+../inc/cimapsyncdownloadrules.h SYMBIAN_APP_LAYER_PLATFORM_EXPORT_PATH(cimapsyncdownloadrules.h)
+../inc/cimaptransportbuffersizes.h SYMBIAN_APP_LAYER_PLATFORM_EXPORT_PATH(cimaptransportbuffersizes.h)
+../inc/cimsmtpmobilitysettings.h SYMBIAN_APP_LAYER_PLATFORM_EXPORT_PATH(cimsmtpmobilitysettings.h)
+../inc/cimprunemessage.h SYMBIAN_APP_LAYER_PLATFORM_EXPORT_PATH(cimprunemessage.h)
+../inc/miut_errconsts.h SYMBIAN_APP_LAYER_PLATFORM_EXPORT_PATH(miut_errconsts.h)
+../inc/timrfc822datefield.h SYMBIAN_APP_LAYER_PLATFORM_EXPORT_PATH(timrfc822datefield.h)
+../inc/cimconvertcharconv.h SYMBIAN_APP_LAYER_PLATFORM_EXPORT_PATH(cimconvertcharconv.h)
+#ifndef SYMBIAN_ENABLE_SPLIT_HEADERS
+#ifdef SYMBIAN_OLD_EXPORT_LOCATION
+../inc/cimmessagepart.h /epoc32/include/cimmessagepart.h
+#endif
+#ifdef SYMBIAN_OLD_EXPORT_LOCATION
+../inc/cimfinder.h /epoc32/include/cimfinder.h
+#endif
+#endif
+
+
+//IBY exports
+../rom/gtemailmtmResources.iby  LANGUAGE_OS_LAYER_IBY_EXPORT_PATH(gtemailmtmResources.iby)
+../rom/gtemailmtm.hby  CORE_OS_LAYER_IBY_EXPORT_PATH(gtemailmtm.hby)
+
+// export localised loc file
+../loc/imcm.loc  OS_LAYER_LOC_EXPORT_PATH(imcm.loc)
+../loc/imcm_default_charset.loc  OS_LAYER_LOC_EXPORT_PATH(imcm_default_charset.loc)
+PRJ_MMPFILES
+
+IMCM.mmp
+
+#include "../test/group/bld.inf"

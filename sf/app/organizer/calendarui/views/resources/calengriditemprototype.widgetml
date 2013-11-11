@@ -1,0 +1,15 @@
+<hbwidget type="gridviewitem" version="0.1">
+  <layout name="calendarCustomGridItem" type="mesh">
+     <meshitem src="monthDayInfoTextItem" srcEdge="CENTERV" dst="" dstEdge="CENTERV" />
+     <meshitem src="monthDayInfoTextItem" srcEdge="CENTERH" dst="" dstEdge="CENTERH" />
+     <meshitem src="eventIconItem" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+     <meshitem src="eventIconItem" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+     <meshitem src="todayIndicatorItem" srcEdge="TOP" dst="monthDayInfoTextItem" dstEdge="BOTTOM" />
+     <meshitem src="todayIndicatorItem" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+     <meshitem src="todayIndicatorItem" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+     <meshitem src="focusIconItem" srcEdge="TOP" dst="" dstEdge="TOP" />
+     <meshitem src="focusIconItem" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+     <meshitem src="focusIconItem" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+     <meshitem src="focusIconItem" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+  </layout>
+</hbwidget>

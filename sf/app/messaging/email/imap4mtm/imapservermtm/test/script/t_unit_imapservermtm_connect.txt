@@ -1,0 +1,12 @@
+<< * OK Microsoft Exchange Server 2003 IMAP4rev1 server version 6.5.6944.0 (ban-cn-exchng01.msexchange01.closedtest.intra) ready.
+>> 1 CAPABILITY
+<< * CAPABILITY IIMAP4 IMAP4rev1 IDLE LOGIN-REFERRALS MAILBOX-REFERRALS NAMESPACE LITERAL+ UIDPLUS CHILDREN AUTH=NTLM
+<< 1 OK CAPABILITY completed.
+>> 2 LOGIN prakash prakash
+<< 2 OK LOGIN completed.
+>> 3 LIST "" ""
+<< * LIST (\Noselect) "/" ""
+<< 3 OK LIST completed.
+>> 4 LOGOUT
+<< * BYE Microsoft Exchange 2000 IMAP4rev1 server version 6.0.6249.0 signing off.
+<< 4 OK LOGOUT completed.

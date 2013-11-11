@@ -1,0 +1,94 @@
+// Copyright (c) 2006-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+
+PRJ_TESTMMPFILES
+t_unit_imapservermtm_server.mmp manual
+
+PRJ_TESTEXPORTS
+// TEFUnit Scripts
+../script/t_unit_imapservermtm.script					/epoc32/winscw/c/msgtest/scripts/imapunit/t_unit_imapservermtm.script
+../script/t_unit_imapservermtm_busy.script				/epoc32/winscw/c/msgtest/scripts/imapunit/t_unit_imapservermtm_busy.script
+../script/t_unit_imapservermtm_cancelbackgsync.script	/epoc32/winscw/c/msgtest/scripts/imapunit/t_unit_imapservermtm_cancelbackgsync.script
+../script/t_unit_imapservermtm_cancelofflineop.script	/epoc32/winscw/c/msgtest/scripts/imapunit/t_unit_imapservermtm_cancelofflineop.script
+../script/t_unit_imapservermtm_change.script			/epoc32/winscw/c/msgtest/scripts/imapunit/t_unit_imapservermtm_change.script
+../script/t_unit_imapservermtm_connect.script			/epoc32/winscw/c/msgtest/scripts/imapunit/t_unit_imapservermtm_connect.script
+../script/t_unit_imapservermtm_connectandsync.script	/epoc32/winscw/c/msgtest/scripts/imapunit/t_unit_imapservermtm_connectandsync.script
+../script/t_unit_imapservermtm_copyfromlocal.script		/epoc32/winscw/c/msgtest/scripts/imapunit/t_unit_imapservermtm_copyfromlocal.script
+../script/t_unit_imapservermtm_copytolocal.script		/epoc32/winscw/c/msgtest/scripts/imapunit/t_unit_imapservermtm_copytolocal.script
+../script/t_unit_imapservermtm_copywithinservice.script	/epoc32/winscw/c/msgtest/scripts/imapunit/t_unit_imapservermtm_copywithinservice.script
+../script/t_unit_imapservermtm_create.script			/epoc32/winscw/c/msgtest/scripts/imapunit/t_unit_imapservermtm_create.script
+../script/t_unit_imapservermtm_deleteall.script			/epoc32/winscw/c/msgtest/scripts/imapunit/t_unit_imapservermtm_deleteall.script
+../script/t_unit_imapservermtm_disconnect.script		/epoc32/winscw/c/msgtest/scripts/imapunit/t_unit_imapservermtm_disconnect.script
+../script/t_unit_imapservermtm_folderfullsync.script	/epoc32/winscw/c/msgtest/scripts/imapunit/t_unit_imapservermtm_folderfullsync.script
+../script/t_unit_imapservermtm_fullsync.script			/epoc32/winscw/c/msgtest/scripts/imapunit/t_unit_imapservermtm_fullsync.script
+../script/t_unit_imapservermtm_inboxnewsync.script		/epoc32/winscw/c/msgtest/scripts/imapunit/t_unit_imapservermtm_inboxnewsync.script
+../script/t_unit_imapservermtm_isconnected.script		/epoc32/winscw/c/msgtest/scripts/imapunit/t_unit_imapservermtm_isconnected.script
+../script/t_unit_imapservermtm_localsubscribe.script	/epoc32/winscw/c/msgtest/scripts/imapunit/t_unit_imapservermtm_localsubscribe.script
+../script/t_unit_imapservermtm_localunsubscribe.script	/epoc32/winscw/c/msgtest/scripts/imapunit/t_unit_imapservermtm_localunsubscribe.script
+../script/t_unit_imapservermtm_movefromlocal.script		/epoc32/winscw/c/msgtest/scripts/imapunit/t_unit_imapservermtm_movefromlocal.script
+../script/t_unit_imapservermtm_movetolocal.script		/epoc32/winscw/c/msgtest/scripts/imapunit/t_unit_imapservermtm_movetolocal.script
+../script/t_unit_imapservermtm_movewithinservice.script	/epoc32/winscw/c/msgtest/scripts/imapunit/t_unit_imapservermtm_movewithinservice.script
+../script/t_unit_imapservermtm_populate.script			/epoc32/winscw/c/msgtest/scripts/imapunit/t_unit_imapservermtm_populate.script
+../script/t_unit_imapservermtm_renamefolder.script		/epoc32/winscw/c/msgtest/scripts/imapunit/t_unit_imapservermtm_renamefolder.script
+../script/t_unit_imapservermtm_select.script			/epoc32/winscw/c/msgtest/scripts/imapunit/t_unit_imapservermtm_select.script
+../script/t_unit_imapservermtm_synchronise.script		/epoc32/winscw/c/msgtest/scripts/imapunit/t_unit_imapservermtm_synchronise.script
+../script/t_unit_imapservermtm_synctree.script			/epoc32/winscw/c/msgtest/scripts/imapunit/t_unit_imapservermtm_synctree.script
+../script/t_unit_imapservermtm_undeleteall.script		/epoc32/winscw/c/msgtest/scripts/imapunit/t_unit_imapservermtm_undeleteall.script
+../script/t_unit_imapservermtm_unsupportedcmds.script	/epoc32/winscw/c/msgtest/scripts/imapunit/t_unit_imapservermtm_unsupportedcmds.script
+../script/t_unit_imapservermtm_waitforbackg.script		/epoc32/winscw/c/msgtest/scripts/imapunit/t_unit_imapservermtm_waitforbackg.script
+../script/t_unit_imapservermtm.ini						/epoc32/winscw/c/msgtest/scripts/imapunit/t_unit_imapservermtm.ini
+
+// Spoofserver Scripts
+../script/t_unit_imapservermtm_connect.txt	/epoc32/winscw/c/msgtest/scripts/imapunit/t_unit_imapservermtm_connect.txt
+../script/t_unit_imapservermtm_connect_when_connected.txt	/epoc32/winscw/c/msgtest/scripts/imapunit/t_unit_imapservermtm_connect_when_connected.txt
+../script/t_unit_imapservermtm_connect_with_bad_login.txt	/epoc32/winscw/c/msgtest/scripts/imapunit/t_unit_imapservermtm_connect_with_bad_login.txt
+../script/t_unit_imapservermtm_connect_with_bad_password.txt	/epoc32/winscw/c/msgtest/scripts/imapunit/t_unit_imapservermtm_connect_with_bad_password.txt
+../script/t_unit_imapservermtm_connect_and_sync_no_email.txt /epoc32/winscw/c/msgtest/scripts/imapunit/t_unit_imapservermtm_connect_and_sync_no_email.txt
+../script/t_unit_imapservermtm_connect_and_sync_with_bad_login.txt /epoc32/winscw/c/msgtest/scripts/imapunit/t_unit_imapservermtm_connect_and_sync_with_bad_login.txt
+../script/t_unit_imapservermtm_connect_and_sync_with_bad_password.txt /epoc32/winscw/c/msgtest/scripts/imapunit/t_unit_imapservermtm_connect_and_sync_with_bad_password.txt
+../script/t_unit_imapservermtm_disconnect.txt /epoc32/winscw/c/msgtest/scripts/imapunit/t_unit_imapservermtm_disconnect.txt
+../script/t_unit_imapservermtm_inbox_new_sync_no_email_script.txt	/epoc32/winscw/c/msgtest/scripts/imapunit/t_unit_imapservermtm_inbox_new_sync_no_email_script.txt
+../script/t_unit_imapservermtm_inbox_new_sync_with_one_email_script.txt	/epoc32/winscw/c/msgtest/scripts/imapunit/t_unit_imapservermtm_inbox_new_sync_with_one_email_script.txt	
+../script/t_unit_imapservermtm_inbox_new_sync_with_ten_emails_script.txt	/epoc32/winscw/c/msgtest/scripts/imapunit/t_unit_imapservermtm_inbox_new_sync_with_ten_emails_script.txt
+../script/t_unit_imapservermtm_is_connected.txt /epoc32/winscw/c/msgtest/scripts/imapunit/t_unit_imapservermtm_is_connected.txt
+../script/t_unit_imapservermtm_not_busy.txt /epoc32/winscw/c/msgtest/scripts/imapunit/t_unit_imapservermtm_not_busy.txt
+../script/t_unit_imapservermtm_synchronise_with_inbox_selected_script.txt	/epoc32/winscw/c/msgtest/scripts/imapunit/t_unit_imapservermtm_synchronise_with_inbox_selected_script.txt
+
+//../script/t_unit_imapservermtm_cancelbackgsync.txt /epoc32/winscw/c/msgtest/Scripts/ImapUnit/t_unit_imapservermtm_cancelbackgsync.txt
+//../script/t_unit_imapservermtm_batchoperation.txt /epoc32/winscw/c/msgtest/Scripts/ImapUnit/t_unit_imapservermtm_batchoperation.txt
+//../script/t_unit_imapservermtm_busy.txt /epoc32/winscw/c/msgtest/Scripts/ImapUnit/t_unit_imapservermtm_busy.txt
+//../script/t_unit_imapservermtm_select.txt /epoc32/winscw/c/msgtest/Scripts/ImapUnit/t_unit_imapservermtm_select.txt
+//../script/t_unit_imapservermtm_synchronise.txt /epoc32/winscw/c/msgtest/Scripts/ImapUnit/t_unit_imapservermtm_synchronise.txt
+//../script/t_unit_imapservermtm_synctree.txt /epoc32/winscw/c/msgtest/Scripts/ImapUnit/t_unit_imapservermtm_synctree.txt
+//../script/t_unit_imapservermtm_fullsync.txt /epoc32/winscw/c/msgtest/Scripts/ImapUnit/t_unit_imapservermtm_fullsync.txt
+//../script/t_unit_imapservermtm_localsubscribe.txt /epoc32/winscw/c/msgtest/Scripts/ImapUnit/t_unit_imapservermtm_localsubscribe.txt
+//../script/t_unit_imapservermtm_localunsubscribe.txt /epoc32/winscw/c/msgtest/Scripts/ImapUnit/t_unit_imapservermtm_localunsubscribe.txt
+//../script/t_unit_imapservermtm_folderfullsync.txt /epoc32/winscw/c/msgtest/Scripts/ImapUnit/t_unit_imapservermtm_folderfullsync.txt
+//../script/t_unit_imapservermtm_waitforbackg.txt /epoc32/winscw/c/msgtest/Scripts/ImapUnit/t_unit_imapservermtm_waitforbackg.txt
+//../script/t_unit_imapservermtm_renamefolder.txt /epoc32/winscw/c/msgtest/Scripts/ImapUnit/t_unit_imapservermtm_renamefolder.txt
+//../script/t_unit_imapservermtm_undeleteall.txt /epoc32/winscw/c/msgtest/Scripts/ImapUnit/t_unit_imapservermtm_undeleteall.txt
+//../script/t_unit_imapservermtm_cancelofflineop.txt /epoc32/winscw/c/msgtest/Scripts/ImapUnit/t_unit_imapservermtm_cancelofflineop.txt
+//../script/t_unit_imapservermtm_populate.txt /epoc32/winscw/c/msgtest/Scripts/ImapUnit/t_unit_imapservermtm_populate.txt
+//../script/t_unit_imapservermtm_unsupportedcmds.txt /epoc32/winscw/c/msgtest/Scripts/ImapUnit/t_unit_imapservermtm_unsupportedcmds.txt
+//../script/t_unit_imapservermtm_copytolocal.txt /epoc32/winscw/c/msgtest/Scripts/ImapUnit/t_unit_imapservermtm_copytolocal.txt
+//../script/t_unit_imapservermtm_copyfromlocal.txt /epoc32/winscw/c/msgtest/Scripts/ImapUnit/t_unit_imapservermtm_copyfromlocal.txt
+//../script/t_unit_imapservermtm_copywithinservice.txt /epoc32/winscw/c/msgtest/Scripts/ImapUnit/t_unit_imapservermtm_copywithinservice.txt
+//../script/t_unit_imapservermtm_movetolocal.txt /epoc32/winscw/c/msgtest/Scripts/ImapUnit/t_unit_imapservermtm_movetolocal.txt
+//../script/t_unit_imapservermtm_movefromlocal.txt /epoc32/winscw/c/msgtest/Scripts/ImapUnit/t_unit_imapservermtm_movefromlocal.txt
+//../script/t_unit_imapservermtm_movewithinservice.txt /epoc32/winscw/c/msgtest/Scripts/ImapUnit/t_unit_imapservermtm_movewithinservice.txt
+//../script/t_unit_imapservermtm_deleteall.txt /epoc32/winscw/c/msgtest/Scripts/ImapUnit/t_unit_imapservermtm_deleteall.txt
+//../script/t_unit_imapservermtm_create.txt /epoc32/winscw/c/msgtest/Scripts/ImapUnit/t_unit_imapservermtm_create.txt
+//../script/t_unit_imapservermtm_change.txt /epoc32/winscw/c/msgtest/Scripts/ImapUnit/t_unit_imapservermtm_change.txt

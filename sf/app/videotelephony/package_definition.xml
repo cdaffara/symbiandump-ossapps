@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SystemDefinition schema="3.0.1" xmlns:qt="http://www.nokia.com/qt">
+ <package id="videotelephony" name="Video Telephony Apps" levels="engine plugin prot ui">
+  <collection id="videotelephony_plat" name="VT Apps Platform Interfaces" level="ui">
+   <component id="video_telephony_media_configuration_api" name="Video Telephony Media Configuration API" class="api" filter="s60">
+    <meta rel="Api" href="videotelephony_plat/video_telephony_media_configuration_api/video_telephony_media_configuration_api.metaxml"/>
+    <unit bldFile="videotelephony_plat/video_telephony_media_configuration_api/group"/>
+   </component>
+  </collection>
+  <collection id="vtengines" name="Video Telephony Engines" level="engine">
+   <component id="videoteleng" filter="s60" name="Video Telephony Engine">
+    <unit bldFile="vtengines/videoteleng/Group"/>
+   </component>
+   <component id="vtmediatorplugin" filter="s60" name="VT Mediator Plugin" class="plugin">
+    <unit bldFile="vtengines/vtmediatorplugin/group"/>
+   </component>
+  </collection>
+  <collection id="vtuis" name="Video Telephony UIs" level="ui">
+   <component id="lcvtplugin" filter="s60" name="Video Telephony Plugin" class="plugin">
+    <unit bldFile="vtuis/lcvtplugin/group"/>
+   </component>
+   <component id="lcvtapp" filter="s60" name="Video Telephony Application" introduced="^4">
+	<unit bldFile="vtuis/lcvtapp" qt:proFile="lcvtapp.pro"/>
+   </component>
+   <component id="lcvtindicatorplugin" filter="s60" name="Video Telephony Indicator Plugin" class="plugin" introduced="^4">
+    <unit bldFile="vtuis/lcvtindicatorplugin" qt:proFile="lcvtindicatorplugin.pro"/>
+   </component>
+   <component id="lcvtindicatorcontroller" filter="s60" name="Video Telephony Indicator Controller" introduced="^4">
+    <unit bldFile="vtuis/lcvtindicatorcontroller" qt:proFile="lcvtindicatorcontroller.pro"/>
+   </component>
+  </collection>
+  <collection id="vtprotocolplugins" name="VT Protocol Plugins" level="plugin">
+   <component id="displaysink" filter="s60" name="Display Sink" introduced="^2">
+    <unit bldFile="vtprotocolplugins/DisplaySink/group"/>
+   </component>
+   <component id="videosource" filter="s60" name="Video Source" introduced="^2">
+    <unit bldFile="vtprotocolplugins/VideoSource/group"/>
+   </component>
+  </collection>
+  <collection id="vtprotocolsstub" name="VT Protocols Stub" level="prot">
+   <!--  this collection is really a component, move down a directory -->
+   <component id="videotelproto" filter="s60" name="Video Telephony Protocol">
+    <unit bldFile="vtprotocolsstub/group"/>
+   </component>
+  </collection>
+ </package>
+</SystemDefinition>
+

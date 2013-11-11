@@ -1,0 +1,33 @@
+#
+# Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+# All rights reserved.
+# This component and the accompanying materials are made available
+# under the terms of "Eclipse Public License v1.0"
+# which accompanies this distribution, and is available
+# at the URL "http://www.eclipse.org/legal/epl-v10.html".
+#
+# Initial Contributors:
+# Nokia Corporation - initial contribution.
+#
+# Contributors:
+#
+# Description: 
+#
+
+component	messaging_mmssettings
+
+source	\sf\app\messaging\mmsengine\mmssettings\bwins
+source	\sf\app\messaging\mmsengine\mmssettings\eabi
+source	\sf\app\messaging\mmsengine\mmssettings\group
+source	\sf\app\messaging\mmsengine\mmssettings\inc
+source	\sf\app\messaging\mmsengine\mmssettings\src
+source	\sf\app\messaging\mmsengine\mmssettings\test
+
+binary	\sf\app\messaging\mmsengine\mmssettings\group	all
+exports	\sf\app\messaging\mmsengine\mmssettings\group	
+notes_source	\component_defs\release.src
+
+
+ipr E 
+ipr T \sf\app\messaging\mmsengine\mmssettings\test
+

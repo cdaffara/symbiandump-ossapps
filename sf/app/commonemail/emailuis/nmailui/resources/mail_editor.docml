@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="1.1">
+    <object name="action" type="HbAction">
+        <string locid="txt_mail_button_attach" name="text"/>
+        <bool name="checkable" value="FALSE"/>
+        <bool name="enabled" value="TRUE"/>
+        <icon iconName="qtg_mono_attach" name="icon"/>
+        <bool name="visible" value="TRUE"/>
+    </object>
+    <object name="action_1" type="HbAction">
+        <string locid="txt_common_button_send" name="text"/>
+        <bool name="checkable" value="FALSE"/>
+        <bool name="enabled" value="FALSE"/>
+        <icon iconName="qtg_mono_send" name="icon"/>
+        <bool name="visible" value="TRUE"/>
+    </object>
+    <widget name="NmEditorView" type="HbView">
+        <widget name="content" role="HbView:widget" type="HbWidget">
+            <widget name="scrollArea" type="HbScrollArea">
+                <widget name="scrollAreaContents" role="HbScrollArea:contents" type="HbWidget">
+                    <widget name="editorToField" type="HbWidget">
+                        <widget name="editorToLabel" type="HbLabel">
+                            <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+                            <sizehint height="7.5un" type="FIXED" width="12.5un"/>
+                            <string locid="txt_mail_editor_to" name="plainText"/>
+                            <fontspec name="fontSpec" role="Secondary" textheight="var(hb-param-text-height-secondary)"/>
+                        </widget>
+                        <widget name="editorToEdit" type="HbLineEdit">
+                            <enums name="alignment" value="AlignAbsolute"/>
+                            <bool name="adjustFontSizeToFitHeight" value="FALSE"/>
+                            <sizepolicy horizontalPolicy="MinimumExpanding" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+                            <sizehint height="7.5un" type="MINIMUM"/>
+                            <bool name="enabled" value="TRUE"/>
+                        </widget>
+                        <widget name="editorToButton" type="HbPushButton">
+                            <icon iconName="qtg_mono_contacts" name="icon"/>
+                            <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+                            <sizehint height="7.5un" type="FIXED" width="9.5un"/>
+                            <string name="state" value="normal"/>
+                        </widget>
+                        <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Preferred" verticalStretch="0"/>
+                        <sizehint type="PREFERRED" width="expr(var(hb-param-screen-width) )"/>
+                        <layout orientation="Horizontal" spacing="var(hb-param-margin-gene-middle-horizontal)" type="linear">
+                            <contentsmargins bottom="0un" left="var(hb-param-margin-gene-left)" right="var(hb-param-margin-gene-right)" top="0un"/>
+                            <linearitem itemname="editorToLabel"/>
+                            <linearitem itemname="editorToEdit"/>
+                            <linearitem itemname="editorToButton"/>
+                        </layout>
+                    </widget>
+                    <widget name="editorSubjectField" type="HbWidget">
+                        <widget name="editorSubjectLabel" type="HbLabel">
+                            <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+                            <sizehint height="7.5un" type="FIXED" width="12.5un"/>
+                            <string locid="txt_mail_editor_subject" name="plainText"/>
+                            <fontspec name="fontSpec" role="Secondary" textheight="var(hb-param-text-height-secondary)"/>
+                        </widget>
+                        <widget name="editorSubjectEdit" type="HbLineEdit">
+                            <sizehint type="PREFERRED" width="26.22948un"/>
+                            <sizehint type="MAXIMUM" width="2504062.01158un"/>
+                            <sizehint height="7.5un" type="MINIMUM" width="26.22948un"/>
+                        </widget>
+                        <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Preferred" verticalStretch="0"/>
+                        <sizehint type="PREFERRED" width="expr(var(hb-param-screen-width) )"/>
+                        <layout orientation="Horizontal" spacing="var(hb-param-margin-gene-middle-horizontal)" type="linear">
+                            <contentsmargins bottom="0un" left="var(hb-param-margin-gene-left)" right="var(hb-param-margin-gene-right)" top="0un"/>
+                            <linearitem itemname="editorSubjectLabel"/>
+                            <linearitem itemname="editorSubjectEdit"/>
+                        </layout>
+                    </widget>
+                    <real name="z" value="0"/>
+                    <sizepolicy horizontalPolicy="Expanding" horizontalStretch="0" verticalPolicy="Preferred" verticalStretch="0"/>
+                    <sizehint height="85.52239un" type="PREFERRED"/>
+                    <layout orientation="Vertical" spacing="var(hb-param-margin-gene-middle-vertical)" type="linear">
+                        <contentsmargins bottom="0un" left="0un" right="0un" top="var(hb-param-margin-gene-top)"/>
+                        <linearitem itemname="editorToField"/>
+                        <linearitem itemname="editorSubjectField"/>
+                    </layout>
+                </widget>
+                <enums name="scrollDirections" value="Vertical"/>
+                <enums name="verticalScrollBarPolicy" value="ScrollBarAlwaysOff"/>
+                <enums name="horizontalScrollBarPolicy" value="ScrollBarAlwaysOff"/>
+            </widget>
+            <layout type="anchor">
+                <anchoritem dst="scrollArea" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="scrollArea" dstEdge="TOP" spacing="0un" src="" srcEdge="TOP"/>
+                <anchoritem dst="scrollArea" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="scrollArea" dstEdge="BOTTOM" spacing="0un" src="" srcEdge="BOTTOM"/>
+            </layout>
+        </widget>
+        <widget name="NmEditorViewToolBar" role="HbView:toolBar" type="HbToolBar">
+            <ref object="action" role="HbWidget:addAction"/>
+            <ref object="action_1" role="HbWidget:addAction"/>
+        </widget>
+        <string name="title"/>
+    </widget>
+    <metadata activeUIState="Common ui state" display="NHD-3.2-inch_portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+    </metadata>
+</hbdocument>

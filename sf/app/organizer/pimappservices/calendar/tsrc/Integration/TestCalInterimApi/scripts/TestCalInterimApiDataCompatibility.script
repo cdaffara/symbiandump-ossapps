@@ -1,0 +1,128 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+PRINT Run Data Compatibility Tests
+
+// Copy 9.1 version cal file
+PREFIX RUN_UTILS 
+MkDir 		c:\private\
+MkDir 		c:\private\10003a5b\
+MakeReadWrite 	c:\private\10003a5b\CITVCal.dat
+DeleteFile	c:\private\10003a5b\CITVCal.dat
+DeleteFile	c:\private\10003a5b\citvcal.datIdx
+CopyFile	\CITCalInterimApi\CITVCal_v9.1.dat	 c:\private\10003a5b\CITVCal.dat
+MakeReadWrite 	c:\private\10003a5b\CITVCal.dat
+REMOVE_PREFIX
+
+RUN_SCRIPT 	\CITCalInterimApi\scripts\TestCalInterimApiDataCompatibility_v9.1.script
+
+// So that we dont get a KErrInUse error for the calendar file
+DELAY 10000
+
+// Copy 9.2 version cal file
+PREFIX RUN_UTILS 
+MakeReadWrite 		c:\private\10003a5b\CITVCal.dat
+DeleteFile		c:\private\10003a5b\CITVCal.dat
+DeleteFile		c:\private\10003a5b\citvcal.datIdx
+CopyFile		\CITCalInterimApi\CITVCal_v9.2.dat	 c:\private\10003a5b\CITVCal.dat
+MakeReadWrite		c:\private\10003a5b\CITVCal.dat
+REMOVE_PREFIX
+
+// Run some 9.1 script tests and some additional tests for 9.2
+RUN_SCRIPT 		\CITCalInterimApi\scripts\TestCalInterimApiDataCompatibility_v9.2.script
+// So that we dont get a KErrInUse error for the calendar file
+DELAY 10000
+RUN_SCRIPT 		\CITCalInterimApi\scripts\TestCalInterimApiDataCompatibility_v9.1.script
+
+// Performance tests
+
+// Performance test (using a NAND ROM) for 9.1 calendar file.
+PREFIX RUN_UTILS 
+MakeReadWrite 		c:\private\10003a5b\CITVCal_v9.1_perf.dat
+DeleteFile		c:\private\10003a5b\CITVCal_v9.1_perf.dat
+DeleteFile		c:\private\10003a5b\citvcal_v9.1_perf.datIdx
+CopyFile		\CITCalInterimApi\CITVCal_v9.1_perf.dat	 c:\private\10003a5b\CITVCal_v9.1_perf.dat
+MakeReadWrite		c:\private\10003a5b\CITVCal_v9.1_perf.dat
+REMOVE_PREFIX
+
+LOAD_SUITE TestCalInterimApiSuite
+
+START_TESTCASE PIM-APPENG-CalInterimAPI-DC-0020
+//! @file
+//! @SYMTestCaseID  		PIM-APPENG-CalInterimAPI-DC-0020
+//! @SYMTestCaseDesc		Verify that the time taken for converting a v9.1 calendar file containing around 1000
+//! entries is less than 5 seconds.
+//! @SYMREQ			REQ5751 - Calendar Forward Data Compatibility
+//! @SYMPREQ			PREQ1090
+//! @SYMTestPriority		3
+//! @SYMPREQ 1090
+//! @SYMTestActions 
+//!1. 	Boot up the H4 board with a NAND ROM image.
+//!2.	Create an entry or instance view on a v9.2 Calendar file that contains 1000 entries/instances.
+//!3.   Measure the time taken for the view creation.
+//!4.   Close the view.
+//! @SYMTestExpectedResults	The time taken for view creation should be less than 5 seconds (using a NAND ROM image).
+
+RUN_TEST_STEP		100	TestCalInterimApiSuite	TestCalInterimApiDeleteAgendaServers
+RUN_TEST_STEP		20	TestCalInterimApiSuite	TestCalInterimApiUpdateEntry	\CITCalInterimApi\TestCalInterimApiDataCompatibility.ini 	performance_entry_view_1
+RUN_TEST_STEP		20	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiDataCompatibility.ini 	performance_instance_view_1
+
+END_TESTCASE PIM-APPENG-CalInterimAPI-DC-0020
+
+// Performance test for 9.2 calendar file (using a NAND ROM)
+
+PREFIX RUN_UTILS 
+MakeReadWrite 		c:\private\10003a5b\CITVCal_v9.2_perf.dat
+DeleteFile		c:\private\10003a5b\CITVCal_v9.2_perf.dat
+DeleteFile		c:\private\10003a5b\citvcal_v9.2_perf.datIdx
+CopyFile		\CITCalInterimApi\CITVCal_v9.2_perf.dat	 c:\private\10003a5b\CITVCal_v9.2_perf.dat
+MakeReadWrite		c:\private\10003a5b\CITVCal_v9.2_perf.dat
+REMOVE_PREFIX
+
+START_TESTCASE PIM-APPENG-CalInterimAPI-DC-0021
+//! @file
+//! @SYMTestCaseID  		PIM-APPENG-CalInterimAPI-DC-0021
+//! @SYMTestCaseDesc		Verify that the time taken for converting a v9.2 calendar file containing around 1000
+//! entries is less than 5 seconds.
+//! @SYMREQ			REQ5751 - Calendar Forward Data Compatibility
+//! @SYMPREQ			PREQ1090
+//! @SYMTestPriority		3
+//! @SYMPREQ 1090
+//! @SYMTestActions 
+//!1. 	Boot up the H4 board with a NAND ROM image.
+//!2.	Create an entry or instance view on a v9.1 Calendar file that contains 1000 entries/instances.
+//!3.   Measure the time taken for the view creation and verify that it is less than 5 seconds.
+//!4.   Close the view.
+//! @SYMTestExpectedResults	The time taken for view creation should be less than 5 seconds (using a NAND ROM image).
+
+RUN_TEST_STEP				20	TestCalInterimApiSuite	TestCalInterimApiUpdateEntry	\CITCalInterimApi\TestCalInterimApiDataCompatibility.ini 	performance_entry_view_2
+RUN_TEST_STEP				20	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiDataCompatibility.ini 	performance_instance_view_2
+END_TESTCASE PIM-APPENG-CalInterimAPI-DC-0021
+
+PREFIX RUN_UTILS 
+MakeReadWrite 	c:\private\10003a5b\citvcal_v9.1_perf.datIdx
+DeleteFile	c:\private\10003a5b\citvcal_v9.1_perf.datIdx
+MakeReadWrite 	c:\private\10003a5b\citvcal.dat
+DeleteFile	c:\private\10003a5b\citvcal.dat
+MakeReadWrite 	c:\private\10003a5b\citvcal_v9.2_perf.dat
+DeleteFile	c:\private\10003a5b\citvcal_v9.2_perf.dat
+MakeReadWrite 	c:\private\10003a5b\citvcal_v9.1_perf.dat
+DeleteFile	c:\private\10003a5b\citvcal_v9.1_perf.dat
+MakeReadWrite 	c:\private\10003a5b\citvcal.datIdx
+DeleteFile	c:\private\10003a5b\citvcal.datIdx
+MakeReadWrite 	c:\private\10003a5b\citvcal_v9.2_perf.datIdx
+DeleteFile	c:\private\10003a5b\citvcal_v9.2_perf.datIdx
+REMOVE_PREFIX

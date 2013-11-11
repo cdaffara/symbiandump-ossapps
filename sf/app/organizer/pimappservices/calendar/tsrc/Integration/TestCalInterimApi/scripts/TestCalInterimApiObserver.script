@@ -1,0 +1,512 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+PRINT Run all TestCalInterimApi Suite Observer Tests
+
+LOAD_SUITE TestCalInterimApiSuite
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.1
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.1
+//! @SYMTestCaseDesc 		Add, modify & delete entries
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Add, modify & delete different kind of entries like event, appointments, anniversaries & Todos
+//!	
+//! @SYMTestExpectedResults 	The Observer should be notified about the Cal Change operations & received notifications should 
+//!				be inline with the expected changes
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP   100     TestCalInterimApiSuite  TestCalInterimApiModifierThread	\CITCalInterimApi\TestCalInterimApiObserver.ini	ObserverData_1
+
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.1
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.2
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.2
+//! @SYMTestCaseDesc 		Add entries within Filter Range
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Add different kind of entries like event, appointments, anniversaries & Todos		
+//!	
+//! @SYMTestExpectedResults 	The Observer should be notified about the Cal Change operations & received notifications should 
+//!				be inline with the expected changes
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP   100     TestCalInterimApiSuite  TestCalInterimApiModifierThread	\CITCalInterimApi\TestCalInterimApiObserver.ini	ObserverData_2
+
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.2
+
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.3
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.3
+//! @SYMTestCaseDesc 		Update entries within Filter Range
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Modify different kind of entries like event, appointments, anniversaries & Todos				
+//!	
+//! @SYMTestExpectedResults 	The Observer should be notified about the Cal Change operations & received notifications should
+//!				be inline with the expected changes
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP   100     TestCalInterimApiSuite  TestCalInterimApiModifierThread	\CITCalInterimApi\TestCalInterimApiObserver.ini	ObserverData_3
+
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.3
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.4
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.4
+//! @SYMTestCaseDesc 		Delete entries within Filter Range
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Delete different kind of entries like event, appointments, anniversaries & Todos		
+//!	
+//! @SYMTestExpectedResults 	The Observer should be notified about the Cal Change operations & received notifications should
+//!				be inline with the expected changes
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP   100     TestCalInterimApiSuite  TestCalInterimApiModifierThread	\CITCalInterimApi\TestCalInterimApiObserver.ini	ObserverData_4
+
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.4
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.5
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.5
+//! @SYMTestCaseDesc 		Add entries outside Filter Range
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Add different kind of entries like event, appointments, anniversaries & Todos
+//!				While Adding entries ensure that these entries do not fall in the Notifier Time Range
+//!	
+//! @SYMTestExpectedResults 	The Observer should be not notified about the Cal Change operations 
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP   100     TestCalInterimApiSuite  TestCalInterimApiModifierThread	\CITCalInterimApi\TestCalInterimApiObserver.ini	ObserverData_5
+
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.5
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.6
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.6
+//! @SYMTestCaseDesc 		Modify entries outside Filter Range
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Modify different kind of entries like event, appointments, anniversaries & Todos
+//!				While Updating entries ensure that these entries do not fall in the Notifier Time Range			
+//!	
+//! @SYMTestExpectedResults 	The Observer should not be notified about the Cal Change operations
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP   100     TestCalInterimApiSuite  TestCalInterimApiModifierThread	\CITCalInterimApi\TestCalInterimApiObserver.ini	ObserverData_6
+
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.6
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.7
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.7
+//! @SYMTestCaseDesc 		Delete entries outside Filter Range
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Delete different kind of entries like event, appointments, anniversaries & Todos
+//!				While deleting entries ensure that these entries do not fall in the Notifier Time Range			
+//!	
+//! @SYMTestExpectedResults 	The Observer should not be notified about the Cal Change operations & received notifications should 
+//!				be inline with the expected changes
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP   100     TestCalInterimApiSuite  TestCalInterimApiModifierThread	\CITCalInterimApi\TestCalInterimApiObserver.ini	ObserverData_7
+
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.7
+
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.8
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.8
+//! @SYMTestCaseDesc 		Add repeating entries within Filter Range
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Add different kind of entries like event, appointments, anniversaries & Todos
+//!				While Adding entries ensure that these entries have repeat rule
+//!	
+//! @SYMTestExpectedResults 	The Observer should be notified about the Cal Change operations & received notifications should 
+//!				be inline with the expected changes
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP   100     TestCalInterimApiSuite  TestCalInterimApiModifierThread	\CITCalInterimApi\TestCalInterimApiObserver.ini	ObserverData_8
+
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.8
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.9
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.9
+//! @SYMTestCaseDesc 		Update repeating entries within Filter Range
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Modify different kind of entries like event, appointments, anniversaries & Todos
+//!				While Updating entries ensure that these entries have repeat rule				
+//!	
+//! @SYMTestExpectedResults 	The Observer should be notified about the Cal Change operations & received notifications should 
+//!				be inline with the expected changes
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP   100     TestCalInterimApiSuite  TestCalInterimApiModifierThread	\CITCalInterimApi\TestCalInterimApiObserver.ini	ObserverData_9
+
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.9
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.10
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.10
+//! @SYMTestCaseDesc 		Delete repeating entries within Filter Range
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Delete different kind of entries like event, appointments, anniversaries & Todos
+//!				While deleting entries ensure that these entries have repeat rule & their instances
+//!				fall in the Notifier Time Range	
+//!				
+//! @SYMTestExpectedResults 	The Observer should be notified about the Cal Change operations & received notifications should 
+//!				be inline with the expected changes
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP   100     TestCalInterimApiSuite  TestCalInterimApiModifierThread	\CITCalInterimApi\TestCalInterimApiObserver.ini	ObserverData_10
+
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.10
+
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.11
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.11
+//! @SYMTestCaseDesc 		Add repeating entries outside Filter Range
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Add different kind of entries like event, appointments, anniversaries & Todos
+//!				While Adding entries ensure that these entries have repeat rule & their instances
+//!				do not fall in the Notifier Time Range	
+//!	
+//! @SYMTestExpectedResults 	The Observer should not be notified about the Cal Change operations.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP   100     TestCalInterimApiSuite  TestCalInterimApiModifierThread	\CITCalInterimApi\TestCalInterimApiObserver.ini	ObserverData_11
+
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.11
+
+
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.12
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.12
+//! @SYMTestCaseDesc 		Update repeating entries outside Filter Range
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Modify different kind of entries like event, appointments, anniversaries & Todos
+//!				While Updating entries ensure that these entries have repeat rule & their instances
+//!				do not fall in the Notifier Time Range	
+//!				
+//! @SYMTestExpectedResults 	The Observer should not be notified about the Cal Change operations 
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP   100     TestCalInterimApiSuite  TestCalInterimApiModifierThread	\CITCalInterimApi\TestCalInterimApiObserver.ini	ObserverData_12
+
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.12
+
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.13
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.13
+//! @SYMTestCaseDesc 		Delete repeating entries outside Filter Range
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Delete different kind of entries like event, appointments, anniversaries & Todos
+//!				While deleting entries ensure that these entries have repeat rule & their instances
+//!				do not fall in the Notifier Time Range	
+//!				
+//! @SYMTestExpectedResults 	The Observer should not be notified about the Cal Change operations 
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP   100     TestCalInterimApiSuite  TestCalInterimApiModifierThread	\CITCalInterimApi\TestCalInterimApiObserver.ini	ObserverData_13
+
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.13
+
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.14
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.14
+//! @SYMTestCaseDesc 		Add modify & delete events with notification filter set to Todo
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Add different kind of events like simple event, appointments, anniversaries with notification filter type
+//!				set to the Notification filter to TODO
+//!	
+//! @SYMTestExpectedResults 	The Observer should not be notified about the Cal Change operations.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP   100     TestCalInterimApiSuite  TestCalInterimApiModifierThread	\CITCalInterimApi\TestCalInterimApiObserver.ini	ObserverData_14
+
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.14
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.15
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.15
+//! @SYMTestCaseDesc 		Add modify & delete todos with notification filter set to events
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Add Todos with notification filter type set to events
+//!	
+//! @SYMTestExpectedResults 	The Observer should not be notified about the Cal Change operations.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP   100     TestCalInterimApiSuite  TestCalInterimApiModifierThread	\CITCalInterimApi\TestCalInterimApiObserver.ini	ObserverData_15
+
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.15
+
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.16
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.16
+//! @SYMTestCaseDesc 		Add entries with start time of entries as end time of Notification Range
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1) Add some entries like simple event, Anniversary, appointments, todos
+//!				2) The entries should start on the end time of Notification range 
+//!	
+//! @SYMTestExpectedResults 	The Observer should not be notified about the Cal Change operations.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP   100     TestCalInterimApiSuite  TestCalInterimApiModifierThread	\CITCalInterimApi\TestCalInterimApiObserver.ini	ObserverData_16
+
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.16
+
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.18
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.18
+//! @SYMTestCaseDesc 		Add, modify & delete large number of entries
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Add, modify & delete thousands of entries like event, Anniversary, appointments, todos 
+//!				
+//! @SYMTestExpectedResults 	The Observer should be notified about the Cal Change operations & received notifications should 
+//!				be inline with the expected changes
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP   100     TestCalInterimApiSuite  TestCalInterimApiModifierThread	\CITCalInterimApi\TestCalInterimApiObserver.ini	ObserverData_18
+
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.18
+
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.19
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.19
+//! @SYMTestCaseDesc 		Disable the Cal Change BroadCast
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Disable the Cal Change BroadCast in the modifier thread i.e. Thread 1 and 
+//!				Add modify & delete different kind of entries like event, appointments etc
+//!				
+//! @SYMTestExpectedResults 	The Observer should not be notified about the Cal Change operations 
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP   100     TestCalInterimApiSuite  TestCalInterimApiModifierThread	\CITCalInterimApi\TestCalInterimApiObserver.ini	ObserverData_19
+
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.19
+
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.20
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.20
+//! @SYMTestCaseDesc 		Disable & Enable Cal Change BroadCast
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Re Enable the Cal Change BroadCast in the modifier thread i.e. Thread 1 and 
+//!				Add modify & delete different kind of entries like event, appointments etc
+//!				
+//! @SYMTestExpectedResults 	The Observer should be notified about the Cal Change operations 
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP   100     TestCalInterimApiSuite  TestCalInterimApiModifierThread	\CITCalInterimApi\TestCalInterimApiObserver.ini	ObserverData_20
+
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.20
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.21
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.21
+//! @SYMTestCaseDesc 		Stop the notifier
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Stop the notifier in the Observer Thread and Add modify & delete 
+//!				different kind of entries like event, appointments, anniversaries & Todos
+//!				
+//! @SYMTestExpectedResults 	The Observer should be notified about the Cal Change operations 
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP   100     TestCalInterimApiSuite  TestCalInterimApiModifierThread	\CITCalInterimApi\TestCalInterimApiObserver.ini	ObserverData_21
+
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.21
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.22
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.22
+//! @SYMTestCaseDesc 		ReEnable the notifier
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		ReEnable the notifier in the Observer Thread and Add modify & delete 
+//!				different kind of entries like event, appointments, anniversaries & Todos
+//!				
+//! @SYMTestExpectedResults 	The Observer should be notified about the Cal Change operations 
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP   100     TestCalInterimApiSuite  TestCalInterimApiModifierThread	\CITCalInterimApi\TestCalInterimApiObserver.ini	ObserverData_22
+
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.22
+
+
+START_TESTCASE	PIM-APPENG-Multiple-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.23
+
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-Multiple-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.23
+//! @SYMTestCaseDesc 		Add, modify & delete entries
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create threads 1,2,3 and 4
+//!				2. Thread 1 and 2 register with the Calendar Server for Notifications
+//!				3. Add/Update/Delete the entries in Threads 3 & 4
+//!				4. Verify that the thread 1 and 2 are notified with the notifications
+//!				5. Verify and validate the modified entry details 
+//!				6. Close the threads
+//! @SYMTestExpectedResults 	Observer Threads 1 & 2 should receive desired notifications
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP  100  TestCalInterimApiSuite TestCalInterimApiMainThread \CITCalInterimApi\TestCalInterimApiObserver.ini ObserverData_4.3.23
+
+END_TESTCASE	PIM-APPENG-Multiple-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.23
+
+START_TESTCASE	PIM-APPENG-Multiple-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.24
+
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-Multiple-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.24
+//! @SYMTestCaseDesc 		Add repeating entries within Filter Range
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create threads 1,2,3 and 4
+//!				2. Thread 1 and 2 register with the Calendar Server for Notifications
+//!				3. Add the entries in Threads 3 & 4
+//!				4. Verify that the thread 1 and 2 are notified with the notifications
+//!				5. Verify and validate the modified entry details 
+//!				6. Close the threads
+//! @SYMTestExpectedResults 	Threads 1&2 should receive the desired notifications
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP   100     TestCalInterimApiSuite  TestCalInterimApiMainThread \CITCalInterimApi\TestCalInterimApiObserver.ini ObserverData_4.3.24
+
+END_TESTCASE	PIM-APPENG-Multiple-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.24
+
+START_TESTCASE	PIM-APPENG-Multiple-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.25
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-Multiple-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.25
+//! @SYMTestCaseDesc 		Disable the Cal Change BroadCast
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create threads 1,2,3 and 4
+//!				2. Thread 1 and 2 register with the Calendar Server for Notifications
+//!				3. Add/Update/Delete the entries in Threads 3 & 4
+//!				4. Set the disable Change broadcast in Threads 3 & 4.
+//!				5. Close the threads
+//! @SYMTestExpectedResults 	Threads 1 & 2 should not receive the desired notifications
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP   100     TestCalInterimApiSuite  TestCalInterimApiMainThread \CITCalInterimApi\TestCalInterimApiObserver.ini ObserverData_4.3.25
+
+END_TESTCASE	PIM-APPENG-Multiple-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.25
+
+
+START_TESTCASE	PIM-APPENG-MultipleObservers-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.26
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-MultipleObservers-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.26
+//! @SYMTestCaseDesc	 	Disable & Enable Cal Change BroadCast
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create threads 1,2,3 and 4
+//!				2. Thread 1 and 2 register with the Calendar Server for Notifications
+//!				3. Add/Update/Delete the entries in Threads 3 & 4
+//!				4. Set the enable change broadcast flag in Threads 3 & 4.
+//!				4. Verify that the thread 1 and 2 are notified with the notifications
+//!				5. Verify and validate the modified entry details 
+//!				6. Close the threads
+//! @SYMTestExpectedResults 	Threads 1 & 2 should receive the desired notifications.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP   100     TestCalInterimApiSuite  TestCalInterimApiMainThread \CITCalInterimApi\TestCalInterimApiObserver.ini ObserverData_4.3.26
+
+END_TESTCASE	PIM-APPENG-MultipleObservers-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.26
+
+START_TESTCASE	PIM-APPENG-Observers-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.17
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-Observers-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.17
+//! @SYMTestCaseDesc 		Add entries with end time of entries as start time of Notification Range
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1) Add some entries like simple event, Anniversary, appointments, todos
+//!				2) The entries should end on the start time of Notification time range. 
+//!	
+//! @SYMTestExpectedResults 	The Observer should not be notified about the Cal Change operations.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP   100     TestCalInterimApiSuite  TestCalInterimApiModifierThread	\CITCalInterimApi\TestCalInterimApiObserver.ini	ObserverData_17
+
+END_TESTCASE	PIM-APPENG-Observers-CALINTERIMAPI-PREQ1090-OBSERVERS-0001-Sec_4.3.17
+
+PRINT Run all TestCalInterimApi Suite Observer Tests
+
+PREFIX RUN_UTILS 
+MakeReadWrite 	c:\private\10003a5b\CalendarFileObserver.dat
+DeleteFile		c:\private\10003a5b\CalendarFileObserver.dat
+MakeReadWrite 	c:\private\10003a5b\CalendarFile.dat
+DeleteFile		c:\private\10003a5b\CalendarFile.dat
+MakeReadWrite 	c:\private\10003a5b\calendar.datIdx
+DeleteFile		c:\private\10003a5b\calendar.datIdx
+MakeReadWrite 	c:\private\10003a5b\calendarfileobserver.datIdx
+DeleteFile		c:\private\10003a5b\calendarfileobserver.datIdx
+MakeReadWrite 	c:\private\10003a5b\Calendar.dat
+DeleteFile		c:\private\10003a5b\Calendar.dat
+MakeReadWrite 	c:\private\10003a5b\calendarfile.datIdx
+DeleteFile		c:\private\10003a5b\calendarfile.datIdx
+REMOVE_PREFIX

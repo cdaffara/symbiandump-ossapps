@@ -1,0 +1,224 @@
+/*
+* Copyright (c) 2008-2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   Localisation file for slide show
+*
+*/
+
+
+
+/*
+  The syntax of a logical name entry in this file is the following:
+
+  // d:context description (line 1)
+  // d:context description (line N)
+  // l:layout id
+  // w:
+  // r:release information
+  //
+  #define qtn_<?feature_or_application>_?freetext "?text"
+
+  where
+      "qtn_" starts a logical name.  Note: "text_" has been used in
+           old logical names, but is deprecated.
+      "?feature/application" is 2-5 lower-case characters and/or numbers
+           identifying the larger context of the display text.
+      "?freetext" is the free text portion of the logical name.
+           It may contain only lower-case letters ('a' to 'z'), numbers
+           ('0' to '9'), and the underscore ('_').  The total length of
+           the logical name does must not exceed 50 characters.
+      "d:" Starts a description line clarifying the entry's context with
+           information like:
+           - Is a word a verb in imperative or is it a noun?  (For instance,
+             what does "Set" mean?)
+           - What will replace %U (unicode text parameter) or %N (number
+             parameter) included in texts?  (For instance, is it a phone
+             number or an e-mail address?)
+      "l:" Starts a layout id information (one line).
+           "P" and "No" are symbols in LAF's information table
+                - "P" is parent pane or current pane
+                - "No" is reference number in table
+      "r:" Starts a release information: one line indicating in which
+           S60 release the text was used for the first time.
+
+*/
+
+//
+// d:slideshow settings view title text
+// l:title_pane_t2/opt9
+// r:4.0
+//
+#define qtn_lgal_view_slideshow_settings_title_general	"Slide show settings"
+
+//
+// d:Direction Setting item text
+// l:list_setting_pane_t1
+// r:8.0
+//
+#define qtn_lgal_slideshow_settings_order 		"Slideshow order"
+
+//
+// d:slideshow play order "old to new"
+// l:list_set_graphic_pane_t1
+// r:8.0
+//
+#define qtn_lgal_slideshow_settings_older_to_newer		"From older to newer"
+
+//
+// d:slideshow play order "new to old"
+// l:list_set_graphic_pane_t1
+// r:8.0
+//
+#define qtn_lgal_slideshow_settings_newer_to_older		"From newer to older"
+
+//
+// d:Music Setting item text
+// l:list_setting_pane_t1
+// r:4.0
+//
+#define qtn_lgal_slideshow_settings_music 		"Music"
+
+//
+// d:slideshow music settings 'on' text
+// l:list_set_graphic_pane_t1
+// r:4.0
+//
+#define qtn_lgal_slideshow_settings_music_on		"On"
+
+//
+// d:slideshow music settings 'off' text
+// l:list_set_graphic_pane_t1
+// r:4.0
+//
+#define qtn_lgal_slideshow_settings_music_off		"Off"
+
+// d:Track Setting item text
+// l:list_setting_pane_t1
+// r:4.0
+//
+#define  qtn_lgal_slideshow_settings_track 		"Track"
+
+//
+// d:slideshow settings no tracks available text
+// l:list_set_graphic_pane_t1
+// r:4.0
+//
+#define qtn_lgal_slideshow_settings_track_none		"None"
+
+//
+// d:slideshow setting transition text, to select an effect that is shown for images during the slide show
+// l:list_setting_pane_t1
+// r:6.0
+//
+#define qtn_lgal_slideshow_settings_transition		"Transition"
+
+//
+// d:slideshow transition setting "fade" or "cross dissolve" or "cross fade", representing a 
+// d:transition in which the next image is smoothly faded over to replace the currently shown image,
+// d:from transparent to fully opaque.
+// d:Selected from qtn_lgal_slideshow_settings_transition setting.
+// l:list_set_graphic_pane_t1
+// r:6.0
+//
+#define qtn_lgal_slideshow_settings_transition_xdissolve		"Cross dissolve"
+
+// d:slideshow transition setting zoom and pan text, representing simultaneous zooming and panning of items in slideshow
+// d:Selected from qtn_lgal_slideshow_settings_transition setting.
+// l:list_set_graphic_pane_t1
+// r:6.0
+//
+#define qtn_lgal_slideshow_settings_transition_kenburns		"Zoom and pan"
+
+// d:Select track dialog title (Fetcher title)
+// d:User can select music file also known as track using this dialog
+// l:popup_query_data_window
+// r:4.0
+//
+#define qtn_lgal_popup_select_track  			"Select track:"
+
+// d:note that is shown if user starts the slide show but selected music track no longer exists
+// l:popup_note_window/opt2
+// r:4.0
+//
+#define qtn_lgal_note_slideshow_track			"Music track does not exist"
+
+// d:Confirmation note
+// d:This note is shown if the user tries to set the 'Music' setting
+// d:to 'On' but has not yet defined a music track.
+// l:popup_note_window/opt2
+// r:4.0
+//
+#define qtn_lgal_note_track_define 			"No track defined. Define now?" 
+
+//
+// d:Note text for invalid drm rights
+// l:popup_note_window/opt2
+// r:4.0
+//
+#define qtn_lgal_note_slideshow_drm			"Track rights are not valid. Music will not play"
+
+// d:Tempo setting item. The value of this settings item is used as the delay between each slide in the slide show.
+// l:list_setting_pane_t1
+// r:4.0
+//
+#define qtn_lgal_slideshow_settings_delay_slides    	"Delay between slides"
+
+//
+// d:slideshow delay text slow setting text
+// d:This setting is accessible via qtn_lgal_slideshow_settings_delay_slides option
+// l:setting_slider_graphic_pane_t1
+// r:6.0
+// 
+#define qtn_lgal_slideshow_settings_delay_slow		"Slow"
+
+//
+// d:slideshow delay text fast setting text
+// d:This setting is accessible via qtn_lgal_slideshow_settings_delay_slides option
+// l:setting_slider_graphic_pane_t2
+// r:6.0
+//
+#define qtn_lgal_slideshow_settings_delay_fast		"Fast"
+
+//
+// d:slideshow music playback's volume percentage
+// d:This text is shown when the user adjusts the music volume
+// l:setting_graphic_pane_t1
+// r:6.0
+//
+#define qtn_lgal_slideshow_volume_percentage "%N%"
+
+
+//
+// soft keys
+//
+
+//
+// d:Softkey text for continuing slide show
+// l:control_pane_t1/opt7
+// r:4.0
+//
+#define qtn_lgal_slideshow_softkey_continue		"Continue"
+
+//
+// d:Softkey text for ending slide show
+// l:control_pane_t1/opt7
+// r:4.0
+//
+#define qtn_lgal_slideshow_softkey_end			"End"
+
+//
+// d:Softkey text for pausing slide show
+// l:control_pane_t1/opt7
+// r:4.0
+//
+#define qtn_lgal_slideshow_softkey_pause			"Pause"

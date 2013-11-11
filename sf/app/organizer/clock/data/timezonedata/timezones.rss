@@ -1,0 +1,5738 @@
+/*
+* Copyright (c) 2008 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Resource description file.
+*
+*/
+
+// Resource Identifier
+NAME TZTZ
+
+// INCLUDES
+#include <uikon.rh>
+#include <timezonelocalization.loc>
+#include "timezonelocalization.rh"
+
+RESOURCE RSS_SIGNATURE { }
+
+RESOURCE DEFAULT_CACHED_TIMEZONES r_df_cached_zones
+	{
+	default_home_zone_id = 2760;
+	default_zone_of_interest_id = 2800;
+	default_recent_zone1 = 1248;
+	default_recent_zone2 = 2864;
+	}
+	
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_afga_kabul
+	{
+	time_zone_id = 1904;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 1;
+			city_name = qtn_clk_city_afga_kabul;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_argen_buenos
+	{
+	time_zone_id = 544;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 2;
+			city_name = qtn_clk_city_argen_buenos;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_armenia_yerevan
+	{
+	time_zone_id = 2248;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 3;
+			city_name = qtn_clk_city_armenia_yerevan;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_aus_adelaide
+	{
+	time_zone_id = 2336;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 4;
+			city_name = qtn_clk_city_aus_adelaide;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_aus_darwin
+	{
+	time_zone_id = 2368;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 4;
+			city_name = qtn_clk_city_aus_darwin;
+			}
+		};  }
+
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_aus_brisbane
+	{
+	time_zone_id = 2344;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 4;
+			city_name = qtn_clk_city_aus_brisbane;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_aus_melbourne
+	{
+	time_zone_id = 2408;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 4;
+			city_name = qtn_clk_city_aus_melbourne;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_aus_perth
+	{
+	time_zone_id = 2416;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 4;
+			city_name = qtn_clk_city_aus_perth;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_aus_sydney
+	{
+	time_zone_id = 2424;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 4;
+			city_name = qtn_clk_city_aus_sydney;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 4;
+			city_name = qtn_clk_city_aus_canberra;
+			}
+		};  }
+		
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_aus_eucla
+	{
+	time_zone_id = 2376;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{		
+		TIMEZONE_CITY
+			{
+			city_group_id = 4;
+			city_name = qtn_clk_city_aus_eucla;
+			}
+		};  }
+		
+		
+RESOURCE LOCALIZED_TIMEZONE r_tz_aus_lord_howe_island
+	{
+	time_zone_id = 2400;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{		
+		TIMEZONE_CITY
+			{
+			city_group_id = 4;
+			city_name = qtn_clk_city_aus_lord_howe_island;
+			}
+		};  }		
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_aus_hobart
+	{
+	time_zone_id = 2384;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{		
+		TIMEZONE_CITY
+			{
+			city_group_id = 4;
+			city_name = qtn_clk_city_aus_hobart;
+			}
+		};  }	
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_austria_vienna
+	{
+	time_zone_id = 2960;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 5;
+			city_name = qtn_clk_city_austria_vienna;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_azerb_baku
+	{
+	time_zone_id = 1728;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 6;
+			city_name = qtn_clk_city_azerb_baku;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_baham_nassau
+	{
+	time_zone_id = 1240;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 7;
+			city_name = qtn_clk_city_baham_nassau;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_bangla_dhaka
+	{
+	time_zone_id = 1800;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 8;
+			city_name = qtn_clk_city_bangla_dhaka;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_belarus_minsk
+	{
+	time_zone_id = 2832;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 9;
+			city_name = qtn_clk_city_belarus_minsk;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_belg_brussels
+	{
+	time_zone_id = 2704;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 10;
+			city_name = qtn_clk_city_belg_brussels;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_bermu_hamilton
+	{
+	time_zone_id = 2264;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 11;
+			city_name = qtn_clk_city_bermu_hamilton;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_bolivia_lapaz
+	{
+	time_zone_id = 1104;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 12;
+			city_name = qtn_clk_city_bolivia_lapaz;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_bosnia_sarajevo
+	{
+	time_zone_id = 3400;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 13;
+			city_name = qtn_clk_city_bosnia_sarajevo;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_bra_acre
+	{
+	time_zone_id = 1400;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 14;
+			city_name = qtn_clk_city_bra_acre;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_bra_fernand
+	{
+	time_zone_id = 1272;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 14;
+			city_name = qtn_clk_city_bra_fernand;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_bra_manaus
+	{
+	time_zone_id = 1144;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 14;
+			city_name = qtn_clk_city_bra_manaus;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_bra_saopaulo
+	{
+	time_zone_id = 1432;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 14;
+			city_name = qtn_clk_city_bra_saopaulo;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 14;
+			city_name = qtn_clk_city_bra_riojan;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 14;
+			city_name = qtn_clk_city_bra_brasilia;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 14;
+			city_name = qtn_clk_city_bra_porto_alegre;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 14;
+			city_name = qtn_clk_city_bra_joinville;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 14;
+			city_name = qtn_clk_city_bra_curitiba;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 14;
+			city_name = qtn_clk_city_bra_vitoria;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 14;
+			city_name = qtn_clk_city_bra_belo_horizonte;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 14;
+			city_name = qtn_clk_city_bra_goiania;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_bra_recife
+	{
+	time_zone_id = 1376;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 14;
+			city_name = qtn_clk_city_bra_recife;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 14;
+			city_name = qtn_clk_city_bra_macapa;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 14;
+			city_name = qtn_clk_city_bra_sao_luis;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 14;
+			city_name = qtn_clk_city_bra_teresina;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 14;
+			city_name = qtn_clk_city_bra_natal;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 14;
+			city_name = qtn_clk_city_bra_joao_pessoa;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 14;
+			city_name = qtn_clk_city_bra_aragaju;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 14;
+			city_name = qtn_clk_city_bra_salvador;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 14;
+			city_name = qtn_clk_city_bra_palmas;
+			}
+		};  }
+		
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_bra_campo_grande
+	{
+	time_zone_id = 736;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 14;
+			city_name = qtn_clk_city_bra_campo_grande;
+			}
+		};  }
+				
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_bra_cuiaba
+	{
+	time_zone_id = 800;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 14;
+			city_name = qtn_clk_city_bra_cuiaba;
+			}
+		};  }
+		
+		
+RESOURCE LOCALIZED_TIMEZONE r_tz_bra_belem
+	{
+	time_zone_id = 680;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 14;
+			city_name = qtn_clk_city_bra_belem;
+			}
+		};  }
+		
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_bra_fortaleza
+	{
+	time_zone_id = 888;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 14;
+			city_name = qtn_clk_city_bra_fortaleza;
+			}
+		};  }
+		
+		
+RESOURCE LOCALIZED_TIMEZONE r_tz_bra_maceio
+	{
+	time_zone_id = 1128;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 14;
+			city_name = qtn_clk_city_bra_maceio;
+			}
+		};  }
+		
+		
+RESOURCE LOCALIZED_TIMEZONE r_tz_bra_araguaina
+	{
+	time_zone_id = 536;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 14;
+			city_name = qtn_clk_city_bra_araguaina;
+			}
+		};  }		
+		
+		
+RESOURCE LOCALIZED_TIMEZONE r_tz_bra_porto_velho
+	{
+	time_zone_id = 1344;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 14;
+			city_name = qtn_clk_city_bra_porto_velho;
+			}
+		};  }		
+		
+		
+RESOURCE LOCALIZED_TIMEZONE r_tz_bra_boa_vista
+	{
+	time_zone_id = 704;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 14;
+			city_name = qtn_clk_city_bra_boa_vista;
+			}
+		};  }		
+						
+				
+RESOURCE LOCALIZED_TIMEZONE r_tz_bulg_sofia
+	{
+	time_zone_id = 2912;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 15;
+			city_name = qtn_clk_city_bulg_sofia;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_canada_calgar
+	{
+	time_zone_id = 864;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 16;
+			city_name = qtn_clk_city_canada_calgar;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 16;
+			city_name = qtn_clk_city_canada_edmonton;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 16;
+			city_name = qtn_clk_city_canada_cambridge_bay;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_canada_halifax
+	{
+	time_zone_id = 968;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 16;
+			city_name = qtn_clk_city_canada_halifax;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 16;
+			city_name = qtn_clk_city_canada_charlottetown;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_canada_stjohns
+	{
+	time_zone_id = 1448;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 16;
+			city_name = qtn_clk_city_canada_stjohns;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_canada_ottawa
+	{
+	time_zone_id = 1528;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 16;
+			city_name = qtn_clk_city_canada_ottawa;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 16;
+			city_name = qtn_clk_city_canada_toronto;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 16;
+			city_name = qtn_clk_city_canada_montreal;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_canada_vancouv
+	{
+	time_zone_id = 1544;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 16;
+			city_name = qtn_clk_city_canada_vancouv;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_canada_winnipeg
+	{
+	time_zone_id = 1560;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 16;
+			city_name = qtn_clk_city_canada_winnipeg;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 16;
+			city_name = qtn_clk_city_canada_creighton;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_canada_regina
+	{
+	time_zone_id = 1384;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 16;
+			city_name = qtn_clk_city_canada_regina;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_canada_blanc_sablon
+	{
+	time_zone_id = 696;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 16;
+			city_name = qtn_clk_city_canada_blanc_sablon;
+			}
+		};  }
+		
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_canada_atikokan
+	{
+	time_zone_id = 656;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 16;
+			city_name = qtn_clk_city_canada_atikokan;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 16;
+			city_name = qtn_clk_city_canada_coral_harbour;
+			}
+		};	}
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_canada_goose_bay
+	{
+	time_zone_id = 912;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 16;
+			city_name = qtn_clk_city_canada_goose_bay;
+			}
+		};  }
+		
+		
+RESOURCE LOCALIZED_TIMEZONE r_tz_canada_dawson_creek
+	{
+	time_zone_id = 832;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 16;
+			city_name = qtn_clk_city_canada_dawson_creek;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 16;
+			city_name = qtn_clk_city_canada_lloydminster;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 62;
+			city_name = qtn_clk_city_mexico_sonora;
+			}
+		};  }
+		
+		
+RESOURCE LOCALIZED_TIMEZONE r_tz_canada_yellowknife
+	{
+	time_zone_id = 1576;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 16;
+			city_name = qtn_clk_city_canada_yellowknife;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 16;
+			city_name = qtn_clk_city_canada_cranbrook;
+			}
+		};  }
+		
+		
+RESOURCE LOCALIZED_TIMEZONE r_tz_canada_iqaluit
+	{
+	time_zone_id = 1064;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 16;
+			city_name = qtn_clk_city_canada_iqaluit;
+			}
+		};  }
+		
+		
+RESOURCE LOCALIZED_TIMEZONE r_tz_canada_rankin_inlet
+	{
+	time_zone_id = 1368;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 16;
+			city_name = qtn_clk_city_canada_rankin_inlet;
+			}
+		};  }				
+		
+		
+RESOURCE LOCALIZED_TIMEZONE r_tz_canada_rainy_river
+	{
+	time_zone_id = 1360;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 16;
+			city_name = qtn_clk_city_canada_rainy_river;
+			}
+		};  }		
+		
+		
+RESOURCE LOCALIZED_TIMEZONE r_tz_canada_whitehorse
+	{
+	time_zone_id = 1552;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 16;
+			city_name = qtn_clk_city_canada_whitehorse;
+			}
+		};  }		
+				
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_capv_praia
+	{
+	time_zone_id = 2280;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 17;
+			city_name = qtn_clk_city_capv_praia;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_chile_santiago
+	{
+	time_zone_id = 1416;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 18;
+			city_name = qtn_clk_city_chile_santiago;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_china_beijing
+	{
+	time_zone_id = 2136;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 19;
+			city_name = qtn_clk_city_china_beijing;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_colomb_bogota
+	{
+	time_zone_id = 712;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 20;
+			city_name = qtn_clk_city_colomb_bogota;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_costar_sanjose
+	{
+	time_zone_id = 792;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 21;
+			city_name = qtn_clk_city_costar_sanjose;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_croatia_zagreb
+	{
+	time_zone_id = 3408;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 22;
+			city_name = qtn_clk_city_croatia_zagreb;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_cuba_havanna
+	{
+	time_zone_id = 976;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 23;
+			city_name = qtn_clk_city_cuba_havanna;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_czeh_prague
+	{
+	time_zone_id = 2872;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 24;
+			city_name = qtn_clk_city_czeh_prague;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_den_copenhag
+	{
+	time_zone_id = 2736;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 25;
+			city_name = qtn_clk_city_den_copenhag;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_dominica_roseau
+	{
+	time_zone_id = 856;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 26;
+			city_name = qtn_clk_city_dominica_roseau;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_dominicareb_santod
+	{
+	time_zone_id = 1424;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 27;
+			city_name = qtn_clk_city_dominicareb_santod;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_ecuad_quito
+	{
+	time_zone_id = 952;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 28;
+			city_name = qtn_clk_city_ecuad_quito;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_egypt_cairo
+	{
+	time_zone_id = 192;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 29;
+			city_name = qtn_clk_city_egypt_cairo;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_elsalva_sansalva
+	{
+	time_zone_id = 880;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 30;
+			city_name = qtn_clk_city_elsalva_sansalva;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_est_tallinn
+	{
+	time_zone_id = 2928;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 31;
+			city_name = qtn_clk_city_est_tallinn;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_fiji_suva
+	{
+	time_zone_id = 3152;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 32;
+			city_name = qtn_clk_city_fiji_suva;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_fin_hki
+	{
+	time_zone_id = 2760;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 33;
+			city_name = qtn_clk_city_fin_hki;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_fra_paris
+	{
+	time_zone_id = 2864;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 34;
+			city_name = qtn_clk_city_fra_paris;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_georgia_tbilisi
+	{
+	time_zone_id = 2168;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 35;
+			city_name = qtn_clk_city_georgia_tbilisi;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_germ_berlin
+	{
+	time_zone_id = 2696;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 36;
+			city_name = qtn_clk_city_germ_berlin;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_greece_athens
+	{
+	time_zone_id = 2680;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 37;
+			city_name = qtn_clk_city_greece_athens;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_greenl_nuuk
+	{
+	time_zone_id = 904;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 38;
+			city_name = qtn_clk_city_greenl_nuuk;
+			}
+		};  }
+		
+		
+RESOURCE LOCALIZED_TIMEZONE r_tz_greenl_danmarkshavn
+	{
+	time_zone_id = 816;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 38;
+			city_name = qtn_clk_city_greenl_danmarkshavn;
+			}
+		};  }		
+		
+		
+RESOURCE LOCALIZED_TIMEZONE r_tz_greenl_scoresbysund
+	{
+	time_zone_id = 1440;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 38;
+			city_name = qtn_clk_city_greenl_scoresbysund;
+			}
+		};  }	
+		
+		
+RESOURCE LOCALIZED_TIMEZONE r_tz_greenl_thule
+	{
+	time_zone_id = 1504;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 38;
+			city_name = qtn_clk_city_greenl_thule;
+			}
+		};  }				
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_guam_agana
+	{
+	time_zone_id = 3192;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 39;
+			city_name = qtn_clk_city_guam_agana;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_guatmal_guatemala
+	{
+	time_zone_id = 944;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 40;
+			city_name = qtn_clk_city_guatmal_guatemala;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_guy_georgetown
+	{
+	time_zone_id = 960;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 41;
+			city_name = qtn_clk_city_guy_georgetown;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_hk_hong
+	{
+	time_zone_id = 1856;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 42;
+			city_name = qtn_clk_city_hk_hong;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_hung_budapest
+	{
+	time_zone_id = 2720;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 43;
+			city_name = qtn_clk_city_hung_budapest;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_iceland_reykjavik
+	{
+	time_zone_id = 2304;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 44;
+			city_name = qtn_clk_city_iceland_reykjavik;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_india_newdel
+	{
+	time_zone_id = 1944;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 45;
+			city_name = qtn_clk_city_india_newdel;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 45;
+			city_name = qtn_clk_city_india_mumbai;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 45;
+			city_name = qtn_clk_city_india_chennai;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 45;
+			city_name = qtn_clk_city_india_calcut;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_indon_jakarta
+	{
+	time_zone_id = 1880;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 46;
+			city_name = qtn_clk_city_indon_jakarta;
+			}
+		};  }
+
+	RESOURCE LOCALIZED_TIMEZONE r_tz_indon_jayapura
+	{
+	time_zone_id = 1888;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 46;
+			city_name = qtn_clk_city_indon_jayapura;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_indon_makassar
+	{
+	time_zone_id = 2000;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 46;
+			city_name = qtn_clk_city_indon_makassar;
+			}
+		};  }
+
+
+
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_iran_tehran
+	{
+	time_zone_id = 2176;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 47;
+			city_name = qtn_clk_city_iran_tehran;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_iraq_baghdad
+	{
+	time_zone_id = 1712;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 48;
+			city_name = qtn_clk_city_iraq_baghdad;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_ireland_dubli
+	{
+	time_zone_id = 2744;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 49;
+			city_name = qtn_clk_city_ireland_dubli;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 139;
+			city_name = qtn_clk_city_ireland_belfast;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_israel_jerusalem
+	{
+	time_zone_id = 1896;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 50;
+			city_name = qtn_clk_city_israel_jerusalem;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_italy_rome
+	{
+	time_zone_id = 2888;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 51;
+			city_name = qtn_clk_city_italy_rome;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 134;
+			city_name = qtn_clk_city_san_marino;
+			},
+			TIMEZONE_CITY
+			{
+			city_group_id = 138;
+			city_name = qtn_clk_city_vatican_vatican_city;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_jamaica_kings
+	{
+	time_zone_id = 1072;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 52;
+			city_name = qtn_clk_city_jamaica_kings;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_jp_tokyo
+	{
+	time_zone_id = 2192;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 53;
+			city_name = qtn_clk_city_jp_tokyo;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 53;
+			city_name = qtn_clk_city_jp_sapporo;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 53;
+			city_name = qtn_clk_city_jp_osaka;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_kaz_astana
+	{
+	time_zone_id = 1664;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 54;
+			city_name = qtn_clk_city_kaz_astana;
+			}
+		};  }
+		
+		
+RESOURCE LOCALIZED_TIMEZONE r_tz_kaz_aqtau
+	{
+	time_zone_id = 1688;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 54;
+			city_name = qtn_clk_city_kaz_aqtau;
+			}
+		};  }		
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_kenya_nairob
+	{
+	time_zone_id = 424;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 55;
+			city_name = qtn_clk_city_kenya_nairob;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_kuwait_kuwait
+	{
+	time_zone_id = 1976;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 56;
+			city_name = qtn_clk_city_kuwait_kuwait;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_latvia_riga
+	{
+	time_zone_id = 2880;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 57;
+			city_name = qtn_clk_city_latvia_riga;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_liber_monorov
+	{
+	time_zone_id = 416;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 58;
+			city_name = qtn_clk_city_liber_monorov;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_lith_vilnius
+	{
+	time_zone_id = 2968;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 59;
+			city_name = qtn_clk_city_lith_vilnius;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_makedo_skopje
+	{
+	time_zone_id = 3416;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 60;
+			city_name = qtn_clk_city_makedo_skopje;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_male_kualalump
+	{
+	time_zone_id = 1960;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 61;
+			city_name = qtn_clk_city_male_kualalump;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_mexico_chihua
+	{
+	time_zone_id = 784;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 62;
+			city_name = qtn_clk_city_mexico_chihua;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_mexico_mexicoc
+	{
+	time_zone_id = 1184;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 62;
+			city_name = qtn_clk_city_mexico_mexicoc;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_mexico_tijuana
+	{
+	time_zone_id = 1520;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 62;
+			city_name = qtn_clk_city_mexico_tijuana;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_mona_monaco
+	{
+	time_zone_id = 2840;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 63;
+			city_name = qtn_clk_city_mona_monaco;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_mongolia_ulan
+	{
+	time_zone_id = 2200;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 64;
+			city_name = qtn_clk_city_mongolia_ulan;
+			}
+		};  }
+		
+		
+RESOURCE LOCALIZED_TIMEZONE r_tz_mongolia_hovd
+	{
+	time_zone_id = 1864;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 64;
+			city_name = qtn_clk_city_mongolia_hovd;
+			}
+		};  }	
+		
+		
+RESOURCE LOCALIZED_TIMEZONE r_tz_mongolia_choibalsan
+	{
+	time_zone_id = 1768;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 64;
+			city_name = qtn_clk_city_mongolia_choibalsan;
+			}
+		};  }			
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_moroc_rabat
+	{
+	time_zone_id = 200;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 65;
+			city_name = qtn_clk_city_moroc_rabat;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 65;
+			city_name = qtn_clk_city_moroc_casabl;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_myanmar_rango
+	{
+	time_zone_id = 2096;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 66;
+			city_name = qtn_clk_city_myanmar_rango;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_nepal_kathma
+	{
+	time_zone_id = 1936;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 67;
+			city_name = qtn_clk_city_nepal_kathma;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_neth_amsterdam
+	{
+	time_zone_id = 2664;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 68;
+			city_name = qtn_clk_city_neth_amsterdam;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_nzealand_welling
+	{
+	time_zone_id = 3104;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 69;
+			city_name = qtn_clk_city_nzealand_welling;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 69;
+			city_name = qtn_clk_city_newz_auckland;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_nzealand_chatham
+	{
+	time_zone_id = 3112;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{		
+		TIMEZONE_CITY
+			{
+			city_group_id = 69;
+			city_name = qtn_clk_city_newz_chatham;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_nicarag_managua
+	{
+	time_zone_id = 1136;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 70;
+			city_name = qtn_clk_city_nicarag_managua;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_norw_oslo
+	{
+	time_zone_id = 2856;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 71;
+			city_name = qtn_clk_city_norw_oslo;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_oman_muscat
+	{
+	time_zone_id = 2016;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 72;
+			city_name = qtn_clk_city_oman_muscat;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_pakist_islam
+	{
+	time_zone_id = 1920;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 73;
+			city_name = qtn_clk_city_pakist_islama;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 73;
+			city_name = qtn_clk_city_pakistan_karac;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_panama_panamac
+	{
+	time_zone_id = 1296;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 74;
+			city_name = qtn_clk_city_panama_panamac;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_png_portmoresby
+	{
+	time_zone_id = 3328;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 75;
+			city_name = qtn_clk_city_png_portmoresby;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_paraqu_asunc
+	{
+	time_zone_id = 648;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 76;
+			city_name = qtn_clk_city_paraqu_asunc;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_peru_lima
+	{
+	time_zone_id = 1112;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 77;
+			city_name = qtn_clk_city_peru_lima;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_philippines_manila
+	{
+	time_zone_id = 2008;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 78;
+			city_name = qtn_clk_city_philippines_manila;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_pol_warsaw
+	{
+	time_zone_id = 2984;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 79;
+			city_name = qtn_clk_city_pol_warsaw;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_portu_lisbon
+	{
+	time_zone_id = 2792;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 80;
+			city_name = qtn_clk_city_portu_lisbon;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_puertor_sanjuan
+	{
+	time_zone_id = 1352;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 81;
+			city_name = qtn_clk_city_puertor_sanjuan;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_romania_buch
+	{
+	time_zone_id = 2712;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 82;
+			city_name = qtn_clk_city_romania_buch;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_rus_moscow
+	{
+	time_zone_id = 2848;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 83;
+			city_name = qtn_clk_city_rus_moscow;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 83;
+			city_name = qtn_clk_city_rus_stpeters;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_rus_novosib
+	{
+	time_zone_id = 2032;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 83;
+			city_name = qtn_clk_city_rus_novosib;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_rus_vladivost
+	{
+	time_zone_id = 2224;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 83;
+			city_name = qtn_clk_city_rus_vladivost;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_rus_kaliningrad
+	{
+	time_zone_id = 2776;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 83;
+			city_name = qtn_clk_city_rus_kaliningrad;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_rus_samara
+	{
+	time_zone_id = 2896;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 83;
+			city_name = qtn_clk_city_rus_samara;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_rus_yekaterinburg
+	{
+	time_zone_id = 2240;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 83;
+			city_name = qtn_clk_city_rus_yekaterinburg;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_rus_krasnoyarsk
+	{
+	time_zone_id = 1952;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 83;
+			city_name = qtn_clk_city_rus_krasnoyarsk;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_rus_irkutsk
+	{
+	time_zone_id = 1872;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 83;
+			city_name = qtn_clk_city_rus_irkutsk;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_rus_yakutsk
+	{
+	time_zone_id = 2232;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 83;
+			city_name = qtn_clk_city_rus_yakutsk;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_rus_magadan
+	{
+	time_zone_id = 1992;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 83;
+			city_name = qtn_clk_city_rus_magadan;
+			}
+		};  }
+		
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_rus_anadyr
+	{
+	time_zone_id = 1680;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 83;
+			city_name = qtn_clk_city_rus_anadyr;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_samoa_apia
+	{
+	time_zone_id = 3096;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 84;
+			city_name = qtn_clk_city_samoa_apia;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_saudiarab_riya
+	{
+	time_zone_id = 2104;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 85;
+			city_name = qtn_clk_city_saudiarab_riya;
+			}
+		};  }
+
+
+
+
+		
+		
+	
+RESOURCE LOCALIZED_TIMEZONE r_tz_mont_podgorica
+	{
+	time_zone_id = 3424;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 86;
+			city_name = qtn_clk_city_montenegro_podgorica;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_singp_singapore
+	{
+	time_zone_id = 2144;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 87;
+			city_name = qtn_clk_city_singp_singapore;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_slova_bratislava
+	{
+	time_zone_id = 3432;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 88;
+			city_name = qtn_clk_city_slova_bratislava;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_slove_ljubljana
+	{
+	time_zone_id = 3440;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 89;
+			city_name = qtn_clk_city_slove_ljubljana;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_solomis_honiar
+	{
+	time_zone_id = 3184;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 90;
+			city_name = qtn_clk_city_solomis_honiar;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_safric_pretoria
+	{
+	time_zone_id = 288;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 91;
+			city_name = qtn_clk_city_safric_pretoria;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 91;
+			city_name = qtn_clk_city_safric_johburg;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_skorea_seoul
+	{
+	time_zone_id = 2128;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 92;
+			city_name = qtn_clk_city_skorea_seoul;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_spain_madrid
+	{
+	time_zone_id = 2816;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 93;
+			city_name = qtn_clk_city_spain_madrid;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_srilan_colombo
+	{
+	time_zone_id = 1784;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 94;
+			city_name = qtn_clk_city_srilan_colombo;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_swe_stockholm
+	{
+	time_zone_id = 2920;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 95;
+			city_name = qtn_clk_city_swe_stockholm;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_switz_bern
+	{
+	time_zone_id = 3000;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 96;
+			city_name = qtn_clk_city_switz_bern;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 96;
+			city_name = qtn_clk_city_switzerland_zurich;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_taiw_taipei
+	{
+	time_zone_id = 2152;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 97;
+			city_name = qtn_clk_city_taiw_taipei;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_thai_bangkok
+	{
+	time_zone_id = 1736;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 98;
+			city_name = qtn_clk_city_thai_bangkok;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_tonga_nuku
+	{
+	time_zone_id = 3368;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 99;
+			city_name = qtn_clk_city_tonga_nuku;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_trinidad_portofspain
+	{
+	time_zone_id = 1336;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 100;
+			city_name = qtn_clk_city_trinidad_portofspain;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_turk_ankara
+	{
+	time_zone_id = 2768;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 101;
+			city_name = qtn_clk_city_turk_ankara;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 101;
+			city_name = qtn_clk_city_turk_istanbul;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_ukraine_kiev
+	{
+	time_zone_id = 2784;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 102;
+			city_name = qtn_clk_city_ukraine_kiev;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_abu_dhabi
+	{
+	time_zone_id = 1816;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 103;
+			city_name = qtn_clk_city_abu_dhabi;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_uk_london
+	{
+	time_zone_id = 2800;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 104;
+			city_name = qtn_clk_city_uk_london;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 104;
+			city_name = qtn_clk_city_uk_edingbu;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 104;
+			city_name = qtn_clk_city_uk_cardiff;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_urugua_montev
+	{
+	time_zone_id = 1216;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 105;
+			city_name = qtn_clk_city_urugua_montev;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_usa_boise
+	{
+	time_zone_id = 720;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_boise;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_usa_chicago
+	{
+	time_zone_id = 776;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_chicago;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_dallas;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_desmoines;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_memphis;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_minneap;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_neworlea;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_oklahoma;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_omaha;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_stluis;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_pensacola;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_evansville;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_gary;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_wichita;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_jackson;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_bismarck;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_sioux_falls;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_milwaukee;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_birmingham;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_usa_denver
+	{
+	time_zone_id = 840;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_denver;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_albuquer;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_cheyenne;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_saltlakec;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_billings;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_usa_phoenix
+	{
+	time_zone_id = 64;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_phoenix;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_usa_detroit
+	{
+	time_zone_id = 848;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_detroit;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_usa_hawaii
+	{
+	time_zone_id = 3200;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_hawaii;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_usa_indiana
+	{
+	time_zone_id = 992;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_indiana;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_usa_juneau
+	{
+	time_zone_id = 1080;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_juneau;
+			}
+		};  }
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_usa_losange
+	{
+	time_zone_id = 1120;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_losange;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_lasvega;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_sanfranci;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_seattle;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_portland;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_usa_ny
+	{
+	time_zone_id = 1248;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_ny;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_atlanta;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_augusta;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_boston;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_charlotte;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_columbus;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_miami;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_philadelp;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_washington;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_hatford;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_dover;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_baltimore;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_concord;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_providence;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_columbia;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_montpelier;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_richmond;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_charleston;
+			}
+		};  }
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_usa_adak
+	{
+	time_zone_id = 504;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_adak;
+			}
+		};  }
+		
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_usa_saipan
+	{
+	time_zone_id = 3344;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_saipan;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_guam;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 208;
+			city_name = qtn_clk_city_n_mariana_i_saipan;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 200;
+			city_name = qtn_clk_city_micronesia_colonia;
+			}
+		};  }
+		
+		
+RESOURCE LOCALIZED_TIMEZONE r_tz_usa_pago_pago
+	{
+	time_zone_id = 3296;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_pago_pago;
+			}
+		};  }				
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_uzbe_tashkent
+	{
+	time_zone_id = 2160;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 107;
+			city_name = qtn_clk_city_uzbe_tashkent;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_vene_caracas
+	{
+	time_zone_id = 752;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 108;
+			city_name = qtn_clk_city_vene_caracas;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_viet_hanoi
+	{
+	time_zone_id = 1848;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 109;
+			city_name = qtn_clk_city_viet_hanoi;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_zimb_harare
+	{
+	time_zone_id = 280;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 110;
+			city_name = qtn_clk_city_zimb_harare;
+			}
+		};  }
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_nigeria_abuja
+	{
+	time_zone_id = 328;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 111;
+			city_name = qtn_clk_city_nigeria_abuja;
+			}
+		};  }
+		
+RESOURCE LOCALIZED_TIMEZONE r_tz_serb_belgrade
+	{
+	time_zone_id = 2688;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 112;
+			city_name = qtn_clk_city_serb_belgrade;
+			}
+		};  }
+
+//26.06.07 
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_algeria_algiers
+	{
+	time_zone_id = 120;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 113;
+			city_name = qtn_clk_city_algeria_algiers;
+			}
+		};  }
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_andorra_la_vella
+	{
+	time_zone_id = 2672;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 114;
+			city_name = qtn_clk_city_andorra_la_vella;
+			}
+		};  }
+		
+RESOURCE LOCALIZED_TIMEZONE r_tz_bahrain_al_manamah
+	{
+	time_zone_id = 1720;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 115;
+			city_name = qtn_clk_city_bahrain_al_manamah;
+			}
+		};  }
+		
+RESOURCE LOCALIZED_TIMEZONE r_tz_canary_las_palmas
+	{
+	time_zone_id = 2272;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 116;
+			city_name = qtn_clk_city_canary_las_palmas;
+			}
+		};  }
+		
+RESOURCE LOCALIZED_TIMEZONE r_tz_cayman_georgetown
+	{
+	time_zone_id = 768;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 117;
+			city_name = qtn_clk_city_cayman_georgetown;
+			}
+		};  }
+		
+RESOURCE LOCALIZED_TIMEZONE r_tz_christmas_island_christmas
+	{
+	time_zone_id = 3024;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 118;
+			city_name = qtn_clk_city_christmas_island_christmas;
+			}
+		};  }
+		
+RESOURCE LOCALIZED_TIMEZONE r_tz_cyprus_nicosia
+	{
+	time_zone_id = 2024;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 119;
+			city_name = qtn_clk_city_cyprus_nicosia;
+			}
+		};  }
+		
+RESOURCE LOCALIZED_TIMEZONE r_tz_drc_kinshasa
+	{
+	time_zone_id = 320;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 120;
+			city_name = qtn_clk_city_drc_kinshasa;
+			}
+		};  }
+	
+RESOURCE LOCALIZED_TIMEZONE r_tz_drc_lubumbashi
+	{
+	time_zone_id = 360;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 120;
+			city_name = qtn_clk_city_drc_lubumbashi;
+			}
+		};  }
+RESOURCE LOCALIZED_TIMEZONE r_tz_falkland_stanley
+	{
+	time_zone_id = 2328;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 121;
+			city_name = qtn_clk_city_falkland_stanley;
+			}
+		};  }
+		
+RESOURCE LOCALIZED_TIMEZONE r_tz_faroe_islands_torshavn
+	{
+	time_zone_id = 2288;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 122;
+			city_name = qtn_clk_city_faroe_islands_torshavn;
+			}
+		};  }
+		
+RESOURCE LOCALIZED_TIMEZONE r_tz_jordan_amman
+	{
+	time_zone_id = 1672;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 123;
+			city_name = qtn_clk_city_jordan_amman;
+			}
+		};  }
+		
+RESOURCE LOCALIZED_TIMEZONE r_tz_libya_tripoli
+	{
+	time_zone_id = 480;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 124;
+			city_name = qtn_clk_city_libya_tripoli;
+			}
+		};  }
+		
+RESOURCE LOCALIZED_TIMEZONE r_tz_liechtenstein_vaduz
+	{
+	time_zone_id = 2952;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 125;
+			city_name = qtn_clk_city_liechtenstein_vaduz;
+			}
+		};  }
+		
+RESOURCE LOCALIZED_TIMEZONE r_tz_luxembourg_luxembourg
+	{
+	time_zone_id = 2808;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 126;
+			city_name = qtn_clk_city_luxembourg_luxembourg;
+			}
+		};  }		
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_madagascar_antananarivo
+	{
+	time_zone_id = 3008;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 127;
+			city_name = qtn_clk_city_madagascar_antananarivo;
+			}
+		};  }	
+		
+		
+RESOURCE LOCALIZED_TIMEZONE r_tz_malta_valletta
+	{
+	time_zone_id = 2824;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 128;
+			city_name = qtn_clk_city_malta_valletta;
+			}
+		};  }
+		
+RESOURCE LOCALIZED_TIMEZONE r_tz_moldova_kishinev
+	{
+	time_zone_id = 2728;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 129;
+			city_name = qtn_clk_city_moldova_kishinev;
+			}
+		};  }	
+						
+				
+RESOURCE LOCALIZED_TIMEZONE r_tz_namibia_windhoek
+	{
+	time_zone_id = 496;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 130;
+			city_name = qtn_clk_city_namibia_windhoek;
+			}
+		};  }	
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_norfolk_kingston
+	{
+	time_zone_id = 3280;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 131;
+			city_name = qtn_clk_city_norfolk_kingston;
+			}
+		};  }	
+
+		
+RESOURCE LOCALIZED_TIMEZONE r_tz_qatar_doha
+	{
+	time_zone_id = 2080;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 133;
+			city_name = qtn_clk_city_qatar_doha;
+			}
+		};  }	
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_seychelles_victoria
+	{
+	time_zone_id = 3056 ;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 135;
+			city_name = qtn_clk_city_seychelles_victoria;
+			}
+		};  }
+		
+		
+RESOURCE LOCALIZED_TIMEZONE r_tz_somalia_mogadishu
+	{
+	time_zone_id =408 ;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 136;
+			city_name = qtn_clk_city_somalia_mogadishu;
+			}
+		};  }	
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_tunisia_tunis
+	{
+	time_zone_id =488 ;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 137;
+			city_name = qtn_clk_city_tunisia_tunis;
+			}
+		};  }				
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_yemen_sana
+	{
+	time_zone_id = 1656;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 132;
+			city_name = qtn_clk_city_yemen_sana;
+			}
+		};  }	
+
+//26.06.07
+
+//Phase II
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_albania_tirane
+	{
+	time_zone_id = 2936;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 140;
+			city_name = qtn_clk_city_albania_tirane;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_angola_luanda
+	{
+	time_zone_id = 352;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 141;
+			city_name = qtn_clk_city_angola_luanda;
+			}
+		};  }	
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_anguilla_anguilla
+	{
+	time_zone_id = 520;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 142;
+			city_name = qtn_clk_city_anguilla_anguilla;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_ab_saint_johns
+	{
+	time_zone_id = 528;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 143;
+			city_name = qtn_clk_city_ab_saint_johns;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 152;
+			city_name = qtn_clk_city_bvi_road_town;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_charlotte_amalie;
+			}		
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_aruba_oranjestad
+	{
+	time_zone_id = 640;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 144;
+			city_name = qtn_clk_city_aruba_oranjestad;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_azores_ponta_delgada
+	{
+	time_zone_id = 2256;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 145;
+			city_name = qtn_clk_city_azores_ponta_delgada;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_barbados_bridgetown
+	{
+	time_zone_id = 672;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 146;
+			city_name = qtn_clk_city_barbados_bridgetown;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_belize_belmopan
+	{
+	time_zone_id = 688;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 147;
+			city_name = qtn_clk_city_belize_belmopan;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_benin_porto_novo
+	{
+	time_zone_id = 464;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 148;
+			city_name = qtn_clk_city_benin_porto_novo;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_bhutan_thimphu
+	{
+	time_zone_id = 2184;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 149;
+			city_name = qtn_clk_city_bhutan_thimphu;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_botswana_gaborone
+	{
+	time_zone_id = 272;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 150;
+			city_name = qtn_clk_city_botswana_gaborone;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_biot_chagos
+	{
+	time_zone_id = 3016;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 151;
+			city_name = qtn_clk_city_biot_chagos;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_brunei_bandar_seri_begawar
+	{
+	time_zone_id = 1760;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 153;
+			city_name = qtn_clk_city_brunei_bandar_seri_begawar;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_bf_ouagadougou
+	{
+	time_zone_id = 456;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 154;
+			city_name = qtn_clk_city_bf_ouagadougou;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_burundi_bujumbura
+	{
+	time_zone_id = 184;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 155;
+			city_name = qtn_clk_city_burundi_bujumbura;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_cambodia_phnom_penh
+	{
+	time_zone_id = 2056;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 156;
+			city_name = qtn_clk_city_cambodia_phnom_penh;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_car_bangui
+	{
+	time_zone_id = 144;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 158;
+			city_name = qtn_clk_city_car_bangui;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 157;
+			city_name = qtn_clk_city_cameroon_yaounde;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_chad_ndjamena
+	{
+	time_zone_id = 432;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 159;
+			city_name = qtn_clk_city_chad_ndjamena;
+			}
+		};  }
+		
+		
+RESOURCE LOCALIZED_TIMEZONE r_tz_cocos_islands_cocos
+	{
+	time_zone_id = 3032;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 160;
+			city_name = qtn_clk_city_cocos_islands_cocos;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_comoros_moroni
+	{
+	time_zone_id = 3040;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 161;
+			city_name = qtn_clk_city_comoros_moroni;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_cook_islands_rarotonga
+	{
+	time_zone_id = 3336;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 162;
+			city_name = qtn_clk_city_cook_islands_rarotonga;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_cotedlvoire_abidjan
+	{
+	time_zone_id = 96;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 163;
+			city_name = qtn_clk_city_cotedlvoire_abidjan;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_curacao_willemstad
+	{
+	time_zone_id = 808;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 164;
+			city_name = qtn_clk_city_curacao_willemstad;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_djibouti_djibouti
+	{
+	time_zone_id = 240;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 165;
+			city_name = qtn_clk_city_djibouti_djibouti;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_east_timor_dili
+	{
+	time_zone_id = 1808;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 166;
+			city_name = qtn_clk_city_east_timor_dili;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_easter_island_mataveri
+	{
+	time_zone_id = 3120;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 167;
+			city_name = qtn_clk_city_easter_island_mataveri;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_eq_guinea_malabo
+	{
+	time_zone_id = 376;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 168;
+			city_name = qtn_clk_city_eq_guinea_malabo;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_eritrea_asmara
+	{
+	time_zone_id = 128;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 169;
+			city_name = qtn_clk_city_eritrea_asmara;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_ethiopia_addis_ababa
+	{
+	time_zone_id = 112;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 170;
+			city_name = qtn_clk_city_ethiopia_addis_ababa;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_french_guiana_cayenne
+	{
+	time_zone_id = 760;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 171;
+			city_name = qtn_clk_city_french_guiana_cayenne;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_french_pol_gambier_islands
+	{
+	time_zone_id = 3176;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 172;
+			city_name = qtn_clk_city_french_pol_gambier_islands;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_gabon_libreville
+	{
+	time_zone_id = 336;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 173;
+			city_name = qtn_clk_city_gabon_libreville;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_galapagos_islands_galapagos
+	{
+	time_zone_id = 3168;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 174;
+			city_name = qtn_clk_city_galapagos_islands_galapagos;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_gambia_banjul
+	{
+	time_zone_id = 152;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 175;
+			city_name = qtn_clk_city_gambia_banjul;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_ghana_accra
+	{
+	time_zone_id = 104;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 176;
+			city_name = qtn_clk_city_ghana_accra;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_gibraltar_gibraltar
+	{
+	time_zone_id = 2752;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 177;
+			city_name = qtn_clk_city_gibraltar_gibraltar;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_grenada_saint_georges
+	{
+	time_zone_id = 928;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 178;
+			city_name = qtn_clk_city_grenada_saint_georges;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_guadeloupe_pointe_a_pitre
+	{
+	time_zone_id = 936;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 179;
+			city_name = qtn_clk_city_guadeloupe_pointe_a_pitre;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_guinea_conakry
+	{
+	time_zone_id = 216;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 180;
+			city_name = qtn_clk_city_guinea_conakry;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_guinea_bissau_bissau
+	{
+	time_zone_id = 160;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 181;
+			city_name = qtn_clk_city_guinea_bissau_bissau;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_haiti_port_au_prince
+	{
+	time_zone_id = 1328;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 182;
+			city_name = qtn_clk_city_haiti_port_au_prince;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_honduras_tegucigalpa
+	{
+	time_zone_id = 1496;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 183;
+			city_name = qtn_clk_city_honduras_tegucigalpa;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_kerguelen_port_aux_francais
+	{
+	time_zone_id = 3048;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 184;
+			city_name = qtn_clk_city_kerguelen_port_aux_francais;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_kiribati_tarawa
+	{
+	time_zone_id = 3360;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 185;
+			city_name = qtn_clk_city_kiribati_tarawa;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_kyrgyzstan_bishkek
+	{
+	time_zone_id = 1752;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 186;
+			city_name = qtn_clk_city_kyrgyzstan_bishkek;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_laos_vientiane
+	{
+	time_zone_id = 2216;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 187;
+			city_name = qtn_clk_city_laos_vientiane;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_lebanon_beirut
+	{
+	time_zone_id = 1744;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 188;
+			city_name = qtn_clk_city_lebanon_beirut;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_lesotho_maseru
+	{
+	time_zone_id = 392;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 189;
+			city_name = qtn_clk_city_lesotho_maseru;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 191;
+			city_name = qtn_clk_city_malawi_lilongwe;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_madeira_funchal
+	{
+	time_zone_id = 2296;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 190;
+			city_name = qtn_clk_city_madeira_funchal;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_maldives_male
+	{
+	time_zone_id = 3064;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 192;
+			city_name = qtn_clk_city_maldives_male;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_mali_bamako
+	{
+	time_zone_id = 136;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 193;
+			city_name = qtn_clk_city_mali_bamako;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_marq_island_taiohae
+	{
+	time_zone_id = 3248;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 194;
+			city_name = qtn_clk_city_marq_island_taiohae;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_mars_islands_majuro
+	{
+	time_zone_id = 3240;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 195;
+			city_name = qtn_clk_city_mars_islands_majuro;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_martinique_fort_de_franc
+	{
+	time_zone_id = 1152;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 196;
+			city_name = qtn_clk_city_martinique_fort_de_franc;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_mauritania_nouakchott
+	{
+	time_zone_id = 448;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 197;
+			city_name = qtn_clk_city_mauritania_nouakchott;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_mauritius_port_louis
+	{
+	time_zone_id = 3072;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 198;
+			city_name = qtn_clk_city_mauritius_port_louis;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_mayotte_mamoudzou
+	{
+	time_zone_id = 3080;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 199;
+			city_name = qtn_clk_city_mayotte_mamoudzou;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_micronesia_ponape
+	{
+	time_zone_id = 3320;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 200;
+			city_name = qtn_clk_city_micronesia_ponape;
+			}
+		};  }
+		
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_montserrat_olveston
+	{
+	time_zone_id = 1232;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 201;
+			city_name = qtn_clk_city_montserrat_olveston;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_mozambique_maputo
+	{
+	time_zone_id = 384;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 202;
+			city_name = qtn_clk_city_mozambique_maputo;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_nauru_makwa
+	{
+	time_zone_id = 3264;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 203;
+			city_name = qtn_clk_city_nauru_makwa;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_new_caledonia_noumea
+	{
+	time_zone_id = 3288;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 204;
+			city_name = qtn_clk_city_new_caledonia_noumea;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 237;
+			city_name = qtn_clk_city_vanuatu_port_vila;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_niger_niamey
+	{
+	time_zone_id = 440;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 205;
+			city_name = qtn_clk_city_niger_niamey;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_niue_alofi
+	{
+	time_zone_id = 3272;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 206;
+			city_name = qtn_clk_city_niue_alofi;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_north_korea_pyongyang
+	{
+	time_zone_id = 2072;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 207;
+			city_name = qtn_clk_city_north_korea_pyongyang;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_palau_koror
+	{
+	time_zone_id = 3304;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 209;
+			city_name = qtn_clk_city_palau_koror;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_phoenix_islands_rawaki
+	{
+	time_zone_id = 3136;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 210;
+			city_name = qtn_clk_city_phoenix_islands_rawaki;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_pitcairn_adamstown
+	{
+	time_zone_id = 3312;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 211;
+			city_name = qtn_clk_city_pitcairn_adamstown;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_r_congo_brazzaville
+	{
+	time_zone_id = 176;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 212;
+			city_name = qtn_clk_city_r_congo_brazzaville;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_reunion_saint_denis
+	{
+	time_zone_id = 3088;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 213;
+			city_name = qtn_clk_city_reunion_saint_denis;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_rwanda_kigali
+	{
+	time_zone_id = 312;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 214;
+			city_name = qtn_clk_city_rwanda_kigali;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_st_helena_jamestown
+	{
+	time_zone_id = 2320;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 215;
+			city_name = qtn_clk_city_st_helena_jamestown;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_st_kitts_nevis_basseterre
+	{
+	time_zone_id = 1456;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 216;
+			city_name = qtn_clk_city_st_kitts_nevis_basseterre;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_st_lucia_castries
+	{
+	time_zone_id = 1464;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 217;
+			city_name = qtn_clk_city_st_lucia_castries;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_st_vincent_kingstown
+	{
+	time_zone_id = 1480;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 218;
+			city_name = qtn_clk_city_st_vincent_kingstown;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_sao_tome_principe_sao_tome
+	{
+	time_zone_id = 472;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 219;
+			city_name = qtn_clk_city_sao_tome_principe_sao_tome;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_senegal_dakar
+	{
+	time_zone_id = 224;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 220;
+			city_name = qtn_clk_city_senegal_dakar;
+			}
+		};  }
+		
+		
+RESOURCE LOCALIZED_TIMEZONE r_tz_sierra_leone_freetown
+	{
+	time_zone_id = 264;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 221;
+			city_name = qtn_clk_city_sierra_leone_freetown;
+			}
+		};  }
+		
+		
+RESOURCE LOCALIZED_TIMEZONE r_tz_south_georgia_grytviken
+	{
+	time_zone_id = 2312;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 222;
+			city_name = qtn_clk_city_south_georgia_grytviken;
+			}
+		};  }
+		
+		
+RESOURCE LOCALIZED_TIMEZONE r_tz_st_pierre_miquelon_pierre
+	{
+	time_zone_id = 1192;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 223;
+			city_name = qtn_clk_city_st_pierre_miquelon_pierre;
+			}
+		};  }
+		
+		
+RESOURCE LOCALIZED_TIMEZONE r_tz_sudan_khartoum
+	{
+	time_zone_id = 304;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 224;
+			city_name = qtn_clk_city_sudan_khartoum;
+			}
+		};  }
+		
+		
+RESOURCE LOCALIZED_TIMEZONE r_tz_suriname_paramaribo
+	{
+	time_zone_id = 1312;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 225;
+			city_name = qtn_clk_city_suriname_paramaribo;
+			}
+		};  }
+		
+		
+RESOURCE LOCALIZED_TIMEZONE r_tz_swaziland_mbabane
+	{
+	time_zone_id = 400;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 226;
+			city_name = qtn_clk_city_swaziland_mbabane;
+			}
+		};  }
+		
+		
+RESOURCE LOCALIZED_TIMEZONE r_tz_syria_damascus
+	{
+	time_zone_id = 1792;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 227;
+			city_name = qtn_clk_city_syria_damascus;
+			}
+		};  }
+		
+		
+RESOURCE LOCALIZED_TIMEZONE r_tz_tahiti_papeete
+	{
+	time_zone_id = 3352;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 228;
+			city_name = qtn_clk_city_tahiti_papeete;
+			}
+		};  }
+		
+		
+RESOURCE LOCALIZED_TIMEZONE r_tz_tajikistan_dushanbe
+	{
+	time_zone_id = 1824;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 229;
+			city_name = qtn_clk_city_tajikistan_dushanbe;
+			}
+		};  }
+		
+		
+RESOURCE LOCALIZED_TIMEZONE r_tz_tanzania_dar_es_salaam
+	{
+	time_zone_id = 232;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 230;
+			city_name = qtn_clk_city_tanzania_dar_es_salaam;
+			}
+		};  }
+		
+		
+RESOURCE LOCALIZED_TIMEZONE r_tz_togo_lome
+	{
+	time_zone_id = 344;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 231;
+			city_name = qtn_clk_city_togo_lome;
+			}
+		};  }
+		
+		
+RESOURCE LOCALIZED_TIMEZONE r_tz_tokelau_fakaofo
+	{
+	time_zone_id = 3144;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 232;
+			city_name = qtn_clk_city_tokelau_fakaofo;
+			}
+		};  }
+		
+		
+RESOURCE LOCALIZED_TIMEZONE r_tz_turkmenistan_ashgabat
+	{
+	time_zone_id = 1704;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 233;
+			city_name = qtn_clk_city_turkmenistan_ashgabat;
+			}
+		};  }
+		
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_turks_caicos_kingston
+	{
+	time_zone_id = 920;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 234;
+			city_name = qtn_clk_city_turks_caicos_kingston;
+			}
+		};  }
+
+		
+RESOURCE LOCALIZED_TIMEZONE r_tz_tuvalu_funafuti
+	{
+	time_zone_id = 3160;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 235;
+			city_name = qtn_clk_city_tuvalu_funafuti;
+			}
+		};  }
+		
+		
+RESOURCE LOCALIZED_TIMEZONE r_tz_uganda_kampala
+	{
+	time_zone_id = 296;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 236;
+			city_name = qtn_clk_city_uganda_kampala;
+			}
+		};  }
+		
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_wallis_futuna_wallis
+	{
+	time_zone_id = 3392;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 239;
+			city_name = qtn_clk_city_wallis_futuna_wallis;
+			}
+		};  }
+		
+	
+RESOURCE LOCALIZED_TIMEZONE r_tz_west_sahara_el_aaiun
+	{
+	time_zone_id = 256;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 241;
+			city_name = qtn_clk_city_west_sahara_el_aaiun;
+			}
+		};  }
+		
+		
+RESOURCE LOCALIZED_TIMEZONE r_tz_zambia_lusaka
+	{
+	time_zone_id = 368;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 238;
+			city_name = qtn_clk_city_zambia_lusaka;
+			}
+		};  }
+		
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_ci_kiritimati
+	{
+	time_zone_id = 3216;
+	standard_name = "default";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 240;
+			city_name = qtn_clk_city_ci_kiritimati;
+			}
+		};  }
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_macau_macau
+	{
+	time_zone_id = 1984;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 242;
+			city_name = qtn_clk_city_macau;
+			}
+		};  }
+		
+		
+RESOURCE LOCALIZED_TIMEZONE r_tz_usa_louisville
+	{
+	time_zone_id = 1088;
+	standard_name = "";
+	daylight_name = "";
+	short_standard_name = "";
+	short_daylight_name = "";
+	cities = 
+		{		
+		TIMEZONE_CITY
+			{
+			city_group_id = 106;
+			city_name = qtn_clk_city_usa_louisville;
+			}
+		};	}
+
+
+// End of file

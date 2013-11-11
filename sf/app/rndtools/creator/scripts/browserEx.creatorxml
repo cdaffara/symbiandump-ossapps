@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<creatorscript schemaVersion="1.0" scriptVersion="1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="creator.xsd">
+
+<!-- Create bookmark -->
+<bookmark>
+   <fields>
+    <name>Creator bookmark</name>
+    <url>http://example.net</url>
+    <username>User</username>
+    <password>passwd</password>
+  </fields>
+</bookmark>
+
+<!-- Create 5 random bookmarks -->
+<bookmark amount="5">
+   <fields>
+        <name randomlength="default"/>
+        <url randomlength="default"/>
+        <username randomlength="default"/>
+        <password randomlength="default"/>
+   </fields>
+</bookmark>
+
+<!-- Create bookmark folder -->
+<bookmarkfolder>
+   <fields>
+       <name>Creator bookmarks</name>
+   </fields>
+</bookmarkfolder>
+
+<!-- Create saved page folder -->
+<savedpagefolder>
+    <fields>
+       <name>Creator saved pages</name>
+    </fields>
+</savedpagefolder>
+
+<!-- Create saved page -->
+<savedpage>
+    <fields>
+       <name>Creator saved page</name>
+       <path randomlength="default"/>
+    </fields>
+</savedpage>
+
+</creatorscript>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="1.1">
+    <object name="btnContinue" type="HbAction">
+        <string name="text" value="Continue"/>
+    </object>
+    <object name="btnResumeLater" type="HbAction">
+        <string name="text" value="Resume Later"/>
+    </object>
+    <widget name="dialog" type="HbDialog">
+        <sizehint height="49.73un" type="PREFERRED" width="49.73un"/>
+        <contentsmargins bottom="var(hb-param-margin-view-bottom)" left="var(hb-param-margin-view-left)" right="var(hb-param-margin-view-right)" top="var(hb-param-margin-view-top)"/>
+        <widget name="lblHeading" role="HbDialog:headingWidget" type="HbLabel">
+            <enums name="alignment" value="AlignLeft|AlignLeading"/>
+            <contentsmargins bottom="var(hb-param-margin-gene-popup)" left="var(hb-param-margin-gene-popup)" right="var(hb-param-margin-gene-popup)" top="var(hb-param-margin-gene-popup)"/>
+            <string name="plainText" value="Device Update"/>
+            <fontspec name="fontSpec" role="Primary" textheight="var(hb-param-text-height-primary)"/>
+        </widget>
+        <widget name="listView" role="HbDialog:contentWidget" type="HbScrollArea">
+            <widget name="scrollAreaContents" role="HbScrollArea:contents" type="HbWidget">
+                <widget name="label" type="HbLabel">
+                    <string name="plainText" value="The Last update &lt;Name&gt; &lt;Version&gt; and &lt;Size&gt; was not completed. You can install it now."/>
+                    <enums name="textWrapping" value="TextWrapAnywhere"/>
+                </widget>
+                <widget name="label_1" type="HbLabel">
+                    <string name="plainText" value="During the download phone cannot be used even for emergency"/>
+                    <enums name="textWrapping" value="TextWrapAnywhere"/>
+                </widget>
+                <widget name="label_2" type="HbLabel">
+                    <string name="plainText" value="After the installation phone will restart."/>
+                    <enums name="textWrapping" value="TextWrapAnywhere"/>
+                </widget>
+                <widget name="label_3" type="HbLabel">
+                    <string name="plainText" value="It is recommended to connect the charger."/>
+                    <enums name="textWrapping" value="TextWrapAnywhere"/>
+                </widget>
+                <sizehint height="49.43284un" type="PREFERRED" width="49.55224un"/>
+                <layout type="grid">
+                    <griditem column="0" itemname="label" row="0"/>
+                    <griditem column="0" itemname="label_1" row="3"/>
+                    <griditem column="0" itemname="label_2" row="2"/>
+                    <griditem column="0" itemname="label_3" row="1"/>
+                </layout>
+            </widget>
+            <real name="z" value="1"/>
+            <contentsmargins bottom="var(hb-param-margin-gene-popup-list)" left="var(hb-param-margin-gene-popup-list)" right="var(hb-param-margin-gene-popup-list)" top="var(hb-param-margin-gene-popup-list)"/>
+            <enums name="scrollDirections" value="Horizontal|Vertical"/>
+        </widget>
+        <ref object="btnContinue" role="HbWidget:addAction"/>
+        <ref object="btnResumeLater" role="HbWidget:addAction"/>
+    </widget>
+    <metadata activeUIState="Common ui state" display="NHD-3.2-inch_portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+    </metadata>
+</hbdocument>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE SystemDefinition SYSTEM "sysdef_1_5_1.dtd" [
+  <!ENTITY layer_real_source_path "sf/app/internetradio" >
+]>
+
+<SystemDefinition name="internetradio" schema="1.5.1">
+  <systemModel>
+    <layer name="app_layer">
+      <module name="internetradio">
+        <unit name="internetradio" unitID="av.internetradio" bldFile="&layer_real_source_path;/group" mrp="" />
+      </module>
+    </layer>
+    <layer name="app_layer">
+      <module name="qtinternetradio">
+        <unit unitID="qtinternetradio" mrp="" bldFile="&layer_real_source_path;/qtinternetradio" name="qtinternetradio" proFile="all.pro" qmakeArgs="-r -config rom"/>
+      </module>
+    </layer>
+    <layer name="qt_unit_test_layer">
+      <module name="qtinternetradio_test">
+        <unit unitID="qtinternetradio_test" mrp="" bldFile="&layer_real_source_path;/qtinternetradio/internal/tsrc" name="qtinternetradio_test" proFile="tsrc.pro" qmakeArgs="-r" filter="TA_InternetRadio"/>
+      </module>
+    </layer>
+  </systemModel>
+</SystemDefinition>

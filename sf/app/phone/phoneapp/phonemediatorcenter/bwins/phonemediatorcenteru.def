@@ -1,0 +1,16 @@
+EXPORTS
+	?SendEvent@CPhoneMediatorSender@@QBEXHHPBVTDesC16@@@Z @ 1 NONAME ; void CPhoneMediatorSender::SendEvent(int, int, class TDesC16 const *) const
+	?IssueCommand@CPhoneMediatorSender@@QAEHVTUid@@0HVTVersion@@ABVTDesC8@@PAVMPhoneShutdownCommand@@@Z @ 2 NONAME ; int CPhoneMediatorSender::IssueCommand(class TUid, class TUid, int, class TVersion, class TDesC8 const &, class MPhoneShutdownCommand *)
+	?Sender@CPhoneMediatorFactory@@QAEPAVCPhoneMediatorSender@@XZ @ 3 NONAME ; class CPhoneMediatorSender * CPhoneMediatorFactory::Sender(void)
+	?SendEvent@CPhoneMediatorSender@@QAEXHAAVTPhoneCommandParam@@@Z @ 4 NONAME ; void CPhoneMediatorSender::SendEvent(int, class TPhoneCommandParam &)
+	?NewL@CPhoneContinueEmergencyCallCommand@@SAPAV1@AAVMPhoneEngineMessageSender@@@Z @ 5 NONAME ; class CPhoneContinueEmergencyCallCommand * CPhoneContinueEmergencyCallCommand::NewL(class MPhoneEngineMessageSender &)
+	?SendEvent@CPhoneMediatorSender@@QBEXHH@Z @ 6 NONAME ; void CPhoneMediatorSender::SendEvent(int, int) const
+	?SendEvent@CPhoneMediatorSender@@QBEXH@Z @ 7 NONAME ; void CPhoneMediatorSender::SendEvent(int) const
+	?SendEvent@CPhoneMediatorSender@@QBEXHHAAVTPhoneCommandParam@@@Z @ 8 NONAME ; void CPhoneMediatorSender::SendEvent(int, int, class TPhoneCommandParam &) const
+	?Instance@CPhoneMediatorSender@@SAPAV1@XZ @ 9 NONAME ; class CPhoneMediatorSender * CPhoneMediatorSender::Instance(void)
+	?NewL@CPhoneTerminateAllConnectionsCommand@@SAPAV1@AAVMPhoneEngineMessageSender@@@Z @ 10 NONAME ; class CPhoneTerminateAllConnectionsCommand * CPhoneTerminateAllConnectionsCommand::NewL(class MPhoneEngineMessageSender &)
+	?CommandListener@CPhoneMediatorFactory@@QAEPAVCPhoneMediatorCommandListener@@PAVMPhoneMenuAndCbaEvents@@PAVMPhoneEngineMessageSender@@PAVMPEEngineInfo@@@Z @ 11 NONAME ; class CPhoneMediatorCommandListener * CPhoneMediatorFactory::CommandListener(class MPhoneMenuAndCbaEvents *, class MPhoneEngineMessageSender *, class MPEEngineInfo *)
+	?MediatorMessage@CPhoneMediatorFactory@@QAEPAVMPhoneMediatorMessage@@HH@Z @ 12 NONAME ; class MPhoneMediatorMessage * CPhoneMediatorFactory::MediatorMessage(int, int)
+	?NewL@CPhoneReleaseCommand@@SAPAV1@AAVMPhoneEngineMessageSender@@@Z @ 13 NONAME ; class CPhoneReleaseCommand * CPhoneReleaseCommand::NewL(class MPhoneEngineMessageSender &)
+	?Instance@CPhoneMediatorFactory@@SAPAV1@XZ @ 14 NONAME ; class CPhoneMediatorFactory * CPhoneMediatorFactory::Instance(void)
+

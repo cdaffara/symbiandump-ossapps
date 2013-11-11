@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="1.1">
+    <widget name="nmailViewerView" type="HbView">
+        <widget name="content" role="HbView:widget" type="HbWidget">
+            <widget name="viewerScrollArea" type="HbScrollArea">
+                <widget name="viewerScrollAreaContents" role="HbScrollArea:contents" type="HbWidget">
+                    <widget name="viewerHeader" type="NmViewerHeader">
+                        <bool name="visible" value="TRUE"/>
+                    </widget>
+                    <widget name="viewerAttaList" type="NmAttachmentListWidget">
+                        <bool name="visible" value="TRUE"/>
+                    </widget>
+                    <widget name="viewerWebView" type="NmMailViewerWK">
+                        <real name="z" value="2"/>
+                        <bool name="visible" value="TRUE"/>
+                    </widget>
+                    <real name="z" value="0"/>
+                    <layout orientation="Vertical" type="linear">
+                        <linearitem itemname="viewerHeader"/>
+                        <linearitem itemname="viewerAttaList"/>
+                        <linearitem itemname="viewerWebView"/>
+                    </layout>
+                </widget>
+            </widget>
+            <real name="z" value="0"/>
+            <layout type="anchor">
+                <anchoritem dst="viewerScrollArea" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="viewerScrollArea" dstEdge="TOP" spacing="0un" src="" srcEdge="TOP"/>
+                <anchoritem dst="viewerScrollArea" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="viewerScrollArea" dstEdge="BOTTOM" spacing="0un" src="" srcEdge="BOTTOM"/>
+            </layout>
+        </widget>
+        <string name="title"/>
+    </widget>
+    <metadata activeUIState="Common ui state" display="NHD-3.2-inch_portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+    </metadata>
+</hbdocument>

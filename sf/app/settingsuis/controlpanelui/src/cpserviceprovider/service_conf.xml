@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<service>
+  <name>cpserviceprovider</name>
+  <filepath>="must-not-be-empty"</filepath>
+  <description>ControlPanel service</description>
+  <interface>
+     <name>com.nokia.symbian.ICpPluginLauncher</name>
+     <version>1.0</version>
+     <description>Launch a setting view which comes from a controlpanel plugin</description>
+  </interface>
+</service>

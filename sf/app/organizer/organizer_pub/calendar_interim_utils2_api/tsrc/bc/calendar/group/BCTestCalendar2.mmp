@@ -1,0 +1,111 @@
+/*
+* Copyright (c) 2002-2010 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  ?Description
+*
+*/
+
+
+#if defined(__S60_)
+        // To get the OS_LAYER_SYSTEMINCLUDE-definition
+        #include <platform_paths.hrh>
+#endif
+
+TARGET          BCTestCalendar2.dll
+TARGETTYPE      dll
+UID             0x1000008D 0x101FB3E3
+
+EPOCSTACKSIZE   0x5000
+EPOCHEAPSIZE    1048576 5242880
+
+CAPABILITY      ALL -TCB
+/* Remove comments and replace 0x00000000 with correct vendor id */
+// VENDORID     0x00000000
+/* Remove comments and replace 0x00000000 with correct secure id */
+// SECUREID     0x00000000
+
+//TARGETPATH      ?target_path
+DEFFILE         BCTestCalendar2.def
+
+#ifdef SBSV2
+	USERINCLUDE     ../inc 
+
+	#if defined(__S60_)
+	    OS_LAYER_SYSTEMINCLUDE
+	#else // __S60_ not defined
+	    SYSTEMINCLUDE   /epoc32/include
+	#endif // __S60_
+
+	SOURCEPATH      ../src
+#else // SBSV2 not defined
+	USERINCLUDE     ../inc 
+
+	#if defined(__S60_)
+	    OS_LAYER_SYSTEMINCLUDE
+	#else // __S60_ not defined
+	    SYSTEMINCLUDE   /epoc32/include
+	#endif // __S60_
+
+	SOURCEPATH      ../src
+#endif // SBSV2
+
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE   /epoc32/include		
+SYSTEMINCLUDE	/epoc32/include/middleware 	
+SYSTEMINCLUDE	/epoc32/include/domain/middleware 	
+SYSTEMINCLUDE	/epoc32/include/osextensions 	
+SYSTEMINCLUDE	/epoc32/include/domain/osextensions 	
+SYSTEMINCLUDE	/epoc32/include/applications
+
+SOURCE          BCTestCalendar2.cpp
+SOURCE          BCTestCalendar2Blocks.cpp
+
+//RESOURCE        resource_file
+//RESOURCE        resource_file2
+
+LIBRARY         euser.lib
+LIBRARY         stiftestinterface.lib
+LIBRARY         stiftestengine.lib
+LIBRARY					etext.lib
+LIBRARY					CalInterimAPI.lib
+LIBRARY					CalenInterimUtils2.lib
+LIBRARY					bafl.lib
+LIBRARY					flogger.lib
+LIBRARY					featdiscovery.lib
+
+
+LANG            SC
+
+/*
+START WINS      
+?wins_specific_information
+END
+
+START MARM
+?marm_specific_information
+END
+*/
+// Other possible keywords:
+ 
+// DOCUMENT     ?file, that is not compiled, but added to MSVC project workspace (i.e. release notes)
+/*
+START BITMAP ?target
+TARGETPATH   ?emulated_path_on_target_machine
+HEADER
+SOURCE       ?color_depth ?source_bitmap
+END
+*/
+// DEFFILE ?filename
+// AIF ?filename
+
+// End of File

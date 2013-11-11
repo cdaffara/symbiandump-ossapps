@@ -1,0 +1,102 @@
+/*
+* Copyright (c) 2005-2007 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  UIControl subcomponent of PhoneUI
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+// Capability assignment.
+CAPABILITY CAP_GENERAL_DLL
+
+// Assign Vendor ID.
+VENDORID VID_DEFAULT
+
+VERSION 10.0
+
+TARGET          phoneuicontrol.dll
+TARGETTYPE      dll
+UID             0x1000008d  0x101F4D0C
+
+SOURCEPATH      ../src
+SOURCE          cphonebtaadisconnecthandler.cpp
+SOURCE          cphonedtmfwaitchartimer.cpp
+SOURCE          cphoneenginehandler.cpp
+SOURCE          cphoneremotecontrolhandler.cpp
+SOURCE          cphonestate.cpp
+SOURCE          cphonestatecallsetup.cpp
+SOURCE          cphonestatehandle.cpp
+SOURCE          cphonestateidle.cpp
+SOURCE          cphonestateincall.cpp
+SOURCE          cphonestateincoming.cpp
+SOURCE          cphonestatemachine.cpp
+SOURCE          cphonestatestartup.cpp
+SOURCE          cphonesystemeventhandler.cpp
+SOURCE          cphoneuicontroller.cpp
+SOURCE          cphoneaccessorybthandler.cpp
+SOURCE          cphonenumberentrymanager.cpp
+SOURCE          cphoneuicommandmanager.cpp
+SOURCE          phonenoteutil.cpp 
+SOURCE          phoneaudioutil.cpp
+
+/* Languages */
+LANG SC
+
+
+USERINCLUDE     ../inc
+USERINCLUDE     ../../phoneuiqtviewadapter/inc
+USERINCLUDE     ../../phoneuiutils/inc
+USERINCLUDE     ../../phoneui2/srcdata
+USERINCLUDE     ../../phoneuistates/inc
+USERINCLUDE     ../../phonemediatorcenter/inc
+USERINCLUDE     ../../phoneuiutils/inc
+
+APP_LAYER_SYSTEMINCLUDE         // Application layer domain APIs
+SYSTEMINCLUDE   ../../../inc    // Telephony internal headers
+
+LIBRARY         euser.lib
+LIBRARY         cone.lib 
+LIBRARY         phoneuiutils.lib
+LIBRARY         efsrv.lib 
+LIBRARY         engineinfo.lib
+LIBRARY         ws32.lib 
+LIBRARY         fbscli.lib
+LIBRARY         phonestringloader.lib
+LIBRARY         featmgr.lib // FeatureManager
+LIBRARY         connmon.lib // RConnectionMonitor
+LIBRARY         hal.lib
+
+// RemCon
+LIBRARY         remconcoreapi.lib
+LIBRARY         remconinterfacebase.lib
+LIBRARY         phonecmdhandler.lib
+// Soft reject
+LIBRARY         eikcore.lib // CCharFormatLayer, CParaFormatLayer
+
+// Profiles
+LIBRARY         profileeng.lib
+
+LIBRARY         sssettings.lib
+LIBRARY         bafl.lib                // Descriptor arrays
+
+LIBRARY         apgrfx.lib
+LIBRARY         serviceprovidersettings.lib
+
+LIBRARY         starterclient.lib
+
+LIBRARY         phonemediatorcenter.lib
+
+
+SMPSAFE

@@ -1,0 +1,12 @@
+
+HsListViewItem[layoutName="default"][progress] {
+    layout:layout-1_applib_progress;
+}
+
+HsListViewItem[layoutName="default"][progress][stretchingStyle="StretchLandscape"]:landscape {
+    layout:layout-4_applib_progress;
+}
+
+HsListViewItem::progress {
+
+}

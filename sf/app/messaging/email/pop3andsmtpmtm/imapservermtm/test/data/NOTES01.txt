@@ -1,0 +1,108 @@
+
+Test Suite Notes
+----------------
+
+Automated tests
+---------------
+
+To run the tests, run up the code and select 'y' to clean the message
+folder.
+
+Select 1 and then 2,3 or 4 depending on which IMAP server you are
+connecting to (add extras as necessary to the function
+CActiveConsole::SelectImap4ServerEntryL()).
+
+select 7 (automation)
+select 1 (this will connect and put the server in a known state).
+select 2 (runs offline tests without dialling)
+select 3 (connects and runs more tests)
+select X X to exit
+
+
+OffLine tests
+-------------
+
+States 0-699: Test combinations of offline Move/Copy/Delete operations
+checking that
+ 1) Op Queue in folders are correct
+ 2) Shadow items are created correctly
+ 3) Visibilities are updated correctly
+ 4) DisconnectedOp flags are updated correctly
+
+Each combination tests that the individual op gives the right results
+and that the combination resolves correctly.
+
+Combinations checked are
+ 10: MoveFromLocal + CopyTolocal == CopyFromLocal
+ 20: CopyFromLocal + CopyToLocal == Immediate Copy
+100: CopyToLocal + CopyFromLocal == CopyToLocal + CopyWithinService
+200: CopyWithinService + CopyWithinService
+203: MoveWithinService + CopyWithinService
+300: MoveFromLocal + MoveToLocal (same folder) == nothing
+310: CopyFromLocal + MoveToLocal == immediate copy
+320: MoveFromLocal + MoveToLocal == immediate move
+400: MoveToLocal + MoveFromLocal (same folder) == nothing
+410: MoveToLocal + MoveFromLocal == MoveWithinService
+420: CopyToLocal + Delete + MoveFromLocal == nothing
+500: MoveWithinService + MoveWithinService (same folder) == nothing
+510: MoveWithinService + MoveWithinService == MoveWithinService
+600: Delete + Undelete = nothing
+
+State 700: Check message flags
+
+Check that the various test messages have the correct flags etc. set
+
+ 1) Check priority values
+ 2) Check return receipt addresses
+ 3) Check disposition addresses
+ 4) Check MHTML flags TODO
+ 5) Check Attachment flags TODO
+
+States 701-710: Test right result given when performing ops offline.
+
+ KErrDisconnected: KIMAP4MTMIsConnected, KIMAP4MTMSynchronise,
+ KIMAP4MTMFullSync, KIMAP4MTMRenameFolder, KIMAP4MTMDisconnect,
+ KIMAP4MTMSyncTree, KIMAP4MTMSelect
+
+ KErrNone: KIMAP4MTMBusy, KIMAP4MTMCancelBackgroundSynchronise
+
+States 711-717: Test LocalSubscription/LocalUnsubscription
+
+ Subscribe and unsubscribe folders and check visibility changes
+
+States 800-899: Test Populate options
+
+ Test Populate option is inserted into queue correctly.
+
+
+Synchronise tests
+-----------------
+
+States 0-99: Set up assortment of offline operations to do when going
+on line including
+
+ CopyToLocal
+ CopyWithinService
+ MoveToLocal
+ MoveWithinService
+ Delete
+ Populate (4 flag variations)
+ Multiple CopyWithinService to same folder
+ CopyToLocal and then delete ghost
+ CopyWithinService and then delete ghost
+ MoveToLocal and then delete ghost
+ MoveWithinService and then delete ghost
+  
+States 100-102: Go online and wait for sync to end
+
+State 103: Check that
+ 1) all the above happened 
+ 2) Queues are updated correctly
+ 3) Disconnected Op Flags are updated correctly
+ 4) Complete flags are updated correctly
+ 5) Shadows are removed
+ 6) Check delete happened (if deleting on connection).
+
+States 200-299: check that the logging worked as expected.
+
+State 300: Check delete happened (if deleting on disconnection).

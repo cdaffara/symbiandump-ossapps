@@ -1,0 +1,10 @@
+EXPORTS
+	?makePresetUserDefined@IRQFavoritesDB@@QAEHHH@Z @ 1  NONAME ; int IRQFavoritesDB::makePresetUserDefined(int, int)
+	?addPreset@IRQFavoritesDB@@QAEHABVIRQPreset@@@Z @ 2  NONAME ; int IRQFavoritesDB::addPreset(class IRQPreset const &)
+	?getPresets@IRQFavoritesDB@@QBEPAV?$QList@PAVIRQPreset@@@@XZ @ 3  NONAME ; class QList<class IRQPreset *> * IRQFavoritesDB::getPresets(void) const
+	?deletePreset@IRQFavoritesDB@@QAEHABVIRQPreset@@@Z @ 4  NONAME ; int IRQFavoritesDB::deletePreset(class IRQPreset const &)
+	??1IRQFavoritesDB@@QAE@XZ @ 5  NONAME ; IRQFavoritesDB::~IRQFavoritesDB(void)
+	?replacePreset@IRQFavoritesDB@@QAEXABVIRQPreset@@@Z @ 6  NONAME ; void IRQFavoritesDB::replacePreset(class IRQPreset const &)
+	?renamePreset@IRQFavoritesDB@@QAEHABVIRQPreset@@ABVQString@@@Z @ 7  NONAME ; int IRQFavoritesDB::renamePreset(class IRQPreset const &, class QString const &)
+	??0IRQFavoritesDB@@QAE@XZ @ 8  NONAME ; IRQFavoritesDB::IRQFavoritesDB(void)
+

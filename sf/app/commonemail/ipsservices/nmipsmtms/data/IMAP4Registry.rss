@@ -1,0 +1,93 @@
+/*
+* Copyright (c) 2002 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: 
+*     This file contains IMAP4 MTM info resource.
+*
+*
+*/
+
+
+//  INCLUDES
+#include <mtmconfig.rh>
+#include <e32capability.h>
+
+//#include <imum.loc>
+
+//  CONSTANTS
+//  MACROS
+//  RESOURCE DEFINITIONS
+
+// ----------------------------------------------------------------------------
+//
+//
+//    MTM info resource IMAP4
+//
+// ----------------------------------------------------------------------------
+//
+
+RESOURCE MTM_INFO_FILE
+    {
+    mtm_type_uid = 0x1000102a;
+    technology_type_uid = 0x10001671;
+    components =
+        {
+        MTM_COMPONENT_V2
+            {
+            human_readable_name = "Email";
+            component_uid = KUidMtmServerComponentVal;
+            entry_point = 1;
+            version = VERSION_V2 { major = 1; minor = 0; build = 100; };
+            filename = "imps.dll";
+            },
+        MTM_COMPONENT_V2
+            {
+            human_readable_name = "Email";
+            component_uid = KUidMtmClientComponentVal;
+            entry_point = 3;
+            version = VERSION_V2 { major = 1; minor = 0; build = 100; };
+            filename = "imcm.dll";
+            },
+        MTM_COMPONENT_V2
+            {
+            human_readable_name = qtn_mce_inbox_write_email;
+            component_uid = KUidMtmUiComponentVal;
+            entry_point = 2;
+            version = VERSION_V2 { major = 1; minor = 0; build = 100; };
+            filename = "nmipsmtms.dll";
+            },
+        MTM_COMPONENT_V2
+            {
+            human_readable_name = qtn_mce_inbox_write_email;
+            component_uid = KUidMtmUiDataComponentVal;
+            entry_point = 1;
+            version = VERSION_V2 { major = 1; minor = 0; build = 100; };
+            filename = "nmipsmtms.dll";
+            }
+        };
+    }
+    
+RESOURCE MTM_CAPABILITIES
+    {
+    send_capability = 1;
+    body_capability = 1;
+    }
+        
+RESOURCE MTM_SECURITY_CAPABILITY_SET
+    {
+    capabilities = { ECapabilityNetworkServices };
+    }
+       
+
+// End of File
+

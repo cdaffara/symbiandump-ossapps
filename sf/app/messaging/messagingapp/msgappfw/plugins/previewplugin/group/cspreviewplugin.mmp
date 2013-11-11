@@ -1,0 +1,70 @@
+/*
+* Copyright (c) 2006-2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  CS Preview Plugin
+*
+*/
+#include <data_caging_paths.hrh>
+#include <platform_paths.hrh>
+
+CAPABILITY      CAP_ECOM_PLUGIN 
+VENDORID        VID_DEFAULT
+TARGET          cspreviewplugin.dll
+TARGETTYPE      PLUGIN
+UID             0x10009D8D 0x20026F49
+
+VERSION 	1.0
+
+PAGED
+
+// RESOURCE
+START RESOURCE ../rss/cspreviewplugin.rss
+TARGET cspreviewplugin.rsc
+END
+
+SOURCEPATH      ../src
+
+SOURCE    proxy.cpp
+SOURCE    ccspreviewplugin.cpp
+SOURCE    ccspreviewpluginhandler.cpp
+
+USERINCLUDE     ../inc
+USERINCLUDE     ../../../server/inc
+USERINCLUDE     ../../../utils/inc
+USERINCLUDE     ../../../../../inc
+USERINCLUDE     ../../../../msgutils/unidatautils/unidatamodel/inc
+APP_LAYER_SYSTEMINCLUDE
+MW_LAYER_SYSTEMINCLUDE
+
+LIBRARY         euser.lib
+LIBRARY         eCom.lib
+LIBRARY         csutils.lib
+LIBRARY         efsrv.lib 
+
+DEBUGLIBRARY    flogger.lib
+
+// Msg Server
+LIBRARY         Smcm.lib
+LIBRARY         gsmu.lib
+LIBRARY         etext.lib
+LIBRARY         msgs.lib
+LIBRARY         sqldb.lib 
+LIBRARY         thumbnailmanager.lib
+LIBRARY         fbscli.lib 
+LIBRARY         estor.lib 
+LIBRARY         unidatamodel.lib
+LIBRARY         charconv.lib
+LIBRARY         centralrepository.lib
+LIBRARY         MsgMedia.lib
+LIBRARY         imageconversion.lib
+SMPSAFE

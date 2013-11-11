@@ -1,0 +1,106 @@
+<hbwidget version="0.1" type="listviewitem">    
+    
+<!-- layout-portrait -->
+    <!--
+        Required items: 
+            text-1
+            
+        Items from left to right:
+            <- selection icon <- icon-1 <- text-1 -> icon-2 ->
+                                           text-2 ->
+                                         
+        Other:
+            selection icon: center aligned with text-1 center
+            icon-1: top aligned with text-1 top
+            icon-2: center aligned with text-1 center
+            
+            text-1: connected from TOP to item TOP and BOTTOM to text-2 TOP
+            text-2: connected BOTTOM to BOTTOM
+            text-3: connected BOTTOM to text-2 BOTTOM    
+    -->
+    <layout name="logs-portrait" type="mesh">
+      <meshitem src="icon-1" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="-var(hb-param-margin-gene-left)" />
+      <meshitem src="icon-1" srcEdge="TOP" dst="text-1" dstEdge="TOP" />
+      
+      <meshitem src="text-1" srcEdge="LEFT" dst="icon-1" dstEdge="RIGHT" spacing="-var(hb-param-margin-gene-middle-horizontal)" />
+      <meshitem src="text-1" srcEdge="TOP" dst="" dstEdge="TOP" spacing="-var(hb-param-margin-gene-top)"/>
+      <meshitem src="text-1" srcEdge="RIGHT" dst="icon-2" dstEdge="LEFT" spacing="var(hb-param-margin-gene-middle-horizontal)" />
+      <meshitem src="text-1" srcEdge="BOTTOM" dst="text-2" dstEdge="TOP" spacing="var(hb-param-margin-gene-middle-vertical)" />
+      
+      <meshitem src="text-2" srcEdge="LEFT" dst="text-1" dstEdge="LEFT" />
+      <meshitem src="text-2" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)" />
+      <meshitem src="text-2" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacing="var(hb-param-margin-gene-bottom)" />
+      
+      <meshitem src="icon-2" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)" />
+      <meshitem src="icon-2" srcEdge="CENTERV" dst="text-1" dstEdge="CENTERV" />
+      
+      <meshitem src="multiselection-toucharea" srcEdge="CENTERH" dst="selection-icon" dstEdge="CENTERH" />
+      <meshitem src="multiselection-toucharea" srcEdge="TOP" dst="" dstEdge="TOP" />
+      <meshitem src="multiselection-toucharea" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+    </layout>
+        
+                
+<!-- logs-landscape -->    
+    <!--
+        Required items: 
+            icon-1 & text-1
+            
+        Items from left to right:
+            icon -1 -> text-1 -> text-2 -> icon-2 ->
+                                     
+        Other:
+            icon-1: connected from TOP to item TOP and BOTTOM to item BOTTOM
+            icon-2: center aligned with icon-1 center
+            
+            text-1: center aligned with icon-1 center
+            text-2: center aligned with icon-1 center
+    -->
+    <layout name="logs-landscape" type="mesh">
+      <meshitem src="icon-1" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="-var(hb-param-margin-gene-left)"/>
+      <meshitem src="icon-1" srcEdge="TOP" dst="" dstEdge="TOP" spacing="0.0un"/>
+      <meshitem src="icon-1" srcEdge="RIGHT" dst="text-1" dstEdge="LEFT" spacing="var(hb-param-margin-gene-middle-horizontal)" />
+      <meshitem src="icon-1" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacing="var(hb-param-margin-gene-bottom)" />
+      
+      <meshitem src="text-1" srcEdge="RIGHT" dst="text-2" dstEdge="LEFT" spacing="var(hb-param-margin-gene-middle-horizontal)" />
+      <meshitem src="text-1" srcEdge="CENTERV" dst="icon-1" dstEdge="CENTERV" />
+
+      <meshitem src="text-2" srcEdge="RIGHT" dst="icon-2" dstEdge="LEFT" spacing="var(hb-param-margin-gene-middle-horizontal)"/>
+      <meshitem src="text-2" srcEdge="CENTERV" dst="icon-1" dstEdge="CENTERV" />
+
+      <meshitem src="icon-2" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)"/>
+      <meshitem src="icon-2" srcEdge="CENTERV" dst="icon-1" dstEdge="CENTERV" />
+
+      <meshitem src="multiselection-toucharea" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+      <meshitem src="multiselection-toucharea" srcEdge="TOP" dst="" dstEdge="TOP" />
+      <meshitem src="multiselection-toucharea" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+    </layout>
+    
+    
+<!-- logs-landscape-dialpad -->    
+    <!--
+        Required items: 
+            icon-1 & text-1
+            
+        Items from left to right:
+            icon -1 -> text-1
+                                         
+        Other:
+            icon-1: connected from TOP to item TOP and BOTTOM to item BOTTOM            
+            text-1: center aligned with icon-1 center
+            text-2 is forced not to become visible. It's size is set (0.0,0.0) in .css.
+    -->
+    <layout name="logs-landscape-dialpad" type="mesh">
+      <meshitem src="icon-1" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="-var(hb-param-margin-gene-left)"/>
+      <meshitem src="icon-1" srcEdge="TOP" dst="" dstEdge="TOP" spacing="0.0un"/>
+      <meshitem src="icon-1" srcEdge="RIGHT" dst="text-1" dstEdge="LEFT" spacing="var(hb-param-margin-gene-middle-horizontal)" />
+      <meshitem src="icon-1" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacing="var(hb-param-margin-gene-bottom)" />
+      
+      <meshitem src="text-1" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)" />
+      <meshitem src="text-1" srcEdge="CENTERV" dst="icon-1" dstEdge="CENTERV" />
+
+      <meshitem src="multiselection-toucharea" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+      <meshitem src="multiselection-toucharea" srcEdge="TOP" dst="" dstEdge="TOP" />
+      <meshitem src="multiselection-toucharea" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+    </layout>
+    
+</hbwidget>

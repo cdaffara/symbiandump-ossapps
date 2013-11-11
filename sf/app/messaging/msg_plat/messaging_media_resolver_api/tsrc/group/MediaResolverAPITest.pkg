@@ -1,0 +1,41 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:  MediaResolverAPITest.pkg;
+
+; Supported languages
+&EN
+
+; Package header
+#{"MediaResolverAPITest"}, (0x101FB3E9), 1, 2, 3, TYPE=SA
+
+; Series 60 v5.0
+[0x1028315F], *, *, *, {"Series60ProductID"}
+
+; Localised vendor name
+%{"Nokia Test EN"}
+; Unique vendor name
+:"Nokia"
+
+;Files to install
+;
+"\epoc32\release\armv5\urel\MediaResolverAPITest.dll"-"C:\sys\bin\MediaResolverAPITest.dll"
+"..\conf\MediaResolverAPITest.cfg"-"C:\TestFramework\MediaResolverAPITest.cfg"
+"..\init\TestFramework.ini"-"C:\TestFramework\TestFramework.ini"
+"..\data\mmc\mresolverData\test.txt"-"E:\testing\Data\mresolverData\test.txt"
+"..\data\mmc\mresolverData\test.amr"-"E:\testing\Data\mresolverData\test.amr"
+"..\data\mmc\mresolverData\test.jpg"-"E:\testing\Data\mresolverData\test.jpg"
+"..\data\mmc\mresolverData\test.mp4"-"E:\testing\Data\mresolverData\test.mp4"
+"..\data\mmc\mresolverData\test.mp4"-"E:\testing\Data\mresolverData\test.xyz"
+"..\data\mmc\mresolverData\test.mp4"-"E:\testing\Data\mresolverData\test.smil"
+

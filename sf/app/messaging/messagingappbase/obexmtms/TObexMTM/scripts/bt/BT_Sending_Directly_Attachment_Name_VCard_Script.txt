@@ -1,0 +1,23 @@
+// *****************************************
+//  OBEX Test Script GT0133UT2201
+//  This test is expected to succeed.
+// *****************************************
+
+[main]
+obex_client_test obex
+
+[obex]
+obex_select_mtm bt
+select_root_folder
+create_service
+create_message
+add_attachment_by_name "c:\msgtest\obexsmoke\mediaobjects\symtest.vcf"
+// to get the BT device address from a 7650, type *#2820#
+set_bt_recipient "0002EE30467A"
+send_message succeed
+dump_message_store
+add_comment "Message created"
+add_comment "Message stored"
+add_comment "Test complete: message store structure dumped to Entry_Structure.txt"
+
+

@@ -1,0 +1,43 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: Symbian version configuration file 
+*
+*/
+
+#ifndef __SYMBIAN_VERSION_HRH
+#define __SYMBIAN_VERSION_HRH
+
+// S60 and Symbian version number enumeration definitions
+
+#define S60_30                                              30
+#define S60_31                                              31
+#define S60_32                                              32
+#define S60_50                                              50
+#define S60_51                                              91
+#define S60_52                                              92
+#define SYMBIAN_1                                           50
+#define SYMBIAN_2                                           91
+#define SYMBIAN_3                                           92
+#define SYMBIAN_4                                           101
+
+
+/**
+ * Defines the S60 or Symbian version used by this component. This flag can be
+ * used to variate the source code based on the SDK in use. The value of the
+ * flag should be always changed to reflect the current build environment.
+ */
+#define SYMBIAN_VERSION_SUPPORT                              SYMBIAN_4
+
+
+#endif  // __SYMBIAN_VERSION_HRH

@@ -1,0 +1,42 @@
+;
+; Copyright (c) 2006-2008 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:  Stub Package file for nsmlcontactsdatastoreextension.dll
+;
+; Language
+&EN
+
+; SIS header: name, uid, version
+#{"contactsdatastoreextension"},(0x2002E6D9),1,0,0, TYPE=SP
+
+
+; Localised Vendor name
+%{"Vendor"}
+
+; Unique Vendor name
+:"Vendor"
+
+; Manual PKG pre-rules from PRO files
+; Default HW/platform dependencies
+[0x101F7961],0,0,0,{"S60ProductID"}
+[0x102032BE],0,0,0,{"S60ProductID"}
+[0x102752AE],0,0,0,{"S60ProductID"}
+[0x1028315F],0,0,0,{"S60ProductID"}
+ 
+; Default dependency to Qt libraries
+(0x2001E61C),0 ,0 ,0 , {"QtLibs pre-release"}
+
+; Executable and default resource files
+"/epoc32/release/armv5/urel/nsmlcontactsdatastoreextension.dll"    - "!:\sys\bin\nsmlcontactsdatastoreextension.dll"
+
+; Manual PKG post-rules from PRO files

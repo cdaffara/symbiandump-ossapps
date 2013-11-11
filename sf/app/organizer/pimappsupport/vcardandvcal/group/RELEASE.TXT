@@ -1,0 +1,1116 @@
+Perforce Release by Shazia Murtaza 25/06/2009
+=========================================
+DEF140464 Fix ONB warnings related to Versit
+
+Perforce Release by Shazia Murtaza 10/06/2009
+=========================================
+DEF139751 [Coverity]- USE_AFTER_FREE, SYMBIAN.CLEANUP_STACK and DEADCODE   
+
+Perforce Release by Andy Smith 28/11/2008
+=========================================
+DEF130838 [Coverity]-FORWARD_NULL,MISSING_BREAK -app-services/versit
+ 
+Perforce Release by Andy Smith 28/11/2008
+===========================================
+DEF130839 [Coverity]-SYMBIAN.CLEANUP_STACK -app-services/worldserver,app-services/versit
+ 
+Perforce Release by Waiman Tang 14/11/2008
+=============================================
+DEF128940 ICC Codenomicon: PIM: Contacts Module: Panic KERN-EXEC 3
+
+Perforce Release by Beibei Wang 3/11/2008
+=============================================
+DEF129858  ICC Codenomicon: PIM: Calendar Module: Panic USER 3 
+
+Perforce Release by Waiman Tang 20/10/2008
+=============================================
+DEF128936 ICC Codenomicon: PIM: Contacts Module: Panic USER 10
+
+Perforce Release by Beibei Wang 20/10/2008
+=============================================
+DEF129138  ICC Codenomicon: PIM: Calendar Module: Panic USER 21 
+
+Perforce Release by Beibei Wang 20/10/2008
+=============================================
+DEF129136:ICC Codenomicon: PIM: Calendar Module: Panic KERN-EXEC 3
+
+Perforce Release by Kalyan Reddy 10/10/2008
+=============================================
+DEF128638:[Coverity]-UNINIT-app-engines/agnversit2 
+
+Perforce Release by James Aley 25/09/2008
+=============================================
+DEF126532: [Coverity] - SYMBIAN.CLEANUP - app-services/hlpmodel/
+
+Perforce Release by Kalyan Reddy 01/07/2008
+=============================================
+DEF123922 CVersitAlarm::NewL can cause a Kern-Exec panic 
+
+Perforce Release by Waiman Tang 19/12/2007
+=============================================
+PDEF115638  UPF28: vCard crash when parsing data 
+
+Perforce Release by Daniel Burnham 22/10/2007
+=============================================
+DEF107918: Outlook 2007 IOP issue
+
+Perforce Release by Crystal Wang 06/07/2007
+=============================================
+PDEF109115: Codebase-Versit: Add test to Quoted Printable encoding of properties with CRLF
+
+Perforce Release by Janice Halligan 24/11/2006
+=============================================
+PDEF098289 vCal RRule imported incorrectly when no duration specified
+
+Perforce Release by Konstantin Zheludev 23/10/2006
+=============================================
+DEF096180 Versit VCAL repeat rule data handled incorrectly
+
+Perforce Release by Konstantin Zheludev 02/10/2006
+=============================================
+INC095304  Possible Versit TLS KE3
+
+Perforce Release by Konstantin Zheludev 29/09/2006
+=============================================
+DEF093327  Tag Scan Error Report for Pim component
+
+Perforce Release by Konstantin Zheludev 28/09/2006
+=============================================
+DEF092658  Leave scan errors found in PIM component
+
+Perforce Release by Xing Jin 05/09/2006
+=============================================
+DEF093155  Codebase-Versit: Missing checking aValue un-Null in versit functions.
+DEF093158  Codebase-Versit: RDesReadStream objects need to be pushed. 
+DEF093159  Codebase-Versit: Misusing cleanup callback function in CParserVCard::GroupOfProp 
+DEF094190  VersitParser provides plugIn to remove escaping for binary property values 
+
+Perforce Release by Xing Jin 05/09/2006
+=============================================
+DEF093841 Codebase-Versit: Memory leak in CVersitParser::MakePropertyValueL
+DEF093843 RF Codebase-Versit: Data is decoded in wrong charset when memory is low.
+DEF093845 RF Codebase-Versit: Memory leak - CVersitParser::MakePropertyValueMultiDateTimeL
+
+Perforce Release by Xing Jin 27/08/2006
+=============================================
+DEF092791  Codebase-Versit: CVersitParser::EntityL misuses cleanup callback.
+
+Perforce Release by Konstantin Zheludev 24/08/2006
+=============================================
+DEF092284: Member variables wrongly pushed on to Cleanupstack in versit , coreapps
+
+Perforce Release by Konstantin Zheludev 24/08/2006
+=============================================
+DEF092284: Member variables wrongly pushed on to Cleanupstack in versit , coreapps
+
+Perforce Release by Beibei Wang 25/08/2006
+=============================================
+DEF093038: Versit - Not possible to import vcal with AALARM and X-EPOCALARM
+
+Perforce Release by Beibei Wang 15/08/2006
+=============================================
+DEF092784: Codebase-Versit: No un-null check to parameter aValue in MakePropertyValueLPerforce Release by Beibei Wang 15/08/2006
+
+Perforce Release by Beibei Wang 15/08/2006
+=============================================
+DEF092626: Codebase-Versit: export empty when repeating count in alarm property is 0.
+
+Perforce Release by Konstantin Zheludev 28/07/2006
+=============================================
+DEF091652: Local UID of the entry is not imported
+
+Perforce Release by Janice Halligan 06/20/2006
+=============================================
+DEF087898: [AQD] Invalid Daylight Property 
+- fix reworked
+
+Perforce Release by Janice Halligan 06/20/2006
+=============================================
+DEF087898: [AQD] Invalid Daylight Property
+
+Perforce Release by Xing Jin 01/06/06
+=============================================
+INC083508: Property X-ASSISTANT-TEL should be used instead of X-ASSISTANTTEL
+
+Perforce Release by Lakshman M P 24/05/06
+=============================================
+DEF086406: Improper use of @file doxygen tag
+
+Perforce Release by Francesco Lodolo 09/05/06
+=============================================
+DEF085335: Backslash character not properly handled when contact is copied to memory card
+
+Perforce Release by Prabodh Depala 08/05/06
+=============================================
+INC085348: System error when opening a business vCard with image (sent from S40 phone)
+
+Perforce Release by Oz Najafi 26/04/06
+=============================================
+DEF085335: Backslash character not properly handled when contact is copied to memory card
+
+Perforce Release by Mathieu George 05/04/06
+=============================================
+DEF067076: Alarmserver GT0257 code submission contains uncommented code
+
+Perforce Release by Ibrahim Rahman 10/02/06
+=============================================
+INC081645 - SWSV_604_R3A01:V-card from Eniro is corrupt in MS
+
+VCard/VCal support for lines terminated by LF's only.
+Includes test case in contacts t_cntvcard.
+
+Perforce Release by Noel Raj 31/01/06
+=============================================
+DEF078802: Cannot open vCals sended from Motorola A1000
+
+Perforce Release by Mohammad Minhaz 16/11/2005
+=============================================
+DEF073176: Added comment in vstaticutils.cpp
+
+Perforce Release by Prashanth Grandhi 28/10/2005
+=============================================
+DEF072110: The CalInterimApi can't handle times specified with 4 digits (hhmm)
+
+Perforce Release by Kelly Hon 25/10/2005
+=============================================
+DEF071566: Remove obsolete PREQ 1118 macro from PIM MCL
+
+Perforce Release by Shazia Murtaza 24/10/2005
+=============================================
+DEF071706: CVersitParser::ParsePropertiesL() must null iCurrentProperty after deletion 
+
+Perforce Release by Ravishankar Lakshminarayanan 10/10/2005
+=============================================
+DEF069293: vCard export unsafe , user data goes missing in Notes address book
+
+Perforce Release by Tony Naggs 5/09/2005
+=============================================
+INC065809: Versit Escaping Test fails at check 10
+
+Perforce Release by Ravishankar Lakshminarayanan 5/09/2005
+=============================================
+DEF065983: TBUGFIX fails on winscw and H2 since 03648
+
+
+Perforce release by Graeme Riddick 15/04/2005
+=============================================
+INC059120
+Title:Versit: Multiline not handled correct by CVersitParser::ReadLineAndDecodeParamsL
+
+perforce release Veeranjaneyulu Toka 17/03/05
+==================================
+INC053829
+Title:NTT App-services\versit Tversit fails
+
+perforce release Veeranjaneyulu Toka 16/03/05
+==================================
+INC053823
+Title:NTT App-services\versit test Toom.exe fails
+
+Perforce release Toby HU 25/02/05
+================================
+DEF055329
+Title: RVCT2.2 compiler upgrade needs source code changes in vrecur.h file
+
+Perforce release Steve Childerley 11/11/04
+================================
+DEF051454
+Title: out-of-date @SYMPurpose statement
+
+Perforce release Nikolay Budantsev 11/09/04
+================================
+MS3.1.1  GT0215   PREQ277 PS6.4 Replacement APIs (Also PS8.1)
+MS3.6    GT0215   PREQ728 Base API Improvements
+
+Perforce release Glen Cook 24/08/04
+================================
+DEF047953
+Title: SS EUseDefaultCharSetForAllProperties flag doesn't propagate to vCal subents
+
+Perforce release RajaShekhar 22/07/04
+================================
+DEF045624  
+Title: Versit does not allow users to add extended properties  
+
+Perforce release Pat Nicholls 16/07/04
+======================================
+DEF046381 TBugfix test fails on wins, winscw amd arm4
+
+
+Perforce release Bob Rosenberg 08/06/04
+================================
+DEF045836
+Title: Contacts sorting not working right 
+
+Added versit delta design document
+
+Perforce release Pat Nicholls 02/06/04
+================================
+DEF045682  
+Title: Sending VCal via SMS fails when alarm name contains chinese characters 
+
+Perforce release Bob Rosenberg 02/04/04
+================
+PHAR-5U6KGG
+Title: Add support for reading (pronunciation) fields in Contacts model (for e.g. Japanese)
+
+Versit is modified to support the IRMC SOUND extensions for name (X-IRMC-N) and company (X-IRMC-ORG)
+TJapaneseSoundProperty is added to test new functionality of SOUND properties in versit
+TVersit is modified to be automatic and use RDebug
+
+Perforce release Waiman Tang 08/04/04
+================================
+INC043438
+Title:   AV26 default charset support from vCard import is missing
+
+Perforce release Jitender Kumar 11/02/04
+================================
+INC041810 
+Title:  Symbian Versit imports incorrectly recurrence rule that doesn't have reccurrence value
+
+Perforce release Waiman Tang 19/01/04
+================================
+DEF041564 
+Title:  Mistakes in Doxygen tagging
+
+Perforce release Dominic Pinkman 17/11/03
+================================
+DEF039936
+Title:  Mistakes in Doxygen tagging
+
+Perforce release Andrew Newman 04/11/03
+================================
+DEF039497
+Title:  Temporary File Cleanup
+
+Perforce release Tom Bassett 30/10/03
+================================
+DEF039615  
+Title:  Remove need for key press in automaitc test TVGEN
+
+Perforce release Andrew Newman 23/09/03
+================================
+DEF038022  
+Title:  Versit / TBUGFIX test fails on Lubbock  
+
+Perforce release Stéphane Lenclud 22/09/03
+================================
+INC037394 - Sync Contacts: Contact is deleted from phone if removing birthday detail fromPIM
+
+Perforce release 
+================
+Made by Andy Newman 17 Sept 2003
+TCharsetvCard.cpp - Use Z drive on target builds
+Fix Defect : DEF037977
+
+Perforce release 
+================
+Made by Graeme Riddick 26 Aug 2003
+PHAR-5LKRFC - Added support for X-EPOCSECONDNAME field in versit and contacts model
+
+Perforce release BobR 27/08/03
+================================
+Fix defect
+INC037498 - TBugFix fails in comparing files (timezone issue)
+
+Perforce release 
+================
+Made by Graeme Riddick 26 Aug 2003
+PHAR-5LKRFC - Added support for X-EPOCSECONDNAME field in versit and contacts model
+
+Perforce release BobR 27/08/03
+================================
+Fix defect
+INC037498 - TBugFix fails in comparing files (timezone issue)
+
+Perforce release BeibeiW 15/07/03
+================================
+Fix defect
+DEF035264 - Incorrect handling of vCalendar time properties in AgnVersit
+
+Perforce release
+================
+Made by Graeme Riddick
+Fix of defect : DEF022049  (Propagated 6.1 - 7.0s) Problems syncronising outlook contacts 
+
+Perforce release
+================
+Made by Tony Naggs 28 July 2003
+ 
+DEF036630 - Unable to view VCard sent from an IPAQ
+  Recognise 'blank lines' that terminate a binary VCard field if it has
+  whitespace.
+
+Perforce release
+================
+Made by Beibei Wang 20th March 2003
+
+INC021811 - Versit parser fails if VCard ends with "END:VCARD"
+Perforce release
+================
+Made by Beibei Wang 17th Feb 2003
+
+INC017322 - Recurrent calendar item is not displayed by device
+
+Perforce release
+================
+Made by Graeme Riddick/Bill Vance 13th January 2003
+
+Fix for defect
+INC015525 "agnmodel panic when syncing with recurring appointments"
+
+Perforce Release
+================
+Made by Sindhu Melkote , 10th Oct , 2002
+Implemented the CR to store large binary objects out of line.
+Added the following exported functions 
+CParserProperty::LoadBinaryValuesFromFilesL(class RFs &)
+CVersitParser::LoadBinaryValuesFromFilesL(class RFs &)
+CVersitParser::LoadBinaryValuesFromFilesL(void)
+CParserProperty::SaveBinaryValuesToFilesL(int,class TDesC16 const &,class RFs &)
+CVersitParser::SaveBinaryValuesToFilesL(int,class TDesC16 const &)
+CVersitParser::SaveBinaryValuesToFilesL(int,class TDesC16 const &,class RFs &)
+
+Perforce release
+================
+Made by Andy Blackburn 23rd October 2002
+
+Fix defect
+HUN-5ELH9C - vCard viewable on windows comes up corrupt
+
+A one-line AGENT property should contain another vCard inside BEGIN/END delimiters. 
+The vcard in question is badly-formed because the BEGIN/END delimiters are missing. 
+The Windows viewer reads the vCard but doesn't display any of the agent information. 
+VCARD.CPP has been altered to mimic this behaviour and a new test cases has been 
+added to the test code. Note that vCards with BEGIN or BEGIN: on the same line as 
+the agent and a correctly-formatted "agent" vCard terminated with END on subsequent 
+lines will still be correctly handled.
+
+Perforce release
+================
+Made by Stéphane Lenclud 17th October 2002
+
+Fix for defect
+LUD-5ETG3K "VCard sent from P800 to T300 which includes an image does not save on T300"
+
+Perforce release
+================
+Made by Beibei Wang, 10th October 2002
+Fix defect 
+NEO-5EQKJ3 "Incorrect time when beaming/mailing vCals"
+
+Perforce release
+================
+Made by Stephane Lenclud, 8th October 2002
+Fix defect 
+EXT-5DXF2R "SyncML Qouted-printable: Spaces in beginning of lines dissapearing"
+
+Perforce release
+================
+Made by Chris Dudding, 12th August 2002
+Fix defect 
+BRN-5CQNUY "#include guard broken in vrecur.h"
+
+Perforce release
+================
+Made by Stephane Lenclud, 10th July 2002
+* Fix defect LUD-5BGLMU "Incorrect time when importing VCal from Email"
+I implemented the fix proposed by Douglas Feather.
+So the new function CVersitParser::AdjustAllPropertyDateTimesToMachineLocalL is now exported by the VERSIT.DLL
+The function CVersitParser::ConvertAllPropertyDateTimesToMachineLocalL have been modified to call this new function.
+And the function CParserVCal::InternalizeL from VCAL.DLL have suffer some changes.
+
+Perforce release
+================
+(Made by Nichola Turner, 3rd April 2002)
+* Fix the defect FER-58LPN2 versit needs to export VObserv.H
+
+(Made by Doug Feather, 4th March 2002)
+* Fix the defect BEN-56WJSY Panic following a SyncML contacts session. (again)
+* Fix the defect DUG-57RKDC Exception after exporting vCard from Contacts and closing app.
+* Update test code for the 2nd bug.
+* Added in line documentation for the PlugIn and Oberser classes.
+* Added the VTicketMaster demonstration code.
+
+(Made by Doug Feather, 5th February 2002)
+* Fix for defect FER-56DF89 Internalising of Shift-JIS data with Yen symbol used as escape character.
+* Test code for the same.
+
+(Made by Doug Feather, 4th February 2002)
+* CR for v3 spec
+
+(Made by Beibei Wang, 18th December 2001)
+* Inline documentation
+* Add several more testing cases to increase the coverage percetage 
+* Fix the defect WAG-55EPJS "Time offset is not handled correctly"
+* Fix the defect DUG-4VWMK9 "ResetAndDestroyArrayOf* methods should be public"
+* Fix the defect FER-557JYW "Bad versit data causes panic in ConArc"
+* Fix the problem when internalise\externalise a property like "EXRULE:YD3 1 100 
+200 #10"
+* Update the porting quide
+
+(Made by Doug Feather, 12th December 2001)
+* First release of the new design of versit.
+* The data is parsed in a completely new way with is much quicker and needs less memory and code.
+* The API has been changed at various points to make it simpler and more natural.  See the PortingGuide for more details.
+* Added much more test code.
+
+(Made by Beibei Wang, 17th October 2001)
+*HAN-4YALGX "Errors not propegated from versit"
+*WAG-53KJNV "Possible memory leak because C class is mistaken as T class"
+*WAG-53KK8C "Passible memory leak because a leaving function is a parameter of the allocating function"
+
+(Made by Beibei Wang, 21st September 2001)  (suggested by Alex)
+* "Mapping information missing" errors while syncing Agenda" (BEN-4YAEF4)
+
+(Made by Doug Feather, 11th September 2001)
+* Merged 4 pices of test code and added extra test cases.
+
+(Made by Beibei Wang, 7th September 2001)
+* Fix for defect "Base64 encoding internalise\externalise is inconsistent" (WAG-4YGCRX)
+* Fix for defect "Versit: TEncoding test fails" (WIR-4YJL6E)
+* Fix for defect "Versit does not Externalize '\\' correctly for Shift-JIS encoded vCard" (VAN-4YQGX3)
+* Fix for defect "Line folding is not quite right when externalising the data" (WAG-4Z8D8C)
+* Fix for defect "Alarm snooze time property value not internalised correctly" (EVS-522G7D)
+* Fix for defect "Shift-JIS character set is not supported for DALARM's display string field" (EVS-4ZUJBC)
+* Fit all 6 defect fixes above to newly added test code by Doug
+
+
+(Made by Alex Wilbur, 8th August 2001)
+* Fix for defect "Versit: possible memory leak and cleanup 
+  stack error" (WIR-4YJLB4)
+* Fix for defect "Versit ignores quoted-printable encoding when 
+  externalising" (EVS-4YZJ63)
+* Fix for defect "Escape key "\" is not added into externalised 
+  data when it is Base64 encoding" (WAG-4Z8CZG)
+
+Perforce release 
+================
+(Made by Alex Wilbur, 31st July 2001)
+* Fix for defect "Versit does not externalize buffer with escaped
+  characters correctly" (EVS-4YZDKZ)
+* Fix for defect "Versit: possible massive speed increase?" (WIR-52MD7K)
+
+Perforce release 
+================
+(Made by Alex Wilbur, 19th July 2001)
+* Fix for defect "Versit: possible memory leak and cleanup stack error" (WIR-4YJLB4)
+
+Perforce release 
+================
+(Made by Alex Wilbur, 9th July 2001)
+
+From Beibei:
+* Fix for defect "Escaped characters in shift JIS encoding cause problems" (DUG-4UZPBE)
+* Fix for defect "0x5c in second byte (at end of property value) for Shift-JIS not
+  externalized correctly" (VAN-4XAHFT)
+
+From Alex:
+* Fix for defect "Escape Character Problem in Versit" (VAN-4XAHCS)
+* Fix for defect "Regression in Quoted Printable encoding of ADR property" (DUG-4XAKYJ)
+* Fix for defect "Versit: Externalization of entities doesn't obey default 
+  encoding/charset" (WIR-4XDFVH)
+
+Perforce release 
+================
+(Made by Chris Dudding, 2nd May 2001)
+
+Added a new iFlags member to TVersitDateTime to allow Versit clients to choose
+whether they want the the time-zone designator, 'Z', to be appended to the end
+of ISO-8901 UTC times.
+
+The default behaviour is to export the time-zone designator, unless a client 
+explicitly requests not to export it by clearing the 'EExportTimeZoneDesignator' 
+flag.
+
+These changes (plus changes in agenda model) provide a fix for 
+EDNSKAN-4VHEKF "Sending Calendar appointment to 9110i via SMS fails"
+
+This is a binary incompatible change and all clients of TVersitDateTime MUST 
+rebuild against the new code.
+
+Perforce release 
+================
+(Made by Alex Wilbur, 26th March 2001)
+
+* Fix for defect "Versit Does Not Handle Shift_JIS CHARSET Value Correctly." (VAN-4ULJVJ)
+* Fix for defect "Specifying the default charset as GBK and encoding as Base64 gives text output in GBK but encoded as 8 bit" (HAL-4UZEW3)
+* Fix for defect "Certain character sets are ignored and interpreted as UTF-8 when externalizing vCals" (HAL-4UZJRF)
+* Fix for defect "Escaped characters in shift JIS encoding cause problems" (DUG-4UZPBE)
+* Fix for defect "Versit thinks UTF8 is 7 bit" (WIR-4WAMJN)
+* Fix for defect "Unexpected folding for long property values" (DUG-4VVEW2)
+
+Perforce release 
+================
+(Made by Chris Dudding, 14th March 2001)
+
+Fixed the following defect
+EDNLPEN-4MSHLW "Fixed in QP 6.1, Launching VCardviewer with invalid vcard leaves in OpenFileL"
+
+Perforce release 
+================
+(Made by Veikko Punkka, 31st October 2000)
+
+Integrated Teleca code for Application Services 2.0 project.
+
+Perforce release 
+================
+(Made by Chris Dudding, 5th September 2001)
+
+Minor release to fix TVERSIT testcode. 
+This fixes defect EGA-4ZPL4S "Cannot exit or quit tversit on Assabet"
+
+Perforce release 
+================
+(Made by Nichola Turner, 4th September 2001)
+
+* Fix for defect "Regression in vCard export" (DUG-4YTE3C)
+
+Perforce release 
+================
+(Made by Alex Wilbur, 9th July 2001)
+
+From Beibei:
+* Fix for defect "Escaped characters in shift JIS encoding cause problems" (DUG-4UZPBE)
+* Fix for defect "0x5c in second byte (at end of property value) for Shift-JIS not
+  externalized correctly" (VAN-4XAHFT)
+
+From Alex:
+* Fix for defect "Escape Character Problem in Versit" (VAN-4XAHCS)
+* Fix for defect "Regression in Quoted Printable encoding of ADR property" (DUG-4XAKYJ)
+* Fix for defect "Versit: Externalization of entities doesn't obey default 
+  encoding/charset" (WIR-4XDFVH)
+
+Perforce release 
+================
+(Made by Chris Dudding, 11th June 2001)
+
+Fixed the following defects
+DUG-4XHMED "Different parsing behaviour in debug and release builds"
+DUG-4VWMK9 "ResetAndDestroyArrayOf* methods should be public"
+
+Perforce release 
+================
+(Made by Chris Dudding, 1st June 2001)
+
+Fixed the following defect
+DUG-4X9LVZ "Regression in Quoted Printable encoding of ADR property"
+
+Perforce release 
+================
+(Made by Chris Dudding, 2nd May 2001)
+
+Added a new iFlags member to TVersitDateTime to allow Versit clients to choose
+whether they want the the time-zone designator, 'Z', to be appended to the end
+of ISO-8901 UTC times.
+
+The default behaviour is to export the time-zone designator, unless a client 
+explicitly requests not to export it by clearing the 'EExportTimeZoneDesignator' 
+flag.
+
+These changes (plus changes in agenda model) provide a fix for 
+EDNSKAN-4VHEKF "Sending Calendar appointment to 9110i via SMS fails"
+
+This is a binary incompatible change and all clients of TVersitDateTime MUST 
+rebuild against the new code.
+
+Perforce release 
+================
+(Made by Alex Wilbur, 26th March 2001)
+
+* Fix for defect "Versit Does Not Handle Shift_JIS CHARSET Value Correctly." (VAN-4ULJVJ)
+* Fix for defect "Specifying the default charset as GBK and encoding as Base64 gives text output in GBK but encoded as 8 bit" (HAL-4UZEW3)
+* Fix for defect "Certain character sets are ignored and interpreted as UTF-8 when externalizing vCals" (HAL-4UZJRF)
+* Fix for defect "Escaped characters in shift JIS encoding cause problems" (DUG-4UZPBE)
+* Fix for defect "Versit thinks UTF8 is 7 bit" (WIR-4WAMJN)
+* Fix for defect "Unexpected folding for long property values" (DUG-4VVEW2)
+
+Perforce release 
+================
+(Made by Chris Dudding, 14th March 2001)
+
+Fixed the following defect
+EDNLPEN-4MSHLW "Fixed in QP 6.1, Launching VCardviewer with invalid vcard leaves in OpenFileL"
+
+Perforce release 
+================
+(Made by Veikko Punkka, 31st October 2000)
+
+Integrated Teleca code for Application Services 2.0 project.
+
+Perforce release 
+================
+(Made by Chris Dudding, 5th July 2000)
+
+Fixed a couple of defects found by doing OOM testing of vCalendar 
+implementation in Agenda model.
+
+Perforce release 
+================
+(Made by Chris Dudding, 19th June 2000)
+
+Fixed defect
+EDNCDUG-4L9H9T "Integrate additional ER5u Versit changes"
+
+Added logging code to TVGEN to log errors.
+
+
+Perforce release 
+================
+(Made by Alex Wilbur, 1st June 2000)
+
+* Fixed defect "Cleanup stack error" (EDNMMIR-4KVES8)
+
+
+Perforce release 
+================
+(Made by Chris Dudding, 5th May 2000)
+
+Added new class CParserPropertyValueBinary to support import of base64 encoded
+PHOTO and LOGO properties. All testcode runs successfully on WINS UDEB.
+
+
+Perforce release 
+================
+(Made by Alex Wilbur, 1st March 2000)
+
+* Fixed the following defect for interoperability with IMC example vCard generator.
+  EDNRTRN-4GYHK9 "Versit doesn't cope with some vCards"
+  The defect relates to versit not being able to tolerate 0D0D0A as a line delimiter
+  (i.e CR-CR-LF).
+* Started to add vCards to a vCard archive directory that can be used for regression
+  testing in future releases.
+
+All testcode runs successfully on WINS UDEB.
+
+Perforce release 
+================
+(Made by Chris Dudding, 22 February 2000)
+
+Fixed the following defect for interoperability with Nokia 9110 phone 
+EDNCDUG-4GMG4Y "Versit fails to import 9110 repeating appointment with alarm"
+
+All testcode runs successfully on WINS UDEB.
+
+Perforce release 
+================
+(Made by Chris Dudding, 28 January 2000)
+
+Fixed the following defects for interoperability with Nokia 9110 phone 
+EDNCDUG-4FXNAW "Importing 9110 alarmed vCalendar causes Versit to leave"
+EDNCDUG-4FXPKP "Versit fails to import 9110 monthly repeat vCalendar interval"
+EDNCDUG-4FXRAA "Versit fails to import 9110 yearly repeat vCalendar into Agenda"
+
+All testcode runs successfully on WINS UDEB and THUMB UREL.
+
+
+Version 0.00.048
+================
+(Made by Alex Wilbur, 13 December 1999)
+
+Update to versit to fix defect "VERSIT calls User::LeaveIfError on the return 
+value of CnvUtfConverter function calls" (EDNDBAR-4DZK3A - Defect Tracking v3.0)
+	
+Added new test code project TVGen.
+
+
+Version 0.00.047
+================
+(Made by Alex Wilbur, 20 October 99)
+
+Added methods that were mistakenly removed from 046, so that this version is Source Compatible with 045.
+Fixed minor error which was highlighted by the release of a new ISO-2 DAT file for testing.
+
+Version 0.00.046
+================
+(Made by Alex Wilbur, 13 October 99)
+
+Amended versit so that it supports encoding and decoding of versit objects using ISO-X and UTF7.
+This is quite a large change, with a number of new additional internal methods and internal re-structuring.
+
+Extra non-exported (and static) methods added-
+
+	static void				ConvertNarrowToUnicodeL(const TDesC8& aSource, TDes16& aDest, TUint aCharConvCharSet);
+	static void				ConvertNarrowToUnicodeL(const TDesC8& aSource, TDes16& aDest, CVersitParser::TVersitCharSet aVersitSet);
+	static void				ConvertUnicodeToNarrowL(const TDesC16& aSource, TDes8& aDest, TUint aCharConvCharSet);
+	static void				ConvertUnicodeToNarrowL(const TDesC16& aSource, TDes8& aDest, CVersitParser::TVersitCharSet aVersitSet);
+	static TUint				MapVersitCharsetToCharConvCharset(CVersitParser::TVersitCharSet aVersitSet);
+	static CVersitParser::TVersitCharSet	MapVersitCharsetUidToVersitCharsetEnum(TUint aVersitCharSetUidValue);
+	static TUint				MapVersitEncodingToCharConvUid(CVersitParser::TVersitEncoding aVersitEncoding);
+
+New data structures added to hold the default encoding, current encoding, default charset and and curent character. Current encodings/charsets relate to the property currently being parsed.
+
+Extra exported access methods for the encoding / charset:-
+
+	IMPORT_C CVersitParser::TVersitEncoding		LineEncoding() const;
+	IMPORT_C CVersitParser::TVersitCharSet		LineCharSet() const;
+	IMPORT_C TUint					LineEncodingId() const;
+	IMPORT_C TUint					LineCharSetId() const;
+
+Version 0.00.045
+================
+(Made by Darren Jones, 1 July 99)
+
+Uses:   BAFL/091 BAFLSND/004 CHARCONV/022 CONARC/032 CONVERT/027 E32/185 E32TOOLP/107
+	E32TOOLS/120 E32UTILS/027 EIKTOOLS/133 EMIME/006 F32/145 STORE/062 MEDIASVR/051
+1) Fixed EDNDJOS-47YJDU Contacts won't import vCards with trailing whitespace
+2) Added support for default encoding and character set:
+
+New methods:
+ const CVersitParser::TVersitEncoding CVersitParser::DefaultEncoding() const;
+ void CVersitParser::SetDefaultEncoding(const CVersitParser::TVersitEncoding aEncoding);
+ const CVersitParser::TVersitCharSet CVersitParser::DefaultCharSet() const;
+ void CVersitParser::SetDefaultCharSet(const CVersitParser::TVersitCharSet aCharSet);
+
+Changed methods (addition of aVersitParser parameter):
+ virtual void CParserProperty::ExternalizeL(RWriteStream& aStream, CVersitParser* aVersitParser = NULL);
+ void CParserGroupedProperty::ExternalizeL(RWriteStream& aStream, CVersitParser* aVersitParser = NULL);	
+
+
+Version 0.00.044
+================
+(Made by Darren Jones, 20 May 99)
+
+Uses:   BAFL/089 CHARCONV/021 CONARC/032 CONVERT/027 E32/185 E32TOOLP/107
+		E32TOOLS/120 E32UTILS/027 EIKTOOLS/133 EMIME/006 F32/145 STORE/062
+1) Changes for auto-building
+
+
+Version 0.00.043
+================
+(Made by Darren Jones, 7 May 99)
+
+Uses:   BAFL/088 CHARCONV/020 CONARC/031 CONVERT/026 E32/166 E32TOOLP/100
+		E32TOOLS/110 E32UTILS/027 EIKTOOLS/132 EMIME/005 F32/133 STORE/061
+1) Added extra tokens needed by AGNMODEL
+
+
+Version 0.00.042
+================
+(Made by Darren Jones, 30 Apr 99)
+
+Uses:   BAFL/088 CHARCONV/020 CONARC/031 CONVERT/026 E32/166 E32TOOLP/100
+		E32TOOLS/110 E32UTILS/027 EIKTOOLS/132 EMIME/005 F32/133 STORE/061
+1) More development/fixes for unicode builds and ER5u
+
+
+Version 0.00.041
+================
+(Made by Darren Jones, 16 Mar 99)
+
+Uses:   BAFL/087 CHARCONV/004 CONARC/031 CONVERT/026 E32/156 E32TOOLP/100
+		E32TOOLS/099 E32UTILS/027 EIKTOOLS/132 EMIME/005 F32/122 STORE/051
+1) More development/fixes for unicode builds and ER5u
+
+
+Version 0.00.040
+================
+(Made by Darren Jones, 3 Mar 99)
+
+Uses:   BAFL/087 CHARCONV/004 CONARC/010 CONVERT/026 E32/156 E32TOOLP/100
+		E32TOOLS/099 E32UTILS/027 EIKTOOLS/132 EMIME/005 F32/122 STORE/051
+1) Development/fixes for unicode builds and ER5u
+
+
+Version 0.00.022
+================
+(Made by Darren Jones, 12 Feb 99)
+
+Uses:   BAFL/087 CHARCONV/004 CONARC/010 CONVERT/026 E32/156 E32TOOLP/100
+		E32TOOLS/099 E32UTILS/026 EIKTOOLS/132 EMIME/005 F32/122 STORE/051
+1) Fixed EDN047837 Some punctuation characters in contact cause versit parsing problems
+
+
+Version 0.00.021
+================
+(Made by Darren Jones, 9 Feb 99)
+
+Uses:   BAFL/087 CHARCONV/004 CONARC/010 CONVERT/026 E32/156 E32TOOLP/099
+		E32TOOLS/097 E32UTILS/026 EIKTOOLS/132 EMIME/005 F32/122 STORE/051
+1) Fixed EDN294499 Monthly recurrence rule is incorrect after versit export/import
+
+
+Version 0.00.020
+================
+(Made by Darren Jones, 5 Feb 99)
+
+Uses:   BAFL/087 CHARCONV/004 CONARC/010 CONVERT/026 E32/156 E32TOOLP/099
+		E32TOOLS/097 E32UTILS/026 EIKTOOLS/132 EMIME/005 F32/122 STORE/051
+1) Fixed EDN357061 Bad array access in Versit
+2) Fixed EDN325017 Versit masks OOM leaves
+3) Fixed EDN734264 VERSIT doesn't implement folding properly
+4) Fixed EDN504769 Paste splits address line
+5) Fixed EDN369192 Bad QP encoding of long texts
+
+
+Version 0.00.019
+================
+(Made by Darren Jones, 1 Feb 99)
+
+Uses:   BAFL/087 CHARCONV/004 CONARC/010 CONVERT/026 E32/156 E32TOOLP/099
+		E32TOOLS/097 E32UTILS/026 EIKTOOLS/132 EMIME/005 F32/122 STORE/051
+1) Fixed EDN129244 Upper/Lower Case bug has returned
+2) Fixed EDN255741 Possible OOM problem
+3) Fixed EDN274968 Function takes ownership of pointer part-way through
+4) Fixed EDN481117 Possible OOM problem
+5) Fixed EDN805524 Null pointer hit in RecognizerCurrentTokenL
+6) Fixed EDN843061 Compound vcard properties which are QP encoded don't get parsed completely
+7) Fixed EDN854887 Possible Versit OOM problem
+8) Fixed EDN900206 Possible OOM problem
+9) Fixed EDN929351 Possible OOM problem
+10) Fixed EDN996948 Contacts won't import vCards without final CRLF
+
+Version 0.00.018
+================
+(Made by Darren Jones, 21 Jan 99)
+
+Uses:   BAFL/087 CHARCONV/004 CONARC/009 CONVERT/025 E32/156 E32TOOLP/099
+		E32TOOLS/095 E32UTILS/026 EIKTOOLS/131 EMIME/004 F32/122 STORE/051
+1) Fixed EDN619974 Out of memory errors lost in CompareWithCurrentToken
+2) Fixed EDN843824 CVersitParser::SkipWhiteSpace() can leave
+3) Fixed EDN830091 Bad Contacts copy/paste
+4) Parsing optimisations for speed
+
+From Lane Roberts:
+1) Parsing optimisations for speed
+
+
+Version 0.00.017
+================
+(Made by Darren Jones, 18 Jan 99)
+
+Uses:   BAFL/087 CHARCONV/004 CONARC/009 CONVERT/025 E32/156 E32TOOLP/099
+		E32TOOLS/095 E32UTILS/026 EIKTOOLS/131 EMIME/003 F32/122 STORE/051
+1) Fixed EDN141146 Importing this vCard panics contacts E32User-CBase 12
+2) Fixed EDN275196 Duplicated fields
+3) Fixed EDN783398 Not a good import of the attached vCard
+4) Fixed EDN246738 Copied contact with first name only is pasted into last name
+5) Fixed EDN407874 Contact values containing ; don't work
+6) Fixed EDN206455 Trouble with big records in contacts
+7) Fixed EDN866789 USER 3 panic importing to Contacts
+8) Fixed EDN136644 In marm debug builds only tests 3 and 4 panic
+
+
+Version 0.00.016
+================
+(Made by Darren Jones, 11 Jan 99)
+
+Uses:   BAFL/086 CHARCONV/003 CONARC/008 CONVERT/025 E32/156 E32TOOLP/098
+		E32TOOLS/095 E32UTILS/023 EIKTOOLS/128 EMIME/003 F32/122 STORE/050
+1) Fixed EDN365988 Code review defects
+2) Fixed EDN986114 VCard property following a QP encoded one is lost
+3) Fixed EDN641871 Cut/Copy/Paste in Contact causes corrupt data
+4) Fixed EDN875105 Imported (or pasted) vCards don't get sorted properly
+5) Fixed EDN452583 Memo fields in Synchronised Contacts Database
+6) Fixed EDN054398 Versit encoding problem
+
+Version 0.00.015
+================
+(Made by Will Ramsay, 24 Dec 98)
+
+Uses:   BAFL/086 CHARCONV/003 CONARC/004 CONVERT/022 E32/156 E32TOOLP/097
+		E32TOOLS/095 E32UTILS/023 EIKTOOLS/128 EMIME/002 F32/122 STORE/050
+1) Fixed EDN502175 Beaming to Palm 3 is only half-working
+2) Fixed EDN187991 Versit 014 panics exporting properties with empty subfields
+3) Fixed EDN583352 Problem importing compound fields and QP decoding
+4) Fixed EDN351644 Decoding QP doesn't work in all cases
+
+Version 0.00.014
+================
+(Made by Will Ramsay, 19 Dec 98)
+
+Uses:   BAFL/086 CHARCONV/003 CONARC/004 CONVERT/022 E32/156 E32TOOLP/097
+		E32TOOLS/095 E32UTILS/023 EIKTOOLS/128 EMIME/002 F32/122 STORE/050
+
+Release valids on a clean drive
+1) Fixed EDN886397 CDesCArray property values are not decoded
+2) Fixed EDN483101 More agenda vCal import problems
+3) Fixed EDN433051 Need to rebuild VC5 SP3
+4) Fixed EDN038376 Importing the following vCard leaves
+5) Fixed EDN983978 Parsing of compound properties is broken
+6) Changed failed parsed properties to leave in DEBUG mode rather than panic-to aid cntmodel OOM testing
+
+Version 0.00.013
+================
+(Made by Will Ramsay, 27 Nov 98)
+
+Uses:   BAFL/086 CHARCONV/003 CONARC/004 CONVERT/022 E32/156 E32TOOLP/097
+		E32TOOLS/095 E32UTILS/023 EIKTOOLS/128 EMIME/002 F32/122 STORE/050
+
+1) Implemented code review changes suggested by Matt Millar
+2) Fixed EDN483101 More agenda vCal import problems
+
+Version 0.00.012
+================
+(Made by Will Ramsay, 27 Nov 98)
+
+Uses:   BAFL/086 CHARCONV/003 CONARC/004 CONVERT/022 E32/156 E32TOOLP/097
+		E32TOOLS/095 E32UTILS/023 EIKTOOLS/128 EMIME/002 F32/122 STORE/050
+From Will
+> boiler plated headers
+
+> Fixed CParserPropertyCDesCArray to cope with empty arrays
+
+> all values containing chars >127, CR or LF are now QP encoded
+
+> Parser ignores backslashes that have been used as escape chars for CR or LF (to sync with Palm Pilot)
+
+From Simon
+) Updated MNT.CMD and changed to using EVALID
+
+) Changed many of the #defined strings to use _LIT instead
+
+) Fixed a number of potential OOM errors
+
+
+
+Version 0.00.011
+================
+(Made by Will Ramsay, 16 Nov 98)
+
+Uses:   E32/156 E32TOOLS/095 E32TOOLP/096 E32UTILS/023 EIKTOOLS/125 F32/122 STORE/050                   CONVERT/021 BAFL/086 CONARC/004  APPARC/100   BITGDI/062   GDI/061 FNTSTORE/052                         FBSERV/082 CHARCONV/003 EMIME/002
+
+As 010, but BC with 009
+
+Version 0.00.010
+================
+(Made by Will Ramsay, 16 Nov 98)
+
+Uses:   E32/156 E32TOOLS/095 E32TOOLP/096 E32UTILS/023 EIKTOOLS/125 F32/122 STORE/050                   CONVERT/021 BAFL/086 CONARC/004  APPARC/100   BITGDI/062   GDI/061 FNTSTORE/052                         FBSERV/082 CHARCONV/003 EMIME/002
+
+NOT BC with 009
+
+2 new members added to CVersitParser for use by cntmodel:
+#ifdef UNICODE
+	IMPORT_C TUid RecognizeTokenL(const TDesC16& aToken);
+#endif  
+	IMPORT_C TBool IsValidParameterValue(TInt& aPos,const TDesC& aParamValue) const;
+
+Parser now allows white spaces in parameter values to allow cntmodel to use them to store labels, (although this is not strictly following the spec)
+
+Alloc bug removed.
+
+CParserProperty constructor now has an __ASSERT_DEBUG(CParserPropertyValue*,Panic()) to avoid null property values being added.
+
+Version 0.00.009
+================
+(Made by Will Ramsay, 6 Nov 98)
+
+Uses:   E32/156 E32TOOLS/095 E32TOOLP/096 E32UTILS/023 EIKTOOLS/125 F32/122 STORE/050                   CONVERT/021 BAFL/086 CONARC/004  APPARC/100   BITGDI/062   GDI/061 FNTSTORE/052                         FBSERV/082 CHARCONV/003 EMIME/002
+
+def files released.
+Various checks inserted for calling member functions on NULL objects.
+
+Version 0.00.008
+================
+(Made by Will Ramsay, 2 Nov 98)
+
+Uses:   E32/156 E32TOOLS/095 E32TOOLP/096 E32UTILS/023 EIKTOOLS/125 F32/122 STORE/050                   CONVERT/021 BAFL/086 CONARC/004  APPARC/100   BITGDI/062   GDI/061 FNTSTORE/052                         FBSERV/082 CHARCONV/003 EMIME/002
+
+Deb/Rel and Unicode UID release.
+UID's for Versit DLL's are now:
+
+uid             0x1000008D 0x10001306
+unicodeuid      0x1000008D 0x10003B26
+
+Version 0.00.007
+================
+(Made by Will Ramsay, 22 Oct 98)
+
+Uses:   E32/126 E32TOOLS/091 E32UTILS/019 EIKTOOLS/125 F32/095 STORE/048 CONVERT/021
+	BAFL/076 CONARC/003  APPARC/100   BITGDI/062   GDI/057 FNTSTORE/046 FBSERV/075
+	CHARCONV/002    
+
+More testcode added
+Bug in AddPropertyL fixed
+
+Version 0.00.006
+================
+(Made by Will Ramsay, 16 Oct 98)
+
+Uses:   E32/126 E32TOOLS/091 E32UTILS/019 EIKTOOLS/125 F32/095 STORE/048 CONVERT/021
+	BAFL/076 CONARC/003  APPARC/100   BITGDI/062   GDI/057 FNTSTORE/046 FBSERV/075
+	CHARCONV/002    
+
+Base64/QP converter integration. Unicode builds released. Various bug fixes.
+
+Version 0.00.005
+================
+(Made by Nigel Grange, 29 Sept 98)
+
+Uses:   E32/121 E32TOOLS/086 E32UTILS/019 EIKTOOLS/125 F32/090 STORE/046 CONVERT/020
+
+Added support for encoded streams, and moved a few things around in the source to accomodate this.
+Can decode / encode quoted-printable streams using convert/020 + QPCONV.CNF/CNV files.
+If converter is not found, streams will still be read, but will remain encoded.
+Fixed a few more bugs when internalizing streams. 
+There are still suspected memory leaks in the internalize function. 
+
+Still todo:
+Base64 encoding integration (when converter is available)
+Unicode values integration
+
+
+Version 0.00.004
+================
+(Made by Steph Rolland, 21 September 1998)
+
+Uses:   E32/121 E32TOOLS/086 E32UTILS/019 EIKTOOLS/125 F32/090 STORE/046
+
+Fixed bugs found when doing integration in cntmodel (vcard) and agenda (vcal-contribution by Nigel Grange)
+
+Still todo:
+Quoted printable/Base64 encoding integration
+Unicode values integration
+
+Version 0.00.003
+================
+(Made by Will Ramsay, 17 August 1998)
+
+Uses:   E32/121 E32TOOLS/086 E32UTILS/019 EIKTOOLS/125 F32/090 STORE/046
+
+More bug fixes. Agent property improved. More tokens added
+
+Only narrow wins and marm variants released so far. Marm deb testcode didn't run, though Marm rel was successful.
+
+Still todo:
+Quoted printable/Base64 encoding integration
+Unicode values integration
+
+
+Version 0.00.002
+================
+(Made by Will Ramsay, 10 August 1998)
+
+Uses:   E32/121 E32TOOLS/086 E32UTILS/019 EIKTOOLS/125 F32/090 STORE/046
+
+Many bug fixes. Recurrence rules, daylight and timezone properties added.
+
+Only narrow wins and marm variants released so far. Marm deb testcode didn't run, though Marm rel was successful.
+
+Still todo:
+Quoted printable/Base64 encoding integration
+Unicode values integration
+
+
+Version 0.00.001
+================
+(Made by Will Ramsay, 30 June 1998)
+
+Uses:   E32/121 E32TOOLS/086 E32UTILS/019 EIKTOOLS/125 F32/090 STORE/046
+
+First release
+
+Uses Platform 003 dependencies except for Eiktools which requires version 125 to
+fetch unicode variants of everything.  Clients can safely build with 123.
+
+Only narrow wins and marm variants released so far. Marm deb testcode didn't run, though Marm rel was successful.
+
+Can be released and built using the standard MNT and EBLD commands.
+
+Note that nether binary nor file compatibility will be maintained with future releases.
+
+Still todo:
+Recurrence rules for Agenda
+Quoted printable/Base64 encoding integration
+Unicode values integration

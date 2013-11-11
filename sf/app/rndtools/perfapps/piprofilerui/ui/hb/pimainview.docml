@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="0.9">
+    <object name="actionStartProfiling" type="HbAction">
+        <string name="text" value="Start profiling"/>
+    </object>
+    <object name="actionSettings" type="HbAction">
+        <string name="text" value="Settings"/>
+    </object>
+    <object name="actionAbout" type="HbAction">
+        <string name="text" value="About"/>
+    </object>
+    <object name="actionExit" type="HbAction">
+        <string name="text" value="Exit"/>
+    </object>
+    <object name="actionStartTimedProfiling" type="HbAction">
+        <string name="text" value="Start profiling for 60 seconds"/>
+    </object>
+    <widget name="PIMainView" type="PIMainView">
+        <widget name="viewMenu" role="HbView:menu" type="HbMenu">
+            <string name="HbVkbHost" value=""/>
+            <ref object="actionStartProfiling" role="HbMenu:addAction"/>
+            <ref object="actionStartTimedProfiling" role="HbMenu:addAction"/>
+            <ref object="actionSettings" role="HbMenu:addAction"/>
+            <ref object="actionAbout" role="HbMenu:addAction"/>
+            <ref object="actionExit" role="HbMenu:addAction"/>
+        </widget>
+        <widget name="viewToolbar" role="HbView:toolBar" type="HbToolBar">
+            <ref object="actionStartProfiling" role="HbToolBar:addAction"/>
+            <ref object="actionSettings" role="HbToolBar:addAction"/>
+        </widget>
+        <widget name="content" role="HbView:widget" type="HbWidget">
+            <widget name="listPlugins" type="HbListWidget">
+                <sizehint height="32.53731un" type="PREFERRED" width="51.04478un"/>
+                <bool name="visible" value="TRUE"/>
+            </widget>
+            <real name="z" value="0"/>
+            <layout type="anchor">
+                <anchoritem dst="listPlugins" dstEdge="LEFT" spacing="5" src="" srcEdge="LEFT"/>
+                <anchoritem dst="listPlugins" dstEdge="RIGHT" spacing="5" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="listPlugins" dstEdge="TOP" spacing="5" src="" srcEdge="TOP"/>
+                <anchoritem dst="listPlugins" dstEdge="BOTTOM" spacing="5" src="" srcEdge="BOTTOM"/>
+            </layout>
+        </widget>
+        <string name="title" value="PI Profiler"/>
+    </widget>
+    <metadata activeUIState="Common ui state" display="NHD portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+    </metadata>
+</hbdocument>
+
+<!-- 
+
+Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+All rights reserved.
+This component and the accompanying materials are made available
+under the terms of "Eclipse Public License v1.0"
+which accompanies this distribution, and is available
+at the URL "http://www.eclipse.org/legal/epl-v10.html".
+
+Initial Contributors:
+Nokia Corporation - initial contribution.
+
+Contributors:
+
+Description: 
+
+
+  --> 

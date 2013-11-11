@@ -1,0 +1,20 @@
+220 dummy.test.com ESMTP 
+250-dummy.test.com is pleased to meet you
+250-HELP
+250-PIPELINING
+250-ETRN
+250-DSN
+250-ATRN
+250-STARTTLS
+250-SIZE
+250-AUTH=LOGIN
+250-AUTH LOGIN PLAIN CRAM-MD5 DIGEST-MD5
+250 EHLO
+334 PDQ2MDg5LjEwMjU4NjA0NjZAdHJtYWkwMi5pdC5jZWxsdWxhcmRhdGEuY29tPg==
+235 rahman relaying authenticated
+250 SMTP state reset
+250 test@dummy.test.com sender accepted
+250 testrcpt@dummy.rcpt.test.com will relay mail for an authenticated user
+354 Enter mail, end with "." on a line by itself
+250 114136 message accepted for delivery
+221 dummy.test.com CommuniGate Pro SMTP closing connection

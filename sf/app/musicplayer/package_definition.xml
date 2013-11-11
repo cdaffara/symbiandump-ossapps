@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SystemDefinition schema="3.0.0" xmlns:qt="http://www.nokia.com/qt">
+ <package id="musicplayer" name="Music Player Apps" levels="plugins support engine app">
+    <!-- move the rom .pri files into their components and uncomment the units -->
+  <collection id="mpdata " name="Music Player Data" level="support">
+   <component id="mpdata_rom" filter="s60" name="Music Player Data ROM" introduced="^4" class="config">
+    <unit bldFile="mpdata/rom"/>
+   </component>
+   <component id="mpdata_build" filter="s60" name="Music Player Data Build" introduced="^4">
+    <unit bldFile="mpdata" qt:proFile="mpdata.pro" qt:qmakeArgs="-r -config rom"/>
+   </component>
+   <component id="mpdata_test" name="Music Player Data Test" filter="s60,test,qt_unit_test,pref_test,TA_MUSICPLAYER">
+     <unit bldFile="mpdata/tsrc" qt:proFile="tsrc.pro"/>
+   </component>
+  </collection>
+  <collection id="mpengine " name="Music Player Engine" level="engine">
+   <component id="mpengine_rom" filter="s60" name="Music Player Engine ROM" introduced="^4" class="config">
+    <unit bldFile="mpengine/rom"/>
+   </component>
+   <component id="mpengine_build" filter="s60" name="Music Player Engine Build" introduced="^4">
+    <unit bldFile="mpengine" qt:proFile="mpengine.pro" qt:qmakeArgs="-r -config rom"/>
+   </component>
+   <component id="mpengine_test" name="Music Player Engine Test" filter="s60,test,qt_unit_test,pref_test,TA_MUSICPLAYER">
+     <unit bldFile="mpengine/tsrc" qt:proFile="tsrc.pro"/>
+   </component>
+  </collection>
+  <collection id="musicplayer_utilities " name="Music Player Utilities" level="support">
+   <component id="mpnowplayingbanner" filter="s60" name="MP Now Playing Banner" introduced="^4">
+    <unit bldFile="utilities/mpnowplayingbanner" qt:proFile="mpnowplayingbanner.pro" qt:qmakeArgs="-r -config rom"/>
+   </component>
+   <component id="mpsettingsmanager" filter="s60" name="MP Settings Manager" introduced="^4">
+    <unit bldFile="utilities/mpsettingsmanager" qt:proFile="mpsettingsmanager.pro" qt:qmakeArgs="-r -config rom"/>
+   </component>
+   <component id="mpalbumcoverwidget" filter="s60" name="MP Album Cover Widget" introduced="^4">
+    <unit bldFile="utilities/mpalbumcoverwidget" qt:proFile="mpalbumcoverwidget.pro" qt:qmakeArgs="-r -config rom"/>
+   </component>
+   <component id="mpmediacontroller" filter="s60" name="MP Media Controller" introduced="^4">
+    <unit bldFile="utilities/mpmediacontroller" qt:proFile="mpmediacontroller.pro" qt:qmakeArgs="-r -config rom"/>
+   </component>
+   <component id="mpapplicationmonitor" filter="s60" name="MP Application Monitor" introduced="^4">
+    <unit bldFile="utilities/mpapplicationmonitor" qt:proFile="mpapplicationmonitor.pro" qt:qmakeArgs="-r -config rom"/>
+   </component>      
+   <component id="musicplayer_utilities_test" name="Music Player Utilities Test" filter="s60,test,qt_unit_test,pref_test,TA_MUSICPLAYER">
+     <unit bldFile="utilities/tsrc" qt:proFile="tsrc.pro"/>
+   </component>
+   <component id="musicplayer_utilities_rom" name="Music Player Utilities ROM" filter="s60" class="config">
+     <unit bldFile="utilities/rom"/>
+   </component>
+  </collection>
+  <collection id="musicservices " name="Music Services" level="support">
+   <component id="musicservices_rom" filter="s60" name="Music Services ROM" introduced="^4" class="config">
+    <unit bldFile="musicservices/rom"/>
+   </component>
+   <component id="musicservices_build" filter="s60" name="Music Services Build" introduced="^4">
+    <unit bldFile="musicservices" qt:proFile="musicservices.pro" qt:qmakeArgs="-r -config rom"/>
+   </component>
+   <component id="musicservices_test" name="Music Services Test" filter="s60,test,qt_unit_test,pref_test,TA_MUSICPLAYER">
+     <unit bldFile="musicservices/tsrc" qt:proFile="tsrc.pro"/>
+   </component>
+  </collection>
+  <collection id="musicplayer_app " name="Music Player Application" level="app">
+   <component id="musicplayer_app_rom" filter="s60" name="Music Player Application ROM" introduced="^4" class="config">
+    <unit bldFile="app/rom"/>
+   </component>
+   <component id="musicplayer_app_build" filter="s60" name="Music Player Application Build" introduced="^4">
+    <unit bldFile="app" qt:proFile="app.pro" qt:qmakeArgs="-r -config rom"/>
+   </component>
+   <component id="musicplayer_app_test" name="Music Player Application Test" filter="s60,test,qt_unit_test,pref_test,TA_MUSICPLAYER">
+     <unit bldFile="app/tsrc" qt:proFile="tsrc.pro"/>
+   </component>
+  </collection>
+  <collection id="mpviewplugins" name="Music Player View Plugins" level="plugins">
+   <component id="mpcollectionviewplugin" filter="s60" name="MP Collection View Plugin" introduced="^4" class="plugin">
+    <unit bldFile="mpviewplugins/mpcollectionviewplugin" qt:proFile="mpcollectionviewplugin.pro" qt:qmakeArgs="-r -config rom"/>
+   </component>
+   <component id="mpplaybackviewplugin" filter="s60" name="MP Playback View Plugin" introduced="^4" class="plugin">
+    <unit bldFile="mpviewplugins/mpplaybackviewplugin" qt:proFile="mpplaybackviewplugin.pro" qt:qmakeArgs="-r -config rom"/>
+   </component>
+   <component id="mpsettingsviewplugin" filter="s60" name="MP Settings View Plugin" introduced="^4" class="plugin">
+    <unit bldFile="mpviewplugins/mpsettingsviewplugin" qt:proFile="mpsettingsviewplugin.pro" qt:qmakeArgs="-r -config rom"/>
+   </component>
+   <component id="mpdetailsviewplugin" filter="s60" name="MP Details View Plugin" introduced="^4" class="plugin">
+    <unit bldFile="mpviewplugins/mpdetailsviewplugin" qt:proFile="mpdetailsviewplugin.pro" qt:qmakeArgs="-r -config rom"/>
+   </component>
+   <component id="mpmediawallviewplugin" filter="s60" name="MP Media Wall View Plugin" introduced="^4" class="plugin">
+    <unit bldFile="mpviewplugins/mpmediawallviewplugin" qt:proFile="mpmediawallviewplugin.pro" qt:qmakeArgs="-r -config rom"/>
+   </component>
+   <component id="mpviewplugins_rom" name="Music Player View Plugins ROM" filter="s60" class="config">
+     <unit bldFile="mpviewplugins/rom"/>
+   </component>
+   <component id="mpviewplugins_test" name="Music Player View Plugins Test" filter="s60,test,qt_unit_test,pref_test,TA_MUSICPLAYER">
+     <unit bldFile="mpviewplugins/tsrc" qt:proFile="tsrc.pro"/>
+   </component>
+  </collection>
+  <collection id="musicwidgetplugin" name="Music Widget Plugin" level="plugins">
+   <component id="musicwidgetplugin_rom" filter="s60" name="Music Widget Plugin ROM" introduced="^4" class="config">
+    <unit bldFile="musicwidgetplugin/rom"/>
+   </component>
+   <component id="musicwidgetplugin_build" filter="s60" name="Music Widget Plugin" introduced="^4" class="plugin">
+    <unit bldFile="musicwidgetplugin" qt:proFile="musicwidgetplugin.pro" qt:qmakeArgs="-r -config rom"/>
+   </component>
+   <component id="musicwidgetplugin_test" name="Music Widget Plugin Test" filter="s60,test,qt_unit_test,pref_test,TA_MUSICPLAYER">
+     <unit bldFile="musicwidgetplugin/tsrc" qt:proFile="tsrc.pro"/>
+   </component>
+  </collection>
+  <collection id="mpserviceplugins" name="Music Player Service Plugins" level="plugins">
+   <component id="audioeffects" filter="s60" name="Audio Effects" introduced="^4" class="plugin">
+    <unit bldFile="mpserviceplugins/audioeffects/group"/>
+   </component>
+   <component id="localaudio" filter="s60" name="Local Audio" introduced="^4" class="plugin">
+    <unit bldFile="mpserviceplugins/localaudio/group"/>
+   </component>
+   <component id="mpxsqlitedbcommon" filter="s60" name="MPX SQLite Database Common" introduced="^4">
+    <unit bldFile="mpserviceplugins/mpxsqlitedbcommon/group"/>
+   </component>
+   <component id="mpxsqlitedbhgplugin" filter="s60" name="MPX SQLite Database Hg Plugin" introduced="^4" class="plugin">
+    <unit bldFile="mpserviceplugins/mpxsqlitedbhgplugin/group"/>
+   </component>
+   <component id="mpxsqlitepodcastdbplugin" filter="s60" name="MPX SQLlite Podcast Database Plugin" introduced="^4" class="plugin">
+    <unit bldFile="mpserviceplugins/mpxsqlitepodcastdbplugin/group"/>
+   </component>
+   <component id="mpxinmemoryplugin" filter="s60" name="MPX In-Memory Plugin" introduced="^4" class="plugin">
+    <unit bldFile="mpserviceplugins/mpxinmemoryplugin/group"/>
+   </component>
+   <component id="m3uplaylistplugin" filter="s60" name="M3U Playlist Plugin" introduced="^4" class="plugin">
+    <unit bldFile="mpserviceplugins/m3uplaylistplugin/group"/>
+   </component>
+  </collection>
+ </package>
+</SystemDefinition>

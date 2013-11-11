@@ -1,0 +1,7 @@
+EXPORTS
+	?NewL@CPEContactHandlingDummy@@SAPAV1@XZ @ 1 NONAME ; class CPEContactHandlingDummy * CPEContactHandlingDummy::NewL(void)
+	?FindContactInfoSync@CPEContactHandlingDummy@@UAEHHW4TPEFindContactKey@@@Z @ 2 NONAME ; int CPEContactHandlingDummy::FindContactInfoSync(int, enum TPEFindContactKey)
+	?CreateFirstPhaseL@CPEContactHandlingProxy@@SAPAVMPEContactHandling@@XZ @ 3 NONAME ; class MPEContactHandling * CPEContactHandlingProxy::CreateFirstPhaseL(void)
+	?FindContactInfoSync@CPEContactHandlingProxy@@UAEHHW4TPEFindContactKey@@@Z @ 4 NONAME ; int CPEContactHandlingProxy::FindContactInfoSync(int, enum TPEFindContactKey)
+	?CreateSecondPhaseL@CPEContactHandlingProxy@@QAEXAAVMPEPhoneModelInternal@@AAVRFs@@@Z @ 5 NONAME ; void CPEContactHandlingProxy::CreateSecondPhaseL(class MPEPhoneModelInternal &, class RFs &)
+

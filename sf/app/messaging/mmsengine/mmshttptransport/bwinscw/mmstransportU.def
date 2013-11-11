@@ -1,0 +1,6 @@
+EXPORTS
+	?FetchMessageL@CMmsSession@@QAEXABVTDesC16@@AAVCBufFlat@@JAAVMMmsCodecDataSupplier@@AAVMMmsCodecDataSink@@AAVTRequestStatus@@@Z @ 1 NONAME ; void CMmsSession::FetchMessageL(class TDesC16 const &, class CBufFlat &, long, class MMmsCodecDataSupplier &, class MMmsCodecDataSink &, class TRequestStatus &)
+	?NewL@CMmsSession@@SAPAV1@HAAVRSocketServ@@AAVRConnection@@@Z @ 2 NONAME ; class CMmsSession * CMmsSession::NewL(int, class RSocketServ &, class RConnection &)
+	?OpenL@CMmsSession@@QAEXABVTDesC8@@HJJAAVTRequestStatus@@@Z @ 3 NONAME ; void CMmsSession::OpenL(class TDesC8 const &, int, long, long, class TRequestStatus &)
+	?SendMessageL@CMmsSession@@QAEXABVTDesC16@@AAVCBufFlat@@AAVMMmsCodecDataSupplier@@AAVMMmsCodecDataSink@@AAVTRequestStatus@@@Z @ 4 NONAME ; void CMmsSession::SendMessageL(class TDesC16 const &, class CBufFlat &, class MMmsCodecDataSupplier &, class MMmsCodecDataSink &, class TRequestStatus &)
+

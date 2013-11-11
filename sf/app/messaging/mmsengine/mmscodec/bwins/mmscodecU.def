@@ -1,0 +1,13 @@
+EXPORTS
+	?DecodeAttachmentsL@CMmsDecode@@QAEXAAVMMmsEntryWrapper@@AAVCMmsHeaders@@AAVCBufFlat@@HAAHAAVTRequestStatus@@HH@Z @ 1 NONAME ; void CMmsDecode::DecodeAttachmentsL(class MMmsEntryWrapper &, class CMmsHeaders &, class CBufFlat &, int, int &, class TRequestStatus &, int, int)
+	?DecodeHeadersL@CMmsDecode@@QAEXAAVMMmsEntryWrapper@@AAVCMmsHeaders@@AAVCBufFlat@@HHPAH3@Z @ 2 NONAME ; void CMmsDecode::DecodeHeadersL(class MMmsEntryWrapper &, class CMmsHeaders &, class CBufFlat &, int, int, int *, int *)
+	?EncodeHeadersL@CMmsEncode@@QAEXAAVCMmsHeaders@@AAVCBufFlat@@@Z @ 3 NONAME ; void CMmsEncode::EncodeHeadersL(class CMmsHeaders &, class CBufFlat &)
+	?ExtractNextDataPartL@CMmsDecode@@QAEAAVCMsvMimeHeaders@@AAVCBufFlat@@AAH11@Z @ 4 NONAME ; class CMsvMimeHeaders & CMmsDecode::ExtractNextDataPartL(class CBufFlat &, int &, int &, int &)
+	?NewL@CMmsDecode@@SAPAV1@AAVRFs@@@Z @ 5 NONAME ; class CMmsDecode * CMmsDecode::NewL(class RFs &)
+	?NewL@CMmsEncode@@SAPAV1@AAVRFs@@@Z @ 6 NONAME ; class CMmsEncode * CMmsEncode::NewL(class RFs &)
+	?StartL@CMmsDecode@@QAEXAAVMMmsEntryWrapper@@AAVCMmsHeaders@@AAVCBufFlat@@AAVTRequestStatus@@HH@Z @ 7 NONAME ; void CMmsDecode::StartL(class MMmsEntryWrapper &, class CMmsHeaders &, class CBufFlat &, class TRequestStatus &, int, int)
+	?StartL@CMmsEncode@@QAEXAAVMMmsEntryWrapper@@AAVCMmsHeaders@@AAVCBufFlat@@AAVTRequestStatus@@@Z @ 8 NONAME ; void CMmsEncode::StartL(class MMmsEntryWrapper &, class CMmsHeaders &, class CBufFlat &, class TRequestStatus &)
+	?CommitStoreL@CMmsDecode@@QAEXXZ @ 9 NONAME ; void CMmsDecode::CommitStoreL(void)
+	?StartChunkedL@CMmsEncode@@QAEXAAVMMmsEntryWrapper@@AAVCMmsHeaders@@AAVCBufFlat@@AAVTRequestStatus@@@Z @ 10 NONAME ; void CMmsEncode::StartChunkedL(class MMmsEntryWrapper &, class CMmsHeaders &, class CBufFlat &, class TRequestStatus &)
+	?InitializeChunkedMode@CMmsDecode@@QAEXAAVMMmsEntryWrapper@@AAVCMmsHeaders@@AAVCBufFlat@@@Z @ 11 NONAME ; void CMmsDecode::InitializeChunkedMode(class MMmsEntryWrapper &, class CMmsHeaders &, class CBufFlat &)
+

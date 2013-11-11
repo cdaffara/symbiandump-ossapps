@@ -1,0 +1,44 @@
+/*
+* Copyright (c) 2005 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   Build definition file.
+*
+*/
+
+
+
+#include <platform_paths.hrh>
+
+#ifdef __I_CAL_SUPPORT
+PRJ_EXPORTS
+../rom/versit2.iby CORE_APP_LAYER_IBY_EXPORT_PATH(versit2.iby)
+//Export to calendarengines/inc
+../inc/ICal.h					        |../../inc/ICal.h	
+../inc/ICalBase.h					|../../inc/ICalBase.h
+../inc/ICalParser.h					|../../inc/ICalParser.h		
+../inc/ICalComponent.h			                |../../inc/ICalComponent.h
+../inc/ICalProperty.h				        |../../inc/ICalProperty.h
+../inc/ICalPropertyParam.h	                        |../../inc/ICalPropertyParam.h
+../inc/ICalValue.h					|../../inc/ICalValue.h
+../inc/ICalRuleSegment.h		                |../../inc/ICalRuleSegment.h
+../inc/ICalErrors.h					|../../inc/ICalErrors.h
+../inc/ICalKeyWords.h				        |../../inc/ICalKeyWords.h
+
+
+
+PRJ_MMPFILES
+Versit2.mmp
+
+#endif // __I_CAL_SUPPORT
+
+// End of File

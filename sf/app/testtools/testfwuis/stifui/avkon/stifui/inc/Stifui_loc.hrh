@@ -1,0 +1,144 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+* 
+* Description: This file contains localized strings.
+*
+*/
+
+// LOCALISATION STRINGS
+
+//#define qtn_testcase_menu_tab           "Cases"
+//#define qtn_testmodules_menu_tab        "Modules"
+//#define qtn_testsets_menu_tab           "Sets"
+
+// Main menu
+#define qtn_mainmenulist_test_cases     "\tTest Cases"
+#define qtn_mainmenulist_modules        "\tModules"
+#define qtn_mainmenulist_test_sets      "\tTest Sets"
+
+// Test cases menu
+#define qtn_testcasemenu_startcase      "\tStart Case(s)"
+#define qtn_testcasemenu_startedcases   "\tStarted Cases"
+
+// Started cases menu
+#define qtn_startedcases_allcases       "\tAll Started Cases"
+#define qtn_startedcases_ongoing        "\tOngoing Cases"
+#define qtn_startedcases_paused         "\tPaused Cases"
+#define qtn_startedcases_passed         "\tPassed Cases"
+#define qtn_startedcases_failed         "\tFailed Cases"
+#define qtn_startedcases_crashed_aborted        "\tCrashed/Aborted Cases"
+#define qtn_startedcases_statistics     "\tStatistics"
+
+// Modules menu
+#define qtn_open_module                 "Open module"
+#define qtn_add_module                  "Load all module(s)"
+#define qtn_remove_module               "Remove module"
+
+// Test set menu.
+#define qtn_testsetbasemenu_createtestset	"\tCreate test set"
+#define qtn_testsetbasemenu_loadtestset		"\tLoad test set"
+#define qtn_owerwrite_testset_confirmation	"Test set already created. Do you want to overwrite it?"
+#define qtn_save_testset_confirmation       "Save current test?"//changes for STIF-451
+#define qtn_load_testset_errornote          "Error loading test set."
+
+#define qtn_testsetinsert_add_selected  "Add selected"
+#define qtn_insert_confirmation			"Add selected test case(s) to test set?"
+#define qtn_insert_none_selected        "No test cases selected."
+
+#define qtn_testset_started_menu        "Show"
+#define qtn_testset_set_menu            "Set"
+
+#define qtn_testset_started_allcases    "Started Cases"
+#define qtn_testset_started_ongoing     "Ongoing Cases"
+#define qtn_testset_started_paused      "Paused Cases"
+#define qtn_testset_started_passed      "Passed Cases"
+#define qtn_testset_started_failed      "Failed Cases"
+#define qtn_testset_started_crashed_aborted     "Crashed/Aborted Cases"
+
+#define qtn_filter_test_cases           "Filter"
+#define qtn_by_module                   "By module"
+#define qtn_by_testcasefile             "By test case file"
+
+// Test case operations and menu texts
+#define qtn_markmenu_title				"Mark/Unmark"
+#define qtn_markmenu_mark				"Mark"
+#define qtn_markmenu_unmark				"Unmark"
+#define qtn_markmenu_markall			"Mark All"
+#define qtn_markmenu_unmarkall			"Unmark All"
+#define qtn_mark_test_case              "Mark"
+#define qtn_unmark_test_case            "Unmark"
+
+#define qtn_filter_menu                 "Filtering"
+#define qtn_filter_by_modules 		    "Filter by module"
+#define qtn_filter_by_test_case_file 	"Filter by test case file"
+#define qtn_no_filtering 		        "No filtering"
+
+
+//#define qtn_remove_execution            "Remove execution"
+//#define qtn_remove_all_executions       "Remove all executions"
+#define qtn_testcase_control_menu       "Test case control"
+#define qtn_view_output                 "View ouput of case"
+#define qtn_pause_testcase              "Pause"
+#define qtn_resume_testcase             "Resume"
+#define qtn_abort_testcase              "Abort"
+
+#define qtn_exit                        "Exit"
+
+// Start test cases queries.
+#define qtn_start_test_cases            "Start Case(s)"
+#define qtn_starting_test_case          "Start test?"
+#define qtn_starting_test_cases         "Start tests?"
+
+#define qtn_start                       "Start"
+#define qtn_start_and_view_output       "Start and view output"
+
+#define qtn_start_test					"Start"
+#define qtn_start_test_output			"Start&view output"
+#define qtn_start_tests_parallel		"Parallel"
+#define qtn_start_tests_serial			"Sequential"
+
+// example caption strings for app
+#define qtn_app_caption_string          "STIF UI"
+#define qtn_appui_demo              	"Demo"
+
+#define qtn_app_short_caption_string    "STIF UI"
+
+// Navipanel titles
+#define qtn_navi_load_test_set			"Load Test Set"
+#define qtn_navi_main					"Main menu"
+#define qtn_navi_testcases				"Test cases menu"
+#define qtn_navi_startcases				"Start cases"
+#define qtn_navi_startedcases			"Started cases"
+#define qtn_navi_testcase_output		"Test case output"
+#define qtn_navi_modules				"Modules menu"
+#define qtn_navi_testset_base			"Test set menu"
+#define qtn_navi_testset				"Test set"
+#define qtn_navi_testset_insert			"Insert test case"
+
+#define qtn_navi_started    			"Started cases"
+#define qtn_navi_started_all			"All started cases"
+#define qtn_navi_started_ongoing		"Ongoing cases"
+#define qtn_navi_started_paused			"Paused cases"
+#define qtn_navi_started_passed			"Passed cases"
+#define qtn_navi_started_failed			"Failed cases"
+#define qtn_navi_started_crashed_aborted		"Crashed/Aborted cases"
+#define qtn_navi_started_stats			"Statistics"
+
+// Test case states
+#define qtn_testcase_state_running      "Running"
+#define qtn_testcase_state_passed       "Passed"
+#define qtn_testcase_state_failed       "Failed"
+#define qtn_testcase_state_crashed_aborted      "Crashed/Aborted"
+#define qtn_testcase_state_unknown      "Undefined state!"
+
+// End of File

@@ -1,0 +1,47 @@
+/*
+* Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: 
+*
+*/
+#include <registryinfo.rh>
+
+// Declares info for one test implementation
+RESOURCE REGISTRY_INFO theInfo
+        {
+        // UID for the DLL       
+		// TODO: Rename dll_uid according to your plugin UID
+        dll_uid = 0x20029ABB;
+        // Declare array of interface info
+        interfaces = 
+                {
+                INTERFACE_INFO
+                        {
+                        // UID of interface that is implemented
+                        interface_uid = 0x2001F700; // CPixSearch Plugin Interface UID
+                        implementations = 
+                                {
+                                // Info for CMessagePlugin
+                                IMPLEMENTATION_INFO
+                                        {
+                                        implementation_uid = 0x20029ABB;
+                                        version_no = 1;
+                                        display_name = "Image";
+                                        default_data = "Images";
+                                        opaque_data = "z:\\resource\\qt\\plugins\\searchsrv\\contentconfig\\imageconfig.xml";
+                                        }
+                                };
+                        }
+                };
+        }
+

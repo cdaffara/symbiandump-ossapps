@@ -1,0 +1,65 @@
+
+/********************************** BODYTEXT **********************************/
+MsgConversationWidget[isIncoming]::bodyText
+{
+  color:var(qtc_conv_list_received_normal);
+}
+
+MsgConversationWidget[isIncoming][isUnread]::bodyText
+{
+  color:var(qtc_conv_list_received_highlight);
+}
+
+MsgConversationWidget[!isIncoming]::bodyText
+{
+  color:var(qtc_conv_list_sent_highlight);
+}
+
+MsgConversationWidget[!isIncoming][sendingState="Sent"]::bodyText
+{
+  color:var(qtc_conv_list_sent_normal);
+}
+
+/********************************** SUBJECT ***********************************/
+MsgConversationWidget[isIncoming]::subject
+{
+  color:var(qtc_conv_list_received_normal);
+}
+
+MsgConversationWidget[isIncoming][isUnread]::subject
+{
+  color:var(qtc_conv_list_received_highlight);
+}
+
+MsgConversationWidget[!isIncoming]::subject
+{
+  color:var(qtc_conv_list_sent_highlight);
+}
+
+MsgConversationWidget[!isIncoming][sendingState="Sent"]::subject
+{
+  color:var(qtc_conv_list_sent_normal);
+}
+
+/****************************** TIMESTAMP TEXT ********************************/
+MsgConversationWidget[isIncoming]::timeStamp
+{
+  color:var(qtc_conv_list_received_normal);
+}
+
+MsgConversationWidget[isIncoming][isUnread]::timeStamp
+{
+  color:var(qtc_conv_list_received_highlight);
+}
+
+MsgConversationWidget[!isIncoming]::timeStamp
+{
+  color:var(qtc_conv_list_sent_highlight);
+}
+
+MsgConversationWidget[!isIncoming][sendingState="Sent"]::timeStamp
+{
+  color:var(qtc_conv_list_sent_normal);
+}
+
+/* EOF */

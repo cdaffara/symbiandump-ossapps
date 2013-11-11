@@ -1,0 +1,59 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description: PKG file  of Contacts Application for IAD.
+;
+
+; Language
+&EN
+
+
+; SIS header: name, uid, version
+#{"Contacts"},(0x20022EF9),1,0,0, TYPE=SA
+
+; Localised Vendor name
+%{"Nokia"}
+
+; Unique Vendor name
+:"Nokia"
+
+
+; Phonebook.iby contents 
+ 
+"" - "z:\sys\bin\cntlistmodel.dll"
+"" - "z:\sys\bin\cnthistorymodel.dll"
+"" - "z:\sys\bin\cntactionsplugin.dll"
+"" - "z:\sys\bin\cntsimutility.dll"
+"" - "z:\sys\bin\cntimageutility.dll"
+"" - "z:\sys\bin\cntcommonui.dll"
+"" - "z:\sys\bin\phonebook.exe"
+
+"" - "z:\resource\qt\plugins\contacts\cntactionsplugin.qtplugin"
+
+"" - "z:\resource\hb\splashml\phonebook.splashml"
+"" - "z:\resource\hb\splashml\phonebook.docml"
+
+; Phonebookservices.iby contents 
+"" - "z:\sys\bin\phonebookservices.exe"
+"" - "z:\resource\apps\phonebookservices.r*"
+"" - "z:\private\10003a3f\import\apps\phonebookservices_reg.rsc"
+
+
+
+;Phonebookresources.iby contents
+"" - "z:\resource\qt\translations\contacts*.qm"
+"" - "z:\resource\apps\phonebook.r*"
+
+;Cenrep settings
+"" - "z:\system\data\10202BE9\2002FF54.txt"
+"" - "z:\system\data\10202BE9\200315A8.txt"

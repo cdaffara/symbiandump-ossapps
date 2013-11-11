@@ -1,0 +1,1245 @@
+/*
+* Copyright (c) 2002-2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*     This file contains the localised strings for MmsUi 
+*
+*/
+
+
+
+//////////////////////////////////
+//  MMSEDITOR MAIN VIEW
+//////////////////////////////////
+
+//d: Name shown in title pane when application is running
+//d: This string MUST NOT ANYMORE have any '\n's in the end of the string
+//l: title_pane_t2/opt12
+#define qtn_mms_title_mms_shorter           "Multimedia"
+
+//////////////////////////////////
+// Main views options menu
+//////////////////////////////////
+
+//d: Command in options menu.
+//d: Opens dialog where all viewable and non-viewable parts of the message
+//d: are listed to user.   
+//l: list_single_pane_t1_cp2
+#define qtn_mms_om_objects                  "Objects"
+
+//////////////////////////////////
+//  WAIT NOTES
+//////////////////////////////////
+
+//d: Wait note
+//d: This is shown when user is changing slide
+//d: current page / number of pages
+//l: popup_note_wait_window
+#define qtn_mms_wait_opening_page           "Opening page %0N/%1N"
+
+//////////////////////////////////
+//  INFORMATION AND CONFIRMATION NOTES
+//////////////////////////////////
+
+//d: Information note
+//d: Note shown when message contains objects that cannot be displayed.
+//l: popup_note_window
+#define qtn_mms_info_fwd_cannot_display     "Unable to display some objects."
+
+//////////////////////////////////
+//  QUERY DIALOGS
+//////////////////////////////////
+
+//d: Confirmation query. 
+//d: Confirmation asked when deleting whole message
+//d: YES/NO
+//l: popup_note_window
+#define qtn_mms_quest_delete_msg            "Delete message?"
+
+//d: Confirmation query. 
+//d: Confirmation asked when ringing type of the phone is silent
+//d: and play audio command was selected in MMS Viewer.
+//d: The profile can be any only the ringing type matters.
+//d: YES/NO 
+//l: popup_note_window
+//w:
+//r:3.0
+//
+#define qtn_mms_qry_play_audio              "Phone is on silent profile. Play audio anyway?"
+
+//////////////////////////////////
+// Settings dialog
+
+// d: Confirmation query - MMS access points are either missing or contain settings that are not valid.
+// d: This query is given when starting to write a new or edit an existing multimedia message.
+// l: popup_note_window
+#define qtn_mce_conf_no_ap                  "No access point defined or it is not valid. Modify now?"
+
+// d: Submenu item in mce application that starts writing a multimedia message.
+// l: list_single_popup_submenu_pane_t1
+#define qtn_mce_inbox_write_mms             "Multimedia message"
+
+// d: Popup query item in mce application that starts writing a multimedia message.
+// l: list_single_pane_t1_cp2
+#define qtn_mce_pop_up_mms                  "Multimedia message"
+
+// d: Settings dialog item in mce application for multimedia messaging settings.
+// l: list_double_pane_t1_cp2
+#define qtn_mce_settings_mms                "Multimedia message"
+
+// Note: qtn_options_send_via_mms is in avkon.loc
+
+// d: Multimedia message settings dialog title
+// l: title_pane_t2/opt12
+#define qtn_mce_title_settings_mms          "Multimedia message"
+
+// d: Multimedia message settings dialog menu item.
+// d: Change selected item.
+// l: list_single_pane_t1_cp2
+#define qtn_mce_settings_change             "Change"
+
+// d: Multimedia message settings dialog menu item.
+// d: Closes settings dialog.
+// l: list_single_pane_t1_cp2
+#define qtn_mce_settings_exit               "Exit"
+
+// d: Multimedia message settings list item.
+// d: If chosen opens a dialog to select an access point.
+// l: list_setting_pane_t1
+#define qtn_mce_mms_pc                      "Connection"
+
+// d: Multimedia message settings list item value
+// d: Means that this access point is not defined.
+// l: list_set_graphic_pane_t1
+#define qtn_mce_settings_mms_none           "None"
+
+// d: Multimedia message settings list item.
+// d: Allows user to define how the MMS messages are received.
+// l: list_setting_pane_t1
+#define qtn_mms_reception_setting           "MMS Reception"
+
+// d: Multimedia message setting item list value. Also a choice item in a select dialog.
+// d: Sets MMS receiving mode to "Automatic" in both home & roaming networks.
+// l: list_set_graphic_pane_t1
+#define qtn_mms_recept_sett_auto_always     "Always automatic"
+
+// d: Multimedia message setting item list value. Also a choice item in a select dialog.
+// d: Sets MMS receiving mode to "Automatic" in home network & "Manual" in roaming network.
+// l: list_set_graphic_pane_t1
+#define qtn_mms_recept_sett_auto_home       "Automatic in home network"
+
+// d: Multimedia message setting item list value. Also a choice item in a select dialog.
+// d: Sets MMS receiving mode to "Manual" in both home & roaming networks.
+// l: list_set_graphic_pane_t1
+#define qtn_mms_recept_sett_manual_always   "Always manual"
+
+// d: Multimedia message settings list item.
+// d: If chosen opens a dialog to select to select receive mode for anonymous (sender unknown) messages.
+// l: list_setting_pane_t1
+#define qtn_mce_mms_fetch_anonymous         "Fetch anonymous messages"
+
+// d: Multimedia message settings list item.
+// d: If chosen opens a dialog to select receive mode for multimedia message advertisements.
+// l: list_setting_pane_t1
+#define qtn_mce_mms_receive_ad              "Receiving of advertisements"
+
+// d: Multimedia message settings list item.
+// d: If chosen opens a dialog to select the status of allowing sending of delivery reports for received multimedia messages.
+// l: list_setting_pane_t1
+#define qtn_mce_mms_deny_dr                 "Deny report sending"
+
+// d: Multimedia message settings list item.
+// d: If chosen opens a dialog to select the default validity period.
+// l: list_setting_pane_t1
+#define qtn_mce_mms_validity_period         "Validity period"
+
+// d: Multimedia message settings list item.
+// d: If chosen opens a dialog to select the default image resolution limit.
+// l: list_setting_pane_t1
+#define qtn_mce_mms_image_size              "Image size"
+
+// d: Confirmation query - user must confirm the made selection.
+// d: Given when "always enabled" has been selected for "MMS reception".
+// l: popup_note_window
+#define qtn_mms_sttng_enabled_conf_q        "Automatic MMS message reception creates network connections independently. This can be more costly while roaming. Do you wish to set this to always enabled?"
+
+// d: Confirmation query - user must accept erroneous settings
+// d: Given when settings are erroneous and user is exiting MMS Settings dialog.
+// l: popup_note_window
+#define qtn_mce_settings_mms_invalid        "Multimedia message doesn't work without Connection. Exit anyway?"
+
+// d: Multimedia message setting item list value. Also a choice item in a select dialog.
+// d: Sets multimedia message receiving to be always on, i.e. both in home network & in roaming.
+// l: list_set_graphic_pane_t1
+#define qtn_mms_stng_mms_rcpt_enab_alw      "Always enabled"
+
+// d: Multimedia message setting item list value. Also a choice item in a select dialog.
+// d: Sets multimedia message receiving to be always off, i.e. both in home network & in roaming.
+// l: list_set_graphic_pane_t1
+#define qtn_mms_stng_mms_rcpt_disenab       "Disabled"
+
+// d: Multimedia message settings list item.
+// d: If chosen opens a dialog to select the MMS creation mode.
+// l: list_setting_pane_t1
+#define qtn_mms_stng_creation_modes         "MMS Creation mode"
+
+// d: Multimedia message setting item list value. Also a choice item in a select dialog.
+// d: If creation mode is set "restricted" user is not able to insert objects that 
+// d: are not IOP safe into the message
+// l: list_set_graphic_pane_t1
+#define qtn_mms_stng_restricted_mode        "Restricted"
+
+// d: Multimedia message setting item list value. Also a choice item in a select dialog.
+// d: If creation mode is set "guided" user is warned when he/she is trying to insert objects that 
+// d: are not IOP safe into the message
+// l: list_set_graphic_pane_t1
+#define qtn_mms_stng_guided_mode            "Guided"
+
+// d: Multimedia message setting item list value. Also a choice item in a select dialog.
+// d: If creation mode is set "free" user is able to insert objects that 
+// d: are not IOP safe into the message without any warnings etc.
+// l: list_set_graphic_pane_t1
+#define qtn_mms_stng_free_mode              "Free"
+
+// d: Confirmation query - user must accept query in order to
+// d: change creation mode into "free"
+// d: YES / NO
+// l: popup_note_window
+#define qtn_mms_query_change_to_free        "No warnings are given, though the created message may not be supported by all receivers. Continue?"
+
+// d: Information note
+// d: If the MMS Creation mode setting is not changable by the user and the user
+// d: is trying to change it he is given this information note
+// l: popup_note_window
+#define qtn_mms_cannot_change_cmode         "MMS Creation mode cannot be changed."
+
+// d: Information note
+// d: Info note is shown when the user changes the Creation mode setting
+// d: to "Restricted" when the Image size is "Large" (since "Large"
+// d: is not supported in "Restricted" mode).
+// l: popup_note_window
+// w:
+// r: 3.2
+#define qtn_mms_info_im_size_to_small       "Image size changed to Small."
+
+//////////////////////////////////
+// MMS Editor
+
+// d: Confirmation query
+// d: When trying to open a message (for example from Drafts), that includes object
+// d: that is not IOP safe and terminal is in guided creation mode.
+// d: YES / NO
+// l: popup_note_window
+#define qtn_mms_conf_guid_incl_object       "Message includes an object that may not be supported by the receiving phone. Continue?"
+
+// d: Confirmation query
+// d: When trying to open a message (for example from Drafts), that includes objects
+// d: that are not IOP safe and terminal is in guided creation mode.
+// d: YES / NO
+// l: popup_note_window
+#define qtn_mms_conf_guid_incl_objects      "Message includes objects that may not be supported by the receiving phone. Continue?"
+
+// d: Confirmation query
+// d: When trying to insert an object that is not IOP safe into MMS message
+// d: via SendAs interface and terminal is in guided creation mode.
+// d: YES / NO
+// l: popup_note_window
+#define qtn_mms_conf_guided_object          "The receiving phone may not support this object. Continue?"
+
+// d: Confirmation query
+// d: When trying to insert multiple objects that are not IOP safe into MMS message
+// d: via SendAs interface and terminal is in guided creation mode.
+// d: YES / NO
+// l: popup_note_window
+#define qtn_mms_conf_guided_objects         "Some objects may not be supported by the receiving phone. Continue?"
+
+// d: Confirmation query
+// d: When trying to create presentation
+// d: and terminal is in guided creation mode.
+// d: YES / NO
+// l: popup_note_window
+#define qtn_mms_conf_guid_present           "The receiving phone may not support presentation. Continue?"
+
+
+// d: Multimedia message setting item list value. Also a choice item in a select dialog.
+// d: Requests delivery reports for sent messages.
+// l: list_set_graphic_pane_t1
+#define qtn_mce_settings_mms_yes        "Yes"
+
+// d: Multimedia message setting item list value. Also a choice item in a select dialog.
+// d: Does not request delivery reports for sent messages.
+// l: list_set_graphic_pane_t1
+#define qtn_mce_settings_mms_no         "No"
+
+//////////////////////////////////
+// MMS editor service settings
+//////////////////////////////////
+
+// d: Multimedia message setting item list value. Also a choice item in a select dialog.
+// d: Requests vality period time of one hour for sent messages.
+// l: list_set_graphic_pane_t1
+#define qtn_mce_settings_mms_1          "1 h"
+
+// d: Multimedia message setting item list value. Also a choice item in a select dialog.
+// d: Requests vality period time of six hours for sent messages.
+// l: list_set_graphic_pane_t1
+#define qtn_mce_settings_mms_6          "6 h"
+
+// d: Multimedia message setting item list value. Also a choice item in a select dialog.
+// d: Requests vality period time of 1 day for sent messages.
+// l: list_set_graphic_pane_t1
+#define qtn_mce_settings_mms_24         "24 h"
+
+// d: Multimedia message setting item list value. Also a choice item in a select dialog.
+// d: Requests vality period time of three days for sent messages.
+// l: list_set_graphic_pane_t1
+#define qtn_mce_settings_mms_3          "3 days"
+
+// d: Multimedia message setting item list value. Also a choice item in a select dialog.
+// d: Requests vality period time of one week for sent message´s.
+// l: list_set_graphic_pane_t1
+#define qtn_mce_settings_mms_week       "Week"
+
+// d: Multimedia message setting item list value. Also a choice item in a select dialog.
+// d: Requests maximum vality period time for sent messages.
+// l: list_set_graphic_pane_t1
+#define qtn_mce_settings_mms_maximum    "Maximum"
+
+// d: Multimedia message setting item list value. Also a choice item in a select dialog.
+// d: Large (640*480) image resolution value to be used in sending images.
+// l: list_set_graphic_pane_t1
+#define qtn_mce_settings_mms_large      "Large"
+
+// d: Multimedia message setting item list value. Also a choice item in a select dialog.
+// d: Small (160*120) image resolution value to be used in sending images.
+// l: list_set_graphic_pane_t1
+#define qtn_mce_settings_mms_small      "Small"
+
+//////////////////////////////////
+// Message info
+//////////////////////////////////
+
+// d: Message info popup item value
+// d: Type of the message.
+// l: list_single_heading_pane_t1_cp2
+#define qtn_mms_msginfo_mms             "Multimedia message"
+
+// d: Message info popup item value
+// d: Priority of the message.
+// l: list_single_heading_pane_t1_cp2
+#define qtn_mms_message_priority_low	"Low"
+
+// d: Message info popup item value
+// d: Priority of the message.
+// l: list_single_heading_pane_t1_cp2
+#define qtn_mms_message_priority_normal	"Normal"
+
+// d: Message info popup item value
+// d: Priority of the message.
+// l: list_single_heading_pane_t1_cp2
+#define qtn_mms_message_priority_high	"High"
+
+// d: Message info popup item value
+// d: Type of the message.
+// l: list_single_heading_pane_t1_cp2
+#define qtn_mms_msginfo_notif           "Multimedia notification"
+
+// d: Command in options list in Mce. 
+// d: Opens Message info dialog
+// d: Visible when one message selected.
+// l: list_single_pane_t1_cp2
+#define qtn_mce_info                    "Message info"
+
+// d: Message info popup item.
+// d: For mobile terminated messages: the date the message was received in MMSC.
+// d: For mobile originated message: the date the message was last modified (=saved).
+// l: list_single_heading_pane_t2_cp2
+#define qtn_mms_date                    "date"
+
+// d: Message info popup item.
+// d: For mobile terminated messages: the time the message was received in MMSC.
+// d: For mobile originated message: the time the message was last modified (=saved).
+// l: list_single_heading_pane_t2_cp2
+#define qtn_mms_time                    "time"
+
+// d: Message info popup item.
+// d: The type of the message. Always: multimedia message.
+// d: For mobile originated message: the date the message was last modified (=saved).
+// l: list_single_heading_pane_t2_cp2
+#define qtn_mms_type                    "type"
+
+// d: Message info popup item value
+// d: Type of the message.
+// l: list_single_heading_pane_t1_cp2
+// w:
+// r:3.1u
+#define qtn_msg_details_type_audio             "Audio message"
+
+//////////////////////////////////
+// Outbox statuses
+//////////////////////////////////
+
+// d: A status of the message when waiting for sending in Outbox
+// d: listbox text
+// l: list_double_graphic_pane_t2
+#define qtn_mce_outbox_status_sending   "Sending"
+
+// d: A status of the message when waiting for sending in Outbox
+// d: listbox text
+// l: list_double_graphic_pane_t2
+#define qtn_mce_outbox_status_waiting   "Waiting"
+
+// d: A status of the message when waiting for sending in Outbox
+// d: listbox text
+// l: list_double_graphic_pane_t2
+#define qtn_mce_outbox_status_retry_at  "Retry at %U"
+
+// d: A status of the message when waiting for sending in Outbox
+// d: listbox text
+// l: list_double_graphic_pane_t2
+#define qtn_mce_outbox_status_suspended "Suspended"
+
+// d: A status of the message when waiting for sending in Outbox
+// d: listbox text
+// l: list_double_graphic_pane_t2
+#define qtn_mce_outbox_status_queued    "Queued"
+
+// d: A status of the message when waiting for sending in Outbox
+// d: listbox text
+// l: list_double_graphic_pane_t2
+#define qtn_mce_outbox_status_failed    "Failed"
+
+// d: Application name in title pane
+// l: title_pane_t2/opt12
+#define qtn_mms_title_notification      "Multimedia Notification"
+
+// d: Application name in title pane
+// l: title_pane_t2/opt12
+#define qtn_mms_title_fwd_rqst          "Forward Request"
+
+// d: Command in options-menu
+// d: Starts the retrieval of the MMS from the server
+// l: list_single_pane_t1_cp2
+#define qtn_mms_om_retrieve_msg         "Retrieve message"
+
+// d: Command in options-menu
+// d: Starts the forwarding of the MMS
+// l: list_single_pane_t1_cp2
+#define qtn_mms_notif_fwd_msg           "Forward message"
+
+//////////////////////////////////
+// The texts in the Notification Viewer body:
+//////////////////////////////////
+
+// d: Name of the label
+// d: Subject of the message
+// l: popup_query_data_window
+#define qtn_msg_nf_subject	            "Subject:"
+
+// d: Name of the label
+// d: From field
+// l: msg_header_pane_t1
+#define qtn_msg_nf_from		            "From:"
+
+// d: Name of the label
+// d: Extended notification text
+// l: popup_query_data_window
+#define qtn_mms_extended_notif_text     "Text:"
+
+// d: Name of the label
+// d: The date and time when the message expires in the server
+// l: popup_query_data_window
+#define qtn_mms_expires                 "Expires:"
+
+// d: Name of the label
+// d: Estimated size of the message (content adaptation might change it)
+// l: popup_query_data_window
+#define qtn_mms_estimated_size	        "Estimated size:"
+
+// d: Name of the label
+// d: The class of the message (personal/informative/ad)
+// l: popup_query_data_window
+#define qtn_mms_class                   "Class:"
+
+// d: Name of the label
+// d: Priority of the message (low/normal/high)
+// l: popup_query_data_window
+#define qtn_mms_priority                "Priority:"
+
+
+// d: Value of class
+// d: Message is personal
+// l: popup_info_list_pane_t2/opt1
+#define qtn_mms_msg_type_personal       "Personal message"
+
+// d: Value of class
+// d: Message is informative
+// l: popup_info_list_pane_t2/opt1
+#define qtn_mms_msg_type_informative    "Informative message"
+
+// d: Value of class
+// d: Message is advertisement
+// l: popup_info_list_pane_t2/opt1
+#define qtn_mms_msg_type_advertisement  "Advertisement message"
+
+// d: Value of priority
+// d: Message has low priority
+// l: popup_info_list_pane_t2/opt1
+#define qtn_mms_priority_low            "Low"
+
+// d: Value of priority
+// d: Message has normal priority
+// l: popup_info_list_pane_t2/opt1
+#define qtn_mms_priority_normal         "Normal"
+
+// d: Value of priority
+// d: Message has high priority
+// l: popup_info_list_pane_t2/opt1
+#define qtn_mms_priority_high           "High"
+
+// d: Info text of the status of the notification in NotViewer
+// l: popup_info_list_pane_t2/opt1
+#define qtn_mms_notif_retrieval_failed  "Message retrieval failed."
+
+// d. Info text of the status of the notification in NotViewer
+// l: popup_info_list_pane_t2/opt1
+#define qtn_mms_notif_msg_expired       "Message has expired."
+
+// d: Info text of the status of the notification in NotViewer
+// l: popup_info_list_pane_t2/opt1
+#define qtn_mms_notif_msg_forwarding    "Forwarding the message."
+
+// d: Info text of the status of the notification in NotViewer
+// l: popup_info_list_pane_t2/opt1
+#define qtn_mms_notif_msg_forwarded     "Message sent forward."
+
+// d: Info text of the status of the notification in NotViewer
+// l: popup_info_list_pane_t2/opt1
+#define qtn_mms_notif_msg_waiting       "You have a multimedia message waiting."
+
+// d: Info text of the status of the notification in NotViewer
+// l: popup_info_list_pane_t2/opt1
+#define qtn_mms_notif_auto_retrieval    "Message will be retrieved automatically."
+
+// Notification states in Inbox
+
+// d: A state of the notification when the message is being retrieved
+// d: listbox text
+// l: list_double_graphic_pane_t2_cp2
+#define qtn_mms_notification_state_retrieving       "Retrieving"
+
+// d: A state of the message when notification is scheduled for
+// d: scheduled for automatic retrieval but not yet being retrieved
+// d: listbox text
+// l: list_double_graphic_pane_t2_cp2
+#define qtn_mms_notification_state_waiting          "Waiting"
+
+// d: A status of the notification when retrieval has failed for some reason
+// d: listbox text
+// l: list_double_graphic_pane_t2_cp2
+#define qtn_mms_notification_state_failed           "Failed"
+
+// d: A status of the notification when the message is
+// d: being forwarded at the moment
+// d: listbox text
+// l: list_double_graphic_pane_t2_cp2
+#define qtn_mms_notification_state_forwarding       "Forwarding"
+
+// d: A status of the notification when message is forwarded
+// d: listbox text
+// l: list_double_graphic_pane_t2_cp2
+#define qtn_mms_notification_state_forwarded        "Forwarded"
+
+// d: A state of the notification when the message has been deleted from server
+// d: listbox text
+// l: list_double_graphic_pane_t2_cp2
+#define qtn_mms_notification_state_deleted			"Deleted from server"
+
+// d: A state of the notification when the message is ready to be fetched/forwarded
+// d: listbox text
+// l: list_double_graphic_pane_t2_cp2
+#define qtn_mms_notification_state_normal			"MMS Waiting"
+
+// d: Defines the order of time and date strings
+// d: 0 is time and 1 is date
+// l: popup_info_list_pane_t2/opt1
+#define qtn_mms_expiry_time_date    "%0U %1U"
+
+//d: Confirmation query. 
+//d: Confirmation asked when fetching expired message.
+//d: YES/NO 
+//l: popup_note_window
+#define qtn_mms_quest_msg_expired       "Message has expired. Continue?"
+
+//d: Confirmation query. 
+//d: Confirmation asked when fetching expired message.
+//d: YES/NO 
+//l: popup_note_window
+#define qtn_mms_conf_forward_request	"Forwarded message cannot anymore be retrieved to the phone. Continue?"
+
+// d: The heading of "Delete from:" list query
+// l: heading_pane_t1
+#define qtn_mms_qry_title_del_from          "Delete from:"
+
+// d: An entry in "Delele from:" list query
+// l: list_single_pane_t1_cp2
+#define qtn_mms_qry_del_from_both           "Phone and MMBox"
+
+// d: An entry in "Delele from:" list query
+// l: list_single_pane_t1_cp2
+#define qtn_mms_qry_del_only_remote         "MMBox only"
+
+// d: An entry in "Delele from:" list query
+// l: list_single_pane_t1_cp2
+#define qtn_mms_qry_del_only_local	"Phone only"
+
+//d:Message deleting from MMBox wait note string
+//d:A wait note
+//l:popup_note_wait_window 
+#define qtn_mms_wait_deleting_remote        "Deleting from MMBox"
+
+//d:Deleting notification from Phone wait note string
+//d:A wait note
+//l:popup_note_wait_window 
+#define qtn_notif_wait_delete				"Deleting notification from Phone"
+
+//d:Deleting notifications from Phone wait note string
+//d:A wait note
+//l:popup_note_wait_window 
+#define qtn_notif_wait_delete_many			"Deleting notifications from Phone"
+
+//d:Note when message deletion from MMBox is completed
+//d:Information note
+//l:popup_note_window
+#define qtn_mms_info_remote_del             "Deleting from MMBox completed."
+
+//d:Note when message deletion from MMBox is failed
+//d:Information note
+//l:popup_note_window
+#define qtn_mms_info_remote_del_failed      "Could not delete message from MMBox."
+
+// d: Displayed when several mms notifications delete fails
+// d: 
+// l: popup_note_window
+//
+#define qtn_mms_info_remote_del_failed_many "Could not delete %0N/%1N messages from MMbox"
+
+// d: Information note
+// d: Shown when user starts to retrieve message
+// l: popup_note_window
+#define qtn_mms_wait_retrieving     "Retrieving message"
+
+// d: Query text to confirm to delete one message. 
+// d: Filled to qtn_query_common_conf_delete string.
+// l: popup_note_window
+//
+#define qtn_query_common_conf_delete_me "Delete message?"
+
+// d: Query text to confirm to delete more than one messages.
+// d: Filled to qtn_query_common_conf_delete string.
+// l: popup_note_window
+//
+#define qtn_query_common_conf_delete_ms "Delete %N messages?"
+
+/////////////////////////////////////////////////
+// Option-menu commands in MMS VIEWER
+
+//d:Command in options-menu
+//d:Launches SMIL Player to show 3GPP SMIL presentation
+//l:list_single_pane_t1_cp2
+#define qtn_mms_om_show_presentation        "Play presentation"
+
+//d:Command in options-menu
+//d:Launches MMS Editor for forwarding the current message
+//l:list_single_pane_t1_cp2
+#define qtn_mms_om_forward                  "Forward"
+
+//d:Command in options-menu
+//d:Plays the attached audio clip
+//l:list_single_pane_t1_cp2
+#define qtn_mms_om_play_audio               "Play audio"
+
+//d:Command in options-menu
+//d:Shows the attached image file in PhotoAlbum
+//l:list_single_pane_t1_cp2
+#define qtn_mms_om_view_image               "View image"
+
+//d:Command in options-menu
+//d:Starts video playback
+//l:list_single_pane_t1_cp2
+#define qtn_mms_om_play_video               "Play video"
+
+//d:Command in options-menu
+//d:Moves the current message into another folder
+//l:list_single_pane_t1_cp2
+#define qtn_mms_om_move_to_folder           "Move to folder"
+
+//d:Command in options-menu
+//d:Launches SMIL Player to show MMS SMIL presentation
+//l:list_single_pane_t1_cp2
+//w:
+//r:3.0
+//
+#define qtn_mms_om_play_message             "Play message"
+
+//d:Command in options-menu
+//d:Launches file browser to save objects into file system.
+//d:Message text is launched into notepad
+//l:list_single_pane_t1_cp2
+//w:
+//r:3.0
+//
+#define qtn_mms_om_save_object              "Save object"
+
+//d:Command in options-menu
+//d:Exit
+//l:list_single_pane_t1_cp2
+#define qtn_mms_om_exit                     "Exit"
+
+//d:Command in reply-submenu
+//d:Reply to all
+//l:list_single_popup_submenu_pane_t1
+#define qtn_mms_sm_to_all                   "To all"
+
+//d:Command for the softkey 'Stop'
+//d:Stop audio
+//l:control_pane_t1/opt7
+#define qtn_mms_rsk_stop                    "Stop"
+
+//d:Command for the softkey 'Stop'
+//d:Stop video
+//l:control_pane_t1/opt7
+#define qtn_skrs_stop_scroll                "Stop"
+
+/////////////////////////////////////////////////
+//  Texts in Notifications/Queries
+
+//d:Note when an object (text, image, audio or svg-t) cannot be presented because it
+//d:is corrupted
+//d:Information note
+//l:popup_note_window
+//w:
+//r:3.0
+//
+#define qtn_mms_cannot_open_corrupted       "Cannot open. Object corrupted."
+
+//d:Message loading wait note string
+//d:A wait note
+//l:popup_note_wait_window 
+//
+#define qtn_mms_wait_animation_load         "Loading the message..."
+
+//d:Note when message cannot be forwarded because of unsupported objects.
+//d:This note appears, if software is variated so that mms creation mode is restricted
+//d:and user cannot change the mode  or creation mode is guided or free. Related note is qtn_mms_err_rmode_cannot_fw_objects.
+//d:Information note
+//l:popup_note_window
+#define qtn_mms_err_cannot_fw_objects       "Message includes objects that cannot be forwarded."
+
+//d:Note when message cannot be forwarded because of unsupported objects.
+//d:This note appears, if mms creationg mode is restricted and user can change mode 
+//d:from restricted to another mode.Related note is qtn_mms_err_cannot_fw_objects.
+//d:Information note
+//l:popup_note_window
+#define qtn_mms_err_rmode_cannot_fw_objects "Message includes objects that cannot be forwarded in restricted mode."
+
+//d:Note when message cannot be forwarded because of unsupported presentation
+//d:This note appears, if software is variated so that mms creation mode is restricted
+//d:and user cannot change the mode. Related note is qtn_mms_err_rmode_cannot_fw_pres.
+//d:Information note
+//l:popup_note_window
+#define qtn_mms_err_cannot_fw_pres          "Cannot forward a Presentation."
+
+//d:Note when message cannot be forwarded because of unsupported presentation
+//d:This note appears, if mms creationg mode is restricted and user can change mode 
+//d:from restricted to another mode.Related note is qtn_mms_err_cannot_fw_pres.
+//d:Information note
+//l:popup_note_window
+#define qtn_mms_err_rmode_cannot_fw_pres    "Cannot forward a Presentation in restricted mode."
+
+//d:Note when message cannot be forwarded because of message size
+//d:Information note
+//l:popup_note_window
+#define qtn_mms_err_cannot_fw_big           "Cannot forward. Message size too big."
+
+/////////////////////////////////////////////////
+//  Texts
+
+//d:Text in "Move to" selection dialog
+//d:The heading of the dialog
+//l:heading_pane_t1
+#define qtn_mms_popup_text_move_to      "Move to:"
+
+//d: Short name for application.
+//d: Text in application shell list (NOTE: MmsViewer is not visible in shell)
+//l: cell_app_pane_t1
+#define qtn_apps_mmsviewer_grid         "MMS"   
+
+//d: Long name for application.
+//d: Text in application fast swap list shell list
+//l: list_single_large_graphic_pane_t1
+#define qtn_apps_mmsviewer_list         "Multimedia"
+
+//d:Messages ordinal number in navipane
+//d:text
+//l:tabs_2_active_pane_t1/opt1
+#define qtn_stat_msg_number             "%0N/%1N"
+
+/////////////////////////////////////////////////
+// STUFF FOR MMBOX VIEW
+
+//d: Command in options menu.
+//d: Opens the Notifications View from MCE Inbox
+//l: list_single_pane_t1_cp2
+#define qtn_mce_open_mms_notif_view	"MMS Notifications"
+
+// d: Displayed in title pane when Notifications View is open
+// l: title_pane_t2/opt12
+#define qtn_mce_title_mms_notifs_view "MMS Notifications"
+
+// d: Displayed in navi pane when Notifications View is open
+// d: %0U is the date when the MMBox was updated last time.
+// d: Date is presented in the short form.
+// l: navi_text_pane_t1
+#define qtn_navi_list_updated "Updated %0U"
+
+// d: Displayed in navi pane when Notifications View is open and the last update has been today
+// d: %0U is the time when the MMBox was updated last time.
+// l: navi_text_pane_t1
+#define qtn_navi_list_updated_today "Updated %0U"
+
+// d: Displayed in server status info dialog
+// d: %0U is the time when the MMBox was updated last time.
+// d: %0U is the date when the MMBox was updated last time.
+// l: list_double_pane_t2_cp2
+#define qtn_notif_list_updated "On %0U %1U"
+
+// d: Displayed when opened empty MMS Notifications dialog.
+// l: main_list_empty_pane
+#define qtn_mms_text_empty_list "Update list by selecting Update view from Options."
+
+//d: Submenu command in "Retrieve" and "Delete" submenus
+//d: Starts to retrieve or delete the selected items of MMS Notifications List
+//l: list_single_popup_submenu_pane_t1
+#define qtn_mms_sm_selected_items "Selected"
+
+//d: Submenu command in "Retrieve" and "Delete" submenus
+//d: Starts to retrieve or delete all the items of MMS Notifications List
+//l: list_single_popup_submenu_pane_t1
+#define qtn_mms_sm_all_items "All"
+
+//d: Command in options menu.
+//d: Starts updating the list view
+//l: list_single_pane_t1_cp2
+#define qtn_mce_om_update_view	"Update list"
+
+//d: Command in options menu.
+//d: Shows the server status
+//l: list_single_pane_t1_cp2
+#define qtn_mce_om_view_info	"View server status"
+
+// d: The heading text for server status dialog
+// l: heading_pane_t1
+#define qtn_list_view_status_info_title	"Server status information:"
+
+// d: Name of the label
+// d: Tells when the list info was updated
+// l: list_double_pane_t1_cp2
+#define qtn_list_view_info_updated	"Updated:"
+
+// d: Name of the label
+// d: Tells how many percents is in use
+// l: list_single_heading_pane_t1_cp2
+#define qtn_list_view_info_percents_used "Storage in use:"
+
+// d: Value of storage
+// d: Tells how many percents is in use
+// l: list_double_pane_t2_cp2
+#define qtn_list_view_data_percents_used "%N%"
+
+// d: Name of the label
+// d: Tells how much of the quota is in use
+// l: list_double_pane_t1_cp2
+#define qtn_list_view_info_quota_used "Quota used:"
+
+// d: Value of used quota
+// d: Tells how much of the quota is in use
+// l: list_double_pane_t2_cp2
+#define qtn_list_view_data_quota_used "%0N kB / %1N kB"
+
+//d: Wait note
+//d: This is shown when user is updating the list view
+//l: popup_note_wait_window
+#define qtn_mce_wait_updating_notif_list	"Updating MMS Notifications list"
+
+//d: Confirmation note.
+//d: This note is shown if more than 80% of the MMBox quota is in use
+//l: popup_note_window
+#define qtn_list_view_qry_remove_msgs "More than 80% of quota is in use. Retrieve or delete msgs to free space."
+
+//d: Information note.
+//d: When list is updated and there were no msgs in MMBox, this is shown
+//l: popup_note_window
+#define qtn_mce_info_mmbox_empty "There are no messages in server."
+
+//d: Information note.
+//d: If list update failed for some reason, this is shown
+//l: popup_note_window
+#define qtn_mce_info_failed_update_list "Unable to update notifications list."
+
+// d: Command in options list in Mce.
+// d: Sorts mail messages
+// l: list_single_pane_t1_cp2/opt3
+//
+#define qtn_mce_rm_sort_messages "Sort by"
+
+// d: Command in sort suboptions list in Mce.
+// d: Sorts by date
+// l: list_single_popup_submenu_pane_t1
+//
+#define qtn_mce_rm_sort_date "Date"
+
+// d: Command in sort suboptions list in Mce.
+// d: Sorts by subject
+// l: list_single_popup_submenu_pane_t1
+//
+#define qtn_mce_rm_sort_subject "Subject"
+
+// d: Command in sort suboptions list in Mce.
+// d: Sorts by sender
+// l: list_single_popup_submenu_pane_t1
+//
+#define qtn_mce_rm_sort_sender "Sender"
+
+// d: Command in options list in Mce. 
+// d: Opens currently selected item.
+// l: list_single_pane_t1_cp2
+//
+#define qtn_mce_open "Open"
+
+// d: Command in options list in Mce.
+// d: Deletes selected item(s).
+// l: list_single_pane_t1_cp2
+//
+#define qtn_mce_delete "Delete"
+
+//d: Confirmation query. 
+//d: Confirmation asked when opening Notifications View and the list has been updated before
+//d: %0U is the time and %1U is the date of the last update (in short form)
+//d: YES/NO
+//l: popup_note_window
+#define qtn_mms_qry_time_update_list "List updated on %0U %1U. Do you want to update it now?"
+
+//d: Confirmation query. 
+//d: Confirmation asked when opening Notifications View and the list has never been update
+//d: YES/NO
+//l: popup_note_window
+#define qtn_mms_qry_update_list      "Do you want to update the Notifications list?"
+
+//d:Information note text.
+//d:Shown after an unprotected rich audio file is tried to be played, if 
+//d:the feature not to support their playback is enabled.
+//l:popup_note_window
+//
+#define qtn_mp_info_tone_no_drm "Unprotected file. Cannot be played."
+
+//d: Information note. 
+//d: Shown in Notifications View when it's not possible to fetch the message from MMBox
+//l: popup_note_window
+//w:
+//r:2.8
+#define qtn_mms_cannot_retrieve_one       "Cannot retrieve. Message deleted from MMBox."
+
+//d: Information note. 
+//d: Shown in Notifications View when it's not possible to fetch some messages from MMBox
+//l: popup_note_window
+//w:
+//r:2.8
+#define qtn_mms_cannot_retrieve_some      "Cannot retrieve. Some messages deleted from MMBox."
+
+//d: Information note. 
+//d: Shown in Notifications View when it's not possible to fetch any messages from MMBox
+//l: popup_note_window
+//w:
+//r:2.8
+#define qtn_mms_cannot_retrieve_any       "Cannot retrieve. Messages deleted from MMBox."
+
+//d: Confirmation query. 
+//d: Confirmation asked when opening Notifications View and last time there was a problem updating it.
+//d: YES/NO
+//l: popup_note_window
+//w:
+//r:2.8
+#define qtn_mms_qry_list_update_not_successful "Problems occurred during previous list update. The list may not be complete. Update list now?"
+
+
+/////////////////////////////////////////////////
+// STUFF FOR MMS DELIVERY REPORTS FEATURE
+
+//d:Header text used in Delivery status dialog.
+//d:
+//l:popup_info_list_pane_t1
+//w:
+//r:3.0
+//
+#define qtn_msg_qry_title_delivery_status "Delivery status:"
+
+//d:Label text used in Delivery status dialog.
+//d:Singular form. Plural form is qtn_mms_qry_status_label_failed_plural
+//d:In the dialog under this item one contact is listed.
+//l:popup_info_list_pane_t1
+//w:
+//r:3.0
+//
+#define qtn_mms_qry_status_label_failed "Failed"
+
+//d:Label text used in Delivery status dialog.
+//d:Singular form. Plural form is qtn_mms_qry_status_label_pending_plural
+//d:In the dialog under this item one contact is listed.
+//l:popup_info_list_pane_t1
+//w:
+//r:3.0
+//
+#define qtn_mms_qry_status_label_pending "Pending"
+
+//d:Label text used in Delivery status dialog.
+//d:Singular form. Plural form is qtn_mms_qry_status_label_delivered_plural
+//d:In the dialog under this item one contact is listed.
+//l:popup_info_list_pane_t1
+//w:
+//r:3.0
+//
+#define qtn_mms_qry_status_label_delivered "Delivered"
+
+//d:Label text used in Delivery status dialog.
+//d:Singular form. Plural form is qtn_mms_qry_status_label_unavailable_plural
+//d:In the dialog under this item one contact is listed.
+//l:popup_info_list_pane_t1
+//w:
+//r:3.0
+//
+#define qtn_mms_qry_status_label_unavailable "Unavailable"
+
+//d:Command in options list.
+//d:Opens the delivery status dialog for the focused MMS.
+//l:list_single_pane_t1_cp2
+//w:
+//r:3.0
+//
+#define qtn_msg_om_delivery_status "Delivery status"
+
+//d:Label text used in Delivery status dialog.
+//d:Plural form. Singular form is qtn_mms_qry_status_label_failed
+//d:In the dialog under this item two or more contacts are listed each on its own line
+//d:TSW SCR CR waiting for acceptance
+//l:popup_info_list_pane_t1
+//w:
+//r:3.2
+//
+#define qtn_mms_qry_status_label_failed_plural "Failed"
+
+//d:Label text used in Delivery status dialog.
+//d:Plural form. Singular form is qtn_mms_qry_status_label_failed
+//d:In the dialog under this item two or more contacts are listed each on its own line
+//d:TSW SCR CR waiting for acceptance
+//l:popup_info_list_pane_t1
+//w:
+//r:3.2
+//
+#define qtn_mms_qry_status_label_pending_plural "Pending"
+
+//d:Label text used in Delivery status dialog.
+//d:Plural form. Singular form is qtn_mms_qry_status_label_delivered
+//d:In the dialog under this item two or more contacts are listed each on its own line
+//d:TSW SCR CR waiting for acceptance
+//l:popup_info_list_pane_t1
+//w:
+//r:3.2
+//
+#define qtn_mms_qry_status_label_delivered_plural "Delivered"
+
+//d:Label text used in Delivery status dialog.
+//d:Plural form. Singular form is qtn_mms_qry_status_label_unavailable
+//d:In the dialog under this item two or more contacts are listed each on its own line
+//d:TSW SCR CR waiting for acceptance
+//l:popup_info_list_pane_t1
+//w:
+//r:3.2
+//
+#define qtn_mms_qry_status_label_unavailable_plural "Unavailable"
+
+//d:Label text used in Delivery status dialog of an sent MMS message
+//d:Plural form. Singular form is qtn_mms_qry_status_label_read
+//d:In the dialog under this item two or more contacts are listed each on its own line
+//d:TSW SCR CR waiting for acceptance
+//l:popup_info_list_pane_t1
+//w:
+//r:3.2
+//
+#define qtn_mms_qry_status_label_read_plural   "Read"
+
+
+/////////////////////////////////////////////////
+//d:Label text used in Delivery status dialog of an sent MMS message
+//d:Singular form. Plural form is qtn_mms_qry_status_label_read_plural
+//d:In the dialog under this item one contact is listed.
+//l:popup_info_list_pane_t1
+//w:
+//r:3.2
+//
+#define qtn_mms_qry_status_label_read   "Read"
+
+//d: Multimedia message settings list item.
+//d: If chosen opens a dialog to select report types wished from recipients
+//d: of sent mms messages
+//d: qtn_mce_mms_reports replaces qtn_mce_mms_dr in s60 3.2 
+//l: list_setting_pane_t1
+//w:
+//r:3.2
+#define qtn_mce_mms_reports             "Receive reports"
+
+//d: A choice item for Multimedia message settings list item qtn_mce_mms_reports.
+//d: Sets an attribute in a sent MMS message to request both delivery and read reports
+//l: list_set_graphic_pane_t1
+//w:
+//r:3.2
+#define qtn_mce_settings_mms_both_reprts "Delivery and read"
+
+//d: A choice item for Multimedia message settings list item qtn_mce_mms_reports.
+//d: Sets an attribute in a sent MMS message to request only delivery reports
+//l: list_set_graphic_pane_t1
+//w:
+//r:3.2
+#define qtn_mce_settings_mms_deliv_only  "Delivery"
+
+// d: Multimedia message settings list item.
+// d: When read reports are supported, selects the status 'Yes' or 'No' of allowing sending of delivery and read reports for received multimedia messages.
+// d: When read reports are supported this item is shown instead of qtn_mce_mms_deny_dr in the mms service settings
+// l: list_setting_pane_t1
+// w:
+// r:3.2
+#define qtn_mce_mms_deny_reports                 "Deny reports sending"
+
+
+//////////////////////////////////
+// MMS Viewer toolbar
+//////////////////////////////////
+
+// d: MMS Viewer toolbar item tooltip.
+// d: Tooltip text for 'Reply' button in the permanent touch toolbar of MMS Viewer. 
+// d: The button is leftmost of three buttons.
+// d: LOGICAL STRING TO BE EXPOSED WHEN SCB LOC CR ACCEPTED
+// l: popup_preview_text_window_t1
+// w:
+// r: 5.0
+#define qtn_mms_tb_tooltip_reply                      "Reply"
+
+// d: MMS Viewer toolbar item tooltip.
+// d: Tooltip text for 'Forward' button in the permanent touch toolbar of MMS Viewer. 
+// d: The button is middle of three buttons.
+// d: LOGICAL STRING TO BE EXPOSED WHEN SCB LOC CR ACCEPTED
+// l: popup_preview_text_window_t1
+// w:
+// r: 5.0
+#define qtn_mms_tb_tooltip_forward                    "Forward"
+
+// d: MMS Viewer toolbar item tooltip.
+// d: Tooltip text for 'Delete' button in the permanent touch toolbar of MMS Viewer. 
+// d: The button is rightmost of three buttons.
+// d: LOGICAL STRING TO BE EXPOSED WHEN SCB LOC CR ACCEPTED
+// l: popup_preview_text_window_t1
+// w:
+// r: 5.0
+#define qtn_mms_tb_tooltip_delete                     "Delete"
+
+
+/////////////////////////////////////////////////
+// MMS Notification Viewer - viewer mode toolbar
+/////////////////////////////////////////////////
+
+// d: MMS Notification Viewer - viewer mode toolbar item tooltip for received notifications.
+// d: Tooltip text for 'Retrieve' button in the permanent touch toolbar of MMS Notification Viewer. 
+// d: Retrieve starts retrieving the multimedia message from the server.
+// d: The button is leftmost of three buttons.
+// l: popup_preview_text_window_t1
+// w:
+// r: 5.0
+#define qtn_mms_notif_tb_tooltip_retrieve             "Retrieve"
+
+// d: MMS Notification Viewer - viewer mode toolbar item tooltip for received notifications.
+// d: Tooltip text for 'Reply' button in the permanent touch toolbar of MMS Notification Viewer. 
+// d: The button is middle of three buttons.
+// l: popup_preview_text_window_t1
+// w:
+// r: 5.0
+#define qtn_mms_notif_tb_tooltip_reply                "Reply"
+
+/////////////////////////////////////////////////
+// MMS Notification Viewer - forward request mode
+/////////////////////////////////////////////////
+
+// d: MMS Notification Viewer - forward request mode toolbar item tooltip.
+// d: Tooltip text for 'Send' button in the permanent touch toolbar of forward request in 
+// d: MMS Notification Viewer. 
+// d: Sends the forward request in edit mode (i.e. mode, which opens
+// d: when forward command is selected for received notification), if recipient has been added. 
+// d: In case there is nothing in the recipient field then selecting Send item functions as 
+// d: Add recipient feature. 
+// d: If forward request is opened from Sent folder (i.e. forward request, which has been sent), 
+// d: button is dimmed. 
+// d: The button is leftmost of three buttons.
+// l: popup_preview_text_window_t1
+// w:
+// r: 5.0
+#define qtn_mms_notif_fwd_tb_tooltip_send             "Send"
+
+// d: MMS Notification Viewer - forward request mode toolbar item tooltip.
+// d: Tooltip text for 'Add recipient' button in the permanent touch toolbar of forward request in 
+// d: MMS Notification Viewer. 
+// d: In case there is nothing in the recipient field and forward request is in edit mode
+// d: (i.e. mode, which opens when forward command is selected for received notification),
+// d: Add recipient is selectable. Add recipient opens Phonebook view. 
+// d: If there is already a recipient selected, button is dimmed.
+// d: If forward request is opened from Sent folder (i.e. forward request, which has been sent), 
+// d: button is dimmed. 
+// d: The button is middle of three buttons.
+// l: popup_preview_text_window_t1
+// w:
+// r: 5.0
+#define qtn_mms_notif_fwd_tb_tooltip_add_recipient    "Add recipient"
+
+//////////////////////////////////////////////////////////////////////////
+// MMS Notification Viewer - viewer and forward request mode toolbar item
+//////////////////////////////////////////////////////////////////////////
+
+// d: MMS Notification Viewer toolbar item tooltip both in viewer and forward request mode.
+// d: Tooltip text for 'Delete' button in the permanent touch toolbar of MMS Notification Viewer. 
+// d: The button is rightmost of three buttons.
+// d: The button is dimmed, if forward request is in edit mode.
+// l: popup_preview_text_window_t1
+// w:
+// r: 5.0
+#define qtn_mms_notif_tb_tooltip_delete               "Delete"
+
+//////////////////////////////////////////////////////////////////////////
+// MMS UI - viewer and forward request mode toolbar item
+//////////////////////////////////////////////////////////////////////////
+
+//d:Cannot be used note.
+//d:Shown when when the user tries to do something that is not possible during video call
+//l:popup_note_wait_window
+//
+#define qtn_mms_info_video_call_ongoing_no_media "Media files cannot be played during video call"
+
+
+// End of File

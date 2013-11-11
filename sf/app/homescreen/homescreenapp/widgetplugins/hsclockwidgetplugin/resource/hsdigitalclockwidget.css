@@ -1,0 +1,67 @@
+HsDigitalClockWidget {
+  layout: digital_clock_layout;
+}
+
+HsDigitalClockWidget::background {
+  right: 0.5un;
+  border-width: 0.0un;
+  fixed-width: 28un;
+  fixed-height: 11un;
+  zvalue: 0;
+}
+
+HsDigitalClockWidget::digit1 {
+  top: -1.5un;
+  bottom: 1.5un;
+  fixed-width: 5un;
+  fixed-height: 8un;
+  zvalue: 1;
+}
+
+HsDigitalClockWidget::digit2 {
+  top: -1.5un;
+  bottom: 1.5un;
+  fixed-width: 5un;
+  fixed-height: 8un;
+  zvalue: 1;
+}
+
+HsDigitalClockWidget::digit3 {
+  top: -1.5un;
+  bottom: 1.5un;
+  fixed-width: 5un;
+  fixed-height: 8un;
+  zvalue: 1;
+}
+
+HsDigitalClockWidget::digit4 {
+  top: -1.5un;
+  bottom: 1.5un;
+  fixed-width: 5un;
+  fixed-height: 8un;
+  zvalue: 1;
+}
+
+HsDigitalClockWidget::digit5 {
+  bottom: 0.5un;
+  fixed-width: 1.5un;
+  fixed-height: 3un;
+  zvalue: 2;
+}
+
+HsDigitalClockWidget::digit6 {
+  bottom: 0.5un;
+  right: 1un;
+  fixed-width: 1.5un;
+  fixed-height: 3un;
+  zvalue: 2;
+}
+
+HsDigitalClockWidget::ampm {
+  top: -0.5un;
+  left: -0.5un;
+  fixed-width: 3un;
+  fixed-height: 3un;
+  zvalue: 2;
+}
+

@@ -1,0 +1,32 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+#ifndef __LOGS_IBY__
+#define __LOGS_IBY__
+
+// Backup registration
+data=DATAZ_\private\101F4CD5\backup_registration.xml  private\101F4CD5\backup_registration.xml
+
+// Sis stub
+data=DATAZ_\system\install\logs_stub.sis    system\install\logs_stub.sis
+
+file=ABI_DIR\UREL\logsservices.dll SHARED_LIB_DIR\logsservices.dll
+file=ABI_DIR\UREL\logsengine.dll SHARED_LIB_DIR\logsengine.dll
+file=ABI_DIR\UREL\logscntfinder.dll SHARED_LIB_DIR\logscntfinder.dll
+file=ABI_DIR\UREL\logs.exe PROGRAMS_DIR\logs.exe
+data=DATAZ_\private\10003a3f\import\apps\logs_reg.rsc \private\10003a3f\import\apps\logs_reg.rsc
+
+#endif

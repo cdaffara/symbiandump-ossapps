@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="0.8">
+		<object name="cnt:discardchanges" type="HbAction">
+      <string name="text" locid="txt_phob_opt_discard_changes"/>
+    </object>
+
+    <widget name="content" type="HbWidget">
+        <widget name="dataForm" type="HbDataForm">
+            <enums name="scrollingStyle" value="PanWithFollowOn"/>
+            <sizepolicy horizontalPolicy="MinimumExpanding" horizontalStretch="0" verticalPolicy="MinimumExpanding" verticalStretch="0"/>
+            <sizehint height="1un" type="PREFERRED" width="1un"/>
+            <enums name="clampingStyle" value="BounceBackClamping"/>
+        </widget>
+        <widget name="headerBox" type="HbGroupBox">
+            <bool name="collapsable" value="FALSE"/>
+        </widget>
+        <layout orientation="Vertical" spacing="0un" type="linear">
+            <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+            <linearitem itemname="headerBox"/>
+            <linearitem itemname="dataForm"/>
+        </layout>
+    </widget>
+    <metadata display="QHD portrait" unit="un"/>
+</hbdocument>

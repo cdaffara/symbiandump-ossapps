@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<relnotes name="MMS Settings">
+  <purpose>
+  </purpose>
+
+  <defect number="DEF139515" title="mmssettings-config does not conform to the standard sysdef model" revision="004">
+    messaging_mmssettings-config is made a new component under mmsengine.
+  </defect>
+  
+  <defect number="DEF111689" title="Filename Policy non-conformance generates warnings in checksource build " revision="003">
+    Replaced the #ifdef WINS with #ifdef WINSCW 
+  </defect>
+
+  <defect number="DEF108002" title="Warnings generated with checksource build  " revision="002">
+    Added condition to differentiate the winscw and armv5 def files for case sensitive 
+  </defect>
+
+  <deliverystep number="500" name="Messaging file name changes to support GNU compiler for Linux" osproject="Oghma" revision="001">
+    <preq number="1182" title="GNU Make-based build system">
+    GNU Make-based build system
+  </preq>
+    <milestone project="GT0342" number="3.3"/>
+  </deliverystep>
+</relnotes>

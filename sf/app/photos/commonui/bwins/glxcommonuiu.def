@@ -1,0 +1,28 @@
+EXPORTS
+	??1CGlxResolutionManager@@UAE@XZ @ 1 NONAME ; CGlxResolutionManager::~CGlxResolutionManager(void)
+	?ActivatePreviousViewL@CGlxNavigationalState@@QAEXXZ @ 2 NONAME ABSENT ; void CGlxNavigationalState::ActivatePreviousViewL(void)
+	?AddObserverL@CGlxNavigationalState@@QAEXAAVMGlxNavigationalStateObserver@@@Z @ 3 NONAME ABSENT ; void CGlxNavigationalState::AddObserverL(class MGlxNavigationalStateObserver &)
+	?AddObserverL@CGlxResolutionUtility@@QAEXAAVMGlxResolutionChangeObserver@@@Z @ 4 NONAME ; void CGlxResolutionUtility::AddObserverL(class MGlxResolutionChangeObserver &)
+	?Close@CGlxErrorPoster@@QAEXXZ @ 5 NONAME ; void CGlxErrorPoster::Close(void)
+	?Close@CGlxNavigationalState@@QAEXXZ @ 6 NONAME ABSENT ; void CGlxNavigationalState::Close(void)
+	?Close@CGlxResolutionUtility@@QAEXXZ @ 7 NONAME ; void CGlxResolutionUtility::Close(void)
+	?InstanceL@CGlxErrorPoster@@SAPAV1@XZ @ 8 NONAME ; class CGlxErrorPoster * CGlxErrorPoster::InstanceL(void)
+	?InstanceL@CGlxNavigationalState@@SAPAV1@XZ @ 9 NONAME ABSENT ; class CGlxNavigationalState * CGlxNavigationalState::InstanceL(void)
+	?InstanceL@CGlxResolutionUtility@@SAPAV1@XZ @ 10 NONAME ; class CGlxResolutionUtility * CGlxResolutionUtility::InstanceL(void)
+	?NavigateToChildL@CGlxNavigationalState@@QAEXABVTGlxMediaId@@@Z @ 11 NONAME ABSENT ; void CGlxNavigationalState::NavigateToChildL(class TGlxMediaId const &)
+	?NavigateToL@CGlxNavigationalState@@QAEXABVCMPXCollectionPath@@@Z @ 12 NONAME ABSENT ; void CGlxNavigationalState::NavigateToL(class CMPXCollectionPath const &)
+	?NavigateToParentL@CGlxNavigationalState@@QAEXXZ @ 13 NONAME ABSENT ; void CGlxNavigationalState::NavigateToParentL(void)
+	?NewL@CGlxResolutionManager@@SAPAV1@XZ @ 14 NONAME ; class CGlxResolutionManager * CGlxResolutionManager::NewL(void)
+	?PixelsToPoss@CGlxResolutionUtility@@QBEMABM@Z @ 15 NONAME ; float CGlxResolutionUtility::PixelsToPoss(float const &) const
+	?PossToPixels@CGlxResolutionUtility@@QBEMABM@Z @ 16 NONAME ; float CGlxResolutionUtility::PossToPixels(float const &) const
+	?PostError@CGlxErrorPoster@@QAEXH@Z @ 17 NONAME ; void CGlxErrorPoster::PostError(int)
+	?PublishStateL@NGlxZoomStatePublisher@@YAXH@Z @ 18 NONAME ; void NGlxZoomStatePublisher::PublishStateL(int)
+	?RemoveObserver@CGlxNavigationalState@@QAEXAAVMGlxNavigationalStateObserver@@@Z @ 19 NONAME ABSENT ; void CGlxNavigationalState::RemoveObserver(class MGlxNavigationalStateObserver &)
+	?RemoveObserver@CGlxResolutionUtility@@QAEXAAVMGlxResolutionChangeObserver@@@Z @ 20 NONAME ; void CGlxResolutionUtility::RemoveObserver(class MGlxResolutionChangeObserver &)
+	?ScreenSize@CGlxResolutionUtility@@QBE?AVTSize@@XZ @ 21 NONAME ; class TSize CGlxResolutionUtility::ScreenSize(void) const
+	?SetScreenSize@CGlxResolutionManager@@QAEXVTSize@@@Z @ 22 NONAME ; void CGlxResolutionManager::SetScreenSize(class TSize)
+	?SetToViewMode@CGlxNavigationalState@@QAEXXZ @ 23 NONAME ABSENT ; void CGlxNavigationalState::SetToViewMode(void)
+	?StateLC@CGlxNavigationalState@@QBEPAVCMPXCollectionPath@@XZ @ 24 NONAME ABSENT ; class CMPXCollectionPath * CGlxNavigationalState::StateLC(void) const
+	?ViewingMode@CGlxNavigationalState@@QAE?AW4TViewingMode@NGlxNavigationalState@@XZ @ 25 NONAME ABSENT ; enum NGlxNavigationalState::TViewingMode CGlxNavigationalState::ViewingMode(void)
+	?RetrieveL@GlxAttributeRetriever@@SAHABVMGlxFetchContext@@AAVMGlxMediaList@@H@Z @ 26 NONAME ; int GlxAttributeRetriever::RetrieveL(class MGlxFetchContext const &, class MGlxMediaList &, int)
+

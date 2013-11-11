@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<creatorscript schemaVersion="1.0" scriptVersion="1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="creator.xsd">
+
+<contact-set id="1" numberofexistingcontacts="10">
+</contact-set>
+
+<contactgroup name="Group with 5 existing contacts">
+   <members>
+      <contact-set-reference maxamount="5" id="1"/>
+   </members>
+</contactgroup>
+
+<contactgroup name="ExampleCompany&apos;s Designers">
+   <members>
+      <contact-set-reference id="2"/>
+   </members>
+</contactgroup>
+
+<contact>
+   <fields>
+      <firstname>John</firstname>
+      <lastname>Smith</lastname>
+      <mobilephonework>+35800101010101</mobilephonework>
+      <mobilephonework>00101010102</mobilephonework>
+      <emailgen>john.smith@example.com</emailgen>
+      <prefix>Mr.</prefix>
+   </fields>
+</contact>
+
+<contact-set id="2">
+   <contact amount="15">
+    <fields>
+    <firstname/>
+    <lastname/>
+    <mobilephonegen/>
+    <landphonegen/>
+    <emailgen/>
+    <videonumbergen/>
+    <voipgen/>
+    <poc/>
+    <company>ExampleCompany Ltd.</company>
+    <jobtitle>Software Designer</jobtitle>
+    <note/>
+ 	<middlename/>
+    <secondname/>
+    <prefix/>
+    <suffix/>
+    <addrlabelgen/>
+    <addrpogen/>
+    <addrextgen/>
+    <addrstreetgen/>
+    <addrlocalgen/>
+    </fields>
+   </contact>
+</contact-set>
+
+</creatorscript>

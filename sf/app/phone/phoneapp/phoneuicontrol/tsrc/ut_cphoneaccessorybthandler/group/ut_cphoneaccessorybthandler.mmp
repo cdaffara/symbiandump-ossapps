@@ -1,0 +1,126 @@
+/*
+* Copyright (c) 2005-2007 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*
+*/
+
+
+#include <platform_paths.hrh>
+#include <digia/eunit/eunitcaps.h>
+
+TARGET          ut_cphoneaccessorybthandler.dll
+TARGETTYPE      dll
+UID             0x1000af5a 0x01700900
+
+CAPABILITY      EUNIT_CAPS
+VENDORID        VID_DEFAULT
+
+SOURCEPATH              ../Src
+SOURCE                  ut_cphoneaccessorybthandler.cpp
+
+
+// Sources required by the test suite
+SOURCEPATH              ../../../src
+SOURCE                  cphoneaccessorybthandler.cpp
+
+SOURCEPATH              ../../../../../phoneengine/engineinfo/src
+SOURCE                  cpeengineinfo.cpp
+
+SOURCEPATH              ../../../../internal/mocks/
+SOURCE                  mock_StringLoader.cpp
+
+SOURCEPATH              ../Src
+SOURCE                  ut_cphoneaccessorybthandler_dllmain.cpp
+
+SOURCEPATH              ../../../../internal/mocks/phoneuistates
+SOURCE                  mock_cphonegsmincall.cpp
+SOURCE                  mock_cphonestatemachinegsm.cpp
+
+SOURCEPATH              ../../../../internal/mocks/phoneuicontrol
+SOURCE                  mock_cphonestatemachine.cpp
+
+SOURCEPATH              ../../../../internal/mocks/phoneuiview
+SOURCE                  mock_cphoneviewcommandhandle.cpp
+
+SOURCEPATH              ../../../../internal/mocks/phoneuiutils
+SOURCE                  mock_tphonecmdparamnote.cpp
+SOURCE                  mock_cphonemainresourceresolver.cpp
+SOURCE                  mock_cphonelogger.cpp
+SOURCE                  mock_cphonestorage.cpp
+SOURCE                  mock_cphonepubsubproxy.cpp
+SOURCE                  mock_cphonecenrepproxy.cpp
+
+
+SOURCEPATH              ../../../../../internal/mocks/phoneengine/engineinfo
+SOURCE                  mock_cpeengineinfoimpl.cpp
+
+SOURCEPATH              ../../../../internal/mocks/
+SOURCE                  mock_featmgr.cpp
+
+SOURCEPATH              ../../../../../internal/mocks/eikmenupane
+SOURCE                  mock_eikmenup.cpp
+SOURCE                  mock_eikmenub.cpp
+SOURCE                  mock_coecntrl.cpp
+SOURCE                  mock_eikbctrl.cpp
+SOURCE                  mock_coemop.cpp
+SOURCE                  mock_coeinput.cpp
+SOURCE                  mock_gulbordr.cpp
+SOURCE                  mock_akncontrol.cpp
+SOURCE                  mock_eikcmobs.cpp
+SOURCE                  mock_coemain.cpp
+SOURCE                  mock_eikenv.cpp
+SOURCE                  mock_eikvcurs.cpp
+
+USERINCLUDE             ../Src
+
+// User include folders required by the tested code
+USERINCLUDE             ../../../../../phoneengine/engineinfo/inc
+USERINCLUDE             ../../../../internal/mocks/phoneengine
+USERINCLUDE             ../../../../phoneui2/srcdata
+USERINCLUDE             ../../../../phoneuiutils/inc
+USERINCLUDE             ../../../../phoneuiview2/inc
+USERINCLUDE             ../../../../phoneuistates/inc
+USERINCLUDE             ../../../../phoneuiqtviewadapter/inc
+USERINCLUDE             ../../../inc
+USERINCLUDE             ../../../src
+USERINCLUDE             ../../../../internal/mocks/phoneuiview
+
+SYSTEMINCLUDE           /epoc32/include/Digia/EUnit
+
+// System include folders required by the tested code
+
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE           /epoc32/include/platform/mw/graphics/uigraphicsutils/
+SYSTEMINCLUDE           ../../../../../inc    // phone inc
+
+LIBRARY         phoneuiutils.lib
+LIBRARY                 EUnit.lib
+LIBRARY                 EUnitUtil.lib
+LIBRARY                 euser.lib
+LIBRARY                 SSSettings.lib
+LIBRARY                 cone.lib
+LIBRARY                 symbianmock.lib
+LIBRARY                 apgrfx.lib
+LIBRARY                 FeatMgr.lib // FeatureManager
+LIBRARY                 fbscli.lib
+LIBRARY                 efsrv.lib
+LIBRARY                 bafl.lib // Descriptor arrays
+LIBRARY                 charconv.lib
+LIBRARY                 gdi.lib          // TZoomFactor
+LIBRARY                 ws32.lib         // RWsSession
+
+// Libraries required by the tested code
+
+LIBRARY                 CommonEngine.lib
+

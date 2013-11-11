@@ -1,0 +1,36 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+#ifndef __INTEROPTEST_IBY__
+#define __INTEROPTEST_IBY__
+
+#include <CoreAppsTest.iby>
+#include <calinterimapi.iby>
+#include <calinterimapitest.iby>
+
+//file=ABI_DIR\BUILD_DIR\CALTESTLIB.DLL		System\Libs\CALTESTLIB.DLL
+file=ABI_DIR\BUILD_DIR\alldayevents.exe	        sys\bin\interop\alldayevents.exe
+
+data=DATAZ_\alldayevents\outlook_2003_alldayevent.vcs	alldayevents\outlook_2003_alldayevent.vcs
+data=DATAZ_\alldayevents\outlook_1998_alldayevent.vcs	alldayevents\outlook_1998_alldayevent.vcs
+data=DATAZ_\alldayevents\google_alldayevent.ics	        alldayevents\google_alldayevent.ics
+data=DATAZ_\alldayevents\S60_Calendar.vcs	        alldayevents\S60_Calendar.vcs
+data=DATAZ_\alldayevents\UIQ3.2_sym9.2.vcs	        alldayevents\UIQ3.2_sym9.2.vcs
+
+#endif //__INTEROPTEST_IBY__
+
+
+

@@ -1,0 +1,29 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: IBY for mpxvideohelixplugin.dll
+*
+*/
+
+// Version : %version: 2 %
+
+#ifndef MPXVIDEOHELIXPLUGIN_IBY
+#define MPXVIDEOHELIXPLUGIN_IBY
+
+#include <bldvariant.hrh>
+
+ECOM_PLUGIN(mpxvideohelixplayback.dll,mpxvideohelixplayback.rsc)
+
+#endif // MPXVIDEOHELIXPLUGIN_IBY
+
+//  End of File  

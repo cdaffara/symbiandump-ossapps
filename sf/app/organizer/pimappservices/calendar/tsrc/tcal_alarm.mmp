@@ -1,0 +1,40 @@
+// Copyright (c) 2006-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+TARGET			tcal_alarm.exe
+TARGETTYPE		EXE
+CAPABILITY   	ALL -TCB
+
+SOURCEPATH		.
+SOURCE			tcal_alarm.cpp
+
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+
+USERINCLUDE		.
+
+LIBRARY			alarmclient.lib
+LIBRARY			alarmshared.lib
+LIBRARY			bafl.lib
+LIBRARY			calinterimapi.lib
+LIBRARY			caltestlib.lib
+LIBRARY			efsrv.lib
+LIBRARY			estor.lib
+LIBRARY			euser.lib
+LIBRARY			pimtestclient.lib
+LIBRARY			tzclient.lib centralrepository.lib
+
+VENDORID 0x70000001
+
+SMPSAFE

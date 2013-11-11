@@ -1,0 +1,67 @@
+/*
+* Copyright (c) 2000 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  ?Description
+*
+*/
+
+
+#include <registryinfo.rh>
+
+// Declares info for two implementations
+RESOURCE REGISTRY_INFO theInfo
+	{
+	// UID for the DLL
+	dll_uid = 0x2000B4A8;
+	// Declare array of interface info
+	interfaces = 
+		{
+		INTERFACE_INFO
+			{
+			// UID of interface that is implemented
+			interface_uid = 0x200087E8;
+			implementations = 
+				{
+				//implementation for MP3
+				IMPLEMENTATION_INFO
+					{
+					implementation_uid = 0x200087E9;
+					version_no = 1;
+					display_name = "MP3";
+					default_data = "audio/mpeg"; 
+					opaque_data = "";
+					},
+				IMPLEMENTATION_INFO
+					{
+					implementation_uid = 0x200087EA; 
+					version_no = 1;
+					display_name = "AAC";
+					default_data = "audio/aac"; 
+					opaque_data = "";
+					},
+				IMPLEMENTATION_INFO
+					{
+					implementation_uid = 0x200087EB; 
+					version_no = 1;
+					display_name = "AACplus";
+					default_data = "audio/aacp"; 
+					opaque_data = "";
+					}
+				
+				
+				
+				};
+			}
+		};
+	}
+

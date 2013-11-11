@@ -1,0 +1,579 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+Print Run Expanded FindInstanceL and Fetch Instance Improvement tests
+
+LOAD_SUITE TestCalInterimApiSuite
+
+START_TESTCASE PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-001-HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-001-HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - REQ5757: Calendar Search extensions
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Perform search with none of the fields
+//! @SYMTestActions 
+//!1.	Create large number of calendar entries. 
+//!2.	Perform a text search, with none of the fields mentioned in the search criteria
+//! @SYMTestExpectedResults 
+//!The summary field is always searched. Hence when no fields are mentioned, a match in the summary field will be returned by the search.
+
+RUN_TEST_STEP				100	TestCalInterimApiSuite	TestCalInterimApiSetTz		\CITCalInterimApi\TestCalInterimApiFind.ini	calcutta
+
+RUN_TEST_STEP				100	TestCalInterimApiSuite	TestCalInterimApiSetSysTime	\CITCalInterimApi\TestCalInterimApiFind.ini	jan011998_12am
+
+RUN_TEST_STEP				100	TestCalInterimApiSuite	TestCalInterimApiReadData		\CITCalInterimApi\TestCalInterimApiFind.ini	addentries
+
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	noneofthefields
+END_TESTCASE PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-001-HP
+
+START_TESTCASE PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-002-005-HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-002-005-HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - REQ5757: Calendar Search extensions
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Search with one of the fields
+//! @SYMTestActions 
+//!1.	Create large number of calendar entries. 
+//!2.	Perform a text search, with one of the searchable descriptor fields mentioned in the search criteria, at a time. Do this for all the searchable descriptor fields one by one.
+//! @SYMTestExpectedResults 
+//!The correct search result is returned in all the searches performed.
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	locationonly
+
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	descriptiononly
+
+
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-005-HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - REQ5757: Calendar Search extensions
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Perform search including undated Todos
+//! @SYMTestActions 
+//!1.	Create large number of calendar entries. 
+//!2.	Perform text searches, with various combinations of the searchable descriptor fields mentioned in the search criteria when undated todos are included
+//! @SYMTestExpectedResults 
+//!The correct search result is returned in all the searches performed.
+
+// all these include undated todo too
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	attendeeaddressonly1
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	attendeeaddressonly2
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	attendeeaddressonly3
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	attendeeaddressonly4
+
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	attendeesentbyonly1
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	attendeesentbyonly2
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	attendeesentbyonly3
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	attendeesentbyonly4
+
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	attendeecmnnameonly1
+
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	organizeraddressonly1
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	organizeraddressonly2
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	organizeraddressonly3
+
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	organizersentbyonly1
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	organizersentbyonly2
+
+
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	organizercmnnameonly1
+
+END_TESTCASE PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-002-005--HP
+
+START_TESTCASE PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-003-HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-003-HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - REQ5757: Calendar Search extensions
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Search with some of the fields
+//! @SYMTestActions 
+//!1.	Create large number of calendar entries. 
+//!2.	Perform text searches, with various combinations of the searchable descriptor fields mentioned in the search criteria.
+//! @SYMTestExpectedResults 
+//!The correct search result is returned in all the searches performed.
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	locn_descn_attaddr1
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	locn_descn_attaddr2
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	locn_descn_attaddr3
+
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	attaddr_attsentby_attcmn_orgcmn1
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	attaddr_attsentby_attcmn_orgcmn2
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	attaddr_attsentby_attcmn_orgcmn3
+
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	orgaddr_orgsentby_orgcmn_attcmn1
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	orgaddr_orgsentby_orgcmn_attcmn2
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	orgaddr_orgsentby_orgcmn_attcmn3
+END_TESTCASE PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-003-HP
+
+START_TESTCASE PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-004-HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-004-HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - REQ5757: Calendar Search extensions
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Search with all of the fields
+//! @SYMTestActions 
+//!1.	Create large number of calendar entries. 
+//!2.	Perform a text search, with all of the searchable descriptor fields mentioned in the search criteria at a time
+//! @SYMTestExpectedResults 
+//!The correct search result is returned in all the searches performed.
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	allofthefields1
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	allofthefields2
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	allofthefields3
+END_TESTCASE PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-004-HP
+
+
+START_TESTCASE PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-006-HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-006-HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - REQ5757: Calendar Search extensions
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Search against repeating entries
+//! @SYMTestActions 
+//!1.	Create large number of calendar entries including repeating ones.
+//!2.	Perform text searches, with various combinations of the searchable descriptor fields mentioned in the search criteria, in such a way that the search covers some repeating entries.
+//!3.	Modify one particular instance of a set of repeating entries, so that it alone matches the search string. Perform the search and verify that this instance alone is returned
+//! @SYMTestExpectedResults 
+//!The correct search result is returned in all the searches performed.
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	allofthefields3
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	modifyoneinstance
+END_TESTCASE PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-006-HP
+
+
+START_TESTCASE PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-007-HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-007-HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - REQ5757: Calendar Search extensions
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Search against entries occurring on the same day
+//! @SYMTestActions 
+//!1.	Create large number of calendar entries. 
+//!2.	Perform text searches, with various combinations of the searchable descriptor fields mentioned in the search criteria, in such a way that the search covers a large number of entries occurring on the same day.
+//! @SYMTestExpectedResults 
+//!The correct search result is returned in all the searches performed.
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	sameday
+END_TESTCASE PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-007-HP
+
+
+START_TESTCASE PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-009-HP-0001
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-009-HP-0001
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - REQ5757: Calendar Search extensions
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Perform search on a very long time range
+//! @SYMTestActions 
+//!1.	Create large number of calendar entries. 
+//!2.	Perform text searches, passing a very long (100 years) time range.
+//!3.	Close and re-open the file. Repeat the search
+//! @SYMTestExpectedResults 
+//!The correct search result is returned by the search performed.
+
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	verylongtimerange
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	verylongtimerange
+END_TESTCASE PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-009-HP-0001
+
+
+START_TESTCASE PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-008-HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-008-HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - REQ5757: Calendar Search extensions
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Perform search on a very long time range and also in such a way that it covers all the instances of all the entries in the calendar file.
+//! @SYMTestActions 
+//!1.	Create a large number of entries and perform search on a very long time range and also in such a way that it covers all the instances of all the entries in the calendar file.
+//!2.	Close and re-open the file. Repeat the search.
+//! @SYMTestExpectedResults 
+//!The correct search result is returned by the search performed.
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	searchenclosingallinstances
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	searchenclosingallinstances
+END_TESTCASE PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-008-HP
+
+
+START_TESTCASE PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-009-HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-009-HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - REQ5757: Calendar Search extensions
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Perform searches involving different case.
+//! @SYMTestActions 
+//!1.	Create a large number of entries 
+//!2.	Perform text searches involving different cases, with various combinations of the searchable descriptor fields mentioned in the search criteria, and verify case-sensitivity of the search
+//! @SYMTestExpectedResults 
+//!The correct search result is returned by the search performed.
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	casesensitive
+END_TESTCASE PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-009-HP
+
+
+START_TESTCASE PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-010-HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-010-HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - REQ5757: Calendar Search extensions
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Unusual Characters (Negative)
+//! @SYMTestActions 
+//!1.	Create large number of calendar entries with unusual characters like control characters and non 7-bit safe characters in the descriptor fields.
+//!2.	Perform text searches involving such unusual characters, with various combinations of the searchable descriptor fields mentioned in the search criteria.
+//! @SYMTestExpectedResults 
+//!The correct search result is returned in all the searches performed and FindInsstanceL works consistently when unusual characters are involved.
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	unusualcharsagain
+END_TESTCASE PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-010-HP
+
+
+START_TESTCASE PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-011-HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-011-HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - REQ5757: Calendar Search extensions
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Deliberate No match found (Negative)
+//! @SYMTestActions 
+//!1.	Create large number of calendar entries 
+//!2.	Search for text that is not present in any of the entries, with various combinations of the searchable descriptor fields mentioned in the search criteria
+//! @SYMTestExpectedResults 
+//!No search result is returned
+
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	deliberatenomatch1
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	deliberatenomatch2
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	deliberatenomatch3
+
+END_TESTCASE PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-011-HP
+
+
+START_TESTCASE PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-012-HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-012-HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - REQ5757: Calendar Search extensions
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Huge text search (Negative)
+//! @SYMTestActions 
+//!1.	Create large number of calendar entries with huge text fields
+//!2.	Perform searches which involve huge search-text and/or cover the huge text fields, with various combinations of the searchable descriptor fields mentioned in the search criteria
+//! @SYMTestExpectedResults 
+//!No search result is returned
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	hugetext_32chars
+
+// expect to leave if search text is greater than 32
+RUN_TEST_STEP	!Error=-6 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	hugetext_33chars
+END_TESTCASE PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-012-HP
+
+
+START_TESTCASE PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-013-HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-013-HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - REQ5757: Calendar Search extensions
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Category field not searchable
+//! @SYMTestActions 
+//!1.	Create entries with extended category names.
+//!2.	Perform searches with various combinations of the searchable descriptor fields mentioned in the search criteria and ensure that a match in the category field is not considered a match for the search
+//! @SYMTestExpectedResults 
+//!A match in the category field is not considered a match for the search
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	categorynotsearched1
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	categorynotsearched2
+END_TESTCASE PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-013-HP
+
+
+START_TESTCASE PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-014-HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-014-HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - REQ5757: Calendar Search extensions
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Perform searches involving other languages like Japanese.
+//! @SYMTestActions 
+//!1.	Perform text search with other languages like Japanese.
+//! @SYMTestExpectedResults 
+//!FindInstanceL works as expected when searching for text in other languages.
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	otherlangagain
+END_TESTCASE PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-014-HP
+
+
+START_TESTCASE PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-015-HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-015-HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - REQ5757: Calendar Search extensions
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Search for instances "Occuring" within a time range
+//! @SYMTestActions 
+//!1.	Create large number of calendar entries.
+//!2.	Perform a search by setting the filter to "all occurring instances" and passing a time range
+//!3.	Negative Test: An instance which overlaps with the starting "date" of the time range, but which ends before the starting "time" should not be returned by the search. Similarly for ending date-time.
+//! @SYMTestExpectedResults 
+//!All the instances overlapping with the time range must be returned
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	alloccuring1
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	alloccuring2
+END_TESTCASE PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-015-HP
+
+
+START_TESTCASE PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-016-HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-016-HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - REQ5757: Calendar Search extensions
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Search for instances "Starting From" a date
+//! @SYMTestActions 
+//!1.	Create large number of calendar entries. 
+//!2.	Perform a search by setting the filter to "starting instances only" and passing a time range
+//!3.	Negative Test: Instances starting on the same "date" as the starting time of the search range but earlier than that "time" (therefore out of the search range) are not returned. Similarly for instances starting after the ending time in the time range
+//! @SYMTestExpectedResults 
+//!All the instances starting from a time within the time range must be returned
+END_TESTCASE PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-016-HP
+
+START_TESTCASE PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-019-HP-0001
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-019-HP-0001
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - REQ5757: Calendar Search extensions
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Instances marginally outside the search time range
+//! @SYMTestActions 
+//!1.	Create large number of calendar entries. 
+//!2.	Perform searches involving starting, ending and occurring instances and passing a time range in such a way that there are some instances marginally before or after the time range
+//! @SYMTestExpectedResults 
+//!The returned instances are strictly only those falling within the time range.
+END_TESTCASE PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-019-HP-0001
+
+START_TESTCASE PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-016-019-020-HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-016-019-020-HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - REQ5757: Calendar Search extensions
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Midnight value as time filter
+//! @SYMTestActions 
+//!1.	Create large number of calendar entries with some of them spanning midnight. 
+//!2.	Perform searches involving starting, ending and occurring instances and passing a time range that starts and/or ends at midnight.
+//! @SYMTestExpectedResults 
+//!The returned instances are strictly only those falling within the time range.
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	startingonly1
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	startingonly2
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	startingonly3
+END_TESTCASE PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-016-019-020-HP
+
+
+
+
+START_TESTCASE PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-017-HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-017-HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - REQ5757: Calendar Search extensions
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Search for instances "Ending On" a date
+//! @SYMTestActions 
+//!1.	Create large number of calendar entries. 
+//!2.	Perform a search by setting the filter to "ending instances only" and passing a time range
+//!3.	Negative Test: Instances ending on the same "date" as the ending time of the search range but later than that "time" (therefore out of the search range) are not returned. Similarly for instances ending before the starting time in the time range
+//! @SYMTestExpectedResults 
+//!All the instances ending on a time within the time range must be returned
+END_TESTCASE PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-017-HP
+
+START_TESTCASE PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-019-HP-0002
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-019-HP-0002
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - REQ5757: Calendar Search extensions
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Instances marginally outside the search time range
+//! @SYMTestActions 
+//!1.	Create large number of calendar entries. 
+//!2.	Perform searches involving starting, ending and occurring instances and passing a time range in such a way that there are some instances marginally before or after the time range
+//! @SYMTestExpectedResults 
+//!The returned instances are strictly only those falling within the time range.
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	endingonly1
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	endingonly2
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	endingonly3
+END_TESTCASE PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-019-HP-0002
+
+START_TESTCASE PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-018-HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-018-HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - REQ5757: Calendar Search extensions
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Search for instances "Starting On" and "Ending On" a date
+//! @SYMTestActions 
+//!1.	Create large number of calendar entries. 
+//!2.	Perform a search by setting the flags for both "starting" and "ending" instances and passing a time range
+//! @SYMTestExpectedResults 
+//!All the instances starting and ending on a time within the time range must be returned
+END_TESTCASE PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-018-HP
+
+START_TESTCASE PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-019-HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-019-HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - REQ5757: Calendar Search extensions
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Instances marginally outside the search time range
+//! @SYMTestActions 
+//!1.	Create large number of calendar entries. 
+//!2.	Perform searches involving starting, ending and occurring instances and passing a time range in such a way that there are some instances marginally before or after the time range
+//! @SYMTestExpectedResults 
+//!The returned instances are strictly only those falling within the time range.
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	startingandending1
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	startingandending2
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	startingandending3
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	startingandending4
+END_TESTCASE PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-019-HP
+
+
+
+START_TESTCASE PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-021-HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-021-HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - REQ5757: Calendar Search extensions
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Perform searches after a DST update has occurred
+//! @SYMTestActions 
+//!1.	Create large number of calendar entries including entries which start/end near the current time. 
+//!2.	Perform searches involving starting, ending and occurring instances and passing a time range that includes the current time.
+//!3.	Trigger a DST update on the system
+//!4.	Perform the same search
+//! @SYMTestExpectedResults 
+//!FindInstanceL works consistently and returns only the entries that strictly fall within the search time range
+// Change TZ to London and change system time to DST threshold
+RUN_TEST_STEP				100	TestCalInterimApiSuite	TestCalInterimApiSetTz		\CITCalInterimApi\TestCalInterimApiFind.ini	london
+RUN_TEST_STEP				100	TestCalInterimApiSuite	TestCalInterimApiSetSysTime	\CITCalInterimApi\TestCalInterimApiFind.ini	mar292015_1259am
+
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	dst_occuring1
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	dst_occuring2
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	dst_startingonly1
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	dst_startingonly2
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	dst_endingonly1
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	dst_endingonly2
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	dst_startingandending1
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	dst_startingandending2
+END_TESTCASE PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-021-HP
+
+
+START_TESTCASE PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-022-023-HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-022-023-HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - REQ5757: Calendar Search extensions
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Timezone change before the search
+//! @SYMTestActions 
+//!1.	Create large number of calendar entries (fixed and floating) including entries which start/end near the current time. 
+//!2.	Perform searches involving starting, ending and occurring instances and passing a time range that includes the current time.
+//!3.	Do a Timezone change on the system
+//!4.	Perform the same search, and verify the search results taking into account the entries are fixed or floating ones
+//! @SYMTestExpectedResults 
+//!FindInstanceL works consistently and returns only the entries that strictly fall within the search time range.
+RUN_TEST_STEP				100	TestCalInterimApiSuite	TestCalInterimApiSetTz		\CITCalInterimApi\TestCalInterimApiFind.ini	london
+
+// we are in London now
+RUN_TEST_STEP				100	TestCalInterimApiSuite	TestCalInterimApiSetSysTime	\CITCalInterimApi\TestCalInterimApiFind.ini	mar292015_1259am
+
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-022-HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - REQ5757: Calendar Search extensions
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Invalid time search
+//! @SYMTestActions 
+//!1.	Create some floating calendar entries in some timezone such that they occur at an invalid time in another timezone. 
+//!2.	Change the timezone to one in which the above instances become invalid
+//!3.	Perform searches passing a time range which is invalid, for example, 1.00 to 1.59 on the day of change from GMT to BST in London.
+//! @SYMTestExpectedResults 
+//!The search yields no instances.
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	invalidtimeinlondon
+
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	tz_startingandending1
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	tz_startingandending2
+
+// change tz to calcutta
+RUN_TEST_STEP				100	TestCalInterimApiSuite	TestCalInterimApiSetTz		\CITCalInterimApi\TestCalInterimApiFind.ini	calcutta
+
+// the floating entries will not be affected by the TZ change
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	tz_occuring1
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	tz_startingonly1
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	tz_startingonly2
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	tz_endingonly1
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiFind.ini	tz_endingonly2
+END_TESTCASE PIM-APPENG-CalInterimAPI-ExpandedFindInstanceL-I-022-023-HP
+
+PREFIX RUN_UTILS 
+MakeReadWrite 	c:\private\10003a5b\citvcal.datIdx
+DeleteFile		c:\private\10003a5b\citvcal.datIdx
+MakeReadWrite 	c:\private\10003a5b\CITVCal.dat
+DeleteFile		c:\private\10003a5b\CITVCal.dat
+REMOVE_PREFIX

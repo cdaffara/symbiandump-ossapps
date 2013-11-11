@@ -1,0 +1,36 @@
+/*
+* Copyright (c)  Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Build file for service handling.
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+../inc/cpeservicehandling.h            |../../inc/cpeservicehandling.h
+../inc/mpeservicehandling.h            |../../inc/mpeservicehandling.h
+
+// SIS stubs
+../rom/servicehandling_stub.sis       /epoc32/data/z/system/install/servicehandling_stub.sis
+
+PRJ_MMPFILES
+peservicehandling.mmp
+
+
+PRJ_TESTMMPFILES
+

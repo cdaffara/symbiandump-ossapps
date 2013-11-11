@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="0.8">
+	<object name="cnt:cancel" type="HbAction">
+      <string name="text" locid="txt_common_button_cancel"/>
+    </object>
+    
+    <widget name="view" type="HbView">
+        <widget name="content" role="HbView:widget" type="HbWidget">
+            <widget name="listView" type="HbListView">
+                <sizehint height="1.0un" type="PREFERRED" width="1.0un"/>
+                <sizepolicy horizontalPolicy="MinimumExpanding" horizontalStretch="0" verticalPolicy="MinimumExpanding" verticalStretch="0"/>
+            </widget>
+            <layout orientation="Vertical" spacing="0un" type="linear">
+                <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+                <linearitem itemname="listView"/>
+            </layout>
+        </widget>
+        
+        <string locid="txt_phob_title_contacts" name="title" value="Contacts"/>
+    </widget>
+    <metadata activeUIState="Common ui state" display="NHD portrait" unit="un">
+        <resource location="pbkcommonui.qrc"/>
+        <uistate name="Common ui state" sections="#common"/>
+    </metadata>
+</hbdocument>

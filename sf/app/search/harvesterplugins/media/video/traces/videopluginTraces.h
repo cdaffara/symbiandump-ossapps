@@ -1,0 +1,53 @@
+/*
+* Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Media Video harvester plugin implementation
+*
+*/
+// Created by TraceCompiler 2.3.0
+// DO NOT EDIT, CHANGES WILL BE LOST
+
+#ifndef __VIDEOPLUGINTRACES_H__
+#define __VIDEOPLUGINTRACES_H__
+
+#define KOstTraceComponentID 0x20029aba
+
+#define CVIDEOPLUGIN_STARTPLUGINL_ENTRY 0x8a0003
+#define CVIDEOPLUGIN_STARTPLUGINL_EXIT 0x8a0004
+#define CVIDEOPLUGIN_STARTHARVESTINGL_ENTRY 0x8a0005
+#define CVIDEOPLUGIN_STARTHARVESTINGL_EXIT 0x8a0006
+#define CVIDEOPLUGIN_HARVESTINGCOMPLETEDL_ENTRY 0x8a0007
+#define CVIDEOPLUGIN_HARVESTINGCOMPLETEDL_EXIT 0x8a0008
+#define CVIDEOPLUGIN_PAUSEPLUGINL_ENTRY 0x8a0009
+#define CVIDEOPLUGIN_PAUSEPLUGINL_EXIT 0x8a000a
+#define CVIDEOPLUGIN_RESUMEPLUGINL_ENTRY 0x8a000b
+#define CVIDEOPLUGIN_RESUMEPLUGINL_EXIT 0x8a000c
+#define CVIDEOPLUGIN_HANDLEMDEITEML 0x860001
+#define DUP1_CVIDEOPLUGIN_HANDLEMDEITEML 0x860002
+#define DUP2_CVIDEOPLUGIN_HANDLEMDEITEML 0x860003
+#define DUP3_CVIDEOPLUGIN_HANDLEMDEITEML 0x860004
+#define DUP4_CVIDEOPLUGIN_HANDLEMDEITEML 0x860005
+#define DUP5_CVIDEOPLUGIN_HANDLEMDEITEML 0x860006
+#define DUP6_CVIDEOPLUGIN_HANDLEMDEITEML 0x860007
+#define DUP7_CVIDEOPLUGIN_HANDLEMDEITEML 0x860008
+#define DUP8_CVIDEOPLUGIN_HANDLEMDEITEML 0x860009
+#define DUP9_CVIDEOPLUGIN_HANDLEMDEITEML 0x86000a
+#define DUP10_CVIDEOPLUGIN_HANDLEMDEITEML 0x86000b
+#define DUP11_CVIDEOPLUGIN_HANDLEMDEITEML 0x86000c
+#define DUP12_CVIDEOPLUGIN_HANDLEMDEITEML 0x86000d
+
+
+#endif
+
+// End of file
+

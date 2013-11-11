@@ -1,0 +1,43 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*
+*/
+
+
+#ifndef __ORBITFILEBROWSER_IBY__
+#define __ORBITFILEBROWSER_IBY__
+
+S60_APP_EXE(FileBrowser)
+//S60_APP_AIF_ICONS(FileBrowser)
+S60_APP_RESOURCE(FileBrowser)
+SCALABLE_IMAGE(APP_BITMAP_DIR,APP_BITMAP_DIR,FileBrowser)
+
+//#ifdef S60_UPGRADABLE_APP_REG_RSC
+//  S60_UPGRADABLE_APP_REG_RSC(FileBrowser)
+//#else
+//  S60_APP_AIF_RSC(FileBrowser)
+//#endif
+data=ZPRIVATE\10003a3f\import\APPS\FileBrowser_reg.RSC Private\10003a3f\import\Apps\FileBrowser_reg.rsc
+
+#ifndef FILEBROWSER_LITE
+file=ABI_DIR\BUILD_DIR\FileBrowserFileOpServer.exe      PROGRAMS_DIR\FileBrowserFileOpServer.exe
+file=ABI_DIR\BUILD_DIR\FileBrowserFileOpClient.dll      SHARED_LIB_DIR\FileBrowserFileOpClient.dll
+#endif
+
+data=ZPRIVATE\102828D6\backup_registration.xml          private\102828D6\backup_registration.xml
+data=ZSYSTEM\Install\FileBrowser_stub.sis               \system\install\FileBrowser_stub.sis
+
+
+#endif // __ORBITFILEBROWSER_IBY__

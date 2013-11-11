@@ -1,0 +1,31 @@
+/*
+* Copyright (c) 2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Build information file for project emulatorlan
+*
+*/
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+../data/configchange.pl             /epoc32/tools/configchange.pl
+../data/EnableLanConnection.cmd     /epoc32/tools/EnableLanConnection.cmd
+../data/ethernetced.xml             /epoc32/winscw/c/ethernetced.xml
+../data/s60_32_default_snaps.xml    /epoc32/winscw/c/s60_32_default_snaps.xml
+
+PRJ_MMPFILES
+
+PRJ_TESTMMPFILES
+
+//  End of File

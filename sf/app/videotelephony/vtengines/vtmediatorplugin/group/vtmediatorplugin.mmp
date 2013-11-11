@@ -1,0 +1,52 @@
+/*
+* Copyright (c) 2008 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Video telephony mediator plugin
+*
+*/
+
+
+#include <data_caging_paths.hrh>
+#include <platform_paths.hrh>   // for APP_LAYER_SYSTEMINCLUDE macro
+
+// Build target
+
+CAPABILITY      CAP_ECOM_PLUGIN
+TARGET		    vtmediatorplugin.dll
+TARGETTYPE	    PLUGIN
+UID             0x10009D8D 0x2001599F
+VENDORID        VID_DEFAULT
+
+SOURCEPATH	../data
+START RESOURCE  vtmediatorplugin.rss
+TARGET          vtmediatorplugin.rsc
+END
+
+SOURCEPATH	../src
+SOURCE		cvtmediatorplugin.cpp
+SOURCE      vtmediatorpluginproxy.cpp
+
+USERINCLUDE     ../inc
+SYSTEMINCLUDE   ../../../inc
+SYSTEMINCLUDE   /epoc32/include/ecom
+APP_LAYER_SYSTEMINCLUDE
+
+LIBRARY apparc.lib
+LIBRARY apgrfx.lib
+LIBRARY euser.lib
+LIBRARY ws32.lib
+LIBRARY ecom.lib
+LIBRARY mediatorclient.lib
+LIBRARY mediatorpluginbase.lib
+
+// End of File

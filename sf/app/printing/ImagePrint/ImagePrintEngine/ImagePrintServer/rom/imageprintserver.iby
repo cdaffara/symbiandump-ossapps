@@ -1,0 +1,27 @@
+/*
+* Copyright (c) 2004-2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*
+*/
+
+
+#ifndef IMAGEPRINTSERVER_IBY
+#define IMAGEPRINTSERVER_IBY
+
+#include <imageprintdef.iby>
+
+file=ABI_DIR\IP_DIR\imageprintserver.exe  		PROGRAMS_DIR\imageprintserver.exe
+file=ABI_DIR\IP_DIR\imageprintclient.dll			SHARED_LIB_DIR\imageprintclient.dll
+
+#endif // IMAGEPRINTSERVER_IBY

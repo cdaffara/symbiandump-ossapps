@@ -1,0 +1,42 @@
+;
+; Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:
+;
+
+; Language
+&EN
+
+; SIS header: name, uid, version
+#{"contentpublishclient"},(0x20022F74),1,0,0
+
+; Localised Vendor name
+%{"Vendor"}
+
+; Unique Vendor name
+:"Vendor"
+
+; Manual PKG pre-rules from PRO files
+; Default HW/platform dependencies
+[0x101F7961],0,0,0,{"S60ProductID"}
+[0x102032BE],0,0,0,{"S60ProductID"}
+[0x102752AE],0,0,0,{"S60ProductID"}
+[0x1028315F],0,0,0,{"S60ProductID"}
+ 
+"/epoc32/release/armv5/urel/contentpublishclient.exe"                       - "c:/sys/bin/contentpublishclient.exe"
+"/epoc32/data/z/private/10003a3f/import/apps/contentpublishclient_reg.rsc"  - "c:/private/10003a3f/import/apps/contentpublishclient_reg.rsc"
+"/epoc32/data/z/resource/apps/contentpublishclient.rsc"                     - "c:/resource/apps/contentpublishclient.rsc"
+"/epoc32/data/z/data/images/testwallpaper.jpg"                              - "c:/data/images/testwallpaper.jpg"
+"/epoc32/data/z/data/images/testwallpaper2.jpg"                             - "c:/data/images/testwallpaper2.jpg"
+"/epoc32/data/z/data/images/testwallpaper_p.png"                            - "c:/data/images/testwallpaper_p.png"
+"/epoc32/data/z/data/images/testwallpaper_l.png"                            - "c:/data/images/testwallpaper_l.png"

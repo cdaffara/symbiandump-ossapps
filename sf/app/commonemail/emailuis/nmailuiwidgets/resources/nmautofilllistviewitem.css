@@ -1,0 +1,25 @@
+NmAutoFillListViewItem:portrait {
+        layout:portrait-111;
+}
+
+NmAutoFillListViewItem:landscape {
+        layout:landscape-111;
+}
+
+
+NmAutoFillListViewItem::AutoFillListViewDisplayName:landscape {
+pref-width:expr((1/2)*(var(hb-param-screen-width)-var(hb-param-margin-gene-right)-var(hb-param-margin-gene-left)-9.5un-var(hb-param-margin-gene-middle-horizontal)-var(hb-param-margin-gene-popup)-var(hb-param-margin-gene-popup)));
+size-policy-horizontal:fixed;
+font-variant:primary; 
+text-height: var(hb-param-graphic-size-primary);
+}
+
+NmAutoFillListViewItem::AutoFillListViewDisplayName:portrait {
+font-variant:primary; 
+text-height: var(hb-param-graphic-size-primary);
+}
+
+NmAutoFillListViewItem::AutoFillListViewAddress {
+font-variant:secondary;
+text-height:var(hb-param-graphic-size-secondary);
+}

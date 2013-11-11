@@ -1,0 +1,97 @@
+[All]
+Defaults= defaults.script
+
+[Message]
+Message= Hello From Script, Encoding 7
+
+[test0]
+DiallingPauseDuration= 3
+ConnectingPauseDuration= 1
+DisconnectingPauseDuration= 5
+AnswerIncomingPauseDuration= 5
+
+SmsTx= 00, 0, 0, 00, -15
+SmsTx= 00, 0, 0, 00, -15
+SmsTx= 00, 0, 0, 00, -15
+SmsTx= 00, 0, 0, 00, -15
+SmsTx= 00, 0, 0, 00, -15
+SmsTx= 00, 0, 0, 00, -15
+SmsTx= 00, 0, 0, 00, -15
+SmsTx= 00, 0, 0, 00, -15
+SmsTx= 00, 0, 0, 00, -15
+SmsTx= 00, 0, 0, 00, -15
+SmsTx= 00, 0, 0, 00, -15
+SmsTx= 00, 0, 0, 00, -15
+SmsTx= 00, 0, 0, 00, -15
+
+# SmsTx = <pdu>, <sca>, <MsgRef>, <SubmitReportPdu>, <ExpectedError>
+
+[test1]
+DiallingPauseDuration= 3
+ConnectingPauseDuration= 1
+DisconnectingPauseDuration= 5
+AnswerIncomingPauseDuration= 5
+
+SmsTx= 00, 0, 0, 00, -2017
+SmsTx= 00, 0, 0, 00, 0
+
+# SmsTx = <pdu>, <sca>, <MsgRef>, <SubmitReportPdu>, <ExpectedError>
+
+[test2]
+
+#RxPdu1, contains:"Test message, 8bits, length 30"
+SmsRx= 240C915348801455820004108071417314801E54657374206D6573736167652C2038626974732C206C656E677468203330, 358405202000
+
+#Class 2
+SmsRx= 240C9153488014558200F6108071417314801E54657374206D6573736167652C2038626974732C206C656E677468203330, 358405202000
+SmsRx= 240C915348801455820012108071417314801E54657374206D6573736167652C2038626974732C206C656E677468203330, 358405202000
+
+#RxPdu2-16, contains:"Sest message, 8bits, length 30"
+SmsRx= 240C915348801455820004108071417314801E53657374206D6573736167652C2038626974732C206C656E677468203330, 358405202000
+#RxPdu17, contains:"test message, 8bits, length 30"
+SmsRx= 240C915348801455820004108071417314801E74657374206D6573736167652C2038626974732C206C656E677468203330, 358405202000
+SmsRxPeriod= 5
+
+
+SmsAckNackPause= 1
+SmsResumePause= 1
+
+SmsStore= S14, 10
+
+SmsStoreEntry= S14, 1, 4, 15000c915348801455820004A71E74657374206D6573736167652C2038626974732C206C656E677468203330, 44444444444
+
+SmsStoreIndividualReqPause= 1
+
+SmsStoreBatchReqPause= 2
+
+endscript
+
+[Message]
+Message= Hello From Script, 2 Recipients, Encoding 7
+Recipients= Default|Default
+
+[Message]
+Message= This is a 200 char mesge
+This is a 200 char mesge
+This is a 200 char mesge
+This is a 200 char mesge
+This is a 200 char mesge
+This is a 200 char mesge
+This is a 200 char mesge
+This is a 200 char mesge
+Encoding= 7
+
+[Message]
+Message= Hello From Script, Encoding 8
+Encoding= 8
+
+[Message]
+Message= This is a 200 8bit mesge
+This is a 200 8bit mesge
+This is a 200 8bit mesge
+This is a 200 8bit mesge
+This is a 200 8bit mesge
+This is a 200 8bit mesge
+This is a 200 8bit mesge
+This is a 200 8bit mesge
+Encoding= 8

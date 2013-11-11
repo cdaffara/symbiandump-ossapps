@@ -1,0 +1,56 @@
+<hbwidget version="0.1" type="listviewitem">
+
+    <layout name="layout-1_applib_progress" type="mesh">
+      <meshitem src="selection-icon" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="-var(hb-param-margin-gene-left)" />
+      <meshitem src="selection-icon" srcEdge="CENTERV" dst="text-1" dstEdge="CENTERV" />
+      
+      <meshitem src="icon-1" srcEdge="LEFT" dst="selection-icon" dstEdge="RIGHT" spacing="-var(hb-param-margin-gene-left)" />
+      <meshitem src="icon-1" srcEdge="TOP" dst="text-1" dstEdge="TOP" />
+      
+      <meshitem src="text-1" srcEdge="LEFT" dst="icon-1" dstEdge="RIGHT" spacing="-var(hb-param-margin-gene-middle-horizontal)" />
+      <meshitem src="text-1" srcEdge="TOP" dst="" dstEdge="TOP" spacing="-var(hb-param-margin-gene-top)"/>
+      <meshitem src="text-1" srcEdge="RIGHT" dst="icon-2" dstEdge="LEFT" spacing="var(hb-param-margin-gene-middle-horizontal)" />
+      <meshitem src="text-1" srcEdge="BOTTOM" dst="progress" dstEdge="TOP" spacing="var(hb-param-margin-gene-middle-vertical)" />
+      
+      <meshitem src="progress" srcEdge="LEFT" dst="text-1" dstEdge="LEFT" />
+      <meshitem src="progress" srcEdge="RIGHT" dst="text-3" dstEdge="LEFT" spacing="var(hb-param-margin-gene-middle-horizontal)" />
+      <meshitem src="progress" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacing="var(hb-param-margin-gene-bottom)" />
+      
+      <meshitem src="icon-2" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)" />
+      <meshitem src="icon-2" srcEdge="CENTERV" dst="text-1" dstEdge="CENTERV" />
+      
+      <meshitem src="text-3" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)" />
+      <meshitem src="text-3" srcEdge="BOTTOM" dst="progress" dstEdge="BOTTOM" spacing="0.0un" />
+      
+      <meshitem src="multiselection-toucharea" srcEdge="CENTERH" dst="selection-icon" dstEdge="CENTERH" />
+      <meshitem src="multiselection-toucharea" srcEdge="TOP" dst="" dstEdge="TOP" />
+      <meshitem src="multiselection-toucharea" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+    </layout>
+    
+    <layout name="layout-4_applib_progress" type="mesh">
+      <meshitem src="selection-icon" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="-var(hb-param-margin-gene-left)" />
+      <meshitem src="selection-icon" srcEdge="CENTERV" dst="icon-1" dstEdge="CENTERV" />
+
+      <meshitem src="icon-1" srcEdge="LEFT" dst="selection-icon" dstEdge="RIGHT" spacing="-var(hb-param-margin-gene-left)" />
+      <meshitem src="icon-1" srcEdge="TOP" dst="" dstEdge="TOP" spacing="-var(hb-param-margin-gene-top)"/>
+      <meshitem src="icon-1" srcEdge="RIGHT" dst="text-1" dstEdge="LEFT" spacing="var(hb-param-margin-gene-middle-horizontal)" />
+      <meshitem src="icon-1" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacing="var(hb-param-margin-gene-bottom)" />
+
+      <meshitem src="text-1" srcEdge="RIGHT" dst="icon-2" dstEdge="LEFT" spacing="var(hb-param-margin-gene-middle-horizontal)" />
+      <meshitem src="text-1" srcEdge="CENTERV" dst="icon-1" dstEdge="CENTERV" />
+      
+      <meshitem src="icon-2" srcEdge="RIGHT" dst="progress" dstEdge="LEFT" spacing="var(hb-param-margin-gene-middle-horizontal)"/>
+      <meshitem src="icon-2" srcEdge="CENTERV" dst="icon-1" dstEdge="CENTERV" />
+      
+      <meshitem src="progress" srcEdge="RIGHT" dst="text-3" dstEdge="LEFT" spacing="var(hb-param-margin-gene-middle-horizontal)"/>
+      <meshitem src="progress" srcEdge="CENTERV" dst="icon-1" dstEdge="CENTERV" />
+      
+      <meshitem src="text-3" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)"/>
+      <meshitem src="text-3" srcEdge="CENTERV" dst="icon-1" dstEdge="CENTERV" />
+      
+      <meshitem src="multiselection-toucharea" srcEdge="CENTERH" dst="selection-icon" dstEdge="CENTERH" />
+      <meshitem src="multiselection-toucharea" srcEdge="TOP" dst="" dstEdge="TOP" />
+      <meshitem src="multiselection-toucharea" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+    </layout>
+        
+</hbwidget>

@@ -1,0 +1,34 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+#ifndef __TESTCALINTERIMAPI_IBY__
+#define __TESTCALINTERIMAPI_IBY__
+
+#include <testexecute.iby>
+#include <coreappstest.iby>
+
+file=ABI_DIR\BUILD_DIR\TestCalInterimApiSuite.exe Sys\Bin\TestCalInterimApiSuite.exe
+
+data=DATAC_\calendarindexingtests\scripts\calendarindexingperformancetests.script	calendarindexingtests\scripts\calendarindexingperformancetests.script
+data=DATAC_\calendarindexingtests\scripts\calendarindexmodificationtests.script		calendarindexingtests\scripts\calendarindexmodificationtests.script
+data=DATAC_\calendarindexingtests\scripts\calendarindexmodificationtests1.script	calendarindexingtests\scripts\calendarindexmodificationtests1.script
+data=DATAC_\calendarindexingtests\scripts\calendarindexstresstests.script			calendarindexingtests\scripts\calendarindexstresstests.script
+data=DATAC_\calendarindexingtests\scripts\calendarindexstresstests1.script			calendarindexingtests\scripts\calendarindexstresstests1.script
+data=DATAC_\calendarindexingtests\testdata\calendarindextests.ini					calendarindexingtests\testdata\calendarindextests.ini
+data=DATAC_\calendarindexingtests\testdata\IndexingCalendar.dat						calendarindexingtests\testdata\IndexingCalendar.dat
+
+#endif

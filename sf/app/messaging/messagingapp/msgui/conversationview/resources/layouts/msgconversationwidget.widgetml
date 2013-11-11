@@ -1,0 +1,99 @@
+<hbwidget version="0.1">
+
+  <layout name="layout-msg-portrait" type="mesh">
+
+    <meshitem src="subject" srcEdge="TOP" dst="headerItem" dstEdge="TOP" />   
+    <meshitem src="subject" srcEdge="LEFT" dst="headerItem" dstEdge="LEFT" />
+    <meshitem src="subject" srcEdge="RIGHT" dst="priority" dstEdge="LEFT"/>
+    <meshitem src="subject" srcEdge="BOTTOM" dst="headerItem" dstEdge="BOTTOM"/>
+
+    <meshitem src="priority" srcEdge="RIGHT" dst="attachment" dstEdge="LEFT" />
+    <meshitem src="priority" srcEdge="CENTERV" dst="headerItem" dstEdge="CENTERV" />
+    <meshitem src="priority" srcEdge="TOP" dst="headerItem" dstEdge="TOP" spacer="topSpacer" />
+    <meshitem src="priority" srcEdge="BOTTOM" dst="headerItem" dstEdge="BOTTOM" spacer="bottomSpacer" />
+    
+    <meshitem src="attachment" srcEdge="RIGHT" dst="headerItem" dstEdge="RIGHT" />
+    <meshitem src="attachment" srcEdge="CENTERV" dst="headerItem" dstEdge="CENTERV" />
+    <meshitem src="attachment" srcEdge="TOP" dst="headerItem" dstEdge="TOP" spacer="topSpacer"/>
+    <meshitem src="attachment" srcEdge="BOTTOM" dst="headerItem" dstEdge="BOTTOM" spacer="bottomSpacer" />
+    
+    <meshitem src="headerItem" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="headerItem" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+    <meshitem src="headerItem" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />    
+
+    <meshitem src="preview" srcEdge="TOP" dst="headerItem" dstEdge="BOTTOM" />
+    <meshitem src="preview" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+
+    <meshitem src="bodyText" srcEdge="TOP" dst="preview" dstEdge="BOTTOM" />    
+    <meshitem src="bodyText" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+    <meshitem src="bodyText" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+
+    <meshitem src="timeStamp" srcEdge="TOP" dst="bodyText" dstEdge="BOTTOM" />
+    <meshitem src="timeStamp" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+    <meshitem src="timeStamp" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+    <meshitem src="timeStamp" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+
+    <meshitem src="newItemIcon" srcEdge="LEFT" dst="" dstEdge="LEFT"/>
+    <meshitem src="newItemIcon" srcEdge="TOP" dst="" dstEdge="TOP"/>
+    <meshitem src="newItemIcon" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM"/>
+
+    <meshitem src="bubble" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="bubble" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+    <meshitem src="bubble" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+    <meshitem src="bubble" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+
+    <meshitem src="playIcon" srcEdge="TOP" dst="headerItem" dstEdge="BOTTOM"/>
+    <meshitem src="playIcon" srcEdge="LEFT" dst="preview" dstEdge="RIGHT" />
+
+  </layout>
+
+  <layout name="layout-msg-landscape" type="mesh">
+
+    <meshitem src="preview" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="preview" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+    <meshitem src="preview" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacer="bottomSpacer"/>
+    
+    <meshitem src="playIcon" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="playIcon" srcEdge="LEFT" dst="preview" dstEdge="RIGHT" />
+    <meshitem src="playIcon" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacer="bottomSpacer"/>
+
+    <meshitem src="subject" srcEdge="TOP" dst="headerItem" dstEdge="TOP" />   
+    <meshitem src="subject" srcEdge="LEFT" dst="headerItem" dstEdge="LEFT" />
+    <meshitem src="subject" srcEdge="RIGHT" dst="priority" dstEdge="LEFT"/>
+    <meshitem src="subject" srcEdge="BOTTOM" dst="headerItem" dstEdge="BOTTOM"/>
+
+    <meshitem src="priority" srcEdge="RIGHT" dst="attachment" dstEdge="LEFT" />
+    <meshitem src="priority" srcEdge="CENTERV" dst="headerItem" dstEdge="CENTERV" />
+    <meshitem src="priority" srcEdge="TOP" dst="headerItem" dstEdge="TOP" spacer="topSpacer" />
+    <meshitem src="priority" srcEdge="BOTTOM" dst="headerItem" dstEdge="BOTTOM" spacer="bottomSpacer" />
+    
+    <meshitem src="attachment" srcEdge="RIGHT" dst="headerItem" dstEdge="RIGHT" />
+    <meshitem src="attachment" srcEdge="CENTERV" dst="headerItem" dstEdge="CENTERV" />
+    <meshitem src="attachment" srcEdge="TOP" dst="headerItem" dstEdge="TOP" spacer="topSpacer" />
+    <meshitem src="attachment" srcEdge="BOTTOM" dst="headerItem" dstEdge="BOTTOM" spacer="bottomSpacer" />
+    
+    <meshitem src="headerItem" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="headerItem" srcEdge="LEFT" dst="playIcon" dstEdge="RIGHT" />
+    <meshitem src="headerItem" srcEdge="RIGHT" dst="" dstEdge="RIGHT" /> 
+
+    <meshitem src="bodyText" srcEdge="TOP" dst="headerItem" dstEdge="BOTTOM" />
+    <meshitem src="bodyText" srcEdge="LEFT" dst="playIcon" dstEdge="RIGHT" />
+    <meshitem src="bodyText" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+ 
+    <meshitem src="timeStamp" srcEdge="TOP" dst="bodyText" dstEdge="BOTTOM" spacer="topSpacer" />
+    <meshitem src="timeStamp" srcEdge="LEFT" dst="playIcon" dstEdge="RIGHT" />
+    <meshitem src="timeStamp" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+    <meshitem src="timeStamp" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacer="bottomSpacer" />
+
+    <meshitem src="newItemIcon" srcEdge="LEFT" dst="" dstEdge="LEFT"/>
+    <meshitem src="newItemIcon" srcEdge="TOP" dst="" dstEdge="TOP"/>
+    <meshitem src="newItemIcon" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM"/>
+
+    <meshitem src="bubble" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="bubble" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+    <meshitem src="bubble" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+    <meshitem src="bubble" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+
+  </layout>
+
+</hbwidget>

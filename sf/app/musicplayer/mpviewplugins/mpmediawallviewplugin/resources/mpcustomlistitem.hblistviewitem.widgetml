@@ -1,0 +1,57 @@
+<hbwidget version="0.1" type="HbListViewItem">
+ 
+  <!-- mpmwtracklist-1 -->
+    <!--
+        Required items: 
+            text-1
+            icon-2
+            
+        Items from left to right:
+            <- text-1 ->
+                                         
+        Other:
+            text-1: connected from TOP to item TOP and BOTTOM to item BOTTOM
+    -->
+    <layout name="mpmwtracklist-1" type="mesh">
+   
+        <meshitem src="text-1" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="-expr((var(hb-param-touch-area-gene-primary-small)-var(hb-param-text-height-secondary))/2)"/>
+        <meshitem src="text-1" srcEdge="TOP" dst="" dstEdge="TOP" spacing="-expr((var(hb-param-touch-area-gene-primary-small)-var(hb-param-text-height-secondary))/2)"/>
+        <meshitem src="text-1" srcEdge="RIGHT" dst="icon-2" dstEdge="LEFT" spacing="var(hb-param-margin-gene-middle-horizontal)" />
+        <meshitem src="text-1" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacing="expr((var(hb-param-touch-area-gene-primary-small)-var(hb-param-text-height-secondary))/2)" />
+          
+        <meshitem src="icon-2" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-widget-scroll-bar-interactive-width)" />
+        <meshitem src="icon-2" srcEdge="CENTERV" dst="text-1" dstEdge="CENTERV" />
+          
+        <meshitem src="text-2" srcEdge="LEFT" dst="" dstEdge="LEFT"/>
+        <meshitem src="text-3" srcEdge="LEFT" dst="" dstEdge="LEFT"/>
+        <meshitem src="icon-1" srcEdge="LEFT" dst="" dstEdge="LEFT"/>
+    
+    </layout>
+
+  <!-- mpmwtracklist-2 -->
+    <!--
+        Required items: 
+            text-1
+            
+        Items from left to right:
+            <- text-1 -> icon-2 ->
+                                         
+        Other:
+            icon-2: center aligned with text-1 center    
+            text-1: connected from TOP to item TOP and BOTTOM to item BOTTOM
+    -->
+    <layout name="mpmwtracklist-2" type="mesh">
+        <meshitem src="text-1" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="-expr((var(hb-param-touch-area-gene-primary-small)-var(hb-param-text-height-secondary))/2)"/>
+        <meshitem src="text-1" srcEdge="TOP" dst="" dstEdge="TOP" spacing="-expr((var(hb-param-touch-area-gene-primary-small)-var(hb-param-text-height-secondary))/2)"/>
+        <meshitem src="text-1" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-widget-scroll-bar-interactive-width)" />
+        <meshitem src="text-1" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacing="expr((var(hb-param-touch-area-gene-primary-small)-var(hb-param-text-height-secondary))/2)" />
+          
+        <meshitem src="text-2" srcEdge="LEFT" dst="" dstEdge="LEFT"/>
+        <meshitem src="text-3" srcEdge="LEFT" dst="" dstEdge="LEFT"/>
+        <meshitem src="icon-1" srcEdge="LEFT" dst="" dstEdge="LEFT"/>       
+        <meshitem src="icon-2" srcEdge="LEFT" dst="" dstEdge="LEFT"/>       
+    </layout>
+    
+    
+</hbwidget>
+

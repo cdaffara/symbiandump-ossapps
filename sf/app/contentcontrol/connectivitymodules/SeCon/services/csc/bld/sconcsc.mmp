@@ -1,0 +1,79 @@
+/*
+* Copyright (c) 2005-2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Capability Object Module mmp file
+*
+*/
+
+
+// To get the MW_LAYER_SYSTEMINCLUDE-definition
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+
+VENDORID        VID_DEFAULT
+
+CAPABILITY      CAP_GENERAL_DLL
+
+TARGETPATH      sys/bin
+
+TARGET          sconcsc.dll
+TARGETTYPE      DLL
+UID             0x10009D8D 0x101F9698
+
+#if defined(ARMCC)
+DEFFILE	./def/eabiu
+#elif defined(WINSCW) 
+DEFFILE	./def/bwinscw
+#elif defined(WINS)
+DEFFILE	./def/bwins
+#elif defined(ARM)
+DEFFILE	./def/bmarm
+#endif
+
+SOURCEPATH      ../src
+SOURCE          sconcsc.cpp
+SOURCE          capinfo.cpp
+SOURCE          caputils.cpp
+SOURCE          caplist.cpp
+SOURCE          stringlist.cpp
+SOURCE          capparser.cpp
+SOURCE          sconsyncservice.cpp
+SOURCE          sconversioninfo.cpp 
+
+USERINCLUDE     ../inc
+USERINCLUDE     ../../../inc
+
+// Default system include paths.
+APP_LAYER_SYSTEMINCLUDE
+
+DEBUGLIBRARY    flogger.lib
+LIBRARY         euser.lib
+LIBRARY         efsrv.lib
+LIBRARY         bafl.lib
+LIBRARY         sysutil.lib
+LIBRARY         etel.lib
+LIBRARY         etelmm.lib
+LIBRARY         hal.lib
+LIBRARY         platformenv.lib
+LIBRARY         charconv.lib
+LIBRARY	        centralrepository.lib
+LIBRARY         apgrfx.lib
+LIBRARY         apparc.lib
+LIBRARY         sisregistryclient.lib
+LIBRARY         syncmlclientapi.lib
+LIBRARY         javaregistryclient.lib
+LIBRARY         sysversioninfo.lib
+LIBRARY         etel3rdparty.lib
+LIBRARY         platformver.lib
+
+

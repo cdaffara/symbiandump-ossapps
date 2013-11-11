@@ -1,0 +1,54 @@
+/*
+* Copyright (c) 2004 - 2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:    Project definition file for Video Source image transforms
+*
+*/
+
+
+#include        <platform_paths.hrh>
+#include        "../inc/CVtImageTransformsUids.hrh"
+
+TARGET          vtimagetransforms.dll
+TARGETTYPE      dll
+VENDORID        VID_DEFAULT
+
+UID             KSharedLibraryUidDefine KUidVtImageTransformsLibrary
+
+SOURCEPATH      ../src
+SOURCE          CVtImage.cpp
+SOURCE			CVtImageBitmap.cpp
+SOURCE			CVtImageIYUV.cpp
+SOURCE			CVtImageScaler.cpp
+SOURCE			CVtImageScalerImpl.cpp
+SOURCE			CVtImageScalerImplNearest.cpp
+SOURCE			CVtImageScalerImplWeightedAverage.cpp
+SOURCE			CVtImageScalerImplBilinear.cpp
+SOURCE			CVtImageRotator.cpp
+SOURCE			CVtImageRotatorImpl.cpp
+SOURCE			CVtImageRotatorImplMirrorFlip.cpp
+SOURCE			CVtImageRotatorImplClockwise.cpp
+
+USERINCLUDE     ../inc
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE	/epoc32/include/mmf/server
+SYSTEMINCLUDE	/epoc32/include/mmf/common
+
+LIBRARY         euser.lib
+LIBRARY		    fbscli.lib
+LIBRARY         bitmaptransforms.lib
+
+CAPABILITY      CAP_GENERAL_DLL
+
+// End of File
+

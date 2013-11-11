@@ -1,0 +1,49 @@
+/*
+* Copyright (c) 2008 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   Project definition file for project testcalenimporter
+*
+*/
+
+#include <platform_paths.hrh>
+#include <defaultcaps.hrh>
+TARGET          testcalenimporter.dll
+TARGETTYPE      dll
+TARGETPATH      /DigiaEUnit/Tests
+UID             0x1000af5a 0x01700000
+
+CAPABILITY              CAP_GENERAL_DLL
+VENDORID                VID_DEFAULT
+
+SOURCEPATH              ../src
+SOURCE                  testcalenimporterdllmain.cpp
+SOURCE                  testcalenimporter.cpp
+
+USERINCLUDE             ../inc
+
+//organizer/inc
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE           /epoc32/include/ecom
+SYSTEMINCLUDE           /epoc32/include/Digia/EUnit
+
+LIBRARY                 EUnit.lib
+LIBRARY                 euser.lib
+LIBRARY                 EFSRV.LIB
+LIBRARY                 ESTOR.LIB
+LIBRARY                 InetProtUtil.lib //DelimitedParser8
+LIBRARY                 charconv.lib
+LIBRARY                 calinterimapi.lib 
+LIBRARY                 CalenImp.lib
+LIBRARY 								swinstcli.lib
+
+// End of file

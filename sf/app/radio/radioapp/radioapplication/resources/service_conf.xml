@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<service>
+  <name>fmradio</name>
+  <filepath>No path</filepath>
+  <description>Radio services</description>
+  <interface>
+     <name>com.nokia.symbian.IRadioControl</name>
+     <version>1.0</version>
+     <description>Interface to control radio playback</description>
+   </interface>
+  <interface>
+     <name>com.nokia.symbian.IRadioMonitor</name>
+     <version>1.0</version>
+     <description>Interface to monitor radio status changes</description>
+   </interface>
+</service>

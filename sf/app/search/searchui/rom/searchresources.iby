@@ -1,0 +1,33 @@
+/*
+* Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  search IBY file
+*/
+
+#ifndef __SEARCHRESOURCES_IBY__
+#define __SEARCHRESOURCES_IBY__
+
+
+#ifdef FF_SEARCH_SW
+
+#include <data_caging_paths_for_iby.hrh>
+
+//Language resource files
+data=DATAZ_\QT_TRANSLATIONS_DIR\search.qm QT_TRANSLATIONS_DIR\search.qm
+
+// Application resource file.
+data=DATAZ_/resource/apps/Searchapplication.RSC     /resource/apps/Searchapplication.RSC
+
+#endif //FF_SEARCH_SW
+
+#endif //__SEARCHRESOURCES_IBY__

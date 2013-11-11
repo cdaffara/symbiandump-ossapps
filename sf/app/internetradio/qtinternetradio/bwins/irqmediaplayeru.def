@@ -1,0 +1,25 @@
+EXPORTS
+	??0IRQMediaPlayer@@QAE@XZ @ 1 NONAME ; IRQMediaPlayer::IRQMediaPlayer(void)
+	?disableStereoEffect@IRQMediaPlayer@@QAEXXZ @ 2 NONAME ; void IRQMediaPlayer::disableStereoEffect(void)
+	?stop@IRQMediaPlayer@@QAEXXZ @ 3 NONAME ; void IRQMediaPlayer::stop(void)
+	?setVolume@IRQMediaPlayer@@QAEXH@Z @ 4 NONAME ; void IRQMediaPlayer::setVolume(int)
+	?enableStereoEffect@IRQMediaPlayer@@QAEXXZ @ 5 NONAME ; void IRQMediaPlayer::enableStereoEffect(void)
+	?getVolume@IRQMediaPlayer@@QAEHXZ @ 6 NONAME ; int IRQMediaPlayer::getVolume(void)
+	?playStation@IRQMediaPlayer@@QAEXABVQString@@H@Z @ 7 NONAME ; void IRQMediaPlayer::playStation(class QString const &, int)
+	?trUtf8@IRQMediaPlayer@@SA?AVQString@@PBD0H@Z @ 8  NONAME ; class QString IRQMediaPlayer::trUtf8(char const *, char const *, int)
+	?qt_metacast@IRQMediaPlayer@@UAEPAXPBD@Z @ 9  NONAME ; void * IRQMediaPlayer::qt_metacast(char const *)
+	?metaObject@IRQMediaPlayer@@UBEPBUQMetaObject@@XZ @ 10  NONAME ; struct QMetaObject const * IRQMediaPlayer::metaObject(void) const
+	?tr@IRQMediaPlayer@@SA?AVQString@@PBD0H@Z @ 11  NONAME ; class QString IRQMediaPlayer::tr(char const *, char const *, int)
+	??_EIRQMediaPlayer@@UAE@I@Z @ 12  NONAME ; IRQMediaPlayer::~IRQMediaPlayer(unsigned int)
+	?connectionEstablished@IRQMediaPlayer@@IAEXH@Z @ 13  NONAME ; void IRQMediaPlayer::connectionEstablished(int)
+	?trUtf8@IRQMediaPlayer@@SA?AVQString@@PBD0@Z @ 14  NONAME ; class QString IRQMediaPlayer::trUtf8(char const *, char const *)
+	?staticMetaObject@IRQMediaPlayer@@2UQMetaObject@@B @ 15  NONAME ; struct QMetaObject const IRQMediaPlayer::staticMetaObject
+	?errorOccured@IRQMediaPlayer@@IAEXW4IRQError@@@Z @ 16  NONAME ; void IRQMediaPlayer::errorOccured(enum IRQError)
+	?metaDataReceived@IRQMediaPlayer@@IAEXAAVIRQMetaData@@@Z @ 17  NONAME ; void IRQMediaPlayer::metaDataReceived(class IRQMetaData &)
+	??1IRQMediaPlayer@@UAE@XZ @ 18  NONAME ; IRQMediaPlayer::~IRQMediaPlayer(void)
+	?percentageBuffered@IRQMediaPlayer@@IAEXH@Z @ 19  NONAME ; void IRQMediaPlayer::percentageBuffered(int)
+	?volumeExpected@IRQMediaPlayer@@IAEXAAH@Z @ 20  NONAME ; void IRQMediaPlayer::volumeExpected(int &)
+	?tr@IRQMediaPlayer@@SA?AVQString@@PBD0@Z @ 21  NONAME ; class QString IRQMediaPlayer::tr(char const *, char const *)
+	?getStaticMetaObject@IRQMediaPlayer@@SAABUQMetaObject@@XZ @ 22  NONAME ; struct QMetaObject const & IRQMediaPlayer::getStaticMetaObject(void)
+	?qt_metacall@IRQMediaPlayer@@UAEHW4Call@QMetaObject@@HPAPAX@Z @ 23  NONAME ; int IRQMediaPlayer::qt_metacall(enum QMetaObject::Call, int, void * *)
+

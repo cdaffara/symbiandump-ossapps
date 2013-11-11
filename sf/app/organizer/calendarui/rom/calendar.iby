@@ -1,0 +1,56 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   IBY file for non-localizable elements of Calendar.app
+*
+*/
+
+
+
+#ifndef CALENDAR_IBY
+#define CALENDAR_IBY
+
+
+S60_APP_EXE( calendar )
+
+
+// Backup registration file
+data = ZPRIVATE\10005901\backup_registration.xml  PRIVATE\10005901\backup_registration.xml
+
+
+
+// Application registration file.
+data=DATAZ_\private\10003a3f\import\apps\calendar_reg.rsc		\private\10003a3f\import\apps\calendar_reg.rsc
+data=\epoc32\data\z\resource\qt\plugins\calendar\agendaeventviewerplugin.qtplugin             resource\qt\plugins\calendar\agendaeventviewerplugin.qtplugin
+
+// Stub sis
+data=DATAZ_\system\install\calendar_stub.sis             \System\Install\calendar_stub.sis
+
+data=ZRESOURCE\hb\splashml\calendar.splashml  		RESOURCE_FILES_DIR\hb\splashml\calendar.splashml
+data=ZRESOURCE\hb\splashml\calendar.docml  		RESOURCE_FILES_DIR\hb\splashml\calendar.docml
+
+
+file=ABI_DIR\BUILD_DIR\calencommonutils.dll SHARED_LIB_DIR\calencommonutils.dll
+file=ABI_DIR\BUILD_DIR\calenglobaldata.dll SHARED_LIB_DIR\calenglobaldata.dll
+file=ABI_DIR\BUILD_DIR\calencustomisationmanager.dll SHARED_LIB_DIR\calencustomisationmanager.dll
+file=ABI_DIR\BUILD_DIR\caleneditor.dll SHARED_LIB_DIR\caleneditor.dll
+file=ABI_DIR\BUILD_DIR\calenviews.dll SHARED_LIB_DIR\calenviews.dll
+file=ABI_DIR\BUILD_DIR\calensettings.dll SHARED_LIB_DIR\calensettings.dll
+file=ABI_DIR\BUILD_DIR\calencontroller.dll SHARED_LIB_DIR\calencontroller.dll
+file=ABI_DIR\BUILD_DIR\agendaeventviewer.dll SHARED_LIB_DIR\agendaeventviewer.dll
+file=ABI_DIR\BUILD_DIR\calenlauncher.dll SHARED_LIB_DIR\calenlauncher.dll
+file=ABI_DIR\BUILD_DIR\agendaeventviewerplugin.dll SHARED_LIB_DIR\agendaeventviewerplugin.dll 
+
+#endif // CALENDAR_IBY
+
+//  End of File

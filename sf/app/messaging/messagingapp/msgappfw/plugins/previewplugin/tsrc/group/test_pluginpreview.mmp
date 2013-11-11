@@ -1,0 +1,124 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  ?Description
+*
+*/
+
+
+// To get the OSEXT_LAYER_SYSTEMINCLUDE-definition
+#include <platform_paths.hrh>
+#include <data_caging_paths_strings.hrh>
+
+
+TARGET          test_pluginpreview.dll
+TARGETTYPE      dll
+UID             0x1000008D 0x101FB3D3
+
+CAPABILITY      ALL -TCB
+
+//TARGETPATH      ?target_path
+DEFFILE         test_plugin.def
+
+#ifdef SBSV2
+	USERINCLUDE     ../inc 
+
+	#if defined(__S60_)
+	   
+	#else // __S60_ not defined
+	    SYSTEMINCLUDE   /epoc32/include 
+	    SYSTEMINCLUDE   /epoc32/include/internal
+	#endif // __S60_
+
+	SOURCEPATH      ../src
+#else // SBSV2 not defined
+	USERINCLUDE     ..\inc 
+
+	#if defined(__S60_)
+	    OSEXT_LAYER_SYSTEMINCLUDE
+	#else // __S60_ not defined
+	    SYSTEMINCLUDE   \epoc32\include 
+	    SYSTEMINCLUDE   \epoc32\include\internal
+	#endif // __S60_
+
+	SOURCEPATH      ..\src
+#endif // SBSV2
+
+SOURCEPATH        ../src
+SOURCE            test_pluginpreview.cpp
+SOURCE            test_pluginpreviewblocks.cpp  
+SOURCE            ..\..\src\ccspreviewplugin.cpp
+SOURCE 		  ..\..\src\ccspreviewpluginhandler.cpp
+SOURCE 		  ..\..\src\proxy.cpp
+
+USERINCLUDE     ..\inc 
+USERINCLUDE     ..\..\inc
+USERINCLUDE     ..\..\..\..\..\..\inc
+USERINCLUDE     ..\..\..\..\..\msgutils\unidatautils\unidatamodel\inc
+USERINCLUDE     ..\..\..\..\..\..\messagingappbase\obexmtms\TObexMTM\INC
+USERINCLUDE     ..\..\..\..\utils\inc
+
+APP_LAYER_SYSTEMINCLUDE
+MW_LAYER_SYSTEMINCLUDE
+
+LIBRARY         euser.lib
+LIBRARY         eCom.lib
+LIBRARY         csutils.lib
+LIBRARY         efsrv.lib 
+
+DEBUGLIBRARY    flogger.lib
+
+// Msg Server
+LIBRARY         Smcm.lib
+LIBRARY         gsmu.lib
+LIBRARY         etext.lib
+LIBRARY         msgs.lib
+LIBRARY         sqldb.lib 
+LIBRARY         thumbnailmanager.lib
+LIBRARY         fbscli.lib 
+LIBRARY         estor.lib 
+LIBRARY         unidatamodel.lib
+LIBRARY         charconv.lib
+LIBRARY         sendas2.lib
+
+SYSTEMINCLUDE   \epoc32\include\internal
+
+LIBRARY                         cone.lib 
+LIBRARY                         ecom.lib
+LIBRARY                         bafl.lib
+LIBRARY                         estor.lib 
+LIBRARY                         euser.lib
+LIBRARY                         flogger.lib
+LIBRARY                         StifTestInterface.lib
+LIBRARY                         StifTestEngine.lib
+LIBRARY                         imcm.lib
+LIBRARY                         msgs.lib
+LIBRARY                         charconv.lib
+
+// Msg Server
+LIBRARY         Smcm.lib
+LIBRARY         gsmu.lib
+LIBRARY         etext.lib
+LIBRARY         msgs.lib
+LIBRARY         sqldb.lib 
+LIBRARY         thumbnailmanager.lib
+LIBRARY         fbscli.lib 
+LIBRARY         estor.lib 
+LIBRARY         unidatamodel.lib
+LIBRARY         charconv.lib
+LIBRARY         centralrepository.lib
+LIBRARY         MsgMedia.lib
+
+
+
+SMPSAFE

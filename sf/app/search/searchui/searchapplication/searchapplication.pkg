@@ -1,0 +1,68 @@
+
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:  searchapplication package file
+
+; Language
+&EN
+
+; SIS header: name, uid, version
+#{"Searchapplication"},(0x2002C377),1,1,0, TYPE=SA, RU
+
+; Localised Vendor name
+%{"Vendor"}
+
+; Unique Vendor name
+:"Vendor"
+
+; Manual PKG pre-rules from PRO files
+; Default HW/platform dependencies
+[0x101F7961],0,0,0,{"S60ProductID"}
+[0x102032BE],0,0,0,{"S60ProductID"}
+[0x102752AE],0,0,0,{"S60ProductID"}
+[0x1028315F],0,0,0,{"S60ProductID"}
+ 
+; Default dependency to Qt libraries
+(0x2001E61C), 4, 5, 0, {"Qt"}
+
+; Executable and default resource files
+"/epoc32/release/armv5/urel/Searchapplication.exe"    - "!:\sys\bin\Searchapplication.exe"
+"/epoc32/data/z/private/10003a3f/import/apps/Searchapplication_reg.rsc"    - "!:\private\10003a3f\import\apps\Searchapplication_reg.rsc"
+
+
+; Indevice Habdler DLL DEPLOYMENT
+"/epoc32/release/armv5/urel/searchindevicehandler.dll"  - "!:\sys\bin\searchindevicehandler.dll"
+
+; RuntimeProvider DLL DEPLOYMENT
+"/epoc32/release/armv5/urel/searchruntimeprovider.dll"    - "!:\sys\bin\searchruntimeprovider.dll"
+
+
+; Stateprovider DLL DEPLOYMENT
+"/epoc32/release/armv5/urel/searchstateprovider.dll"    - "!:\sys\bin\searchstateprovider.dll"
+
+
+
+;Resource&Language file DEPLOYMENT
+
+"\epoc32\data\z\resource\apps\searchapplication.rsc"                 -  "!:\resource\apps\searchapplication.rsc"
+"\epoc32\data\z\resource\apps\searchapplication.r01"                 - "!:\resource\apps\searchapplication.r01"
+"\epoc32\data\z\resource\apps\searchapplication.r02"                 - "!:\resource\apps\searchapplication.r02"
+"\epoc32\data\z\resource\apps\searchapplication.r03"                 - "!:\resource\apps\searchapplication.r03"
+"\epoc32\data\z\resource\apps\searchapplication.r04"                 - "!:\resource\apps\searchapplication.r04"
+"\epoc32\data\z\resource\apps\searchapplication.r05"                 - "!:\resource\apps\searchapplication.r05"
+"\epoc32\data\z\resource\apps\searchapplication.r13"                 - "!:\resource\apps\searchapplication.r13"
+
+
+
+
+; Manual PKG post-rules from PRO files

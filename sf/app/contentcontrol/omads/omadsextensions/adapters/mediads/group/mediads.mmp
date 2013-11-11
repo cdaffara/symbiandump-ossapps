@@ -1,0 +1,83 @@
+/*
+* Copyright (c) 2009-2010 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project definition file for project Media DS adapter
+*
+*/
+
+
+#include <platform_paths.hrh>
+#include <defaultcaps.hrh>
+#include <data_caging_paths.hrh>
+
+TARGET          mediadsprovider.dll
+TARGETTYPE      PLUGIN
+UID             0x10009d8d 0x2001A9A1
+
+CAPABILITY      CAP_ECOM_PLUGIN
+VENDORID        VID_DEFAULT
+
+SOURCEPATH      ../src
+SOURCE          snapshotitem.cpp
+SOURCE          changefinder.cpp
+SOURCE          mediadsprovider.cpp
+SOURCE          mediadsstore.cpp
+SOURCE          mediamanager.cpp
+SOURCE          playlistitem.cpp
+SOURCE          songitem.cpp
+SOURCE          omadsfolderobject.cpp
+SOURCE          cmdemanager.cpp
+
+USERINCLUDE     ../inc
+
+APP_LAYER_SYSTEMINCLUDE
+
+// For temporary use only
+SYSTEMINCLUDE   /epoc32/include/syncml 
+
+START RESOURCE  mediadsprovider.rss
+HEADER
+TARGET          mediadsprovider.rsc
+TARGETPATH      ECOM_RESOURCE_DIR
+END
+
+START RESOURCE  mediadsstore.rss
+HEADER
+TARGET          mediadsstore.rsc
+TARGETPATH      RESOURCE_FILES_DIR
+END
+
+DEBUGLIBRARY    flogger.lib
+LIBRARY         ecom.lib
+LIBRARY         euser.lib
+LIBRARY         efsrv.lib
+LIBRARY         estor.lib
+LIBRARY         smldataprovider.lib
+LIBRARY         smlstoreformat.lib
+LIBRARY         bafl.lib
+LIBRARY         nsmlchangefinder.lib
+LIBRARY         mpxcollectionhelper.lib
+LIBRARY         mpxcommon.lib
+LIBRARY         charconv.lib
+LIBRARY         hash.lib
+LIBRARY         mpxharvesterutility.lib
+LIBRARY         mpxcollectionutility.lib
+LIBRARY         mpxcollectionmediator.lib
+LIBRARY         fbscli.lib
+LIBRARY         metadatautility.lib
+LIBRARY         platformenv.lib
+LIBRARY         mdccommon.lib
+LIBRARY         mdeclient.lib
+
+
+SMPSAFE

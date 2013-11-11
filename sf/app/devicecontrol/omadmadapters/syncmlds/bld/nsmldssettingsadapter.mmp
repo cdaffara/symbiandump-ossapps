@@ -1,0 +1,54 @@
+/*
+* Copyright (c) 2005 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:    DS-settings 
+*
+*/
+
+
+
+
+#include "defaultcaps.hrh"
+#include  <platform_paths.hrh>
+
+
+TARGET          nsmldssettingsadapter.dll
+TARGETTYPE      PLUGIN
+UID             0x10009D8D 0x101F6DE7
+VENDORID        VID_DEFAULT
+CAPABILITY      CAP_ECOM_PLUGIN
+
+
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE 	/epoc32/include/ecom
+
+SOURCEPATH      ../src
+USERINCLUDE     ../inc ../../inc
+
+SOURCE          NSmlDsSettingsAdapter.cpp
+
+
+START RESOURCE  nsmldssettingsadapter.rss
+LANGUAGE_IDS
+END
+
+
+LIBRARY         euser.lib ecom.lib charconv.lib commdb.lib nsmldebug.lib 
+LIBRARY         nsmldmiapmatcher.lib
+LIBRARY			bafl.lib
+LIBRARY         syncmlclientapi.lib
+LIBRARY         nsmltransporthandler.lib
+
+
+SMPSAFE
+// End of File

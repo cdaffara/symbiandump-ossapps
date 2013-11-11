@@ -1,0 +1,34 @@
+/*
+ * Copyright (c) 2007-2010 Sebastian Brannstrom, Lars Persson, EmbedDev AB
+ *
+ * All rights reserved.
+ * This component and the accompanying materials are made available
+ * under the terms of the License "Eclipse Public License v1.0"
+ * which accompanies this distribution, and is available
+ * at the URL "http://www.eclipse.org/legal/epl-v10.html".
+ *
+ * Initial Contributors:
+ * Sebastian Brannstrom
+ *
+ * Contributors:
+ *
+ * Description:
+ *
+ */
+ 
+#ifndef __PODCATCHER_IBY__
+#define __PODCATCHER_IBY__
+
+file=ABI_DIR\BUILD_DIR\podcast.exe				sys\bin\podcast.ext
+file=ABI_DIR\BUILD_DIR\podcastengine.dll		sys\bin\podcastengine.dll
+
+data=ZRESOURCE\apps\podcast.rsc					resource\apps\podcast.rsc
+data=ZRESOURCE\apps\Podcast.mif					resource\apps\Podcast.mif
+data=ZRESOURCE\help\podcatcher.hlp				resource\apps\podcatcher.hlp
+
+data=ZPRIVATE\10003a3f\apps\podcast_reg.rsc			private\10003a3f\apps\podcast_reg.rsc
+data=ZPRIVATE\A0009D00\backup_registration.xml		private\A0009D00\backup_registration.xml
+data=ZPRIVATE\A0009D00\podcatcher.sqlite.template	private\A0009D00\podcatcher.sqlite.template
+data=ZPRIVATE\A0009D00\defaultfeeds.xml			private\A0009D00\defaultfeeds.xml
+
+#endif

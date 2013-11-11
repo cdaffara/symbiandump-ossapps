@@ -1,0 +1,240 @@
+/*
+* Copyright (c)  Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Resource definitions for project ?myapp
+*
+*/
+
+
+/* ---------------------------------------------------------------------------
+*  Version history:
+*  Template version:
+*  <ccm_history>
+*
+*  Version: 5, Tue Mar 11 20:00:00 2008 by Rohit
+*  Ref:
+*  Merged IRv1.0 Engine code changes
+*
+*  </ccm_history>
+* ============================================================================
+*/
+
+#include <uikon.rh>
+
+NAME IRST
+
+RESOURCE RSS_SIGNATURE { }
+RESOURCE TBUF { buf = ""; }
+
+// ---------------------------------------------------------------------------
+// ?resource_name
+// ?description
+// ---------------------------------------------------------------------------
+//
+RESOURCE TBUF r_ir_default_setting_irapp_version
+    {
+    buf = "iRAPP/1.3.0";
+    }
+
+// ---------------------------------------------------------------------------
+// ?resource_name
+// ?description
+// ---------------------------------------------------------------------------
+//
+RESOURCE TBUF r_ir_default_setting_isds_base_url
+    {
+    buf = "http://djmagnus.edelkey.net/isds";
+    }
+    
+// ---------------------------------------------------------------------------
+// ?resource_name
+// ?description
+// ---------------------------------------------------------------------------
+//
+RESOURCE NUMBER_INT32 r_ir_default_setting_max_preset_count
+    {
+    value = 20;
+    }
+
+// ---------------------------------------------------------------------------
+// ?resource_name
+// ?description
+// ---------------------------------------------------------------------------
+//
+RESOURCE NUMBER_INT32 r_ir_default_setting_volume_level
+    {
+    value = 5;
+    }
+    
+// ---------------------------------------------------------------------------
+// ?resource_name
+// ?description
+// ---------------------------------------------------------------------------
+//
+RESOURCE NUMBER_INT32 r_ir_default_setting_display_access_point
+    {
+    value = 1;
+    }
+
+// ---------------------------------------------------------------------------
+// ?resource_name
+// ?description
+// ---------------------------------------------------------------------------
+//
+RESOURCE NUMBER_INT32 r_ir_default_setting_time_out
+    {
+    //value = 60000000;
+    //Changed by Snigdha to decrease timeout value to 30 secs
+    value = 30000000;
+    }
+    
+// ---------------------------------------------------------------------------
+// ?resource_name
+// ?description
+// ---------------------------------------------------------------------------
+//
+RESOURCE NUMBER_INT32 r_ir_default_setting_running_channel_id
+    {
+    value = 1;
+    }
+    
+// ---------------------------------------------------------------------------
+// ?resource_name
+// ?description
+// ---------------------------------------------------------------------------
+//
+RESOURCE NUMBER_INT32 r_ir_default_setting_log_running_number
+    {
+    value = 1;
+    }
+
+// ---------------------------------------------------------------------------
+// ?resource_name
+// ?description
+// ---------------------------------------------------------------------------
+//
+RESOURCE NUMBER_INT32 r_ir_default_setting_gprs_bit_rate_quality
+    {
+    value = 0;
+    }
+    
+// ---------------------------------------------------------------------------
+// ?resource_name
+// ?description
+// ---------------------------------------------------------------------------
+//
+RESOURCE NUMBER_INT32 r_ir_default_setting_wcdma_bit_rate_quality
+    {
+    value = 1;
+    }
+    
+// ---------------------------------------------------------------------------
+// ?resource_name
+// ?description
+// ---------------------------------------------------------------------------
+//
+RESOURCE NUMBER_INT32 r_ir_default_setting_wireless_bit_rate_quality
+    {
+    value = 2;
+    }
+    
+// ---------------------------------------------------------------------------
+// ?resource_name
+// ?description
+// ---------------------------------------------------------------------------
+//
+RESOURCE NUMBER_INT32 r_ir_default_setting_running_channel_index
+    {
+    value = 1;
+    }
+
+// ---------------------------------------------------------------------------
+// ?resource_name
+// ?description
+// ---------------------------------------------------------------------------
+//
+RESOURCE NUMBER_INT32 r_ir_default_setting_bearer_id
+    {
+    value = -18;
+    }
+    
+// ---------------------------------------------------------------------------
+// ?resource_name
+// ?description
+// ---------------------------------------------------------------------------
+//
+RESOURCE NUMBER_INT32 r_ir_default_setting_network_id
+    {
+    value = -18;
+    }
+    
+// ---------------------------------------------------------------------------
+// ?resource_name
+// ?description
+// ---------------------------------------------------------------------------
+//
+RESOURCE NUMBER_INT32 r_ir_default_setting_access_point_id
+    {
+    value = -18;
+    }
+    
+// ---------------------------------------------------------------------------
+// ?resource_name
+// ?description
+// ---------------------------------------------------------------------------
+//
+RESOURCE NUMBER_INT32 r_ir_default_setting_settings_view_bearer_id
+    {
+    value = -18;
+    }
+    
+// ---------------------------------------------------------------------------
+// ?resource_name
+// ?description
+// ---------------------------------------------------------------------------
+//
+RESOURCE NUMBER_INT32 r_ir_default_setting_settings_view_network_id
+    {
+    value = -18;
+    }
+    
+// ---------------------------------------------------------------------------
+// ?resource_name
+// ?description
+// ---------------------------------------------------------------------------
+//
+RESOURCE NUMBER_INT32 r_ir_default_setting_settings_view_access_point_id
+    {
+    value = -18;
+    }
+    
+   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

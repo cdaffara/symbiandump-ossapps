@@ -1,0 +1,29 @@
+EXPORTS
+	??0CParserGroupedProperty@@QAE@PAVCDesC8Array@@PAV?$CArrayPtr@VCParserParam@@@@@Z @ 1 NONAME ; public: __thiscall CParserGroupedProperty::CParserGroupedProperty(class CDesC8Array *,class CArrayPtr<class CParserParam> *)
+	??0CParserPropertyValueAgent@@QAE@PAVCParserVCard@@@Z @ 2 NONAME ; public: __thiscall CParserPropertyValueAgent::CParserPropertyValueAgent(class CParserVCard *)
+	??1CParserGroupedProperty@@UAE@XZ @ 3 NONAME ; public: virtual __thiscall CParserGroupedProperty::~CParserGroupedProperty(void)
+	??1CParserPropertyValueAgent@@UAE@XZ @ 4 NONAME ; public: virtual __thiscall CParserPropertyValueAgent::~CParserPropertyValueAgent(void)
+	?ConvertAllPropertyDateTimesToMachineLocalL@CParserVCard@@UAEXABVTTimeIntervalSeconds@@PBVCVersitDaylight@@@Z @ 5 NONAME ; public: virtual void __thiscall CParserVCard::ConvertAllPropertyDateTimesToMachineLocalL(class TTimeIntervalSeconds const &,class CVersitDaylight const *)
+	?ExternalizeL@CParserGroupedProperty@@UAEXAAVRWriteStream@@PAVCVersitParser@@@Z @ 6 NONAME ; public: virtual void __thiscall CParserGroupedProperty::ExternalizeL(class RWriteStream &,class CVersitParser *)
+	?ExternalizeL@CParserPropertyValueAgent@@UAEXAAVRWriteStream@@ABVTEncodingAndCharset@Versit@@H@Z @ 7 NONAME ; public: virtual void __thiscall CParserPropertyValueAgent::ExternalizeL(class RWriteStream &,class Versit::TEncodingAndCharset const &,int)
+	?ExternalizeL@CParserVCard@@UAEXAAVRWriteStream@@@Z @ 8 NONAME ; public: virtual void __thiscall CParserVCard::ExternalizeL(class RWriteStream &)
+	?GetGroupNamesL@CParserVCard@@IAEPAVCDesC8Array@@AAVTPtr8@@@Z @ 9 NONAME ; protected: class CDesC8Array * __thiscall CParserVCard::GetGroupNamesL(class TPtr8 &)
+	?Group@CParserGroupedProperty@@QBEHABVTDesC8@@@Z @ 10 NONAME ; public: int __thiscall CParserGroupedProperty::Group(class TDesC8 const &)const 
+	?GroupOfPropertiesL@CParserVCard@@QBEPAV?$CArrayPtr@VCParserProperty@@@@ABVTDesC8@@@Z @ 11 NONAME ; public: class CArrayPtr<class CParserProperty> * __thiscall CParserVCard::GroupOfPropertiesL(class TDesC8 const &)const 
+	?InternalizeL@CParserVCard@@UAEXAAVRReadStream@@@Z @ 12 NONAME ; public: virtual void __thiscall CParserVCard::InternalizeL(class RReadStream &)
+	?MakePropertyValueAgentL@CParserVCard@@MAEPAVCParserPropertyValue@@VTPtr16@@@Z @ 13 NONAME ; protected: virtual class CParserPropertyValue * __thiscall CParserVCard::MakePropertyValueAgentL(class TPtr16)
+	?MakePropertyValueL@CParserVCard@@MAEPAVCParserPropertyValue@@ABVTUid@@AAPAVHBufC16@@@Z @ 14 NONAME ; protected: virtual class CParserPropertyValue * __thiscall CParserVCard::MakePropertyValueL(class TUid const &,class HBufC16 * &)
+	?NewL@CParserGroupedProperty@@SAPAV1@AAVCParserPropertyValue@@ABVTDesC8@@PAVCDesC8Array@@PAV?$CArrayPtr@VCParserParam@@@@@Z @ 15 NONAME ; public: static class CParserGroupedProperty * __cdecl CParserGroupedProperty::NewL(class CParserPropertyValue &,class TDesC8 const &,class CDesC8Array *,class CArrayPtr<class CParserParam> *)
+	?NewL@CParserVCard@@SAPAV1@XZ @ 16 NONAME ; public: static class CParserVCard * __cdecl CParserVCard::NewL(void)
+	?ParsePropertyL@CParserVCard@@MAEXXZ @ 17 NONAME ; protected: virtual void __thiscall CParserVCard::ParsePropertyL(void)
+	?RecognizeToken@CParserVCard@@UBE?AVTUid@@ABVTDesC8@@@Z @ 18 NONAME ; public: virtual class TUid  __thiscall CParserVCard::RecognizeToken(class TDesC8 const &)const 
+	?Reserved1@CParserVCard@@EAEXXZ @ 19 NONAME ; private: virtual void __thiscall CParserVCard::Reserved1(void)
+	?Reserved2@CParserVCard@@EAEXXZ @ 20 NONAME ; private: virtual void __thiscall CParserVCard::Reserved2(void)
+	?Reserved@CParserGroupedProperty@@EAEXXZ @ 21 NONAME ; private: virtual void __thiscall CParserGroupedProperty::Reserved(void)
+	?SupportsInterface@CParserGroupedProperty@@UBEHABVTUid@@@Z @ 22 NONAME ; public: virtual int __thiscall CParserGroupedProperty::SupportsInterface(class TUid const &)const 
+	?ConvertDateTimesToMachineLocalAndDeleteTZL@CParserVCard@@QAEXXZ @ 23 NONAME ; public: void __thiscall CParserVCard::ConvertDateTimesToMachineLocalAndDeleteTZL(void)
+	?MakePropertyValueSoundL@CParserVCard@@IAEPAVCParserPropertyValue@@AAPAVHBufC16@@@Z @ 24 NONAME ; protected: class CParserPropertyValue * __thiscall CParserVCard::MakePropertyValueSoundL(class HBufC16 * &)
+	?InternalizeL@CParserVCard3@@UAEXAAVRReadStream@@@Z @ 25 NONAME ; void CParserVCard3::InternalizeL(class RReadStream &)
+	?NewL@CParserVCard3@@SAPAV1@XZ @ 26 NONAME ; class CParserVCard3 * CParserVCard3::NewL(void)
+
+

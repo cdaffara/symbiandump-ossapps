@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api id="8bfff0a255f33f33c8272f378eb5e2af" dataversion="2.0">
+  <name>onlinesearchproviders_api</name>
+  <description>This API provides interface to read the internet search providers and a way to set the default user selected internet search provider. The backend implementation uses SQL db to store the list. Each provider entity provide the name, description and suitable icon for display.</description>
+  <type>c++</type>
+  <collection>onlinesearchproviders</collection>
+  <libs>
+    <lib name="isengine.lib"/>
+  </libs>
+  <release category="platform" sinceversion="5.2"/>
+  <attributes>
+    <htmldocprovided>no</htmldocprovided>
+    <adaptation>no</adaptation>
+  </attributes>
+</api>

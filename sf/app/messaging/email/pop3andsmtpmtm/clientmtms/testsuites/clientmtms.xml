@@ -1,0 +1,15 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE testSuite SYSTEM "file:///c:/program files/common files/symbian/testSuite.dtd" [ ]>
+
+<testSuite>
+	<name>clientmtms</name> 
+
+	<testItems>
+		<test>t_emailaccountsettings</test> 
+	</testItems>
+
+	<testExecuteServers>
+		<server>t_emailaccountsettings_server</server>
+	</testExecuteServers>
+
+</testSuite>

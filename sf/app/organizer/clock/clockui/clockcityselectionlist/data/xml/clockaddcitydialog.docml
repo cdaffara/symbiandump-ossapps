@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="1.1">
+    <object name="okAction" type="HbAction">
+        <string locid="txt_common_button_ok" name="text" value="Ok"/>
+    </object>
+    <object name="cancelAction" type="HbAction">
+        <string locid="txt_common_button_cancel" name="text" value="Cancel"/>
+    </object>
+    <widget name="dialog" type="HbDialog">
+        <sizepolicy horizontalPolicy="Preferred" horizontalStretch="0" verticalPolicy="Preferred" verticalStretch="0"/>
+        <sizehint type="PREFERRED" width="expr(var(hb-param-screen-width) -  2 * var(hb-param-margin-gene-screen) )"/>
+        <widget name="heading" role="HbDialog:headingWidget" type="HbLabel">
+            <enums name="alignment" value="AlignLeft|AlignLeading"/>
+            <string locid="txt_clk_opt_add_own_city" name="plainText" value="Add own city"/>
+        </widget>
+        <widget name="container" role="HbDialog:contentWidget" type="HbWidget">
+            <widget name="countryLabel" type="HbLabel">
+                <sizehint height="expr(var(hb-param-text-height-secondary) )" type="PREFERRED" width="46.38806un"/>
+                <string locid="txt_clock_formlabel_country" name="plainText" value="Country:"/>
+            </widget>
+            <widget name="timezoneCombobox" type="HbComboBox">
+                <sizehint type="PREFERRED" width="46.38806un"/>
+            </widget>
+            <widget name="cityNameLineEdit" type="HbLineEdit">
+                <string name="text" value=""/>
+            </widget>
+            <widget name="cityNameLabel" type="HbLabel">
+                <sizehint height="expr(var(hb-param-text-height-secondary) )" type="PREFERRED" width="46.38806un"/>
+                <sizehint height="expr(var(hb-param-text-height-secondary) )" type="MINIMUM"/>
+                <string locid="txt_clock_formlabel_city_name" name="plainText" value="City name:"/>
+            </widget>
+            <widget name="counrtyCombobox" type="HbComboBox">
+            </widget>
+            <widget name="timezoneLabel" type="HbLabel">
+                <sizehint height="expr(var(hb-param-text-height-secondary) )" type="PREFERRED" width="46.38806un"/>
+                <string locid="txt_clock_formlabel_timezone" name="plainText" value="Timezone:"/>
+            </widget>
+            <layout type="anchor">
+                <anchoritem dst="cityNameLabel" dstEdge="LEFT" spacing="expr(var(hb-param-margin-gene-popup) )" src="" srcEdge="LEFT"/>
+                <anchoritem dst="cityNameLabel" dstEdge="TOP" spacing="expr(var(hb-param-margin-gene-popup) )" src="" srcEdge="TOP"/>
+                <anchoritem dst="cityNameLabel" dstEdge="RIGHT" spacing="expr(-var(hb-param-margin-gene-popup) )" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="cityNameLineEdit" dstEdge="LEFT" spacing="expr(var(hb-param-margin-gene-popup) )" src="" srcEdge="LEFT"/>
+                <anchoritem dst="cityNameLineEdit" dstEdge="TOP" spacing="expr(var(hb-param-margin-gene-middle-vertical) )" src="cityNameLabel" srcEdge="BOTTOM"/>
+                <anchoritem dst="cityNameLineEdit" dstEdge="RIGHT" spacing="-var(hb-param-margin-gene-popup)" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="timezoneLabel" dstEdge="TOP" spacing="2un" src="cityNameLineEdit" srcEdge="BOTTOM"/>
+                <anchoritem dst="timezoneLabel" dstEdge="RIGHT" spacing="-1.34328un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="timezoneCombobox" dstEdge="LEFT" spacing="2un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="timezoneCombobox" dstEdge="TOP" spacing="0.75un" src="timezoneLabel" srcEdge="BOTTOM"/>
+                <anchoritem dst="countryLabel" dstEdge="TOP" spacing="var(hb-param-margin-gene-popup)" src="timezoneCombobox" srcEdge="BOTTOM"/>
+                <anchoritem dst="countryLabel" dstEdge="RIGHT" spacing="-1.34328un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="counrtyCombobox" dstEdge="LEFT" spacing="var(hb-param-margin-gene-popup)" src="" srcEdge="LEFT"/>
+                <anchoritem dst="counrtyCombobox" dstEdge="TOP" spacing="expr(var(hb-param-margin-gene-middle-vertical) )" src="countryLabel" srcEdge="BOTTOM"/>
+                <anchoritem dst="counrtyCombobox" dstEdge="RIGHT" spacing="-var(hb-param-margin-gene-popup)" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="counrtyCombobox" dstEdge="BOTTOM" spacing="-var(hb-param-margin-gene-popup)" src="" srcEdge="BOTTOM"/>
+            </layout>
+        </widget>
+        <ref object="okAction" role="HbWidget:addAction"/>
+        <ref object="cancelAction" role="HbWidget:addAction"/>
+    </widget>
+    <section name="portrait">
+        <widget name="container" role="HbDialog:contentWidget" type="HbWidget">
+            <layout type="anchor">
+                <anchoritem dst="cityNameLabel" dstEdge="LEFT" spacing="expr(var(hb-param-margin-gene-popup) )" src="" srcEdge="LEFT"/>
+                <anchoritem dst="cityNameLabel" dstEdge="TOP" spacing="var(hb-param-margin-gene-popup)" src="" srcEdge="TOP"/>
+                <anchoritem dst="cityNameLabel" dstEdge="RIGHT" spacing="expr(-var(hb-param-margin-gene-popup) )" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="cityNameLineEdit" dstEdge="LEFT" spacing="expr(var(hb-param-margin-gene-popup) )" src="" srcEdge="LEFT"/>
+                <anchoritem dst="cityNameLineEdit" dstEdge="TOP" spacing="expr(var(hb-param-margin-gene-middle-vertical) )" src="cityNameLabel" srcEdge="BOTTOM"/>
+                <anchoritem dst="cityNameLineEdit" dstEdge="RIGHT" spacing="expr(-var(hb-param-margin-gene-popup) )" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="timezoneLabel" dstEdge="LEFT" spacing="expr(var(hb-param-margin-gene-popup) )" src="" srcEdge="LEFT"/>
+                <anchoritem dst="timezoneLabel" dstEdge="TOP" spacing="expr(var(hb-param-margin-gene-popup) )" src="cityNameLineEdit" srcEdge="BOTTOM"/>
+                <anchoritem dst="timezoneLabel" dstEdge="RIGHT" spacing="expr(-var(hb-param-margin-gene-popup) )" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="timezoneCombobox" dstEdge="LEFT" spacing="expr(var(hb-param-margin-gene-popup) )" src="" srcEdge="LEFT"/>
+                <anchoritem dst="timezoneCombobox" dstEdge="TOP" spacing="expr(var(hb-param-margin-gene-middle-vertical) )" src="timezoneLabel" srcEdge="BOTTOM"/>
+                <anchoritem dst="timezoneCombobox" dstEdge="RIGHT" spacing="expr(-var(hb-param-margin-gene-popup) )" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="countryLabel" dstEdge="LEFT" spacing="expr(var(hb-param-margin-gene-popup) )" src="" srcEdge="LEFT"/>
+                <anchoritem dst="countryLabel" dstEdge="TOP" spacing="expr(var(hb-param-margin-gene-popup) )" src="timezoneCombobox" srcEdge="BOTTOM"/>
+                <anchoritem dst="countryLabel" dstEdge="RIGHT" spacing="expr(-var(hb-param-margin-gene-popup) )" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="counrtyCombobox" dstEdge="LEFT" spacing="expr(var(hb-param-margin-gene-popup) )" src="" srcEdge="LEFT"/>
+                <anchoritem dst="counrtyCombobox" dstEdge="TOP" spacing="expr(var(hb-param-margin-gene-middle-vertical) )" src="countryLabel" srcEdge="BOTTOM"/>
+                <anchoritem dst="counrtyCombobox" dstEdge="RIGHT" spacing="expr(-var(hb-param-margin-gene-popup) )" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="counrtyCombobox" dstEdge="BOTTOM" spacing="expr(-var(hb-param-margin-gene-popup) )" src="" srcEdge="BOTTOM"/>
+            </layout>
+        </widget>
+        <widget name="dialog" type="HbDialog">
+            <sizehint type="PREFERRED" width="expr(var(hb-param-screen-short-edge)  -  2 * var(hb-param-margin-gene-screen) )"/>
+        </widget>
+        <widget name="cityNameLineEdit" type="HbLineEdit">
+            <string name="text"/>
+        </widget>
+        <widget name="cityNameLabel" type="HbLabel">
+            <string locid="txt_clock_formlabel_city_name" name="plainText" value="City name:"/>
+        </widget>
+        <widget name="heading" role="HbDialog:headingWidget" type="HbLabel">
+            <enums name="alignment" value="AlignLeft|AlignLeading"/>
+            <string locid="txt_clk_opt_add_own_city" name="plainText" value="Add own city"/>
+        </widget>
+    </section>
+    <section name="landscape">
+        <widget name="timezoneCombobox" type="HbComboBox">
+            <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Preferred" verticalStretch="0"/>
+            <sizehint type="PREFERRED" width="expr(var(hb-param-screen-short-edge) - 2 * var(hb-param-margin-gene-popup) )"/>
+        </widget>
+        <widget name="container" role="HbDialog:contentWidget" type="HbWidget">
+            <layout type="anchor">
+                <anchoritem dst="cityNameLineEdit" dstEdge="LEFT" spacing="expr(var(hb-param-margin-gene-middle-horizontal) )" src="cityNameLabel" srcEdge="RIGHT"/>
+                <anchoritem dst="cityNameLineEdit" dstEdge="TOP" spacing="expr(var(hb-param-margin-gene-popup) )" src="" srcEdge="TOP"/>
+                <anchoritem dst="cityNameLineEdit" dstEdge="RIGHT" spacing="expr(-var(hb-param-margin-gene-popup) )" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="cityNameLabel" dstEdge="LEFT" spacing="expr(var(hb-param-margin-gene-popup) )" src="" srcEdge="LEFT"/>
+                <anchoritem dst="cityNameLabel" dstEdge="CENTERV" spacing="0un" src="cityNameLineEdit" srcEdge="CENTERV"/>
+                <anchoritem dst="timezoneCombobox" dstEdge="LEFT" spacing="expr(var(hb-param-margin-gene-middle-horizontal) )" src="timezoneLabel" srcEdge="RIGHT"/>
+                <anchoritem dst="timezoneCombobox" dstEdge="TOP" spacing="expr(var(hb-param-margin-gene-popup) )" src="cityNameLineEdit" srcEdge="BOTTOM"/>
+                <anchoritem dst="timezoneCombobox" dstEdge="RIGHT" spacing="expr(-var(hb-param-margin-gene-popup) )" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="timezoneLabel" dstEdge="LEFT" spacing="expr(var(hb-param-margin-gene-popup) )" src="" srcEdge="LEFT"/>
+                <anchoritem dst="timezoneLabel" dstEdge="RIGHT" spacing="0un" src="cityNameLabel" srcEdge="RIGHT"/>
+                <anchoritem dst="timezoneLabel" dstEdge="CENTERV" spacing="0un" src="timezoneCombobox" srcEdge="CENTERV"/>
+                <anchoritem dst="counrtyCombobox" dstEdge="LEFT" spacing="expr(var(hb-param-margin-gene-middle-horizontal) )" src="countryLabel" srcEdge="RIGHT"/>
+                <anchoritem dst="counrtyCombobox" dstEdge="TOP" spacing="expr(var(hb-param-margin-gene-popup) )" src="timezoneCombobox" srcEdge="BOTTOM"/>
+                <anchoritem dst="counrtyCombobox" dstEdge="RIGHT" spacing="expr(-var(hb-param-margin-gene-popup) )" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="counrtyCombobox" dstEdge="BOTTOM" spacing="expr(-var(hb-param-margin-gene-popup) )" src="" srcEdge="BOTTOM"/>
+                <anchoritem dst="countryLabel" dstEdge="LEFT" spacing="expr(var(hb-param-margin-gene-popup) )" src="" srcEdge="LEFT"/>
+                <anchoritem dst="countryLabel" dstEdge="RIGHT" spacing="0un" src="cityNameLabel" srcEdge="RIGHT"/>
+                <anchoritem dst="countryLabel" dstEdge="CENTERV" spacing="0un" src="counrtyCombobox" srcEdge="CENTERV"/>
+            </layout>
+        </widget>
+        <widget name="dialog" type="HbDialog">
+            <sizehint type="PREFERRED" width="expr(var(hb-param-screen-long-edge)  -  2 * var(hb-param-margin-gene-screen) )"/>
+        </widget>
+        <widget name="cityNameLineEdit" type="HbLineEdit">
+            <sizehint type="FIXED" width="expr(var(hb-param-screen-short-edge) - 2 * var(hb-param-margin-gene-popup) )"/>
+            <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+        </widget>
+        <widget name="cityNameLabel" type="HbLabel">
+            <sizepolicy horizontalPolicy="Preferred" horizontalStretch="0" verticalPolicy="Preferred" verticalStretch="0"/>
+            <sizehint height="expr(var(hb-param-text-height-secondary) )" type="PREFERRED" width="expr((var(hb-param-screen-long-edge) - (2 * var(hb-param-margin-gene-popup)  + var(hb-param-margin-gene-middle-horizontal)  )) / 2)"/>
+        </widget>
+        <widget name="heading" role="HbDialog:headingWidget" type="HbLabel">
+            <enums name="alignment" value="AlignLeft|AlignLeading"/>
+        </widget>
+        <widget name="timezoneLabel" type="HbLabel">
+            <sizepolicy horizontalPolicy="Preferred" horizontalStretch="0" verticalPolicy="Preferred" verticalStretch="0"/>
+            <sizehint height="expr(var(hb-param-text-height-secondary) )" type="PREFERRED" width="expr((var(hb-param-screen-long-edge) - (2 * var(hb-param-margin-gene-popup)  + var(hb-param-margin-gene-middle-horizontal)  )) / 2)"/>
+        </widget>
+        <widget name="countryLabel" type="HbLabel">
+            <sizepolicy horizontalPolicy="Preferred" horizontalStretch="0" verticalPolicy="Preferred" verticalStretch="0"/>
+            <sizehint height="expr(var(hb-param-text-height-secondary) )" type="PREFERRED" width="expr((var(hb-param-screen-long-edge) - (2 * var(hb-param-margin-gene-popup)  + var(hb-param-margin-gene-middle-horizontal)  )) / 2)"/>
+        </widget>
+        <widget name="counrtyCombobox" type="HbComboBox">
+            <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Preferred" verticalStretch="0"/>
+            <sizehint type="PREFERRED" width="expr(var(hb-param-screen-short-edge) - 2 * var(hb-param-margin-gene-popup) )"/>
+        </widget>
+    </section>
+    <metadata activeUIState="portrait" display="NHD-3.2-inch_portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+        <uistate name="portrait" sections="#common portrait"/>
+        <uistate name="landscape" sections="#common landscape"/>
+    </metadata>
+</hbdocument>

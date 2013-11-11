@@ -1,0 +1,17 @@
+        ROOT, 001000, Children=3, Size=0, Store=------, P=Medium, Other=--C--V ------, Det:, Desc:
+          SERVICE, 001001, Children=5, Size=0, Store=------, P=Low   , Other=--C--V ------, Det:Local, Desc:
+            FOLDER_UNKWN, 001002, Children=6, Size=0, Store=------, P=Low   , Other=--C--V ------, Det:Inbox, Desc:
+              MESSAGE, 00100000, Children=0, Size=0, Store=------, P=Medium, Other=--C--V ------, Det:Entry created by test MailInit, Desc:MessagingMailInitTestEntry
+              MESSAGE, 00100001, Children=0, Size=0, Store=------, P=Medium, Other=--C--V ------, Det:Entry created by test MailInit, Desc:MessagingMailInitTestEntry
+              MESSAGE, 00100002, Children=0, Size=0, Store=------, P=Medium, Other=--C--V ------, Det:Entry created by test MailInit, Desc:MessagingMailInitTestEntry
+              MESSAGE, 00100003, Children=0, Size=0, Store=------, P=Medium, Other=--C--V ------, Det:Entry created by test MailInit, Desc:MessagingMailInitTestEntry
+              MESSAGE, 00100004, Children=0, Size=0, Store=------, P=Medium, Other=--C--V ------, Det:Entry created by test MailInit, Desc:MessagingMailInitTestEntry
+              MESSAGE, 00100005, Children=0, Size=0, Store=------, P=Medium, Other=--C--V ------, Det:Entry created by test MailInit, Desc:MessagingMailInitTestEntry
+            FOLDER_UNKWN, 001003, Children=0, Size=0, Store=------, P=Low   , Other=--C--V ------, Det:Outbox, Desc:
+            FOLDER_UNKWN, 001004, Children=0, Size=0, Store=------, P=Low   , Other=--C--V ------, Det:Drafts, Desc:
+            FOLDER_UNKWN, 001005, Children=0, Size=0, Store=------, P=Low   , Other=--C--V ------, Det:Sent, Desc:
+            FOLDER_UNKWN, 001006, Children=0, Size=0, Store=------, P=Low   , Other=--C--- ------, Det:Deleted, Desc:
+          SERVICE, 00100006, Children=0, Size=0, Store=------, P=Medium, Other=--C--- ------, Det:SmtpAccount, Desc:
+          SERVICE, 00100007, Children=1, Size=0, Store=------, P=Medium, Other=--C--V ------, Det:PopAccount, Desc:
+            MESSAGE, 00100008, Children=1, Size=3884, Store=HM--R-, P=High  , Other=-UCB-V ------, Det:SMTP Test1 <test@psion9.demon.co.uk>, Desc:Test message No.1 - 1000 character line in message
+              TEXT, 0010000a, Children=0, Size=3510, Store=--B-R-, P=High  , Other=--C--V ------, Det:, Desc:, TxtSize:3510

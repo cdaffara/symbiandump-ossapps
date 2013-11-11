@@ -1,0 +1,83 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description: 
+;
+; Language
+&EN
+
+; SIS header: name, uid, version
+#{"musicplayer"}, (0x10207C62), 1,0,0, TYPE=SA
+
+; Localised Vendor name
+%{"Nokia, Qt Software"}
+
+; Unique Vendor name
+:"Nokia, Qt Software"
+
+; Executable and default resource files
+""-"z:\sys\bin\musicplayer.exe"
+""-"z:\resource\apps\musicplayer.r*"
+""-"z:\private\10003a3f\import\apps\musicplayer_reg.rsc"
+""-"z:\resource\apps\musicplayer.mif"
+""-"z:\resource\qt\translations\musicplayer*.qm"
+
+; DLLs
+""-"z:\sys\bin\mpnowplayingbanner.dll"
+""-"z:\sys\bin\mpsettingsmanager.dll"
+""-"z:\sys\bin\mpalbumcoverwidget.dll"
+""-"z:\sys\bin\mpmediacontroller.dll"
+""-"z:\sys\bin\mpapplicationmonitor.dll"
+""-"z:\sys\bin\mpdata.dll"
+""-"z:\sys\bin\mpengine.dll"
+""-"z:\sys\bin\musicservices.dll"
+
+; CenRep
+""-"z:\private\10202be9\10207C92.txt"
+
+; PLUGIN AND VIEW
+""-"z:\sys\bin\mpcollectionviewplugin.dll"
+""-"z:\resource\plugins\mpcollectionviewplugin.r*"
+
+""-"z:\sys\bin\mpplaybackviewplugin.dll"
+""-"z:\resource\plugins\mpplaybackviewplugin.r*"
+
+""-"z:\sys\bin\mpsettingsviewplugin.dll"
+""-"z:\resource\plugins\mpsettingsviewplugin.r*"
+
+""-"z:\sys\bin\mpdetailsviewplugin.dll"
+""-"z:\resource\plugins\mpdetailsviewplugin.r*"
+
+""-"z:\sys\bin\mpmediawallviewplugin.dll"
+""-"z:\resource\plugins\mpmediawallviewplugin.r*"
+
+; DATA
+""-"z:\system\data\nullsound.mp3"
+
+;MP SERVICE PLUGINGS
+""-"z:\sys\bin\mpxaudioeffectengine.dll"
+""-"z:\sys\bin\mpxlocalaudioplayback.dll"
+""-"z:\sys\bin\mpxm3uplaylistparsers.dll"
+""-"z:\sys\bin\mpxm3uplaylistplugin.dll"
+""-"z:\sys\bin\mpxinmemoryplugin.dll"
+""-"z:\sys\bin\mpxsqlitedbcommon.dll"
+""-"z:\sys\bin\mpxsqlitedbhgplugin.dll"
+""-"z:\sys\bin\mpxsqlitepodcastdbplugin.dll"
+
+""-"z:\resource\plugins\mpxlocalaudioplayback.r*"
+""-"z:\resource\plugins\mpxm3uplaylistplugin.r*"
+""-"z:\resource\plugins\mpxinmemoryplugin.r*"
+""-"z:\resource\plugins\mpxsqlitedbhgplugin.r*"
+""-"z:\resource\apps\mpxcollectiondbhgres.r*"
+""-"z:\resource\plugins\mpxsqlitepodcastdbplugin.r*"
+""-"z:\resource\apps\pcres.r*"

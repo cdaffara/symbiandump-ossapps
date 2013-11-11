@@ -1,0 +1,52 @@
+/*
+* Copyright (c) 2004 - 2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:    Component definition file for Display Sink subsystem.
+*
+*/
+
+
+           
+
+#include <platform_paths.hrh>
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+
+../inc/cvtimageconverter.h      |../../../inc/cvtimageconverter.h
+../inc/cvtimageconverter.inl    |../../../inc/cvtimageconverter.inl
+../inc/mdisplaysink.h           |../../../inc/mdisplaysink.h
+../inc/TDisplaySinkParamsDSA.h  |../../../inc/tdisplaysinkparamsdsa.h
+../inc/tdisplaysinkparamsdsa.inl  |../../../inc/tdisplaysinkparamsdsa.inl
+../inc/TDisplaySinkParamsDP.h  |../../../inc/tdisplaysinkparamsdp.h
+../inc/TDisplaySinkParamsNGA.h |../../../inc/tdisplaysinkparamsnga.h
+../inc/cvtimage.h        |../../../inc/cvtimage.h
+../inc/CVtImageBitmap.h  |../../../inc/cvtimagebitmap.h
+../inc/CVtImageIYUV.h        |../../../inc/cvtimageiyuv.h
+../inc/CVtImageScaler.h  |../../../inc/cvtimagescaler.h
+../inc/cvtimagerotator.h  |../../../inc/cvtimagerotator.h
+
+// Export SIS stub file
+../data/displaysink_stub.SIS   /epoc32/data/z/system/install/displaysink_stub.sis
+
+// Export IBY file
+../rom/DisplaySink.iby            CORE_APP_LAYER_IBY_EXPORT_PATH(displaysink.iby)
+
+PRJ_MMPFILES
+VtImageTransforms.mmp
+VtImageConverter.mmp
+DisplaySink.mmp
+
+//  End of File

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service>
+    <name>contactwidgethsplugin</name>
+    <filepath>contactwidgethsplugin</filepath>
+    <description>Contact</description>
+    <interface>
+        <name>com.nokia.symbian.IHomeScreenWidget</name>
+        <version>1.0</version>
+        <description>ContactFriends</description>
+        <capabilities></capabilities>
+        <customproperty key="iconuri">qtg_large_friend.svg</customproperty>
+        <customproperty key="title">Contact</customproperty>
+    </interface>
+</service>

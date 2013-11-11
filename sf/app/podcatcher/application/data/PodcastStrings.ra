@@ -1,0 +1,78 @@
+/*
+* Copyright (c) 2007-2010 Sebastian Brannstrom, Lars Persson, EmbedDev AB
+*
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the License "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* EmbedDev AB - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+RESOURCE TBUF r_podcast_update_all_cmd{buf = STRING_r_update_all_feeds_cmd;}
+RESOURCE TBUF r_podcast_remove_feed_prompt {buf = STRING_r_remove_feed_prompt;}
+RESOURCE TBUF r_podcast_update_new_feed_prompt {buf = STRING_r_update_new_feed_prompt;}
+RESOURCE TBUF r_podcast_delete_show_prompt {buf = STRING_r_delete_show_prompt;}
+RESOURCE TBUF r_podcast_enable_downloads_prompt {buf = STRING_r_enable_downloads_prompt;}
+RESOURCE TBUF r_podcast_feeds_title_format {buf = STRING_r_podcast_feeds_title_format;}
+RESOURCE TBUF r_podcast_feeds_status_format {buf = STRING_r_podcast_feeds_status_format;}
+RESOURCE TBUF r_podcast_shows_no_items {buf = STRING_r_podcast_shows_no_items;}
+RESOURCE TBUF r_podcast_shows_title_format { buf =  STRING_r_podcast_shows_title_format;}
+RESOURCE TBUF r_podcast_shows_title_download {buf = STRING_r_podcast_shows_title_download;}
+RESOURCE TBUF r_podcast_shows_downloads_suspended { buf = STRING_r_podcast_shows_downloads_suspended;}
+RESOURCE TBUF r_podcast_empty_queue { buf = STRING_r_podcast_empty_queue; }
+RESOURCE TBUF r_podcast_empty_list { buf = STRING_r_podcast_empty_list; }
+RESOURCE TBUF r_podcast_empty_list_updating { buf = STRING_r_podcast_empty_list_updating; }
+RESOURCE TBUF r_podcast_empty_search { buf = STRING_r_podcast_empty_search; }
+RESOURCE TBUF r_podcast_feeds_update_error {buf = STRING_r_podcast_feeds_update_error;}
+RESOURCE TBUF r_podcast_feeds_never_updated {buf = STRING_r_podcast_shows_never_updated;}
+RESOURCE TBUF r_podcast_feeds_is_updating {buf = STRING_r_podcast_feeds_is_updating;}
+RESOURCE TBUF r_podcast_feeds_no_feeds {buf = STRING_r_podcast_no_feeds;}
+RESOURCE TBUF r_podcast_export_feeds_softkey {buf = STRING_r_view_export_feeds_softkey;}
+RESOURCE TBUF r_podcast_pending_status_active {buf = STRING_r_podcast_shows_title_download;}
+RESOURCE TBUF r_podcast_pending_status_suspended {buf = STRING_r_podcast_shows_downloads_suspended;}
+RESOURCE TBUF r_podcast_feeds_status {buf = STRING_r_view_feeds_status;}
+RESOURCE TBUF r_add_feed_exists {buf = STRING_r_add_feed_exists;}
+RESOURCE TBUF r_add_feed_replace {buf = STRING_r_add_feed_replace;}
+RESOURCE TBUF r_remove_all_dlg {buf = STRING_r_remove_all_dlg;}
+RESOURCE TBUF r_podcast_addfeed_prompt {buf = STRING_r_add_feed_prompt;}
+RESOURCE TBUF r_podcast_addfeed_title_prompt {buf = STRING_r_add_feed_title_prompt;}
+RESOURCE TBUF r_tabgroup_feeds {buf = STRING_r_tabgroup_feeds;}
+RESOURCE TBUF r_tabgroup_queue {buf = STRING_r_tabgroup_queue;}
+RESOURCE TBUF r_tabgroup_queue_counter {buf = STRING_r_tabgroup_queue_counter;}
+RESOURCE TBUF r_podcast_no_search_results {buf = STRING_r_podcast_empty_list;}
+RESOURCE TBUF r_add_feed_query {buf=STRING_add_feed_query;}
+RESOURCE TBUF r_add_feed_success {buf=STRING_add_feed_success;}
+RESOURCE TBUF r_add_feed_failure {buf=STRING_add_feed_error;}
+RESOURCE TBUF r_import_feed_success {buf=STRING_import_feed_success;}
+RESOURCE TBUF r_import_feed_failure {buf=STRING_import_feed_failure;}
+RESOURCE TBUF r_export_feed_success {buf=STRING_export_feed_success;}
+RESOURCE TBUF r_export_feed_failure {buf=STRING_export_feed_failure;}
+RESOURCE TBUF r_clear_query {buf=STRING_r_clear_query;}
+RESOURCE TBUF r_search_noresults {buf=STRING_r_search_noresults;}
+RESOURCE TBUF r_podcast_connection_error {buf = STRING_r_podcast_connection_error;}
+RESOURCE TBUF r_searching {buf=STRING_r_searching;}
+RESOURCE TBUF r_importing {buf=STRING_r_importing;}
+RESOURCE TBUF r_exporting {buf=STRING_r_exporting;}
+RESOURCE TBUF r_exit_shows_downloading {buf=STRING_r_exit_shows_downloading;}
+RESOURCE TBUF r_search_results {buf=STRING_r_search_results;}
+RESOURCE TBUF r_podcast_no_feeds {buf=STRING_r_podcast_no_feeds;}
+RESOURCE TBUF r_podcast_select_folder {buf = STRING_r_podcast_select_folder;}
+RESOURCE TBUF r_podcast_select_opml {buf = STRING_r_view_import_feeds_title;}
+
+RESOURCE TBUF r_error_notfound {buf=STRING_r_error_notfound;}
+RESOURCE TBUF r_error_general {buf=STRING_r_error_general;}
+RESOURCE TBUF r_error_http {buf=STRING_r_error_http;}
+RESOURCE TBUF r_error_invalid_address {buf=STRING_r_error_invalid_address;}
+
+RESOURCE TBUF r_reset_db_query {buf = STRING_r_podcast_setting_reset_db_query;}
+
+RESOURCE TBUF r_error_disk_full {buf = STRING_r_error_disk_full; }
+RESOURCE TBUF r_error_playback_failed {buf = STRING_r_error_playback_failed; }

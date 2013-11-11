@@ -1,0 +1,28 @@
+/*
+* Copyright (c) 2009-2010 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  IBY file for Media DS plugin
+*
+*/
+
+
+#ifndef __MEDIADS_IBY__
+#define __MEDIADS_IBY__
+
+ECOM_PLUGIN(mediadsprovider.dll,mediadsprovider.rsc)
+data=DATAZ_\RESOURCE_FILES_DIR\mediadsstore.rsc         RESOURCE_FILES_DIR\mediadsstore.rsc
+data=DATAZ_\private\101F99F6\capability\2001A9A1.XML    private\101F99F6\capability\2001A9A1.XML
+
+data=ZSYSTEM\install\mediads_stub.sis             	    system\install\mediads_stub.sis
+
+#endif //__MEDIADS_IBY__

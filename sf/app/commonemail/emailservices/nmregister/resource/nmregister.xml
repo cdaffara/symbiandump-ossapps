@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service>
+    <name>nmregister</name>
+    <filepath>nmregister</filepath>
+    <description>nmregister.</description>
+    <interface>
+        <name>com.nokia.symbian.IEmailRegisterAccount</name>
+        <version>1.0</version>
+        <description>nmregister registers email account to hs and app list.</description>
+        <capabilities></capabilities>
+        <customproperty key="title">nmregister</customproperty>
+    </interface>
+</service>

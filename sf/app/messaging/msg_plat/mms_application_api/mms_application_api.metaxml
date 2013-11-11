@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<api id="69c758e97b990bdb78c5bf81f39f731e" dataversion="2.0">
+  <name>MMS Application API</name>
+  <description>API to support application specific MMS messaging.</description>
+  <type>c++</type>
+  <collection>mmsengine</collection>
+  <libs>
+    <lib name="mmsappadapter.lib" />
+  </libs>
+  <release category="platform"/>
+  <attributes>
+     <!-- This indicates wether the api provedes separate html documentation -->
+     <!-- or is the additional documentation generated from headers. -->
+     <!-- If you are unsuere then the value is "no" -->
+     <htmldocprovided>no</htmldocprovided>
+     <adaptation>no</adaptation>
+  </attributes>
+</api>

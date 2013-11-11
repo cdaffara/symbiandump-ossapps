@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="0.9">
+    <object name="allAction" type="HbAction">
+        <bool name="checkable" value="TRUE"/>
+        <icon iconName="qtg_mono_location" name="icon"/>
+        <string name="text" value=""/>
+    </object>
+    <object name="collectionAction" type="HbAction">
+        <bool name="checkable" value="TRUE"/>
+        <icon iconName="qtg_mono_location_collection" name="icon"/>
+        <string name="text" value=""/>
+    </object>
+    <object name="searchAction" type="HbAction">
+        <icon iconName="qtg_mono_search" name="icon"/>
+        <string name="text" value=""/>
+    </object>
+    <object name="ascendingAction" type="HbAction">
+        <string locid="txt_lint_opt_sort_by_sub_ascending" name="text" value="Ascending"/>
+    </object>
+    <object name="descendingAction" type="HbAction">
+        <string locid="txt_lint_opt_sort_by_sub_descending" name="text" value="Descending"/>
+    </object>
+    <widget name="LocationPickerView" type="HbView">
+        <widget name="content" role="HbView:widget" type="HbWidget">
+            <layout orientation="Vertical" type="linear"/>
+        </widget>
+        <widget name="viewToolbar" role="HbView:toolBar" type="HbToolBar">
+            <ref object="allAction" role="HbToolBar:addAction"/>
+            <ref object="collectionAction" role="HbToolBar:addAction"/>
+            <ref object="searchAction" role="HbToolBar:addAction"/>
+        </widget>
+        <widget name="viewMenu" role="HbView:menu" type="HbMenu">
+            <widget name="sortByMenu" role="HbMenu:menu" type="HbMenu">
+                <ref object="ascendingAction" role="HbMenu:addAction"/>
+                <ref object="descendingAction" role="HbMenu:addAction"/>
+                <string locid="txt_lint_opt_sort_by" name="title" value="Sort By"/>
+            </widget>
+        </widget>
+        <string locid="txt_lint_title_select_location" name="title"/>
+    </widget>
+    <metadata activeUIState="Common ui state" display="NHD portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+    </metadata>
+</hbdocument>

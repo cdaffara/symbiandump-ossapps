@@ -1,0 +1,152 @@
+/*
+* Copyright (c) 2005 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: 
+*       UniEditor/Model resource file.
+*
+*
+*/
+
+
+// ========== RESOURCE IDENTIFIER ==========================
+
+NAME    UEDM
+
+// ========== INCLUDE FILES ================================
+
+#include <eikon.rh>
+#include <eikon.rsg>
+
+#include "UniSmil.hrh"
+#include "UniSmil.rh"
+
+// ========== CONSTANTS ====================================
+
+// ========== MACROS =======================================
+
+// ========== RESOURCE DEFINITIONS =========================
+
+RESOURCE RSS_SIGNATURE { }
+
+// ---------------------------------------------------------
+//  Additional resources
+// ---------------------------------------------------------
+//
+
+// Arrays of MIME types for MsgData to recognize supported types
+//
+// NOTE: Mimetypes must contain only US-ASCII characters.
+
+//
+// Default file name for attachment
+//
+RESOURCE TBUF r_mmdu_default_file_name      { buf = qtn_mms_no_name_for_file; }
+
+//
+// String for empty page in Objects view
+//
+RESOURCE TBUF r_mmdu_empty_slide            { buf = qtn_mms_item_title_empty_slide; }
+
+//----------------------------------------------------  
+//    COMPOSE_PARAMS
+//    Parameters to define how to do composing
+//
+//    r_root_layout_compose
+//      There is only one option left.
+//
+//    r_display_width   and 
+//    r_display_height
+//      Values are defined here because it's bit unclear
+//      whether to use actual display dimensions
+//      w=176 h=208
+//      or dimensions minus status pane height (44)
+//      which is the size used for displaying the message                        
+//      w=176, h=164.
+//      The third alternative would be to use some 
+//      very large height value because virtual viewing 
+//      area can be expanded in that direction.
+//
+//    r_compose_xmlns
+//      To generate xmlns or not.
+//
+//----------------------------------------------------
+//
+RESOURCE COMPOSE_PARAMS r_compose_params
+    {
+    r_root_layout_compose   = ESmilDisplayRootLayout;  // THIS IS ONLY OPTION
+    r_display_width         = 176;
+    r_display_height        = 208;
+    r_compose_xmlns         = ESmilYesXmlns;
+    r_top_padding           = 5;
+    r_region_padding        = 5;
+    r_bottom_padding        = 20;
+    }
+
+//----------------------------------------------------
+//   
+//    IMAGE_REGION
+//    Values for composing.
+//    NOTE: heigth, width are not checked in code 
+//          not to ecxeed rootlayout dimensions. 
+//
+//----------------------------------------------------
+//
+RESOURCE REGION r_image_region_attributes
+    {
+    r_id            = "Image";
+    r_fit           = "meet"; 
+    r_max_height    = 120;        
+    r_min_height    = 120;        
+    r_max_width     = 160;    
+    r_min_width     = 160;        
+    r_top           = 0;      
+    r_left          = 0;
+    }
+
+//----------------------------------------------------
+//   
+//    TEXT_REGION
+//    Values for composing.
+//    NOTE: heigth, width should have sensible values 
+//          based on the r_root_layout_compose param.
+//          There is no code to check some weird cases. 
+//
+//----------------------------------------------------
+//
+RESOURCE REGION r_text_region_attributes
+    {
+    r_id            = "Text";
+    r_fit           = "scroll"; 
+    r_max_height    = 200;        
+    r_min_height    = 40;     
+    r_max_width     = 160;    // MUST ALWAYS BE SAME AS MAX IMAGE WIDTH
+    r_min_width     = 160;      
+    r_top           = 0;      
+    r_left          = 0;
+    }
+
+//----------------------------------------------------
+//   
+//    SLIDE_PARAMETERs
+//    Values for composing.
+//    NOTE: 
+//
+//----------------------------------------------------
+//
+RESOURCE SLIDE r_slide_params
+    {
+    r_default_duration_milliseconds    = 5000;
+    r_default_when_audio_milliseconds  = 5000;
+    }
+
+// End of File

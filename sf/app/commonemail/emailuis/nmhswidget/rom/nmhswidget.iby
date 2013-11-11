@@ -1,0 +1,27 @@
+/*
+* Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+#ifndef __NMHSWIDGET_IBY__
+#define __NMHSWIDGET_IBY__
+
+#include <bldvariant.hrh>
+
+file=ABI_DIR\BUILD_DIR\nmhswidget.dll                         SHARED_LIB_DIR\nmhswidget.dll
+data=\epoc32\data\z\resource\qt\plugins\nmhswidget.qtplugin   resource\qt\plugins\nmhswidget.qtplugin
+data=ZPRIVATE\2002DD15\nmhswidget.xml      					  private\2002DD15\nmhswidget.xml
+data=ZSYSTEM\install\nmhswidget_stub.sis    				  system\install\nmhswidget_stub.sis
+#endif  // __NMHSWIDGET_IBY__

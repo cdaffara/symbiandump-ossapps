@@ -1,0 +1,64 @@
+/*
+* Copyright (c) 2002-2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*     This is project specification file for the mmsgenutils.dll.
+*
+*/
+
+
+
+#include <platform_paths.hrh>
+
+TARGET          mmsgenutils.dll
+TARGETTYPE      dll
+UID             0x1000008d 0x1000596B
+CAPABILITY      CAP_GENERAL_DLL
+VENDORID        VID_DEFAULT
+VERSION 	10.0
+PAGED
+
+SOURCEPATH      ../src
+
+SOURCE          mmsgenu.cpp
+SOURCE          mmsgenutils.cpp
+SOURCE          mmsmsventry.cpp
+SOURCE          mmsattachmentwaiter.cpp
+SOURCE          mmsattachmenthandler.cpp
+
+USERINCLUDE     ../../inc
+SYSTEMINCLUDE   ../../../inc
+APP_LAYER_SYSTEMINCLUDE
+
+LIBRARY         euser.lib
+LIBRARY         msgs.lib
+LIBRARY         efsrv.lib       // TParse
+LIBRARY         bafl.lib        // Baflutils
+LIBRARY         imcm.lib        // miutpars
+LIBRARY	        imut.lib
+LIBRARY         estor.lib
+LIBRARY         charconv.lib
+LIBRARY         centralrepository.lib
+LIBRARY         msgcommonutils.lib
+//LIBRARY         vpbkeng.lib
+//LIBRARY         Pbk2Presentation.lib
+DEBUGLIBRARY    flogger.lib
+
+#if defined(ARMCC)
+deffile       ../eabi/mmsgenutils.def
+#elif defined( WINS )
+DEFFILE       ../bwins/wins.def
+#endif
+
+
+SMPSAFE

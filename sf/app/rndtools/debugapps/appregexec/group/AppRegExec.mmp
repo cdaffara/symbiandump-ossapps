@@ -1,0 +1,40 @@
+/*
+* Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:    
+*
+*/
+
+#include <platform_paths.hrh>
+
+TARGET		  AppRegExec.exe
+TARGETTYPE	  exe
+UID			 0 0x20031EA3
+CAPABILITY      ALL
+
+APP_LAYER_SYSTEMINCLUDE
+
+USERINCLUDE	 ../inc
+
+SOURCEPATH	  ../src
+SOURCE		  AppRegExec.cpp NotifyChange.cpp
+
+LIBRARY		 euser.lib
+LIBRARY		 efsrv.lib
+LIBRARY		sisregistryclient.lib
+
+SMPSAFE
+
+#ifdef ENABLE_ABIV2_MODE
+DEBUGGABLE_UDEBONLY
+#endif

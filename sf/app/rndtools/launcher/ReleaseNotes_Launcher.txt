@@ -1,0 +1,135 @@
+===============================================================================
+
+RELEASE NOTES - LAUNCHER v4.0.1
+RELEASED 21st May 2010 
+
+SUPPORTS S60 3.0+
+
+===============================================================================
+
+Product Description:
+====================
+Launcher is a testing utility application aimed to help test the launching of
+applications installed in the system, both on user side disk drives and on
+ROM. Launcher tests if an application can be launched and then, if the launch
+has failed, reports the possible reason for the failure. It is a very useful
+application when checking the build as the user can instantly see if the
+applications work. Launcher can also be used when testing binary
+compatibility issues because it can reveal any DLL files missing from the
+device.
+
+Main Features:
+==============
+- Show a list of installed applications in all drives
+- Launch selected applications and read their statuses from threads
+- In case of a failure, report thread's exit type, reason and category
+- Show missing DLL files required by the binary to be launched
+- Show problems on the UI and print all cases to a log file
+- Generate a list of DLLs in the device to a file
+- Analyse binary compatibility of system DLLs comparing them to a user
+  given reference data. Report any binary compatibility issues or missing
+  DLL files.
+
+===============================================================================
+
+What's New in v4.0.1
+====================
+- Feature: Orbit UI improvements
+- Fix: Launching DLL analysis not starting
+
+===============================================================================
+
+Installation Notes:
+===================
+Launcher is typically preinstalled on ROM. If not, it can be added to the
+ROM with the .iby file. Alternatively, a .sis file can be found under the sis-
+directory, but the user needs to sign it with their own developer certificate.
+In Nokia R&D environment, you can use directly the R&D-signed .sis file under the
+internal\sis directory.
+
+When signing with own developer certificate, the following capabilities are
+needed:
+  PowerMgmt
+  ReadDeviceData
+  WriteDeviceData
+  AllFiles
+  ReadUserData
+  WriteUserData
+
+When building Launcher against S60 3.0 or 3.1, you may need to patch your SDK
+environment first with some fixes. For more information, please refer to the
+instructions under the "envpatcher" directory.
+  
+===============================================================================
+
+System Requirements:
+====================
+Basic Requirements:
+- Any S60 3.x device or emulator environment
+
+===============================================================================
+
+Compatibility Issues:
+=====================
+N/A
+
+===============================================================================
+
+Known Issues:
+=============
+
+Fails in a test despite the application is working correctly
+------------------------------------------------------------
+- Some application may exit immediately after a launch. This can be
+  normal behavior and should be checked manually. Such application is, for example, 
+  irapp.exe.
+  
+Binary compatibility check support
+----------------------------------
+- Currently, only uncompressed and deflate compressed ELF binaries are
+  supported. This means that for example WINSCW is not supported.
+
+===============================================================================
+
+Version History:
+================
+3.7.0 - 29th May 2009
+- Feature: Binary compatiblity check for DLLs, which checks UID1, UID2, UID3, SID
+and capability values of system DLLs against an XML-formatted input file.
+- Fix: Launcher panics when comparing a large DLL list against system DLLs.
+- Fix: Launcher panics when application launching is cancelled.
+
+Version 3.6.3 - 14th March 2008
+-------------------------------
+- Change: Removed unnecessary capabilities
+
+Version 3.6.2 - 6th November 2007
+--------------------------------
+- Fix: Applications can be selected/unselected on a touch UI
+- Fix: Scroll bar in the output view can be scrolled on a touch UI
+
+Version 3.6.1 - 9th October 2007
+--------------------------------
+- Fix: Layout in out tab in mirrored mode
+- Fix: Codescanner high warnings
+
+Version 3.6.0 - 25th January 2007
+---------------------------------
+- Fix: Re-fix problems when reading import section from binaries
+- Fix: Output screen for larger resolutions
+- Fix: Stopping of launching
+
+Version 3.5.0 - 4th December 2006
+---------------------------------
+- Fix: Problems when reading import section from binaries
+- Change: Marquee used for items in the application list view
+
+===============================================================================
+
+Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+All rights reserved.
+
+This component and the accompanying materials are made available
+under the terms of "Eclipse Public License v1.0"
+which accompanies this distribution, and is available
+at the URL "http://www.eclipse.org/legal/epl-v10.html".

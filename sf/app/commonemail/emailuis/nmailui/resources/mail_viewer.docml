@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="1.1">
+    <widget name="NmViewerView" type="HbView">
+        <widget name="container" role="HbView:widget" type="HbWidget">
+            <widget name="groupBox" type="HbGroupBox">
+                <widget name="label" role="HbGroupBox:contentWidget" type="HbLabel">
+                    <real name="z" value="1"/>
+                    <string name="plainText"/>
+                </widget>
+                <real name="z" value="1"/>
+                <sizehint type="PREFERRED" width="25un"/>
+                <string name="heading" value=" "/>
+                <bool name="collapsable" value="TRUE"/>
+                <bool name="collapsed" value="TRUE"/>
+            </widget>
+            <real name="z" value="1"/>
+            <layout type="anchor">
+                <anchoritem dst="groupBox" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="groupBox" dstEdge="TOP" spacing="0un" src="" srcEdge="TOP"/>
+                <anchoritem dst="groupBox" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+            </layout>
+        </widget>
+        <string name="title"/>
+    </widget>
+    <metadata activeUIState="Common ui state" display="NHD-3.2-inch_portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+    </metadata>
+</hbdocument>

@@ -1,0 +1,35 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:
+;
+
+; vtmediatorplugin.pkg
+;
+; Languages
+&EN
+
+;Header
+#{"vtmediatorplugin patch"},(0x2001599F),10,1,0,TYPE=PU
+
+; localized vendor name
+%{"Nokia"}
+
+; unique vendor name
+:"Nokia"
+
+"\epoc32\release\armv5\udeb\vtmediatorplugin.dll"-"!:\sys\bin\vtmediatorplugin.dll"
+"\epoc32\data\z\resource\plugins\vtmediatorplugin.rsc"-"!:\sys\bin\vtmediatorplugin.rsc"
+
+
+; End of File

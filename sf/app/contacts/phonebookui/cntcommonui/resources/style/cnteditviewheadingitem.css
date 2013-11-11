@@ -1,0 +1,61 @@
+CntEditViewHeadingItem[icon][text][second_text]{
+    layout:customLayout;
+}
+
+CntEditViewHeadingItem[icon][text][!second_text]{
+    layout:customLayoutNoSecondText;
+}
+
+CntEditViewHeadingItem[icon][!text][second_text]{
+    layout:customLayoutNoText;
+}
+
+CntEditViewHeadingItem[text][second_text]:landscape{
+    layout:customLayout-landscape;
+}
+
+CntEditViewHeadingItem[text][!second_text]:landscape{
+    layout:customLayoutNoSecondText-landscape;
+}
+
+CntEditViewHeadingItem[!text][second_text]:landscape{
+    layout:customLayoutNoText-landscape;
+}
+
+CntEditViewHeadingItem::icon{
+    fixed-width:var(hb-param-graphic-size-primary-large);
+    fixed-height:var(hb-param-graphic-size-primary-large);
+}
+
+CntEditViewHeadingItem::text{
+    text-height:var(hb-param-text-height-primary);
+    font-variant:primary;
+    text-align:left;
+}
+
+CntEditViewHeadingItem::second_text{
+    text-height:var(hb-param-text-height-secondary);
+    font-variant:secondary;
+    text-align:left;
+}
+
+CntEditViewHeadingItem::background{
+    left:0.0un;
+    right:0.0un;
+    top:0.0un;
+    bottom:0.0un;
+}
+
+CntEditViewHeadingItem::highlight{
+    left:0.0un;
+    right:0.0un;
+    top:0.0un;
+    bottom:0.0un;
+}
+
+CntEditViewHeadingItem::iconArea{
+    left:0.0un;
+    right:0.0un;
+    top:0.0un;
+    bottom:0.0un;
+}

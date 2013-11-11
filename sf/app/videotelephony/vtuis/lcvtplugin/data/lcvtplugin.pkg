@@ -1,0 +1,16 @@
+; Languages
+;
+&EN
+
+; Header
+#{"lcvtplugin patch"}, (0xF0112235), 1, 0, 0, TYPE=PU
+
+; Localised Vendor name
+%{"Nokia"}
+
+; Unique Vendor name
+:"Nokia"
+
+;Files
+"\epoc32\release\armv5\udeb\lcvtengineplugin.dll"    - "!:\sys\bin\lcvtengineplugin.dll"
+"\epoc32\data\Z\Resource\Plugins\lcvtengineplugin.RSC"-"!:\resource\plugins\lcvtengineplugin.RSC"

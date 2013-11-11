@@ -1,0 +1,103 @@
+/*TYPE TESTCLASS*//*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  ?Description
+*
+*/
+
+
+// To get the OSEXT_LAYER_SYSTEMINCLUDE-definition
+#include <platform_paths.hrh>
+#include <data_caging_paths_strings.hrh>
+
+
+TARGET          test_plugin.dll
+TARGETTYPE      dll
+UID             0x1000008D 0x101FB3E4
+
+CAPABILITY      ALL -TCB
+
+//TARGETPATH      ?target_path
+DEFFILE         test_plugin.def
+
+#ifdef SBSV2
+	USERINCLUDE     ../inc 
+
+	#if defined(__S60_)
+	   
+	#else // __S60_ not defined
+	    SYSTEMINCLUDE   /epoc32/include 
+	    SYSTEMINCLUDE   /epoc32/include/internal
+	#endif // __S60_
+
+	SOURCEPATH      ../src
+#else // SBSV2 not defined
+	USERINCLUDE     ..\inc 
+
+	#if defined(__S60_)
+	    OSEXT_LAYER_SYSTEMINCLUDE
+	#else // __S60_ not defined
+	    SYSTEMINCLUDE   \epoc32\include 
+	    SYSTEMINCLUDE   \epoc32\include\internal
+	#endif // __S60_
+
+	SOURCEPATH      ..\src
+#endif // SBSV2
+
+SOURCEPATH        ../src
+SOURCE            test_plugin.cpp
+SOURCE            test_pluginblocks.cpp  
+SOURCE            ..\..\src\proxy.cpp
+SOURCE 		  ..\..\src\ccsmsg.cpp
+SOURCE 		  ..\..\src\ccsmsgpluginutility.cpp
+SOURCE 		  ..\..\src\ccsmsghandler.cpp
+
+USERINCLUDE     ..\inc 
+USERINCLUDE     ..\..\inc
+USERINCLUDE     ..\..\..\..\..\conversationserver\csserver\inc
+USERINCLUDE     ..\..\..\..\..\conversationserver\csutils\inc
+USERINCLUDE     ..\..\..\..\..\..\..\os\buildtools\devlib\devlibhelp\examples\SysLibs\CentRepExample
+USERINCLUDE     ..\..\..\..\..\messagingappbase\obexmtms\TObexMTM\INC
+USERINCLUDE     ..\..\..\..\..\..\inc  
+USERINCLUDE     ..\..\..\..\utils\inc 
+USERINCLUDE     ..\..\..\..\..\..\..\..\mw\messagingmw\messagingfw\msgtest\testutils\sms\inc
+
+
+APP_LAYER_SYSTEMINCLUDE
+
+LIBRARY         euser.lib
+LIBRARY         StifTestInterface.lib
+LIBRARY         StifTestEngine.lib
+LIBRARY efsrv.lib
+
+
+LIBRARY         eCom.lib
+DEBUGLIBRARY   flogger.lib
+
+LIBRARY         csutils.lib
+// Msg Server
+LIBRARY         Smcm.lib
+LIBRARY         gsmu.lib
+LIBRARY         etext.lib
+LIBRARY         msgs.lib
+LIBRARY         sendas2.lib
+
+LANG            SC
+
+
+
+
+
+SMPSAFE
+
+// End of File

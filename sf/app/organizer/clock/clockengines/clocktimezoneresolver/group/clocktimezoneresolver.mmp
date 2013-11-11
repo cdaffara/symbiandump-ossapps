@@ -1,0 +1,52 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   This is project specification file for the clocktimezoneresolver.
+*
+*/
+
+// System includes
+#include <platform_paths.hrh>
+
+// Application Info
+TARGET			clocktimezoneresolver.dll
+TARGETTYPE		dll
+UID				0x1000008d 0x200159A4
+
+// Capability and vendor info
+CAPABILITY		ALL -TCB
+VENDORID		VID_DEFAULT
+
+// Source files
+SOURCEPATH		../src
+SOURCE			clockmcctzmapper.cpp
+SOURCE			clocktimezoneresolver.cpp
+SOURCE			clocktimezoneresolverimpl.cpp
+
+// User include paths
+USERINCLUDE		../inc
+USERINCLUDE		../../inc
+USERINCLUDE		../../../inc
+
+// System include paths
+APP_LAYER_SYSTEMINCLUDE
+
+// Libraries
+LIBRARY			bafl.lib
+LIBRARY			tzclient.lib
+LIBRARY			efsrv.lib
+LIBRARY			euser.lib
+LIBRARY			flogger.lib
+LIBRARY			timezonelocalization.lib
+
+// End of file

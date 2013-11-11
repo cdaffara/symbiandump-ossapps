@@ -1,0 +1,35 @@
+HbListViewItem[layoutName="citylist"]::text-4{
+    color: var(qtc_list_item_content_normal);
+}
+
+HbListViewItem[layoutName="citylist"]::text-4[state="pressed"]{
+    color: var(qtc_list_item_pressed);
+}
+
+HbListViewItem[layoutName="citylist"]::text-4[state="disabled"]{
+    color: var(qtc_list_item_disabled);
+}
+
+HbListViewItem[layoutName="citylist"]::text-2{
+    color: var(qtc_list_item_title_normal);
+}
+
+HbListViewItem[layoutName="citylist"]::text-2[state="pressed"]{
+    color: var(qtc_list_item_pressed);
+}
+
+HbListViewItem[layoutName="citylist"]::text-2[state="disabled"]{
+    color: var(qtc_list_item_disabled);
+}
+
+HbListViewItem[layoutName="citylist"]::text-1{
+    color: var(qtc_list_item_content_normal);
+}
+
+HbListViewItem[layoutName="citylist"]::text-1[state="pressed"]{
+    color: var(qtc_list_item_pressed);
+}
+
+HbListViewItem[layoutName="citylist"]::text-1[state="disabled"]{
+    color: var(qtc_list_item_disabled);
+}

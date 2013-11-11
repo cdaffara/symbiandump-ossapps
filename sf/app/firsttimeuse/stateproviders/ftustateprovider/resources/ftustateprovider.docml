@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="1.1">
+    <widget name="tocView" type="HbView">
+        <widget name="content" role="HbView:widget" type="HbWidget">
+            <widget name="tocListView" type="HbListView">
+                <real name="z" value="2"/>
+                <sizepolicy horizontalPolicy="Expanding" horizontalStretch="0" verticalPolicy="Expanding" verticalStretch="0"/>
+                <sizehint height="81.04478un" type="PREFERRED" width="51.64179un"/>
+            </widget>
+            <widget name="tocInfoTextLabel" type="HbGroupBox">
+                <sizehint type="PREFERRED" width="25un"/>
+                <sizehint height="4.7un" type="MINIMUM"/>
+                <bool name="collapsable" value="FALSE"/>
+                <string name="heading"/>
+            </widget>
+            <real name="z" value="0"/>
+            <layout orientation="Vertical" type="linear">
+                <linearitem itemname="tocInfoTextLabel"/>
+                <linearitem itemname="tocListView"/>
+            </layout>
+        </widget>
+    </widget>
+    <widget name="wizardView" type="HbView">
+        <widget name="content_2" role="HbView:widget" type="HbWidget">
+            <widget name="wizardInfoTextLabel" type="HbLabel">
+                <real name="z" value="2"/>
+                <sizehint height="5un" type="PREFERRED" width="51.64179un"/>
+            </widget>
+            <widget name="wizardStackedWidget" type="HbStackedWidget">
+                <real name="z" value="3"/>
+                <sizehint height="23.8806un" type="PREFERRED" width="23.8806un"/>
+            </widget>
+            <real name="z" value="0"/>
+            <layout type="anchor">
+                <anchoritem dst="wizardInfoTextLabel" dstEdge="LEFT" spacing="1un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="wizardInfoTextLabel" dstEdge="TOP" spacing="1un" src="" srcEdge="TOP"/>
+                <anchoritem dst="wizardInfoTextLabel" dstEdge="RIGHT" spacing="-1un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="wizardStackedWidget" dstEdge="LEFT" spacing="1un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="wizardStackedWidget" dstEdge="TOP" spacing="6un" src="" srcEdge="TOP"/>
+                <anchoritem dst="wizardStackedWidget" dstEdge="RIGHT" spacing="-1un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="wizardStackedWidget" dstEdge="BOTTOM" spacing="-1un" src="" srcEdge="BOTTOM"/>
+            </layout>
+        </widget>
+        <real name="z" value="1"/>
+    </widget>
+    <metadata activeUIState="Common ui state" display="NHD-3.2-inch_portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+        <dummydata objectName="tocListView" section="#common" value="app_list_template5"/>
+    </metadata>
+</hbdocument>

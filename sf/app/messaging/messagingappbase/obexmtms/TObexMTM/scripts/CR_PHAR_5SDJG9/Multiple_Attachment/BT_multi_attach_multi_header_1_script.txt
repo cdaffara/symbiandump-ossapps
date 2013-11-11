@@ -1,0 +1,31 @@
+// *****************************************
+//  OBEX Test Script different single header
+//  4 attachments
+//  This test is expected to succeed.
+// *****************************************
+
+[main]
+obex_client_test obex
+
+[obex]
+obex_select_mtm bt
+select_root_folder
+create_service
+create_message
+add_header 0x30 "Unicode Str Att1"
+add_attachment_by_name_with_headers "c:\msgtest\obexsmoke\mediaobjects\cr_phar_5sdjg9\vcal_multi_03.vcs"
+add_header 0x70 "\x00\x01\x02\x03"
+add_attachment_by_name_with_headers "c:\msgtest\obexsmoke\mediaobjects\cr_phar_5sdjg9\vcal_multi_04.vcs"
+add_header 0xB0 0x00
+add_attachment_by_name_with_headers "c:\msgtest\obexsmoke\mediaobjects\cr_phar_5sdjg9\vcal_multi_05.vcs"
+add_header 0xF0 0x00000000
+add_attachment_by_name_with_headers "c:\msgtest\obexsmoke\mediaobjects\cr_phar_5sdjg9\vcal_multi_06.vcs"
+// to get the BT device address from a 7650, type *#2820#
+set_bt_recipient "00025B016A9D"
+send_message succeed
+dump_message_store
+add_comment "Message created"
+add_comment "Message stored"
+add_comment "Test complete: message store structure dumped to Entry_Structure.txt"
+
+

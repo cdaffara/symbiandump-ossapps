@@ -1,0 +1,66 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Build information file for building
+*               HTI UI layer components.
+*                
+*
+*/
+
+#include <platform_paths.hrh>
+#include "../symbian_version.hrh"
+
+PRJ_EXPORTS
+#if ( SYMBIAN_VERSION_SUPPORT < SYMBIAN_4 )
+../rom/htiui.iby        CORE_IBY_EXPORT_PATH(tools,htiui.iby)
+#else
+../rom/htiui_10_1.iby   CORE_IBY_EXPORT_PATH(tools,htiui.iby)
+#endif
+
+// Service plugins
+#include "../HtiServicePlugins/HtiAppServicePlugin/group/bld.inf"
+#include "../HtiServicePlugins/HtiAudioServicePlugin/group/bld.inf"
+#include "../HtiServicePlugins/HtiCameraServicePlugin/group/bld.inf"
+#include "../HtiServicePlugins/HtiKeyEventServicePlugin/group/bld.inf"
+#include "../HtiServicePlugins/HtiMessagesServicePlugin/group/bld.inf"
+#include "../HtiServicePlugins/HtiPIMServicePlugin/group/bld.inf"
+#include "../HtiServicePlugins/HtiScreenshotServicePlugin/group/bld.inf"
+#include "../HtiServicePlugins/HtiSysInfoServicePlugin/group/bld.inf"
+
+// Backup fake DLL used by HtiFtpServicePlugin
+#include "../HtiServicePlugins/HtiFtpBackupFake/group/bld.inf"
+
+// Device rebooter
+#include "../HtiDeviceReboot/group/bld.inf"
+
+// Startup wait DLL
+#include "../HtiStartupWait/group/bld.inf"
+
+// Hti tcb help application
+#include "../HtiTcbHlp/group/bld.inf"
+
+// HTI Admin UI application
+#if ( SYMBIAN_VERSION_SUPPORT < SYMBIAN_4 )
+#include "../HtiAdmin/group/bld.inf"
+#endif
+
+// Build stub SIS
+PRJ_EXTENSIONS
+#ifdef MARM
+START EXTENSION app-services/buildstubsis
+OPTION SRCDIR ../sis
+OPTION SISNAME HTI_stub
+END
+#endif
+
+// End of File

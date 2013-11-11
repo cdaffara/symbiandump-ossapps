@@ -1,0 +1,52 @@
+/*
+* Copyright (c) 2005 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:	
+*
+* Description:  mmp file for DS Data Modification
+*
+*/
+
+
+#include <platform_paths.hrh>
+#include 		"defaultcaps.hrh"
+
+TARGET          nsmldatamod.dll
+TARGETTYPE      DLL
+UID             0x1000008d 0x101F6DE4
+CAPABILITY 		CAP_GENERAL_DLL
+VENDORID		VID_DEFAULT
+
+#if defined(EABI)
+DEFFILE			./def/eabidatamod
+#elif defined(WINSCW)
+DEFFILE			./def/bwinscwdatamod
+#endif
+
+APP_LAYER_SYSTEMINCLUDE
+
+SOURCEPATH      ../src
+SOURCE          nsmldatamodbase.cpp
+SOURCE          NSmlProperty.cpp
+SOURCE          NSmlVCalMod.cpp
+SOURCE          NSmlVCardMod.cpp
+
+LIBRARY         euser.lib 
+LIBRARY			versit.lib 
+LIBRARY			estor.lib 
+LIBRARY			vcal.lib 
+LIBRARY			vcard.lib
+LIBRARY			bafl.lib
+LIBRARY			smlstoreformat.lib
+LIBRARY			nsmldebug.lib
+
+
+SMPSAFE

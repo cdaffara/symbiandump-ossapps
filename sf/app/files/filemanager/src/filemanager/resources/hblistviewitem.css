@@ -1,0 +1,59 @@
+	
+HbListViewItem[layoutName="drive"]:portrait{
+    layout: drive-portrait;
+}
+
+
+HbListViewItem[layoutName="drive"]:landscape{
+    layout: drive-landscape;
+}
+
+HbListViewItem::text-1[layoutName="drive"]:portrait{
+ 	top: -var(hb-param-margin-gene-middle-vertical);
+	font-variant: primary;
+	text-align: left;
+}
+
+HbListViewItem::text-2[layoutName="drive"]:portrait{
+	font-variant: secondary;
+	text-align: left;
+}
+HbListViewItem::text-3[layoutName="drive"]:portrait{
+ 	bottom: var(hb-param-margin-gene-middle-vertical);
+	font-variant: secondary-small;
+	text-align: left;
+	size-policy-horizontal: ignored;
+}
+HbListViewItem::icon-1[layoutName="drive"]:portrait{
+ 	top: -var(hb-param-margin-gene-top);
+    left: -var(hb-param-margin-gene-middle-horizontal);
+
+	fixed-height: var(hb-param-graphic-size-primary-large);
+	fixed-width: var(hb-param-graphic-size-primary-large);
+}
+
+HbListViewItem::text-1[layoutName="drive"]:landscape{
+ 	top: -var(hb-param-margin-gene-top);
+	font-variant: primary;
+	text-align: left;
+}
+
+HbListViewItem::text-2[layoutName="drive"]:landscape {
+	top: -var(hb-param-margin-gene-top);
+	font-variant: secondary;
+	text-align: left;
+}
+HbListViewItem::text-3[layoutName="drive"]:landscape{
+ 	bottom: var(hb-param-margin-gene-top);
+	font-variant: secondary-small;
+	text-align: left;
+	size-policy-horizontal: ignored;
+}
+HbListViewItem::icon-1[layoutName="drive"]:landscape{
+    top: -var(hb-param-margin-gene-top);
+    left: -var(hb-param-margin-gene-middle-horizontal);
+    bottom: var(hb-param-margin-gene-bottom);
+    fixed-height: var(hb-param-graphic-size-primary-large);
+    fixed-width: var(hb-param-graphic-size-primary-large);
+}
+

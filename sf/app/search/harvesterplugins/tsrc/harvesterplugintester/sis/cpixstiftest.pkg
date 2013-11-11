@@ -1,0 +1,73 @@
+;
+; Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description: 
+;
+; Installation file for Search application
+;
+; This is an auto-generated PKG file by Carbide.
+; This file uses variables specific to Carbide builds that will not work
+; on command-line builds. If you want to use this generated PKG file from the
+; command-line tools you will need to modify the variables with the appropriate
+; values: \, $(PLATFORM), UDEB
+;
+;Languages
+&EN
+
+;
+; UID is the app's UID
+;
+; Provide value for uid
+#{"STIF"},(0x00000000),1,1,0,TYPE=SA
+
+; Series60 product id for S60 3.0
+[0x101F7961], 0, 0, 0, {"Series60ProductID"}
+
+; Vendor names
+%{"Nokia-EN"}
+:"Nokia"
+
+; Files to install
+; Symbols set up for the source location are Carbide.c++ specific symbols
+
+; Capsmod.exe for modifying stif capability at runtime
+; Commented out as it can not be installed
+;"\epoc32\release\armv5\udeb\capsmod.exe" - "c:\sys\bin\capsmod.exe"
+
+; Harvesterplugin tester DLL
+;"\epoc32\release\armv5\udeb\HarvesterPluginTester.dll" - "c:\sys\bin\HarvesterPluginTester.dll"
+
+; CPiX STIF test data
+
+"\epoc32\data\z\ids\HarvesterPluginTester.cfg"
+-"c:\TestFramework\HarvesterPluginTester.cfg"
+
+"\epoc32\data\z\ids\Notestest.txt"
+-"c:\TestFramework\Notestest.txt"
+
+"\epoc32\data\z\ids\NotesAlphanumerictest.txt"
+-"c:\TestFramework\NotesAlphanumerictest.txt"
+
+"\epoc32\data\z\ids\NotesLongtest.txt"
+-"c:\TestFramework\NotesLongtest.txt"
+
+"\epoc32\data\z\ids\TestAttachment.txt"
+-"c:\TestFramework\TestAttachment.txt"
+
+"\epoc32\data\z\ids\Eagle_Landed.mp3"
+-"c:\data\Eagle_Landed.mp3"
+
+"\epoc32\data\z\ids\Niagara.wmv"
+-"c:\data\Niagara.wmv"
+
+;End test data

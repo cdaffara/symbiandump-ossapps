@@ -1,0 +1,32 @@
+/*
+* Copyright (c) 2004-2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*
+*/
+
+
+#include "../imageprinteng/group/bld.inf"
+#include "../imageprintapp/group/bld.inf"
+#include "../imgpprintdll/group/bld.inf"
+#include "../imageprintprovider/group/bld.inf"
+
+PRJ_EXPORTS
+
+../rom/desw_imageprintui.iby 				CORE_APP_LAYER_IBY_EXPORT_PATH( desw_imageprintui.iby )
+../rom/imageprintresources.iby 				LANGUAGE_APP_LAYER_IBY_EXPORT_PATH( imageprintresources.iby )
+
+PRJ_PLATFORMS
+DEFAULT
+
+//  End of File

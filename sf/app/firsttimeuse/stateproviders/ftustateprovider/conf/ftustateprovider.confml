@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration xmlns="http://www.s60.com/xml/confml/1" name="FtuStateProvider" version="1">
+  <feature ref="FtuPluginInfo" name="First Time Use Home Screen Widget">
+    <desc>Defines various cenrep keys used by FTU State Machine to record info of plugin completion</desc>
+    <setting ref="KLastPluginCompleteDateTime" name="Date and time of last completed plugin " type="string">
+      <desc>Contains date and Time in string format</desc>
+    </setting>
+    <setting ref="KFtuPlugin00" name="Plugin00 info" type="int">
+      <desc>Value is 1 if plugin is complete. Value is 0 if plugin is incomplete</desc>
+    </setting>
+    <setting ref="KFtuPlugin01" name="Plugin01 info" type="int">
+      <desc>Value is 1 if plugin is complete. Value is 0 if plugin is incomplete</desc>
+    </setting>
+    <setting ref="KFtuPlugin02" name="Plugin02 info" type="int">
+      <desc>Value is 1 if plugin is complete. Value is 0 if plugin is incomplete</desc>
+    </setting>
+    <setting ref="KFtuPlugin03" name="Plugin03 info" type="int">
+      <desc>Value is 1 if plugin is complete. Value is 0 if plugin is incomplete</desc>
+    </setting>
+    <setting ref="KFtuPlugin04" name="Plugin04 info" type="int">
+      <desc>Value is 1 if plugin is complete. Value is 0 if plugin is incomplete</desc>
+    </setting>
+    <setting ref="KFtuPlugin05" name="Plugin05 info" type="int">
+      <desc>Value is 1 if plugin is complete. Value is 0 if plugin is incomplete</desc>
+    </setting>
+    <setting ref="KFtuPlugin06" name="Plugin06 info" type="int">
+      <desc>Value is 1 if plugin is complete. Value is 0 if plugin is incomplete</desc>
+    </setting>
+    <setting ref="KFtuPlugin07" name="Plugin07 info" type="int">
+      <desc>Value is 1 if plugin is complete. Value is 0 if plugin is incomplete</desc>
+    </setting>
+    <setting ref="KFtuPlugin08" name="Plugin08 info" type="int">
+      <desc>Value is 1 if plugin is complete. Value is 0 if plugin is incomplete</desc>
+    </setting>
+    <setting ref="KFtuPlugin09" name="Plugin09 info" type="int">
+      <desc>Value is 1 if plugin is complete. Value is 0 if plugin is incomplete</desc>
+    </setting>
+    <setting ref="KFtuPlugin10" name="Plugin10 info" type="int">
+      <desc>Value is 1 if plugin is complete. Value is 0 if plugin is incomplete</desc>
+    </setting>
+    <setting ref="KFtuPlugin11" name="Plugin11 info" type="int">
+      <desc>Value is 1 if plugin is complete. Value is 0 if plugin is incomplete</desc>
+    </setting>
+    <setting ref="KFtuPlugin12" name="Plugin12 info" type="int">
+      <desc>Value is 1 if plugin is complete. Value is 0 if plugin is incomplete</desc>
+    </setting>
+    <setting ref="KFtuPlugin13" name="Plugin13 info" type="int">
+      <desc>Value is 1 if plugin is complete. Value is 0 if plugin is incomplete</desc>
+    </setting>
+    <setting ref="KFtuPlugin14" name="Plugin14 info" type="int">
+      <desc>Value is 1 if plugin is complete. Value is 0 if plugin is incomplete</desc>
+    </setting>
+  </feature>
+  <data>
+    <FtuPluginInfo>
+      <KLastPluginCompleteDateTime></KLastPluginCompleteDateTime>
+      <KFtuPlugin00>0</KFtuPlugin00>
+      <KFtuPlugin01>0</KFtuPlugin01>
+      <KFtuPlugin02>0</KFtuPlugin02>
+      <KFtuPlugin03>0</KFtuPlugin03>
+      <KFtuPlugin04>0</KFtuPlugin04>
+      <KFtuPlugin05>0</KFtuPlugin05>
+      <KFtuPlugin06>0</KFtuPlugin06>
+      <KFtuPlugin07>0</KFtuPlugin07>
+      <KFtuPlugin08>0</KFtuPlugin08>
+      <KFtuPlugin09>0</KFtuPlugin09>
+      <KFtuPlugin10>0</KFtuPlugin10>
+      <KFtuPlugin11>0</KFtuPlugin11>
+      <KFtuPlugin12>0</KFtuPlugin12>
+      <KFtuPlugin13>0</KFtuPlugin13>
+      <KFtuPlugin14>0</KFtuPlugin14>
+    </FtuPluginInfo>
+  </data>
+</configuration>

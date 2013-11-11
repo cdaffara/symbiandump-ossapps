@@ -1,0 +1,65 @@
+/*
+* Copyright (c) 2002 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the License "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:    Makefile for Media Settings ROP Model*
+*/
+
+// Version : %version: 9 %
+
+#include <data_caging_paths.hrh>
+#include <platform_paths.hrh>
+TARGET          mpsettropmodel.dll
+CAPABILITY      CAP_ECOM_PLUGIN
+TARGETTYPE      PLUGIN
+UID             0x10009D8D 0x101F857B
+VENDORID        VID_DEFAULT
+VERSION         10.0
+
+SOURCEPATH      ../src
+SOURCE          MPSettingsModelForROP.cpp
+SOURCE          MPSettingsRopConfigParser.cpp
+SOURCE          MPSettingsModelForRopImplementationProxy.cpp
+
+SOURCEPATH      ../data
+START RESOURCE  101F857B.rss
+TARGET mpsettropmodel.rsc                                                                
+END
+
+START RESOURCE  MPSettingsROPModel.rss
+HEADER
+TARGET mpsettingsropmodel.rsc       
+TARGETPATH      RESOURCE_FILES_DIR 
+END
+
+USERINCLUDE     .
+USERINCLUDE		../inc
+
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE   /epoc32/include/ecom
+SYSTEMINCLUDE   /epoc32/include/mmf
+SYSTEMINCLUDE   /epoc32/include/mmf/common
+
+SMPSAFE
+
+LIBRARY         euser.lib
+LIBRARY         mmfcontrollerframework.lib
+LIBRARY         charconv.lib
+LIBRARY         mpsettengine.lib
+LIBRARY         commdb.lib
+LIBRARY         bafl.lib
+LIBRARY         efsrv.lib
+LIBRARY         flogger.lib
+LIBRARY         centralrepository.lib
+LIBRARY         commsdat.lib
+
+// End of File

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SystemDefinition schema="3.0.0" xmlns:qt="http://www.nokia.com/qt">
+ <package id="camera" name="Camera Apps" version="1.0.0">
+  <collection id="camerauis" name="Camera UIs">
+   <component id="cameraxui" filter="s60" name="CameraX UIs">
+     <meta rel="testbuild">
+       <group name="camera_unit_tests"/>
+     </meta>
+     <unit bldFile="camerauis/cameraxui" qt:proFile="camerax.pro" filter="!test"/>
+     <unit bldFile="camerauis/cameraxui/cxengine/tsrc/unit"  qt:proFile="unit.pro"  filter="test,unit_test"/>
+     </component>
+  </collection>
+  <collection id="camera_info" name="Camera Application Info" level="int">
+   <component id="camera_sis" filter="s60" name="Camera Application SIS installation files" class="config">
+    <!-- consider moving these exports into the other collections -->
+    <unit bldFile="sis"/>
+   </component>
+  </collection>
+ </package>
+</SystemDefinition>

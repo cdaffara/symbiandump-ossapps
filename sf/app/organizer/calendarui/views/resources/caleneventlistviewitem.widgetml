@@ -1,0 +1,69 @@
+<hbwidget version="0.1" type="CalenEventListViewItem">
+
+<!-- custom -->
+     <!--     
+	Items from left to right:
+	<- icon-1 -> text-1 -> text-2 -> icon-2 -> icon-3 ->
+	<- text-3 -> text-4 -> icon-4 ->
+	-->
+	
+	<layout name="custom" type="mesh">
+	
+		<meshitem src="icon-1" srcEdge="TOP" dst="text-2" dstEdge="TOP"/>
+    <meshitem src="icon-1" srcEdge="LEFT" dst="" dstEdge="LEFT"/>
+		
+		<meshitem src="text-1" srcEdge="TOP" dst="text-2" dstEdge="TOP"/>
+		<meshitem src="text-1" srcEdge="LEFT" dst="icon-1" dstEdge="RIGHT"/>
+  	
+		<meshitem src="text-2" srcEdge="TOP" dst="" dstEdge="TOP"/>
+		<meshitem src="text-2" srcEdge="LEFT" dst="text-1" dstEdge="RIGHT"/>
+		<meshitem src="text-2" srcEdge="RIGHT" dst="icon-2" dstEdge="LEFT"/>							
+		<meshitem src="text-2" srcEdge="BOTTOM" dst="text-3" dstEdge="TOP"/>
+	
+		<meshitem src="text-3" srcEdge="LEFT" dst="text-2" dstEdge="LEFT"/>
+		<meshitem src="text-3" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM"/>
+    <meshitem src="text-3" srcEdge="RIGHT" dst="icon-4" dstEdge="LEFT"/>        
+        
+        <meshitem src="text-4" srcEdge="TOP" dst="text-3" dstEdge="TOP"/>
+        <meshitem src="text-4" srcEdge="LEFT" dst="text-1" dstEdge="LEFT"/>
+      	<meshitem src="text-4" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM"/>   		      
+        
+        <meshitem src="icon-3" srcEdge="CENTERV" dst="text-2" dstEdge="CENTERV"/>
+        <meshitem src="icon-3" srcEdge="RIGHT" dst="" dstEdge="RIGHT"/>        
+        
+        <meshitem src="icon-2" srcEdge="CENTERV" dst="text-2" dstEdge="CENTERV"/>
+        <meshitem src="icon-2" srcEdge="RIGHT" dst="icon-3" dstEdge="LEFT"/>
+        
+        <meshitem src="icon-4" srcEdge="CENTERV" dst="text-3" dstEdge="CENTERV"/>
+        <meshitem src="icon-4" srcEdge="RIGHT" dst="" dstEdge="RIGHT"/>
+		
+	</layout>	
+	
+
+	    <layout name="custom-stretch" type="mesh">
+	 
+      <meshitem src="icon-1" srcEdge="LEFT" dst="" dstEdge="LEFT"/>
+        <meshitem src="icon-1" srcEdge="TOP" dst="text-2" dstEdge="TOP"/>
+    
+        
+        <meshitem src="text-2" srcEdge="TOP" dst="" dstEdge="TOP"/>
+        <meshitem src="text-2" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM"/>
+        <meshitem src="text-2" srcEdge="RIGHT" dst="icon-2" dstEdge="LEFT"/>
+             <meshitem src="text-2" srcEdge="LEFT" dst="icon-1" dstEdge="RIGHT"/> 
+
+        <meshitem src="icon-2" srcEdge="RIGHT" dst="icon-3" dstEdge="LEFT"/>
+        <meshitem src="icon-2" srcEdge="CENTERV" dst="text-2" dstEdge="CENTERV"/>
+        
+        <meshitem src="icon-3" srcEdge="RIGHT" dst="text-3" dstEdge="LEFT"/>
+        <meshitem src="icon-3" srcEdge="CENTERV" dst="text-2" dstEdge="CENTERV"/>
+        
+        <meshitem src="text-3" srcEdge="CENTERV" dst="text-2" dstEdge="CENTERV"/>
+        <meshitem src="text-3" srcEdge="RIGHT" dst="icon-4" dstEdge="LEFT"/>
+        
+        <meshitem src="icon-4" srcEdge="RIGHT" dst="" dstEdge="RIGHT"/>
+        <meshitem src="icon-4" srcEdge="CENTERV" dst="text-2" dstEdge="CENTERV"/>
+        
+    </layout>
+    
+    
+   </hbwidget> 

@@ -1,0 +1,124 @@
+EXPORTS
+	?AppendL@CImapSession@@QAEXAAVTRequestStatus@@AAVCImSendMessage@@ABVTDesC16@@@Z @ 1 NONAME ; void CImapSession::AppendL(class TRequestStatus &, class CImSendMessage &, class TDesC16 const &)
+	?BodyDescription@CImapBodyStructure@@QBEABVTDesC8@@XZ @ 2 NONAME ; class TDesC8 const & CImapBodyStructure::BodyDescription(void) const
+	?BodyEncoding@CImapBodyStructure@@QBEABVTDesC8@@XZ @ 3 NONAME ; class TDesC8 const & CImapBodyStructure::BodyEncoding(void) const
+	?BodyId@CImapBodyStructure@@QBEABVTDesC8@@XZ @ 4 NONAME ; class TDesC8 const & CImapBodyStructure::BodyId(void) const
+	?BodyLines@CImapBodyStructure@@QBEABVTDesC8@@XZ @ 5 NONAME ; class TDesC8 const & CImapBodyStructure::BodyLines(void) const
+	?BodySizeOctets@CImapBodyStructure@@QBEABVTDesC8@@XZ @ 6 NONAME ; class TDesC8 const & CImapBodyStructure::BodySizeOctets(void) const
+	?BodyStructure@CImapFetchResponse@@QAEPAVCImapBodyStructure@@XZ @ 7 NONAME ; class CImapBodyStructure * CImapFetchResponse::BodyStructure(void)
+	?BodyStructureType@CImapBodyStructure@@QBE?AW4TBodyStructureType@1@XZ @ 8 NONAME ; enum CImapBodyStructure::TBodyStructureType CImapBodyStructure::BodyStructureType(void) const
+	?Cancel@CImapSession@@QAEXXZ @ 9 NONAME ; void CImapSession::Cancel(void)
+	?CapabilityInfo@CImapSession@@QAEABVCImapCapabilityInfo@@XZ @ 10 NONAME ; class CImapCapabilityInfo const & CImapSession::CapabilityInfo(void)
+	?CapabilityL@CImapSession@@QAEXAAVTRequestStatus@@@Z @ 11 NONAME ; void CImapSession::CapabilityL(class TRequestStatus &)
+	?CloseL@CImapSession@@QAEXAAVTRequestStatus@@@Z @ 12 NONAME ; void CImapSession::CloseL(class TRequestStatus &)
+	?CopyL@CImapSession@@QAEXAAVTRequestStatus@@ABVTDesC8@@ABVTDesC16@@@Z @ 13 NONAME ; void CImapSession::CopyL(class TRequestStatus &, class TDesC8 const &, class TDesC16 const &)
+	?CreateAddressStringL@TAddress@CImapEnvelope@@QBEPAVHBufC16@@XZ @ 14 NONAME ; class HBufC16 * CImapEnvelope::TAddress::CreateAddressStringL(void) const
+	?CreateL@CImapSession@@QAEXAAVTRequestStatus@@ABVTDesC16@@@Z @ 15 NONAME ; void CImapSession::CreateL(class TRequestStatus &, class TDesC16 const &)
+	?CreateSequenceSetLC@CImapSession@@SAPAVHBufC8@@AAV?$RArray@I@@@Z @ 16 NONAME ; class HBufC8 * CImapSession::CreateSequenceSetLC(class RArray<unsigned int> &)
+	?Date@CImapRfc822HeaderFields@@QAE?AVTTime@@XZ @ 17 NONAME ; class TTime CImapRfc822HeaderFields::Date(void)
+	?DeleteL@CImapSession@@QAEXAAVTRequestStatus@@ABVTDesC16@@@Z @ 18 NONAME ; void CImapSession::DeleteL(class TRequestStatus &, class TDesC16 const &)
+	?Disconnect@CImapSessionManager@@QAEXAAVTRequestStatus@@ABV?$RPointerArray@VCImapSession@@@@@Z @ 19 NONAME ; void CImapSessionManager::Disconnect(class TRequestStatus &, class RPointerArray<class CImapSession> const &)
+	?Disconnect@CImapSessionManager@@QAEXABV?$RPointerArray@VCImapSession@@@@@Z @ 20 NONAME ; void CImapSessionManager::Disconnect(class RPointerArray<class CImapSession> const &)
+	?Disconnect@CImapSessionManager@@QAEXABVCImapSession@@@Z @ 21 NONAME ; void CImapSessionManager::Disconnect(class CImapSession const &)
+	?DoneIdle@CImapSession@@QAEXAAVTRequestStatus@@@Z @ 22 NONAME ; void CImapSession::DoneIdle(class TRequestStatus &)
+	?EmbeddedBodyStructureList@CImapBodyStructure@@QBE?BV?$RPointerArray@VCImapBodyStructure@@@@XZ @ 23 NONAME ; class RPointerArray<class CImapBodyStructure> const CImapBodyStructure::EmbeddedBodyStructureList(void) const
+	?EnterIdleL@CImapSession@@QAEXAAVTRequestStatus@@@Z @ 24 NONAME ; void CImapSession::EnterIdleL(class TRequestStatus &)
+	?EnvBcc@CImapEnvelope@@QAEABV?$RArray@$$CBUTAddress@CImapEnvelope@@@@XZ @ 25 NONAME ; class RArray<struct CImapEnvelope::TAddress const > const & CImapEnvelope::EnvBcc(void)
+	?EnvCc@CImapEnvelope@@QAEABV?$RArray@$$CBUTAddress@CImapEnvelope@@@@XZ @ 26 NONAME ; class RArray<struct CImapEnvelope::TAddress const > const & CImapEnvelope::EnvCc(void)
+	?EnvDate@CImapEnvelope@@QAEABVTDesC8@@XZ @ 27 NONAME ; class TDesC8 const & CImapEnvelope::EnvDate(void)
+	?EnvFrom@CImapEnvelope@@QAEABV?$RArray@$$CBUTAddress@CImapEnvelope@@@@XZ @ 28 NONAME ; class RArray<struct CImapEnvelope::TAddress const > const & CImapEnvelope::EnvFrom(void)
+	?EnvInReplyTo@CImapEnvelope@@QAEABVTDesC8@@XZ @ 29 NONAME ; class TDesC8 const & CImapEnvelope::EnvInReplyTo(void)
+	?EnvMessageId@CImapEnvelope@@QAEABVTDesC8@@XZ @ 30 NONAME ; class TDesC8 const & CImapEnvelope::EnvMessageId(void)
+	?EnvReplyTo@CImapEnvelope@@QAEABV?$RArray@$$CBUTAddress@CImapEnvelope@@@@XZ @ 31 NONAME ; class RArray<struct CImapEnvelope::TAddress const > const & CImapEnvelope::EnvReplyTo(void)
+	?EnvSender@CImapEnvelope@@QAEABV?$RArray@$$CBUTAddress@CImapEnvelope@@@@XZ @ 32 NONAME ; class RArray<struct CImapEnvelope::TAddress const > const & CImapEnvelope::EnvSender(void)
+	?EnvSubject@CImapEnvelope@@QAEABVTDesC8@@XZ @ 33 NONAME ; class TDesC8 const & CImapEnvelope::EnvSubject(void)
+	?EnvTo@CImapEnvelope@@QAEABV?$RArray@$$CBUTAddress@CImapEnvelope@@@@XZ @ 34 NONAME ; class RArray<struct CImapEnvelope::TAddress const > const & CImapEnvelope::EnvTo(void)
+	?ExamineL@CImapSession@@QAEXAAVTRequestStatus@@PAVCImapFolderInfo@@@Z @ 35 NONAME ; void CImapSession::ExamineL(class TRequestStatus &, class CImapFolderInfo *)
+	?Exists@CImapFolderInfo@@QBEHXZ @ 36 NONAME ; int CImapFolderInfo::Exists(void) const
+	?ExpungeL@CImapSession@@QAEXAAVTRequestStatus@@@Z @ 37 NONAME ; void CImapSession::ExpungeL(class TRequestStatus &)
+	?ExpungedMessages@CImapFolderInfo@@QAE?BV?$RArray@I@@XZ @ 38 NONAME ; class RArray<unsigned int> const CImapFolderInfo::ExpungedMessages(void)
+	?ExtDispositionName@CImapBodyStructure@@QBEABVTDesC8@@XZ @ 39 NONAME ; class TDesC8 const & CImapBodyStructure::ExtDispositionName(void) const
+	?ExtDispositionParameterList@CImapBodyStructure@@QBEABV?$RArray@UTAttributeValuePair@CImapBodyStructure@@@@XZ @ 40 NONAME ; class RArray<struct CImapBodyStructure::TAttributeValuePair> const & CImapBodyStructure::ExtDispositionParameterList(void) const
+	?ExtLanguageList@CImapBodyStructure@@QBEABV?$RArray@VTPtrC8@@@@XZ @ 41 NONAME ; class RArray<class TPtrC8> const & CImapBodyStructure::ExtLanguageList(void) const
+	?ExtLocation@CImapBodyStructure@@QBEABVTDesC8@@XZ @ 42 NONAME ; class TDesC8 const & CImapBodyStructure::ExtLocation(void) const
+	?ExtMD5@CImapBodyStructure@@QBEABVTDesC8@@XZ @ 43 NONAME ; class TDesC8 const & CImapBodyStructure::ExtMD5(void) const
+	?FetchBodyL@CImapSession@@QAEXAAVTRequestStatus@@IHAAVCFetchBodyInfo@@AAVCImapFetchBodyResponse@@@Z @ 44 NONAME ; void CImapSession::FetchBodyL(class TRequestStatus &, unsigned int, int, class CFetchBodyInfo &, class CImapFetchBodyResponse &)
+	?FetchBodyStructureAndHeadersL@CImapSession@@QAEXAAVTRequestStatus@@ABVTDesC8@@1AAVMImapFetchStructureObserver@@@Z @ 45 NONAME ; void CImapSession::FetchBodyStructureAndHeadersL(class TRequestStatus &, class TDesC8 const &, class TDesC8 const &, class MImapFetchStructureObserver &)
+	?FetchBodyStructureAndHeadersL@CImapSession@@QAEXAAVTRequestStatus@@IABVTDesC8@@AAVCImapFetchResponse@@@Z @ 46 NONAME ; void CImapSession::FetchBodyStructureAndHeadersL(class TRequestStatus &, unsigned int, class TDesC8 const &, class CImapFetchResponse &)
+	?FetchFlagsL@CImapSession@@QAEXAAVTRequestStatus@@ABVTDesC8@@AAV?$RArray@VTMessageFlagInfo@@@@@Z @ 47 NONAME ; void CImapSession::FetchFlagsL(class TRequestStatus &, class TDesC8 const &, class RArray<class TMessageFlagInfo> &)
+	?FieldExists@CImapMimeHeaderFields@@QAEHW4THeaderFields@1@@Z @ 48 NONAME ; int CImapMimeHeaderFields::FieldExists(enum CImapMimeHeaderFields::THeaderFields)
+	?FieldExists@CImapRfc822HeaderFields@@QAEHW4THeaderFields@1@@Z @ 49 NONAME ; int CImapRfc822HeaderFields::FieldExists(enum CImapRfc822HeaderFields::THeaderFields)
+	?FieldValue@CImapMimeHeaderFields@@QAEABVTDesC8@@W4THeaderFields@1@@Z @ 50 NONAME ; class TDesC8 const & CImapMimeHeaderFields::FieldValue(enum CImapMimeHeaderFields::THeaderFields)
+	?FieldValue@CImapRfc822HeaderFields@@QAEABVTDesC8@@W4THeaderFields@1@@Z @ 51 NONAME ; class TDesC8 const & CImapRfc822HeaderFields::FieldValue(enum CImapRfc822HeaderFields::THeaderFields)
+	?FlushCancelledCommand@CImapSession@@QAEXAAVTRequestStatus@@@Z @ 52 NONAME ; void CImapSession::FlushCancelledCommand(class TRequestStatus &)
+	?FolderName@CImapListFolderInfo@@QBE?AVTPtrC16@@XZ @ 53 NONAME ; class TPtrC16 CImapListFolderInfo::FolderName(void) const
+	?GetConnectionL@CImapSessionManager@@QAEAAVRConnection@@XZ @ 54 NONAME ; class RConnection & CImapSessionManager::GetConnectionL(void)
+	?GetReadWrite@CImapFolderInfo@@QBEHXZ @ 55 NONAME ; int CImapFolderInfo::GetReadWrite(void) const
+	?GetRfc822EnvelopeStructureL@CImapBodyStructure@@QAEAAVCImapEnvelope@@XZ @ 56 NONAME ; class CImapEnvelope & CImapBodyStructure::GetRfc822EnvelopeStructureL(void)
+	?GetSessionL@CImapSessionManager@@QAEXAAVTRequestStatus@@AAPAVCImapSession@@@Z @ 57 NONAME ; void CImapSessionManager::GetSessionL(class TRequestStatus &, class CImapSession * &)
+	?HasConnection@CImapSessionManager@@QAEHXZ @ 58 NONAME ; int CImapSessionManager::HasConnection(void)
+	?HeaderFields@CImapFetchBodyResponse@@QAEPAVCImapMimeHeaderFields@@XZ @ 59 NONAME ; class CImapMimeHeaderFields * CImapFetchBodyResponse::HeaderFields(void)
+	?HeaderFields@CImapFetchResponse@@QAEPAVCImapRfc822HeaderFields@@XZ @ 60 NONAME ; class CImapRfc822HeaderFields * CImapFetchResponse::HeaderFields(void)
+	?ImapIdleSupported@CImapSession@@QBEHXZ @ 61 NONAME ; int CImapSession::ImapIdleSupported(void) const
+	?LastSocketActivityTimeout@CImapSessionManager@@QAEKXZ @ 62 NONAME ; unsigned long CImapSessionManager::LastSocketActivityTimeout(void)
+	?ListL@CImapSession@@QAEXAAVTRequestStatus@@ABVTDesC16@@1AAV?$RPointerArray@VCImapListFolderInfo@@@@@Z @ 63 NONAME ; void CImapSession::ListL(class TRequestStatus &, class TDesC16 const &, class TDesC16 const &, class RPointerArray<class CImapListFolderInfo> &)
+	?LogId@CImapSession@@QBEHXZ @ 64 NONAME ; int CImapSession::LogId(void) const
+	?LoginL@CImapSession@@QAEXAAVTRequestStatus@@ABVTDesC8@@1@Z @ 65 NONAME ; void CImapSession::LoginL(class TRequestStatus &, class TDesC8 const &, class TDesC8 const &)
+	?LogoutL@CImapSession@@QAEXAAVTRequestStatus@@@Z @ 66 NONAME ; void CImapSession::LogoutL(class TRequestStatus &)
+	?LsubL@CImapSession@@QAEXAAVTRequestStatus@@ABVTDesC16@@1AAV?$RPointerArray@VCImapListFolderInfo@@@@@Z @ 67 NONAME ; void CImapSession::LsubL(class TRequestStatus &, class TDesC16 const &, class TDesC16 const &, class RPointerArray<class CImapListFolderInfo> &)
+	?MessageFlagInfo@CImapFetchBodyResponse@@QAEAAVTMessageFlagInfo@@XZ @ 68 NONAME ; class TMessageFlagInfo & CImapFetchBodyResponse::MessageFlagInfo(void)
+	?MessageFlagInfo@CImapFetchResponse@@QAEAAVTMessageFlagInfo@@XZ @ 69 NONAME ; class TMessageFlagInfo & CImapFetchResponse::MessageFlagInfo(void)
+	?MessageFlagsChanged@CImapFolderInfo@@QBEHXZ @ 70 NONAME ; int CImapFolderInfo::MessageFlagsChanged(void) const
+	?MessageUid@CImapFetchResponse@@QBEIXZ @ 71 NONAME ; unsigned int CImapFetchResponse::MessageUid(void) const
+	?MessageUid@TMessageFlagInfo@@QBEIXZ @ 72 NONAME ; unsigned int TMessageFlagInfo::MessageUid(void) const
+	?Messages@CImapFolderInfo@@QBEHXZ @ 73 NONAME ; int CImapFolderInfo::Messages(void) const
+	?MsvId@CImapFolderInfo@@QBEJXZ @ 74 NONAME ; long CImapFolderInfo::MsvId(void) const
+	?Name@CImapFolderInfo@@QBEABVTDesC16@@XZ @ 75 NONAME ; class TDesC16 const & CImapFolderInfo::Name(void) const
+	?NewL@CImapCapabilityInfo@@SAPAV1@XZ @ 76 NONAME ; class CImapCapabilityInfo * CImapCapabilityInfo::NewL(void)
+	?NewL@CImapFetchBodyResponse@@SAPAV1@XZ @ 77 NONAME ; class CImapFetchBodyResponse * CImapFetchBodyResponse::NewL(void)
+	?NewL@CImapFetchResponse@@SAPAV1@XZ @ 78 NONAME ; class CImapFetchResponse * CImapFetchResponse::NewL(void)
+	?NewL@CImapFolderInfo@@SAPAV1@XZ @ 79 NONAME ; class CImapFolderInfo * CImapFolderInfo::NewL(void)
+	?NewL@CImapServerGreetingInfo@@SAPAV1@XZ @ 80 NONAME ; class CImapServerGreetingInfo * CImapServerGreetingInfo::NewL(void)
+	?NewL@CImapSession@@SAPAV1@AAVCImapSettings@@AAVCImapMailStore@@AAVMInputStream@@AAVMOutputStream@@@Z @ 81 NONAME ; class CImapSession * CImapSession::NewL(class CImapSettings &, class CImapMailStore &, class MInputStream &, class MOutputStream &)
+	?NewL@CImapSessionManager@@SAPAV1@AAVCImapSettings@@AAVCImapMailStore@@@Z @ 82 NONAME ; class CImapSessionManager * CImapSessionManager::NewL(class CImapSettings &, class CImapMailStore &)
+	?NoopL@CImapSession@@QAEXAAVTRequestStatus@@@Z @ 83 NONAME ; void CImapSession::NoopL(class TRequestStatus &)
+	?ParameterList@CImapBodyStructure@@QBEABV?$RArray@UTAttributeValuePair@CImapBodyStructure@@@@XZ @ 84 NONAME ; class RArray<struct CImapBodyStructure::TAttributeValuePair> const & CImapBodyStructure::ParameterList(void) const
+	?PriorityL@CImapRfc822HeaderFields@@QAE?AW4TMsvPriority@@XZ @ 85 NONAME ; enum TMsvPriority CImapRfc822HeaderFields::PriorityL(void)
+	?Progress@CImapSessionManager@@QAEXAAVTImap4GenericProgress@@@Z @ 86 NONAME ; void CImapSessionManager::Progress(class TImap4GenericProgress &)
+	?QueryFlag@CImapCapabilityInfo@@QBEHW4TImapCapabilityFlags@1@@Z @ 87 NONAME ; int CImapCapabilityInfo::QueryFlag(enum CImapCapabilityInfo::TImapCapabilityFlags) const
+	?QueryFlag@CImapFolderInfo@@QBEHW4TIMapMailboxFlags@1@@Z @ 88 NONAME ; int CImapFolderInfo::QueryFlag(enum CImapFolderInfo::TIMapMailboxFlags) const
+	?QueryFlag@CImapListFolderInfo@@QAEHW4TIMapListFlags@1@@Z @ 89 NONAME ; int CImapListFolderInfo::QueryFlag(enum CImapListFolderInfo::TIMapListFlags)
+	?QueryFlag@TMessageFlagInfo@@QAEHW4TImapMessageFlags@1@@Z @ 90 NONAME ; int TMessageFlagInfo::QueryFlag(enum TMessageFlagInfo::TImapMessageFlags)
+	?ReadServerGreetingL@CImapSession@@QAEXAAVTRequestStatus@@@Z @ 91 NONAME ; void CImapSession::ReadServerGreetingL(class TRequestStatus &)
+	?Recent@CImapFolderInfo@@QBEHXZ @ 92 NONAME ; int CImapFolderInfo::Recent(void) const
+	?RenameL@CImapSession@@QAEXAAVTRequestStatus@@ABVTDesC16@@1@Z @ 93 NONAME ; void CImapSession::RenameL(class TRequestStatus &, class TDesC16 const &, class TDesC16 const &)
+	?ResetExpungedMessages@CImapFolderInfo@@QAEXXZ @ 94 NONAME ; void CImapFolderInfo::ResetExpungedMessages(void)
+	?ResponseTag@CImapServerGreetingInfo@@QBE?AW4TResponseTag@1@XZ @ 95 NONAME ; enum CImapServerGreetingInfo::TResponseTag CImapServerGreetingInfo::ResponseTag(void) const
+	?ReturnReceiptField@CImapRfc822HeaderFields@@QAEABVTDesC8@@XZ @ 96 NONAME ; class TDesC8 const & CImapRfc822HeaderFields::ReturnReceiptField(void)
+	?SearchL@CImapSession@@QAEXAAVTRequestStatus@@ABVTDesC8@@AAV?$RArray@I@@@Z @ 97 NONAME ; void CImapSession::SearchL(class TRequestStatus &, class TDesC8 const &, class RArray<unsigned int> &)
+	?SelectL@CImapSession@@QAEXAAVTRequestStatus@@PAVCImapFolderInfo@@H@Z @ 98 NONAME ; void CImapSession::SelectL(class TRequestStatus &, class CImapFolderInfo *, int)
+	?SelectedFolderInfo@CImapSession@@QAEPAVCImapFolderInfo@@XZ @ 99 NONAME ; class CImapFolderInfo * CImapSession::SelectedFolderInfo(void)
+	?ServerGreetingInfo@CImapSession@@QAEABVCImapServerGreetingInfo@@XZ @ 100 NONAME ; class CImapServerGreetingInfo const & CImapSession::ServerGreetingInfo(void)
+	?ServerState@CImapSession@@QAE?AW4TImapServerState@1@XZ @ 101 NONAME ; enum CImapSession::TImapServerState CImapSession::ServerState(void)
+	?SetFlag@CImapCapabilityInfo@@QAEXW4TImapCapabilityFlags@1@H@Z @ 102 NONAME ; void CImapCapabilityInfo::SetFlag(enum CImapCapabilityInfo::TImapCapabilityFlags, int)
+	?SetMessageFlagsChanged@CImapFolderInfo@@QAEXH@Z @ 103 NONAME ; void CImapFolderInfo::SetMessageFlagsChanged(int)
+	?SetMsvId@CImapFolderInfo@@QAEXJ@Z @ 104 NONAME ; void CImapFolderInfo::SetMsvId(long)
+	?SetNameL@CImapFolderInfo@@QAEXABVTDesC16@@@Z @ 105 NONAME ; void CImapFolderInfo::SetNameL(class TDesC16 const &)
+	?SetRecent@CImapFolderInfo@@QAEXH@Z @ 106 NONAME ; void CImapFolderInfo::SetRecent(int)
+	?SetResponseTag@CImapServerGreetingInfo@@QAEXW4TResponseTag@1@@Z @ 107 NONAME ; void CImapServerGreetingInfo::SetResponseTag(enum CImapServerGreetingInfo::TResponseTag)
+	?StartTlsL@CImapSession@@QAEXAAVTRequestStatus@@@Z @ 108 NONAME ; void CImapSession::StartTlsL(class TRequestStatus &)
+	?StatusL@CImapSession@@QAEXAAVTRequestStatus@@ABVTDesC16@@ABVTDesC8@@AAVCImapFolderInfo@@@Z @ 109 NONAME ; void CImapSession::StatusL(class TRequestStatus &, class TDesC16 const &, class TDesC8 const &, class CImapFolderInfo &)
+	?StoreL@CImapSession@@QAEXAAVTRequestStatus@@ABVTDesC8@@11HAAV?$RArray@VTMessageFlagInfo@@@@@Z @ 110 NONAME ; void CImapSession::StoreL(class TRequestStatus &, class TDesC8 const &, class TDesC8 const &, class TDesC8 const &, int, class RArray<class TMessageFlagInfo> &)
+	?SubType@CImapBodyStructure@@QBEABVTDesC8@@XZ @ 111 NONAME ; class TDesC8 const & CImapBodyStructure::SubType(void) const
+	?SubscribeL@CImapSession@@QAEXAAVTRequestStatus@@ABVTDesC16@@@Z @ 112 NONAME ; void CImapSession::SubscribeL(class TRequestStatus &, class TDesC16 const &)
+	?Type@CImapBodyStructure@@QBEABVTDesC8@@XZ @ 113 NONAME ; class TDesC8 const & CImapBodyStructure::Type(void) const
+	?UidNext@CImapFolderInfo@@QBEIXZ @ 114 NONAME ; unsigned int CImapFolderInfo::UidNext(void) const
+	?UidValidity@CImapFolderInfo@@QBEIXZ @ 115 NONAME ; unsigned int CImapFolderInfo::UidValidity(void) const
+	?Unseen@CImapFolderInfo@@QBEIXZ @ 116 NONAME ; unsigned int CImapFolderInfo::Unseen(void) const
+	?UnsubscribeL@CImapSession@@QAEXAAVTRequestStatus@@ABVTDesC16@@@Z @ 117 NONAME ; void CImapSession::UnsubscribeL(class TRequestStatus &, class TDesC16 const &)
+	?WaitForIdleEvent@CImapSession@@QAEXAAVTRequestStatus@@@Z @ 118 NONAME ; void CImapSession::WaitForIdleEvent(class TRequestStatus &)
+	?WaitForServerEventL@CImapSession@@QAEXAAVTRequestStatus@@@Z @ 119 NONAME ; void CImapSession::WaitForServerEventL(class TRequestStatus &)
+	?GetAccessPointIdForConnection@CImapSessionManager@@QBEHAAK@Z @ 120 NONAME ; int CImapSessionManager::GetAccessPointIdForConnection(unsigned long &) const
+	?CloseNetworkConnection@CImapSessionManager@@QAEXXZ @ 121 NONAME ; void CImapSessionManager::CloseNetworkConnection(void)
+	?AuthenticateL@CImapSession@@QAEXAAVTRequestStatus@@W4TImapAuthProfileFlag@CImapAuthMechanismHelper@@@Z @ 122 NONAME ABSENT ; void CImapSession::AuthenticateL(class TRequestStatus &, enum CImapAuthMechanismHelper::TImapAuthProfileFlag)
+

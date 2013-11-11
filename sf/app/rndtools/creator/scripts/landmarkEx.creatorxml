@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<creatorscript schemaVersion="1.0" scriptVersion="1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="creator.xsd">
+
+<!-- Create a landmark with all possible categories -->
+<landmark>
+  <fields>
+    <name>CreatorExample</name>
+    <category>accommodation</category>
+    <category>business</category>
+    <category>communication</category>
+    <category>educational</category>
+    <category>entertainment</category>
+    <category>food</category>
+    <category>geographical</category>
+    <category>outdoor</category>
+    <category>people</category>
+    <category>public</category>
+    <category>religious</category>
+    <category>shopping</category>
+    <category>sightseeing</category>
+    <category>sports</category>
+    <category>transport</category>
+    <description>This is an example landmark!</description>
+    <street>Landmark street 1</street>
+    <postalcode>00445</postalcode>
+    <city>Landmark City</city>
+    <state>Landmark State</state>
+    <country>Landmark Country</country>
+    <phonenbr>111222333</phonenbr>
+    <url>http://www.example.net</url>
+    <latitude>-76.0023</latitude>
+    <longitude>98.1002</longitude>
+    <positionaccuracy>2</positionaccuracy>
+    <altitude>-4.1</altitude>
+    <altitudeaccuracy>3</altitudeaccuracy>
+  </fields>
+</landmark>
+        
+<!-- Create 3 random landmarks -->
+<landmark amount="10">
+    <fields>
+        <name/>
+        <category/>
+        <description/>        
+        <latitude/>
+        <longitude/>        
+    </fields>
+</landmark>
+
+</creatorscript>

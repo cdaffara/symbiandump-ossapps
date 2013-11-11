@@ -1,0 +1,26 @@
+EXPORTS
+	?tr@CalenSettings@@SA?AVQString@@PBD0@Z @ 1 NONAME ; class QString CalenSettings::tr(char const *, char const *)
+	?removeRegionalInfoItem@CalenSettings@@AAEXXZ @ 2 NONAME ; void CalenSettings::removeRegionalInfoItem(void)
+	?createModel@CalenSettings@@QAEXXZ @ 3 NONAME ; void CalenSettings::createModel(void)
+	?trUtf8@CalenSettings@@SA?AVQString@@PBD0H@Z @ 4 NONAME ; class QString CalenSettings::trUtf8(char const *, char const *, int)
+	?isPluginEnabled@CalenSettings@@QAE_NXZ @ 5 NONAME ; bool CalenSettings::isPluginEnabled(void)
+	?getStaticMetaObject@CalenSettings@@SAABUQMetaObject@@XZ @ 6 NONAME ; struct QMetaObject const & CalenSettings::getStaticMetaObject(void)
+	?populateRegionalInfo@CalenSettings@@AAEXXZ @ 7 NONAME ; void CalenSettings::populateRegionalInfo(void)
+	?qt_metacall@CalenSettings@@UAEHW4Call@QMetaObject@@HPAPAX@Z @ 8 NONAME ; int CalenSettings::qt_metacall(enum QMetaObject::Call, int, void * *)
+	?handleRegionalInfoChange@CalenSettings@@QAEXXZ @ 9 NONAME ; void CalenSettings::handleRegionalInfoChange(void)
+	?qt_metacast@CalenSettings@@UAEPAXPBD@Z @ 10 NONAME ; void * CalenSettings::qt_metacast(char const *)
+	?staticMetaObject@CalenSettings@@2UQMetaObject@@B @ 11 NONAME ; struct QMetaObject const CalenSettings::staticMetaObject
+	?tr@CalenSettings@@SA?AVQString@@PBD0H@Z @ 12 NONAME ; class QString CalenSettings::tr(char const *, char const *, int)
+	??0CalenSettings@@QAE@AAVMCalenServices@@PAVHbDataForm@@PAVQObject@@@Z @ 13 NONAME ; CalenSettings::CalenSettings(class MCalenServices &, class HbDataForm *, class QObject *)
+	?trUtf8@CalenSettings@@SA?AVQString@@PBD0@Z @ 14 NONAME ; class QString CalenSettings::trUtf8(char const *, char const *)
+	?setStartDayOfWeek@CalenSettings@@QAEXH@Z @ 15 NONAME ; void CalenSettings::setStartDayOfWeek(int)
+	?handleAlarmSnoozeTimeChange@CalenSettings@@QAEXH@Z @ 16 NONAME ; void CalenSettings::handleAlarmSnoozeTimeChange(int)
+	?addRegionalInfoItem@CalenSettings@@AAEXXZ @ 17 NONAME ; void CalenSettings::addRegionalInfoItem(void)
+	?metaObject@CalenSettings@@UBEPBUQMetaObject@@XZ @ 18 NONAME ; struct QMetaObject const * CalenSettings::metaObject(void) const
+	?updateShowWeekItem@CalenSettings@@AAEXXZ @ 19 NONAME ; void CalenSettings::updateShowWeekItem(void)
+	??1CalenSettings@@UAE@XZ @ 20 NONAME ; CalenSettings::~CalenSettings(void)
+	??_ECalenSettings@@UAE@I@Z @ 21 NONAME ; CalenSettings::~CalenSettings(unsigned int)
+	?handleWeekNumberChange@CalenSettings@@QAEXXZ @ 22 NONAME ; void CalenSettings::handleWeekNumberChange(void)
+	?addWeekNumberItem@CalenSettings@@QAEXXZ @ 23 NONAME ; void CalenSettings::addWeekNumberItem(void)
+	?populateSettingList@CalenSettings@@QAEXXZ @ 24 NONAME ; void CalenSettings::populateSettingList(void)
+

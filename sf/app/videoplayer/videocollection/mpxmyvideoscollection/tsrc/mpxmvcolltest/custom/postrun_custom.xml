@@ -1,0 +1,40 @@
+<step name="Fetch Test module Report" harness="STIF" enabled="true" passrate="100" significant="false">
+       <command>fetch-log</command>
+       <params>
+	    <param type="text"/>
+	    <param delete="true"/>
+	    <param path="C:\Logs\TestFramework\*"/>
+       </params>
+</step>
+<step name="Fetch Fusion logs" harness="STIF" enabled="true" passrate="100" significant="false">
+       <command>fetch-log</command>
+       <params>
+	    <param type="text"/>
+	    <param delete="true"/>
+	    <param path="c:\logs\Fusion\*"/>
+       </params>
+</step>
+<step name="Fetch TestScripter logs" harness="STIF" enabled="true" passrate="100" significant="false">
+       <command>fetch-log</command>
+       <params>
+	    <param type="text"/>
+	    <param delete="true"/>
+	    <param path="C:\Logs\TestFramework\TestScripter\*"/>
+       </params>
+</step>
+<step name="Fetch Testengine logs" harness="STIF" enabled="true" passrate="100" significant="false">
+       <command>fetch-log</command>
+       <params>
+	    <param type="text"/>
+	    <param delete="true"/>
+	    <param path="C:\Logs\TestFramework\Testengine\*"/>
+       </params>
+</step>
+<step name="Fetch Testserver logs" harness="STIF" enabled="true" passrate="100" significant="false">
+       <command>fetch-log</command>
+       <params>
+	    <param type="text"/>
+	    <param delete="true"/>
+	    <param path="C:\Logs\TestFramework\Testserver\*"/>
+       </params>
+</step>

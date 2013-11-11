@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<relnotes name="Bluetooth Profiles">
+  <purpose>
+    An implementation, protocol and API for the Bluetooth Phone Book Access Profile (PBAP)
+  </purpose>
+
+  <defect number="PDEF139836" title=".esk and .cmi files do not have header" revision="023">
+    Added copyright headers
+  </defect>
+  
+  <defect number="DEF139748" title="[Coverity]-SYMBIAN.CLEANUP_STACK -bluetooth/latest" revision="022">
+    Mark coverity error as intentional.
+  </defect>  
+
+  <defect number="PDEF130031" title="Semi-colon shown in contact name on PBAP device" revision="021">
+    Added code to obtain missing fields from both pathways (via db view; not via db view).
+   </defect> 
+ 
+  <defect number="PDEF124219" title="Dependency failures with PBAP components when __BT_DEBUG__ defined." revision="020">
+    Updated iby files, btlogger.dll was missing.
+   </defect> 
+
+  <defect number="DEF121781" title="PBAP server panic 19 when pulling call history" revision="019">
+    Delete the iAsyncExporter when the server gets the notification.
+  </defect>
+  
+  <defect number="PDEF115381" title="Errors in SDP reported by tool SDP Record Verified" revision="018">
+    Removed the serviceID attribute.
+  </defect>
+
+  <defect number="DEF115865" title="PBAP Service Availability record is incorrect" revision="017">
+    Corrected the service availability attribute for the PBAP SDP record to follow the specification.
+  </defect>
+
+  <defect number="PDEF113337" title="PBAP does not handle low power modes" revision="016">
+    Request Sniff mode when a connection to PBAP is established and request Active mode when it is required.
+  </defect>
+
+  <defect number="DEF112407" title="Problem with __UREL_RDEBUG_PRINT macro in bt generic logger" revision="015">
+    Fixed RDebug Output during UDEB builds
+  </defect>
+
+  <defect number="DEF112407" title="Problem with __UREL_RDEBUG_PRINT macro in bt generic logger" revision="015">
+    Fixed RDebug Output during UDEB builds
+  </defect>
+
+  <defect number="PDEF112315" title="[Rosetta] PBAP doesn't advert it's service availability" revision="014">
+     Added a new function pbapserver::UpdateAvailability.
+  </defect>
+
+  <defect number="PDEF112488" title="Bluetooth PBAP KERN EXEC 3" revision="013">
+    Ensure that iAsyncRestartObex is not NULL before using it
+  </defect>
+
+  <defect number="PDEF111053" title="PBAP panics if Obex error occurs" revision="012">
+    Make PBAP handle an error from OBEX gracefully
+  </defect>
+
+  <defect number="PDEF109248" title="PBAP connection problem with BH-902 and BH-903" revision="011">
+    PBAP connection problem with BH-902 and BH-903
+  </defect>
+
+  <defect number="DEF105855" title="[Mini-UPF] PBAP Removing all CH entries results in wrong error reported to PCE" revision="010">
+    DEF105855: [Mini-UPF] PBAP Removing all CH entries results in wrong error reported to PCE
+  </defect>
+
+  <defect number="DEF108219" title="[upf27] PBAP Ignores maxlistcount when appending owner card" revision="009">
+    DEF108219: [upf27] PBAP Ignores maxlistcount when appending owner card
+  </defect>
+
+  <defect number="DEF105852" title="[Mini-UPF] Changing PBAP handles during download causes panic" revision="008">
+    fix changing PBAP handles during download causes panic
+  </defect>
+
+  <defect number="PDEF106856" title="PBAP vCard holds spec violating typo" revision="007">
+    KVersitParamDIALED spelling corrected
+  </defect>
+
+  <defect number="DEF106011" title="Ensure Shortlink files have correct IM tags" revision="006">
+    Removed unecessary exports of header files
+  </defect>
+
+  <defect number="PDEF106201" title="Codenomicon testcase #5167 causes !PBAP to crash" revision="005">
+    Fix PBAP crashes when receive a bad app header from client
+  </defect>
+
+  <defect number="DEF105853" title="[Mini-UPF] PBAP invalid/unknown name header still results in valid vCard listing" revision="004">
+    PBAP invalid/unknown name header still results in valid vCard listing
+  </defect>
+
+  <defect number="DEF104371" title="PBAP Alphabetical or Phonetic sort orders do not include empty owner card" revision="003">
+    In case of own card’s absence, an empty own card is added to the end of search results in alphabetic or phonetic order.
+  </defect>
+
+  <defect number="PDEF103523" title="UPF26: PBAP is not in public browse group" revision="002">
+    PBAP is now included in Public Browse Group
+  </defect>
+
+  <preq number="1215" title="Bluetooth Phonebook Access Profile (PBAP)" revision="001">
+    Initial submission
+  </preq>
+</relnotes>

@@ -1,0 +1,34 @@
+;Run \vado\videoplayer\tsrc\testing\tools\genATSdrop.pl from 
+;the tsrc folder to create ATS3 drop.
+[DROP]
+NAME Radio - engine - settings
+DEVICE Vasco
+LONGREBOOT
+FLASH W:\output\release_flash_images\vasco\rnd\core\RM-596_2010.22_79.01.2010.22_rnd.core.fpsx
+FLASH W:\output\release_flash_images\vasco\rnd\langpack\langpack_01\RM-596_2010.22_01.01_Euro_1_79.01.2010.22_rnd.rofs2.fpsx
+FLASH W:\output\release_flash_images\vasco\rnd\customer\custvariant_01_tools\RM-596_2010.22_01.01_tools_79.01.2010.22_rnd.rofs3.fpsx
+FLASH W:\output\release_flash_images\vasco\rnd\uda\RM-596_2010.22_79.01.2010.22_rnd.udaerase.fpsx
+PKG group\SettingsTestModule.pkg
+BOOT
+INI init\TestFramework.ini 600
+EMAIL jouni.vallo@nokia.com
+RUN
+[ENDDROP]
+
+;
+; ats3tools synergyyn vai verkkolevylle ja manuaalisesti kopioida sielt‰?
+; 
+; TODO
+; oikeuksien haku Tampereen ATS3
+; imagen luonti, imaker vasco_ui default
+; Testframework.ini t‰ytyy olla init hakemistossa
+; cenrep t‰ytyy HW:sta, .cre tiedosto ja lis‰t‰ custom/prerun_custom.xml tiedostoon 
+; 
+; STEPIT:
+; s‰‰d‰ conf/atsconf.txt asetukset kohdalleen
+; komentorivill‰ tsrc hakemistoon ja aja:
+; perl \ats3tools\genATSdrop.pl -f conf\atsconf.txt -u k‰ytt‰j‰ -p salasana
+; 
+;
+;
+;

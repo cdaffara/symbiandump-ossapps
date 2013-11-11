@@ -1,0 +1,59 @@
+/*
+* Copyright (c) 2002-2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  File Transfer Profile Plug-in
+*
+*/
+
+
+// To get the MW_LAYER_SYSTEMINCLUDE-definition
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+
+VENDORID        VID_DEFAULT
+
+CAPABILITY      CAP_ECOM_PLUGIN
+
+TARGET          sconftpplugin.dll
+TARGETTYPE      PLUGIN
+
+UID             0x10009D8D 0x101F9686
+
+SOURCEPATH     	../src
+
+SOURCE          sconftpplugin.cpp
+SOURCE          proxy.cpp
+SOURCE          sconftppluginutils.cpp
+SOURCE          sconservicetimer.cpp
+SOURCE          sconshutdownwatcher.cpp
+
+START RESOURCE 101f9686.rss
+  TARGET        sconftpplugin.rsc
+END
+
+// Default system include paths.
+APP_LAYER_SYSTEMINCLUDE
+
+USERINCLUDE     ../inc 
+USERINCLUDE     ../../../inc 
+USERINCLUDE     ../../../services/ftp/inc 
+
+DEBUGLIBRARY    flogger.lib
+LIBRARY	        euser.lib
+LIBRARY	        irobex.lib 
+LIBRARY         ecom.lib			
+LIBRARY	        efsrv.lib 
+LIBRARY         bluetooth.lib
+LIBRARY         esock.lib 
+
+

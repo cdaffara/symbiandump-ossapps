@@ -1,0 +1,11 @@
+EXPORTS
+	?CancelOffLineOperationsL@CImapOfflineControl@@QAEXABVCMsvEntrySelection@@@Z @ 1 NONAME ; void CImapOfflineControl::CancelOffLineOperationsL(class CMsvEntrySelection const &)
+	?FindShadowIdL@CImapOfflineControl@@QAEJABVCImOffLineOperation@@@Z @ 2 NONAME ; long CImapOfflineControl::FindShadowIdL(class CImOffLineOperation const &)
+	?IdIsLocalL@CImapOfflineControl@@QAEJJ@Z @ 3 NONAME ; long CImapOfflineControl::IdIsLocalL(long)
+	?NewL@CImapOfflineControl@@SAPAV1@AAVCMsvServerEntry@@@Z @ 4 NONAME ; class CImapOfflineControl * CImapOfflineControl::NewL(class CMsvServerEntry &)
+	?OffLineOpArrayL@CImapOfflineControl@@QAEPAVCImOffLineOperationArray@@J@Z @ 5 NONAME ; class CImOffLineOperationArray * CImapOfflineControl::OffLineOpArrayL(long)
+	?Progress@CImapOfflineControl@@QAE?AVTImap4CompoundProgress@@XZ @ 6 NONAME ; class TImap4CompoundProgress CImapOfflineControl::Progress(void)
+	?SetOffLineOpArrayL@CImapOfflineControl@@QAEXJAAVCImOffLineOperationArray@@@Z @ 7 NONAME ; void CImapOfflineControl::SetOffLineOpArrayL(long, class CImOffLineOperationArray &)
+	?StoreOfflineCommandL@CImapOfflineControl@@QAEXW4TImap4OpType@1@ABVCMsvEntrySelection@@JAAVTRequestStatus@@@Z @ 8 NONAME ; void CImapOfflineControl::StoreOfflineCommandL(enum CImapOfflineControl::TImap4OpType, class CMsvEntrySelection const &, long, class TRequestStatus &)
+	?StoreOfflineCommandL@CImapOfflineControl@@QAEXW4TImap4OpType@1@ABVCMsvEntrySelection@@JABVTDesC8@@AAVTRequestStatus@@@Z @ 9 NONAME ; void CImapOfflineControl::StoreOfflineCommandL(enum CImapOfflineControl::TImap4OpType, class CMsvEntrySelection const &, long, class TDesC8 const &, class TRequestStatus &)
+

@@ -1,0 +1,12 @@
+<layers>
+  <visual>
+    <param name="scale_x" type="anim">
+        <duration>0.3</duration>
+        <style>outquad</style>
+        <keyframe at="0.0">1.0</keyframe>
+        <keyframe at="0.5">0.5</keyframe>
+        <keyframe at="1.0">0.0</keyframe>
+    </param>
+    <param name="scale_origin_x" ref="visual.right">1</param>
+  </visual>
+</layers>

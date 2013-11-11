@@ -1,0 +1,230 @@
+/*
+* Copyright (c) 2002 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the License "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   ROP model's resource file.*
+*/
+
+
+// Version : %version: 2 %
+
+
+
+
+//  RESOURCE IDENTIFIER
+NAME    ROPS
+
+//  INCLUDES
+#include    <eikon.rh>
+
+#include    "MPSettingsROPModel.rh"
+#include    "MPSettingsROPSettings.hrh"
+
+
+RESOURCE RSS_SIGNATURE { }
+
+RESOURCE TBUF 
+    {
+    buf = "";
+    }
+
+//  RESOURCE DEFINITIONS 
+// -----------------------------------------------------------------------------
+//   
+// r_mpsett_rop_settings_array
+// Array defining all ROP setting items (keys and ids).
+//
+//  ROP specific configuration keywords are defined in
+//  "Multimedia Framework - Video Player" Interface Specification.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE MPSETT_ROP_SETTING_ITEM_ARRAY r_mpsett_rop_settings_array
+    {
+    items = 
+        {
+        MPSETT_ROP_SETTING_ITEM
+            {
+            id = EMPRopContrast;
+            key = "Contrast";
+            },
+        MPSETT_ROP_SETTING_ITEM
+            {
+            id = EMPRopProxyMode;
+            key = "UseProxy";
+            },
+        MPSETT_ROP_SETTING_ITEM
+            {
+            id = EMPRopProxyHostName;
+            key = "Proxy";
+            },
+        MPSETT_ROP_SETTING_ITEM
+            {
+            id = EMPRopProxyPort;
+            key = "ProxyPort";
+            },
+        MPSETT_ROP_SETTING_ITEM
+            {
+            id = EMPRopDefaultAP;
+            key = "AccessPoint";
+            },
+        MPSETT_ROP_SETTING_ITEM
+            {
+            id = EMPRopBandwidthMode;
+            key = "ManualBandwidth";
+            },
+        MPSETT_ROP_SETTING_ITEM
+            {
+            id = EMPRopConnTimeout;
+            key = "ConnTimeout";
+            },
+        MPSETT_ROP_SETTING_ITEM
+            {
+            id = EMPRopServerTimeout;
+            key = "Timeout";
+            },
+        MPSETT_ROP_SETTING_ITEM
+            {
+            id = EMPRopMinUDPPort;
+            key = "MinUDPPort";
+            },
+        MPSETT_ROP_SETTING_ITEM
+            {
+            id = EMPRopMaxUDPPort;
+            key = "MaxUDPPort";
+            },
+        MPSETT_ROP_SETTING_ITEM
+            {
+            id = EMPRopCntrlVersion;
+            key = "RNControllerVersion";
+            },
+        MPSETT_ROP_SETTING_ITEM
+            {
+            id = EMPRopCntrlBldDate;
+            key = "RNControllerBuildDate";
+            },
+        MPSETT_ROP_SETTING_ITEM
+            {
+            id = EMPRopCntrlPlatform;
+            key = "RNControllerPlatform";
+            },
+        MPSETT_ROP_SETTING_ITEM
+            {
+            id = EMPRopDemandBwFactor;
+            key = "DemandBWFactor";
+            },
+        MPSETT_ROP_SETTING_ITEM
+            {
+            id = EMPRopGPRSMaxBw;
+            key = "GPRSMaximumBandwidth";
+            },
+        MPSETT_ROP_SETTING_ITEM
+            {
+            id = EMPRopGPRSSustainBw;
+            key = "GPRSSustainBandwidth";
+            },
+        MPSETT_ROP_SETTING_ITEM
+            {
+            id = EMPRopGPRSMaxBwPresets;
+            key = "GPRSMaximumBWPresets";
+            },
+        MPSETT_ROP_SETTING_ITEM
+            {
+            id = EMPRopGPRSSustainBwPresets;
+            key = "GPRSSustainBWPresets";
+            },
+        MPSETT_ROP_SETTING_ITEM
+            {
+            id = EMPRopEGPRSMaxBw;
+            key = "EGPRSMaximumBandwidth";
+            },
+        MPSETT_ROP_SETTING_ITEM
+            {
+            id = EMPRopEGPRSSustainBw;
+            key = "EGPRSSustainBandwidth";
+            },
+        MPSETT_ROP_SETTING_ITEM
+            {
+            id = EMPRopEGPRSMaxBwPresets;
+            key = "EGPRSMaximumBWPresets";
+            },
+        MPSETT_ROP_SETTING_ITEM
+            {
+            id = EMPRopEGPRSSustainBwPresets;
+            key = "EGPRSSustainBWPresets";
+            },
+        MPSETT_ROP_SETTING_ITEM
+            {
+            id = EMPRopWCDMAMaxBw;
+            key = "WCDMAMaximumBandwidth";
+            },
+        MPSETT_ROP_SETTING_ITEM
+            {
+            id = EMPRopWCDMASustainBw;
+            key = "WCDMASustainBandwidth";
+            },
+        MPSETT_ROP_SETTING_ITEM
+            {
+            id = EMPRopWCDMAMaxBwPresets;
+            key = "WCDMAMaximumBWPresets";
+            },
+        MPSETT_ROP_SETTING_ITEM
+            {
+            id = EMPRopWCDMASustainBwPresets;
+            key = "WCDMASustainBWPresets";
+            },
+        MPSETT_ROP_SETTING_ITEM
+            {
+            id = EMPRopWLANMaxBw;
+            key = "WLANMaximumBandwidth";
+            },
+        MPSETT_ROP_SETTING_ITEM
+            {
+            id = EMPRopWLANSustainBw;
+            key = "WLANSustainBandwidth";
+            },
+        MPSETT_ROP_SETTING_ITEM
+            {
+            id = EMPRopWLANMaxBwPresets;
+            key = "WLANMaximumBWPresets";
+            },
+        MPSETT_ROP_SETTING_ITEM
+            {
+            id = EMPRopWLANSustainBwPresets;
+            key = "WLANSustainBWPresets";
+            },
+        MPSETT_ROP_SETTING_ITEM
+            {
+            id = EMPRopHSDPAMaxBw;
+            key = "HSDPAMaximumBandwidth";
+            },
+        MPSETT_ROP_SETTING_ITEM
+            {
+            id = EMPRopHSDPASustainBw;
+            key = "HSDPASustainBandwidth";
+            },
+        MPSETT_ROP_SETTING_ITEM
+            {
+            id = EMPRopHSDPAMaxBwPresets;
+            key = "HSDPAMaximumBWPresets";
+            },
+        MPSETT_ROP_SETTING_ITEM
+            {
+            id = EMPRopHSDPASustainBwPresets;
+            key = "HSDPASustainBWPresets";
+            }
+        };
+    }
+            
+// End of File
+
+

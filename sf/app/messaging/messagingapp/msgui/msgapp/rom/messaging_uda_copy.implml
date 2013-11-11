@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<container  xmlns="http://www.symbianfoundation.org/xml/implml/1"
+			condition="${messaging_uda.Enabled}">
+	<tag name="target" value="uda" />
+	<content xmlns="http://www.s60.com/xml/content/2">	  
+	  <output dir="zip" flatten="true">
+	    <input file="zip/private.zip" />
+	  </output>
+	</content>
+</container>

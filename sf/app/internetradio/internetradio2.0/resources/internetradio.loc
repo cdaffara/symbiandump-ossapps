@@ -1,0 +1,1535 @@
+/*
+* Copyright (c) 2007-2007 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  This is a localisation file for Series 60 Internet Radio.
+*                A .loc file is the one and only place where the logical strings
+*                to be localised are defined.
+*
+*/
+
+
+/*
+*  --------------------------------------------------------------------
+* Syntax of a logical name entry in this file is the following:
+*
+* // d:context description (line 1)
+* // d:context description (line N)
+* // l:P_No
+* //
+* #define qtn_?feature/?module_name_?freetext "?text"
+*
+*   where
+*         "qtn_" starts a logical name, which does not
+*          not contain dots.
+*         "d:" starts description line(s), which
+*              clarify entry's context with information like:
+*              1. Is a word a verb in imperative or is it a noun ?
+*                   - what does text "Set" mean ?
+*              2. What will replace %U (unicode text parameter) or
+*                 %N (number parameter) included in texts ?
+*                   - is it phone number or email address ?
+*         "l:" starts a layout information (one line).
+*              "P" and "No" are symbols in LAF's information table
+*                 - "P" is parent pane or current pane
+*                 - "No" is reference number in table
+*/
+
+#ifdef LANGUAGE_01
+#include "01/internetradio_01.loc"
+#elif LANGUAGE_02
+#include "02/internetradio_02.loc"
+#elif LANGUAGE_03
+#include "03/internetradio_03.loc"
+#elif LANGUAGE_04
+#include "04/internetradio_04.loc"
+#elif LANGUAGE_05
+#include "05/internetradio_05.loc"
+#elif LANGUAGE_06
+#include "06/internetradio_06.loc"
+#elif LANGUAGE_07
+#include "07/internetradio_07.loc"
+#elif LANGUAGE_08
+#include "08/internetradio_08.loc"
+#elif LANGUAGE_09
+#include "09/internetradio_09.loc"
+#elif LANGUAGE_10
+#include "10/internetradio_10.loc"
+#elif LANGUAGE_13
+#include "13/internetradio_13.loc"
+#elif LANGUAGE_14
+#include "14/internetradio_14.loc"
+#elif LANGUAGE_15
+#include "15/internetradio_15.loc"
+#elif LANGUAGE_16
+#include "16/internetradio_16.loc"
+#elif LANGUAGE_17
+#include "17/internetradio_17.loc"
+#elif LANGUAGE_18
+#include "18/internetradio_18.loc"
+#elif LANGUAGE_25
+#include "25/internetradio_25.loc"
+#elif LANGUAGE_26
+#include "26/internetradio_26.loc"
+#elif LANGUAGE_27
+#include "27/internetradio_27.loc"
+#elif LANGUAGE_28
+#include "28/internetradio_28.loc"
+#elif LANGUAGE_29
+#include "29/internetradio_29.loc"
+#elif LANGUAGE_30
+#include "30/internetradio_30.loc"
+#elif LANGUAGE_31
+#include "31/internetradio_31.loc"
+#elif LANGUAGE_32
+#include "32/internetradio_32.loc"
+#elif LANGUAGE_33
+#include "33/internetradio_33.loc"
+#elif LANGUAGE_37
+#include "37/internetradio_37.loc"
+#elif LANGUAGE_39
+#include "39/internetradio_39.loc"
+#elif LANGUAGE_42
+#include "42/internetradio_42.loc"
+#elif LANGUAGE_44
+#include "44/internetradio_44.loc"
+#elif LANGUAGE_45
+#include "45/internetradio_45.loc"
+#elif LANGUAGE_49
+#include "49/internetradio_49.loc"
+#elif LANGUAGE_50
+#include "50/internetradio_50.loc"
+#elif LANGUAGE_51
+#include "51/internetradio_51.loc"
+#elif LANGUAGE_54
+#include "54/internetradio_54.loc"
+#elif LANGUAGE_57
+#include "57/internetradio_57.loc"
+#elif LANGUAGE_59
+#include "59/internetradio_59.loc"
+#elif LANGUAGE_67
+#include "67/internetradio_67.loc"
+#elif LANGUAGE_68
+#include "68/internetradio_68.loc"
+#elif LANGUAGE_70
+#include "70/internetradio_70.loc"
+#elif LANGUAGE_76
+#include "76/internetradio_76.loc"
+#elif LANGUAGE_78
+#include "78/internetradio_78.loc"
+#elif LANGUAGE_79
+#include "79/internetradio_79.loc"
+#elif LANGUAGE_83
+#include "83/internetradio_83.loc"
+#elif LANGUAGE_93
+#include "93/internetradio_93.loc"
+#elif LANGUAGE_94
+#include "94/internetradio_94.loc"
+#elif LANGUAGE_96
+#include "96/internetradio_96.loc"
+#elif LANGUAGE_102
+#include "102/internetradio_102.loc"
+#elif LANGUAGE_103
+#include "103/internetradio_103.loc"
+#elif LANGUAGE_129
+#include "129/internetradio_129.loc"
+#elif LANGUAGE_157
+#include "157/internetradio_157.loc"
+#elif LANGUAGE_158
+#include "158/internetradio_158.loc"
+#elif LANGUAGE_159
+#include "159/internetradio_159.loc"
+#elif LANGUAGE_160
+#include "160/internetradio_160.loc"
+#elif LANGUAGE_161
+#include "161/internetradio_161.loc"
+#elif LANGUAGE_230
+#include "230/internetradio_230.loc"
+#elif LANGUAGE_326
+#include "326/internetradio_326.loc"
+#elif LANGUAGE_327
+#include "327/internetradio_327.loc"
+#elif LANGUAGE_401
+#include "401/internetradio_401.loc"
+#elif LANGUAGE_402
+#include "402/internetradio_402.loc"
+
+#else
+
+//
+// Application names
+//
+
+// d: Menu item for Internet Radio in grid view.
+// l: cell_app_pane_t1
+// r: 5.0, Inc2
+//
+#define qtn_ir_apps_grid				"Internet Radio"
+
+// d: Menu item for Internet Radio in list view.
+// l: list_single_large_graphic_pane_t1
+// r: 5.0, Inc2
+//
+#define qtn_ir_apps_list                        "Internet Radio"
+
+// d: Menu item for Internet Radio in Application wheel.
+// l: list_single_large_graphic_pane_t1
+// r: 5.0, Inc2
+//
+#define qtn_ir_apps_wheel                        "Internet Radio"
+
+// d: Menu item for Internet Radio in General Settings
+// l: list_single_large_graphic_pane_t1
+// r: 5.0, Inc2
+//
+#define qtn_ir_set_folder_internetradio            "Internet Radio"
+
+// d: Menu item for downgraded Internet Radio in General Settings
+// l: list_single_large_graphic_pane_t1
+// r: 5.0, Inc2
+//
+#define qtn_ir_set_folder_irradio                   "Internet Radio"
+
+// d: Softkey text for Internet Radio in idle state.
+// l: control_pane_t1
+// r: 5.0, Inc2
+//
+#define qtn_ir_apps_skey                         "Internet Radio"    
+
+// d: Text for setting standby application.
+// l: list_set_graphic_pane_t1
+// r: 5.0, Inc2
+//
+#define qtn_ir_apps_standby                         "Internet Radio"              
+
+// d: Internet Radio name in Installer and Application manager
+// d: Displayed in 
+// d: a) Install\n%U?' confirmation note (qtn_swins_note_inst_conf_head/appinstui), replaces %U 
+// d: b) 'Details' (qtn_swins_heading_det/appinst) view in App. manager, value for 'Name' (qtn_swins_lsh2_apps_name/appinstui).
+// d: As the same text is used in both cases, the string must not be hyphenated or truncated.
+// l: list_double_pane_t2_cp2
+// r: 5.0, Inc2
+//
+#define qtn_ir_apps_swins                        "Internet Radio"
+
+//
+// Cost Warning
+//
+
+// d: Title for Cost warning  view
+// d: This is shown as title pane text in the status pane
+// l: title_pane_t1
+// r: 3.2, Inc5
+//
+#define qtn_ir_cost_title			      "Internet Radio"
+
+// d: Main pane string in Text Viewer(Rich text editor).
+// d: Heading of Cost Warning.
+// l: heading_main_pane_t1
+// r: 3.2, Inc5
+//
+#define qtn_ir_cost_heading 				"Important notice"
+
+// d: Main pane string in Text Viewer(Rich text editor).
+// d: Description of Cost Warning.
+// l: msg_body_pane_t3/opt2
+// r: 3.2, Inc5
+//
+#define qtn_ir_cost_warning				"Internet radio uses your phone's data connection for radio transmissions. This is only recommended if you have a flat fee data plan. If you are not sure of your data costs, check with your operator before continuing."
+
+//
+// Terms & Conditions
+//
+
+// d: Main pane string in rText Viewer(Rich text editor).
+// d: Heading of Terms And Conditions
+// l: heading_main_pane_t1
+// r: 3.2, Inc5
+//
+#define qtn_ir_terms_heading				"Terms and Conditions"
+
+// d: Main pane string in Text Viewer(Rich text editor).
+// d: This is the descriptive text for terms& conditions which is shown in the Main pane
+// l: msg_body_pane_t1/opt2
+// r: 3.2, Inc5
+//
+#define qtn_ir_terms_details				"By agreeing to the Terms and Conditions below you enter into a contract to the extent permitted by applicable law and not further limited or prohibited with respect to all material rights."
+
+//
+// First time view and Find stations view
+//
+
+// d: Title for First Time View.
+// l: title_pane_t1
+// r: 5.0, Inc2
+//
+#define qtn_ir_firstuse_title                  "Internet radio: Welcome"
+
+// d: Find stations view title.
+// l: title_pane_t1
+// r: 5.0, Inc2
+//
+#define qtn_ir_findstation_title		     "Find stations"
+
+// d: Listitem of First time/Find stations view.
+// d: 1st item and 1st row
+// l: list_logical_template_2_title
+// l: list_double_pane_t1
+// r: 5.0, Inc2
+//
+#define qtn_ir_findst_browsesds			"Browse station directory"
+
+// d: Listitem of First time/Find stations view.
+// d: 1st item and 2nd row
+// l: list_logical_template_2_detail
+// l: list_double_pane_t2
+// r: 3.2, Inc5
+//
+#define qtn_ir_main_discover_expanded           "Discover new radio stations"
+
+// d: Listitem of First time/Find stations view.
+// d: 2nd item and 1st row
+// l: list_logical_template_2_title
+// l: list_double_pane_t1
+// r: 5.0, Inc2
+//
+#define qtn_ir_main_searchindir			"Search in directory"
+
+// d: Listitem of First time/Find stations view.
+// d: 2nd item and 2nd row
+// l: list_logical_template_10_detail
+// l: list_double_pane_t2
+// r: 5.0, Inc2
+//
+#define qtn_ir_findst_search_ensrhterm       	"Enter a search term"
+
+// d: Listitem of First time/Find stations view.
+// d: 3rd item and 1st row
+// l: list_logical_template_2_title
+// l: list_double_pane_t1
+// r: 5.0, Inc2
+//
+#define qtn_ir_findst_addstation			"Add station manually"
+
+// d: Listitem of First time/Find stations view.
+// d: 3rd item and 2nd row
+// l: list_logical_template_2_detail
+// l: list_double_pane_t2
+// r: 5.0, Inc2
+//
+#define qtn_ir_findst_addtofav       		"Add your own station to favourites"
+
+
+//
+// Soft keys-All views
+//
+
+// d: Left Softkey
+// d: A text for a softkey to accept Cost warning.
+// l: control_pane_t1
+// r: 5.0, Inc2
+//
+#define qtn_ir_cost_softkey_continue                   "Continue"
+
+// d: Right Softkey
+// d: A text for a softkey to exit Cost warning.
+// l: control_pane_t2
+// r: 5.0, Inc2
+//
+#define qtn_ir_cost_softkey_exit                 	 "Exit"
+
+// d: Left Softkey
+// d: A text for a softkey to accept Terms & Conditions.
+// l: control_pane_t1
+// r: 5.0, Inc2
+//
+#define qtn_ir_terms_softkey_accept                   	"Accept"
+
+// d: Right Softkey
+// d: A text for a softkey to exit Terms & Conditions.
+// l: control_pane_t2
+// r: 5.0, Inc2
+//
+#define qtn_ir_terms_softkey_decline                	"Decline"
+
+// d: Left Softkey
+// d: A text for a softkey to open Options menu.
+// l: control_pane_t1
+// r: 5.0, Inc2
+//
+#define   qtn_ir_softkey_options                 "Options"
+
+// d: Right Softkey
+// d: A text for a softkey to switch to previous view.
+// l: control_pane_t2
+// r: 5.0, Inc2
+//
+#define   qtn_ir_softkey_back                    "Back"
+
+// d: Left Softkey
+// d: A text for a softkey to open select the items in options menu.
+// l: control_pane_t1
+// r: 5.0, Inc2
+//
+#define   qtn_ir_softkey_select                  "Select"
+
+// d: Right Softkey
+// d: A text for a softkey to close the options menu.
+// l: control_pane_t2
+// r: 5.0, Inc2
+//
+#define   qtn_ir_softkey_cancel                  "Cancel"
+
+// d: Left Softkey-Confirmatory query pop-up
+// d: A text for a softkey to accept the confirmation text.
+// l: control_pane_t1
+// r: 5.0, Inc2
+//
+#define   qtn_ir_softkey_yes              	     "Yes"
+
+// d: Right Softkey-Confirmatory query pop-up
+// d: A text for a softkey to reject the confirmation text.
+// l: control_pane_t2
+// r: 5.0, Inc2
+//
+#define   qtn_ir_softkey_no               	      "No"
+
+// d: Left Softkey-Move
+// d: A text for a softkey to accept the Move query pop-up.
+// l: control_pane_t1
+// r: 5.0, Inc2
+//
+#define   qtn_ir_softkey_done             		"Done"
+
+// d: Search view left soft key.
+// l: control_pane_t1
+// r: 5.0, Inc2
+//
+#define qtn_ir_findst_softkey_search	     		"Search"
+
+// d: Right Softkey text for Station information view.
+// l: control_pane_t2
+// r: 3.2, Inc5
+//
+#define qtn_ir_info_softkey_close                         "Close"
+
+// d: Left Softkey-Connection type based bit rates
+// d: A text for a softkey to select the connection type based bitrate.
+// l: control_pane_t1
+// r: 3.2, Inc5
+//
+#define   qtn_ir_settings_connec_softkey_ok             		"OK"
+
+//
+// Main View
+//
+
+// d: Title for Main View.
+// l: title_pane_t1
+// r: 3.2, Inc5
+//
+#define qtn_ir_main_title                  "Internet radio"
+
+// d: Header text of list item named Last played.
+// l: list_logical_template_6_title
+// l: list_double_large_grpahic_pane_t1
+// r: 3.2, Inc5
+//
+#define qtn_ir_main_last                       "Last played station"
+
+// d: Descriptive text in the empty list
+// l: list_view_text_empty
+// l: main_list_empty_pane
+// r: 5.0, Inc2
+//
+#define qtn_ir_main_descriptive_text           "Use Find stations from the toolbar to add new stations"
+
+// d: Header text of list item named Unnamed.
+// l: list_logical_template_3_title
+// l: list_double_large_grpahic_pane_t1
+// r: 5.0, Inc2
+//
+#define qtn_ir_main_unnamed_station            "Unnamed station"
+
+// d: Progress bar dialogue string
+// d: Main view, Notes-Progress bar
+// l: popup_note_wait_window
+// r: 5.0, Inc2
+//
+#define qtn_ir_main_prog_deleting			  	  "Deleting... %N"
+
+// d: Listitems index
+// l: list_logical_template_3_title
+// l: list_double_large_grpahic_pane_t1
+// r: 3.2, Inc5
+//
+#define qtn_ir_list_memory_location             "%N. "
+
+//
+// Now playing view
+//
+
+// d: Station index shown just before the station name in Now playing view
+// d: Now palying view-Layout given in Internet Radio UISpecification.
+// d: Reference-NowPlayingView_Portrait_Landscape_LAF.doc
+// l: irradio_now_playing_station_index
+// r: 5.0, Inc2
+//
+#define qtn_ir_now_station_index             "%N. "
+
+// d: Data counter in the area of main pane.
+// d: Now palying view-Layout given in Internet Radio UISpecification.
+// d: Reference-NowPlayingView_Portrait_Landscape_LAF.doc
+// l: irradio_now_playing_deci_bytecountermb
+// r: 5.0, Inc2
+//
+#define qtn_ir_now_deci_bytecountermb           "%N.%N MB"
+
+// d: Data counter in the area of main pane.
+// d: Now palying view-Layout given in Internet Radio UISpecification.
+// d: Reference-NowPlayingView_Portrait_Landscape_LAF.doc
+// l: irradio_now_playing_bytecountermb
+// r: 5.0, Inc2
+//
+#define qtn_ir_now_bytecountermb                 "%N MB"
+
+// d: Bitrate in the area of main pane.
+// d: Now palying view-Layout given in Internet Radio UISpecification.
+// d: Reference-NowPlayingView_Portrait_Landscape_LAF.doc
+// l: irradio_now_playing_bitrate
+// r: 3.2, Inc5
+#define qtn_ir_now_bitrate                       "%N kbps"
+
+// d: Bitrate in the area of main pane.
+// d: Now palying view-Layout given in Internet Radio UISpecification.
+// d: Reference-NowPlayingView_Portrait_Landscape_LAF.doc
+// l: irradio_now_playing_bitrate_mbps
+// r: 5.0, Inc2
+//
+#define qtn_ir_now_bitrate_mbps                  "%N mbps"
+
+// d: Buffering wait bar dialogue string-Aakash
+// d: Wait bar dialogue string-Avkon
+// d: This is shown when buffering is on going on Now playing view.
+// d: Now palying view-Layout given in Internet Radio UISpecification.
+// l: popup_note_wait_window
+// r: 3.2, Inc5
+//
+#define qtn_ir_loading_percent_sign			  "%N %"
+
+// d: Frequency of a channel in the status pane of Now Palying View.
+// d: Now palying view-Layout given in Internet Radio UISpecification.
+// d: R_AVKON_STATUS_PANE_LAYOUT_USUAL_FLAT
+// d: R_AVKON_WIDESCREEN_PANE_LAYOUT_USUAL_FLAT 
+// l: vradio_frequency_info_pane_t1 
+// r: 5.0, Inc2
+//
+#define qtn_ir_now_fm_frequency              	  "%U MHz"
+
+// d: Now playing view main pane string.
+// d: %0U is the artist name and %1U is the song name
+// d: Now palying view-Layout given in Internet Radio UISpecification.
+// d: Reference-NowPlayingView_Portrait_Landscape_LAF.doc
+// l: irradio_now_playing_artist_song
+// r: 5.0, Inc2 
+//
+#define qtn_ir_now_artist_song			  "%0U - %1U"
+
+// d: This is shown when buffering is ongoing in now playing view-Aakash
+// d: Now palying view-Layout given in Internet Radio UISpecification.
+// d: Nseries_common_now_playing_view_DeSWrel8_v0.4
+// l: mui_detail
+// r: 5.0, Inc2
+//
+#define qtn_ir_now_buffering			  	  "Buffering..."
+
+// d: Wait bar dialogue string-Avkon
+// d: Now palying view-Layout given in Internet Radio UISpecification.
+// l: popup_note_wait_window
+// r: 5.0, Inc2
+//
+#define qtn_ir_now_wait_buffering			  	  "Buffering..."
+
+
+//
+// Options menu
+//
+
+// d: General context specific options menu string.
+// d: Switches back to the Now Playing View for current palying radio station.
+// l: list_single_pane_t1_cp2
+// r: 3.2, Inc5
+//
+#define qtn_ir_options_now             		   "Go to now playing"
+
+// d: Main view options menu string.
+// d: Launches Add station view. 
+// l: list_single_pane_t1_cp2
+// r: 3.2, Inc5
+//
+#define qtn_ir_options_add_manually            	   "Add station manually"
+
+// d: Main view options menu string.
+// d: Saves the last played station to favourites list
+// l: list_single_pane_t1_cp2
+// r: 3.2, Inc5
+//
+#define qtn_ir_options_add           		   "Add to favourites"
+
+// d: Main view context specific options menu string
+// d: Launches Edit station view
+// l: list_single_pane_t1_cp2
+// r: 5.0, Inc2
+//
+#define qtn_ir_options_editstation         	   "Edit station"
+
+// d: Main view options menu string
+// d: Launches station sub-menu.
+// l: list_single_pane_t1_cp2/opt3
+// r: 3.2, Inc5
+//
+#define qtn_ir_options_station        		   "Station"
+
+
+// d: Main view context specific sub options menu string.
+// d: Launches station information view
+// l: list_single_popup_submenu_pane_t1
+// r: 3.2, Inc5
+//
+#define qtn_ir_suboptions_details                  "Details"
+
+// d: Main view context specific sub options menu string.
+// d: Moves station to another location in the list.
+// l: list_single_pane_t1_cp2
+// r: 3.2, Inc5
+//
+#define qtn_ir_suboptions_move                     "Move"
+
+// d: Main view context specific sub options menu string.
+// d: Prompts for deleting selected station.
+// l: list_single_pane_t1_cp2
+// r: 3.2, Inc5
+//
+#define qtn_ir_suboptions_delete                   "Delete"
+
+// d: Main view options menu string
+// d: Launches Mark/Unmark sub-menu.
+// l: list_single_pane_t1_cp2/opt3
+// r: 5.0, Inc2
+//
+#define qtn_ir_options_markunmark      		    "Mark/Unmark"
+
+// d: Main view context specific sub options menu string.
+// d: Marks the highlighted favourite in the list.
+// l: list_single_popup_submenu_pane_t1
+// r: 5.0, Inc2
+//
+#define qtn_ir_options_mark                   	     "Mark"
+
+// d: Main view context specific sub options menu string.
+// d: Unmarks the marked favourite in the list.
+// l: list_single_popup_submenu_pane_t1
+// r: 5.0, Inc2
+//
+#define qtn_ir_options_unmark                        "Unmark"
+
+// d: Main view context specific sub options menu string.
+// d: Marks all the favourites in the list.
+// l: list_single_popup_submenu_pane_t1
+// r: 5.0, Inc2
+//
+#define qtn_ir_options_markall                       "Mark all"
+
+// d: Main view context specific sub options menu string.
+// d: Unmarks all the marked favourite in the list.
+// l: list_single_popup_submenu_pane_t1
+// r: 5.0, Inc2
+//
+#define qtn_ir_options_unmarkall                     "Unmark all"
+
+// d: Now playing view options menu string.
+// d: Launches station information view.
+// l: list_single_pane_t1_cp2
+// r: 3.2, Inc5
+//
+#define qtn_ir_options_info            		     "Station information"
+
+// d: Now playing view options menu string.
+// d: Launches FM transmitter application
+// l: list_single_pane_t1_cp2
+// r: 5.0, Inc2
+//
+#define qtn_ir_options_fmtrans          		     "FM transmitter"
+
+// d: Now playing view options menu string.
+// d: Launches Nokia music store
+// l: list_single_pane_t1_cp2
+// r: 5.0, Inc2
+//
+#define qtn_ir_options_findnmusicstore         	     "Find in Music store"
+
+// d: Now playing view options menu string.
+// d: Launches Nokia music store
+// l: list_single_pane_t1_cp2
+// r: 5.0, Inc2
+//
+#define qtn_ir_options_gotomusicstore         	     "Go to Music store"
+
+// d: Now playing view options menu string.
+// d: Launches Stereo widening sub-menu
+// l: list_single_pane_t1_cp2/opt2
+// r: 5.0, Inc2
+//
+#define qtn_ir_options_stereowidening        	     "Stereo widening"
+
+// d: Now playing view sub options menu string.
+// d: Activates stereo widening
+// l: list_single_pane_t1_cp2
+// r: 5.0, Inc2
+//
+#define qtn_ir_options_on                  	     "On"
+
+// d: Now playing view sub options menu string.
+// d: Deactivates stereo widening
+// l: list_single_pane_t1_cp2
+// r: 5.0, Inc2
+//
+#define qtn_ir_options_off                  	    "Off"
+
+// d: Now playing view options menu string.
+// d: Launches Equalizer view
+// l: list_single_pane_t1_cp2
+// r: 5.0, Inc2
+//
+#define qtn_ir_options_equalizer        		   "Equalizer"
+
+// d: Now playing view options menu string.
+// d: Launches History view.
+// l: list_single_pane_t1_cp2
+// r: 5.0, Inc2
+//
+#define qtn_ir_options_history        		   "History"
+
+// d: General context specific options menu string.
+// d: Selects the highlighted item in the list.
+// l: list_single_pane_t1_cp2
+// r: 3.2, Inc5
+//
+#define qtn_ir_options_select          		   "Select"
+
+// d: General context specific options menu string.
+// d: Launches Main View 
+// l: list_single_pane_t1_cp2
+// r: 5.0, Inc2
+//
+#define qtn_ir_options_mainview             	   "Go to main view"
+
+// d: History view options menu string.
+// d: Deletes all the entries in the History view.
+// l: list_single_pane_t1_cp2
+// r: 5.0, Inc2
+//
+#define qtn_ir_options_clearhistory         	    "Clear history"
+
+// d: Search results view options menu string.
+// d: Launches Search view to perform the search.
+// l: list_single_pane_t1_cp2
+// r: 3.2, Inc5
+//
+#define qtn_ir_options_searchag          		    "Search again"
+
+// d: General options menu string.
+// d: Launches Settings view
+// l: list_single_pane_t1_cp2
+// r: 3.2, Inc5
+//
+#define qtn_ir_options_settings             	   "Settings"
+
+// d: General options menu string.
+// d: Launches view specific Help file
+// l: list_single_pane_t1_cp2
+// r: 3.2, Inc5
+//
+#define qtn_ir_options_help            	   	   "Help"
+
+// d: General options menu string.
+// d: Launches view specific Help file
+// l: list_single_pane_t1_cp2
+// r: 3.2, Inc5
+//
+#define qtn_ir_options_exit           	   	   "Exit"
+
+//
+// Add station/Edit station
+//
+
+// d: Add station view title.
+// l: title_pane_t1
+// r: 3.2, Inc5
+//
+#define qtn_ir_url_title		        	   "Add station"
+
+// d: Form item of Add station/Edit station view.
+// d: 1st item and 1st row
+// d: Always editable form
+// l: form_field_data_wide_pane_t1
+// r: 5.0, Inc2
+//
+#define qtn_ir_addst_streamurl         		   "Stream URL "
+
+// d: Form item of Add station view.
+// d: 2nd item and 2nd row
+// d: Always editable form
+// l: list_form_graphic_pane_t1/opt1
+// r: 3.2, Inc5
+//
+#define qtn_ir_url_http        			   "http://"
+
+// d: Form item of Add station/Edit station view.
+// d: 2nd item and 1st row
+// d: Always editable form
+// l: form_field_data_wide_pane_t1
+// r: 3.2, Inc5
+//
+#define qtn_ir_url_name        			   "Name"
+
+// d: Form item of Add station view.
+// d: 2nd item and 2nd row
+// d: Always editable form
+// l: list_form_graphic_pane_t1/opt1
+// r: 3.2, Inc5
+//
+#define qtn_ir_addmanually_unnamed       		   "Unnamed"
+
+// d: Form item of Add station/Edit station view.
+// d: 3rd item and 1st row
+// d: Always editable form
+// l: form_field_data_wide_pane_t1
+// r: 5.0, Inc2
+//
+#define qtn_ir_addst_description       		   "Description"
+
+// d: Edit station view title.
+// l: title_pane_t1
+// r: 5.0, Inc2
+//
+#define qtn_ir_edit_title		        	   "Edit station"
+
+//
+// Station directory view
+//
+
+// d: Station directory view title.
+// l: title_pane_t1
+// r: 3.2, Inc5
+//
+#define qtn_ir_discover_title		        	   "Station Directory"
+
+// d: Listitem of Station directory view.
+// d: 1st item and 1st row
+// l: list_logical_template_5_detail
+// l: list_double_pane_t1
+// r: 3.2, Inc5
+//
+#define qtn_ir_discover_genre   			   "Browse by genre"
+
+// d: Listitem of Station directory view.
+// d: 1st item and 2nd row
+// l: list_logical_template_5_detail
+// l: list_double_pane_t2
+// r: 3.2, Inc5
+//
+#define qtn_ir_discover_genre_expanded   		   "Stations sorted by genre"
+
+// d: Listitem of Station directory view.
+// d: 2nd item and 1st row
+// l: list_logical_template_5_detail
+// l: list_double_pane_t1
+// r: 3.2, Inc5
+//
+#define qtn_ir_discover_langauge   			   "Browse by language"
+
+// d: Listitem of Station directory view.
+// d: 2nd item and 2nd row
+// l: list_logical_template_5_detail
+// l: list_double_pane_t2
+// r: 3.2, Inc5
+//
+#define qtn_ir_discover_language_expanded   	   "Stations sorted by language"
+
+// d: Listitem of Station directory view.
+// d: 3rd item and 1st row
+// l: list_logical_template_5_detail
+// l: list_double_pane_t1
+// r: 5.0, Inc2
+//
+#define qtn_ir_discover_country_region       	   "Browse by country/region"
+
+// d: Listitem of Station directory view.
+// d: 3rd item and 2nd row
+// l: list_logical_template_5_detail
+// l: list_double_pane_t2
+// r: 5.0, Inc2
+//
+#define qtn_ir_discover_staticountryreg   	   "Stations sorted by country or region "	
+
+// d: Listitem of Station directory view.
+// d: 4th item and 1st row
+// l: list_logical_template_5_detail
+// l: list_double_pane_t1
+// r: 3.2, Inc5
+//
+#define qtn_ir_discover_top   			   "Top stations"
+
+// d: Listitem of Station directory view.
+// d: 4th item and 2nd row
+// l: list_logical_template_5_detail
+// l: list_double_pane_t2
+// r: 5.0, Inc2
+//
+#define qtn_ir_discover_beststations   		    "A selection of the best stations"
+
+//
+// List of Genres
+//
+
+// d: List of Genres view title.
+// l: title_pane_t1
+// r: 3.2, Inc5
+//
+#define qtn_ir_genre_title		    		    "Genres"
+
+// d: Listitem of List of Genres view.
+// d: 2nd row of every item in the list
+// d: %N is the number of stations
+// l: list_logical_template_2_detail
+// l: list_double_pane_t2
+// r: 3.2, Inc5
+//
+#define qtn_ir_genre_list_expanded   		    "%N Stations"
+
+//
+// List of Languages
+//
+
+// d: List of Langugaes view title.
+// l: title_pane_t1
+// r: 3.2, Inc5
+//
+#define qtn_ir_language_title		    		    "Languages"
+
+// d: Listitem of List of Languages view.
+// d: 2nd row of every item in the list
+// d: %N is the number of stations
+// l: list_logical_template_2_detail
+// l: list_double_pane_t2
+// r: 3.2, Inc5
+//
+#define qtn_ir_language_list_expanded   		    "%N Stations"
+
+//
+// List of Countries/Regions
+//
+
+// d: List of Cuntries/Regions view title.
+// l: title_pane_t1
+// r: 5.0, Inc2
+//
+#define qtn_ir_countryregion_title	    		    "Countries/Regions"
+
+// d: Listitem of List of Countries/Regions view.
+// d: 2nd row of every item in the list
+// d: %N is the number of Stations
+// l: list_logical_template_2_detail
+// l: list_double_pane_t2
+// r: 3.2, Inc5
+//
+#define qtn_ir_country_list_expanded   		    "%N Stations"
+
+//
+// Top stations
+//
+
+// d: Top stations view title.
+// l: title_pane_t1
+// r: 3.2, Inc5
+//
+#define qtn_ir_top_title	    			    "Top stations"
+
+// d: Main pane text
+// d: Shown when no matches are found for the entered characters in the Find pane.
+// l: list_view_text_empty
+// l: main_list_empty_pane
+// r: 5.0, Inc2
+//
+#define qtn_ir_stationlist_nomatches	    			    "(no matches)"
+
+//
+// Search results 
+//
+
+// d: Search results view title.
+// l: title_pane_t2/opt9
+// r: 5.0, Inc2
+//
+#define qtn_ir_search_results	    			    "%0U:%1N Results"
+
+// d: Search results view title.
+// l: title_pane_t2/opt9
+// r: 5.0, Inc2
+//
+#define qtn_ir_search_result	    			    "%0U:%1N Result"
+
+//
+// History
+//
+
+// d: History view title.
+// l: title_pane_t1
+// r: 5.0, Inc2
+//
+#define qtn_ir_title_history	    	     		    "History"
+
+// d: Sub-Listitem of History view.
+// d: %0U is the artist name and %1U is the song name
+// l: sublist_logical_template_1_detail
+// l: hierarchical_coloumn_list_core_data
+// r: 5.0, Inc2
+//
+#define qtn_ir_history_artist_song       		    "%0U-1U%"
+
+// d: Descriptive text in the empty list of history view
+// l: list_view_text_empty
+// l: main_list_empty_pane
+// r: 5.0, Inc2
+//
+#define qtn_ir_history_no_history        		    "No history"
+
+//
+// Station information view
+//
+
+// d: Station information view title.
+// l: title_pane_t1
+// r: 3.2, Inc5
+//
+#define qtn_ir_info_details_title	    		    "Station information"
+
+// d: Station information view main pane string.
+// d: Name text in station information view.
+// d: This is shown just below the station logo in the Main pane. Or it is shown as first item in the Main pane if station logo is not available.
+// d: Text viewer(Rich text editor)
+// l: msg_header_pane_t2
+// r: 3.2, Inc5
+//
+#define qtn_ir_info_details_name   			    "Name:"
+
+// d: Station information view main pane string.
+// d: Unnamed text in station information view.
+// d: This is shown as the deafult name for the user defined station if user has not given any name to the station.
+// d: Text viewer(Rich text editor)
+// l: msg_header_pane_t1
+// r: 5.0, Inc2
+//
+#define qtn_ir_info_details_unnamed          	    "Unnamed station"
+
+// d: Station information view main pane string.
+// d: Description text in station information view.
+// d: This is shown just below the Name of the station.
+// l: Text viewer(Rich text editor)
+// r: 5.0, Inc2
+//
+#define qtn_ir_info_details_description		    "Description:"
+
+// d: Station information view main pane string.
+// d: Genre text in station information view.
+// d: This is shown just below the Description of the station.
+// d: Text viewer(Rich text editor)
+// l: msg_header_pane_t2
+// r: 3.2, Inc5
+//
+#define qtn_ir_info_details_genre			    "Genre(s):"
+
+// d: Station information view main pane string.
+// d: Language text in station information view.
+// d: This is shown just below the Genre(s) of the station.
+// d: Text viewer(Rich text editor)
+// l: msg_header_pane_t2
+// r: 3.2, Inc5
+//
+#define qtn_ir_info_details_language		    "Language:"
+
+// d: Station information view main pane string.
+// d: Country/Region text in station information view.
+// d: This is shown just below the Language of the station.
+// d: Text viewer(Rich text editor)
+// l: msg_header_pane_t2
+// r: 5.0, Inc2
+//
+#define qtn_ir_info_details_countryregi		    "Country/Region:" 
+
+// d: Station information view main pane string
+// d: Type text in station information view.
+// d: This is shown just below the Country/Region of the station.
+// d: Text viewer(Rich text editor)
+// l: msg_header_pane_t2
+// r: 3.2, Inc5
+//
+#define qtn_ir_info_details_type			    "Type:"
+
+// d: Station information view main pane string.
+// d: Station directory text in station information view.
+// d: This is shown just below the type of the station.
+// d: Text viewer(Rich text editor)
+// l: msg_header_pane_t1
+// r: 3.2, Inc5
+//
+#define qtn_ir_info_details_type_isds		   "Station Directory"
+
+// d: Station information view main pane string
+// d: User-defined text in station information view.
+// d: This is shown for the User defined stations
+// d: Text viewer(Rich text editor)
+// l: msg_header_pane_t1
+// r: 3.2, Inc5
+//
+#define qtn_ir_info_details_type_manual		   "User Defined"
+
+// d: Station information view main pane string
+// d: Streams text in station information view.
+// d: This is shown just below the type of the station in the Main pane.
+// d: Text viewer(Rich text editor)
+// l: msg_header_pane_t2
+// r: 3.2, Inc5
+//
+#define qtn_ir_info_details_streams			   "Streams:"
+
+// d: Station information view main pane string
+// d: Streams text in station information view.
+// d: This is shown just below the Streams text in the Main pane Where %U is the station bit rate from ISDS, shown in kbps, and %N is the station URL, without the http identifier
+// d: Text viewer(Rich text editor)
+// l: msg_header_pane_t2
+// r: 3.2, Inc5
+//
+#define qtn_ir_info_details_bitrate			   "%N kbps:"
+
+//
+// Settings view
+//
+
+// d: Settings view title.
+// l: title_pane_t1
+// r: 3.2, Inc5
+//
+#define qtn_ir_settings_title	    			  "Settings"
+
+// d: Listitem of Settings view.
+// d: 1st item and 1st line.
+// l: Settings list and Pop-up settings list.
+// l: list_setting_pane_t1
+// r: 5.0, Inc2
+//
+#define qtn_ir_settings_network   			  "Network connection"
+
+// d: Setting item value in Settings view.
+// d: 1st item and 2nd line
+// d: Settings list and Pop-up settings list
+// l: set_value_pane_t1
+// r: 5.0, Inc2
+//
+#define qtn_ir_settings_snap_default		  "Default connection "
+
+// d: Listitem of Settings view.
+// d: 1st item and 1st line.
+// d: Settings list and Pop-up settings list.
+// l: list_setting_pane_t1
+// r: 3.2, Inc5
+//
+#define qtn_ir_settings_gprs		 	 	  "GPRS connection bit rate"	
+
+// d: Listitem of Settings view.
+// d: 2nd item and 1st line.
+// d: Settings list and Pop-up settings list.
+// l: list_setting_pane_t1
+// r: 3.2, Inc5
+//
+#define qtn_ir_settings_3g			  	  "3G connection bit rate"
+
+// d: Listitem of Settings view.
+// d: 3rd item and 1st line.
+// d: Settings list and Pop-up settings list.
+// l: list_setting_pane_t1
+// r: 3.2, Inc5
+//
+#define qtn_ir_settings_wifi				  "Wifi connection bit rate"
+
+// d: Settings view options menu string.
+// d: Opens the respective view to change the setting or toggles the value of the setting
+// l: list_single_pane_t1_cp2
+// r: 3.2, Inc5
+//
+#define qtn_ir_options_change           		  "Change"
+
+// d: Asks connection every time from user.
+// l: Settings list and Pop-up settings list
+// l: list_set_graphic_pane_t1
+// r: 3.2, Inc5
+//
+#define qtn_ir_access_ask                  	  "Always ask "
+
+// d: Setting item value in Settings view.
+// d: List item in the Pop-up setting list for GPRS,3G,Wi-Fi.
+// d: Possible value.
+// l: list_set_graphic_pane_t1
+// r: 3.2, Inc5
+//
+#define qtn_ir_bitrate_standard                  "Standard quality"
+
+// d: Setting item value in Settings view.
+// d: List item in the Pop-up setting list for GPRS,3G,Wi-Fi.
+// d: Possible value.
+// l: list_set_graphic_pane_t1
+// r: 3.2, Inc5
+//
+#define qtn_ir_bitrate_high                      "High quality"
+
+// d: Setting item value in Settings view.
+// d: List item in the Pop-up setting list for GPRS,3G,Wi-Fi.
+// d: Possible value.
+// l: list_set_graphic_pane_t1
+// r: 3.2, Inc5
+//
+#define qtn_ir_bitrate_best                      "Best quality"
+
+//
+// Play list view
+//
+
+// d: Play list view title.
+// l: title_pane_t1
+// r: 3.2, Inc5
+//
+#define qtn_ir_playlist_title    			"Received Links"
+
+//
+//Internet radio active idle
+//
+
+// d: Internet radio active idle 
+// d: Active idle plug-in textNavigation 
+// l: ai_gene_pane_1_t1
+// r: 5.0, Inc2
+//
+#define qtn_ir_active_idle_data    			"%0U - %1U : %2U"
+
+// d: Internet radio active idle Station name, artist name and currently playin gtrack name. 
+// d: bar active idle plug-in text
+// l: heading_ai2_gene_pane_t1/opt1
+// r: 5.0, Inc2
+//
+#define qtn_ir_ai_iradio_title    			"Internet Radio"
+
+// d: Internet radio active idle Station name, artist name and currently playin gtrack name. 
+// d: Active idle plug-in text
+// l: list_ai2_gene_pane_t2/opt1
+// r: 5.0, Inc2
+//
+#define qtn_ir_ai_radio_not_active    			"Radio not active"
+
+
+//
+// Notes
+//
+
+// d: Wait note.
+// d: This text is shown in waitbar note, when searching process is ongoing.
+// l: popup_note_wait_window
+// r: 3.2, Inc5
+//
+#define qtn_ir_loading_searching             	"Searching…"
+
+// d: Wait note.
+// d: This text is shown in waitbar note, during the process of fetching the stations from ISDS
+// l: popup_note_wait_window
+// r: 3.2, Inc5
+//
+#define qtn_ir_loading_loading             	"Loading…"
+
+// d: Information note.
+// d: If zero results are found for the search term, then an information note with this text is shown
+// l: popup_note_window
+// r: 3.2, Inc5
+//
+#define qtn_ir_results_none                	"No matching stations were found. Please search again"
+
+// d: Confirmation note.
+// d: Single station saved to favourites list.
+// d: %U is name of the station saved to favourites list.
+// l: popup_note_window
+// r: 3.2, Inc5
+//
+#define qtn_ir_added_single                      "%U saved"
+
+// d: Confirmation note.
+// d: Multiple stations saved to favourites list
+// d: %N is the number of stations saved to favourites list.
+// l: popup_note_window
+// r: 3.2, Inc5
+//
+#define qtn_ir_added_multi                       "%N stations saved"
+
+// d: Confirmation note.
+// d: This is shown when a single Station ULR is saved to favourites list.
+// l: popup_note_window
+// r: 3.2, Inc5
+//
+#define qtn_ir_station_saved                     "Station saved"
+
+// d: Confirmation note.
+// d: Stations deleted.
+// d: %N is the number of stations deleted from the favourites list.
+// l: popup_note_window
+// r: 3.2, Inc5
+//
+#define qtn_ir_stations_popup_removed_many       "%N stations deleted"
+
+// d: Confirmation note.
+// d: Station deleted.
+// d: %U is the name of the station deleted from the favourites list.
+// l: popup_note_window
+// r: 3.2, Inc5
+//
+#define qtn_ir_stations_popup_removed            "%U deleted"
+
+// d: Information note.
+// d: Shown when user tries to open .pls file with no streaming links.
+// l: popup_note_window
+// r: 5.0, Inc2
+//
+#define qtn_ir_error_notavailable       		 "No streaming links available"
+
+// d: Error note.
+// d: Shown when user performs the search without entering any charater in the Search input box.-Aakash
+// l: popup_note_window
+// r: 3.2, Inc5
+//
+#define qtn_ir_error_search                  	 "Please enter a search term"
+
+// d: Error note.
+// d: Shown when there are 50 items in the favourites list and user tries to add 51 item(station) to favourites list.
+// l: popup_note_window
+// r: 3.2, Inc5
+//
+#define qtn_ir_error_favourites                  "Not enough space in favourites to save selection"
+
+// d: Error note.
+// d: Shown when the network connection is timed out during search process or fetching the data from ISDS.
+// l: popup_note_window
+// r: 3.2, Inc5
+//
+#define qtn_ir_error_connection                  "Connection timed out. Try again"
+
+// d: Error note.
+// d: Shown when user tries to connect to an incorrect radio staion address.
+// l: popup_note_window
+// r: 3.2, Inc5
+//
+#define qtn_ir_error_address               	 "Incorrect Internet Radio station address"
+
+// d: Error note.
+// d: Shown when connection to a particular station is not successful.
+// l: popup_note_window
+// r: 3.2, Inc5
+//
+#define qtn_ir_error_general               	 "Unable to connect to station"
+
+// d: Error note.
+// d: Shown when an error ocuurs.
+// l: popup_note_window
+// r: 3.2, Inc5
+//
+#define qtn_ir_app_general_err                   "Internal error. Please restart application"
+
+// d: Error note.
+// d: Shown when a radio playback is failed
+// l: popup_note_window
+// r: 3.2, Inc5
+//
+#define qtn_ir_playfail_err                      "Radio playback failed"
+
+// d: Error note.
+// d: Shown when there is no network connectivity
+// l: popup_note_window
+// r: 3.2, Inc5
+//
+#define qtn_ir_nwcontroller_err_noconnectivity   "No network connectivity "
+
+// d: Error note.
+// d: Shown when no snap is defined
+// l: popup_note_window
+// r: 5.0, Inc2
+//
+#define qtn_ir_nwcontroller_err_nosnaps           "No access point defined"
+
+// d: Error note.
+// d: Shown when user selects an item which is not available in isds
+// l: popup_note_window
+// r: 3.2, Inc5
+//
+#define qtn_ir_error_notinisds            	  "Item no longer available"
+
+// d: Information note.
+// d: Shown when there are no search results found for the entered term
+// l: popup_note_window
+// r: 5.0, Inc2
+//
+#define qtn_ir_popup_no_results                    "No results found"
+
+// d: Information note.
+// d: Shown when there are more than 50 results found for the entered term 
+// l: popup_note_window
+// r: 5.0, Inc2
+//
+#define qtn_ir_popup_toomany_results               "Too many results, refine your search term"
+
+// d: Information note.
+// d: Shown when Internet Station Directory Service is temporarily unavailable
+// l: popup_note_window
+// r: 5.0, Inc2
+//
+#define qtn_ir_error_isds_unavailable              "Internet Station Directory Service temporarily unavailable"
+
+
+//
+// Queries
+//
+
+// d: Confirmation query
+// d: Shown, when user selects Add to favorites option.
+// l: popup_note_window
+// r: 3.2, Inc5
+//
+#define qtn_ir_stations_popup_save	          	   "Save station to favorites?"
+
+// d: Confirmation query
+// d: Shown when user tries to delete multiple stations
+// l: popup_note_window
+// r: 3.2, Inc5
+//
+#define qtn_ir_stations_popup_delete_many          "Delete %N stations?"
+
+// d: Confirmation query
+// d: Shown when user tries to delete a single station
+// l: popup_note_window
+// r: 3.2, Inc5
+//
+#define qtn_ir_stations_popup_delete               "Delete %U?"
+
+
+//
+// Toolbar items tips
+//
+
+// d: Tips for previous station
+// l: toolbar_text_tooltip
+// r: 5.0, Inc2
+//
+#define qtn_ir_now_tooltip_previous         	   "Previous station"
+
+// d: Tips for next station
+// l: toolbar_text_tooltip
+// r: 5.0, Inc2
+//
+#define qtn_ir_now_tooltip_next                    "Next station"
+
+// d: Tips for Play
+// l: toolbar_text_tooltip
+// r: 5.0, Inc2
+//
+#define qtn_ir_now_tooltip_play                    "Play"
+
+// d: Tips for Stop
+// l: toolbar_text_tooltip
+// r: 5.0, Inc2
+//
+#define qtn_ir_now_tooltip_stop                    "Stop"
+
+// d: Tips for Copy
+// l: toolbar_text_tooltip
+// r: 5.0, Inc2
+//
+#define qtn_ir_tooltip_copy                        "Copy"
+
+// d: Tips for Paste
+// l: toolbar_text_tooltip
+// r: 5.0, Inc2
+//
+#define qtn_ir_tooltip_paste                       "Paste"
+
+// d: Tips for Add to favourites
+// l: toolbar_text_tooltip
+// r: 5.0, Inc2
+//
+#define qtn_ir_tooltip_addtofav                    "Add to favourites"
+
+// d: Tips for Find stations
+// l: toolbar_text_tooltip
+// r: 5.0, Inc2
+//
+#define qtn_ir_tooltip_findst                      "Find stations"
+
+// d: Tips for History
+// l: toolbar_text_tooltip
+// r: 5.0, Inc2
+//
+#define qtn_ir_tooltip_history                     "History"
+
+// d: Tips for Listen
+// l: toolbar_text_tooltip
+// r: 5.0, Inc2
+// 
+#define qtn_ir_tooltip_listen                     "Listen"
+
+// d: Tips for Station details 
+// l: toolbar_text_tooltip
+// r: 5.0, Inc2
+//
+#define qtn_ir_tooltip_stationde       		  "Station details"
+
+// d: Tips for Add station manually  
+// l: toolbar_text_tooltip
+// r: 5.0, Inc2
+//
+#define qtn_ir_tooltip_addstation       		  "Add station manually"
+
+// d: Tips for Find in Music store
+// l: toolbar_text_tooltip
+// r: 5.0, Inc2
+//
+#define qtn_ir_tooltip_findnstore      		  "Find in Music store"
+
+// d: Tips for Add all to favourites  
+// l: toolbar_text_tooltip
+// r: 5.0, Inc2
+//
+#define qtn_ir_tooltip_addalltofav			  "Add all to favourites"
+
+//advertisemnt and Click through URL is not available
+
+// l: popup_note_window
+// r: 5.0, Inc2
+//
+#define	qtn_ir_err_url_unavail		"URL unavailable "
+
+#endif
+
+// End of File

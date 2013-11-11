@@ -1,0 +1,111 @@
+/*
+* Copyright (c) 2002-2004 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   This file contains iCal's x-parameters mapping to
+*                Agenda entry types and the localizable strings for this 
+*                x-paramenters.
+*
+*/
+
+
+
+#ifndef AGNVERSIT2STRINGS_HRH
+#define AGNVERSIT2STRINGS_HRH
+
+enum TStringId
+	{
+	EICalProdIdValue = 0,
+	EICalTzidUtc,
+	EICalTzidPlus,
+	EICalTzidMinus,
+	EICalTzidSlash,
+	EICalTzidStandard,
+	EICalTzidDaylight,
+	EICalErrRruleNumRules,
+	EICalErrRruleNoFreq,
+	EICalErrRruleNotYearly,
+	EICalErrValarmNotAllowed,
+	EICalErrValarmNoTrigger,
+	EICalErrValarmNoStart,
+	EICalErrAlarmAfterEvent,
+	EICalXParamType,
+	EICalXParamAppointment,
+	EICalXParamTodo,
+	EICalXParamEvent,
+	EICalXParamReminder,
+	EICalXParamAnniversary,
+	EICalAppointment,
+	EICalBusiness,
+	EICalEducation,
+	EICalHoliday,
+	EICalMeeting,
+	EICalMisc,
+	EICalPersonal,
+	EICalPhoneCall,
+	EICalSick,
+	EICalSpecial,
+	EICalTravel,
+	EICalVacation,
+	EICalNumberOfStrings	// Make sure this is last in the list
+	};
+
+//Non - localisable product identifier
+#define PROD_ID_VALUE "-//S60//NONSGML Agenda S60 R3.2//EN"
+
+// The following are X-Parameters mapping to Agenda entry types.
+// These should be shared through all languages as we need to be able 
+// to port calendars from one language to another.
+// X_PARAM_TYPE is the property, and the value can be any one of the following strings.
+// The generated property (in the .ics file) will take the form:
+// X-EPOC-AGENDA-TYPE:Appointment
+
+#define X_PARAM_TYPE "X-EPOC-AGENDA-TYPE"
+#define X_PARAM_APPT "Appointment"
+#define X_PARAM_TODO "Todo"
+#define X_PARAM_EVENT "Event"
+#define X_PARAM_REMINDER "Reminder"
+#define X_PARAM_ANNIVERSARY "Anniversary"
+
+// The following are used in generaing timezone names
+#define TZID_TEXT_UTC "UTC "
+#define TZID_TEXT_PLUS "+"
+#define TZID_TEXT_MINUS "-"
+#define TZID_TEXT_SLASH " / "
+
+#define ELanguage	ELangEnglish	// Caption language
+
+//  LOCALISATION STRINGS
+
+// The following are output as a timezone id when exporting a timezone,
+// i.e. UTC +HHMM (Standard) / UTC +HHMM (Daylight)
+
+#define TZID_TEXT_STANDARD " (Standard)"
+#define TZID_TEXT_DAYLIGHT " (Daylight)"
+
+// Categories used by agenda
+
+#define CAT_APPOINTMENT "Appointment"
+#define CAT_BUSINESS "Business"
+#define CAT_EDUCATION "Education"
+#define CAT_HOLIDAY "Holiday"
+#define CAT_MEETING "Meeting"
+#define CAT_MISC "Miscellaneous"
+#define CAT_PERSONAL "Personal"
+#define CAT_PHONECALL "PhoneCall"
+#define CAT_SICK "SickDay"
+#define CAT_SPECIAL "SpecialOccasion"
+#define CAT_TRAVEL "Travel"
+#define CAT_VACATION "Vacation"
+
+
+#endif  // AGNVERSIT2STRINGS_HRH

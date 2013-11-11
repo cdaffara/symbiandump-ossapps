@@ -1,0 +1,66 @@
+/*
+* Copyright (c) 2002 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*     This is a localisation file for imcm.dll
+*     A .loc file is the one and only place where the logical strings
+*     to be localised are defined. 
+* >>>
+* The text between >>> and <<< is just to document the syntax and
+* you can remove it if you like.
+*
+*/
+
+
+
+
+// LOCALISATION STRINGS
+
+// d: Added in the beginning of the subject line when replying
+// l: mce_header_field_pane_t1
+#define qtn_mail_re         "RE: "
+
+// d: Added in the beginning of the subject line when forwarding
+// l: mce_header_field_pane_t1
+#define qtn_mail_fwd         "FWD: "
+
+// d: Text to be inserted into a message when replying
+// d: Inerted in the beginning of the original message
+// l: msg_header_pane_t2
+#define qtn_mail_reply_separator "--- original message ---"
+
+// d: Text to be inserted into a message when forwarding
+// d: Inserted in the beginning of the original message
+// l: msg_header_pane_t2
+#define qtn_mail_forward_separator "--- original message ---"
+
+// d: Text to be inserted into a message when forwarding or replying
+// d: Inserted in the beginning of the original message
+// l: msg_header_pane_t2
+#define qtn_mail_copy_subject "Subject:"
+
+// d: Text to be inserted into a message when forwarding or replying
+// d: Inserted in the beginning of the original message
+// l: msg_header_pane_t2
+#define qtn_mail_copy_sender "Sender:"
+
+// d: Text to be inserted into a message when forwarding or replying
+// d: Inserted in the beginning of the original message
+// l: msg_header_pane_t2
+#define qtn_mail_copy_date "Date:"
+
+// d: Text to be inserted into a message body if part of message body is filtered out
+// l:none
+#define qtn_mail_rest_of_mail_not_fetched "- - - Retrieve total mail selecting Retrieve from Options list. - - -"
+
+// End of File

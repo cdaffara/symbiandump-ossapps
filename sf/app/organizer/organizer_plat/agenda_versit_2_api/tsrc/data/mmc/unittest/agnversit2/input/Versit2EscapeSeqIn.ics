@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+PRODID:rich new\\\
+VERSION:2.0
+METHOD:PUBLISH
+BEGIN:VJOURNAL
+UID:19970901T130000Z-123405@host.com,,
+DTSTAMP:19970901T1300Z\\\,hello\n\n\\n\;
+DTSTART;VALUE="DATE:":19970317\\\\\n\;\:\\;
+COMMENT;VALUE="DATE:":19970317\\\\\n\;\:\\;
+SUMMARY:joy!\\
+DESCRIPTION:Span, span, span, span, span, span, span, span, lovely span, oh
+  wonderful span.
+END:VJOURNAL
+BEGIN:VTODO
+DESCRIPTION:
+DTSTART;VALUE="";Value2=;value3;value4=1,2,3,,,;value5="1,2,3,,,":19970317
+End:vToDo
+END:VCALENDAR

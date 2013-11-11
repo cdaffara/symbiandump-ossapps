@@ -1,0 +1,41 @@
+// Copyright (c) 1999-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+
+PRJ_TESTMMPFILES
+t_unit_imapsession_server.mmp manual
+
+PRJ_TESTEXPORTS
+../script/t_unit_imapsession.script							+/winscw/c/msgtest/scripts/imapunit/t_unit_imapsession.script
+../script/t_unit_imapsession_only.script					+/winscw/c/msgtest/scripts/imapunit/t_unit_imapsession_only.script
+
+../script/t_unit_imapatombuilder.script						+/winscw/c/msgtest/scripts/imapunit/t_unit_imapatombuilder.script
+../script/t_unit_imapbodystructurebuilder.script			+/winscw/c/msgtest/scripts/imapunit/t_unit_imapbodystructurebuilder.script
+../script/t_unit_imapcommand.script							+/winscw/c/msgtest/scripts/imapunit/t_unit_imapcommand.script
+../script/t_unit_imapcancelandflush.script					+/winscw/c/msgtest/scripts/imapunit/t_unit_imapcancelandflush.script
+../script/t_unit_imapfetchbody.script						+/winscw/c/msgtest/scripts/imapunit/t_unit_imapfetchbody.script
+../script/t_unit_imapfetchflags.script						+/winscw/c/msgtest/scripts/imapunit/t_unit_imapfetchflags.script
+../script/t_unit_imapfetchsinglebodystructure.script		+/winscw/c/msgtest/scripts/imapunit/t_unit_imapfetchsinglebodystructure.script
+../script/t_unit_imapidle.script							+/winscw/c/msgtest/scripts/imapunit/t_unit_imapidle.script
+../script/t_unit_imapservereventwait.script					+/winscw/c/msgtest/scripts/imapunit/t_unit_imapservereventwait.script
+../script/t_unit_imaplist.script							+/winscw/c/msgtest/scripts/imapunit/t_unit_imaplist.script
+../script/t_unit_imaplsub.script							+/winscw/c/msgtest/scripts/imapunit/t_unit_imaplsub.script
+../script/t_unit_imapsearch.script							+/winscw/c/msgtest/scripts/imapunit/t_unit_imapsearch.script
+../script/t_unit_imapselect.script							+/winscw/c/msgtest/scripts/imapunit/t_unit_imapselect.script
+../script/t_unit_imapstore.script							+/winscw/c/msgtest/scripts/imapunit/t_unit_imapstore.script
+#if (defined SYMBIAN_EMAIL_CAPABILITY_SUPPORT)
+../script/t_unit_imapauthenticate.script					+/winscw/c/msgtest/scripts/imapunit/t_unit_imapauthenticate.script
+#endif
+../script/t_unit_ctestimapsessioncreatesequenceset.script	+/winscw/c/msgtest/scripts/imapunit/t_unit_ctestimapsessioncreatesequenceset.script

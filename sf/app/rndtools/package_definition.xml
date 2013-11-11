@@ -1,0 +1,50 @@
+<SystemDefinition schema="3.0.0" xmlns:qt="http://www.nokia.com/qt">
+  <package id="rndtools" name="R&amp;D tools" levels="support generic test util">
+    <collection id="perfapps" name="Performance Applications" level="generic">
+			<component id="memspyui" filter="s60" name="Memspy UI" purpose="development" target="device" class="tool">
+				<unit bldFile="perfapps/memspyui" qt:proFile="memspyui.pro" />
+			</component>
+			<component id="perfmon" filter="s60" name="Performance Monitor" purpose="development" target="device" class="tool">
+				<unit bldFile="perfapps/perfmon" qt:proFile="perfmon.pro"/>
+			</component>
+			<component id="piprofilerui" filter="s60" name="Performance Investigator Profiler UI" purpose="development" target="device" introduced="^4">
+				<unit bldFile="perfapps/piprofilerui" qt:proFile="piprofilerui.pro" />
+			</component>
+		</collection>
+    <collection id="creator" name="Creator" level="support">
+	   	<!-- collection is really a component. Should move down a directory -->
+      <component id="creator_build" filter="s60" name="Creator Tool" purpose="development" target="device" class="tool">
+        <unit bldFile="creator" qt:proFile="creator.pro"/>
+      </component>
+    </collection>
+    <collection id="filebrowser" name="File Browser" level="util">
+	   	<!-- collection is really a component. Should move down a directory -->
+      <component id="filebrowser_build" filter="s60" name="File Browser Build" purpose="development" target="device" class="tool">
+        <unit bldFile="filebrowser" qt:proFile="filebrowser.pro" />
+      </component>
+    </collection>
+    <collection id="launcher" name="Launcher" level="util">
+	   	<!-- collection is really a component. Should move down a directory -->
+      <component id="launcher_build" filter="s60" name="Launcher Utility" purpose="development" target="device" class="tool">
+        <unit bldFile="launcher" qt:proFile="launcher.pro" />
+      </component>
+    </collection>
+    <collection id="loadgen" name="Load Generator" level="test">
+	   	<!-- collection is really a component. Should move down a directory -->
+      <component id="loadgen_build" filter="s60" name="Load Generator Application" purpose="development" target="device" class="tool">
+        <unit bldFile="loadgen" qt:proFile="loadgen.pro" />
+      </component>
+    </collection>
+    <collection id="screengrabber" name="Screen Grabber" level="util">
+	   	<!-- collection is really a component. Should move down a directory -->
+      <component id="screengrabber_build" filter="s60"  name="ScreenGrabber" purpose="development" target="device" class="tool">
+		    <unit bldFile="screengrabber" qt:proFile="screengrabber.pro"/>
+      </component>
+    </collection>
+    <collection id="debugapps" name="Debug Applications" level="generic">
+			<component id="appregexec" filter="s60" name="AppRegExec" purpose="development" target="device" class="tool">
+				<unit bldFile="debugapps/appregexec/group" />
+			</component>    
+    </collection>    
+  </package>
+</SystemDefinition>

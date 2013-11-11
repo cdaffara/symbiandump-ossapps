@@ -1,0 +1,137 @@
+/*
+* Copyright (c) 2008-2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Command ids
+*
+*/
+
+
+#ifndef __GLXCOMMANDHANDLERS_HRH__
+#define __GLXCOMMANDHANDLERS_HRH__
+
+
+#ifdef __PEN_SUPPORT 
+//#define __PHOTOS_MATRIX_PENSUPPORT
+#define __PHOTOS_TOOLBAR_PENSUPPORT
+#endif
+
+/**
+ * @internal reviewed 08/02/2008 by Rhodri Byles
+ */
+
+// CONSTANTS
+
+enum TGlxCommandId
+    {
+    EGlxCmdHandled    = 0x0000,
+    EGlxCmdAddToAlbum = 0x5500,
+    EGlxCmdOptions,
+    EGlxCmdDelete,
+    EGlxCmdAddTag,
+    EGlxCmdStateView,
+    EGlxCmdStateBrowse,
+    EGlxCmdDetails,
+    EGlxCmdUpload,
+    EGlxCmdRotate,
+    EGlxCmdRotateLeft,
+    EGlxCmdRotateRight,
+    EGlxCmdSlideshowPlay,
+    EGlxCmdSlideshowSettings,   
+    EGlxCmdDrmMoreInfoOnline,
+    EGlxCmdDrmGetPreview,
+    EGlxCmdDrmPlayPreview,
+    EGlxCmdStartMultipleMarking,
+    EGlxCmdEndMultipleMarking,
+    EGlxCmdMarkingSubmenu,
+    EGlxCmdAddMedia,
+    EGlxCmdRemoveFrom,
+    EGlxCmdFirstSlideshow,   //play the slide show with first item
+    EGlxCmdSelectSlideshow,  //play the slide show with selected item
+    EGlxCmdAlbumSlideShow,   //play the slide show for a album
+    EGlxCmdRename,
+    EGlxCmdRenameFile,
+    EGlxCmdAddToFav,
+    EGlxCmdRemoveFromFav,
+    EGlxCmdPlay,
+    EGlxCmdDRMOpen,
+    EGlxCmdShowOnlineInfo,
+    EGlxCmdDownloadImages,
+    EGlxCmdDownloadVideos,
+    EGlxCmdCopy,
+    EGlxCmdMove,
+    EGlxCmdCopyMoveSubmenu,
+    EGlxCmdSend,
+    EGlxShowViaUpnp,
+    EGlxStopShowing,
+    EGlxShowViaUpnpSubmenuVersion,
+    EGlxStopShowingSubmenuVersion,
+    EGlxHomeNetworkSubmenu,
+    EGlxCopyToHomeNetwork,
+    EGlxCmdHideUI,
+    EGlxCmdSortByAlphabetical,
+    EGlxCmdSortByCount,
+    EGlxCmdDisableAnimations,
+    EGlxCmdEnableAnimations,
+    EGlxCmdDetailsOption,
+    EGlxCmdAiwPrint,
+    EGlxCmdAiwAssign,
+    EGlxCmdAiwEdit,
+    EGlxCmdAiwShowMap,
+    EGlxCmdSelectMarked,
+    EGlxCmdFullScreenBack,
+    EGlxCmdShowViaUpnpStateChanged,
+    EGlxCmdResetView,
+    EGlxCmdActivateStateView,
+    EGlxCmdShow,
+    EGlxCmdShowAll,
+    EGlxCmdShowImages,
+    EGlxCmdShowVideos,
+    EGlxCmdAllGridOpen,
+    EGlxCmdFetcherAllGridOpen,  //open fetcher grid in all collection
+    EGlxCmdFullScreenOpen,
+    EGlxCmdFetcherFullScreenOpen,  //open fetcher in fullscreen
+    EGlxCmdBrowseFullScreenOpen,   //open browse service in FS
+    EGlxCmdAlbumGridOpen,
+    EGlxCmdFetcherAlbumGridOpen,  //open fetcher album grid
+    EGlxCmdAlbumListOpen,
+    EGlxCmdFetcherAlbumListOpen,  //open fetcher album list
+    EGlxCmdCameraOpen,
+    EGlxCmdDetailsOpen,
+    EGlxCmdEmptyData,
+    EGlxCmdOviOpen,
+    EGlxCmdBack,
+    EGlxCmdSlideShowBack,
+    EGlxCmdSelect,
+    EGlxCmdCancel,
+    EGlxCmdMarkAll,
+    EGlxCmdUnMarkAll,
+    EGlxCmdContextRemoveFrom,
+    EGlxCmdContextAddToAlbum,
+    EGlxCmdContextDelete,
+    EGlxCmdContextAlbumDelete,
+    EGlxCmdContextSend,
+    EGlxCmdContextRename,
+    EGlxCmdSetupItem,
+    EGlxCmdComment,
+    EGlxCmdRotateImgCW,
+    EGlxCmdRotateImgCCW,
+    EGlxCmdRotateImgCrop,
+    EGlxCmd3DEffectOn,
+    EGlxCmd3DEffectOff,
+    EGlxCmdSetWallpaper,
+    EGlxCmdPlayBackAnim,
+    EGlxCmdFetcherSelect,
+    EGlxCmdAiwBase = 0x6000
+    };
+
+#endif  // __GLXCOMMANDHANDLERS_HRH__

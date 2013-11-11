@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="1.1">
+    <object name="mOptionsDelete" type="HbAction">
+        <string locid="txt_common_opt_delete" name="text" value="Delete"/>
+    </object>
+    <widget name="videofiledetailsview" type="HbView">
+        <widget name="mOptionsMenu" role="HbView:menu" type="HbMenu">
+            <ref object="mOptionsDelete" role="HbWidget:addAction"/>
+        </widget>
+        <widget name="mContent" role="HbView:widget" type="HbWidget">
+            <widget name="mLblTitle" type="HbStackedWidget">
+                <real name="z" value="0.0079"/>
+                <sizehint height="4.47761un" type="PREFERRED" width="47.7612un"/>
+            </widget>
+            <widget name="mDetailsContainer" type="HbWidget">
+                <widget name="mDetailsList" type="HbListWidget"/>
+                <real name="z" value="2"/>
+                <sizehint height="23.8806un" type="PREFERRED" width="11.9403un"/>
+                <layout orientation="Vertical" type="linear">
+                    <linearitem itemname="mDetailsList"/>
+                </layout>
+            </widget>
+            <widget name="mThumbContainer" type="HbWidget">
+                <widget name="mDetailsLabel" type="HbStackedWidget">
+                    <real name="z" value="2"/>
+                    <sizehint height="34.47761un" type="PREFERRED" width="47.91045un"/>
+                    <bool name="visible" value="TRUE"/>
+                    <string name="state" value="normal"/>
+                </widget>
+                <real name="z" value="1"/>
+                <sizehint height="37.31343un" type="PREFERRED" width="47.7612un"/>
+                <layout type="anchor">
+                    <anchoritem dst="mDetailsLabel" dstEdge="LEFT" spacing="1.34328un" src="" srcEdge="LEFT"/>
+                    <anchoritem dst="mDetailsLabel" dstEdge="TOP" spacing="1.34328un" src="" srcEdge="TOP"/>
+                </layout>
+            </widget>
+            <widget name="mButton" type="HbPushButton">
+                <real name="z" value="3"/>
+            </widget>
+        </widget>
+    </widget>
+    <section name="portrait">
+        <widget name="mContent" role="HbView:widget" type="HbWidget">
+            <widget name="mButton" type="HbPushButton">
+                <real name="z" value="5"/>
+                <sizehint height="7.17164un" type="PREFERRED" width="50.74626un"/>
+            </widget>
+            <widget name="mDetailsContainer" type="HbWidget">
+                <widget name="mDetailsList" type="HbListWidget">
+                    <real name="z" value="0"/>
+                    <sizepolicy horizontalPolicy="Expanding" horizontalStretch="0" verticalPolicy="Expanding" verticalStretch="0"/>
+                    <sizehint height="38.50746un" type="PREFERRED" width="48.0597un"/>
+                    <bool name="visible" value="TRUE"/>
+                </widget>
+                <real name="z" value="2"/>
+                <sizehint height="42.68657un" type="PREFERRED" width="50.89551un"/>
+                <layout type="anchor">
+                    <anchoritem dst="mDetailsList" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                    <anchoritem dst="mDetailsList" dstEdge="TOP" spacing="0un" src="" srcEdge="TOP"/>
+                    <anchoritem dst="mDetailsList" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                    <anchoritem dst="mDetailsList" dstEdge="BOTTOM" spacing="0un" src="" srcEdge="BOTTOM"/>
+                </layout>
+            </widget>
+            <widget name="mThumbContainer" type="HbWidget">
+                <widget name="mDetailsLabel" type="HbStackedWidget">
+                    <real name="z" value="2"/>
+                    <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+                    <sizehint height="28.54478un" type="FIXED" width="50.74627un"/>
+                    <string name="state"/>
+                </widget>
+                <real name="z" value="1"/>
+                <sizehint height="28.69403un" type="PREFERRED" width="50.74626un"/>
+                <sizepolicy horizontalPolicy="Preferred" horizontalStretch="0" verticalPolicy="Preferred" verticalStretch="0"/>
+                <layout orientation="Horizontal" spacing="0un" type="linear">
+                    <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+                    <linearitem itemname="mDetailsLabel"/>
+                </layout>
+            </widget>
+            <layout orientation="Vertical" type="linear">
+                <linearitem itemname="mLblTitle"/>
+                <linearitem itemname="mThumbContainer"/>
+                <linearitem itemname="mDetailsContainer"/>
+                <linearitem itemname="mButton"/>
+            </layout>
+        </widget>
+    </section>
+    <section name="landscape">
+        <widget name="mContent" role="HbView:widget" type="HbWidget">
+            <widget name="mDetailsContent" type="HbWidget">
+                <widget name="mRightContent" type="HbWidget">
+                    <widget name="mDetailsContainer" type="HbWidget">
+                        <widget name="mDetailsList" type="HbListWidget">
+                            <real name="z" value="0"/>
+                            <sizehint height="35.37314un" type="PREFERRED" width="48.0597un"/>
+                            <bool name="visible" value="TRUE"/>
+                        </widget>
+                        <real name="z" value="2"/>
+                        <sizehint height="35.97015un" type="PREFERRED" width="42.98507un"/>
+                        <layout type="anchor">
+                            <anchoritem dst="mDetailsList" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                            <anchoritem dst="mDetailsList" dstEdge="TOP" spacing="0un" src="" srcEdge="TOP"/>
+                            <anchoritem dst="mDetailsList" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                            <anchoritem dst="mDetailsList" dstEdge="BOTTOM" spacing="0un" src="" srcEdge="BOTTOM"/>
+                        </layout>
+                    </widget>
+                    <sizehint height="29.52029un" type="PREFERRED" width="29.52029un"/>
+                    <sizepolicy horizontalPolicy="Expanding" horizontalStretch="0" verticalPolicy="Expanding" verticalStretch="0"/>
+                    <layout orientation="Vertical" type="linear">
+                        <linearitem itemname="mDetailsContainer"/>
+                    </layout>
+                </widget>
+                <widget name="mLeftContent" type="HbWidget">
+                    <widget name="mThumbContainer" type="HbWidget">
+                        <widget name="mDetailsLabel" type="HbStackedWidget">
+                            <real name="z" value="5"/>
+                            <sizehint height="29.49253un" type="FIXED" width="48.35821un"/>
+                            <bool name="visible" value="TRUE"/>
+                            <string name="state"/>
+                            <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+                        </widget>
+                        <real name="z" value="1"/>
+                        <sizepolicy horizontalPolicy="Preferred" horizontalStretch="0" verticalPolicy="Preferred" verticalStretch="0"/>
+                        <sizehint height="30.29851un" type="PREFERRED" width="49.04478un"/>
+                        <layout type="anchor">
+                            <anchoritem dst="mDetailsLabel" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                            <anchoritem dst="mDetailsLabel" dstEdge="TOP" spacing="0un" src="" srcEdge="TOP"/>
+                            <anchoritem dst="mDetailsLabel" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                            <anchoritem dst="mDetailsLabel" dstEdge="BOTTOM" spacing="0un" src="" srcEdge="BOTTOM"/>
+                        </layout>
+                    </widget>
+                    <widget name="mButton" type="HbPushButton">
+                        <real name="z" value="6"/>
+                        <sizehint height="7.5un" type="PREFERRED" width="43.88059un"/>
+                    </widget>
+                    <sizehint height="23.8806un" type="PREFERRED" width="23.8806un"/>
+                    <sizepolicy horizontalPolicy="Expanding" horizontalStretch="0" verticalPolicy="Expanding" verticalStretch="0"/>
+                    <layout orientation="Vertical" type="linear">
+                        <linearitem itemname="mThumbContainer"/>
+                        <linearitem itemname="mButton"/>
+                    </layout>
+                </widget>
+                <sizehint height="29.52029un" type="PREFERRED" width="29.52029un"/>
+                <layout orientation="Horizontal" spacing="0un" type="linear">
+                    <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+                    <linearitem itemname="mLeftContent"/>
+                    <linearitem itemname="mRightContent"/>
+                </layout>
+            </widget>
+            <layout orientation="Vertical" spacing="0un" type="linear">
+                <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+                <linearitem itemname="mLblTitle"/>
+                <linearitem itemname="mDetailsContent"/>
+            </layout>
+        </widget>
+    </section>
+    <metadata activeUIState="landscape" display="NHD-4.0-inch_landscape" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+        <uistate name="portrait" sections="#common portrait"/>
+        <uistate name="landscape" sections="#common landscape"/>
+    </metadata>
+</hbdocument>

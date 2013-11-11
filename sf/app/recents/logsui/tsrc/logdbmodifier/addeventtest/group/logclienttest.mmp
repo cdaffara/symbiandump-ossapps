@@ -1,0 +1,61 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+#include <platform_paths.hrh>
+
+TARGET        logclienttest.exe
+TARGETTYPE    exe
+UID           0x100039CE 0x20026F62
+SECUREID			0x20026F62
+SOURCEPATH    ..\src
+SOURCE	      clientlogstest.cpp
+SOURCE	      argstest.cpp
+
+EPOCSTACKSIZE 0x5000
+
+USERINCLUDE   ..\inc
+USERINCLUDE     ..\data
+
+APP_LAYER_SYSTEMINCLUDE        
+SYSTEMINCLUDE   \epoc32\include\ecom
+
+
+LIBRARY		apparc.lib
+LIBRARY		avkon.lib
+LIBRARY         bafl.lib
+LIBRARY         cone.lib
+LIBRARY         ecom.lib
+LIBRARY         eikcoctl.lib
+LIBRARY         eikcore.lib 
+LIBRARY         euser.lib
+LIBRARY         fbscli.lib
+LIBRARY         efsrv.lib    
+LIBRARY         CdlEngine.lib           // for scalable ui
+LIBRARY         flogger.lib
+LIBRARY         charconv.lib 
+LIBRARY         customapi.lib
+LIBRARY         logcli.lib 
+LIBRARY         logwrap.lib 
+LIBRARY         estor.lib
+LIBRARY         inetprotutil.lib
+
+VENDORID 0x101FB657
+
+CAPABILITY    ALL -TCB
+
+
+SMPSAFE

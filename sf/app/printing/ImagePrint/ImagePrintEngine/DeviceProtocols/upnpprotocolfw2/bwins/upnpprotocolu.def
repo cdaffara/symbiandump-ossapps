@@ -1,0 +1,18 @@
+EXPORTS
+	?ImplementationGroupProxy@@YAPBUTImplementationProxy@@AAH@Z @ 1 NONAME ; struct TImplementationProxy const * ImplementationGroupProxy(int &)
+	?CancelJobL@CPrinterControlPoint@@QAEXPAVCUpnpDevice@@ABVTDesC8@@@Z @ 2 NONAME ; void CPrinterControlPoint::CancelJobL(class CUpnpDevice *, class TDesC8 const &)
+	?GetPrinterAttributesL@CPrinterControlPoint@@QAEXPAVCUpnpDevice@@@Z @ 3 NONAME ; void CPrinterControlPoint::GetPrinterAttributesL(class CUpnpDevice *)
+	?GetJobAttributesL@CPrinterControlPoint@@QAEXPAVCUpnpDevice@@ABVTDesC8@@@Z @ 4 NONAME ; void CPrinterControlPoint::GetJobAttributesL(class CUpnpDevice *, class TDesC8 const &)
+	?GetMediaListL@CPrinterControlPoint@@QAEXPAVCUpnpDevice@@ABVTDesC8@@1@Z @ 5 NONAME ; void CPrinterControlPoint::GetMediaListL(class CUpnpDevice *, class TDesC8 const &, class TDesC8 const &)
+	?GetMarginsL@CPrinterControlPoint@@QAEXPAVCUpnpDevice@@ABVTDesC8@@1@Z @ 6 NONAME ; void CPrinterControlPoint::GetMarginsL(class CUpnpDevice *, class TDesC8 const &, class TDesC8 const &)
+	?ActionResponseReceivedL@CPrinterControlPoint@@UAEXPAVCUpnpAction@@@Z @ 7 NONAME ; void CPrinterControlPoint::ActionResponseReceivedL(class CUpnpAction *)
+	?CancelJobL@CPrinterControlPoint@@QAEXH@Z @ 8 NONAME ; void CPrinterControlPoint::CancelJobL(int)
+	?HttpResponseReceivedL@CPrinterControlPoint@@UAEXPAVCUpnpHttpMessage@@@Z @ 9 NONAME ; void CPrinterControlPoint::HttpResponseReceivedL(class CUpnpHttpMessage *)
+	?DeviceDisappearedL@CPrinterControlPoint@@UAEXPAVCUpnpDevice@@@Z @ 10 NONAME ; void CPrinterControlPoint::DeviceDisappearedL(class CUpnpDevice *)
+	?CreateJobL@CPrinterControlPoint@@QAEHPAVCUpnpDevice@@ABVTDesC8@@11111111H@Z @ 11 NONAME ; int CPrinterControlPoint::CreateJobL(class CUpnpDevice *, class TDesC8 const &, class TDesC8 const &, class TDesC8 const &, class TDesC8 const &, class TDesC8 const &, class TDesC8 const &, class TDesC8 const &, class TDesC8 const &, class TDesC8 const &, int)
+	?NewL@CPrinterControlPoint@@SAPAV1@AAVMPCPObserver@@@Z @ 12 NONAME ; class CPrinterControlPoint * CPrinterControlPoint::NewL(class MPCPObserver &)
+	?PrintingFinishedL@CPrinterControlPoint@@QAEXPAVCUpnpDevice@@@Z @ 13 NONAME ; void CPrinterControlPoint::PrintingFinishedL(class CUpnpDevice *)
+	?DeviceDiscoveredL@CPrinterControlPoint@@UAEXPAVCUpnpDevice@@@Z @ 14 NONAME ; void CPrinterControlPoint::DeviceDiscoveredL(class CUpnpDevice *)
+	??1CPrinterControlPoint@@UAE@XZ @ 15 NONAME ; CPrinterControlPoint::~CPrinterControlPoint(void)
+	?StateUpdatedL@CPrinterControlPoint@@UAEXPAVCUpnpService@@@Z @ 16 NONAME ; void CPrinterControlPoint::StateUpdatedL(class CUpnpService *)
+

@@ -1,0 +1,47 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+#ifndef __TESTCALINDEXFILE_IBY__
+#define __TESTCALINDEXFILE_IBY__
+
+#include <testexecute.iby>
+#include <agnmodel.iby>
+#include <calinterimapi.iby>
+
+file=ABI_DIR\BUILD_DIR\TestCalIndexFileSuite.exe		                 Sys\Bin\TestCalIndexFileSuite.exe
+
+data=EPOCROOT##Epoc32\data\c\CalIndexFileTestData\TestCalIndexFileSuite.script CalIndexFileTestData\TestCalIndexFileSuite.script
+data=EPOCROOT##Epoc32\data\c\CalIndexFileTestData\TestCalIndexFileBandR.script CalIndexFileTestData\TestCalIndexFileBandR.script
+data=EPOCROOT##Epoc32\data\c\CalIndexFileTestData\opentest.ini CalIndexFileTestData\opentest.ini
+data=EPOCROOT##Epoc32\data\c\CalIndexFileTestData\openindextest.ini CalIndexFileTestData\openindextest.ini
+data=EPOCROOT##Epoc32\data\c\CalIndexFileTestData\Calendar1 CalIndexFileTestData\Calendar1
+data=EPOCROOT##Epoc32\data\c\CalIndexFileTestData\calendar1Idx CalIndexFileTestData\calendar1Idx
+data=EPOCROOT##Epoc32\data\c\CalIndexFileTestData\Calendar2 CalIndexFileTestData\Calendar2
+data=EPOCROOT##Epoc32\data\c\CalIndexFileTestData\calendar2Idx CalIndexFileTestData\calendar2Idx
+data=EPOCROOT##Epoc32\data\c\CalIndexFileTestData\burtest.ini CalIndexFileTestData\burtest.ini
+data=EPOCROOT##Epoc32\data\c\CalIndexFileTestData\Calendar0 CalIndexFileTestData\Calendar0
+data=EPOCROOT##Epoc32\data\c\CalIndexFileTestData\Calendar0Crpt CalIndexFileTestData\Calendar0Crpt
+data=EPOCROOT##Epoc32\data\c\CalIndexFileTestData\calendar0CrptIdx CalIndexFileTestData\calendar0CrptIdx
+data=EPOCROOT##Epoc32\data\c\CalIndexFileTestData\calendar0Idx CalIndexFileTestData\calendar0Idx
+data=EPOCROOT##Epoc32\data\c\CalIndexFileTestData\Calendar1Crpt CalIndexFileTestData\Calendar1Crpt
+data=EPOCROOT##Epoc32\data\c\CalIndexFileTestData\calendar1CrptIdx CalIndexFileTestData\calendar1CrptIdx
+data=EPOCROOT##Epoc32\data\c\CalIndexFileTestData\Calendar2Crpt CalIndexFileTestData\Calendar2Crpt
+data=EPOCROOT##Epoc32\data\c\CalIndexFileTestData\calendar2CrptIdx CalIndexFileTestData\calendar2CrptIdx
+data=EPOCROOT##Epoc32\data\c\CalIndexFileTestData\corruptindex.ini CalIndexFileTestData\corruptindex.ini
+data=EPOCROOT##Epoc32\data\c\CalIndexFileTestData\crudentries.ini CalIndexFileTestData\crudentries.ini
+
+#endif

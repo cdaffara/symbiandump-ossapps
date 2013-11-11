@@ -1,0 +1,81 @@
+/*
+* Copyright (c) 2002-2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*     This is project specification file for the mmsutils.dll.
+*
+*/
+
+
+
+#include <platform_paths.hrh>
+
+TARGET          mmsmessage.dll
+TARGETTYPE      dll
+UID             0x1000008d 0x100058E0
+CAPABILITY      CAP_GENERAL_DLL
+VENDORID        VID_DEFAULT
+VERSION 	10.0
+PAGED
+
+SOURCEPATH      ../src
+
+SOURCE          mmsmessagemain.cpp
+SOURCE          mmsheaders.cpp
+SOURCE          mmsmessageoperation.cpp
+SOURCE          mmssendingchain.cpp
+SOURCE          mmselementdescriptor.cpp
+SOURCE          mmsmmboxflags.cpp
+SOURCE          mmsmmboxmessageheaders.cpp
+SOURCE          mmsmmboxviewheaders.cpp
+SOURCE          mmsdeleteresultarray.cpp
+SOURCE          mmscliententry.cpp
+SOURCE          mmsserverentry.cpp
+SOURCE          mmsdrm.cpp
+
+USERINCLUDE     ../inc
+USERINCLUDE     ../../inc
+USERINCLUDE     ../../mmsconninit/inc
+USERINCLUDE     ../../mmscodec/inc
+USERINCLUDE     ../../mmsserversettings/inc
+USERINCLUDE     ../../mmsserver/inc
+
+SYSTEMINCLUDE   ../../../inc
+APP_LAYER_SYSTEMINCLUDE
+
+LIBRARY         euser.lib
+LIBRARY         estor.lib
+LIBRARY         msgs.lib
+LIBRARY         bafl.lib
+LIBRARY         efsrv.lib
+LIBRARY         mmsgenutils.lib
+LIBRARY         mmsserversettings.lib
+LIBRARY         charconv.lib
+LIBRARY         centralrepository.lib
+LIBRARY         caf.lib
+LIBRARY         cafutils.lib
+LIBRARY         drmrights.lib
+
+DEBUGLIBRARY    flogger.lib
+
+#if defined(ARMCC)
+deffile       ../eabi/mmsmessage.def
+#elif defined( WINS )
+DEFFILE       ../bwins/wins.def
+#endif
+
+
+
+SMPSAFE
+
+//  End of File

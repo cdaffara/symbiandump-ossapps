@@ -1,0 +1,43 @@
+Notes on T_IMPS harness 07-Aug-1998
+-----------------------
+
+This harness drives the IMPS.DLL component through connecting to an IMAP
+server, performing various synchronising and fetching tasks, and then
+disconnection. After disconnection, the local folder structure is dumped
+to the file:
+
+c:\system\messages\zac.txt
+
+...which can be used to check the server database has been formed correctly.
+
+When run, you get offered a selection of IMAP servers to connect to: if you
+have no existing server in your database, pick one of these to create a new
+service entry and run against this.
+
+If you have created a service entry in a previous session, and wish to run
+against this existing service entry (with its associated data - messages,
+folder structure, etc) then key '0', which searches the root of the database
+for the first IMAP service, then uses this for the connection. This allows
+synchronisation to be tested -
+
+ - Blank database
+ - Create new service entry, connect and synchronise trees and inbox
+ - Disconnect
+ - Using another client, alter the inbox/folder tree
+ - Connect again, using option '0'
+ - Client synchronises changes on the remote server back to the database
+
+The current operation sequence is this:
+
+ 1. Connect to server (checks hierarchy separator if necessary)
+ 2. Perform full sync operation, which conists of
+    - Select inbox
+    - Sync inbox
+    - Sync folder tree
+    - Check remote folder subscriptions
+      For each subscribed folder:
+      - Select folder
+      - Sync folder
+ 3. Logout
+ 4. Disconnect
+ 5. Create text file showing database structure (zac.txt)

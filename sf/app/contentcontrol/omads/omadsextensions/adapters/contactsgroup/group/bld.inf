@@ -1,0 +1,29 @@
+/*
+* Copyright (c) 2008-2010 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  bld file for Contacts Group DS adapter
+*
+*/
+
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+./101ff972.xml              Z:/private/101f99f6/capability/101ff972.xml
+./contactsgrpdsa_stub.sis   /epoc32/data/z/system/install/contactsgrpdsa_stub.sis
+../rom/contactsgrpdsa.iby   CORE_APP_LAYER_IBY_EXPORT_PATH(contactsgrpdsa.iby)
+
+PRJ_MMPFILES
+./contactsgrpdataprovider.mmp
+

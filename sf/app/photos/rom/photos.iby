@@ -1,0 +1,97 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+* 
+* Description:
+*
+*/
+#ifndef __PHOTOS_IBY__
+#define __PHOTOS_IBY__
+
+#include <bldvariant.hrh>
+#include <data_caging_paths_for_iby.hrh>
+
+file=ABI_DIR/BUILD_DIR/glxcommonui.dll                        SHARED_LIB_DIR/glxcommonui.dll  
+file=ABI_DIR/BUILD_DIR/glxcommon.dll                          SHARED_LIB_DIR/glxcommon.dll  
+file=ABI_DIR/BUILD_DIR/glximageviewermanager.dll              SHARED_LIB_DIR/glximageviewermanager.dll
+
+// datasource
+file=ABI_DIR/BUILD_DIR/glxdatasourcemanager.dll               SHARED_LIB_DIR/glxdatasourcemanager.dll  
+ECOM_PLUGIN( glxdatasourcemde.dll, glxdatasourcemde.rsc )
+
+// Collection plugins
+ECOM_PLUGIN( glxcollectionpluginalbums.dll, glxcollectionpluginalbums.rsc )
+data=DATAZ_/ECOM_RESOURCE_DIR/glxpluginalbums.rsc              ECOM_RESOURCE_DIR/glxpluginalbums.rsc
+
+ECOM_PLUGIN( glxcollectionpluginall.dll, glxcollectionpluginall.rsc )
+data=DATAZ_/ECOM_RESOURCE_DIR/glxpluginall.rsc                 ECOM_RESOURCE_DIR/glxpluginall.rsc
+
+ECOM_PLUGIN( glxcollectionplugincamera.dll, glxcollectionplugincamera.rsc )
+data=DATAZ_/ECOM_RESOURCE_DIR/glxplugincamera.rsc              ECOM_RESOURCE_DIR/glxplugincamera.rsc
+
+ECOM_PLUGIN( glxcollectionplugindownloads.dll, glxcollectionplugindownloads.rsc )
+data=DATAZ_/ECOM_RESOURCE_DIR/glxplugindownloads.rsc           ECOM_RESOURCE_DIR/glxplugindownloads.rsc
+
+ECOM_PLUGIN( glxcollectionpluginmonths.dll, glxcollectionpluginmonths.rsc )
+data=DATAZ_/ECOM_RESOURCE_DIR/glxpluginmonths.rsc              ECOM_RESOURCE_DIR/glxpluginmonths.rsc
+
+ECOM_PLUGIN( glxcollectionplugintags.dll, glxcollectionplugintags.rsc )
+data=DATAZ_/ECOM_RESOURCE_DIR/glxplugintags.rsc                ECOM_RESOURCE_DIR/glxplugintags.rsc
+
+ECOM_PLUGIN( glxcollectionpluginimageviewer.dll, glxcollectionpluginimageviewer.rsc )
+
+ECOM_PLUGIN( glxmemoryplugin.dll, glxmemoryplugin.rsc )
+
+// logger
+file=ABI_DIR/BUILD_DIR/glxlogging.dll              			SHARED_LIB_DIR/glxlogging.dll
+
+// commandhandlers
+file=ABI_DIR/BUILD_DIR/glxcommandhandlerbase.dll            SHARED_LIB_DIR/glxcommandhandlerbase.dll
+file=ABI_DIR/BUILD_DIR/glxcommoncommandhandlers.dll         SHARED_LIB_DIR/glxcommoncommandhandlers.dll
+
+// engine
+file=ABI_DIR/BUILD_DIR/glxdrmutility.dll					SHARED_LIB_DIR/glxdrmutility.dll
+file=ABI_DIR/BUILD_DIR/glxmedialists.dll                    SHARED_LIB_DIR/glxmedialists.dll
+file=ABI_DIR\BUILD_DIR/glxtvout.dll      					SHARED_LIB_DIR/glxtvout.dll
+
+// viewmanagement
+file=ABI_DIR/BUILD_DIR/glxstatehandler.dll              	SHARED_LIB_DIR/glxstatehandler.dll
+file=ABI_DIR/BUILD_DIR/glxviewmanager.dll              		SHARED_LIB_DIR/glxviewmanager.dll
+
+//qt 
+file=ABI_DIR/BUILD_DIR/glxdrmutilitywrapper.dll             SHARED_LIB_DIR/glxdrmutilitywrapper.dll
+file=ABI_DIR/BUILD_DIR/glxexternalutility.dll              	SHARED_LIB_DIR/glxexternalutility.dll
+file=ABI_DIR/BUILD_DIR/glximagedecoderwrapper.dll          	SHARED_LIB_DIR/glximagedecoderwrapper.dll
+file=ABI_DIR/BUILD_DIR/glxloggerqt.dll              	   	SHARED_LIB_DIR/glxloggerqt.dll
+file=ABI_DIR/BUILD_DIR/glxmedialistwrapper.dll             	SHARED_LIB_DIR/glxmedialistwrapper.dll
+file=ABI_DIR/BUILD_DIR/glxtvoutwrapper.dll                 	SHARED_LIB_DIR/glxtvoutwrapper.dll
+file=ABI_DIR/BUILD_DIR/glxfavmediamodel.dll          		SHARED_LIB_DIR/glxfavmediamodel.dll
+file=ABI_DIR/BUILD_DIR/glxmediamodel.dll                   	SHARED_LIB_DIR/glxmediamodel.dll
+file=ABI_DIR/BUILD_DIR/glxmodelwrapper.dll              	SHARED_LIB_DIR/glxmodelwrapper.dll
+file=ABI_DIR/BUILD_DIR/glxlistmodel.dll                    	SHARED_LIB_DIR/glxlistmodel.dll
+file=ABI_DIR/BUILD_DIR/glxviews.dll                        	SHARED_LIB_DIR/glxviews.dll
+file=ABI_DIR/BUILD_DIR/glxviewutilities.dll                	SHARED_LIB_DIR/glxviewutilities.dll
+file=ABI_DIR/BUILD_DIR/glxzoomwidget.dll                	SHARED_LIB_DIR/glxzoomwidget.dll
+file=ABI_DIR/BUILD_DIR/glxdetailscustomwidgets.dll         	SHARED_LIB_DIR/glxdetailscustomwidgets.dll
+file=ABI_DIR/BUILD_DIR/glxdetailscustomplugin.dll          	SHARED_LIB_DIR/glxdetailscustomplugin.dll
+
+
+
+S60_APP_EXE(photos)
+data=/epoc32/data/z/private/10003a3f/import/apps/photos_reg.rsc         private/10003a3f/import/apps/photos_reg.rsc
+data=/epoc32/data/Z/private/10202BE9/20007194.txt						private/10202BE9/20007194.txt
+data=/epoc32/data/Z/private/10202BE9/20007193.txt						private/10202BE9/20007193.txt
+data=/epoc32/data/z/system/install/photos_stub.sis        				/system/install/photos_stub.sis
+
+data=ZRESOURCE/hb/splashml/photos.splashml  RESOURCE_FILES_DIR/hb/splashml/photos.splashml
+data=ZRESOURCE/hb/splashml/photos.docml  RESOURCE_FILES_DIR/hb/splashml/photos.docml
+#endif //__PHOTOS_IBY__

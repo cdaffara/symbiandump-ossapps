@@ -1,0 +1,38 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+//
+// TMODEL.MMP
+//
+
+TARGET			TMODEL.EXE
+TARGETTYPE		EXE
+CAPABILITY   None
+SOURCEPATH		..\TSRC
+SOURCE			TMODEL.CPP
+
+USERINCLUDE		..\TSRC
+USERINCLUDE		..\INC
+USERINCLUDE		..\DBWRITER
+
+SYSTEMINCLUDE	..\INC
+SYSTEMINCLUDE	..\DBWRITER
+SYSTEMINCLUDE	\EPOC32\INCLUDE
+
+LIBRARY			EUSER.LIB	EFSRV.LIB	BAFL.LIB	HLPMODEL.LIB
+VENDORID 0x70000001
+
+SMPSAFE

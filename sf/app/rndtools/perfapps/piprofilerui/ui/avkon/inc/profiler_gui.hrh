@@ -1,0 +1,117 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   
+*
+*/
+
+
+
+#ifndef PROFILERGUI_HRH
+#define PROFILERGUI_HRH
+
+enum TProfilerCmdSamplerIds
+    {
+    EProfilerGuiCmdSamplerEnable = 1,   // id cannot be 0
+    EProfilerGuiCmdSamplerDisable,
+    EProfilerGuiCmdSamplerSettings,
+    EProfilerGuiCmdSamplerInfo
+    };
+
+enum TSamplerSettingItemIds
+    {
+    EProfilerGuiGenericSamplerQuerySampleRate = 0,
+    EProfilerGuiGenericSamplerQueryItem1,
+    EProfilerGuiGenericSamplerQueryItem2,
+    EProfilerGuiGenericSamplerQueryItem3,
+    EProfilerGuiGenericSamplerQueryItem4,
+    EProfilerGuiGenericSamplerQueryItem5,
+    EProfilerGuiGenericSamplerQueryItem6
+    };
+
+enum TGeneralSettingItemIds
+    {
+    ESettingListItemPluginTraceOutput = 0,
+    ESettingListItemPluginSaveFileDrive,
+    ESettingListItemPluginTraceFilePrefix,
+    ESettingListItemPluginSamplingTime
+    };
+
+enum TProfilerGuiCommandIds
+    {
+    EProfilerGuiCmdStart = 1000,
+    EProfilerGuiCmdStop,
+    EProfilerGuiCmdStartAll,
+    EProfilerGuiCmdStartTimed,
+    EProfilerGuiCmdStopAll,
+    
+    EProfilerGuiCmdSamplerControl,
+    EProfilerGuiCmdSamplerSettingsChange,
+    EProfilerGuiCmdSamplerSettingsExit,
+    
+    EProfilerGuiCmdSettings,
+    EProfilerGuiCmdSettingsChange,
+    EProfilerGuiCmdSettingsExit,
+    EProfilerGuiCmdSettingsBack,
+
+    EProfilerGuiCmdAbout,
+
+    EProfilerGuiViewConfQuery,
+    EProfilerGuiSettingItemList,
+    EProfilerSamplerSettingItemList
+    };
+
+enum TProfilerGuiSettingSamplerNameLength
+	{
+	ESamplerNameShort,
+	ESamplerNameMedium,
+	ESamplerNameLong
+	};
+
+enum TProfilerGuiSettingTraceMode
+	{
+	ETraceModeStream,
+	ETraceModeBuffer
+	};
+
+enum TProfilerGuiSettingOutputMode
+	{
+	EOutputToDebugPort = 0,
+	EOutputToFileSystem
+	};
+
+enum TProfilerGuiSettingSaveFileDrive
+	{
+	ETraceSaveFileDriveC,
+	ETraceSaveFileDriveD,
+	ETraceSaveFileDriveE,
+	ETraceSaveFileDriveF,
+	ETraceSaveFileDriveG,
+	ETraceSaveFileDriveH,
+	ETraceSaveFileDriveI,
+	ETraceSaveFileDriveJ,
+	ETraceSaveFileDriveK,
+	ETraceSaveFileDriveL
+	};
+
+enum TItemActionMenuTypes
+    {
+    EItemActionMenuTypeEnable = 0,
+    EItemActionMenuTypeDisable,
+    EItemActionMenuTypeEditSettings,    
+    EItemActionMenuTypeInfo,    
+    EItemActionMenuTypeStart,	// for future use
+    EItemActionMenuTypeStop	    // for future use
+    };
+
+#endif      // PROFILERGUI_HRH

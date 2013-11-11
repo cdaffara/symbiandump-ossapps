@@ -1,0 +1,71 @@
+EXPORTS
+	?NewL@CPECallHandling@@SAPAV1@AAVMPEPhoneModelInternal@@AAVCCCE@@AAVMCCEDtmfInterface@@@Z @ 1 NONAME ; class CPECallHandling * CPECallHandling::NewL(class MPEPhoneModelInternal &, class CCCE &, class MCCEDtmfInterface &)
+	?DialEmergencyCall@CPECallHandling@@UAEXABV?$TBuf@$0GE@@@@Z @ 2 NONAME ; void CPECallHandling::DialEmergencyCall(class TBuf<100> const &)
+	?HangUp@CPECallHandling@@UAEHHW4TPEHangUpOptions@@@Z @ 3 NONAME ; int CPECallHandling::HangUp(int, enum TPEHangUpOptions)
+	?TransferCalls@CPECallHandling@@UAEHXZ @ 4 NONAME ; int CPECallHandling::TransferCalls(void)
+	?TerminateAllConnections@CPECallHandling@@UAEHXZ @ 5 NONAME ; int CPECallHandling::TerminateAllConnections(void)
+	?GetCallIdByState@CPECallHandling@@UBEHI@Z @ 6 NONAME ; int CPECallHandling::GetCallIdByState(unsigned int) const
+	?CallForwardEventOccurred@CPESupplementaryServicesMonitor@@UAEXW4TCCESsCallForwardEvent@MCCESsObserver@@ABVTDesC16@@@Z @ 7 NONAME ; void CPESupplementaryServicesMonitor::CallForwardEventOccurred(enum MCCESsObserver::TCCESsCallForwardEvent, class TDesC16 const &)
+	?CallDurationChanged@CPESingleCallObserver@@UAEXVTTimeIntervalSeconds@@@Z @ 8 NONAME ; void CPESingleCallObserver::CallDurationChanged(class TTimeIntervalSeconds)
+	?IsCallByCallId@CPECallArrayOwner@@UBEHH@Z @ 9 NONAME ; int CPECallArrayOwner::IsCallByCallId(int) const
+	?DoUnattendedTransfer@CPECallHandling@@UAEHABVTDesC16@@@Z @ 10 NONAME ; int CPECallHandling::DoUnattendedTransfer(class TDesC16 const &)
+	?DialCall@CPECallHandling@@UAEHABV?$TBuf@$0GE@@@AAH@Z @ 11 NONAME ; int CPECallHandling::DialCall(class TBuf<100> const &, int &)
+	?GetCallState@CPECallHandling@@UAEIH@Z @ 12 NONAME ; unsigned int CPECallHandling::GetCallState(int)
+	?GetCallInfo@CPECallHandling@@UAEHAAVTMobileCallInfoV3@RMobileCall@@H@Z @ 13 NONAME ; int CPECallHandling::GetCallInfo(class RMobileCall::TMobileCallInfoV3 &, int)
+	?RejectCall@CPECallHandling@@UAEHXZ @ 14 NONAME ; int CPECallHandling::RejectCall(void)
+	?AddConferenceMember@CPECallHandling@@UAEHXZ @ 15 NONAME ; int CPECallHandling::AddConferenceMember(void)
+	?DropMember@CPECallHandling@@UAEHH@Z @ 16 NONAME ; int CPECallHandling::DropMember(int)
+	?SwapCalls@CPECallHandling@@UAEHXZ @ 17 NONAME ; int CPECallHandling::SwapCalls(void)
+	?ErrorOccurred@CPESingleCallObserver@@UAEXW4TCCPError@@@Z @ 18 NONAME ; void CPESingleCallObserver::ErrorOccurred(enum TCCPError)
+	?SendErrorMessage@CPECall@@UAEXH@Z @ 19 NONAME ; void CPECall::SendErrorMessage(int)
+	?RejectUnattendedTransfer@CPECallHandling@@UAEHXZ @ 20 NONAME ; int CPECallHandling::RejectUnattendedTransfer(void)
+	?HoldCall@CPECallHandling@@UAEHXZ @ 21 NONAME ; int CPECallHandling::HoldCall(void)
+	?CLIEventOccurred@CPESupplementaryServicesMonitor@@UAEXW4TCCESsCLIEvent@MCCESsObserver@@@Z @ 22 NONAME ; void CPESupplementaryServicesMonitor::CLIEventOccurred(enum MCCESsObserver::TCCESsCLIEvent)
+	?ResumeCall@CPECallHandling@@UAEHXZ @ 23 NONAME ; int CPECallHandling::ResumeCall(void)
+	?CallByCallId@CPECallArrayOwner@@UBEPAVMPECall@@H@Z @ 24 NONAME ; class MPECall * CPECallArrayOwner::CallByCallId(int) const
+	?GetCallDuration@CPECallHandling@@UAEHAAVTTimeIntervalSeconds@@H@Z @ 25 NONAME ; int CPECallHandling::GetCallDuration(class TTimeIntervalSeconds &, int)
+	?AnswerCall@CPECallHandling@@UAEHXZ @ 26 NONAME ; int CPECallHandling::AnswerCall(void)
+	??1CPECall@@MAE@XZ @ 27 NONAME ; CPECall::~CPECall(void)
+	?ActiveCallCount@CPECallArrayOwner@@UBEHXZ @ 28 NONAME ; int CPECallArrayOwner::ActiveCallCount(void) const
+	?StartUp@CPECallHandling@@UAEXXZ @ 29 NONAME ; void CPECallHandling::StartUp(void)
+	?NotifyCurrentActiveALSLine@CPESupplementaryServicesMonitor@@UAEXH@Z @ 30 NONAME ; void CPESupplementaryServicesMonitor::NotifyCurrentActiveALSLine(int)
+	?GetCallTerminatedDiagnostics@CPECallHandling@@UBEHAAV?$TBuf@$0IA@@@@Z @ 31 NONAME ; int CPECallHandling::GetCallTerminatedDiagnostics(class TBuf<128> &) const
+	?GetNumberOfCalls@CPECallHandling@@UAEHXZ @ 32 NONAME ; int CPECallHandling::GetNumberOfCalls(void)
+	?CallCugEventOccurred@CPESupplementaryServicesMonitor@@UAEXW4TCCESsCugEvent@MCCESsObserver@@@Z @ 33 NONAME ; void CPESupplementaryServicesMonitor::CallCugEventOccurred(enum MCCESsObserver::TCCESsCugEvent)
+	?ConnectedCalls@CPECallHandling@@QAEHXZ @ 34 NONAME ; int CPECallHandling::ConnectedCalls(void)
+	?HandleDTMFEvent@CPEDtmfHandling@@UAEXW4TCCEDtmfEvent@MCCEDtmfObserver@@HVTChar@@@Z @ 35 NONAME ; void CPEDtmfHandling::HandleDTMFEvent(enum MCCEDtmfObserver::TCCEDtmfEvent, int, class TChar)
+	?BuildConference@CPECallHandling@@UAEHXZ @ 36 NONAME ; int CPECallHandling::BuildConference(void)
+	?VoiceCallDataByState@CPECallHandling@@QBEPAVCPESingleCall@@IAAH@Z @ 37 NONAME ; class CPESingleCall * CPECallHandling::VoiceCallDataByState(unsigned int, int &) const
+	?IsCallInState@CPECallHandling@@UBEHI@Z @ 38 NONAME ; int CPECallHandling::IsCallInState(unsigned int) const
+	??0CPEDtmfHandling@@IAE@AAVCPECallHandling@@AAVMCCEDtmfInterface@@@Z @ 39 NONAME ; CPEDtmfHandling::CPEDtmfHandling(class CPECallHandling &, class MCCEDtmfInterface &)
+	?CallEventOccurred@CPESingleCallObserver@@UAEXW4TCCECallEvent@MCCECallObserver@@@Z @ 40 NONAME ; void CPESingleCallObserver::CallEventOccurred(enum MCCECallObserver::TCCECallEvent)
+	?StopDtmfTone@CPECallHandling@@UAEHXZ @ 41 NONAME ; int CPECallHandling::StopDtmfTone(void)
+	?GoOneToOne@CPECallHandling@@UAEHH@Z @ 42 NONAME ; int CPECallHandling::GoOneToOne(int)
+	?CallStateChangedWithInband@CPESingleCallObserver@@UAEXW4TCallState@CCPCall@@@Z @ 43 NONAME ; void CPESingleCallObserver::CallStateChangedWithInband(enum CCPCall::TCallState)
+	?GetMissedCall@CPECallHandling@@UAEHAAHH@Z @ 44 NONAME ; int CPECallHandling::GetMissedCall(int &, int)
+	??1CPECallHandling@@UAE@XZ @ 45 NONAME ; CPECallHandling::~CPECallHandling(void)
+	?ReleaseAll@CPECallHandling@@UAEHXZ @ 46 NONAME ; int CPECallHandling::ReleaseAll(void)
+	?CancelDtmfPlay@CPECallHandling@@UAEXXZ @ 47 NONAME ; void CPECallHandling::CancelDtmfPlay(void)
+	?CallStateChanged@CPESingleCallObserver@@UAEXW4TCallState@CCPCall@@@Z @ 48 NONAME ; void CPESingleCallObserver::CallStateChanged(enum CCPCall::TCallState)
+	?StopDtmfSending@CPECallHandling@@UAEXXZ @ 49 NONAME ; void CPECallHandling::StopDtmfSending(void)
+	?CallTerminatedError@CPECallHandling@@UAEHH@Z @ 50 NONAME ; int CPECallHandling::CallTerminatedError(int)
+	?CallByName@CPECallArrayOwner@@UBEPAVMPECall@@ABV?$TBuf@$0IA@@@@Z @ 51 NONAME ; class MPECall * CPECallArrayOwner::CallByName(class TBuf<128> const &) const
+	?ConstructL@CPEDtmfHandling@@MAEXXZ @ 52 NONAME ; void CPEDtmfHandling::ConstructL(void)
+	?ContinueDtmfSending@CPECallHandling@@UAEXXZ @ 53 NONAME ; void CPECallHandling::ContinueDtmfSending(void)
+	?SendDtmf@CPECallHandling@@UAEHABV?$TBuf@$0GE@@@@Z @ 54 NONAME ; int CPECallHandling::SendDtmf(class TBuf<100> const &)
+	?CallOwner@CPECallHandling@@UBEAAVMPECallOwner@@XZ @ 55 NONAME ; class MPECallOwner & CPECallHandling::CallOwner(void) const
+	?CallByState@CPECallArrayOwner@@UBEPAVMPECall@@I@Z @ 56 NONAME ; class MPECall * CPECallArrayOwner::CallByState(unsigned int) const
+	?IsCallByState@CPECallArrayOwner@@UBEHI@Z @ 57 NONAME ; int CPECallArrayOwner::IsCallByState(unsigned int) const
+	?AcceptUnattendedTransfer@CPECallHandling@@UAEHXZ @ 58 NONAME ; int CPECallHandling::AcceptUnattendedTransfer(void)
+	?HandleTransfer@CPESingleCallObserver@@UAEXHABVTDesC16@@@Z @ 59 NONAME ; void CPESingleCallObserver::HandleTransfer(int, class TDesC16 const &)
+	?ReplaceActive@CPECallHandling@@UAEHXZ @ 60 NONAME ; int CPECallHandling::ReplaceActive(void)
+	?CallCapsChanged@CPESingleCallObserver@@UAEXW4TCCECallControlCaps@MCCECallObserver@@@Z @ 61 NONAME ; void CPESingleCallObserver::CallCapsChanged(enum MCCECallObserver::TCCECallControlCaps)
+	?NewL@CPEDtmfHandling@@SAPAV1@AAVCPECallHandling@@AAVMCCEDtmfInterface@@@Z @ 62 NONAME ; class CPEDtmfHandling * CPEDtmfHandling::NewL(class CPECallHandling &, class MCCEDtmfInterface &)
+	?StartDtmfTone@CPECallHandling@@UAEHABVTChar@@@Z @ 63 NONAME ; int CPECallHandling::StartDtmfTone(class TChar const &)
+	?DialMultimedia@CPECallHandling@@UAEHABV?$TBuf@$0GE@@@AAH@Z @ 64 NONAME ; int CPECallHandling::DialMultimedia(class TBuf<100> const &, int &)
+	?SetActiveLine@CPECallHandling@@UAEXXZ @ 65 NONAME ; void CPECallHandling::SetActiveLine(void)
+	?BarringEventOccurred@CPESupplementaryServicesMonitor@@UAEXW4TCCESsBarringEvent@MCCESsObserver@@@Z @ 66 NONAME ; void CPESupplementaryServicesMonitor::BarringEventOccurred(enum MCCESsObserver::TCCESsBarringEvent)
+	??0CPECall@@IAE@AAVMPEMessageSender@@@Z @ 67 NONAME ; CPECall::CPECall(class MPEMessageSender &)
+	?ForwardCallToAddress@CPECallHandling@@UAEHH@Z @ 68 NONAME ; int CPECallHandling::ForwardCallToAddress(int)
+	??1CPEDtmfHandling@@UAE@XZ @ 69 NONAME ; CPEDtmfHandling::~CPEDtmfHandling(void)
+

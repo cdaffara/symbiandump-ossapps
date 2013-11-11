@@ -1,0 +1,128 @@
+/*
+* Copyright (c) 2006-2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: This is the project specification file for ConnTest.
+*
+*/
+
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+
+TARGET  ConnTest.exe
+TARGETTYPE  exe
+EPOCSTACKSIZE 0x10000
+EPOCHEAPSIZE 0x2000 0x200000
+
+
+UID  0x100039CE 0x101F6D2B 
+
+//TARGETPATH /system/apps/ConnTest
+
+VENDORID    VID_DEFAULT
+CAPABILITY  LocalServices  NetworkServices  ReadUserData  UserEnvironment  WriteUserData  PowerMgmt  ProtServ  ReadDeviceData  TrustedUI  WriteDeviceData  NetworkControl  CommDD  AllFiles
+
+LANG              SC
+
+SOURCEPATH        ../src
+SOURCE            ConnTestApp.cpp 
+SOURCE            ConnTestAppUi.cpp
+SOURCE            ConnTestDocument.cpp
+SOURCE            ConnTestContainer.cpp
+SOURCE            ConnTestView.cpp
+SOURCE            SettingItemList.cpp
+SOURCE            SettingData.cpp
+SOURCE            CustomPrefsItemList.cpp
+SOURCE            CustomPrefsData.cpp
+SOURCE            Utils.cpp
+
+SOURCEPATH        ../Engine
+SOURCE            SocketsEngine.cpp
+SOURCE            SocketsWrite.cpp
+SOURCE            SocketsRead.cpp
+SOURCE            ProgressNotifier.cpp
+SOURCE            TimeOutTimer.cpp
+SOURCE            SendTimer.cpp
+SOURCE            HttpHandler.cpp
+SOURCE            ipdumpengine.cpp
+SOURCE            alractiveobject.cpp
+
+START RESOURCE ../data/ConnTest.rss
+HEADER
+TARGETPATH APP_RESOURCE_DIR
+LANG     SC
+END
+
+
+START RESOURCE ../data/ConnTest_reg.rss
+DEPENDS conntest.rsg
+// Do not change the UID below.
+TARGETPATH /private/10003a3f/apps
+END
+
+USERINCLUDE . ../inc
+
+APP_LAYER_SYSTEMINCLUDE
+
+LIBRARY           apparc.lib
+LIBRARY           apgrfx.lib
+LIBRARY           avkon.lib
+LIBRARY           AknSkins.lib
+LIBRARY           aknnotify.lib
+LIBRARY           bafl.lib 
+LIBRARY           commdb.lib
+LIBRARY           cone.lib
+LIBRARY           ecom.lib
+LIBRARY           efsrv.lib
+LIBRARY           eikcoctl.lib
+LIBRARY           eikcore.lib
+LIBRARY           eikctl.lib
+LIBRARY           egul.lib
+LIBRARY           estor.lib
+LIBRARY           etext.lib
+LIBRARY           euser.lib 
+LIBRARY           gdi.lib
+LIBRARY           http.lib
+LIBRARY           inetprotutil.lib
+LIBRARY           insock.lib
+LIBRARY           esock.lib
+LIBRARY           ws32.lib
+LIBRARY           cmmanager.lib
+LIBRARY           netmeta.lib
+LIBRARY           extendedconnpref.lib
+LIBRARY           esock_api_ext.lib
+
+// For performance marks
+LIBRARY 		hal.lib
+
+
+START WINS      
+// ?wins_specific_information
+END
+
+START MARM
+// ?marm_specific_information
+END
+
+// Other possible keywords:
+/* 
+START BITMAP ?target
+TARGETPATH   ?emulated_path_on_target_machine
+HEADER
+SOURCEPATH   ?source_path
+SOURCE       ?color_depth ?source_bitmap_list
+END
+*/
+// DEFFILE ?filename
+
+//AIF ConnTest.aif ../aif ConnTestaif.rss c8 context_pane_icon.bmp context_pane_icon_mask.bmp list_icon.bmp list_icon_mask.bmp
+

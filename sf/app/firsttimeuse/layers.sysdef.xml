@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE SystemDefinition SYSTEM "sysdef_1_5_1.dtd" [
+  <!ENTITY layer_real_source_path "sf/app/firsttimeuse" >
+]>
+
+<SystemDefinition name="firsttimeuse" schema="1.5.1">
+  <systemModel>
+    <layer name="app_layer">
+      <module name="firsttimeuse">
+        <unit name="firsttimeuse" unitID="orgdo.firsttimeuse.pro" bldFile="&layer_real_source_path;" mrp="" proFile="ftu.pro" qmakeArgs="-r -config rom"/>
+      </module>
+    </layer>
+
+   
+    </systemModel>
+</SystemDefinition>

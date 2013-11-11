@@ -1,0 +1,62 @@
+/*
+* Copyright (c) 2006-2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+ *
+*/
+
+
+
+#include "../../../../group/glxbuildcommon.mmh"
+
+TARGET                  t_tcommandfactory.dll
+TARGETTYPE              dll
+UID                     0x1000af5a 0x01700000
+
+CAPABILITY              ALL -TCB
+
+SOURCEPATH              ../t_tcommandfactory
+SOURCE                  t_tcommandfactory.cpp
+
+// Sources required by the test suite
+SOURCEPATH              ../../src
+SOURCE                  glxcommandparser.cpp
+SOURCE                  glxcommandfactory.cpp
+
+SOURCEPATH              ../t_tcommandfactory
+SOURCE                  t_tcommandfactory_dllmain.cpp
+
+USERINCLUDE             ../t_tcommandfactory
+
+// User include folders required by the tested code
+USERINCLUDE             ../../src
+USERINCLUDE             ../../inc
+
+// System include folders required by the tested code
+SYSTEMINCLUDE           ../../../inc
+
+APP_LAYER_SYSTEMINCLUDE
+
+SYSTEMINCLUDE           /epoc32/include/Digia/EUnit
+
+LIBRARY                 eunit.lib
+LIBRARY                 eunitutil.lib
+LIBRARY                 euser.lib
+
+// Libraries required by the tested code
+LIBRARY                 estor.lib
+LIBRARY                 ecom.lib
+LIBRARY                 lbs.lib
+LIBRARY                 mpxcommon.lib
+SMPSAFE
+// End of file

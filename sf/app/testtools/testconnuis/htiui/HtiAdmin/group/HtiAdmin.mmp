@@ -1,0 +1,76 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project file for HtiAdmin
+*
+*/
+
+
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+
+TARGET          HtiAdmin.exe
+TARGETTYPE      EXE
+
+UID             0x100039CE 0x1020DEB5
+
+VENDORID        0x101FB657
+
+CAPABILITY      ALL -TCB
+
+EPOCSTACKSIZE   0x5000
+
+TARGETPATH      PROGRAMS_DIR
+
+LANG            SC
+
+USERINCLUDE     ../inc
+APP_LAYER_SYSTEMINCLUDE
+
+SOURCEPATH      ../src
+SOURCE          HtiAdmin.cpp
+SOURCE          HtiAdminApplication.cpp
+SOURCE          HtiAdminAppView.cpp
+SOURCE          HtiAdminAppUi.cpp
+SOURCE          HtiAdminDocument.cpp
+
+SOURCEPATH      ../data
+
+START RESOURCE  HtiAdmin.rss
+HEADER
+TARGETPATH      APP_RESOURCE_DIR
+LANG            SC
+END
+
+START RESOURCE  HtiAdmin_reg.rss
+HEADER
+TARGETPATH      /private/10003a3f/apps
+END
+
+LIBRARY         apparc.lib
+LIBRARY         avkon.lib
+LIBRARY         cone.lib
+LIBRARY         ecom.lib
+LIBRARY         eikcoctl.lib
+LIBRARY         eikcore.lib
+LIBRARY         euser.lib
+LIBRARY         gdi.lib
+LIBRARY         hticfg.lib
+LIBRARY         ws32.lib
+LIBRARY         flogger.lib
+LIBRARY         bafl.lib
+LIBRARY         commdb.lib
+
+SMPSAFE
+
+// End of file

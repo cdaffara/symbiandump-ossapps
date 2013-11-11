@@ -1,0 +1,13 @@
+EXPORTS
+	?DeleteAudioSink@VTProtocolFactory@@SAHPAVMVTAudioSink@@@Z @ 1 NONAME ; int VTProtocolFactory::DeleteAudioSink(class MVTAudioSink *)
+	?CreateAudioSink@VTProtocolFactory@@SAPAVMVTAudioSink@@XZ @ 2 NONAME ; class MVTAudioSink * VTProtocolFactory::CreateAudioSink(void)
+	?CreateCommServerL@VTProtocolFactory@@SAPAVMCommServer@@ABVTDesC16@@H@Z @ 3 NONAME ; class MCommServer * VTProtocolFactory::CreateCommServerL(class TDesC16 const &, int)
+	?CreateUserInputIndication@VTProtocolFactory@@SAPAVMVTUserInput@@W4TUserInputType@@E@Z @ 4 NONAME ; class MVTUserInput * VTProtocolFactory::CreateUserInputIndication(enum TUserInputType, unsigned char)
+	?CreateSessionCommandL@VTProtocolFactory@@SAPAVMVtSessionCommand@@PAVMVtProtocolHandler@@HAAW4TVt3G324MSupported@@@Z @ 5 NONAME ; class MVtSessionCommand * VTProtocolFactory::CreateSessionCommandL(class MVtProtocolHandler *, int, enum TVt3G324MSupported &)
+	?DeletAudioSource@VTProtocolFactory@@SAHPAVMVTAudioSource@@@Z @ 6 NONAME ; int VTProtocolFactory::DeletAudioSource(class MVTAudioSource *)
+	?GetAudioConfigCommandL@VTProtocolFactory@@SAPAVMVtAudioConfigCommand@@PAVMVTAudioSink@@@Z @ 7 NONAME ; class MVtAudioConfigCommand * VTProtocolFactory::GetAudioConfigCommandL(class MVTAudioSink *)
+	?CreateAudioSource@VTProtocolFactory@@SAPAVMVTAudioSource@@XZ @ 8 NONAME ; class MVTAudioSource * VTProtocolFactory::CreateAudioSource(void)
+	?DeleteCommServerL@VTProtocolFactory@@SAXPAVMCommServer@@@Z @ 9 NONAME ; void VTProtocolFactory::DeleteCommServerL(class MCommServer *)
+	?DeleteUserInputIndication@VTProtocolFactory@@SAXPAVMVTUserInput@@@Z @ 10 NONAME ; void VTProtocolFactory::DeleteUserInputIndication(class MVTUserInput *)
+	?DeleteSessionCommand@VTProtocolFactory@@SAXPAVMVtSessionCommand@@@Z @ 11 NONAME ; void VTProtocolFactory::DeleteSessionCommand(class MVtSessionCommand *)
+

@@ -1,0 +1,64 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:
+;
+
+; Language
+&EN
+
+; SIS header: name, uid, version
+#{"t_hsdomainmodel"},(0x20022F59),1,0,0
+
+; Localised Vendor name
+%{"Nokia"}
+
+; Unique Vendor name
+:"Nokia"
+
+; Supports S60 5th Edition
+[0x1028315F], 0, 0, 0, {"S60ProductID"}
+
+; domain model test
+"/epoc32/release/armv5/urel/t_hsdomainmodel.exe"                         - "c:/sys/bin/t_hsdomainmodel.exe"
+"/epoc32/data/z/private/10003a3f/import/apps/t_hsdomainmodel_reg.rsc"    - "c:/private/10003a3f/import/apps/t_hsdomainmodel_reg.rsc"
+"/epoc32/data/z/resource/apps/t_hsdomainmodel.rsc"                       - "c:/resource/apps/t_hsdomainmodel.rsc"
+
+; Test resources
+"../t_hsdomainmodel/hsdomainmodeltest.db" - "c:/private/20022F59/hsdomainmodeltest.db"
+"../t_hsdomainmodel/resource/default_portrait.png"       - "c:/private/20022F59/wallpapers/scene/default_landscape.png"
+"../t_hsdomainmodel/resource/default_landscape.png"  - "c:/private/20022F59/wallpapers/scene/default_portrait.png"
+"../t_hsdomainmodel/resource/default_portrait.png"       - "c:/private/20022F59/wallpapers/page/default_landscape.png"
+"../t_hsdomainmodel/resource/default_landscape.png"  - "c:/private/20022F59/wallpapers/page/default_portrait.png"
+
+; mockwidgetplugin
+"/epoc32/release/armv5/urel/mockwidgetplugin.dll" - "c:/sys/bin/mockwidgetplugin.dll"
+"/epoc32/data/z/private/20022F59/hsresources/plugins/widgetplugins/mockwidgetplugin.qtplugin" - "c:/private/20022F59/hsresources/plugins/widgetplugins/mockwidgetplugin.qtplugin"
+"/epoc32/data/z/private/20022F59/hsresources/plugins/widgetplugins/mockwidgetplugin.xml" - "c:/private/20022F59/hsresources/plugins/widgetplugins/mockwidgetplugin.xml"
+"/epoc32/data/z/resource/qt/translations/mockwidgetplugin.qm" - "c:/resource/qt/translations/mockwidgetplugin.qm"
+
+; mockwidgetplugintoosmall
+"/epoc32/release/armv5/urel/mockwidgetplugintoosmall.dll" - "c:/sys/bin/mockwidgetplugintoosmall.dll"
+"/epoc32/data/z/private/20022F59/hsresources/plugins/widgetplugins/mockwidgetplugintoosmall.qtplugin" - "c:/private/20022F59/hsresources/plugins/widgetplugins/mockwidgetplugintoosmall.qtplugin"
+"/epoc32/data/z/private/20022F59/hsresources/plugins/widgetplugins/mockwidgetplugintoosmall.xml" - "c:/private/20022F59/hsresources/plugins/widgetplugins/mockwidgetplugintoosmall.xml"
+
+; mockwidgetplugintoobig
+"/epoc32/release/armv5/urel/mockwidgetplugintoobig.dll" - "c:/sys/bin/mockwidgetplugintoobig.dll"
+"/epoc32/data/z/private/20022F59/hsresources/plugins/widgetplugins/mockwidgetplugintoobig.qtplugin" - "c:/private/20022F59/hsresources/plugins/widgetplugins/mockwidgetplugintoobig.qtplugin"
+"/epoc32/data/z/private/20022F59/hsresources/plugins/widgetplugins/mockwidgetplugintoobig.xml" - "c:/private/20022F59/hsresources/plugins/widgetplugins/mockwidgetplugintoobig.xml"
+
+; mockwidgetplugincheater
+"/epoc32/release/armv5/urel/mockwidgetplugincheater.dll" - "c:/sys/bin/mockwidgetplugincheater.dll"
+"/epoc32/data/z/private/20022F59/hsresources/plugins/widgetplugins/mockwidgetplugincheater.qtplugin" - "c:/private/20022F59/hsresources/plugins/widgetplugins/mockwidgetplugincheater.qtplugin"
+"/epoc32/data/z/private/20022F59/hsresources/plugins/widgetplugins/mockwidgetplugincheater.xml" - "c:/private/20022F59/hsresources/plugins/widgetplugins/mockwidgetplugincheater.xml"
+"/epoc32/data/z/resource/qt/translations/mockwidgetplugincheater.qm" - "c:/resource/qt/translations/mockwidgetplugincheater.qm"

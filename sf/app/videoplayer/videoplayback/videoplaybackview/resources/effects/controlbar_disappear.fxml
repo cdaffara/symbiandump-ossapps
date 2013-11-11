@@ -1,0 +1,12 @@
+<layers>
+	<visual>
+	    <param name="translation_y" type="anim">
+	        <duration>0.4</duration>
+	        <style>outquad</style>
+	        <keyframe at="0.0">0.0</keyframe>
+	        <keyframe at="1.0">1.0</keyframe>
+	        <start ref="visual.top">-1.0</start>
+	        <end ref="visual.bottom">1.0</end>
+	    </param>
+	</visual>
+</layers>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<relnotes name="Phonebook Sync">
+  <purpose>
+    Component used for synchronisation of the ICC phonebooks with the contacts in the contacts database. In a non-secure platform (EKA1) it runs in the Comms process, whereas in a secure platform (EKA2) it runs within its own autonomous process.
+  </purpose>
+
+  <defect number="DEF135120" title="Remove reference to TRPTSY from TE_Sync." revision="020">
+	Removing the test script for a TRPTSY configuration as the component is being removed.
+  </defect>
+
+  <defect number="PDEF119868" title="Beibei 750, after one crash on verification build, cannot restart, has to be ..." revision="019">    	
+  </defect>
+  
+  <defect number="PDEF113724" title="crash in Symbian component app-engines_cntmodel" revision="018">
+    Fixed error in CPhoneBookSyncPlugin::ICCSlotNumber() that caused a cntmodel crash.	
+  </defect>
+
+  <defect number="PDEF112979" title="Handset cannot read Fixed Dialing Contacts" revision="017">
+    Fixed Dial List on SIM is now read correctly.
+  </defect>
+
+  <defect number="PDEF111443" title="SBTM: Contacts: Wrong label on name when receiving a vCard" revision="016">
+    Fixed problem with incorrect label when receiving a vCard.
+  </defect>
+
+  <defect number="PDEF111217" title="Phbsync returns error when it should not" revision="015">
+    Fixed incorrect return value in CPhoneBookSyncPlugin::PhonebookList().
+  </defect>
+  
+  <defect number="PDEF109742" title="LIBmm81199 DUT gets crash and freeze while pressing green key during backup proces" revision="014">
+    Fixed issue that may cause a crash during backup.
+  </defect>
+
+  <defect number="PDEF108683" title="PhbkSync uses lables that are not localisable" revision="013">
+    Improved labels in templates for SIM contacts.
+  </defect>
+
+  <defect number="PDEF107980" title="New contacts are not sync-ed after a SAT Refresh" revision="012">
+    Fixed issue where new contacts were not synchronised after a SAT refresh.
+  </defect>
+
+  <defect number="INC106349" title="DUT crash&amp;panic when try to accessSIM contacts while phone memory is ful" revision="011">
+    Fixed issue where the PhBkSync server may crash when sync'ing during zero disk space.
+  </defect>
+
+  <defect number="PDEF105270" title="Contacts not sync-ed once PIN1 is unlocked, after bootup" revision="010">
+    Fix for phonebook synchronisation issue when PIN1 becomes unlocked.
+  </defect>
+
+  <defect number="PDEF103465" title="lose contact content (the + sign) on SIM entry when moving SIM from Elena to ..." revision="009">
+    Fix for the handling of USIM contact updates and the international plus symbol.
+  </defect>
+
+  <defect number="DEF100083" title="PhBkSync/SIMTSY reports USIM ADN phonebook when no USIM phonebook exists." revision="008">
+    TGetPhoneBookCacheState() API now returns an error if the phonebook is not present.
+  </defect>
+
+  <defect number="INC090628" title="PhbkSync appends '+' without first checking if it is needed; international no." revision="007">
+    PhBkSync now checks for the existance of a '+' symbol before prefixing one to international phone numbers
+  </defect>
+
+  <defect number="PDEF085757" title="Contacts: App panic on startup when SIM connected, depending on DB." revision="006">
+    CSyncEngineServer::CreateGroupIdL() now handles the error when GetTemplateLabelL leaves
+  </defect>
+
+  <defect number="PDEF085843" title="SWSV_612_R2B02_CONT When creating a new contact on SIM it is not visible unti..." revision="005">
+    V5 Phonebook info structure is now available in the Write ICC active object and will check the additional number text length to determine if the string can be written.
+  </defect>
+
+  <defect number="PDEF084692" title="PhBkSync: Email duplicates are created if contact template contains empty ema..." revision="004">
+    Problem with duplicate e-mail addresses on the SIM card has now been resolved
+  </defect>
+
+  <defect number="DEF078949" title="Support for TMobilePhoneBookInfoV5 needed in PhbkSync" revision="003">
+    PhBkSync now supports RMobilePhoneBookStore::TMobilePhoneBookInfoV5
+  </defect>
+
+  <minorchange revision="002">
+    PhBkSync is now configured to work with and without the Contacts model developed for PREQ0811. By default, PhbkSync and Contacts work with PREQ0811 improvements only under 9.3+.
+  </minorchange>
+
+  <defect number="DEF076589" title="PhBkSync always opens the phonebook stores and relies on their subsession handle" revision="001">
+    PhBkSync no longer relies on the phone book store sub-session handle to determine whether the store is supported. The stores will be opened and accepted as supported only if the store info is retrievable
+  </defect>
+</relnotes>

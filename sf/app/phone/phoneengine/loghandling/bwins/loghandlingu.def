@@ -1,0 +1,10 @@
+EXPORTS
+	??1CPELogHandling@@UAE@XZ @ 1 NONAME ; CPELogHandling::~CPELogHandling(void)
+	??1CPELogHandlingDummy@@UAE@XZ @ 2 NONAME ; CPELogHandlingDummy::~CPELogHandlingDummy(void)
+	??1CPELogHandlingProxy@@UAE@XZ @ 3 NONAME ; CPELogHandlingProxy::~CPELogHandlingProxy(void)
+	?CreateFirstPhaseL@CPELogHandlingProxy@@SAPAVMPELogHandling@@XZ @ 4 NONAME ; class MPELogHandling * CPELogHandlingProxy::CreateFirstPhaseL(void)
+	?CreateSecondPhaseL@CPELogHandlingProxy@@QAEXAAVMPEPhoneModelInternal@@AAVRFs@@@Z @ 5 NONAME ; void CPELogHandlingProxy::CreateSecondPhaseL(class MPEPhoneModelInternal &, class RFs &)
+	?SaveCallEntry@CPELogHandling@@UAEHH@Z @ 6 NONAME ; int CPELogHandling::SaveCallEntry(int)
+	?SaveCallEntry@CPELogHandlingDummy@@UAEHH@Z @ 7 NONAME ; int CPELogHandlingDummy::SaveCallEntry(int)
+	?SaveCallEntry@CPELogHandlingProxy@@UAEHH@Z @ 8 NONAME ; int CPELogHandlingProxy::SaveCallEntry(int)
+

@@ -1,0 +1,41 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: Implementation of applicationmanagement components
+*
+*/
+
+#ifndef __APPLICATIONMANAGEMENT_IBY__
+#define __APPLICATIONMANAGEMENT_IBY__
+
+//#if defined(__SAP_APPLICATION_MANAGEMENT)
+	
+	S60_APP_EXE(ApplicationManagementServer)
+
+  S60_APP_RESOURCE( ApplicationManagementServer )
+      
+      // _reg.rsc has to be in "import" folder to allow updating application exe with a SISX-file
+  data=\EPOC32\DATA\Z\private\10003a3f\import\apps\ApplicationManagementServer_reg.RSC \private\10003a3f\import\apps\ApplicationManagementServer_reg.RSC
+
+	file=ABI_DIR\BUILD_DIR\ApplicationManagementClient.dll		SHARED_LIB_DIR\ApplicationManagementClient.dll
+	
+//	ECOM_PLUGIN(RfsAppMgmtPlugin.dll,102073BF.rsc)
+  ECOM_PLUGIN(omascomoadapter.dll, omascomoadapter.rsc)
+
+  data=ZPRIVATE\100012a5\policy\20021335.spd      PRIVATE\100012a5\policy\20021335.spd
+  data=ZPRIVATE\100012a5\policy\200267FB.spd      PRIVATE\100012a5\policy\200267FB.spd
+
+	
+//#endif // #ifdef __SAP_APPLICATION_MANAGEMENT
+
+#endif

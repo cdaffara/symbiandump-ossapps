@@ -1,0 +1,279 @@
+/*
+ * Copyright (c) 2007-2010 Sebastian Brannstrom, Lars Persson, EmbedDev AB
+ *
+ * All rights reserved.
+ * This component and the accompanying materials are made available
+ * under the terms of the License "Eclipse Public License v1.0"
+ * which accompanies this distribution, and is available
+ * at the URL "http://www.eclipse.org/legal/epl-v10.html".
+ *
+ * Initial Contributors:
+ * EmbedDev AB - initial contribution.
+ *
+ * Contributors:
+ *
+ * Description:
+ *
+ */
+
+RESOURCE MENU_BAR r_podcast_settingsview_menubar
+    {
+    titles =
+        {
+        MENU_TITLE { menu_pane = r_podcast_settingsview_menu; txt = ""; }
+        };
+    }
+
+RESOURCE MENU_PANE r_podcast_settingsview_menu
+    {
+    items =
+        {        
+		/*MENU_ITEM
+			{
+			command = EPodcastResetDb;
+			txt = STRING_r_podcast_setting_reset_db;
+			},*/
+		MENU_ITEM
+			{
+			command = EPodcastHelp;
+			txt = STRING_r_view_help;
+			}
+		};
+    }
+
+
+RESOURCE AVKON_VIEW r_podcast_settingsview
+{
+	menubar = r_podcast_settingsview_menubar;
+	cba = R_AVKON_SOFTKEYS_OPTIONS_BACK;    
+}
+
+RESOURCE AVKON_SETTING_ITEM_LIST r_podcast_settings
+{
+title = STRING_r_podcast_settings_title;
+items =
+	{
+			AVKON_SETTING_ITEM
+			{
+				name = STRING_r_podcast_setting_showdir;
+				identifier = EPodcastSettingShowDir;
+				setting_page_resource = r_podcast_showdir_page;
+			},
+			AVKON_SETTING_ITEM
+			{
+				identifier = EPodcastSettingAutoUpdate;
+				setting_page_resource = r_podcast_autoupdate_page_resource;
+				associated_resource = r_podcast_autoupdate_texts;
+				name = STRING_r_podcast_setting_autoupdate;
+			},
+			AVKON_SETTING_ITEM
+				{
+				identifier = EPodcastSettingAutoDownload;
+				setting_page_resource = r_podcast_autodownload_page_resource;
+				associated_resource = r_on_off_texts;
+				name = STRING_r_podcast_setting_autodownload;
+				},
+			AVKON_SETTING_ITEM
+			{
+				identifier = EPodcastSettingConnection;
+				setting_page_resource = r_podcast_connection_page_resource;
+				associated_resource = r_podcast_connection_texts;
+				name = STRING_r_podcast_setting_connection;
+			},
+			AVKON_SETTING_ITEM
+			{
+				identifier = EPodcastSettingIAPList;
+				setting_page_resource = r_setting_iap_page_resource;
+				associated_resource = r_setting_iap_texts;
+				name = STRING_r_podcast_setting_iaplist;
+			}		
+	};
+}
+
+RESOURCE AVKON_SETTING_PAGE r_podcast_showdir_page
+{
+	label=STRING_r_podcast_setting_showdir;
+	type = EEikCtEdwin;
+	editor_resource_id = r_podcast_showdir;
+}
+
+RESOURCE EDWIN r_podcast_showdir
+{
+	lines = 3;
+	maxlength = 256;
+	default_input_mode = EAknEditorTextInputMode;
+}
+
+RESOURCE AVKON_SETTING_PAGE r_podcast_connection_page_resource
+{
+    label= STRING_r_podcast_setting_connection;
+    type = EAknCtPopupSettingList;
+    editor_resource_id = r_setting_connection_popup_list_entry;
+}
+
+RESOURCE POPUP_SETTING_LIST r_setting_connection_popup_list_entry
+{
+}
+
+RESOURCE AVKON_POPUP_SETTING_TEXTS r_podcast_connection_texts
+{
+    setting_texts_resource = r_podcast_connection_closed;
+    popped_up_texts_resource = r_podcast_connection_opened;
+}
+
+RESOURCE ARRAY r_podcast_connection_closed
+{
+    items = 
+    {
+    AVKON_ENUMERATED_TEXT{value=EConnectionDefault; text = STRING_r_podcast_setting_default;},
+    AVKON_ENUMERATED_TEXT{value=EConnectionAlwaysAsk; text = STRING_r_podcast_setting_alwaysask;},    
+    AVKON_ENUMERATED_TEXT{value=EConnectionUseIap; text = STRING_r_podcast_setting_useiap;}
+    };
+}
+
+RESOURCE ARRAY r_podcast_connection_opened
+{
+    items = 
+    {
+    LBUF { txt=STRING_r_podcast_setting_default; },
+    LBUF { txt=STRING_r_podcast_setting_alwaysask; },	   
+    LBUF { txt=STRING_r_podcast_setting_useiap; }
+    };
+}
+
+RESOURCE AVKON_SETTING_PAGE r_podcast_autodownload_page_resource
+{
+    label= STRING_r_podcast_setting_autodownload;
+    type = EAknCtPopupSettingList;
+    number= 0;
+}
+
+RESOURCE AVKON_POPUP_SETTING_TEXTS r_on_off_texts
+{
+    flags = 0;
+    setting_texts_resource = r_setting_on_off_closed;
+    popped_up_texts_resource = r_setting_on_off_opened;
+}
+
+RESOURCE ARRAY r_setting_on_off_closed
+{
+    items =
+    {
+        AVKON_ENUMERATED_TEXT { value=1; text=STRING_r_on; },
+    	AVKON_ENUMERATED_TEXT { value=0; text=STRING_r_off; }
+    };
+}
+
+RESOURCE ARRAY r_setting_on_off_opened
+{
+    items =
+    {
+        LBUF { txt=STRING_r_on; },
+        LBUF { txt=STRING_r_off; }
+    };
+}
+
+RESOURCE AVKON_SETTING_PAGE r_podcast_autoupdate_page_resource
+{
+    label= STRING_r_podcast_setting_autoupdate;
+    type = EAknCtPopupSettingList;
+    editor_resource_id = r_setting_autoupdate_popup_list_entry;
+}
+
+RESOURCE POPUP_SETTING_LIST r_setting_autoupdate_popup_list_entry
+{
+}
+
+RESOURCE AVKON_POPUP_SETTING_TEXTS r_podcast_autoupdate_texts
+{
+    flags = 0;
+    setting_texts_resource = r_podcast_autoupdate_closed;
+    popped_up_texts_resource = r_podcast_autoupdate_opened;
+}
+
+RESOURCE ARRAY r_podcast_autoupdate_closed
+{
+    items =
+    {
+	AVKON_ENUMERATED_TEXT { value=0; text=STRING_podcast_autoupdate_option1; },
+    AVKON_ENUMERATED_TEXT { value=60; text=STRING_podcast_autoupdate_option2; },
+    AVKON_ENUMERATED_TEXT { value=360; text=STRING_podcast_autoupdate_option3; },    
+    AVKON_ENUMERATED_TEXT { value=720; text=STRING_podcast_autoupdate_option4; },    
+    AVKON_ENUMERATED_TEXT { value=1440; text=STRING_podcast_autoupdate_option5; }    
+    };
+}
+
+RESOURCE ARRAY r_podcast_autoupdate_opened
+{
+    items =
+    {
+        LBUF { txt=STRING_podcast_autoupdate_option1; },
+        LBUF { txt=STRING_podcast_autoupdate_option2; },
+        LBUF { txt=STRING_podcast_autoupdate_option3; },
+        LBUF { txt=STRING_podcast_autoupdate_option4; },
+        LBUF { txt=STRING_podcast_autoupdate_option5; }
+    };
+}
+
+RESOURCE FILESELECTIONDIALOG r_podcast_showdir_selector
+{
+ title = STRING_r_view_export_feeds_title;
+ root_path = "";
+ filters =
+ {
+  FILTER
+  {
+  filter_type = EFilenameFilter;
+  filter_style = EInclusiveFilter;
+  filter_data = { "*.*" };
+  }
+ };
+}
+
+RESOURCE MEMORYSELECTIONDIALOG r_podcast_memory_selection
+    {
+    title = "Select memory:";
+    softkey_1 = text_softkey_ok; // The text for the left softkey.
+    softkey_2 = text_softkey_cancel; // The text for the right softkey.
+    locations =
+        {
+        LOCATION { root_path =  text_phone_memory_root_path; },
+        LOCATION { root_path = text_memory_card_root_path; }
+        };
+    } 
+
+RESOURCE TBUF r_podcast_softkey_select { buf = STRING_r_view_export_feeds_softkey; }
+RESOURCE TBUF r_settings_title { buf = STRING_r_podcast_settings_title; }
+
+RESOURCE AVKON_SETTING_PAGE r_setting_iap_page_resource
+{
+    label= STRING_r_podcast_setting_iaplist;
+    type = EAknCtPopupSettingList;
+    editor_resource_id = r_setting_iap_popup_list_entry;
+}
+
+RESOURCE POPUP_SETTING_LIST r_setting_iap_popup_list_entry
+{
+}
+
+RESOURCE AVKON_POPUP_SETTING_TEXTS r_setting_iap_texts
+{
+    setting_texts_resource = r_setting_iap_closed;
+    popped_up_texts_resource = r_setting_iap_opened;
+}
+
+RESOURCE ARRAY r_setting_iap_closed
+{
+    items = 
+    {
+    AVKON_ENUMERATED_TEXT{value=0; text = "";}
+    };
+}
+
+RESOURCE ARRAY r_setting_iap_opened
+{
+    items = 
+    {
+    LBUF { txt=""; }
+    };
+}

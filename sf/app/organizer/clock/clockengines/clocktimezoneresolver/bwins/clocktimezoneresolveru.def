@@ -1,0 +1,7 @@
+EXPORTS
+	??1CClockTimeZoneResolver@@UAE@XZ @ 1 NONAME ; CClockTimeZoneResolver::~CClockTimeZoneResolver(void)
+	?GetTimeZoneL@CClockTimeZoneResolver@@QAEHABUtimeAttributes@@ABV?$TBuf@$03@@AAH@Z @ 2 NONAME ; int CClockTimeZoneResolver::GetTimeZoneL(struct timeAttributes const &, class TBuf<4> const &, int &)
+	?MCCFromTzIdL@CClockTimeZoneResolver@@QAEHABVCTzId@@@Z @ 3 NONAME ; int CClockTimeZoneResolver::MCCFromTzIdL(class CTzId const &)
+	?NewL@CClockTimeZoneResolver@@SAPAV1@XZ @ 4 NONAME ; class CClockTimeZoneResolver * CClockTimeZoneResolver::NewL(void)
+	?TzIdFromMccL@CClockTimeZoneResolver@@QAEXABV?$TBuf@$03@@AAV?$RArray@VCTzId@@@@ABVTTimeIntervalMinutes@@@Z @ 5 NONAME ; void CClockTimeZoneResolver::TzIdFromMccL(class TBuf<4> const &, class RArray<class CTzId> &, class TTimeIntervalMinutes const &)
+

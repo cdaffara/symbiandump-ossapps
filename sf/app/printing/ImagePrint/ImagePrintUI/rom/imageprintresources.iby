@@ -1,0 +1,30 @@
+/*
+* Copyright (c) 2004-2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Image Print resources. 
+*
+*/
+
+
+#ifndef IMAGEPRINTRESOURCES_IBY
+#define IMAGEPRINTRESOURCES_IBY
+
+S60_APP_RESOURCE( imageprintapp )
+S60_APP_CAPTION( imageprintapp )
+
+DATA=DATAZ_\RESOURCE_FILES_DIR\imageprintengine.rsc			RESOURCE_FILES_DIR\imageprintengine.rsc
+DATA=DATAZ_\RESOURCE_FILES_DIR\aiwprintingprovider.rsc		RESOURCE_FILES_DIR\aiwprintingprovider.rsc
+
+data=DATAZ_\resource\imageprintdata\protocols\dpof.rsc      resource\imageprintdata\protocols\dpof.rsc 
+
+#endif //__IMAGEPRINTRESOURCES_IBY__

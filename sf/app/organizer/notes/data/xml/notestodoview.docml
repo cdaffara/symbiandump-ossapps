@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="1.1">
+    <object name="allNotesAction" type="HbAction">
+        <icon iconName="qtg_mono_notes_all" name="icon"/>
+    </object>
+    <object name="displayCollectionsAction" type="HbAction">
+        <icon iconName="qtg_mono_notes_collections" name="icon"/>
+    </object>
+    <object name="newTodoAction" type="HbAction">
+        <icon iconName="qtg_mono_create_event" name="icon"/>
+    </object>
+    <object name="deleteAction" type="HbAction">
+        <string locid="txt_common_opt_delete" name="text" value="Delete"/>
+    </object>
+    <widget name="notesTodoView" type="HbView">
+        <widget name="notesTodoViewWidget" role="HbView:widget" type="HbWidget">
+            <widget name="subtitleGroupBox" type="HbGroupBox">
+                <real name="z" value="1"/>
+                <bool name="collapsable" value="FALSE"/>
+                <string name="heading" value=" "/>
+            </widget>
+            <widget name="todoListView" type="HbListView">
+                <widget name="listItemPrototype" role="HbAbstractView:prototype" type="HbListViewItem"/>
+                <real name="z" value="2"/>
+                <sizehint height="47.7612un" type="PREFERRED" width="35.8209un"/>
+            </widget>
+            <widget name="emptyListLabel" type="HbLabel">
+                <real name="z" value="1"/>
+		<string locid="txt_notes_list_no_notes_available" name="plainText" value="No notes available"/>
+                <enums name="textWrapping" value="TextWordWrap"/>
+                <enums name="textWrapping" value="TextWordWrap"/>
+                <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+                <sizehint height="expr(var(hb-param-text-height-primary) )" type="PREFERRED"/>
+            </widget>
+            <layout type="anchor">
+                <anchoritem dst="subtitleGroupBox" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="subtitleGroupBox" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="subtitleGroupBox" dstEdge="TOP" spacing="0un" src="" srcEdge="TOP"/>
+                <anchoritem dst="todoListView" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="todoListView" dstEdge="TOP" spacing="0un" src="subtitleGroupBox" srcEdge="BOTTOM"/>
+                <anchoritem dst="todoListView" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="todoListView" dstEdge="BOTTOM" spacing="0un" src="" srcEdge="BOTTOM"/>
+                <anchoritem dst="emptyListLabel" dstEdge="LEFT" spacing="expr(var(hb-param-margin-gene-left))" src="todoListView" srcEdge="LEFT"/>
+                <anchoritem dst="emptyListLabel" dstEdge="RIGHT" spacing="-expr(var(hb-param-margin-gene-right))" src="todoListView" srcEdge="RIGHT"/>
+                <anchoritem dst="emptyListLabel" dstEdge="CENTERV" spacing="0un" src="todoListView" srcEdge="CENTERV"/>
+            </layout>
+        </widget>
+        <widget name="viewToolbar" role="HbView:toolBar" type="HbToolBar">
+            <enums name="orientation" value="Horizontal"/>
+            <ref object="allNotesAction" role="HbWidget:addAction"/>
+            <ref object="displayCollectionsAction" role="HbWidget:addAction"/>
+            <ref object="newTodoAction" role="HbWidget:addAction"/>
+        </widget>
+        <widget name="viewMenu" role="HbView:menu" type="HbMenu"/>
+        <string locid="txt_notes_title_notes" name="title" value="Notes"/>
+    </widget>
+    <metadata activeUIState="Common ui state" display="NHD-3.2-inch_portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+        <uistate name="portrait" sections="#common"/>
+        <uistate name="landscape" sections="#common"/>
+        <dummydata objectName="todoListView" section="#common" value="app_list_template5"/>
+    </metadata>
+</hbdocument>

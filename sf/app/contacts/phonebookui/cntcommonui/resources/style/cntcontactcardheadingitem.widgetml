@@ -1,0 +1,186 @@
+<hbwidget version="0.1" type="cntcontactcardheadingitem">
+
+  <layout name="layout_one_row" type="mesh">
+    <meshitem src="icon" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="-var(hb-param-margin-gene-left)" />
+    <meshitem src="icon" srcEdge="TOP" dst="" dstEdge="TOP" spacing="-1un" />
+    <meshitem src="icon" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacing="1un" />
+
+    <meshitem src="primary_text" srcEdge="LEFT" dst="icon" dstEdge="RIGHT" spacing="-var(hb-param-margin-gene-middle-horizontal)" />
+    <meshitem src="primary_text" srcEdge="CENTERV" dst="" dstEdge="CENTERV" />
+    <meshitem src="primary_text" srcEdge="RIGHT" dst="secondary_icon" dstEdge="LEFT" spacing="var(hb-param-margin-gene-middle-horizontal)" />
+
+    <meshitem src="background" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="background" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+    <meshitem src="background" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+    <meshitem src="background" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+
+    <meshitem src="pictureArea" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="pictureArea" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+    <meshitem src="pictureArea" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+    <meshitem src="pictureArea" srcEdge="RIGHT" dst="icon" dstEdge="RIGHT" />
+
+    <meshitem src="secondary_icon" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)" />
+    <meshitem src="secondary_icon" srcEdge="CENTERV" dst="primary_text" dstEdge="TOP" spacing="-expr(var(hb-param-text-height-primary)/2)" />
+  </layout>
+
+  <layout name="layout_two_rows_secondary" type="mesh">
+    <meshitem src="icon" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="-var(hb-param-margin-gene-left)" />
+    <meshitem src="icon" srcEdge="TOP" dst="" dstEdge="TOP" spacing="-1un" />
+
+    <meshitem src="first_line_text" srcEdge="LEFT" dst="icon" dstEdge="RIGHT" spacing="-var(hb-param-margin-gene-middle-horizontal)" />
+    <meshitem src="first_line_text" srcEdge="TOP" dst="icon" dstEdge="TOP" />
+    <meshitem src="first_line_text" srcEdge="RIGHT" dst="secondary_icon" dstEdge="LEFT" spacing="var(hb-param-margin-gene-middle-horizontal)" />
+
+    <meshitem src="secondary_text" srcEdge="TOP" dst="first_line_text" dstEdge="BOTTOM" spacing="-var(hb-param-margin-gene-middle-vertical)" />
+    <meshitem src="secondary_text" srcEdge="LEFT" dst="first_line_text" dstEdge="LEFT" />
+    <meshitem src="secondary_text" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)" />
+    <meshitem src="secondary_text" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacing="1un" />
+    
+    <meshitem src="background" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="background" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+    <meshitem src="background" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+    <meshitem src="background" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+
+    <meshitem src="pictureArea" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="pictureArea" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+    <meshitem src="pictureArea" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+    <meshitem src="pictureArea" srcEdge="RIGHT" dst="icon" dstEdge="RIGHT" />
+
+    <meshitem src="secondary_icon" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)" />
+    <meshitem src="secondary_icon" srcEdge="CENTERV" dst="first_line_text" dstEdge="CENTERV" />
+  </layout>
+
+  <layout name="layout_two_rows_marquee" type="mesh">
+    <meshitem src="icon" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="-var(hb-param-margin-gene-left)" />
+    <meshitem src="icon" srcEdge="TOP" dst="" dstEdge="TOP" spacing="-1un" />
+
+    <meshitem src="first_line_text" srcEdge="LEFT" dst="icon" dstEdge="RIGHT" spacing="-var(hb-param-margin-gene-middle-horizontal)" />
+    <meshitem src="first_line_text" srcEdge="TOP" dst="icon" dstEdge="TOP" />
+    <meshitem src="first_line_text" srcEdge="RIGHT" dst="secondary_icon" dstEdge="LEFT" spacing="var(hb-param-margin-gene-middle-horizontal)" />
+    
+    <meshitem src="marquee_item" srcEdge="TOP" dst="first_line_text" dstEdge="BOTTOM" spacing="-var(hb-param-margin-gene-middle-vertical)" />
+    <meshitem src="marquee_item" srcEdge="LEFT" dst="first_line_text" dstEdge="LEFT" /> 
+    <meshitem src="marquee_item" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)" />
+    <meshitem src="marquee_item" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacing="1un" />
+    
+    <meshitem src="background" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="background" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+    <meshitem src="background" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+    <meshitem src="background" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+
+    <meshitem src="pictureArea" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="pictureArea" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+    <meshitem src="pictureArea" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+    <meshitem src="pictureArea" srcEdge="RIGHT" dst="icon" dstEdge="RIGHT" />
+
+    <meshitem src="secondary_icon" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)" />
+    <meshitem src="secondary_icon" srcEdge="CENTERV" dst="first_line_text" dstEdge="CENTERV" />
+  </layout>
+
+  <layout name="layout_three_rows" type="mesh">
+    <meshitem src="icon" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="-var(hb-param-margin-gene-left)" />
+    <meshitem src="icon" srcEdge="TOP" dst="" dstEdge="TOP" spacing="-1un" />
+
+    <meshitem src="first_line_text" srcEdge="LEFT" dst="icon" dstEdge="RIGHT" spacing="-var(hb-param-margin-gene-middle-horizontal)" />
+    <meshitem src="first_line_text" srcEdge="TOP" dst="icon" dstEdge="TOP" />
+    <meshitem src="first_line_text" srcEdge="RIGHT" dst="secondary_icon" dstEdge="LEFT" spacing="var(hb-param-margin-gene-middle-horizontal)" />
+
+    <meshitem src="secondary_text" srcEdge="TOP" dst="first_line_text" dstEdge="BOTTOM" spacing="-var(hb-param-margin-gene-middle-vertical)" />
+    <meshitem src="secondary_text" srcEdge="LEFT" dst="first_line_text" dstEdge="LEFT" />
+    <meshitem src="secondary_text" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)" />
+    
+    <meshitem src="marquee_item" srcEdge="TOP" dst="secondary_text" dstEdge="BOTTOM" spacing="-var(hb-param-margin-gene-middle-vertical)" />
+    <meshitem src="marquee_item" srcEdge="LEFT" dst="secondary_text" dstEdge="LEFT" />
+    <meshitem src="marquee_item" srcEdge="RIGHT" dst="secondary_text" dstEdge="RIGHT" />
+    <meshitem src="marquee_item" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacing="1un" />
+    
+    <meshitem src="background" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="background" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+    <meshitem src="background" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+    <meshitem src="background" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+
+    <meshitem src="pictureArea" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="pictureArea" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+    <meshitem src="pictureArea" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+    <meshitem src="pictureArea" srcEdge="RIGHT" dst="icon" dstEdge="RIGHT" />
+    
+    <meshitem src="secondary_icon" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)" />
+    <meshitem src="secondary_icon" srcEdge="CENTERV" dst="first_line_text" dstEdge="CENTERV" />
+  </layout>
+  
+  <layout name="layout_one_row-landscape" type="mesh">
+    <meshitem src="primary_text" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="-var(hb-param-margin-gene-left)" />
+    <meshitem src="primary_text" srcEdge="TOP" dst="" dstEdge="TOP" spacing="-var(hb-param-margin-gene-top)" />
+    <meshitem src="primary_text" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacing="var(hb-param-margin-gene-bottom)" />
+    <meshitem src="primary_text" srcEdge="RIGHT" dst="secondary_icon" dstEdge="LEFT" spacing="var(hb-param-margin-gene-middle-horizontal)" />
+    
+    <meshitem src="background" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="background" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+    <meshitem src="background" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+    <meshitem src="background" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+
+    <meshitem src="secondary_icon" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)" />
+    <meshitem src="secondary_icon" srcEdge="CENTERV" dst="primary_text" dstEdge="TOP" spacing="-expr(var(hb-param-text-height-primary)/2)" />
+  </layout>
+  
+  <layout name="layout_two_rows_secondary-landscape" type="mesh">
+    <meshitem src="first_line_text" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="-var(hb-param-margin-gene-left)" />
+    <meshitem src="first_line_text" srcEdge="TOP" dst="" dstEdge="TOP" spacing="-1un" />
+    <meshitem src="first_line_text" srcEdge="RIGHT" dst="secondary_icon" dstEdge="LEFT" spacing="var(hb-param-margin-gene-middle-horizontal)" />
+
+    <meshitem src="secondary_text" srcEdge="TOP" dst="first_line_text" dstEdge="BOTTOM" spacing="-var(hb-param-margin-gene-middle-vertical)" />
+    <meshitem src="secondary_text" srcEdge="LEFT" dst="first_line_text" dstEdge="LEFT" />
+    <meshitem src="secondary_text" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacing="1un" />
+    <meshitem src="secondary_text" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+    
+    <meshitem src="background" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="background" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+    <meshitem src="background" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+    <meshitem src="background" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+
+    <meshitem src="secondary_icon" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)" />
+    <meshitem src="secondary_icon" srcEdge="CENTERV" dst="first_line_text" dstEdge="CENTERV" />
+  </layout>
+
+  <layout name="layout_two_rows_marquee-landscape" type="mesh">
+    <meshitem src="first_line_text" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="-var(hb-param-margin-gene-left)" />
+    <meshitem src="first_line_text" srcEdge="TOP" dst="" dstEdge="TOP" spacing="-1un" />
+    <meshitem src="first_line_text" srcEdge="RIGHT" dst="secondary_icon" dstEdge="LEFT" spacing="var(hb-param-margin-gene-middle-horizontal)" />
+
+    <meshitem src="marquee_item" srcEdge="TOP" dst="first_line_text" dstEdge="BOTTOM" spacing="-var(hb-param-margin-gene-middle-vertical)" />
+    <meshitem src="marquee_item" srcEdge="LEFT" dst="first_line_text" dstEdge="LEFT" />
+    <meshitem src="marquee_item" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacing="1un" />
+    <meshitem src="marquee_item" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+    
+    <meshitem src="background" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="background" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+    <meshitem src="background" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+    <meshitem src="background" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+
+    <meshitem src="secondary_icon" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)" />
+    <meshitem src="secondary_icon" srcEdge="CENTERV" dst="first_line_text" dstEdge="CENTERV" />
+  </layout>
+  
+  <layout name="layout_three_rows-landscape" type="mesh">
+    <meshitem src="first_line_text" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="-var(hb-param-margin-gene-left)" />
+    <meshitem src="first_line_text" srcEdge="TOP" dst="" dstEdge="TOP" spacing="-1un" />
+    <meshitem src="first_line_text" srcEdge="RIGHT" dst="secondary_icon" dstEdge="LEFT" spacing="var(hb-param-margin-gene-middle-horizontal)" />
+
+    <meshitem src="secondary_text" srcEdge="TOP" dst="first_line_text" dstEdge="BOTTOM" spacing="-var(hb-param-margin-gene-middle-vertical)" />
+    <meshitem src="secondary_text" srcEdge="LEFT" dst="first_line_text" dstEdge="LEFT" />
+    <meshitem src="secondary_text" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)" />
+    
+    <meshitem src="marquee_item" srcEdge="TOP" dst="secondary_text" dstEdge="BOTTOM" spacing="-var(hb-param-margin-gene-middle-vertical)" />
+    <meshitem src="marquee_item" srcEdge="LEFT" dst="secondary_text" dstEdge="LEFT" /> 
+    <meshitem src="marquee_item" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacing="1un" />
+    <meshitem src="marquee_item" srcEdge="RIGHT" dst="secondary_text" dstEdge="RIGHT" />
+    
+    <meshitem src="background" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="background" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+    <meshitem src="background" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+    <meshitem src="background" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+
+    <meshitem src="secondary_icon" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)" />
+    <meshitem src="secondary_icon" srcEdge="CENTERV" dst="first_line_text" dstEdge="CENTERV" />
+  </layout>
+</hbwidget>

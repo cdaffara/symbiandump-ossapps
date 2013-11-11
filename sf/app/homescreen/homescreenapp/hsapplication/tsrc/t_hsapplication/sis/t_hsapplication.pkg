@@ -1,0 +1,40 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:
+;
+
+; Language
+&EN
+
+; SIS header: name, uid, version
+#{"t_hsapplication"},(0x20022F5F),1,0,0
+
+; Localised Vendor name
+%{"Nokia"}
+
+; Unique Vendor name
+:"Nokia"
+
+; Supports S60 5th Edition
+[0x1028315F], 0, 0, 0, {"S60ProductID"}
+
+; HS application's unittest
+"/epoc32/release/armv5/urel/t_hsapplicationexe.exe"                         - "c:/sys/bin/t_hsapplicationexe.exe"
+"/epoc32/data/z/private/10003a3f/import/apps/t_hsapplicationexe_reg.rsc"    - "c:/private/10003a3f/import/apps/t_hsapplicationexe_reg.rsc"
+"/epoc32/data/z/resource/apps/t_hsapplicationexe.rsc"                       - "c:/resource/apps/t_hsapplicationexe.rsc"
+
+;Mocked test plugin
+"/epoc32/release/armv5/urel/mockstateplugins.dll"                                              - "c:/sys/bin/mockstateplugins.dll"
+"/epoc32/data/z/private/20022f5f/hsresources/plugins/stateplugins/mockstateplugins.qtplugin" - "c:/private/20022f5f/hsresources/plugins/stateplugins/mockstateplugins.qtplugin"
+"/epoc32/data/z/private/20022f5f/hsresources/plugins/stateplugins/mockstateplugins.xml"      - "c:/private/20022f5f/hsresources/plugins/stateplugins/mockstateplugins.xml"

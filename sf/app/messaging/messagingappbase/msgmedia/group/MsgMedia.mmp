@@ -1,0 +1,94 @@
+/*
+* Copyright (c) 2005 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*       Project file for MsgMedia
+*
+*/
+
+
+
+#include <data_caging_paths.hrh>
+#include <platform_paths.hrh>
+
+//...LOGGING...
+//MACRO           __MSGMEDIA_DEBUG    // Logging
+//MACRO           USE_RDEBUG    // RDebug vs. file logging
+//LIBRARY         flogger.lib   // RFileLogger, debug logging
+//...LOGGING...
+
+TARGET          MsgMedia.dll
+TARGETTYPE      dll
+UID             0x1000008D 0x102072E8
+VENDORID        VID_DEFAULT
+CAPABILITY      CAP_GENERAL_DLL
+VERSION 	10.0
+PAGED
+
+START RESOURCE  MsgMimeToMediaMapping.rss
+TARGETPATH      RESOURCE_FILES_DIR
+HEADER
+END
+
+SOURCEPATH      ../src
+
+SOURCE          MsgMediaDll.cpp
+SOURCE          MsgMediaResolver.cpp
+SOURCE          MsgMediaTypeGroup.cpp
+
+SOURCE          MsgMediaInfo.cpp
+SOURCE          MsgAudioInfo.cpp
+SOURCE          MsgImageInfo.cpp
+SOURCE          MsgTextInfo.cpp
+SOURCE          MsgVideoInfo.cpp
+
+SOURCE          MmsConformance.cpp
+
+LANG            SC
+
+USERINCLUDE     ../inc
+
+SYSTEMINCLUDE   ../../../inc
+APP_LAYER_SYSTEMINCLUDE
+
+
+LIBRARY         euser.lib
+LIBRARY         apgrfx.lib
+LIBRARY         efsrv.lib
+LIBRARY         apmime.lib
+LIBRARY         bafl.lib
+LIBRARY         cone.lib
+LIBRARY         charconv.lib
+LIBRARY         centralrepository.lib
+LIBRARY         imageconversion.lib
+LIBRARY         mediaclientaudio.lib
+LIBRARY         mediaclientvideo.lib
+LIBRARY         ws32.lib
+LIBRARY         FeatMgr.lib
+LIBRARY         DRMHelper.lib
+LIBRARY         msgcommonutils.lib
+STATICLIBRARY   hxmetadatautil.lib
+
+#if defined( ARMCC )
+deffile         ./eabi.def
+#elif defined( WINS )
+deffile         ./wins.DEF
+#else
+deffile         ./marm.def
+#endif
+
+
+
+SMPSAFE
+
+/* End of File */

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<service>
+  <name>videoplayer</name>
+  <filepath>No path</filepath>
+  <description>Video services</description>
+  <interface>
+     <name>com.nokia.symbian.IVideoFetch</name>
+     <version>1.0</version>
+     <description>Interface to fetch video URI</description>
+   </interface>
+  <interface>
+     <name>com.nokia.symbian.IVideoBrowse</name>
+     <version>1.0</version>
+     <description>Interface to browse categorized video content</description>
+   </interface>
+  <interface>
+     <name>IVideoView</name>
+     <version>1.0</version>
+     <description>Interface to play a video</description>
+     <customproperty key="deprecatedsn">Video View</customproperty>
+  </interface>
+  <interface>
+     <name>com.nokia.symbian.IVideoView</name>
+     <version>1.0</version>
+     <description>Interface to play a video</description>
+  </interface>  
+  <interface>
+     <name>com.nokia.symbian.IFileView</name>
+     <version>1.0</version>
+     <description>Interface for playing video given a QFile</description>
+  </interface>
+  <interface>
+     <name>com.nokia.symbian.IUriView</name>
+     <version>1.0</version>
+     <description>Interface for playing RSTP and MMS</description>
+     <customproperty key="schemes">rtsp, rtspt, rtspu, mms, mmst</customproperty>
+  </interface>  
+</service>

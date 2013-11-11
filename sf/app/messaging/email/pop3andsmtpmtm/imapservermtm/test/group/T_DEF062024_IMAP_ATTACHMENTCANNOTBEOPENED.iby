@@ -1,0 +1,27 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+#ifndef __T_DEF062024_IMAP_ATTACHMENTCANNOTBEOPENED__
+#define __T_DEF062024_IMAP_ATTACHMENTCANNOTBEOPENED__
+
+file=ABI_DIR\BUILD_DIR\T_DEF062024_Imap_AttachmentCannotBeOpened.exe	System\bin\T_DEF062024_Imap_AttachmentCannotBeOpened.exe
+
+data=EPOCROOT##Epoc32\winscw\c\msgtest\imap\T_DEF062024_IMAP_ATTACHMENTCANNOTBEOPENED.script msgtest\imap\T_DEF062024_IMAP_ATTACHMENTCANNOTBEOPENED.script
+data=EPOCROOT##Epoc32\winscw\c\msgtest\imap\uploadAttachment.txt msgtest\imap\ImapGetMailAndAttachment.txt
+data=EPOCROOT##Epoc32\winscw\c\msgtest\imap\ImapUTCTest2.ini msgtest\imap\ImapAttachmentTest.ini
+
+#endif

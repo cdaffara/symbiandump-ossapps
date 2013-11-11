@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE testExecuteTest SYSTEM "file:///c:/program files/common files/symbian/testExecuteTest.dtd" [ ]>
+
+<testExecuteTest>
+
+	<name>t_emailaccountsettings</name>
+	<timeout>300</timeout>
+	<testScripts>
+		<script>
+			<hostPath>\epoc32\winscw\c\msgtest\scripts\imcm\t_emailaccountsettings.script</hostPath>
+			<devicePath>c:\msgtest\scripts\imcm\t_emailaccountsettings.script</devicePath>
+		</script>
+	</testScripts>
+
+	<testServers>
+		<server>t_emailaccountsettings_server</server>
+	</testServers>
+
+</testExecuteTest>

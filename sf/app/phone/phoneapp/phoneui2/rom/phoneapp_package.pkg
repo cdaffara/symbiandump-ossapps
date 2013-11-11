@@ -1,0 +1,43 @@
+;
+; Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description: For packing phoneuicontrol component.
+;
+; Languages
+&EN
+
+; Standard SIS file header
+;
+; TODO: UID must ne fixed once SW Update bug is fixed. Estimate wk40 2010
+;
+#{"phone_package"},(0x100058B5),1,0,0,TYPE=SA,RU
+
+
+; Localized Vendor Name
+%{"Nokia"}
+
+
+; Unique Vendor name
+:"Nokia"
+
+
+; Platform Dependency
+;
+; TODO: Fix correct platform
+;
+[0x102752ae], 0, 0, 0, {"Series60ProductID"}
+
+; Files to copy
+"\Epoc32\release\armv5\udeb\phoneuicontrol.dll" -"C:\sys\bin\phoneuicontrol.dll"
+
+

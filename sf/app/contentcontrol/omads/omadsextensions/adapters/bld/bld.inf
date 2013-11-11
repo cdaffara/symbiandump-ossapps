@@ -1,0 +1,41 @@
+/*
+* Copyright (c) 2004-2010 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  build info file for SyncML DS Plug In adapters
+*
+*/
+
+
+PRJ_EXPORTS
+
+#ifdef __SYNCML_DS_CON
+#include "../contacts/bld/bld.inf"
+#endif
+
+#ifdef  __SYNCML_DS_CAL
+#include "../agenda/bld/bld.inf"
+#endif
+
+#ifdef  __SYNCML_DS_NOTEPAD
+#include "../notes/group/bld.inf"
+#endif
+
+#include "../contactsgroup/group/bld.inf"
+
+#include "../mediads/group/bld.inf"
+
+// #include "../bookmark/group/bld.inf"
+
+#include "../mms/group/bld.inf"
+
+#include "../sms/group/bld.inf"

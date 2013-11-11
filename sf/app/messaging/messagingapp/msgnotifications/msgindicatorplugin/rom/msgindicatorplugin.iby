@@ -1,0 +1,24 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+#ifndef __MSGINDICATORPLUGIN_IBY__
+#define __MSGINDICATORPLUGIN_IBY__
+
+REM DLL
+file=ABI_DIR\UREL\msgindicatorplugin.dll               SHARED_LIB_DIR\msgindicatorplugin.dll UNPAGED
+data=\epoc32\data\z\resource\plugins\indicators\msgindicatorplugin.qtplugin   \resource\plugins\indicators\msgindicatorplugin.qtplugin
+data=\epoc32\winscw\c\resource\messaging\message.svg   \resource\messaging\message.svg
+#endif

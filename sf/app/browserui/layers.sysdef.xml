@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE SystemDefinition SYSTEM "sysdef_1_5_1.dtd" [
+  <!ENTITY layer_real_source_path "sf/app/browserui" >
+]>
+
+<SystemDefinition name="browserui" schema="1.5.1">
+<systemModel>
+  <layer name="app_layer">
+    <module name="browserui">
+      <unit unitID="browserui" mrp="" bldFile="&layer_real_source_path;/" name="browserui" proFile="browserui.pro" qmakeArgs="" filter=""/>
+            </module>
+        </layer>
+    </systemModel>
+</SystemDefinition>

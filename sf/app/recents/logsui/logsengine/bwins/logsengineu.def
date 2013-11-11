@@ -1,0 +1,72 @@
+EXPORTS
+	?predictiveSearchStatus@LogsAbstractModel@@QAEHXZ @ 1 NONAME ; int LogsAbstractModel::predictiveSearchStatus(void)
+	??0LogsModel@@QAE@W4LogsModelType@0@_N@Z @ 2 NONAME ; LogsModel::LogsModel(enum LogsModel::LogsModelType, bool)
+	??0LogsEvent@@QAE@ABV0@@Z @ 3 NONAME ; LogsEvent::LogsEvent(class LogsEvent const &)
+	??0LogsFilter@@QAE@W4FilterType@0@@Z @ 4 NONAME ; LogsFilter::LogsFilter(enum LogsFilter::FilterType)
+	?logsDetailsModel@LogsModel@@QAEPAVLogsDetailsModel@@AAVLogsEvent@@@Z @ 5 NONAME ; class LogsDetailsModel * LogsModel::logsDetailsModel(class LogsEvent &)
+	?sendMessage@LogsMessage@@QAE_NXZ @ 6 NONAME ; bool LogsMessage::sendMessage(void)
+	?contactLocalId@LogsEvent@@QBEIXZ @ 7 NONAME ; unsigned int LogsEvent::contactLocalId(void) const
+	?open@LogsContact@@QAE_NXZ @ 8 NONAME ; bool LogsContact::open(void)
+	?logId@LogsEvent@@QBEHXZ @ 9 NONAME ; int LogsEvent::logId(void) const
+	?allowedCallTypes@LogsCall@@QAE?AV?$QList@W4CallType@LogsCall@@@@XZ @ 10 NONAME ; class QList<enum LogsCall::CallType> LogsCall::allowedCallTypes(void)
+	??1LogsModel@@UAE@XZ @ 11 NONAME ; LogsModel::~LogsModel(void)
+	?compressData@LogsModel@@QAEHXZ @ 12 NONAME ; int LogsModel::compressData(void)
+	?addNew@LogsContact@@QAE_NXZ @ 13 NONAME ; bool LogsContact::addNew(void)
+	?getLogsEvent@LogsDetailsModel@@QBE?AVLogsEvent@@XZ @ 14 NONAME ; class LogsEvent LogsDetailsModel::getLogsEvent(void) const
+	?ringDuration@LogsEvent@@QBEHXZ @ 15 NONAME ; int LogsEvent::ringDuration(void) const
+	?logsMatchesModel@LogsModel@@QAEPAVLogsMatchesModel@@XZ @ 16 NONAME ; class LogsMatchesModel * LogsModel::logsMatchesModel(void)
+	??1LogsFilter@@UAE@XZ @ 17 NONAME ; LogsFilter::~LogsFilter(void)
+	??1LogsMessage@@UAE@XZ @ 18 NONAME ; LogsMessage::~LogsMessage(void)
+	?cancelServiceRequest@LogsContact@@QAEXXZ @ 19 NONAME ; void LogsContact::cancelServiceRequest(void)
+	?logsMatches@LogsMatchesModel@@QAEXABVQString@@@Z @ 20 NONAME ; void LogsMatchesModel::logsMatches(class QString const &)
+	?listItemTextWidth@LogsConfigurationParams@@QBEHXZ @ 21 NONAME ; int LogsConfigurationParams::listItemTextWidth(void) const
+	?clearEvent@LogsDetailsModel@@QAEXXZ @ 22 NONAME ; void LogsDetailsModel::clearEvent(void)
+	?clearMissedCallsCounter@LogsModel@@QAEHXZ @ 23 NONAME ; int LogsModel::clearMissedCallsCounter(void)
+	?filterType@LogsFilter@@QBE?AW4FilterType@1@XZ @ 24 NONAME ; enum LogsFilter::FilterType LogsFilter::filterType(void) const
+	?setLocaleChanged@LogsConfigurationParams@@QAEX_N@Z @ 25 NONAME ; void LogsConfigurationParams::setLocaleChanged(bool)
+	?eventType@LogsEvent@@QBE?AW4LogsEventType@1@XZ @ 26 NONAME ; enum LogsEvent::LogsEventType LogsEvent::eventType(void) const
+	??1LogsCall@@UAE@XZ @ 27 NONAME ; LogsCall::~LogsCall(void)
+	??1LogsContact@@UAE@XZ @ 28 NONAME ; LogsContact::~LogsContact(void)
+	?localeChanged@LogsConfigurationParams@@QBE_NXZ @ 29 NONAME ; bool LogsConfigurationParams::localeChanged(void) const
+	?time@LogsEvent@@QBE?AVQDateTime@@XZ @ 30 NONAME ; class QDateTime LogsEvent::time(void) const
+	?setPredictiveSearch@LogsAbstractModel@@QAEH_N@Z @ 31 NONAME ; int LogsAbstractModel::setPredictiveSearch(bool)
+	??0LogsCustomFilter@@QAE@XZ @ 32 NONAME ; LogsCustomFilter::LogsCustomFilter(void)
+	?clearEvents@LogsCustomFilter@@QAE_NXZ @ 33 NONAME ; bool LogsCustomFilter::clearEvents(void)
+	?ALS@LogsEvent@@QBE_NXZ @ 34 NONAME ; bool LogsEvent::ALS(void) const
+	?updateExisting@LogsContact@@QAE_NXZ @ 35 NONAME ; bool LogsContact::updateExisting(void)
+	?allowedRequestType@LogsContact@@QAE?AW4RequestType@1@XZ @ 36 NONAME ; enum LogsContact::RequestType LogsContact::allowedRequestType(void)
+	?markEventsSeen@LogsModel@@QAE_NW4ClearType@1@@Z @ 37 NONAME ; bool LogsModel::markEventsSeen(enum LogsModel::ClearType)
+	?getNumberToClipboard@LogsDetailsModel@@QAEXXZ @ 38 NONAME ; void LogsDetailsModel::getNumberToClipboard(void)
+	?updateConfiguration@LogsAbstractModel@@UAEHAAVLogsConfigurationParams@@@Z @ 39 NONAME ; int LogsAbstractModel::updateConfiguration(class LogsConfigurationParams &)
+	??1LogsMatchesModel@@UAE@XZ @ 40 NONAME ; LogsMatchesModel::~LogsMatchesModel(void)
+	?duration@LogsEvent@@QBEHXZ @ 41 NONAME ; int LogsEvent::duration(void) const
+	?call@LogsCall@@QAEXW4CallType@1@@Z @ 42 NONAME ; void LogsCall::call(enum LogsCall::CallType)
+	?setContactId@LogsCustomFilter@@QAEXI@Z @ 43 NONAME ; void LogsCustomFilter::setContactId(unsigned int)
+	?serialize@LogsEvent@@QAE_NAAVQDataStream@@@Z @ 44 NONAME ; bool LogsEvent::serialize(class QDataStream &)
+	??1LogsConfigurationParams@@UAE@XZ @ 45 NONAME ; LogsConfigurationParams::~LogsConfigurationParams(void)
+	?callToNumber@LogsCall@@SAXW4CallType@1@ABVQString@@II@Z @ 46 NONAME ; void LogsCall::callToNumber(enum LogsCall::CallType, class QString const &, unsigned int, unsigned int)
+	?remoteParty@LogsEvent@@QBEABVQString@@XZ @ 47 NONAME ; class QString const & LogsEvent::remoteParty(void) const
+	?updateConfiguration@LogsModel@@UAEHAAVLogsConfigurationParams@@@Z @ 48 NONAME ; int LogsModel::updateConfiguration(class LogsConfigurationParams &)
+	?setListItemTextWidth@LogsConfigurationParams@@QAEXH@Z @ 49 NONAME ; void LogsConfigurationParams::setListItemTextWidth(int)
+	?isRead@LogsEvent@@QBE_NXZ @ 50 NONAME ; bool LogsEvent::isRead(void) const
+	??1LogsDetailsModel@@UAE@XZ @ 51 NONAME ; LogsDetailsModel::~LogsDetailsModel(void)
+	?markEventsSeen@LogsCustomFilter@@QAE_NXZ @ 52 NONAME ; bool LogsCustomFilter::markEventsSeen(void)
+	?createContact@LogsAbstractModel@@QAEPAVLogsContact@@ABVQString@@@Z @ 53 NONAME ; class LogsContact * LogsAbstractModel::createContact(class QString const &)
+	?number@LogsEvent@@QBEABVQString@@XZ @ 54 NONAME ; class QString const & LogsEvent::number(void) const
+	?getNumberForCalling@LogsEvent@@QAE?AVQString@@XZ @ 55 NONAME ; class QString LogsEvent::getNumberForCalling(void)
+	?duplicates@LogsEvent@@QBEHXZ @ 56 NONAME ; int LogsEvent::duplicates(void) const
+	?direction@LogsEvent@@QBE?AW4LogsDirection@1@XZ @ 57 NONAME ; enum LogsEvent::LogsDirection LogsEvent::direction(void) const
+	?refreshData@LogsModel@@QAEHXZ @ 58 NONAME ; int LogsModel::refreshData(void)
+	??4LogsConfigurationParams@@QAEAAV0@ABV0@@Z @ 59 NONAME ; class LogsConfigurationParams & LogsConfigurationParams::operator=(class LogsConfigurationParams const &)
+	??1LogsEvent@@UAE@XZ @ 60 NONAME ; LogsEvent::~LogsEvent(void)
+	??0LogsEvent@@QAE@AAVQDataStream@@@Z @ 61 NONAME ; LogsEvent::LogsEvent(class QDataStream &)
+	?initiateCallback@LogsCall@@QAEXXZ @ 62 NONAME ; void LogsCall::initiateCallback(void)
+	?setMaxSize@LogsFilter@@QAEXH@Z @ 63 NONAME ; void LogsFilter::setMaxSize(int)
+	??1LogsCustomFilter@@UAE@XZ @ 64 NONAME ; LogsCustomFilter::~LogsCustomFilter(void)
+	?defaultCallType@LogsCall@@QAE?AW4CallType@1@XZ @ 65 NONAME ; enum LogsCall::CallType LogsCall::defaultCallType(void)
+	?sendMessageToNumber@LogsMessage@@SA_NABVQString@@0I@Z @ 66 NONAME ; bool LogsMessage::sendMessageToNumber(class QString const &, class QString const &, unsigned int)
+	??0LogsConfigurationParams@@QAE@PAVQObject@@@Z @ 67 NONAME ; LogsConfigurationParams::LogsConfigurationParams(class QObject *)
+	?isRemotePartyPrivate@LogsEvent@@QBE_NXZ @ 68 NONAME ; bool LogsEvent::isRemotePartyPrivate(void) const
+	?clearList@LogsModel@@QAE_NW4ClearType@1@@Z @ 69 NONAME ; bool LogsModel::clearList(enum LogsModel::ClearType)
+	?clearType@LogsFilter@@QBE?AW4ClearType@LogsModel@@XZ @ 70 NONAME ; enum LogsModel::ClearType LogsFilter::clearType(void) const
+

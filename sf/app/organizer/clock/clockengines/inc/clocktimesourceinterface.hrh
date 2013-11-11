@@ -1,0 +1,78 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   Protocol time information/data.
+*
+*/
+ 
+#ifndef __CLOCK_TIMESOURCE_INTERFACE_HRH__
+#define __CLOCK_TIMESOURCE_INTERFACE_HRH__
+
+/**
+* @enum TInterfaceAttribute
+* @brief This enum defines the attributes which are used to get the data by the clockserver
+*/
+enum TInterfaceAttribute
+	{
+	EUTCTime = 0,
+	EDSTOffset,
+	ETZOffset,
+	ELocationCoordinates,
+	EAttrLast
+	};
+
+/**
+* @struct STimeAttributes
+* @brief This contains the various time attributes that a user application can request
+*/
+struct timeAttributes
+	{
+	/** UTC Time */
+	TDateTime iUtcDateTime;
+		
+	/** Timezone Offset */
+	TTimeIntervalMinutes iTimeZoneOffset;
+		
+	/** DST Offset */
+	TTimeIntervalMinutes iDstOffset;
+	};
+
+typedef timeAttributes STimeAttributes;
+
+/**
+* @enum TTimeSource
+* @brief The various protocols supported.
+*/
+enum TTimeSource
+	{
+	ENITZPlugin = 0,
+	ESNTPPlugin,
+	EGPSPlugin,
+	EAllPlugins,
+	EProtocolNULL
+	};
+	
+/**
+* @enum TChangedComponent
+* @brief enum indicates which item underwent a change, passed by clockserver while a notification is given.
+*/
+enum TChangedComponent
+	{
+	EComponentMcc = 0x1000,
+	EComponentTime,
+	EComponentNone
+	};
+
+#endif		// __CLOCK_TIMESOURCE_INTERFACE_HRH__
+
+// End of file

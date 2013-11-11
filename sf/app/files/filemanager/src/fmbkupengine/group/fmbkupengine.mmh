@@ -1,0 +1,72 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0""
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project definition header file for project FileManagerBkupEngine
+*
+*/
+
+SOURCE          CMMCScBkupArchive.cpp
+SOURCE          CMMCScBkupArchiveDataManager.cpp
+SOURCE          CMMCScBkupArchiveFooter.cpp
+SOURCE          CMMCScBkupArchiveHeader.cpp
+SOURCE          CMMCScBkupArchiveInfo.cpp
+SOURCE          CMMCScBkupBufferManagers.cpp
+SOURCE          CMMCScBkupDataOwnerCollection.cpp
+SOURCE          CMMCScBkupDataOwnerInfo.cpp
+SOURCE          CMMCScBkupDataStrategies.cpp
+SOURCE          CMMCScBkupDriveSpecificRequest.cpp
+SOURCE          CMMCScBkupEngine.cpp
+SOURCE          CMMCScBkupEngineImpl.cpp
+SOURCE          CMMCScBkupFileInfo.cpp
+SOURCE          CMMCScBkupFileListCollection.cpp
+SOURCE          CMMCScBkupIndexBase.cpp
+SOURCE          CMMCScBkupIndexDataOwners.cpp
+SOURCE          CMMCScBkupIndexActiveData.cpp
+SOURCE          CMMCScBkupIndexPassiveData.cpp
+SOURCE          CMMCScBkupIndexPublicDataFiles.cpp
+SOURCE          CMMCScBkupIndexJavaData.cpp
+SOURCE          CMMCScBkupIndexSystemData.cpp
+SOURCE          CMMCScBkupIndexWithIdentifier.cpp
+SOURCE          CMMCScBkupOperationParameters.cpp
+SOURCE          CMMCScBkupState.cpp
+SOURCE          CMMCScBkupStateArchiveOpActiveData.cpp
+SOURCE          CMMCScBkupStateArchiveOpArchiveFooter.cpp
+SOURCE          CMMCScBkupStateArchiveOpArchiveHeader.cpp
+SOURCE          CMMCScBkupStateArchiveOpDataOwners.cpp
+SOURCE          CMMCScBkupStateArchiveOpPassiveData.cpp
+SOURCE          CMMCScBkupStateArchiveOpPublicDataFiles.cpp
+SOURCE          CMMCScBkupStateArchiveOpSystemData.cpp
+SOURCE          CMMCScBkupStateArchiveOpJavaData.cpp
+SOURCE          CMMCScBkupStateFactory.cpp
+SOURCE          CMMCScBkupStateGetDataOwners.cpp
+SOURCE          CMMCScBkupStateGetDataOwnerStatuses.cpp
+SOURCE          CMMCScBkupStateOpAware.cpp
+SOURCE          CMMCScBkupStateRequestListOfPublicFiles.cpp
+SOURCE          CMMCScBkupStateRequestSizeOfBackupData.cpp
+SOURCE          CMMCScBkupStateSetPhoneMode.cpp
+SOURCE          CMMCScBkupStateNotifyAllSnapshotsSupplied.cpp
+SOURCE          CMMCScBkupStateValidateDiskSpace.cpp
+SOURCE          CMMCScBkupTransferReadRequest.cpp
+SOURCE          CMMCScBkupTransferRequest.cpp
+SOURCE          CMMCScBkupTransferWriteRequest.cpp
+SOURCE			CMMCScBkupDriveAndOperationTypeManager.cpp
+SOURCE          CMMCScBkupDriveDataSizeManager.cpp
+SOURCE          MMCScBkupArchiveUtils.cpp
+SOURCE          MMCScBkupPhoneModelUtils.cpp
+SOURCE          MMCScBkupSBEUtils.cpp
+SOURCE          MMCScBkupLogger.cpp
+SOURCE          RMMCScBkupArchiveStreams.cpp
+SOURCE          RMMCScBkupProgressSizer.cpp
+SOURCE          TMMCScBkupArchiveVector.cpp
+SOURCE          TMMCScBkupDriveFilter.cpp
+SOURCE          TMMCScBkupDriveAndSize.cpp

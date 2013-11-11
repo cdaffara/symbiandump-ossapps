@@ -1,0 +1,109 @@
+/*
+* Copyright (c) 2002-2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0""
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: 
+*     This file contains declarations for resources.
+*     The file can be included only in resource file.
+*
+*
+*/
+
+
+//  INCLUDES
+#include <bldvariant.hrh>
+
+//  STRUCTURE DEFINITIONS
+
+// ---------------------------------------------------------
+//  BACKUPITEM
+//  Defines a file or folder to be backed up
+//  Note! Remember to use a trailing backslash!
+// ---------------------------------------------------------
+//
+STRUCT BACKUPITEM
+    {
+    LTEXT item_path;
+    WORD item_flags;
+    }
+
+
+
+// ---------------------------------------------------------
+//  MMC_SECURE_BACKUP_DRIVE_LIST
+//
+//  Defines an array of drive numbers, starting at 0 
+//  (EDriveA), to a maximum of 25 (EDriveZ)
+//  which are included in a backup/restore to/from MMC
+//  operation
+//
+//  See TMMCDriveNumber and TBkupDriveCategory (BkupEngine.hrh)
+//  See TMMCScBkupOwnerDataType in TMMCScBkupOwnerDataType.hrh
+// ---------------------------------------------------------
+//
+STRUCT MMC_SECURE_BACKUP_DRIVE_AND_OPERATION_TYPE
+	{
+	BYTE drive;	 // See TMMCDriveNumber and TBkupDriveCategory (BkupEngine.hrh)
+	BYTE type;   // See TMMCScBkupOwnerDataType (TMMCScBkupOwnerDataType.h)
+	}
+
+
+
+// ---------------------------------------------------------
+//  MMC_SECURE_BACKUP_DRIVES_AND_OPERATIONS
+//
+//  Defines an array of drive numbers and operations.
+//  The drive starts at 0 (EDriveA), to a maximum of 25 (EDriveZ)
+//  which are included in a backup/restore to/from MMC
+//  operation. Each drive should include a number of associated
+//  operations. For example, for drive C:\ we wish to carry
+//  out all SBE backup/restore ops. For MMC we wish to only
+//  back up & restore package data (Required to ensure that
+//  hashes for MMC-based binaries are recreated on C:\ after
+//  the internal drive is formatted & a restore is performed).
+//
+// ---------------------------------------------------------
+//
+STRUCT MMC_SECURE_BACKUP_DRIVES_AND_OPERATIONS
+    {
+    LEN BYTE STRUCT drivesAndOperations[]; // SEE MMC_SECURE_BACKUP_DRIVE_AND_OPERATION_TYPE
+    }
+
+// ---------------------------------------------------------
+//  BACKUPCATEGORY
+//  Defines a category, name for archive and uids, 
+//  from which backup category consists of
+// ---------------------------------------------------------
+//
+STRUCT BACKUPCATEGORY
+    {
+    LONG category;
+    LTEXT archive_name;
+    LONG special_flags;
+    LONG exclude_special_flags;
+    LONG uids[];
+    LONG exclude_uids[];
+    }
+
+
+// ---------------------------------------------------------
+//  BACKUPCATEGORY
+//  Defines a category, name for archive and uids, 
+//  from which backup category consists of
+// ---------------------------------------------------------
+//
+STRUCT BACKUPCATEGORYARRAY
+    {
+    STRUCT backupcategory[];
+    }
+
+// End of File

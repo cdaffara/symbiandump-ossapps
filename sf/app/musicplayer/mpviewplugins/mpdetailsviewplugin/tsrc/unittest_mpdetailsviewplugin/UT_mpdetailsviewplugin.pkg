@@ -1,0 +1,31 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description: 
+;
+; Language
+&EN
+
+; SIS header: name, uid, version
+#{"unittest_mpdetailsviewplugin"},(0xE003e881),1,0,0
+
+; Localised Vendor name
+%{"Vendor"}
+
+; Unique Vendor name
+:"Vendor"
+
+; Executable and default resource files
+"/epoc32/release/armv5/udeb/unittest_mpdetailsviewplugin.exe"    - "!:\sys\bin\unittest_mpdetailsviewplugin.exe"
+"/epoc32/data/z/private/10003a3f/import/apps/unittest_mpdetailsviewplugin_reg.rsc"    - "!:\private\10003a3f\import\apps\unittest_mpdetailsviewplugin_reg.rsc"
+

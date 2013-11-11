@@ -1,0 +1,37 @@
+EXPORTS
+	?Category@CMMCScBkupArchiveInfo@@QBE?AV?$TBitFlagsT@K@@XZ @ 1 NONAME ; class TBitFlagsT<unsigned long> CMMCScBkupArchiveInfo::Category(void) const
+	?CancelOperation@CMMCScBkupEngine@@QAEXXZ @ 2 NONAME ; void CMMCScBkupEngine::CancelOperation(void)
+	?PackageTransferType@CMMCScBkupOpParamsRestoreFull@@UBE?AW4TPackageDataType@conn@@XZ @ 3 NONAME ; enum conn::TPackageDataType CMMCScBkupOpParamsRestoreFull::PackageTransferType(void) const
+	?PassiveTransferType@CMMCScBkupOpParamsRestoreFull@@UBE?AW4TTransferDataType@conn@@XZ @ 4 NONAME ; enum conn::TTransferDataType CMMCScBkupOpParamsRestoreFull::PassiveTransferType(void) const
+	??1CMMCScBkupEngine@@UAE@XZ @ 5 NONAME ; CMMCScBkupEngine::~CMMCScBkupEngine(void)
+	?NewL@CMMCScBkupEngine@@SAPAV1@AAVRFs@@@Z @ 6 NONAME ; class CMMCScBkupEngine * CMMCScBkupEngine::NewL(class RFs &)
+	?TotalOperationSizeL@CMMCScBkupEngine@@QBE_JXZ @ 7 NONAME ; long long CMMCScBkupEngine::TotalOperationSizeL(void) const
+	?StartOperationL@CMMCScBkupEngine@@QAEXW4TMMCScBkupOperationType@@AAVMMMCScBkupEngineObserver@@PAVCMMCScBkupOpParamsBase@@@Z @ 8 NONAME ; void CMMCScBkupEngine::StartOperationL(enum TMMCScBkupOperationType, class MMMCScBkupEngineObserver &, class CMMCScBkupOpParamsBase *)
+	?IncrementType@CMMCScBkupOpParamsBackupFull@@UBE?AW4TBackupIncType@conn@@XZ @ 9 NONAME ; enum conn::TBackupIncType CMMCScBkupOpParamsBackupFull::IncrementType(void) const
+	?Close@RMMCScBkupArchiveBuf@@QAEXXZ @ 10 NONAME ; void RMMCScBkupArchiveBuf::Close(void)
+	?PartType@CMMCScBkupOpParamsRestoreFull@@UBE?AW4TBURPartType@conn@@XZ @ 11 NONAME ; enum conn::TBURPartType CMMCScBkupOpParamsRestoreFull::PartType(void) const
+	??1CMMCScBkupOpParamsRestoreFull@@UAE@XZ @ 12 NONAME ; CMMCScBkupOpParamsRestoreFull::~CMMCScBkupOpParamsRestoreFull(void)
+	?NewL@CMMCScBkupOpParamsRestoreFull@@SAPAV1@PAV?$CArrayFixFlat@VTBkupDrivesAndOperation@@@@V?$TBitFlagsT@K@@@Z @ 13 NONAME ; class CMMCScBkupOpParamsRestoreFull * CMMCScBkupOpParamsRestoreFull::NewL(class CArrayFixFlat<class TBkupDrivesAndOperation> *, class TBitFlagsT<unsigned long>)
+	?ActiveTransferType@CMMCScBkupOpParamsRestoreFull@@UBE?AW4TTransferDataType@conn@@XZ @ 14 NONAME ; enum conn::TTransferDataType CMMCScBkupOpParamsRestoreFull::ActiveTransferType(void) const
+	?ListArchivesL@CMMCScBkupEngine@@QBEXAAV?$RPointerArray@VCMMCScBkupArchiveInfo@@@@PAVCMMCScBkupOpParamsBase@@KH@Z @ 15 NONAME ; void CMMCScBkupEngine::ListArchivesL(class RPointerArray<class CMMCScBkupArchiveInfo> &, class CMMCScBkupOpParamsBase *, unsigned long, int) const
+	?ActiveTransferType@CMMCScBkupOpParamsBackupFull@@UBE?AW4TTransferDataType@conn@@XZ @ 16 NONAME ; enum conn::TTransferDataType CMMCScBkupOpParamsBackupFull::ActiveTransferType(void) const
+	?NewL@CMMCScBkupDriveAndOperationTypeManager@@SAPAV1@PAV?$CArrayFixFlat@VTBkupDrivesAndOperation@@@@@Z @ 17 NONAME ; class CMMCScBkupDriveAndOperationTypeManager * CMMCScBkupDriveAndOperationTypeManager::NewL(class CArrayFixFlat<class TBkupDrivesAndOperation> *)
+	?AssociatedOpType@CMMCScBkupOpParamsRestoreFull@@UBE?AW4TMMCScBkupOperationType@@XZ @ 18 NONAME ; enum TMMCScBkupOperationType CMMCScBkupOpParamsRestoreFull::AssociatedOpType(void) const
+	?SetArchiveInfosL@CMMCScBkupOpParamsBase@@QAEXAAV?$RPointerArray@VCMMCScBkupArchiveInfo@@@@@Z @ 19 NONAME ; void CMMCScBkupOpParamsBase::SetArchiveInfosL(class RPointerArray<class CMMCScBkupArchiveInfo> &)
+	?IncrementType@CMMCScBkupOpParamsRestoreFull@@UBE?AW4TBackupIncType@conn@@XZ @ 20 NONAME ; enum conn::TBackupIncType CMMCScBkupOpParamsRestoreFull::IncrementType(void) const
+	??1CMMCScBkupOpParamsBackupFull@@UAE@XZ @ 21 NONAME ; CMMCScBkupOpParamsBackupFull::~CMMCScBkupOpParamsBackupFull(void)
+	?PackageTransferType@CMMCScBkupOpParamsBackupFull@@UBE?AW4TPackageDataType@conn@@XZ @ 22 NONAME ; enum conn::TPackageDataType CMMCScBkupOpParamsBackupFull::PackageTransferType(void) const
+	?PartType@CMMCScBkupOpParamsBackupFull@@UBE?AW4TBURPartType@conn@@XZ @ 23 NONAME ; enum conn::TBURPartType CMMCScBkupOpParamsBackupFull::PartType(void) const
+	??1CMMCScBkupDriveAndOperationTypeManager@@UAE@XZ @ 24 NONAME ; CMMCScBkupDriveAndOperationTypeManager::~CMMCScBkupDriveAndOperationTypeManager(void)
+	?DriveAndOperations@CMMCScBkupOpParamsBase@@QBEABVCMMCScBkupDriveAndOperationTypeManager@@XZ @ 25 NONAME ; class CMMCScBkupDriveAndOperationTypeManager const & CMMCScBkupOpParamsBase::DriveAndOperations(void) const
+	?ValidArchiveForRestore@CMMCScBkupEngine@@QAEHABVTDesC16@@@Z @ 26 NONAME ; int CMMCScBkupEngine::ValidArchiveForRestore(class TDesC16 const &)
+	?FileName@CMMCScBkupArchiveInfo@@QBEABVTDesC16@@XZ @ 27 NONAME ; class TDesC16 const & CMMCScBkupArchiveInfo::FileName(void) const
+	?NewL@CMMCScBkupOpParamsBackupFull@@SAPAV1@PAV?$CArrayFixFlat@VTBkupDrivesAndOperation@@@@PAV?$RPointerArray@VCBkupCategory@@@@W4TDriveNumber@@V?$TBitFlagsT@K@@@Z @ 28 NONAME ; class CMMCScBkupOpParamsBackupFull * CMMCScBkupOpParamsBackupFull::NewL(class CArrayFixFlat<class TBkupDrivesAndOperation> *, class RPointerArray<class CBkupCategory> *, enum TDriveNumber, class TBitFlagsT<unsigned long>)
+	?PassiveTransferType@CMMCScBkupOpParamsBackupFull@@UBE?AW4TTransferDataType@conn@@XZ @ 29 NONAME ; enum conn::TTransferDataType CMMCScBkupOpParamsBackupFull::PassiveTransferType(void) const
+	?DateTime@CMMCScBkupArchiveInfo@@QBEABVTTime@@XZ @ 30 NONAME ; class TTime const & CMMCScBkupArchiveInfo::DateTime(void) const
+	??1CMMCScBkupOpParamsBase@@UAE@XZ @ 31 NONAME ; CMMCScBkupOpParamsBase::~CMMCScBkupOpParamsBase(void)
+	?AssociatedOpType@CMMCScBkupOpParamsBackupFull@@UBE?AW4TMMCScBkupOperationType@@XZ @ 32 NONAME ; enum TMMCScBkupOperationType CMMCScBkupOpParamsBackupFull::AssociatedOpType(void) const
+	?Drive@CMMCScBkupArchiveInfo@@QBE?AW4TDriveNumber@@XZ @ 33 NONAME ; enum TDriveNumber CMMCScBkupArchiveInfo::Drive(void) const
+	?RebootRequired@CMMCScBkupEngine@@QBEHXZ @ 34 NONAME ; int CMMCScBkupEngine::RebootRequired(void) const
+	?DeleteArchivesL@CMMCScBkupEngine@@QBEHAAV?$RPointerArray@VCMMCScBkupArchiveInfo@@@@@Z @ 35 NONAME ; int CMMCScBkupEngine::DeleteArchivesL(class RPointerArray<class CMMCScBkupArchiveInfo> &) const
+

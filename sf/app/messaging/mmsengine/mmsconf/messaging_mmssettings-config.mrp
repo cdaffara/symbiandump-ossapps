@@ -1,0 +1,31 @@
+#
+# Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+# All rights reserved.
+# This component and the accompanying materials are made available
+# under the terms of "Eclipse Public License v1.0"
+# which accompanies this distribution, and is available
+# at the URL "http://www.eclipse.org/legal/epl-v10.html".
+#
+# Initial Contributors:
+# Nokia Corporation - initial contribution.
+#
+# Contributors:
+#
+# Description: 
+#
+
+component	messaging_mmssettings-config
+
+# configuration files - source in is messaging_mmssettings, and
+# the exports are disowned by that MRP file.
+
+source  \sf\app\messaging\mmsengine\mmsconf
+binary	\sf\app\messaging\mmsengine\mmsconf	all
+exports	\sf\app\messaging\mmsengine\mmsconf
+
+notes_source	\component_defs\release.src
+
+
+
+ipr E 
+

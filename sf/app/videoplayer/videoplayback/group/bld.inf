@@ -1,0 +1,34 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Build information file for mpx video playback plugins collection.
+*
+*/
+
+// Version : %version: da1mmcf#7.1 %
+
+
+
+#include <platform_paths.hrh>
+
+#include "../videohelix/group/bld.inf"
+
+//
+// Don't need to build the following components in 10.1
+//
+//#include "../videopdlplaybackviewplugin/group/bld.inf"
+//#include "../videoplaybackcontrols/group/bld.inf"
+//#include "../videoplaybackviewplugin/group/bld.inf"
+//#include "../videoplaybackviews/group/bld.inf"
+
+//  End of File

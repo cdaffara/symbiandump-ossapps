@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="1.1">
+    <widget name="mainContainer" type="HbWidget">
+        <widget name="nmhswidgetContainer" type="HbWidget">
+            <widget name="mailRowContainer" type="HbWidget">
+                <widget name="noMailsLabel" type="HbLabel">
+                    <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+                    <sizepolicy horizontalPolicy="Expanding" horizontalStretch="0" verticalPolicy="Expanding" verticalStretch="0"/>
+                    <sizehint height="29.75un" type="PREFERRED" width="46un"/>
+                    <sizehint height="0un" type="MINIMUM" width="0un"/>
+                    <sizehint type="MAXIMUM" width="46un"/>
+                    <string name="textColor" value="#000000"/>
+                    <string locid="txt_mail_widget_info_no_messages" name="plainText" value="No mails!!!"/>
+                    <fontspec name="fontSpec" role="Secondary" textheight="var(hb-param-text-height-tiny)"/>
+                    <enums name="textWrapping" value="TextNoWrap"/>
+                </widget>
+                <widget name="mailListView" type="HbListView">
+                    <widget name="listItemPrototype" role="HbAbstractView:prototype" type="HbListViewItem"/>
+                    <sizepolicy horizontalPolicy="Expanding" horizontalStretch="0" verticalPolicy="Expanding" verticalStretch="0"/>
+                    <sizehint height="expr(3*9.75un)" type="PREFERRED" width="46un"/>
+                    <fontspec name="fontSpec" role="Secondary" textheight="var(hb-param-text-height-secondary)"/>
+                    <enums name="horizontalScrollBarPolicy" value="ScrollBarAlwaysOff"/>
+                    <enums name="verticalScrollBarPolicy" value="ScrollBarAlwaysOff"/>
+                    <bool name="longPressEnabled" value="FALSE"/>
+                    <enums name="clampingStyle" value="BounceBackClamping"/>
+                    <real name="rotation" value="0"/>
+                    <bool name="frictionEnabled" value="TRUE"/>
+                    <bool name="itemRecycling" value="TRUE"/>
+                </widget>
+                <sizepolicy horizontalPolicy="Expanding" horizontalStretch="0" verticalPolicy="Expanding" verticalStretch="0"/>
+                <sizehint height="expr(3*9.75un )" type="PREFERRED" width="46un"/>
+                <sizehint height="0un" type="MINIMUM" width="0un"/>
+                <sizehint height="2504062.01158un" type="MAXIMUM" width="2504062.01158un"/>
+                <layout orientation="Vertical" spacing="0un" type="linear">
+                    <contentsmargins bottom="1un" left="0un" right="0un" top="0un"/>
+                    <linearitem itemname="noMailsLabel"/>
+                    <linearitem itemname="mailListView"/>
+                </layout>
+            </widget>
+            <widget name="titleLayoutWidget" type="HbWidget">
+                <widget name="mailboxNameLabel" type="HbLabel">
+                    <real name="z" value="1"/>
+                    <sizepolicy horizontalPolicy="Ignored" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+                    <sizehint height="expr(var(hb-param-text-height-secondary) )" type="PREFERRED" width="34.92537un"/>
+                    <sizehint height="expr(var(hb-param-text-height-secondary) )" type="MINIMUM"/>
+                    <sizehint height="expr(var(hb-param-text-height-secondary) )" type="MAXIMUM"/>
+                    <string name="plainText" value="Mailbox gmail"/>
+                    <fontspec name="fontSpec" role="Secondary" textheight="var(hb-param-text-height-secondary)"/>
+                    <enums name="textWrapping" value="TextNoWrap"/>
+                </widget>
+                <widget name="mailboxIcon" type="HbLabel">
+                    <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+                    <icon iconName="note_warning" name="icon"/>
+                    <real name="z" value="2"/>
+                    <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+                    <sizehint height="10un" type="FIXED" width="10un"/>
+                    <sizehint height="10un" type="MINIMUM" width="10un"/>
+                    <sizehint height="10un" type="MAXIMUM" width="10un"/>
+                </widget>
+                <widget name="unreadCountLabel" type="HbLabel">
+                    <enums name="alignment" value="AlignRight|AlignVCenter|AlignTrailing"/>
+                    <real name="z" value="3"/>
+                    <sizepolicy horizontalPolicy="MinimumExpanding" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+                    <sizehint height="expr(var(hb-param-text-height-secondary) )" type="MINIMUM" width="0un"/>
+                    <sizehint height="expr(var(hb-param-text-height-secondary) )" type="MAXIMUM" width="9un"/>
+                    <string locid="txt_mail_widget_list_l1" name="plainText" value="(999)"/>
+                    <fontspec name="fontSpec" role="Secondary" textheight="var(hb-param-text-height-secondary)"/>
+                    <enums name="textWrapping" value="TextNoWrap"/>
+                </widget>
+                <widget name="collapseExpandIcon" type="HbPushButton">
+                    <icon iconName="note_warning" name="icon"/>
+                    <real name="z" value="4"/>
+                    <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+                    <sizehint height="7un" type="FIXED" width="7un"/>
+                    <sizehint height="7un" type="MINIMUM" width="7un"/>
+                    <sizehint height="7un" type="MAXIMUM" width="7un"/>
+                    <string name="alignment" value="AlignVCenter|AlignHCenter"/>
+                </widget>
+                <real name="z" value="1"/>
+                <sizepolicy horizontalPolicy="Expanding" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+                <sizehint height="expr(var(hb-param-margin-gene-bottom) + var(hb-param-text-height-secondary)  + var(hb-param-margin-gene-top) )" type="PREFERRED" width="46un"/>
+                <sizehint height="expr(var(hb-param-margin-gene-bottom) + var(hb-param-text-height-secondary)  + var(hb-param-margin-gene-top) )" type="MINIMUM" width="expr(5*var(hb-param-margin-gene-middle-horizontal) + 27un )"/>
+                <sizehint height="expr(var(hb-param-margin-gene-bottom) + var(hb-param-text-height-secondary)  + var(hb-param-margin-gene-top) )" type="MAXIMUM" width="46un"/>
+                <layout type="anchor">
+                    <anchoritem dst="mailboxIcon" dstEdge="LEFT" spacing="var(hb-param-margin-gene-middle-horizontal)" src="" srcEdge="LEFT"/>
+                    <anchoritem dst="mailboxIcon" dstEdge="BOTTOM" spacing="0un" src="" srcEdge="BOTTOM"/>
+                    <anchoritem dst="collapseExpandIcon" dstEdge="RIGHT" spacing="-0.25un" src="" srcEdge="RIGHT"/>
+                    <anchoritem dst="collapseExpandIcon" dstEdge="CENTERV" spacing="0un" src="unreadCountLabel" srcEdge="CENTERV"/>
+                    <anchoritem dst="unreadCountLabel" dstEdge="RIGHT" spacing="-var(hb-param-margin-gene-middle-horizontal)" src="collapseExpandIcon" srcEdge="LEFT"/>
+                    <anchoritem dst="unreadCountLabel" dstEdge="CENTERV" spacing="0un" src="mailboxNameLabel" srcEdge="CENTERV"/>
+                    <anchoritem dst="mailboxNameLabel" dstEdge="LEFT" spacing="var(hb-param-margin-gene-middle-horizontal)" src="mailboxIcon" srcEdge="RIGHT"/>
+                    <anchoritem dst="mailboxNameLabel" dstEdge="TOP" spacing="var(hb-param-margin-gene-top)" src="" srcEdge="TOP"/>
+                    <anchoritem dst="mailboxNameLabel" dstEdge="RIGHT" spacing="-var(hb-param-margin-gene-middle-horizontal)" src="unreadCountLabel" srcEdge="LEFT"/>
+                </layout>
+            </widget>
+            <real name="z" value="1"/>
+            <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Maximum" verticalStretch="0"/>
+            <sizehint height="expr(30un + var(hb-param-margin-gene-bottom) + var(hb-param-text-height-secondary)  + var(hb-param-margin-gene-top) )" type="PREFERRED" width="46un"/>
+            <sizehint height="7un" type="MINIMUM" width="46un"/>
+            <sizehint height="42un" type="MAXIMUM" width="46un"/>
+            <layout type="anchor">
+                <anchoritem dst="titleLayoutWidget" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="titleLayoutWidget" dstEdge="TOP" spacing="0un" src="" srcEdge="TOP"/>
+                <anchoritem dst="mailRowContainer" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="mailRowContainer" dstEdge="TOP" spacing="expr(var(hb-param-margin-gene-top) + var(hb-param-margin-gene-bottom)  + var(hb-param-text-height-secondary))" src="" srcEdge="TOP"/>
+                <anchoritem dst="mailRowContainer" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="mailRowContainer" dstEdge="BOTTOM" spacing="0un" src="" srcEdge="BOTTOM"/>
+            </layout>
+        </widget>
+        <widget name="emptySpaceContainer" type="HbWidget">
+            <sizepolicy horizontalPolicy="Expanding" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+            <sizehint height="2.5un" type="PREFERRED" width="46un"/>
+            <sizehint height="2.5un" type="MINIMUM"/>
+            <sizehint height="2.5un" type="MAXIMUM"/>
+        </widget>
+        <rect height="269.67499" name="geometry" width="308.19999" x="14" y="33"/>
+        <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Maximum" verticalStretch="0"/>
+        <sizehint height="40.25un" type="PREFERRED" width="46un"/>
+        <sizehint height="40.25un" type="MINIMUM" width="46un"/>
+        <sizehint height="expr(4un + var(hb-param-margin-gene-bottom) + var(hb-param-text-height-secondary)  + var(hb-param-margin-gene-top) + 3*9.75un )" type="MAXIMUM" width="46un"/>
+        <layout type="anchor">
+            <anchoritem dst="emptySpaceContainer" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+            <anchoritem dst="emptySpaceContainer" dstEdge="TOP" spacing="0un" src="" srcEdge="TOP"/>
+            <anchoritem dst="emptySpaceContainer" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+            <anchoritem dst="nmhswidgetContainer" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+            <anchoritem dst="nmhswidgetContainer" dstEdge="TOP" spacing="0un" src="emptySpaceContainer" srcEdge="BOTTOM"/>
+            <anchoritem dst="nmhswidgetContainer" dstEdge="BOTTOM" spacing="0un" src="" srcEdge="BOTTOM"/>
+        </layout>
+    </widget>
+    <metadata activeUIState="Common ui state" display="NHD-3.2-inch_portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+        <dummydata objectName="mailListView" section="#common" value="app_list_template5"/>
+    </metadata>
+</hbdocument>

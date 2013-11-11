@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="1.1">
+    <object name="exit_act" type="HbAction">
+        <string locid="txt_common_opt_exit" name="text"/>
+    </object>
+    <widget name="ext-IRStationDetailsView" type="HbView">
+        <widget name="content" role="HbView:widget" type="HbWidget">
+            <widget name="scrollArea" type="HbScrollArea">
+                <widget name="scrollAreaContents" role="HbScrollArea:contents" type="HbWidget">
+                    <widget name="stationName" type="HbLabel">
+                        <enums name="textWrapping" value="TextWordWrap"/>
+                        <enums name="elideMode" value="ElideNone"/>
+                        <fontspec name="fontSpec" role="Primary" textheight="var(hb-param-text-height-primary)"/>
+                    </widget>
+                    <widget name="genre" type="HbLabel">
+                        <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Preferred" verticalStretch="0"/>
+                        <sizehint height="expr(var(hb-param-text-height-secondary))" type="MINIMUM"/>                 
+                        <enums name="textWrapping" value="TextWordWrap"/>
+                        <enums name="elideMode" value="ElideNone"/>
+                        <fontspec name="fontSpec" role="Secondary" textheight="var(hb-param-text-height-secondary)"/>
+                    </widget>
+                    <widget name="language" type="HbLabel">
+                        <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Preferred" verticalStretch="0"/>
+                        <sizehint height="expr(var(hb-param-text-height-secondary))" type="MINIMUM"/>   
+                        <enums name="textWrapping" value="TextWordWrap"/>
+                        <enums name="elideMode" value="ElideNone"/>
+                        <fontspec name="fontSpec" role="Secondary" textheight="var(hb-param-text-height-secondary)"/>
+                    </widget>
+                    <widget name="country" type="HbLabel">
+                        <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Preferred" verticalStretch="0"/>
+                        <sizehint height="expr(var(hb-param-text-height-secondary))" type="MINIMUM"/>   
+                        <enums name="textWrapping" value="TextWordWrap"/>
+                        <enums name="elideMode" value="ElideNone"/>
+                        <fontspec name="fontSpec" role="Secondary" textheight="var(hb-param-text-height-secondary)"/>
+                    </widget>
+                    <widget name="bitRate" type="HbLabel">
+                        <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Preferred" verticalStretch="0"/>
+                        <sizehint height="expr(var(hb-param-text-height-secondary))" type="MINIMUM"/>   
+                        <enums name="textWrapping" value="TextWordWrap"/>
+                        <enums name="elideMode" value="ElideNone"/>
+                        <fontspec name="fontSpec" role="Secondary" textheight="var(hb-param-text-height-secondary)"/>
+                    </widget>
+                    <widget name="description" type="HbLabel">
+                        <enums name="textWrapping" value="TextWordWrap"/>
+                        <enums name="elideMode" value="ElideNone"/>
+                        <fontspec name="fontSpec" role="Secondary" textheight="var(hb-param-text-height-secondary)"/>
+                    </widget>
+                    <widget name="stationUrl" type="HbLabel">
+                        <enums name="textWrapping" value="TextWordWrap"/>
+                        <enums name="elideMode" value="ElideNone"/>
+                        <fontspec name="fontSpec" role="Secondary" textheight="var(hb-param-text-height-secondary)"/>
+                    </widget>
+                    <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalStretch="0"/>
+                    <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+                    <layout type="anchor">
+                        <anchoritem dst="stationName" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                        <anchoritem dst="stationName" dstEdge="TOP" spacing="var(hb-param-margin-gene-top)" src="" srcEdge="TOP"/>
+                        <anchoritem dst="stationName" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                        <anchoritem dst="genre" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                        <anchoritem dst="genre" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                        <anchoritem dst="genre" dstEdge="TOP" spacing="expr(var(hb-param-margin-gene-middle-vertical))" src="stationName" srcEdge="BOTTOM"/>
+                        <anchoritem dst="language" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                        <anchoritem dst="language" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                        <anchoritem dst="language" dstEdge="TOP" spacing="var(hb-param-margin-gene-middle-vertical)" src="genre" srcEdge="BOTTOM"/>
+                        <anchoritem dst="country" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                        <anchoritem dst="country" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                        <anchoritem dst="country" dstEdge="TOP" spacing="expr(var(hb-param-margin-gene-middle-vertical))" src="language" srcEdge="BOTTOM"/>
+                        <anchoritem dst="bitRate" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                        <anchoritem dst="bitRate" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                        <anchoritem dst="bitRate" dstEdge="TOP" spacing="expr(var(hb-param-margin-gene-middle-vertical))" src="country" srcEdge="BOTTOM"/>
+                        <anchoritem dst="description" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                        <anchoritem dst="description" dstEdge="TOP" spacing="4un" src="bitRate" srcEdge="BOTTOM"/>
+                        <anchoritem dst="description" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                        <anchoritem dst="stationUrl" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                        <anchoritem dst="stationUrl" dstEdge="TOP" spacing="4un" src="description" srcEdge="BOTTOM"/>
+                        <anchoritem dst="stationUrl" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                        <anchoritem dst="stationUrl" dstEdge="BOTTOM" spacing="0un" src="" srcEdge="BOTTOM"/>
+                    </layout>
+                </widget>
+                <enums name="verticalScrollBarPolicy" value="ScrollBarAsNeeded"/>
+                <enums name="horizontalScrollBarPolicy" value="ScrollBarAlwaysOff"/>
+
+            </widget>
+            <layout orientation="Vertical" type="linear">
+                <contentsmargins bottom="var(hb-param-margin-gene-screen)" left="var(hb-param-margin-gene-screen)" right="var(hb-param-margin-gene-screen)" top="var(hb-param-margin-gene-screen)"/>
+                <linearitem itemname="scrollArea"/>
+            </layout>
+        </widget>
+        <widget name="viewMenu" role="HbView:menu" type="HbMenu">
+            <ref object="exit_act" role="HbMenu:addAction"/>
+        </widget>
+        <string locid="txt_irad_title_internet_radio" name="title"/>
+    </widget>
+    <section name="portrait">
+        <widget name="scrollAreaContents" role="HbScrollArea:contents" type="HbWidget">
+            <sizehint type="PREFERRED" width="expr(var(hb-param-screen-short-edge) - 2*var(hb-param-margin-gene-screen))"/>
+        </widget>
+        <widget name="genre" type="HbLabel">
+            <sizehint type="PREFERRED" width="expr(var(hb-param-screen-short-edge) - 2*var(hb-param-margin-gene-screen))"/>
+        </widget>
+        <widget name="language" type="HbLabel">
+            <sizehint type="PREFERRED" width="expr(var(hb-param-screen-short-edge) - 2*var(hb-param-margin-gene-screen))"/>
+        </widget>
+        <widget name="country" type="HbLabel">
+            <sizehint type="PREFERRED" width="expr(var(hb-param-screen-short-edge) - 2*var(hb-param-margin-gene-screen))"/>
+        </widget>
+        <widget name="bitRate" type="HbLabel">
+            <sizehint type="PREFERRED" width="expr(var(hb-param-screen-short-edge) - 2*var(hb-param-margin-gene-screen))"/>
+        </widget>
+    </section>
+    <section name="landscape">
+        <widget name="scrollAreaContents" role="HbScrollArea:contents" type="HbWidget">
+            <sizehint type="PREFERRED" width="expr(var(hb-param-screen-long-edge) - 2*var(hb-param-margin-gene-screen))"/>
+        </widget>
+        <widget name="genre" type="HbLabel">
+            <sizehint type="PREFERRED" width="expr(var(hb-param-screen-long-edge) - 2*var(hb-param-margin-gene-screen))"/>
+        </widget>
+        <widget name="language" type="HbLabel">
+            <sizehint type="PREFERRED" width="expr(var(hb-param-screen-long-edge) - 2*var(hb-param-margin-gene-screen))"/>
+        </widget>
+        <widget name="country" type="HbLabel">
+            <sizehint type="PREFERRED" width="expr(var(hb-param-screen-long-edge) - 2*var(hb-param-margin-gene-screen))"/>
+        </widget>
+        <widget name="bitRate" type="HbLabel">
+            <sizehint type="PREFERRED" width="expr(var(hb-param-screen-long-edge) - 2*var(hb-param-margin-gene-screen))"/>
+        </widget>
+    </section>
+    <metadata activeUIState="Common ui state" display="NHD portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+        <uistate name="portrait state" sections="#common portrait"/>
+        <uistate name="landscape state" sections="#common landscape"/>
+    </metadata>
+</hbdocument>

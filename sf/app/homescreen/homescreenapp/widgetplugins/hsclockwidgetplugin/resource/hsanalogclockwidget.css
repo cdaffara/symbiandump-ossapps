@@ -1,0 +1,27 @@
+HsAnalogClockWidget {
+	layout: analog_clock_layout;
+}
+
+HsAnalogClockWidget::background {
+  fixed-width: 25.0un;
+  fixed-height: 25.0un;
+  zvalue: 0;
+}
+
+HsAnalogClockWidget::hour_hand {
+  fixed-width: 25.0un;
+  fixed-height: 25.0un;
+  zvalue: 3;
+}
+
+HsAnalogClockWidget::minute_hand {
+  fixed-width: 25.0un;
+  fixed-height: 25.0un;
+  zvalue: 2;
+}
+
+HsAnalogClockWidget::second_hand {
+  fixed-width: 25.0un;
+  fixed-height: 25.0un;
+  zvalue: 1;
+}

@@ -1,0 +1,39 @@
+<?XML version="1.0" ?>
+<!DOCTYPE SMIL PUBLIC "-//W3C//DTD SMIL 2.0 Basic//EN"
+"http://www.w3.org/TR/REC-smil/2000/SMIL20Basic.dtd">
+
+<!-- Focus of this test: seq element, attribute variations -->
+<!-- Focus of this test: seq element, attribute variations -->
+<!-- customTest IMPLIED -->
+<!-- id, class, title, xml:lang, abstract, author, copyright, dur,
+     repeatCount, repeatDur, begin, end, min, max SPECIFIED -->
+<!-- systemBitrate, systemLanguage, systemRequired, systemScreenSize, systemScreenDepth, systemOperatingSystem,
+     systemCPU, systemComponent (NEW ATTRIBUTE NAMES) SPECIFIED -->
+<!-- endsync SPECIFIED="first" -->
+<!-- fill SPECIFIED="remove" -->
+<!-- systemCaptions (NEW ATTRIBUTE NAME) SPECIFIED="on" -->
+<!-- systemOverdubOrSubtitle (NEW ATTRIBUTE NAME) SPECIFIED="overdub" -->
+<!-- systemAudioDesc (NEW ATTRIBUTE NAME) SPECIFIED="on" -->
+<smil xmlns="http://www.w3.org/TR/REC-smil/2000/SMIL20/Basic">
+   <head>
+      <!-- This is a "landscape" screen -->
+      <layout>
+         <root-layout width="352" height="144"/>
+         <region id="Image" width="176" height="144" left="0" top="0"/>
+         <region id="Text" width="176" height="144" left="176" top="0"/>
+      </layout>
+   </head>
+   <body>
+      <seq dur="1000s" repeatCount="1.0" repeatDur="1000s" begin="0s" end="1000s" endsync="first" fill="remove" min="1000s" max="1000s" systemBitrate="28800" systemCaptions="on" systemLanguage="en" systemOverdubOrSubtitle="overdub" systemRequired="aNamespacePrefix" systemScreenSize="640X480" systemScreenDepth="16" systemAudioDesc="on" systemOperatingSystem="symbianos" systemCPU="arm32" systemComponent="http://www.example.org/SomeCodec" id="SeqId" class="class1 class2" title="A sequence time container" xml:lang="en-GB" abstract="A sequence time container" author="J. Smith" copyright="Copyright (c) 1999-2000 Symbian Ltd.  All rights reserved.">
+         <video src="http://www.example.org/graph.imf"/>
+         <par id="ParId">
+            <a tabindex="4" href="http://www.example.org/presentation">
+               <video src="http://www.example.org/graph.imf"/>
+            </a>
+            <video src="http://www.example.org/v1.mpg"/>
+            <text src="http://www.example.org/caption1.html"/>
+            <text src="http://www.example.org/caption2.html"/>
+         </par>
+      </seq>
+   </body>
+</smil>

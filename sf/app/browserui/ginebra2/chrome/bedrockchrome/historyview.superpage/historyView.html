@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-EN">
+
+<head>
+   <script src="../../js/3rdparty/jquery-1.4.2.min.js" type="text/javascript"></script>
+   <script src="../../js/3rdparty/jquery-ui/ui.core.js" type="text/javascript"></script>
+   <script src="../../js/3rdparty/jquery-ui/effects.core.js" type="text/javascript"></script>
+   <script src="../../js/3rdparty/jquery-ui/effects.blind.js" type="text/javascript"></script>
+   <link rel="stylesheet" id="CSSLink" type="text/css" href="historyview.css"/>
+   <meta name = "viewport" content = "width = device-width, height = device-height, initial-scale = 1.0, user-scalable = no">
+
+   <title>History  View</title>
+   <script src="historyview.js" type="text/javascript"></script>
+
+  <script type="text/javascript">
+  
+		var _prevExpandedUL = null;
+		var _prevExpandedATag = null;
+
+  	function scrollToTop()
+  		{
+	    	$('html, body').attr({scrollTop: 0});
+
+        var todayFolder = document.getElementById("aTagId_"+0);
+        var todaySubUl = document.getElementById("subUlId_"+0);
+        if(_prevExpandedUL != null && _prevExpandedATag.className == 'opened')
+        	toggleHistoryFolder(_prevExpandedATag,_prevExpandedUL);
+        _prevExpandedATag = todayFolder;
+        _prevExpandedUL = todaySubUl;
+        toggleHistoryFolder(todayFolder,todaySubUl);
+
+			}
+		
+		function update() {
+      updateHistoryList();
+    	
+			window.views.WebView.BookmarkHistoryView.shown.connect(scrollToTop);          
+      }
+  </script>
+
+</head>
+<body onload="update()">
+<!-- <input type="button" value="test" onClick="alert(1);">-->
+ <div class = "HistoryView" id="HistoryViewId">
+  </div>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<hbwidget version="0.1" type="be">  
+  <layout name="three_lines_layout" type="mesh">
+    <meshitem src="text_line_1" srcEdge="LEFT" dst="" dstEdge="LEFT"/>
+    <meshitem src="text_line_1" srcEdge="RIGHT" dst="" dstEdge="RIGHT"/>
+    <meshitem src="text_line_1" srcEdge="TOP" dst="" dstEdge="TOP"/>
+    
+    <meshitem src="text_line_2" srcEdge="TOP" dst="text_line_1" dstEdge="BOTTOM"/>
+    <meshitem src="text_line_2" srcEdge="LEFT" dst="" dstEdge="LEFT"/>
+    <meshitem src="text_line_2" srcEdge="RIGHT" dst="" dstEdge="RIGHT"/>
+    
+    <meshitem src="text_line_3" srcEdge="TOP" dst="text_line_2" dstEdge="BOTTOM"/>
+    <meshitem src="text_line_3" srcEdge="LEFT" dst="" dstEdge="LEFT"/>
+    <meshitem src="text_line_3" srcEdge="RIGHT" dst="" dstEdge="RIGHT"/>
+    <meshitem src="text_line_3" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM"/>
+  </layout>
+  
+  <layout name="three_lines_layout_1" type="mesh">
+    <meshitem src="text_line_1" srcEdge="LEFT" dst="" dstEdge="LEFT"/>
+    <meshitem src="text_line_1" srcEdge="RIGHT" dst="indicator_icon_1" dstEdge="LEFT" spacing="var(hb-param-margin-gene-middle-horizontal)"/>
+    <meshitem src="text_line_1" srcEdge="TOP" dst="" dstEdge="TOP"/>
+    
+    <meshitem src="indicator_icon_1" srcEdge="RIGHT" dst="" dstEdge="RIGHT"/>
+    <meshitem src="indicator_icon_1" srcEdge="CENTERV" dst="text_line_1" dstEdge="CENTERV"/>
+    
+    <meshitem src="text_line_2" srcEdge="TOP" dst="text_line_1" dstEdge="BOTTOM"/>
+    <meshitem src="text_line_2" srcEdge="LEFT" dst="" dstEdge="LEFT"/>
+    <meshitem src="text_line_2" srcEdge="RIGHT" dst="" dstEdge="RIGHT"/>
+    
+    <meshitem src="text_line_3" srcEdge="TOP" dst="text_line_2" dstEdge="BOTTOM"/>
+    <meshitem src="text_line_3" srcEdge="LEFT" dst="" dstEdge="LEFT"/>
+    <meshitem src="text_line_3" srcEdge="RIGHT" dst="" dstEdge="RIGHT"/>
+    <meshitem src="text_line_3" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM"/>
+  </layout>  
+  
+  <layout name="three_lines_layout_2" type="mesh">
+    <meshitem src="text_line_1" srcEdge="LEFT" dst="" dstEdge="LEFT"/>
+    <meshitem src="text_line_1" srcEdge="RIGHT" dst="indicator_icon_1" dstEdge="LEFT" spacing="var(hb-param-margin-gene-middle-horizontal)"/>
+    <meshitem src="text_line_1" srcEdge="TOP" dst="" dstEdge="TOP"/>
+    
+    <meshitem src="indicator_icon_1" srcEdge="RIGHT" dst="indicator_icon_2" dstEdge="LEFT"/>
+    <meshitem src="indicator_icon_1" srcEdge="CENTERV" dst="text_line_1" dstEdge="CENTERV"/>
+    
+    <meshitem src="indicator_icon_2" srcEdge="RIGHT" dst="" dstEdge="RIGHT"/>
+    <meshitem src="indicator_icon_2" srcEdge="CENTERV" dst="text_line_1" dstEdge="CENTERV"/>    
+    
+    <meshitem src="text_line_2" srcEdge="TOP" dst="text_line_1" dstEdge="BOTTOM"/>
+    <meshitem src="text_line_2" srcEdge="LEFT" dst="" dstEdge="LEFT"/>
+    <meshitem src="text_line_2" srcEdge="RIGHT" dst="" dstEdge="RIGHT"/>
+    
+    <meshitem src="text_line_3" srcEdge="TOP" dst="text_line_2" dstEdge="BOTTOM"/>
+    <meshitem src="text_line_3" srcEdge="LEFT" dst="" dstEdge="LEFT"/>
+    <meshitem src="text_line_3" srcEdge="RIGHT" dst="" dstEdge="RIGHT"/>
+    <meshitem src="text_line_3" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM"/>
+  </layout>  
+
+  <layout name="two_lines_layout" type="mesh">
+    <meshitem src="text_line_1" srcEdge="LEFT" dst="" dstEdge="LEFT"/>
+    <meshitem src="text_line_1" srcEdge="RIGHT" dst="" dstEdge="RIGHT"/>
+    <meshitem src="text_line_1" srcEdge="TOP" dst="" dstEdge="TOP"/>
+    
+    <meshitem src="text_line_2" srcEdge="LEFT" dst="" dstEdge="LEFT"/>
+    <meshitem src="text_line_2" srcEdge="RIGHT" dst="" dstEdge="RIGHT"/>
+    <meshitem src="text_line_2" srcEdge="TOP" dst="text_line_1" dstEdge="BOTTOM"/>
+    <meshitem src="text_line_2" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM"/>
+  </layout>
+  
+  <layout name="two_lines_layout_1" type="mesh">
+    <meshitem src="text_line_1" srcEdge="LEFT" dst="" dstEdge="LEFT"/>
+    <meshitem src="text_line_1" srcEdge="RIGHT" dst="indicator_icon_1" dstEdge="LEFT" spacing="var(hb-param-margin-gene-middle-horizontal)"/>
+    <meshitem src="text_line_1" srcEdge="TOP" dst="" dstEdge="TOP"/>
+    
+    <meshitem src="indicator_icon_1" srcEdge="RIGHT" dst="" dstEdge="RIGHT"/>
+    <meshitem src="indicator_icon_1" srcEdge="CENTERV" dst="text_line_1" dstEdge="CENTERV"/>
+    
+    <meshitem src="text_line_2" srcEdge="LEFT" dst="" dstEdge="LEFT"/>
+    <meshitem src="text_line_2" srcEdge="RIGHT" dst="" dstEdge="RIGHT"/>
+    <meshitem src="text_line_2" srcEdge="TOP" dst="text_line_1" dstEdge="BOTTOM"/>
+    <meshitem src="text_line_2" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM"/>
+  </layout>  
+  
+  <layout name="two_lines_layout_2" type="mesh">
+    <meshitem src="text_line_1" srcEdge="LEFT" dst="" dstEdge="LEFT"/>
+    <meshitem src="text_line_1" srcEdge="RIGHT" dst="indicator_icon_1" dstEdge="LEFT" spacing="var(hb-param-margin-gene-middle-horizontal)"/>
+    <meshitem src="text_line_1" srcEdge="TOP" dst="" dstEdge="TOP"/>
+    
+    <meshitem src="indicator_icon_1" srcEdge="RIGHT" dst="indicator_icon_2" dstEdge="LEFT"/>
+    <meshitem src="indicator_icon_1" srcEdge="CENTERV" dst="text_line_1" dstEdge="CENTERV"/>
+    
+    <meshitem src="indicator_icon_2" srcEdge="RIGHT" dst="" dstEdge="RIGHT"/>
+    <meshitem src="indicator_icon_2" srcEdge="CENTERV" dst="text_line_1" dstEdge="CENTERV"/>
+    
+    <meshitem src="text_line_2" srcEdge="LEFT" dst="" dstEdge="LEFT"/>
+    <meshitem src="text_line_2" srcEdge="RIGHT" dst="" dstEdge="RIGHT"/>
+    <meshitem src="text_line_2" srcEdge="TOP" dst="text_line_1" dstEdge="BOTTOM"/>
+    <meshitem src="text_line_2" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM"/>
+  </layout>  
+
+  <layout name="one_line_layout" type="mesh">
+    <meshitem src="text_line_1" srcEdge="LEFT" dst="" dstEdge="LEFT"/>
+    <meshitem src="text_line_1" srcEdge="CENTERV" dst="" dstEdge="CENTERV"/>
+    <meshitem src="text_line_1" srcEdge="RIGHT" dst="text_line_2" dstEdge="LEFT" spacing="var(hb-param-margin-gene-middle-horizontal)"/>
+    
+    <meshitem src="text_line_2" srcEdge="CENTERV" dst="" dstEdge="CENTERV"/>
+    <meshitem src="text_line_2" srcEdge="RIGHT" dst="" dstEdge="RIGHT"/>
+  </layout>
+  
+  <layout name="one_line_layout_1" type="mesh">
+    <meshitem src="text_line_1" srcEdge="LEFT" dst="" dstEdge="LEFT"/>
+    <meshitem src="text_line_1" srcEdge="CENTERV" dst="" dstEdge="CENTERV"/>
+    <meshitem src="text_line_1" srcEdge="RIGHT" dst="text_line_2" dstEdge="LEFT" spacing="var(hb-param-margin-gene-middle-horizontal)"/>
+    
+    <meshitem src="text_line_2" srcEdge="CENTERV" dst="" dstEdge="CENTERV"/>
+    <meshitem src="text_line_2" srcEdge="RIGHT" dst="indicator_icon_1" dstEdge="LEFT"  spacing="var(hb-param-margin-gene-middle-horizontal)"/>
+    
+    <meshitem src="indicator_icon_1" srcEdge="RIGHT" dst="" dstEdge="RIGHT"/>
+    <meshitem src="indicator_icon_1" srcEdge="CENTERV" dst="text_line_1" dstEdge="CENTERV"/>        
+  </layout>  
+  
+  <layout name="one_line_layout_2" type="mesh">
+    <meshitem src="text_line_1" srcEdge="LEFT" dst="" dstEdge="LEFT"/>
+    <meshitem src="text_line_1" srcEdge="CENTERV" dst="" dstEdge="CENTERV"/>
+    <meshitem src="text_line_1" srcEdge="RIGHT" dst="text_line_2" dstEdge="LEFT" spacing="var(hb-param-margin-gene-middle-horizontal)"/>
+    
+    <meshitem src="text_line_2" srcEdge="CENTERV" dst="" dstEdge="CENTERV"/>
+    <meshitem src="text_line_2" srcEdge="RIGHT" dst="indicator_icon_1" dstEdge="LEFT"  spacing="var(hb-param-margin-gene-middle-horizontal)"/>
+    
+    <meshitem src="indicator_icon_1" srcEdge="RIGHT" dst="indicator_icon_2" dstEdge="LEFT"/>
+    <meshitem src="indicator_icon_1" srcEdge="CENTERV" dst="text_line_1" dstEdge="CENTERV"/>        
+    
+    <meshitem src="indicator_icon_2" srcEdge="RIGHT" dst="" dstEdge="RIGHT"/>
+    <meshitem src="indicator_icon_2" srcEdge="CENTERV" dst="text_line_1" dstEdge="CENTERV"/>
+    
+  </layout>  
+  
+</hbwidget>
+

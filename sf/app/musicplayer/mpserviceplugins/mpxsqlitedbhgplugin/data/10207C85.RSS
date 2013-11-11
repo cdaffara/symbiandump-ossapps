@@ -1,0 +1,83 @@
+/*
+* Copyright (c) 2008 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Resource file
+*
+*/
+
+
+#include <ecom/registryinfo.rh>
+#include <mpxcollectionplugin.hrh>
+#include "mpxpluginresource.hrh"
+
+/**
+ * The opaque_data syntax is made up of three parts: 
+ * a list of Uids for resolving the view plugin, feature flags, priority.
+ * 
+ * <p>uid1;uid2;uid3</p>
+ *  uid*: Supported plugin types.
+ *  E.g. if podcast plugin may support music plugin as well, KMPXColPluginMusic
+ *
+ * <t>uid</t>
+ *  uid: plugin type uid.
+ *  E.g. for music plugin will be: 0x101FFCDA
+ *
+ * <f>flags</f> [optional]
+ *  flags: sum of the required feature flags
+ *         Collection specific flags include:
+ *                EMPXCollectionPluginFlagCacheable - Are media results cachable in the collection cache
+ *         General flags include: 
+ *                EMPXPluginFlagPreLoad - Should the plugin be pre loaded when the collection starts
+ *                
+ *
+ * <i>priority</i> [optional]
+ *  priority: a value of type TMPXCollectionPluginPriorities. This value determines
+ *  the returning order when several plugins can support the same set of Uids. 
+ *  Default value of this field is EMPXCollectionPluginPriorityNormal.
+ *
+ * <c>non-cacheable attributes</c> optional
+ *  List of content IDs that cannot be cached in the collection cache.
+ *  The list is a list of hexidecimal numbers, semicolon seperated
+ *  For example, <c>0x101FFC45</c> not cache media objects w/ drm attributes
+ *
+ */
+
+RESOURCE REGISTRY_INFO theInfo
+    {
+    dll_uid = 0x10207C85;
+
+    interfaces = 
+        {
+        INTERFACE_INFO
+            {
+            interface_uid = KMPXCollectionPluginInterfaceUid;
+            implementations = 
+                {
+                IMPLEMENTATION_INFO
+                    {
+                    implementation_uid = 0x101FFC3A;
+                    version_no = 1;
+                    display_name = "";
+                    default_data = "audio/mp3;audio/x-mp3;audio/mp4;audio/3gpp;audio/3gpp2;audio/wav;audio/x-wav;audio/x-au;audio/au;audio/3gp;audio/mpeg;audio/aac;audio/x-ms-wma;x-caf-audio/x-ms-wma;audio/x-pn-realaudio;audio/x-realaudio;audio/vnd.rn-realaudio";
+                    opaque_data = "<s>*<e>.mp3;.aac;.3gp;.3gpp;.3g2;.3gpp2;.m4a;.wav;.mp4;.wma;.dcf;.odf;.asf;.m3u;.rm;.ra;.o4a;.dm;.3ga"
+                                  "<t>"EMPXCollectionPluginMusic"</t>"
+                                  "<i>"EMPXPluginPriorityHighest"</i>"
+                                  "<c>"EDRMContentId"</c>" // DRM
+                                  "<f>"EPreloadAndCache"</f>";
+                    }
+                };
+            }
+        };
+    }
+
+// End of file

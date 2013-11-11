@@ -1,0 +1,87 @@
+EXPORTS
+	??0CObexMtmHeader@@IAE@VTUid@@J@Z @ 1 NONAME ; protected: __thiscall CObexMtmHeader::CObexMtmHeader(class TUid,long)
+	?DummyDtorCContainer@CContainer@@QAEXXZ @ 2 NONAME ; public: void __thiscall CContainer::DummyDtorCContainer(void)
+	?DummyDtorCObexFileContainer@CObexFileContainer@@QAEXXZ @ 3 NONAME ; public: void __thiscall CObexFileContainer::DummyDtorCObexFileContainer(void)
+	??1CObexMtmHeader@@UAE@XZ @ 4 NONAME ; public: virtual __thiscall CObexMtmHeader::~CObexMtmHeader(void)
+	?BaseConstructL@CObexMtmHeader@@IAEXXZ @ 5 NONAME ; protected: void __thiscall CObexMtmHeader::BaseConstructL(void)
+	?BaseExternalizeL@CObexMtmHeader@@IBEXAAVRMsvWriteStream@@@Z @ 6 NONAME ; protected: void __thiscall CObexMtmHeader::BaseExternalizeL(class RMsvWriteStream &)const 
+	?BaseInternalizeL@CObexMtmHeader@@IAEXAAVRMsvReadStream@@@Z @ 7 NONAME ; protected: void __thiscall CObexMtmHeader::BaseInternalizeL(class RMsvReadStream &)
+	?CommitStoreL@CObexMtmFileNameExternaliser@@QAEXXZ @ 8 NONAME ; public: void __thiscall CObexMtmFileNameExternaliser::CommitStoreL(void)
+	?ConnectionID@CObexMtmHeader@@QBE?AVTPtrC8@@XZ @ 9 NONAME ; public: class TPtrC8  __thiscall CObexMtmHeader::ConnectionID(void)const 
+	?DummyCopyOfDataLC@CContainer@@QAEXH@Z @ 10 NONAME ; public: void __thiscall CContainer::DummyCopyOfDataLC(int)
+	?DummyCopyOfDataLC@CContainer@@QAEXXZ @ 11 NONAME ; public: void __thiscall CContainer::DummyCopyOfDataLC(void)
+	?DummyCopyOfDataLC@CObexFileContainer@@QAEXH@Z @ 12 NONAME ; public: void __thiscall CObexFileContainer::DummyCopyOfDataLC(int)
+	?DummyCopyOfDataLC@CObexFileContainer@@QAEXXZ @ 13 NONAME ; public: void __thiscall CObexFileContainer::DummyCopyOfDataLC(void)
+	?DummyCopyToFileContainerLC@CContainer@@QAEXAAVRFs@@ABVTDesC16@@@Z @ 14 NONAME ; public: void __thiscall CContainer::DummyCopyToFileContainerLC(class RFs &,class TDesC16 const &)
+	?ExternaliseAndCommit1FileNameL@CObexMtmFileNameExternaliser@@SAXPAVCMsvEntry@@PBVTDesC16@@@Z @ 15 NONAME ; public: static void __cdecl CObexMtmFileNameExternaliser::ExternaliseAndCommit1FileNameL(class CMsvEntry *,class TDesC16 const *)
+	?ExternaliseFileNameL@CObexMtmFileNameExternaliser@@QAEXPBVTDesC16@@@Z @ 16 NONAME ; public: void __thiscall CObexMtmFileNameExternaliser::ExternaliseFileNameL(class TDesC16 const *)
+	?ExternalizeL@ObexInternalUtils@@SAXABVTDes16@@AAVRWriteStream@@@Z @ 17 NONAME ; public: static void __cdecl ObexInternalUtils::ExternalizeL(class TDes16 const &,class RWriteStream &)
+	?ExternalizeL@ObexInternalUtils@@SAXABVTDes8@@AAVRWriteStream@@@Z @ 18 NONAME ; public: static void __cdecl ObexInternalUtils::ExternalizeL(class TDes8 const &,class RWriteStream &)
+	?ExternalizeL@ObexInternalUtils@@SAXPBVHBufC16@@AAVRWriteStream@@@Z @ 19 NONAME ; public: static void __cdecl ObexInternalUtils::ExternalizeL(class HBufC16 const *,class RWriteStream &)
+	?ExternalizeL@ObexInternalUtils@@SAXPBVHBufC8@@AAVRWriteStream@@@Z @ 20 NONAME ; public: static void __cdecl ObexInternalUtils::ExternalizeL(class HBufC8 const *,class RWriteStream &)
+	?DummyFinaliseObexMessageL@CObexUtils@@SAXAAVCMsvSession@@J@Z @ 21 NONAME ; public: static void __cdecl CObexUtils::DummyFinaliseObexMessageL(class CMsvSession &,long)
+	?DummyGetHeaderDetailsL@CBaseContainer@@QBEXAAVCObexBaseObject@@@Z @ 22 NONAME ; public: void __thiscall CBaseContainer::DummyGetHeaderDetailsL(class CObexBaseObject &)const 
+	?GetPasswordFromServiceEntryLC@ObexPasswordExternaliser@@SAPAVHBufC16@@AAVCMsvEntry@@@Z @ 23 NONAME ; public: static class HBufC16 * __cdecl ObexPasswordExternaliser::GetPasswordFromServiceEntryLC(class CMsvEntry &)
+	?GetPasswordLC@ObexPasswordExternaliser@@SAPAVHBufC16@@AAVCMsvEntry@@@Z @ 24 NONAME ; public: static class HBufC16 * __cdecl ObexPasswordExternaliser::GetPasswordLC(class CMsvEntry &)
+	?GetPasswordLC@ObexPasswordExternaliser@@SAPAVHBufC16@@AAVCMsvSession@@ABVTUid@@@Z @ 25 NONAME ; public: static class HBufC16 * __cdecl ObexPasswordExternaliser::GetPasswordLC(class CMsvSession &,class TUid const &)
+	?GetServiceEntryLC@ObexPasswordExternaliser@@SAPAVCMsvEntry@@AAVCMsvSession@@ABVTUid@@@Z @ 26 NONAME ; public: static class CMsvEntry * __cdecl ObexPasswordExternaliser::GetServiceEntryLC(class CMsvSession &,class TUid const &)
+	?InitialiseStoreL@CObexMtmFileNameExternaliser@@QAEXJ@Z @ 27 NONAME ; public: void __thiscall CObexMtmFileNameExternaliser::InitialiseStoreL(long)
+	?Internalise1FileNameL@CObexMtmFileNameExternaliser@@SAXPAVCMsvEntry@@PAVTDes16@@@Z @ 28 NONAME ; public: static void __cdecl CObexMtmFileNameExternaliser::Internalise1FileNameL(class CMsvEntry *,class TDes16 *)
+	?InternaliseFileNamesLC@CObexMtmFileNameExternaliser@@SAPAV?$RPointerArray@VCObexMtmFileNameWithHeaders@@@@AAVCMsvStore@@@Z @ 29 NONAME ; public: static class RPointerArray<class CObexMtmFileNameWithHeaders> * __cdecl CObexMtmFileNameExternaliser::InternaliseFileNamesLC(class CMsvStore &)
+	?InternalizeL@ObexInternalUtils@@SAXAAPAVHBufC16@@AAVRReadStream@@@Z @ 30 NONAME ; public: static void __cdecl ObexInternalUtils::InternalizeL(class HBufC16 * &,class RReadStream &)
+	?InternalizeL@ObexInternalUtils@@SAXAAPAVHBufC8@@AAVRReadStream@@@Z @ 31 NONAME ; public: static void __cdecl ObexInternalUtils::InternalizeL(class HBufC8 * &,class RReadStream &)
+	?InternalizeL@ObexInternalUtils@@SAXAAVTDes16@@AAVRReadStream@@@Z @ 32 NONAME ; public: static void __cdecl ObexInternalUtils::InternalizeL(class TDes16 &,class RReadStream &)
+	?InternalizeL@ObexInternalUtils@@SAXAAVTDes8@@AAVRReadStream@@@Z @ 33 NONAME ; public: static void __cdecl ObexInternalUtils::InternalizeL(class TDes8 &,class RReadStream &)
+	?Length@CObexMtmHeader@@QBEHXZ @ 34 NONAME ; public: int __thiscall CObexMtmHeader::Length(void)const 
+	?DummyMoveToFile@CContainer@@QAEXAAVRFs@@ABVTDesC16@@@Z @ 35 NONAME ; public: void __thiscall CContainer::DummyMoveToFile(class RFs &,class TDesC16 const &)
+	?DummyMoveToFile@CObexFileContainer@@QAEXAAVRFs@@ABVTDesC16@@@Z @ 36 NONAME ; public: void __thiscall CObexFileContainer::DummyMoveToFile(class RFs &,class TDesC16 const &)
+	?Name@CObexMtmHeader@@QBE?AVTPtrC16@@XZ @ 37 NONAME ; public: class TPtrC16  __thiscall CObexMtmHeader::Name(void)const 
+	?DummyNewL@CContainer@@SAXPAVCBufBase@@@Z @ 38 NONAME ; public: static void __cdecl CContainer::DummyNewL(class CBufBase *)
+	?DummyNewL@CContainer@@SAXXZ @ 39 NONAME ; public: static void __cdecl CContainer::DummyNewL(void)
+	?DummyNewL@CObexFileContainer@@SAXABVTDesC16@@@Z @ 40 NONAME ; public: static void __cdecl CObexFileContainer::DummyNewL(class TDesC16 const &)
+	?NewL@CObexMtmFileNameExternaliser@@SAPAV1@PAVCMsvSession@@J@Z @ 41 NONAME ; public: static class CObexMtmFileNameExternaliser * __cdecl CObexMtmFileNameExternaliser::NewL(class CMsvSession *,long)
+	?NewL@CObexSdpUtils@@SAPAV1@AAVMObexSdpUtilsObserver@@@Z @ 42 NONAME ; public: static class CObexSdpUtils * __cdecl CObexSdpUtils::NewL(class MObexSdpUtilsObserver &)
+	?NewLC@CObexSdpUtils@@SAPAV1@AAVMObexSdpUtilsObserver@@@Z @ 43 NONAME ; public: static class CObexSdpUtils * __cdecl CObexSdpUtils::NewLC(class MObexSdpUtilsObserver &)
+	?DummyObexBaseObject@CContainer@@QBEXXZ @ 44 NONAME ; public: void __thiscall CContainer::DummyObexBaseObject(void)const 
+	?DummyObexBaseObject@CObexFileContainer@@QBEXXZ @ 45 NONAME ; public: void __thiscall CObexFileContainer::DummyObexBaseObject(void)const 
+	?Panic@ObexInternalUtils@@SAXW4TObexInternalUtilsPanic@1@@Z @ 46 NONAME ; public: static void __cdecl ObexInternalUtils::Panic(enum ObexInternalUtils::TObexInternalUtilsPanic)
+	?RemoteBtObexQueryL@CObexSdpUtils@@QAEXVTBTDevAddr@@@Z @ 47 NONAME ; public: void __thiscall CObexSdpUtils::RemoteBtObexQueryL(class TBTDevAddr)
+	?DummyRemoveFromInboxL@CObexUtils@@SAXAAVCMsvSession@@J@Z @ 48 NONAME ; public: static void __cdecl CObexUtils::DummyRemoveFromInboxL(class CMsvSession &,long)
+	?ResetPasswordL@ObexPasswordExternaliser@@SAXAAVCMsvEntry@@@Z @ 49 NONAME ; public: static void __cdecl ObexPasswordExternaliser::ResetPasswordL(class CMsvEntry &)
+	?ResetPasswordL@ObexPasswordExternaliser@@SAXAAVCMsvSession@@ABVTUid@@@Z @ 50 NONAME ; public: static void __cdecl ObexPasswordExternaliser::ResetPasswordL(class CMsvSession &,class TUid const &)
+	?RestoreL@CObexMtmHeader@@QAEXABVCMsvStore@@@Z @ 51 NONAME ; public: void __thiscall CObexMtmHeader::RestoreL(class CMsvStore const &)
+	?DummySaveObjToInboxL@CObexUtils@@SAXAAVCMsvSession@@AAVCBaseContainer@@VTUid@@AAJAAVTDesC16@@@Z @ 52 NONAME ; public: static void __cdecl CObexUtils::DummySaveObjToInboxL(class CMsvSession &,class CBaseContainer &,class TUid,long &,class TDesC16 &)
+	?SetConnectionIDL@CObexMtmHeader@@QAEXABVTDesC8@@@Z @ 53 NONAME ; public: void __thiscall CObexMtmHeader::SetConnectionIDL(class TDesC8 const &)
+	?DummySetHeaderDetailsL@CBaseContainer@@QAEXAAVCObexBaseObject@@@Z @ 54 NONAME ; public: void __thiscall CBaseContainer::DummySetHeaderDetailsL(class CObexBaseObject &)
+	?SetLength@CObexMtmHeader@@QAEXH@Z @ 55 NONAME ; public: void __thiscall CObexMtmHeader::SetLength(int)
+	?SetNameL@CObexMtmHeader@@QAEXABVTDesC16@@@Z @ 56 NONAME ; public: void __thiscall CObexMtmHeader::SetNameL(class TDesC16 const &)
+	?SetPasswordFromServiceEntryL@ObexPasswordExternaliser@@SAXAAVCMsvEntry@@ABVTDesC16@@@Z @ 57 NONAME ; public: static void __cdecl ObexPasswordExternaliser::SetPasswordFromServiceEntryL(class CMsvEntry &,class TDesC16 const &)
+	?SetPasswordL@ObexPasswordExternaliser@@SAXAAVCMsvEntry@@ABVTDesC16@@@Z @ 58 NONAME ; public: static void __cdecl ObexPasswordExternaliser::SetPasswordL(class CMsvEntry &,class TDesC16 const &)
+	?SetPasswordL@ObexPasswordExternaliser@@SAXAAVCMsvSession@@ABVTUid@@ABVTDesC16@@@Z @ 59 NONAME ; public: static void __cdecl ObexPasswordExternaliser::SetPasswordL(class CMsvSession &,class TUid const &,class TDesC16 const &)
+	?SetSubjectL@CObexMtmHeader@@QAEXABVTDesC16@@@Z @ 60 NONAME ; public: void __thiscall CObexMtmHeader::SetSubjectL(class TDesC16 const &)
+	?SetTargetL@CObexMtmHeader@@QAEXABVTDesC8@@@Z @ 61 NONAME ; public: void __thiscall CObexMtmHeader::SetTargetL(class TDesC8 const &)
+	?SetTime@CObexMtmHeader@@QAEXABVTTime@@@Z @ 62 NONAME ; public: void __thiscall CObexMtmHeader::SetTime(class TTime const &)
+	?SetTypeL@CObexMtmHeader@@QAEXABVTDesC8@@@Z @ 63 NONAME ; public: void __thiscall CObexMtmHeader::SetTypeL(class TDesC8 const &)
+	?StoreL@CObexMtmHeader@@QBEXAAVCMsvStore@@@Z @ 64 NONAME ; public: void __thiscall CObexMtmHeader::StoreL(class CMsvStore &)const 
+	?Subject@CObexMtmHeader@@QBE?AVTPtrC16@@XZ @ 65 NONAME ; public: class TPtrC16  __thiscall CObexMtmHeader::Subject(void)const 
+	?Target@CObexMtmHeader@@QBE?AVTPtrC8@@XZ @ 66 NONAME ; public: class TPtrC8  __thiscall CObexMtmHeader::Target(void)const 
+	?Time@CObexMtmHeader@@QBEABVTTime@@XZ @ 67 NONAME ; public: class TTime const & __thiscall CObexMtmHeader::Time(void)const 
+	?Type@CObexMtmHeader@@QBE?AVTPtrC8@@XZ @ 68 NONAME ; public: class TPtrC8  __thiscall CObexMtmHeader::Type(void)const 
+	??1CObexHeaderList@@UAE@XZ @ 69 NONAME ; public: virtual __thiscall CObexHeaderList::~CObexHeaderList(void)
+	?AddHeader@CObexHeaderList@@QAEHPBVCObexHeader@@@Z @ 70 NONAME ; public: int __thiscall CObexHeaderList::AddHeader(class CObexHeader const *)
+	?AddHeadersToBaseObjectL@CObexHeaderList@@IAEXAAVCObexBaseObject@@@Z @ 71 NONAME ; protected: void __thiscall CObexHeaderList::AddHeadersToBaseObjectL(class CObexBaseObject &)
+	?Count@CObexHeaderList@@IBEHXZ @ 72 NONAME ; protected: int __thiscall CObexHeaderList::Count(void)const 
+	?ExternalizeL@CObexHeaderList@@IBEXAAVRMsvWriteStream@@@Z @ 73 NONAME ABSENT ; protected: void __thiscall CObexHeaderList::ExternalizeL(class RMsvWriteStream &)const 
+	?InternalizeL@CObexHeaderList@@IAEXAAVRMsvReadStream@@@Z @ 74 NONAME ABSENT ; protected: void __thiscall CObexHeaderList::InternalizeL(class RMsvReadStream &)
+	?NewL@CObexHeaderList@@SAPAV1@XZ @ 75 NONAME ; public: static class CObexHeaderList * __cdecl CObexHeaderList::NewL(void)
+	?NewLC@CObexHeaderList@@SAPAV1@XZ @ 76 NONAME ; public: static class CObexHeaderList * __cdecl CObexHeaderList::NewLC(void)
+	?ObexHeaderL@CObexHeaderList@@IAEAAPAVCObexHeader@@H@Z @ 77 NONAME ; protected: class CObexHeader * & __thiscall CObexHeaderList::ObexHeaderL(int)
+	?ExternaliseFileNameAndHeadersL@CObexMtmFileNameExternaliser@@QAEXPBVTDesC16@@PBVCObexHeaderList@@@Z @ 78 NONAME ; public: void __thiscall CObexMtmFileNameExternaliser::ExternaliseFileNameAndHeadersL(class TDesC16 const *,class CObexHeaderList const *)
+	?NewL@CObexMtmFileNameWithHeaders@@SAPAV1@XZ @ 79 NONAME ; public: static class CObexMtmFileNameWithHeaders * __cdecl CObexMtmFileNameWithHeaders::NewL(void)
+	?ExportToAttachmentL@CObexHeaderList@@QBEXAAVCMsvAttachment@@@Z @ 80 NONAME ; void CObexHeaderList::ExportToAttachmentL(class CMsvAttachment &) const
+	?ExternalizeL@CObexHeaderList@@QBEXAAVRWriteStream@@@Z @ 81 NONAME ; void CObexHeaderList::ExternalizeL(class RWriteStream &) const
+	?ImportFromAttachmentL@CObexHeaderList@@QAEXAAVCMsvAttachment@@@Z @ 82 NONAME ; void CObexHeaderList::ImportFromAttachmentL(class CMsvAttachment &)
+	?InternalizeL@CObexHeaderList@@QAEXAAVRReadStream@@@Z @ 83 NONAME ; void CObexHeaderList::InternalizeL(class RReadStream &)
+	??0CObexSendOperation@@QAE@AAVCMsvSession@@AAVTRequestStatus@@@Z @ 84 NONAME ; CObexSendOperation::CObexSendOperation(class CMsvSession &, class TRequestStatus &)
+	?TranslateProgress@CObexSendOperation@@UAEABVTDesC8@@ABV2@@Z @ 85 NONAME ; class TDesC8 const & CObexSendOperation::TranslateProgress(class TDesC8 const &)
+

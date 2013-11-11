@@ -1,0 +1,97 @@
+// Copyright (c) 2008-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// t_unit_imapservermtm_server.mmp
+//
+
+#if (defined WINS && !defined EKA2)
+TARGET      // t_unit_imapservermtm_server.dll
+TARGETTYPE  dll
+UID             0x1000008d 0x07e22113
+VENDORID 0x70000001
+#else
+TARGET       t_unit_imapservermtm_server.exe
+TARGETTYPE  exe
+UID             0x1000007A 0x1000484b
+VENDORID 0x70000001
+#endif
+
+CAPABILITY		ReadDeviceData WriteDeviceData ProtServ NetworkControl NetworkServices LocalServices ReadUserData WriteUserData
+
+SOURCEPATH  ../src
+SOURCE		t_unit_imapservermtm_server.cpp
+SOURCE		cactivewaiter.cpp
+SOURCE		ctestimapservermtmbase.cpp
+SOURCE		ctestimapservermtmisconnected.cpp		// KIMAP4MTMIsConnected
+SOURCE		ctestimapservermtmconnect.cpp			// KIMAP4MTMConnect
+SOURCE		ctestimapservermtmconnectandsync.cpp	// KIMAP4MTMConnectAndSynchronise
+SOURCE		ctestimapservermtmcancelbackgsync.cpp	// KIMAP4MTMCancelBackgroundSynchronise
+//SOURCE		ctestimapservermtmbatchoperation.cpp	// KIMAP4MTMStartBatch & KIMAP4MTMEndBatch
+SOURCE		ctestimapservermtmbusy.cpp				// KIMAP4MTMBusy
+SOURCE		ctestimapservermtmselect.cpp			// KIMAP4MTMSelect
+SOURCE		ctestimapservermtmsynchronise.cpp		// KIMAP4MTMSynchronise
+SOURCE		ctestimapservermtmsynctree.cpp			// KIMAP4MTMSyncTree
+SOURCE		ctestimapservermtmfullsync.cpp			// KIMAP4MTMFullSync
+SOURCE		ctestimapservermtmdisconnect.cpp		// KIMAP4MTMDisconnect
+SOURCE		ctestimapservermtmlocalsubscribe.cpp	// KIMAP4MTMLocalSubscribe
+SOURCE		ctestimapservermtmlocalunsubscribe.cpp	// KIMAP4MTMLocalUnsubscribe
+SOURCE		ctestimapservermtminboxnewsync.cpp		// KIMAP4MTMInboxNewSync
+SOURCE		ctestimapservermtmfolderfullsync.cpp	// KIMAP4MTMFolderFullSync
+SOURCE		ctestimapservermtmwaitforbackg.cpp		// KIMAP4MTMWaitForBackground
+SOURCE		ctestimapservermtmrenamefolder.cpp		// KIMAP4MTMRenameFolder
+SOURCE		ctestimapservermtmundeleteall.cpp		// KIMAP4MTMUndeleteAll
+SOURCE		ctestimapservermtmcancelofflineop.cpp	// KIMAP4MTMCancelOffLineOperations
+SOURCE		ctestimapservermtmpopulate.cpp			// KIMAP4MTMPopulate
+SOURCE		ctestimapservermtmunsupportedcmds.cpp	// All unsupported commands that are defined in TImap4Cmds
+
+SOURCE		ctestimapservermtmcopytolocal.cpp		// CopyToLocalL
+SOURCE		ctestimapservermtmcopyfromlocal.cpp		// CopyFromLocalL
+SOURCE		ctestimapservermtmcopywithinservice.cpp	// CopyWithinServiceL
+
+SOURCE		ctestimapservermtmmovetolocal.cpp		// MoveToLocalL
+SOURCE		ctestimapservermtmmovefromlocal.cpp		// MoveFromLocalL
+SOURCE		ctestimapservermtmmovewithinservice.cpp	// MoveWithinServiceL
+
+SOURCE		ctestimapservermtmdeleteall.cpp			// DeleteAllL
+SOURCE		ctestimapservermtmcreate.cpp			// CreateL
+SOURCE		ctestimapservermtmchange.cpp			// ChangeL (This command has been recinded)
+
+USERINCLUDE   ../inc ../../../../pop3andsmtpmtm/clientmtms/inc
+USERINCLUDE   ../../inc ../../../../pop3andsmtpmtm/servermtmutils/inc
+USERINCLUDE   ../../../imapsettings/inc
+//USERINCLUDE	  ../../../imaptransporthandler/inc
+//USERINCLUDE	  ../../../imaputils/inc
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+OS_LAYER_ESTLIB_SYSTEMINCLUDE  
+USERINCLUDE ../../../../../../../mw/messagingmw/messagingfw/msgsrvnstore/server/inc
+USERINCLUDE ../../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/base/inc
+USERINCLUDE ../../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/email/inc
+USERINCLUDE ../../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/server/inc
+USERINCLUDE ../../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/sms/inc
+USERINCLUDE ../../../../../../../mw/messagingmw/messagingfw/msgtest/tools/spoofserver/inc
+STATICLIBRARY	tefunit.lib
+LIBRARY			rfileloggerclient.lib
+LIBRARY     euser.lib
+LIBRARY		testexecuteutils.lib
+LIBRARY		testexecutelogclient.lib
+//LIBRARY		imapsession.lib
+
+LIBRARY		emailtestutils.lib
+LIBRARY		msvtestutils.lib
+LIBRARY		efsrv.lib
+LIBRARY		spoofserver.lib
+LIBRARY		imcm.lib
+LIBRARY		msgs.lib
+LIBRARY		imapsettings.lib
+
+SMPSAFE

@@ -1,0 +1,68 @@
+HgMediawall#MPmediaWallWidget
+{
+  layout:mpmediawallview;
+  front-cover-elevation-factor:0.51;
+}
+
+HgMediawall#MPmediaWallWidget::content
+{
+  size-policy: ignored ignored;
+  left:0un;
+  right:0un;
+  top:0un;
+  bottom:0un;
+  zvalue: 0;
+}
+
+HgMediawall#MPmediaWallWidget::title
+{
+  text-height: var(hb-param-text-height-primary);
+  font-variant:primary;
+  text-align: center center;
+  text-line-count-min:1;
+  text-line-count-max:1;
+  text-wrap-mode:no-wrap;
+  left:-var(hb-param-margin-gene-screen);
+  right:var(hb-param-margin-gene-screen);
+  top:-var(hb-param-margin-gene-middle-vertical);
+  bottom:0un;
+  zvalue: 2;
+}
+
+HgMediawall#MPmediaWallWidget::description
+{
+  text-height: var(hb-param-text-height-secondary);
+  font-variant:secondary;
+  text-align: center center;
+  text-line-count-min:1;
+  text-line-count-max:1;
+  text-wrap-mode:no-wrap;
+  left:-var(hb-param-margin-gene-screen);
+  right:var(hb-param-margin-gene-screen);
+  top:-var(hb-param-margin-gene-middle-vertical);
+  bottom:0un;
+  zvalue: 2;
+}
+
+HgMediawall#MPmediaWallWidget::centeritem
+{
+  size-policy: fixed fixed;
+  fixed-height: expr(var(hb-param-screen-short-edge)-var(hb-param-text-height-primary)-var(hb-param-text-height-secondary)-4*var(hb-param-margin-gene-middle-vertical)-var(hb-param-widget-scroll-bar-indicative-width));
+  fixed-width:  expr(var(hb-param-screen-short-edge)-var(hb-param-text-height-primary)-var(hb-param-text-height-secondary)-4*var(hb-param-margin-gene-middle-vertical)-var(hb-param-widget-scroll-bar-indicative-width));
+  left:0un;
+  right:0un;
+  top:-var(hb-param-margin-gene-middle-vertical);
+  bottom:0un;
+  zvalue: 2;
+}
+
+HgMediawall#MPmediaWallWidget::scrollbar-horizontal
+{
+  size-policy: preferred preferred;
+  left:0un;
+  right:0un;
+  top:0un;
+  bottom:0un;
+  zvalue: 2;
+}
+

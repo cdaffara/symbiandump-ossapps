@@ -1,0 +1,35 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//! @file
+//! @SYMTestCaseID DEF062024
+//! @SYMTestType UT
+//! @SYMTestPriority High
+//! @SYMDEF DEF062024
+//! @SYMDEF T_DEF062024_Imap_AttachmentCannotBeOpened.exe
+//! @SYMTestCaseDesc Implements an IMAP server to facilitate offline testing of imap parsing. 
+//! The sever contains and retrieves an email with an attachment (a v-card), the aim of th test is to check that this
+//! attachmenet is fetched correctly by comparing its size and centent to the size and content of the source file attached.
+//! @SYMTestActions  1. The Server is started and listens on port 143.
+//! 				 2. The client connects to the server, requests a sync and a populate
+//! 				 3. The server reads the protocol information from a file specified in the ini file (ImapAttachmentTest.ini).
+//! 				 4. The client disconnects.
+//! 				 5. The attachment of the mail fetched is compared with the corresponding source file. The test passes if its size and content is exactly the same as the size and content of the file originally attached to this email, otherwise itv fails.
+//! @SYMTestExpectedResults The attachment file should have the same size and content as the source file originally attached.
+
+PRINT Run T_DEF062024_Imap_AttachmentCannotBeOpened Test 
+LOAD_SUITE T_DEF062024_Imap_AttachmentCannotBeOpened -SharedData
+
+RUN_TEST_STEP 1000 T_DEF062024_Imap_AttachmentCannotBeOpened TestImapAttachment c:\msgtest\imap\ImapAttachmentTest.ini Section1

@@ -1,0 +1,34 @@
+<hbwidget version="0.1" type="HgMediawall">
+  <layout name="layout-scrollbar" type="mesh">
+    <meshitem src="content" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+    <meshitem src="content" srcEdge="TOP" dst="" dstEdge="TOP" />
+	  <meshitem src="content" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+    <meshitem src="content" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+    <meshitem src="scrollbar-horizontal" srcEdge="BOTTOM" dst="content" dstEdge="BOTTOM" />
+	  <meshitem src="scrollbar-horizontal" srcEdge="RIGHT" dst="content" dstEdge="RIGHT" />
+    <meshitem src="scrollbar-horizontal" srcEdge="LEFT" dst="content" dstEdge="LEFT" />
+    <meshitem src="title" srcEdge="TOP" dst="content" dstEdge="TOP" />
+    <meshitem src="title" srcEdge="LEFT" dst="content" dstEdge="LEFT" /> 
+    <meshitem src="title" srcEdge="RIGHT" dst="content" dstEdge="RIGHT" />
+    <meshitem src="centeritem" srcEdge="BOTTOM" dst="content" dstEdge="BOTTOM" />
+    <meshitem src="centeritem" srcEdge="TOP" dst="title" dstEdge="BOTTOM" />
+	  <meshitem src="centeritem" srcEdge="RIGHT" dst="content" dstEdge="RIGHT" />
+    <meshitem src="centeritem" srcEdge="LEFT" dst="content" dstEdge="LEFT" />
+  </layout>
+  <layout name="layout-noscrollbar" type="mesh">
+    <meshitem src="content" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+    <meshitem src="content" srcEdge="TOP" dst="" dstEdge="TOP" />
+	  <meshitem src="content" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+    <meshitem src="content" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+    <meshitem src="description" srcEdge="BOTTOM" dst="content" dstEdge="BOTTOM" />
+    <meshitem src="description" srcEdge="LEFT" dst="content" dstEdge="LEFT" /> 
+    <meshitem src="description" srcEdge="RIGHT" dst="content" dstEdge="RIGHT" /> 
+    <meshitem src="title" srcEdge="TOP" dst="content" dstEdge="TOP" />
+    <meshitem src="title" srcEdge="LEFT" dst="content" dstEdge="LEFT" /> 
+    <meshitem src="title" srcEdge="RIGHT" dst="content" dstEdge="RIGHT" />
+    <meshitem src="centeritem" srcEdge="BOTTOM" dst="content" dstEdge="BOTTOM" />
+    <meshitem src="centeritem" srcEdge="TOP" dst="title" dstEdge="BOTTOM" />
+	<meshitem src="centeritem" srcEdge="RIGHT" dst="content" dstEdge="RIGHT" />
+    <meshitem src="centeritem" srcEdge="LEFT" dst="content" dstEdge="LEFT" />
+  </layout>
+</hbwidget>

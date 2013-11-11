@@ -1,0 +1,31 @@
+EXPORTS
+	??1CVtImageBitmap@@UAE@XZ @ 1 NONAME ; public: virtual __thiscall CVtImageBitmap::~CVtImageBitmap(void)
+	??1CVtImageIYUV@@UAE@XZ @ 2 NONAME ; public: virtual __thiscall CVtImageIYUV::~CVtImageIYUV(void)
+	??1CVtImageRotator@@UAE@XZ @ 3 NONAME ; public: virtual __thiscall CVtImageRotator::~CVtImageRotator(void)
+	??1CVtImageScaler@@UAE@XZ @ 4 NONAME ; public: virtual __thiscall CVtImageScaler::~CVtImageScaler(void)
+	?Bitmap@CVtImageBitmap@@QBEAAVCFbsBitmap@@XZ @ 5 NONAME ; public: class CFbsBitmap & __thiscall CVtImageBitmap::Bitmap(void)const 
+	?Image@CVtImageIYUV@@QBE?AVTPtrC8@@XZ @ 6 NONAME ; public: class TPtrC8  __thiscall CVtImageIYUV::Image(void)const 
+	?NewL@CVtImageBitmap@@SAPAV1@ABVTSize@@W4TDisplayMode@@@Z @ 7 NONAME ; public: static class CVtImageBitmap * __cdecl CVtImageBitmap::NewL(class TSize const &,enum TDisplayMode)
+	?NewL@CVtImageBitmap@@SAPAV1@H@Z @ 8 NONAME ; public: static class CVtImageBitmap * __cdecl CVtImageBitmap::NewL(int)
+	?NewL@CVtImageIYUV@@SAPAV1@ABVTSize@@@Z @ 9 NONAME ; public: static class CVtImageIYUV * __cdecl CVtImageIYUV::NewL(class TSize const &)
+	?NewL@CVtImageIYUV@@SAPAV1@ABVTSize@@AAVTPtr8@@@Z @ 10 NONAME ; public: static class CVtImageIYUV * __cdecl CVtImageIYUV::NewL(class TSize const &,class TPtr8 &)
+	?NewL@CVtImageIYUV@@SAPAV1@ABVTSize@@ABVTDesC8@@@Z @ 11 NONAME ; public: static class CVtImageIYUV * __cdecl CVtImageIYUV::NewL(class TSize const &,class TDesC8 const &)
+	?NewL@CVtImageRotator@@SAPAV1@AAVMVtImageRotatorObserver@@W4TPriority@CActive@@@Z @ 12 NONAME ; public: static class CVtImageRotator * __cdecl CVtImageRotator::NewL(class MVtImageRotatorObserver &,enum CActive::TPriority)
+	?NewL@CVtImageScaler@@SAPAV1@AAVMVtImageScalerObserver@@W4TQuality@1@W4TPriority@CActive@@@Z @ 13 NONAME ; public: static class CVtImageScaler * __cdecl CVtImageScaler::NewL(class MVtImageScalerObserver &,enum CVtImageScaler::TQuality,enum CActive::TPriority)
+	?ResizeL@CVtImageBitmap@@QAEXABVTSize@@@Z @ 14 NONAME ; public: void __thiscall CVtImageBitmap::ResizeL(class TSize const &)
+	?RotateL@CVtImageRotator@@QAEXABVCVtImage@@AAV2@ABW4TRotationAngle@1@@Z @ 15 NONAME ; public: void __thiscall CVtImageRotator::RotateL(class CVtImage const &,class CVtImage &,enum CVtImageRotator::TRotationAngle const &)
+	?ScaleL@CVtImageScaler@@QAEXABVCVtImage@@AAV2@@Z @ 16 NONAME ; public: void __thiscall CVtImageScaler::ScaleL(class CVtImage const &,class CVtImage &)
+	?SetBitmapL@CVtImageBitmap@@QAEXH@Z @ 17 NONAME ; public: void __thiscall CVtImageBitmap::SetBitmapL(int)
+	?SetImageL@CVtImageIYUV@@QAEXAAVTPtr8@@@Z @ 18 NONAME ; public: void __thiscall CVtImageIYUV::SetImageL(class TPtr8 &)
+	?SetImageL@CVtImageIYUV@@QAEXABVTDesC8@@@Z @ 19 NONAME ; public: void __thiscall CVtImageIYUV::SetImageL(class TDesC8 const &)
+	?SetQualityL@CVtImageScaler@@QAEXW4TQuality@1@@Z @ 20 NONAME ; public: void __thiscall CVtImageScaler::SetQualityL(enum CVtImageScaler::TQuality)
+	?Type@CVtImage@@QBE?AW4TVtImageType@1@XZ @ 21 NONAME ; public: enum CVtImage::TVtImageType  __thiscall CVtImage::Type(void)const 
+	?U@CVtImageIYUV@@QBEPAEXZ @ 22 NONAME ; public: unsigned char * __thiscall CVtImageIYUV::U(void)const 
+	?UVPlaneHeight@CVtImageIYUV@@QBEHXZ @ 23 NONAME ; public: int __thiscall CVtImageIYUV::UVPlaneHeight(void)const 
+	?UVPlaneWidth@CVtImageIYUV@@QBEHXZ @ 24 NONAME ; public: int __thiscall CVtImageIYUV::UVPlaneWidth(void)const 
+	?V@CVtImageIYUV@@QBEPAEXZ @ 25 NONAME ; public: unsigned char * __thiscall CVtImageIYUV::V(void)const 
+	?Y@CVtImageIYUV@@QBEPAEXZ @ 26 NONAME ; public: unsigned char * __thiscall CVtImageIYUV::Y(void)const 
+	?Scale@CVtImageScaler@@QAEXABVCVtImage@@AAV2@@Z @ 27 NONAME ; void CVtImageScaler::Scale(class CVtImage const &, class CVtImage &)
+	?Rotate@CVtImageRotator@@QAEXABVCVtImage@@AAV2@ABW4TRotationAngle@1@@Z @ 28 NONAME ; void CVtImageRotator::Rotate(class CVtImage const &, class CVtImage &, enum CVtImageRotator::TRotationAngle const &)
+	?ScaleNowL@CVtImageScaler@@QAEXABVCVtImage@@AAV2@@Z @ 29 NONAME ; void CVtImageScaler::ScaleNowL(class CVtImage const &, class CVtImage &)
+

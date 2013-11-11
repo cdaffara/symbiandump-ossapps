@@ -1,0 +1,75 @@
+EXPORTS
+	?NewL@CSmsClientMtm@@SAPAV1@AAVCRegisteredMtmDll@@AAVCMsvSession@@@Z @ 1 NONAME ; public: static class CSmsClientMtm * __cdecl CSmsClientMtm::NewL(class CRegisteredMtmDll &,class CMsvSession &)
+	?Dummy_Export_1@TSmsUtilities@@QAEXXZ @ 2 NONAME ; public: void __thiscall TSmsUtilities::Dummy_Export_1(void)
+	??1CSmsHeader@@UAE@XZ @ 3 NONAME ; public: virtual __thiscall CSmsHeader::~CSmsHeader(void)
+	??1CSmsNumber@@UAE@XZ @ 4 NONAME ; public: virtual __thiscall CSmsNumber::~CSmsNumber(void)
+	??1CSmsSettings@@UAE@XZ @ 5 NONAME ; public: virtual __thiscall CSmsSettings::~CSmsSettings(void)
+	?Dummy_Export_2@TSmsUtilities@@QAEXXZ @ 6 NONAME ; public: void __thiscall TSmsUtilities::Dummy_Export_2(void)
+	?AddSCAddressL@CSmsSettings@@QAEXABVTDesC16@@0@Z @ 7 NONAME ; public: void __thiscall CSmsSettings::AddSCAddressL(class TDesC16 const &,class TDesC16 const &)
+	?BioTypeChangedL@CSmsClientMtm@@UAEXVTUid@@@Z @ 8 NONAME ; public: virtual void __thiscall CSmsClientMtm::BioTypeChangedL(class TUid)
+	?CopyL@CSmsMessageSettings@@UAEXABV1@@Z @ 9 NONAME ; public: virtual void __thiscall CSmsMessageSettings::CopyL(class CSmsMessageSettings const &)
+	?CopyL@CSmsNumber@@QAEAAV1@ABV1@@Z @ 10 NONAME ; public: class CSmsNumber & __thiscall CSmsNumber::CopyL(class CSmsNumber const &)
+	?CopyL@CSmsSettings@@QAEXABV1@@Z @ 11 NONAME ; public: void __thiscall CSmsSettings::CopyL(class CSmsSettings const &)
+	?ExternalizeL@CSmsHeader@@QBEXAAVRMsvWriteStream@@@Z @ 12 NONAME ; public: void __thiscall CSmsHeader::ExternalizeL(class RMsvWriteStream &)const 
+	?ExternalizeL@CSmsMessageSettings@@UBEXAAVRWriteStream@@@Z @ 13 NONAME ; public: virtual void __thiscall CSmsMessageSettings::ExternalizeL(class RMsvWriteStream &)const 
+	?ExternalizeL@CSmsNumber@@UBEXAAVRWriteStream@@@Z @ 14 NONAME ; public: virtual void __thiscall CSmsNumber::ExternalizeL(class RWriteStream &)const 
+	?ExternalizeL@CSmsSettings@@UBEXAAVRWriteStream@@@Z @ 15 NONAME ; public: virtual void __thiscall CSmsSettings::ExternalizeL(class RMsvWriteStream &)const 
+	?GetDescription@TSmsUtilities@@SAHABVCSmsMessage@@AAVTDes16@@H@Z @ 16 NONAME ; public: static int __cdecl TSmsUtilities::GetDescription(class CSmsMessage const &,class TDes16 &,int)
+	?GetDetails@TSmsUtilities@@SAHAAVRFs@@ABVCSmsMessage@@AAVTDes16@@H@Z @ 17 NONAME ; public: static int __cdecl TSmsUtilities::GetDetails(class RFs &,class CSmsMessage const &,class TDes16 &,int)
+	?GetDetails@TSmsUtilities@@SAHAAVRFs@@ABVTDesC16@@AAVTDes16@@H@Z @ 18 NONAME ; public: static int __cdecl TSmsUtilities::GetDetails(class RFs &,class TDesC16 const &,class TDes16 &,int)
+	?GetSmsSettingsL@CSmsHeader@@QBEXAAVCSmsMessageSettings@@@Z @ 19 NONAME ; public: void __thiscall CSmsHeader::GetSmsSettingsL(class CSmsMessageSettings &)const 
+	?InternalizeL@CSmsHeader@@QAEXAAVRMsvReadStream@@@Z @ 20 NONAME ; public: void __thiscall CSmsHeader::InternalizeL(class RMsvReadStream &)
+	?InternalizeL@CSmsMessageSettings@@UAEXAAVRReadStream@@@Z @ 21 NONAME ; public: virtual void __thiscall CSmsMessageSettings::InternalizeL(class RMsvReadStream &)
+	?InternalizeL@CSmsNumber@@UAEXAAVRReadStream@@@Z @ 22 NONAME ; public: virtual void __thiscall CSmsNumber::InternalizeL(class RReadStream &)
+	?InternalizeL@CSmsSettings@@UAEXAAVRReadStream@@@Z @ 23 NONAME ; public: virtual void __thiscall CSmsSettings::InternalizeL(class RMsvReadStream &)
+	?NewL@CSmsHeader@@SAPAV1@PAVCSmsMessage@@@Z @ 24 NONAME ; public: static class CSmsHeader * __cdecl CSmsHeader::NewL(class CSmsMessage *)
+	?NewL@CSmsHeader@@SAPAV1@W4TSmsPDUType@CSmsPDU@@AAVCEditableText@@@Z @ 25 NONAME ; public: static class CSmsHeader * __cdecl CSmsHeader::NewL(enum CSmsPDU::TSmsPDUType,class CEditableText &)
+	?NewL@CSmsNumber@@SAPAV1@ABV1@@Z @ 26 NONAME ; public: static class CSmsNumber * __cdecl CSmsNumber::NewL(class CSmsNumber const &)
+	?NewL@CSmsNumber@@SAPAV1@XZ @ 27 NONAME ; public: static class CSmsNumber * __cdecl CSmsNumber::NewL(void)
+	?NewL@CSmsSettings@@SAPAV1@XZ @ 28 NONAME ; public: static class CSmsSettings * __cdecl CSmsSettings::NewL(void)
+	?PopulateMsgEntry@TSmsUtilities@@SAXAAVTMsvEntry@@ABVCSmsMessage@@JVTUid@@@Z @ 29 NONAME ; public: static void __cdecl TSmsUtilities::PopulateMsgEntry(class TMsvEntry &,class CSmsMessage const &,long,class TUid)
+	?RemoveSCAddress@CSmsSettings@@QAEXH@Z @ 30 NONAME ; public: void __thiscall CSmsSettings::RemoveSCAddress(int)
+	?RestoreL@CSmsHeader@@QAEXAAVCMsvStore@@@Z @ 31 NONAME ; public: void __thiscall CSmsHeader::RestoreL(class CMsvStore &)
+	?RestoreL@CSmsSettings@@QAEXAAVCMsvStore@@@Z @ 32 NONAME ; public: void __thiscall CSmsSettings::RestoreL(class CMsvStore &)
+	?RestoreServiceAndSettingsL@CSmsClientMtm@@QAEXXZ @ 33 NONAME ; public: void __thiscall CSmsClientMtm::RestoreServiceAndSettingsL(void)
+	?ServiceIdL@TSmsUtilities@@SAXAAVCMsvEntry@@AAJVTUid@@PAVCMsvEntrySelection@@@Z @ 34 NONAME ; public: static void __cdecl TSmsUtilities::ServiceIdL(class CMsvEntry &,long &,class TUid,class CMsvEntrySelection *)
+	?ServiceIdL@TSmsUtilities@@SAXAAVCMsvServerEntry@@AAJVTUid@@PAVCMsvEntrySelection@@@Z @ 35 NONAME ; public: static void __cdecl TSmsUtilities::ServiceIdL(class CMsvServerEntry &,long &,class TUid,class CMsvEntrySelection *)
+	?SetSmsSettingsL@CSmsHeader@@QAEXABVCSmsMessageSettings@@@Z @ 36 NONAME ; public: void __thiscall CSmsHeader::SetSmsSettingsL(class CSmsMessageSettings const &)
+	?StoreL@CSmsHeader@@QBEXAAVCMsvStore@@@Z @ 37 NONAME ; public: void __thiscall CSmsHeader::StoreL(class CMsvStore &)const 
+	?StoreL@CSmsSettings@@QBEXAAVCMsvStore@@@Z @ 38 NONAME ; public: void __thiscall CSmsSettings::StoreL(class CMsvStore &)const 
+	?ProgressL@CSmsSimParamOperation@@UAEABVTDesC8@@XZ @ 39 NONAME ; public: virtual class TDesC8 const & __thiscall CSmsSimParamOperation::ProgressL(void)
+	?ReadSimParamsL@CSmsClientMtm@@QAEPAVCSmsSimParamOperation@@AAVTRequestStatus@@@Z @ 40 NONAME ; public: class CSmsSimParamOperation * __thiscall CSmsClientMtm::ReadSimParamsL(class TRequestStatus &)
+	?ServiceCentersLC@CSmsSimParamOperation@@QBEPAVCMobilePhoneSmspList@@XZ @ 41 NONAME ; public: class CMobilePhoneSmspList * __thiscall CSmsSimParamOperation::ServiceCentersLC(void)const 
+	?Address@CSmsNumber@@QBE?AVTPtrC16@@XZ @ 42 NONAME ; public: class TPtrC16  __thiscall CSmsNumber::Address(void)const 
+	?Name@CSmsNumber@@QBE?AVTPtrC16@@XZ @ 43 NONAME ; public: class TPtrC16  __thiscall CSmsNumber::Name(void)const 
+	?SetAddressL@CSmsNumber@@QAEXABVTDesC16@@@Z @ 44 NONAME ; public: void __thiscall CSmsNumber::SetAddressL(class TDesC16 const &)
+	?SetNameL@CSmsNumber@@QAEXABVTDesC16@@@Z @ 45 NONAME ; public: void __thiscall CSmsNumber::SetNameL(class TDesC16 const &)
+	?CreateMessageL@CSmsClientMtm@@UAEXJ@Z @ 46 NONAME ; public: virtual void __thiscall CSmsClientMtm::CreateMessageL(long)
+	?ServiceIdL@TSmsUtilities@@SAXAAVCMsvSession@@AAJVTUid@@PAVCMsvEntrySelection@@@Z @ 47 NONAME ; public: static void __cdecl TSmsUtilities::ServiceIdL(class CMsvSession &,long &,class TUid,class CMsvEntrySelection *)
+	?RestoreSimParamsL@CSmsSimParamOperation@@SAXAAVCMsvStore@@AAVCMobilePhoneSmspList@@@Z @ 48 NONAME ; public: static void __cdecl CSmsSimParamOperation::RestoreSimParamsL(class CMsvStore &,class CMobilePhoneSmspList &)
+	?StoreSimParamsL@CSmsSimParamOperation@@SAXAAVCMsvStore@@ABVCMobilePhoneSmspList@@@Z @ 49 NONAME ; public: static void __cdecl CSmsSimParamOperation::StoreSimParamsL(class CMsvStore &,class CMobilePhoneSmspList const &)
+	?WriteSimParamsL@CSmsClientMtm@@QAEPAVCSmsSimParamOperation@@ABVCMobilePhoneSmspList@@AAVTRequestStatus@@@Z @ 50 NONAME ; public: class CSmsSimParamOperation * __thiscall CSmsClientMtm::WriteSimParamsL(class CMobilePhoneSmspList const &,class TRequestStatus &)
+	?SaveExternalL@CSmsSettings@@QAEXAAVCMsvStore@@@Z @ 51 NONAME ; void CSmsSettings::SaveExternalL(class CMsvStore &)
+	?OpenResourceFileL@TSmsUtilities@@SA?AVRResourceFile@@AAVRFs@@@Z @ 52 NONAME ; public: static class RResourceFile  __cdecl TSmsUtilities::OpenResourceFileL(class RFs &)
+	?ReadResourceStringL@TSmsUtilities@@SAXVRResourceFile@@HAAVTDes16@@@Z @ 53 NONAME ; public: static void __cdecl TSmsUtilities::ReadResourceStringL(class RResourceFile,int,class TDes16 &)
+	?AckStatus@CSmsNumber@@QBE?AW4TSmsAckStatus@1@W4TSmsAckType@@@Z @ 54 NONAME ; enum CSmsNumber::TSmsAckStatus CSmsNumber::AckStatus(enum TSmsAckType) const
+	?AckSummary@TMsvSmsEntry@@QBE?AW4TMsvSmsEntryAckSummary@1@W4TSmsAckType@@@Z @ 55 NONAME ; enum TMsvSmsEntry::TMsvSmsEntryAckSummary TMsvSmsEntry::AckSummary(enum TSmsAckType) const
+	?MessageId@TMsvSmsEntry@@QBEHAAJ@Z @ 56 NONAME ; int TMsvSmsEntry::MessageId(long &) const
+	?SetAckStatus@CSmsNumber@@QAEXW4TSmsAckType@@W4TSmsAckStatus@1@@Z @ 57 NONAME ; void CSmsNumber::SetAckStatus(enum TSmsAckType, enum CSmsNumber::TSmsAckStatus)
+	?SetAckSummary@TMsvSmsEntry@@QAEXW4TSmsAckType@@W4TMsvSmsEntryAckSummary@1@@Z @ 58 NONAME ; void TMsvSmsEntry::SetAckSummary(enum TSmsAckType, enum TMsvSmsEntry::TMsvSmsEntryAckSummary)
+	?SetMessageId@TMsvSmsEntry@@QAEXJH@Z @ 59 NONAME ; void TMsvSmsEntry::SetMessageId(long, int)
+	??1CSmsEmailFields@@UAE@XZ @ 60 NONAME ; CSmsEmailFields::~CSmsEmailFields(void)
+	?AddAddressL@CSmsEmailFields@@QAEXABVTDesC16@@@Z @ 61 NONAME ; void CSmsEmailFields::AddAddressL(class TDesC16 const &)
+	?Addresses@CSmsEmailFields@@QBEABVMDesC16Array@@XZ @ 62 NONAME ; class MDesC16Array const & CSmsEmailFields::Addresses(void) const
+	?ComposeLC@CSmsEmailFields@@QBEPAVHBufC16@@XZ @ 63 NONAME ; class HBufC16 * CSmsEmailFields::ComposeLC(void) const
+	?EmailFields@CSmsHeader@@QBEABVCSmsEmailFields@@XZ @ 64 NONAME ; class CSmsEmailFields const & CSmsHeader::EmailFields(void) const
+	?HasAddress@CSmsEmailFields@@QBEHXZ @ 65 NONAME ; int CSmsEmailFields::HasAddress(void) const
+	?Length@CSmsEmailFields@@QBEHXZ @ 66 NONAME ; int CSmsEmailFields::Length(void) const
+	?NewL@CSmsEmailFields@@SAPAV1@ABV1@@Z @ 67 NONAME ; class CSmsEmailFields * CSmsEmailFields::NewL(class CSmsEmailFields const &)
+	?NewL@CSmsEmailFields@@SAPAV1@XZ @ 68 NONAME ; class CSmsEmailFields * CSmsEmailFields::NewL(void)
+	?RemoveAddress@CSmsEmailFields@@QAEXH@Z @ 69 NONAME ; void CSmsEmailFields::RemoveAddress(int)
+	?Reset@CSmsEmailFields@@QAEXXZ @ 70 NONAME ; void CSmsEmailFields::Reset(void)
+	?SetEmailFieldsL@CSmsHeader@@QAEXABVCSmsEmailFields@@@Z @ 71 NONAME ; void CSmsHeader::SetEmailFieldsL(class CSmsEmailFields const &)
+	?SetSubjectL@CSmsEmailFields@@QAEXABVTDesC16@@@Z @ 72 NONAME ; void CSmsEmailFields::SetSubjectL(class TDesC16 const &)
+	?Subject@CSmsEmailFields@@QBEABVTDesC16@@XZ @ 73 NONAME ; class TDesC16 const & CSmsEmailFields::Subject(void) const
+

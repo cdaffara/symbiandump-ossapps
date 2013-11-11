@@ -1,0 +1,30 @@
+<?XML version="1.0" ?>
+<!DOCTYPE SMIL PUBLIC "-//W3C//DTD SMIL 2.0 Basic//EN"
+"http://www.w3.org/TR/REC-smil/2000/SMIL20Basic.dtd">
+
+<!-- Focus of this test: 'a' element, attribute variations -->
+<!-- Focus of this test: 'a' element, attribute variations -->
+<!-- href, target SPECIFIED -->
+<!-- dur, repeatCount, repeatDur, begin, end, min, max, accesskey, tabindex, id, class, title, xml:lang IMPLIED -->
+<!-- sourceLevel, destinationLevel DEFAULT='100&amp;#37;' -->
+<!-- fill IMPLIED -->
+<!-- sourcePlaystate IMPLIED -->
+<!-- destinationPlaystate DEFAULT='play' -->
+<!-- show DEFAULT='replace' -->
+<!-- external DEFAULT='false' -->
+<!-- actuate DEFAULT='onRequest' -->
+<smil xmlns="http://www.w3.org/TR/REC-smil/2000/SMIL20/Basic">
+   <head>
+      <!-- This is a "landscape" screen -->
+      <layout>
+         <root-layout width="352" height="144"/>
+         <region id="source" width="176" height="144" left="0" top="0"/>
+         <region id="destination" width="176" height="144" left="176" top="0"/>
+      </layout>
+   </head>
+   <body>
+      <a target="destination" href="http://www.example.org/presentationB#next">
+         <img region="source" src="source.jpg"/>
+      </a>
+   </body>
+</smil>

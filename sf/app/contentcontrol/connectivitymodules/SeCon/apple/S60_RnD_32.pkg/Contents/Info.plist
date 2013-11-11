@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleGetInfoString</key>
+	<string>0.0, Copyright 2006 Apple Computer, Inc.</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.apple.isyncpluginmaker.phoneplugin</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.0</string>
+	<key>IFMajorVersion</key>
+	<integer>1</integer>
+	<key>IFMinorVersion</key>
+	<integer>0</integer>
+	<key>IFPkgFlagAllowBackRev</key>
+	<false/>
+	<key>IFPkgFlagAuthorizationAction</key>
+	<string>AdminAuthorization</string>
+	<key>IFPkgFlagBackgroundAlignment</key>
+	<string>topleft</string>
+	<key>IFPkgFlagBackgroundScaling</key>
+	<string>none</string>
+	<key>IFPkgFlagDefaultLocation</key>
+	<string>/</string>
+	<key>IFPkgFlagFollowLinks</key>
+	<true/>
+	<key>IFPkgFlagInstallFat</key>
+	<false/>
+	<key>IFPkgFlagInstalledSize</key>
+	<integer>156</integer>
+	<key>IFPkgFlagIsRequired</key>
+	<false/>
+	<key>IFPkgFlagOverwritePermissions</key>
+	<false/>
+	<key>IFPkgFlagRelocatable</key>
+	<false/>
+	<key>IFPkgFlagRestartAction</key>
+	<string>NoRestart</string>
+	<key>IFPkgFlagRootVolumeOnly</key>
+	<true/>
+	<key>IFPkgFlagUpdateInstalledLanguages</key>
+	<false/>
+	<key>IFPkgFormatVersion</key>
+	<real>0.10000000149011612</real>
+	<key>IFRequirementDicts</key>
+	<array>
+		<dict>
+			<key>LabelKey</key>
+			<string>iSync24Label</string>
+			<key>MessageKey</key>
+			<string>iSync2XMessage</string>
+			<key>SpecArgument</key>
+			<string>/Applications/iSync.app/Contents/Info.plist</string>
+			<key>SpecProperty</key>
+			<string>CFBundleVersion</string>
+			<key>SpecType</key>
+			<string>plist</string>
+			<key>TestObject</key>
+			<string>500.134</string>
+			<key>TestOperator</key>
+			<string>ge</string>
+			<key>TitleKey</key>
+			<string>iSync24Title</string>
+		</dict>
+	</array>
+</dict>
+</plist>

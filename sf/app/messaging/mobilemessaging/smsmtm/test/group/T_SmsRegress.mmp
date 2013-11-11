@@ -1,0 +1,39 @@
+// Copyright (c) 2000-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// t_smsregress.mmp
+//
+
+target          t_smsregress.exe
+targettype      exe
+
+CAPABILITY All -TCB
+SOURCEPATH		../src
+source          T_SmsRegress.cpp 
+userinclude     ../inc 
+USERINCLUDE		../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/sms/inc
+USERINCLUDE		../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/base/inc
+USERINCLUDE		../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/server/inc
+USERINCLUDE		../../../../../../mw/messagingmw/messagingfw/msgsrvnstore/server/inc
+USERINCLUDE		../../../../../../mw/messagingmw/messagingfw/biomsgfw/BIOSINC
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+library         euser.lib msgs.lib		//smcm.lib
+library			smstestutils.lib msvtestutils.lib
+library         esock.lib smsu.lib
+
+EPOCSTACKSIZE 0x8000
+
+
+VENDORID 0x70000001
+
+SMPSAFE

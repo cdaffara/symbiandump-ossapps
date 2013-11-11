@@ -1,0 +1,67 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+; 
+; Description: Installation file for STIF UI
+;
+
+; Languages
+&EN
+
+; Package header, uid is the Stifui's uid
+#{"STIF UI"},(0x1028311D),0,1,0,TYPE=SA
+
+; Series60 product id for S60 3.0
+[0x101F7961], 0, 0, 0, {"Series60ProductID"}
+
+; Localised Vendor name
+%{"Nokia"}
+
+; Unique Vendor name
+:"Nokia"
+
+; Logo
+; None
+
+; Package signature - Optional
+; None
+
+; Start of Package body
+
+; Condition blocks
+; None
+
+; Options list
+; None
+
+; Install files
+
+   ;// Note: STIF needs to be installed before STIF UI can be used
+
+  "\epoc32\release\armv5\udeb\Stifui.exe"-"!:\Sys\Bin\Stifui.exe"
+  "\epoc32\data\z\private\10003a3f\apps\Stifui_reg.rsc"-"!:\Private\10003a3f\import\apps\Stifui_reg.rsc"
+  "\epoc32\data\z\Resource\apps\Stifui.rsc"-"!:\Resource\apps\Stifui.rsc"
+
+  "\epoc32\release\armv5\udeb\UITestServerStarter.exe"-"!:\Sys\Bin\UITestServerStarter.exe"
+  "\epoc32\data\z\private\10003a3f\apps\UITestServerStarter_reg.rsc"-"!:\Private\10003a3f\import\apps\UITestServerStarter_reg.rsc"
+  "\epoc32\data\z\Resource\apps\UITestServerStarter.rsc"-"!:\Resource\apps\UITestServerStarter.rsc"  
+
+; Embedded SIS 
+; None
+
+; End of Package body
+
+; PKG dependencies
+; None
+
+; PKG capabilities
+; None

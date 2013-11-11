@@ -1,0 +1,49 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:
+;
+
+
+; Language - standard language definitions
+&EN
+
+; Standard SIS file header
+#{"MemSpy"},(0x2002129F),1,2,0,TYPE=SA
+
+; Supports S60 v 5.2
+[0x20022E6D], 0, 0, 0, {"S60ProductID"}
+
+; Non-localised vendor name
+:"Nokia Corporation"
+
+; Localised vendor names
+%{"Nokia Corporation"}
+
+; Engine:
+"\epoc32\release\armv5\urel\MemSpyDriver.ldd"-"!:\sys\bin\MemSpyDriver.ldd"
+"\epoc32\release\armv5\urel\MemSpyDriverClient.dll"-"!:\sys\bin\MemSpyDriverClient.dll"
+"\epoc32\release\armv5\urel\MemSpyEngine.dll"-"!:\sys\bin\MemSpyEngine.dll"
+"\epoc32\release\armv5\urel\MemSpy.exe"-"!:\sys\bin\MemSpy.exe"
+"\epoc32\release\armv5\urel\MemSpyConsole.exe"-"!:\sys\bin\MemSpyConsole.exe"
+"\epoc32\data\z\private\2002129E\MemSpyEComInterfaceIds.xml"-"c:\private\2002129E\MemSpyEComInterfaceIds.xml"
+"\epoc32\data\z\private\2002129E\MemSpyProcessMemoryTrackingAutoStartConfig.xml"-"c:\private\2002129E\MemSpyProcessMemoryTrackingAutoStartConfig.xml"
+
+; UI:
+"\epoc32\release\armv5\urel\MemSpyUI.exe"-"!:\sys\bin\MemSpyUI.exe"
+"\epoc32\data\z\Resource\apps\MemSpyUI_aif.mif"-"!:\Resource\Apps\MemSpyUI_aif.mif"
+"\epoc32\data\z\Resource\apps\MemSpyUI.rsc"-"!:\Resource\Apps\MemSpyUI.rsc"
+"\epoc32\data\z\private\10003A3F\apps\MemSpyUI_reg.rsc"-"!:\private\10003a3f\import\apps\MemSpyUI_reg.rsc"
+"\epoc32\data\z\private\2002129F\MemSpyEComInterfaceIds.xml"-"c:\private\2002129F\MemSpyEComInterfaceIds.xml"
+"\epoc32\data\z\private\2002129F\MemSpyProcessMemoryTrackingAutoStartConfig.xml"-"c:\private\2002129F\MemSpyProcessMemoryTrackingAutoStartConfig.xml"
+"\epoc32\release\armv5\urel\memspywindowserverhelper.dll"-"!:\sys\bin\memspywindowserverhelper.dll"

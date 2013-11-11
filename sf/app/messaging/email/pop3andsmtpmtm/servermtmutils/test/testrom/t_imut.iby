@@ -1,0 +1,293 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+REM
+REM T_IMUT.IBY
+REM
+
+REM data
+
+REM IMSK script files
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\scriptwithSSLTLS.scr		System\MsgTest\MsgTest\imut\scriptwithSSLTLS.scr
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\scriptwithoutSSLTLS.scr	System\MsgTest\MsgTest\imut\scriptwithoutSSLTLS.scr
+
+REM  IMUT_TRAMSFORM_SEND
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\transform_send\rfc82201.jig	System\MsgTest\msgtest\IMUT\rfc822\transform_send\rfc82201.jig
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\transform_send\rfc82201.txt	System\MsgTest\msgtest\IMUT\rfc822\transform_send\rfc82201.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\transform_send\rfc82202.txt	System\MsgTest\msgtest\IMUT\rfc822\transform_send\rfc82202.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\transform_send\rfc82203.txt	System\MsgTest\msgtest\IMUT\rfc822\transform_send\rfc82203.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\transform_send\rfc82204.txt	System\MsgTest\msgtest\IMUT\rfc822\transform_send\rfc82204.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\transform_send\rfc82205.txt	System\MsgTest\msgtest\IMUT\rfc822\transform_send\rfc82205.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\transform_send\rfc82206.txt	System\MsgTest\msgtest\IMUT\rfc822\transform_send\rfc82206.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\transform_send\rfc82207_single_jp_subject.txt	System\MsgTest\msgtest\IMUT\rfc822\transform_send\rfc82207_single_jp_subject.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\transform_send\rfc82208_long_jp_subject.txt	System\MsgTest\msgtest\IMUT\rfc822\transform_send\rfc82208_long_jp_subject.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\transform_send\rfc82209_garbled_jp_subject.txt	System\MsgTest\msgtest\IMUT\rfc822\transform_send\rfc82209_garbled_jp_subject.txt
+
+REM IMUT_TRANSFORM_SEND
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\transform_send\ASCII_old_ImcvSendOutputText.txt			System\MsgTest\msgtest\IMUT\imcv\transform_send\ASCII_old_ImcvSendOutputText.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\transform_send\ASCII_SDC_Info_ImcvSendOutputText.txt		System\MsgTest\msgtest\IMUT\imcv\transform_send\ASCII_SDC_Info_ImcvSendOutputText.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\transform_send\B64_Info_ImcvSendOutputText.txt			System\MsgTest\msgtest\IMUT\imcv\transform_send\B64_Info_ImcvSendOutputText.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\transform_send\Charset_ASCII_Info_ImcvSendOutputText.txt System\MsgTest\msgtest\IMUT\imcv\transform_send\Charset_ASCII_Info_ImcvSendOutputText.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\transform_send\Charset_Big5_Info_ImcvSendOutputText.txt	System\MsgTest\msgtest\IMUT\imcv\transform_send\Charset_Big5_Info_ImcvSendOutputText.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\transform_send\Charset_JP_Info_ImcvSendOutputText.txt	System\MsgTest\msgtest\IMUT\imcv\transform_send\Charset_JP_Info_ImcvSendOutputText.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\transform_send\Charset_UTF7_Info_ImcvSendOutputText.txt	System\MsgTest\msgtest\IMUT\imcv\transform_send\Charset_UTF7_Info_ImcvSendOutputText.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\transform_send\Charset_UTF8_Info_ImcvSendOutputText.txt	System\MsgTest\msgtest\IMUT\imcv\transform_send\Charset_UTF8_Info_ImcvSendOutputText.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\transform_send\Def_Info_ImcvSendOutputText.txt			System\MsgTest\msgtest\IMUT\imcv\transform_send\Def_Info_ImcvSendOutputText.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\transform_send\None_Info_ImcvSendOutputText.txt			System\MsgTest\msgtest\IMUT\imcv\transform_send\None_Info_ImcvSendOutputText.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\transform_send\QP_Info_ImcvSendOutputText.txt			System\MsgTest\msgtest\IMUT\imcv\transform_send\QP_Info_ImcvSendOutputText.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\transform_send\Service_B64_Info_ImcvSendOutputText.txt	System\MsgTest\msgtest\IMUT\imcv\transform_send\Service_B64_Info_ImcvSendOutputText.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\transform_send\Service_Def_Info_ImcvSendOutputText.txt	System\MsgTest\msgtest\IMUT\imcv\transform_send\Service_Def_Info_ImcvSendOutputText.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\transform_send\Service_QP_Info_ImcvSendOutputText.txt	System\MsgTest\msgtest\IMUT\imcv\transform_send\Service_QP_Info_ImcvSendOutputText.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\transform_send\Service_UTF7_Info_ImcvSendOutputText.txt	System\MsgTest\msgtest\IMUT\imcv\transform_send\Service_UTF7_Info_ImcvSendOutputText.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\transform_send\UTF7_SDC_Info_ImcvSendOutputText.txt		System\MsgTest\msgtest\IMUT\imcv\transform_send\UTF7_SDC_Info_ImcvSendOutputText.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\transform_send\UTF8_old_ImcvSendOutputText.txt			System\MsgTest\msgtest\IMUT\imcv\transform_send\UTF8_old_ImcvSendOutputText.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\transform_send\UU_Info_ImcvSendOutputText.txt			System\MsgTest\msgtest\IMUT\imcv\transform_send\UU_Info_ImcvSendOutputText.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\transform_send\Wrong_SDC_Info_ImcvSendOutputText.txt		System\MsgTest\msgtest\IMUT\imcv\transform_send\Wrong_SDC_Info_ImcvSendOutputText.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\transform_send\CTE_7Bit_Info_ImcvSendOutputText.txt		System\MsgTest\msgtest\IMUT\imcv\transform_send\CTE_7Bit_Info_ImcvSendOutputText.txt
+
+REM IMUT_TRANSFORM_RECEIVE
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\transform_receive\Rfc_01_NONMIME_UTF7.txt			System\MsgTest\msgtest\IMUT\rfc822\transform_receive\Rfc_01_NONMIME_UTF7.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\transform_receive\Rfc_02_NONMIME_ASCII.txt			System\MsgTest\msgtest\IMUT\rfc822\transform_receive\Rfc_02_NONMIME_ASCII.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\transform_receive\Rfc_03_NONMIME_ATTACH_UTF7.txt	System\MsgTest\msgtest\IMUT\rfc822\transform_receive\Rfc_03_NONMIME_ATTACH_UTF7.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\transform_receive\Rfc_04_MIME_UTF7.txt				System\MsgTest\msgtest\IMUT\rfc822\transform_receive\Rfc_04_MIME_UTF7.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\transform_receive\Rfc_05_MIME_Text_PARTS.txt		System\MsgTest\msgtest\IMUT\rfc822\transform_receive\Rfc_05_MIME_Text_PARTS.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\transform_receive\ASCIIEntry_822Headers.txt			System\MsgTest\msgtest\IMUT\imcv\transform_receive\ASCIIEntry_822Headers.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\transform_receive\ASCIIEntry_Files.txt				System\MsgTest\msgtest\IMUT\imcv\transform_receive\ASCIIEntry_Files.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\transform_receive\ASCIIEntry_MimeHeaders.txt			System\MsgTest\msgtest\IMUT\imcv\transform_receive\ASCIIEntry_MimeHeaders.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\transform_receive\ASCIIEntry_RichTextBodies.txt		System\MsgTest\msgtest\IMUT\imcv\transform_receive\ASCIIEntry_RichTextBodies.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\transform_receive\ASCIIEntry_Structure.txt			System\MsgTest\msgtest\IMUT\imcv\transform_receive\ASCIIEntry_Structure.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\transform_receive\NoneEntry_822Headers.txt			System\MsgTest\msgtest\IMUT\imcv\transform_receive\NoneEntry_822Headers.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\transform_receive\NoneEntry_Files.txt				System\MsgTest\msgtest\IMUT\imcv\transform_receive\NoneEntry_Files.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\transform_receive\NoneEntry_MimeHeaders.txt			System\MsgTest\msgtest\IMUT\imcv\transform_receive\NoneEntry_MimeHeaders.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\transform_receive\NoneEntry_RichTextBodies.txt		System\MsgTest\msgtest\IMUT\imcv\transform_receive\NoneEntry_RichTextBodies.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\transform_receive\NoneEntry_Structure.txt			System\MsgTest\msgtest\IMUT\imcv\transform_receive\NoneEntry_Structure.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\transform_receive\UnknownEntry_822Headers.txt		System\MsgTest\msgtest\IMUT\imcv\transform_receive\UnknownEntry_822Headers.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\transform_receive\UnknownEntry_Files.txt				System\MsgTest\msgtest\IMUT\imcv\transform_receive\UnknownEntry_Files.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\transform_receive\UnknownEntry_MimeHeaders.txt		System\MsgTest\msgtest\IMUT\imcv\transform_receive\UnknownEntry_MimeHeaders.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\transform_receive\UnknownEntry_RichTextBodies.txt	System\MsgTest\msgtest\IMUT\imcv\transform_receive\UnknownEntry_RichTextBodies.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\transform_receive\UnknownEntry_Structure.txt			System\MsgTest\msgtest\IMUT\imcv\transform_receive\UnknownEntry_Structure.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\transform_receive\UTF7Entry_822Headers.txt			System\MsgTest\msgtest\IMUT\imcv\transform_receive\UTF7Entry_822Headers.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\transform_receive\UTF7Entry_Files.txt				System\MsgTest\msgtest\IMUT\imcv\transform_receive\UTF7Entry_Files.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\transform_receive\UTF7Entry_MimeHeaders.txt			System\MsgTest\msgtest\IMUT\imcv\transform_receive\UTF7Entry_MimeHeaders.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\transform_receive\UTF7Entry_RichTextBodies.txt		System\MsgTest\msgtest\IMUT\imcv\transform_receive\UTF7Entry_RichTextBodies.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\transform_receive\UTF7Entry_Structure.txt			System\MsgTest\msgtest\IMUT\imcv\transform_receive\UTF7Entry_Structure.txt
+
+REM IMCV PARSE
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\A.Simple\Entry_822Headers.txt		  	System\MsgTest\msgtest\IMUT\imcv\parse\A.Simple\Entry_822Headers.txt          
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\A.Simple\Entry_Files.txt			  	System\MsgTest\msgtest\IMUT\imcv\parse\A.Simple\Entry_Files.txt               
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\A.Simple\Entry_MimeHeaders.txt	  	System\MsgTest\msgtest\IMUT\imcv\parse\A.Simple\Entry_MimeHeaders.txt         
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\A.Simple\Entry_RichTextBodies.txt		System\MsgTest\msgtest\IMUT\imcv\parse\A.Simple\Entry_RichTextBodies.txt      
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\A.Simple\Entry_Structure.txt		  	System\MsgTest\msgtest\IMUT\imcv\parse\A.Simple\Entry_Structure.txt           
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\A.Simple\ImcvSendOutputText.txt	  	System\MsgTest\msgtest\IMUT\imcv\parse\A.Simple\ImcvSendOutputText.txt        
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\A.Simple\ImcvSendOutputText_MIME.txt	System\MsgTest\msgtest\IMUT\imcv\parse\A.Simple\ImcvSendOutputText_MIME.txt   
+REM 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\B.Mime\Entry_822Headers.txt			System\MsgTest\msgtest\IMUT\imcv\parse\B.Mime\Entry_822Headers.txt       
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\B.Mime\Entry_Files.txt			 	System\MsgTest\msgtest\IMUT\imcv\parse\B.Mime\Entry_Files.txt            
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\B.Mime\Entry_MimeHeaders.txt			System\MsgTest\msgtest\IMUT\imcv\parse\B.Mime\Entry_MimeHeaders.txt      
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\B.Mime\Entry_RichTextBodies.txt		System\MsgTest\msgtest\IMUT\imcv\parse\B.Mime\Entry_RichTextBodies.txt   
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\B.Mime\Entry_Structure.txt		 	System\MsgTest\msgtest\IMUT\imcv\parse\B.Mime\Entry_Structure.txt        
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\B.Mime\ImcvSendOutputText.txt			System\MsgTest\msgtest\IMUT\imcv\parse\B.Mime\ImcvSendOutputText.txt     
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\B.Mime\ImcvSendOutputText_MIME.txt 	System\MsgTest\msgtest\IMUT\imcv\parse\B.Mime\ImcvSendOutputText_MIME.txt
+REM 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\C.Multipart\Entry_822Headers.txt			System\MsgTest\msgtest\IMUT\imcv\parse\C.Multipart\Entry_822Headers.txt       
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\C.Multipart\Entry_Files.txt				System\MsgTest\msgtest\IMUT\imcv\parse\C.Multipart\Entry_Files.txt            
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\C.Multipart\Entry_MimeHeaders.txt			System\MsgTest\msgtest\IMUT\imcv\parse\C.Multipart\Entry_MimeHeaders.txt      
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\C.Multipart\Entry_RichTextBodies.txt		System\MsgTest\msgtest\IMUT\imcv\parse\C.Multipart\Entry_RichTextBodies.txt   
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\C.Multipart\Entry_Structure.txt			System\MsgTest\msgtest\IMUT\imcv\parse\C.Multipart\Entry_Structure.txt        
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\C.Multipart\ImcvSendOutputText.txt		System\MsgTest\msgtest\IMUT\imcv\parse\C.Multipart\ImcvSendOutputText.txt     
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\C.Multipart\ImcvSendOutputText_MIME.txt	System\MsgTest\msgtest\IMUT\imcv\parse\C.Multipart\ImcvSendOutputText_MIME.txt
+REM 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\D.Encoding\Entry_822Headers.txt			System\MsgTest\msgtest\IMUT\imcv\parse\D.Encoding\Entry_822Headers.txt       
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\D.Encoding\Entry_Files.txt			  	System\MsgTest\msgtest\IMUT\imcv\parse\D.Encoding\Entry_Files.txt            
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\D.Encoding\Entry_MimeHeaders.txt			System\MsgTest\msgtest\IMUT\imcv\parse\D.Encoding\Entry_MimeHeaders.txt      
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\D.Encoding\Entry_RichTextBodies.txt		System\MsgTest\msgtest\IMUT\imcv\parse\D.Encoding\Entry_RichTextBodies.txt   
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\D.Encoding\Entry_Structure.txt		  	System\MsgTest\msgtest\IMUT\imcv\parse\D.Encoding\Entry_Structure.txt        
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\D.Encoding\ImcvSendOutputText.txt			System\MsgTest\msgtest\IMUT\imcv\parse\D.Encoding\ImcvSendOutputText.txt     
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\D.Encoding\ImcvSendOutputText_MIME.txt  	System\MsgTest\msgtest\IMUT\imcv\parse\D.Encoding\ImcvSendOutputText_MIME.txt
+REM 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\E.Charsets\Entry_822Headers.txt			System\MsgTest\msgtest\IMUT\imcv\parse\E.Charsets\Entry_822Headers.txt        
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\E.Charsets\Entry_Files.txt				System\MsgTest\msgtest\IMUT\imcv\parse\E.Charsets\Entry_Files.txt             
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\E.Charsets\Entry_MimeHeaders.txt			System\MsgTest\msgtest\IMUT\imcv\parse\E.Charsets\Entry_MimeHeaders.txt       
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\E.Charsets\Entry_RichTextBodies.txt		System\MsgTest\msgtest\IMUT\imcv\parse\E.Charsets\Entry_RichTextBodies.txt    
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\E.Charsets\Entry_Structure.txt			System\MsgTest\msgtest\IMUT\imcv\parse\E.Charsets\Entry_Structure.txt         
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\E.Charsets\ImcvSendOutputText.txt			System\MsgTest\msgtest\IMUT\imcv\parse\E.Charsets\ImcvSendOutputText.txt      
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\E.Charsets\ImcvSendOutputText_MIME.txt	System\MsgTest\msgtest\IMUT\imcv\parse\E.Charsets\ImcvSendOutputText_MIME.txt 
+REM 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\F.Header\Entry_822Headers.txt			System\MsgTest\msgtest\IMUT\imcv\parse\F.Header\Entry_822Headers.txt        
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\F.Header\Entry_Files.txt			 	System\MsgTest\msgtest\IMUT\imcv\parse\F.Header\Entry_Files.txt             
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\F.Header\Entry_MimeHeaders.txt	 	System\MsgTest\msgtest\IMUT\imcv\parse\F. Header\Entry_MimeHeaders.txt       
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\F.Header\Entry_RichTextBodies.txt		System\MsgTest\msgtest\IMUT\imcv\parse\F.Header\Entry_RichTextBodies.txt    
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\F.Header\Entry_Structure.txt		 	System\MsgTest\msgtest\IMUT\imcv\parse\F.Header\Entry_Structure.txt         
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\F.Header\ImcvSendOutputText.txt	  	System\MsgTest\msgtest\IMUT\imcv\parse\F.Header\ImcvSendOutputText.txt      
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\F.Header\ImcvSendOutputText_MIME.txt	System\MsgTest\msgtest\IMUT\imcv\parse\F.Header\ImcvSendOutputText_MIME.txt 
+REM 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\G.Mhtml\Entry_822Headers.txt			System\MsgTest\msgtest\IMUT\imcv\parse\G.Mhtml\Entry_822Headers.txt        
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\G.Mhtml\Entry_Files.txt			  	System\MsgTest\msgtest\IMUT\imcv\parse\G.Mhtml\Entry_Files.txt             
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\G.Mhtml\Entry_MimeHeaders.txt			System\MsgTest\msgtest\IMUT\imcv\parse\G.Mhtml\Entry_MimeHeaders.txt       
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\G.Mhtml\Entry_RichTextBodies.txt		System\MsgTest\msgtest\IMUT\imcv\parse\G.Mhtml\Entry_RichTextBodies.txt    
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\G.Mhtml\Entry_Structure.txt		  	System\MsgTest\msgtest\IMUT\imcv\parse\G.Mhtml\Entry_Structure.txt         
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\G.Mhtml\ImcvSendOutputText.txt	  	System\MsgTest\msgtest\IMUT\imcv\parse\G.Mhtml\ImcvSendOutputText.txt      
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\G.Mhtml\ImcvSendOutputText_MIME.txt 	System\MsgTest\msgtest\IMUT\imcv\parse\G.Mhtml\ImcvSendOutputText_MIME.txt 
+REM 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\H.Embedded\Entry_822Headers.txt			System\MsgTest\msgtest\IMUT\imcv\parse\H.Embedded\Entry_822Headers.txt          
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\H.Embedded\Entry_Files.txt			 	System\MsgTest\msgtest\IMUT\imcv\parse\H.Embedded\Entry_Files.txt               
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\H.Embedded\Entry_MimeHeaders.txt			System\MsgTest\msgtest\IMUT\imcv\parse\H.Embedded\Entry_MimeHeaders.txt         
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\H.Embedded\Entry_RichTextBodies.txt		System\MsgTest\msgtest\IMUT\imcv\parse\H.Embedded\Entry_RichTextBodies.txt      
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\H.Embedded\Entry_Structure.txt		 	System\MsgTest\msgtest\IMUT\imcv\parse\H.Embedded\Entry_Structure.txt           
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\H.Embedded\ImcvSendOutputText.txt			System\MsgTest\msgtest\IMUT\imcv\parse\H.Embedded\ImcvSendOutputText.txt        
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\imcv\parse\H.Embedded\ImcvSendOutputText_MIME.txt 	System\MsgTest\msgtest\IMUT\imcv\parse\H. Embedded\ImcvSendOutputText_MIME.txt   
+REM 
+REM REM RFC822 PARSE
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\A.Simple\rfc_0002.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\A.Simple\rfc_0002.txt
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\A.Simple\rfc_0006.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\A.Simple\rfc_0006.txt
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\A.Simple\rfc_0007.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\A.Simple\rfc_0007.txt
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\A.Simple\rfc_0008.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\A.Simple\rfc_0008.txt
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\A.Simple\rfc_0009.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\A.Simple\rfc_0009.txt
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\A.Simple\rfc_0010.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\A.Simple\rfc_0010.txt
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\A.Simple\rfc_0011.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\A.Simple\rfc_0011.txt
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\A.Simple\rfc_0061.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\A.Simple\rfc_0061.txt
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\A.Simple\rfc_0070.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\A.Simple\rfc_0070.txt
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\A.Simple\rfc_0072.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\A.Simple\rfc_0072.txt
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\A.Simple\rfc_0073_no_received_date.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\A.Simple\rfc_0073_no_received_date.txt
+REM 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\B.Mime\rfc_0001.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\B.Mime\rfc_0001.txt
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\B.Mime\rfc_0003.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\B.Mime\rfc_0003.txt
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\B.Mime\rfc_0004.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\B.Mime\rfc_0004.txt
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\B.Mime\rfc_0005.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\B.Mime\rfc_0005.txt
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\B.Mime\rfc_0012.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\B.Mime\rfc_0012.txt
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\B.Mime\rfc_0013.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\B.Mime\rfc_0013.txt
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\B.Mime\rfc_0014.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\B.Mime\rfc_0014.txt
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\B.Mime\rfc_0015.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\B.Mime\rfc_0015.txt
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\B.Mime\rfc_0016.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\B.Mime\rfc_0016.txt
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\B.Mime\rfc_0017.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\B.Mime\rfc_0017.txt
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\B.Mime\rfc_0018.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\B.Mime\rfc_0018.txt
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\B.Mime\rfc_0019.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\B.Mime\rfc_0019.txt
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\B.Mime\rfc_0020.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\B.Mime\rfc_0020.txt
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\B.Mime\rfc_0021.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\B.Mime\rfc_0021.txt
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\B.Mime\rfc_0022.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\B.Mime\rfc_0022.txt
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\B.Mime\rfc_0088.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\B.Mime\rfc_0088.txt
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\B.Mime\rfc_0090.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\B.Mime\rfc_0090.txt
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\B.Mime\rfc_0091.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\B.Mime\rfc_0091.txt
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\B.Mime\rfc_0092.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\B.Mime\rfc_0092.txt
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\B.Mime\rfc_x-vcard.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\B.Mime\rfc_x-vcard.txt
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\B.Mime\rfc_0093_blank_cte.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\B.Mime\rfc_0093_blank_cte.txt
+REM 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\C.Multipart\rfc_0023.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\C.Multipart\rfc_0023.txt 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\C.Multipart\rfc_0024.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\C.Multipart\rfc_0024.txt 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\C.Multipart\rfc_0025.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\C.Multipart\rfc_0025.txt 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\C.Multipart\rfc_0026.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\C.Multipart\rfc_0026.txt 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\C.Multipart\rfc_0027.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\C.Multipart\rfc_0027.txt 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\C.Multipart\rfc_0028.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\C.Multipart\rfc_0028.txt 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\C.Multipart\rfc_0029.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\C.Multipart\rfc_0029.txt 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\C.Multipart\rfc_0037.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\C.Multipart\rfc_0037.txt 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\C.Multipart\rfc_0038.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\C.Multipart\rfc_0038.txt 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\C.Multipart\rfc_0039.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\C.Multipart\rfc_0039.txt 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\C.Multipart\rfc_0040.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\C.Multipart\rfc_0040.txt 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\C.Multipart\rfc_0041.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\C.Multipart\rfc_0041.txt 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\C.Multipart\rfc_0042.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\C.Multipart\rfc_0042.txt 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\C.Multipart\rfc_0043.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\C.Multipart\rfc_0043.txt 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\C.Multipart\rfc_0052.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\C.Multipart\rfc_0052.txt 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\C.Multipart\rfc_0053.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\C.Multipart\rfc_0053.txt 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\C.Multipart\rfc_0054.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\C.Multipart\rfc_0054.txt 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\C.Multipart\rfc_0055.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\C.Multipart\rfc_0055.txt 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\C.Multipart\rfc_0056.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\C.Multipart\rfc_0056.txt 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\C.Multipart\rfc_0057.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\C.Multipart\rfc_0057.txt 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\C.Multipart\rfc_0058.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\C.Multipart\rfc_0058.txt 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\C.Multipart\rfc_0059.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\C.Multipart\rfc_0059.txt 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\C.Multipart\rfc_0060.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\C.Multipart\rfc_0060.txt 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\C.Multipart\rfc_0062.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\C.Multipart\rfc_0062.txt 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\C.Multipart\rfc_0063.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\C.Multipart\rfc_0063.txt 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\C.Multipart\rfc_0064.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\C.Multipart\rfc_0064.txt 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\C.Multipart\rfc_0065.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\C.Multipart\rfc_0065.txt 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\C.Multipart\rfc_0066.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\C.Multipart\rfc_0066.txt 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\C.Multipart\rfc_0067.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\C.Multipart\rfc_0067.txt 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\C.Multipart\rfc_0068.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\C.Multipart\rfc_0068.txt 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\C.Multipart\rfc_0071.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\C.Multipart\rfc_0071.txt 
+REM 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\D.Encoding\rfc_0030.txt				System\MsgTest\msgtest\IMUT\rfc822\parse\D.Encoding\rfc_0030.txt
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\D.Encoding\rfc_0031.txt				System\MsgTest\msgtest\IMUT\rfc822\parse\D.Encoding\rfc_0031.txt
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\D.Encoding\rfc_0032.txt				System\MsgTest\msgtest\IMUT\rfc822\parse\D.Encoding\rfc_0032.txt
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\D.Encoding\rfc_0033.txt				System\MsgTest\msgtest\IMUT\rfc822\parse\D.Encoding\rfc_0033.txt
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\D.Encoding\rfc_0034.txt				System\MsgTest\msgtest\IMUT\rfc822\parse\D.Encoding\rfc_0034.txt
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\D.Encoding\rfc_0035.txt				System\MsgTest\msgtest\IMUT\rfc822\parse\D.Encoding\rfc_0035.txt
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\D.Encoding\rfc_0036.txt				System\MsgTest\msgtest\IMUT\rfc822\parse\D.Encoding\rfc_0036.txt
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\D.Encoding\rfc_0044.txt				System\MsgTest\msgtest\IMUT\rfc822\parse\D.Encoding\rfc_0044.txt
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\D.Encoding\rfc_0045.txt				System\MsgTest\msgtest\IMUT\rfc822\parse\D.Encoding\rfc_0045.txt
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\D.Encoding\rfc_0046.txt				System\MsgTest\msgtest\IMUT\rfc822\parse\D.Encoding\rfc_0046.txt
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\D.Encoding\rfc_0047.txt				System\MsgTest\msgtest\IMUT\rfc822\parse\D.Encoding\rfc_0047.txt
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\D.Encoding\rfc_0048.txt				System\MsgTest\msgtest\IMUT\rfc822\parse\D.Encoding\rfc_0048.txt
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\D.Encoding\rfc_0049.txt				System\MsgTest\msgtest\IMUT\rfc822\parse\D.Encoding\rfc_0049.txt
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\D.Encoding\rfc_0050.txt				System\MsgTest\msgtest\IMUT\rfc822\parse\D.Encoding\rfc_0050.txt
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\D.Encoding\rfc_0051.txt				System\MsgTest\msgtest\IMUT\rfc822\parse\D.Encoding\rfc_0051.txt
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\D.Encoding\rfc_0077.txt				System\MsgTest\msgtest\IMUT\rfc822\parse\D.Encoding\rfc_0077.txt
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\D.Encoding\rfc_0078.txt				System\MsgTest\msgtest\IMUT\rfc822\parse\D.Encoding\rfc_0078.txt
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\D.Encoding\rfc_0085.txt				System\MsgTest\msgtest\IMUT\rfc822\parse\D.Encoding\rfc_0085.txt
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\D.Encoding\rfc_0101.txt				System\MsgTest\msgtest\IMUT\rfc822\parse\D.Encoding\rfc_0101.txt
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\D.Encoding\rfc_inline_Base64.txt	System\MsgTest\msgtest\IMUT\rfc822\parse\D.Encoding\rfc_inline_Base64.txt
+REM 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\E.Charsets\rfc_0098.txt			System\MsgTest\msgtest\IMUT\rfc822\parse\E.Charsets\rfc_0098.txt        
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\E.Charsets\rfc_0099.txt			System\MsgTest\msgtest\IMUT\rfc822\parse\E.Charsets\rfc_0099.txt        
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\E.Charsets\rfc_2022_ex1.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\E.Charsets\rfc_2022_ex1.txt    
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\E.Charsets\rfc_amazon_co_jp.txt	System\MsgTest\msgtest\IMUT\rfc822\parse\E.Charsets\rfc_amazon_co_jp.txt
+REM 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\F.Header\rfc_0073.txt			System\MsgTest\msgtest\IMUT\rfc822\parse\F.Header\rfc_0073.txt 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\F.Header\rfc_0074.txt			System\MsgTest\msgtest\IMUT\rfc822\parse\F.Header\rfc_0074.txt 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\F.Header\rfc_0075.txt			System\MsgTest\msgtest\IMUT\rfc822\parse\F.Header\rfc_0075.txt 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\F.Header\rfc_0076.txt			System\MsgTest\msgtest\IMUT\rfc822\parse\F.Header\rfc_0076.txt 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\F.Header\rfc_0079.txt			System\MsgTest\msgtest\IMUT\rfc822\parse\F.Header\rfc_0079.txt 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\F.Header\rfc_0080.txt			System\MsgTest\msgtest\IMUT\rfc822\parse\F.Header\rfc_0080.txt 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\F.Header\rfc_0081.txt			System\MsgTest\msgtest\IMUT\rfc822\parse\F.Header\rfc_0081.txt 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\F.Header\rfc_0083.txt			System\MsgTest\msgtest\IMUT\rfc822\parse\F.Header\rfc_0083.txt 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\F.Header\rfc_0084.txt			System\MsgTest\msgtest\IMUT\rfc822\parse\F.Header\rfc_0084.txt 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\F.Header\rfc_0092.txt			System\MsgTest\msgtest\IMUT\rfc822\parse\F.Header\rfc_0092.txt 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\F.Header\rfc_0093.txt			System\MsgTest\msgtest\IMUT\rfc822\parse\F.Header\rfc_0093.txt 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\F.Header\rfc_0094.txt			System\MsgTest\msgtest\IMUT\rfc822\parse\F.Header\rfc_0094.txt 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\F.Header\rfc_0095.txt			System\MsgTest\msgtest\IMUT\rfc822\parse\F.Header\rfc_0095.txt 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\F.Header\rfc_0096.txt			System\MsgTest\msgtest\IMUT\rfc822\parse\F.Header\rfc_0096.txt 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\F.Header\rfc_0097.txt			System\MsgTest\msgtest\IMUT\rfc822\parse\F.Header\rfc_0097.txt 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\F.Header\rfc_0100.txt			System\MsgTest\msgtest\IMUT\rfc822\parse\F.Header\rfc_0100.txt 
+REM 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\G.Mhtml\rfc_0069.txt						System\MsgTest\msgtest\IMUT\rfc822\parse\G.Mhtml\rfc_0069.txt                 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\G.Mhtml\rfc_0082.txt						System\MsgTest\msgtest\IMUT\rfc822\parse\G.Mhtml\rfc_0082.txt                 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\G.Mhtml\rfc_0086.txt						System\MsgTest\msgtest\IMUT\rfc822\parse\G.Mhtml\rfc_0086.txt                 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\G.Mhtml\rfc_0087.txt						System\MsgTest\msgtest\IMUT\rfc822\parse\G.Mhtml\rfc_0087.txt                 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\G.Mhtml\rfc_0089.txt						System\MsgTest\msgtest\IMUT\rfc822\parse\G.Mhtml\rfc_0089.txt                 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\G.Mhtml\rfc_0090.txt						System\MsgTest\msgtest\IMUT\rfc822\parse\G.Mhtml\rfc_0090.txt                 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\G.Mhtml\rfc_0091.txt						System\MsgTest\msgtest\IMUT\rfc822\parse\G.Mhtml\rfc_0091.txt                 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\G.Mhtml\rfc_0102_digest.txt					System\MsgTest\msgtest\IMUT\rfc822\parse\G.Mhtml\rfc_0102_digest.txt          
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\G.Mhtml\rfc_0103_reverse.txt				System\MsgTest\msgtest\IMUT\rfc822\parse\G.Mhtml\rfc_0103_reverse.txt         
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\G.Mhtml\rfc_0104_rfc822.txt					System\MsgTest\msgtest\IMUT\rfc822\parse\G.Mhtml\rfc_0104_rfc822.txt          
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\G.Mhtml\RFC_0105_encoded_filename.TXT		System\MsgTest\msgtest\IMUT\rfc822\parse\G. Mhtml\RFC_0105_encoded_filename.TXT
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\G.Mhtml\rfc_0105_japanese.txt				System\MsgTest\msgtest\IMUT\rfc822\parse\G.Mhtml\rfc_0105_japanese.txt        
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\G.Mhtml\rfc_0106_japanese.txt				System\MsgTest\msgtest\IMUT\rfc822\parse\G.Mhtml\rfc_0106_japanese.txt        
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\G.Mhtml\rfc_0500.txt						System\MsgTest\msgtest\IMUT\rfc822\parse\G.Mhtml\rfc_0500.txt                 
+REM 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\H.Embedded\RFC_0105_encoded_filename.TXT									System\MsgTest\msgtest\IMUT\rfc822\parse\H.Embedded\RFC_0105_encoded_filename.TXT                              
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\H.Embedded\rfc_106_mx5-d_Digest_V99.txt										System\MsgTest\msgtest\IMUT\rfc822\parse\H.Embedded\rfc_106_mx5-d_Digest_V99.txt                               
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\H.Embedded\rfc_107_Really_mad_nested_message.txt							System\MsgTest\msgtest\IMUT\rfc822\parse\H.Embedded\rfc_107_Really_mad_nested message.txt                      
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\H.Embedded\rfc_108_Chicken_Oriental_pathologically_nested_message.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\H.Embedded\rfc_108_Chicken_Oriental_pathologically_nested_message.txt 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\H.Embedded\rfc_109_Chicken_Oriental_pathologically_nested_message.txt		System\MsgTest\msgtest\IMUT\rfc822\parse\H.Embedded\rfc_109_Chicken_Oriental_pathologically_nested_message.txt 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\H.Embedded\rfc_110_inline_plus_attached_gifs.txt							System\MsgTest\msgtest\IMUT\rfc822\parse\H.Embedded\rfc_110_inline_plus_attached_gifs.txt                      
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\H.Embedded\rfc_111_empty_embedded.txt										System\MsgTest\msgtest\IMUT\rfc822\parse\H.Embedded\rfc_111_empty_embedded.txt                                 
+REM data=EPOCROOT##epoc32\wins\C\msgtest\imut\rfc822\parse\H.Embedded\rfc_112_multipart_report.txt										System\MsgTest\msgtest\IMUT\rfc822\parse\H.Embedded\rfc_112_multipart_report.txt                               
+  
+REM harnesses
+file=ABI_DIR\BUILD_DIR\T_IMUT_PARSE.exe	   			System\MsgTest\T_IMUT_PARSE.exe
+file=ABI_DIR\BUILD_DIR\T_IMCV_TRANSFORM_SEND.exe	System\MsgTest\T_IMCV_TRANSFORM_SEND.exe
+file=ABI_DIR\BUILD_DIR\T_IMCV_TRANSFORM_RECEIVE.exe	System\MsgTest\T_IMCV_TRANSFORM_RECEIVE.exe
+file=ABI_DIR\BUILD_DIR\T_MSGCONNTEST.exe			System\MsgTest\T_MSGCONNTEST.exe
+ 

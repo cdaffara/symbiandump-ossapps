@@ -1,0 +1,83 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+PRINT Run TZ Rules Test
+
+LOAD_SUITE TestCalInterimApiSuite
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TZRule-0058AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-TZRule-0058AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - Non Functional Requirements Calendar Design R1 R2
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Repeat.003 Repeat/004
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Verifying Time Zone Rules on a repeating fixed entry
+//! @SYMTestActions Set local time zone setting to Europe/London.  Create 2 repeating entries, and set time zone rule by
+//! fecthing a particular time zone rule and using the current local time zone, Store entry, fecth entry and  verify time zone rules
+//! @SYMTestExpectedResults Time Zone rules should match with the time zone rules for that local time zone
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\testdata\TestCalInterimApiTZRules.ini london
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCreateRptTZRule \CITCalInterimApi\testdata\TestCalInterimApiTZRules.ini createRptEntry
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiVerifyTZRules \CITCalInterimApi\testdata\TestCalInterimApiTZRules.ini VerifyRptEntry
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCreateRptTZRule \CITCalInterimApi\testdata\TestCalInterimApiTZRules.ini createRptEntry1
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TZRule-0058AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TZRule-0062AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-TZRule-0062AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - Non Functional Requirements Calendar Design R1 R2
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Repeat.003 Repeat/004
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Repeating Time Zone Rule setting operation on a repeating fixed entry (soak)
+//! @SYMTestActions Create repeating fixed entry and repeat setting time zone rule using the local time setting.
+//		    Create repeating fixed entry and repeat setting time zone rule using fecthed time zone for a particuar time zone
+//! @SYMTestExpectedResults Setting time zone rules multiple times should have no effect
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\testdata\TestCalInterimApiTZRules.ini london
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCreateRptTZRule \CITCalInterimApi\testdata\TestCalInterimApiTZRules.ini createRptEntry
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiVerifyTZRules \CITCalInterimApi\testdata\TestCalInterimApiTZRules.ini VerifyRptEntry
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCreateRptTZRule \CITCalInterimApi\testdata\TestCalInterimApiTZRules.ini createRptEntry1
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TZRule-0062AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TZRule-0063AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-TZRule-0063AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - Non Functional Requirements Calendar Design R1 R2
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Repeat.003 Repeat/004
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Setting Time Zone Rules on a floating and fixed entry (negative)
+//! @SYMTestActions Create floating and fxied entry, and attempt to create TZ rule
+//! @SYMTestExpectedResults Time Zone rules should not be set and should not return KErrNotFound
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\testdata\TestCalInterimApiTZRules.ini london
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetTZRuleEntry \CITCalInterimApi\testdata\TestCalInterimApiTZRules.ini createEntry
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TZRule-0063AP-1090HP
+
+PREFIX RUN_UTILS 
+MakeReadWrite 	c:\private\10003a5b\CITTZRules.dat
+DeleteFile		c:\private\10003a5b\CITTZRules.dat
+REMOVE_PREFIX

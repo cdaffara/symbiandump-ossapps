@@ -1,0 +1,136 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+* 
+* Description: This file defines UITestServerStarter resources.
+*
+*/
+
+//  RESOURCE IDENTIFIER
+NAME UITE	// 4 letter ID
+
+
+//  INCLUDES
+#include <eikon.rh>
+#include <avkon.rsg>
+#include <avkon.rh>
+#include <appinfo.rh>
+#include "UITestServerStarter.hrh"
+#include "UITestServerStarter.rls"
+
+//  RESOURCE DEFINITIONS
+// -----------------------------------------------------------------------------
+//
+//	Define the resource file signature
+//	This resource should be empty.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE RSS_SIGNATURE
+	{
+	}
+
+// -----------------------------------------------------------------------------
+//
+//	Default Document Name
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE TBUF r_default_document_name
+	{
+	buf="UITE";
+	}
+
+// -----------------------------------------------------------------------------
+//
+//	Define default menu and CBA key.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE EIK_APP_INFO
+	{
+	//menubar = r_menubar;
+	cba = R_AVKON_SOFTKEYS_EXIT;
+	}
+
+
+// -----------------------------------------------------------------------------
+//
+//   r_menubar
+//   Main menubar
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE MENU_BAR r_menubar
+	{
+	titles =
+		{
+		MENU_TITLE { menu_pane = r_menu; }
+		};
+	}
+
+
+// -----------------------------------------------------------------------------
+//
+//   r_menu
+//   Menu for "Options"
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_menu
+	{
+	items =
+		{
+		MENU_ITEM
+				{
+				command = EAknSoftkeyExit;
+				txt = qtn_exit;
+				}
+		};
+	}
+
+// -----------------------------------------------------------------------------
+//
+// About dialog resource.
+//
+// -----------------------------------------------------------------------------
+//
+// None
+
+// -----------------------------------------------------------------------------
+//
+// Resources for messages.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE TBUF32 r_caption_string { buf=qtn_caption_string; }
+
+// ---------------------------------------------------------------------------- 
+//
+// r_localisable_app_info
+//
+// ---------------------------------------------------------------------------- 
+//
+RESOURCE LOCALISABLE_APP_INFO r_localisable_app_info
+	{
+	short_caption = qtn_caption_string;
+	caption_and_icon = 
+	CAPTION_AND_ICON_INFO
+		{
+		caption = qtn_caption_string;
+
+		number_of_icons = 1;
+	   	icon_file = "\\resource\\apps\\UITestServerStarter.mif";
+		};
+	}
+
+// End of File

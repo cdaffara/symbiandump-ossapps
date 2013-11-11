@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service>
+    <name>calendarwidgetplugin</name>
+    <filepath>z:/private/20022F35/import/widgetregistry/2002C35A/calendarwidgetplugin.qtplugin</filepath>
+    <description>shows calendar events.</description>
+    <interface>
+        <name>com.nokia.symbian.IHomeScreenWidget</name>
+        <version>1.0</version>
+        <description>Calendar widget</description>
+        <capabilities></capabilities>
+        <customproperty key="iconuri">qtg_large_calendar.png</customproperty>
+        <customproperty key="title">CalendarWidget</customproperty>
+    </interface>
+</service>

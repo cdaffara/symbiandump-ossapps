@@ -1,0 +1,23 @@
+<?XML version="1.0" ?>
+<!DOCTYPE SMIL PUBLIC "-//W3C//DTD SMIL 2.0 Basic//EN"
+"http://www.w3.org/TR/REC-smil/2000/SMIL20Basic.dtd">
+
+<!-- Focus of this test: body element, structure variations -->
+<!-- Focus of this test: body element, structure variations -->
+<!-- A number of 'body' structure variations appear elsewhere; these are some additional ones -->
+<!-- 'body' contains a number of 'anchor' elements -->
+<smil xmlns="http://www.w3.org/TR/REC-smil/2000/SMIL20/Basic">
+   <head>
+      <!-- This is a "landscape" screen -->
+      <layout>
+         <root-layout width="352" height="144"/>
+         <region id="source" width="176" height="144" left="0" top="0"/>
+         <region id="destination" width="176" height="144" left="176" top="0"/>
+      </layout>
+   </head>
+   <body>
+      <!-- Spatial anchors -->
+      <anchor coords="5,5,50,50" target="destination" href="http://www.example.org/AudioVideo"/>
+      <anchor coords="60,5,100,50" target="destination" nohref="nohref"/>
+   </body>
+</smil>

@@ -1,0 +1,44 @@
+/*
+* Copyright (c) 2002 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: 
+*     Contact model ECOM plugin resource file
+*
+*/
+
+
+#include <ecom/registryinfo.rh>
+#include "cntsortpluginuid.h"
+
+RESOURCE REGISTRY_INFO theInfo
+	{
+	dll_uid = KCntModelSortPluginDllUID3;
+	interfaces = 
+		{
+		INTERFACE_INFO
+			{
+			interface_uid = KCntModelSortPluginInterfaceUID;
+			implementations = 
+				{
+				IMPLEMENTATION_INFO
+					{
+					implementation_uid = KCntModelSortPluginImplementationUID;
+					version_no = 1;
+					display_name = "Contacts Sort Plugin";
+					default_data = "/default";
+					opaque_data = "";
+					}
+				};
+			}
+		};
+	}

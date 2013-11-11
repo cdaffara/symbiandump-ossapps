@@ -1,0 +1,61 @@
+/*
+* Copyright (c) 2002-2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*
+*/
+
+
+
+#ifndef IMAGEPRINTAPP_HRH
+#define IMAGEPRINTAPP_HRH
+
+enum TCustomControlsIDs
+    {
+    EPrintProgressNote = 0x2000,
+    EPrintWaitNote,
+    ENoPrintersConfirmation,
+    EBitmapCtrl,
+    EBrandingBitmap
+    };
+
+// Commands for preview view
+enum TPreviewView
+    {
+    ECmdPrint = 0x1000,
+    ECmdPrintSettings,
+    ECmdPrintNumberOfCopies,
+    ECmdPrintHelp = EAknCmdHelp
+    };
+
+// Commands for the setting view's HandleCommandL()
+enum TSettingsViewCommands
+    {
+    ESettingsChangeItem = 0x2200,
+    ESettingsPrint,
+    ESettingsExit    
+    };
+
+enum TImageSelectionViewCommands
+    {
+    ESelectMarked = 0x2400
+    };
+
+// View state for the binary setting items
+enum TSettingsViewState
+    {
+    EOff = 0,
+    EOn = 1
+    };
+
+#endif      // IMAGEPRINTAPP_HRH

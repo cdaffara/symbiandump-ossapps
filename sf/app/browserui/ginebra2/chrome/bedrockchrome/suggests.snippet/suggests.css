@@ -1,0 +1,114 @@
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+/* for fixed position images such as topshadow.png */
+img.floatImg {
+    position: fixed;
+    left: 0px;
+    width: 100%;
+}
+
+/* the topshadow image goes at top of list behind the text */
+img#TopShadowImgId {
+    top: 0px;
+    height: 20px;
+    z-index: 0;
+}
+
+#PageBorderId {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: white;
+    border-left: 2px #2a3447 solid;
+    border-right: 2px #2a3447 solid;
+    border-bottom: 2px #2a3447 solid;
+    -webkit-border-bottom-left-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+    -webkit-user-select: none;
+    z-index: -1;
+}
+
+#PageBottomShadowId {
+    position: fixed;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    height: 23px;
+    background-image: url(icons/bottomshadow.png);
+    background-repeat: repeat-x;
+    -webkit-border-bottom-left-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+    z-index: -1;
+}
+
+/* make sure content apears over images */
+#SuggestsId {
+    position: relative;
+    z-index: 2;
+}
+
+.SuggestView {
+    overflow-y: hidden;
+    height: 100%;
+}
+
+ul#suggestUlId {
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+}
+
+ul#suggestUlId a {
+    display: block;
+    text-decoration: none;
+}
+
+span.aTitle {
+    color: blue;
+    font-size: 20px;
+}
+
+span.aUrl {
+    color: #999999;
+    font-size: 16px;
+}
+
+ul#suggestUlId li#searchLiId>a {
+    /* between padding and height, total height is 70px */
+    /* if total height changes, change elementHeight in _setMaxHeight() */
+    /* top, right, bottom, and left padding */
+    padding: 15px 10px 8px 10px;
+    height: 47px;
+    display: block;
+    overflow: hidden;
+    white-space: pre;
+    -webkit-user-select: none;
+    z-index: 3;
+}
+
+ul#suggestUlId li#suggestsLiId>a {
+    /* between padding and height, total height is 70px */
+    /* if total height changes, change elementHeight in _setMaxHeight() */
+    /* top, right, bottom, and left padding */
+    padding: 8px 10px 8px 10px;
+    height: 54px;
+    display: block;
+    background-image: url(icons/divider.png);
+    background-repeat: repeat-x;
+    overflow: hidden;
+    white-space: pre;
+    -webkit-user-select: none;
+    z-index: 3;
+}
+
+/* truncate long titles and URLs with ellipsis */
+.SuggestView div.SuggestElement {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

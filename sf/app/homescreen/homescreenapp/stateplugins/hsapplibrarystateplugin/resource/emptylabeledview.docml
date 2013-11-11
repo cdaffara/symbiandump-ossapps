@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="1.2">
+    <widget name="view" type="HbView">
+        <widget name="container" role="HbView:widget" type="HbWidget">
+            <widget name="label" type="HbGroupBox">
+                <string name="heading" value="."/>
+                <bool name="marqueeHeading" value="TRUE"/>
+                <fontspec name="fontSpec" role="Title" textheight="0"/>
+            </widget>
+            <widget name="emptyViewLabelContainer" type="HbWidget">
+                <widget name="emptyViewLabel" type="HbLabel">
+                    <enums name="alignment" value="AlignHCenter"/>
+                    <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Minimum" verticalStretch="0"/>
+                    <enums name="elideMode" value="ElideMiddle"/>
+                    <bool name="visible" value="TRUE"/>
+                    <string locid="txt_applib_formlabel_no_content" name="plainText"/>
+                    <fontspec name="fontSpec" role="Primary" textheight="var(hb-param-text-height-primary)"/>
+                </widget>
+                <layout orientation="Horizontal" spacing="0.0un" type="linear">
+                    <stretchitem stretchfactor="1"/>
+                    <linearitem itemname="emptyViewLabel"/>
+                    <stretchitem stretchfactor="1"/>
+                </layout>
+            </widget>
+            <layout orientation="Vertical" spacing="0.0un" type="linear">
+                <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+                <linearitem itemname="label"/>
+                <stretchitem stretchfactor="1"/>
+                <linearitem itemname="emptyViewLabelContainer"/>
+                <stretchitem stretchfactor="5"/>
+            </layout>
+        </widget>
+        <string locid="txt_applib_title_applications" name="title"/>
+    </widget>
+    <metadata activeUIState="Common ui state" display="NHD-3.2-inch_portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+    </metadata>
+</hbdocument>

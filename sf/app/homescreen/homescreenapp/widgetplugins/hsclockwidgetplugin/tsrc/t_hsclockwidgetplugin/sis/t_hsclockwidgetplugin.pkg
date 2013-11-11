@@ -1,0 +1,36 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:
+;
+
+; Language
+&EN
+
+; SIS header: name, uid, version
+#{"t_t_hsclockwidgetplugin"},(0x20022F6D),1,0,0
+
+; Localised Vendor name
+%{"Nokia"}
+
+; Unique Vendor name
+:"Nokia"
+
+; Supports S60 5th Edition
+[0x1028315F], 0, 0, 0, {"S60ProductID"}
+
+; Clock widget unittest
+"/epoc32/release/armv5/urel/t_hsclockwidgetplugin.exe"                         - "c:/sys/bin/t_hsclockwidgetplugin.exe"
+"/epoc32/data/z/private/10003a3f/import/apps/t_hsclockwidgetplugin_reg.rsc"    - "c:/private/10003a3f/import/apps/t_hsclockwidgetplugin_reg.rsc"
+"/epoc32/data/z/resource/apps/t_hsclockwidgetplugin.rsc"                       - "c:/resource/apps/t_hsclockwidgetplugin.rsc"
+

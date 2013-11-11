@@ -1,0 +1,28 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Image description file for project m3uplaylistplugin
+*
+*/
+
+
+
+#ifndef MPXM3UPLAYLISTPLUGIN_IBY
+#define MPXM3UPLAYLISTPLUGIN_IBY
+
+#include <data_caging_paths_for_iby.hrh>
+
+file=ABI_DIR\BUILD_DIR\mpxm3uplaylistparsers.dll       SHARED_LIB_DIR\mpxm3uplaylistparsers.dll
+ECOM_PLUGIN( mpxm3uplaylistplugin.dll, 101FFC22.rsc )
+
+#endif // MPXM3UPLAYLISTPLUGIN_IBY

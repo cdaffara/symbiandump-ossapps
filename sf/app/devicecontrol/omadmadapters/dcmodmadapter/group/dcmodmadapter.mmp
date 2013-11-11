@@ -1,0 +1,56 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  DCMO DM Adapter
+*
+*/
+
+#include <platform_paths.hrh>
+
+TARGET          dcmodmadapter.dll
+TARGETTYPE      PLUGIN
+CAPABILITY      CAP_ECOM_PLUGIN
+
+UID             0x10009D8D 0x2001FD3E
+VENDORID        VID_DEFAULT
+LANG            SC
+
+SOURCEPATH      ../src
+SOURCE          dcmodmadapter.cpp
+SOURCE          dcmodmadaptermain.cpp
+
+APP_LAYER_SYSTEMINCLUDE
+
+USERINCLUDE     ../inc
+
+SYSTEMINCLUDE 	/epoc32/include/ecom
+
+
+START RESOURCE  ../data/dcmodmadapter.rss
+TARGET          dcmodmadapter.rsc
+LANGUAGE_IDS
+END
+
+LIBRARY         euser.lib
+LIBRARY         ecom.lib
+LIBRARY         centralrepository.lib
+LIBRARY         dmutil.lib
+LIBRARY         charconv.lib
+LIBRARY					dcmoclient.lib
+LIBRARY					policyengine.lib
+LIBRARY					nsmldebug.lib
+
+
+SMPSAFE
+// End Of File
+

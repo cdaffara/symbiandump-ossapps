@@ -1,0 +1,68 @@
+/* 
+Mode/setting indicators in still precapture 
+All HbLabel icons and text inside indicatorContainer
+*/
+HbWidget#indicatorContainer > HbLabel::icon
+{
+color: var(qtc_popup_trans_normal);
+}
+HbWidget#indicatorContainer > HbLabel::text
+{
+color: var(qtc_popup_trans_normal);
+}
+/* 
+Selftimer
+All HbLabel text and icons inside still_precapture_selftimer_container
+*/
+HbWidget#selftimer_icon_container > HbLabel::icon
+{
+color: var(qtc_popup_trans_normal);
+}
+HbWidget#selftimer_icon_container > HbLabel::text
+{
+color: var(qtc_popup_trans_normal);
+}
+/* 
+Images left 
+All HbLabel text and icons inside images_left_container
+*/
+HbWidget#images_left_container > HbLabel::text
+{
+color: var(qtc_popup_trans_normal);
+}
+/* 
+Mode/setting indicators
+All HbLabel icons and text inside video_indicator_container_top
+*/
+HbWidget#video_indicator_container_top > HbLabel::icon
+{
+color: var(qtc_popup_trans_normal);
+}
+HbWidget#video_indicator_container_top > HbLabel::text
+{
+color: var(qtc_popup_trans_normal);
+}
+/* 
+Bottom indicators (recording icon, time elapsed & left)
+HbLabels defined separately since they should be colored differently
+*/
+HbLabel#video_elapsed_time::text
+{
+color: var(qtc_popup_trans_normal);
+}
+HbWidget#video_indicator_container_bottom > HbLabel::icon
+{
+color: var(qtc_popup_trans_normal);
+}
+/* 
+Zoom sliders
+Decrement and increase icons both 
+*/
+CxuiZoomSlider::decrement-icon
+{
+color: var(qtc_popup_trans_normal);
+}
+CxuiZoomSlider::increment-icon
+{
+color: var(qtc_popup_trans_normal);
+}

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="1.1">
+    <widget name="view" type="HbView">
+        <widget name="content" role="HbView:widget" type="HbWidget">
+            <widget name="ImageIcon" type="HbLabel">
+                <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+                <real name="z" value="3"/>
+                <sizehint height="21.19403un" type="PREFERRED" width="39.55224un"/>
+            </widget>
+            <widget name="FavIcon" plugin="glxdetailscustomplugin" type="GlxDetailsIcon">
+                <real name="z" value="3"/>
+            </widget>
+            <widget name="ShareButton" type="HbPushButton">
+                <real name="z" value="3"/>
+                <sizepolicy horizontalPolicy="Preferred" horizontalStretch="0" verticalPolicy="Preferred" verticalStretch="0"/>
+                <sizehint type="PREFERRED" width="42.53731un"/>
+                <string locid="txt_photos_button_share" name="text"/>
+            </widget>
+            <widget name="DetailsViewList" type="HbListView">
+                <widget name="prototype" role="HbAbstractView:prototype" type="HbListViewItem">
+                    <string name="state" value="normal"/>
+                </widget>
+                <bool name="itemRecycling" value="FALSE"/>
+                <real name="z" value="22"/>
+                <sizepolicy horizontalPolicy="Expanding" horizontalStretch="0" verticalPolicy="Expanding" verticalStretch="0"/>
+                <sizehint height="47.7612un" type="PREFERRED" width="expr(var(hb-param-screen-short-edge) )"/>
+            </widget>
+            <widget name="ImageBackGround" type="HbLabel">
+                <enums name="aspectRatioMode" value="IgnoreAspectRatio"/>
+                <real name="z" value="1"/>
+            </widget>
+            <layout type="anchor">
+                <anchoritem dst="ImageIcon" dstEdge="TOP" spacing="1.64179un" src="" srcEdge="TOP"/>
+                <anchoritem dst="ImageIcon" dstEdge="RIGHT" spacing="-12.83582un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="FavIcon" dstEdge="TOP" spacing="14.32836un" src="" srcEdge="TOP"/>
+                <anchoritem dst="FavIcon" dstEdge="RIGHT" spacing="-10.59702un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="ShareButton" dstEdge="LEFT" spacing="2.98507un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="ShareButton" dstEdge="TOP" spacing="2.98507un" src="" srcEdge="TOP"/>
+                <anchoritem dst="DetailsViewList" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="DetailsViewList" dstEdge="TOP" spacing="11.26119un" src="" srcEdge="TOP"/>
+                <anchoritem dst="ImageBackGround" dstEdge="LEFT" spacing="4.32836un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="ImageBackGround" dstEdge="TOP" spacing="4.47761un" src="" srcEdge="TOP"/>
+            </layout>
+        </widget>
+        <string name="title" value="View"/>
+        <bool name="contentFullScreen" value="TRUE"/>
+    </widget>
+    <section name="portrait">
+        <widget name="view" type="HbView">
+            <bool name="contentFullScreen" value="TRUE"/>
+        </widget>
+        <widget name="ShareButton" type="HbPushButton">
+            <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+            <sizehint type="FIXED" width="31.95un"/>
+            <sizehint type="MINIMUM" width="31.95un"/>
+            <sizehint type="MAXIMUM" width="31.95un"/>
+        </widget>
+        <widget name="content" role="HbView:widget" type="HbWidget">
+            <layout type="anchor">
+                <anchoritem dst="FavIcon" dstEdge="RIGHT" spacing="0un" src="ImageIcon" srcEdge="RIGHT"/>
+                <anchoritem dst="FavIcon" dstEdge="BOTTOM" spacing="0un" src="ImageIcon" srcEdge="BOTTOM"/>
+                <anchoritem dst="ShareButton" dstEdge="TOP" spacing="expr(var(hb-param-margin-gene-screen) + 0.5un)" src="ImageIcon" srcEdge="BOTTOM"/>
+                <anchoritem dst="ShareButton" dstEdge="CENTERH" spacing="expr(var(hb-param-screen-width)  /2px)" src="" srcEdge="LEFT"/>
+                <anchoritem dst="ImageBackGround" dstEdge="LEFT" spacing="expr(var(hb-param-margin-gene-screen) )" src="" srcEdge="LEFT"/>
+                <anchoritem dst="ImageBackGround" dstEdge="TOP" spacing="expr(var(hb-param-widget-chrome-height) +var(hb-param-margin-gene-screen))" src="" srcEdge="TOP"/>
+                <anchoritem dst="ImageIcon" dstEdge="LEFT" spacing="0.5un" src="ImageBackGround" srcEdge="LEFT"/>
+                <anchoritem dst="ImageIcon" dstEdge="TOP" spacing="0.5un" src="ImageBackGround" srcEdge="TOP"/>
+                <anchoritem dst="DetailsViewList" dstEdge="LEFT" spacing="expr(var(hb-param-margin-gene-screen) -1un)" src="" srcEdge="LEFT"/>
+                <anchoritem dst="DetailsViewList" dstEdge="TOP" spacing="12un" src="ImageBackGround" srcEdge="BOTTOM"/>
+            </layout>
+        </widget>
+        <widget name="FavIcon" plugin="glxdetailscustomplugin" type="GlxDetailsIcon">
+            <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+            <sizehint height="expr(var(hb-param-graphic-size-primary-small) + var(hb-param-graphic-size-primary-small) )" type="FIXED" width="expr(var(hb-param-graphic-size-primary-small) + var(hb-param-graphic-size-primary-small) )"/>
+            <sizehint height="expr(var(hb-param-graphic-size-primary-small) + var(hb-param-graphic-size-primary-small) )" type="MINIMUM" width="expr(var(hb-param-graphic-size-primary-small) + var(hb-param-graphic-size-primary-small) )"/>
+            <sizehint height="expr(var(hb-param-graphic-size-primary-small) + var(hb-param-graphic-size-primary-small) )" type="MAXIMUM" width="expr(var(hb-param-graphic-size-primary-small) + var(hb-param-graphic-size-primary-small) )"/>
+        </widget>
+        <widget name="ImageBackGround" type="HbLabel">
+            <enums name="aspectRatioMode" value="IgnoreAspectRatio"/>
+            <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+            <sizehint height="31.95un" type="FIXED" width="expr( var(hb-param-screen-width)  -var(hb-param-margin-gene-screen) -var(hb-param-margin-gene-screen) )"/>
+            <sizehint height="31.95un" type="MINIMUM" width="expr( var(hb-param-screen-width)  -var(hb-param-margin-gene-screen) -var(hb-param-margin-gene-screen) )"/>
+            <sizehint height="31.95un" type="MAXIMUM" width="expr( var(hb-param-screen-width)  -var(hb-param-margin-gene-screen) -var(hb-param-margin-gene-screen) )"/>
+        </widget>
+        <widget name="DetailsViewList" type="HbListView">
+            <bool name="itemRecycling" value="FALSE"/>
+            <bool name="longPressEnabled" value="FALSE"/>
+            <enums name="verticalScrollBarPolicy" value="ScrollBarAlwaysOff"/>
+            <bool name="uniformItemSizes" value="FALSE"/>
+            <enums name="horizontalScrollBarPolicy" value="ScrollBarAlwaysOff"/>
+            <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+            <sizehint height="39un" type="FIXED" width="expr(  var(hb-param-screen-width) -var(hb-param-margin-gene-screen) -var(hb-param-margin-gene-screen) + 2un)"/>
+            <sizehint height="39un" type="MINIMUM" width="expr(  var(hb-param-screen-width) -var(hb-param-margin-gene-screen) -var(hb-param-margin-gene-screen) + 2un)"/>
+            <sizehint height="39un" type="MAXIMUM" width="expr(  var(hb-param-screen-width) -var(hb-param-margin-gene-screen) -var(hb-param-margin-gene-screen) + 2un)"/>
+        </widget>
+        <widget name="ImageIcon" type="HbLabel">
+            <enums name="aspectRatioMode" value="KeepAspectRatio"/>
+            <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+            <sizehint height="expr(31.95un - 1un)" type="FIXED" width="expr( var(hb-param-screen-width)  -var(hb-param-margin-gene-screen) -var(hb-param-margin-gene-screen) - 1un)"/>
+            <sizehint height="expr(31.95un - 1un)" type="MINIMUM" width="expr( var(hb-param-screen-width)  -var(hb-param-margin-gene-screen) -var(hb-param-margin-gene-screen) - 1un)"/>
+            <sizehint height="expr(31.95un - 1un)" type="MAXIMUM" width="expr( var(hb-param-screen-width)  -var(hb-param-margin-gene-screen) -var(hb-param-margin-gene-screen) - 1un)"/>
+        </widget>
+    </section>
+    <section name="landscape">
+        <widget name="view" type="HbView">
+            <bool name="contentFullScreen" value="TRUE"/>
+        </widget>
+        <widget name="ShareButton" type="HbPushButton">
+            <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+            <sizehint type="MINIMUM" width="31.95un"/>
+            <sizehint height="7.5un" type="MAXIMUM" width="31.95un"/>
+        </widget>
+        <widget name="content" role="HbView:widget" type="HbWidget">
+            <layout type="anchor">
+                <anchoritem dst="FavIcon" dstEdge="RIGHT" spacing="0un" src="ImageIcon" srcEdge="RIGHT"/>
+                <anchoritem dst="FavIcon" dstEdge="BOTTOM" spacing="0un" src="ImageIcon" srcEdge="BOTTOM"/>
+                <anchoritem dst="ShareButton" dstEdge="LEFT" spacing="expr(var(hb-param-margin-gene-screen) )" src="" srcEdge="LEFT"/>
+                <anchoritem dst="ShareButton" dstEdge="TOP" spacing="expr(var(hb-param-margin-gene-middle-vertical) )" src="ImageIcon" srcEdge="BOTTOM"/>
+                <anchoritem dst="DetailsViewList" dstEdge="LEFT" spacing="expr(var(hb-param-margin-gene-screen) + 31.95un + var(hb-param-margin-gene-left))" src="" srcEdge="LEFT"/>
+                <anchoritem dst="DetailsViewList" dstEdge="TOP" spacing="expr(var(hb-param-widget-chrome-height) +var(hb-param-margin-gene-screen))" src="" srcEdge="TOP"/>
+                <anchoritem dst="ImageBackGround" dstEdge="LEFT" spacing="1.9403un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="ImageBackGround" dstEdge="TOP" spacing="11.49254un" src="" srcEdge="TOP"/>
+                <anchoritem dst="ImageIcon" dstEdge="LEFT" spacing="0.45un" src="ImageBackGround" srcEdge="LEFT"/>
+                <anchoritem dst="ImageIcon" dstEdge="TOP" spacing="0.45un" src="ImageBackGround" srcEdge="TOP"/>
+            </layout>
+        </widget>
+        <widget name="FavIcon" plugin="glxdetailscustomplugin" type="GlxDetailsIcon">
+            <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+            <sizehint height="expr(var(hb-param-graphic-size-primary-small) + var(hb-param-graphic-size-primary-small) )" type="FIXED" width="expr(var(hb-param-graphic-size-primary-small) + var(hb-param-graphic-size-primary-small) )"/>
+            <sizehint height="expr(var(hb-param-graphic-size-primary-small) + var(hb-param-graphic-size-primary-small) )" type="MINIMUM" width="expr(var(hb-param-graphic-size-primary-small) + var(hb-param-graphic-size-primary-small) )"/>
+            <sizehint height="expr(var(hb-param-graphic-size-primary-small) + var(hb-param-graphic-size-primary-small) )" type="MAXIMUM" width="expr(var(hb-param-graphic-size-primary-small) + var(hb-param-graphic-size-primary-small) )"/>
+        </widget>
+        <widget name="ImageBackGround" type="HbLabel">
+            <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+            <sizehint height="31.95un" type="FIXED" width="31.95un"/>
+            <sizehint height="31.95un" type="MINIMUM" width="31.95un"/>
+            <sizehint height="31.95un" type="MAXIMUM" width="31.95un"/>
+        </widget>
+        <widget name="DetailsViewList" type="HbListView">
+            <bool name="itemRecycling" value="FALSE"/>
+            <bool name="longPressEnabled" value="FALSE"/>
+            <enums name="verticalScrollBarPolicy" value="ScrollBarAlwaysOff"/>
+            <bool name="uniformItemSizes" value="FALSE"/>
+            <enums name="horizontalScrollBarPolicy" value="ScrollBarAlwaysOff"/>
+            <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+            <sizehint height="40.74627un" type="FIXED" width="385.8"/>
+            <sizehint height="40.74627un" type="MINIMUM" width="385.8"/>
+            <sizehint height="40.74627un" type="MAXIMUM" width="385.8"/>
+        </widget>
+        <widget name="ImageIcon" type="HbLabel">
+            <enums name="aspectRatioMode" value="KeepAspectRatio"/>
+            <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+            <sizehint height="31un" type="FIXED" width="31un"/>
+            <sizehint height="31un" type="MINIMUM" width="31un"/>
+            <sizehint height="31.95un" type="MAXIMUM" width="31.95un"/>
+        </widget>
+    </section>
+    <metadata activeUIState="portrait" display="NHD-3.2-inch_portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+        <uistate name="portrait" sections="#common portrait"/>
+        <uistate name="landscape" sections="#common landscape"/>
+        <dummydata objectName="DetailsViewList" section="#common" value="0"/>
+    </metadata>
+</hbdocument>

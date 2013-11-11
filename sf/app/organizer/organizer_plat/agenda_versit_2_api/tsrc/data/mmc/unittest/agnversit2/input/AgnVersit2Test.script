@@ -1,0 +1,74 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description: 
+//
+
+PRINT Run all AgnVersit2 Tests 
+
+LOAD_SUITE AgnVersit2TestServer
+
+RUN_TEST_STEP 100 AgnVersit2TestServer Versit2Test	z:\private\101FDAB0\AgnVersit2Test.ini VERSIT2_FILTER_PROPS
+RUN_TEST_STEP 100 AgnVersit2TestServer Versit2Test	z:\private\101FDAB0\AgnVersit2Test.ini VERSIT2_FILTER_COMPS
+RUN_TEST_STEP 100 AgnVersit2TestServer Versit2Test	z:\private\101FDAB0\AgnVersit2Test.ini VERSIT2_ESCAPE_SEQ
+RUN_TEST_STEP 100 AgnVersit2TestServer Versit2Test	z:\private\101FDAB0\AgnVersit2Test.ini VERSIT2_VJOURNAL
+RUN_TEST_STEP 100 AgnVersit2TestServer Versit2Test	z:\private\101FDAB0\AgnVersit2Test.ini VERSIT2_VFREEBUSY
+RUN_TEST_STEP !ERROR=-20 100 AgnVersit2TestServer Versit2Test	z:\private\101FDAB0\AgnVersit2Test.ini VERSIT2_CORRUPT1
+RUN_TEST_STEP !ERROR=-20 100 AgnVersit2TestServer Versit2Test	z:\private\101FDAB0\AgnVersit2Test.ini VERSIT2_CORRUPT2
+RUN_TEST_STEP !ERROR=-20 100 AgnVersit2TestServer Versit2Test	z:\private\101FDAB0\AgnVersit2Test.ini VERSIT2_CORRUPT3
+RUN_TEST_STEP 100 AgnVersit2TestServer Versit2Test	z:\private\101FDAB0\AgnVersit2Test.ini VERSIT2_NOT_CORRUPT
+RUN_TEST_STEP 100 AgnVersit2TestServer ImportExportTest z:\private\101FDAB0\AgnVersit2Test.ini SIMPLE_VEVENT
+RUN_TEST_STEP 100 AgnVersit2TestServer ImportExportTest z:\private\101FDAB0\AgnVersit2Test.ini SIMPLE_VEVENT_ATTENDEE
+RUN_TEST_STEP 100 AgnVersit2TestServer ImportExportTest z:\private\101FDAB0\AgnVersit2Test.ini SIMPLE_VEVENT_CATEGORIES
+RUN_TEST_STEP 100 AgnVersit2TestServer ImportExportTest z:\private\101FDAB0\AgnVersit2Test.ini SIMPLE_VEVENT_DESCRIPTION
+RUN_TEST_STEP 100 AgnVersit2TestServer ImportExportTest z:\private\101FDAB0\AgnVersit2Test.ini SIMPLE_VEVENT_DURATION
+RUN_TEST_STEP 100 AgnVersit2TestServer ImportExportTest z:\private\101FDAB0\AgnVersit2Test.ini SIMPLE_VEVENT_EXDATE
+RUN_TEST_STEP 100 AgnVersit2TestServer ImportExportTest z:\private\101FDAB0\AgnVersit2Test.ini SIMPLE_VEVENT_LASTMOD
+RUN_TEST_STEP 100 AgnVersit2TestServer ImportExportTest z:\private\101FDAB0\AgnVersit2Test.ini SIMPLE_VEVENT_LOCATION
+RUN_TEST_STEP 100 AgnVersit2TestServer ImportExportTest z:\private\101FDAB0\AgnVersit2Test.ini SIMPLE_VEVENT_ORGANIZER
+RUN_TEST_STEP 100 AgnVersit2TestServer ImportExportTest z:\private\101FDAB0\AgnVersit2Test.ini SIMPLE_VEVENT_RDATE
+RUN_TEST_STEP 100 AgnVersit2TestServer ImportExportTest z:\private\101FDAB0\AgnVersit2Test.ini SIMPLE_VEVENT_RECURID
+RUN_TEST_STEP 100 AgnVersit2TestServer ImportExportTest z:\private\101FDAB0\AgnVersit2Test.ini SIMPLE_VEVENT_RRULE
+RUN_TEST_STEP 100 AgnVersit2TestServer ImportExportTest z:\private\101FDAB0\AgnVersit2Test.ini SIMPLE_VEVENT_SEQUENCE
+RUN_TEST_STEP 100 AgnVersit2TestServer ImportExportTest z:\private\101FDAB0\AgnVersit2Test.ini SIMPLE_VEVENT_STATUS
+RUN_TEST_STEP 100 AgnVersit2TestServer ImportExportTest z:\private\101FDAB0\AgnVersit2Test.ini SIMPLE_VEVENT_SUMMARY
+RUN_TEST_STEP 100 AgnVersit2TestServer ImportExportTest	z:\private\101FDAB0\AgnVersit2Test.ini VEVENT_RRULE_TZ
+RUN_TEST_STEP 100 AgnVersit2TestServer ImportExportTest	z:\private\101FDAB0\AgnVersit2Test.ini OUTLOOK_ALLDAY_REPEAT_WEEKLY
+RUN_TEST_STEP 100 AgnVersit2TestServer ImportExportTest z:\private\101FDAB0\AgnVersit2Test.ini NOTSUPPORTED_CONTINUE
+RUN_TEST_STEP 100 AgnVersit2TestServer ImportExportTest z:\private\101FDAB0\AgnVersit2Test.ini NOTSUPPORTED_SKIP
+RUN_TEST_STEP 100 AgnVersit2TestServer ImportExportTest z:\private\101FDAB0\AgnVersit2Test.ini NOTSUPPORTED_STOP
+RUN_TEST_STEP !ERROR=-39 100 AgnVersit2TestServer ImportExportTest z:\private\101FDAB0\AgnVersit2Test.ini NOTSUPPORTED_LEAVE
+RUN_TEST_STEP !ERROR=-13 100 AgnVersit2TestServer ImportExportTest z:\private\101FDAB0\AgnVersit2Test.ini NOTSUPPORTED_DIE
+RUN_TEST_STEP 100 AgnVersit2TestServer ImportExportTest z:\private\101FDAB0\AgnVersit2Test.ini RRULE_NUMBERING_WEEKLY
+RUN_TEST_STEP 100 AgnVersit2TestServer ImportExportTest z:\private\101FDAB0\AgnVersit2Test.ini RRULE_NUMBERING_MONTHLY
+RUN_TEST_STEP 100 AgnVersit2TestServer ImportExportTest z:\private\101FDAB0\AgnVersit2Test.ini RRULE_NUMBERING_YEARLY
+RUN_TEST_STEP 100 AgnVersit2TestServer ImportExportTest z:\private\101FDAB0\AgnVersit2Test.ini VEVENT_ITIP_PUBLISH
+RUN_TEST_STEP 100 AgnVersit2TestServer ImportExportTest z:\private\101FDAB0\AgnVersit2Test.ini VEVENT_ITIP_REQUEST
+RUN_TEST_STEP 100 AgnVersit2TestServer ImportExportTest z:\private\101FDAB0\AgnVersit2Test.ini VEVENT_ITIP_REPLY
+RUN_TEST_STEP 100 AgnVersit2TestServer ImportExportTest z:\private\101FDAB0\AgnVersit2Test.ini VEVENT_ITIP_ADD
+RUN_TEST_STEP 100 AgnVersit2TestServer ImportExportTest z:\private\101FDAB0\AgnVersit2Test.ini VEVENT_ITIP_CANCEL
+RUN_TEST_STEP 100 AgnVersit2TestServer ImportExportTest z:\private\101FDAB0\AgnVersit2Test.ini VEVENT_ITIP_REFRESH
+RUN_TEST_STEP 100 AgnVersit2TestServer ImportExportTest z:\private\101FDAB0\AgnVersit2Test.ini VEVENT_ITIP_COUNTER
+RUN_TEST_STEP 100 AgnVersit2TestServer ImportExportTest z:\private\101FDAB0\AgnVersit2Test.ini VEVENT_ITIP_DECLINECOUNTER
+RUN_TEST_STEP 100 AgnVersit2TestServer ImportExportTest z:\private\101FDAB0\AgnVersit2Test.ini VTODO_ITIP_PUBLISH
+RUN_TEST_STEP 100 AgnVersit2TestServer ImportExportTest z:\private\101FDAB0\AgnVersit2Test.ini VTODO_ITIP_REQUEST
+RUN_TEST_STEP 100 AgnVersit2TestServer ImportExportTest z:\private\101FDAB0\AgnVersit2Test.ini VTODO_ITIP_REPLY
+RUN_TEST_STEP 100 AgnVersit2TestServer ImportExportTest z:\private\101FDAB0\AgnVersit2Test.ini VTODO_ITIP_ADD
+RUN_TEST_STEP 100 AgnVersit2TestServer ImportExportTest z:\private\101FDAB0\AgnVersit2Test.ini VTODO_ITIP_CANCEL
+RUN_TEST_STEP 100 AgnVersit2TestServer ImportExportTest z:\private\101FDAB0\AgnVersit2Test.ini VTODO_ITIP_REFRESH
+RUN_TEST_STEP 100 AgnVersit2TestServer ImportExportTest z:\private\101FDAB0\AgnVersit2Test.ini VTODO_ITIP_COUNTER
+RUN_TEST_STEP 100 AgnVersit2TestServer ImportExportTest z:\private\101FDAB0\AgnVersit2Test.ini VTODO_ITIP_DECLINECOUNTER
+RUN_TEST_STEP !ERROR=-20 100 AgnVersit2TestServer ImportExportTest z:\private\101FDAB0\AgnVersit2Test.ini NOT_AN_ICAL
+
+
+

@@ -1,0 +1,57 @@
+/*
+* Copyright (c) 2000 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: ECOM plugin resource definition.
+*
+*/
+
+
+#include <ecom/registryinfo.rh>
+//<Qmail>
+#include "../../inc/emailversionnumbers.hrh" // KEmailEcomVersionNumber
+//</Qmail>
+// ---------------------------------------------------------------------------
+// theInfo
+// Defines the ecom plugin for IPSSosSmtpPlugin
+// ---------------------------------------------------------------------------
+//
+
+RESOURCE REGISTRY_INFO theInfo
+	{
+	// IpsSosAOPlugin.dll UID
+	dll_uid = 0x200100BA;
+	interfaces =
+		{
+		INTERFACE_INFO
+			{
+			// CEComInterface interface UID
+			interface_uid = 0x101F85EC;
+			implementations =
+				{
+				IMPLEMENTATION_INFO
+					{
+					// AlwaysOnlineManager implementation UID
+					implementation_uid = 0x200100BA;
+					version_no = KEmailEcomVersionNumber;
+					display_name = "Smtp ECom Plugin for always online manager";
+					default_data = "smtp";
+					// Note : opaque_data MUST have @ least a single byte of data
+					// in this instance it is an empty string.
+					opaque_data = " ";
+					}
+				// Place additional interface implementations here
+				};
+			}
+		// Place additional interfaces here
+		};
+	}

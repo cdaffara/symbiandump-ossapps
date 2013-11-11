@@ -1,0 +1,43 @@
+// Copyright (c) 1999-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+rls_string STRING_r_error_res_pop3_cannot_connect	 "The POP3 server refused to allow a connection" 
+rls_string STRING_r_error_res_pop3_invalid_user		 "The POP3 server refused to allow a connection. Check your mailbox username" 
+rls_string STRING_r_error_res_pop3_invalid_login	 "The POP3 server refused to allow a connection. Check your mailbox username and password" 
+rls_string STRING_r_error_res_pop3_apop_login_string "Could not create secure logon string. Mailbox server may not support secure logon" 
+rls_string STRING_r_error_res_pop3_problem_remote	 "Problem communicating with POP3 server" 
+rls_string STRING_r_error_res_pop3_top_unsupported   "The POP3 server does not support the TOP command"
+rls_string STRING_r_error_res_imsk_dns_not_found		 "Could not find a DNS server. Please check the DNS address in the Internet control panel" 
+rls_string STRING_r_error_res_imsk_control_panel_locked	 "Could not connect to Internet. Please ensure the Internet control panel is closed" 
+rls_string STRING_r_error_res_imsk_wrong_active_settings "Cannot use active network connection for this acount" 
+rls_string STRING_r_error_res_TLS_Negotiation_failed	 "Secure connection failed.  Server may not accept secure connections."
+rls_string STRING_r_error_res_imap_connect_fail		 "Could not connect to the IMAP4 server" 
+rls_string STRING_r_error_res_imap_server_fail		 "The connection to the IMAP4 server has been broken" 
+rls_string STRING_r_error_res_imap_server_busy		 "The IMAP4 server refused to allow connection. The server is currently busy" 
+rls_string STRING_r_error_res_imap_server_version	 "Could not connect to the IMAP4 server. The IMAP server is of the wrong version" 
+rls_string STRING_r_error_res_imap_send_fail		 "Could not transmit to the IMAP4 server" 
+rls_string STRING_r_error_res_imap_bad_logon		 "The IMAP4 server refused to allow a connection. Check your mailbox username and password" 
+rls_string STRING_r_error_res_imap_wrong_folder		 "Could not select an IMAP4 folder" 
+rls_string STRING_r_error_res_imap_no_security		 "Secure connections are not available on this server"
+rls_string STRING_r_error_res_imap_TLS_failed		 "Secure connection failed.  Certificates may have expired"
+rls_string STRING_r_error_res_imap_Invalid_Server_Response	"Invalid server response"
+rls_string STRING_r_error_res_pop3_Server_Already_Connected	"Pop3 server already connected"
+rls_string STRING_r_error_res_smtp_no_mail_from		 "Could not send email due to an invalid return email address. Check your email address in your account settings" 
+rls_string STRING_r_error_res_smtp_unknown		 "Unknown problem while sending email" 
+rls_string STRING_r_error_res_smtp_bad_from_address	 "Email message has an invalid \"From\" address" 
+rls_string STRING_r_error_res_smtp_bad_to_address	 "Incorrect addresses or unable to send to specified addresses using this server" 
+rls_string STRING_r_error_res_smtp_login_refusal	 "SMTP server refused to allow connection" 
+rls_string STRING_r_error_res_smtp_wrong_account	 "Could not send email. The messages are destined for an account different from the currently connected one" 
+rls_string STRING_r_error_res_smtp_no_TLS		 "Secure connections are not available on this server"

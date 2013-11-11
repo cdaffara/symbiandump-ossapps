@@ -1,0 +1,82 @@
+// Copyright (c) 1999-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+#include "../class0smsnotifier/group/bld.inf"
+
+PRJ_TESTMMPFILES
+T_smcm1.mmp		manual
+T_smcm2.mmp		manual
+T_SmcmFail.mmp		manual
+T_SmsSendRecv.mmp		manual
+T_SmsSendText.mmp		manual
+T_SmsSendNbs.mmp		manual
+T_SmsSendWap.mmp		manual
+T_SmsEnum.mmp		manual
+t_smsbiofication.mmp		manual
+T_SmsSc.mmp		manual
+T_schsms.mmp		manual
+T_SmsCancel.mmp		manual
+T_SmsRegress.mmp		manual
+T_smcmsimtsytest.mmp		manual
+t_smcmrecvmanual.mmp	manual
+T_SmsDeliver.mmp manual
+t_smsdetails.mmp manual
+t_smcs2_server.mmp manual
+T_SmsDeliverLastSegmentReport.mmp manual
+
+
+PRJ_TESTEXPORTS
+../data/script/sms.script	/epoc32/wins/c/msgtest/sms/sms.script
+../data/script/smsenum.script	/epoc32/wins/c/msgtest/sms/smsenum.script
+../data/script/wap.script	/epoc32/wins/c/msgtest/sms/wap.script
+../data/script/nbs.script	/epoc32/wins/c/msgtest/sms/nbs.script
+../data/script/biofication.script	/epoc32/wins/c/msgtest/sms/biofication.script
+../data/script/simparameter.script	/epoc32/wins/c/sms/simparameter.script
+../data/script/smssc_config.txt	/epoc32/wins/c/sms/smssc_config.txt
+../data/script/smcmsimtsytest_config.txt	/epoc32/wins/c/msgtest/sms/smcmsimtsytest_config.txt
+../data/script/sendrecv.script	/epoc32/wins/c/msgtest/sms/sendrecv.script
+../data/script/sendrecv_ems.script	/epoc32/wins/c/msgtest/sms/sendrecv_ems.script
+../data/script/Nokia8210.txt	/epoc32/wins/c/msgtest/sms/nokia8210.txt
+../data/script/EricssonT300.txt	/epoc32/wins/c/msgtest/sms/ericssont300.txt
+../data/script/logo1.olp		/epoc32/wins/c/msgtest/sms/logo1.olp
+../data/script/tone1.rtp		/epoc32/wins/c/msgtest/sms/tone1.rtp
+../data/script/tone2.rtp		/epoc32/wins/c/msgtest/sms/tone2.rtp
+../data/script/tone3.rtp		/epoc32/wins/c/msgtest/sms/tone3.rtp
+../data/T_SmsSendRecv.html	/epoc32/wins/c/msgtest/sms/t_smssendrecv.html
+../data/t_smcmrecvmanual.html	/epoc32/wins/c/msgtest/sms/t_smcmrecvmanual.html
+../data/ems/anims.mbm		/epoc32/wins/c/ems/anims.mbm
+../data/ems/pics.mbm		/epoc32/wins/c/ems/pics.mbm
+../data/script/sms.script	/epoc32/winscw/c/msgtest/sms/sms.script
+../data/script/smsenum.script	/epoc32/winscw/c/msgtest/sms/smsenum.script
+../data/script/wap.script	/epoc32/winscw/c/msgtest/sms/wap.script
+../data/script/nbs.script	/epoc32/winscw/c/msgtest/sms/nbs.script
+../data/script/biofication.script	/epoc32/winscw/c/msgtest/sms/biofication.script
+../data/script/simparameter.script	/epoc32/winscw/c/sms/simparameter.script
+../data/script/smssc_config.txt	/epoc32/winscw/c/sms/smssc_config.txt
+../data/script/smcmsimtsytest_config.txt	/epoc32/winscw/c/msgtest/sms/smcmsimtsytest_config.txt
+../data/script/sendrecv.script	/epoc32/winscw/c/msgtest/sms/sendrecv.script
+../data/script/sendrecv_ems.script	/epoc32/winscw/c/msgtest/sms/sendrecv_ems.script
+../data/script/Nokia8210.txt	/epoc32/winscw/c/msgtest/sms/nokia8210.txt
+../data/script/EricssonT300.txt	/epoc32/winscw/c/msgtest/sms/ericssont300.txt
+../data/script/logo1.olp		/epoc32/winscw/c/msgtest/sms/logo1.olp
+../data/script/tone1.rtp		/epoc32/winscw/c/msgtest/sms/tone1.rtp
+../data/script/tone2.rtp		/epoc32/winscw/c/msgtest/sms/tone2.rtp
+../data/script/tone3.rtp		/epoc32/winscw/c/msgtest/sms/tone3.rtp
+../data/T_SmsSendRecv.html	/epoc32/winscw/c/msgtest/sms/t_smssendrecv.html
+../data/t_smcmrecvmanual.html	/epoc32/winscw/c/msgtest/sms/t_smcmrecvmanual.html
+../data/ems/anims.mbm		/epoc32/winscw/c/ems/anims.mbm
+../data/ems/pics.mbm		/epoc32/winscw/c/ems/pics.mbm
+../data/script/t_smcs2.script	/epoc32/winscw/c/msgtest/sms/t_smcs2.script
+

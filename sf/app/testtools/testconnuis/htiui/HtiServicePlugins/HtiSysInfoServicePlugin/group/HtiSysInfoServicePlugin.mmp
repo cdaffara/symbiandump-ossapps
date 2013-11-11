@@ -1,0 +1,72 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  HTI service plugin for getting system information from device.
+*
+*/
+
+
+#include <platform_paths.hrh>
+#include "../../../symbian_version.hrh"
+
+TARGET          HtiSysInfoServicePlugin.dll
+TARGETTYPE      PLUGIN
+
+// ECom Dll recognition UID followed by the unique UID for this dll
+UID             0x10009D8D 0x10210CC6
+
+VENDORID        0x101FB657
+
+CAPABILITY      ALL -TCB
+
+SOURCEPATH      ../src
+SOURCE          proxy.cpp
+SOURCE          HtiSysInfoServicePlugin.cpp
+SOURCE          HtiLightsController.cpp
+SOURCE          HtiPropertySubscriber.cpp
+
+USERINCLUDE     ../inc
+APP_LAYER_SYSTEMINCLUDE
+
+START RESOURCE  ../data/10210CC6.rss
+TARGET          HtiSysInfoServicePlugin.rsc
+END
+
+#if ( SYMBIAN_VERSION_SUPPORT < SYMBIAN_4 )
+LIBRARY         avkon.lib
+#endif
+
+LIBRARY         aknskinsrv.lib
+LIBRARY         bafl.lib
+LIBRARY         btdevice.lib
+LIBRARY         btmanclient.lib
+LIBRARY         btengsettings.lib
+LIBRARY         c32.lib
+LIBRARY         centralrepository.lib
+LIBRARY         customapi.lib
+LIBRARY         drmserverinterfaces.lib
+LIBRARY         ecom.lib
+LIBRARY         efsrv.lib
+LIBRARY         etel.lib
+LIBRARY         etelmm.lib
+LIBRARY         euser.lib
+LIBRARY         hal.lib
+LIBRARY         hwrmlightclient.lib
+LIBRARY         sysutil.lib
+LIBRARY         tzclient.lib
+LIBRARY         flogger.lib
+LIBRARY	        featmgr.lib // Chinese support
+
+SMPSAFE
+
+// End of file

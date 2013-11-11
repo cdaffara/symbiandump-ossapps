@@ -1,0 +1,27 @@
+
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: 
+*
+*/
+
+file=ABI_DIR\BUILD_DIR\CpPluginLauncherClient.exe         			 SHARED_LIB_DIR\CpPluginLauncherClient.exe 
+CP_UPGRADABLE_APP_REG_RSC(CpPluginLauncherClient)    
+S60_APP_RESOURCE(CpPluginLauncherClient)   
+
+file=ABI_DIR\BUILD_DIR\cpgroupplugin.dll   SHARED_LIB_DIR\cpgroupplugin.dll
+file=ABI_DIR\BUILD_DIR\cpviewplugin.dll    SHARED_LIB_DIR\cpviewplugin.dll
+
+data=\epoc32\data\c\resource\qt\plugins\controlpanel\cpgroupplugin.qtplugin    resource\qt\plugins\controlpanel\cpgroupplugin.qtplugin
+data=\epoc32\data\c\resource\qt\plugins\controlpanel\cpviewplugin.qtplugin     resource\qt\plugins\controlpanel\cpviewplugin.qtplugin

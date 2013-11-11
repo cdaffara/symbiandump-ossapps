@@ -1,0 +1,13 @@
+EXPORTS
+	?CreateTestSuiteL@@YAPAVMEUnitTest@@XZ @ 1 NONAME ; class MEUnitTest * __cdecl CreateTestSuiteL(void)
+	??1CGlxResolutionManager@@UAE@XZ @ 2 NONAME ; CGlxResolutionManager::~CGlxResolutionManager(void)
+	?AddObserverL@CGlxResolutionUtility@@QAEXAAVMGlxResolutionChangeObserver@@@Z @ 3 NONAME ; void CGlxResolutionUtility::AddObserverL(class MGlxResolutionChangeObserver &)
+	?Close@CGlxResolutionUtility@@QAEXXZ @ 4 NONAME ; void CGlxResolutionUtility::Close(void)
+	?InstanceL@CGlxResolutionUtility@@SAPAV1@XZ @ 5 NONAME ; class CGlxResolutionUtility * CGlxResolutionUtility::InstanceL(void)
+	?NewL@CGlxResolutionManager@@SAPAV1@XZ @ 6 NONAME ; class CGlxResolutionManager * CGlxResolutionManager::NewL(void)
+	?PixelsToPoss@CGlxResolutionUtility@@QBEMABM@Z @ 7 NONAME ; float CGlxResolutionUtility::PixelsToPoss(float const &) const
+	?PossToPixels@CGlxResolutionUtility@@QBEMABM@Z @ 8 NONAME ; float CGlxResolutionUtility::PossToPixels(float const &) const
+	?RemoveObserver@CGlxResolutionUtility@@QAEXAAVMGlxResolutionChangeObserver@@@Z @ 9 NONAME ; void CGlxResolutionUtility::RemoveObserver(class MGlxResolutionChangeObserver &)
+	?ScreenSize@CGlxResolutionUtility@@QBE?AVTSize@@XZ @ 10 NONAME ; class TSize CGlxResolutionUtility::ScreenSize(void) const
+	?SetScreenSize@CGlxResolutionManager@@QAEXVTSize@@@Z @ 11 NONAME ; void CGlxResolutionManager::SetScreenSize(class TSize)
+

@@ -1,0 +1,98 @@
+/*
+* Copyright (c) 2004-2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*
+*/
+
+
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+
+#include "../../../inc/logdef.h"
+
+deffile btprotocol.def
+
+TARGET		btprotocol.dll
+TARGETTYPE	PLUGIN
+CAPABILITY 	CAP_ECOM_PLUGIN
+
+UID			0x10009D8D 0x01007779
+
+APP_LAYER_SYSTEMINCLUDE	
+SYSTEMINCLUDE 	/epoc32/include/libc
+
+USERINCLUDE		../inc
+USERINCLUDE		../../xhtmlfilecomposer/inc
+USERINCLUDE		../../../ImagePrintLibrary/inc
+USERINCLUDE     ../../../ImagePrintServer/inc
+USERINCLUDE     ../../../inc
+USERINCLUDE		../../../../clog/inc
+
+SOURCEPATH		../src
+
+SOURCE		cbtprintingdevice.cpp
+SOURCE		crsbtdiscoverengine.cpp
+SOURCE		cbtdiscover.cpp
+SOURCE		crsbtdevice.cpp
+SOURCE		cbtdevicecontainer.cpp
+SOURCE		rsutils.cpp
+SOURCE		cprintjob.cpp
+SOURCE     	main.cpp
+SOURCE		cbttimer.cpp
+SOURCE		cbtsoapcodec.cpp
+SOURCE		cxmlhandler.cpp
+SOURCE		cbtprintercontroller.cpp
+SOURCE      cbtobjectserver.cpp
+SOURCE      cbtsdpadvertiser.cpp
+SOURCE      cbtdprserviceadvertiser.cpp
+SOURCE		cbtjobchannel.cpp
+SOURCE		cbtstatuschannel.cpp
+SOURCE		cbtchannelbase.cpp
+SOURCE      cbtonquery.cpp
+SOURCE		cbtpasswordquery.cpp
+
+START RESOURCE ../data/01007779.rss
+TARGET btprotocol.rsc
+END
+
+START RESOURCE ../data/btprotocol.rss
+HEADER
+TARGET btprotocol.rsc
+TARGETPATH       resource/imageprintdata/protocols
+END
+
+STATICLIBRARY   clog.lib	
+DEBUGLIBRARY	flogger.lib
+
+LIBRARY			euser.lib
+LIBRARY			fbscli.lib
+LIBRARY			bluetooth.lib
+LIBRARY 		esock.lib
+LIBRARY 		irobex.lib
+LIBRARY 		estor.lib
+LIBRARY 		sdpdatabase.lib
+LIBRARY 		btdevice.lib
+LIBRARY 		sdpagent.lib
+LIBRARY 		btextnotifiers.lib
+LIBRARY 		efsrv.lib  
+LIBRARY			charconv.lib
+LIBRARY 		bafl.lib
+LIBRARY 		hal.lib
+LIBRARY			platformenv.lib
+LIBRARY			estlib.lib
+LIBRARY   	  	ecom.lib
+LIBRARY    		xhtmlfilecomposer.lib
+LIBRARY			centralrepository.lib
+
+// End of File

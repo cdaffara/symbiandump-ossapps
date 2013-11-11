@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="0.9">
+    <widget name="containerWidget" type="HbWidget">
+        <widget name="widget_background_icon" type="HbLabel">
+            <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+            <enums name="aspectRatioMode" value="IgnoreAspectRatio"/>
+            <real name="z" value="1"/>
+            <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+            <sizehint height="29un" type="FIXED" width="29un"/>
+        </widget>
+        <widget name="album_art_image" type="MpAlbumCoverWidget">
+            <real name="z" value="2"/>
+            <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+            <sizehint height="27.5un" type="FIXED" width="27.5un"/>
+        </widget>
+        <widget name="text_bg" type="HbLabel">
+            <real name="z" value="3"/>
+            <sizehint height="expr(var(hb-param-text-height-tiny)+2*var(hb-param-margin-gene-middle-vertical))" type="PREFERRED" width="27.5un"/>
+        </widget>
+        <widget name="scrolling_text" type="HbMarqueeItem">
+            <real name="z" value="4"/>
+            <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+            <sizehint height="var(hb-param-text-height-tiny)" type="PREFERRED" width="expr(27.5un-2*var(hb-param-margin-gene-middle-horizontal))"/>
+            <fontspec name="fontSpec" role="Secondary" textheight="var(hb-param-text-height-secondary)"/>
+            <string name="textColor" value="var(qtg_fr_multimedia_trans)"/>
+            </widget>
+        <widget name="button_group_container" type="HbWidget">
+            <widget name="btn_previous" type="HbPushButton">
+                <icon iconName="qtg_mono_previous" name="icon"/>            
+            </widget>        
+            <widget name="btn_play" type="HbPushButton">
+                <icon iconName="qtg_mono_play" name="icon"/>            
+            </widget>
+            <widget name="btn_next" type="HbPushButton">
+                <icon iconName="qtg_mono_next" name="icon"/>            
+            </widget>
+            <real name="z" value="4"/>
+            <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+            <sizehint height="8un" type="FIXED" width="33un"/>
+            <layout orientation="Horizontal" spacing="0un" type="linear">
+                <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+                <linearitem itemname="btn_previous" spacing="0un"/>
+                <linearitem itemname="btn_play" spacing="0un"/>
+                <linearitem itemname="btn_next" spacing="0un"/>
+            </layout>
+        </widget>
+        <real name="z" value="1"/>
+        <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+        <sizehint height="expr(37un-var(hb-param-margin-gene-middle-vertical))" type="FIXED" width="33un"/>
+        <layout type="anchor">
+            <anchoritem dst="widget_background_icon" dstEdge="RIGHT" spacing="-var(hb-param-margin-gene-right)" src="" srcEdge="RIGHT"/>
+            <anchoritem dst="widget_background_icon" dstEdge="TOP" spacing="0un" src="" srcEdge="TOP"/>
+            <anchoritem dst="album_art_image" dstEdge="RIGHT" spacing="-var(hb-param-margin-gene-middle-horizontal)" src="widget_background_icon" srcEdge="RIGHT"/>
+            <anchoritem dst="album_art_image" dstEdge="TOP" spacing="var(hb-param-margin-gene-middle-vertical)" src="widget_background_icon" srcEdge="TOP"/>
+            <anchoritem dst="text_bg" dstEdge="RIGHT" spacing="0un" src="album_art_image" srcEdge="RIGHT"/>
+            <anchoritem dst="text_bg" dstEdge="BOTTOM" spacing="0un" src="album_art_image" srcEdge="BOTTOM"/>
+            <anchoritem dst="scrolling_text" dstEdge="RIGHT" spacing="-var(hb-param-margin-gene-middle-horizontal)" src="text_bg" srcEdge="RIGHT"/>
+            <anchoritem dst="scrolling_text" dstEdge="BOTTOM" spacing="-var(hb-param-margin-gene-middle-vertical)" src="text_bg" srcEdge="BOTTOM"/>
+            <anchoritem dst="scrolling_text" dstEdge="LEFT" spacing="var(hb-param-margin-gene-middle-horizontal)" src="text_bg" srcEdge="LEFT"/>
+            <anchoritem dst="scrolling_text" dstEdge="TOP" spacing="var(hb-param-margin-gene-middle-vertical)" src="text_bg" srcEdge="TOP"/>
+            <anchoritem dst="button_group_container" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+            <anchoritem dst="button_group_container" dstEdge="TOP" spacing="0un" src="text_bg" srcEdge="BOTTOM"/>
+        </layout>
+    </widget>
+    <metadata activeUIState="Common ui state" display="NHD portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+    </metadata>
+</hbdocument>

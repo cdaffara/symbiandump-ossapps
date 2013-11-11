@@ -1,0 +1,45 @@
+/*
+* ==============================================================================
+*  Name        : F0112234.rss
+*  Part of     : 
+*  Description : 
+*  Version     : 
+*
+*  Copyright © 2004 Nokia Corporation.
+*  This material, including documentation and any related
+*  computer programs, is protected by copyright controlled by
+*  Nokia Corporation. All rights are reserved. Copying,
+*  including reproducing, storing, adapting or translating, any
+*  or all of this material requires the prior written consent of
+*  Nokia Corporation. This material also contains confidential
+*  information which may not be disclosed to others without the
+*  prior written consent of Nokia Corporation.
+* ==============================================================================
+*/
+#include "registryinfov2.rh"
+
+RESOURCE REGISTRY_INFO theInfo
+	{
+	resource_format_version = RESOURCE_FORMAT_VERSION_2;
+	// UID for the DLL
+	dll_uid = 0xF0112235;
+	// Declare array of interface info
+	interfaces = 
+		{
+		INTERFACE_INFO
+			{
+			// UID of interface that is implemented
+			interface_uid = 0x20021340;
+			implementations = 
+				{
+				IMPLEMENTATION_INFO
+					{
+					implementation_uid = 0x20021342;
+					version_no = 1;
+					default_data = "Videotelephony";
+					rom_only = 0;
+					}
+				};
+			}
+		};
+	}

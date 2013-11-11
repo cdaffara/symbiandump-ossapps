@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="0.2">
+    <object name="actionClearWindow" type="HbAction">
+        <string name="iconText" value="Clear window"/>
+    </object>
+    <object name="actionOpenApplicationView" type="HbAction">
+        <string name="iconText" value="Open application view"/>
+        <string name="text" value="Open application view"/>
+        <string name="toolTip" value="Open application view"/>
+    </object>
+    <widget name="outputview" type="OutputView">
+        <widget name="OutputContent" role="HbView:widget" type="HbWidget">
+            <widget name="textEdit" type="HbTextEdit">
+                <string name="plainText" value="Text"/>
+                <sizehint height="5.970149423688901un" type="PREFERRED" width="22.388060338833377un"/>
+            </widget>
+            <layout type="anchor" widget="OutputContent">
+                <anchoritem dst="textEdit" dstEdge="LEFT" spacing="0.0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="textEdit" dstEdge="TOP" spacing="0.0un" src="" srcEdge="TOP"/>
+                <anchoritem dst="textEdit" dstEdge="RIGHT" spacing="0.0un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="textEdit" dstEdge="BOTTOM" spacing="0.0un" src="" srcEdge="BOTTOM"/>
+            </layout>
+        </widget>
+        <widget name="viewMenu" role="HbView:menu" type="HbMenu">
+            <ref object="actionClearWindow" role="HbMenu:addAction"/>
+        </widget>
+        <widget name="viewToobar" role="HbView:toolBar" type="HbToolBar">
+            <ref object="actionOpenApplicationView" role="HbToolBar:addAction"/>
+        </widget>
+        <string name="title" value="Output"/>
+    </widget>
+    <metadata display="QHD portrait" unit="un"/>
+</hbdocument>

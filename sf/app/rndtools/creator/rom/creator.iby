@@ -1,0 +1,67 @@
+/*
+* Copyright (c) 2008 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*
+*/
+
+
+#ifndef __CREATOR_IBY__
+#define __CREATOR_IBY__
+
+S60_APP_EXE(Creator)
+S60_APP_RESOURCE(Creator)
+S60_APP_RESOURCE(datacreator)
+SCALABLE_IMAGE(APP_BITMAP_DIR,APP_BITMAP_DIR,Creator)
+
+data=ZPRIVATE\10003a3f\import\APPS\Creator_reg.RSC Private\10003a3f\import\Apps\Creator_reg.rsc 
+//#ifdef S60_UPGRADABLE_APP_REG_RSC
+//  S60_UPGRADABLE_APP_REG_RSC(Creator)
+//#else
+//  S60_APP_AIF_RSC(Creator)
+//#endif
+
+data=ZPRIVATE\20011383\backup_registration.xml        	private\20011383\backup_registration.xml
+data=ZSYSTEM\Install\Creator_stub.sis                   \system\install\Creator_stub.sis
+
+// test files (remove largest files if running out of ROM space):
+data=ZPRIVATE\20011383\3GPP-70kB.3gpp                   private\20011383\3GPP-70kB.3gpp
+data=ZPRIVATE\20011383\AAC-100kB.aac                    private\20011383\AAC-100kB.aac
+data=ZPRIVATE\20011383\AMR-20kB.amr                     private\20011383\AMR-20kB.amr
+data=ZPRIVATE\20011383\Deck-1kB.saveddeck               private\20011383\Deck-1kB.saveddeck
+data=ZPRIVATE\20011383\DOC-20kB.doc                     private\20011383\DOC-20kB.doc
+data=ZPRIVATE\20011383\HTML-20kB.html                   private\20011383\HTML-20kB.html
+data=ZPRIVATE\20011383\JAD-1kB.jad                      private\20011383\JAD-1kB.jad
+data=ZPRIVATE\20011383\JAR-10kB.jar                     private\20011383\JAR-10kB.jar
+data=ZPRIVATE\20011383\JP2-65kB.jp2                     private\20011383\JP2-65kB.jp2
+data=ZPRIVATE\20011383\MIDI-10kB.mid                    private\20011383\MIDI-10kB.mid
+data=ZPRIVATE\20011383\MP3-250kB.mp3                    private\20011383\MP3-250kB.mp3
+data=ZPRIVATE\20011383\MP4-200kB.mp4                    private\20011383\MP4-200kB.mp4
+data=ZPRIVATE\20011383\MXMF-40kB.mxmf                   private\20011383\MXMF-40kB.mxmf
+data=ZPRIVATE\20011383\PNG-15kB.png                     private\20011383\PNG-15kB.png
+data=ZPRIVATE\20011383\PPT-40kB.ppt                     private\20011383\PPT-40kB.ppt
+data=ZPRIVATE\20011383\RAM-1kB.ram                      private\20011383\RAM-1kB.ram
+data=ZPRIVATE\20011383\RM-95kB.rm                       private\20011383\RM-95kB.rm
+data=ZPRIVATE\20011383\RNG-1kB.rng                      private\20011383\RNG-1kB.rng
+data=ZPRIVATE\20011383\SVG-15kB.svg                     private\20011383\SVG-15kB.svg
+data=ZPRIVATE\20011383\SWF-15kB.swf                     private\20011383\SWF-15kB.swf
+data=ZPRIVATE\20011383\TIF-25kB.tif                     private\20011383\TIF-25kB.tif
+data=ZPRIVATE\20011383\VCF-1kB.vcf                      private\20011383\VCF-1kB.vcf
+data=ZPRIVATE\20011383\VCS-1kB.vcs                      private\20011383\VCS-1kB.vcs
+data=ZPRIVATE\20011383\WAV-20kB.wav                     private\20011383\WAV-20kB.wav
+data=ZPRIVATE\20011383\XLS-15kB.xls                     private\20011383\XLS-15kB.xls
+data=ZPRIVATE\20011383\SISX-10kB.sisx                   private\20011383\SISX-10kB.sisx
+data=ZPRIVATE\20011383\WMA-50kB.wma                     private\20011383\WMA-50kB.wma
+data=ZPRIVATE\20011383\WMV-200kB.wmv                    private\20011383\WMV-200kB.wmv
+
+#endif // __CREATOR_IBY__

@@ -1,0 +1,49 @@
+// Copyright (c) 2002-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+#ifndef __TE_PHBKSYNC_IBY__
+#define __TE_PHBKSYNC_IBY__
+
+#include <testexecute.iby>
+#include <testconfigfileparser.iby>
+#include <telephony.iby>
+#include <simtsy.iby>
+
+// TE_Sync
+file=ABI_DIR\DEBUG_DIR\TE_Sync.exe                                  SYSTEM_BINDIR\TE_Sync.exe
+data=\epoc32\data\z\TestData\scripts\TE_Sync.script                 TestData\scripts\TE_Sync.script
+data=\epoc32\data\z\TestData\scripts\TE_Sync_MMTSY.script           TestData\scripts\TE_Sync_MMTSY.script
+data=\epoc32\data\z\TestData\scripts\TE_Sync_setup.script           TestData\scripts\TE_Sync_setup.script
+data=\epoc32\data\z\TestData\scripts\TE_Sync_setup_MMTSY.script     TestData\scripts\TE_Sync_setup_MMTSY.script
+data=\epoc32\data\z\TestData\Configs\TE_Sync.cfg                    TestData\Configs\TE_Sync.cfg
+data=\epoc32\data\z\TestData\Configs\TE_Sync_MMTSY.cfg              TestData\Configs\TE_Sync_MMTSY.cfg
+data=\epoc32\data\z\TestData\Configs\TE_Sync_config.txt             TestData\Configs\TE_Sync_config.txt
+
+// TE_PhBkSync
+file=ABI_DIR\DEBUG_DIR\TE_PhBkSync.exe                              SYSTEM_BINDIR\TE_PhBkSync.exe
+data=\epoc32\data\z\TestData\scripts\TE_PhBkSync.script             TestData\scripts\TE_PhBkSync.script
+data=\epoc32\data\z\TestData\scripts\TE_PhBkSync_setup.script       TestData\scripts\TE_PhBkSync_setup.script
+data=\epoc32\data\z\TestData\Configs\TE_PhBkSync.cfg                TestData\Configs\TE_PhBkSync.cfg
+data=\epoc32\data\z\TestData\Configs\TE_PhBkSync_config.txt         TestData\Configs\TE_PhBkSync_config.txt
+
+// TE_CntSync
+file=ABI_DIR\DEBUG_DIR\TE_CntSync.exe                               SYSTEM_BINDIR\TE_CntSync.exe
+data=\epoc32\data\z\TestData\scripts\TE_CntSync.script              TestData\scripts\TE_CntSync.script
+data=\epoc32\data\z\TestData\scripts\TE_CntSync_setup.script        TestData\scripts\TE_CntSync_setup.script
+data=\epoc32\data\z\TestData\Configs\TE_CntSync.cfg                 TestData\Configs\TE_CntSync.cfg
+data=\epoc32\data\z\TestData\Configs\TE_CntSync_config.txt          TestData\Configs\TE_CntSync_config.txt
+
+#endif // __TE_PHBKSYNC_IBY__
+

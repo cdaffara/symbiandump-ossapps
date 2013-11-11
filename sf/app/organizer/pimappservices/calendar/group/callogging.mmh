@@ -1,0 +1,39 @@
+// Copyright (c) 2006-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// Calendar Logging
+// 
+//
+
+//
+// NOTE: Calendar logging is enabled for DEBUG builds only.
+//
+// FEATURES
+// 1. It is possible to log every IPC call made to the calendar server and log any leaves that occur.
+// 2. It is possible to log details of operations such as find instance, store entry, update entry, delete entry etc.
+// 3. It is possible to output details of all entries in the calendar database.
+
+// SETUP
+// 1. Uncomment atleast one of the following macros to enable Calendar logging.
+// 2. The macros can be turned off/on by commenting/uncommenting in any combination. 
+// 3. The verbose macro is a combination of all the macros and additional verbose logging comments
+// 4. Details of all the entries currently in the calendar database can be retrieved using an iterator e.g. NextInstanceL
+
+//MACRO __CAL_BASIC_LOGGING__	// Basic Logs 	- Client side requests (store, update, delete etc.), calendar file operations and others.
+//MACRO __CAL_ENTRY_LOGGING__ 	// Entry Logs 	- Store entry, update entry, delete entry and other entry operations.
+//MACRO __CAL_IPC_LOGGING__	// IPC Logs	- Every IPC call made to the calendar server and any leaves that occur.
+//MACRO __CAL_ALARM_LOGGING__	// Alarm Logs	- Alarm queues, expiry, cancellation, panics and other alarm operations.
+//MACRO __CAL_ASYNC_LOGGING__	// Async Log	- Buildindex, async delete, category tasks.
+//MACRO __CAL_INSTANCE_LOGGING__	// Instance Logs - FindInstance and other instance related logs.
+//MACRO __CAL_ATTACH_LOGGING__	// Attachment Logs- Add, update, remove, move attachment and other operations attachment operations.
+//MACRO __CAL_VERBOSE_LOGGING__ 	// Verbose Logs	- Combination of all the logging macros and additional verbose logging comments.

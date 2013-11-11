@@ -1,0 +1,230 @@
+/*
+* Copyright (c) 2006-2008 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Resource headers for project InternetRadio
+*
+*/
+
+
+/* ---------------------------------------------------------------------------
+*  Version history:
+*  Template version:
+*  <ccm_history>
+*
+*  Version: 21, Tue Mar 11 20:00:00 2008 by Rohit
+*  Ref:
+*  Merged IRv1.0 Engine code changes
+*
+*  </ccm_history>
+* ============================================================================
+*/
+
+#ifndef IR_HRH
+#define IR_HRH
+
+#include <bldvariant.hrh>
+#define KPbk2NullIconIdOwnerUid     0
+
+/** 
+IR enumerate command codes 
+*/
+enum TIRIds
+	{
+	EIRMainChoiceView = 1,			// start value must not be 0
+	EIRDiscoverStationsView,
+	EIRBrowsebyStationMap,
+	EIRBrowseByGenreView,
+	EIRBrowseByLanguageView,
+	EIRBrowseByCountryView,
+	EIRStationsView,
+	EIRSavedStationsView,
+	EIRNowPlayingView,
+	EIRAddManuallyStationView,
+	EIRSearchView,
+	EIRSearchListView,
+	EIRProgressBarView,
+	EIRBufferingView,
+	ESelectCmd,
+	EGotoNowPlayingViewCmd,
+	EAddStationManuallyCmd,
+	EAddtoStationsCmd,
+	EAddtoFavouritesCmd,
+	ESendtoFriendCmd,
+	EUpdateAppCmd,
+	ESettingsCmd,
+	EHelpCmd,
+	EChangeCmd,
+	EExitCmd,
+	EIRBack,
+	EIRExit,
+	EListenCmd,
+	EStationsCmd,
+	EStationDetailsCmd,
+	EMoveCmd,
+	EDeleteCmd,
+	EAddStationCmd,
+	EStopCmd,
+	EPlayCmd,
+	//EStationInfoCmd,
+	ESaveStationCmd,
+	ESearchCmd,
+	//EIRStationInformationView,
+	EIROk,
+	EIRCancel,
+	EIRAccept,
+	EIRRequestGenreData,
+	EIRRequestLanguageData,
+	EIRRequestCountryData,
+	EIRRequestTopStationsData,
+	EIRRequestECatagoryData,
+	EIRRequestChannelData,
+	EIROkayCmd,
+	ESaveCmd,
+	ESaveAllCmd,
+	ESettingsEditCmd,
+	ESearchAgainCmd, 	//Search again if search fails.
+	EStationInformationCmd,	// Launch Station Info view
+	EProgressDialog,    //Added For Search Progress Bar
+	EIRMoveCancel, // Cancel for saved stations view move option
+	EIRDelayedPlayStation,
+	EVRCmdListenChannel,
+	EAdvertisementUrl,
+	EVRCmdShowVisualContent,
+	EVRCmdOpenSetupView,
+	EVRCmdMoveChannel,
+	EVRCmdDeleteChannel,
+	EExportFavCmd,
+	EEditStationsCmd,
+	EClearCmd,
+	EFirstTimeSelectCmd,
+	EUpdateApplicationCmd,
+	EFirstTimeSettingsCmd,
+	EFindStationsCmd,
+	EHistoryCmd,
+	EDeleteInProgress,
+    EIRCmdShowVisualContent,	// 9 enums used by Now Playing view
+	EIRCmdStepNextPreset,
+	EIRCmdStepPrevPreset,
+	EIRCmdTuneUp,
+	EIRCmdTuneDown,
+	EIRCmdPlay,
+	EIRCmdStop,
+	EPrevCmd,
+	ENextCmd,
+	
+	EISDSRec,			// Added for Byte Counter testing (to be rmoved)
+	EISDSSend,
+	EAudioRec,
+	EAudioSend,
+	EIRContinue, 	
+	EPbk2qgn_indi_tb_prev,	
+	EPbk2qgn_indi_tb_play,
+	EPbk2qgn_indi_tb_avail_next,
+	EIRCmdChangeSetting,
+	EIRSettingItemSnapSelectionID,
+	EIRSettingItemGprsConnBitRateID,
+	EIRSettingItem3GConnBitRateID,
+    EIRSettingItemWiFiConnBitRateID,
+    EFmRecOrPhone,
+    EStereoMode,
+    EEqualizer,
+    EFindInShop,
+    EGotoMusicStore,
+    EHistory,
+    EOnCmd,
+    EOffCmd,
+    EMarkUnmark,
+    EMark,
+    EMarkAll,
+    EUnmark,
+    EUnmarkAll,
+    EGoToMainView,
+    EIRCmdVolumeControl,
+    EGotoMainView,
+    	
+    	
+    EIRAddManuallyStationCommand1,
+    EaddstaionCommand2, 
+      EAddStaionName,
+    EAddStaionURL,
+   // EAddStaionName,
+    EAddStaionDescription, // start value must not be 0
+    EGoToNowPlaying,
+    EUpdateApplication,
+    EAddHelp,
+    EAddExit ,
+    EButton1,
+    EButton2,
+    EButton3	
+	};
+	
+	//----- BatteryIndicator Start
+
+enum TSysInfoCommandIds
+	{
+	ESysInfoCmdAppTest = 1
+	};
+
+enum TSysInfoTabViewId
+	{
+	ESysInfoView1Tab= 1,
+	ESysInfoView2Tab,
+	ESysInfoView3Tab
+	};
+
+	
+enum TState
+	{
+	EStateBatteryInfo = 0,
+	EStateCurrentNetwork,
+	EStateHomeOperator,
+	EStateNetworkType
+	};
+	
+enum TChargerStatus
+	{
+	EChargerStatusOff = 0,
+	EChargerStatusOn,
+	EChargerStatusAlmostFull,
+	EChargerStatusFull,
+	EChargerStatusError
+	};
+
+// Use these flags in IR_BITMAP_BUTTON_LAYOUT keys field. These values are bitwise flags
+#define EIRRockerButtonKeyRight         0x0001
+#define EIRRockerButtonKeyRightLong     0x0002
+#define EIRRockerButtonKeyLeft          0x0004
+#define EIRRockerButtonKeyLeftLong      0x0008
+#define EIRRockerButtonKeyMiddle        0x0010
+#define EIRRockerButtonKeyMiddleLong    0x0020
+#define EIRRockerButtonKeyUp            0x0040
+#define EIRRockerButtonKeyUpLong        0x0080
+#define EIRRockerButtonKeyDown          0x0100
+#define EIRRockerButtonKeyDownLong      0x0200
+#define EPbk2NullIconId                  -1
+#define ENow2NullIconArrayId             -1
+ 
+//---Battery Indicator End
+
+// Disable Radio Launcher for others than S60 3.2 environment.
+// #undef __DISABLE_RADIO_LAUNCHER
+// #ifndef __S60_32__
+// #define __DISABLE_RADIO_LAUNCHER
+// #endif // __S60_32__
+
+// Enable the removal of Internet Radio Updater that is used to remove 
+// 1.0/1.1 installations.
+//#define __SHIPPING_METHOD_UPDATER
+
+
+#endif // __IR_HRH__

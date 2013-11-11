@@ -1,0 +1,27 @@
+// Copyright (c) 2000-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+TARGET tccnoriginal.exe
+TARGETTYPE exe
+CAPABILITY   None
+UID 0
+VENDORID 0x70000001
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+USERINCLUDE  ../originalinc
+SOURCEPATH ../originaltsrc
+SOURCE TCCnMain.cpp ConvertDates.cpp
+LIBRARY euser.lib cconoriginal.lib efsrv.lib flogger.lib
+
+SMPSAFE

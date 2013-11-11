@@ -1,0 +1,210 @@
+// Copyright (c) 1998-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// resource file for IMCM.DLL
+// 
+//
+
+#include "imcm.rls"
+#include <imcm.loc>
+#include <imcm_default_charset.loc>
+
+#define PARABREAK	8233
+#define TABCHAR		9
+            
+STRUCT LBUF
+    {
+    LTEXT buffer; // non-zero terminated text string
+    }
+
+STRUCT L8BUF
+    {
+    LTEXT8 buffer;
+    }
+
+STRUCT INT8
+    {
+    BYTE value;
+    }
+
+RESOURCE LBUF forward_formatting_string
+	{
+	buffer=qtn_mail_fwd"%S";
+	}
+
+RESOURCE LBUF reply_formatting_string
+	{
+	buffer=qtn_mail_re"%S";
+	}
+
+RESOURCE LBUF receipt_formatting_string
+	{
+	buffer=STRING_receipt_formatting_string1;
+	}
+
+RESOURCE LBUF email_address_formatting_string
+	{
+	buffer="%S <%S>";//STRING_email_address_formatting_string1;
+	}        
+
+// Headers used in Body for Forwarded/Replyed message
+
+RESOURCE LBUF forward_body_header
+	{
+	buffer=<PARABREAK><PARABREAK>qtn_mail_forward_separator<PARABREAK>
+			qtn_mail_copy_subject" %S"<PARABREAK>
+			qtn_mail_copy_sender" %S"<PARABREAK>
+			qtn_mail_copy_date" %S"<PARABREAK>;
+	}
+
+RESOURCE LBUF forward_body_header_toonly
+	{
+	buffer=STRING_forward_body_header1
+			STRING_forward_body_header2
+			STRING_forward_body_header3
+			STRING_forward_body_header5
+			STRING_forward_body_header4;
+	}
+
+RESOURCE LBUF forward_body_header_cconly
+	{
+	buffer=STRING_forward_body_header1
+			STRING_forward_body_header2
+			STRING_forward_body_header3
+			STRING_forward_body_header6
+			STRING_forward_body_header4;
+	}
+
+RESOURCE LBUF forward_body_header_tocc
+	{
+	buffer=STRING_forward_body_header1
+			STRING_forward_body_header2
+			STRING_forward_body_header3
+			STRING_forward_body_header5
+			STRING_forward_body_header6
+			STRING_forward_body_header4;
+	}
+
+RESOURCE LBUF reply_body_header
+	{
+	buffer=<PARABREAK><PARABREAK>qtn_mail_reply_separator<PARABREAK>
+			qtn_mail_copy_subject" %S"<PARABREAK>
+			qtn_mail_copy_sender" %S"<PARABREAK>
+			qtn_mail_copy_date" %S"<PARABREAK>;
+	}
+
+RESOURCE LBUF reply_body_header_toonly
+	{
+	buffer=STRING_reply_body_header1
+			STRING_reply_body_header2
+			STRING_reply_body_header3
+			STRING_reply_body_header5
+			STRING_reply_body_header4;
+	}
+
+RESOURCE LBUF reply_body_header_cconly
+	{
+	buffer=STRING_reply_body_header1
+			STRING_reply_body_header2
+			STRING_reply_body_header3
+			STRING_reply_body_header6
+			STRING_reply_body_header4;
+	}
+
+RESOURCE LBUF reply_body_header_tocc
+	{
+	buffer=STRING_reply_body_header1
+			STRING_reply_body_header2
+			STRING_reply_body_header3
+			STRING_reply_body_header5
+			STRING_reply_body_header6
+			STRING_reply_body_header4;
+	}
+
+RESOURCE LBUF body_header
+	{
+	buffer=STRING_body_header1
+			STRING_body_header2
+			STRING_body_header3
+			STRING_body_header4
+			STRING_body_header5;
+	}
+
+RESOURCE LBUF removed_attachment_tag
+	{
+	buffer=STRING_removed_attachment_tag1;
+	}
+
+RESOURCE LBUF retained_attachment_tag
+	{
+	buffer=STRING_retained_attachment_tag1;
+	}
+
+RESOURCE LBUF default_attachment_name
+	{
+	buffer=STRING_default_attachment_name1;
+	}
+
+RESOURCE LBUF product_name
+	{
+	buffer=STRING_product_name1;
+	}
+
+RESOURCE LBUF timeout_dialog_title 
+	{
+	buffer=STRING_timeout_dialog_title1;
+	}
+
+RESOURCE LBUF timeout_dialog_text
+	{
+	buffer=STRING_timeout_dialog_text1;
+	}
+
+RESOURCE LBUF default_vcard_name
+	{
+	buffer=STRING_default_vcard_name1;
+	}
+
+// List of available character sets in Charconv.h
+// at some point flags should be removed and only qtn_default_charset be used for all builds.
+RESOURCE L8BUF default_system_charset
+    {
+    buffer = qtn_default_email_charset;
+    }
+
+// If this value is set to 1, 8 bit body text data and character set information will be stored
+// when downloaded via IMPS and POPS.  The body text will be decoded to the correct character set
+// when opened.  If this value is set to 0, the body text is decoded and stored when downloading.
+RESOURCE INT8 store_8bit_body_text
+	{
+	value = 1;
+	}
+
+// Used for localised date time formatting for email forward and reply body headers
+RESOURCE LBUF body_header_datetime_format
+	{
+	buffer="%D%M%Y%/0%1%/1%2%/2%3%/3 %-B%:0%J%:1%T%:3%+B"; //STRING_body_header_datetime_format;
+	}
+
+RESOURCE LBUF partial_download_footer_message
+	{
+	buffer=qtn_mail_rest_of_mail_not_fetched;
+	}
+
+// If this value is set to 1,body text data  will be stored when downloaded via IMPS and POPS using chunk storage option.  
+// If this value is set to 0, the body text is  stored by creating entire message in RAM.
+
+RESOURCE INT8 store_plain_body_text
+	{
+	value = 0;
+	}

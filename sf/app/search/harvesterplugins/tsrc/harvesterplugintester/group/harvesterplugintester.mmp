@@ -1,0 +1,250 @@
+/*TYPE TESTCLASS*/
+/*
+* Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+* 
+* Description: MMP file for STIF Test Framework's TestScripter 
+* testclass test module.
+*
+*/
+
+#include <platform_paths.hrh>
+
+TARGET          HarvesterPluginTester.dll
+TARGETTYPE      dll
+UID             0x1000008D 0x101FB3E3
+
+CAPABILITY        CAP_GENERAL_DLL -AllFiles -DRM
+//CAPABILITY      ALL -TCB
+/* Remove comments and replace 0x00000000 with correct vendor id */
+// VENDORID     0x00000000
+/* Remove comments and replace 0x00000000 with correct secure id */
+// SECUREID     0x00000000
+
+//TARGETPATH      ?target_path
+DEFFILE         harvesterplugintester.def
+
+USERINCLUDE     ../inc 
+
+APP_LAYER_SYSTEMINCLUDE
+OS_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE /epoc32/include/ecom
+SYSTEMINCLUDE /epoc32/include/mmf/common
+SYSTEMINCLUDE /epoc32/include/mw
+
+SOURCEPATH      ../src
+
+SOURCE          harvesterplugintester.cpp
+SOURCE          harvesterplugintesterblocks.cpp
+SOURCE          harvesterobserver.cpp
+
+//RESOURCE        resource_file
+//RESOURCE        resource_file2
+
+LIBRARY         euser.lib
+LIBRARY         stiftestinterface.lib
+LIBRARY         stiftestengine.lib
+
+LANG            SC
+
+/*
+START WINS      
+?wins_specific_information
+END
+
+START MARM
+?marm_specific_information
+END
+*/
+// Other possible keywords:
+ 
+// DOCUMENT     ?file, that is not compiled, but added to MSVC project workspace (i.e. release notes)
+/*
+START BITMAP ?target
+TARGETPATH   ?emulated_path_on_target_machine
+HEADER
+SOURCE       ?color_depth ?source_bitmap
+END
+*/
+// DEFFILE ?filename
+// AIF ?filename
+
+//Used for adding friend classes for unit testing
+//Example (in class header file):
+//#ifdef HARVESTERPLUGINTESTER_FRIEND
+// friend class CHarvesterPluginTester
+//#endif
+MACRO HARVESTERPLUGINTESTER_FRIEND
+
+//------------------------Added for testing FilePlugin-------------------
+USERINCLUDE ./../../../file/inc
+USERINCLUDE ./../../../file/inc/monitorplugin
+USERINCLUDE ./../../../file/fastfindfileserverplugin/inc
+
+SOURCEPATH ./../../../file/src
+SOURCE 	cfileplugin.cpp cfileharvester.cpp cfilemonitor.cpp cmmcmonitor.cpp
+SOURCE  cfolderrenamedharvester.cpp
+//---------------End of additions for testing FilePlugin-------------------
+
+//------------------Added for testing Messaging plugin-------------------
+USERINCLUDE ./../../../messaging/smsmms/inc
+
+SOURCEPATH ./../../../messaging/smsmms/src
+SOURCE        cmessageplugin.cpp cmessagedatahandler.cpp cmessageharvester.cpp cmessagemonitor.cpp
+
+SOURCEPATH ../src
+SOURCE cmessagesessionobserver.cpp
+
+LIBRARY       msgs.lib
+LIBRARY		  etext.lib // CParaFormatLayer etc
+LIBRARY       charconv.lib
+LIBRARY       imcm.lib
+LIBRARY       smcm.lib
+LIBRARY       gsmu.lib
+LIBRARY       mmscli.lib
+//------------------End for Messaging plugin ----------------------------  
+
+LIBRARY       efile.lib
+LIBRARY       flogger.lib  
+LIBRARY 	  cpixharvesterplugininterface.lib
+LIBRARY       ecom.lib
+LIBRARY       efsrv.lib
+LIBRARY       cpixsearchclient.lib
+LIBRARY       platformenv.lib // Path info
+//---------------End of additions for testing FilePlugin-------------------
+
+//------------------End for Bookmarks plugin ----------------------------  
+USERINCLUDE ./../../../bookmarks/inc
+
+SOURCEPATH ./../../../bookmarks/src
+SOURCE  bookmarksplugin.cpp
+
+LIBRARY       favouritesengine.lib
+LIBRARY       inetprotutil.lib //Uri16.h
+//---------------End of additions for Bookmarks Plugin-------------------
+
+//------------------Additions for Applications plugin ----------------------------  
+USERINCLUDE ./../../../applications/inc
+
+SOURCEPATH ./../../../applications/src
+SOURCE  applicationsplugin.cpp
+
+LIBRARY       apgrfx.lib //for RApaLsSession
+LIBRARY       apparc.lib //for TApaAppInfo
+LIBRARY       centralrepository.lib    //for CRepository
+LIBRARY	      scrclient.lib
+//---------------End of additions for Applications Plugin-------------------
+
+//------------------Added for Notes plugin ---------------------------- 
+USERINCLUDE ./../../../notes/inc
+
+SOURCEPATH ./../../../notes/src
+SOURCE  notesplugin.cpp  
+
+LIBRARY       estor.lib    //RDbColReadStream
+LIBRARY       edbms.lib    //RDbNamedDatabase
+//---------------End of additions for Notes Plugin-------------------
+
+//---------------Additions for Contacts Plugin----------------------------
+USERINCLUDE ./../../../contacts/inc
+SOURCEPATH ./../../../contacts/src
+SOURCE        ccontactsplugin.cpp
+LIBRARY       cntmodel.lib
+//------------------End for Contacts  plugin ----------------------------
+
+//---------------Additions for Calendar Plugin----------------------------
+USERINCLUDE ./../../../calendar/inc
+
+SOURCEPATH ../src
+SOURCE ccalanderobserver.cpp
+SOURCEPATH ./../../../calendar/src
+SOURCE        ccalendarplugin.cpp
+
+LIBRARY       calinterimapi.lib
+//------------------End for Calendar  plugin ----------------------------
+
+//Audio media plugin
+USERINCLUDE ./../../../media/mediautils/inc
+USERINCLUDE ./../../../media/audio/inc
+SOURCEPATH  ./../../../media/audio/src
+
+SOURCE        cpixmediaaudiodoc.cpp
+SOURCE        mediaplugin.cpp
+
+//------------------Added for Blacklist database ----------------------------
+//USERINCLUDE ./../../../harvesterserver/inc
+
+//SOURCEPATH  ./../../../harvesterserver/src
+//SOURCE        cblacklistdb.cpp  cblacklistmgr.cpp
+//------------------End for Blacklist database ----------------------------
+
+//SOURCEPATH  ./../../../pluginfw/src
+
+//SOURCE        delayedcallback.cpp //Linked to CPixHarvesterPluginInterface.lib
+
+STATICLIBRARY cpixmediautils.lib
+//LIBRARY       mediautils.lib
+LIBRARY       bafl.lib
+LIBRARY       mdeclient.lib
+LIBRARY       mdccommon.lib           // mds
+LIBRARY       harvesterclient.lib
+//End
+//---------------Additions for video plugin----------------------------
+USERINCLUDE ./../../../media/video/inc
+SOURCEPATH  ./../../../media/video/src
+
+SOURCE        cpixmediavideodoc.cpp
+SOURCE        videoplugin.cpp
+//------------------End for video plugin -----------------------------
+
+//---------------Additions for image plugin----------------------------
+USERINCLUDE ./../../../media/image/inc
+SOURCEPATH  ./../../../media/image/src
+
+SOURCE        cpixmediaimagedoc.cpp
+SOURCE        imageplugin.cpp
+//------------------End for image plugin -----------------------------
+
+//---------------Additions for Email plugin----------------------------
+USERINCLUDE ./../../../messaging/email/inc
+USERINCLUDE ./../../../messaging/email/qtemailfetcher
+SOURCEPATH  ./../../../messaging/email/src
+
+SOURCE        cemailplugin.cpp
+
+SYSTEMINCLUDE		/epoc32/include/mw/QtCore
+SYSTEMINCLUDE		/epoc32/include/stdapis
+SYSTEMINCLUDE		/epoc32/include/stdapis/sys
+SYSTEMINCLUDE		.
+SYSTEMINCLUDE		/epoc32/include/stdapis/stlport
+
+
+LIBRARY       qtemailfetcher.lib
+LIBRARY       qtcore.lib
+LIBRARY       libstdcpp.lib
+
+OPTION CW -wchar_t on
+MACRO _WCHAR_T_DECLARED
+EPOCALLOWDLLDATA
+//------------------End for Eail plugin -----------------------------
+
+USERINCLUDE ../../../applications/traces 
+USERINCLUDE ../../../bookmarks/traces 
+USERINCLUDE ../../../calendar/traces 
+USERINCLUDE ../../../contacts/traces 
+USERINCLUDE ../../../file/traces 
+USERINCLUDE ../../../media/audio/traces 
+USERINCLUDE ../../../media/image/traces 
+USERINCLUDE ../../../media/video/traces 
+USERINCLUDE ../../../messaging/smsmms/traces 
+USERINCLUDE ../../../notes/traces
+// End of File

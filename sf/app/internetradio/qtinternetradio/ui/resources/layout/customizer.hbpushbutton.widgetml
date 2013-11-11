@@ -1,0 +1,21 @@
+<hbwidget version="0.1" type="pushbutton">
+  <layout name="ir_custom_layout" type="mesh">
+    <meshitem src="icon" srcEdge="LEFT" dst="" dstEdge="LEFT" spacer="leftSpacer" />
+    <meshitem src="icon" srcEdge="RIGHT" dst="text" dstEdge="LEFT" />
+    <meshitem src="icon" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="icon" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+
+    <meshitem src="text" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacer="rightSpacer" />
+    <meshitem src="text" srcEdge="CENTERV" dst="icon" dstEdge="CENTERV" />
+    
+    <meshitem src="background" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="background" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+    <meshitem src="background" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+    <meshitem src="background" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+
+    <meshitem src="toucharea" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+    <meshitem src="toucharea" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+    <meshitem src="toucharea" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="toucharea" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+  </layout>
+</hbwidget>

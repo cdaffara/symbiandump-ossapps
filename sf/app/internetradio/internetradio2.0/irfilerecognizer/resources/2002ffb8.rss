@@ -1,0 +1,45 @@
+/*
+* Copyright (c) 2000 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  ?Description
+*
+*/
+
+
+#include <registryinfo.rh>
+#include "iruid3.hrh"
+
+RESOURCE REGISTRY_INFO r_registry
+{
+    dll_uid = UID3_IRFILERECOGNIZER_DLL; // should match name of this file
+    interfaces =
+    {
+        INTERFACE_INFO
+        {
+            interface_uid = 0x101F7D87;  // const for all Data Recognizers
+            implementations =
+            {
+                IMPLEMENTATION_INFO
+                {
+                    implementation_uid = UID3_IRFILERECOGNIZER_DLL_IMPLEMENTATION_UID; // unique implementation uid
+                    version_no = 1;
+                    display_name = "IRFileRecognizer";
+                    default_data = "";
+                    opaque_data = "";
+                }
+            };
+        }
+    };
+}
+
+// End of File

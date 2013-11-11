@@ -1,0 +1,11 @@
+<?xml version="1.0" standalone="yes"?>
+<backup_registration>
+    <passive_backup>
+      <include_directory name = "\" />
+    </passive_backup>
+    <active_backup process_name = "hsapplication.exe"
+                   supports_incremental = "no"
+                   requires_delay_to_prepare_data = "yes">
+    </active_backup>    
+    <restore requires_reboot = "no"/>
+</backup_registration>

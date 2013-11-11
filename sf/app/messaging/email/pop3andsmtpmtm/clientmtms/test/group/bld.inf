@@ -1,0 +1,254 @@
+// Copyright (c) 1999-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+PRJ_TESTMMPFILES
+
+T_IMCM_ASYNCHRONOUS_OPERATION_CANCELLATION_TEST.mmp	manual
+T_IMCM_IMAP_LONGIDLETIME.mmp manual
+T_MIUT01.mmp      manual
+T_MIUT02.mmp      manual
+T_MIUT03.mmp      manual
+T_MIUT04.mmp      manual
+T_MIUT05.mmp      manual
+T_MIUT06.mmp      manual
+T_MIUT07.mmp      manual
+T_MIUT09.mmp      manual
+T_MIUT10.mmp      manual
+T_MIUT10A.mmp      manual
+
+T_POPC.mmp        manual
+T_SMTC.mmp        manual
+T_SMTC_IPV6.mmp        manual
+T_IMPC.mmp        manual
+T_IMPC01.mmp      manual
+T_SMTSND.mmp      manual
+
+T_IMCM01.mmp      manual
+T_imcm02a.mmp     manual
+T_imcm02b.mmp     manual
+T_imcm02b1.mmp     manual
+T_imcm02b2.mmp     manual
+T_imcm02c.mmp     manual
+T_imcm02c1.mmp     manual
+T_imcm02c2.mmp     manual
+T_imcm02d.mmp     manual
+T_imcm02d1.mmp     manual
+T_imcm02d2.mmp     manual
+T_imcm02e.mmp     manual
+T_imcm02e1.mmp     manual
+T_imcm02e2.mmp     manual
+T_imcm02_heap.mmp manual
+T_IMCM03.mmp      manual
+T_imcm03_heap.mmp manual
+T_imcm05.mmp      manual
+T_imcm06.mmp      manual
+T_imcm07.mmp      manual
+T_imcm07_imap.mmp      manual
+T_Performance.mmp      manual
+T_IAPP.mmp        manual
+t_cimemailmessage.mmp        manual
+T_PartialFetch.mmp	manual
+t_smtp_utc_server.mmp	manual
+T_CImPruneMessage.mmp   manual
+T_SmtpClientMtm_SpeedTest.mmp manual
+
+t_emailaccountsettings_server.mmp  manual
+t_unit_CImplaintextstore_server.mmp manual
+
+ PRJ_TESTEXPORTS
+ 
+../data/mhtml1.eml /epoc32/wins/c/mailtest/rfc822/mhtml1.eml
+../data/mhtml2.eml /epoc32/wins/c/mailtest/rfc822/mhtml2.eml
+../data/mhtml3.eml /epoc32/wins/c/mailtest/rfc822/mhtml3.eml
+../data/mhtml4.eml /epoc32/wins/c/mailtest/rfc822/mhtml4.eml
+../data/mhtml5.eml /epoc32/wins/c/mailtest/rfc822/mhtml5.eml
+../data/plain_text.txt /epoc32/wins/c/mailtest/rfc822/plain_text.txt
+../data/html_with_attachment.txt /epoc32/wins/c/mailtest/rfc822/html_with_attachment.txt
+../data/mainpic.msg /epoc32/wins/c/mailtest/mainpic.msg
+../data/POPC.dat /epoc32/wins/c/system/mtm/popc.dat
+../data/SMTP.dat /epoc32/wins/c/system/mtm/smtp.dat
+../data/rfc82201.jig /epoc32/wins/c/mailtest/rfc822/rfc82201.jig
+../data/RFC82201.txt /epoc32/wins/c/mailtest/imcm/rfc82201.txt
+../data/RFC82202.txt /epoc32/wins/c/mailtest/imcm/rfc82202.txt
+../data/RFC82203.txt /epoc32/wins/c/mailtest/imcm/rfc82203.txt
+../data/Rfc82204.txt /epoc32/wins/c/mailtest/imcm/rfc82204.txt
+../data/Rfc82205.txt /epoc32/wins/c/mailtest/imcm/rfc82205.txt
+../data/Rfc82206.txt /epoc32/wins/c/mailtest/imcm/rfc82206.txt
+../data/Rfc82207.txt /epoc32/wins/c/mailtest/imcm/rfc82207.txt
+../data/rfc82208.txt /epoc32/wins/c/mailtest/imcm/rfc82208.txt
+../data/rfc82209.txt /epoc32/wins/c/mailtest/imcm/rfc82209.txt
+../data/T_IMCM02A_Entry_Structure.txt /epoc32/wins/c/msgtest/imcm/t_imcm02a_entry_structure.txt
+../data/T_IMCM02B_Entry_Structure.txt /epoc32/wins/c/msgtest/imcm/t_imcm02b_entry_structure.txt
+../data/T_IMCM02B1_Entry_Structure.txt /epoc32/wins/c/msgtest/imcm/t_imcm02b1_entry_structure.txt
+../data/T_IMCM02B2_Entry_Structure.txt /epoc32/wins/c/msgtest/imcm/t_imcm02b2_entry_structure.txt
+../data/T_IMCM02C_Entry_Structure.txt /epoc32/wins/c/msgtest/imcm/t_imcm02c_entry_structure.txt
+../data/T_IMCM02C1_Entry_Structure.txt /epoc32/wins/c/msgtest/imcm/t_imcm02c1_entry_structure.txt
+../data/T_IMCM02C2_Entry_Structure.txt /epoc32/wins/c/msgtest/imcm/t_imcm02c2_entry_structure.txt
+../data/T_IMCM02D_Entry_Structure.txt /epoc32/wins/c/msgtest/imcm/t_imcm02d_entry_structure.txt
+../data/T_IMCM02D1_Entry_Structure.txt /epoc32/wins/c/msgtest/imcm/t_imcm02d1_entry_structure.txt
+../data/T_IMCM02D2_Entry_Structure.txt /epoc32/wins/c/msgtest/imcm/t_imcm02d2_entry_structure.txt
+../data/T_IMCM02E_Entry_Structure.txt /epoc32/wins/c/msgtest/imcm/t_imcm02e_entry_structure.txt
+../data/T_IMCM02E1_Entry_Structure.txt /epoc32/wins/c/msgtest/imcm/t_imcm02e1_entry_structure.txt
+../data/T_IMCM02E2_Entry_Structure.txt /epoc32/wins/c/msgtest/imcm/t_imcm02e2_entry_structure.txt
+../data/T_IMCM03_Entry_Structure.txt /epoc32/wins/c/msgtest/imcm/t_imcm03_entry_structure.txt
+../data/arm/t_imcm02a_entry_structure.txt /epoc32/wins/c/msgtest/imcm/arm/t_imcm02a_entry_structure.txt
+../data/arm/t_imcm02b_entry_structure.txt /epoc32/wins/c/msgtest/imcm/arm/t_imcm02b_entry_structure.txt
+../data/arm/t_imcm02b1_entry_structure.txt /epoc32/wins/c/msgtest/imcm/arm/t_imcm02b1_entry_structure.txt
+../data/arm/t_imcm02b2_entry_structure.txt /epoc32/wins/c/msgtest/imcm/arm/t_imcm02b2_entry_structure.txt
+../data/arm/t_imcm02c_entry_structure.txt /epoc32/wins/c/msgtest/imcm/arm/t_imcm02c_entry_structure.txt
+../data/arm/t_imcm02c1_entry_structure.txt /epoc32/wins/c/msgtest/imcm/arm/t_imcm02c1_entry_structure.txt
+../data/arm/t_imcm02c2_entry_structure.txt /epoc32/wins/c/msgtest/imcm/arm/t_imcm02c2_entry_structure.txt
+../data/arm/t_imcm02d_entry_structure.txt /epoc32/wins/c/msgtest/imcm/arm/t_imcm02d_entry_structure.txt
+../data/arm/t_imcm02d1_entry_structure.txt /epoc32/wins/c/msgtest/imcm/arm/t_imcm02d1_entry_structure.txt
+../data/arm/t_imcm02d2_entry_structure.txt /epoc32/wins/c/msgtest/imcm/arm/t_imcm02d2_entry_structure.txt
+../data/arm/t_imcm02e_entry_structure.txt /epoc32/wins/c/msgtest/imcm/arm/t_imcm02e_entry_structure.txt
+../data/arm/t_imcm02e1_entry_structure.txt /epoc32/wins/c/msgtest/imcm/arm/t_imcm02e1_entry_structure.txt
+../data/arm/t_imcm02e2_entry_structure.txt /epoc32/wins/c/msgtest/imcm/arm/t_imcm02e2_entry_structure.txt
+../data/arm/t_imcm03_entry_structure.txt /epoc32/wins/c/msgtest/imcm/arm/t_imcm03_entry_structure.txt
+
+../data/RFCT_IMCM06/Rfc82201.txt /epoc32/wins/c/mailtest/rfct_imcm06/rfc82201.txt
+../data/RFCT_IMCM06/Rfc82202.txt /epoc32/wins/c/mailtest/rfct_imcm06/rfc82202.txt
+../data/RFCT_IMCM06/Rfc82203.txt /epoc32/wins/c/mailtest/rfct_imcm06/rfc82203.txt
+../data/RFCT_IMCM06/Rfc82204.txt /epoc32/wins/c/mailtest/rfct_imcm06/rfc82204.txt
+../data/RFCT_IMCM06/Rfc82205.txt /epoc32/wins/c/mailtest/rfct_imcm06/rfc82205.txt
+../data/RFCT_IMCM06/Rfc82206.txt /epoc32/wins/c/mailtest/rfct_imcm06/rfc82206.txt
+../data/RFCT_IMCM06/Rfc82207.txt /epoc32/wins/c/mailtest/rfct_imcm06/rfc82207.txt
+../data/RFCT_IMCM06/Rfc82208.txt /epoc32/wins/c/mailtest/rfct_imcm06/rfc82208.txt
+../data/RFCT_IMCM06/Rfc82209.txt /epoc32/wins/c/mailtest/rfct_imcm06/rfc82209.txt
+../data/RFCT_IMCM06/Rfc82210.txt /epoc32/wins/c/mailtest/rfct_imcm06/rfc82210.txt
+../data/RFCT_IMCM06/Rfc82211.txt /epoc32/wins/c/mailtest/rfct_imcm06/rfc82211.txt
+../data/RFCT_IMCM06/Rfc82212.txt /epoc32/wins/c/mailtest/rfct_imcm06/rfc82212.txt
+../data/RFCT_IMCM06/Rfc82213.txt /epoc32/wins/c/mailtest/rfct_imcm06/rfc82213.txt
+../data/RFCT_IMCM06/Rfc82214.txt /epoc32/wins/c/mailtest/rfct_imcm06/rfc82214.txt
+../data/RFCT_IMCM06/Rfc82215.txt /epoc32/wins/c/mailtest/rfct_imcm06/rfc82215.txt
+../data/RFCT_IMCM06/Rfc82216.txt /epoc32/wins/c/mailtest/rfct_imcm06/rfc82216.txt
+../data/RFCT_IMCM06/Rfc82217.txt /epoc32/wins/c/mailtest/rfct_imcm06/rfc82217.txt
+../data/RFCT_IMCM06/Rfc82218.txt /epoc32/wins/c/mailtest/rfct_imcm06/rfc82218.txt
+../data/RFCT_IMCM06/Rfc82219.txt /epoc32/wins/c/mailtest/rfct_imcm06/rfc82219.txt
+../data/RFCT_IMCM06/Rfc82220.txt /epoc32/wins/c/mailtest/rfct_imcm06/rfc82220.txt
+../data/RFCT_IMCM06/Rfc82221.txt /epoc32/wins/c/mailtest/rfct_imcm06/rfc82221.txt
+../data/RFCT_IMCM06/Rfc82222.txt /epoc32/wins/c/mailtest/rfct_imcm06/rfc82222.txt
+../data/RFCT_IMCM06/rfc82223.txt /epoc32/wins/c/mailtest/rfct_imcm06/rfc82223.txt
+../data/RFCT_IMCM06/Rfc82224.txt /epoc32/wins/c/mailtest/rfct_imcm06/rfc82224.txt
+../data/RFCT_IMCM06/Rfc82225.txt /epoc32/wins/c/mailtest/rfct_imcm06/rfc82225.txt
+../data/RFCT_IMCM06/Rfc82226.txt /epoc32/wins/c/mailtest/rfct_imcm06/rfc82226.txt
+../data/RFCT_IMCM06/Rfc82227.txt /epoc32/wins/c/mailtest/rfct_imcm06/rfc82227.txt
+../data/RFCT_IMCM06/rfc82228.txt /epoc32/wins/c/mailtest/rfct_imcm06/rfc82228.txt
+../data/RFCT_IMCM06/rfc82229.txt /epoc32/wins/c/mailtest/rfct_imcm06/rfc82229.txt
+../data/RFCT_IMCM06/rfc82230.txt /epoc32/wins/c/mailtest/rfct_imcm06/rfc82230.txt
+../data/RFCT_IMCM06/rfc82231.txt /epoc32/wins/c/mailtest/rfct_imcm06/rfc82231.txt
+../data/RFCT_IMCM06/rfc82232.txt /epoc32/wins/c/mailtest/rfct_imcm06/rfc82232.txt
+../data/RFCT_IMCM07/RFC82202.TXT /epoc32/wins/c/mailtest/rfct_imcm07/rfc82202.txt
+../data/RFCT_IMCM07/RFC82203.TXT /epoc32/wins/c/mailtest/rfct_imcm07/rfc82203.txt
+../data/RFCT_IMCM07/RFC82204.TXT /epoc32/wins/c/mailtest/rfct_imcm07/rfc82204.txt
+../data/RFCT_IMCM07/RFC82205.TXT /epoc32/wins/c/mailtest/rfct_imcm07/rfc82205.txt
+../data/RFCT_IMCM07/RFC82206.TXT /epoc32/wins/c/mailtest/rfct_imcm07/rfc82206.txt
+../data/Contacts.cdb /epoc32/wins/c/private/100012a5/dbs_100065ff_contacts.cdb
+
+../data/mhtml1.eml /epoc32/winscw/c/mailtest/rfc822/mhtml1.eml
+../data/mhtml2.eml /epoc32/winscw/c/mailtest/rfc822/mhtml2.eml
+../data/mhtml3.eml /epoc32/winscw/c/mailtest/rfc822/mhtml3.eml
+../data/mhtml4.eml /epoc32/winscw/c/mailtest/rfc822/mhtml4.eml
+../data/mhtml5.eml /epoc32/winscw/c/mailtest/rfc822/mhtml5.eml
+../data/plain_text.txt /epoc32/winscw/c/mailtest/rfc822/plain_text.txt
+../data/html_with_attachment.txt /epoc32/winscw/c/mailtest/rfc822/html_with_attachment.txt
+../data/mainpic.msg /epoc32/winscw/c/mailtest/mainpic.msg
+../data/POPC.dat /epoc32/winscw/c/system/mtm/popc.dat
+../data/SMTP.dat /epoc32/winscw/c/system/mtm/smtp.dat
+../data/rfc82201.jig /epoc32/winscw/c/mailtest/rfc822/rfc82201.jig
+../data/RFC82201.txt /epoc32/winscw/c/mailtest/imcm/rfc82201.txt
+../data/RFC82202.txt /epoc32/winscw/c/mailtest/imcm/rfc82202.txt
+../data/RFC82203.txt /epoc32/winscw/c/mailtest/imcm/rfc82203.txt
+../data/Rfc82204.txt /epoc32/winscw/c/mailtest/imcm/rfc82204.txt
+../data/Rfc82205.txt /epoc32/winscw/c/mailtest/imcm/rfc82205.txt
+../data/Rfc82206.txt /epoc32/winscw/c/mailtest/imcm/rfc82206.txt
+../data/Rfc82207.txt /epoc32/winscw/c/mailtest/imcm/rfc82207.txt
+../data/rfc82208.txt /epoc32/winscw/c/mailtest/imcm/rfc82208.txt
+../data/rfc82209.txt /epoc32/winscw/c/mailtest/imcm/rfc82209.txt
+../data/T_IMCM02A_Entry_Structure.txt /epoc32/winscw/c/msgtest/imcm/t_imcm02a_entry_structure.txt
+../data/T_IMCM02B_Entry_Structure.txt /epoc32/winscw/c/msgtest/imcm/t_imcm02b_entry_structure.txt
+../data/T_IMCM02B1_Entry_Structure.txt /epoc32/winscw/c/msgtest/imcm/t_imcm02b1_entry_structure.txt
+../data/T_IMCM02B2_Entry_Structure.txt /epoc32/winscw/c/msgtest/imcm/t_imcm02b2_entry_structure.txt
+../data/T_IMCM02C_Entry_Structure.txt /epoc32/winscw/c/msgtest/imcm/t_imcm02c_entry_structure.txt
+../data/T_IMCM02C1_Entry_Structure.txt /epoc32/winscw/c/msgtest/imcm/t_imcm02c1_entry_structure.txt
+../data/T_IMCM02C2_Entry_Structure.txt /epoc32/winscw/c/msgtest/imcm/t_imcm02c2_entry_structure.txt
+../data/T_IMCM02D_Entry_Structure.txt /epoc32/winscw/c/msgtest/imcm/t_imcm02d_entry_structure.txt
+../data/T_IMCM02D1_Entry_Structure.txt /epoc32/winscw/c/msgtest/imcm/t_imcm02d1_entry_structure.txt
+../data/T_IMCM02D2_Entry_Structure.txt /epoc32/winscw/c/msgtest/imcm/t_imcm02d2_entry_structure.txt
+../data/T_IMCM02E_Entry_Structure.txt /epoc32/winscw/c/msgtest/imcm/t_imcm02e_entry_structure.txt
+../data/T_IMCM02E1_Entry_Structure.txt /epoc32/winscw/c/msgtest/imcm/t_imcm02e1_entry_structure.txt
+../data/T_IMCM02E2_Entry_Structure.txt /epoc32/winscw/c/msgtest/imcm/t_imcm02e2_entry_structure.txt
+../data/T_IMCM03_Entry_Structure.txt /epoc32/winscw/c/msgtest/imcm/t_imcm03_entry_structure.txt
+../data/arm/t_imcm02a_entry_structure.txt /epoc32/winscw/c/msgtest/imcm/arm/t_imcm02a_entry_structure.txt
+../data/arm/t_imcm02b_entry_structure.txt /epoc32/winscw/c/msgtest/imcm/arm/t_imcm02b_entry_structure.txt
+../data/arm/t_imcm02b1_entry_structure.txt /epoc32/winscw/c/msgtest/imcm/arm/t_imcm02b1_entry_structure.txt
+../data/arm/t_imcm02b2_entry_structure.txt /epoc32/winscw/c/msgtest/imcm/arm/t_imcm02b2_entry_structure.txt
+../data/arm/t_imcm02c_entry_structure.txt /epoc32/winscw/c/msgtest/imcm/arm/t_imcm02c_entry_structure.txt
+../data/arm/t_imcm02c1_entry_structure.txt /epoc32/winscw/c/msgtest/imcm/arm/t_imcm02c1_entry_structure.txt
+../data/arm/t_imcm02c2_entry_structure.txt /epoc32/winscw/c/msgtest/imcm/arm/t_imcm02c2_entry_structure.txt
+../data/arm/t_imcm02d_entry_structure.txt /epoc32/winscw/c/msgtest/imcm/arm/t_imcm02d_entry_structure.txt
+../data/arm/t_imcm02d1_entry_structure.txt /epoc32/winscw/c/msgtest/imcm/arm/t_imcm02d1_entry_structure.txt
+../data/arm/t_imcm02d2_entry_structure.txt /epoc32/winscw/c/msgtest/imcm/arm/t_imcm02d2_entry_structure.txt
+../data/arm/t_imcm02e_entry_structure.txt /epoc32/winscw/c/msgtest/imcm/arm/t_imcm02e_entry_structure.txt
+../data/arm/t_imcm02e1_entry_structure.txt /epoc32/winscw/c/msgtest/imcm/arm/t_imcm02e1_entry_structure.txt
+../data/arm/t_imcm02e2_entry_structure.txt /epoc32/winscw/c/msgtest/imcm/arm/t_imcm02e2_entry_structure.txt
+../data/arm/t_imcm03_entry_structure.txt /epoc32/winscw/c/msgtest/imcm/arm/t_imcm03_entry_structure.txt
+../data/RFCT_IMCM06/Rfc82201.txt /epoc32/winscw/c/mailtest/rfct_imcm06/rfc82201.txt
+../data/RFCT_IMCM06/Rfc82202.txt /epoc32/winscw/c/mailtest/rfct_imcm06/rfc82202.txt
+../data/RFCT_IMCM06/Rfc82203.txt /epoc32/winscw/c/mailtest/rfct_imcm06/rfc82203.txt
+../data/RFCT_IMCM06/Rfc82204.txt /epoc32/winscw/c/mailtest/rfct_imcm06/rfc82204.txt
+../data/RFCT_IMCM06/Rfc82205.txt /epoc32/winscw/c/mailtest/rfct_imcm06/rfc82205.txt
+../data/RFCT_IMCM06/Rfc82206.txt /epoc32/winscw/c/mailtest/rfct_imcm06/rfc82206.txt
+../data/RFCT_IMCM06/Rfc82207.txt /epoc32/winscw/c/mailtest/rfct_imcm06/rfc82207.txt
+../data/RFCT_IMCM06/Rfc82208.txt /epoc32/winscw/c/mailtest/rfct_imcm06/rfc82208.txt
+../data/RFCT_IMCM06/Rfc82209.txt /epoc32/winscw/c/mailtest/rfct_imcm06/rfc82209.txt
+../data/RFCT_IMCM06/Rfc82210.txt /epoc32/winscw/c/mailtest/rfct_imcm06/rfc82210.txt
+../data/RFCT_IMCM06/Rfc82211.txt /epoc32/winscw/c/mailtest/rfct_imcm06/rfc82211.txt
+../data/RFCT_IMCM06/Rfc82212.txt /epoc32/winscw/c/mailtest/rfct_imcm06/rfc82212.txt
+../data/RFCT_IMCM06/Rfc82213.txt /epoc32/winscw/c/mailtest/rfct_imcm06/rfc82213.txt
+../data/RFCT_IMCM06/Rfc82214.txt /epoc32/winscw/c/mailtest/rfct_imcm06/rfc82214.txt
+../data/RFCT_IMCM06/Rfc82215.txt /epoc32/winscw/c/mailtest/rfct_imcm06/rfc82215.txt
+../data/RFCT_IMCM06/Rfc82216.txt /epoc32/winscw/c/mailtest/rfct_imcm06/rfc82216.txt
+../data/RFCT_IMCM06/Rfc82217.txt /epoc32/winscw/c/mailtest/rfct_imcm06/rfc82217.txt
+../data/RFCT_IMCM06/Rfc82218.txt /epoc32/winscw/c/mailtest/rfct_imcm06/rfc82218.txt
+../data/RFCT_IMCM06/Rfc82219.txt /epoc32/winscw/c/mailtest/rfct_imcm06/rfc82219.txt
+../data/RFCT_IMCM06/Rfc82220.txt /epoc32/winscw/c/mailtest/rfct_imcm06/rfc82220.txt
+../data/RFCT_IMCM06/Rfc82221.txt /epoc32/winscw/c/mailtest/rfct_imcm06/rfc82221.txt
+../data/RFCT_IMCM06/Rfc82222.txt /epoc32/winscw/c/mailtest/rfct_imcm06/rfc82222.txt
+../data/RFCT_IMCM06/rfc82223.txt /epoc32/winscw/c/mailtest/rfct_imcm06/rfc82223.txt
+../data/RFCT_IMCM06/Rfc82224.txt /epoc32/winscw/c/mailtest/rfct_imcm06/rfc82224.txt
+../data/RFCT_IMCM06/Rfc82225.txt /epoc32/winscw/c/mailtest/rfct_imcm06/rfc82225.txt
+../data/RFCT_IMCM06/Rfc82226.txt /epoc32/winscw/c/mailtest/rfct_imcm06/rfc82226.txt
+../data/RFCT_IMCM06/Rfc82227.txt /epoc32/winscw/c/mailtest/rfct_imcm06/rfc82227.txt
+../data/RFCT_IMCM06/rfc82228.txt /epoc32/winscw/c/mailtest/rfct_imcm06/rfc82228.txt
+../data/RFCT_IMCM06/rfc82229.txt /epoc32/winscw/c/mailtest/rfct_imcm06/rfc82229.txt
+../data/RFCT_IMCM06/rfc82230.txt /epoc32/winscw/c/mailtest/rfct_imcm06/rfc82230.txt
+../data/RFCT_IMCM06/rfc82231.txt /epoc32/winscw/c/mailtest/rfct_imcm06/rfc82231.txt
+../data/RFCT_IMCM06/rfc82232.txt /epoc32/winscw/c/mailtest/rfct_imcm06/rfc82232.txt
+../data/RFCT_IMCM07/RFC82202.TXT /epoc32/winscw/c/mailtest/rfct_imcm07/rfc82202.txt
+../data/RFCT_IMCM07/RFC82203.TXT /epoc32/winscw/c/mailtest/rfct_imcm07/rfc82203.txt
+../data/RFCT_IMCM07/RFC82204.TXT /epoc32/winscw/c/mailtest/rfct_imcm07/rfc82204.txt
+../data/RFCT_IMCM07/RFC82205.TXT /epoc32/winscw/c/mailtest/rfct_imcm07/rfc82205.txt
+../data/RFCT_IMCM07/RFC82206.TXT /epoc32/winscw/c/mailtest/rfct_imcm07/rfc82206.txt
+../data/Contacts.cdb /epoc32/winscw/c/private/10003a73/contacts.cdb
+../data/Contacts.cdb /epoc32/winscw/c/private/100012a5/dbs_100065ff_contacts.cdb
+../data/SQLite__Contacts.cdb /epoc32/winscw/c/private/10003a73/sqlite__contacts.cdb
+../scripts/t_smtp_utc.script	/epoc32/winscw/c/mailtest/smts/t_smtp_utc.script
+../scripts/t_unit_CImplaintextstore_server.script  /epoc32/winscw/c/mailtest/imcm/t_unit_cimplaintextstore_server.script
+../scripts/t_emailaccountsettings.script /epoc32/winscw/c/msgtest/scripts/imcm/t_emailaccountsettings.script
+
+#if (defined SYMBIAN_MESSAGESTORE_HEADER_BODY_USING_SQLDB)
+#include "../Unittef/group/bld.inf"
+#endif

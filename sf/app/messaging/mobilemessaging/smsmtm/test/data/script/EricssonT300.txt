@@ -1,0 +1,74 @@
+[All]
+Defaults= defaults.script
+
+[TwoRecipients]
+Message= This message is going to my two buddies
+Recipients= Default|Default
+
+[PlainOldMessage]
+Message= Hello, this is a plain SMS message.
+
+[BigHonkingMsg]
+Message= A big message to ya!
+Ya' know.  Lots of text makes
+a message big.
+More text blah, blah, blah!
+Blah blah blah.
+And a bit more to make sure
+that this is a big honking
+howling messages.
+Yup.  A very big message!
+Okay - and then some more.
+
+[WAP:vCalendar]
+Bearer= WAP
+BioUid= 268457267
+Message=
+BEGIN:VCALENDAR
+VERSION:1.0
+BEGIN:VEVENT
+X-EPOCAGENDAENTRYTYPE:APPOINTMENT
+DESCRIPTION:ModifiedAppointment
+UID:2
+CLASS:PUBLIC
+DCREATED:19991020T000000Z
+LAST-MODIFIED:19991020T165400Z
+DTSTART:19991020T090000Z
+DTEND:19991020T100000Z
+END:VEVENT
+END:VCALENDAR
+Encoding= 8
+
+[WAP:vCard]
+Bearer= WAP
+BioUid= 268457268
+Message=
+begin:vcard 
+n:;Julia
+adr:;;;;;;
+version:2.1
+fn:Julia Blumin
+end:vcard
+
+[ReplaceTypeSMSOne]
+Message= Replace Type Message One.
+BioUid= 0
+Encoding= 7
+DeliveryReport= YES
+Bearer= NBS
+
+[ReplaceTypeSMSTwo]
+Message= Replace Type SMS Message Two replaces Message One.
+BioUid= 0
+Encoding= 7
+DeliveryReport= YES
+Bearer= NBS
+
+[SMSMessageIndication]
+Message= Send Message Indication.
+BioUid= 0
+Encoding= 7
+DeliveryReport= YES
+Bearer= NBS
+
+endscript

@@ -1,0 +1,113 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Collection file db plugin project specification
+*
+*/
+
+
+#include <bldvariant.hrh>
+#include <data_caging_paths.hrh>
+#include <platform_paths.hrh>
+#include "../../../inc/musicplayerbldvariant.hrh"
+
+TARGET          mpxsqlitedbhgplugin.dll
+TARGETTYPE      PLUGIN
+UID             0x10009D8D 0x10207C85
+
+VENDORID        VID_DEFAULT
+CAPABILITY      CAP_ECOM_PLUGIN
+
+VERSION 15.0
+
+MACRO __ENABLE_PODCAST_IN_MUSIC_MENU
+#define __ENABLE_PODCAST_IN_MUSIC_MENU
+//MACRO RD_MPX_COLLECTION_CACHE
+MACRO __RAMDISK_PERF_ENABLE
+#define __RAMDISK_PERF_ENABLE
+
+#ifdef IAD_INCLUDE_ABSTRACTAUDIOALBUM
+MACRO ABSTRACTAUDIOALBUM_INCLUDED
+MACRO RD_MPX_TNM_INTEGRATION
+#define RD_MPX_TNM_INTEGRATION
+#endif // IAD_INCLUDE_ABSTRACTAUDIOALBUM
+
+SOURCEPATH      ../src
+SOURCE          mpxdbplugin.cpp
+SOURCE          mpxdbpluginproxy.cpp
+SOURCE          mpxdbutil.cpp
+
+SOURCE          mpxcollectiondbmanager.cpp
+
+SOURCE          mpxdbcategory.cpp
+SOURCE          mpxdbmusic.cpp
+SOURCE          mpxdbplaylist.cpp
+SOURCE          mpxdbplaylistsongs.cpp
+SOURCE          mpxdbauxiliary.cpp
+SOURCE          mpxdbautoplaylist.cpp
+SOURCE          mpxdbhandler.cpp
+SOURCE          mpxdbartist.cpp
+SOURCE          mpxdbalbum.cpp
+SOURCE          mpxdbgenre.cpp
+SOURCE          mpxdbcomposer.cpp
+#ifdef IAD_INCLUDE_ABSTRACTAUDIOALBUM
+SOURCE          mpxdbabstractalbum.cpp
+#endif // IAD_INCLUDE_ABSTRACTAUDIOALBUM
+
+SOURCEPATH       ../data
+START RESOURCE  mpxcollectiondbhgres.rss
+HEADER
+TARGETPATH      APP_RESOURCE_DIR
+LANGUAGE_IDS 
+END
+
+SOURCEPATH      ../data
+START RESOURCE  10207C85.RSS
+TARGET          mpxsqlitedbhgplugin.rsc
+END
+
+USERINCLUDE     ../inc
+USERINCLUDE     ../../inc
+
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE   /epoc32/include/ecom
+SYSTEMINCLUDE   /epoc32/include/mmf/common
+SYSTEMINCLUDE   /epoc32/include/mw/hb/hbcore
+
+LIBRARY         euser.lib
+LIBRARY         ecom.lib
+LIBRARY         efsrv.lib
+LIBRARY         estor.lib
+LIBRARY         sqldb.lib
+LIBRARY         bafl.lib
+LIBRARY         apmime.lib
+LIBRARY         sysutil.lib
+LIBRARY         hbcore.lib
+#ifdef __MTP_PROTOCOL_SUPPORT
+LIBRARY         centralrepository.lib
+#endif
+#ifdef RD_MULTIPLE_DRIVE
+LIBRARY         PlatformEnv.lib
+#endif //RD_MULTIPLE_DRIVE
+
+LIBRARY         mpxsqlitedbcommon.lib
+LIBRARY         mpxcommon.lib
+#ifdef RD_MPX_TNM_INTEGRATION
+LIBRARY         thumbnailmanager.lib
+#endif 
+ALWAYS_BUILD_AS_ARM
+OPTION ARMCC -O3 -Otime
+
+SMPSAFE
+
+// End of File

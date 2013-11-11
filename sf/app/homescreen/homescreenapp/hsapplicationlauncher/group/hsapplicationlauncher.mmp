@@ -1,0 +1,51 @@
+/*
+* Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Makefile of hsapplicationlauncher
+*
+*/
+
+#include <platform_paths.hrh>
+
+TARGET hsapplicationlauncher.exe
+
+targettype exe
+
+UID             0x1000008d 0x20022F36
+CAPABILITY      ReadDeviceData WriteDeviceData
+VENDORID        VID_DEFAULT
+SECUREID        0x20022F36
+
+EPOCHEAPSIZE	0x1000 0x100000   // 4KB - 1 MB
+EPOCSTACKSIZE	0x5000
+
+SOURCEPATH		../src
+SOURCE			hsapplicationlauncher.cpp
+SOURCE			hsprocessmonitor.cpp
+SOURCE			hsshutdownmonitor.cpp
+
+USERINCLUDE		. 
+USERINCLUDE		../inc
+
+MW_LAYER_SYSTEMINCLUDE
+
+LIBRARY			euser.lib  // CBase etc
+LIBRARY			bafl.lib   // descriptors
+LIBRARY			ssmcmn.lib // state manager
+LIBRARY         centralrepository.lib
+LIBRARY         cenrepnotifhandler.lib
+
+LANG			SC
+
+SMPSAFE
+

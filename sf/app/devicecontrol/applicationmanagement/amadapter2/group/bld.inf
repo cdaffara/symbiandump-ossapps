@@ -1,0 +1,38 @@
+/*
+* Copyright (c) 2004 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  build info file for application management adapter
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+PRJ_EXPORTS
+../rom/amadapter.iby						CORE_APP_LAYER_IBY_EXPORT_PATH(amadapter.iby)
+
+PRJ_TESTEXPORTS
+/* Commenting the internal folder exports
+../internal/AmadapterTestScript.cfg /epoc32/winscw/c/testframework/AmadapterTestScript.cfg
+../internal/verysilent_c_en.xml /epoc32/winscw/c/TestFramework/amadapter/verysilent_c_en.xml
+../internal/barew_locserv.sisx	/epoc32/winscw/c/TestFramework/amadapter/barew_locserv.sisx
+../internal/barew_locserv2.sisx	/epoc32/winscw/c/TestFramework/amadapter/barew_locserv2.sisx
+*/
+
+
+PRJ_MMPFILES
+./amadapter.mmp
+
+
+
+

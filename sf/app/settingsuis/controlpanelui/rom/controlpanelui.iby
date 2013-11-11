@@ -1,0 +1,65 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: 
+*
+*/
+
+#ifndef __CONTROLPANELUI_IBY__
+#define __CONTROLPANELUI_IBY__
+
+#include <bldvariant.hrh>
+#include <data_caging_paths_for_iby.hrh>
+
+#define CP_UPGRADABLE_APP_REG_RSC(NAME) data=DATAZ_\PRIVATE\10003A3F\IMPORT\APPS\ ## NAME ## _reg.rsc        Private\10003a3f\import\apps\ ## NAME ## _reg.rsc
+
+file=ABI_DIR\BUILD_DIR\controlpanel.exe         			 SHARED_LIB_DIR\controlpanel.exe 
+data = ZRESOURCE\apps\controlpanel.mif                                   APP_RESOURCE_DIR\controlpanel.mif
+CP_UPGRADABLE_APP_REG_RSC(controlpanel)    
+
+
+file=ABI_DIR\BUILD_DIR\cpserviceprovider.exe         			 SHARED_LIB_DIR\cpserviceprovider.exe 
+CP_UPGRADABLE_APP_REG_RSC(cpserviceprovider)    
+
+file=ABI_DIR\BUILD_DIR\cpcategorymodel.dll			  	 SHARED_LIB_DIR\cpcategorymodel.dll
+file=ABI_DIR\BUILD_DIR\cpprofilewrapper.dll           SHARED_LIB_DIR\cpprofilewrapper.dll
+file=ABI_DIR\BUILD_DIR\cpringtoneview.dll           SHARED_LIB_DIR\cpringtoneview.dll 
+
+
+file=ABI_DIR\BUILD_DIR\cppersonalizationplugin.dll           SHARED_LIB_DIR\cppersonalizationplugin.dll
+file=ABI_DIR\BUILD_DIR\cpcommunicationplugin.dll             SHARED_LIB_DIR\cpcommunicationplugin.dll
+file=ABI_DIR\BUILD_DIR\cpdeviceplugin.dll                    SHARED_LIB_DIR\cpdeviceplugin.dll
+file=ABI_DIR\BUILD_DIR\cpprivacyplugin.dll                   SHARED_LIB_DIR\cpprivacyplugin.dll
+file=ABI_DIR\BUILD_DIR\cpkeytouchfdbkplugin.dll              SHARED_LIB_DIR\cpkeytouchfdbkplugin.dll
+file=ABI_DIR\BUILD_DIR\cpprofileactivator.dll                SHARED_LIB_DIR\cpprofileactivator.dll   
+file=ABI_DIR\BUILD_DIR\cpvolumeplugin.dll					SHARED_LIB_DIR\cpvolumeplugin.dll
+file=ABI_DIR\BUILD_DIR\cpringtoneplugin.dll					SHARED_LIB_DIR\cpringtoneplugin.dll	   
+	   
+data=\epoc32\data\c\resource\qt\plugins\controlpanel\config\mainview.cpcfg 													resource\qt\plugins\controlpanel\config\mainview.cpcfg
+data=\epoc32\data\c\resource\qt\plugins\controlpanel\config\cppersonalizationplugin.cpcfg		        resource\qt\plugins\controlpanel\config\cppersonalizationplugin.cpcfg
+data=\epoc32\data\c\resource\qt\plugins\controlpanel\config\cpcommunicationplugin.cpcfg		          resource\qt\plugins\controlpanel\config\cpcommunicationplugin.cpcfg
+data=\epoc32\data\c\resource\qt\plugins\controlpanel\config\cpdeviceplugin.cpcfg		                resource\qt\plugins\controlpanel\config\cpdeviceplugin.cpcfg
+data=\epoc32\data\c\resource\qt\plugins\controlpanel\config\cpprivacyplugin.cpcfg		                resource\qt\plugins\controlpanel\config\cpprivacyplugin.cpcfg
+
+
+data=\epoc32\data\c\resource\qt\plugins\controlpanel\cppersonalizationplugin.qtplugin             resource\qt\plugins\controlpanel\cppersonalizationplugin.qtplugin
+data=\epoc32\data\c\resource\qt\plugins\controlpanel\cpcommunicationplugin.qtplugin               resource\qt\plugins\controlpanel\cpcommunicationplugin.qtplugin
+data=\epoc32\data\c\resource\qt\plugins\controlpanel\cpdeviceplugin.qtplugin                      resource\qt\plugins\controlpanel\cpdeviceplugin.qtplugin
+data=\epoc32\data\c\resource\qt\plugins\controlpanel\cpprivacyplugin.qtplugin                     resource\qt\plugins\controlpanel\cpprivacyplugin.qtplugin
+data=\epoc32\data\c\resource\qt\plugins\controlpanel\cpkeytouchfdbkplugin.qtplugin                resource\qt\plugins\controlpanel\cpkeytouchfdbkplugin.qtplugin
+data=\epoc32\data\c\resource\qt\plugins\controlpanel\cpprofileactivator.qtplugin                  resource\qt\plugins\controlpanel\cpprofileactivator.qtplugin
+data=\epoc32\data\c\resource\qt\plugins\controlpanel\cpvolumeplugin.qtplugin                  resource\qt\plugins\controlpanel\cpvolumeplugin.qtplugin
+data=\epoc32\data\c\resource\qt\plugins\controlpanel\cpringtoneplugin.qtplugin                  resource\qt\plugins\controlpanel\cpringtoneplugin.qtplugin
+
+
+#endif

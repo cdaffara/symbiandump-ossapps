@@ -1,0 +1,38 @@
+;
+; Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of the License "Symbian Foundation License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.symbianfoundation.org/legal/sfl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:
+;
+
+; Language
+&EN
+
+; SIS header: name, uid, version
+#{"cxui"},(0x20031EC3),1,0,0, TYPE=SA,RU
+
+; Localised Vendor name
+%{"Nokia"}
+
+; Unique Vendor name
+:"Nokia"
+
+; Dependencies                     
+[0x20032DE7],0,0,0,{"S60ProductID"}
+
+; CameraX UI
+"\epoc32\release\armv5\urel\cxui.exe"    - "!:\sys\bin\cxui.exe"
+"\epoc32\data\z\resource\apps\cxui.rsc"    - "!:\resource\apps\cxui.rsc"
+"\epoc32\data\z\private\10003a3f\import\apps\cxui_reg.rsc"    - "!:\private\10003a3f\import\apps\cxui_reg.rsc"
+
+; CameraX Engine
+"\epoc32\release\armv5\urel\cxengine.dll"    - "!:\sys\bin\cxengine.dll"

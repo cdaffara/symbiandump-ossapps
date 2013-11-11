@@ -1,0 +1,34 @@
+/*
+* Copyright (c) 2002-2005 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Blacklist build definition.
+*
+*/
+
+
+#include  <platform_paths.hrh>
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+../inc/phoneanimdllstd.h         |../../../inc/phoneanimdllstd.h
+../rom/phoneanimdll_stub.sis    /epoc32/data/z/system/install/phoneanimdll_stub.sis
+
+// IBY files
+../rom/phoneanimdll.iby             CORE_APP_LAYER_IBY_EXPORT_PATH(phoneanimdll.iby)
+
+PRJ_MMPFILES
+../group/phoneanimdll.mmp
+
+//  End of File

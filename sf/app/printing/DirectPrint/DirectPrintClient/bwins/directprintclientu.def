@@ -1,0 +1,31 @@
+EXPORTS
+	??0RDirectPrintClient@@QAE@XZ @ 1 NONAME ; RDirectPrintClient::RDirectPrintClient(void)
+	?CancelCreateJob@RDirectPrintClient@@QBEHXZ @ 2 NONAME ; int RDirectPrintClient::CancelCreateJob(void) const
+	?CancelDiscovery@RDirectPrintClient@@QBEHXZ @ 3 NONAME ; int RDirectPrintClient::CancelDiscovery(void) const
+	?CancelPrintJob@RDirectPrintClient@@QBEHXZ @ 4 NONAME ; int RDirectPrintClient::CancelPrintJob(void) const
+	?CancelStartDiscovery@RDirectPrintClient@@QBEHXZ @ 5 NONAME ; int RDirectPrintClient::CancelStartDiscovery(void) const
+	?Close@RDirectPrintClient@@QAEXXZ @ 6 NONAME ; void RDirectPrintClient::Close(void)
+	?ConnectL@RDirectPrintClient@@QAEXXZ @ 7 NONAME ; void RDirectPrintClient::ConnectL(void)
+	?ContinueCreateJob@RDirectPrintClient@@QAEHAAVTDirectPrintJobGuardData@@AAVTRequestStatus@@@Z @ 8 NONAME ; int RDirectPrintClient::ContinueCreateJob(class TDirectPrintJobGuardData &, class TRequestStatus &)
+	?ContinuePrintJob@RDirectPrintClient@@QBEHXZ @ 9 NONAME ; int RDirectPrintClient::ContinuePrintJob(void) const
+	?CountConnections@RDirectPrintClient@@QBEHAAH@Z @ 10 NONAME ; int RDirectPrintClient::CountConnections(int &) const
+	?CreateJob@RDirectPrintClient@@QAEHHAAVTDirectPrintJobGuardData@@AAV?$RPointerArray@VTDesC16@@@@AAVTRequestStatus@@@Z @ 11 NONAME ; int RDirectPrintClient::CreateJob(int, class TDirectPrintJobGuardData &, class RPointerArray<class TDesC16> &, class TRequestStatus &)
+	?GetJobSetting@RDirectPrintClient@@QBEHHAAH@Z @ 12 NONAME ; int RDirectPrintClient::GetJobSetting(int, int &) const
+	?GetJobStatus@RDirectPrintClient@@QBEHXZ @ 13 NONAME ; int RDirectPrintClient::GetJobStatus(void) const
+	?GetJobTemplateIcon@RDirectPrintClient@@QBEHHAAH@Z @ 14 NONAME ; int RDirectPrintClient::GetJobTemplateIcon(int, int &) const
+	?GetNumPreviewPages@RDirectPrintClient@@QBEHXZ @ 15 NONAME ; int RDirectPrintClient::GetNumPreviewPages(void) const
+	?GetNumPrintPages@RDirectPrintClient@@QBEHXZ @ 16 NONAME ; int RDirectPrintClient::GetNumPrintPages(void) const
+	?GetPrinterCapability@RDirectPrintClient@@QBEHHHAAVTDirectPrintCapability@@@Z @ 17 NONAME ; int RDirectPrintClient::GetPrinterCapability(int, int, class TDirectPrintCapability &) const
+	?GetPrinterCapabilityIDs@RDirectPrintClient@@QBEHHAAV?$RArray@H@@@Z @ 18 NONAME ; int RDirectPrintClient::GetPrinterCapabilityIDs(int, class RArray<int> &) const
+	?GetPrinterStatus@RDirectPrintClient@@QBEHH@Z @ 19 NONAME ; int RDirectPrintClient::GetPrinterStatus(int) const
+	?GetProtocolNames@RDirectPrintClient@@QBEHAAV?$RArray@VTDirectPrintSelectItem@@@@@Z @ 20 NONAME ; int RDirectPrintClient::GetProtocolNames(class RArray<class TDirectPrintSelectItem> &) const
+	?IsPictBridgeMode@RDirectPrintClient@@QBEHXZ @ 21 NONAME ; int RDirectPrintClient::IsPictBridgeMode(void) const
+	?ReleaseEngine@RDirectPrintClient@@QBEHXZ @ 22 NONAME ; int RDirectPrintClient::ReleaseEngine(void) const
+	?RemoveCachedPrinter@RDirectPrintClient@@QBEHH@Z @ 23 NONAME ; int RDirectPrintClient::RemoveCachedPrinter(int) const
+	?ReserveEngine@RDirectPrintClient@@QBEHXZ @ 24 NONAME ; int RDirectPrintClient::ReserveEngine(void) const
+	?SetForeground@RDirectPrintClient@@QBEHH@Z @ 25 NONAME ; int RDirectPrintClient::SetForeground(int) const
+	?SetJobSetting@RDirectPrintClient@@QBEHHHAAH@Z @ 26 NONAME ; int RDirectPrintClient::SetJobSetting(int, int, int &) const
+	?SetNumberOfCopies@RDirectPrintClient@@QBEHABV?$RArray@H@@@Z @ 27 NONAME ; int RDirectPrintClient::SetNumberOfCopies(class RArray<int> const &) const
+	?SubmitPrintJob@RDirectPrintClient@@QBEHXZ @ 28 NONAME ; int RDirectPrintClient::SubmitPrintJob(void) const
+	?SupportedProtocols@RDirectPrintClient@@QBEHXZ @ 29 NONAME ; int RDirectPrintClient::SupportedProtocols(void) const
+

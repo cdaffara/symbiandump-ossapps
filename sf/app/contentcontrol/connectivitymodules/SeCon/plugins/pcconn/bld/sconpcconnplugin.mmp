@@ -1,0 +1,65 @@
+/*
+* Copyright (c) 2005-2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  PC Connectivity Plug-in MMP file
+*
+*/
+
+
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+
+VENDORID        VID_DEFAULT
+
+CAPABILITY      CAP_ECOM_PLUGIN
+
+TARGET          sconpcconnplugin.dll
+TARGETTYPE      PLUGIN
+
+UID             0x10009D8D 0x101F9688
+
+SOURCEPATH     	../src
+
+SOURCE          sconpcconnplugin.cpp
+SOURCE          proxy.cpp
+SOURCE          sconpcconnpluginutils.cpp
+SOURCE          sconservicetimer.cpp
+SOURCE          sconshutdownwatcher.cpp
+
+START RESOURCE 101f9688.rss
+  TARGET        sconpcconnplugin.rsc
+END
+
+// Default system include paths.
+APP_LAYER_SYSTEMINCLUDE
+
+USERINCLUDE     ../inc
+USERINCLUDE     ../../../inc 
+USERINCLUDE     ../../../clients/pcconn/inc
+USERINCLUDE     ../../../servers/pcconn/inc
+USERINCLUDE     ../../../services/ftp/inc 
+USERINCLUDE     ../../../catalogspcconnectivityplugin/inc 
+
+DEBUGLIBRARY    flogger.lib
+LIBRARY         sconpcconnclient.lib
+LIBRARY         euser.lib
+LIBRARY         irobex.lib 
+LIBRARY         ecom.lib			
+LIBRARY         efsrv.lib 
+LIBRARY         bafl.lib
+LIBRARY         catalogspcconnectivityplugin.lib
+LIBRARY         apmime.lib 
+LIBRARY         bluetooth.lib
+LIBRARY         esock.lib 
+
+

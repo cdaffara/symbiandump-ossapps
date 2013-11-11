@@ -1,0 +1,54 @@
+// Copyright (c) 2002-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// Phonebook Synchroniser 
+// 
+//
+
+PRJ_EXPORTS
+../group/phbksync.iby	        		/epoc32/rom/include/phbksync.iby
+../Client/phbksync.h APP_LAYER_PUBLIC_EXPORT_PATH(phbksync.h)
+
+
+PRJ_TESTEXPORTS
+../group/TE_PhBkSync.iby			/epoc32/rom/include/te_phbksync.iby
+
+../Test/TE_Sync/TE_Sync.script              	z:/testdata/scripts/te_sync.script
+../Test/TE_Sync/TE_Sync_MMTSY.script            z:/testdata/scripts/te_sync_mmtsy.script
+../Test/TE_Sync/TE_Sync_Setup.script        	z:/testdata/scripts/te_sync_setup.script
+../Test/TE_Sync/TE_Sync_Setup_MMTSY.script      z:/testdata/scripts/te_sync_setup_mmtsy.script
+../Test/TE_Sync/TE_Sync.cfg			z:/testdata/configs/te_sync.cfg
+../Test/TE_Sync/TE_Sync_MMTSY.cfg		z:/testdata/configs/te_sync_mmtsy.cfg
+../Test/TE_Sync/TE_Sync_Config.txt          	z:/testdata/configs/te_sync_config.txt
+
+../Test/TE_PhBkSync/TE_PhBkSync.script          z:/testdata/scripts/te_phbksync.script
+../Test/TE_PhBkSync/TE_PhBkSync_Setup.script    z:/testdata/scripts/te_phbksync_setup.script
+../Test/TE_PhBkSync/TE_PhBkSync_Config.txt      z:/testdata/configs/te_phbksync_config.txt
+../Test/TE_PhBkSync/TE_PhBkSync.cfg		z:/testdata/configs/te_phbksync.cfg
+
+../Test/TE_cntsync/te_cntsync.script            z:/testdata/scripts/te_cntsync.script
+../Test/TE_cntsync/te_CntSync_setup.script      z:/testdata/scripts/te_cntsync_setup.script
+../Test/TE_cntsync/te_cntsync_config.txt        z:/testdata/configs/te_cntsync_config.txt
+../Test/TE_cntsync/te_cntsync.cfg		z:/testdata/configs/te_cntsync.cfg
+
+PRJ_MMPFILES
+
+../group/phbksyncsvr.mmp
+../group/phbksyncplugin.mmp
+../group/phbksyncsvrexe.mmp
+
+PRJ_TESTMMPFILES
+
+../Test/TE_Sync/TE_Sync.mmp
+../Test/TE_PhBkSync/TE_PhBkSync.mmp
+../Test/TE_cntsync/te_cntsync.mmp

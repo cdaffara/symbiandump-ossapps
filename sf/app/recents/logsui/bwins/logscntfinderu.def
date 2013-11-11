@@ -1,0 +1,18 @@
+EXPORTS
+	?resultsCount@LogsCntFinder@@QBEHXZ @ 1 NONAME ; int LogsCntFinder::resultsCount(void) const
+	?getEntry@LogsCntFinder@@QBEPAVLogsCntEntry@@ABVQObject@@@Z @ 2 NONAME ; class LogsCntEntry * LogsCntFinder::getEntry(class QObject const &) const
+	?deleteEntry@LogsCntFinder@@QAEXABVQObject@@@Z @ 3 NONAME ; void LogsCntFinder::deleteEntry(class QObject const &)
+	?contactId@LogsCntEntry@@QBEIXZ @ 4 NONAME ; unsigned int LogsCntEntry::contactId(void) const
+	?type@LogsCntEntry@@QBE?AW4EntryType@1@XZ @ 5 NONAME ; enum LogsCntEntry::EntryType LogsCntEntry::type(void) const
+	?setFirstName@LogsCntEntry@@QAEXABVQString@@@Z @ 6 NONAME ; void LogsCntEntry::setFirstName(class QString const &)
+	??0LogsCntEntry@@QAE@AAVQObject@@I@Z @ 7 NONAME ; LogsCntEntry::LogsCntEntry(class QObject &, unsigned int)
+	?resultAt@LogsCntFinder@@QAEABVLogsCntEntry@@H@Z @ 8 NONAME ; class LogsCntEntry const & LogsCntFinder::resultAt(int)
+	?predictiveSearchQuery@LogsCntFinder@@QAEXABVQString@@@Z @ 9 NONAME ; void LogsCntFinder::predictiveSearchQuery(class QString const &)
+	?lastName@LogsCntEntry@@QBEABV?$QList@VLogsCntText@@@@XZ @ 10 NONAME ; class QList<class LogsCntText> const & LogsCntEntry::lastName(void) const
+	?handle@LogsCntEntry@@QBEPAVQObject@@XZ @ 11 NONAME ; class QObject * LogsCntEntry::handle(void) const
+	??1LogsCntFinder@@UAE@XZ @ 12 NONAME ; LogsCntFinder::~LogsCntFinder(void)
+	?firstName@LogsCntEntry@@QBEABV?$QList@VLogsCntText@@@@XZ @ 13 NONAME ; class QList<class LogsCntText> const & LogsCntEntry::firstName(void) const
+	?setLastName@LogsCntEntry@@QAEXABVQString@@@Z @ 14 NONAME ; void LogsCntEntry::setLastName(class QString const &)
+	??0LogsCntFinder@@QAE@XZ @ 15 NONAME ; LogsCntFinder::LogsCntFinder(void)
+	?insertEntry@LogsCntFinder@@QAEXHPAVLogsCntEntry@@@Z @ 16 NONAME ; void LogsCntFinder::insertEntry(int, class LogsCntEntry *)
+

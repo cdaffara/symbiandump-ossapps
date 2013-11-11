@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="0.1">
+    <widget name="content" type="HbWidget">
+        <widget name="collapsedBubble2" type="BubbleContainerWidget">
+            <widget name="cb2:bubbleHeading" type="BubbleHeadingWidget">
+            </widget>
+        </widget>
+
+        <widget name="collapsedBubble" type="BubbleContainerWidget">
+            <widget name="cb:bubbleHeading" type="BubbleHeadingWidget">
+            </widget>
+        </widget>
+
+        <widget name="expandedBubble" type="BubbleContainerWidget">
+            <widget name="eb:bubbleHeading" type="BubbleHeadingWidget">
+            </widget>
+            <widget name="eb:callImage" type="BubbleImageWidget">
+                <bool name="keepSquareShape" value="TRUE"/>
+            </widget>
+            <widget name="eb:centerButton" type="BubbleButton">
+                <sizehint height="9.0un" type="FIXED"/>
+                <sizehint width="24.5un" type="PREFERRED"/>
+            </widget>
+            <widget name="eb:leftButton" type="BubbleButton">
+                <sizehint height="9.0un" type="FIXED"/>
+                <sizehint width="24.5un" type="PREFERRED"/>                
+            </widget>
+            <widget name="eb:rightButton" type="BubbleButton">
+                <sizehint height="9.0un" type="FIXED"/>
+                <sizehint width="24.5un" type="PREFERRED"/>                
+            </widget>
+        </widget>
+    </widget>
+
+<section name="portrait">
+
+    <widget name="collapsedBubble2" type="BubbleContainerWidget">
+        <sizehint height="11.5un" type="FIXED"/>
+    </widget>
+    
+    <widget name="cb2:bubbleHeading" type="BubbleHeadingWidget">
+        <integer name="lineCount" value="2"/>
+    </widget>
+    
+    <widget name="collapsedBubble" type="BubbleContainerWidget">
+        <sizehint height="11.5un" type="FIXED"/>
+    </widget>
+    
+    <widget name="cb:bubbleHeading" type="BubbleHeadingWidget">
+        <integer name="lineCount" value="2"/>
+    </widget>    
+
+    <widget name="eb:bubbleHeading" type="BubbleHeadingWidget">
+        <integer name="lineCount" value="3"/>
+    </widget>
+    
+    <widget name="eb:centerButton" type="BubbleButton">
+        <sizehint width="24.5un" type="PREFERRED"/>
+    </widget>
+    
+    <widget name="eb:leftButton" type="BubbleButton">
+        <sizehint width="24.5un" type="PREFERRED"/>
+    </widget>
+
+    <widget name="eb:rightButton" type="BubbleButton">
+        <sizehint width="24.5un" type="PREFERRED"/>
+    </widget>        
+    
+    <layout type="anchor" widget="content">
+        <anchoritem src="collapsedBubble2" srcEdge="TOP" dst="" dstEdge="TOP"/>        
+        <anchoritem src="collapsedBubble2" srcEdge="LEFT" dst="" dstEdge="LEFT"/>
+        <anchoritem src="collapsedBubble2" srcEdge="RIGHT" dst="" dstEdge="RIGHT"/>
+        <anchoritem src="collapsedBubble" srcEdge="TOP" dst="collapsedBubble2" dstEdge="BOTTOM"/>        
+        <anchoritem src="collapsedBubble" srcEdge="LEFT" dst="" dstEdge="LEFT"/>
+        <anchoritem src="collapsedBubble" srcEdge="RIGHT" dst="" dstEdge="RIGHT"/>        
+        <anchoritem src="expandedBubble" srcEdge="TOP" dst="collapsedBubble" dstEdge="BOTTOM"/>
+        <anchoritem src="expandedBubble" srcEdge="LEFT" dst="" dstEdge="LEFT"/>
+        <anchoritem src="expandedBubble" srcEdge="RIGHT" dst="" dstEdge="RIGHT"/>
+        <anchoritem src="expandedBubble" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM"/>
+    </layout>
+
+    <layout type="anchor" widget="collapsedBubble2">
+        <anchoritem src="cb2:bubbleHeading" srcEdge="TOP" dst="" dstEdge="TOP" spacing="-1.5un"/>        
+        <anchoritem src="cb2:bubbleHeading" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="-var(hb-param-margin-gene-left)"/>
+        <anchoritem src="cb2:bubbleHeading" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)"/>
+        <anchoritem src="cb2:bubbleHeading" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM"/>
+    </layout>
+
+    <layout type="anchor" widget="collapsedBubble">
+        <anchoritem src="cb:bubbleHeading" srcEdge="TOP" dst="" dstEdge="TOP" spacing="-1.5un"/>        
+        <anchoritem src="cb:bubbleHeading" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="-var(hb-param-margin-gene-left)"/>
+        <anchoritem src="cb:bubbleHeading" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)"/>
+        <anchoritem src="cb:bubbleHeading" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM"/>
+    </layout>
+
+    <layout type="anchor" widget="expandedBubble">
+        <anchoritem src="eb:bubbleHeading" srcEdge="TOP" dst="" dstEdge="TOP" spacing="-1.5un"/>
+        <anchoritem src="eb:bubbleHeading" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="-var(hb-param-margin-gene-left)"/>
+        <anchoritem src="eb:bubbleHeading" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)"/>
+        <anchoritem src="eb:bubbleHeading" srcEdge="BOTTOM" dst="eb:callImage" dstEdge="TOP" spacing="1.5un"/>
+        <anchoritem src="eb:callImage" srcEdge="BOTTOM" dst="eb:centerButton" dstEdge="TOP"  spacing="1.5un"/>
+        <anchoritem src="eb:callImage" srcEdge="CENTERH" dst="" dstEdge="CENTERH"/>
+        <anchoritem src="eb:leftButton" srcEdge="RIGHT" dst="" dstEdge="CENTERH" spacing="expr(var(hb-param-margin-gene-middle-horizontal)/2)"/>
+        <anchoritem src="eb:leftButton" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="-var(hb-param-margin-gene-left)"/>
+        <anchoritem src="eb:leftButton" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacing="3.0un"/>
+        <anchoritem src="eb:rightButton" srcEdge="LEFT" dst="" dstEdge="CENTERH" spacing="-expr(var(hb-param-margin-gene-middle-horizontal)/2)"/>
+        <anchoritem src="eb:rightButton" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)"/>
+        <anchoritem src="eb:rightButton" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacing="3.0un"/>
+        <anchoritem src="eb:centerButton" srcEdge="CENTERH" dst="" dstEdge="CENTERH"/>
+        <anchoritem src="eb:centerButton" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacing="3.0un"/>
+    </layout>
+</section>
+
+<section name="landscape">
+
+    <widget name="collapsedBubble2" type="BubbleContainerWidget">
+        <sizehint height="8.5un" type="FIXED"/>
+    </widget>
+    
+    <widget name="cb2:bubbleHeading" type="BubbleHeadingWidget">
+        <integer name="lineCount" value="1"/>
+    </widget>
+    
+
+    <widget name="collapsedBubble" type="BubbleContainerWidget">
+        <sizehint height="8.5un" type="FIXED"/>
+    </widget>
+    
+    <widget name="cb:bubbleHeading" type="BubbleHeadingWidget">
+        <integer name="lineCount" value="1"/>
+    </widget>        
+
+    <widget name="eb:bubbleHeading" type="BubbleHeadingWidget">
+        <integer name="lineCount" value="3"/>
+    </widget>
+    
+    <widget name="eb:centerButton" type="BubbleButton">
+        <sizehint width="28.0un" type="FIXED"/>
+    </widget>    
+    
+    <widget name="eb:leftButton" type="BubbleButton">
+        <sizehint width="21.0un" type="FIXED"/>
+    </widget>
+
+    <widget name="eb:rightButton" type="BubbleButton">
+        <sizehint width="21.0un" type="FIXED"/>
+    </widget>        
+
+    <layout type="anchor" widget="content">
+        <anchoritem src="collapsedBubble2" srcEdge="TOP" dst="" dstEdge="TOP"/>        
+        <anchoritem src="collapsedBubble2" srcEdge="LEFT" dst="" dstEdge="LEFT"/>
+        <anchoritem src="collapsedBubble2" srcEdge="RIGHT" dst="" dstEdge="RIGHT"/>
+
+        <anchoritem src="collapsedBubble" srcEdge="TOP" dst="collapsedBubble2" dstEdge="BOTTOM"/>        
+        <anchoritem src="collapsedBubble" srcEdge="LEFT" dst="" dstEdge="LEFT"/>
+        <anchoritem src="collapsedBubble" srcEdge="RIGHT" dst="" dstEdge="RIGHT"/>        
+        
+        <anchoritem src="expandedBubble" srcEdge="TOP" dst="collapsedBubble" dstEdge="BOTTOM"/>
+        <anchoritem src="expandedBubble" srcEdge="LEFT" dst="" dstEdge="LEFT"/>
+        <anchoritem src="expandedBubble" srcEdge="RIGHT" dst="" dstEdge="RIGHT"/>
+        <anchoritem src="expandedBubble" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM"/>
+    </layout>
+
+    <layout type="anchor" widget="collapsedBubble2">
+        <anchoritem src="cb2:bubbleHeading" srcEdge="TOP" dst="" dstEdge="TOP" spacing="-1.5un"/>        
+        <anchoritem src="cb2:bubbleHeading" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="-var(hb-param-margin-gene-left)"/>
+        <anchoritem src="cb2:bubbleHeading" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)"/>
+        <anchoritem src="cb2:bubbleHeading" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM"/>
+    </layout>
+
+    <layout type="anchor" widget="collapsedBubble">
+        <anchoritem src="cb:bubbleHeading" srcEdge="TOP" dst="" dstEdge="TOP" spacing="-1.5un"/>        
+        <anchoritem src="cb:bubbleHeading" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="-var(hb-param-margin-gene-left)"/>
+        <anchoritem src="cb:bubbleHeading" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)"/>
+        <anchoritem src="cb:bubbleHeading" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM"/>
+    </layout>    
+
+    <layout type="anchor" widget="expandedBubble">
+        <anchoritem src="eb:callImage" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="-var(hb-param-margin-gene-left)"/>
+        <anchoritem src="eb:callImage" srcEdge="TOP" dst="" dstEdge="TOP" spacing="-1.5un"/>
+        <anchoritem src="eb:callImage" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacing="var(hb-param-margin-gene-bottom)"/>        
+        
+        <anchoritem src="eb:bubbleHeading" srcEdge="TOP" dst="" dstEdge="TOP" spacing="-1.5un"/>
+        <anchoritem src="eb:bubbleHeading" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)"/>
+        <anchoritem src="eb:bubbleHeading" srcEdge="LEFT" dst="eb:callImage" dstEdge="RIGHT" spacing="-var(hb-param-margin-gene-left)"/>         
+        
+        <anchoritem src="eb:centerButton" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)"/>
+        <anchoritem src="eb:centerButton" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacing="var(hb-param-margin-gene-bottom)"/>
+        
+        <anchoritem src="eb:leftButton" srcEdge="RIGHT" dst="eb:rightButton" dstEdge="LEFT" spacing="var(hb-param-margin-gene-middle-horizontal)"/>
+        <anchoritem src="eb:leftButton" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacing="var(hb-param-margin-gene-bottom)"/>
+        
+        <anchoritem src="eb:rightButton" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)"/>
+        <anchoritem src="eb:rightButton" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacing="var(hb-param-margin-gene-bottom)"/>        
+    </layout>    
+    
+</section>
+
+</hbdocument>

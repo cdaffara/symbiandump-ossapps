@@ -1,0 +1,43 @@
+EXPORTS
+	??0RSconSyncSession@@QAE@XZ @ 1 NONAME ; RSconSyncSession::RSconSyncSession(void)
+	??1CSconDataproviderInfo@@UAE@XZ @ 2 NONAME ; CSconDataproviderInfo::~CSconDataproviderInfo(void)
+	??1RSconSyncSession@@QAE@XZ @ 3 NONAME ; RSconSyncSession::~RSconSyncSession(void)
+	?AddedItemsL@RSconSyncSession@@QBEXAAV?$RArray@H@@@Z @ 4 NONAME ; void RSconSyncSession::AddedItemsL(class RArray<int> &) const
+	?CancelRequest@RSconSyncSession@@QAEXXZ @ 5 NONAME ; void RSconSyncSession::CancelRequest(void)
+	?Close@RSconSyncSession@@QAEXXZ @ 6 NONAME ; void RSconSyncSession::Close(void)
+	?CloseDataStore@RSconSyncSession@@QBEXXZ @ 7 NONAME ; void RSconSyncSession::CloseDataStore(void) const
+	?CommitChangeInfoL@RSconSyncSession@@QAEXABV?$RArray@H@@@Z @ 8 NONAME ; void RSconSyncSession::CommitChangeInfoL(class RArray<int> const &)
+	?Connect@RSconSyncSession@@QAEHXZ @ 9 NONAME ; int RSconSyncSession::Connect(void)
+	?CreateItemL@RSconSyncSession@@QAEXAAHHABVTDesC8@@11@Z @ 10 NONAME ; void RSconSyncSession::CreateItemL(int &, int, class TDesC8 const &, class TDesC8 const &, class TDesC8 const &)
+	?CreateItemL@RSconSyncSession@@QAEXAAV?$TPckg@H@@HABVTDesC8@@11AAVTRequestStatus@@@Z @ 11 NONAME ; void RSconSyncSession::CreateItemL(class TPckg<int> &, int, class TDesC8 const &, class TDesC8 const &, class TDesC8 const &, class TRequestStatus &)
+	?DefaultStoreL@CSconDataproviderInfo@@QAEAAVTDesC16@@XZ @ 12 NONAME ; class TDesC16 & CSconDataproviderInfo::DefaultStoreL(void)
+	?DeleteAllItems@RSconSyncSession@@QAEXAAVTRequestStatus@@@Z @ 13 NONAME ; void RSconSyncSession::DeleteAllItems(class TRequestStatus &)
+	?DeleteItemL@RSconSyncSession@@QAEXH@Z @ 14 NONAME ; void RSconSyncSession::DeleteItemL(int)
+	?DeletedItemsL@RSconSyncSession@@QBEXAAV?$RArray@H@@@Z @ 15 NONAME ; void RSconSyncSession::DeletedItemsL(class RArray<int> &) const
+	?DisplayNameL@CSconDataproviderInfo@@QAEAAVTDesC16@@XZ @ 16 NONAME ; class TDesC16 & CSconDataproviderInfo::DisplayNameL(void)
+	?ExternalizeL@CSconDataproviderInfo@@QBEXAAVRWriteStream@@@Z @ 17 NONAME ; void CSconDataproviderInfo::ExternalizeL(class RWriteStream &) const
+	?GetParent@RSconSyncSession@@QAEHHAAH@Z @ 18 NONAME ; int RSconSyncSession::GetParent(int, int &)
+	?GetSyncTimeStampL@RSconSyncSession@@QBEXHHAAVTDateTime@@@Z @ 19 NONAME ; void RSconSyncSession::GetSyncTimeStampL(int, int, class TDateTime &) const
+	?HasSyncHistoryL@RSconSyncSession@@QBEHXZ @ 20 NONAME ; int RSconSyncSession::HasSyncHistoryL(void) const
+	?ImplementationUid@CSconDataproviderInfo@@QBE?AVTUid@@XZ @ 21 NONAME ; class TUid CSconDataproviderInfo::ImplementationUid(void) const
+	?InternalizeL@CSconDataproviderInfo@@QAEXAAVRReadStream@@@Z @ 22 NONAME ; void CSconDataproviderInfo::InternalizeL(class RReadStream &)
+	?ListAllImplementationsL@RSconSyncSession@@QAEXAAV?$RPointerArray@VCSconDataproviderInfo@@@@@Z @ 23 NONAME ; void RSconSyncSession::ListAllImplementationsL(class RPointerArray<class CSconDataproviderInfo> &)
+	?ListStoresL@CSconDataproviderInfo@@QBEPAVCDesC16Array@@XZ @ 24 NONAME ; class CDesC16Array * CSconDataproviderInfo::ListStoresL(void) const
+	?ModifiedItemsL@RSconSyncSession@@QBEXAAV?$RArray@H@@@Z @ 25 NONAME ; void RSconSyncSession::ModifiedItemsL(class RArray<int> &) const
+	?MoveItemL@RSconSyncSession@@QAEXHH@Z @ 26 NONAME ; void RSconSyncSession::MoveItemL(int, int)
+	?MovedItemsL@RSconSyncSession@@QBEXAAV?$RArray@H@@@Z @ 27 NONAME ; void RSconSyncSession::MovedItemsL(class RArray<int> &) const
+	?NewL@CSconDataproviderInfo@@SAPAV1@XZ @ 28 NONAME ; class CSconDataproviderInfo * CSconDataproviderInfo::NewL(void)
+	?OpenDataStoreL@RSconSyncSession@@QAEXHABVTDesC16@@H@Z @ 29 NONAME ; void RSconSyncSession::OpenDataStoreL(int, class TDesC16 const &, int)
+	?OpenItemL@RSconSyncSession@@QAEXHAAH0AAVTDes8@@1AAVCBufFlat@@@Z @ 30 NONAME ; void RSconSyncSession::OpenItemL(int, int &, int &, class TDes8 &, class TDes8 &, class CBufFlat &)
+	?ReplaceItemL@RSconSyncSession@@QAEXHHHABVTDesC8@@@Z @ 31 NONAME ; void RSconSyncSession::ReplaceItemL(int, int, int, class TDesC8 const &)
+	?ReplaceItemL@RSconSyncSession@@QAEXHHHABVTDesC8@@AAVTRequestStatus@@@Z @ 32 NONAME ; void RSconSyncSession::ReplaceItemL(int, int, int, class TDesC8 const &, class TRequestStatus &)
+	?ResetChangeInfoL@RSconSyncSession@@QAEXXZ @ 33 NONAME ; void RSconSyncSession::ResetChangeInfoL(void)
+	?SetDefaultStoreL@CSconDataproviderInfo@@QAEXABVTDesC16@@@Z @ 34 NONAME ; void CSconDataproviderInfo::SetDefaultStoreL(class TDesC16 const &)
+	?SetDisplayNameL@CSconDataproviderInfo@@QAEXABVTDesC16@@@Z @ 35 NONAME ; void CSconDataproviderInfo::SetDisplayNameL(class TDesC16 const &)
+	?SetImplementationUid@CSconDataproviderInfo@@QAEXVTUid@@@Z @ 36 NONAME ; void CSconDataproviderInfo::SetImplementationUid(class TUid)
+	?SetRemoteStoreFormatL@RSconSyncSession@@QAEXABVCSmlDataStoreFormat@@@Z @ 37 NONAME ; void RSconSyncSession::SetRemoteStoreFormatL(class CSmlDataStoreFormat const &)
+	?SetStoresL@CSconDataproviderInfo@@QAEXABVCDesC16Array@@@Z @ 38 NONAME ; void CSconDataproviderInfo::SetStoresL(class CDesC16Array const &)
+	?SoftDeleteItemL@RSconSyncSession@@QAEXH@Z @ 39 NONAME ; void RSconSyncSession::SoftDeleteItemL(int)
+	?SoftDeletedItemsL@RSconSyncSession@@QBEXAAV?$RArray@H@@@Z @ 40 NONAME ; void RSconSyncSession::SoftDeletedItemsL(class RArray<int> &) const
+	?StoreFormatL@RSconSyncSession@@QAEPAVCSmlDataStoreFormat@@ABVRStringPool@@@Z @ 41 NONAME ; class CSmlDataStoreFormat * RSconSyncSession::StoreFormatL(class RStringPool const &)
+

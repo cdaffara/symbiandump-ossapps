@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>  
+<service>
+  <name>messaging</name>
+  <filepath>No path</filepath>
+  <description>Messaging services</description>
+  <interface>
+     <name>com.nokia.symbian.IUriView</name>
+     <version>1.0</version>
+     <description>Interface for showing URIs</description>
+     <customproperty key="schemes">sms,mmsto</customproperty>
+  </interface>
+  
+  <interface>
+     <name>com.nokia.symbian.IFileShare</name>
+     <version>1.0</version>
+     <description>Share UI send interface</description>
+     <customproperty key="aiw_action_text_file">messaging</customproperty>
+     <customproperty key="aiw_action_text">txt_share_dblist_message</customproperty>
+     <customproperty key="aiw_action_icon">qtg_large_message</customproperty>
+     <customproperty key="allowed_mime_types">audio/amr,audio/x-amr,audio/sp-midi,image/gif,image/jpeg,image/jpg,image/png,image/vnd.wap.wbmp,text/calendar,text/plain,text/x-vCalendar,text/x-vCard,video/3gpp</customproperty>     
+  </interface>
+  <interface>
+      <name>com.nokia.symbian.IMessageSend</name>
+     <version>1.0</version>
+     <description>Message send Interface</description>
+  </interface> 
+  <interface>
+      <name>com.nokia.symbian.IMessageView</name>
+     <version>1.0</version>
+     <description>Message view Interface</description>
+  </interface>
+</service>

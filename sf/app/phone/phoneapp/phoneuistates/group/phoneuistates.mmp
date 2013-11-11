@@ -1,0 +1,106 @@
+/*
+* Copyright (c) 2007 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*   This mmp file defines the PhoneUIStates polymorphic interface
+*   DLL module, which contains all the GSM specific implementations 
+*   of variant classes.
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+// Capability assignment.
+CAPABILITY CAP_GENERAL_DLL
+
+// Assign Vendor ID.
+VENDORID VID_DEFAULT
+
+VERSION 10.0
+
+TARGET          phoneuistates.dll
+TARGETTYPE      dll
+
+UID             0x101F7CAC  0x101F7C9F
+
+SOURCEPATH      ../src
+
+SOURCE          cphonealerting.cpp
+SOURCE          cphonecallsetup.cpp
+SOURCE          cphonecallsetupandwaiting.cpp
+SOURCE          cphoneconference.cpp
+SOURCE          cphoneconferenceandcallsetup.cpp
+SOURCE          cphoneconferenceandsingle.cpp
+SOURCE          cphoneconferenceandsingleandwaiting.cpp
+SOURCE          cphoneconferenceandwaiting.cpp
+SOURCE          cphoneconferenceandwaitingandcallsetup.cpp
+SOURCE          cphoneemergency.cpp
+SOURCE          cphonegeneralgsmmessageshandler.cpp
+SOURCE          cphonegsmincall.cpp
+SOURCE          cphoneidle.cpp
+SOURCE          cphoneincoming.cpp
+SOURCE          cphoneresourceresolvergsm.cpp
+SOURCE          cphoneerrormessageshandler.cpp
+SOURCE          cphonesingleandalerting.cpp
+SOURCE          cphonesingleandcallsetup.cpp
+SOURCE          cphonesingleandcallsetupandwaiting.cpp
+SOURCE          cphonesingleandwaiting.cpp
+SOURCE          cphonesinglecall.cpp
+SOURCE          cphonestartup.cpp
+SOURCE          cphonestatemachinegsm.cpp
+SOURCE          cphonetwosingles.cpp
+SOURCE          cphonetwosinglesandwaiting.cpp
+SOURCE          cphoneuistatemachinefactorygsm.cpp
+
+/* Languages */
+LANG SC
+
+USERINCLUDE     ../inc
+USERINCLUDE     ../../phoneuicontrol/inc
+USERINCLUDE     ../../phoneuiqtviewadapter/inc
+USERINCLUDE     ../../phoneui/inc
+USERINCLUDE     ../../phoneuiutils/inc
+USERINCLUDE     ../../phoneui2/srcdata
+USERINCLUDE     ../../phonemediatorcenter/inc
+
+APP_LAYER_SYSTEMINCLUDE         // Application layer domain APIs
+SYSTEMINCLUDE   ../../../inc    // Telephony internal headers
+
+LIBRARY         bafl.lib
+LIBRARY         phonestringloader.lib
+LIBRARY         cone.lib
+LIBRARY         engineinfo.lib
+LIBRARY         euser.lib
+LIBRARY         featmgr.lib         // FeatureManager
+LIBRARY         phoneengine.lib
+LIBRARY         phonemediatorcenter.lib
+LIBRARY         phoneuicontrol.lib
+LIBRARY         phoneuiutils.lib
+LIBRARY         sssettings.lib
+LIBRARY         ws32.lib
+
+// RemCon
+LIBRARY         remconcoreapi.lib
+
+// Eikon Environment
+LIBRARY         eikcore.lib
+
+#ifdef __SYNCML_DM
+// Apa server
+LIBRARY         apgrfx.lib
+#endif
+
+
+
+SMPSAFE

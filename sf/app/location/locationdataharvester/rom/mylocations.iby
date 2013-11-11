@@ -1,0 +1,35 @@
+/*
+* Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: mylocations iby file
+*
+*/
+
+
+#ifndef __Mylocations_IBY__
+#define __Mylocations_IBY__
+
+file=ABI_DIR\BUILD_DIR\mylocationsengine.exe PROGRAMS_DIR\mylocationsengine.exe
+file=ABI_DIR\BUILD_DIR\geocodeupdate.dll PROGRAMS_DIR\geocodeupdate.dll
+file=ABI_DIR\BUILD_DIR\maptileservice.dll PROGRAMS_DIR\maptileservice.dll
+file=ABI_DIR\BUILD_DIR\locationdatalookupdb.dll PROGRAMS_DIR\locationdatalookupdb.dll
+file=ABI_DIR\BUILD_DIR\mylocationsdatabasemanager.dll PROGRAMS_DIR\mylocationsdatabasemanager.dll
+
+
+//Resource file(s) for Mylocations application (mylocations.iby)
+data=DATAZ_\APP_RESOURCE_DIR\mylocationsengine.rsc APP_RESOURCE_DIR\mylocationsengine.rsc
+
+data=\epoc32\data\z\resource\qt\crml\maptilestatuspublisher.qcrml   resource\qt\crml\maptilestatuspublisher.qcrml
+data=\epoc32\data\z\resource\qt\crml\maptilecontactpublisher.qcrml   resource\qt\crml\maptilecontactpublisher.qcrml
+data=\epoc32\data\z\resource\qt\crml\maptilecalpublisher.qcrml   resource\qt\crml\maptilecalpublisher.qcrml
+#endif

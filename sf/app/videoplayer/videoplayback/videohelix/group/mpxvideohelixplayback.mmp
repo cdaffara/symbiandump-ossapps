@@ -1,0 +1,90 @@
+/*
+* Copyright (c) 2008 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Helix Video Playback Plug-in specification
+ *
+*/
+
+// Version : %version: ou1cpsw#20 %
+
+
+
+
+#include <bldvariant.hrh>
+#include <data_caging_paths.hrh>
+#include <platform_paths.hrh>
+
+TARGET          mpxvideohelixplayback.dll
+TARGETTYPE      PLUGIN
+UID             0x10009D8D 0x10282550
+
+VENDORID        VID_DEFAULT
+CAPABILITY      CAP_ECOM_PLUGIN
+VERSION         10.0
+
+SOURCEPATH      ../src
+SOURCE          mpxvideohelixplayback.cpp
+SOURCE          mpxvideohelixplaybackproxy.cpp
+SOURCE          mpxvideoplaybackcontroller.cpp
+SOURCE          mpxvideoplaybackstate.cpp
+SOURCE          mpxvideoplaybackmode.cpp
+SOURCE          mpxvideofiledetails.cpp
+SOURCE          mpxvideoseeker.cpp
+SOURCE          mpxvideoaccessoryobserver.cpp
+SOURCE          mpxvideoplayerutility.cpp
+SOURCE          mpxvideodrmhelper.cpp
+SOURCE          mpxvideoposterframesetter.cpp
+SOURCE          mpxcalldetector.cpp
+
+START RESOURCE  ../data/10282550.rss
+TARGET          mpxvideohelixplayback.rsc
+END
+
+USERINCLUDE     ../inc
+USERINCLUDE     ../../inc
+USERINCLUDE     ../../../inc
+
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE   /epoc32/include/ecom
+
+SMPSAFE
+
+LIBRARY  apgrfx.lib
+LIBRARY  apmime.lib
+LIBRARY  ecom.lib
+LIBRARY  efsrv.lib
+LIBRARY  euser.lib
+LIBRARY  mmfcontrollerframework.lib
+LIBRARY  mmfstandardcustomcommands.lib
+LIBRARY  mpxcommon.lib
+LIBRARY  estor.lib
+LIBRARY  flogger.lib
+LIBRARY  playbackhelper.lib
+LIBRARY  platformenv.lib
+LIBRARY  etel.lib
+LIBRARY  etelmm.lib
+LIBRARY  hal.lib
+LIBRARY  drmutility.lib
+LIBRARY  caf.lib
+LIBRARY  mmcommon.lib 
+LIBRARY  hwrmlightclient.lib   // Lights control
+LIBRARY  centralrepository.lib // For display backlight timeout value
+LIBRARY  fbscli.lib
+LIBRARY  thumbnailmanager.lib
+
+#ifdef __ACCESSORY_FW
+LIBRARY accclient.lib
+LIBRARY accpolicy.lib
+#endif
+
+// End of File

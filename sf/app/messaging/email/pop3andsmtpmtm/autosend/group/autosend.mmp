@@ -1,0 +1,48 @@
+// Copyright (c) 2004-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// autosend.exe Executable that sends email when mail connection for POP/IMAP initiated
+// 
+//
+
+/**
+ @file
+*/
+
+
+TARGET			autosend.exe
+TARGETTYPE		exe
+
+CAPABILITY NetworkServices LocalServices ReadUserData WriteUserData
+
+
+UID				0x1000007a 0x1000A402
+VENDORID 0x70000001
+SOURCEPATH		../src
+SOURCE			autosend.cpp
+USERINCLUDE		../inc ../../clientmtms/inc ../../servermtmutils/inc
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+LIBRARY			euser.lib msgs.lib 
+
+#include	"../../../../../../mw/messagingmw/messagingfw/msgtests/group/msgopt.mph"
+
+// logging is happening
+//   - in DEBUG mode: always
+//   - in RELEASE mode, only if _MSG_NO_LOGGING_DEFINE is NOT defined 
+#ifdef _MSG_NO_LOGGING_DEFINE
+DEBUGLIBRARY flogger.lib
+#else
+LIBRARY flogger.lib
+#endif
+
+SMPSAFE

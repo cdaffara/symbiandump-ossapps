@@ -1,0 +1,27 @@
+
+About naming: 
+-------------
+
+- Example classess uses NP prefix
+- ECom plugin interfaces uses EComBrowserPlugin
+- The API is called NP (netscape plugin) plugin API. NP runtime is part of it 
+- The environment where we are aiming is WebKit 
+- Browser is main using WebKit
+- So, of which of these (NP, WebKit or Browser) we are developing plugin for? 
+  - NP apparently. The plugin should also work (not really) in other S60 NP 
+    compatible environments (like the old abandoned browser, all thought it 
+    didn't support npruntime)
+- The classes used in the plugin should be differentiated from S60 side classes
+  in some way. Currently it is done with NP 'prefix'. Inconsistently, it appears 
+  - In front of names: CNPSearchDocument
+  - And in the middle of names: CCPixNPSearchDocument
+  -> TODO? Switch CCPixNPSearchDocument to CNPCPixSearchDocument
+ 
+
+About design:
+-------------
+
+- Are the inc/idl classes meant to allow direct usage of the objects e.g. 
+  from other modules. If this is the case, are they allowed to expose 
+  S60 interfaces (with descriptors etc.), or should they expose some 
+  standard POSIX interfaces instead. 

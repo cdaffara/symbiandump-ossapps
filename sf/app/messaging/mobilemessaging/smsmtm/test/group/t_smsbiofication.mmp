@@ -1,0 +1,34 @@
+// Copyright (c) 1999-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// t_smsbiofication.mmp
+//
+
+target          t_smsbiofication.exe
+targettype      exe
+
+CAPABILITY All -TCB
+SOURCEPATH		../src
+source          t_smsbiofication.cpp
+userinclude     ../inc 
+USERINCLUDE		../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/sms/inc
+USERINCLUDE		../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/base/inc
+USERINCLUDE		../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/server/inc
+USERINCLUDE		../../../../../../mw/messagingmw/messagingfw/msgsrvnstore/server/inc
+USERINCLUDE		../../../../../../mw/messagingmw/messagingfw/biomsgfw/BIOSINC
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+library         euser.lib msgs.lib
+library			esock.lib smsu.lib smstestutils.lib msvtestutils.lib
+VENDORID 0x70000001
+
+SMPSAFE

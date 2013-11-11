@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SystemDefinition schema="3.0.0" xmlns:qt="http://www.nokia.com/qt">
+ <package id="search" name="Search Apps" levels="eng base app api">
+	<collection id="search_info" name="Search Info" level="base"> 
+	<component id="search_rom" name="Search ROM" introduced="^4" filter="s60" class="config">
+	  <unit bldFile="rom"/>
+	 </component>
+	</collection>
+	<collection id="search_plat" name="Search Platform Interfaces" level="api">
+	<component id="onlinesearchplugin_api" name="Online Search Plugin API" introduced="^4" class="api" filter="s60">
+	   <meta rel="Api" href="search_plat/onlinesearchplugin_api/onlinesearchplugin_api.metaxml"/>
+	 </component>
+	<component id="onlinesearchproviders_api" name="Online Search Providers API" introduced="^4" class="api" filter="s60">
+	   <meta rel="Api" href="search_plat/onlinesearchproviders_api/onlinesearchproviders_api.metaxml"/>
+	  <unit bldFile="search_plat" qt:proFile="search_plat.pro"/>
+	 </component>
+	</collection>
+	<collection id="onlinesearchproviders" name="Online Search Providers" level="eng">
+	<component id="onlinesearchproviders_build" name="Online Search Providers Build" introduced="^4" filter="s60">
+	  <unit bldFile="onlinesearchproviders" qt:proFile="onlinesearchproviders.pro"/>
+	 </component>
+	</collection>
+	<collection id="search_browserplugin" name="Search Browser Plugins" level="base">
+	<component id="cpixnpplugin" name="CPIX NP Plugin" class="plugin" introduced="^4" filter="s60">
+		<!-- <unit bldFile="browserplugin/CPixNPPlugin/group"/> -->
+	 </component>
+	</collection>
+	<collection id="search_harvesterplugins" name="Search Harvester Plugins" level="base">
+	<component id="search_qtemailfetcher" name="Search Qt Email Fetcher" introduced="^4" class="plugin" filter="s60">
+	  <unit bldFile="harvesterplugins/messaging/email/qtemailfetcher" qt:proFile="qtemailfetcher.pro"/>
+	 </component>
+	 <component id="search_contacts" name="Search Contacts Harvester" introduced="^4" filter="s60" class="plugin">
+	     <unit bldFile="harvesterplugins/contacts/group"/>
+	 </component>
+	 <component id="search_messaging" name="Search Messaging Harvester" introduced="^4" filter="s60" class="plugin">
+	   <unit bldFile="harvesterplugins/messaging/group"/>
+	 </component>
+	 <component id="search_file" name="Search File Harvester" introduced="^4" filter="s60" class="plugin">
+	      <unit bldFile="harvesterplugins/file/group"/>
+	 </component>
+	 <component id="search_calendar" name="Search Calendar Harvester" introduced="^4" filter="s60" class="plugin">
+	      <unit bldFile="harvesterplugins/calendar/group"/>
+	 </component>
+	 <component id="search_bookmarks" name="Search Bookmarks Harvester" introduced="^4" filter="s60" class="plugin">
+	  <!--    <unit bldFile="harvesterplugins/bookmarks/group"/> -->
+	 </component>
+	 <component id="search_applications" name="Search Applications Harvester" introduced="^4" filter="s60" class="plugin">
+	      <unit bldFile="harvesterplugins/applications/group"/>
+	 </component>
+	 <component id="search_notes" name="Search Notes Harvester" introduced="^4" filter="s60" class="plugin">
+	      <unit bldFile="harvesterplugins/notes/group"/>
+	 </component>
+	 <component id="search_media" name="Search Media Harvester" introduced="^4" filter="s60" class="plugin">
+	      <unit bldFile="harvesterplugins/media/group"/>
+	 </component>
+	 <component id="search_harvesterplugintester" name="Search Harvester Plugin Tester" introduced="^4" filter="s60">
+	      <unit bldFile="harvesterplugins/tsrc/harvesterplugintester/group"/>
+	 </component>
+	</collection>
+	<collection id="searchui" name="Search UI" level="app">
+	<component id="searchui_build" name="Search UI Build" introduced="^4" filter="s60">
+	  <unit bldFile="searchui" qt:proFile="searchui.pro"/>
+	 </component>
+	</collection>
+ </package>
+</SystemDefinition>

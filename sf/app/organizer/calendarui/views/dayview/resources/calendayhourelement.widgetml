@@ -1,0 +1,14 @@
+<hbwidget version="0.1" type="CalenDayHourElement">
+
+  <layout name="customCalendarLayout" type="mesh">
+    <meshitem src="time" srcEdge="TOP" dst="" dstEdge="TOP" spacing="-var(hb-param-margin-gene-middle-vertical)"/>
+	<meshitem src="time" srcEdge="BOTTOM" dst="ampm" dstEdge="TOP" spacing="var(hb-param-margin-gene-middle-vertical)"/>
+    <meshitem src="time" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="-var(hb-param-margin-gene-middle-horizontal)"/>
+	<meshitem src="time" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-middle-horizontal)"/>
+
+    <meshitem src="ampm" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacing="0un" spacer="bottomSpacer"/>
+    <meshitem src="ampm" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="-var(hb-param-margin-gene-middle-horizontal)"/>
+    <meshitem src="ampm" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-middle-horizontal)"/>
+  </layout>
+
+</hbwidget>

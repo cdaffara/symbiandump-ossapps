@@ -1,0 +1,37 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+#ifndef __AGNMODEL_IBY__
+#define __AGNMODEL_IBY__
+
+REM Agenda Model
+
+#ifndef DATAZ_
+  define DATAZ_ EPOCROOT##epoc32\data\Z
+#endif
+
+REM Configurable heap size for agenda server.
+#ifndef AGENDA_SERVER_MAX_HEAPSIZE
+#define AGENDA_SERVER_MAX_HEAPSIZE  0x100000
+#endif
+
+file=ABI_DIR\BUILD_DIR\agnmodel.dll        System\Libs\agnmodel.dll
+file=ABI_DIR\BUILD_DIR\agsvexe.exe         System\Programs\agsvexe.exe       heapmax=AGENDA_SERVER_MAX_HEAPSIZE
+
+data = ZPRIVATE\10003A5B\backup_registration.xml	PRIVATE\10003A5B\backup_registration.xml
+
+#endif

@@ -1,0 +1,152 @@
+/*
+* Copyright (c) 2002-2008 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: 
+*     This file contains declarations for commands of PhoneAppS60.
+*     The file can be included in C++ or resource file.
+*     
+*
+*/
+
+
+#ifndef PHONEAPPCOMMANDS_HRH
+#define PHONEAPPCOMMANDS_HRH
+
+
+#include    <bldvariant.hrh>
+
+//  CONSTANTS
+
+#define KPhoneCmdBase 6000
+enum 
+    {
+    // commands for all
+    EPhoneCmdDoNothing = KPhoneCmdBase,
+    EPhoneCmdOptions,
+    EPhoneCmdBack,
+    EPhoneCmdEnd,
+    EPhoneCmdYesBtDisconnectQuery,
+    EPhoneCmdNoBtDisconnectQuery,
+
+    // commands for number acquisition.
+    EPhoneNumberAcqCmdSave,
+    EPhoneNumberAcqCmdAddToName,
+    EPhoneNumberAcqCmdCall,
+    EPhoneNumberAcqCmdVideoCall,
+    EPhoneNumberAcqCmdSendCommand,
+    EPhoneNumberAcqSecurityDialer, // NOT IN MENU.
+    EPhoneNumberAcqCmdAddToContacts,
+    // commands for call coming in
+    EPhoneCallComingCmdReject,
+    EPhoneCallComingCmdAnswer,
+    EPhoneCallComingCmdAnswerHandPortable,
+    EPhoneCallComingCmdAnswerHandPortableVideo,
+    EPhoneCallComingCmdSilent,
+    EPhoneCallComingCmdOptions,
+    EPhoneCallComingCmdAnswerWithHandsfree,
+    EPhoneCallComingCmdSoftReject,
+    // commands for incall
+    EPhoneInCallCmdSwap,
+    EPhoneInCallCmdAnswer,
+    EPhoneInCallCmdReject,
+    EPhoneInCallCmdHold,
+    EPhoneInCallCmdUnhold,
+    EPhoneInCallCmdEndThisActiveCall,
+    EPhoneInCallCmdEndThisHeldCall,
+    EPhoneInCallCmdEndThisOutgoingCall,
+    EPhoneInCallCmdEndAllCalls,
+    EPhoneInCallCmdHandset,
+    EPhoneInCallCmdBtHandsfree,
+    EPhoneInCallCmdActivateIhf,
+    EPhoneInCallCmdDeactivateIhf,
+    EPhoneInCallCmdMute,
+    EPhoneInCallCmdUnmute,
+    EPhoneInCallCmdNewCall,
+    EPhoneInCallCmdCreateConference,
+    EPhoneInCallCmdConferenceMenu,
+    EPhoneInCallCmdPrivateSelection,
+    EPhoneInCallCmdJoin,
+    EPhoneInCallCmdDropSelection,
+    EPhoneInCallCmdTransfer,
+    EPhoneInCallCmdReplace,
+    EPhoneInCallCmdDtmfListQuery,
+    EPhoneInCallCmdDtmfManualQuery,
+    EPhoneInCallCmdCancelSendingDtmfString,
+    EPhoneInCallCmdContinueSendingDtmfString,
+    EPhoneInCallCmdVoiceMode,
+    EPhoneInCallCmdSendToCallerMenu,    
+    EPhoneInCallCmdSendNew,
+    EPhoneInCallCmdSendFile,
+    EPhoneInCallCmdDrop,
+    EPhoneInCallCmdPrivate,
+    EPhoneInCallCmdDialer,
+    EPhoneInCallCmdContacts,
+
+    // Enable video
+    EPhoneInCallCmdEnableVideo,
+    // Disable video
+    EPhoneInCallCmdDisableVideo,
+    // Use primary camera
+    EPhoneInCallCmdPrimaryCamera,
+    // Use secondary camera
+    EPhoneInCallCmdSecondaryCamera,
+    EPhoneInCallCmdActivatEPhonebook, // NOT IN MENU!
+
+    EPhoneInCallCmdConferenceHold, // JMK
+    EPhoneInCallCmdConferenceUnhold, // JMK
+    EPhoneInCallCmdGoToIdle,
+    EPhoneInCallCmdParticipants,
+    
+    EPhoneEmergencyCmdExit,         
+    // DTMF specific
+    EPhoneCmdDtmfOk,
+    // other commands
+    EPhoneCmdWaitNoteOk,
+    EPhoneInCallCmdSetVolumeLevel,
+    
+    //Dialer commands
+    EPhoneDialerCmdLog,
+    EPhoneDialerCmdContacts,
+    EPhoneDialerCmdClear,  
+    EPhoneDialerCallHandling,
+    EPhoneDialerCmdTouchInput,
+    EPhoneDialerCmdEditText,
+    EPhoneDialerCallSettings,   
+    EPhoneDtmfDialerCancel, 
+    EPhoneDtmfDialerExit,
+    EPhoneIsDTMFDialerVisible,
+    EPhoneDialerCmdHelp,
+    EPhoneDialerCmdHelpDtmf,
+    EPhoneIsCustomizedDialerVisible,
+
+    EPhoneCmdVideoCallOutOfMemory,
+    EPhoneCmdUpdateUiControls,
+
+    EPhoneCmdLast
+    };
+    
+    
+// Command range for custom menu commands.
+// Custom commands can be used for menu extensions.
+#define KPhoneCustomCmdBase 8000
+#define KPhoneCustomCmdLast 8500
+
+enum
+    {
+    EPhoneCmdCustomFirst = KPhoneCustomCmdBase,
+    EPhoneCmdCustomLast = KPhoneCustomCmdLast
+    };
+
+#endif
+
+// End of File

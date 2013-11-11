@@ -1,0 +1,2057 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+* 
+* Description: This file defines StifUI resources.
+*
+*/
+
+//	RESOURCE IDENTIFIER
+NAME	STIF // 4 letter ID
+
+//	INCLUDES
+
+#include <eikon.rh>
+#include "Stifui.hrh"
+#include "Stifui_loc.hrh"
+#include <avkon.rsg>
+#include <avkon.rh>
+#include <avkon.mbg>
+#include <avkon.hrh>
+//#include <CommonDialogs.hrh> // Enumerations of memory selection, file selection, save etc dialogs
+//#include <CommonDialogs.rh> // Resource structures of memory selection, file selection, save etc dialogs
+#if defined (__S60_)
+    #include <data_caging_paths_strings.hrh>
+#endif
+#include <appinfo.rh>
+
+//	CONSTANTS  
+
+
+//	MACROS	
+
+
+//	RESOURCE DEFINITIONS 
+
+RESOURCE RSS_SIGNATURE { }
+
+RESOURCE TBUF { buf="STIF UI"; }
+
+RESOURCE EIK_APP_INFO
+	{
+	status_pane = r_appui_status_pane;
+	}
+
+STRUCT STRING 
+    { 
+	BUF text;
+    }
+
+
+//  RESOURCE DEFINITIONS 
+//-----------------------------------------------------------------------------
+//	 
+// r_appui_hotkeys
+// ?description
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE HOTKEYS r_appui_hotkeys
+	{
+	control=
+		{
+		HOTKEY { command=EAknCmdExit; key='e'; }
+		};
+	}
+
+
+// APPUI
+//-----------------------------------------------------------------------------
+//	 
+//	  r_appui_status_pane
+//	  Applications status panel.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE STATUS_PANE_APP_MODEL r_appui_status_pane
+	{
+	panes=
+		{
+		//SPANE_PANE
+		//	{
+		//	id = EEikStatusPaneUidNavi;
+		//	//type = EEikCtLabel;
+		//	//type = EAknCtTitlePane;
+		//	type = EAknCtNaviPane;
+		//	//resource = r_appui_statuspane_text;
+		//	resource = r_appui_navi_decorator;
+		//	},
+		SPANE_PANE
+			{
+			id = EEikStatusPaneUidTitle;
+			type = EAknCtTitlePane;
+			resource = r_appui_overriden_app_name;
+			}
+		//SPANE_PANE
+		//	{
+		//	id = EEikStatusPaneUidContext;
+		//	type = EAknCtContextPane;
+		//	resource = ;
+		//	}
+		};
+	}
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_appui_status_pane
+//	  Status panel text.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE LABEL r_appui_statuspane_text
+    {
+    txt = "STIF UI";
+    }
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_appui_overriden_app_name
+//	  Application name.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE TITLE_PANE r_appui_overriden_app_name
+	{
+	txt = qtn_app_caption_string;
+	}
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_appui_navi_decorator
+//	  ?description
+//
+//-----------------------------------------------------------------------------
+//
+/*
+RESOURCE NAVI_DECORATOR r_appui_navi_decorator
+	{
+	type = ENaviDecoratorControlTabGroup;
+	control = TAB_GROUP
+		{
+		tab_width = EAknTabWidthWithTwoTabs;  // two tabs
+		active = 0;
+		tabs = {
+			TAB
+				{
+				id = ETestCaseMenuTab; // from application hrh
+				txt = qtn_testcase_menu_tab;
+				},
+			TAB
+				{
+				id = ETestModulesMenuTab; // from application hrh
+				txt = qtn_testmodules_menu_tab;
+				},
+			TAB
+				{
+				id = ETestSetsMenuTab; // from application hrh
+				txt = qtn_testsets_menu_tab;
+				}
+			};
+		};
+	}
+*/
+
+// MAIN MENU
+//-----------------------------------------------------------------------------
+//	 
+//	  r_appui_mainmenuview
+//	  Mainmenu view.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE AVKON_VIEW r_appui_mainmenuview
+	{
+	menubar=r_appui_menubar_mainmenuview;  
+	cba=R_AVKON_SOFTKEYS_OPTIONS_EXIT;
+	}
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_appui_menubar_mainmenuview
+//	  Main menu menubar.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE MENU_BAR r_appui_menubar_mainmenuview
+	{
+	titles=
+		{
+		MENU_TITLE 
+				{ 
+				menu_pane=r_appui_mainmenuview_menu;
+				}
+		};
+	}
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_appui_mainmenuview_menu
+//	  Main menu options menu.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_appui_mainmenuview_menu
+	{
+	items=
+		{
+		MENU_ITEM 
+				{ 
+				command= EAknCmdOpen; 
+				txt = "Open"; 
+				},
+			MENU_ITEM
+				{
+				command = ECmdShowAbout;
+				txt = "About";
+				},
+        	MENU_ITEM 
+				{
+				command = EAknSoftkeyExit;   
+				txt = "Exit";
+				}
+		};
+	}
+
+//-----------------------------------------------------------------------------
+//
+//	  r_main_menu_listbox
+//	  ListBox( Single )
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE LISTBOX r_main_menu_listbox
+	{
+	array_id = r_main_menu_items;
+	flags = EAknListBoxSelectionList;
+	}
+
+//-----------------------------------------------------------------------------
+//
+//	  r_main_menu_items
+//	  Items array for Main Menu
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE ARRAY r_main_menu_items
+	{
+	items =
+		{
+		LBUF
+			{
+			txt = qtn_mainmenulist_test_cases;
+			},
+		LBUF
+			{
+			txt = qtn_mainmenulist_modules;
+			},
+		LBUF
+			{
+			txt = qtn_mainmenulist_test_sets;
+			}
+		};
+	}
+
+
+
+// TEST CASES MENU
+//-----------------------------------------------------------------------------
+//	 
+//	  r_appui_testcasemenuview
+//	  Test case menu view.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE AVKON_VIEW r_appui_testcasemenuview
+	{
+	menubar=r_appui_menubar_testcasemenuview;
+	cba=R_AVKON_SOFTKEYS_OPTIONS_BACK;
+	}
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_appui_menubar_testcasemenuview
+//	  Test case view menubar.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE MENU_BAR r_appui_menubar_testcasemenuview
+	  {
+	titles=
+		{
+		MENU_TITLE 
+				{ 
+				menu_pane=r_appui_testcasemenuview_menu;
+				}
+		};
+
+	  }
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_appui_testcasemenuview_menu
+//	  Testcase view options menu.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_appui_testcasemenuview_menu
+	{
+	items=
+		{
+		MENU_ITEM 
+				{ 
+				command= EAknCmdOpen; 
+				txt = "Open"; 
+				},
+        	MENU_ITEM 
+				{
+				command = EAknSoftkeyExit;   
+				txt = "Exit";
+				}
+		};
+	}
+
+//-----------------------------------------------------------------------------
+//
+//	  r_testcase_menu_listbox
+//	  ListBox( Single )
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE LISTBOX r_testcase_menu_listbox
+	{
+	array_id = r_testcase_menu_items;
+	flags = EAknListBoxSelectionList;
+	}
+
+//-----------------------------------------------------------------------------
+//
+//	  r_testcase_menu_items
+//	  Items array for Test Case Menu
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE ARRAY r_testcase_menu_items
+	{
+	items =
+		{
+		LBUF
+			{
+			txt = qtn_testcasemenu_startcase; // "\tStart Case(s)";
+			},
+		LBUF
+			{
+			txt = qtn_testcasemenu_startedcases; // "\tStarted Cases";
+			}
+		};
+	}
+
+
+
+// START CASES
+//-----------------------------------------------------------------------------
+//	 
+//	  r_appui_startcasesview
+//	  Startcases view.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE AVKON_VIEW r_appui_startcasesview
+	{
+	hotkeys=r_appui_hotkeys;
+	menubar=r_appui_menubar_startcasesview;  
+	cba=R_AVKON_SOFTKEYS_OPTIONS_BACK;	  
+	}
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_appui_menubar_startcasesview
+//	  Startcases view menubar.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE MENU_BAR r_appui_menubar_startcasesview
+	{
+	titles=
+		{
+		MENU_TITLE 
+				{ 
+				menu_pane=r_appui_startcasesview_menu;
+				//menu_pane=R_AVKON_MENUPANE_MARKABLE_LIST;
+				}
+		};
+	}
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_appui_loadtestsetview_menu
+//	  loadtestset view options menu.
+//
+//-----------------------------------------------------------------------------
+RESOURCE MENU_PANE r_appui_loadtestsetview_menu
+	{
+	items= 
+		{
+		MENU_ITEM 
+			{ 
+			command=EAknCmdOpen; 
+			txt = qtn_start; 
+			},
+		MENU_ITEM 
+			{ 
+			command=EEikCmdExit; 
+			txt = qtn_exit; 
+			}
+		};
+	}
+//-----------------------------------------------------------------------------
+//	 
+//	  r_appui_loadtestsetview
+//	  Started cases view.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE AVKON_VIEW r_appui_loadtestsetview
+	{
+	//hotkeys=r_appui_hotkeys;
+	menubar=r_appui_menubar_startedcasesmenuview;  
+	cba=R_AVKON_SOFTKEYS_OPTIONS_BACK;	  
+	}
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_appui_menubar_startedcasesmenuview
+//	  Started cases menubar.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE MENU_BAR r_appui_menubar_loadtestsetview
+	  {
+	titles=
+		{
+		MENU_TITLE 
+				{ 
+				menu_pane=r_appui_loadtestsetview_menu;
+				}
+		};
+
+	  }
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_appui_startcasesview_menu
+//	  Startcases view options menu.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_appui_startcasesview_menu
+	{
+	items=
+		{
+		MENU_ITEM
+		    {
+		    command = ECmdFilterMenu;
+		    txt = qtn_filter_menu;
+		    cascade = r_appui_filtermenu;
+		    },
+		/*
+		MENU_ITEM 
+			{ 
+			command=ECmdFilterByModule; 
+			txt = qtn_filter_by_modules; 
+			cascade = r_appui_filterbymodules_menu; 
+			},
+		MENU_ITEM 
+			{ 
+			command=ECmdFilterByTestCaseFile; 
+			txt = qtn_filter_by_test_case_file;
+			cascade = r_appui_filter_by_testcasefile_menu; 
+			},
+		MENU_ITEM 
+			{ 
+			command=ECmdNOFiltering; 
+			txt = qtn_no_filtering; 
+			},
+		*/
+		MENU_ITEM 
+			{ 
+			command=ECmdMarkMenu;
+		    txt = qtn_markmenu_title; 
+		    cascade = r_appui_markunmark_menu;
+		    },
+		MENU_ITEM 
+			{ 
+			command=ECmdStartCases; 
+			txt = qtn_start_test_cases; 
+			},
+		MENU_ITEM 
+			{ 
+			command=EEikCmdExit; 
+			txt = qtn_exit; 
+			}
+		};
+	}
+
+
+
+// STARTED CASES
+//-----------------------------------------------------------------------------
+//	 
+//	  r_appui_startedcasesmenuview
+//	  Started cases view.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE AVKON_VIEW r_appui_startedcasesmenuview
+	{
+	//hotkeys=r_appui_hotkeys;
+	menubar=r_appui_menubar_startedcasesmenuview;  
+	cba=R_AVKON_SOFTKEYS_OPTIONS_BACK;	  
+	}
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_appui_menubar_startedcasesmenuview
+//	  Started cases menubar.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE MENU_BAR r_appui_menubar_startedcasesmenuview
+	  {
+	titles=
+		{
+		MENU_TITLE 
+				{ 
+				menu_pane=r_appui_startedcasesmenuview_menu;
+				}
+		};
+
+	  }
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_appui_startedcasesmenuview_menu
+//	  Started cases view options menu.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_appui_startedcasesmenuview_menu
+	{
+	items=
+		{
+		MENU_ITEM 
+				{ 
+				command= EAknCmdOpen; 
+				txt = "Open"; 
+				},
+        	MENU_ITEM 
+				{
+				command = EAknSoftkeyExit;   
+				txt = "Exit";
+				}
+		};
+	}
+
+//-----------------------------------------------------------------------------
+//
+//	  r_started_cases_menu_listbox
+//	  ListBox( Single )
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE LISTBOX r_started_cases_menu_listbox
+	{
+	array_id = r_startedcases_menu_items;
+	flags = EAknListBoxSelectionList;
+	}
+
+
+
+//-----------------------------------------------------------------------------
+//
+//	  r_startedcases_menu_items
+//	  Items array for Test Case Menu
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE ARRAY r_startedcases_menu_items
+	{
+	items =
+		{
+		LBUF
+			{
+			txt = qtn_startedcases_allcases;
+			},
+		LBUF
+			{
+			txt = qtn_startedcases_ongoing;
+			},
+		LBUF
+			{
+			txt = qtn_startedcases_paused;
+			},
+		LBUF
+			{
+			txt = qtn_startedcases_passed;
+			},
+		LBUF
+			{
+			txt = qtn_startedcases_failed;
+			},
+		LBUF
+			{
+			txt = qtn_startedcases_crashed_aborted;
+			},
+		LBUF
+			{
+			txt = qtn_startedcases_statistics;
+			}
+		};
+	}
+
+
+
+// SHOW STARTED CASES
+//-----------------------------------------------------------------------------
+//	 
+//	  r_appui_showstartedcasesview
+//	  Show started cases view.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE AVKON_VIEW r_appui_showstartedcasesview
+	{
+	hotkeys=r_appui_hotkeys;
+	menubar=r_appui_menubar_showstartedcasesview;  
+	cba=R_AVKON_SOFTKEYS_OPTIONS_BACK;	  
+	}
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_appui_menubar_showstartedcasesview
+//	  Show started cases view menubar.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE MENU_BAR r_appui_menubar_showstartedcasesview
+	{
+	titles=
+		{
+		MENU_TITLE 
+				{ 
+				menu_pane=r_appui_showstartedcasesview_menu;
+				}
+		};
+	}
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_appui_showstartedcasesview_menu
+//	  Show started cases view options menu.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_appui_showstartedcasesview_menu
+	{
+	items=
+		{
+		MENU_ITEM 
+			{ 
+			command=ECmdViewOutput; 
+			txt = qtn_view_output; 
+			},
+		MENU_ITEM
+		    {
+		    command = ECmdFilterMenu;
+		    txt = qtn_filter_menu;
+		    cascade = r_appui_filtermenu;
+		    },
+		MENU_ITEM
+		    { 
+			command=ECmdShowSetMenu;
+			txt = qtn_testcase_control_menu;
+			cascade = r_testcase_control_submenu;
+			},
+		MENU_ITEM 
+		    { 
+			command=EEikCmdExit; 
+			txt = qtn_exit; 
+			}
+			
+        /*
+		MENU_ITEM 
+				{ 
+				command=ECmdPauseTestCase; 
+				txt = qtn_pause_testcase; 
+				},
+		MENU_ITEM 
+				{ 
+				command=ECmdResumeTestCase; 
+				txt = qtn_resume_testcase; 
+				},
+		MENU_ITEM 
+				{ 
+				command=ECmdAbortTestCase; 
+				txt = qtn_abort_testcase; 
+				},
+        */
+        
+        /*
+		MENU_ITEM 
+				{ 
+				command=ECmdFilterByModule; 
+				txt = qtn_filter_by_modules; 
+				cascade = r_appui_filterbymodules_menu; 
+				},
+		MENU_ITEM 
+				{ 
+				command=ECmdFilterByTestCaseFile; 
+				txt = qtn_filter_by_test_case_file;
+				cascade = r_appui_filter_by_testcasefile_menu; 
+				},
+		MENU_ITEM 
+				{ 
+				command=ECmdNOFiltering; 
+				txt = qtn_no_filtering; 
+				},
+		*/
+		
+		/*
+		MENU_ITEM 
+				{ 
+				command=ECmdRemoveExecution; 
+				txt = qtn_remove_execution; 
+				},
+		MENU_ITEM 
+				{ 
+				command=ECmdRemoveAllExecutions; 
+				txt = qtn_remove_all_executions; 
+				},
+	    */
+
+		};
+	}
+
+
+// STATISTICS VIEW
+//-----------------------------------------------------------------------------
+//	 
+//	  r_appui_statisticsview
+//	  Statistics view.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE AVKON_VIEW r_appui_statisticsview
+	{
+	menubar= r_appui_menubar_statisticsview;
+	cba=R_AVKON_SOFTKEYS_OPTIONS_BACK;	  
+	}
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_appui_menubar_statisticsview
+//	  Statistics view menubar.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE MENU_BAR r_appui_menubar_statisticsview
+	{
+	titles=
+		{
+		MENU_TITLE 
+			{ 
+			menu_pane=r_appui_statisticsview_menu; 
+			}
+		};
+	}
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_appui_statisticsview_menu
+//	  Statistics view options menu.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_appui_statisticsview_menu
+	{
+	items=
+		{
+		MENU_ITEM 
+			{ 
+			command=ECmdFilterByModule; 
+			txt = qtn_filter_by_modules; 
+			cascade = r_appui_filterbymodules_menu; 
+			},
+		MENU_ITEM 
+			{ 
+			command=ECmdFilterByTestCaseFile; 
+			txt = qtn_filter_by_test_case_file;
+			cascade = r_appui_filter_by_testcasefile_menu; 
+			},
+		MENU_ITEM 
+			{ 
+			command=ECmdNOFiltering; 
+			txt = qtn_no_filtering; 
+			},
+
+		MENU_ITEM 
+			{ 
+			command=EEikCmdExit; 
+			txt = qtn_exit; 
+			}
+		};
+	}
+
+
+// TESTCASE OUTPUT VIEW
+//-----------------------------------------------------------------------------
+//	 
+//	  r_appui_testcaseoutputview
+//	  Testcase output view.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE AVKON_VIEW r_appui_testcaseoutputview
+	{
+	hotkeys=r_appui_hotkeys;
+	menubar=r_appui_menubar_testcaseoutputview;  
+	cba=R_AVKON_SOFTKEYS_OPTIONS_BACK;	  
+	}
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_appui_menubar_testcaseoutputview
+//	  Testcase output view menub bar.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE MENU_BAR r_appui_menubar_testcaseoutputview
+	{
+	titles=
+		{
+		MENU_TITLE 
+			{ 
+			menu_pane=r_appui_testcaseoutputview_menu; 
+			}
+		};
+	}
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_appui_testcaseoutputview_menu
+//	  Testcase output view options menu.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_appui_testcaseoutputview_menu
+	{
+	items=
+		{
+		MENU_ITEM 
+			{ 
+			command=ECmdPauseTestCase; 
+			txt = qtn_pause_testcase; 
+			},
+		MENU_ITEM 
+			{ 
+			command=ECmdResumeTestCase; 
+			txt = qtn_resume_testcase; 
+			},
+		MENU_ITEM 
+			{ 
+			command=ECmdAbortTestCase; 
+			txt = qtn_abort_testcase; 
+			},
+		MENU_ITEM 
+			{ 
+			command=EEikCmdExit; 
+			txt = qtn_exit; 
+			}
+		};
+	}
+
+
+
+// MODULES MENU
+//-----------------------------------------------------------------------------
+//	 
+//	  r_appui_testmodulesmenuview
+//	  Test modules menu view.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE AVKON_VIEW r_appui_testmodulesmenuview
+	{
+	hotkeys=r_appui_hotkeys;
+	menubar=r_appui_menubar_testmodulesmenuview;  
+	cba=R_AVKON_SOFTKEYS_OPTIONS_BACK;	  
+	}
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_appui_menubar_testmodulesmenuview
+//	  Test modules view menubar.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE MENU_BAR r_appui_menubar_testmodulesmenuview
+	{
+	titles=
+		{
+		MENU_TITLE 
+			{ 
+			menu_pane=r_appui_testmodulesmenuview_menu; 
+			}
+		};
+	}
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_appui_testmodulesmenuview_menu
+//	  Testmodules view options menu.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_appui_testmodulesmenuview_menu
+	{
+	items=
+		{
+		// MENU_ITEM 
+		//	{ 
+		//	command=ECmdOpenModule; 
+		//	txt = qtn_open_module; 
+		//	},
+		MENU_ITEM 
+			{ 
+			command=ECmdAddModule; 
+			txt = qtn_add_module; 
+			},
+		MENU_ITEM 
+			{ 
+			command=ECmdRemoveModule; 
+			txt = qtn_remove_module; 
+			},
+	        MENU_ITEM 
+			{ 
+			command=EAknCmdExit; 
+			txt = qtn_exit; 
+			}
+		};
+	}
+
+//-----------------------------------------------------------------------------
+//	  r_testmodules_menu_listbox
+//	  ListBox( Single )
+//
+//-----------------------------------------------------------------------------
+//
+/*
+RESOURCE LISTBOX r_testmodules_menu_listbox
+	{
+	array_id = r_testmodules_menu_items;
+	flags = EAknListBoxSelectionList;
+	}
+*/
+
+//-----------------------------------------------------------------------------
+//	  r_testmodules_menu_items
+//	  Items array for Test Case Menu
+//
+//-----------------------------------------------------------------------------
+//
+/*
+RESOURCE ARRAY r_testmodules_menu_items
+	{
+	items =
+		{
+		LBUF
+			{
+			txt = "\tModule1";
+			},
+		LBUF
+			{
+			txt = "\tModule2";
+			}
+		};
+	}
+*/
+
+
+// TEST SET BASE
+//-----------------------------------------------------------------------------
+//	 
+//	  r_appui_testsetbasemenuview
+//	  Testset base menu view.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE AVKON_VIEW r_appui_testsetbasemenuview
+	{
+	menubar=r_appui_menubar_testsetbasemenuview;
+	cba=R_AVKON_SOFTKEYS_OPTIONS_BACK;
+	}
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_appui_menubar_testsetbasemenuview
+//	  Testset base menu view menubar.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE MENU_BAR r_appui_menubar_testsetbasemenuview
+	  {
+	titles=
+		{
+		MENU_TITLE 
+				{ 
+				menu_pane=r_appui_testsetbasemenuview_menu;
+				}
+		};
+
+	  }
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_appui_testsetbasemenuview_menu
+//	  Testset base menu view options menu.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_appui_testsetbasemenuview_menu
+	{
+	items=
+		{
+		MENU_ITEM 
+				{ 
+				command= ECmdCreateTestSet; 
+				txt = "Create test set";
+				},
+		MENU_ITEM 
+				{ 
+				command= ECmdLoadTestSet; 
+				txt = "Load test set";
+				},
+        	MENU_ITEM 
+				{
+				command = EAknSoftkeyExit;   
+				txt = "Exit";
+				}
+		};
+	}
+
+//-----------------------------------------------------------------------------
+//
+//	  r_testsetbase_menu_listbox
+//	  ListBox( Single )
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE LISTBOX r_testsetbase_menu_listbox
+	{
+	array_id = r_testsetbase_menu_items;
+	flags = EAknListBoxSelectionList;
+	}
+
+
+
+//-----------------------------------------------------------------------------
+//
+//	  r_testsetbase_menu_items
+//	  Items array for Test Sets Base Menu
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE ARRAY r_testsetbase_menu_items
+	{
+	items =
+		{
+		LBUF
+			{
+			txt = qtn_testsetbasemenu_createtestset;
+			},
+		LBUF
+			{
+			txt = qtn_testsetbasemenu_loadtestset;
+			}
+		};
+	}
+
+
+// TESTSET MENU
+//-----------------------------------------------------------------------------
+//	 
+//	  r_appui_testsetmenuview
+//	  Test set menu view.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE AVKON_VIEW r_appui_testsetmenuview
+	{
+	menubar=r_appui_menubar_testsetmenuview;
+	cba=R_AVKON_SOFTKEYS_OPTIONS_BACK;
+	}
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_appui_menubar_testsetmenuview
+//	  Test set menu view menubar.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE MENU_BAR r_appui_menubar_testsetmenuview
+	  {
+	titles=
+		{
+		MENU_TITLE 
+				{ 
+				menu_pane=r_appui_testsetmenuview_menu;
+				}
+		};
+
+	  }
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_appui_testsetmenuview_menu
+//	  Test set menu view options menu.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_appui_testsetmenuview_menu
+	{
+	items=
+		{
+		MENU_ITEM 
+				{ 
+				command= ECmdStartTestSet; 
+				txt = "Start testing";
+				},
+		MENU_ITEM 
+				{ 
+				command= ECmdShowStartedTestSet; 
+				txt = "View started cases";
+				},				
+		MENU_ITEM 
+				{ 
+				command= ECmdSaveTestSet; 
+				txt = "Save test set"; 
+				},
+		MENU_ITEM 
+				{ 
+				command= ECmdInsertTestCases; 
+				txt = "Insert test case(s)";
+				},
+		MENU_ITEM 
+				{ 
+				command= ECmdRemoveTestCases; 
+				txt = "Remove test case"; 
+				},
+        MENU_ITEM 
+				{
+				command = EAknSoftkeyExit;   
+				txt = "Exit";
+				}
+		};
+	}
+
+//-----------------------------------------------------------------------------
+//
+//	  r_testset_menu_listbox
+//	  ListBox( Single )
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE LISTBOX r_testset_menu_listbox
+	{
+	array_id = r_testset_menu_items;
+	flags = EAknListBoxSelectionList;
+	}
+
+
+
+//-----------------------------------------------------------------------------
+//
+//	  r_testset_menu_items
+//	  Items array for Test Sets Menu
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE ARRAY r_testset_menu_items
+	{
+	items =
+		{
+		LBUF
+			{
+			txt = "";
+			}			
+		};
+	}
+
+
+// TESTSET STARTED CASES
+//-----------------------------------------------------------------------------
+//	 
+//	  r_test_set_startedcasesview
+//	  Test set started cases view.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE AVKON_VIEW r_testset_startedcasesview
+	{
+	//hotkeys=r_appui_hotkeys;
+	menubar=r_testset_menubar_startedcasesview;  
+	cba=R_AVKON_SOFTKEYS_OPTIONS_BACK;	  
+	}
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_test_set_menubar_startedcasesview
+//	  Test set started cases view menubar.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE MENU_BAR r_testset_menubar_startedcasesview
+	{
+	titles=
+		{
+		MENU_TITLE 
+				{ 
+				menu_pane=r_testset_startedcasesview_menu;
+				}
+		};
+	}
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_testset_startedcasesview_menu
+//	  Test set started cases view options menu.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_testset_startedcasesview_menu
+	{
+	items=
+		{
+		MENU_ITEM
+				{
+				txt = qtn_testset_started_menu;
+				cascade = r_testset_startedcases_submenu;
+				},
+		MENU_ITEM 
+				{ 
+				command=ECmdViewOutput; 
+				txt = qtn_view_output; 
+				},
+        MENU_ITEM 
+				{ 
+				command=ECmdShowSetMenu;
+				txt = qtn_testcase_control_menu;
+				cascade = r_testcase_control_submenu;
+				},
+		MENU_ITEM 
+				{ 
+				command=EEikCmdExit; 
+				txt = qtn_exit; 
+				}
+		};
+	}
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_testset_startedcases_submenu
+//	  Test set started cases view sub menu.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_testset_startedcases_submenu
+	{
+	items=
+		{
+		MENU_ITEM
+				{
+				command = ECmdShowAllStartedCases;
+				txt = qtn_testset_started_allcases;
+				},
+		MENU_ITEM
+				{
+				command = ECmdShowOngoingCases;
+				txt = qtn_testset_started_ongoing;
+				},
+		MENU_ITEM
+				{
+				command = ECmdShowPausedCases;
+				txt = qtn_testset_started_paused;
+				},
+		MENU_ITEM
+				{
+				command = ECmdShowPassedCases;
+				txt = qtn_testset_started_passed;
+				},
+		MENU_ITEM
+				{
+				command = ECmdShowFailedCases;
+				txt = qtn_testset_started_failed;
+				},
+		MENU_ITEM
+				{
+				command = ECmdShowCrashedAbortedCases;
+				txt = qtn_testset_started_crashed_aborted;
+				}
+		};
+	}
+
+
+// TESTSET INSERT CASES
+//-----------------------------------------------------------------------------
+//	 
+//	  r_insert_testcases_view
+//	  Insert test cases view.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE AVKON_VIEW r_insert_testcases_view
+	{
+	//hotkeys=r_appui_hotkeys;
+	menubar=r_insert_testcases_menubar;  
+	cba=R_AVKON_SOFTKEYS_OPTIONS_CANCEL;	  
+	}
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_insert_testcases_menubar
+//	  Insert test cases view menubar.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE MENU_BAR r_insert_testcases_menubar
+	{
+	titles=
+		{
+		MENU_TITLE 
+				{ 
+				menu_pane=r_insert_testcases_menu;
+				}
+		};
+	}
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_insert_testcases_menu
+//	  Insert test cases view options menu.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_insert_testcases_menu
+	{
+	items=
+		{
+		MENU_ITEM 
+			{ 
+			command=ECmdInsertSelectedCases;
+			txt = qtn_testsetinsert_add_selected; 
+			},
+        MENU_ITEM
+		    {
+		    command = ECmdFilterMenu;
+		    txt = qtn_filter_menu;
+		    cascade = r_appui_filtermenu;
+		    },
+		MENU_ITEM 
+			{ 
+			command=ECmdMarkMenu;
+		    txt = qtn_markmenu_title; 
+		    cascade = r_appui_markunmark_menu;
+		    },
+		MENU_ITEM 
+			{ 
+			command=EEikCmdExit; 
+			txt = qtn_exit; 
+			}
+		};
+	}
+
+
+
+// GENERAL
+// MARKMENU
+//-----------------------------------------------------------------------------
+//	 
+//	  r_appui_markunmark_menu
+//	  Submenu for marking items.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_appui_markunmark_menu
+	{
+	items=
+		{
+		MENU_ITEM 
+			{ 
+			command=EAknCmdMark; 
+			txt = qtn_markmenu_mark; 
+			},
+		MENU_ITEM 
+			{ 
+			command=EAknCmdUnmark; 
+			txt = qtn_markmenu_unmark; 
+			},
+		MENU_ITEM 
+			{ 
+			command=EAknMarkAll; 
+			txt = qtn_markmenu_markall; 
+			},
+		MENU_ITEM 
+			{ 
+			command=EAknUnmarkAll; 
+			txt = qtn_markmenu_unmarkall; 
+			}
+		};
+	}
+
+// TEST CASE CONTROL
+//-----------------------------------------------------------------------------
+//	 
+//	  r_testset_stertedcases_setmenu
+//	  Test set started cases view set menu.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_testcase_control_submenu
+	{
+	items=
+		{
+		MENU_ITEM 
+				{ 
+				command=ECmdPauseTestCase; 
+				txt = qtn_pause_testcase; 
+				},
+		MENU_ITEM 
+				{ 
+				command=ECmdResumeTestCase; 
+				txt = qtn_resume_testcase; 
+				},
+		MENU_ITEM 
+				{ 
+				command=ECmdAbortTestCase; 
+				txt = qtn_abort_testcase; 
+				}
+		};
+	}
+
+// FILTERING			
+//-----------------------------------------------------------------------------
+//	 
+//	  r_appui_filtermenu
+//	  MenuPane for Filter submenu.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_appui_filtermenu
+	{
+	items=
+		{
+		MENU_ITEM 
+			{ 
+			command=ECmdFilterByModule; 
+			txt = qtn_filter_by_modules; 
+			cascade = r_appui_filterbymodules_menu; 
+			},
+		MENU_ITEM 
+			{ 
+			command=ECmdFilterByTestCaseFile; 
+			txt = qtn_filter_by_test_case_file;
+			cascade = r_appui_filter_by_testcasefile_menu; 
+			},
+		MENU_ITEM 
+			{ 
+			command=ECmdNOFiltering; 
+			txt = qtn_no_filtering; 
+			}
+	    };
+	}
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_appui_filterbymodules_menu
+//	  MenuPane for Filter submenu.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_appui_filterbymodules_menu
+	{
+	items=
+		{
+		// items (modules) are added dynamically when
+		// Filter by module submenu is opened
+		};
+	}
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_appui_filter_by_testcasefile_menu
+//	  MenuPane for Filter submenu.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_appui_filter_by_testcasefile_menu
+	{
+	items=
+		{
+		// Items (testcase files are added dynamically when
+		// Filter by testcase file menu is opened
+		};
+	}
+
+
+// DIALOGS
+// START TEST CASES
+//-----------------------------------------------------------------------------
+//	 
+//	  r_start_testcase_list_query
+//	  Query dialog for starting single test case.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE AVKON_LIST_QUERY r_start_testcase_list_query
+	{
+	flags = EGeneralQueryFlags;
+	softkeys = R_AVKON_SOFTKEYS_OK_CANCEL;
+	items = 
+		{
+		DLG_LINE   //AVKON_LIST_QUERY_DLG_LINE
+			{
+			type = EAknCtListQueryControl;
+			id = EListQueryControl;
+			control = AVKON_LIST_QUERY_CONTROL
+				{
+				listtype = EAknCtSinglePopupMenuListBox;
+				listbox = LISTBOX		//AVKON_LIST_QUERY_LIST
+					{
+					flags = EAknListBoxMenuList;
+					height = 3;
+					width = 3;
+					array_id = r_start_testcase_listbox_item_array;
+					};
+				heading = qtn_starting_test_case;
+				};
+			}
+		};
+	}
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_start_testcase_listbox_item_array
+//	  Listbox items in query dialog for starting single test case.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE ARRAY r_start_testcase_listbox_item_array
+	{
+	items =
+		{
+		LBUF { txt = qtn_start_test; },
+		LBUF { txt = qtn_start_test_output; }
+		};
+	}
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_start_multiple_testcases_list_query
+//	  Query dialog for starting multiple test cases.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE AVKON_LIST_QUERY r_start_multiple_testcases_list_query
+	{
+	flags = EGeneralQueryFlags;
+	softkeys = R_AVKON_SOFTKEYS_OK_CANCEL;
+	items = 
+		{
+		DLG_LINE   //AVKON_LIST_QUERY_DLG_LINE
+			{
+			type = EAknCtListQueryControl;
+			id = EListQueryControl;
+			control = AVKON_LIST_QUERY_CONTROL
+				{
+				listtype = EAknCtSinglePopupMenuListBox;
+				listbox = LISTBOX		//AVKON_LIST_QUERY_LIST
+					{
+					flags = EAknListBoxMenuList;
+					height = 3;
+					width = 3;
+					array_id = r_start_multiple_testcases_listbox_item_array;
+					};
+				heading = qtn_starting_test_cases;
+				};
+			}
+		};
+	}
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_start_multiple_testcases_listbox_item_array
+//	  Listbox items in query dialog for starting single test case.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE ARRAY r_start_multiple_testcases_listbox_item_array
+	{
+	items =
+		{
+		LBUF { txt = qtn_start_tests_parallel; },
+		LBUF { txt = qtn_start_tests_serial; }
+		};
+	}
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_general_confirmation_dialog
+//	  General confirmation dialog with empty label.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE DIALOG r_general_confirmation_dialog
+	{
+	flags = EGeneralQueryFlags;
+	buttons = R_AVKON_SOFTKEYS_YES_NO;
+	items = 
+		{
+		DLG_LINE
+			{
+			type = EAknCtQuery;
+			id = EGeneralQuery;
+			control = AVKON_CONFIRMATION_QUERY
+				{
+				layout = EConfirmationQueryLayout;
+        		label = "";
+				};
+			}
+		};
+
+	} 
+
+//-----------------------------------------------------------------------------
+//	 
+//    r_stifui_about_dialog
+//	  "About" dialog
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE DIALOG r_stifui_about_dialog
+{
+    flags = EGeneralQueryFlags | EEikDialogFlagNoBorder | EEikDialogFlagNoShadow;
+    buttons = R_AVKON_SOFTKEYS_OK_EMPTY;
+    items=
+    {
+        DLG_LINE
+        {
+            type = EAknCtPopupHeadingPane;
+            id = EAknMessageQueryHeaderId;
+            control = AVKON_HEADING
+            {
+                label = "About STIF";
+                headinglayout = R_AVKON_WML_SIGN_QUERY_HEADING_PANE;
+            };
+        },
+        DLG_LINE
+        {
+            type = EAknCtMessageQuery;
+            id = EAknMessageQueryContentId;
+            control = AVKON_MESSAGE_QUERY
+            {
+                
+            };
+        }
+    };
+}
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_memory_selection_dialog
+//	  Selection dialog for selectiong either C or E drive.
+//        Not yet used.
+//
+//-----------------------------------------------------------------------------
+//
+/*
+RESOURCE MEMORYSELECTIONDIALOG r_memory_selection_dialog
+	{
+	title = "Choose memory:";
+	softkey_1 = "Ok";
+	softkey_2 = "Cancel";
+	locations = 
+		{
+		LOCATION { root_path = "C:\\"; },
+		LOCATION { root_path = "E:\\";  //default_folder = "TestFramework\\";
+                 }
+		};
+	}
+*/
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_file_selection_dialog
+//	  Fileselection dialog.
+//        Not yet used.
+//
+//-----------------------------------------------------------------------------
+//
+/*
+RESOURCE FILESELECTIONDIALOG r_file_selection_dialog
+	{
+	title = "Select-a-file:";
+	root_path = "C:\\";
+	filters =
+		{
+		FILTER
+			{
+			filter_type = EAttributeFilter; //EAttributeFilter;
+			filter_style = EExclusiveFilter; //EExclusiveFilter;
+			filter_data = 
+				{
+				"SH",
+				"R"
+				}; // Excludes system, hidden and read-only attributes
+			}
+		};
+	}
+*/
+    
+
+// APPLICATION NAVIPANEL TITLES
+//-----------------------------------------------------------------------------
+//	 
+//	  r_navititle_main
+//	  Main menu title.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE NAVI_LABEL r_navititle_main
+	{
+	txt = qtn_navi_main;
+	}
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_navititle_testcases
+//	  Test cases menu title.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE NAVI_LABEL r_navititle_testcases
+	{
+	txt = qtn_navi_testcases;
+	}
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_navititle_startcases
+//	  Startcases menu title.
+//
+//-----------------------------------------------------------------------------
+//	
+RESOURCE NAVI_LABEL r_navititle_startcases
+	{
+	txt = qtn_navi_startcases;
+	}
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_navititle_loadtestset
+//	  Startcases menu title.
+//
+//-----------------------------------------------------------------------------
+//	
+RESOURCE NAVI_LABEL r_navititle_loadtestset
+	{
+	txt = qtn_navi_load_test_set;
+	}
+
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_navititle_startedcases
+//	  Started cases menu title.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE NAVI_LABEL r_navititle_startedcases
+	{
+	txt = qtn_navi_startedcases;
+	}
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_navititle_testcase_output
+//	  Test case output view title.
+//
+//-----------------------------------------------------------------------------
+//	
+RESOURCE NAVI_LABEL r_navititle_testcase_output
+	{
+	txt = qtn_navi_testcase_output;
+	}
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_navititle_modules
+//	  Modules menu title.
+//
+//-----------------------------------------------------------------------------
+//	
+RESOURCE NAVI_LABEL r_navititle_modules
+	{
+	txt = qtn_navi_modules;
+	}
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_navititle_testset_base
+//	  Testset base menu title.
+//
+//-----------------------------------------------------------------------------
+//	
+RESOURCE NAVI_LABEL r_navititle_testset_base
+	{
+	txt = qtn_navi_testset_base;
+	}
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_navititle_testset
+//	  Testset menu title.
+//
+//-----------------------------------------------------------------------------
+//	
+RESOURCE NAVI_LABEL r_navititle_testset
+	{
+	txt = qtn_navi_testset;
+	}
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_navititle_testset_insert
+//	  Testset insert menu title.
+//
+//-----------------------------------------------------------------------------
+//	
+RESOURCE NAVI_LABEL r_navititle_testset_insert
+	{
+	txt = qtn_navi_testset_insert;
+	}
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_navititle_started
+//	  Started cases view menu title.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE NAVI_LABEL r_navititle_started
+	{
+	txt = qtn_navi_started;
+	}
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_navititle_started_all
+//	  All started cases view menu title.
+//
+//-----------------------------------------------------------------------------
+//	
+RESOURCE NAVI_LABEL r_navititle_started_all
+	{
+	txt = qtn_navi_started_all;
+	}
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_navititle_started_ongoing
+//	  Ongoing cases view menu title.
+//
+//-----------------------------------------------------------------------------
+//	
+RESOURCE NAVI_LABEL r_navititle_started_ongoing
+	{
+	txt = qtn_navi_started_ongoing;
+	}
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_navititle_started_paused
+//	  Paused cases view menu title.
+//
+//-----------------------------------------------------------------------------
+//	
+RESOURCE NAVI_LABEL r_navititle_started_paused
+	{
+	txt = qtn_navi_started_paused;
+	}
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_navititle_started_passed
+//	  Passed cases view menu title.
+//
+//-----------------------------------------------------------------------------
+//	
+RESOURCE NAVI_LABEL r_navititle_started_passed
+	{
+	txt = qtn_navi_started_passed;
+	}
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_navititle_started_failed
+//	  Failed cases view menu title.
+//
+//-----------------------------------------------------------------------------
+//	
+RESOURCE NAVI_LABEL r_navititle_started_failed
+	{
+	txt = qtn_navi_started_failed;
+	}
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_navititle_started_crashed_aborted
+//	  Crashed cases view menu title.
+//
+//-----------------------------------------------------------------------------
+//	
+RESOURCE NAVI_LABEL r_navititle_started_crashed_aborted
+	{
+	txt = qtn_navi_started_crashed_aborted;
+	}
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_navititle_started_stats
+//	  Statistics view menu title.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE NAVI_LABEL r_navititle_started_stats
+	{
+	txt = qtn_navi_started_stats;
+	}
+
+
+// RESOURCE TEXTS
+//-----------------------------------------------------------------------------
+//	 
+//	  r_insert_confirmation_question
+//	  Insert test cases confirmation query text.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE STRING r_insert_confirmation_question
+	{
+	text = qtn_insert_confirmation;
+	}
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_insert_nocases_text
+//	  Infomsg text to inform user that there´s no test cases selected when 
+//    trying to insert test cases.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE STRING r_insert_nocases_text
+	{
+	text = qtn_insert_none_selected;
+	}
+	
+//-----------------------------------------------------------------------------
+//	 
+//	  r_insert_confirmation_question
+//	  Overwrite existing test set confirmation query text.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE STRING r_overwrite_testset_question
+	{
+	text = qtn_owerwrite_testset_confirmation;
+	}
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_insert_confirmation_question
+//	  Save test set confirmation query text.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE STRING r_save_testset_question
+	{
+	text = qtn_save_testset_confirmation;
+	}
+
+//-----------------------------------------------------------------------------
+//	 
+//	  r_insert_confirmation_question
+//	  Loading test set failed text.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE STRING r_load_testset_failed
+	{
+	text = qtn_load_testset_errornote;
+	}
+
+	
+// TEST CASE STATES
+RESOURCE STRING r_testcase_state_running
+	{
+	text = qtn_testcase_state_running;
+	}
+
+RESOURCE STRING r_testcase_state_passed
+	{
+	text = qtn_testcase_state_passed;
+	}
+
+RESOURCE STRING r_testcase_state_failed
+	{
+	text = qtn_testcase_state_failed;
+	}
+
+RESOURCE STRING r_testcase_state_crashed_aborted
+	{
+	text = qtn_testcase_state_crashed_aborted;
+	}
+	
+RESOURCE STRING r_testcase_state_unknown
+	{
+	text = qtn_testcase_state_unknown;
+	}
+
+RESOURCE LOCALISABLE_APP_INFO r_stifui_localisable_app_info
+    {
+    short_caption = qtn_app_short_caption_string;
+    caption_and_icon = 
+    CAPTION_AND_ICON_INFO
+        {
+        caption = qtn_app_caption_string;
+        };
+    }	
+			
+// End of File

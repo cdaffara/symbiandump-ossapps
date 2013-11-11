@@ -1,0 +1,166 @@
+/*
+* Copyright (c) 2003-2005 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  The file contains values for shared data keys specifying
+*       telephony specific software settings. 
+*
+*
+*/
+
+
+#ifndef TELEPHONYVARIANT_HRH
+#define TELEPHONYVARIANT_HRH
+
+/** 
+* KTelephonyLVFlagCLIName is on/off setting for 3 line calling feature.
+* When it is set on in KTelephonyConfigFlags 3 line calling is enabled
+* (both number and name are shown in call bubble).
+*/
+#define KTelephonyLVFlagCLIName 0x00000002
+
+/**
+* Keypad cover hides Send and End key 
+* If set, softkeys are updated to handle call 
+* @since Series 60 3.1
+*/
+#define KTelephonyLVFlagCoverHideSendEndKey 0x00000004
+
+/** 
+* KTelephonyLVFlagScrollSoftKeys defines status of scroll softkeys. When the 
+* flag is set on in KTelephonyConfigFlags scroll softkeys are enabled. 
+*/
+#define KTelephonyLVFlagScrollSoftKeys 0x00000010
+
+/**
+* KTelephonyLVFlagScrollVolumeKeys defines if up/down scroll keys are used to 
+* adjust volume. 
+* 
+* When the flag is turned on scroll keys up/down are used to change volume. 
+* If flag is disabled scroll key do not adjust volume but if KFeatureIdSideVolumeKeys 
+* is disabled then scroll keys affects to volume.
+*/
+#define KTelephonyLVFlagScrollVolumeKeys 0x00000020
+
+/**
+* KTelephonyLVFlagAdvancedGPRS defines if advanced GPRS termination
+* functionality is enabled. The Connection Utility ECom component
+* encapsulates the functionality and it must be present in ROM.
+*
+* When the flag is set, the CCoUtlInterface class is used to
+* terminate GPRS connections. Otherwise, simpler GPRS termination
+* provided by Phone Engine is applied.
+*/
+#define KTelephonyLVFlagAdvancedGPRS 0x00000040
+
+/**
+* KTelephonyLVFlagSwivelInDevice defines if the device has a
+* swivel mechanism.
+*
+* When the flag is set, a special handler class is created. This
+* class is presented in phoneuis/TelephonyDeviceMode/CTelDMSwivelHandler.h.
+* The implementation is used to capture open and close events for the
+* swivel mechanism and it can be used to answer or hangup calls depending
+* on used settings.
+*/
+#define KTelephonyLVFlagSwivelInDevice 0x00000080
+
+/**
+* KTelephonyLVFlagThreeLineBubbles defines if three lines in-call bubble 
+* is enabled. 
+* When the flag is set, three lines in-call bubble feature is enabled.
+*/
+#define KTelephonyLVFlagThreeLineBubbles 0x00000100 
+
+/**
+* KTelephonyLVFlagAdvancedENCheck defines if advanced emergency number check
+* is enabled. 
+* When the flag is set, the advanced emergency number check feature is enabled.
+* @since Series 60 2.6
+*/
+#define KTelephonyLVFlagAdvancedENCheck 0x00000200
+
+/**
+* KTelephonyLVFlagDisableCallControlHardKeysWhileLocked 
+*/
+#define KTelephonyLVFlagDisableCallControlHardKeysWhileLocked 0x00000400 
+
+/**
+* KTelephonyLVFlagUssdTone defines if the USSD tone play functionality is 
+* enabled.
+* When the flag is set, tone is played when USSD message is received. 
+* @since Series 60 2.6
+*/
+#define KTelephonyLVFlagUssdTone 0x00000800
+
+
+/**
+* KTelephonyLVFlagArbitraryVideoScaling defines if video player
+* implementation in the device support arbitrary scaling.
+* When the flag is set, arbitrary scaling is applied.
+* @since Series 60 3.1
+*/
+#define KTelephonyLVFlagArbitraryVideoScaling 0x00001000
+
+/**
+* KTelephonyLVFlagAllowUnlockOnIncoming 
+*/
+#define KTelephonyLVFlagAllowUnlockOnIncoming 0x00002000 
+
+/**
+* KTelephonyLVFlagMannerMode defines if the manner mode is enabled.
+* When the flag is set, long press on hash key toggles silent on/off
+* @since Series 60 2.8
+*/
+#define KTelephonyLVFlagMannerMode 0x00004000
+
+/**
+* KTelephonyLVFlagUUS defines if UUS feature is enabled
+* When the flag is set, bubble will show Skype ID if available.
+* @since Series 60 3.2
+*/
+#define KTelephonyLVFlagUUS 0x00008000
+
+/**
+* KTelephonyLVFlagCloseApplications defines if applications should
+* be closed when End key is pressed.
+* When the flag is set, foreground application is closed when End key
+* is pressed.
+* @since Series 60 2.6
+*/
+#define KTelephonyLVFlagCloseApplications 0x00040000
+
+/**
+* InCall menu options modifications
+* If set, option "Replace" is changed to "Answer"
+* in incall_active_held_waiting state
+* @since Series 60 5.0
+*/
+#define KTelephonyLVFlagOptionsChange 0x00400000
+
+/**
+* KTelephonyLVFlagForbiddenIcon defines if forbidden feature is enabled.
+* When flag is set, applications should show GSM, WCDMA, GSM/WCDMA 
+* and Forbiddeb icons in manual selection of network.
+* @since Series 60 5.0
+*/
+#define KTelephonyLVFlagForbiddenIcon 0x00800000
+
+/**
+* Ussd ( service command ) shows number of remaining characters 
+* Requirement RM-RIM TOOL ID 107-8820 
+* @since Series 60 3.0
+*/
+#define KTelephonyLVFlagUssdUIRemainingChars 0x10000000
+
+#endif // TELEPHONYVARIANT_HRH
+// End of File

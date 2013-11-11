@@ -1,0 +1,12 @@
+EXPORTS
+	?uninstallMessageHandler@FileLogger@@AAEXXZ @ 1  NONAME ; void FileLogger::uninstallMessageHandler(void)
+	?handleMessage@FileLogger@@CAXW4QtMsgType@@PBD@Z @ 2  NONAME ; void FileLogger::handleMessage(enum QtMsgType, char const *)
+	?installLogDir@@YAXXZ @ 3  NONAME ; void installLogDir(void)
+	??0MethodLogger@@QAE@PBD@Z @ 4  NONAME ; MethodLogger::MethodLogger(char const *)
+	?connectAndAssert@@YA_NPBVQObject@@PBD01W4ConnectionType@Qt@@@Z @ 5  NONAME ; bool connectAndAssert(class QObject const *, char const *, class QObject const *, char const *, enum Qt::ConnectionType)
+	??1FileLogger@@QAE@XZ @ 6  NONAME ; FileLogger::~FileLogger(void)
+	?writeLog@SymbianLogger@@SAXABVQString@@@Z @ 7  NONAME ; void SymbianLogger::writeLog(class QString const &)
+	?connectAndTest@@YA_NPBVQObject@@PBD01W4ConnectionType@Qt@@@Z @ 8  NONAME ; bool connectAndTest(class QObject const *, char const *, class QObject const *, char const *, enum Qt::ConnectionType)
+	?installMessageHandler@FileLogger@@AAEXABVQString@@_N@Z @ 9  NONAME ; void FileLogger::installMessageHandler(class QString const &, bool)
+	??0FileLogger@@QAE@ABVQString@@_N@Z @ 10  NONAME ; FileLogger::FileLogger(class QString const &, bool)
+	??1MethodLogger@@QAE@XZ @ 11  NONAME ; MethodLogger::~MethodLogger(void)

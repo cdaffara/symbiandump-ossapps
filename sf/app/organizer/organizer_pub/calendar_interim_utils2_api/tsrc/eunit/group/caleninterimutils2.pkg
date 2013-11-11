@@ -1,0 +1,37 @@
+;
+; Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description: 
+;
+&EN
+;
+; UID is the app's UID
+;
+#{"caleninterimutils2"},(0x0170000A),1,0,0,TYPE=SA
+
+; Localised Vendor name
+%{"Nokia-EN"}
+
+; Unique Vendor name
+:"Nokia"
+
+;Supports Series 60 v 3.0
+;This line indicates that this installation is for the Series 60 platform v0.9
+;This line must appear _exactly_ as shown below in the sis file
+;If this line is missing or incorrect, the sis file will not be able
+;to be installed on Series 60 v3.0 platforms
+[0x101F7961], 0, 0, 0, {"Series60ProductID"}
+;
+
+; CalenImporter data input files
+"\epoc32\release\armv5\urel\testcaleninterimutils2.dll"-"$:\sys\bin\testcaleninterimutils2.dll"

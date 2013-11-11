@@ -1,0 +1,35 @@
+// Copyright (c) 2002-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// Messaging - OBEX MTM
+// OBEX MTM
+// 
+//
+
+/**
+ @file
+*/
+
+
+PRJ_PLATFORMS
+DEFAULT
+
+#include "../obexmtm/obexutil/group/bld.inf"
+#include "../obexmtm/obexclient/group/bld.inf"
+#include "../obexmtm/obexserver/group/bld.inf"
+#include "../btmtm/btclient/group/bld.inf"
+#include "../btmtm/btserver/group/bld.inf"
+#include "../irmtm/irclient/group/bld.inf"
+#include "../irmtm/irserver/group/bld.inf"
+#include "../Rom/bld.inf"
+#include "../TObexMTM/GROUP/bld.inf"

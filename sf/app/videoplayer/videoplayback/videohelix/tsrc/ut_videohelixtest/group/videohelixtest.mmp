@@ -1,0 +1,95 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project definition file for project videohelixtest class.
+*
+*/
+
+// Version : %version: 12 %
+
+
+
+#include <platform_paths.hrh>
+
+TARGET          videohelixtest.dll
+TARGETTYPE      dll
+UID             0x1000008D 0x101FB3E3
+
+OPTION GCC      -save-temps
+
+EPOCALLOWDLLDATA
+
+CAPABILITY      ALL -TCB
+
+DEFFILE         videohelixtest.def
+
+APP_LAYER_SYSTEMINCLUDE
+
+USERINCLUDE     ../inc
+USERINCLUDE     ../../../inc
+USERINCLUDE     ../../../../inc
+USERINCLUDE     ../../../../../inc
+
+SOURCEPATH      ../src
+SOURCE          videohelixtest.cpp
+SOURCE          videohelixtestbody.cpp
+SOURCE          timeoutcontroller.cpp
+SOURCE          mpxvideoplayerutility_stub.cpp
+SOURCE          mpxvideoregion.cpp
+SOURCE          stifutilities.cpp
+SOURCE          mediarecognizer_stub.cpp
+SOURCE          mpxvideoaccessoryobserver_stub.cpp
+SOURCE          mpxvideodrmhelper_stub.cpp
+SOURCE          tnmgr_stub.cpp
+
+SOURCEPATH      ../../../src
+SOURCE          mpxvideofiledetails.cpp
+SOURCE          mpxvideohelixplayback.cpp
+SOURCE          mpxvideoplaybackcontroller.cpp
+SOURCE          mpxvideoplaybackmode.cpp
+SOURCE          mpxvideoplaybackstate.cpp
+SOURCE          mpxvideoseeker.cpp
+SOURCE          mpxvideoposterframesetter.cpp
+SOURCE          mpxcalldetector.cpp
+
+
+LIBRARY         euser.lib
+LIBRARY         mpxcommon.lib
+LIBRARY         stiftestinterface.lib
+LIBRARY         stiftestengine.lib
+LIBRARY         efsrv.lib
+LIBRARY         estor.lib
+
+LIBRARY         accclient.lib
+LIBRARY         accpolicy.lib
+LIBRARY         acccontrol.lib
+LIBRARY         accsrvUtil.lib
+
+LIBRARY         mmfcontrollerframework.lib
+LIBRARY         mmfstandardcustomcommands.lib
+
+LIBRARY         hal.lib
+LIBRARY         caf.lib
+LIBRARY         sysutil.lib
+LIBRARY         ecom.lib
+LIBRARY         platformenv.lib
+LIBRARY         charconv.lib
+LIBRARY         etel.lib
+LIBRARY         etelmm.lib
+LIBRARY         centralrepository.lib
+LIBRARY         flogger.lib
+LIBRARY         playbackhelper.lib
+LIBRARY         hwrmlightclient.lib   // Lights control
+LIBRARY         fbscli.lib
+
+// End of File

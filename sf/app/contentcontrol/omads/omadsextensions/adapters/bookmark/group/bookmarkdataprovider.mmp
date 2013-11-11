@@ -1,0 +1,78 @@
+/*
+* Copyright (c) 2005-2007 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project definition file for project Bookmark DS Plugin
+*
+*/
+
+
+#include <platform_paths.hrh>
+#include <defaultcaps.hrh>
+#include <data_caging_paths.hrh>
+
+TARGET          bookmarkdataprovider.dll
+TARGETTYPE      PLUGIN
+UID             0x10009d8d 0x102751BA
+
+CAPABILITY      CAP_ECOM_PLUGIN
+VENDORID        VID_DEFAULT
+
+SOURCEPATH      ../src
+SOURCE          bookmarkdataprovider.cpp
+SOURCE          bookmarkdatastore.cpp
+SOURCE          vbookmarkconverter.cpp
+SOURCE          omadsfolderobject.cpp
+SOURCE          conversionutil.cpp
+SOURCE          changefinder.cpp
+SOURCE          snapshotitem.cpp
+
+USERINCLUDE     ../inc
+
+APP_LAYER_SYSTEMINCLUDE
+
+START RESOURCE  bookmarkdataprovider.rss
+HEADER
+TARGET          bookmarkdataprovider.rsc
+TARGETPATH      ECOM_RESOURCE_DIR
+END
+
+START RESOURCE  bookmarkdatastore.rss
+HEADER
+TARGET          bookmarkdatastore.rsc  
+TARGETPATH      RESOURCE_FILES_DIR
+END
+
+START RESOURCE  bookmarkdsa.rss
+HEADER 
+TARGETPATH      RESOURCE_FILES_DIR
+LANGUAGE_IDS
+END
+
+DEBUGLIBRARY    flogger.lib
+LIBRARY         euser.lib
+LIBRARY         estor.lib
+LIBRARY         ecom.lib
+LIBRARY         smldataprovider.lib
+LIBRARY         favouritesengine.lib
+LIBRARY         bafl.lib
+LIBRARY         nsmlchangefinder.lib
+LIBRARY         efsrv.lib
+LIBRARY         smlstoreformat.lib
+LIBRARY         SenXml.lib 
+LIBRARY         charconv.lib 
+LIBRARY         sysutil.lib
+LIBRARY         commonengine.lib        // For resource reader
+LIBRARY         FeedsServerClient.lib
+LIBRARY         hash.lib
+
+SMPSAFE

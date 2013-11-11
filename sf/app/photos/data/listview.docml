@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="1.2">
+    <widget name="glxlistview" type="HbView">
+        <widget name="content" role="HbView:widget" type="HbWidget">
+            <widget name="listview" type="HbListView">
+                <widget name="prototype" role="HbAbstractView:prototype" type="HbListViewItem">
+                    <enums name="graphicsSize" value="Thumbnail"/>
+                    <string name="state" value="normal"/>
+                </widget>
+                <bool name="itemRecycling" value="FALSE"/>
+                <bool name="uniformItemSizes" value="TRUE"/>
+                <bool name="arrangeMode" value="FALSE"/>
+                <real name="z" value="1"/>
+                <sizehint height="47.7612un" type="PREFERRED" width="35.8209un"/>
+                <bool name="frictionEnabled" value="TRUE"/>
+                <enums name="clampingStyle" value="BounceBackClamping"/>
+            </widget>
+            <widget name="albumCount" type="HbGroupBox">
+                <sizehint type="PREFERRED" width="25un"/>
+                <bool name="collapsable" value="FALSE"/>
+                <string name="heading"/>
+            </widget>
+            <layout type="anchor">
+                <anchoritem dst="listview" dstEdge="LEFT" src="" srcEdge="LEFT"/>
+                <anchoritem dst="listview" dstEdge="RIGHT" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="listview" dstEdge="BOTTOM" src="" srcEdge="BOTTOM"/>
+                <anchoritem dst="listview" dstEdge="TOP" prefLength="4.7un" src="" srcEdge="TOP"/>
+                <anchoritem dst="albumCount" dstEdge="LEFT" src="" srcEdge="LEFT"/>
+                <anchoritem dst="albumCount" dstEdge="TOP" src="" srcEdge="TOP"/>
+                <anchoritem direction="NEGATIVE" dst="albumCount" dstEdge="RIGHT" src="" srcEdge="RIGHT"/>
+            </layout>
+        </widget>
+        <string name="title" value="Photos"/>
+        <bool name="contentFullScreen" value="FALSE"/>
+    </widget>
+    <metadata activeUIState="Common ui state" display="NHD-3.2-inch_portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+        <dummydata objectName="listview" section="#common" value="0"/>
+    </metadata>
+</hbdocument>

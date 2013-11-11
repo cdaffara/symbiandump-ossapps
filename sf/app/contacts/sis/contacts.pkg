@@ -1,0 +1,58 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description: pkg file  of Contacts Application for IAD.
+;
+
+
+; Language
+&EN
+
+
+; SIS header: name, uid, version
+#{"Contacts"},(0x20022EF9),1,1,0, TYPE=SA, RU
+
+; Localised Vendor name
+%{"Nokia"}
+
+; Unique Vendor name
+:"Nokia"
+
+"/epoc32/release/armv5/urel/cntlistmodel.dll"                                - "!:/sys/bin/cntlistmodel.dll"
+"/epoc32/release/armv5/urel/cnthistorymodel.dll"                                - "!:/sys/bin/cnthistorymodel.dll"
+"/epoc32/release/armv5/urel/cntactionsplugin.dll"                                - "!:/sys/bin/cntactionsplugin.dll"
+"/epoc32/release/armv5/urel/cntsimutility.dll"                                - "!:/sys/bin/cntsimutility.dll"
+"/epoc32/release/armv5/urel/cntimageutility.dll"                                - "!:/sys/bin/cntimageutility.dll"
+
+"/epoc32/release/armv5/urel/cntcommonui.dll"                                - "!:/sys/bin/cntcommonui.dll"
+"/epoc32/release/armv5/urel/phonebook.exe"                                - "!:/sys/bin/phonebook.exe"
+
+
+"/epoc32/data/z/resource/qt/plugins/contacts\cntactionsplugin.qtplugin"    -   "!:/resource/qt/plugins/contacts\cntactionsplugin.qtplugin"
+
+"/epoc32/data/z/resource/hb/splashml/phonebook.splashml"  - "!:\resource\hb\splashml\phonebook.splashml"
+"/epoc32/data/z/resource/hb/splashml/phonebook.splashml"  - "!:\resource\hb\splashml\phonebook.splashml"
+
+; Phonebook services
+"/epoc32/release/armv5/urel/phonebookservices.exe"                                - "!:/sys/bin/phonebookservices.exe"
+"/epoc32/data/z/resource/apps/phonebookservices.rsc"                         - "!:/resource/apps/phonebookservices.rsc"
+"/epoc32/data/Z/private/10003a3f/import/apps/phonebookservices_reg.rsc"		- "!:/private/10003a3f/import/apps/phonebookservices_reg.rsc"
+
+
+;Phonebook resources
+"/epoc32/data/z/resource/apps/phonebook.rsc"                         - "!:/resource/apps/phonebook.rsc"
+"/epoc32/data/z/resource/qt/translations/contacts_en.qm"            - "!:/resource/qt/translations/contacts_en.qm"
+
+;Cenrep settings
+"/epoc32/data/z/private/10202be9/2002FF54.txt" - "!:/system/data/10202BE9/2002FF54.txt"
+"/epoc32/data/z/private/10202be9/200315A8.txt" - "!:/system/data/10202BE9/200315A8.txt"

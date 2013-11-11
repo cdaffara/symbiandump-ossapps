@@ -1,0 +1,44 @@
+// Copyright (c) 2006-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// t_smsdeliverlastsegmentreport.mmp
+//
+
+TARGET          t_smsdeliverlastsegmentreport.exe
+TARGETTYPE      exe
+
+CAPABILITY All -TCB
+
+SOURCEPATH	../src
+SOURCE          t_smsdeliverlastsegmentreport.cpp
+
+USERINCLUDE     ../inc 
+USERINCLUDE		../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/sms/inc
+USERINCLUDE		../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/base/inc
+USERINCLUDE		../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/server/inc
+USERINCLUDE		../../../../../../mw/messagingmw/messagingfw/msgsrvnstore/server/inc
+USERINCLUDE		../../../../../../mw/messagingmw/messagingfw/biomsgfw/BIOSINC
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+
+LIBRARY         euser.lib smcm.lib msgs.lib etext.lib gsmu.lib
+LIBRARY			smstestutils.lib msvtestutils.lib estor.lib
+library			commsdat.lib bafl.lib efsrv.lib 
+#ifndef WINS
+LIBRARY		etel.lib etelmm.lib 
+#endif
+UID    0x1000007a 0x10274073
+
+VENDORID 0x70000001
+
+
+SMPSAFE

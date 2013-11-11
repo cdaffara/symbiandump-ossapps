@@ -1,0 +1,185 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//
+PRINT Run all TestCalInterimApi Suite Tests
+//
+LOAD_SUITE testcalinterimapiit
+//
+
+PREFIX RUN_UTILS
+// Remove the INI file
+MakeReadWrite c:\Private\101F5027\AlarmServer.ini
+DeleteFile c:\Private\101F5027\AlarmServer.ini
+REMOVE_PREFIX
+
+//export import Negative Offset Entries
+//! @SYMTestCaseID 
+//! @SYMFssID 
+//! @SYMTestType
+//! @SYMTestPriority High
+//! @SYMTestCaseDesc Tests storing, fetching, and exporting and importing of TODO and APPT entries with negative offsets
+//! @SYMTestActions stores TODO and APPT data in the calendar database. Fetches the entries after 
+//! they have been stored and compares exports to a vcs file. Imports the data from the vcs file
+//! and compares the offset to the expected values.  
+//! @SYMTestExpectedResults Entries with negative offset that pushes the alarms to the next day 
+// !should leave with KErrNotSupported. 
+//! Other entries with negative offsets should be exported/imported without the offset changing.
+RUN_TEST_STEP 100 testcalinterimapiit TestCalInterimApiExportImportNegOffset
+
+//export Recurrence Entries
+//! @SYMTestCaseID 
+//! @SYMFssID 
+//! @SYMTestType
+//! @SYMTestPriority High
+//! @SYMTestCaseDesc Tests storing, fetching, and exporting of recurrence TODO entries
+//! @SYMTestActions stores TODO data in the calendar database. Fetches the entries after 
+//! they have been stored and compares to the expected values. Repeats with a new set of data. 
+//! @SYMTestExpectedResults Recurrence entry with same recurrence id should replace previous recurrence entry.
+RUN_TEST_STEP 100 testcalinterimapiit TestCalInterimApiExportRecur
+
+//standard store and fetch
+//! @SYMTestCaseID CalInterimAPI_1
+//! @SYMFssID App-Engines/CalInterimAPI/Data.007
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMTestCaseDesc Tests storing and fetching of calendar entries
+//! @SYMTestActions Reads data for fixed and floating entries of type EVENT, APPT, REMINDER, and TODO from .ini file and then
+//! stores them in the calendar database. Fetches the entries after they have been stored and compares to the original 
+//! entries which were stored.
+//! @SYMTestExpectedResults Fetched entries match stored entries
+RUN_TEST_STEP 100 testcalinterimapiit TestCalInterimApiStoreFetch \cr6blc8w\testdata\t_cr6blc8w_data1.ini test1
+RUN_TEST_STEP 100 testcalinterimapiit TestCalInterimApiStoreFetch \cr6blc8w\testdata\t_cr6blc8w_data1.ini test2
+RUN_TEST_STEP 100 testcalinterimapiit TestCalInterimApiStoreFetch \cr6blc8w\testdata\t_cr6blc8w_data1.ini test3
+RUN_TEST_STEP 100 testcalinterimapiit TestCalInterimApiStoreFetch \cr6blc8w\testdata\t_cr6blc8w_data1.ini test4
+
+//! @SYMTestCaseID CalInterimAPI_rpt
+//! @SYMFssID App-Engines/CalInterimAPI/Data.007
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMTestCaseDesc Tests storing and fetching of repeating calendar entries with UTC change in between store and fetch
+//! @SYMTestActions Reads data for fixed and floating repeating entries of type EVENT, APPT, REMINDER, and TODO from .ini file 
+//! and then stores them in the calendar database. Fetches the entries and their repeating instances after they have been stored 
+//! and compares to the original entries and instances which were stored
+//! @SYMTestExpectedResults Fetched entries and instances match stored entries and instances
+RUN_TEST_STEP 100 testcalinterimapiit TestCalInterimApiStoreFetchRpt \cr6blc8w\testdata\t_cr6blc8w_data2.ini test1
+RUN_TEST_STEP 100 testcalinterimapiit TestCalInterimApiStoreFetchRpt \cr6blc8w\testdata\t_cr6blc8w_data2.ini test2
+RUN_TEST_STEP 100 testcalinterimapiit TestCalInterimApiStoreFetchRpt \cr6blc8w\testdata\t_cr6blc8w_data2.ini test3
+RUN_TEST_STEP 100 testcalinterimapiit TestCalInterimApiStoreFetchRpt \cr6blc8w\testdata\t_cr6blc8w_data2.ini test4
+
+
+//! @SYMTestCaseID VCal_Export_1
+//! @SYMTestCaseID VCal_Import_1
+//! @SYMFssID App-Engines/CalInterimAPI/IO.001
+//! @SYMFssID App-Engines/CalInterimAPI/IO.002
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMTestCaseDesc Tests VCal Export and Import of calendar entries
+//! @SYMTestActions Reads data for fixed and floating entries of type EVENT, APPT, REMINDER, and TODO from .ini
+//! file, stores them in the calendar database, then exports them in VCAL format to a file. Uses this file to import
+//! VCAL entries into database after deleting them.
+//! @SYMTestExpectedResults Imported entries should match exported entries
+RUN_TEST_STEP 100 testcalinterimapiit TestCalInterimApiExportImport \cr6blc8w\testdata\t_cr6blc8w_data3.ini test1
+
+//! @SYMTestCaseID VCal_Export_1
+//! @SYMTestCaseID VCal_Import_1
+//! @SYMFssID App-Engines/CalInterimAPI/IO.001
+//! @SYMFssID App-Engines/CalInterimAPI/IO.002
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMTestCaseDesc Tests VCal Export and Import of repeating calendar entries
+//! @SYMTestActions Reads data for fixed and floating repeating entries of type EVENT, APPT, REMINDER, and TODO from .ini
+//! file, stores them in the calendar database, then exports them in VCAL format to a file. Uses this file to import
+//! VCAL entries into database after deleting them.
+//! @SYMTestExpectedResults Imported entries should match exported entries
+RUN_TEST_STEP 100 testcalinterimapiit TestCalInterimApiExportImportRpt \cr6blc8w\testdata\t_cr6blc8w_data3.ini test2
+
+//! @SYMTestCaseID VCal_Export_1
+//! @SYMTestCaseID VCal_Import_1
+//! @SYMFssID App-Engines/CalInterimAPI/IO.001
+//! @SYMFssID App-Engines/CalInterimAPI/IO.002
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMTestCaseDesc Tests VCal Export and Import of repeating calendar entries with exceptions to repeat rule
+//! @SYMTestActions Reads data for fixed and floating repeating entries of type EVENT, APPT, REMINDER, and TODO from .ini
+//! file, stores them in the calendar database, adds exception dates, then exports them in VCAL format to a file. Uses this
+//! file to import VCAL entries into database after deleting them.
+//! @SYMTestExpectedResults Imported entries should match exported entries
+
+RUN_TEST_STEP 100 testcalinterimapiit TestCalInterimApiExportImportExc \cr6blc8w\testdata\t_cr6blc8w_data3.ini test2
+
+//! @SYMTestCaseID VCal_Export_1
+//! @SYMTestCaseID VCal_Import_1
+//! @SYMFssID App-Engines/CalInterimAPI/IO.001
+//! @SYMFssID App-Engines/CalInterimAPI/IO.002
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMTestCaseDesc Tests VCal Export and Import of sporadically repeating calendar entries (RDates)
+//! @SYMTestActions Reads data for fixed and floating entries of type EVENT, APPT, REMINDER, and TODO from .ini
+//! file, stores them in the calendar database, adds RDate sporadic repeats then exports them in VCAL format to a file.
+//! Uses this file to import VCAL entries into database after deleting them.
+//! @SYMTestExpectedResults Imported entries should match exported entries
+
+RUN_TEST_STEP 100 testcalinterimapiit TestCalInterimApiExportImportSpor \cr6blc8w\testdata\t_cr6blc8w_data3.ini test1
+
+//! @SYMTestCaseID VCal_Import_2
+//! @SYMFssID App-Engines/CalInterimAPI/IO.001
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMTestCaseDesc Tests importing VCal entries with different modes on start and end times
+//! @SYMTestActions Uses a predefined Vcal file with two entries, each with different time modes for start and end times
+//! (one with start floating and end fixed, and the other with start fixed and end floating). Imports these into the 
+//! calendar database.
+//! @SYMTestExpectedResults Entries are imported. Endtime mode of each entry is changed to match the start time mode.
+RUN_TEST_STEP 100 testcalinterimapiit TestCalInterimApiImportMixed
+
+PREFIX RUN_UTILS
+// Remove the INI file
+MakeReadWrite c:\Private\101F5027\AlarmServer.ini
+DeleteFile c:\Private\101F5027\AlarmServer.ini
+REMOVE_PREFIX
+//! @SYMTestCaseID Alarm_sorting_1
+//! @SYMFssID <App-Engines>/<AgnModel>/ARG.1.3
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMTestCaseDesc Tests alarm restoration after UTC offset change - basic case with 2 alarmed entries
+//! @SYMTestActions Sets up two alarmed entries, one set to go off 1 minute before UTC change, the other set to go
+//! off 1 miniute after the UTC change. The alarms are armed, wait for first alarm to expire, then change UTC time
+//! and wait for next alarm to expire.
+//! @SYMTestExpectedResults Alarms should expire as expected.
+RUN_TEST_STEP 300 testcalinterimapiit TestCalInterimApiAlarmBasic \cr6blc8w\testdata\t_cr6blc8w_data4.ini test1
+
+
+PREFIX RUN_UTILS
+// Remove the INI file
+MakeReadWrite c:\Private\101F5027\AlarmServer.ini
+DeleteFile c:\Private\101F5027\AlarmServer.ini
+REMOVE_PREFIX
+//! @SYMTestCaseID Alarm_sorting_2
+//! @SYMFssID <App-Engines>/<AgnModel>/ARG.1.3
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMTestCaseDesc Tests alarm re-ordering after UTC offset change for many alarms and entries
+//! @SYMTestActions Set up 20 alarmed entries, half with fixed times and half with floating times. Set times so that
+//! some will expire before the UTC change and some after. Wait for the initial expiries. Change UTC time. Wait for 
+//! second set of expiry.
+//! @SYMTestExpectedResults Alarms should expire as expected.
+RUN_TEST_STEP 300 testcalinterimapiit TestCalInterimApiAlarmMany \cr6blc8w\testdata\t_cr6blc8w_data4.ini test2
+
+PREFIX RUN_UTILS
+// Remove the calendar file
+MakeReadWrite c:\private\10003a5b\CITVCal.dat
+DeleteFile c:\private\10003a5b\CITVCal.dat
+REMOVE_PREFIX

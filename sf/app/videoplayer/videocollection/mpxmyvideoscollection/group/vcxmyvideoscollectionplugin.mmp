@@ -1,0 +1,76 @@
+/*
+* Copyright (c) 2008 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the License "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:    My Videos mpx collection plugin project specification*
+*/
+
+#include <bldvariant.hrh>
+#include <data_caging_paths.hrh>
+#include <platform_paths.hrh>
+
+TARGET          vcxmyvideoscollectionplugin.dll
+TARGETTYPE      PLUGIN
+UID             0x10009D8D 0x20016B96
+
+VENDORID        VID_DEFAULT
+//CAPABILITY      CAP_ECOM_PLUGIN
+CAPABILITY All -TCB
+VERSION         10.0
+
+SOURCEPATH      ../src
+SOURCE          vcxmyvideoscollectionpluginproxy.cpp
+SOURCE          vcxmyvideoscollectionplugin.cpp
+SOURCE          vcxmyvideosmdsdb.cpp
+SOURCE          vcxmyvideoscollectionutil.cpp
+SOURCE          vcxmyvideosvideocache.cpp
+SOURCE          vcxmyvideoscategories.cpp
+SOURCE          vcxmyvideosmessagelist.cpp
+SOURCE          vcxmyvideosasyncfileoperations.cpp
+SOURCE          vcxmyvideosdrivemonitor.cpp
+SOURCE          vcxmyvideosdriveinfo.cpp
+SOURCE          vcxmyvideosdrivemonitorevent.cpp
+SOURCE          vcxmyvideosactivetask.cpp
+SOURCE          vcxmyvideosopenhandler.cpp
+SOURCE          vcxmyvideosmdsalbums.cpp
+SOURCE          vcxmyvideosmdscmdqueue.cpp
+SOURCE          vcxmyvideosalbums.cpp
+SOURCE          vcxmyvideosalbum.cpp
+SOURCE          vcxmyvideosasyncfilecopy.cpp
+
+SOURCEPATH      ../data
+
+START RESOURCE  vcxmyvideoscollectionplugin.RSS
+TARGET          vcxmyvideoscollectionplugin.rsc
+END
+
+USERINCLUDE     ../inc
+USERINCLUDE     ../../inc
+
+APP_LAYER_SYSTEMINCLUDE
+
+SMPSAFE
+
+LIBRARY         euser.lib
+LIBRARY         ecom.lib
+
+LIBRARY         estor.lib
+LIBRARY         mpxcommon.lib
+LIBRARY         bafl.lib
+LIBRARY         flogger.lib
+LIBRARY         mdeclient.lib
+LIBRARY         efsrv.lib
+LIBRARY         charconv.lib
+LIBRARY         centralrepository.lib
+LIBRARY         PlatformEnv.lib
+
+// End of File

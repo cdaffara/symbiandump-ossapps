@@ -1,0 +1,65 @@
+/*
+* Copyright (c) 2007 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Phone Engine iby file
+*
+*/
+
+
+#ifndef PHONEENGINE_IBY
+#define PHONEENGINE_IBY
+
+#include <data_caging_paths_for_iby.hrh>
+
+// Phone Engine
+file=ABI_DIR\BUILD_DIR\phoneengine.dll          SHARED_LIB_DIR\phoneengine.dll
+
+// Engine Info
+file=ABI_DIR\BUILD_DIR\engineinfo.dll           SHARED_LIB_DIR\engineinfo.dll
+
+// Audio Handling
+file=ABI_DIR\BUILD_DIR\audiohandling.dll        SHARED_LIB_DIR\audiohandling.dll
+data=MULTI_LINGUIFY(RSC DATAZ_\RESOURCE_FILES_DIR\defaultbeep RESOURCE_FILES_DIR\defaultbeep)
+
+// Call Handling
+file=ABI_DIR\BUILD_DIR\callhandling.dll         SHARED_LIB_DIR\callhandling.dll
+
+// Contact Handling
+file=ABI_DIR\BUILD_DIR\contacthandling.dll      SHARED_LIB_DIR\contacthandling.dll
+
+// Log Handling
+file=ABI_DIR\BUILD_DIR\loghandling.dll          SHARED_LIB_DIR\loghandling.dll
+
+// Service Handling
+file=ABI_DIR\BUILD_DIR\peservicehandling.dll    SHARED_LIB_DIR\peservicehandling.dll
+
+// Dial Service
+file=ABI_DIR\BUILD_DIR\phoneservices.dll        SHARED_LIB_DIR\phoneservices.dll
+
+data=DATAZ_\private\1000A86C\backup_registration.xml  private\1000A86C\backup_registration.xml
+
+
+// SIS stubs
+data=ZSYSTEM\install\audiohandling_stub.sis     System\Install\audiohandling_stub.sis
+data=ZSYSTEM\install\callhandling_stub.sis      System\Install\callhandling_stub.sis
+data=ZSYSTEM\install\contacthandling_stub.sis   System\Install\contacthandling_stub.sis
+data=ZSYSTEM\install\loghandling_stub.sis       System\Install\loghandling_stub.sis
+data=ZSYSTEM\install\phonemodel_stub.sis        System\Install\phonemodel_stub.sis
+data=ZSYSTEM\install\servicehandling_stub.sis   System\Install\servicehandling_stub.sis
+data=ZSYSTEM\install\phoneservices_stub.sis     System\Install\phoneservices_stub.sis
+data=ZSYSTEM\install\engineinfo_stub.sis        System\Install\engineinfo_stub.sis
+
+#endif // PHONEENGINE_IBY
+
+//  End of File  
+ 

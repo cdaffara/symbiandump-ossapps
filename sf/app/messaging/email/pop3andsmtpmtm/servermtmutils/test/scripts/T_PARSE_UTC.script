@@ -1,0 +1,30 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//! @file
+//! @SYMTestCaseID MSG-POP-0243
+//! @SYMTestType UT
+//! @SYMTestPriority High
+//! @SYMPREQ 234
+//! @SYMDEF T_PARSE_UTCServer.exe
+//! @SYMTestCaseDesc Each test case tests for correct parsing of date header information by the POP system.
+//! @SYMTestActions Reads in and parses RFC2822 files.
+//! @SYMTestExpectedResults Test that the dates used to time-stamp message store entries are as expected.
+
+
+PRINT Run all T_Parse_UTCServer Tests 
+LOAD_SUITE T_Parse_UTCServer -SharedData
+RUN_TEST_STEP 1000 T_Parse_UTCServer TestUTCParse
+

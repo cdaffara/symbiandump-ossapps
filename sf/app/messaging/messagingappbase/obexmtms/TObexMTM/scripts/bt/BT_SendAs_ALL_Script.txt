@@ -1,0 +1,101 @@
+// *****************************************
+//  OBEX SendAs Test Script
+//  This test is expected to succeed.
+// *****************************************
+
+[main]
+obex_client_test jpeg
+obex_client_test vcal
+obex_client_test vcard
+obex_client_test multijpeg
+obex_client_test multi
+
+[jpeg]
+// select the transport type and create the service entry in the root
+obex_select_mtm bt
+select_root_folder
+create_service
+// create the message and set some message attributes
+sendas_create
+// to get the BT device address from a 7650, type *#2820#
+sendas_add_bt_recipient "0002EE30467A"
+sendas_set_subject "Who spilt my pint?"
+sendas_add_attachment "c:\msgtest\obexsmoke\mediaobjects\Photo.jpg"
+// save, validate then send the message
+sendas_save_message
+sendas_validate_message
+send_message succeed
+wait 10
+
+[vcal]
+// remove the folder c\system\mail
+//clean_message_folder
+// select the transport type and create the service entry in the root
+obex_select_mtm bt
+select_root_folder
+create_service
+// create the message and set some message attributes
+sendas_create
+// to get the BT device address from a 7650, type *#2820#
+sendas_add_bt_recipient "0002EE30467A"
+sendas_set_subject "Who spilt my pint?"
+sendas_add_attachment "c:\msgtest\obexsmoke\mediaobjects\Nokia.vcs"
+// save, validate then send the message
+sendas_save_message
+sendas_validate_message
+send_message succeed
+wait 10
+
+[vcard]
+// select the transport type and create the service entry in the root
+obex_select_mtm bt
+select_root_folder
+create_service
+// create the message and set some message attributes
+sendas_create
+// to get the BT device address from a 7650, type *#2820#
+sendas_add_bt_recipient "0002EE30467A"
+sendas_set_subject "Who spilt my pint?"
+sendas_add_attachment "c:\msgtest\obexsmoke\mediaobjects\symtest.vcf"
+// save, validate then send the message
+sendas_save_message
+sendas_validate_message
+send_message succeed
+wait 10
+
+[multijpeg]
+// select the transport type and create the service entry in the root
+obex_select_mtm bt
+select_root_folder
+create_service
+// create the message and set some message attributes
+sendas_create
+// to get the BT device address from a 7650, type *#2820#
+sendas_add_bt_recipient "0002EE30467A"
+sendas_set_subject "Who spilt my pint?"
+sendas_add_attachment "c:\msgtest\obexsmoke\mediaobjects\Photo.jpg"
+sendas_add_attachment "c:\msgtest\obexsmoke\mediaobjects\small_logo.jpg"
+// save, validate then send the message
+sendas_save_message
+sendas_validate_message
+send_message succeed
+wait 10
+
+[multi]
+// select the transport type and create the service entry in the root
+obex_select_mtm bt
+select_root_folder
+create_service
+// create the message and set some message attributes
+sendas_create
+// to get the BT device address from a 7650, type *#2820#
+sendas_add_bt_recipient "0002EE30467A"
+sendas_set_subject "Who spilt my pint?"
+sendas_add_attachment "c:\msgtest\obexsmoke\mediaobjects\symtest.vcf"
+sendas_add_attachment "c:\msgtest\obexsmoke\mediaobjects\small_logo.jpg"
+// save, validate then send the message
+sendas_save_message
+sendas_validate_message
+send_message succeed
+wait 10
+

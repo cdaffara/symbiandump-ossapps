@@ -1,0 +1,13 @@
+<hbwidget version="0.1">
+  <layout name="layout-default" type="mesh">
+
+     <meshitem src="subjectEdit" srcEdge="TOP" dst="" dstEdge="TOP" />
+     <meshitem src="subjectEdit" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+     <meshitem src="subjectEdit" srcEdge="RIGHT" dst="priorityIcon" dstEdge="LEFT" />
+     <meshitem src="" srcEdge="BOTTOM" dst="subjectEdit" dstEdge="BOTTOM" />
+     
+     <meshitem src="priorityIcon" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+     <meshitem src="priorityIcon" srcEdge="CENTERV" dst="subjectEdit" dstEdge="CENTERV" />
+          
+  </layout>
+</hbwidget>

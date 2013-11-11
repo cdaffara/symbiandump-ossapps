@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="0.9">
+    <widget name="mainContainer" type="HbWidget">
+        <widget name="infoBar" type="HbGroupBox">
+            <sizehint type="PREFERRED" height="0.0" width="var(hb-param-screen-width)"/>
+        </widget>
+        <widget name="nowPlaying" type="MpNowPlayingWidget">
+            <sizehint type="PREFERRED" height="0.0" width="var(hb-param-screen-width)"/>
+        </widget>
+        <widget name="container" type="HbWidget">
+            <sizehint height="expr(var(hb-param-screen-height) - var(hb-param-widget-chrome-height) - var(hb-param-widget-toolbar-height))" type="PREFERRED" width="var(hb-param-screen-width)"/>
+        </widget>
+        <layout orientation="Vertical" spacing="0un" type="linear">
+            <contentsmargins bottom="0.0un" left="var(hb-param-margin-view-left)" right="var(hb-param-margin-view-right)" top="0.0un"/>
+            <linearitem itemname="infoBar" spacing="0.0un" />
+            <linearitem itemname="container" spacing="0.0un"/>
+            <linearitem itemname="nowPlaying" spacing="0.0un"/>
+        </layout>
+    </widget>
+
+    <section name="showBanner">
+        <widget name="nowPlaying">
+            <sizehint type="PREFERRED" height="expr(2*var(hb-param-margin-gene-middle-vertical) + var(hb-param-text-height-primary) + var(hb-param-text-height-secondary))" />
+            <bool name="visible" value="TRUE" />  
+        </widget>
+    </section>
+    
+    <section name="hideBanner">
+        <widget name="nowPlaying">
+            <sizehint type="PREFERRED" height="0.0" />
+            <bool name="visible" value="FALSE" />          
+        </widget>
+    </section>
+    
+    <section name="showInfoBar">
+    	<widget name="infoBar">
+    		<sizehint type="PREFERRED" height="expr(2*var(hb-param-margin-gene-middle-vertical) + var(hb-param-text-height-primary))" />
+    		<bool name="visible" value="TRUE"/>
+    	</widget>
+    </section>
+    
+   <section name="hideInfoBar">
+        <widget name="infoBar">
+            <sizehint type="PREFERRED" height="0.0" />
+            <bool name="visible" value="FALSE" />        
+        </widget>
+    </section>
+    
+    <section name="allSongs">
+        <widget name="container">
+            <widget name="allSongsList" type="HbListView">
+                <sizehint height="expr(var(hb-param-screen-height) - var(hb-param-widget-chrome-height) - var(hb-param-widget-toolbar-height))" type="PREFERRED" width="var(hb-param-screen-width)"/>
+            </widget>
+            <layout orientation="Vertical" spacing="0un" type="linear">
+                <contentsmargins bottom="0.0" left="var(hb-param-margin-view-left)" right="var(hb-param-margin-view-right)" top="0.0"/>
+                <linearitem itemname="allSongsList" spacing="0.0"/>
+            </layout>
+        </widget>
+    </section>
+    
+    <section name="artists">
+        <widget name="container">
+            <widget name="artistsList" type="HbListView">
+                <sizehint height="expr(var(hb-param-screen-height) - var(hb-param-widget-chrome-height) - var(hb-param-widget-toolbar-height))" type="PREFERRED" width="var(hb-param-screen-width)"/>
+            </widget>
+            <layout orientation="Vertical" spacing="0un" type="linear">
+                <contentsmargins bottom="0.0" left="var(hb-param-margin-view-left)" right="var(hb-param-margin-view-right)" top="0.0"/>
+                <linearitem itemname="artistsList" spacing="0.0"/>
+            </layout>
+        </widget>
+    </section>
+
+    <section name="artistAlbums">
+        <widget name="container">
+            <layout orientation="Vertical" spacing="0un" type="linear">
+                <contentsmargins bottom="0.0" left="var(hb-param-margin-view-left)" right="var(hb-param-margin-view-right)" top="0.0"/>
+                <linearitem itemname="artistsList" spacing="0.0"/>
+            </layout>
+        </widget>
+    </section>
+
+    <section name="artistAlbumTBone">
+        <widget name="container">
+            <widget name="artistAlbumWall" type="HgMediawall">
+                <sizehint height="expr(var(hb-param-margin-gene-screen) + 24.5un + var(hb-param-text-height-primary) + var(hb-param-text-height-secondary) + (2*var(hb-param-margin-gene-middle-vertical)) + 1.5un)" type="MAXIMUM" width="var(hb-param-screen-width)"/>
+                <sizehint height="expr(var(hb-param-margin-gene-screen) + 24.5un + var(hb-param-text-height-primary) + var(hb-param-text-height-secondary) + (2*var(hb-param-margin-gene-middle-vertical)) + 1.5un)" type="PREFERRED" width="var(hb-param-screen-width)"/>
+                <sizehint height="expr(var(hb-param-margin-gene-screen) + 24.5un + var(hb-param-text-height-primary) + var(hb-param-text-height-secondary) + (2*var(hb-param-margin-gene-middle-vertical)) + 1.5un)" type="FIXED" width="var(hb-param-screen-width)"/>
+                <sizehint height="expr(var(hb-param-margin-gene-screen) + 24.5un + var(hb-param-text-height-primary) + var(hb-param-text-height-secondary) + (2*var(hb-param-margin-gene-middle-vertical)) + 1.5un)" type="MINIMUM" width="var(hb-param-screen-width)"/>
+            </widget>
+            <layout orientation="Vertical" spacing="var(hb-param-margin-gene-middle-vertical)" type="linear">
+                <contentsmargins bottom="0.0" left="var(hb-param-margin-view-left)" right="var(hb-param-margin-view-right)" top="0.0"/>
+                <linearitem itemname="artistAlbumWall"/>
+                <linearitem itemname="artistsList"/>
+            </layout>
+        </widget>
+    </section>
+    
+    <section name="artistAlbumTBoneFetcher">
+        <widget name="container">
+            <widget name="artistAlbumWall" type="HgMediawall">
+                <sizehint height="expr(var(hb-param-margin-gene-screen) + 24.5un + var(hb-param-text-height-primary) + var(hb-param-text-height-secondary) + (2*var(hb-param-margin-gene-middle-vertical)) + 1.5un)" type="MAXIMUM" width="var(hb-param-screen-width)"/>
+                <sizehint height="expr(var(hb-param-margin-gene-screen) + 24.5un + var(hb-param-text-height-primary) + var(hb-param-text-height-secondary) + (2*var(hb-param-margin-gene-middle-vertical)) + 1.5un)" type="PREFERRED" width="var(hb-param-screen-width)"/>
+                <sizehint height="expr(var(hb-param-margin-gene-screen) + 24.5un + var(hb-param-text-height-primary) + var(hb-param-text-height-secondary) + (2*var(hb-param-margin-gene-middle-vertical)) + 1.5un)" type="FIXED" width="var(hb-param-screen-width)"/>
+                <sizehint height="expr(var(hb-param-margin-gene-screen) + 24.5un + var(hb-param-text-height-primary) + var(hb-param-text-height-secondary) + (2*var(hb-param-margin-gene-middle-vertical)) + 1.5un)" type="MINIMUM" width="var(hb-param-screen-width)"/>
+            </widget>
+            <layout orientation="Vertical" spacing="var(hb-param-margin-gene-middle-vertical)" type="linear">
+                <contentsmargins bottom="0.0" left="var(hb-param-margin-view-left)" right="var(hb-param-margin-view-right)" top="0.0"/>
+                <linearitem itemname="artistAlbumWall"/>
+                <linearitem itemname="artistsList"/>
+            </layout>
+        </widget>
+    </section>
+    
+    <section name="albums">
+        <widget name="container">
+            <widget name="albumsList" type="HbListView">
+                <sizehint height="expr(var(hb-param-screen-height) - var(hb-param-widget-chrome-height) - var(hb-param-widget-toolbar-height))" type="PREFERRED" width="var(hb-param-screen-width)"/>
+            </widget>
+            <layout orientation="Vertical" spacing="0un" type="linear">
+                <contentsmargins bottom="0.0" left="var(hb-param-margin-view-left)" right="var(hb-param-margin-view-right)" top="0.0"/>
+                <linearitem itemname="albumsList" spacing="0.0"/>
+            </layout>
+        </widget>
+    </section>
+
+    <section name="albumTBone">
+        <widget name="container">
+            <widget name="albumWall" type="HgMediawall">
+                <sizehint height="expr(var(hb-param-margin-gene-screen) + 24.5un + var(hb-param-text-height-primary) + var(hb-param-text-height-secondary) + (2*var(hb-param-margin-gene-middle-vertical)) + 1.5un)" type="MAXIMUM" width="var(hb-param-screen-width)"/>
+                <sizehint height="expr(var(hb-param-margin-gene-screen) + 24.5un + var(hb-param-text-height-primary) + var(hb-param-text-height-secondary) + (2*var(hb-param-margin-gene-middle-vertical)) + 1.5un)" type="PREFERRED" width="var(hb-param-screen-width)"/>
+                <sizehint height="expr(var(hb-param-margin-gene-screen) + 24.5un + var(hb-param-text-height-primary) + var(hb-param-text-height-secondary) + (2*var(hb-param-margin-gene-middle-vertical)) + 1.5un)" type="FIXED" width="var(hb-param-screen-width)"/>
+                <sizehint height="expr(var(hb-param-margin-gene-screen) + 24.5un + var(hb-param-text-height-primary) + var(hb-param-text-height-secondary) + (2*var(hb-param-margin-gene-middle-vertical)) + 1.5un)" type="MINIMUM" width="var(hb-param-screen-width)"/>
+            </widget>
+            <layout orientation="Vertical" spacing="var(hb-param-margin-gene-middle-vertical)" type="linear">
+                <contentsmargins bottom="0.0" left="var(hb-param-margin-view-left)" right="var(hb-param-margin-view-right)" top="0.0"/>
+                <linearitem itemname="albumWall"/>
+                <linearitem itemname="albumsList"/>
+            </layout>
+        </widget>
+    </section>
+    
+    <section name="albumTBoneFetcher">
+        <widget name="container">
+            <widget name="albumWall" type="HgMediawall">
+                <sizehint height="expr(var(hb-param-margin-gene-screen) + 24.5un + var(hb-param-text-height-primary) + var(hb-param-text-height-secondary) + (2*var(hb-param-margin-gene-middle-vertical)) + 1.5un)" type="MAXIMUM" width="var(hb-param-screen-width)"/>
+                <sizehint height="expr(var(hb-param-margin-gene-screen) + 24.5un + var(hb-param-text-height-primary) + var(hb-param-text-height-secondary) + (2*var(hb-param-margin-gene-middle-vertical)) + 1.5un)" type="PREFERRED" width="var(hb-param-screen-width)"/>
+                <sizehint height="expr(var(hb-param-margin-gene-screen) + 24.5un + var(hb-param-text-height-primary) + var(hb-param-text-height-secondary) + (2*var(hb-param-margin-gene-middle-vertical)) + 1.5un)" type="FIXED" width="var(hb-param-screen-width)"/>
+                <sizehint height="expr(var(hb-param-margin-gene-screen) + 24.5un + var(hb-param-text-height-primary) + var(hb-param-text-height-secondary) + (2*var(hb-param-margin-gene-middle-vertical)) + 1.5un)" type="MINIMUM" width="var(hb-param-screen-width)"/>
+            </widget>
+            <layout orientation="Vertical" spacing="var(hb-param-margin-gene-middle-vertical)" type="linear">
+                <contentsmargins bottom="0.0" left="var(hb-param-margin-view-left)" right="var(hb-param-margin-view-right)" top="0.0"/>
+                <linearitem itemname="albumWall"/>
+                <linearitem itemname="albumsList"/>
+            </layout>
+        </widget>
+    </section>
+    
+    <section name="playlists">
+        <widget name="container">
+            <widget name="playlistsList" type="HbListView">
+                <sizehint height="expr(var(hb-param-screen-height) - var(hb-param-widget-chrome-height) - var(hb-param-widget-toolbar-height))" type="PREFERRED" width="var(hb-param-screen-width)"/>
+            </widget>
+            <layout orientation="Vertical" spacing="0un" type="linear">
+                <contentsmargins bottom="0.0" left="var(hb-param-margin-view-left)" right="var(hb-param-margin-view-right)" top="0.0"/>
+                <linearitem itemname="playlistsList" spacing="0.0"/>
+            </layout>
+        </widget>
+    </section>
+
+    <section name="playlistSongs">
+        <widget name="container">
+            <layout orientation="Vertical" spacing="0un" type="linear">
+                <contentsmargins bottom="0.0" left="var(hb-param-margin-view-left)" right="var(hb-param-margin-view-right)" top="0.0"/>
+                <linearitem itemname="playlistsList" spacing="0.0"/>
+            </layout>
+        </widget>
+    </section>
+
+    <section name="emptyList">
+        <widget name="container">
+            <widget name="noMusic" type="HbLabel">
+                <string name="plainText" locid="txt_mus_info_no_music"/>
+                <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+                <fontspec name="fontSpec" role="Primary"/>
+            </widget>
+
+            <layout type="linear" orientation="Vertical" >
+                <contentsmargins bottom="0.0" left="var(hb-param-margin-view-left)" right="var(hb-param-margin-view-right)" top="0.0"/>
+                <stretchitem stretchfactor="1"/>
+                <linearitem itemname="noMusic" spacing="0.0"/>
+                <stretchitem stretchfactor="1"/>
+            </layout>
+        </widget>
+    </section>
+
+</hbdocument>

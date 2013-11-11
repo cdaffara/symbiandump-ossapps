@@ -1,0 +1,23 @@
+<< * OK Microsoft Exchange Server 2003 IMAP4rev1 server version 6.5.6944.0 (ban-cn-exchng01.msexchange01.closedtest.intra)  ready.
+>> 1 CAPABILITY
+<< * CAPABILITY IMAP4 IMAP4rev1 IDLE LOGIN-REFERRALS MAILBOX-REFERRALS NAMESPACE LITERAL+ UIDPLUS CHILDREN AUTH=NTLM
+<< 1 OK CAPABILITY completed.
+>> 2 LOGIN prakash prakash
+<< 2 OK LOGIN completed.
+>> 3 LIST "" ""
+<< * LIST (\Marked \HasNoChildren) "/" INBOX
+<< 3 OK LIST completed.
+>> 4 SELECT INBOX
+<< * 0 EXISTS
+<< * 0 RECENT
+<< * FLAGS (\Seen \Answered \Flagged \Deleted \Draft $MDNSent)
+<< * OK [PERMANENTFLAGS (\Seen \Answered \Flagged \Deleted \Draft $MDNSent)] Permanent flags
+<< * OK [UIDVALIDITY 1378] UIDVALIDITY value
+<< 4 OK [READ-WRITE] SELECT completed.
+>> 5 LIST "" "*"
+<< 5 OK LIST completed.
+>> 6 LOGOUT
+<< * BYE Microsoft Exchange Server 2003 IMAP4rev1 server version 6.5.6944.0 signing off.
+<< 6 OK LOGOUT completed
+
+

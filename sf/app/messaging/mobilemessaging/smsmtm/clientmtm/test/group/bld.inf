@@ -1,0 +1,25 @@
+// Copyright (c) 2005-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+PRJ_TESTMMPFILES
+smcmsuite_gsm.mmp
+
+PRJ_TESTEXPORTS
+../scripts/smcmsuite_gsm.script		+/winscw/c/msgtest/smcmsuite_gsm/smcmsuite_gsm.script
+../group/smcmsuite_gsm.iby   		/epoc32/rom/include/smcmsuite_gsm.iby
+
+#if (defined SYMBIAN_MESSAGESTORE_HEADER_BODY_USING_SQLDB)
+#include "../Unittef/group/bld.inf"
+#endif

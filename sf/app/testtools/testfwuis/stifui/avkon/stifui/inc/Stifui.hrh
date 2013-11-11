@@ -1,0 +1,113 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+* 
+* Description: Const definitions file.
+*
+*/
+
+#ifndef STIF_UI_HRH
+#define STIF_UI_HRH
+
+enum TAppUICommandIds
+    {
+    EAppUIGoBack = 1,
+    EAppUIGoToMainMenu,
+    EAppUIGoToTestCaseMenu,
+    EAppUIGoToModulesMenu,
+    EAppUIGoToTestSetsMenu,
+	ECmdGoToStartCasesView,
+	ECmdGoToStartedCasesView,
+    ECmdShowStartedTestSet,
+    ECmdCreateTestSet,
+    ECmdLoadTestSet,
+    ECmdStartTestSet,
+    ECmdSaveTestSet,
+    ECmdInsertTestCases,
+    ECmdRemoveTestCases,
+	ECmdFilterCases,
+	ECmdMarkMenu,
+    ECmdInsertSelectedCases,
+    ECmdShowSetMenu,
+	ECmdStartCases,
+	ECmdShowAllStartedCases,
+	ECmdShowOngoingCases,
+	ECmdShowPassedCases,
+	ECmdShowFailedCases,
+	ECmdShowPausedCases,
+	ECmdShowCrashedAbortedCases,
+	ECmdShowStatistics,
+    ECmdViewOutput,
+	ECmdPauseTestCase,
+	ECmdResumeTestCase,
+	ECmdAbortTestCase,
+	ECmdRemoveExecution,
+	ECmdRemoveAllExecutions,
+	ECmdOpenModule,
+	ECmdAddModule,
+	ECmdRemoveModule,
+    ECmdFilterMenu,
+    ECmdShowAbout,
+	ECmdFilterByModule = 0x1000,
+	ECmdFilterByTestCaseFile = 0x2000,
+	ECmdNOFiltering = 0x3000,
+	ECmdGoToTestSetView
+    };
+
+
+enum TAppUITabViewId
+    {
+	ETestCaseMenuTab = 1,
+    ETestModulesMenuTab,
+    ETestSetsMenuTab
+    };
+ 
+// Application view ids.
+enum TAppUIViewNumber
+	{
+    EMainMenuViewId = 1,
+    ETestCaseMenuViewId,
+    EStartCaseMenuViewId,
+    EStartedCasesMenuViewId,
+    ETestModulesMenuViewId,
+    ETestSetBaseMenuViewId,
+    ETestSetMenuViewId,
+    ETestSetInsertMenuViewId,
+    ETestSetStartedCasesViewId,
+    ETestSetsMenuViewId, /*???*/
+    EShowStartedCasesViewId,
+    EShowStatisticsViewId,
+	ETestCaseOutputViewId,
+	EStatisticsViewId,
+	ECreatedTestSetMenuViewId
+	};
+
+enum TPanic
+    {
+    EModuleIndexOutOfBound,
+    EShowCasesOutOfSync
+    };
+
+enum TShowStartedCasesMode
+    {
+    EShowAllStartedCases,
+    EShowOngoingCases,
+    EShowPausedCases,
+    EShowPassedCases,
+    EShowFailedCases,
+    EShowCrashedAbortedCases,
+    EShowStatistics
+    };
+
+#endif      // STIF_UI_HRH
+
+// End of File

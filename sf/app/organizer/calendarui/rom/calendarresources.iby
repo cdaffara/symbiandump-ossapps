@@ -1,0 +1,34 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+* The iby file for calendar resources
+*
+*/
+
+
+
+#ifndef CALENDARRESOURCE_IBY
+#define CALENDARRESOURCE_IBY
+#include <data_caging_paths_for_iby.hrh>
+
+// Application resource file.
+S60_APP_RESOURCE(calendar)
+data=DATAZ_/QT_TRANSLATIONS_DIR/calendar.qm			QT_TRANSLATIONS_DIR/calendar.qm
+data=DATAZ_/QT_TRANSLATIONS_DIR/caleneditor.qm			QT_TRANSLATIONS_DIR/caleneditor.qm
+data=DATAZ_/QT_TRANSLATIONS_DIR/caleneventviewer.qm			QT_TRANSLATIONS_DIR/caleneventviewer.qm
+data=DATAZ_/QT_TRANSLATIONS_DIR/calenregional.qm			QT_TRANSLATIONS_DIR/calenregional.qm
+
+#endif // CALENDARRESOURCE_IBY
+
+//  End of File

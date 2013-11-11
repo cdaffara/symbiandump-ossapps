@@ -1,0 +1,60 @@
+/*
+* Copyright (c) 2002 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   This is a localisation file for AknAlarmService.
+ *                A _loc file is the one and only place where the logical
+ *                strings to be localised are defined
+ *
+*/
+
+
+
+
+// LOCALISATION STRINGS
+
+//d:Title of alarm note when Clock alarm is active
+//l:popup_note_window
+//
+#define qtn_quest_clock_alarm_occur  "Clock alarm:"
+
+//d:The message when phone was switch off
+//l:popup_note_window
+//
+#define qtn_quest_switch_phone_on  "Switch the phone on?"
+
+//d:05wk02 To-Do alarm line 1
+//l:popup_note_window
+//
+#define qtn_todo_alarm_heading  "To-Do Task:"
+
+//d:05wk02 To-Do alarm line 2
+//l:popup_note_window
+//
+#define qtn_todo_alarm_due  "Due:"
+
+//d:Confirmation note shown when user snoozes an alarm.
+//d:%N in minutes, plural.
+//l:popup_note_window
+//w:
+//r:3.1
+#define qtn_clk_note_snooze_multiply  "Alarm Snoozed for %N minutes"
+
+//d:Confirmation note shown when user snoozes an alarm.
+//d:(singular)
+//l:popup_note_window
+//w:
+//r:3.1
+#define qtn_clk_note_snooze_multiply_one  "Alarm Snoozed for 1 minute"
+
+
+// End of File

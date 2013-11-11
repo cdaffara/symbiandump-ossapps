@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<category>
+	<name>Email</name>
+	<mime>application/messaging</mime>
+	<licon>qtg_large_email</licon>
+	<baseapp>root msg email</baseapp>
+	<lname>txt_search_list_messagemail</lname>
+	<displayorder>3</displayorder>
+	<exceptionstring></exceptionstring>
+	<tsfile></tsfile>
+	<actionuri>
+		<uri>
+			<uristring></uristring>
+			<lname></lname>
+			<licon></licon>
+			<uriref></uriref>
+			<action></action><!-- primary action or default action. alternatively, we could always use first entry as this one -->
+		</uri>		
+	</actionuri>
+  <fieldmap>
+  	<resulthit>
+  		<field></field>
+  		<auri></auri><!-- alternatively <auriorder>1,2,3,4</auriorder> instead of four lines -->  		
+  	</resulthit>
+  </fieldmap>
+ <indexcontentsize>L</indexcontentsize> <!-- possible values S, M, L, XL, XXL. or scale of 1 to 10. -->
+ <policy>
+ 	<capability>WriteDeviceData<!-- Allow search on my data from clients with only Write Device Data capability it is combination of SID/VID/capability --></capability>
+ </policy>
+ <resultfirstline>
+ 	<list>
+ 	<field>Subject</field><!-- commo seperated list, if there is a chance that certain field could be empty -->
+ 	<field>Recipients</field>
+ 	</list>
+ 	</resultfirstline> 
+ <relevancy>
+ 	<boost>
+ 		<field>Recipients</field>
+ 		<boostvalue>10</boostvalue><!-- on scale 1-10 -->
+ 	</boost>
+ 	<boost>
+ 		<field>Subject</field>
+ 		<boostvalue>5</boostvalue>
+  </boost>  
+ </relevancy>
+</category>

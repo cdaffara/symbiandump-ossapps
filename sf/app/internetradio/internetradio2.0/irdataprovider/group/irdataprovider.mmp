@@ -1,0 +1,109 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+#include 		<platform_paths.hrh>
+
+//MACRO ENABLE_USAGE_REPORT_TEST
+
+TARGET        irdataprovider.dll
+TARGETTYPE    dll
+UID           0x1000008d 0x2002FFB5
+
+PAGED
+
+SOURCEPATH    ../src
+
+SOURCE        irdataprovider.cpp
+SOURCE        irhttpdataprovider.cpp
+SOURCE        irdataprovidertimer.cpp
+SOURCE        irhttppost.cpp
+SOURCE        irlogodownloadengine.cpp
+
+USERINCLUDE    ../inc
+USERINCLUDE    ../../inc
+USERINCLUDE    ../../irsettings/inc
+USERINCLUDE    ../../irnetworkcontroller/inc
+USERINCLUDE    ../../ircommon/inc
+USERINCLUDE    ../../irfavoritesdb/inc
+USERINCLUDE    ../../irpresetplugin/inc
+USERINCLUDE    ../../ircachemgmt/inc
+USERINCLUDE    ../../irsessionlog/inc
+USERINCLUDE    ../../../presetserver/include
+USERINCLUDE    ../../../presetserver/clientinc
+USERINCLUDE    ../../../presetserver/serverinc
+
+APP_LAYER_SYSTEMINCLUDE
+// TODO will be removed after the changes of /epoc32/include
+SYSTEMINCLUDE    OS_LAYER_PUBLIC_EXPORT_PATH(http)
+SYSTEMINCLUDE    MW_LAYER_PUBLIC_EXPORT_PATH(http)
+SYSTEMINCLUDE    OS_LAYER_PUBLIC_EXPORT_PATH(mmf/common)
+
+SMPSAFE
+
+LIBRARY             bafl.lib
+LIBRARY             cone.lib
+LIBRARY             efsrv.lib
+LIBRARY             euser.lib
+LIBRARY             http.lib
+LIBRARY             inetprotutil.lib
+LIBRARY             irnetworkcontroller.lib
+LIBRARY             irsettings.lib
+LIBRARY             irdatastructures.lib
+LIBRARY             irfavoritesdb.lib
+LIBRARY             psclient100.lib
+LIBRARY             ircachemgmt.lib
+LIBRARY             mmfcontrollerframework.lib //to get the supported MIME types
+LIBRARY             avkon.lib //to display the information note
+
+
+
+//test linker error
+LIBRARY cenrepnotifhandler.lib
+LIBRARY	commonengine.lib
+LIBRARY etel.lib
+LIBRARY etel3rdparty.lib
+LIBRARY etelmm.lib
+LIBRARY estor.lib
+LIBRARY xmlframework.lib
+
+
+//LIBRARY avctpplugins.lib
+//LIBRARY eintsock.lib
+LIBRARY impapprotocolcontroller.lib
+LIBRARY imut.lib
+LIBRARY netmsg.lib
+LIBRARY netmeta.lib
+LIBRARY nifman.lib
+LIBRARY pops.lib
+LIBRARY responsemsg.lib
+LIBRARY smts.lib
+LIBRARY ezlib.lib
+
+//test end
+
+
+LIBRARY        flogger.lib
+
+#if defined( WINSCW )
+DEFFILE         ../bwinscw/ 
+#else
+DEFFILE         ../bmarm/ 
+#endif
+
+//CAPABILITY NetworkServices ProtServ ReadDeviceData ReadUserData SwEvent UserEnvironment WriteDeviceData WriteUserData TrustedUI
+CAPABILITY				CAP_GENERAL_DLL
+

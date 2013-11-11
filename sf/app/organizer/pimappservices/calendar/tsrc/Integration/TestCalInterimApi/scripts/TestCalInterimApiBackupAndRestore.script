@@ -1,0 +1,55 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//! @file
+//! @SYMTestSuiteName	TestCalInterimApiSuite 
+//! @SYMScriptTestEnvironment
+
+PRINT Run all TestCalInterimApi 
+
+LOAD_SUITE TestCalInterimApiSuite
+
+START_TESTCASE	PIM-APPENG-BACKUP-AND-RESTORE-CALENDAR-0001
+//! @SYMTestCaseID  PIM-APPENG-BACKUP-AND-RESTORE-CALENDAR-0001
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiReadData \CITCalInterimApi\TestCalInterimApiBackupAndRestore.ini AddAttachment
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCheckAttachment \CITCalInterimApi\TestCalInterimApiBackupAndRestore.ini CheckEntry1
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCheckAttachment \CITCalInterimApi\TestCalInterimApiBackupAndRestore.ini CheckEntry2
+
+// NOW DO THE BACKUP
+LOAD_SUITE BURTestServer
+//
+
+// CT-PIM-PERFIDX-DEV-0007
+PRINT Backup Starts
+RUN_TEST_STEP -1 BURTestServer TestBackup  \CITCalInterimApi\burtest.ini default 
+PRINT Backup Ended
+
+// delete files in source so that we know that they have been restored and not just left
+// in place
+PRINT Cleaning files so that restore operation is confirmed
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiReadData \CITCalInterimApi\TestCalInterimApiBackupAndRestore.ini DeleteFile
+RUN_UTILS DeleteFile c:\private\10003a5b\CalendarFile.dat
+
+PRINT Restore Starts
+RUN_TEST_STEP -1 BURTestServer TestRestore \CITCalInterimApi\burtest.ini default 
+PRINT Restore Ended 
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCheckAttachment \CITCalInterimApi\TestCalInterimApiBackupAndRestore.ini CheckEntry1
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCheckAttachment \CITCalInterimApi\TestCalInterimApiBackupAndRestore.ini CheckEntry2
+
+END_TESTCASE	PIM-APPENG-BACKUP-AND-RESTORE-CALENDAR-0001
+
+PRINT Completed TestCalInterimApi_Tests

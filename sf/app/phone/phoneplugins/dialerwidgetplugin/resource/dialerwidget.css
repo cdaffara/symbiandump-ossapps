@@ -1,0 +1,41 @@
+
+DialerWidget[layoutName="normal"] {
+	layout: layout-1;	
+	fixed-width: 12.0un;
+	fixed-height: 12.0un;
+}
+
+DialerWidget[layoutName="missed_call"] {
+	layout: layout-2;	
+	fixed-width: 12.75un;
+	fixed-height: 12.75un;
+}
+
+DialerWidget::background {
+  border-width: 0.0un;
+  zvalue: 0;
+}
+
+DialerWidget::badgeBackground {
+	border-width: 0.0un;
+	fixed-width: 3.5un;
+	fixed-height: 3.5un;
+	zvalue: 1;
+}
+
+DialerWidget::touchArea {
+	zvalue: 1000;
+}
+
+DialerWidget::badgeText {
+	color: var(qtc_view_normal);
+	text-align: center;
+	text-height: 2.8un;
+	font-variant: primary;
+	zvalue: 2;	
+}
+
+DialerWidget::badgeText[badgeTextLenght="2"]{
+	text-height: 2.0un;
+}
+

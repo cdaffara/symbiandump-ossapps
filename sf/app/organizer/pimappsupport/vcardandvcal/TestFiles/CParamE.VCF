@@ -1,0 +1,9 @@
+BEGIN:VCARD
+VERSION:2.1
+DESCRIPTION;abc=abc\\def\;ghi\\jkl;def=12\\\\34\\;56\\78\;9:Escaping
+  Params
+DESCRIPTION;ab\c;de\f=123:Escaping Param Names
+DESCRIPTION:Empty Params
+DESCRIPTION;;;;:Empty Params 2
+DESCRIPTION;\;\:Empty Params 3
+END:VCARD

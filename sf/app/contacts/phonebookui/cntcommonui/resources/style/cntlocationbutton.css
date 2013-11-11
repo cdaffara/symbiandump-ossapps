@@ -1,0 +1,26 @@
+HbPushButton#cntlocationbutton
+{
+    layout:text_icon_horizontal_prt;
+}
+
+
+HbPushButton#cntlocationbutton::icon{
+    top:-1.5un;
+    bottom:1.5un;
+    right:1.0un;
+    fixed-width:6.0un;
+    fixed-height:6.0un;
+}
+
+
+
+
+HbPushButton#cntlocationbutton::text{
+    left:-0.5un;
+    right:0.5un;
+    top:-1.5un;
+    bottom:1.5un;
+    font-variant:primary;
+    text-align:center;
+}
+

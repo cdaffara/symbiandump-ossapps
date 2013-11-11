@@ -1,0 +1,90 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*
+*/
+
+
+#include <data_caging_paths.hrh>
+#include <platform_paths.hrh>
+#include "../../../symbian_version.hrh"
+
+
+TARGET            PerfMon.exe
+TARGETTYPE        exe
+EPOCSTACKSIZE     0x5000
+EPOCHEAPSIZE      0x10000 0x1000000  // Min 64Kb, Max 16Mb
+
+UID               0x100039CE 0x20011385
+
+VENDORID          VID_DEFAULT
+CAPABILITY        WriteDeviceData
+
+SMPSAFE
+
+LANG              SC
+
+
+START RESOURCE    ../../../data/perfmon.rss
+HEADER
+TARGETPATH        APP_RESOURCE_DIR
+END
+
+START RESOURCE    ../../../data/perfmon_reg.rss
+DEPENDS           perfmon.rsg
+TARGETPATH        /private/10003a3f/import/apps
+END
+
+APP_LAYER_SYSTEMINCLUDE
+USERINCLUDE       ../inc
+SOURCEPATH        ../src
+
+SOURCE            perfmon_app.cpp
+SOURCE            perfmon_document.cpp 
+SOURCE            perfmon_appui.cpp
+SOURCE            perfmon_model.cpp
+SOURCE            perfmon_valuesview.cpp 
+SOURCE            perfmon_valuescontainer.cpp 
+SOURCE            perfmon_graphsview.cpp 
+SOURCE            perfmon_graphscontainer.cpp 
+SOURCE            perfmon_settingsviewdlg.cpp
+SOURCE            perfmon_datapopupcontainer.cpp 
+
+USERINCLUDE       ../../../engine/inc
+SOURCEPATH        ../../../engine/src
+SOURCE            perfmon_engine.cpp
+#if ( SYMBIAN_VERSION_SUPPORT >= SYMBIAN_3 )
+SOURCE            perfmon_powerlistener.cpp
+#else
+SOURCE            perfmon_powerlistener_stub.cpp
+#endif
+
+LIBRARY           euser.lib
+LIBRARY           commonengine.lib
+LIBRARY           apparc.lib
+LIBRARY           cone.lib 
+LIBRARY           eikcore.lib
+LIBRARY           eikcoctl.lib
+LIBRARY           eikdlg.lib  
+LIBRARY           avkon.lib 
+LIBRARY           ws32.lib 
+LIBRARY           apgrfx.lib
+LIBRARY           efsrv.lib
+LIBRARY           bafl.lib
+LIBRARY           gdi.lib
+LIBRARY           estor.lib
+LIBRARY           centralrepository.lib
+LIBRARY           HWRMPowerClient.lib
+
+// End of File

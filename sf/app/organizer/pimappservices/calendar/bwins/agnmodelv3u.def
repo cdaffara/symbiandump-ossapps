@@ -1,0 +1,380 @@
+EXPORTS
+	??0CAgnContent@@QAE@XZ @ 1 NONAME ; CAgnContent::CAgnContent(void)
+	??0CAgnSimpleEntryAllocator@@QAE@XZ @ 2 NONAME ; CAgnSimpleEntryAllocator::CAgnSimpleEntryAllocator(void)
+	??0TAgnCalendarTime@@QAE@XZ @ 3 NONAME ; TAgnCalendarTime::TAgnCalendarTime(void)
+	??0TAgnDailyRpt@@QAE@AAVCAgnRptDef@@@Z @ 4 NONAME ; TAgnDailyRpt::TAgnDailyRpt(class CAgnRptDef &)
+	??0TAgnDailyRpt@@QAE@ABV0@AAVCAgnRptDef@@@Z @ 5 NONAME ; TAgnDailyRpt::TAgnDailyRpt(class TAgnDailyRpt const &, class CAgnRptDef &)
+	??0TAgnEntryId@@QAE@ABVTStreamId@@I@Z @ 6 NONAME ; TAgnEntryId::TAgnEntryId(class TStreamId const &, unsigned int)
+	??0TAgnEntryId@@QAE@XZ @ 7 NONAME ; TAgnEntryId::TAgnEntryId(void)
+	??0TAgnFilter@@QAE@ABIABW4TCalSearchBehaviour@CalCommon@@@Z @ 8 NONAME ; TAgnFilter::TAgnFilter(unsigned int const &, enum CalCommon::TCalSearchBehaviour const &)
+	??0TAgnFilter@@QAE@XZ @ 9 NONAME ; TAgnFilter::TAgnFilter(void)
+	??0TAgnMonthlyByDatesRpt@@QAE@AAVCAgnRptDef@@@Z @ 10 NONAME ; TAgnMonthlyByDatesRpt::TAgnMonthlyByDatesRpt(class CAgnRptDef &)
+	??0TAgnMonthlyByDatesRpt@@QAE@ABV0@AAVCAgnRptDef@@@Z @ 11 NONAME ; TAgnMonthlyByDatesRpt::TAgnMonthlyByDatesRpt(class TAgnMonthlyByDatesRpt const &, class CAgnRptDef &)
+	??0TAgnMonthlyByDaysRpt@@QAE@AAVCAgnRptDef@@@Z @ 12 NONAME ; TAgnMonthlyByDaysRpt::TAgnMonthlyByDaysRpt(class CAgnRptDef &)
+	??0TAgnMonthlyByDaysRpt@@QAE@ABV0@AAVCAgnRptDef@@@Z @ 13 NONAME ; TAgnMonthlyByDaysRpt::TAgnMonthlyByDaysRpt(class TAgnMonthlyByDaysRpt const &, class CAgnRptDef &)
+	??0TAgnWeeklyRpt@@QAE@AAVCAgnRptDef@@@Z @ 14 NONAME ; TAgnWeeklyRpt::TAgnWeeklyRpt(class CAgnRptDef &)
+	??0TAgnWeeklyRpt@@QAE@ABV0@AAVCAgnRptDef@@@Z @ 15 NONAME ; TAgnWeeklyRpt::TAgnWeeklyRpt(class TAgnWeeklyRpt const &, class CAgnRptDef &)
+	??0TAgnYearlyByDateRpt@@QAE@AAVCAgnRptDef@@@Z @ 16 NONAME ; TAgnYearlyByDateRpt::TAgnYearlyByDateRpt(class CAgnRptDef &)
+	??0TAgnYearlyByDateRpt@@QAE@ABV0@AAVCAgnRptDef@@@Z @ 17 NONAME ; TAgnYearlyByDateRpt::TAgnYearlyByDateRpt(class TAgnYearlyByDateRpt const &, class CAgnRptDef &)
+	??0TAgnYearlyByDayRpt@@QAE@AAVCAgnRptDef@@@Z @ 18 NONAME ; TAgnYearlyByDayRpt::TAgnYearlyByDayRpt(class CAgnRptDef &)
+	??0TAgnYearlyByDayRpt@@QAE@ABV0@AAVCAgnRptDef@@@Z @ 19 NONAME ; TAgnYearlyByDayRpt::TAgnYearlyByDayRpt(class TAgnYearlyByDayRpt const &, class CAgnRptDef &)
+	??0TGsChildRefData@@QAE@KABVTAgnCalendarTime@@@Z @ 20 NONAME ; TGsChildRefData::TGsChildRefData(unsigned long, class TAgnCalendarTime const &)
+	??1CAgnAttachment@@UAE@XZ @ 21 NONAME ; CAgnAttachment::~CAgnAttachment(void)
+	??1CAgnAttachmentFile@@UAE@XZ @ 22 NONAME ; CAgnAttachmentFile::~CAgnAttachmentFile(void)
+	??1CAgnContent@@UAE@XZ @ 23 NONAME ; CAgnContent::~CAgnContent(void)
+	??1CAgnEntry@@UAE@XZ @ 24 NONAME ; CAgnEntry::~CAgnEntry(void)
+	??1CAgnRptDef@@UAE@XZ @ 25 NONAME ; CAgnRptDef::~CAgnRptDef(void)
+	??1CAgnSimpleEntryAllocator@@UAE@XZ @ 26 NONAME ; CAgnSimpleEntryAllocator::~CAgnSimpleEntryAllocator(void)
+	??8TAgnCalendarTime@@QBEHABV0@@Z @ 27 NONAME ; int TAgnCalendarTime::operator==(class TAgnCalendarTime const &) const
+	??8TAgnEntryId@@QBEHABV0@@Z @ 28 NONAME ; int TAgnEntryId::operator==(class TAgnEntryId const &) const
+	??8TAgnInstanceId@@QBEHABV0@@Z @ 29 NONAME ; int TAgnInstanceId::operator==(class TAgnInstanceId const &) const
+	??9TAgnCalendarTime@@QBEHABV0@@Z @ 30 NONAME ; int TAgnCalendarTime::operator!=(class TAgnCalendarTime const &) const
+	??9TAgnEntryId@@QBEHABV0@@Z @ 31 NONAME ; int TAgnEntryId::operator!=(class TAgnEntryId const &) const
+	??9TAgnInstanceId@@QBEHABV0@@Z @ 32 NONAME ; int TAgnInstanceId::operator!=(class TAgnInstanceId const &) const
+	??MTAgnCalendarTime@@QBEHABV0@@Z @ 33 NONAME ; int TAgnCalendarTime::operator<(class TAgnCalendarTime const &) const
+	??NTAgnCalendarTime@@QBEHABV0@@Z @ 34 NONAME ; int TAgnCalendarTime::operator<=(class TAgnCalendarTime const &) const
+	??OTAgnCalendarTime@@QBEHABV0@@Z @ 35 NONAME ; int TAgnCalendarTime::operator>(class TAgnCalendarTime const &) const
+	??PTAgnCalendarTime@@QBEHABV0@@Z @ 36 NONAME ; int TAgnCalendarTime::operator>=(class TAgnCalendarTime const &) const
+	?AddAttachmentL@CAgnEntry@@QAEXPAVCAgnAttachment@@@Z @ 37 NONAME ; void CAgnEntry::AddAttachmentL(class CAgnAttachment *)
+	?AddAttendeeL@CAgnEntry@@QAEXPAVCAgnAttendee@@@Z @ 38 NONAME ; void CAgnEntry::AddAttendeeL(class CAgnAttendee *)
+	?AddCategoryL@CAgnEntry@@QAEXPAVCAgnCategory@@@Z @ 39 NONAME ; void CAgnEntry::AddCategoryL(class CAgnCategory *)
+	?AddChildIdL@CAgnEntry@@QAEXABVTGsChildRefData@@@Z @ 40 NONAME ; void CAgnEntry::AddChildIdL(class TGsChildRefData const &)
+	?AddExceptionL@CAgnRptDef@@QAEXABVTAgnCalendarTime@@@Z @ 41 NONAME ; void CAgnRptDef::AddExceptionL(class TAgnCalendarTime const &)
+	?AddSporadicDateL@CAgnRptDef@@QAEXABVTAgnCalendarTime@@@Z @ 42 NONAME ; void CAgnRptDef::AddSporadicDateL(class TAgnCalendarTime const &)
+	?Address@CAgnAttendee@@QBEABVTDesC16@@XZ @ 43 NONAME ; class TDesC16 const & CAgnAttendee::Address(void) const
+	?AlarmAction@CAgnEntry@@QBEPAVCAgnContent@@XZ @ 44 NONAME ; class CAgnContent * CAgnEntry::AlarmAction(void) const
+	?AlarmActionChange@CAgnEntry@@QBE?AW4TAgnDataChange@1@XZ @ 45 NONAME ; enum CAgnEntry::TAgnDataChange CAgnEntry::AlarmActionChange(void) const
+	?AlarmActionIsLoaded@CAgnEntry@@QBEHXZ @ 46 NONAME ; int CAgnEntry::AlarmActionIsLoaded(void) const
+	?AlarmActionStreamId@CAgnEntry@@QBEABVTStreamId@@XZ @ 47 NONAME ; class TStreamId const & CAgnEntry::AlarmActionStreamId(void) const
+	?AlarmOffset@CAgnSimpleEntry@@QBE?AVTTimeIntervalMinutes@@XZ @ 48 NONAME ; class TTimeIntervalMinutes CAgnSimpleEntry::AlarmOffset(void) const
+	?AlarmSoundName@CAgnEntry@@QBEABVTDesC16@@XZ @ 49 NONAME ; class TDesC16 const & CAgnEntry::AlarmSoundName(void) const
+	?AdjustStartUntilTimeForRepEntryL@CAgnSimpleEntry@@QAEXXZ @ 50 NONAME ; void CAgnSimpleEntry::AdjustStartUntilTimeForRepEntryL(void)
+	?Attachment@CAgnEntry@@QBEAAVCAgnAttachment@@H@Z @ 51 NONAME ; class CAgnAttachment & CAgnEntry::Attachment(int) const
+	?AttachmentCount@CAgnEntry@@QBEHXZ @ 52 NONAME ; int CAgnEntry::AttachmentCount(void) const
+	?AttendeeCount@CAgnEntry@@QBEHXZ @ 53 NONAME ; int CAgnEntry::AttendeeCount(void) const
+	?BusyStatus@CAgnEntry@@QBE?AW4TTransp@CCalEntry@@XZ @ 54 NONAME ; enum CCalEntry::TTransp CAgnEntry::BusyStatus(void) const
+	?CalRole@CAgnAttendee@@QBE?AW4TCalRole@CCalAttendee@@XZ @ 55 NONAME ; enum CCalAttendee::TCalRole CAgnAttendee::CalRole(void) const
+	?CalStatus@CAgnAttendee@@QBE?AW4TCalStatus@CCalAttendee@@XZ @ 56 NONAME ; enum CCalAttendee::TCalStatus CAgnAttendee::CalStatus(void) const
+	?CategoryCount@CAgnEntry@@QBEHXZ @ 57 NONAME ; int CAgnEntry::CategoryCount(void) const
+	?ChildId@TGsChildRefData@@QBEKXZ @ 58 NONAME ; unsigned long TGsChildRefData::ChildId(void) const
+	?ChildIds@CAgnEntry@@QBEABV?$RArray@VTGsChildRefData@@@@XZ @ 59 NONAME ; class RArray<class TGsChildRefData> const & CAgnEntry::ChildIds(void) const
+	?ClearAlarm@CAgnEntry@@QAEXXZ @ 60 NONAME ; void CAgnEntry::ClearAlarm(void)
+	?ClearAttribute@CAgnAttachment@@QAEXG@Z @ 61 NONAME ; void CAgnAttachment::ClearAttribute(unsigned short)
+	?ClearFlag@CAgnAttachment@@QAEXG@Z @ 62 NONAME ; void CAgnAttachment::ClearFlag(unsigned short)
+	?ClearRepeat@CAgnSimpleEntry@@QAEXXZ @ 63 NONAME ; void CAgnSimpleEntry::ClearRepeat(void)
+	?ClearTimeArray@CAgnRptDef@@AAEXAAPAV?$RArray@VTAgnCalendarTime@@@@@Z @ 64 NONAME ; void CAgnRptDef::ClearTimeArray(class RArray<class TAgnCalendarTime> * &)
+	?CloneL@AttachmentFactory@@SAPAVCAgnAttachment@@ABV2@@Z @ 65 NONAME ; class CAgnAttachment * AttachmentFactory::CloneL(class CAgnAttachment const &)
+	?CloneL@CAgnAttendee@@QBEPAV1@XZ @ 66 NONAME ; class CAgnAttendee * CAgnAttendee::CloneL(void) const
+	?CloneL@CAgnContent@@QBEPAV1@XZ @ 67 NONAME ; class CAgnContent * CAgnContent::CloneL(void) const
+	?CloneL@CAgnEntry@@QBEPAV1@XZ @ 68 NONAME ; class CAgnEntry * CAgnEntry::CloneL(void) const
+	?CloneTzRulesL@CAgnRptDef@@QAEPAVCTzRules@@XZ @ 69 NONAME ; class CTzRules * CAgnRptDef::CloneTzRulesL(void)
+	?CommonName@CAgnAttendee@@QBEABVTDesC16@@XZ @ 70 NONAME ; class TDesC16 const & CAgnAttendee::CommonName(void) const
+	?CompareL@CAgnEntry@@QBEHABV1@@Z @ 71 NONAME ; int CAgnEntry::CompareL(class CAgnEntry const &) const
+	?CompletedDateUtc@CAgnSimpleEntry@@QBEABVTTime@@XZ @ 72 NONAME ; class TTime const & CAgnSimpleEntry::CompletedDateUtc(void) const
+	?Content@CAgnContent@@QBEABVTDesC8@@XZ @ 73 NONAME ; class TDesC8 const & CAgnContent::Content(void) const
+	?ContentId@CAgnAttachmentFile@@QBEABVTDesC8@@XZ @ 74 NONAME ; class TDesC8 const & CAgnAttachmentFile::ContentId(void) const
+	?ConvertFromRepeatLocalToUtcL@CAgnRptDef@@QBE?AVTTime@@ABV2@@Z @ 75 NONAME ; class TTime CAgnRptDef::ConvertFromRepeatLocalToUtcL(class TTime const &) const
+	?ConvertFromUtcToRepeatLocalL@CAgnRptDef@@QBE?AVTTime@@ABV2@@Z @ 76 NONAME ; class TTime CAgnRptDef::ConvertFromUtcToRepeatLocalL(class TTime const &) const
+	?ConvertToLocalTimeL@AgnDateTime@@SA?AVTTime@@ABV2@@Z @ 77 NONAME ; class TTime AgnDateTime::ConvertToLocalTimeL(class TTime const &)
+	?ConvertToUtcTimeL@AgnDateTime@@SA?AVTTime@@ABV2@@Z @ 78 NONAME ; class TTime AgnDateTime::ConvertToUtcTimeL(class TTime const &)
+	?CopyFromL@CAgnEntry@@QAEXABV1@W4TCopyType@CCalEntry@@@Z @ 79 NONAME ; void CAgnEntry::CopyFromL(class CAgnEntry const &, enum CCalEntry::TCopyType)
+	?CopyL@CAgnRptDef@@QAEXABV1@@Z @ 80 NONAME ; void CAgnRptDef::CopyL(class CAgnRptDef const &)
+	?CreateL@CAgnTlsProxy@@SAPAV1@W4TAgnTlsTzRulesType@1@@Z @ 81 NONAME ; class CAgnTlsProxy * CAgnTlsProxy::CreateL(enum CAgnTlsProxy::TAgnTlsTzRulesType)
+	?CreateSimpleEntryL@CAgnSimpleEntryAllocator@@QAEPAVCAgnSimpleEntry@@W4TType@CCalEntry@@PBV2@@Z @ 82 NONAME ; class CAgnSimpleEntry * CAgnSimpleEntryAllocator::CreateSimpleEntryL(enum CCalEntry::TType, class CAgnSimpleEntry const *)
+	?DTStampUtcL@CAgnEntry@@QBEABVTTime@@XZ @ 83 NONAME ; class TTime const & CAgnEntry::DTStampUtcL(void) const
+	?Date@TAgnInstanceId@@QBEABVTAgnCalendarTime@@XZ @ 84 NONAME ; class TAgnCalendarTime const & TAgnInstanceId::Date(void) const
+	?DateTimeL@TAgnCalendarTime@@ABE?AVTTime@@W4TFormat@MAgnCalendarTimeMode@@@Z @ 85 NONAME ; class TTime TAgnCalendarTime::DateTimeL(enum MAgnCalendarTimeMode::TFormat) const
+	?Delete@CAgnSimpleEntryAllocator@@QAEXPAVCAgnSimpleEntry@@@Z @ 86 NONAME ; void CAgnSimpleEntryAllocator::Delete(class CAgnSimpleEntry *)
+	?DeleteAttachmentL@CAgnEntry@@QAEHABVCAgnAttachment@@@Z @ 87 NONAME ; int CAgnEntry::DeleteAttachmentL(class CAgnAttachment const &)
+	?DeleteAttendee@CAgnEntry@@QAEXH@Z @ 88 NONAME ; void CAgnEntry::DeleteAttendee(int)
+	?DeleteCategory@CAgnEntry@@QAEXH@Z @ 89 NONAME ; void CAgnEntry::DeleteCategory(int)
+	?Description@CAgnEntry@@QBEABVTDesC16@@XZ @ 90 NONAME ; class TDesC16 const & CAgnEntry::Description(void) const
+	?DescriptionChange@CAgnEntry@@QBE?AW4TAgnDataChange@1@XZ @ 91 NONAME ; enum CAgnEntry::TAgnDataChange CAgnEntry::DescriptionChange(void) const
+	?DescriptionIsLoaded@CAgnEntry@@QBEHXZ @ 92 NONAME ; int CAgnEntry::DescriptionIsLoaded(void) const
+	?DescriptionStreamId@CAgnEntry@@QBEABVTStreamId@@XZ @ 93 NONAME ; class TStreamId const & CAgnEntry::DescriptionStreamId(void) const
+	?Drive@CAgnAttachmentFile@@QBE?AV?$TBuf@$01@@XZ @ 94 NONAME ; class TBuf<2> CAgnAttachmentFile::Drive(void) const
+	?DurationInSecondsL@CAgnSimpleEntry@@QBE?AVTTimeIntervalSeconds@@XZ @ 95 NONAME ABSENT ; class TTimeIntervalSeconds CAgnSimpleEntry::DurationInSecondsL(void) const
+	?EndTime@CAgnSimpleEntry@@QBEABVTAgnCalendarTime@@XZ @ 96 NONAME ; class TAgnCalendarTime const & CAgnSimpleEntry::EndTime(void) const
+	?EntryId@CAgnSimpleEntry@@QBEABVTAgnEntryId@@XZ @ 97 NONAME ; class TAgnEntryId const & CAgnSimpleEntry::EntryId(void) const
+	?EntryTime@CAgnSimpleEntry@@QBEABVTAgnCalendarTime@@XZ @ 98 NONAME ; class TAgnCalendarTime const & CAgnSimpleEntry::EntryTime(void) const
+	?Exceptions@CAgnRptDef@@QBEPBV?$RArray@VTAgnCalendarTime@@@@XZ @ 99 NONAME ; class RArray<class TAgnCalendarTime> const * CAgnRptDef::Exceptions(void) const
+	?ExtendedCategoryName@CAgnCategory@@QBEABVTDesC16@@XZ @ 100 NONAME ; class TDesC16 const & CAgnCategory::ExtendedCategoryName(void) const
+	?ExternalizeL@CAgnAttachmentFile@@UBEXAAVRWriteStream@@@Z @ 101 NONAME ; void CAgnAttachmentFile::ExternalizeL(class RWriteStream &) const
+	?ExternalizeL@CAgnCategory@@QBEXAAVRWriteStream@@@Z @ 102 NONAME ; void CAgnCategory::ExternalizeL(class RWriteStream &) const
+	?ExternalizeL@CAgnContent@@QBEXAAVRWriteStream@@@Z @ 103 NONAME ; void CAgnContent::ExternalizeL(class RWriteStream &) const
+	?ExternalizeL@CAgnEntry@@QBEXAAVRWriteStream@@@Z @ 104 NONAME ; void CAgnEntry::ExternalizeL(class RWriteStream &) const
+	?ExternalizeL@CAgnRptDef@@QAEXAAVRWriteStream@@H@Z @ 105 NONAME ; void CAgnRptDef::ExternalizeL(class RWriteStream &, int)
+	?ExternalizeL@CAgnSimpleEntry@@UBEXAAVRWriteStream@@H@Z @ 106 NONAME ; void CAgnSimpleEntry::ExternalizeL(class RWriteStream &, int) const
+	?ExternalizeL@TAgnEntryId@@QBEXAAVRWriteStream@@@Z @ 107 NONAME ; void TAgnEntryId::ExternalizeL(class RWriteStream &) const
+	?ExternalizeL@TAgnFilter@@QBEXAAVRWriteStream@@@Z @ 108 NONAME ; void TAgnFilter::ExternalizeL(class RWriteStream &) const
+	?ExternalizeL@TAgnInstanceId@@QBEXAAVRWriteStream@@@Z @ 109 NONAME ; void TAgnInstanceId::ExternalizeL(class RWriteStream &) const
+	?ExternalizeToBufferL@CAgnEntry@@QBEXAAVRWriteStream@@@Z @ 110 NONAME ; void CAgnEntry::ExternalizeToBufferL(class RWriteStream &) const
+	?FetchAttendee@CAgnEntry@@QBEAAVCAgnAttendee@@H@Z @ 111 NONAME ; class CAgnAttendee & CAgnEntry::FetchAttendee(int) const
+	?FetchCategory@CAgnEntry@@QBEAAVCAgnCategory@@H@Z @ 112 NONAME ; class CAgnCategory & CAgnEntry::FetchCategory(int) const
+	?FileHandle@CAgnAttachmentFile@@QBEABVRFile@@XZ @ 113 NONAME ; class RFile const & CAgnAttachmentFile::FileHandle(void) const
+	?IsFileHandleSet@CAgnAttachmentFile@@QBEHXZ @ 114 NONAME ; int CAgnAttachmentFile::IsFileHandleSet(void) const
+	?FileName@CAgnAttachmentFile@@QBEABVTDesC16@@XZ @ 115 NONAME ; class TDesC16 const & CAgnAttachmentFile::FileName(void) const
+	?FindException@CAgnRptDef@@QBEHABVTAgnCalendarTime@@@Z @ 116 NONAME ; int CAgnRptDef::FindException(class TAgnCalendarTime const &) const
+	?FindRptUntilTimeLocalL@TAgnRpt@@QBE?AVTTime@@I@Z @ 117 NONAME ; class TTime TAgnRpt::FindRptUntilTimeLocalL(unsigned int) const
+	?FindStartDayL@TAgnYearlyByDayRpt@@QAE?AVTTime@@W4TDay@@W4TWeekInMonth@TAgnRpt@@W4TMonth@@H@Z @ 118 NONAME ; class TTime TAgnYearlyByDayRpt::FindStartDayL(enum TDay, enum TAgnRpt::TWeekInMonth, enum TMonth, int)
+	?FirstDayOfWeek@TAgnWeeklyRpt@@QBE?AW4TDay@@XZ @ 119 NONAME ; enum TDay TAgnWeeklyRpt::FirstDayOfWeek(void) const
+	?FirstInstanceL@CAgnRptDef@@QBEABVTAgnCalendarTime@@XZ @ 120 NONAME ; class TAgnCalendarTime const & CAgnRptDef::FirstInstanceL(void) const
+	?FlagsSet@CAgnAttachment@@QBEHG@Z @ 121 NONAME ; int CAgnAttachment::FlagsSet(unsigned short) const
+	?FoldAndGenerateHashL@@YAKABVTDesC16@@@Z @ 122 NONAME ; unsigned long FoldAndGenerateHashL(class TDesC16 const &)
+	?GenerateHash8L@@YAKABVTDesC8@@@Z @ 123 NONAME ; unsigned long GenerateHash8L(class TDesC8 const &)
+	?GeoValue@CAgnEntry@@QBEXAAN0@Z @ 124 NONAME ; void CAgnEntry::GeoValue(double &, double &) const
+	?GetStartDayL@TAgnYearlyByDayRpt@@QBEXAAW4TDay@@AAW4TWeekInMonth@TAgnRpt@@AAW4TMonth@@AAH@Z @ 125 NONAME ; void TAgnYearlyByDayRpt::GetStartDayL(enum TDay &, enum TAgnRpt::TWeekInMonth &, enum TMonth &, int &) const
+	?GsDataType@CAgnEntry@@QBE?AW4TGsDataType@CGsData@@XZ @ 126 NONAME ; enum CGsData::TGsDataType CAgnEntry::GsDataType(void) const
+	?Guid@CAgnEntry@@QBEABVTDesC8@@XZ @ 127 NONAME ; class TDesC8 const & CAgnEntry::Guid(void) const
+	?GuidHash@CAgnSimpleEntry@@QBEKXZ @ 128 NONAME ; unsigned long CAgnSimpleEntry::GuidHash(void) const
+	?HasAlarm@CAgnSimpleEntry@@QBEHXZ @ 129 NONAME ; int CAgnSimpleEntry::HasAlarm(void) const
+	?HasChildren@CAgnEntry@@QBEHXZ @ 130 NONAME ; int CAgnEntry::HasChildren(void) const
+	?InstanceCountL@CAgnRptDef@@QBEIXZ @ 131 NONAME ; unsigned int CAgnRptDef::InstanceCountL(void) const
+	?InternalizeFromBufferL@CAgnEntry@@QAEXAAVRReadStream@@@Z @ 132 NONAME ; void CAgnEntry::InternalizeFromBufferL(class RReadStream &)
+	?InternalizeL@CAgnAttachmentFile@@EAEXAAVRReadStream@@@Z @ 133 NONAME ; void CAgnAttachmentFile::InternalizeL(class RReadStream &)
+	?InternalizeL@CAgnCategory@@QAEXAAVRReadStream@@@Z @ 134 NONAME ; void CAgnCategory::InternalizeL(class RReadStream &)
+	?InternalizeL@CAgnContent@@QAEXAAVRReadStream@@@Z @ 135 NONAME ; void CAgnContent::InternalizeL(class RReadStream &)
+	?InternalizeL@CAgnEntry@@QAEXAAVRReadStream@@@Z @ 136 NONAME ; void CAgnEntry::InternalizeL(class RReadStream &)
+	?InternalizeL@CAgnRptDef@@QAEXAAVRReadStream@@H@Z @ 137 NONAME ; void CAgnRptDef::InternalizeL(class RReadStream &, int)
+	?InternalizeL@CAgnSimpleEntry@@UAEXAAVRReadStream@@H@Z @ 138 NONAME ; void CAgnSimpleEntry::InternalizeL(class RReadStream &, int)
+	?InternalizeL@TAgnCalendarTime@@QAEXAAVRReadStream@@@Z @ 139 NONAME ; void TAgnCalendarTime::InternalizeL(class RReadStream &)
+	?InternalizeL@TAgnEntryId@@QAEXAAVRReadStream@@@Z @ 140 NONAME ; void TAgnEntryId::InternalizeL(class RReadStream &)
+	?InternalizeL@TAgnFilter@@QAEXAAVRReadStream@@@Z @ 141 NONAME ; void TAgnFilter::InternalizeL(class RReadStream &)
+	?InternalizeL@TAgnInstanceId@@QAEXAAVRReadStream@@@Z @ 142 NONAME ; void TAgnInstanceId::InternalizeL(class RReadStream &)
+	?Interval@TAgnRpt@@QBEGXZ @ 143 NONAME ; unsigned short TAgnRpt::Interval(void) const
+	?IsAnInstanceL@CAgnRptDef@@QBEHABVTTime@@@Z @ 144 NONAME ; int CAgnRptDef::IsAnInstanceL(class TTime const &) const
+	?IsAnUnexceptedInstanceL@CAgnRptDef@@QBEHABVTTime@@@Z @ 145 NONAME ; int CAgnRptDef::IsAnUnexceptedInstanceL(class TTime const &) const
+	?IsAttributeSet@CAgnAttachment@@QBEHG@Z @ 146 NONAME ; int CAgnAttachment::IsAttributeSet(unsigned short) const
+	?IsDateSet@TAgnMonthlyByDatesRpt@@QBEHI@Z @ 147 NONAME ; int TAgnMonthlyByDatesRpt::IsDateSet(unsigned int) const
+	?IsDaySet@TAgnMonthlyByDaysRpt@@QBEHW4TDay@@W4TWeekInMonth@TAgnRpt@@@Z @ 148 NONAME ; int TAgnMonthlyByDaysRpt::IsDaySet(enum TDay, enum TAgnRpt::TWeekInMonth) const
+	?IsDaySet@TAgnWeeklyRpt@@QBEHW4TDay@@@Z @ 149 NONAME ; int TAgnWeeklyRpt::IsDaySet(enum TDay) const
+	?IsNullId@TAgnEntryId@@QBEHXZ @ 150 NONAME ; int TAgnEntryId::IsNullId(void) const
+	?IsSet@TAgnCalendarTime@@QBEHXZ @ 151 NONAME ; int TAgnCalendarTime::IsSet(void) const
+	?IsValid@TAgnFilter@@QBEHABVCAgnSimpleEntry@@@Z @ 152 NONAME ; int TAgnFilter::IsValid(class CAgnSimpleEntry const &) const
+	?IsValidAgendaTTime@AgnDateTime@@SAHABVTTime@@@Z @ 153 NONAME ; int AgnDateTime::IsValidAgendaTTime(class TTime const &)
+	?Label@CAgnAttachment@@QBEABVTDesC16@@XZ @ 154 NONAME ; class TDesC16 const & CAgnAttachment::Label(void) const
+	?LastInstanceL@CAgnRptDef@@QBEABVTAgnCalendarTime@@XZ @ 155 NONAME ; class TAgnCalendarTime const & CAgnRptDef::LastInstanceL(void) const
+	?LastModifiedDateUtc@CAgnSimpleEntry@@QBEABVTTime@@XZ @ 156 NONAME ; class TTime const & CAgnSimpleEntry::LastModifiedDateUtc(void) const
+	?LastModifiedTimeUtc@CAgnAttachmentFile@@QBEABVTTime@@XZ @ 157 NONAME ; class TTime const & CAgnAttachmentFile::LastModifiedTimeUtc(void) const
+	?LocalL@TAgnCalendarTime@@QBE?AVTTime@@XZ @ 158 NONAME ; class TTime TAgnCalendarTime::LocalL(void) const
+	?LocalUid@CAgnSimpleEntry@@QBEKXZ @ 159 NONAME ; unsigned long CAgnSimpleEntry::LocalUid(void) const
+	?Location@CAgnEntry@@QBEABVTDesC16@@XZ @ 160 NONAME ; class TDesC16 const & CAgnEntry::Location(void) const
+	?MaxDate@AgnDateTime@@SA?AVTTime@@XZ @ 161 NONAME ; class TTime AgnDateTime::MaxDate(void)
+	?Method@CAgnEntry@@QBE?AW4TMethod@CCalEntry@@XZ @ 162 NONAME ; enum CCalEntry::TMethod CAgnEntry::Method(void) const
+	?MimeType@CAgnContent@@QBEABVTDesC8@@XZ @ 163 NONAME ; class TDesC8 const & CAgnContent::MimeType(void) const
+	?MinDate@AgnDateTime@@SA?AVTTime@@XZ @ 164 NONAME ; class TTime AgnDateTime::MinDate(void)
+	?MoveStartTimeLocalL@CAgnSimpleEntry@@QAEHABVTTime@@@Z @ 165 NONAME ; int CAgnSimpleEntry::MoveStartTimeLocalL(class TTime const &)
+	?NewAttachmentL@AttachmentFactory@@SAPAVCAgnAttachment@@AAVRReadStream@@@Z @ 166 NONAME ; class CAgnAttachment * AttachmentFactory::NewAttachmentL(class RReadStream &)
+	?NewAttachmentL@AttachmentFactory@@SAPAVCAgnAttachment@@W4TDisposition@CCalContent@@@Z @ 167 NONAME ; class CAgnAttachment * AttachmentFactory::NewAttachmentL(enum CCalContent::TDisposition)
+	?NewL@CAgnAttendee@@SAPAV1@ABVTDesC16@@0@Z @ 168 NONAME ; class CAgnAttendee * CAgnAttendee::NewL(class TDesC16 const &, class TDesC16 const &)
+	?NewL@CAgnCategory@@SAPAV1@AAVRReadStream@@@Z @ 169 NONAME ; class CAgnCategory * CAgnCategory::NewL(class RReadStream &)
+	?NewL@CAgnCategory@@SAPAV1@ABV1@@Z @ 170 NONAME ; class CAgnCategory * CAgnCategory::NewL(class CAgnCategory const &)
+	?NewL@CAgnCategory@@SAPAV1@ABVTDesC16@@@Z @ 171 NONAME ; class CAgnCategory * CAgnCategory::NewL(class TDesC16 const &)
+	?NewL@CAgnCategory@@SAPAV1@W4TCalCategoryType@CCalCategory@@@Z @ 172 NONAME ; class CAgnCategory * CAgnCategory::NewL(enum CCalCategory::TCalCategoryType)
+	?NewL@CAgnEntry@@SAPAV1@AAVRReadStream@@@Z @ 173 NONAME ; class CAgnEntry * CAgnEntry::NewL(class RReadStream &)
+	?NewL@CAgnEntry@@SAPAV1@W4TType@CCalEntry@@@Z @ 174 NONAME ; class CAgnEntry * CAgnEntry::NewL(enum CCalEntry::TType)
+	?NewL@CAgnEntry@@SAPAV1@W4TType@CCalEntry@@PAVHBufC8@@W4TMethod@3@I@Z @ 175 NONAME ; class CAgnEntry * CAgnEntry::NewL(enum CCalEntry::TType, class HBufC8 *, enum CCalEntry::TMethod, unsigned int)
+	?NewL@CAgnEntry@@SAPAV1@W4TType@CCalEntry@@PAVHBufC8@@W4TMethod@3@IABVTAgnCalendarTime@@W4TRecurrenceRange@CalCommon@@@Z @ 176 NONAME ; class CAgnEntry * CAgnEntry::NewL(enum CCalEntry::TType, class HBufC8 *, enum CCalEntry::TMethod, unsigned int, class TAgnCalendarTime const &, enum CalCommon::TRecurrenceRange)
+	?NewL@CAgnRptDef@@SAPAV1@ABVCAgnSimpleEntry@@@Z @ 177 NONAME ; class CAgnRptDef * CAgnRptDef::NewL(class CAgnSimpleEntry const &)
+	?NudgeNextInstanceL@CAgnRptDef@@QBEHABVTTime@@AAV2@H@Z @ 178 NONAME ; int CAgnRptDef::NudgeNextInstanceL(class TTime const &, class TTime &, int) const
+	?NudgeNextInstanceUtcL@CAgnRptDef@@QBEHABVTTime@@AAV2@@Z @ 179 NONAME ; int CAgnRptDef::NudgeNextInstanceUtcL(class TTime const &, class TTime &) const
+	?NudgePreviousInstanceUtcL@CAgnRptDef@@QBEHABVTTime@@AAV2@@Z @ 180 NONAME ; int CAgnRptDef::NudgePreviousInstanceUtcL(class TTime const &, class TTime &) const
+	?NudgePreviousUnexceptedInstanceL@CAgnRptDef@@QBEHABVTTime@@AAV2@@Z @ 181 NONAME ; int CAgnRptDef::NudgePreviousUnexceptedInstanceL(class TTime const &, class TTime &) const
+	?Organizer@CAgnEntry@@QBEPAVCAgnAttendee@@XZ @ 182 NONAME ; class CAgnAttendee * CAgnEntry::Organizer(void) const
+	?Panic@@YAXW4TAgmPanic@@@Z @ 183 NONAME ; void Panic(enum TAgmPanic)
+	?ParentId@CAgnEntry@@QBEKXZ @ 184 NONAME ; unsigned long CAgnEntry::ParentId(void) const
+	?PartialId@TAgnEntryId@@QBEIXZ @ 185 NONAME ; unsigned int TAgnEntryId::PartialId(void) const
+	?PhoneOwner@CAgnEntry@@QBEPAVCAgnAttendee@@XZ @ 186 NONAME ; class CAgnAttendee * CAgnEntry::PhoneOwner(void) const
+	?Priority@CAgnSimpleEntry@@QBEEXZ @ 187 NONAME ; unsigned char CAgnSimpleEntry::Priority(void) const
+	?PruneExceptionsL@CAgnRptDef@@QAEXXZ @ 188 NONAME ; void CAgnRptDef::PruneExceptionsL(void)
+	?PruneRDatesL@CAgnEntry@@QAEXABVTAgnCalendarTime@@W4TRecurrenceRange@CalCommon@@@Z @ 189 NONAME ; void CAgnEntry::PruneRDatesL(class TAgnCalendarTime const &, enum CalCommon::TRecurrenceRange)
+	?RRule@CAgnRptDef@@QBEPBVTAgnRpt@@XZ @ 190 NONAME ; class TAgnRpt const * CAgnRptDef::RRule(void) const
+	?RecurrenceId@CAgnEntry@@QBE?AVTAgnCalendarTime@@XZ @ 191 NONAME ; class TAgnCalendarTime CAgnEntry::RecurrenceId(void) const
+	?RecurrenceId@TGsChildRefData@@QBEABVTAgnCalendarTime@@XZ @ 192 NONAME ; class TAgnCalendarTime const & TGsChildRefData::RecurrenceId(void) const
+	?RecurrenceRange@CAgnEntry@@QBE?AW4TRecurrenceRange@CalCommon@@XZ @ 193 NONAME ; enum CalCommon::TRecurrenceRange CAgnEntry::RecurrenceRange(void) const
+	?Release@CAgnTlsProxy@@SAXPAX@Z @ 194 NONAME ; void CAgnTlsProxy::Release(void *)
+	?RemoveAllExceptions@CAgnRptDef@@QAEXXZ @ 195 NONAME ; void CAgnRptDef::RemoveAllExceptions(void)
+	?RemoveAllSporadicDates@CAgnRptDef@@QAEXXZ @ 196 NONAME ; void CAgnRptDef::RemoveAllSporadicDates(void)
+	?RemoveChildId@CAgnEntry@@QAEXK@Z @ 197 NONAME ; void CAgnEntry::RemoveChildId(unsigned long)
+	?ReplicationStatus@CAgnEntry@@QBE?AW4TReplicationStatus@CCalEntry@@XZ @ 198 NONAME ; enum CCalEntry::TReplicationStatus CAgnEntry::ReplicationStatus(void) const
+	?ResetToMidnight@AgnDateTime@@SA?AVTTime@@ABV2@@Z @ 199 NONAME ; class TTime AgnDateTime::ResetToMidnight(class TTime const &)
+	?ResponseRequested@CAgnAttendee@@QBEHXZ @ 200 NONAME ; int CAgnAttendee::ResponseRequested(void) const
+	?RptDef@CAgnSimpleEntry@@QAEPAVCAgnRptDef@@XZ @ 201 NONAME ; class CAgnRptDef * CAgnSimpleEntry::RptDef(void)
+	?RptDef@CAgnSimpleEntry@@QBEPBVCAgnRptDef@@XZ @ 202 NONAME ; class CAgnRptDef const * CAgnSimpleEntry::RptDef(void) const
+	?SentBy@CAgnAttendee@@QBEABVTDesC16@@XZ @ 203 NONAME ; class TDesC16 const & CAgnAttendee::SentBy(void) const
+	?SequenceNumber@CAgnEntry@@QBEHXZ @ 204 NONAME ; int CAgnEntry::SequenceNumber(void) const
+	?SetAlarmAction@CAgnEntry@@QAEXPAVCAgnContent@@@Z @ 205 NONAME ; void CAgnEntry::SetAlarmAction(class CAgnContent *)
+	?SetAlarmActionStreamId@CAgnEntry@@QAEXABVTStreamId@@@Z @ 206 NONAME ; void CAgnEntry::SetAlarmActionStreamId(class TStreamId const &)
+	?SetAlarmOffset@CAgnSimpleEntry@@QAEXABVTTimeIntervalMinutes@@@Z @ 207 NONAME ; void CAgnSimpleEntry::SetAlarmOffset(class TTimeIntervalMinutes const &)
+	?SetAlarmSoundNameL@CAgnEntry@@QAEXABVTDesC16@@@Z @ 208 NONAME ; void CAgnEntry::SetAlarmSoundNameL(class TDesC16 const &)
+	?SetAttribute@CAgnAttachment@@QAEXG@Z @ 209 NONAME ; void CAgnAttachment::SetAttribute(unsigned short)
+	?SetBusyStatusL@CAgnEntry@@QAEXW4TTransp@CCalEntry@@@Z @ 210 NONAME ; void CAgnEntry::SetBusyStatusL(enum CCalEntry::TTransp)
+	?SetCalRoleL@CAgnAttendee@@QAEXW4TCalRole@CCalAttendee@@@Z @ 211 NONAME ; void CAgnAttendee::SetCalRoleL(enum CCalAttendee::TCalRole)
+	?SetCalStatus@CAgnAttendee@@QAEXW4TCalStatus@CCalAttendee@@@Z @ 212 NONAME ; void CAgnAttendee::SetCalStatus(enum CCalAttendee::TCalStatus)
+	?SetCommonNameL@CAgnAttendee@@QAEXABVTDesC16@@@Z @ 213 NONAME ; void CAgnAttendee::SetCommonNameL(class TDesC16 const &)
+	?SetCompletedDateUtcL@CAgnSimpleEntry@@QAEXABVTTime@@@Z @ 214 NONAME ; void CAgnSimpleEntry::SetCompletedDateUtcL(class TTime const &)
+	?SetContentIdL@CAgnAttachmentFile@@QAEXABVTDesC8@@@Z @ 215 NONAME ; void CAgnAttachmentFile::SetContentIdL(class TDesC8 const &)
+	?SetContentL@CAgnContent@@QAEXPAVTDesC8@@0W4TDisposition@CCalContent@@@Z @ 216 NONAME ; void CAgnContent::SetContentL(class TDesC8 *, class TDesC8 *, enum CCalContent::TDisposition)
+	?SetDTStampUtcL@CAgnEntry@@QAEXABVTTime@@@Z @ 217 NONAME ; void CAgnEntry::SetDTStampUtcL(class TTime const &)
+	?SetDate@TAgnInstanceId@@QAEXABVTAgnCalendarTime@@@Z @ 218 NONAME ; void TAgnInstanceId::SetDate(class TAgnCalendarTime const &)
+	?SetDate@TAgnMonthlyByDatesRpt@@QAEXI@Z @ 219 NONAME ; void TAgnMonthlyByDatesRpt::SetDate(unsigned int)
+	?SetDay@TAgnMonthlyByDaysRpt@@QAEXW4TDay@@W4TWeekInMonth@TAgnRpt@@@Z @ 220 NONAME ; void TAgnMonthlyByDaysRpt::SetDay(enum TDay, enum TAgnRpt::TWeekInMonth)
+	?SetDay@TAgnWeeklyRpt@@QAEXW4TDay@@@Z @ 221 NONAME ; void TAgnWeeklyRpt::SetDay(enum TDay)
+	?SetDescription@CAgnEntry@@QAEXPAVHBufC16@@@Z @ 222 NONAME ; void CAgnEntry::SetDescription(class HBufC16 *)
+	?SetDescriptionStreamId@CAgnEntry@@QAEXABVTStreamId@@@Z @ 223 NONAME ; void CAgnEntry::SetDescriptionStreamId(class TStreamId const &)
+	?SetDriveL@CAgnAttachmentFile@@QAEXABVTDesC16@@@Z @ 224 NONAME ; void CAgnAttachmentFile::SetDriveL(class TDesC16 const &)
+	?SetEntryId@CAgnSimpleEntry@@QAEXABVTAgnEntryId@@@Z @ 225 NONAME ; void CAgnSimpleEntry::SetEntryId(class TAgnEntryId const &)
+	?SetEntryId@TAgnInstanceId@@QAEXABVTAgnEntryId@@@Z @ 226 NONAME ; void TAgnInstanceId::SetEntryId(class TAgnEntryId const &)
+	?CopyFileHandle@CAgnAttachmentFile@@QAEXABVRFile@@@Z @ 227 NONAME ; void CAgnAttachmentFile::CopyFileHandle(class RFile const &)
+	?SetFileNameL@CAgnAttachmentFile@@QAEXABVTDesC16@@@Z @ 228 NONAME ; void CAgnAttachmentFile::SetFileNameL(class TDesC16 const &)
+	?SetFirstDayOfWeek@TAgnWeeklyRpt@@QAEXW4TDay@@@Z @ 229 NONAME ; void TAgnWeeklyRpt::SetFirstDayOfWeek(enum TDay)
+	?SetFlag@CAgnAttachment@@QAEXG@Z @ 230 NONAME ; void CAgnAttachment::SetFlag(unsigned short)
+	?SetFloatingL@TAgnCalendarTime@@QAEXABVTTime@@@Z @ 231 NONAME ; void TAgnCalendarTime::SetFloatingL(class TTime const &)
+	?SetGeoValueL@CAgnEntry@@QAEXABN0@Z @ 232 NONAME ; void CAgnEntry::SetGeoValueL(double const &, double const &)
+	?SetGuid@CAgnEntry@@QAEXPAVHBufC8@@@Z @ 233 NONAME ; void CAgnEntry::SetGuid(class HBufC8 *)
+	?SetGuidHash@CAgnSimpleEntry@@QAEXK@Z @ 234 NONAME ; void CAgnSimpleEntry::SetGuidHash(unsigned long)
+	?SetIncomplete@CAgnSimpleEntry@@QAEXXZ @ 235 NONAME ; void CAgnSimpleEntry::SetIncomplete(void)
+	?SetInterval@CAgnRptDef@@QAEXG@Z @ 236 NONAME ; void CAgnRptDef::SetInterval(unsigned short)
+	?SetInterval@TAgnRpt@@QAEXG@Z @ 237 NONAME ; void TAgnRpt::SetInterval(unsigned short)
+	?SetLabelL@CAgnAttachment@@QAEXABVTDesC16@@@Z @ 238 NONAME ; void CAgnAttachment::SetLabelL(class TDesC16 const &)
+	?SetLastModifiedDate@CAgnSimpleEntry@@QAEXXZ @ 239 NONAME ; void CAgnSimpleEntry::SetLastModifiedDate(void)
+	?SetLastModifiedDateUtc@CAgnSimpleEntry@@QAEXABVTTime@@@Z @ 240 NONAME ; void CAgnSimpleEntry::SetLastModifiedDateUtc(class TTime const &)
+	?SetLastModifiedTimeUtc@CAgnAttachmentFile@@QAEXABVTTime@@@Z @ 241 NONAME ; void CAgnAttachmentFile::SetLastModifiedTimeUtc(class TTime const &)
+	?SetLocalL@TAgnCalendarTime@@QAEXABVTTime@@@Z @ 242 NONAME ; void TAgnCalendarTime::SetLocalL(class TTime const &)
+	?SetLocalUid@CAgnSimpleEntry@@QAEXK@Z @ 243 NONAME ; void CAgnSimpleEntry::SetLocalUid(unsigned long)
+	?SetLocationL@CAgnEntry@@QAEXABVTDesC16@@@Z @ 244 NONAME ; void CAgnEntry::SetLocationL(class TDesC16 const &)
+	?SetMethod@CAgnEntry@@QAEXW4TMethod@CCalEntry@@@Z @ 245 NONAME ; void CAgnEntry::SetMethod(enum CCalEntry::TMethod)
+	?SetMimeTypeL@CAgnAttachment@@QAEXABVTDesC8@@@Z @ 246 NONAME ; void CAgnAttachment::SetMimeTypeL(class TDesC8 const &)
+	?SetOrganizerL@CAgnEntry@@QAEXPAVCAgnAttendee@@@Z @ 247 NONAME ; void CAgnEntry::SetOrganizerL(class CAgnAttendee *)
+	?SetParentId@CAgnEntry@@QAEXK@Z @ 248 NONAME ; void CAgnEntry::SetParentId(unsigned long)
+	?SetPhoneOwnerL@CAgnEntry@@QAEXPAVCAgnAttendee@@@Z @ 249 NONAME ; void CAgnEntry::SetPhoneOwnerL(class CAgnAttendee *)
+	?SetPriority@CAgnSimpleEntry@@QAEXE@Z @ 250 NONAME ; void CAgnSimpleEntry::SetPriority(unsigned char)
+	?SetRRuleL@CAgnRptDef@@QAEXABVTAgnRpt@@@Z @ 251 NONAME ; void CAgnRptDef::SetRRuleL(class TAgnRpt const &)
+	?SetRecurrenceIdFromParentL@CAgnEntry@@QAEXABV1@@Z @ 252 NONAME ; void CAgnEntry::SetRecurrenceIdFromParentL(class CAgnEntry const &)
+	?SetRecurrenceRangeL@CAgnEntry@@QAEXW4TRecurrenceRange@CalCommon@@@Z @ 253 NONAME ; void CAgnEntry::SetRecurrenceRangeL(enum CalCommon::TRecurrenceRange)
+	?SetReplicationStatusL@CAgnEntry@@QAEXW4TReplicationStatus@CCalEntry@@@Z @ 254 NONAME ; void CAgnEntry::SetReplicationStatusL(enum CCalEntry::TReplicationStatus)
+	?SetResponseRequested@CAgnAttendee@@QAEXH@Z @ 255 NONAME ; void CAgnAttendee::SetResponseRequested(int)
+	?SetRole@CAgnAttendee@@QAEXW4TAgnRole@1@@Z @ 256 NONAME ; void CAgnAttendee::SetRole(enum CAgnAttendee::TAgnRole)
+	?SetRptDefL@CAgnSimpleEntry@@QAEXABVCAgnRptDef@@@Z @ 257 NONAME ; void CAgnSimpleEntry::SetRptDefL(class CAgnRptDef const &)
+	?SetSequenceNumber@CAgnEntry@@QAEXH@Z @ 258 NONAME ; void CAgnEntry::SetSequenceNumber(int)
+	?SetSize@CAgnAttachment@@QAEXH@Z @ 259 NONAME ; void CAgnAttachment::SetSize(int)
+	?SetStartAndEndTimeL@CAgnSimpleEntry@@QAEXABVTAgnCalendarTime@@0@Z @ 260 NONAME ; void CAgnSimpleEntry::SetStartAndEndTimeL(class TAgnCalendarTime const &, class TAgnCalendarTime const &)
+	?SetStatus@CAgnSimpleEntry@@QAEXW4TStatus@CCalEntry@@@Z @ 261 NONAME ; void CAgnSimpleEntry::SetStatus(enum CCalEntry::TStatus)
+	?SetSummary@CAgnEntry@@QAEXPAVHBufC16@@@Z @ 262 NONAME ; void CAgnEntry::SetSummary(class HBufC16 *)
+	?SetSummaryStreamId@CAgnEntry@@QAEXABVTStreamId@@@Z @ 263 NONAME ; void CAgnEntry::SetSummaryStreamId(class TStreamId const &)
+	?SetTimeZoneL@CAgnRptDef@@QAEXABVCTzRules@@@Z @ 264 NONAME ; void CAgnRptDef::SetTimeZoneL(class CTzRules const &)
+	?SetTimeZoneL@CAgnRptDef@@QAEXXZ @ 265 NONAME ; void CAgnRptDef::SetTimeZoneL(void)
+	?SetUid@CAgnAttachment@@QAEXK@Z @ 266 NONAME ; void CAgnAttachment::SetUid(unsigned long)
+	?SetUntilTime@CAgnRptDef@@QAEXABVTAgnCalendarTime@@@Z @ 267 NONAME ; void CAgnRptDef::SetUntilTime(class TAgnCalendarTime const &)
+	?SetUtcL@TAgnCalendarTime@@QAEXABVTTime@@@Z @ 268 NONAME ; void TAgnCalendarTime::SetUtcL(class TTime const &)
+	?SetVCalExpect@CAgnAttendee@@QAEXW4TVCalExpect@CCalAttendee@@@Z @ 269 NONAME ; void CAgnAttendee::SetVCalExpect(enum CCalAttendee::TVCalExpect)
+	?SetValue@CAgnAttachment@@QAEXPAVTDesC8@@@Z @ 270 NONAME ; void CAgnAttachment::SetValue(class TDesC8 *)
+	?Size@CAgnAttachment@@QBEHXZ @ 271 NONAME ; int CAgnAttachment::Size(void) const
+	?SporadicDateList@CAgnRptDef@@QBEPBV?$RArray@VTAgnCalendarTime@@@@XZ @ 272 NONAME ; class RArray<class TAgnCalendarTime> const * CAgnRptDef::SporadicDateList(void) const
+	?StartTime@CAgnSimpleEntry@@QBEABVTAgnCalendarTime@@XZ @ 273 NONAME ; class TAgnCalendarTime const & CAgnSimpleEntry::StartTime(void) const
+	?Status@CAgnSimpleEntry@@QBE?AW4TStatus@CCalEntry@@XZ @ 274 NONAME ; enum CCalEntry::TStatus CAgnSimpleEntry::Status(void) const
+	?Summary@CAgnEntry@@QBEABVTDesC16@@XZ @ 275 NONAME ; class TDesC16 const & CAgnEntry::Summary(void) const
+	?SummaryChange@CAgnEntry@@QBE?AW4TAgnDataChange@1@XZ @ 276 NONAME ; enum CAgnEntry::TAgnDataChange CAgnEntry::SummaryChange(void) const
+	?SummaryIsLoaded@CAgnEntry@@QBEHXZ @ 277 NONAME ; int CAgnEntry::SummaryIsLoaded(void) const
+	?SummaryStreamId@CAgnEntry@@QBEABVTStreamId@@XZ @ 278 NONAME ; class TStreamId const & CAgnEntry::SummaryStreamId(void) const
+	?TimeMode@CAgnSimpleEntry@@QBE?AW4TTimeMode@MAgnCalendarTimeMode@@XZ @ 279 NONAME ; enum MAgnCalendarTimeMode::TTimeMode CAgnSimpleEntry::TimeMode(void) const
+	?TimeMode@TAgnCalendarTime@@QBE?AW4TTimeMode@MAgnCalendarTimeMode@@XZ @ 280 NONAME ; enum MAgnCalendarTimeMode::TTimeMode TAgnCalendarTime::TimeMode(void) const
+	?Type@CAgnContent@@QBE?AW4TDisposition@CCalContent@@XZ @ 281 NONAME ; enum CCalContent::TDisposition CAgnContent::Type(void) const
+	?Type@CAgnRptDef@@QBE?AW4TType@TAgnRpt@@XZ @ 282 NONAME ; enum TAgnRpt::TType CAgnRptDef::Type(void) const
+	?Type@CAgnSimpleEntry@@QBE?AW4TType@CCalEntry@@XZ @ 283 NONAME ; enum CCalEntry::TType CAgnSimpleEntry::Type(void) const
+	?TzServer@CAgnTlsProxy@@QAEAAVRTz@@XZ @ 284 NONAME ; class RTz & CAgnTlsProxy::TzServer(void)
+	?Uid@CAgnAttachment@@QBEKXZ @ 285 NONAME ; unsigned long CAgnAttachment::Uid(void) const
+	?UntilTimeL@TAgnRpt@@QBEABVTAgnCalendarTime@@XZ @ 286 NONAME ; class TAgnCalendarTime const & TAgnRpt::UntilTimeL(void) const
+	?UpdateRecurrenceIdL@CAgnEntry@@QAEXABVTAgnCalendarTime@@@Z @ 287 NONAME ; void CAgnEntry::UpdateRecurrenceIdL(class TAgnCalendarTime const &)
+	?UtcL@TAgnCalendarTime@@QBE?AVTTime@@XZ @ 288 NONAME ; class TTime TAgnCalendarTime::UtcL(void) const
+	?VCalExpect@CAgnAttendee@@QBE?AW4TVCalExpect@CCalAttendee@@XZ @ 289 NONAME ; enum CCalAttendee::TVCalExpect CAgnAttendee::VCalExpect(void) const
+	?ValidToTimeLocalL@CAgnSimpleEntry@@QBE?AVTTime@@XZ @ 290 NONAME ; class TTime CAgnSimpleEntry::ValidToTimeLocalL(void) const
+	?VerifyBeforeStoreL@CAgnEntry@@QAEXXZ @ 291 NONAME ; void CAgnEntry::VerifyBeforeStoreL(void)
+	?DebugLog@AgmDebug@@SAXPBDZZ @ 292 NONAME ; void AgmDebug::DebugLog(char const *, ...)
+	?DebugLogAlarmL@AgmDebug@@SAXABUTAgnAlarmEntry@@@Z @ 293 NONAME ; void AgmDebug::DebugLogAlarmL(struct TAgnAlarmEntry const &)
+	?DebugLogEntryL@AgmDebug@@SAXAAVCAgnEntry@@W4TAgmEntryDumpLevel@@@Z @ 294 NONAME ; void AgmDebug::DebugLogEntryL(class CAgnEntry &, enum TAgmEntryDumpLevel)
+	?DebugLogIPCL@AgmDebug@@SAXHIH@Z @ 295 NONAME ; void AgmDebug::DebugLogIPCL(int, unsigned int, int)
+	?DebugLogTimeStampL@AgmDebug@@SAXPBDZZ @ 296 NONAME ; void AgmDebug::DebugLogTimeStampL(char const *, ...)
+	?TTimeStrL@AgmDebug@@SAXABVTTime@@AAVTDes16@@@Z @ 297 NONAME ; void AgmDebug::TTimeStrL(class TTime const &, class TDes16 &)
+	?SetHasFileHandle@CAgnAttachmentFile@@QAEXH@Z @ 298 NONAME ; void CAgnAttachmentFile::SetHasFileHandle(int)
+	?SetUserInt@CAgnEntry@@QAEXK@Z @ 299 NONAME ; void CAgnEntry::SetUserInt(unsigned long)
+	?UserInt@CAgnEntry@@QBEKXZ @ 300 NONAME ; unsigned long CAgnEntry::UserInt(void) const
+	?ExternalizeGuidHashL@CAgnSimpleEntry@@QBEXAAVRWriteStream@@@Z @ 301 NONAME ; void CAgnSimpleEntry::ExternalizeGuidHashL(class RWriteStream &) const
+	?InternalizeGuidHashL@CAgnSimpleEntry@@QAEXAAVRReadStream@@@Z @ 302 NONAME ; void CAgnSimpleEntry::InternalizeGuidHashL(class RReadStream &)
+	?Count@TAgnRpt@@QBEHXZ @ 303 NONAME ; int TAgnRpt::Count(void) const
+	?SetCount@TAgnRpt@@QAEXH@Z @ 304 NONAME ; void TAgnRpt::SetCount(int)
+	?DurationPlusL@CAgnSimpleEntry@@QBE?AVTTime@@ABV2@@Z @ 305 NONAME ; class TTime CAgnSimpleEntry::DurationPlusL(class TTime const &) const
+	?__dbgClearTzClientCacheL@CAgnTlsProxy@@QAEXH@Z @ 306 NONAME ; void CAgnTlsProxy::__dbgClearTzClientCacheL(int)
+	?ExternalizeL@TFindInstanceParams@@QBEXAAVRWriteStream@@@Z @ 307 NONAME ; void TFindInstanceParams::ExternalizeL(class RWriteStream &) const
+	?InternalizeL@TFindInstanceParams@@QAEXAAVRReadStream@@@Z @ 308 NONAME ; void TFindInstanceParams::InternalizeL(class RReadStream &)
+	?IsValidTime@TAgnCalendarTime@@QBEHXZ @ 309 NONAME ; int TAgnCalendarTime::IsValidTime(void) const
+	?ValidFromTimeLocalL@CAgnSimpleEntry@@QBE?AVTTime@@XZ @ 310 NONAME ; class TTime CAgnSimpleEntry::ValidFromTimeLocalL(void) const
+	?DurationMinusL@CAgnSimpleEntry@@QBE?AVTTime@@ABV2@@Z @ 311 NONAME ; class TTime CAgnSimpleEntry::DurationMinusL(class TTime const &) const
+	?AddSystemTimeObserverL@CAgnTlsProxy@@QAEXPAVMAgnTzChangeObserver@@@Z @ 312 NONAME ; void CAgnTlsProxy::AddSystemTimeObserverL(class MAgnTzChangeObserver *)
+	?HasValidTzZoneStreamId@CAgnTzRules@@QBEHXZ @ 313 NONAME ; int CAgnTzRules::HasValidTzZoneStreamId(void) const
+	?RemoveSystemTimeObserver@CAgnTlsProxy@@QAEXPAVMAgnTzChangeObserver@@@Z @ 314 NONAME ; void CAgnTlsProxy::RemoveSystemTimeObserver(class MAgnTzChangeObserver *)
+	?SetSystemTzRule@CAgnTzRules@@QAEXH@Z @ 315 NONAME ; void CAgnTzRules::SetSystemTzRule(int)
+	?SetTzRules@CAgnTzRules@@QAEXPAVCTzRules@@@Z @ 316 NONAME ; void CAgnTzRules::SetTzRules(class CTzRules *)
+	?SetTzZoneStreamId@CAgnTzRules@@QAEXVTStreamId@@@Z @ 317 NONAME ; void CAgnTzRules::SetTzZoneStreamId(class TStreamId)
+	?SetUseCurrentSystemTzRules@CAgnTzRules@@QAEXH@Z @ 318 NONAME ; void CAgnTzRules::SetUseCurrentSystemTzRules(int)
+	?SystemTzRule@CAgnTzRules@@QBEHXZ @ 319 NONAME ; int CAgnTzRules::SystemTzRule(void) const
+	?TzRules@CAgnTzRules@@QBEPBVCTzRules@@XZ @ 320 NONAME ; class CTzRules const * CAgnTzRules::TzRules(void) const
+	?TzZoneStreamId@CAgnTzRules@@QBE?AVTStreamId@@XZ @ 321 NONAME ; class TStreamId CAgnTzRules::TzZoneStreamId(void) const
+	?UseCurrentSystemTzRules@CAgnTzRules@@QBEHXZ @ 322 NONAME ; int CAgnTzRules::UseCurrentSystemTzRules(void) const
+	?AgnTzRules@CAgnRptDef@@QBEPAVCAgnTzRules@@XZ @ 323 NONAME ; class CAgnTzRules * CAgnRptDef::AgnTzRules(void) const
+	?GetCurrentSystemTzRulesL@CAgnTlsProxy@@QAEPAVCTzRules@@XZ @ 324 NONAME ; class CTzRules * CAgnTlsProxy::GetCurrentSystemTzRulesL(void)
+	??1CAgnSortCriteria@@UAE@XZ @ 325 NONAME ; CAgnSortCriteria::~CAgnSortCriteria(void)
+	?AtL@CAgnSortCriteria@@QBEABVTAgnSortCriterion@@H@Z @ 326 NONAME ; class TAgnSortCriterion const & CAgnSortCriteria::AtL(int) const
+	?NewL@CAgnSortCriteria@@SAPAV1@XZ @ 327 NONAME ; class CAgnSortCriteria * CAgnSortCriteria::NewL(void)
+	?InternalizeL@CAgnSortCriteria@@QAEXAAVRReadStream@@@Z @ 328 NONAME ; void CAgnSortCriteria::InternalizeL(class RReadStream &)
+	?AppendCriterionL@CAgnSortCriteria@@QAEHW4TCalSortAttribute@CalCommon@@W4TCalSortDirection@3@@Z @ 329 NONAME ; int CAgnSortCriteria::AppendCriterionL(enum CalCommon::TCalSortAttribute, enum CalCommon::TCalSortDirection)
+	?EntryTypeOrder@CAgnSortCriteria@@QBEABV?$RArray@W4TType@CCalEntry@@@@XZ @ 330 NONAME ; class RArray<enum CCalEntry::TType> const & CAgnSortCriteria::EntryTypeOrder(void) const
+	?ExternalizeL@CAgnSortCriteria@@QBEXAAVRWriteStream@@@Z @ 331 NONAME ; void CAgnSortCriteria::ExternalizeL(class RWriteStream &) const
+	?SetEntryTypeOrderL@CAgnSortCriteria@@QAEXABV?$RArray@W4TType@CCalEntry@@@@@Z @ 332 NONAME ; void CAgnSortCriteria::SetEntryTypeOrderL(class RArray<enum CCalEntry::TType> const &)
+	?Count@CAgnSortCriteria@@QBEHXZ @ 333 NONAME ; int CAgnSortCriteria::Count(void) const
+	?UserInt@CAgnSimpleEntry@@QBEKXZ @ 334 NONAME ; unsigned long CAgnSimpleEntry::UserInt(void) const
+	?SetUserInt@CAgnSimpleEntry@@QAEXK@Z @ 335 NONAME ; void CAgnSimpleEntry::SetUserInt(unsigned long)
+	?CollectionId@CAgnSimpleEntry@@QBEEXZ @ 336 NONAME ; unsigned char CAgnSimpleEntry::CollectionId(void) const
+	?SetCollectionId@CAgnSimpleEntry@@QAEXE@Z @ 337 NONAME ; void CAgnSimpleEntry::SetCollectionId(unsigned char)
+	?ExternalizeL@TAgnInstance@@QBEXAAVRWriteStream@@@Z @ 338 NONAME ; void TAgnInstance::ExternalizeL(class RWriteStream &) const
+	?InternalizeL@TAgnInstance@@QAEXAAVRReadStream@@@Z @ 339 NONAME ; void TAgnInstance::InternalizeL(class RReadStream &)
+	?DescriptionL@CAgnCalendarInfo@@QBEABVTDesC16@@XZ @ 340 NONAME ; class TDesC16 const & CAgnCalendarInfo::DescriptionL(void) const
+	?SetFileNameL@CAgnCalendarInfo@@QAEXABVTDesC16@@@Z @ 341 NONAME ; void CAgnCalendarInfo::SetFileNameL(class TDesC16 const &)
+	?SetEnabled@CAgnCalendarInfo@@QAEXH@Z @ 342 NONAME ; void CAgnCalendarInfo::SetEnabled(int)
+	?SetColor@CAgnCalendarInfo@@QAEXVTRgb@@@Z @ 343 NONAME ; void CAgnCalendarInfo::SetColor(class TRgb)
+	?NewL@CAgnCalendarInfo@@SAPAV1@XZ @ 344 NONAME ; class CAgnCalendarInfo * CAgnCalendarInfo::NewL(void)
+	?FileNameL@CAgnCalendarInfo@@QBEABVTDesC16@@XZ @ 345 NONAME ; class TDesC16 const & CAgnCalendarInfo::FileNameL(void) const
+	?FileExternalizeL@CAgnCalendarInfo@@QBEXAAVRWriteStream@@@Z @ 346 NONAME ; void CAgnCalendarInfo::FileExternalizeL(class RWriteStream &) const
+	?SetDescriptionL@CAgnCalendarInfo@@QAEXABVTDesC16@@@Z @ 347 NONAME ; void CAgnCalendarInfo::SetDescriptionL(class TDesC16 const &)
+	?Color@CAgnCalendarInfo@@QBE?AVTRgb@@XZ @ 348 NONAME ; class TRgb CAgnCalendarInfo::Color(void) const
+	?IsValid@CAgnCalendarInfo@@QBEHXZ @ 349 NONAME ; int CAgnCalendarInfo::IsValid(void) const
+	?NameL@CAgnCalendarInfo@@QBEABVTDesC16@@XZ @ 350 NONAME ; class TDesC16 const & CAgnCalendarInfo::NameL(void) const
+	?SetIsValid@CAgnCalendarInfo@@QAEXH@Z @ 351 NONAME ; void CAgnCalendarInfo::SetIsValid(int)
+	?SetNameL@CAgnCalendarInfo@@QAEXABVTDesC16@@@Z @ 352 NONAME ; void CAgnCalendarInfo::SetNameL(class TDesC16 const &)
+	?NewL@CAgnCalendarInfo@@SAPAV1@AAVRReadStream@@@Z @ 353 NONAME ABSENT ; class CAgnCalendarInfo * CAgnCalendarInfo::NewL(class RReadStream &)
+	?Enabled@CAgnCalendarInfo@@QBEHXZ @ 354 NONAME ; int CAgnCalendarInfo::Enabled(void) const
+	??1CAgnCalendarInfo@@UAE@XZ @ 355 NONAME ; CAgnCalendarInfo::~CAgnCalendarInfo(void)
+	?FileInternalizeL@CAgnCalendarInfo@@QAEXAAVRReadStream@@@Z @ 356 NONAME ; void CAgnCalendarInfo::FileInternalizeL(class RReadStream &)
+	??1CAgnFileChangeInfo@@UAE@XZ @ 357 NONAME ; CAgnFileChangeInfo::~CAgnFileChangeInfo(void)
+	?ChangeType@CAgnFileChangeInfo@@QBE?AW4TChangeType@MCalFileChangeObserver@@XZ @ 358 NONAME ; enum MCalFileChangeObserver::TChangeType CAgnFileChangeInfo::ChangeType(void) const
+	?NewL@CAgnFileChangeInfo@@SAPAV1@PAVHBufC16@@W4TChangeType@MCalFileChangeObserver@@@Z @ 359 NONAME ; class CAgnFileChangeInfo * CAgnFileChangeInfo::NewL(class HBufC16 *, enum MCalFileChangeObserver::TChangeType)
+	?NewL@CAgnFileChangeInfo@@SAPAV1@AAVRReadStream@@@Z @ 360 NONAME ; class CAgnFileChangeInfo * CAgnFileChangeInfo::NewL(class RReadStream &)
+	?ExternalizeL@CAgnFileChangeInfo@@QBEXAAVRWriteStream@@@Z @ 361 NONAME ; void CAgnFileChangeInfo::ExternalizeL(class RWriteStream &) const
+	?InternalizeL@CAgnFileChangeInfo@@QAEXAAVRReadStream@@@Z @ 362 NONAME ; void CAgnFileChangeInfo::InternalizeL(class RReadStream &)
+	?FileNameL@CAgnFileChangeInfo@@QBEABVTDesC16@@XZ @ 363 NONAME ; class TDesC16 const & CAgnFileChangeInfo::FileNameL(void) const
+	?StreamId@CAgnCalendarInfoProperty@@QBE?AVTStreamId@@XZ @ 364 NONAME ; class TStreamId CAgnCalendarInfoProperty::StreamId(void) const
+	?PropertyValueL@CAgnCalendarInfo@@UBEABVTDesC8@@ABV2@@Z @ 365 NONAME ; class TDesC8 const & CAgnCalendarInfo::PropertyValueL(class TDesC8 const &) const
+	?IpcInternalizeL@CAgnCalendarInfo@@QAEXAAVRReadStream@@@Z @ 366 NONAME ; void CAgnCalendarInfo::IpcInternalizeL(class RReadStream &)
+	?State@CAgnCalendarInfoProperty@@QBE?AW4TState@1@XZ @ 367 NONAME ; enum CAgnCalendarInfoProperty::TState CAgnCalendarInfoProperty::State(void) const
+	?PropertyKeysL@CAgnCalendarInfo@@QBEPAVCDesC8Array@@XZ @ 368 NONAME ; class CDesC8Array * CAgnCalendarInfo::PropertyKeysL(void) const
+	?ConstructL@CAgnCalendarInfo@@IAEXXZ @ 369 NONAME ; void CAgnCalendarInfo::ConstructL(void)
+	?SetValue@CAgnCalendarInfoProperty@@QAEXPAVHBufC8@@@Z @ 370 NONAME ; void CAgnCalendarInfoProperty::SetValue(class HBufC8 *)
+	?SetPropertyL@CAgnCalendarInfo@@QAEXABVTDesC8@@0@Z @ 371 NONAME ; void CAgnCalendarInfo::SetPropertyL(class TDesC8 const &, class TDesC8 const &)
+	?RemovePropertyL@CAgnCalendarInfo@@QAEXABVTDesC8@@@Z @ 372 NONAME ; void CAgnCalendarInfo::RemovePropertyL(class TDesC8 const &)
+	?IpcExternalizeL@CAgnCalendarInfo@@QBEXAAVRWriteStream@@@Z @ 373 NONAME ; void CAgnCalendarInfo::IpcExternalizeL(class RWriteStream &) const
+	?Value@CAgnCalendarInfoProperty@@QBEABVTDesC8@@XZ @ 374 NONAME ; class TDesC8 const & CAgnCalendarInfoProperty::Value(void) const
+	?Compare@CAgnCalendarInfoProperty@@SAHPBVTDesC8@@ABV1@@Z @ 375 NONAME ; int CAgnCalendarInfoProperty::Compare(class TDesC8 const *, class CAgnCalendarInfoProperty const &)
+	??0CAgnCalendarInfo@@IAE@XZ @ 376 NONAME ; CAgnCalendarInfo::CAgnCalendarInfo(void)
+	?ExternalizePropertiesL@CAgnCalendarInfo@@QBEXAAVCFileStore@@PBV1@@Z @ 377 NONAME ; void CAgnCalendarInfo::ExternalizePropertiesL(class CFileStore &, class CAgnCalendarInfo const *) const
+	?SetState@CAgnCalendarInfoProperty@@QAEXW4TState@1@@Z @ 378 NONAME ; void CAgnCalendarInfoProperty::SetState(enum CAgnCalendarInfoProperty::TState)
+	

@@ -1,0 +1,30 @@
+EXPORTS
+	?AccessPoint@CMmsSettings@@QBEJH@Z @ 1 NONAME ; long CMmsSettings::AccessPoint(int) const
+	?AddAccessPointL@CMmsSettings@@QAEXKH@Z @ 2 NONAME ; void CMmsSettings::AddAccessPointL(unsigned long, int)
+	?CopyL@CMmsSettings@@QAEXABV1@@Z @ 3 NONAME ; void CMmsSettings::CopyL(class CMmsSettings const &)
+	?CreateFolderEntryL@CMmsSettings@@QAEHAAVCMsvSession@@JABVTDesC16@@AAJ@Z @ 4 NONAME ; int CMmsSettings::CreateFolderEntryL(class CMsvSession &, long, class TDesC16 const &, long &)
+	?CreateNewServiceL@CMmsSettings@@QAEXAAVCMsvSession@@@Z @ 5 NONAME ; void CMmsSettings::CreateNewServiceL(class CMsvSession &)
+	?DeleteAccessPointL@CMmsSettings@@QAEXH@Z @ 6 NONAME ; void CMmsSettings::DeleteAccessPointL(int)
+	?FolderEntryL@CMmsSettings@@QAEJAAVCMsvSession@@JABVTDesC16@@@Z @ 7 NONAME ; long CMmsSettings::FolderEntryL(class CMsvSession &, long, class TDesC16 const &)
+	?LoadRegisteredApplicationsL@CMmsRegisteredApplications@@QAEXXZ @ 8 NONAME ; void CMmsRegisteredApplications::LoadRegisteredApplicationsL(void)
+	?LoadScheduleReceiveSettingsL@CMmsAccount@@QAEXAAVCMsvScheduleSettings@@AAVCMsvOffPeakTimes@@AAVCMsvSendErrorActions@@AAVCMsvSysAgentActions@@@Z @ 9 NONAME ; void CMmsAccount::LoadScheduleReceiveSettingsL(class CMsvScheduleSettings &, class CMsvOffPeakTimes &, class CMsvSendErrorActions &, class CMsvSysAgentActions &)
+	?LoadScheduleSendSettingsL@CMmsAccount@@QAEXAAVCMsvScheduleSettings@@AAVCMsvOffPeakTimes@@AAVCMsvSendErrorActions@@AAVCMsvSysAgentActions@@@Z @ 10 NONAME ; void CMmsAccount::LoadScheduleSendSettingsL(class CMsvScheduleSettings &, class CMsvOffPeakTimes &, class CMsvSendErrorActions &, class CMsvSysAgentActions &)
+	?LoadSettingsL@CMmsAccount@@QAEXAAVCMmsSettings@@@Z @ 11 NONAME ; void CMmsAccount::LoadSettingsL(class CMmsSettings &)
+	?LoadSettingsL@CMmsSettings@@QAEXXZ @ 12 NONAME ; void CMmsSettings::LoadSettingsL(void)
+	?NewL@CMmsAccount@@SAPAV1@XZ @ 13 NONAME ; class CMmsAccount * CMmsAccount::NewL(void)
+	?NewL@CMmsMessageStoreUtils@@SAPAV1@AAVCMsvSession@@@Z @ 14 NONAME ; class CMmsMessageStoreUtils * CMmsMessageStoreUtils::NewL(class CMsvSession &)
+	?NewL@CMmsRegisteredApplications@@SAPAV1@XZ @ 15 NONAME ; class CMmsRegisteredApplications * CMmsRegisteredApplications::NewL(void)
+	?NewL@CMmsSettings@@SAPAV1@XZ @ 16 NONAME ; class CMmsSettings * CMmsSettings::NewL(void)
+	?NumberOfRegisteredApplicationsL@CMmsRegisteredApplications@@QBEHXZ @ 17 NONAME ; int CMmsRegisteredApplications::NumberOfRegisteredApplicationsL(void) const
+	?RegisterL@CMmsRegisteredApplications@@QAEHABVTDesC16@@0@Z @ 18 NONAME ; int CMmsRegisteredApplications::RegisterL(class TDesC16 const &, class TDesC16 const &)
+	?RegisterL@CMmsRegisteredApplications@@QAEHABVTDesC16@@@Z @ 19 NONAME ; int CMmsRegisteredApplications::RegisterL(class TDesC16 const &)
+	?RegisteredApplicationList@CMmsRegisteredApplications@@QBEABVCDesC16Array@@XZ @ 20 NONAME ; class CDesC16Array const & CMmsRegisteredApplications::RegisteredApplicationList(void) const
+	?RegisteredL@CMmsRegisteredApplications@@QAEHABVTDesC16@@@Z @ 21 NONAME ; int CMmsRegisteredApplications::RegisteredL(class TDesC16 const &)
+	?Reset@CMmsSettings@@QAEXXZ @ 22 NONAME ; void CMmsSettings::Reset(void)
+	?RestoreFactorySettingsL@CMmsSettings@@QAEXAAVCMsvSession@@W4TMmsFactorySettingsLevel@@@Z @ 23 NONAME ; void CMmsSettings::RestoreFactorySettingsL(class CMsvSession &, enum TMmsFactorySettingsLevel)
+	?SaveSettingsL@CMmsAccount@@QAEXAAVCMmsSettings@@@Z @ 24 NONAME ; void CMmsAccount::SaveSettingsL(class CMmsSettings &)
+	?SaveSettingsL@CMmsSettings@@QAEXXZ @ 25 NONAME ; void CMmsSettings::SaveSettingsL(void)
+	?UnregisterL@CMmsRegisteredApplications@@QAEHABVTDesC16@@@Z @ 26 NONAME ; int CMmsRegisteredApplications::UnregisterL(class TDesC16 const &)
+	?UserFriendlyName@CMmsRegisteredApplications@@QAE?AVTPtrC16@@ABVTDesC16@@@Z @ 27 NONAME ; class TPtrC16 CMmsRegisteredApplications::UserFriendlyName(class TDesC16 const &)
+	?ValidateSettings@CMmsSettings@@QAEHXZ @ 28 NONAME ; int CMmsSettings::ValidateSettings(void)
+

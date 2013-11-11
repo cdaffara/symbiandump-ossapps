@@ -1,0 +1,36 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+#ifndef __Cap_TestCalApiPolicing_IBY__
+#define __Cap_TestCalApiPolicing_IBY__
+
+data=ABI_DIR\DEBUG_DIR\Cap_TestCalApiPolicing.EXE Sys\bin\Cap_TestCalApiPolicing.EXE
+
+data=EPOCROOT##Epoc32\data\c\testdata\scripts\TestCalApiPolicing.script	testdata\scripts\TestCalApiPolicing.script
+
+data=EPOCROOT##Epoc32\data\c\testdata\scripts\Cap_00000004_TestCalApiPolicingSub.script	testdata\scripts\Cap_00000004_TestCalApiPolicingSub.script
+data=EPOCROOT##Epoc32\data\c\testdata\scripts\Cap_00008004_TestCalApiPolicingSub.script	testdata\scripts\Cap_00008004_TestCalApiPolicingSub.script
+data=EPOCROOT##Epoc32\data\c\testdata\scripts\Cap_00010004_TestCalApiPolicingSub.script	testdata\scripts\Cap_00010004_TestCalApiPolicingSub.script
+data=EPOCROOT##Epoc32\data\c\testdata\scripts\Cap_80000004_TestCalApiPolicingSub.script	testdata\scripts\Cap_80000004_TestCalApiPolicingSub.script
+
+// Batch file that runs the tests
+data=EPOCROOT##Epoc32\tools\TestCalApiPolicing.bat	TestCalApiPolicing.bat
+
+// Other dependencies
+#include <testexecute.iby>
+#include <setcap.iby>
+
+#endif

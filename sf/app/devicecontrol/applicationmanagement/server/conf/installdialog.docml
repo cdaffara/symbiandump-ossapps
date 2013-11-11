@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="0.9">
+    <object name="qtl_dialog_softkey_2_left" type="HbAction">
+        <string name="role" value="HbDialog:primaryAction"/>
+        <string name="role" value="HbDialog:primaryAction"/>
+        <string name="text" value="OK"/>
+    </object>
+    <object name="qtl_dialog_softkey_2_right" type="HbAction">
+        <string name="role" value="HbDialog:secondaryAction"/>
+        <string name="role" value="HbDialog:secondaryAction"/>
+        <string name="text" value="Cancel"/>
+    </object>
+    <widget name="dialog" type="HbDialog">
+        <widget name="qtl_dialog_pri_heading" role="HbDialog:headingWidget" type="HbLabel">
+            <contentsmargins bottom="var(hb-param-margin-gene-popup)" left="var(hb-param-margin-gene-popup)" right="var(hb-param-margin-gene-popup)" top="var(hb-param-margin-gene-popup)"/>
+            <string name="plainText" value="Popup title"/>
+            <fontspec name="fontSpec" role="Primary" textheight="var(hb-param-text-height-primary)"/>
+        </widget>
+        <widget name="qtl_dialog_pri5_large_graphic" role="HbDialog:contentWidget" type="HbWidget">
+            <widget name="label" type="HbLabel">
+                <real name="z" value="1"/>
+                <sizehint height="3.8806un" type="PREFERRED" width="32.38806un"/>
+                <bool name="visible" value="TRUE"/>
+                <string name="plainText" value="Size"/>
+            </widget>
+            <widget name="icon" type="HbLabel">
+                <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+                <icon iconName="note_warning" name="icon"/>
+                <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+                <sizehint height="var(hb-param-graphic-size-primary-large)" type="FIXED" width="var(hb-param-graphic-size-primary-large)"/>
+                <bool name="visible" value="TRUE"/>
+            </widget>
+            <widget name="label_1" type="HbLabel">
+                <real name="z" value="5"/>
+                <sizehint height="3.8806un" type="PREFERRED" width="34.77612un"/>
+                <bool name="visible" value="TRUE"/>
+                <string name="plainText" value="Install to"/>
+            </widget>
+            <widget name="qtl_dialog_pri5" type="HbLabel">
+                <enums name="textWrapping" value="TextWordWrap"/>
+                <sizehint height="3.8806un" type="PREFERRED" width="43.8806un"/>
+                <bool name="visible" value="TRUE"/>
+                <string name="plainText" value="App_name"/>
+                <fontspec name="fontSpec" role="Primary" textheight="var(hb-param-text-height-primary)"/>
+            </widget>
+            <widget name="combobox" type="HbComboBox">
+                <real name="z" value="5"/>
+                <sizehint type="PREFERRED" width="44.02985un"/>
+                <bool name="visible" value="TRUE"/>
+            </widget>
+            <real name="z" value="0"/>
+            <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+            <layout type="anchor">
+                <anchoritem dst="label" dstEdge="LEFT" spacing="12.83582un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="label" dstEdge="TOP" spacing="1.34328un" src="" srcEdge="TOP"/>
+                <anchoritem dst="icon" dstEdge="LEFT" spacing="1.34328un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="icon" dstEdge="TOP" spacing="0.59701un" src="" srcEdge="TOP"/>
+                <anchoritem dst="label_1" dstEdge="LEFT" spacing="12.53731un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="label_1" dstEdge="TOP" spacing="6.1194un" src="" srcEdge="TOP"/>
+                <anchoritem dst="combobox" dstEdge="LEFT" spacing="1.34328un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="combobox" dstEdge="TOP" spacing="19.70149un" src="" srcEdge="TOP"/>
+                <anchoritem dst="qtl_dialog_pri5" dstEdge="LEFT" spacing="1.14925un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="qtl_dialog_pri5" dstEdge="TOP" spacing="12.04478un" src="" srcEdge="TOP"/>
+            </layout>
+        </widget>
+        <rect height="45.97015un" name="geometry" width="50.5un" x="1.49254un" y="23.28358un"/>
+        <sizepolicy horizontalPolicy="Preferred" horizontalStretch="0" verticalPolicy="Preferred" verticalStretch="0"/>
+        <sizehint height="50.08955un" type="PREFERRED" width="50.5un"/>
+        <ref object="qtl_dialog_softkey_2_left" role="HbDialog:primaryAction"/>
+        <ref object="qtl_dialog_softkey_2_right" role="HbDialog:secondaryAction"/>
+    </widget>
+    <metadata activeUIState="Common ui state" display="NHD portrait" unit="un">
+        <resource location="TemplateIcons.qrc"/>
+        <uistate name="Common ui state" sections="#common"/>
+    </metadata>
+</hbdocument>

@@ -1,0 +1,60 @@
+/*
+* Copyright (c)  Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+
+
+#include <platform_paths.hrh>
+
+
+TARGET                  ircachemgmt.dll
+TARGETTYPE              dll
+UID                     0x1000008d 0x2002FFB2
+
+CAPABILITY              CAP_GENERAL_DLL
+VENDORID                VID_DEFAULT
+PAGED
+
+SOURCEPATH              ../src
+SOURCE                  ircachemgmt.cpp
+SOURCE                  ircachecleanup.cpp
+
+USERINCLUDE             ../inc
+USERINCLUDE             ../../inc
+USERINCLUDE             ../../irsettings/inc
+USERINCLUDE             ../../ircommon/inc
+USERINCLUDE             ../../irdataprovider/inc
+USERINCLUDE             ../../irnetworkcontroller/inc
+
+APP_LAYER_SYSTEMINCLUDE
+
+SMPSAFE
+
+LIBRARY                 bafl.lib
+LIBRARY                 edbms.lib
+LIBRARY                 efsrv.lib
+LIBRARY                 estor.lib
+LIBRARY                 euser.lib
+LIBRARY                 irdatastructures.lib
+LIBRARY                 irsettings.lib
+LIBRARY                 flogger.lib
+
+#if defined WINSCW
+DEFFILE                 ../bwinscw/ 
+#else
+DEFFILE                 ../bmarm/ 
+#endif
+

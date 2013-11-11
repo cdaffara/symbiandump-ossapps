@@ -1,0 +1,758 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//
+PRINT Run all TestCalInterimApi Parent Child entry tests
+
+LOAD_SUITE TestCalInterimApiSuite
+//
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-GSPARENTCHILD-Sec_4-0001
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-GSPARENTCHILD-Sec_4-0001
+//! @SYMTestCaseDesc 		Create entries that are required for section 4
+//! @SYMFssID-REQ		<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Creates entries based on the data read from the text file 
+//!					TestCalInterimApiParentChild.txt
+//! @SYMTestExpectedResults 	Relevant entries are stored
+//! @SYMTestType 		CIT
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini london
+RUN_TEST_STEP 500 TestCalInterimApiSuite TestCalInterimApiReadData \CITCalInterimApi\TestCalInterimApiParentChild.ini	ReadData
+
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-GSPARENTCHILD-Sec_4-0001
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-GSPARENTCHILD-Sec_4.1.1.1-0001
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-GSPARENTCHILD-Sec_4.1.1.1-0001
+//! @SYMTestCaseDesc 		Addition of additional child entry with repeat rule but different recurrence id
+//! @SYMFssID-REQ		<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Find an instance of first repeating child & second repeating child
+//!				
+//! @SYMTestExpectedResults 	Instance of first repeating child should exist, 
+//!				while any possible instance of second repeating child should not exist
+//! @SYMTestType 		CIT
+
+// EntryType - Reminder
+//
+// Validate the existence of First repeating child instance
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_1_1_1
+
+// Validate the non existence of second repeating child instance
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_1_1_2
+
+// EntryType - Event
+//
+// Validate the existence of First repeating child instance
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_1_2_1
+// Validate the non existence of second repeating child instance
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_1_2_2
+
+// EntryType - Anniversary
+//
+// Validate the existence of First repeating child instance
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_1_3_1
+// Validate the non existence of second repeating child instance
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_1_3_2
+
+
+// EntryType - Appointment
+//
+// Validate the existence of First repeating child instance
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_1_4_1
+// Validate the non existence of second repeating child instance
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_1_4_2
+
+
+// EntryType - Todo
+//
+// Validate the existence of First repeating child instance
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_1_5_1
+// Validate the non existence of second repeating child instance
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_1_5_2
+
+PIM-APPENG-CALINTERIMAPI-PREQ1090-GSPARENTCHILD-Sec_4.1.1.1-0001
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-GSPARENTCHILD-Sec_4.1.1.2-0002
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-GSPARENTCHILD-Sec_4.1.1.2-0002
+//! @SYMTestCaseDesc 		Addition of additional child entry with repeat rule and same recurrence id but different Recurrence Range
+//! @SYMFssID-REQ		<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Find an instance of first repeating child & second repeating child
+//!				
+//! @SYMTestExpectedResults 	Instance of first repeating child should not exist, 
+//!				while any possible instance of second repeating child should exist
+//! @SYMTestType 		CIT
+
+// EntryType - Reminder
+//
+// Validate the non existence of First repeating child instance
+RUN_TEST_STEP  !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_2_1_1
+// Validate the existence of second repeating child instance
+RUN_TEST_STEP  300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_2_1_2
+
+
+// EntryType - Event
+//
+// Validate the non existence of First repeating child instance
+RUN_TEST_STEP  !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_2_2_1
+// Validate the existence of second repeating child instance
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_2_2_2
+
+
+// EntryType - Anniversary
+//
+// Validate the non existence of First repeating child instance
+RUN_TEST_STEP  !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_2_3_1
+// Validate the existence of second repeating child instance
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_2_3_2
+
+// EntryType - Appointment
+//
+// Validate the non existence of First repeating child instance
+ RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_2_4_1
+// Validate the existence of second repeating child instance
+ RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_2_4_2
+
+// EntryType - Todo
+//
+// Validate the non existence of First repeating child instance
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_2_5_1
+// Validate the existence of second repeating child instance
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_2_5_2
+
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-GSPARENTCHILD-Sec_4.1.1.2-0002
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-GSPARENTCHILD-Sec_4.1.1.3-0003
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-GSPARENTCHILD-Sec_4.1.1.3-0003
+//! @SYMTestCaseDesc 		Addition of additional child entry with repeat rule and same recurrence id & recurrence range
+//! @SYMFssID-REQ		<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Find an instance of first repeating child & second repeating child
+//!				
+//! @SYMTestExpectedResults 	Instance of second repeating child should exist, 
+//!				while any possible instance of first repeating child should not exist
+//! @SYMTestType 		CIT
+
+// EntryType - Reminder
+//
+// Validate the non existence of first repeating child instance
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_3_1_1
+// Validate the existence of second repeating child instance
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_3_1_2
+
+// EntryType - Event
+//
+// Validate the non existence of second repeating child instance
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_3_2_1
+// Validate the existence of second repeating child instance
+RUN_TEST_STEP TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_3_2_2
+
+// EntryType - Anniversary
+//
+// Validate the non existence of First repeating child instance
+RUN_TEST_STEP !Result=Fail  300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_3_3_1
+// Validate the existence of second repeating child instance
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_3_3_2
+
+// EntryType - Appointment
+//
+// Validate the non existence of First repeating child instance
+RUN_TEST_STEP !Result=Fail  300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_3_4_1
+// Validate the existence of second repeating child instance
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_3_4_2
+
+
+// EntryType - Todo
+//
+// Validate the non existence of First repeating child instance
+RUN_TEST_STEP !Result=Fail  300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_3_5_1
+// Validate the existence of second repeating child instance
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_3_5_2
+
+END_TESTCASE    PIM-APPENG-CALINTERIMAPI-PREQ1090-GSPARENTCHILD-Sec_4.1.1.3-0003
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-GSPARENTCHILD-Sec_4.1.1.4-0004
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-GSPARENTCHILD-Sec_4.1.1.4-0004
+//! @SYMTestCaseDesc 		Adding child entry of an existing child entry
+//! @SYMFssID-REQ		<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Find an instance of first repeating child & second repeating child
+//!				
+//! @SYMTestExpectedResults 	Instance of first repeating child should exist, 
+//!				while any possible instance of second repeating child should not exist
+//! @SYMTestType 		CIT
+
+// EntryType - Reminder
+//
+// Validate the existence of First repeating child instance
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_4_1_1
+// Validate the non existence of second repeating child instance
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_4_1_2
+
+// EntryType - Event
+//
+// Validate the existence of First repeating child instance
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_4_2_1
+// Validate the non existence of second repeating child instance
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_4_2_2
+
+// EntryType - Anniversary
+//
+// Validate the existence of First repeating child instance
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_4_3_1
+// Validate the non existence of second repeating child instance
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_4_3_2
+
+
+// EntryType - Appointment
+//
+// Validate the existence of First repeating child instance
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_4_4_1
+// Validate the non existence of second repeating child instance
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_4_4_2
+
+// EntryType - Todo
+//
+// Validate the existence of First repeating child instance
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_4_5_1
+// Validate the non existence of second repeating child instance
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_4_5_2
+
+END_TESTCASE    PIM-APPENG-CALINTERIMAPI-PREQ1090-GSPARENTCHILD-Sec_4.1.1.4-0004
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-GSPARENTCHILD-Sec_4.1.2.1-0005
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-GSPARENTCHILD-Sec_4.1.2.1-0005
+//! @SYMTestCaseDesc 		Addition of repeating child entry with Recurrence Range set to EThisOnly
+//! @SYMFssID-REQ		<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Find the instance of parent specified by the child recurrence Id
+//!				Find an instance of child entry
+//!				
+//! @SYMTestExpectedResults 	Instance of parent entry specified by the child recurrence Id should not exist, child Instance should exist 
+//! @SYMTestType 		CIT
+
+// EntryType - Reminder
+//
+// Validate the non existence of parent Instance specified by the child recurrence Id
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_5_1_1
+// Validate the existence of instance of child entry
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_5_1_2
+
+// EntryType - Event
+//
+// Validate the non existence of parent Instance specified by the child recurrence Id
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_5_2_1
+// Validate the existence of instance of child entry
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_5_2_2
+
+// EntryType - Anniversary
+//
+// Validate the non existence of parent Instance specified by the child recurrence Id
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_5_3_1
+// Validate the existence of instance of child entry
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_5_3_2
+
+// EntryType - Appointment
+//
+// Validate the non existence of parent Instance specified by the child recurrence Id
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_5_4_1
+// Validate the existence of instance of child entry
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_5_4_2
+
+// EntryType - Todo
+//
+// Validate the non existence of parent Instance specified by the child recurrence Id
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_5_5_1
+// Validate the existence of instance of child entry
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_5_5_2
+
+END_TESTCASE    PIM-APPENG-CALINTERIMAPI-PREQ1090-GSPARENTCHILD-Sec_4.1.2.1-0005
+
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-GSPARENTCHILD-Sec_4.1.2.2-0006
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-GSPARENTCHILD-Sec_4.1.2.2-0006
+//! @SYMTestCaseDesc 		Addition of repeating child entry with Recurrence Range set to EThisAndAll
+//! @SYMFssID-REQ			<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Find the instance of parent specified by the child recurrence Id
+//!				Find an instance of child entry
+//!				
+//! @SYMTestExpectedResults 	Instance of parent entry specified by the child recurrence Id should exist, any possible child Instance should not exist 
+//! @SYMTestType 		CIT
+
+// EntryType - Reminder
+//
+// Validate the existence of parent Instance specified by the child recurrence Id
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_6_1_1
+// Validate the existence of instance of child entry
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_6_1_2
+
+
+// EntryType - Event
+//
+// Validate the existence of parent Instance specified by the child recurrence Id
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_6_2_1
+// Validate the non existence of instance of child entry
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_6_2_2
+
+// EntryType - Anniversary
+//
+// Validate the existence of parent Instance specified by the child recurrence Id
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_6_3_1
+// Validate the non existence of instance of child entry
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_6_3_2
+
+
+// EntryType - Appointment
+//
+// Validate the existence of parent Instance specified by the child recurrence Id
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_6_4_1
+// Validate the non existence of instance of child entry
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_6_4_2
+
+// EntryType - Todo
+//
+// Validate the existence of parent Instance specified by the child recurrence Id
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_6_5_1
+// Validate the non existence of instance of child entry
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_6_5_2
+
+END_TESTCASE    PIM-APPENG-CALINTERIMAPI-PREQ1090-GSPARENTCHILD-Sec_4.1.2.2-0006
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-GSPARENTCHILD-Sec_4.1.2.3-0007
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-GSPARENTCHILD-Sec_4.1.2.3-0007
+//! @SYMTestCaseDesc 		Addition of repeating child entry with Recurrence Range set to EThisAndFuture 
+//!				and the RecurrenceId as first instance of the parent’s entry’s schedule 
+//! @SYMFssID-REQ		<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Find the instance of parent entry
+//!				Find an instance of child entry
+//!				
+//! @SYMTestExpectedResults 	Instance of parent entry should exist while any possible instance of child entry should not exist
+//! @SYMTestType 		CIT
+
+// EntryType - Reminder
+//
+// Validate the existence of parent Instance 
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_7_1_1
+// Validate the non existence of child Instance 
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_7_1_2
+
+// EntryType - Entry
+//
+// Validate the existence of parent Instance 
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_7_2_1
+// Validate the non existence of child Instance 
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_7_2_2
+
+// EntryType - Anniversary
+//
+// Validate the existence of parent Instance 
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_7_3_1
+// Validate the non existence of child Instance 
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_7_3_2
+
+// EntryType - Appointment
+//
+// Validate the existence of parent Instance 
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_7_4_1
+// Validate the non existence of child Instance 
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_7_4_2
+
+
+// EntryType - Todo
+//
+// Validate the existence of parent Instance 
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_7_5_1
+// Validate the non existence of child Instance 
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_7_5_2
+
+END_TESTCASE    PIM-APPENG-CALINTERIMAPI-PREQ1090-GSPARENTCHILD-Sec_4.1.2.3-0007
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-GSPARENTCHILD-Sec_4.1.2.4-0008
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-GSPARENTCHILD-Sec_4.1.2.4-0008
+//! @SYMTestCaseDesc 		Addition of repeating child entry with Recurrence Range set to EThisAndPrior 
+//!				and the RecurrenceId as last instance of the parent’s entry’s schedule
+//! @SYMFssID-REQ		<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Find the instance of parent entry
+//!				Find an instance of child entry
+//!				
+//! @SYMTestExpectedResults 	Instance of parent entry should exist while any possible instance of child entry should not exist
+//! @SYMTestType 		CIT
+
+// EntryType - Reminder
+//
+// Validate the existence of parent Instance 
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_8_1_1
+// Validate the non existence of child Instance 
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_8_1_2
+
+// EntryType - Event
+//
+// Validate the existence of parent Instance 
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_8_2_1
+// Validate the non existence of child Instance 
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_8_2_2
+
+// EntryType - Anniversary
+//
+// Validate the existence of parent Instance 
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_8_3_1
+// Validate the non existence of child Instance 
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_8_3_2
+
+// EntryType - Appointment
+//
+// Validate the existence of parent Instance 
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_8_4_1
+// Validate the non existence of child Instance 
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_8_4_2
+
+// EntryType - Todo
+//
+// Validate the existence of parent Instance 
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_8_5_1
+// Validate the non existence of child Instance 
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_8_5_2
+
+END_TESTCASE   PIM-APPENG-CALINTERIMAPI-PREQ1090-GSPARENTCHILD-Sec_4.1.2.4-0008
+
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-GSPARENTCHILD-Sec_4.1.3.1-0009
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-GSPARENTCHILD-Sec_4.1.3.1-0009
+//! @SYMTestCaseDesc 		Addition of non repeating child entry with Recurrence Range set to EThisAndFuture
+//! @SYMFssID-REQ		<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Find the instance of parent specified by the child recurrence Id
+//!				Find an instance of child entry
+//!				
+//! @SYMTestExpectedResults 	Instance of parent entry as per the child recurrence Id should not exist, while child Instance should exist 
+//! @SYMTestType 		CIT
+
+// EntryType - Reminder
+//
+// Validate the non existence of parent Instance as per the child recurrence Id
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_9_1_1
+// Validate the existence of corresponding child Instance 
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_9_1_2
+
+// EntryType - Event
+//
+// Validate the non existence of parent Instance as per the child recurrence Id
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_9_2_1
+// Validate the existence of corresponding child Instance 
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_9_2_2
+
+// EntryType - Anniversary
+//
+// Validate the non existence of parent Instance as per the child recurrence Id
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_9_3_1
+// Validate the existence of corresponding child Instance 
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_9_3_2
+
+// EntryType - Appointment
+//
+// Validate the non existence of parent Instance as per the child recurrence Id
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_9_4_1
+// Validate the existence of corresponding child Instance 
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_9_4_2
+
+
+// EntryType - Todo
+//
+// Validate the non existence of parent Instance as per the child recurrence Id
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_9_5_1
+// Validate the existence of corresponding child Instance 
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_9_5_2
+
+END_TESTCASE 	PIM-APPENG-CALINTERIMAPI-PREQ1090-GSPARENTCHILD-Sec_4.1.3.1-0009
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-GSPARENTCHILD-Sec_4.1.3.2-0011
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-GSPARENTCHILD-Sec_4.1.3.2-0011
+//! @SYMTestCaseDesc 		Addition of non repeating child entry with Recurrence Range set to EThisAndPrior
+//! @SYMFssID-REQ		<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Find the instance of parent specified by the child recurrence Id
+//!				Find an instance of child entry
+//!				
+//! @SYMTestExpectedResults 	Instance of parent entry specified by the child recurrence Id should not exist, while child Instance should exist 
+//! @SYMTestType 		CIT
+
+// EntryType - Reminder
+//
+// Validate the non existence of parent Instance specified by the child recurrence Id
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_10_1_1
+// Validate the existence of corresponding child Instance 
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_10_1_2
+
+// EntryType - Event
+//
+// Validate the non existence of parent Instance specified by the child recurrence Id
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_10_2_1
+// Validate the existence of corresponding child Instance 
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_10_2_2
+
+// EntryType - Anniversary
+//
+// Validate the non existence of parent Instance specified by the child recurrence Id
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_10_3_1
+// Validate the existence of corresponding child Instance 
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_10_3_2
+
+// EntryType - Appointment
+//
+// Validate the non existence of parent Instance specified by the child recurrence Id
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_10_4_1
+// Validate the existence of corresponding child Instance 
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_10_4_2
+
+
+// EntryType - Todo
+//
+// Validate the non existence of parent Instance specified by the child recurrence Id
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_10_5_1
+// Validate the existence of corresponding child Instance 
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_10_5_2
+
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-GSPARENTCHILD-Sec_4.1.3.2-0011
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-GSPARENTCHILD-Sec_4.1.3.3-0012
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-GSPARENTCHILD-Sec_4.1.3.3-0012
+//! @SYMTestCaseDesc 		Addition of non repeating child entry with Recurrence Range set to EThisAndAll
+//! @SYMFssID-REQ		<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Find the instance of parent specified by the child recurrence Id
+//!				Find an instance of child entry
+//!				
+//! @SYMTestExpectedResults 	Instance of parent entry specified by the child recurrence Id should not exist, while child Instance should exist 
+//! @SYMTestType 		CIT
+
+// EntryType - Reminder
+//
+// Validate the non existence of parent Instance specified by the child recurrence Id
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_11_1_1
+// Validate the existence of corresponding child Instance 
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_11_1_2
+
+// EntryType - Event
+//
+// Validate the non existence of parent Instance specified by the child recurrence Id
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_11_2_1
+// Validate the existence of corresponding child Instance 
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_11_2_2
+
+// EntryType - Anniversary
+//
+// Validate the non existence of parent Instance specified by the child recurrence Id
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_11_3_1
+// Validate the existence of corresponding child Instance 
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_11_3_2
+
+// EntryType - Appointment
+//
+// Validate the non existence of parent Instance specified by the child recurrence Id
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_11_4_1
+// Validate the existence of corresponding child Instance 
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_11_4_2
+
+
+// EntryType - Todo
+//
+// Validate the non existence of parent Instance specified by the child recurrence Id
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_11_5_1
+// Validate the existence of corresponding child Instance 
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_11_5_2
+
+END_TESTCASE 	PIM-APPENG-CALINTERIMAPI-PREQ1090-GSPARENTCHILD-Sec_4.1.3.3-0012
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-GSPARENTCHILD-Sec_4.1.4.1-0020
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-GSPARENTCHILD-Sec_4.1.4.1-0020
+//! @SYMTestCaseDesc 		Parent Entry with RecurrenceId 
+//! @SYMFssID-REQ		<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Find the instance of parent entry
+//!				
+//! @SYMTestExpectedResults 	There should be no Instances of parent entry 
+//! @SYMTestType 		CIT
+
+// EntryType - Reminder
+//
+// Validate the non existence of parent entry
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_12_1_1
+
+// EntryType - Event
+//
+// Validate the non existence of parent entry
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_12_2_1
+
+// EntryType - Anniversary
+//
+// Validate the non existence of parent entry
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_12_3_1
+
+
+// EntryType - Appointment
+//
+// Validate the non existence of parent entry
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_12_4_1
+
+
+// EntryType - Todo
+//
+// Validate the non existence of parent entry
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_12_5_1
+
+END_TESTCASE 	PIM-APPENG-CALINTERIMAPI-PREQ1090-GSPARENTCHILD-Sec_4.1.4.1-0020
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-GSPARENTCHILD-Sec_4.1.4.2-0021
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-GSPARENTCHILD-Sec_4.1.4.2-0021
+//! @SYMTestCaseDesc 		2 Entries with same GUID  
+//! @SYMFssID-REQ			<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Find an instance of first parent entry and second Parent entry
+//!				
+//! @SYMTestExpectedResults 	Instance of first parent entry should not exist while instance of second parent entry should exist
+//! @SYMTestType 		CIT
+
+// EntryType - Reminder
+//
+// Validate the non existence of first parent Instance 
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_13_1_1
+// Validate the existence of second parent Instance 
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_13_1_2
+
+// EntryType - Event
+//
+// Validate the non existence of first parent Instance 
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_13_2_1
+// Validate the existence of second parent Instance 
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_13_2_2
+
+// EntryType - Anniversary
+//
+// Validate the non existence of first parent Instance 
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_13_3_1
+// Validate the existence of second parent Instance 
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_13_3_2
+
+// EntryType - Appointment
+//
+// Validate the non existence of first parent Instance 
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_13_4_1
+// Validate the existence of second parent Instance 
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_13_4_2
+
+
+// EntryType - Todo
+//
+// Validate the non existence of first parent Instance 
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_13_5_1
+// Validate the existence of second parent Instance 
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_13_5_2
+
+END_TESTCASE 	PIM-APPENG-CALINTERIMAPI-PREQ1090-GSPARENTCHILD-Sec_4.1.4.2-0021
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-GSPARENTCHILD-Sec_4.1.4.3-0021
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-GSPARENTCHILD-Sec_4.1.4.3-0021
+//! @SYMTestCaseDesc 		Add a parent entry, clear repeating properties, add a child entry
+//! @SYMFssID-REQ		<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1) Add a repeating Parent Entry
+//! 				2) Clear the repeating properties
+//! 				3) Add valid child entries
+//! 				4) Check for parent instances
+//! 				5) Check for child instances
+//!				
+//! @SYMTestExpectedResults 	No child entry instances should exist and there should be only one parent instance
+//! @SYMTestType 		CIT
+
+// EntryType - Reminder
+//
+// Validate the existence of first parent Instance 
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_14_1_1
+// Validate the non existence of non first parent Instance 
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_14_1_2
+
+// EntryType - Event
+//
+// Validate the existence of first parent Instance 
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_14_2_1
+// Validate the non existence of non first parent Instance 
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_14_2_2
+
+// EntryType - Anniversary
+//
+// Validate the existence of first parent Instance 
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_14_3_1
+// Validate the non existence of non first parent Instance 
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_14_3_2
+
+// EntryType - Appointment
+//
+// Validate the existence of first parent Instance 
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_14_4_1
+// Validate the non existence of non first parent Instance 
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_14_4_2
+
+
+// EntryType - Todo
+//
+// Validate the existence of first parent Instance 
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_14_5_1
+// Validate the non existence of non first parent Instance 
+RUN_TEST_STEP !Result=Fail 300 TestCalInterimApiSuite TestCalInterimApiFilter        \CITCalInterimApi\TestCalInterimApiParentChild.ini	ParentChild_14_5_2
+
+END_TESTCASE 	PIM-APPENG-CALINTERIMAPI-PREQ1090-GSPARENTCHILD-Sec_4.1.4.3-0021
+
+
+PRINT All TestCalInterimApi Parent Child entry tests Completed
+
+PREFIX RUN_UTILS 
+MakeReadWrite 	c:\private\10003a5b\CalendarFile.dat
+DeleteFile		c:\private\10003a5b\CalendarFile.dat
+MakeReadWrite 	c:\private\10003a5b\calendarfile.datIdx
+DeleteFile		c:\private\10003a5b\calendarfile.datIdx
+REMOVE_PREFIX

@@ -1,0 +1,9 @@
+HbDialog#dialog:portrait {
+    pref-width: expr(var(hb-param-screen-width) - 2* var(hb-param-margin-gene-screen));
+    pref-height: expr(var(hb-param-screen-height) - 2* var(hb-param-margin-gene-screen));
+}
+
+HbDialog#dialog:landscape {
+    pref-width: expr(var(hb-param-screen-width) - 2* var(hb-param-margin-gene-screen));
+    pref-height: expr(var(hb-param-screen-height) - 2* var(hb-param-margin-gene-screen));
+} 

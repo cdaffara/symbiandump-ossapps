@@ -1,0 +1,104 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//
+PRINT Run all TestCalInterimApi Rich Alarm Tests
+//
+RUN_UTILS DeleteFile c:\private\101f5027\AlarmServer.ini
+
+
+LOAD_SUITE TestCalInterimApiSuite
+//
+
+START_TESTCASE PIM-UCT-PREQ1118-AD-AV-221
+//! @SYMTestCaseID PIM-UCT-PREQ1118-AD-AV-221
+//! @SYMTestType CT
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/EAS 1.0
+//! @SYMTestPriority High
+//! @SYMTestCaseDesc Tests Alarm Capabilities
+//! @SYMTestActions . create CCalContent; create CCalEntry
+//! . use CCalContent::SetContentL() to hold content for an alarm;
+//! . use CCalAlarm::SetAlarmAction() to pass in the content as an action for the alarm;
+//! . use CCalAlarm::Content(), CCalAlarm::MimeType(), CCalAlarm::Disposition() to retrieve the content held by the alarm, and verify that it is the same value as was set.
+//! . use CCalEntry::SetStartAndEndTimeL()to set up a Calendar event, and use CCalAlarm:: SetTimeOffset() to set up the alarm..
+//! . use CCalEntry::SetAlarmL() passing in the alarm object to set the alarm containing the action for the Calendar entry;
+//! . use CCalEntry::AlarmL() to retrieve the Calendar Alarm object containing the alarm action from the Calendar Entry;
+//! . use CCalAlarm::AlarmAction() to retrieve the action content;
+//! . use CCalAlarm::AlarmAction(), CCalAlarm::MimeType(), CCalAlarm::Disposition() to retrieve the content
+//! . compare content retrieved with the baseline, compare MIME type and disposition.
+//! Do the above steps for various Alarm Content Types (i.e. Application, Audio, Image, etc.) as described in UCT-PREQ1118-AD-AV-223
+//! @SYMTestExpectedResults data stored and its type match the data and type retrieved
+// This test case is tested in the next test step TestCalInterimApiRichAlarmStep
+END_TESTCASE PIM-UCT-PREQ1118-AD-AV-221
+
+START_TESTCASE PIM-UCT-PREQ1118-AD-AV-231
+//! @SYMTestCaseID PIM-UCT-PREQ1118-AD-AV-231
+//! @SYMTestType CT
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/EAS 1.2
+//! @SYMTestPriority High
+//! @SYMTestCaseDesc Tests Alarm Capabilities
+//! @SYMTestActions . create Agenga Entry;
+//! . externalize into a vCal item;
+//! . check contents of the resulting vCal item. 
+//! . Do the above steps for various alarm action types (i.e. Application, Audio, Image, etc.) as described in UCT-PREQ1118-AD-AV-223
+//! @SYMTestExpectedResults Verify that the vCal item has extension property present, properly formatted, and that it contains correct exported data 
+// This test case is tested in the next test step TestCalInterimApiRichAlarmStep
+END_TESTCASE PIM-UCT-PREQ1118-AD-AV-231
+
+START_TESTCASE PIM-UCT-PREQ1118-AD-AV-223
+//! @SYMTestCaseID PIM-UCT-PREQ1118-AD-AV-223
+//! @SYMTestType CT
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/EAS 1.0
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/EAS 1.2
+//! @SYMTestPriority High
+//! @SYMTestCaseDesc Tests Alarm Capabilities
+//! @SYMTestActions Creates CalInterimApi Entries with (1) no alarm, (2) a
+//! normal (sound only and no action set) alarm, (3) an alarm containing an action with a URL, 
+(4) an alarm containing an action that is an embedded/inline jpeg image, and (5) an alarm with a normal 
+//! alarm sound plus an action containing a URL. Stores these to the calendar/agenda model. 
+//! Uses the data exchange to export the entries to file, then deletes the 
+//! entries from the model. Uses the data exchange to import the entries from 
+//! same file used for export and then stores them in the calendar/agenda
+//! model. Compares cached alarm values from before the export to the alarm
+//! values retrieved from the entries that are imported.
+//! @SYMTestExpectedResults The two sets of alarm values will be identical.
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiRichAlarmStep
+END_TESTCASE PIM-UCT-PREQ1118-AD-AV-223
+
+
+
+START_TESTCASE PIM-UCT-PREQ1118-AD-AV-232
+//! @SYMTestCaseID PIM-UCT-PREQ1118-AD-AV-232
+//! @SYMTestType CT
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/EAS 1.2
+//! @SYMTestPriority High
+//! @SYMTestCaseDesc Tests Alarm Capabilities
+//! @SYMTestActions Imports a known set of calendar entries from a file. Compares
+//! the alarm data from these entries to the expected set used to generate the
+//! file
+//! @SYMTestExpectedResults The imported alarms will match the hardcoded data.
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiRichAlarmFormatStep
+END_TESTCASE PIM-UCT-PREQ1118-AD-AV-232
+
+PRINT Completed TestCalInterimApiAlarmExport_Tests
+
+PREFIX RUN_UTILS 
+MakeReadWrite 	c:\tcal_dataexchange_export.vcs
+DeleteFile		c:\tcal_dataexchange_export.vcs
+MakeReadWrite 	c:\private\10003a5b\citvcal.datIdx
+DeleteFile		c:\private\10003a5b\citvcal.datIdx
+MakeReadWrite 	c:\private\10003a5b\CITVCal.dat
+DeleteFile		c:\private\10003a5b\CITVCal.dat
+REMOVE_PREFIX

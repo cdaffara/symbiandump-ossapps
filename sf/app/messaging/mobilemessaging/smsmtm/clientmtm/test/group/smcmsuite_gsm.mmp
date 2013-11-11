@@ -1,0 +1,50 @@
+// Copyright (c) 2005-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// smcmsuite_gsm.mmp
+//
+
+TARGET		smcmsuite_gsm.exe
+TARGETTYPE  exe
+UID    0x1000007a 0x10274038
+VENDORID 	0x70000001
+
+CAPABILITY	ALL -TCB
+
+SOURCEPATH  ../src
+SOURCE		smcmserver.cpp
+SOURCE		smcmstepbase.cpp
+SOURCE		smcmstepfind.cpp
+SOURCE		smcmstepfindalias.cpp
+SOURCE		smcmstepforward.cpp
+SOURCE		smcmstepforwardemail.cpp
+SOURCE		smcmstepinitialise.cpp
+SOURCE		smcmstepquerycapabilities.cpp
+SOURCE		smcmstepreply.cpp
+SOURCE		smcmstepreplyemail.cpp
+SOURCE		smcmstepsettings.cpp
+
+USERINCLUDE		../inc 
+USERINCLUDE		../../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/sms/inc
+USERINCLUDE		../../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/base/inc
+USERINCLUDE		../../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/server/inc
+USERINCLUDE		../../../../../../../mw/messagingmw/messagingfw/msgsrvnstore/server/inc
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+OS_LAYER_ESTLIB_SYSTEMINCLUDE  
+LIBRARY		efsrv.lib euser.lib testexecuteutils.lib testexecutelogclient.lib 
+LIBRARY		smcm.lib msgs.lib etext.lib smstestutils.lib msvtestutils.lib gsmu.lib
+
+
+
+
+SMPSAFE

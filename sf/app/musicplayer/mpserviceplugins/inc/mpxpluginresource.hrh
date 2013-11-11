@@ -1,0 +1,32 @@
+/*
+* Copyright (c) 2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Resource headers mpx collection plugins
+*
+*/
+
+
+#ifndef MPXCOLLECTIONPLUGIN_HRH
+#define MPXCOLLECTIONPLUGIN_HRH
+
+enum TMPXCollectionPluginNotCacheableIds
+    {
+    EDRMContentId = 0x101FFC45
+    };
+
+enum TMPXCollectionPluginFlags
+    {
+    EPreloadAndCache = 0x00010001 // EMPXPluginFlagPreLoad|EMPXCollectionPluginFlagCacheable
+    };
+
+#endif // MPXCOLLECTIONPLUGIN_HRH

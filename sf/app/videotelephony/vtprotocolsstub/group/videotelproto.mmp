@@ -1,0 +1,65 @@
+/*
+* Copyright (c) 2008 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Video telephony protocol
+*
+*/
+
+#include <platform_paths.hrh>
+
+// Capability assignment.
+CAPABILITY CAP_GENERAL_DLL
+
+// default vendor id
+VENDORID VID_DEFAULT
+
+TARGET          videotelproto.dll
+TARGETTYPE      dll
+UID             0x1000008d 0x20021182
+
+
+SOURCEPATH      ../src
+
+SOURCE          cdatasinkproxy.cpp
+SOURCE          cdatasourceproxy.cpp
+SOURCE          caudioconfighandler.cpp
+SOURCE          ch324confighandler.cpp
+SOURCE          csessionhandler.cpp
+SOURCE          cvideoconfighandler.cpp
+SOURCE          cvtuserinput.cpp
+SOURCE          vtprotocolfactory.cpp
+
+DOCUMENT        ../../group/bld.inf
+
+USERINCLUDE     ../inc/
+
+
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE   ../../inc
+SYSTEMINCLUDE   /epoc32/include/mmf/common
+SYSTEMINCLUDE   /epoc32/include/mmf/server
+
+LIBRARY euser.lib
+LIBRARY ws32.lib
+
+LIBRARY	commonengine.lib
+LIBRARY MediaClientAudio.lib
+
+
+
+DEBUGLIBRARY vtlogger.lib
+
+LIBRARY MMFDevSound.lib
+
+
+// End of File

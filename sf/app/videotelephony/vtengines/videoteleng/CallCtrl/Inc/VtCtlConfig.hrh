@@ -1,0 +1,39 @@
+/*
+* Copyright (c) 2004 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project configuration file.
+*
+*/
+
+
+#ifndef VTCTLCONFIG_HRH
+#define VTCTLCONFIG_HRH
+
+//  INCLUDES
+
+/**
+* Macro that chooses stub implementation for CsCallCtrl.
+* In stub following attributes are effective
+* - duration = 5
+* - session info returns :
+*       direction = MO
+*       state = connected
+*       previous state = alerting
+*       tel number = 0501234567
+*       duration = 5 
+*/
+//#define VTCALLCONTROLSTUB
+
+#endif // VTCTLCONFIG_HRH
+
+// End of File

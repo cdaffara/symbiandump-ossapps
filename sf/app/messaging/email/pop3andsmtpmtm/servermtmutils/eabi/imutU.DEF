@@ -1,0 +1,167 @@
+EXPORTS
+	_ZN10CImcvUtils14ReceiptFieldsLER11CDesC8Array @ 1 NONAME
+	_ZN10CImcvUtils15PriorityFieldsLER11CDesC8Array @ 2 NONAME
+	_ZN10CImcvUtils19SendPriorityFieldsLER11CDesC8Array @ 3 NONAME
+	_ZN10CImcvUtils20EvaluatePriorityTextERK6TDesC8 @ 4 NONAME
+	_ZN10CImcvUtils24SendReturnReceiptFieldsLER11CDesC8Array @ 5 NONAME
+	_ZN10CImcvUtils27EvaluateReturnReceiptFieldsERK6TDesC8 @ 6 NONAME
+	_ZN10CImcvUtils4NewLEv @ 7 NONAME
+	_ZN10CImcvUtils5NewLCEv @ 8 NONAME
+	_ZN10TImCodecQP14DecodeRichTextERK6TDesC8R6TDes16 @ 9 NONAME
+	_ZN10TImCodecQP14EncodeRichTextERK6TDesC8R5TDes8 @ 10 NONAME
+	_ZN10TImCodecQP6DecodeERK6TDesC8R5TDes8 @ 11 NONAME
+	_ZN10TImCodecQP6EncodeERK6TDesC8R5TDes8 @ 12 NONAME
+	_ZN10TImCodecQPC1Ev @ 13 NONAME
+	_ZN10TImCodecQPC2Ev @ 14 NONAME
+	_ZN10TImCodecUU6DecodeERK6TDesC8R5TDes8 @ 15 NONAME
+	_ZN10TImCodecUU6EncodeERK6TDesC8R5TDes8 @ 16 NONAME
+	_ZN10TImCodecUUC1Ev @ 17 NONAME
+	_ZN10TImCodecUUC2Ev @ 18 NONAME
+	_ZN11CMimeParser4NewLER14CImRecvConvert @ 19 NONAME
+	_ZN11CMimeParser5NewLCER14CImRecvConvert @ 20 NONAME
+	_ZN11CMimeParserD0Ev @ 21 NONAME
+	_ZN11CMimeParserD1Ev @ 22 NONAME
+	_ZN11CMimeParserD2Ev @ 23 NONAME
+	_ZN11TImCodecB6410InitialiseEv @ 24 NONAME
+	_ZN11TImCodecB646DecodeERK6TDesC8R5TDes8 @ 25 NONAME
+	_ZN11TImCodecB646EncodeERK6TDesC8R5TDes8 @ 26 NONAME
+	_ZN11TImCodecB64C1Ev @ 27 NONAME
+	_ZN11TImCodecB64C2Ev @ 28 NONAME
+	_ZN12CRfc822Token14ParseNextLineLERK6TDesC8 @ 29 NONAME
+	_ZN12CRfc822Token5NewLCEv @ 30 NONAME
+	_ZN12CRfc822Token5ResetEv @ 31 NONAME
+	_ZN12CRfc822TokenD0Ev @ 32 NONAME
+	_ZN12CRfc822TokenD1Ev @ 33 NONAME
+	_ZN12CRfc822TokenD2Ev @ 34 NONAME
+	_ZN13CImLogMessage4NewLER3RFsi @ 35 NONAME
+	_ZN13CImLogMessage5ResetEv @ 36 NONAME
+	_ZN13CImLogMessage5StartEiR14TRequestStatus @ 37 NONAME
+	_ZN13CImLogMessage7LogBaseEv @ 38 NONAME
+	_ZN13CImLogMessage8LogEventEv @ 39 NONAME
+	_ZN14CImRecvConvert14ParseNextFieldERK6TDesC8 @ 40 NONAME
+	_ZN14CImRecvConvert16MessageCompleteLE14TMsvEmailEntry @ 41 NONAME
+	_ZN14CImRecvConvert16MessageCompleteLEv @ 42 NONAME
+	_ZN14CImRecvConvert16ResetForHeadersLEv @ 43 NONAME
+	_ZN14CImRecvConvert20MessageEntryDetailsLEv @ 44 NONAME
+	_ZN14CImRecvConvert4NewLER3RFsP15CMsvServerEntry4TUidl @ 45 NONAME
+	_ZN14CImRecvConvert5NewLCER3RFsP15CMsvServerEntry4TUidl @ 46 NONAME
+	_ZN14CImRecvConvert6ResetLEv @ 47 NONAME
+	_ZN14CImRecvConvertD0Ev @ 48 NONAME
+	_ZN14CImRecvConvertD1Ev @ 49 NONAME
+	_ZN14CImRecvConvertD2Ev @ 50 NONAME
+	_ZN14CImSendMessage10HeaderSizeEv @ 51 NONAME
+	_ZN14CImSendMessage11InitialiseLEl13TImSendMethod5TTimeRK7TDesC16j21TImSMTPSendCopyToSelf @ 52 NONAME
+	_ZN14CImSendMessage11InitialiseLEl5TTimeRK7TDesC16RK24TImEmailTransformingInfo21TImSMTPSendCopyToSelf @ 53 NONAME
+	_ZN14CImSendMessage4NewLER15CMsvServerEntry @ 54 NONAME
+	_ZN14CImSendMessage5NewLCER15CMsvServerEntry @ 55 NONAME
+	_ZN14CImSendMessage5ResetEv @ 56 NONAME
+	_ZN14CImSendMessage9BodySizeLEv @ 57 NONAME
+	_ZN14CImSendMessage9NextLineLER5TDes8Ri @ 58 NONAME
+	_ZN16CImConvertHeader14SetMessageTypeEi @ 59 NONAME
+	_ZN16CImConvertHeader15FindEncodedWordER6TPtrC8RiS2_S2_ @ 60 NONAME
+	_ZN16CImConvertHeader18DecodeHeaderFieldLERK6TDesC8R6TDes16 @ 61 NONAME
+	_ZN16CImConvertHeader18DecodeHeaderFieldLERK7TDesC16R6TDes16 @ 62 NONAME
+	_ZN16CImConvertHeader18EncodeHeaderFieldLERK7TDesC16R5TDes8P9CArrayFixI21TImHeaderEncodingInfoEii @ 63 NONAME
+	_ZN16CImConvertHeader18EncodeHeaderFieldLERK7TDesC16R5TDes8jN21TImHeaderEncodingInfo13TEncodingTypeE @ 64 NONAME
+	_ZN16CImConvertHeader18SetOverrideCharsetEj @ 65 NONAME
+	_ZN16CImConvertHeader19ConvertHeaderFieldLERK7TDesC16R5TDes8 @ 66 NONAME
+	_ZN16CImConvertHeader22DecodeAllHeaderFieldsLER9CImHeader @ 67 NONAME
+	_ZN16CImConvertHeader25DecodeNonMIMEHeaderFieldLERK6TDesC8R6TDes16 @ 68 NONAME
+	_ZN16CImConvertHeader4NewLER18CImConvertCharconv @ 69 NONAME
+	_ZN16ImCheckDiskSpace15LeaveIfLowDiskLER3RFsi @ 70 NONAME
+	_ZN19CImCalculateMsgSize4NewLER3RFsR15CMsvServerEntry @ 71 NONAME
+	_ZN19CImCalculateMsgSize6StartLER14TRequestStatusl13TImSendMethodR5TTimeRK7TDesC16j @ 72 NONAME
+	_ZN19CImCalculateMsgSizeD0Ev @ 73 NONAME
+	_ZN19CImCalculateMsgSizeD1Ev @ 74 NONAME
+	_ZN19CImCalculateMsgSizeD2Ev @ 75 NONAME
+	_ZN20CImTextServerSession10DisconnectER14TRequestStatus @ 76 NONAME
+	_ZN20CImTextServerSession10DisconnectEv @ 77 NONAME
+	_ZN20CImTextServerSession11GetIAPValueERm @ 78 NONAME
+	_ZN20CImTextServerSession11SendReceiveERK6TDesC8 @ 79 NONAME
+	_ZN20CImTextServerSession11SetSecurityEii @ 80 NONAME
+	_ZN20CImTextServerSession12GetIAPBearerERm @ 81 NONAME
+	_ZN20CImTextServerSession12QueueConnectER14TRequestStatusRK7TDesC16i9TCallBackRK17CImIAPPreferencesii @ 82 NONAME
+	_ZN20CImTextServerSession12QueueConnectER14TRequestStatusRK7TDesC16i9TCallBacki @ 83 NONAME
+	_ZN20CImTextServerSession12QueueConnectER14TRequestStatusRK7TDesC16i9TCallBackmii @ 84 NONAME
+	_ZN20CImTextServerSession12QueueConnectER14TRequestStatusRK7TDesC16iRK17CImIAPPreferencesii @ 85 NONAME
+	_ZN20CImTextServerSession12QueueConnectER14TRequestStatusRK7TDesC16ii @ 86 NONAME
+	_ZN20CImTextServerSession12QueueConnectER14TRequestStatusRK7TDesC16imii @ 87 NONAME
+	_ZN20CImTextServerSession13QueueConnectLER14TRequestStatusRK7TDesC16iRK17CImIAPPreferencesi @ 88 NONAME
+	_ZN20CImTextServerSession14PerformLoggingEi @ 89 NONAME
+	_ZN20CImTextServerSession16SSLQueueConnectLER14TRequestStatusRK7TDesC16iRK17CImIAPPreferencesi @ 90 NONAME
+	_ZN20CImTextServerSession16SendQueueReceiveER14TRequestStatus11TRefByValueIK6TDesC8Ez @ 91 NONAME
+	_ZN20CImTextServerSession16SendQueueReceiveER14TRequestStatusRK6TDesC8 @ 92 NONAME
+	_ZN20CImTextServerSession17ReceiveBinaryDataER14TRequestStatusR5TDes8i @ 93 NONAME
+	_ZN20CImTextServerSession18GetConnectionStageEv @ 94 NONAME
+	_ZN20CImTextServerSession18GetCurrentTextLineER5TDes8 @ 95 NONAME
+	_ZN20CImTextServerSession18SetSSLTLSResponseLERK6TDesC8 @ 96 NONAME
+	_ZN20CImTextServerSession24QueueReceiveNextTextLineER14TRequestStatus @ 97 NONAME
+	_ZN20CImTextServerSession4NewLER11RSocketServ @ 98 NONAME
+	_ZN20CImTextServerSession4NewLEv @ 99 NONAME
+	_ZN20CImTextServerSession4SendE11TRefByValueIK6TDesC8Ez @ 100 NONAME
+	_ZN20CImTextServerSession4SendER14TRequestStatus11TRefByValueIK6TDesC8Ez @ 101 NONAME
+	_ZN20CImTextServerSession4SendER14TRequestStatusRK6TDesC8 @ 102 NONAME
+	_ZN20CImTextServerSession4SendERK6TDesC8 @ 103 NONAME
+	_ZN20CImTextServerSession5NewLCENS_16TImOperationModeER11RSocketServ @ 104 NONAME
+	_ZN20CImTextServerSession7LogTextERK6TDesC8 @ 105 NONAME
+	_ZN20CImTextServerSession7ReceiveER14TRequestStatusR5TDes8 @ 106 NONAME
+	_ZN20CImTextServerSession7ReceiveER5TDes8 @ 107 NONAME
+	_ZN20CImTextServerSession8LogErrorERK6TDesC8i @ 108 NONAME
+	_ZN20CImTextServerSession9LocalNameEv @ 109 NONAME
+	_ZNK13CImLogMessage9GetStringER6TDes16i @ 110 NONAME
+	_ZNK16CImConvertHeader15OverrideCharsetEv @ 111 NONAME
+	_ZTI10TImCodecQP @ 112 NONAME ; #<TI>#
+	_ZTI10TImCodecUU @ 113 NONAME ; #<TI>#
+	_ZTI11TImCodecB64 @ 114 NONAME ; #<TI>#
+	_ZTV10TImCodecQP @ 115 NONAME ; #<VT>#
+	_ZTV10TImCodecUU @ 116 NONAME ; #<VT>#
+	_ZTV11TImCodecB64 @ 117 NONAME ; #<VT>#
+	_ZN14CImRecvConvert19WritePartialFooterLEi @ 118 NONAME
+	_ZN14CImRecvConvert21DeletedAttachmentSizeEv @ 119 NONAME
+	_ZN14CImRecvConvert16MessageCompleteLEi @ 120 NONAME
+	_ZTI10CImConnect @ 121 NONAME ; #<TI>#
+	_ZTI10CImcvUtils @ 122 NONAME ; #<TI>#
+	_ZTI11CImSendFile @ 123 NONAME ; #<TI>#
+	_ZTI11CMimeParser @ 124 NONAME ; #<TI>#
+	_ZTI12CImSendEmail @ 125 NONAME ; #<TI>#
+	_ZTI12CRfc822Token @ 126 NONAME ; #<TI>#
+	_ZTI12TImCodecNull @ 127 NONAME ; #<TI>#
+	_ZTI12TImFileCodec @ 128 NONAME ; #<TI>#
+	_ZTI13CImLogMessage @ 129 NONAME ; #<TI>#
+	_ZTI14CImRecvConvert @ 130 NONAME ; #<TI>#
+	_ZTI14CImSendMessage @ 131 NONAME ; #<TI>#
+	_ZTI15CImSendRichText @ 132 NONAME ; #<TI>#
+	_ZTI16CImConvertHeader @ 133 NONAME ; #<TI>#
+	_ZTI16CImSendMimeEmail @ 134 NONAME ; #<TI>#
+	_ZTI17CImEmailTraverser @ 135 NONAME ; #<TI>#
+	_ZTI17CImSendMimeHeader @ 136 NONAME ; #<TI>#
+	_ZTI17CImSendPlainEmail @ 137 NONAME ; #<TI>#
+	_ZTI19CImCalculateMsgSize @ 138 NONAME ; #<TI>#
+	_ZTI19CImSendRfc822Header @ 139 NONAME ; #<TI>#
+	_ZTI19CImTextServerScript @ 140 NONAME ; #<TI>#
+	_ZTI20CImTextServerSession @ 141 NONAME ; #<TI>#
+	_ZTI25TImCodecB64WithLineBreaks @ 142 NONAME ; #<TI>#
+	_ZTV10CImConnect @ 143 NONAME ; #<VT>#
+	_ZTV10CImcvUtils @ 144 NONAME ; #<VT>#
+	_ZTV11CImSendFile @ 145 NONAME ; #<VT>#
+	_ZTV11CMimeParser @ 146 NONAME ; #<VT>#
+	_ZTV12CImSendEmail @ 147 NONAME ; #<VT>#
+	_ZTV12CRfc822Token @ 148 NONAME ; #<VT>#
+	_ZTV12TImCodecNull @ 149 NONAME ; #<VT>#
+	_ZTV12TImFileCodec @ 150 NONAME ; #<VT>#
+	_ZTV13CImLogMessage @ 151 NONAME ; #<VT>#
+	_ZTV14CImRecvConvert @ 152 NONAME ; #<VT>#
+	_ZTV14CImSendMessage @ 153 NONAME ; #<VT>#
+	_ZTV15CImSendRichText @ 154 NONAME ; #<VT>#
+	_ZTV16CImConvertHeader @ 155 NONAME ; #<VT>#
+	_ZTV16CImSendMimeEmail @ 156 NONAME ; #<VT>#
+	_ZTV17CImEmailTraverser @ 157 NONAME ; #<VT>#
+	_ZTV17CImSendMimeHeader @ 158 NONAME ; #<VT>#
+	_ZTV17CImSendPlainEmail @ 159 NONAME ; #<VT>#
+	_ZTV19CImCalculateMsgSize @ 160 NONAME ; #<VT>#
+	_ZTV19CImSendRfc822Header @ 161 NONAME ; #<VT>#
+	_ZTV19CImTextServerScript @ 162 NONAME ; #<VT>#
+	_ZTV20CImTextServerSession @ 163 NONAME ; #<VT>#
+	_ZTV25TImCodecB64WithLineBreaks @ 164 NONAME ; #<VT>#
+	_ZN20CImTextServerSession18GetRConnectionNameER4TBufILi128EE @ 165 NONAME
+

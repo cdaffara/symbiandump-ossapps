@@ -1,0 +1,103 @@
+<?xml version="1.0" standalone="yes" ?>
+<creatorscript schemaVersion="1.0" scriptVersion="1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="creator.xsd">
+
+<!-- Contact set with existing contacts -->
+<contact-set id="1" numberofexistingcontacts="10">
+</contact-set>
+
+<!-- Create an appointment with 5 attendees. Two of the attendees are selected from the contacts -->
+<!-- and two of the attendees are randomly generated. One contact explicitly given. -->
+<calendar type="appointment">
+   <fields>
+   <summary>Project meeting</summary>
+   <description>Let's have a bi-weekly project meeting. Welcome everyone!</description>
+   <location>Meeting room 1</location>
+   <starttime>2008-03-27T13:02:57</starttime>
+   <endtime>2008-03-27T16:15:00</endtime>
+   <recurrentfrequency>weekly</recurrentfrequency>
+   <recurrentinterval>2</recurrentinterval>
+   <recurrentfrom>2008-03-27</recurrentfrom>   
+   <recurrentto>2009-03-27</recurrentto>
+   <attendees>
+      <!-- Two existing contacts -->
+   	  <contact-set-reference id="1" maxamount="2"/>
+      <attendee>
+         <commonname>John Doe</commonname>
+         <email>john.doe@example.net</email>
+      </attendee>
+      <attendee>
+         <commonname/>
+         <email/>
+      </attendee>
+      <attendee>
+         <commonname/>
+         <email/>
+      </attendee>
+   </attendees>
+   </fields>  
+</calendar>
+
+<!-- Contact set with 5 contacts having first name "Jane" -->
+<contact-set id="2">
+    <contact amount="5">
+        <fields>
+            <firstname>Jane</firstname>
+            <lastname/>
+            <emailwork/>
+            <mobilephonework/>
+        </fields>
+    </contact>
+</contact-set>
+
+<!-- Create an appointment having "Jane" as an attendee (random location) -->
+<calendar type="appointment">
+   <fields>
+   <summary>Appointment with Jane</summary>
+   <starttime>2008-02-29T14:00:00</starttime>
+   <endtime>2008-02-29T15:00:00</endtime>
+   <location/>
+   <attendees>      
+      <contact-set-reference id="2" maxamount="1"/>      
+   </attendees>
+   </fields>
+</calendar>
+
+<!-- Create an event -->
+<calendar type="event">
+   <fields>
+   <summary>Tech Days</summary>
+   <description>Annual tech days, let's have fun!</description>
+   <starttime>2008-05-01</starttime>
+   <endtime>2008-05-03</endtime>
+   </fields>
+</calendar>
+
+<!-- Create a reminder -->
+<calendar type="reminder">
+  <fields>
+  <summary>Remember to buy Lotto!</summary>
+  <starttime>2008-02-28T18:00:00</starttime>
+  <endtime>2008-02-28T18:00:00</endtime>
+  </fields>
+</calendar>
+
+<!-- Create 10 random anniversaries -->
+<calendar type="anniversary" amount="10">
+  <fields>
+  <summary/>
+  <starttime/>
+  </fields>
+</calendar>
+
+<!-- Create a to-do entry -->
+<calendar type="todo">
+  <fields>
+     <summary>Should do something...?</summary>
+     <starttime>2008-02-29T10:00:00</starttime>
+     <endtime>2008-02-29T12:00:00</endtime>
+  </fields>
+</calendar>
+
+</creatorscript>

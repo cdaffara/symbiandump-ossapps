@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<category>
+	<name>Files</name>
+	<mime>type/file</mime>
+	<licon></licon>
+	<baseapp>root file</baseapp>
+	<lname>txt_search_list_all_other_files</lname>
+	<displayorder>7</displayorder>
+	<exceptionstring></exceptionstring>
+	<tsfile></tsfile>
+	<actionuri>
+		<uri>
+			<uristring></uristring>
+			<lname></lname>
+			<licon></licon>
+			<uriref></uriref>
+			<action></action><!-- primary action or default action. alternatively, we could always use first entry as this one -->
+		</uri>		
+	</actionuri>
+  <fieldmap>
+  	<resulthit>
+  		<field></field>
+  		<auri></auri><!-- alternatively <auriorder>1,2,3,4</auriorder> instead of four lines -->  		
+  	</resulthit>  	
+  </fieldmap>
+ <indexcontentsize>L</indexcontentsize> <!-- possible values S, M, L, XL, XXL. or scale of 1 to 10. -->
+ <policy>
+ 	<capability>WriteDeviceData<!-- Allow search on my data from clients with only Write Device Data capability it is combination of SID/VID/capability --></capability>
+ </policy>
+ <resultfirstline>
+ 	<list>
+ 	<field>Name</field><!-- commo seperated list, if there is a chance that certain field could be empty --> 	
+ 	</list>
+ 	</resultfirstline> 
+ <relevancy>
+ 	<boost>
+ 		<field>Name</field>
+ 		<boostvalue>10</boostvalue><!-- on scale 1-10 -->
+ 	</boost>
+ 	<boost>
+ 		<field>Extension</field>
+ 		<boostvalue>5</boostvalue>
+  </boost>  
+ </relevancy>
+</category>

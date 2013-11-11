@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<api id="fd79653552dfddc5384b67f5eab5f62a" dataversion="1.0">
+  <name>DS Contact Adapter Customization API</name>
+  <description>Exports Contact Adapter API to make possible to inherit Contact Adapter and create Extended Contacts Adapters</description>
+  <type>c++</type>
+  <subsystem>omads</subsystem>
+  <libs>
+    <lib name="nsmlcontactsdataprovider.lib" />
+  </libs>
+  <release category="platform"/>
+  <attributes>
+     <htmldocprovided>no</htmldocprovided>
+     <adaptation>no</adaptation>
+  </attributes>
+</api>

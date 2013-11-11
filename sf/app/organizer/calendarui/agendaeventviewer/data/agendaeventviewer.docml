@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="0.9">
+    <widget name="eventViewer" type="HbView">
+        <widget name="content" role="HbView:widget" type="HbWidget">
+			<widget name="groupBox" type="HbGroupBox">
+                <real name="z" value="1"/>
+                <bool name="collapsable" value="FALSE"/>
+                <string locid="txt_calendar_subhead_event" name="heading" value="Event"/>
+            </widget>
+            <widget name="scrollArea" type="HbScrollArea">
+                <widget name="scrollAreaContents" role="HbScrollArea:contents" type="HbWidget">
+                    <widget name="subjectWidget" type="HbWidget"/>
+                    <widget name="dateTimeWidget" type="HbWidget"/>
+                    <widget name="locationWidget" type="HbWidget"/>
+					<widget name="reminderWidget" type="HbWidget"/>
+					<widget name="repeatWidget" type="HbWidget"/>
+					<widget name="descriptionWidget" type="HbWidget"/>
+                    <widget name="maptileWidget" type="HbLabel">
+                        <contentsmargins bottom="var(hb-param-margin-gene-bottom)" left="var(hb-param-margin-gene-left)" top="0un"/>
+                    </widget>
+                    <layout orientation="Vertical" type="linear">
+                        <contentsmargins bottom="0un" left="0un" top="0un"/>
+                        <linearitem itemname="subjectWidget"/>
+                        <linearitem itemname="dateTimeWidget"/>
+                        <linearitem itemname="locationWidget"/>
+                        <linearitem itemname="maptileWidget"/>
+						<linearitem itemname="reminderWidget"/>
+						<linearitem itemname="repeatWidget"/>
+						<linearitem itemname="descriptionWidget"/>
+                    </layout>
+                </widget>
+                <enums name="verticalScrollBarPolicy" value="ScrollBarAutoHide"/>
+                <enums name="horizontalScrollBarPolicy" value="ScrollBarAlwaysOff"/>
+                <real name="z" value="1"/>
+                <enums name="clampingStyle" value="StrictClamping"/>
+            </widget>
+            <layout type="anchor">
+                <anchoritem dst="groupBox" dstEdge="TOP" spacing="0un" src="" srcEdge="TOP"/>
+                <anchoritem dst="groupBox" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="groupBox" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+				<anchoritem dst="scrollArea" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="scrollArea" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="scrollArea" dstEdge="BOTTOM" spacing="0un" src="" srcEdge="BOTTOM"/>
+				<anchoritem dst="scrollArea" dstEdge="TOP" spacing="0un" src="groupBox" srcEdge="BOTTOM"/>
+            </layout>
+        </widget>
+        <widget name="viewerMenu" role="HbView:menu" type="HbMenu"/>
+        <widget name="viewToolbar" role="HbView:toolBar" type="HbToolBar"/>
+        <string locid="txt_calendar_title_calendar" name="title" value="Calendar"/>
+    </widget>
+    <metadata activeUIState="Common ui state" display="QHD portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+    </metadata>
+</hbdocument>

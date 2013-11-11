@@ -1,0 +1,190 @@
+/*
+* Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: 
+*
+*/
+
+
+#ifndef LOADGEN_HRH
+#define LOADGEN_HRH
+
+enum TLoadGenCommandIds
+    {
+    ELoadGenCmdNewLoad,    
+    ELoadGenCmdNewLoadCPULoad,    
+    ELoadGenCmdNewLoadEatMemory,    
+    ELoadGenCmdNewLoadPhoneCall,    
+    ELoadGenCmdNewLoadNetConn,    
+    ELoadGenCmdNewLoadKeyPress,    
+    ELoadGenCmdNewLoadMessages,
+    ELoadGenCmdNewLoadApplications,
+    ELoadGenCmdNewLoadPhotoCaptures,
+    ELoadGenCmdNewLoadBluetooth,
+    ELoadGenCmdNewLoadPointerEvent,
+    ELoadGenStopAll,
+    ELoadGenSuspendAll,
+    ELoadGenResumeAll,
+
+    ELoadGenCmdLaunchPerfMon,
+    ELoadGenCmdAbout,
+
+    ELoadGenCmdSettingsChange,
+    ELoadGenCmdSettingsExit,
+    ELoadGenCmdSettingsBack,
+
+    ELoadGenSettingItemList
+    };
+
+enum TEditorFormItemIds
+    {
+    ELoadGenCPULoadQueryPriority = 1000,
+    ELoadGenCPULoadQueryMode,
+    ELoadGenCPULoadQueryType,
+    ELoadGenCPULoadQueryLength,
+    ELoadGenCPULoadQueryIdle,
+    ELoadGenCPULoadQueryVariance,
+    ELoadGenCPULoadQueryCpu,
+
+    ELoadGenMemoryEatQueryPriority,
+    ELoadGenMemoryEatQuerySource,
+    ELoadGenMemoryEatQueryType,
+    ELoadGenMemoryEatQueryBuffer,
+    ELoadGenMemoryEatQueryIdle,
+    ELoadGenMemoryEatQueryAmount,
+    ELoadGenMemoryEatQueryRandomMin,
+    ELoadGenMemoryEatQueryRandomMax,
+    ELoadGenMemoryEatQueryVariance,
+    
+    ELoadGenPhoneCallQueryPriority,
+    ELoadGenPhoneCallQueryDestination,
+    ELoadGenPhoneCallQueryLength,
+    ELoadGenPhoneCallQueryIdle,
+    ELoadGenPhoneCallQueryVariance,
+    
+    ELoadGenNetConnQueryPriority,
+    ELoadGenNetConnQueryDestination,
+    ELoadGenNetConnQueryIdle,
+    ELoadGenNetConnQueryVariance,
+   
+    ELoadGenKeyPressQueryPriority,
+    ELoadGenKeyPressQueryHeartBeat,
+    ELoadGenKeyPressQueryVariance,
+        
+    ELoadGenMessagesQueryPriority,        
+    ELoadGenMessagesQueryType,            // Message type
+    ELoadGenMessagesQueryDestination,     // Phone number
+    ELoadGenMessagesQueryAmount,          // Messages
+    ELoadGenMessagesQueryLength,          // Message length
+    ELoadGenMessagesQueryMessage,         // Message
+    ELoadGenMessagesQueryIdle,            // idle period 
+    ELoadGenMessagesQueryVariance,
+
+    ELoadGenApplicationsQueryPriority,
+    ELoadGenApplicationsLaunchingInterval,
+    ELoadGenApplicationsKeyPressQueryHeartBeat,
+    ELoadGenApplicationsMaxOpen,
+    ELoadGenApplicationsKeyPressType,
+    ELoadGenApplicationsQueryVariance,
+    
+    ELoadGenPhotoCaptureQueryPriority,
+    ELoadGenPhotoCaptureQueryDevice,    
+    ELoadGenPhotoCaptureQueryIdle,
+    ELoadGenPhotoCaptureQueryVariance,
+           
+    ELoadGenBluetoothQueryPriority,
+    ELoadGenBluetoothQueryIdle,
+    ELoadGenBluetoothQueryVariance,
+    
+    ELoadGenPointerEventQueryPriority,
+    ELoadGenPointerEventQueryHeartBeat,
+    ELoadGenPointerEventQueryVariance
+    };
+
+enum TItemActionMenuTypes
+    {
+    EItemActionMenuTypeStop = 0,
+    EItemActionMenuTypeSuspendResume,    
+    EItemActionMenuTypeEdit    
+    };
+
+enum TThreadPriorityTypes
+    {
+    EThreadPriorityTypeMuchLess = 0,    
+    EThreadPriorityTypeLess,    
+    EThreadPriorityTypeNormal,    
+    EThreadPriorityTypeMore,    
+    EThreadPriorityTypeMuchMore,    
+    EThreadPriorityTypeRealTime,    
+    EThreadPriorityTypeAbsoluteVeryLow,    
+    EThreadPriorityTypeAbsoluteLow,    
+    EThreadPriorityTypeAbsoluteBackground,    
+    EThreadPriorityTypeAbsoluteForeground,    
+    EThreadPriorityTypeAbsoluteHigh
+    };
+
+enum TCpuLoadMode
+    {
+    ECpuLoadModeYielding = 0,
+    ECpuLoadModeBlocking    
+    };
+                    
+enum TCpuLoadTypes
+    {
+    ECpuLoadTypeContinuous = 0,
+    ECpuLoadTypePeriodic    
+    };
+
+enum TMemoryEatTypes
+    {
+    EMemoryEatTypeMemoryToEat = 0,
+    EMemoryEatTypeMemoryToBeLeft,
+    EMemoryEatTypeWavy
+    };        
+
+enum TMemoryEatSourceTypes
+    {
+    EMemoryEatSourceTypeRAM = 0,
+    EMemoryEatSourceTypeDriveC,
+    EMemoryEatSourceTypeDriveD,
+    EMemoryEatSourceTypeDriveE,
+    EMemoryEatSourceTypeDriveF,
+    EMemoryEatSourceTypeDriveG,
+    EMemoryEatSourceTypeDriveH,
+    EMemoryEatSourceTypeDriveI,
+    EMemoryEatSourceTypeDriveJ,
+    EMemoryEatSourceTypeDriveK,
+    EMemoryEatSourceTypeDriveL,
+    EMemoryEatSourceTypeDriveM,
+    EMemoryEatSourceTypeDriveN
+    };
+
+enum TMessageTypes
+    {
+    EMessageTypeSMS = 0,
+    EMessageTypeMMS
+    };      
+
+enum TApplicationsKeyPressTypes
+    {
+    EApplicationsKeyPressTypeNone = 0,
+    EApplicationsKeyPressTypeArrows
+    };      
+
+enum TApplicationsEventTypes
+    {
+    EApplicationsCloseApplication = 0,
+    EApplicationsLaunchApplication
+    };      
+
+#endif      // LOADGEN_HRH

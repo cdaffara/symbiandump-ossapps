@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SystemDefinition schema="3.0.0" xmlns:qt="http://www.nokia.com/qt">
+  <package id="internetradio" name="Internet Radio Apps" levels="engine server ui">
+   <collection id="internetradio2_0" name="Internet Radio 2.0" level="ui">
+	<!-- collection is really a component. Move down a dir -->
+    <component id="internetradio2_0_rom" name="Internet Radio 2.0 ROM" class="config" filter="s60">
+      <unit bldFile="internetradio2.0/rom"/>
+    </component>
+    <component id="ircachemgmt" name="Internet Radio Cache Management" filter="s60">
+      <unit bldFile="internetradio2.0/ircachemgmt/group"/>
+    </component>
+    <component id="ircommon" name="Internet Radio Common" filter="s60">
+      <unit bldFile="internetradio2.0/ircommon/group"/>
+    </component>
+    <component id="irdataprovider" name="Internet Radio Data Provider" filter="s60">
+      <unit bldFile="internetradio2.0/irdataprovider/group"/>
+    </component>
+    <component id="irfavoritesdb" name="Internet Radio Favorites Database" filter="s60">
+      <unit bldFile="internetradio2.0/irfavoritesdb/group"/>
+    </component>
+    <component id="irfilerecognizer" name="Internet Radio File Recognizer" filter="s60">
+      <unit bldFile="internetradio2.0/irfilerecognizer/group"/>
+    </component>
+    <component id="irisdsclient" name="Internet Radio ISDS Client" filter="s60">
+      <unit bldFile="internetradio2.0/irisdsclient/group"/>
+    </component>
+    <component id="irnetworkcontroller" name="Internet Radio Network Controller" filter="s60">
+      <unit bldFile="internetradio2.0/irnetworkcontroller/group"/>
+    </component>
+    <component id="irpresetplugin" name="Internet Radio Preset Plugin" filter="s60" class="plugin">
+      <unit bldFile="internetradio2.0/irpresetplugin/group"/>
+    </component>
+    <component id="irrfsplugin" name="Internet Radio RFS Plugin" filter="s60" class="plugin">
+      <unit bldFile="internetradio2.0/irrfsplugin/group"/>
+    </component>
+    <component id="irsessionlog" name="Internet Radio Session Log" filter="s60">
+      <unit bldFile="internetradio2.0/irsessionlog/group"/>
+    </component>
+    <component id="irsettings" name="Internet Radio Settings" filter="s60">
+      <unit bldFile="internetradio2.0/irsettings/group"/>
+    </component>
+    <component id="irxmlparser" name="Internet Radio XML Parser" filter="s60">
+      <unit bldFile="internetradio2.0/irxmlparser/group"/>
+    </component>
+    </collection>
+    <collection id="presetserver" name="Preset Server" level="server">
+	<!-- collection is really a component. Move down a dir -->
+    <component id="presetserver_build" name="Preset Server Build" filter="s60">
+      <unit bldFile="presetserver/group"/>
+     </component>
+    </collection>
+    <collection id="qtinternetradio" name="Qt Internet Radio">
+    <component id="qtinternetradio_build" name="Qt Internet Radio Build" filter="s60">
+	<!--  Move down a dir or break into components-->
+      <unit bldFile="qtinternetradio" qt:proFile="all.pro" qt:qmakeArgs="-r -config rom"/>
+     </component>
+    </collection>
+  </package>
+</SystemDefinition>

@@ -1,0 +1,32 @@
+  make -r  -f "\EPOC32\BUILD\photosqt\ui\uiengine\medialists\group\EXPORT.make" EXPORT VERBOSE=-s
+Nothing to do
+  make -r  -f "\EPOC32\BUILD\photosqt\ui\uiengine\medialists\group\WINSCW.make" MAKEFILE VERBOSE=-s
+perl -S makmake.pl  -D \photosqt\ui\uiengine\medialists\group\GLXMEDIALISTS WINSCW   
+  make -r  -f "\EPOC32\BUILD\photosqt\ui\uiengine\medialists\group\WINSCW.make" LIBRARY VERBOSE=-s
+make -s  -r -f "\EPOC32\BUILD\photosqt\ui\uiengine\medialists\group\GLXMEDIALISTS\WINSCW\GLXMEDIALISTS.WINSCW" LIBRARY
+  make -r  -f "\EPOC32\BUILD\photosqt\ui\uiengine\medialists\group\WINSCW.make" RESOURCE CFG=UDEB VERBOSE=-s
+make -s  -r -f "\EPOC32\BUILD\photosqt\ui\uiengine\medialists\group\GLXMEDIALISTS\WINSCW\GLXMEDIALISTS.WINSCW" RESOURCEUDEB
+  perl /epoc32/tools/tracecompiler.pl WINSCW 
+  make -r  -f "\EPOC32\BUILD\photosqt\ui\uiengine\medialists\group\WINSCW.make" TARGET CFG=UDEB VERBOSE=-s
+make -s  -r -f "\EPOC32\BUILD\photosqt\ui\uiengine\medialists\group\GLXMEDIALISTS\WINSCW\GLXMEDIALISTS.WINSCW" UDEB
+glxattributecontext.cpp
+glxcache.cpp
+glxcachemanager.cpp
+glxerrormanager.cpp
+glxfetchcontextremover.cpp
+glxgarbagecollector.cpp
+glxitemlist.cpp
+glxmedia.cpp
+glxmedialist.cpp
+glxmedialistarray.cpp
+glxmedialistiterator.cpp
+glxnavigablelist.cpp
+glxstaticitemlist.cpp
+glxthumbnailcontext.cpp
+glxthumbnailutility.cpp
+mglxcache.cpp
+mglxmedialist.cpp
+glxmedialists.UID.CPP
+make[1]: *** No rule to make target `\epoc32\release\WINSCW\udeb\glxcommonui.lib', needed by `\epoc32\release\winscw\udeb\glxmedialists.dll'.  Stop.
+make: *** [TARGETGLXMEDIALISTS] Error 2
+  make -r  -f "\EPOC32\BUILD\photosqt\ui\uiengine\medialists\group\WINSCW.make" FINAL CFG=UDEB VERBOSE=-s

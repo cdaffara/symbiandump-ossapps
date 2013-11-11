@@ -1,0 +1,41 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: Build information file for project InternetRadio
+*
+*/
+
+
+#include <platform_paths.hrh>
+#include <bldvariant.hrh>
+
+#include "../ircachemgmt/group/bld.inf"
+#include "../ircommon/group/bld.inf"
+#include "../irdataprovider/group/bld.inf"
+#include "../irfavoritesdb/group/bld.inf"
+#include "../irfilerecognizer/group/bld.inf"
+#include "../irisdsclient/group/bld.inf"
+#include "../irnetworkcontroller/group/bld.inf"
+#include "../irpresetplugin/group/bld.inf"
+#include "../irrfsplugin/group/bld.inf"
+#include "../irsessionlog/group/bld.inf"
+#include "../irsettings/group/bld.inf"
+#include "../irxmlparser/group/bld.inf"
+
+PRJ_EXPORTS
+backup_registration.xml                         /epoc32/data/z/private/2002ffac/backup_registration.xml
+
+//ROM Build
+// THESE COMMENTED IBYS SHOULD BE EXPORTED BY PRODUCTS
+../rom/internetradio.iby                      CORE_APP_LAYER_IBY_EXPORT_PATH(internetradio.iby)  
+../rom/internetradiosettings.iby              CORE_APP_LAYER_IBY_EXPORT_PATH(internetradiosettings.iby)

@@ -1,0 +1,427 @@
+/*
+* Copyright (c) 2002-2008 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  The localization file for user interface in Image Print R6.2
+*
+*/
+
+
+/** 
+* Syntax of a logical name entry in this file is the following:
+*
+* // d:context description (line 1)
+* // d:context description (line N)
+* // l:P_No
+* // r:n.n (n=0..N)
+*
+* #define qtn_?feature/?module_name_?freetext "?text"
+* #define text_?feature/?module_name_?freetext "?text"
+*
+*   where
+*         "qtn_" or "text_" starts a logical name, which does not
+*          contain dots.
+*         "d:" starts description line(s), which
+*              clarify entry's context with information like:
+*              1. Is a word a verb in imperative or is it a noun ?
+*                   - what does text "Set" mean ?
+*              2. What will replace %U (unicode text parameter) or
+*                 %N (number parameter) included in texts ?
+*                   - is it phone number or email address ?
+*         "l:" starts a layout information (one line).
+*              "P" and "No" are symbols in LAF's information table
+*                 - "P" is parent pane or current pane
+*                 - "No" is reference number in table
+*         "r:" starts the release information line. Write here the release
+*              where the text will be used for the first time.	
+*
+*/
+
+// LOCALISATION STRINGS
+
+// d:Search again text on device discovery dialog
+// l:list_single_pane_t1_cp2
+#define qtn_print_search_again "Search again"	
+
+// d:Info note displayed to user to connect the cable 
+// l:popup_note_window
+#define qtn_print_connect_usb_note "Connect USB printer"	
+
+// d:Printing error note, notifies user that the printer has run out of paper
+// l:popup_note_window
+#define qtn_print_outofpaper_error "Out of paper"	
+
+// d:Printing error note, notifies user to check the printer  
+// l:popup_note_window
+#define qtn_print_status_error "Check status of printer"	
+
+// d:Printing error note, couldn't find the file from device/MMC
+// l:popup_note_window
+#define qtn_print_not_found_error "File not found."		
+
+// d:Printing error note, notifies user that the printer has run out of ink
+// l:popup_note_window
+#define qtn_print_outofink_error "Out of ink"	
+
+// d:Printing error note, notifies user that the printer is running out of ink
+// l:popup_note_window
+#define qtn_print_inklow_error "Ink low"	
+
+// d:Help command in the "Options" menu of Image Print
+// l:list_single_pane_t1_cp2
+#define qtn_print_menu_opt_help "Help"	
+
+// d:Text used in the wait note when either printer discovery or print job has been cancelled.
+// l:popup_note_wait_window
+#define qtn_print_progress_prompt_cancel "Cancelling"	
+
+// d:(No printers) text on device discovery dialog while the search is ongoing and nothing has been found
+// l:main_list_empty_pane/opt1
+#define qtn_print_no_printers "(No printers)"	
+
+// d:Information dialog text that is shown after successful MMC printing
+// d:There is an icon on the upper right corner of the note.
+// l:popup_note_window
+#define qtn_print_mmc_print_note "Images copied to memory card. Memory card may now be used in DPOF printer."	
+
+// d:Information dialog text that is shown after after successful MMC printing with one picture
+// d:There is an icon on the upper right corner of the note.
+// l:popup_note_window
+#define qtn_print_mmc_print_note_one_picture "Image copied to memory card. Memory card may now be used in DPOF printer."
+
+// d:Error note that is displayed, when MMC printing is failed.
+// d:There is an icon on the upper right corner of the note.
+// l:popup_note_window
+#define qtn_print_note_mmccopyfail "Copying to memory card failed. Remove data from memory card and try again."
+
+// d:Printing error note
+// d:Error note is displayed when the connection is unexpectedly terminated while the
+// d:printer is printing or somehow connected to a printer. This can be caused by error in link (e.g. Bluetooth connection
+// d:goes out-of-range or USB cable is disconnected) or then a software error happens, data is not transmitted and 
+// d:system timeout causes transmission to terminate.
+// l:popup_note_window
+#define qtn_print_disconnect_error "Connection to printer lost"
+
+// d: Obs. This string is also used in Image Print Title pane. 
+// d:Application's name on application shell
+// l:list_single_large_graphic_pane_t1
+#define qtn_app_caption_string "Image print"
+
+// NOTE!!!!! THERE IS A SMALL GRAPHIC ANIMATION AT THE END OF THIS LINE
+// d:Title text for device discovery popup list
+// l:heading_pane_t1/opt1
+#define qtn_print_selectprinter_prompt "Select printer"
+
+// d:Text on the device discovery pop-up list
+// l:list_single_large_graphic_pane_t1_cp2/opt1
+#define qtn_print_memory_card "Memory card"
+
+// d:Print command in the "Options" menu of the print view
+// l:list_single_pane_t1_cp2
+#define qtn_print_menu_opt_print "Print"
+
+// d:Exit command in the "Options" menu of the print view
+// l:list_single_pane_t1_cp2
+#define qtn_print_menu_opt_exit "Exit"
+
+// NOTE!!!!! ONLY ONE TEXT LINE ALLOWED
+// d:Text on the print progress dialog
+// l:popup_note_wait_window
+#define qtn_print_progress_prompt "Printing"
+
+// NOTE!!!!! ONLY ONE TEXT LINE ALLOWED
+// d:Text on the print progress dialog when copying files to MMC card
+// l:popup_note_wait_window
+#define qtn_print_progress_prompt_mmc "Copying"
+
+// d:Change command in the "Options" menu of the print settings view
+// l:list_single_pane_t1_cp2
+#define qtn_print_settings_opt_change "Change"
+
+// d:Paper size capability presented in the list box in print settings view
+// l:list_setting_pane_t1
+#define qtn_print_settings_paper_size "Paper size"
+
+// d:Paper size "Automatic" in the print settings view settings value
+// l:list_set_graphic_pane_t1
+#define qtn_print_paper_size_auto "Automatic"
+
+// d:Paper size "US Letter" in the print settings view list box / pop-up window
+// l:list_set_graphic_pane_t1
+#define qtn_print_paper_size_letter "US Letter"
+
+// d:Paper size "A4" in the print settings view list box / pop-up window
+// l:list_set_graphic_pane_t1
+#define qtn_print_paper_size_a4 "A4"
+
+// d:Paper size "A6" in the print settings view list box / pop-up window
+// l:list_set_graphic_pane_t1
+#define qtn_print_paper_size_a6 "A6"
+
+// d:Paper size "4x6" in the print settings view list box / pop-up window
+// d:4x6 means paper size of 4 inches by 6 inches. This needs to be converted
+// d:in country localizations that use metric system
+// l:list_set_graphic_pane_t1
+#define qtn_print_paper_size_4x6 "4x6"
+
+// d:Paper size "5x7" in the print settings view list box / pop-up window
+// d:5x7 means paper size of 5 inches by 7 inches. This needs to be converted
+// d:in country localizations that use metric system
+// l:list_set_graphic_pane_t1
+#define qtn_print_paper_size_5x7 "5x7"
+
+// d:Paper size "Sticker" in the print settings view list box / pop-up window
+// l:list_set_graphic_pane_t1
+#define qtn_print_paper_size_sticker "Sticker"
+
+// d:Print quality capability presented in the list box in print settings view
+// l:list_setting_pane_t1
+#define qtn_print_settings_print_quality "Print quality"
+
+// d:Print quality "Automatic" in the print settings view list box / pop-up window
+// l:list_set_graphic_pane_t1
+#define qtn_print_quality_auto "Automatic"
+
+// d:Print quality "Normal" in the print settings view list box / pop-up window
+// l:list_set_graphic_pane_t1
+#define qtn_print_quality_normal "Normal"
+
+// d:Print quality "Draft" in the print settings view list box / pop-up window
+// l:list_set_graphic_pane_t1
+#define qtn_print_quality_draft "Draft"
+
+// d:Print quality "Fine" in the print settings view list box / pop-up window
+// l:list_set_graphic_pane_t1
+#define qtn_print_quality_fine "Fine"
+
+// d:Printing error note
+// d:Error note is displayed, when connection over the chosen transmission technology fails,
+// d:e.g. application tries to establish connection to printer over Bluetooth, but it is unable
+// d:to do so.
+// l:popup_note_window
+#define qtn_print_connect_error "Unable to connect to printer"
+
+// d:Printing error note
+// l:popup_note_window
+#define qtn_print_send_error "Unable to send image to printer. Printer may be busy"
+
+// d:Printing error note
+// d:This is a generic error note that is displayed, when no specific error message is available.
+// d:It tells to user that there has been problem during printing and (most probably) the printer
+// d:will cancel its current print job.
+// l:popup_note_window
+#define qtn_print_general_error "Printing error"
+
+// d:Selected printer capability presented in the list box in print settings view
+// l:list_setting_pane_t1
+#define qtn_print_selected_printer "Selected printer"
+
+// d:Default printer "PictBridge" in the print settings view list box / pop-up window
+// l:list_set_graphic_pane_t1
+#define qtn_print_settings_default_usb "PictBridge"
+
+// d:Default printer "Bluetooth" in the print settings view list box / pop-up window
+// l:list_set_graphic_pane_t1
+#define qtn_print_settings_default_bt "Bluetooth"
+
+// d:Printing information note.
+// d:This note is used to inform the user that one or many files of unsupported type(other than .jpeg) has been 
+// d:selected and the application will discard them and continue with the images that are of the supported filetype(.jpeg).
+// l:popup_note_window
+#define qtn_print_wrongtype_note "Filetypes that are not supported will be removed from the selection."
+
+// d:Printing information note.
+// d:This note is used to inform the user that (s)he has selected only images that are not supported 
+// d:by the application and has therefore to select new ones to print. 
+// d:This often follows the qtn_print_wrongtype_note note.
+// l:popup_note_window/opt2
+#define qtn_print_selectnew_note "Select new images for printing."
+
+// d:Printing information note.
+// d:The purpose of the note is to inform the user that printing is already ongoing 
+// d:and it may therefore not be initiated again elsewhere.
+// l:popup_note_window/opt2
+#define qtn_print_concurrent_note "Application already in use."
+
+// d:Text used in the wait note when a hidden discovery is ongoing.
+// l:popup_note_wait_window
+#define qtn_print_progress_prompt_pro "Processing"
+
+// d:Default printer "WLAN printer" in the print settings view list box / pop-up window
+// l:list_set_graphic_pane_t1
+#define qtn_print_settings_default_wlan "WLAN printer"
+
+// d:Number of copies pop up prompt.
+// l:list_setting_pane_t1
+#define qtn_print_settings_noc "Number of copies:"
+
+// d:Template capability as settings item in settings view
+// l:list_setting_pane_t1
+#define qtn_print_settings_template "Images per page"
+
+// d:Template 1 per page "1 borderless" in the print settings view list box / pop-up window
+// l:list_set_graphic_pane_t1
+#define qtn_print_settings_bless "1 borderless"
+
+// NOTE!!!!! THERE IS A SMALL GRAPHIC ANIMATION AT THE END OF THIS LINE
+// d:Title text for device discovery popup list
+// l:heading_pane_t1
+#define qtn_print_selectprinter_prompt2 "Searching"
+
+// d:Printing error note, notifies user that problem occurred while printing
+// l:popup_note_window
+#define qtn_print_paper_load_error "Paper not loaded correctly"
+
+// d:Printing error note, notifies user that problem occurred while printing
+// l:popup_note_window
+#define qtn_print_paper_eject_error "Paper not ejected correctly"
+
+// d:Printing error note, notifies user that problem occurred while printing
+// l:popup_note_window
+#define qtn_print_paper_media_error "Media error"
+
+// d:Printing error note, notifies user that problem occurred while printing
+// l:popup_note_window
+#define qtn_print_paper_jam_error "Paper jam"
+
+// d:Printing error note, notifies user that problem occurred while printing
+// l:popup_note_window
+#define qtn_print_paper_combination_error "Paper type/size not supported"
+
+// d:Printing error note, notifies user that problem occurred while printing
+// l:popup_note_window
+#define qtn_print_paper_low_error "Input tray is low on paper"
+
+// d:Printing error note, notifies user that problem occurred while printing
+// l:popup_note_window
+#define qtn_print_paper_error "Paper-related error"
+
+// d:Printing error note, notifies user that problem occurred while printing
+// l:popup_note_window
+#define qtn_print_file_decode_error "Unable to decode image file"
+
+// d:Printing error note, notifies user that problem occurred while printing
+// l:popup_note_window
+#define qtn_print_file_error "File-related error"
+
+// d:Printing error note, notifies user that problem occurred while printing
+// l:popup_note_window
+#define qtn_print_ink_waste_error "Waste-ink reservior full"
+
+// d:Printing error note, notifies user that problem occurred while printing
+// l:popup_note_window
+#define qtn_print_ink_error "Ink-related error"
+
+// d:Printing error note, notifies user that problem occurred while printing
+// l:popup_note_window
+#define qtn_print_hardware_cover_open_error "Cover open"
+
+// d:Printing error note, notifies user that problem occurred while printing
+// l:popup_note_window
+#define qtn_print_hardware_fatal_error "Fatal error"
+
+// d:Printing error note, notifies user that problem occurred while printing
+// l:popup_note_window
+#define qtn_print_hardware_servicecall_error "Service call"
+
+// d:Printing error note, notifies user that problem occurred while printing
+// l:popup_note_window
+#define qtn_print_hardware_printer_unavailable_error "Printer unavailable"
+
+// d:Printing error note, notifies user that problem occurred while printing
+// l:popup_note_window
+#define qtn_print_hardware_printer_busy_error "Printer busy"
+
+// d:Printing error note, notifies user that problem occurred while printing
+// l:popup_note_window
+#define qtn_print_hardware_lever_error "Lever position not correct"
+
+// d:Printing error note, notifies user that problem occurred while printing
+// l:popup_note_window
+#define qtn_print_hardware_no_marking_agent_error "No marking agent"
+
+// d:Printing error note, notifies user that problem occurred while printing
+// l:popup_note_window
+#define qtn_print_hardware_ink_cover_open_error "Ink cover open"
+
+// d:Printing error note, notifies user that problem occurred while printing
+// l:popup_note_window
+#define qtn_print_hardware_no_ink_cartridge_error "No ink cartridge"
+
+// d:Printing error note, notifies user that problem occurred while printing
+// l:popup_note_window
+#define qtn_print_hardware_error "Hardware-related error"
+
+// d:Printing error note, notifies user that problem occurred while printing
+// l:popup_note_window
+#define qtn_print_output_area_almost_full_error "Output area is almost full"
+
+// d:Printing error note, notifies user that problem occurred while printing
+// l:popup_note_window
+#define qtn_print_output_area_full_error "Output area is full"
+
+// d:Printing error note, notifies user that problem occurred while printing
+// l:popup_note_window
+#define qtn_print_marker_supply_low_error "Marker supply low"
+
+// d:Printing error note, notifies user that problem occurred while printing
+// l:popup_note_window
+#define qtn_print_marker_supply_empty_error "Marker supply is empty"
+
+// d:Printing error note, notifies user that problem occurred while printing
+// l:popup_note_window
+#define qtn_print_marker_failure_error "Marker device failed"
+
+// d:Printing error note, notifies user that problem occurred while printing
+// l:popup_note_window
+#define qtn_print_paused_error "Printer is paused"
+
+// d:Confirmation query for memory card printing
+// l:popup_note_window
+#define qtn_print_dpof_confirmation_dialog "Existing print job in memory card will be overwritten"
+
+// d:Confirmation query for launching wlan wizard, header
+// l:heading_pane_t1
+#define qtn_launch_wlan_wizard_query_header "WLAN printer"
+
+// d:Confirmation query for launching wlan wizard, message
+// l:popup_note_window
+#define qtn_launch_wlan_wizard_query_msg "Home network access point must be defined. Do you want to start setup wizard to define it?"
+
+// d:Application interworking (AIW) menu command.
+// d:Starts ImagePrint application.
+// l:list_single_popup_submenu_pane_t1
+// r:6.2
+#define qtn_aiw_command_print "Print"
+
+// d: Text when there is no printer selected in settings view
+// l: list_set_graphic_pane_t1  
+// r: 6.2
+#define qtn_print_no_printer "No printer"
+
+// d:Navi pane text when multiple images are selected to print. 
+// d:Or when one image is selected to print multiple times (number of copies is greater than 1). 
+// d:%N contains the number of the selected images/copies of one image.
+// d:E.g. '17 images', '2 images', '67 images' 
+// d:Maximum number of images is 999, so maximum length of %N is 3 characters ('999 images'). 
+// l:navi_navi_text_pane_t1
+// r:6.2
+#define qtn_printjob_images "%N images"
+
+// d:Navi pane text when only one image and one copy of it is selected to print.
+// l:navi_navi_text_pane_t1
+// r:6.2
+#define qtn_printjob_image "1 image"
+
+CHARACTER_SET UTF8
+
+// End of File

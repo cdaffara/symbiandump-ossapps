@@ -1,0 +1,16 @@
+<hbwidget version="0.1" type="NmAttachmentListItem">
+    <layout name="customitem" type="mesh">   
+        <meshitem src="filename" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="-var(hb-param-margin-gene-left)"/>
+        <meshitem src="filename" srcEdge="TOP" dst="" dstEdge="TOP" spacing="-var(hb-param-margin-gene-top)"/>
+        <meshitem src="filename" srcEdge="BOTTOM" dst="progressbar" dstEdge="TOP" spacing="var(hb-param-margin-gene-middle-vertical)"/>
+        <meshitem src="filename" srcEdge="RIGHT" dst="filesize" dstEdge="LEFT" spacing="var(hb-param-margin-gene-middle-horizontal)"/>
+        
+        <meshitem src="filesize" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)"/>
+        <meshitem src="filesize" srcEdge="TOP" dst="" dstEdge="TOP" spacing="-var(hb-param-margin-gene-top)"/>
+        <meshitem src="filesize" srcEdge="BOTTOM" dst="progressbar" dstEdge="TOP" spacing="var(hb-param-margin-gene-middle-vertical)"/>
+        
+        <meshitem src="progressbar" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacing="var(hb-param-margin-gene-bottom)"/>
+        <meshitem src="" srcEdge="LEFT" dst="progressbar" dstEdge="LEFT" spacing="var(hb-param-margin-gene-left)"/>
+        <meshitem src="progressbar" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)"/>
+    </layout>
+</hbwidget>

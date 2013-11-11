@@ -1,0 +1,592 @@
+// Copyright (c) 1999-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+PRJ_TESTMMPFILES
+
+T_MSGConnTest.mmp			manual
+t_IMUT_PARSE.mmp			manual
+T_IMCV_Transform_Send.mmp		manual
+T_IMCV_Transform_Receive.mmp	manual
+t_securesockets.mmp			manual
+T_IMSK02.mmp			manual
+T_PARSE_UTC.mmp			manual
+
+PRJ_TESTEXPORTS
+
+// IMSK script files
+../data/scriptwithSSLTLS.scr /epoc32/wins/c/msgtest/imut/scriptwithssltls.scr
+../data/scriptwithoutSSLTLS.scr /epoc32/wins/c/msgtest/imut/scriptwithoutssltls.scr
+
+../data/scriptwithSSLTLS.scr /epoc32/winscw/c/msgtest/imut/scriptwithssltls.scr
+../data/scriptwithoutSSLTLS.scr /epoc32/winscw/c/msgtest/imut/scriptwithoutssltls.scr
+
+../scripts/T_PARSE_UTC.script				/epoc32/wins/c/msgtest/imut/t_parse_utc.script
+../scripts/T_PARSE_UTC.script				/epoc32/winscw/c/msgtest/imut/t_parse_utc.script
+
+// IMUT_TRAMSFORM_SEND
+//
+../data/rfc822/Transform_Send/rfc82201.jig /epoc32/wins/c/msgtest/imut/rfc822/transform_send/rfc82201.jig
+../data/rfc822/Transform_Send/rfc82201.txt /epoc32/wins/c/msgtest/imut/rfc822/transform_send/rfc82201.txt
+../data/rfc822/Transform_Send/rfc82202.txt /epoc32/wins/c/msgtest/imut/rfc822/transform_send/rfc82202.txt
+../data/rfc822/Transform_Send/rfc82203.txt /epoc32/wins/c/msgtest/imut/rfc822/transform_send/rfc82203.txt
+../data/rfc822/Transform_Send/rfc82204.txt /epoc32/wins/c/msgtest/imut/rfc822/transform_send/rfc82204.txt
+../data/rfc822/Transform_Send/rfc82205.txt /epoc32/wins/c/msgtest/imut/rfc822/transform_send/rfc82205.txt
+../data/rfc822/Transform_Send/rfc82206.txt /epoc32/wins/c/msgtest/imut/rfc822/transform_send/rfc82206.txt
+../data/rfc822/Transform_Send/rfc82207_single_jp_subject.txt /epoc32/wins/c/msgtest/imut/rfc822/transform_send/rfc82207_single_jp_subject.txt
+../data/rfc822/Transform_Send/rfc82208_long_jp_subject.txt /epoc32/wins/c/msgtest/imut/rfc822/transform_send/rfc82208_long_jp_subject.txt
+../data/rfc822/Transform_Send/rfc82209_garbled_jp_subject.txt /epoc32/wins/c/msgtest/imut/rfc822/transform_send/rfc82209_garbled_jp_subject.txt
+
+../data/rfc822/Transform_Send/rfc82201.jig /epoc32/winscw/c/msgtest/imut/rfc822/transform_send/rfc82201.jig
+../data/rfc822/Transform_Send/rfc82201.txt /epoc32/winscw/c/msgtest/imut/rfc822/transform_send/rfc82201.txt
+../data/rfc822/Transform_Send/rfc82202.txt /epoc32/winscw/c/msgtest/imut/rfc822/transform_send/rfc82202.txt
+../data/rfc822/Transform_Send/rfc82203.txt /epoc32/winscw/c/msgtest/imut/rfc822/transform_send/rfc82203.txt
+../data/rfc822/Transform_Send/rfc82204.txt /epoc32/winscw/c/msgtest/imut/rfc822/transform_send/rfc82204.txt
+../data/rfc822/Transform_Send/rfc82205.txt /epoc32/winscw/c/msgtest/imut/rfc822/transform_send/rfc82205.txt
+../data/rfc822/Transform_Send/rfc82206.txt /epoc32/winscw/c/msgtest/imut/rfc822/transform_send/rfc82206.txt
+../data/rfc822/Transform_Send/rfc82207_single_jp_subject.txt /epoc32/winscw/c/msgtest/imut/rfc822/transform_send/rfc82207_single_jp_subject.txt
+../data/rfc822/Transform_Send/rfc82208_long_jp_subject.txt /epoc32/winscw/c/msgtest/imut/rfc822/transform_send/rfc82208_long_jp_subject.txt
+../data/rfc822/Transform_Send/rfc82209_garbled_jp_subject.txt /epoc32/winscw/c/msgtest/imut/rfc822/transform_send/rfc82209_garbled_jp_subject.txt
+
+
+
+// IMUT_TRANSFORM_SEND
+//
+../data/imcv/Transform_Send/ASCII_old_ImcvSendOutputText.txt /epoc32/wins/c/msgtest/imut/imcv/transform_send/ascii_old_imcvsendoutputtext.txt
+../data/imcv/Transform_Send/ASCII_SDC_Info_ImcvSendOutputText.txt /epoc32/wins/c/msgtest/imut/imcv/transform_send/ascii_sdc_info_imcvsendoutputtext.txt
+../data/imcv/Transform_Send/B64_Info_ImcvSendOutputText.txt /epoc32/wins/c/msgtest/imut/imcv/transform_send/b64_info_imcvsendoutputtext.txt
+../data/imcv/Transform_Send/Charset_ASCII_Info_ImcvSendOutputText.txt /epoc32/wins/c/msgtest/imut/imcv/transform_send/charset_ascii_info_imcvsendoutputtext.txt
+../data/imcv/Transform_Send/Charset_Big5_Info_ImcvSendOutputText.txt /epoc32/wins/c/msgtest/imut/imcv/transform_send/charset_big5_info_imcvsendoutputtext.txt
+../data/imcv/Transform_Send/Charset_JP_Info_ImcvSendOutputText.txt /epoc32/wins/c/msgtest/imut/imcv/transform_send/charset_jp_info_imcvsendoutputtext.txt
+../data/imcv/Transform_Send/Charset_UTF7_Info_ImcvSendOutputText.txt /epoc32/wins/c/msgtest/imut/imcv/transform_send/charset_utf7_info_imcvsendoutputtext.txt
+../data/imcv/Transform_Send/Charset_UTF8_Info_ImcvSendOutputText.txt /epoc32/wins/c/msgtest/imut/imcv/transform_send/charset_utf8_info_imcvsendoutputtext.txt
+../data/imcv/Transform_Send/Def_Info_ImcvSendOutputText.txt /epoc32/wins/c/msgtest/imut/imcv/transform_send/def_info_imcvsendoutputtext.txt
+../data/imcv/Transform_Send/None_Info_ImcvSendOutputText.txt /epoc32/wins/c/msgtest/imut/imcv/transform_send/none_info_imcvsendoutputtext.txt
+../data/imcv/Transform_Send/QP_Info_ImcvSendOutputText.txt /epoc32/wins/c/msgtest/imut/imcv/transform_send/qp_info_imcvsendoutputtext.txt
+../data/imcv/Transform_Send/Service_B64_Info_ImcvSendOutputText.txt /epoc32/wins/c/msgtest/imut/imcv/transform_send/service_b64_info_imcvsendoutputtext.txt
+../data/imcv/Transform_Send/Service_Def_Info_ImcvSendOutputText.txt /epoc32/wins/c/msgtest/imut/imcv/transform_send/service_def_info_imcvsendoutputtext.txt
+../data/imcv/Transform_Send/Service_QP_Info_ImcvSendOutputText.txt /epoc32/wins/c/msgtest/imut/imcv/transform_send/service_qp_info_imcvsendoutputtext.txt
+../data/imcv/Transform_Send/Service_UTF7_Info_ImcvSendOutputText.txt /epoc32/wins/c/msgtest/imut/imcv/transform_send/service_utf7_info_imcvsendoutputtext.txt
+../data/imcv/Transform_Send/UTF7_SDC_Info_ImcvSendOutputText.txt /epoc32/wins/c/msgtest/imut/imcv/transform_send/utf7_sdc_info_imcvsendoutputtext.txt
+../data/imcv/Transform_Send/UTF8_old_ImcvSendOutputText.txt /epoc32/wins/c/msgtest/imut/imcv/transform_send/utf8_old_imcvsendoutputtext.txt
+../data/imcv/Transform_Send/UU_Info_ImcvSendOutputText.txt /epoc32/wins/c/msgtest/imut/imcv/transform_send/uu_info_imcvsendoutputtext.txt
+../data/imcv/Transform_Send/Wrong_SDC_Info_ImcvSendOutputText.txt /epoc32/wins/c/msgtest/imut/imcv/transform_send/wrong_sdc_info_imcvsendoutputtext.txt
+../data/imcv/Transform_Send/CTE_7Bit_Info_ImcvSendOutputText.txt /epoc32/wins/c/msgtest/imut/imcv/transform_send/cte_7bit_info_imcvsendoutputtext.txt
+
+../data/imcv/Transform_Send/ASCII_old_ImcvSendOutputText.txt /epoc32/winscw/c/msgtest/imut/imcv/transform_send/ascii_old_imcvsendoutputtext.txt
+../data/imcv/Transform_Send/ASCII_SDC_Info_ImcvSendOutputText.txt /epoc32/winscw/c/msgtest/imut/imcv/transform_send/ascii_sdc_info_imcvsendoutputtext.txt
+../data/imcv/Transform_Send/B64_Info_ImcvSendOutputText.txt /epoc32/winscw/c/msgtest/imut/imcv/transform_send/b64_info_imcvsendoutputtext.txt
+../data/imcv/Transform_Send/Charset_ASCII_Info_ImcvSendOutputText.txt /epoc32/winscw/c/msgtest/imut/imcv/transform_send/charset_ascii_info_imcvsendoutputtext.txt
+../data/imcv/Transform_Send/Charset_Big5_Info_ImcvSendOutputText.txt /epoc32/winscw/c/msgtest/imut/imcv/transform_send/charset_big5_info_imcvsendoutputtext.txt
+../data/imcv/Transform_Send/Charset_JP_Info_ImcvSendOutputText.txt /epoc32/winscw/c/msgtest/imut/imcv/transform_send/charset_jp_info_imcvsendoutputtext.txt
+../data/imcv/Transform_Send/Charset_UTF7_Info_ImcvSendOutputText.txt /epoc32/winscw/c/msgtest/imut/imcv/transform_send/charset_utf7_info_imcvsendoutputtext.txt
+../data/imcv/Transform_Send/Charset_UTF8_Info_ImcvSendOutputText.txt /epoc32/winscw/c/msgtest/imut/imcv/transform_send/charset_utf8_info_imcvsendoutputtext.txt
+../data/imcv/Transform_Send/Def_Info_ImcvSendOutputText.txt /epoc32/winscw/c/msgtest/imut/imcv/transform_send/def_info_imcvsendoutputtext.txt
+../data/imcv/Transform_Send/None_Info_ImcvSendOutputText.txt /epoc32/winscw/c/msgtest/imut/imcv/transform_send/none_info_imcvsendoutputtext.txt
+../data/imcv/Transform_Send/QP_Info_ImcvSendOutputText.txt /epoc32/winscw/c/msgtest/imut/imcv/transform_send/qp_info_imcvsendoutputtext.txt
+../data/imcv/Transform_Send/Service_B64_Info_ImcvSendOutputText.txt /epoc32/winscw/c/msgtest/imut/imcv/transform_send/service_b64_info_imcvsendoutputtext.txt
+../data/imcv/Transform_Send/Service_Def_Info_ImcvSendOutputText.txt /epoc32/winscw/c/msgtest/imut/imcv/transform_send/service_def_info_imcvsendoutputtext.txt
+../data/imcv/Transform_Send/Service_QP_Info_ImcvSendOutputText.txt /epoc32/winscw/c/msgtest/imut/imcv/transform_send/service_qp_info_imcvsendoutputtext.txt
+../data/imcv/Transform_Send/Service_UTF7_Info_ImcvSendOutputText.txt /epoc32/winscw/c/msgtest/imut/imcv/transform_send/service_utf7_info_imcvsendoutputtext.txt
+../data/imcv/Transform_Send/UTF7_SDC_Info_ImcvSendOutputText.txt /epoc32/winscw/c/msgtest/imut/imcv/transform_send/utf7_sdc_info_imcvsendoutputtext.txt
+../data/imcv/Transform_Send/UTF8_old_ImcvSendOutputText.txt /epoc32/winscw/c/msgtest/imut/imcv/transform_send/utf8_old_imcvsendoutputtext.txt
+../data/imcv/Transform_Send/UU_Info_ImcvSendOutputText.txt /epoc32/winscw/c/msgtest/imut/imcv/transform_send/uu_info_imcvsendoutputtext.txt
+../data/imcv/Transform_Send/Wrong_SDC_Info_ImcvSendOutputText.txt /epoc32/winscw/c/msgtest/imut/imcv/transform_send/wrong_sdc_info_imcvsendoutputtext.txt
+../data/imcv/Transform_Send/CTE_7Bit_Info_ImcvSendOutputText.txt /epoc32/winscw/c/msgtest/imut/imcv/transform_send/cte_7bit_info_imcvsendoutputtext.txt
+
+
+//IMUT_TRANSFORM_RECEIVE
+//
+../data/rfc822/Transform_Receive/Rfc_01_NONMIME_UTF7.txt /epoc32/wins/c/msgtest/imut/rfc822/transform_receive/rfc_01_nonmime_utf7.txt
+../data/rfc822/Transform_Receive/Rfc_02_NONMIME_ASCII.txt /epoc32/wins/c/msgtest/imut/rfc822/transform_receive/rfc_02_nonmime_ascii.txt
+../data/rfc822/Transform_Receive/Rfc_03_NONMIME_ATTACH_UTF7.txt /epoc32/wins/c/msgtest/imut/rfc822/transform_receive/rfc_03_nonmime_attach_utf7.txt
+../data/rfc822/Transform_Receive/Rfc_04_MIME_UTF7.txt /epoc32/wins/c/msgtest/imut/rfc822/transform_receive/rfc_04_mime_utf7.txt
+../data/rfc822/Transform_Receive/Rfc_05_MIME_Text_PARTS.txt /epoc32/wins/c/msgtest/imut/rfc822/transform_receive/rfc_05_mime_text_parts.txt
+
+../data/rfc822/Transform_Receive/Rfc_01_NONMIME_UTF7.txt /epoc32/winscw/c/msgtest/imut/rfc822/transform_receive/rfc_01_nonmime_utf7.txt
+../data/rfc822/Transform_Receive/Rfc_02_NONMIME_ASCII.txt /epoc32/winscw/c/msgtest/imut/rfc822/transform_receive/rfc_02_nonmime_ascii.txt
+../data/rfc822/Transform_Receive/Rfc_03_NONMIME_ATTACH_UTF7.txt /epoc32/winscw/c/msgtest/imut/rfc822/transform_receive/rfc_03_nonmime_attach_utf7.txt
+../data/rfc822/Transform_Receive/Rfc_04_MIME_UTF7.txt /epoc32/winscw/c/msgtest/imut/rfc822/transform_receive/rfc_04_mime_utf7.txt
+../data/rfc822/Transform_Receive/Rfc_05_MIME_Text_PARTS.txt /epoc32/winscw/c/msgtest/imut/rfc822/transform_receive/rfc_05_mime_text_parts.txt
+
+
+
+../data/imcv/Transform_Receive/ASCIIEntry_822Headers.txt /epoc32/wins/c/msgtest/imut/imcv/transform_receive/asciientry_822headers.txt
+../data/imcv/Transform_Receive/ASCIIEntry_Files.txt /epoc32/wins/c/msgtest/imut/imcv/transform_receive/asciientry_files.txt
+../data/imcv/Transform_Receive/ASCIIEntry_MimeHeaders.txt /epoc32/wins/c/msgtest/imut/imcv/transform_receive/asciientry_mimeheaders.txt
+../data/imcv/Transform_Receive/ASCIIEntry_RichTextBodies.txt /epoc32/wins/c/msgtest/imut/imcv/transform_receive/asciientry_richtextbodies.txt
+../data/imcv/Transform_Receive/ASCIIEntry_Structure.txt /epoc32/wins/c/msgtest/imut/imcv/transform_receive/asciientry_structure.txt
+../data/imcv/Transform_Receive/NoneEntry_822Headers.txt /epoc32/wins/c/msgtest/imut/imcv/transform_receive/noneentry_822headers.txt
+../data/imcv/Transform_Receive/NoneEntry_Files.txt /epoc32/wins/c/msgtest/imut/imcv/transform_receive/noneentry_files.txt
+../data/imcv/Transform_Receive/NoneEntry_MimeHeaders.txt /epoc32/wins/c/msgtest/imut/imcv/transform_receive/noneentry_mimeheaders.txt
+../data/imcv/Transform_Receive/NoneEntry_RichTextBodies.txt /epoc32/wins/c/msgtest/imut/imcv/transform_receive/noneentry_richtextbodies.txt
+../data/imcv/Transform_Receive/NoneEntry_Structure.txt /epoc32/wins/c/msgtest/imut/imcv/transform_receive/noneentry_structure.txt
+../data/imcv/Transform_Receive/UnknownEntry_822Headers.txt /epoc32/wins/c/msgtest/imut/imcv/transform_receive/unknownentry_822headers.txt
+../data/imcv/Transform_Receive/UnknownEntry_Files.txt /epoc32/wins/c/msgtest/imut/imcv/transform_receive/unknownentry_files.txt
+../data/imcv/Transform_Receive/UnknownEntry_MimeHeaders.txt /epoc32/wins/c/msgtest/imut/imcv/transform_receive/unknownentry_mimeheaders.txt
+../data/imcv/Transform_Receive/UnknownEntry_RichTextBodies.txt /epoc32/wins/c/msgtest/imut/imcv/transform_receive/unknownentry_richtextbodies.txt
+../data/imcv/Transform_Receive/UnknownEntry_Structure.txt /epoc32/wins/c/msgtest/imut/imcv/transform_receive/unknownentry_structure.txt
+../data/imcv/Transform_Receive/UTF7Entry_822Headers.txt /epoc32/wins/c/msgtest/imut/imcv/transform_receive/utf7entry_822headers.txt
+../data/imcv/Transform_Receive/UTF7Entry_Files.txt /epoc32/wins/c/msgtest/imut/imcv/transform_receive/utf7entry_files.txt
+../data/imcv/Transform_Receive/UTF7Entry_MimeHeaders.txt /epoc32/wins/c/msgtest/imut/imcv/transform_receive/utf7entry_mimeheaders.txt
+../data/imcv/Transform_Receive/UTF7Entry_RichTextBodies.txt /epoc32/wins/c/msgtest/imut/imcv/transform_receive/utf7entry_richtextbodies.txt
+../data/imcv/Transform_Receive/UTF7Entry_Structure.txt /epoc32/wins/c/msgtest/imut/imcv/transform_receive/utf7entry_structure.txt
+
+
+../data/imcv/Transform_Receive/ASCIIEntry_822Headers.txt /epoc32/winscw/c/msgtest/imut/imcv/transform_receive/asciientry_822headers.txt
+../data/imcv/Transform_Receive/ASCIIEntry_Files.txt /epoc32/winscw/c/msgtest/imut/imcv/transform_receive/asciientry_files.txt
+../data/imcv/Transform_Receive/ASCIIEntry_MimeHeaders.txt /epoc32/winscw/c/msgtest/imut/imcv/transform_receive/asciientry_mimeheaders.txt
+../data/imcv/Transform_Receive/ASCIIEntry_RichTextBodies.txt /epoc32/winscw/c/msgtest/imut/imcv/transform_receive/asciientry_richtextbodies.txt
+../data/imcv/Transform_Receive/ASCIIEntry_Structure.txt /epoc32/winscw/c/msgtest/imut/imcv/transform_receive/asciientry_structure.txt
+../data/imcv/Transform_Receive/NoneEntry_822Headers.txt /epoc32/winscw/c/msgtest/imut/imcv/transform_receive/noneentry_822headers.txt
+../data/imcv/Transform_Receive/NoneEntry_Files.txt /epoc32/winscw/c/msgtest/imut/imcv/transform_receive/noneentry_files.txt
+../data/imcv/Transform_Receive/NoneEntry_MimeHeaders.txt /epoc32/winscw/c/msgtest/imut/imcv/transform_receive/noneentry_mimeheaders.txt
+../data/imcv/Transform_Receive/NoneEntry_RichTextBodies.txt /epoc32/winscw/c/msgtest/imut/imcv/transform_receive/noneentry_richtextbodies.txt
+../data/imcv/Transform_Receive/NoneEntry_Structure.txt /epoc32/winscw/c/msgtest/imut/imcv/transform_receive/noneentry_structure.txt
+../data/imcv/Transform_Receive/UnknownEntry_822Headers.txt /epoc32/winscw/c/msgtest/imut/imcv/transform_receive/unknownentry_822headers.txt
+../data/imcv/Transform_Receive/UnknownEntry_Files.txt /epoc32/winscw/c/msgtest/imut/imcv/transform_receive/unknownentry_files.txt
+../data/imcv/Transform_Receive/UnknownEntry_MimeHeaders.txt /epoc32/winscw/c/msgtest/imut/imcv/transform_receive/unknownentry_mimeheaders.txt
+../data/imcv/Transform_Receive/UnknownEntry_RichTextBodies.txt /epoc32/winscw/c/msgtest/imut/imcv/transform_receive/unknownentry_richtextbodies.txt
+../data/imcv/Transform_Receive/UnknownEntry_Structure.txt /epoc32/winscw/c/msgtest/imut/imcv/transform_receive/unknownentry_structure.txt
+../data/imcv/Transform_Receive/UTF7Entry_822Headers.txt /epoc32/winscw/c/msgtest/imut/imcv/transform_receive/utf7entry_822headers.txt
+../data/imcv/Transform_Receive/UTF7Entry_Files.txt /epoc32/winscw/c/msgtest/imut/imcv/transform_receive/utf7entry_files.txt
+../data/imcv/Transform_Receive/UTF7Entry_MimeHeaders.txt /epoc32/winscw/c/msgtest/imut/imcv/transform_receive/utf7entry_mimeheaders.txt
+../data/imcv/Transform_Receive/UTF7Entry_RichTextBodies.txt /epoc32/winscw/c/msgtest/imut/imcv/transform_receive/utf7entry_richtextbodies.txt
+../data/imcv/Transform_Receive/UTF7Entry_Structure.txt /epoc32/winscw/c/msgtest/imut/imcv/transform_receive/utf7entry_structure.txt
+
+
+// T_IMUT_PARSE files
+//
+
+../data/imcv/parse/A.Simple/Entry_822Headers.txt /epoc32/wins/c/msgtest/imut/imcv/parse/a.simple/entry_822headers.txt
+../data/imcv/parse/A.Simple/Entry_Files.txt /epoc32/wins/c/msgtest/imut/imcv/parse/a.simple/entry_files.txt
+../data/imcv/parse/A.Simple/Entry_MimeHeaders.txt /epoc32/wins/c/msgtest/imut/imcv/parse/a.simple/entry_mimeheaders.txt
+../data/imcv/parse/A.Simple/Entry_RichTextBodies.txt /epoc32/wins/c/msgtest/imut/imcv/parse/a.simple/entry_richtextbodies.txt
+../data/imcv/parse/A.Simple/Entry_Structure.txt /epoc32/wins/c/msgtest/imut/imcv/parse/a.simple/entry_structure.txt
+../data/imcv/parse/A.Simple/ImcvSendOutputText.txt /epoc32/wins/c/msgtest/imut/imcv/parse/a.simple/imcvsendoutputtext.txt
+../data/imcv/parse/A.Simple/ImcvSendOutputText_MIME.txt /epoc32/wins/c/msgtest/imut/imcv/parse/a.simple/imcvsendoutputtext_mime.txt
+
+../data/imcv/parse/B.Mime/Entry_822Headers.txt /epoc32/wins/c/msgtest/imut/imcv/parse/b.mime/entry_822headers.txt
+../data/imcv/parse/B.Mime/Entry_Files.txt /epoc32/wins/c/msgtest/imut/imcv/parse/b.mime/entry_files.txt
+../data/imcv/parse/B.Mime/Entry_MimeHeaders.txt /epoc32/wins/c/msgtest/imut/imcv/parse/b.mime/entry_mimeheaders.txt
+../data/imcv/parse/B.Mime/Entry_RichTextBodies.txt /epoc32/wins/c/msgtest/imut/imcv/parse/b.mime/entry_richtextbodies.txt
+../data/imcv/parse/B.Mime/Entry_Structure.txt /epoc32/wins/c/msgtest/imut/imcv/parse/b.mime/entry_structure.txt
+../data/imcv/parse/B.Mime/ImcvSendOutputText.txt /epoc32/wins/c/msgtest/imut/imcv/parse/b.mime/imcvsendoutputtext.txt
+../data/imcv/parse/B.Mime/ImcvSendOutputText_MIME.txt /epoc32/wins/c/msgtest/imut/imcv/parse/b.mime/imcvsendoutputtext_mime.txt
+
+../data/imcv/parse/C.Multipart/Entry_822Headers.txt /epoc32/wins/c/msgtest/imut/imcv/parse/c.multipart/entry_822headers.txt
+../data/imcv/parse/C.Multipart/Entry_Files.txt /epoc32/wins/c/msgtest/imut/imcv/parse/c.multipart/entry_files.txt
+../data/imcv/parse/C.Multipart/Entry_MimeHeaders.txt /epoc32/wins/c/msgtest/imut/imcv/parse/c.multipart/entry_mimeheaders.txt
+../data/imcv/parse/C.Multipart/Entry_RichTextBodies.txt /epoc32/wins/c/msgtest/imut/imcv/parse/c.multipart/entry_richtextbodies.txt
+../data/imcv/parse/C.Multipart/Entry_Structure.txt /epoc32/wins/c/msgtest/imut/imcv/parse/c.multipart/entry_structure.txt
+../data/imcv/parse/C.Multipart/ImcvSendOutputText.txt /epoc32/wins/c/msgtest/imut/imcv/parse/c.multipart/imcvsendoutputtext.txt
+../data/imcv/parse/C.Multipart/ImcvSendOutputText_MIME.txt /epoc32/wins/c/msgtest/imut/imcv/parse/c.multipart/imcvsendoutputtext_mime.txt
+
+../data/imcv/parse/D.Encoding/Entry_822Headers.txt /epoc32/wins/c/msgtest/imut/imcv/parse/d.encoding/entry_822headers.txt
+../data/imcv/parse/D.Encoding/Entry_Files.txt /epoc32/wins/c/msgtest/imut/imcv/parse/d.encoding/entry_files.txt
+../data/imcv/parse/D.Encoding/Entry_MimeHeaders.txt /epoc32/wins/c/msgtest/imut/imcv/parse/d.encoding/entry_mimeheaders.txt
+../data/imcv/parse/D.Encoding/Entry_RichTextBodies.txt /epoc32/wins/c/msgtest/imut/imcv/parse/d.encoding/entry_richtextbodies.txt
+../data/imcv/parse/D.Encoding/Entry_Structure.txt /epoc32/wins/c/msgtest/imut/imcv/parse/d.encoding/entry_structure.txt
+../data/imcv/parse/D.Encoding/ImcvSendOutputText.txt /epoc32/wins/c/msgtest/imut/imcv/parse/d.encoding/imcvsendoutputtext.txt
+../data/imcv/parse/D.Encoding/ImcvSendOutputText_MIME.txt /epoc32/wins/c/msgtest/imut/imcv/parse/d.encoding/imcvsendoutputtext_mime.txt
+
+../data/imcv/parse/E.Charsets/Entry_822Headers.txt /epoc32/wins/c/msgtest/imut/imcv/parse/e.charsets/entry_822headers.txt
+../data/imcv/parse/E.Charsets/Entry_Files.txt /epoc32/wins/c/msgtest/imut/imcv/parse/e.charsets/entry_files.txt
+../data/imcv/parse/E.Charsets/Entry_MimeHeaders.txt /epoc32/wins/c/msgtest/imut/imcv/parse/e.charsets/entry_mimeheaders.txt
+../data/imcv/parse/E.Charsets/Entry_RichTextBodies.txt /epoc32/wins/c/msgtest/imut/imcv/parse/e.charsets/entry_richtextbodies.txt
+../data/imcv/parse/E.Charsets/Entry_Structure.txt /epoc32/wins/c/msgtest/imut/imcv/parse/e.charsets/entry_structure.txt
+../data/imcv/parse/E.Charsets/ImcvSendOutputText.txt /epoc32/wins/c/msgtest/imut/imcv/parse/e.charsets/imcvsendoutputtext.txt
+../data/imcv/parse/E.Charsets/ImcvSendOutputText_MIME.txt /epoc32/wins/c/msgtest/imut/imcv/parse/e.charsets/imcvsendoutputtext_mime.txt
+
+../data/imcv/parse/F.Header/Entry_822Headers.txt /epoc32/wins/c/msgtest/imut/imcv/parse/f.header/entry_822headers.txt
+../data/imcv/parse/F.Header/Entry_Files.txt /epoc32/wins/c/msgtest/imut/imcv/parse/f.header/entry_files.txt
+../data/imcv/parse/F.Header/Entry_MimeHeaders.txt /epoc32/wins/c/msgtest/imut/imcv/parse/f.header/entry_mimeheaders.txt
+../data/imcv/parse/F.Header/Entry_RichTextBodies.txt /epoc32/wins/c/msgtest/imut/imcv/parse/f.header/entry_richtextbodies.txt
+../data/imcv/parse/F.Header/Entry_Structure.txt /epoc32/wins/c/msgtest/imut/imcv/parse/f.header/entry_structure.txt 
+../data/imcv/parse/F.Header/ImcvSendOutputText.txt /epoc32/wins/c/msgtest/imut/imcv/parse/f.header/imcvsendoutputtext.txt
+../data/imcv/parse/F.Header/ImcvSendOutputText_MIME.txt /epoc32/wins/c/msgtest/imut/imcv/parse/f.header/imcvsendoutputtext_mime.txt
+
+../data/imcv/parse/G.Mhtml/Entry_822Headers.txt /epoc32/wins/c/msgtest/imut/imcv/parse/g.mhtml/entry_822headers.txt
+../data/imcv/parse/G.Mhtml/Entry_Files.txt /epoc32/wins/c/msgtest/imut/imcv/parse/g.mhtml/entry_files.txt
+../data/imcv/parse/G.Mhtml/Entry_MimeHeaders.txt /epoc32/wins/c/msgtest/imut/imcv/parse/g.mhtml/entry_mimeheaders.txt
+../data/imcv/parse/G.Mhtml/Entry_RichTextBodies.txt /epoc32/wins/c/msgtest/imut/imcv/parse/g.mhtml/entry_richtextbodies.txt
+../data/imcv/parse/G.Mhtml/Entry_Structure.txt /epoc32/wins/c/msgtest/imut/imcv/parse/g.mhtml/entry_structure.txt
+../data/imcv/parse/G.Mhtml/ImcvSendOutputText.txt /epoc32/wins/c/msgtest/imut/imcv/parse/g.mhtml/imcvsendoutputtext.txt
+../data/imcv/parse/G.Mhtml/ImcvSendOutputText_MIME.txt /epoc32/wins/c/msgtest/imut/imcv/parse/g.mhtml/imcvsendoutputtext_mime.txt
+
+../data/imcv/parse/H.Embedded/Entry_822Headers.txt /epoc32/wins/c/msgtest/imut/imcv/parse/h.embedded/entry_822headers.txt
+../data/imcv/parse/H.Embedded/Entry_Files.txt /epoc32/wins/c/msgtest/imut/imcv/parse/h.embedded/entry_files.txt
+../data/imcv/parse/H.Embedded/Entry_MimeHeaders.txt /epoc32/wins/c/msgtest/imut/imcv/parse/h.embedded/entry_mimeheaders.txt
+../data/imcv/parse/H.Embedded/Entry_RichTextBodies.txt /epoc32/wins/c/msgtest/imut/imcv/parse/h.embedded/entry_richtextbodies.txt
+../data/imcv/parse/H.Embedded/Entry_Structure.txt /epoc32/wins/c/msgtest/imut/imcv/parse/h.embedded/entry_structure.txt
+../data/imcv/parse/H.Embedded/ImcvSendOutputText.txt /epoc32/wins/c/msgtest/imut/imcv/parse/h.embedded/imcvsendoutputtext.txt
+../data/imcv/parse/H.Embedded/ImcvSendOutputText_MIME.txt /epoc32/wins/c/msgtest/imut/imcv/parse/h.embedded/imcvsendoutputtext_mime.txt
+
+../data/imcv/parse/A.Simple/Entry_822Headers.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/a.simple/entry_822headers.txt
+../data/imcv/parse/A.Simple/Entry_Files.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/a.simple/entry_files.txt
+../data/imcv/parse/A.Simple/Entry_MimeHeaders.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/a.simple/entry_mimeheaders.txt
+../data/imcv/parse/A.Simple/Entry_RichTextBodies.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/a.simple/entry_richtextbodies.txt
+../data/imcv/parse/A.Simple/Entry_Structure.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/a.simple/entry_structure.txt
+../data/imcv/parse/A.Simple/ImcvSendOutputText.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/a.simple/imcvsendoutputtext.txt
+../data/imcv/parse/A.Simple/ImcvSendOutputText_MIME.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/a.simple/imcvsendoutputtext_mime.txt
+
+../data/imcv/parse/B.Mime/Entry_822Headers.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/b.mime/entry_822headers.txt
+../data/imcv/parse/B.Mime/Entry_Files.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/b.mime/entry_files.txt
+../data/imcv/parse/B.Mime/Entry_MimeHeaders.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/b.mime/entry_mimeheaders.txt
+../data/imcv/parse/B.Mime/Entry_RichTextBodies.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/b.mime/entry_richtextbodies.txt
+../data/imcv/parse/B.Mime/Entry_Structure.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/b.mime/entry_structure.txt
+../data/imcv/parse/B.Mime/ImcvSendOutputText.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/b.mime/imcvsendoutputtext.txt
+../data/imcv/parse/B.Mime/ImcvSendOutputText_MIME.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/b.mime/imcvsendoutputtext_mime.txt
+
+../data/imcv/parse/C.Multipart/Entry_822Headers.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/c.multipart/entry_822headers.txt
+../data/imcv/parse/C.Multipart/Entry_Files.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/c.multipart/entry_files.txt
+../data/imcv/parse/C.Multipart/Entry_MimeHeaders.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/c.multipart/entry_mimeheaders.txt
+../data/imcv/parse/C.Multipart/Entry_RichTextBodies.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/c.multipart/entry_richtextbodies.txt
+../data/imcv/parse/C.Multipart/Entry_Structure.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/c.multipart/entry_structure.txt
+../data/imcv/parse/C.Multipart/ImcvSendOutputText.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/c.multipart/imcvsendoutputtext.txt
+../data/imcv/parse/C.Multipart/ImcvSendOutputText_MIME.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/c.multipart/imcvsendoutputtext_mime.txt
+
+../data/imcv/parse/D.Encoding/Entry_822Headers.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/d.encoding/entry_822headers.txt
+../data/imcv/parse/D.Encoding/Entry_Files.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/d.encoding/entry_files.txt
+../data/imcv/parse/D.Encoding/Entry_MimeHeaders.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/d.encoding/entry_mimeheaders.txt
+../data/imcv/parse/D.Encoding/Entry_RichTextBodies.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/d.encoding/entry_richtextbodies.txt
+../data/imcv/parse/D.Encoding/Entry_Structure.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/d.encoding/entry_structure.txt
+../data/imcv/parse/D.Encoding/ImcvSendOutputText.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/d.encoding/imcvsendoutputtext.txt
+../data/imcv/parse/D.Encoding/ImcvSendOutputText_MIME.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/d.encoding/imcvsendoutputtext_mime.txt
+
+../data/imcv/parse/E.Charsets/Entry_822Headers.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/e.charsets/entry_822headers.txt
+../data/imcv/parse/E.Charsets/Entry_Files.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/e.charsets/entry_files.txt
+../data/imcv/parse/E.Charsets/Entry_MimeHeaders.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/e.charsets/entry_mimeheaders.txt
+../data/imcv/parse/E.Charsets/Entry_RichTextBodies.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/e.charsets/entry_richtextbodies.txt
+../data/imcv/parse/E.Charsets/Entry_Structure.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/e.charsets/entry_structure.txt
+../data/imcv/parse/E.Charsets/ImcvSendOutputText.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/e.charsets/imcvsendoutputtext.txt
+../data/imcv/parse/E.Charsets/ImcvSendOutputText_MIME.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/e.charsets/imcvsendoutputtext_mime.txt
+
+../data/imcv/parse/F.Header/Entry_822Headers.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/f.header/entry_822headers.txt
+../data/imcv/parse/F.Header/Entry_Files.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/f.header/entry_files.txt
+../data/imcv/parse/F.Header/Entry_MimeHeaders.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/f.header/entry_mimeheaders.txt
+../data/imcv/parse/F.Header/Entry_RichTextBodies.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/f.header/entry_richtextbodies.txt
+../data/imcv/parse/F.Header/Entry_Structure.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/f.header/entry_structure.txt 
+../data/imcv/parse/F.Header/ImcvSendOutputText.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/f.header/imcvsendoutputtext.txt
+../data/imcv/parse/F.Header/ImcvSendOutputText_MIME.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/f.header/imcvsendoutputtext_mime.txt
+
+../data/imcv/parse/G.Mhtml/Entry_822Headers.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/g.mhtml/entry_822headers.txt
+../data/imcv/parse/G.Mhtml/Entry_Files.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/g.mhtml/entry_files.txt
+../data/imcv/parse/G.Mhtml/Entry_MimeHeaders.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/g.mhtml/entry_mimeheaders.txt
+../data/imcv/parse/G.Mhtml/Entry_RichTextBodies.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/g.mhtml/entry_richtextbodies.txt
+../data/imcv/parse/G.Mhtml/Entry_Structure.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/g.mhtml/entry_structure.txt
+../data/imcv/parse/G.Mhtml/ImcvSendOutputText.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/g.mhtml/imcvsendoutputtext.txt
+../data/imcv/parse/G.Mhtml/ImcvSendOutputText_MIME.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/g.mhtml/imcvsendoutputtext_mime.txt
+
+../data/imcv/parse/H.Embedded/Entry_822Headers.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/h.embedded/entry_822headers.txt
+../data/imcv/parse/H.Embedded/Entry_Files.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/h.embedded/entry_files.txt
+../data/imcv/parse/H.Embedded/Entry_MimeHeaders.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/h.embedded/entry_mimeheaders.txt
+../data/imcv/parse/H.Embedded/Entry_RichTextBodies.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/h.embedded/entry_richtextbodies.txt
+../data/imcv/parse/H.Embedded/Entry_Structure.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/h.embedded/entry_structure.txt
+../data/imcv/parse/H.Embedded/ImcvSendOutputText.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/h.embedded/imcvsendoutputtext.txt
+../data/imcv/parse/H.Embedded/ImcvSendOutputText_MIME.txt /epoc32/winscw/c/msgtest/imut/imcv/parse/h.embedded/imcvsendoutputtext_mime.txt
+
+../data/rfc822/parse/A.Simple/rfc_0002.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/a.simple/rfc_0002.txt
+../data/rfc822/parse/A.Simple/rfc_0006.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/a.simple/rfc_0006.txt
+../data/rfc822/parse/A.Simple/rfc_0007.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/a.simple/rfc_0007.txt
+../data/rfc822/parse/A.Simple/rfc_0008.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/a.simple/rfc_0008.txt
+../data/rfc822/parse/A.Simple/rfc_0009.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/a.simple/rfc_0009.txt
+../data/rfc822/parse/A.Simple/rfc_0010.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/a.simple/rfc_0010.txt
+../data/rfc822/parse/A.Simple/rfc_0011.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/a.simple/rfc_0011.txt
+../data/rfc822/parse/A.Simple/rfc_0061.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/a.simple/rfc_0061.txt
+../data/rfc822/parse/A.Simple/rfc_0070.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/a.simple/rfc_0070.txt
+../data/rfc822/parse/A.Simple/rfc_0072.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/a.simple/rfc_0072.txt
+../data/rfc822/parse/A.Simple/rfc_0073_no_received_date.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/a.simple/rfc_0073_no_received_date.txt
+ 
+
+
+../data/rfc822/parse/B.Mime/rfc_0001.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/b.mime/rfc_0001.txt
+../data/rfc822/parse/B.Mime/rfc_0003.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/b.mime/rfc_0003.txt
+../data/rfc822/parse/B.Mime/rfc_0004.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/b.mime/rfc_0004.txt
+../data/rfc822/parse/B.Mime/rfc_0005.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/b.mime/rfc_0005.txt
+../data/rfc822/parse/B.Mime/rfc_0012.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/b.mime/rfc_0012.txt
+../data/rfc822/parse/B.Mime/rfc_0013.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/b.mime/rfc_0013.txt
+../data/rfc822/parse/B.Mime/rfc_0014.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/b.mime/rfc_0014.txt
+../data/rfc822/parse/B.Mime/rfc_0015.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/b.mime/rfc_0015.txt
+../data/rfc822/parse/B.Mime/rfc_0016.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/b.mime/rfc_0016.txt
+../data/rfc822/parse/B.Mime/rfc_0017.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/b.mime/rfc_0017.txt
+../data/rfc822/parse/B.Mime/rfc_0018.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/b.mime/rfc_0018.txt
+../data/rfc822/parse/B.Mime/rfc_0019.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/b.mime/rfc_0019.txt
+../data/rfc822/parse/B.Mime/rfc_0020.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/b.mime/rfc_0020.txt
+../data/rfc822/parse/B.Mime/rfc_0021.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/b.mime/rfc_0021.txt
+../data/rfc822/parse/B.Mime/rfc_0022.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/b.mime/rfc_0022.txt
+../data/rfc822/parse/B.Mime/rfc_0088.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/b.mime/rfc_0088.txt
+../data/rfc822/parse/B.Mime/rfc_0090.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/b.mime/rfc_0090.txt
+../data/rfc822/parse/B.Mime/rfc_0091.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/b.mime/rfc_0091.txt
+../data/rfc822/parse/B.Mime/rfc_0092.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/b.mime/rfc_0092.txt
+../data/rfc822/parse/B.Mime/rfc_x-vcard.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/b.mime/rfc_x-vcard.txt
+../data/rfc822/parse/B.Mime/rfc_0093_blank_cte.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/b.mime/rfc_0093_blank_cte.txt
+
+../data/rfc822/parse/C.Multipart/rfc_0023.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0023.txt
+../data/rfc822/parse/C.Multipart/rfc_0024.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0024.txt
+../data/rfc822/parse/C.Multipart/rfc_0025.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0025.txt
+../data/rfc822/parse/C.Multipart/rfc_0026.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0026.txt
+../data/rfc822/parse/C.Multipart/rfc_0027.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0027.txt
+../data/rfc822/parse/C.Multipart/rfc_0028.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0028.txt
+../data/rfc822/parse/C.Multipart/rfc_0029.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0029.txt
+../data/rfc822/parse/C.Multipart/rfc_0037.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0037.txt
+../data/rfc822/parse/C.Multipart/rfc_0038.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0038.txt
+../data/rfc822/parse/C.Multipart/rfc_0039.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0039.txt
+../data/rfc822/parse/C.Multipart/rfc_0040.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0040.txt
+../data/rfc822/parse/C.Multipart/rfc_0041.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0041.txt
+../data/rfc822/parse/C.Multipart/rfc_0042.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0042.txt
+../data/rfc822/parse/C.Multipart/rfc_0043.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0043.txt
+../data/rfc822/parse/C.Multipart/rfc_0052.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0052.txt
+../data/rfc822/parse/C.Multipart/rfc_0053.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0053.txt
+../data/rfc822/parse/C.Multipart/rfc_0054.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0054.txt
+../data/rfc822/parse/C.Multipart/rfc_0055.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0055.txt
+../data/rfc822/parse/C.Multipart/rfc_0056.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0056.txt
+../data/rfc822/parse/C.Multipart/rfc_0057.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0057.txt
+../data/rfc822/parse/C.Multipart/rfc_0058.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0058.txt
+../data/rfc822/parse/C.Multipart/rfc_0059.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0059.txt
+../data/rfc822/parse/C.Multipart/rfc_0060.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0060.txt
+../data/rfc822/parse/C.Multipart/rfc_0062.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0062.txt
+../data/rfc822/parse/C.Multipart/rfc_0063.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0063.txt
+../data/rfc822/parse/C.Multipart/rfc_0064.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0064.txt
+../data/rfc822/parse/C.Multipart/rfc_0065.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0065.txt
+../data/rfc822/parse/C.Multipart/rfc_0066.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0066.txt
+../data/rfc822/parse/C.Multipart/rfc_0067.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0067.txt
+../data/rfc822/parse/C.Multipart/rfc_0068.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0068.txt
+../data/rfc822/parse/C.Multipart/rfc_0071.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0071.txt
+
+../data/rfc822/parse/D.Encoding/rfc_0030.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/d.encoding/rfc_0030.txt
+../data/rfc822/parse/D.Encoding/rfc_0031.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/d.encoding/rfc_0031.txt
+../data/rfc822/parse/D.Encoding/rfc_0032.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/d.encoding/rfc_0032.txt
+../data/rfc822/parse/D.Encoding/rfc_0033.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/d.encoding/rfc_0033.txt
+../data/rfc822/parse/D.Encoding/rfc_0034.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/d.encoding/rfc_0034.txt
+../data/rfc822/parse/D.Encoding/rfc_0035.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/d.encoding/rfc_0035.txt
+../data/rfc822/parse/D.Encoding/rfc_0036.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/d.encoding/rfc_0036.txt
+../data/rfc822/parse/D.Encoding/rfc_0044.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/d.encoding/rfc_0044.txt
+../data/rfc822/parse/D.Encoding/rfc_0045.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/d.encoding/rfc_0045.txt
+../data/rfc822/parse/D.Encoding/rfc_0046.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/d.encoding/rfc_0046.txt
+../data/rfc822/parse/D.Encoding/rfc_0047.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/d.encoding/rfc_0047.txt
+../data/rfc822/parse/D.Encoding/rfc_0048.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/d.encoding/rfc_0048.txt
+../data/rfc822/parse/D.Encoding/rfc_0049.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/d.encoding/rfc_0049.txt
+../data/rfc822/parse/D.Encoding/rfc_0050.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/d.encoding/rfc_0050.txt
+../data/rfc822/parse/D.Encoding/rfc_0051.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/d.encoding/rfc_0051.txt
+../data/rfc822/parse/D.Encoding/rfc_0077.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/d.encoding/rfc_0077.txt
+../data/rfc822/parse/D.Encoding/rfc_0078.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/d.encoding/rfc_0078.txt
+../data/rfc822/parse/D.Encoding/rfc_0085.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/d.encoding/rfc_0085.txt
+../data/rfc822/parse/D.Encoding/rfc_0101.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/d.encoding/rfc_0101.txt
+../data/rfc822/parse/D.Encoding/rfc_inline_Base64.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/d.encoding/rfc_inline_base64.txt
+../data/rfc822/parse/D.Encoding/rfc_0110.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/d.encoding/rfc_0110.txt
+
+../data/rfc822/parse/E.Charsets/rfc_0097.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/e.charsets/rfc_0097.txt
+../data/rfc822/parse/E.Charsets/rfc_0098.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/e.charsets/rfc_0098.txt
+../data/rfc822/parse/E.Charsets/rfc_0099.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/e.charsets/rfc_0099.txt
+../data/rfc822/parse/E.Charsets/rfc_amazon_co_jp.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/e.charsets/rfc_amazon_co_jp.txt
+
+../data/rfc822/parse/F.Header/rfc_0073.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/f.header/rfc_0073.txt
+../data/rfc822/parse/F.Header/rfc_0074.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/f.header/rfc_0074.txt
+../data/rfc822/parse/F.Header/rfc_0075.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/f.header/rfc_0075.txt
+../data/rfc822/parse/F.Header/rfc_0076.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/f.header/rfc_0076.txt
+../data/rfc822/parse/F.Header/rfc_0079.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/f.header/rfc_0079.txt
+../data/rfc822/parse/F.Header/rfc_0080.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/f.header/rfc_0080.txt
+../data/rfc822/parse/F.Header/rfc_0081.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/f.header/rfc_0081.txt
+../data/rfc822/parse/F.Header/rfc_0083.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/f.header/rfc_0083.txt
+../data/rfc822/parse/F.Header/rfc_0084.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/f.header/rfc_0084.txt
+../data/rfc822/parse/F.Header/rfc_0092.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/f.header/rfc_0092.txt
+../data/rfc822/parse/F.Header/rfc_0093.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/f.header/rfc_0093.txt
+../data/rfc822/parse/F.Header/rfc_0094.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/f.header/rfc_0094.txt
+../data/rfc822/parse/F.Header/rfc_0095.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/f.header/rfc_0095.txt
+../data/rfc822/parse/F.Header/rfc_0096.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/f.header/rfc_0096.txt
+../data/rfc822/parse/F.Header/rfc_0097.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/f.header/rfc_0097.txt
+../data/rfc822/parse/F.Header/rfc_0100.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/f.header/rfc_0100.txt
+../data/rfc822/parse/F.Header/rfc_inline_attachment.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/f.header/rfc_inline_attachment.txt
+../data/rfc822/parse/F.Header/rfc_defect_DEF48171.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/f.header/rfc_defect_def48171.txt
+
+../data/rfc822/parse/G.Mhtml/rfc_0069.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/g.mhtml/rfc_0069.txt
+../data/rfc822/parse/G.Mhtml/rfc_0082.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/g.mhtml/rfc_0082.txt
+../data/rfc822/parse/G.Mhtml/rfc_0086.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/g.mhtml/rfc_0086.txt
+../data/rfc822/parse/G.Mhtml/rfc_0087.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/g.mhtml/rfc_0087.txt
+../data/rfc822/parse/G.Mhtml/rfc_0089.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/g.mhtml/rfc_0089.txt
+../data/rfc822/parse/G.Mhtml/rfc_0090.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/g.mhtml/rfc_0090.txt
+../data/rfc822/parse/G.Mhtml/rfc_0091.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/g.mhtml/rfc_0091.txt
+../data/rfc822/parse/G.Mhtml/rfc_0102_digest.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/g.mhtml/rfc_0102_digest.txt
+../data/rfc822/parse/G.Mhtml/rfc_0103_reverse.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/g.mhtml/rfc_0103_reverse.txt
+../data/rfc822/parse/G.Mhtml/rfc_0104_rfc822.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/g.mhtml/rfc_0104_rfc822.txt
+../data/rfc822/parse/G.Mhtml/RFC_0105_encoded_filename.TXT /epoc32/wins/c/msgtest/imut/rfc822/parse/g.mhtml/rfc_0105_encoded_filename.txt
+../data/rfc822/parse/G.Mhtml/rfc_0500.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/g.mhtml/rfc_0500.txt
+
+../data/rfc822/parse/G.Mhtml/rfc_ical_attachment01.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/g.mhtml/rfc_ical_attachment01.txt
+../data/rfc822/parse/G.Mhtml/rfc_ical_attachment02.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/g.mhtml/rfc_ical_attachment02.txt
+../data/rfc822/parse/G.Mhtml/rfc_ical_attachment03.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/g.mhtml/rfc_ical_attachment03.txt
+../data/rfc822/parse/G.Mhtml/rfc_ical_attachment04.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/g.mhtml/rfc_ical_attachment04.txt
+../data/rfc822/parse/G.Mhtml/rfc_winmail_attachment.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/g.mhtml/rfc_winmail_attachment.txt
+
+../data/rfc822/parse/H.Embedded/RFC_0105_encoded_filename.TXT /epoc32/wins/c/msgtest/imut/rfc822/parse/h.embedded/rfc_0105_encoded_filename.txt
+../data/rfc822/parse/H.Embedded/rfc_106_mx5-d_Digest_V99.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/h.embedded/rfc_106_mx5-d_digest_v99.txt
+../data/rfc822/parse/H.Embedded/rfc_107_Really_mad_nested_message.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/h.embedded/rfc_107_really_mad_nested_message.txt
+../data/rfc822/parse/H.Embedded/rfc_108_Chicken_Oriental_pathologically_nested_message.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/h.embedded/rfc_108_chicken_oriental_pathologically_nested_message.txt
+../data/rfc822/parse/H.Embedded/rfc_109_Chicken_Oriental_pathologically_nested_message.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/h.embedded/rfc_109_chicken_oriental_pathologically_nested_message.txt
+../data/rfc822/parse/H.Embedded/rfc_110_inline_plus_attached_gifs.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/h.embedded/rfc_110_inline_plus_attached_gifs.txt
+../data/rfc822/parse/H.Embedded/rfc_111_empty_embedded.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/h.embedded/rfc_111_empty_embedded.txt
+../data/rfc822/parse/H.Embedded/rfc_112_multipart_report.txt /epoc32/wins/c/msgtest/imut/rfc822/parse/h.embedded/rfc_112_multipart_report.txt
+
+../data/rfc822/parse/A.Simple/rfc_0002.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/a.simple/rfc_0002.txt
+../data/rfc822/parse/A.Simple/rfc_0006.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/a.simple/rfc_0006.txt
+../data/rfc822/parse/A.Simple/rfc_0007.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/a.simple/rfc_0007.txt
+../data/rfc822/parse/A.Simple/rfc_0008.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/a.simple/rfc_0008.txt
+../data/rfc822/parse/A.Simple/rfc_0009.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/a.simple/rfc_0009.txt
+../data/rfc822/parse/A.Simple/rfc_0010.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/a.simple/rfc_0010.txt
+../data/rfc822/parse/A.Simple/rfc_0011.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/a.simple/rfc_0011.txt
+../data/rfc822/parse/A.Simple/rfc_0061.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/a.simple/rfc_0061.txt
+../data/rfc822/parse/A.Simple/rfc_0070.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/a.simple/rfc_0070.txt
+../data/rfc822/parse/A.Simple/rfc_0072.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/a.simple/rfc_0072.txt
+../data/rfc822/parse/A.Simple/rfc_0073_no_received_date.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/a.simple/rfc_0073_no_received_date.txt
+
+
+
+../data/rfc822/parse/B.Mime/rfc_0001.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/b.mime/rfc_0001.txt
+../data/rfc822/parse/B.Mime/rfc_0003.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/b.mime/rfc_0003.txt
+../data/rfc822/parse/B.Mime/rfc_0004.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/b.mime/rfc_0004.txt
+../data/rfc822/parse/B.Mime/rfc_0005.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/b.mime/rfc_0005.txt
+../data/rfc822/parse/B.Mime/rfc_0012.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/b.mime/rfc_0012.txt
+../data/rfc822/parse/B.Mime/rfc_0013.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/b.mime/rfc_0013.txt
+../data/rfc822/parse/B.Mime/rfc_0014.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/b.mime/rfc_0014.txt
+../data/rfc822/parse/B.Mime/rfc_0015.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/b.mime/rfc_0015.txt
+../data/rfc822/parse/B.Mime/rfc_0016.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/b.mime/rfc_0016.txt
+../data/rfc822/parse/B.Mime/rfc_0017.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/b.mime/rfc_0017.txt
+../data/rfc822/parse/B.Mime/rfc_0018.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/b.mime/rfc_0018.txt
+../data/rfc822/parse/B.Mime/rfc_0019.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/b.mime/rfc_0019.txt
+../data/rfc822/parse/B.Mime/rfc_0020.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/b.mime/rfc_0020.txt
+../data/rfc822/parse/B.Mime/rfc_0021.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/b.mime/rfc_0021.txt
+../data/rfc822/parse/B.Mime/rfc_0022.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/b.mime/rfc_0022.txt
+../data/rfc822/parse/B.Mime/rfc_0088.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/b.mime/rfc_0088.txt
+../data/rfc822/parse/B.Mime/rfc_0090.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/b.mime/rfc_0090.txt
+../data/rfc822/parse/B.Mime/rfc_0091.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/b.mime/rfc_0091.txt
+../data/rfc822/parse/B.Mime/rfc_0092.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/b.mime/rfc_0092.txt
+../data/rfc822/parse/B.Mime/rfc_x-vcard.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/b.mime/rfc_x-vcard.txt
+../data/rfc822/parse/B.Mime/rfc_0093_blank_cte.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/b.mime/rfc_0093_blank_cte.txt
+
+../data/rfc822/parse/C.Multipart/rfc_0023.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0023.txt
+../data/rfc822/parse/C.Multipart/rfc_0024.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0024.txt
+../data/rfc822/parse/C.Multipart/rfc_0025.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0025.txt
+../data/rfc822/parse/C.Multipart/rfc_0026.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0026.txt
+../data/rfc822/parse/C.Multipart/rfc_0027.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0027.txt
+../data/rfc822/parse/C.Multipart/rfc_0028.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0028.txt
+../data/rfc822/parse/C.Multipart/rfc_0029.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0029.txt
+../data/rfc822/parse/C.Multipart/rfc_0037.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0037.txt
+../data/rfc822/parse/C.Multipart/rfc_0038.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0038.txt
+../data/rfc822/parse/C.Multipart/rfc_0039.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0039.txt
+../data/rfc822/parse/C.Multipart/rfc_0040.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0040.txt
+../data/rfc822/parse/C.Multipart/rfc_0041.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0041.txt
+../data/rfc822/parse/C.Multipart/rfc_0042.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0042.txt
+../data/rfc822/parse/C.Multipart/rfc_0043.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0043.txt
+../data/rfc822/parse/C.Multipart/rfc_0052.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0052.txt
+../data/rfc822/parse/C.Multipart/rfc_0053.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0053.txt
+../data/rfc822/parse/C.Multipart/rfc_0054.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0054.txt
+../data/rfc822/parse/C.Multipart/rfc_0055.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0055.txt
+../data/rfc822/parse/C.Multipart/rfc_0056.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0056.txt
+../data/rfc822/parse/C.Multipart/rfc_0057.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0057.txt
+../data/rfc822/parse/C.Multipart/rfc_0058.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0058.txt
+../data/rfc822/parse/C.Multipart/rfc_0059.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0059.txt
+../data/rfc822/parse/C.Multipart/rfc_0060.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0060.txt
+../data/rfc822/parse/C.Multipart/rfc_0062.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0062.txt
+../data/rfc822/parse/C.Multipart/rfc_0063.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0063.txt
+../data/rfc822/parse/C.Multipart/rfc_0064.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0064.txt
+../data/rfc822/parse/C.Multipart/rfc_0065.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0065.txt
+../data/rfc822/parse/C.Multipart/rfc_0066.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0066.txt
+../data/rfc822/parse/C.Multipart/rfc_0067.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0067.txt
+../data/rfc822/parse/C.Multipart/rfc_0068.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0068.txt
+../data/rfc822/parse/C.Multipart/rfc_0071.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/c.multipart/rfc_0071.txt
+
+../data/rfc822/parse/D.Encoding/rfc_0030.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/d.encoding/rfc_0030.txt
+../data/rfc822/parse/D.Encoding/rfc_0031.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/d.encoding/rfc_0031.txt
+../data/rfc822/parse/D.Encoding/rfc_0032.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/d.encoding/rfc_0032.txt
+../data/rfc822/parse/D.Encoding/rfc_0033.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/d.encoding/rfc_0033.txt
+../data/rfc822/parse/D.Encoding/rfc_0034.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/d.encoding/rfc_0034.txt
+../data/rfc822/parse/D.Encoding/rfc_0035.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/d.encoding/rfc_0035.txt
+../data/rfc822/parse/D.Encoding/rfc_0036.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/d.encoding/rfc_0036.txt
+../data/rfc822/parse/D.Encoding/rfc_0044.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/d.encoding/rfc_0044.txt
+../data/rfc822/parse/D.Encoding/rfc_0045.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/d.encoding/rfc_0045.txt
+../data/rfc822/parse/D.Encoding/rfc_0046.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/d.encoding/rfc_0046.txt
+../data/rfc822/parse/D.Encoding/rfc_0047.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/d.encoding/rfc_0047.txt
+../data/rfc822/parse/D.Encoding/rfc_0048.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/d.encoding/rfc_0048.txt
+../data/rfc822/parse/D.Encoding/rfc_0049.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/d.encoding/rfc_0049.txt
+../data/rfc822/parse/D.Encoding/rfc_0050.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/d.encoding/rfc_0050.txt
+../data/rfc822/parse/D.Encoding/rfc_0051.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/d.encoding/rfc_0051.txt
+../data/rfc822/parse/D.Encoding/rfc_0077.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/d.encoding/rfc_0077.txt
+../data/rfc822/parse/D.Encoding/rfc_0078.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/d.encoding/rfc_0078.txt
+../data/rfc822/parse/D.Encoding/rfc_0085.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/d.encoding/rfc_0085.txt
+../data/rfc822/parse/D.Encoding/rfc_0101.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/d.encoding/rfc_0101.txt
+../data/rfc822/parse/D.Encoding/rfc_0110.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/d.encoding/rfc_0110.txt
+../data/rfc822/parse/D.Encoding/rfc_inline_Base64.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/d.encoding/rfc_inline_base64.txt
+
+../data/rfc822/parse/E.Charsets/rfc_0097.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/e.charsets/rfc_0097.txt
+../data/rfc822/parse/E.Charsets/rfc_0098.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/e.charsets/rfc_0098.txt
+../data/rfc822/parse/E.Charsets/rfc_0099.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/e.charsets/rfc_0099.txt
+../data/rfc822/parse/E.Charsets/rfc_amazon_co_jp.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/e.charsets/rfc_amazon_co_jp.txt
+
+../data/rfc822/parse/F.Header/rfc_0073.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/f.header/rfc_0073.txt
+../data/rfc822/parse/F.Header/rfc_0074.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/f.header/rfc_0074.txt
+../data/rfc822/parse/F.Header/rfc_0075.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/f.header/rfc_0075.txt
+../data/rfc822/parse/F.Header/rfc_0076.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/f.header/rfc_0076.txt
+../data/rfc822/parse/F.Header/rfc_0079.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/f.header/rfc_0079.txt
+../data/rfc822/parse/F.Header/rfc_0080.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/f.header/rfc_0080.txt
+../data/rfc822/parse/F.Header/rfc_0081.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/f.header/rfc_0081.txt
+../data/rfc822/parse/F.Header/rfc_0083.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/f.header/rfc_0083.txt
+../data/rfc822/parse/F.Header/rfc_0084.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/f.header/rfc_0084.txt
+../data/rfc822/parse/F.Header/rfc_0092.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/f.header/rfc_0092.txt
+../data/rfc822/parse/F.Header/rfc_0093.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/f.header/rfc_0093.txt
+../data/rfc822/parse/F.Header/rfc_0094.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/f.header/rfc_0094.txt
+../data/rfc822/parse/F.Header/rfc_0095.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/f.header/rfc_0095.txt
+../data/rfc822/parse/F.Header/rfc_0096.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/f.header/rfc_0096.txt
+../data/rfc822/parse/F.Header/rfc_0097.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/f.header/rfc_0097.txt
+../data/rfc822/parse/F.Header/rfc_0100.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/f.header/rfc_0100.txt
+../data/rfc822/parse/F.Header/rfc_inline_attachment.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/f.header/rfc_inline_attachment.txt
+../data/rfc822/parse/F.Header/rfc_defect_DEF48171.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/f.header/rfc_defect_def48171.txt
+
+../data/rfc822/parse/G.Mhtml/rfc_0069.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/g.mhtml/rfc_0069.txt
+../data/rfc822/parse/G.Mhtml/rfc_0082.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/g.mhtml/rfc_0082.txt
+../data/rfc822/parse/G.Mhtml/rfc_0086.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/g.mhtml/rfc_0086.txt
+../data/rfc822/parse/G.Mhtml/rfc_0087.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/g.mhtml/rfc_0087.txt
+../data/rfc822/parse/G.Mhtml/rfc_0089.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/g.mhtml/rfc_0089.txt
+../data/rfc822/parse/G.Mhtml/rfc_0090.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/g.mhtml/rfc_0090.txt
+../data/rfc822/parse/G.Mhtml/rfc_0091.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/g.mhtml/rfc_0091.txt
+../data/rfc822/parse/G.Mhtml/rfc_0102_digest.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/g.mhtml/rfc_0102_digest.txt
+../data/rfc822/parse/G.Mhtml/rfc_0103_reverse.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/g.mhtml/rfc_0103_reverse.txt
+../data/rfc822/parse/G.Mhtml/rfc_0104_rfc822.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/g.mhtml/rfc_0104_rfc822.txt
+../data/rfc822/parse/G.Mhtml/RFC_0105_encoded_filename.TXT /epoc32/winscw/c/msgtest/imut/rfc822/parse/g.mhtml/rfc_0105_encoded_filename.txt
+../data/rfc822/parse/G.Mhtml/rfc_0500.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/g.mhtml/rfc_0500.txt
+../data/rfc822/parse/G.Mhtml/rfc_ical_attachment01.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/g.mhtml/rfc_ical_attachment01.txt
+../data/rfc822/parse/G.Mhtml/rfc_ical_attachment02.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/g.mhtml/rfc_ical_attachment02.txt
+../data/rfc822/parse/G.Mhtml/rfc_ical_attachment03.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/g.mhtml/rfc_ical_attachment03.txt
+../data/rfc822/parse/G.Mhtml/rfc_ical_attachment04.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/g.mhtml/rfc_ical_attachment04.txt
+../data/rfc822/parse/G.Mhtml/rfc_winmail_attachment.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/g.mhtml/rfc_winmail_attachment.txt
+
+
+
+../data/rfc822/parse/H.Embedded/RFC_0105_encoded_filename.TXT /epoc32/winscw/c/msgtest/imut/rfc822/parse/h.embedded/rfc_0105_encoded_filename.txt
+../data/rfc822/parse/H.Embedded/rfc_106_mx5-d_Digest_V99.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/h.embedded/rfc_106_mx5-d_digest_v99.txt
+../data/rfc822/parse/H.Embedded/rfc_107_Really_mad_nested_message.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/h.embedded/rfc_107_really_mad_nested_message.txt
+../data/rfc822/parse/H.Embedded/rfc_108_Chicken_Oriental_pathologically_nested_message.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/h.embedded/rfc_108_chicken_oriental_pathologically_nested_message.txt
+../data/rfc822/parse/H.Embedded/rfc_109_Chicken_Oriental_pathologically_nested_message.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/h.embedded/rfc_109_chicken_oriental_pathologically_nested_message.txt
+../data/rfc822/parse/H.Embedded/rfc_110_inline_plus_attached_gifs.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/h.embedded/rfc_110_inline_plus_attached_gifs.txt
+../data/rfc822/parse/H.Embedded/rfc_111_empty_embedded.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/h.embedded/rfc_111_empty_embedded.txt
+../data/rfc822/parse/H.Embedded/rfc_112_multipart_report.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/h.embedded/rfc_112_multipart_report.txt
+
+// T_PARSE_UTC
+../data/rfc822/parse/UTC/rfc_0001.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/utc/rfc_0001.txt
+../data/rfc822/parse/UTC/rfc_0002.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/utc/rfc_0002.txt
+../data/rfc822/parse/UTC/rfc_0003.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/utc/rfc_0003.txt
+../data/rfc822/parse/UTC/rfc_0004.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/utc/rfc_0004.txt
+../data/rfc822/parse/UTC/rfc_Embedded.txt /epoc32/winscw/c/msgtest/imut/rfc822/parse/utc/rfc_embedded.txt
+
+T_PARSE_UTC.iby   				/epoc32/rom/include/t_parse_utc.iby

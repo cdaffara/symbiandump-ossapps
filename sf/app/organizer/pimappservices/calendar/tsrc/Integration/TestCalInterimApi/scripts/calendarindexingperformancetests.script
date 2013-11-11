@@ -1,0 +1,106 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+LOAD_SUITE TestCalInterimApiSuite
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-007ON-1480
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-007ON-1480
+//! @SYMTestType CIT
+//! @SYMTestPriority 2
+//! @SYMREQ 
+//! REQ4 
+//! @SYMTestCaseDesc Start-up performance test
+//! @SYMTestActions
+//! Create session to the Calendar server
+//! Create empty Calendar file
+//! Add 50 repeating and 200 non repeating entries (Repeat test with different number of entries (100, 1000…))
+//! Close session and server
+//! Delete index file (non-cached indexing) (Repeat test where index file is not deleted - cached-indexing )
+//! Reopen session to calendar server
+//! Open calendar file
+//! Fetch all instance for current day, week, month, 3 months or year
+//! Print time taken to open session, calendar file and load instances
+//! Validate main index
+//! Repeat for entries set in the distant past/future
+//! @SYMTestExpectedResults 
+//! Display agenda start-up times for both cached and un-cached indexing
+//! All validations should be successful, The index were 
+//! regenerated / retrieved and contain the correct instances
+//! Cached-Indexing time value should be significantly less than 
+//! the non-cached indexing time value, Cached indexing results 
+//! in noticeable start-up performance improvements
+RUN_TEST_STEP 190 TestCalInterimApiSuite CalendarIndexingStartupPerformanceTest \calendarindexingtests\testdata\calendarindextests.ini IndexStartupPerformance
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-007ON-1480
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-008ON-1480
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-008ON-1480
+//! @SYMTestType CIT
+//! @SYMTestPriority 2
+//! @SYMREQ 
+//! REQ4 
+//! @SYMTestCaseDesc RAM performance test
+//! @SYMTestActions
+//! Create session to the Calendar server
+//! Create empty Calendar file
+//! Add 50 repeating and 200 non repeating entries in distant past, present and future (Repeat test with different number of entries (100, 1000…))
+//! Close session and server
+//! Reopen session to calendar server
+//! Open calendar file
+//! Find instances for current day, month or year (repeat for distant past, future and all times)
+//! Print amount of RAM used by client and server 
+//! Close session
+//! @SYMTestExpectedResults 
+//! Display agenda ram usage when view encompasses various time ranges
+RUN_TEST_STEP 190 TestCalInterimApiSuite CalendarIndexingPerformanceDegradationTest \calendarindexingtests\testdata\calendarindextests.ini PerformanceDegradationStore
+RUN_TEST_STEP 190 TestCalInterimApiSuite CalendarIndexingPerformanceDegradationTest \calendarindexingtests\testdata\calendarindextests.ini PerformanceDegradationStorePast
+RUN_TEST_STEP 100 TestCalInterimApiSuite CalendarIndexingPerformanceDegradationTest \calendarindexingtests\testdata\calendarindextests.ini PerformanceDegradationStoreRepeat
+RUN_TEST_STEP 199 TestCalInterimApiSuite CalendarIndexingPerformanceDegradationTest \calendarindexingtests\testdata\calendarindextests.ini PerformanceDegradationStoreRepeatPast
+RUN_TEST_STEP 199 TestCalInterimApiSuite CalendarIndexingPerformanceDegradationTest \calendarindexingtests\testdata\calendarindextests.ini PerformanceDegradationDelete
+RUN_TEST_STEP 199 TestCalInterimApiSuite CalendarIndexingPerformanceDegradationTest \calendarindexingtests\testdata\calendarindextests.ini PerformanceDegradationDeletePast
+RUN_TEST_STEP 100 TestCalInterimApiSuite CalendarIndexingPerformanceDegradationTest \calendarindexingtests\testdata\calendarindextests.ini PerformanceDegradationUpdateCategory
+RUN_TEST_STEP 100 TestCalInterimApiSuite CalendarIndexingPerformanceDegradationTest \calendarindexingtests\testdata\calendarindextests.ini PerformanceDegradationUpdateException
+RUN_TEST_STEP 100 TestCalInterimApiSuite CalendarIndexingPerformanceDegradationTest \calendarindexingtests\testdata\calendarindextests.ini PerformanceDegradationUpdateChild
+RUN_TEST_STEP 100 TestCalInterimApiSuite CalendarIndexingPerformanceDegradationTest \calendarindexingtests\testdata\calendarindextests.ini PerformanceDegradationUpdateFixed
+RUN_TEST_STEP 100 TestCalInterimApiSuite CalendarIndexingPerformanceDegradationTest \calendarindexingtests\testdata\calendarindextests.ini PerformanceDegradationUpdateFloating
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-008ON-1480
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-013ON-1480
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-013ON-1480
+//! @SYMTestType CIT
+//! @SYMTestPriority 2
+//! @SYMREQ 
+//! REQ4 
+//! @SYMTestCaseDesc Performance degradation test
+//! @SYMTestActions
+//! Create session to the Calendar server
+//! Create empty Calendar file
+//! Add 50 repeating and 200 non repeating entries in distant past, present and future (repeat for child entries, exceptions, alarms, attachments
+//! Repeat for updates(repeat rules, categories, alarms…), deletes (instances and entries), imports and  exports
+//! 
+//! Print time taken to store entries
+//! Find all instances for given period (this day, this week, this month, 3 month window and all time)
+//! Print time taken to find instances
+//! 
+//! Repeat test with different number of entries (100, 1000…)
+//! 
+//! Run test case before submission store results in X
+//! Run test case after submission store results in Y
+//! 
+//! @SYMTestExpectedResults 
+//! The times stored in X should roughly be greater than or equal to Y, 
+//! No degradation has resulted due to this PREQ being submitted.
+RUN_TEST_STEP 190 TestCalInterimApiSuite CalendarIndexingRamPerformanceTest \calendarindexingtests\testdata\calendarindextests.ini IndexRamTest
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-013ON-1480

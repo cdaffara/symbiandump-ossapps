@@ -1,0 +1,143 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+LOAD_SUITE TestCalInterimApiSuite
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-005ON-1480 
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-005ON-1480 
+//! @SYMTestType CIT
+//! @SYMTestPriority 1
+//! @SYMREQ REQ1 
+//! @SYMTestCaseDesc Modified Index test
+//! @SYMTestActions
+//! Create session to the Calendar server
+//! Create empty Calendar file
+//! Add entry for current day
+//! validate main index
+//! Close session and wait for server to close
+//! Reopen session and calendar file and validate main index
+//! Close session and wait for server to close
+//! Reopen session and calendar file
+//! Add an entry one year in the past 
+//! validate main index
+//! Close session and wait for server to close
+//! Reopen session and calendar file and validate main index
+//! Close session and wait for server to close
+//! Reopen session and calendar file
+//! Add an entry one year in the past and an entry for the current day
+//! validate main index
+//! Close session and wait for server to close
+//! Reopen session and calendar file and validate main index
+//! Close session 
+//! Repeat for entries that repeat for one year
+//! Repeat for deletion and updating(categories and/or repeat rules) of entries
+//! Repeat for repeating entries that are updated with a child entry and/or exception
+//! Repeat; change entries from floating time to fixed time and vice versa
+//! 
+//! @SYMTestExpectedResults 
+//! All validations should be successful, The index contain the correct instances
+RUN_TEST_STEP 500 TestCalInterimApiSuite CalendarIndexDCTest \calendarindexingtests\testdata\calendarindextests.ini IndexDCTest
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-005ON-1480 
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-009ON-1480 
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-009ON-1480 
+//! @SYMTestType CIT
+//! @SYMTestPriority 2
+//! @SYMREQ REQ1 
+//! @SYMTestCaseDesc Alarm test
+//! @SYMTestActions
+//! Create session to the Calendar server
+//! Create empty Calendar file
+//! Add 10 non repeating entries in the present
+//! Add an alarm that is due in the next minute for all entries
+//! Close session and server
+//! Reopen session to calendar server
+//! Open calendar file
+//! Check that all alarms are generated
+//! Validate main index
+//! 
+//! 
+//! Create session to the Calendar server
+//! Create empty Calendar file
+//! Add 10 non repeating entries in the present
+//! Add an alarm that is due in the next minute for all entries
+//! Check that all alarms are generated
+//! Close session and server
+//! Reopen session to calendar server
+//! Open calendar file
+//! Check that no other alarms are generated in the next 3 minutes
+//! Validate main index
+//! Repeat where calendar contains only repeating entries or both types of entries
+//!
+//! @SYMTestExpectedResults 
+//! All alarms should be generated only once, The alarm queue should be appropriately populated and cleared
+//! All validations should be successful, The index were retrieved and contain the correct instances
+RUN_TEST_STEP 100 TestCalInterimApiSuite CalendarUniqueIndexTest \calendarindexingtests\testdata\calendarindextests.ini UniqueIdsIndex
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-009ON-1480 
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-010ON-1480 
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-010ON-1480
+//! @SYMTestType CIT
+//! @SYMTestPriority 3
+//! @SYMREQ REQ1 
+//! @SYMTestCaseDesc Category Index test
+//! @SYMTestActions
+//! Create session to the Calendar server
+//! Create empty Calendar file
+//! Add 20 repeating and non repeating entries, each containing one category (12 predefined and 8 custom), in past, current and future times
+//! Close session and server
+//! Reopen session and calendar file
+//! Filter entries based on the predefined and custom categories
+//! Check that filtered entries contain the correct category and data
+//! Repeat where entries contain a mixture of predefined and custom categories
+//! 
+//! @SYMTestExpectedResults 
+//! All checks should be successful, The correct category index has been saved / retrieved
+RUN_TEST_STEP 100 TestCalInterimApiSuite CalendarIndexCategoryTest \calendarindexingtests\testdata\calendarindextests.ini CategoriesIndex
+RUN_TEST_STEP 100 TestCalInterimApiSuite CalendarIndexCategoryTest \calendarindexingtests\testdata\calendarindextests.ini CategoriesIndexMultiple
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-010ON-1480
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-011ON-1480 
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-011ON-1480
+//! @SYMTestType CIT
+//! @SYMTestPriority 3
+//! @SYMREQ REQ1 
+//! @SYMTestCaseDesc Unique ids Index test
+//! @SYMTestActions
+//! Create session to the Calendar server
+//! Create empty Calendar file
+//! Add 10 repeating and non repeating entries in past, current and future times
+//! Close session and server
+//! Reopen session and calendar file
+//! Fetch entries based on GUid or local uid
+//! Check that the correct entries are fetched for a given GUid /local uid
+//! 
+//! @SYMTestExpectedResults 
+//! All checks should be successful, The correct GUid and local uid index have been saved / retrieved
+RUN_TEST_STEP 500 TestCalInterimApiSuite CalendarIndexModificationTest \calendarindexingtests\testdata\calendarindextests.ini ModifiedIndexStore
+RUN_TEST_STEP 500 TestCalInterimApiSuite CalendarIndexModificationTest \calendarindexingtests\testdata\calendarindextests.ini ModifiedIndexStorePast
+RUN_TEST_STEP 700 TestCalInterimApiSuite CalendarIndexModificationTest \calendarindexingtests\testdata\calendarindextests.ini ModifiedIndexStoreRepeat
+RUN_TEST_STEP 700 TestCalInterimApiSuite CalendarIndexModificationTest \calendarindexingtests\testdata\calendarindextests.ini ModifiedIndexStoreRepeatPast
+RUN_TEST_STEP 300 TestCalInterimApiSuite CalendarIndexModificationTest \calendarindexingtests\testdata\calendarindextests.ini ModifiedIndexDelete
+RUN_TEST_STEP 600 TestCalInterimApiSuite CalendarIndexModificationTest \calendarindexingtests\testdata\calendarindextests.ini ModifiedIndexDeletePast
+RUN_TEST_STEP 190 TestCalInterimApiSuite CalendarIndexModificationTest \calendarindexingtests\testdata\calendarindextests.ini ModifiedIndexUpdateCategory
+RUN_TEST_STEP 100 TestCalInterimApiSuite CalendarIndexModificationTest \calendarindexingtests\testdata\calendarindextests.ini ModifiedIndexUpdateException
+RUN_TEST_STEP 100 TestCalInterimApiSuite CalendarIndexModificationTest \calendarindexingtests\testdata\calendarindextests.ini ModifiedIndexUpdateChild
+RUN_TEST_STEP 100 TestCalInterimApiSuite CalendarIndexModificationTest \calendarindexingtests\testdata\calendarindextests.ini ModifiedIndexUpdateFixed
+RUN_TEST_STEP 100 TestCalInterimApiSuite CalendarIndexModificationTest \calendarindexingtests\testdata\calendarindextests.ini ModifiedIndexUpdateFloating
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-011ON-1480
+
+

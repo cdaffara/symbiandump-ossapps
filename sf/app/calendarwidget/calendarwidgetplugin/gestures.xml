@@ -1,0 +1,23 @@
+<gestures>
+<gesture type="onTap" layout="contentContainer" action="launchApplication"> 
+    <parameter service="com.nokia.services"></parameter>
+    <parameter interface="calendar.Launch"></parameter>
+    <parameter method="launchCalendarApp(QDateTime,int)"></parameter>
+    <argument name="date">CURRENTDATE</argument>
+    <argument name="view">1</argument>
+</gesture>
+<gesture type="onSwipe" layout="contentContainer" action="launchApplication">
+    <parameter service="com.nokia.services"></parameter>
+    <parameter interface="calendar.Launch"></parameter>
+    <parameter method="launchCalendarApp(QDateTime,int)"></parameter>
+    <argument name="date">CURRENTDATE</argument>
+    <argument name="view">1</argument>
+</gesture>
+<gesture type="onTap" layout="iconContainer" action="launchApplication">
+    <parameter service="com.nokia.services"></parameter>
+    <parameter interface="calendar.Launch"></parameter>
+    <parameter method="launchCalendarApp(QDateTime,int)"></parameter>
+    <argument name="date">CURRENTDATE</argument>
+    <argument name="view">0</argument>
+</gesture>
+</gestures>

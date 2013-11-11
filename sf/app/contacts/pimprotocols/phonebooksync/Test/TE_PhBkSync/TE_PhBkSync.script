@@ -1,0 +1,1569 @@
+// Copyright (c) 2002-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+// Call the setup script to copy any necessary config files...
+RUN_SCRIPT z:\TestData\Scripts\TE_PhBkSync_Setup.script
+
+LOAD_SUITE TE_PhBkSync
+
+//!@file
+START_TESTCASE PIM-PHBKSYNC-NA-1000
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1000
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test step1 -- Close() matched test step
+//!@SYMTestPriority High
+//!@SYMTestActions Connects to File server, deletes PhBkSync.INI file, deletes 
+//!                default ContactsDb, initialises the phone using [test0], and
+//!                calls connect to start the server
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncOpenTest_01
+
+END_TESTCASE PIM-PHBKSYNC-NA-1000
+
+START_TESTCASE PIM-PHBKSYNC-NA-1001
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1001
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Connects the client to the Phonebook Synchronizer Server in
+//!                 simulated OOM (Out Of Memory) conditions
+//!@SYMTestPriority High
+//!@SYMTestActions Connects the client to the Phonebook Synchronizer Server in
+//!                a loop which simulates OOM situation
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncOOMConnectTest_01
+
+END_TESTCASE PIM-PHBKSYNC-NA-1001
+
+START_TESTCASE PIM-PHBKSYNC-NA-1002
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1002
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test connecting to the phonebook synchroniser server with 
+//!                 the .ini file present which specifies manual sync for all 
+//!                 supported phonebooks (i.e. Global ADN, USIM App ADN, SDN,
+//!                 LND, FDN)
+//!@SYMTestPriority High
+//!@SYMTestActions Connects to the phonebook synchroniser server with the .ini 
+//!                file present which specifies manual sync for all supported 
+//!                phonebooks (i.e. Global ADN, USIM App ADN, SDN, LND, FDN)
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncConnectTest_01
+
+END_TESTCASE PIM-PHBKSYNC-NA-1002
+
+START_TESTCASE PIM-PHBKSYNC-NA-1003
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1003
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test connecting to the phonebook synchroniser server with 
+//!                 the .ini file present which specifies "Automatic sme ICC" 
+//!                 sync option for Global ADN and USIM App ADN and FDN, and 
+//!                 using the "same" ICC (Integrated Circuit Card). The sync 
+//!                 option for the SDN and LND phonebooks is "Manual"
+//!@SYMTestPriority High
+//!@SYMTestActions Connects to the phonebook synchroniser server with the .ini 
+//!                file present which specifies "Automatic sme ICC" sync option
+//!                for Global ADN and USIM App ADN and FDN, and using the "same"
+//!                ICC (Integrated Circuit Card). 
+//!                The sync option for the SDN and LND phonebooks is "Manual"
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncConnectTest_02
+
+END_TESTCASE PIM-PHBKSYNC-NA-1003
+
+START_TESTCASE PIM-PHBKSYNC-NA-1004
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1004
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test connecting to the phonebook synchroniser server with 
+//!                 the .ini file present which specifies "Automatic same ICC"
+//!                 sync option for Global ADN and USIM a=App ADN and FDN, and
+//!                 using a "different" ICC (Integrated Circuit Card). The sync
+//!                 option for the SDN, LND and FDN phonebooks is "Manual"
+//!@SYMTestPriority High
+//!@SYMTestActions Connects to the phonebook synchroniser server with the  .ini 
+//!                file present which specifies "Automatic same ICC" sync 
+//!                option for Global ADN and USIM a=App ADN and FDN, and using 
+//!                a "different" ICC (Integrated Circuit Card). The sync option
+//!                for the SDN, LND and FDN phonebooks is "Manual"
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncConnectTest_03
+
+END_TESTCASE PIM-PHBKSYNC-NA-1004
+
+START_TESTCASE PIM-PHBKSYNC-NA-1005
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1005
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test connecting to the phonebook synchroniser server with 
+//!                 the .ini file present which specifies "Automatic current 
+//!                 ICC" sync option for all supported phonebooks 
+//!                 (i.e. Global ADN, USIM App ADN, SDN, LND and FDN) and using
+//!                 the "same" ICC as the TEL/PHBKSYNC/NA/1004
+//!@SYMTestPriority High
+//!@SYMTestActions Connects to the phonebook synchroniser server with the .ini
+//!                file present which specifies "Automatic current ICC" sync 
+//!                option for all supported phonebooks (i.e. Global ADN,
+//!                USIM App ADN, SDN, LND and FDN) and using the "same" ICC as
+//!                the TEL/PHBKSYNC/NA/1004
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncConnectTest_04
+
+END_TESTCASE PIM-PHBKSYNC-NA-1005
+
+START_TESTCASE PIM-PHBKSYNC-NA-1006
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1006
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test connecting to the phonebook synchroniser server with 
+//!                 the .ini file present which specifies "Automatic current 
+//!                 ICC" sync option for Global ADN and USIM Ap ADN and FDN, 
+//!                 and using a "different" ICC to the previous one. 
+//!                 The sync option for the SDN and LND phonebooks is "Manual"
+//!@SYMTestPriority High
+//!@SYMTestActions Connects to the phonebook synchroniser server with the .ini 
+//!                file present which specifies "Automatic current ICC" sync 
+//!                option for Global ADN and USIM Ap ADN and FDN, and using a 
+//!                "different" ICC to the previous one. The sync option for 
+//!                the SDN and LND phonebooks is "Manual"
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncConnectTest_05
+
+END_TESTCASE PIM-PHBKSYNC-NA-1006
+
+START_TESTCASE PIM-PHBKSYNC-NA-1007
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1007
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test connecting to the phonebook synchroniser without .ini 
+//!                 file
+//!@SYMTestPriority High
+//!@SYMTestActions Connects to the phonebook synchroniser without .ini file
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncConnectTest_06
+
+END_TESTCASE PIM-PHBKSYNC-NA-1007
+
+START_TESTCASE PIM-PHBKSYNC-NA-1008
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1008
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test connecting to the phonebook synchroniser with a corrupt
+//!                 .ini file present
+//!@SYMTestPriority High
+//!@SYMTestActions Connects to the phonebook synchroniser with a corrupt .ini 
+//!                file present
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncConnectTest_07
+
+END_TESTCASE PIM-PHBKSYNC-NA-1008
+
+START_TESTCASE PIM-PHBKSYNC-NA-1009
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1009
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test connecting to the sever when the automatic 
+//!                 syncrhonisation of the ADN phonebook fails. 
+//!                 "Automatic current ICC" sync option is specified for the 
+//!                 Global ADN and LND phonebooks. The sync option for the USIM
+//!                 App, SDN and FDN phonebooks is "Manual". Test closing a 
+//!                 phonebook synchroniser server session.
+//!@SYMTestPriority High
+//!@SYMTestActions Connects to the sever when the automatic syncrhonisation of 
+//!                the ADN phonebook fails
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncConnectTest_08
+
+END_TESTCASE PIM-PHBKSYNC-NA-1009
+
+START_TESTCASE PIM-PHBKSYNC-NA-1010
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1010
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test connecting to the server several times when the IMSI 
+//!                 number is returned empty each time. This used to cause an
+//!                 invalid  
+//!@SYMTestPriority High
+//!@SYMTestActions Connects to the server several times when the IMSI number is
+//!                returned empty each time. This used to cause an invalid  
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncConnectTest_09
+
+END_TESTCASE PIM-PHBKSYNC-NA-1010
+
+START_TESTCASE PIM-PHBKSYNC-NA-1011
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1011
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test getting the current version of the phonebook 
+//!                 synchroniser serer and print the result to screen
+//!@SYMTestPriority High
+//!@SYMTestActions Gets the current version of the phonebook synchroniser server
+//!                and print the result to screen
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncVersionTest_01
+
+END_TESTCASE PIM-PHBKSYNC-NA-1011
+
+START_TESTCASE PIM-PHBKSYNC-NA-1012
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1012
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test executing a manual synchronization of the Global/GSM 
+//!                 ADN phonebook entries in OOM conditions
+//!@SYMTestPriority High
+//!@SYMTestActions Executes a manual synchronization of the Global/GSM ADN 
+//!                phonebook entries in OOM situation
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncOOMDoSynchronisationTest_01
+
+END_TESTCASE PIM-PHBKSYNC-NA-1012
+
+START_TESTCASE PIM-PHBKSYNC-NA-1013
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1013
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test synchronisation with a partially full Global/GSM ADN 
+//!                 phonebook. It is assumed that server been connected/started
+//!                 by Open step
+//!@SYMTestPriority High
+//!@SYMTestActions Synchronises with a partially full Global/GSM ADN phonebook
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncDoSynchronisationTest_01
+
+END_TESTCASE PIM-PHBKSYNC-NA-1013
+
+START_TESTCASE PIM-PHBKSYNC-NA-1014
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1014
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test synchronisation with a partially full USIM ADN 
+//!                 phonebook. It is assumed that server been connected/started
+//!                 by Open step
+//!@SYMTestPriority High
+//!@SYMTestActions Synchronises with a partially full USIM ADN phonebook
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncDoSynchronisationTest_02
+
+END_TESTCASE PIM-PHBKSYNC-NA-1014
+
+START_TESTCASE PIM-PHBKSYNC-NA-1015
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1015
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test synchronisation with a partially full Global/GSM SDN 
+//!                 phonebook. It is assumed that server been connected/started
+//!                 by Open step
+//!@SYMTestPriority High
+//!@SYMTestActions Synchronises with a partially full Global/GSM SDN phonebook
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncDoSynchronisationTest_03
+
+END_TESTCASE PIM-PHBKSYNC-NA-1015
+
+START_TESTCASE PIM-PHBKSYNC-NA-1016
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1016
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test synchronisation with a partially full Global/GSM LND 
+//!                 phonebook. It is assumed that server been connected/started
+//!                 by Open step
+//!@SYMTestPriority High
+//!@SYMTestActions Synchronises with a partially full Global/GSM LND phonebook
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncDoSynchronisationTest_04
+
+END_TESTCASE PIM-PHBKSYNC-NA-1016
+
+START_TESTCASE PIM-PHBKSYNC-NA-1017
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1017
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test synchronisation with a full Global/GSM ADN phonebook.
+//!                 It is assumed that server been connected/started by Open
+//!                 step
+//!@SYMTestPriority High
+//!@SYMTestActions Synchronises with a full Global/GSM ADN phonebook
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncDoSynchronisationTest_05
+
+END_TESTCASE PIM-PHBKSYNC-NA-1017
+
+START_TESTCASE PIM-PHBKSYNC-NA-1018
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1018
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test synchronisation with a full USIM ADN phonebook.
+//!                 It is assumed that server been connected/started by Open 
+//!                 step
+//!@SYMTestPriority High
+//!@SYMTestActions Synchronises with a full USIM ADN phonebook
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncDoSynchronisationTest_06
+
+END_TESTCASE PIM-PHBKSYNC-NA-1018
+
+START_TESTCASE PIM-PHBKSYNC-NA-1019
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1019
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test synchronisation with a full SDN phonebook.
+//!                 It is assumed that server been connected/started by Open 
+//!                 step
+//!@SYMTestPriority High
+//!@SYMTestActions Synchronises with a full SDN phonebook
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncDoSynchronisationTest_07
+
+END_TESTCASE PIM-PHBKSYNC-NA-1019
+
+START_TESTCASE PIM-PHBKSYNC-NA-1020
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1020
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test synchronisation with a full LND phonebook.
+//!                 It is assumed that server been connected/started by Open 
+//!                 step
+//!@SYMTestPriority High
+//!@SYMTestActions Synchronises with a full LND phonebook
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncDoSynchronisationTest_08
+
+END_TESTCASE PIM-PHBKSYNC-NA-1020
+
+START_TESTCASE PIM-PHBKSYNC-NA-1021
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1021
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test synchronisation with all full supported phonebooks.
+//!                 It is assumed that server been connected/started by Open 
+//!                 step
+//!@SYMTestPriority High
+//!@SYMTestActions Synchronises with all full supported phonebooks
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncDoSynchronisationTest_09
+
+END_TESTCASE PIM-PHBKSYNC-NA-1021
+
+START_TESTCASE PIM-PHBKSYNC-NA-1022
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1022
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test synchronisation of all supported phonebooks, when 
+//!                 synchronisation of one of them fails. It is assumed that 
+//!                 server been connected/started by Open step
+//!@SYMTestPriority High
+//!@SYMTestActions Synchronises of all supported phonebooks, when 
+//!                synchronisation of one of them fails
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncDoSynchronisationTest_10
+
+END_TESTCASE PIM-PHBKSYNC-NA-1022
+
+START_TESTCASE PIM-PHBKSYNC-NA-1023
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1023
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test synchronisation of a Global/GSM ADN phonebook that 
+//!                 contains an entry whose size >512 characters which will lead
+//!                 to overflow when phbksync is doing the batch reading
+//!@SYMTestPriority High
+//!@SYMTestActions Synchronises of a Global/GSM ADN phonebook that contains an 
+//!                entry whose size >512 characters which will lead to overflow 
+//!                when phbksync is doing the batch reading
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncDoSynchronisationTest_11
+
+END_TESTCASE PIM-PHBKSYNC-NA-1023
+
+START_TESTCASE PIM-PHBKSYNC-NA-1024
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1024
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc This test is similar to TEL/PHBKSYNC/NA/1023. The difference
+//!                 is that the overflow is caused by large phone number and 
+//!                 additional numbers rather than by names in 
+//!                 TEL/PHBKSYNC/NA/1023
+//!@SYMTestPriority High
+//!@SYMTestActions Synchronises of a Global/GSM ADN phonebook that contains an 
+//!                entry whose size >512 characters which will lead to overflow
+//!                when phbksync is doing the batch reading
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncDoSynchronisationTest_12
+
+END_TESTCASE PIM-PHBKSYNC-NA-1024
+
+START_TESTCASE PIM-PHBKSYNC-NA-1025
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1025
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test synchronisation with a corrupted USIM. It is assumed 
+//!                 that server been connected/started by Open step
+//!@SYMTestPriority High
+//!@SYMTestActions Synchronises with a corrupted USIM
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncDoSynchronisationTest_13
+
+END_TESTCASE PIM-PHBKSYNC-NA-1025
+
+START_TESTCASE PIM-PHBKSYNC-NA-1026
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1026
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test synchronisation of a phonebook containing entries that
+//!                 are "read-only"
+//!@SYMTestPriority High
+//!@SYMTestActions Synchronises of a phonebook containing entries that are 
+//!                "read-only"
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncDoSynchronisationTest_14
+
+END_TESTCASE PIM-PHBKSYNC-NA-1026
+
+START_TESTCASE PIM-PHBKSYNC-NA-1027
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1027
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test synchronisation when a UICC is not present
+//!@SYMTestPriority High
+//!@SYMTestActions Synchronises when a UICC is not present
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncDoSynchronisationTest_15
+
+//
+// No test PhbkSyncDoSynchronisationTest_16
+//
+
+END_TESTCASE PIM-PHBKSYNC-NA-1027
+
+START_TESTCASE PIM-PHBKSYNC-NA-1028
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1028
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test synchronisation when the UICC is "blocked"
+//!@SYMTestPriority High
+//!@SYMTestActions Synchronises when the UICC is "blocked"
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncDoSynchronisationTest_17
+
+END_TESTCASE PIM-PHBKSYNC-NA-1028
+
+START_TESTCASE PIM-PHBKSYNC-NA-1029
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1029
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test synchronisation when the UICC is "PIN protected"
+//!@SYMTestPriority High
+//!@SYMTestActions Synchronises when the UICC is "PIN protected"
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncDoSynchronisationTest_18
+
+END_TESTCASE PIM-PHBKSYNC-NA-1029
+
+START_TESTCASE PIM-PHBKSYNC-NA-1030
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1030
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test synchronisation of a phonebook that contains entries 
+//!                 with Name field set and Number field blank
+//!@SYMTestPriority High
+//!@SYMTestActions Synchronises phonebook that contains entries with Name field
+//!                set and Number field blank 
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncDoSynchronisationTest_19
+
+END_TESTCASE PIM-PHBKSYNC-NA-1030
+
+START_TESTCASE PIM-PHBKSYNC-NA-1031
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1031
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test synchronisation of a phonebook that contains entries
+//!                 with Number field set and Name field blank.
+//!@SYMTestPriority High
+//!@SYMTestActions Synchronises phonebook that contains entries with Number 
+//!                field set and Name field blank.
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncDoSynchronisationTest_20
+
+END_TESTCASE PIM-PHBKSYNC-NA-1031
+
+START_TESTCASE PIM-PHBKSYNC-NA-1032
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1032
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test synchronisation of a phonebook that contains entries 
+//!                 that have letters in the phone number field
+//!@SYMTestPriority High
+//!@SYMTestActions Synchronises phonebook that contains entries that have 
+//!                letters in the phone number field
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncDoSynchronisationTest_21
+
+END_TESTCASE PIM-PHBKSYNC-NA-1032
+
+START_TESTCASE PIM-PHBKSYNC-NA-1033
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1033
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test synchronisation of a phonebook that contains entries 
+//!                 with "+", "p", and "w" in th phone number field
+//!@SYMTestPriority High
+//!@SYMTestActions Synchronises phonebook that contains entries with "+", "p",
+//!                and "w" in th phone number field
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncDoSynchronisationTest_22
+
+//
+// PhbkSyncDoSynchronisationTest_23 removed due to realistic test spec.
+//
+//
+// PhbkSyncDoSynchronisationTest_24 removed due to realistic test spec.
+//
+
+END_TESTCASE PIM-PHBKSYNC-NA-1033
+
+START_TESTCASE PIM-PHBKSYNC-NA-1034
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1034
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test synchronisation of multiple phonebooks by starting them
+//!                 sconsecutively
+//!@SYMTestPriority High
+//!@SYMTestActions Synchronises of multiple phonebooks by starting them 
+//!                consecutively
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncDoSynchronisationTest_25
+
+END_TESTCASE PIM-PHBKSYNC-NA-1034
+
+START_TESTCASE PIM-PHBKSYNC-NA-1035
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1035
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test synchronisation of multiple phonebooks with hidden 
+//!                 entries. Only applies to Global/GSM ADN and USIM App ADN 
+//!                 phonebooks  
+//!@SYMTestPriority High
+//!@SYMTestActions Synchronises of multiple phonebooks with hidden entries
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncDoSynchronisationTest_26
+
+END_TESTCASE PIM-PHBKSYNC-NA-1035
+
+START_TESTCASE PIM-PHBKSYNC-NA-1036
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1036
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Re-Synchronisation (SIM Toolkit initiated). SIM is OK. 
+//!                 Synchronisation mode is "Auto Sync, Current ICC". Test 
+//!                 initial synchronisation is successful. Then test that a 
+//!                 subsequent "SIM toolkit refresh" notification leads to a 
+//!                 second synchronisation
+//!@SYMTestPriority High
+//!@SYMTestActions Re-Synchronises phonebook
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncDoSynchronisationTest_27
+
+END_TESTCASE PIM-PHBKSYNC-NA-1036
+
+START_TESTCASE PIM-PHBKSYNC-NA-1037
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1037
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test synchronisation with a partially full Global/GSM FDN 
+//!                 phonebook. It is assumed that server been connected/started 
+//!                 by Open step
+//!@SYMTestPriority High
+//!@SYMTestActions Synchronises with a partially full Global/GSM FDN phonebook
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncDoSynchronisationTest_28
+
+END_TESTCASE PIM-PHBKSYNC-NA-1037
+
+START_TESTCASE PIM-PHBKSYNC-NA-1038
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1038
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test synchronisation with a full FDN phonebook. It is 
+//!                 assumed that server been connected/started by Open step
+//!@SYMTestPriority High
+//!@SYMTestActions Synchronises with a full FDN phonebook
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncDoSynchronisationTest_29
+
+END_TESTCASE PIM-PHBKSYNC-NA-1038
+
+START_TESTCASE PIM-PHBKSYNC-NA-1101
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1101
+//!@SYMDEF INC104328 
+//!@SYMTestCaseDesc Test booting the phone without PIN1 entered and then ensure
+//                  that when the PIN is entered that the phonebooks are synchronised.
+//!@SYMTestPriority High
+//!@SYMTestActions Boot phone, await PIN1 to become valid and then check phone book status.
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncDoSynchronisationTest_30
+
+END_TESTCASE PIM-PHBKSYNC-NA-1101
+
+START_TESTCASE PIM-PHBKSYNC-NA-1039
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1039
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc The purpose of this test is to test that DoSync request is 
+//!                 issued and is executed in server before the method 
+//!                 ::CompleteGetPhoneStoreInfo is called via the AO. 
+//!                 By doing that, we can trigger the condition "subscriberId" 
+//!                 is not retrived in ::DoSynchronisationL
+//!@SYMTestPriority High
+//!@SYMTestActions Tests that DoSync request is issued and is executed in server
+//!                before the method ::CompleteGetPhoneStoreInfo is called via 
+//!                the AO
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncSubscriberIdTest_01
+
+END_TESTCASE PIM-PHBKSYNC-NA-1039
+
+START_TESTCASE PIM-PHBKSYNC-NA-1040
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1040
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test validating whether a read operation is possible on 
+//!                 valid contacts. Repeat this test case for all supported 
+//!                 phonebooks
+//!@SYMTestPriority High
+//!@SYMTestActions Tests validating whether a read operation is possible on 
+//!                valid contacts. Repeats this test case for all supported 
+//!                phonebooks
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncValidateContactTest_01
+
+END_TESTCASE PIM-PHBKSYNC-NA-1040
+
+START_TESTCASE PIM-PHBKSYNC-NA-1041
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1041
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test validating whether a read operation is possible on 
+//!                 valid contact, where reading the contact is not permitted 
+//!                 due to the UICC being locked/blocked/PIN protected. Repeat 
+//!                 this test case for all supported phonebooks
+//!@SYMTestPriority High
+//!@SYMTestActions Tests validating whether a read operation is possible on 
+//!                valid contact, where reading the contact is not permitted 
+//!                due to the UICC being locked/blocked/PIN protected. Repeats 
+//!                this test case for all supported phonebooks
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncValidateContactTest_02
+
+END_TESTCASE PIM-PHBKSYNC-NA-1041
+
+START_TESTCASE PIM-PHBKSYNC-NA-1042
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1042
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test validating whether a read operation is possible on 
+//!                 contact, where the contact specified by the contact ID is 
+//!                 blank. Repeat this test case for all supported phonebooks
+//!@SYMTestPriority High
+//!@SYMTestActions Tests validating whether a read operation is possible on 
+//!                contact, where the contact specified by the contact ID is 
+//!                blank. Repeats this test case for all supported phonebooks
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncValidateContactTest_03
+
+END_TESTCASE PIM-PHBKSYNC-NA-1042
+
+START_TESTCASE PIM-PHBKSYNC-NA-1043
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1043
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test validing whether a read operation is possible on 
+//!                 contact, where the specified contact ID is invalid.  
+//!                 Repeat this test case for all supported phonebooks
+//!@SYMTestPriority High
+//!@SYMTestActions Tests validing whether a read operation is possible on
+//!                contact, where the specified contact ID is invalid. 
+//!                Repeats this test case for all supported phonebooks
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncValidateContactTest_04
+
+END_TESTCASE PIM-PHBKSYNC-NA-1043
+
+START_TESTCASE PIM-PHBKSYNC-NA-1044
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1044
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test validing whether a search operation is possible on a 
+//!                 valid contact. Repeat this test case for all supported 
+//!                 phonebooks
+//!@SYMTestPriority High
+//!@SYMTestActions Tests validing whether a search operation is possible on a 
+//!                valid contact. Repeats this test case for all supported 
+//!                phonebooks
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncValidateContactTest_05
+
+END_TESTCASE PIM-PHBKSYNC-NA-1044
+
+START_TESTCASE PIM-PHBKSYNC-NA-1045
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1045
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test validing whether a search operation is possible on a 
+//!                 valid contact, where searching the contact is not permitted.
+//!                 Repeat this test case for all supported phonebooks
+//!@SYMTestPriority High
+//!@SYMTestActions Tests validing whether a search operation is possible on a 
+//!                valid contact, where searching the contact is not permitted.
+//!                Repeats this test case for all supported phonebooks
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncValidateContactTest_06
+
+END_TESTCASE PIM-PHBKSYNC-NA-1045
+
+START_TESTCASE PIM-PHBKSYNC-NA-1046
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1046
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test validating whether a search operation is possible on 
+//!                 contact, where the contact specified by the contact ID is 
+//!                 blank. Repeat this test case for all supported phonebooks
+//!@SYMTestPriority High
+//!@SYMTestActions Tests validating whether a search operation is possible on
+//!                contact, where the contact specified by the contact ID is 
+//!                blank. Repeats this test case for all supported phonebooks
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncValidateContactTest_07
+
+END_TESTCASE PIM-PHBKSYNC-NA-1046
+
+START_TESTCASE PIM-PHBKSYNC-NA-1047
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1047
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test validating whether a search operation is possible on 
+//!                 contact, where the specified contact ID is invalid. 
+//!                 Repeat this test case for all supported phonebooks
+//!@SYMTestPriority High
+//!@SYMTestActions Tests validating whether a search operation is possible on 
+//!                contact, where the specified contact ID is invalid. 
+//!                Repeats this test case for all supported phonebooks
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncValidateContactTest_08
+
+END_TESTCASE PIM-PHBKSYNC-NA-1047
+
+START_TESTCASE PIM-PHBKSYNC-NA-1048
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1048
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test validating whether an edit operation is possible on 
+//!                 valid contact. Repeat this test case for all supported 
+//!                 phonebooks
+//!@SYMTestPriority High
+//!@SYMTestActions Tests validating whether an edit operation is possible on 
+//!                valid contact. Repeats this test case for all supported 
+//!                phonebooks
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncValidateContactTest_09
+
+END_TESTCASE PIM-PHBKSYNC-NA-1048
+
+START_TESTCASE PIM-PHBKSYNC-NA-1049
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1049
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test validating whether an edit operation is possile on 
+//!                 valid contact, where editing the contact is not permitted. 
+//!                 Repeat this test case for all supported phonebooks
+//!@SYMTestPriority High
+//!@SYMTestActions Tests validating whether an edit operation is possile on
+//!                valid contact, where editing the contact is not permitted. 
+//!                Repeats this test case for all supported phonebooks
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncValidateContactTest_10
+
+END_TESTCASE PIM-PHBKSYNC-NA-1049
+
+START_TESTCASE PIM-PHBKSYNC-NA-1050
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1050
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test validating whether an edit operation is possible on 
+//!                 contact, where the contact specified by the contact ID is 
+//!                 blank. Repeat this test case for all supported phonebooks
+//!@SYMTestPriority High
+//!@SYMTestActions Tests validating whether an edit operation is possible on 
+//!                contact, where the contact specified by the contact ID is 
+//!                blank. Repeats this test case for all supported phonebooks
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncValidateContactTest_11
+
+END_TESTCASE PIM-PHBKSYNC-NA-1050
+
+START_TESTCASE PIM-PHBKSYNC-NA-1051
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1051
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test validating whether an edit operation is possible on 
+//!                 contact, where the specified contact ID is invalid. 
+//!                 Repeat this test case for all supported phonebooks
+//!@SYMTestPriority High
+//!@SYMTestActions Tests validating whether an edit operation is possible on 
+//!                contact, where the specified contact ID is invalid. 
+//!                Repeats this test case for all supported phonebooks
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncValidateContactTest_12
+
+END_TESTCASE PIM-PHBKSYNC-NA-1051
+
+START_TESTCASE PIM-PHBKSYNC-NA-1052
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1052
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test validating whether an edit operation is possible on 
+//!                 contact, where the specified contact is hidden
+//!@SYMTestPriority High
+//!@SYMTestActions Tests validating whether an edit operation is possible on 
+//!                contact, where the specified contact is hidden
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncValidateContactTest_13
+
+END_TESTCASE PIM-PHBKSYNC-NA-1052
+
+START_TESTCASE PIM-PHBKSYNC-NA-1053
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1053
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test validating whether an edit operation is possible on 
+//!                 USIM Application phonebook contact, and then access to 
+//!                 Global/GSM ADN phonebook 
+//!@SYMTestPriority High
+//!@SYMTestActions Tests validating whether an edit operation is possible on 
+//!                USIM Application phonebook contact, and then accesses to 
+//!                Global/GSM ADN phonebook 
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncValidateContactTest_14
+
+END_TESTCASE PIM-PHBKSYNC-NA-1053
+
+START_TESTCASE PIM-PHBKSYNC-NA-1054
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1054
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test validating whether an edit operation is possible on 
+//!                 USIM Application phonebook contact, when the USIM 
+//!                 Application becomes PIN protected
+//!@SYMTestPriority High
+//!@SYMTestActions Tests validating whether an edit operation is possible on 
+//!                USIM Application phonebook contact, when the USIM Application
+//!                becomes PIN protected
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncValidateContactTest_15
+
+END_TESTCASE PIM-PHBKSYNC-NA-1054
+
+START_TESTCASE PIM-PHBKSYNC-NA-1055
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1055
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc This test is covered by TEL/PHBKSYNC/NA/1054 since the 
+//!                 phonebooks in [test38] are both USIM Application PIN 
+//!                 protected and ICC locked/blocked/PIN protected
+//!@SYMTestPriority High
+//!@SYMTestActions Tests validating whether an edit operation is possible on 
+//!                USIM Application phonebook contact, when the USIM Application
+//!                becomes PIN protected
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncValidateContactTest_16
+
+END_TESTCASE PIM-PHBKSYNC-NA-1055
+
+START_TESTCASE PIM-PHBKSYNC-NA-1056
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1056
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test validating whether a read operation is possible on 
+//!                 valid contact, where reading the ccontact is not permitted 
+//!                 due to the FDN entry being PIN2 protected. Check that other
+//!                 phonebook can still be accessed for reading. Once PIN2 is 
+//!                 verified, editing FDN contact should be permitted. Again 
+//!                 check reading from other phonebook
+//!@SYMTestPriority High
+//!@SYMTestActions Tests whether a read operation is possible on valid contact
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncValidateContactTest_17
+
+END_TESTCASE PIM-PHBKSYNC-NA-1056
+
+START_TESTCASE PIM-PHBKSYNC-NA-1057
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1057
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test getting the format of a new contact and print this 
+//!                 information to screen. Repeat for all supported phonebooks
+//!@SYMTestPriority High
+//!@SYMTestActions Gets information about the supported fields within an ICC 
+//!                phonebook entry
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncGetContactFormatTest_01
+
+END_TESTCASE PIM-PHBKSYNC-NA-1057
+
+START_TESTCASE PIM-PHBKSYNC-NA-1058
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1058
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test writing a contact, where all the contact fields are 
+//!                 valid. Repeat for all supported phonebooks
+//!@SYMTestPriority High
+//!@SYMTestActions Writes a contact, where all the contact fields are valid
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncWriteContactTest_01
+
+END_TESTCASE PIM-PHBKSYNC-NA-1058
+
+START_TESTCASE PIM-PHBKSYNC-NA-1059
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1059
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test writing a contact, where all the contact fields are 
+//!                 valid except the ICC slot which is not specified and there 
+//!                 is space to add another contact. Repeat for all supported 
+//!                 phonebooks
+//!@SYMTestPriority High
+//!@SYMTestActions Writes a contact, where all the contact fields are valid 
+//!                except the ICC slot which is not specified and there is space
+//!                to add another contact
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncWriteContactTest_02
+
+END_TESTCASE PIM-PHBKSYNC-NA-1059
+
+START_TESTCASE PIM-PHBKSYNC-NA-1060
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1060
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test writing a contact, where all the contact fields are 
+//!                 valid except the ICC slot which is not specified and there 
+//!                 is no space to add another contact. Repeat for all supported
+//!                 phonebooks
+//!@SYMTestPriority High
+//!@SYMTestActions Writes a contact, where all the contact fields are valid 
+//!                except the ICC slot which is not specified and there is no 
+//!                space to add another contact
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncWriteContactTest_03
+
+END_TESTCASE PIM-PHBKSYNC-NA-1060
+
+START_TESTCASE PIM-PHBKSYNC-NA-1061
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1061
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test writing a contact, where all the contact fields are 
+//!                 valid except the ICC slot which is an invalid slot number 
+//!                 (0, -1, -5765). Repeat for all supported phonebooks
+//!@SYMTestPriority High
+//!@SYMTestActions Writes a contact, where all the contact fields are valid 
+//!                except the ICC slot which is an invalid slot number 
+//!                (0, -1, -5765)
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncWriteContactTest_04
+
+END_TESTCASE PIM-PHBKSYNC-NA-1061
+
+START_TESTCASE PIM-PHBKSYNC-NA-1062
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1062
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test writing (edit) a contact, where all the contact fields 
+//!                 are valid, but the specified ICC slot already has an entry
+//!@SYMTestPriority High
+//!@SYMTestActions Edits a contact, where all the contact fields are valid, but 
+//!                the specified ICC slot already has an entry
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncWriteContactTest_05
+
+END_TESTCASE PIM-PHBKSYNC-NA-1062
+
+START_TESTCASE PIM-PHBKSYNC-NA-1063
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1063
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test writing a contact, where all the contact fields are 
+//!                 specified in such a way what they are only just valid, e.g.
+//!                 no. of allowed characters for that field , no. of digits in
+//!                 phone number = max no. of allowed digits for that field,
+//!                 ICC slot no. = max no. of ICC slots available
+//!@SYMTestPriority High
+//!@SYMTestActions Writes a contact, where all the contact fields are specified 
+//!                in such a way what they are only just valid
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncWriteContactTest_06
+
+END_TESTCASE PIM-PHBKSYNC-NA-1063
+
+START_TESTCASE PIM-PHBKSYNC-NA-1064
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1064
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test writing a contact, where all the contact fields are 
+//!                 valid except the name which has more characters than 
+//!                 permitted
+//!@SYMTestPriority High
+//!@SYMTestActions Writes a contact
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncWriteContactTest_07
+
+END_TESTCASE PIM-PHBKSYNC-NA-1064
+
+START_TESTCASE PIM-PHBKSYNC-NA-1065
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1065
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test writing a contact, where all the contact fields are 
+//!                 valid except the phone number which has more digits than 
+//!                 permitted
+//!@SYMTestPriority High
+//!@SYMTestActions Writes a contact, where all the contact fields are valid 
+//!                except the phone number which has more digits than permitted
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncWriteContactTest_08
+
+END_TESTCASE PIM-PHBKSYNC-NA-1065
+
+START_TESTCASE PIM-PHBKSYNC-NA-1066
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1066
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test writing a contact, where all the contact fields are 
+//!                 valid. the name field contains obscure characters 
+//!                 (anything other than letters) and the phone number field 
+//!                 contains "+" "p" "w".
+//!@SYMTestPriority High
+//!@SYMTestActions Writes a contact, where all the contact fields are valid
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncWriteContactTest_09
+
+END_TESTCASE PIM-PHBKSYNC-NA-1066
+
+START_TESTCASE PIM-PHBKSYNC-NA-1067
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1067
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test writing a contact, where all the contact fields are 
+//!                 valid except the phone no. which contains letters
+//!@SYMTestPriority High
+//!@SYMTestActions Writes a contact, where all the contact fields are valid 
+//!                except the phone number
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncWriteContactTest_10
+
+END_TESTCASE PIM-PHBKSYNC-NA-1067
+
+START_TESTCASE PIM-PHBKSYNC-NA-1068
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1068
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test writing a contact, where all the contact fields are 
+//!                 valid, but an error occurs when writing to the ICC. 
+//!                 Repeat this test case but with an error because the ICC has
+//!                 become locked/blocked
+//!@SYMTestPriority High
+//!@SYMTestActions Writes a contact, where all the contact fields are valid, but
+//!                an error occurs when writing to the ICC
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncWriteContactTest_11
+
+END_TESTCASE PIM-PHBKSYNC-NA-1068
+
+START_TESTCASE PIM-PHBKSYNC-NA-1069
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1069
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test writing acontact where all the contact fields are valid
+//!                 except the name which is blank
+//!@SYMTestPriority High
+//!@SYMTestActions Writes acontact where all the contact fields are valid except
+//!                the name which is blank
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncWriteContactTest_12
+
+END_TESTCASE PIM-PHBKSYNC-NA-1069
+
+START_TESTCASE PIM-PHBKSYNC-NA-1070
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1070
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test writing a contact where all the contact fields are 
+//!                 valid except the phone number which is blank
+//!@SYMTestPriority High
+//!@SYMTestActions Writes a contact
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncWriteContactTest_13
+
+//
+// BAT 15/08/02 - test step is removed due to incomplete code.
+//
+//RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncWriteContactTest_14 
+//
+
+END_TESTCASE PIM-PHBKSYNC-NA-1070
+
+START_TESTCASE PIM-PHBKSYNC-NA-1071
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1071
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test writing a contact, where the slot number is not 
+//!                 specified
+//!@SYMTestPriority High
+//!@SYMTestActions Writes a contact
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncWriteContactTest_15
+
+END_TESTCASE PIM-PHBKSYNC-NA-1071
+
+START_TESTCASE PIM-PHBKSYNC-NA-1072
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1072
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test writing (editing) a contact, where the contact is a 
+//!                 hidden entry and the hidden key has not been verified
+//!@SYMTestPriority High
+//!@SYMTestActions Writes (edits) a contact
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncWriteContactTest_16
+
+END_TESTCASE PIM-PHBKSYNC-NA-1072
+
+START_TESTCASE PIM-PHBKSYNC-NA-1073
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1073
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test writing a new hidden entry without the hidden key being
+//!                 verified
+//!@SYMTestPriority High
+//!@SYMTestActions Writes a new hidden entry without the hidden key being 
+//!                verified
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncWriteContactTest_17
+
+END_TESTCASE PIM-PHBKSYNC-NA-1073
+
+START_TESTCASE PIM-PHBKSYNC-NA-1074
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1074
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test writing a new hidden entry after the hidden key has 
+//!                 sbeen verified
+//!@SYMTestPriority High
+//!@SYMTestActions Writes a new hidden entry after the hidden key has been 
+//!                verified
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncWriteContactTest_18
+
+END_TESTCASE PIM-PHBKSYNC-NA-1074
+
+START_TESTCASE PIM-PHBKSYNC-NA-1075
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1075
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test writing a new contact, which also contains an invalid 
+//!                 field
+//!@SYMTestPriority High
+//!@SYMTestActions Writes a new contact, which contains an invalid field
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncWriteContactTest_19
+
+END_TESTCASE PIM-PHBKSYNC-NA-1075
+
+START_TESTCASE PIM-PHBKSYNC-NA-1100
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1100
+//!@SYMDEF DEF085843
+//!@SYMTestCaseDesc Test writing a contact, where all the contact fields are
+//!                 valid but max. length of alpha tag for additional numbers 
+//!				     in USIM phone store is zero.
+//!				     Repeat for all supported phonebooks
+//!@SYMTestPriority High
+//!@SYMTestActions Writes a contact, where all the contact fields are valid
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncWriteContactTest_22
+
+END_TESTCASE PIM-PHBKSYNC-NA-1100
+
+START_TESTCASE PIM-PHBKSYNC-NA-1076
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1076
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test deleting a contact by specifying a valid ICC slot. 
+//!                 Repeat for all supported phonebooks
+//!@SYMTestPriority High
+//!@SYMTestActions Deletes a contact by specifying a valid ICC slot
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncDeleteContactTest_01
+
+END_TESTCASE PIM-PHBKSYNC-NA-1076
+
+START_TESTCASE PIM-PHBKSYNC-NA-1077
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1077
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test deleting a contact by specifying a valid ICC slot which
+//!                 contains a blank entry
+//!@SYMTestPriority High
+//!@SYMTestActions Deletes a contact by specifying a valid ICC slot which 
+//!                contains a blank entry
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncDeleteContactTest_02
+
+END_TESTCASE PIM-PHBKSYNC-NA-1077
+
+START_TESTCASE PIM-PHBKSYNC-NA-1078
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1078
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test deleting a contact by specifying an invalid ICC slot. 
+//!                 Repeat for all supported phonebooks
+//!@SYMTestPriority High
+//!@SYMTestActions Deletes a contact by specifying an invalid ICC slot
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncDeleteContactTest_03
+
+END_TESTCASE PIM-PHBKSYNC-NA-1078
+
+START_TESTCASE PIM-PHBKSYNC-NA-1079
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1079
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test deleting a contact from a read-only (SDN) phonebook. 
+//!                 By default, SDN and LND are read-only phonebooks
+//!@SYMTestPriority High
+//!@SYMTestActions Deletes a contact from a read-only (SDN) phonebook
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncDeleteContactTest_04
+
+//
+// Temporarily commented out due to hidden key handling problem in phbksync.
+//
+//RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncDeleteContactTest_05
+//
+
+END_TESTCASE PIM-PHBKSYNC-NA-1079
+
+START_TESTCASE PIM-PHBKSYNC-NA-1080
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1080
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test deleting a contact after the phonebook has become 
+//!                 locked/blocked
+//!@SYMTestPriority High
+//!@SYMTestActions Deletes a contact after the phonebook has become 
+//!                locked/blocked
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncDeleteContactTest_06
+
+//
+// PhbkSyncDeleteContactTest_07 removed at it was redundant since it was the same as _06 above.
+//
+
+END_TESTCASE PIM-PHBKSYNC-NA-1080
+
+START_TESTCASE PIM-PHBKSYNC-NA-1081
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1081
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test getting the synchronisation mode and print this 
+//!                 information to screen. Repeat this for all supported 
+//!                 phonebooks
+//!@SYMTestPriority High
+//!@SYMTestActions Gets the synchronisation mode and prints this information 
+//!                to screen
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncGetSyncModeTest_01
+
+END_TESTCASE PIM-PHBKSYNC-NA-1081
+
+START_TESTCASE PIM-PHBKSYNC-NA-1082
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1082
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test setting the synchronisation mode to EAutoCurrentIcc. 
+//!                 Repeat this for all spported phonebooks
+//!@SYMTestPriority High
+//!@SYMTestActions Sets the synchronisation mode to EAutoCurrentIcc
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncSetSyncModeTest_01
+
+END_TESTCASE PIM-PHBKSYNC-NA-1082
+
+START_TESTCASE PIM-PHBKSYNC-NA-1083
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1083
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test setting the synchronisation mode to EAutoSameIcc. 
+//!                 Repeat this for all spported phonebooks
+//!@SYMTestPriority High
+//!@SYMTestActions Sets the synchronisation mode to EAutoSameIcc
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncSetSyncModeTest_02
+
+END_TESTCASE PIM-PHBKSYNC-NA-1083
+
+START_TESTCASE PIM-PHBKSYNC-NA-1084
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1084
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test setting the synchronisation mode to EManual. Repeat 
+//!                 this for all spported phonebooks
+//!@SYMTestPriority High
+//!@SYMTestActions Sets the synchronisation mode to EManual
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncSetSyncModeTest_03
+
+END_TESTCASE PIM-PHBKSYNC-NA-1084
+
+START_TESTCASE PIM-PHBKSYNC-NA-1085
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1085
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test adding an entry to the ADN phonebook, follwed  by 
+//!                 reading an entry from the LND phonebook and then by deleting
+//!                 an entry from the ADN phonebook, using the same 
+//!                 CPhoneBookSession
+//!@SYMTestPriority High
+//!@SYMTestActions Adds an entry to the ADN phonebook, follwed  by reading an 
+//!                entry from the LND phonebook and then by deleting an entry 
+//!                from the ADN phonebook, using the same CPhoneBookSession
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncOtherTest_01
+
+END_TESTCASE PIM-PHBKSYNC-NA-1085
+
+START_TESTCASE PIM-PHBKSYNC-NA-1086
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1086
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test adding an entry to the ADN phonebook, follwed by adding
+//!                 another entry to the USIM App phonebook, using the same 
+//!                 CPhoneBookSession
+//!@SYMTestPriority High
+//!@SYMTestActions Adds an entry to the ADN phonebook, follwed by adding another
+//!                entry to the USIM App phonebook, using the same 
+//!                CPhoneBookSession
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncOtherTest_02
+
+END_TESTCASE PIM-PHBKSYNC-NA-1086
+
+START_TESTCASE PIM-PHBKSYNC-NA-1087
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1087
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test deleting an entry to the ADN phonebook, followed by 
+//!                 deleting another entry to the USIM App phonebook, using the 
+//!                 same CPhoneBookSession
+//!@SYMTestPriority High
+//!@SYMTestActions Deletes an entry to the ADN phonebook, followed by deleting 
+//!                another entry to the USIM App phonebook, using the same 
+//!                CPhoneBookSession
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncOtherTest_03
+
+END_TESTCASE PIM-PHBKSYNC-NA-1087
+
+START_TESTCASE PIM-PHBKSYNC-NA-1088
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1088
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test adding an entry to the ADN phonebook, followed by 
+//!                 adding antoher entry to the same ADN phonebook, using two 
+//!                 different CPhoneBookSession
+//!@SYMTestPriority High
+//!@SYMTestActions Adds an entry to the ADN phonebook, followed by adding 
+//!                antoher entry to the same ADN phonebook, using two different
+//!                CPhoneBookSession
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncOtherTest_04
+
+END_TESTCASE PIM-PHBKSYNC-NA-1088
+
+START_TESTCASE PIM-PHBKSYNC-NA-1089
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1089
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test the scenario that Phonebook Synchroniser Server thread
+//!                 is only created by the first client. That is, it should 
+//!                 still be alive after closing the second client
+//!@SYMTestPriority High
+//!@SYMTestActions Tests the scenario that Phonebook Synchroniser Server thread
+//!                is only created by the first client. That is, it should still
+//!                be alive after closing the second client
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncOtherTest_05
+
+END_TESTCASE PIM-PHBKSYNC-NA-1089
+
+START_TESTCASE PIM-PHBKSYNC-NA-1090
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1090
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test the situation where phone entries are deleted and then
+//!                 a synchronisation is performed. Check cache state is valid 
+//!                 after synchronisation
+//!@SYMTestPriority High
+//!@SYMTestActions Tests the situation where phone entries are deleted and then
+//!                a synchronisation is performed. Checks cache state is valid
+//!                after synchronisation
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncOtherTest_06
+
+END_TESTCASE PIM-PHBKSYNC-NA-1090
+
+START_TESTCASE PIM-PHBKSYNC-NA-1091
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1091
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test the situation where phone entries are added and then a 
+//!                 synchronisation is performed.  Check cache state is valid 
+//!                 after synchronisation
+//!@SYMTestPriority High
+//!@SYMTestActions Adds phone entries and then synchronises
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncOtherTest_07
+
+END_TESTCASE PIM-PHBKSYNC-NA-1091
+
+START_TESTCASE PIM-PHBKSYNC-NA-1092
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1092
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test the situation where phone existing entry is edited and 
+//!                 then a synchronisation is performed.  Check cache state is 
+//!                 valid after synchronisation
+//!@SYMTestPriority High
+//!@SYMTestActions Edits phone existing entry and then synchronises
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncOtherTest_08
+
+END_TESTCASE PIM-PHBKSYNC-NA-1092
+
+START_TESTCASE PIM-PHBKSYNC-NA-1093
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1093
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test the situation where a synchronisation is performed. 
+//!                 Check that cache state is notification occurs after 
+//!                 synchronisation
+//!@SYMTestPriority High
+//!@SYMTestActions Synchronises, checks that cache state notification occurs 
+//!                after synchronisation
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncOtherTest_09
+
+END_TESTCASE PIM-PHBKSYNC-NA-1093
+
+START_TESTCASE PIM-PHBKSYNC-NA-1094
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1094
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test the situation where a synchronisation is performed. 
+//!                 Check that cache state is notification occurs after 
+//!                 synchronisation for multiple phonebooks
+//!@SYMTestPriority High
+//!@SYMTestActions Synchronises, checks that cache state notification occurs 
+//!                after synchronisation for multiple phonebooks
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncOtherTest_10
+
+END_TESTCASE PIM-PHBKSYNC-NA-1094
+
+START_TESTCASE PIM-PHBKSYNC-NA-1095
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1095
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test the situation where a synchronisation is performed. 
+//!                 Check that cache state is notification cancel occuers 
+//!                 before synchronisation
+//!@SYMTestPriority High
+//!@SYMTestActions Synchronises, checks that cache state notification cancel 
+//!                occurs before synchronisation
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncOtherTest_11
+
+END_TESTCASE PIM-PHBKSYNC-NA-1095
+
+START_TESTCASE PIM-PHBKSYNC-NA-1096
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1096
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test the situation where a synchronisation is performed. 
+//!                 Check that cache state is notification occurs after 
+//!                 synchronisation. and that the status is EErrorDuringSync 
+//!                 and the state is KErrBadHandle
+//!@SYMTestPriority High
+//!@SYMTestActions Synchronises, checks that cache state notification occurs 
+//!                after synchronisation, and that the status is 
+//!                EErrorDuringSync and the state is KErrBadHandle
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncOtherTest_12
+
+END_TESTCASE PIM-PHBKSYNC-NA-1096
+
+START_TESTCASE PIM-PHBKSYNC-NA-1097
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1097
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test the situation where a synchronisation is performed. 
+//!                 Check the last sync error is KErrNone
+//!@SYMTestPriority High
+//!@SYMTestActions Synchronises, and checks the last sync error is KErrNone
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncOtherTest_13
+
+END_TESTCASE PIM-PHBKSYNC-NA-1097
+
+START_TESTCASE PIM-PHBKSYNC-NA-1099
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1099
+//!@SYMREQ INC076400
+//!@SYMTestCaseDesc Test the situation where multiple requests to open/close sessions are made close to 
+//		    each other which leads to the same server side session address being used. Any 
+//		    notifications for a dropped session should be removed.
+//!@SYMTestPriority High
+//!@SYMTestActions Opens and closes sessions with an outstanding event, ensure an dropped sessions have
+//		   their events removed by trying to cancel one
+//!@SYMTestExpectedResults Pass
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncOtherTest_14
+
+END_TESTCASE PIM-PHBKSYNC-NA-1099
+
+START_TESTCASE PIM-PHBKSYNC-NA-1098
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-1098
+//!@SYMREQ REQ908
+//!@SYMTestCaseDesc Tests the situation where a sync server loads its config file that is either 
+//!			corrupt, zero length or does not exist.
+//!@SYMTestPriority High
+//!@SYMTestActions Connects to Server, and checks no error returned.  Also checks that the file
+//!			returned is a valid file.
+//!@SYMTestExpectedResults Pass, if server starts ok and creates default file as expected
+//!@SYMTestType CT
+RUN_TEST_STEP 300 TE_PhBkSync PhbkSyncIniFileTest
+END_TESTCASE PIM-PHBKSYNC-NA-1098
+

@@ -1,0 +1,26 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+#ifndef __UNIDATAMODEL_IBY__
+#define __UNIFIEDDATAMODEL_IBY__
+
+REM DLL
+file=ABI_DIR\UREL\unidatamodel.dll                   SHARED_LIB_DIR\unidatamodel.dll
+
+// UniModel
+data=DATAZ_\RESOURCE_FILES_DIR\UniDataModel.rsc     RESOURCE_FILES_DIR\UniDataModel.rsc
+
+#endif // __UNIDATAMODEL_IBY__

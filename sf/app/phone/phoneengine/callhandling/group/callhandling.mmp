@@ -1,0 +1,70 @@
+/*
+* Copyright (c) 2004-2008 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project specification file for Call Handling dll
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+TARGET          callhandling.dll
+TARGETTYPE      dll
+UID             0x1000008D 0x1000A82F
+VENDORID        VID_DEFAULT
+VERSION         10.0
+
+CAPABILITY      CAP_GENERAL_DLL
+
+SOURCEPATH      ../src
+
+SOURCE      cpecall.cpp
+SOURCE      cpesinglecall.cpp
+SOURCE      cpesinglecallobserver.cpp
+SOURCE      cpecallhandling.cpp
+SOURCE      cpedtmfhandling.cpp
+SOURCE      cpeconferencecall.cpp 
+SOURCE      pecallhandlingpanic.cpp
+SOURCE      cpesupplementaryservicesmonitor.cpp
+SOURCE      cpecallarrayowner.cpp
+SOURCE      cpegprstermination.cpp
+SOURCE      cpesystemcallstate.cpp
+SOURCE      cpevideocallhandling.cpp
+SOURCE      cpecceobserver.cpp
+SOURCE      tpematcher.cpp
+
+USERINCLUDE     ../inc
+
+APP_LAYER_SYSTEMINCLUDE         // Application layer domain APIs
+SYSTEMINCLUDE   ../../inc       // PhoneEngine private headers
+SYSTEMINCLUDE   ../../../inc    // Telephony internal headers
+SYSTEMINCLUDE   /epoc32/include/kernel
+
+LIBRARY callprovider.lib
+LIBRARY cce.lib
+LIBRARY ecom.lib    // ECOM plugin usage.
+LIBRARY engineinfo.lib
+LIBRARY etelmm.lib //TO BE REMOVED! STILL USED BY CPECallHandling.
+LIBRARY euser.lib
+LIBRARY featmgr.lib // Feature manager. 
+LIBRARY flogger.lib
+LIBRARY phonesettings.lib
+LIBRARY centralrepository.lib   // CenRep.
+
+LANG            SC
+START WINS
+BASEADDRESS 0x10040000
+END
+
+
+SMPSAFE

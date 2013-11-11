@@ -1,0 +1,78 @@
+// Copyright (c) 2003-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// imcm.dll Email client MTMs (SMTP, POP3, IMAP4) and email client-side utilities
+// imcm.rsc Resource file for imcm.dll Email client MTMs (SMTP, POP3, IMAP4) and email client-side utilities
+// 
+//
+
+/**
+ @file
+*/
+#include <platform_paths.hrh>
+
+TARGET                  imcm.dll
+TARGETPATH              /system/libs
+TARGETTYPE              dll
+
+CAPABILITY All -TCB
+UID                     0x10003C5F 0x10004839
+VENDORID 0x70000001
+SOURCEPATH              ../src
+SOURCE                  IMCMMAIN.CPP MIUTHDR.CPP MIUTPARS.CPP MIUTSET.CPP 
+SOURCE                  POP3SET.CPP SMTPSET.CPP IMAPSET.CPP
+SOURCE                  MIUTLOG.CPP MIUTATCH.CPP OFFOP.CPP MIUTMSG.CPP
+SOURCE                  POPCMTM.CPP SMTCMTM.CPP MIUTCONV.CPP CACHEMAN.CPP 
+SOURCE			IMCMUTIL.CPP IMPCMTM.CPP MIUTRSLV.CPP CONSYNC.CPP IAPPrefs.cpp cimencodedheader.cpp
+SOURCE					cimattachmentmanager.cpp cemailaccounts.cpp
+SOURCE			cmsvsmtpsendoperation.cpp
+SOURCE			CImAttachmentWaiter.cpp CIMPLAINBODYTEXT.cpp
+SOURCE cimapsyncdownloadrules.cpp cimaptransportbuffersizes.cpp
+SOURCE cimsmtpmobilitysettings.cpp
+USERINCLUDE             ../inc ../../servermtmutils/inc
+USERINCLUDE				../../../../../../mw/messagingmw/messagingfw/msgsrvnstore/server/inc
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+LIBRARY                 conarc.lib
+LIBRARY                 euser.lib estor.lib bafl.lib efsrv.lib etext.lib msgs.lib charconv.lib
+LIBRARY                 cntmodel.lib apgrfx.lib apmime.lib eikcore.lib cone.lib imut.lib
+LIBRARY			centralrepository.lib tzclient.lib numberconversion.lib
+
+SOURCEPATH              .
+START RESOURCE  IMCM.rss
+LANG	SC
+HEADER
+TARGETPATH      resource/messaging
+END
+
+#include                "../../../../../../mw/messagingmw/messagingfw/msgtests/group/msgopt.mph"
+
+START WINS
+baseaddress             0x4AC60000
+COPY_FOR_STATIC_LINKAGE
+END
+
+// This is the final version of the def-file - removed methods have been
+// replaced by panicking stub-functions.
+
+#if (defined SYMBIAN_EMAIL_CAPABILITY_SUPPORT)
+	DEFFILE		v3_imcm.def
+#else
+	DEFFILE		v2_imcm.def
+#endif	
+
+
+OS_LAYER_SYSTEMINCLUDE
+
+
+
+SMPSAFE

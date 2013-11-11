@@ -1,0 +1,753 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//! @file
+//! @SYMTestSuiteName	TestCalInterimApiSuite 
+//! @SYMScriptTestEnvironment
+
+PRINT Run all TestCalInterimApi 
+
+LOAD_SUITE TestCalInterimApiSuite
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-CIT-Create_Entry-0001
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CIT-Create_Entry-0001
+//! @SYMTestCaseDesc 		This test step creates entries which are required the below test cases 
+//! @SYMFssID			<App-Engines>/<CalInterimApi> - Entry.001
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Create entries based on the data read from the text file
+//!					TestCalInterimApiEntryData.txt
+//! @SYMTestExpectedResults 	All the entries are created successfully
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 190 TestCalInterimApiSuite TestCalInterimApiReadData	\CITCalInterimApi\TestCalInterimApiEntryData1.ini	RecurrenceEntry
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-CIT-Create_Entry-0001
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-CIT-0001
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CIT-0001
+//! @SYMTestCaseDesc 		Set the interval for the repeat rule greater than 255
+//! @SYMFssID			<App-Engines>/<CalInterimApi> - Data.011
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		Low
+//! @SYMTestActions 		1. Create a Session. Create a Calendar file and open it.
+//!				2. Create an entry with repeat rule. Set the interval of the repeat rule greater than
+//!				   255,Say 257 and set the repeat rule for the entry.
+//!				3. Store the entry in the calendar file
+//! @SYMTestExpectedResults 	The SetInterval() API should leave with error code KErrArgument
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFilter \CITCalInterimApi\TestCalInterimApiEntryData1.ini FindInstances_4.3.1
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-CIT-0001
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-CIT-0002
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CIT-0002
+//! @SYMTestCaseDesc 		Set the interval for the repeat rule equal to 0
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-Data.011
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		Low
+//! @SYMTestActions 		1. Create a Session. Create a Calendar file and open it.
+//!				2. Create an entry with repeat rule. Set the interval of the repeat rule equal to 0.
+//!				3. Store the entry in the calendar file. Check the repeat is set by finding the instances of 
+//!				the entry.
+//! @SYMTestExpectedResults 	The interval is set with the default value 1.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFilter \CITCalInterimApi\TestCalInterimApiEntryData1.ini FindInstances_4.3.2_Appt
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFilter \CITCalInterimApi\TestCalInterimApiEntryData1.ini FindInstances_4.3.2_Todo
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFilter \CITCalInterimApi\TestCalInterimApiEntryData1.ini FindInstances_4.3.2_Event
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFilter \CITCalInterimApi\TestCalInterimApiEntryData1.ini FindInstances_4.3.2_Reminder
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFilter \CITCalInterimApi\TestCalInterimApiEntryData1.ini FindInstances_4.3.2_Anniv
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-CIT-0002
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-CIT-0003
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CIT-0003
+//! @SYMTestCaseDesc 		Set the interval for the repeat rule equal to some negative number
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-Data.011
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		Low
+//! @SYMTestActions 		1. Create a Session. Create a Calendar file and open it.
+//!				2. Create an entry with repeat rule. Set the interval of the repeat rule equal to -1.
+//!				3. Store the entry in the calendar file. Check that the repeat is set with the interval 1 by 
+//!				finding the instances of the entry
+//! @SYMTestExpectedResults 	The interval is set with the default value 1.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFilter \CITCalInterimApi\TestCalInterimApiEntryData1.ini FindInstances_4.3.3_Todo
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFilter \CITCalInterimApi\TestCalInterimApiEntryData1.ini FindInstances_4.3.3_Event
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFilter \CITCalInterimApi\TestCalInterimApiEntryData1.ini FindInstances_4.3.3_Appt
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFilter \CITCalInterimApi\TestCalInterimApiEntryData1.ini FindInstances_4.3.3_Anniv
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFilter \CITCalInterimApi\TestCalInterimApiEntryData1.ini FindInstances_4.3.3_Reminder
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-CIT-0003
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-CIT-0004
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CIT-0004
+//! @SYMTestCaseDesc 		Copy the entry and call the API in the OOM loop
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-Entry.001
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		Medium
+//! @SYMTestActions 		1. Create a Session. Create a Calendar file and open it.
+//!				2. Create an entry with repeat rule.
+//!				3. Store the entry in the calendar file.
+//!				4. Copy the entry to another entry and compare them if they are copied successfully.
+//!				5. Call the CopyFromL() API in the OOM loop and check that the API leaves gracefully in case
+//!				   of OOM testing
+//! @SYMTestExpectedResults 	The API leaves gracefully in case of Out Of memory conditions
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFilter \CITCalInterimApi\TestCalInterimApiEntryData1.ini FindInstances_4.3.4
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCopyEntry \CITCalInterimApi\TestCalInterimApiEntryData1.ini CopyEntry_4.3.4
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCopyEntry \CITCalInterimApi\TestCalInterimApiEntryData1.ini CopyEntry2
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCompare \CITCalInterimApi\TestCalInterimApiEntryData1.ini CompareEntry_Test7
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-CIT-0004
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-CIT-0005
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CIT-0005
+//! @SYMTestCaseDesc 		Update the entry and call the updateL API in the OOM loop
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-Entry.003
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		Medium
+//! @SYMTestActions 		1. Create a Session. Create a Calendar file and open it.
+//!				2. Create an entry with/without repeat rule. Store the entry in the calendar file.
+//!				3. Fetch the entry and update any of the property of the entry. 
+//!				4. Call the UpdateL() API in the OOM loop and check that the API leaves gracefully in case
+//!				   of OOM testing
+//! @SYMTestExpectedResults 	The API leaves gracefully in case of Out Of memory conditions
+//! @SYMTestType 		CIT
+
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiUpdateEntry \CITCalInterimApi\TestCalInterimApiEntryData1.ini	UpdateParentEntry
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-CIT-0005
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-CIT-0006
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CIT-0006
+//! @SYMTestCaseDesc 		Delete the entry by local id and call the api in the OOM loop
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-Entry.005
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		Low
+//! @SYMTestActions 		1. Create a Session. Create a Calendar file and open it.
+//!				2. Create entries with/without repeat rule and store the entry in the calendar file.
+//!				3. Fetch the entries and delete the entries by passing the local id of the entry.
+//!				4. Verify that the entries are deleted by fetching the entry again and checking the array 
+//!				count of the fetch function
+//! @SYMTestExpectedResults 	The entries are deleted successfully.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiDeleteEntryByLocalId \CITCalInterimApi\TestCalInterimApiEntryData1.ini DeleteChildEntryByLocalId
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-CIT-0006
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-CIT-0007
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CIT-0007
+//! @SYMTestCaseDesc 		Update the attendee property of the entry.
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-Entry.003
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		Medium
+//! @SYMTestActions 		1. Create a Session. Create a Calendar file and open it.
+//!				2. Create entries with/without repeat rule.Set the attendee property of the entry and store
+//!				the entry in the calendar file.
+//!				3. Fetch the entry and update the attendeee property of the entry and store it again.
+//!				4. Verify that the attendee property is updated by fetching the entry and checking the 
+//!				attendee properties.
+//! @SYMTestExpectedResults 	The attendee property of the entry is updated successfully.
+//! @SYMTestType 		CIT
+
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiUpdateEntry \CITCalInterimApi\TestCalInterimApiEntryData1.ini	UpdateEntry_Attendee
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCheckAttendee \CITCalInterimApi\TestCalInterimApiEntryData1.ini FetchEntry_Attendee
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCheckAttendee \CITCalInterimApi\TestCalInterimApiEntryData1.ini FetchEntryAndCheckAttendee
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCheckAttendee \CITCalInterimApi\TestCalInterimApiEntryData1.ini CheckSameAttendee
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-CIT-0007
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-CIT-0008
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CIT-0008
+//! @SYMTestCaseDesc 		Import many entries with same uid
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-IO.001
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		Medium
+//! @SYMTestActions 		1. Create a Session. Create a Calendar file and open it.
+//!				2. Import many repeating and non repeating entries with same GUID.
+//!				3. Store the entry in the calendar file.
+//!				4. Export the calendar file that contains these imported entries
+//!				5. Verify that only one final entry is exported by getting the entry details and comparing
+//!				   it with the expected
+//! @SYMTestExpectedResults 	The last modified entry is exported successfully
+//! @SYMTestType 		CIT
+
+
+RUN_TEST_STEP   100     TestCalInterimApiSuite  TestCalInterimApiImportvCal	\CITCalInterimApi\TestCalInterimApiEntryData1.ini vCal201
+
+RUN_TEST_STEP	100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\TestCalInterimApiEntryData1.ini Export201
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-CIT-0008
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-CIT-0009
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CIT-0009
+//! @SYMTestCaseDesc 		Import many entries with local id
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-IO.001
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		Low
+//! @SYMTestActions 		1. Create a Session. Create a Calendar file and open it.
+//!				2. Import the entry with symbian local UID
+//!				3. Store the entry in the calendar file.
+//!				4. Export the calendar file that contains the imported entries
+//!				5. Verify that the symbian Local UID is exported correctly by comparing it with the expected
+//! @SYMTestExpectedResults 	The Symbian Local UID is imported and exported successfully
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP   100     TestCalInterimApiSuite  TestCalInterimApiImportvCal	\CITCalInterimApi\TestCalInterimApiEntryData1.ini vCal202
+
+RUN_TEST_STEP	100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\TestCalInterimApiEntryData1.ini Export202
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-CIT-0009
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-CIT-0010
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CIT-0010
+//! @SYMTestCaseDesc 		Copy the Child entry with copytype as EDontCopyId
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-Entry.001
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a Session. Create a Calendar file and open it.
+//!				2. Create an entry with repeat rule.
+//!				3. Store the entry in the calendar file.
+//!				4. Create a child entry and store it.
+//!				5. Copy the entry to another entry with copy type as EDontCopyId and Check if the new
+//!				child entry is created.
+//!				6. verify if the parent entry is updated by finding the number of instances.
+//! @SYMTestExpectedResults 	New child entry is created successfully
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCopyEntry \CITCalInterimApi\TestCalInterimApiEntryData1.ini CopyChildEntry_DontCopyID
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFilter \CITCalInterimApi\TestCalInterimApiEntryData1.ini FindInstancesAfterCopy
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-CIT-0010
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-CIT-0011
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CIT-0011
+//! @SYMTestCaseDesc 		Copy the Child entry with copytype as ECopyAll
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-Entry.001
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a Session. Create a Calendar file and open it.
+//!				2. Create an entry with repeat rule.
+//!				3. Store the entry in the calendar file.
+//!				4. Create a child entry and store it.
+//!				5. Copy the entry to another entry with copy type as ECopyAll and Check the child entry
+//!				   details are not copied.
+//!				6. verify if the parent entry is updated or not by finding the number of instances.
+//! @SYMTestExpectedResults 	New child entry is not created.
+//! @SYMTestType 		CIT
+
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFilter \CITCalInterimApi\TestCalInterimApiEntryData1.ini fINDiNSTANCES
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCopyEntry \CITCalInterimApi\TestCalInterimApiEntryData1.ini CopyChildEntry_CopyAll
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFilter \CITCalInterimApi\TestCalInterimApiEntryData1.ini FindInstancesAfterCopyAll
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-CIT-0011
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-CIT-0012
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CIT-0012
+//! @SYMTestCaseDesc 		Add alarm to the child entry
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-Data.015
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a Session. Create a Calendar file and open it.
+//!				2. Create an entry with repeat rule.
+//!				3. Store the entry in the calendar file.
+//!				4. Create a child entry and add alarm to the child entry and store it.
+//!				5. verify that the alarm is added by checking the alarm properties and its notification
+//! @SYMTestExpectedResults 	Alarm will be triggered at the set time
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\TestCalInterimApiEntryData1.ini SetTZ1
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiAlarmProperties \CITCalInterimApi\TestCalInterimApiEntryData1.ini	alarmproperties
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-CIT-0012
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-CIT-0013
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CIT-0013
+//! @SYMTestCaseDesc 		Add two entries with same local id and store it.
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-Entry.001
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		Medium
+//! @SYMTestActions 		1. Create a Session. Create a Calendar file and open it.
+//!				2. Create an entry with repeat rule and set the local id of the entry.Store the entry
+//!				3. Create another entry with local id same as previous entry and Store the entry in the 	//!				   calendar file.
+//!				5. verify that the first entry is replaced with the second entry by fetching the first entry.
+//! @SYMTestExpectedResults 	The first entry will be replaced with the second entry
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFetchEntryAndCheckData \CITCalInterimApi\TestCalInterimApiEntryData1.ini FetchEntry2
+
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-CIT-0013
+
+START_TESTCASE PIM-APPENGCALINTERIMAPI-CIT-0014
+//! @SYMTestCaseID		PIM-APPENGCALINTERIMAPI-CIT-0014
+//! @SYMTestCaseDesc 		Load testing of delete entries by time range
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-Entry.005
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a Session. Create a Calendar file and open it.
+//!				2. Create large number of entries with/without repeat rule and store it in the calendar file.
+//!				3. Delete the entries by specifying the time range.
+//!				4. Verify that the entries are deleted by fetching the UID's using the iterator
+//! @SYMTestExpectedResults 	All the entries in the time range are deleted.
+//! @SYMTestType 		CIT
+
+
+RUN_TEST_STEP 200 TestCalInterimApiSuite TestCalInterimApiReadData \CITCalInterimApi\TestCalInterimApiEntryData1.ini CreateEntry
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiDeleteEntryByTimeRange \CITCalInterimApi\TestCalInterimApiEntryData1.ini DeleteEntryByTimeRange
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFilter \CITCalInterimApi\TestCalInterimApiEntryData1.ini FindInstancesAfterDelete
+
+END_TESTCASE PIM-APPENGCALINTERIMAPI-CIT-0014
+
+START_TESTCASE PIM-APPENGCALINTERIMAPI-CIT-0015
+//! @SYMTestCaseID		PIM-APPENGCALINTERIMAPI-CIT-0015
+//! @SYMTestCaseDesc 		Set some unknown timezone and check
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-Repeat.xxx
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		Low
+//! @SYMTestActions 		1. Create a Session. Create a Calendar file and open it.
+//!				2. Set the time zone of the entry and pass some unknown value Say, world.
+//!				3. Create the entry and store it. Check the time zone for the entry.
+//!				4. Verify that the time zone has default value by checking the time and time zone of the 
+//!				entry.
+//! @SYMTestExpectedResults 	Default time zone is set when we pass unknown value.
+//! @SYMTestType 		CIT
+
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\TestCalInterimApiEntryData1.ini SetTZ
+
+RUN_TEST_STEP	100	TestCalInterimApiSuite	TestCalInterimApiSetSysTime	\CITCalInterimApi\TestCalInterimApiEntryData1.ini	CurrentSystemTime
+
+END_TESTCASE PIM-APPENGCALINTERIMAPI-CIT-0015
+
+START_TESTCASE PIM-APPENGCALINTERIMAPI-CIT-0016
+//! @SYMTestCaseID		PIM-APPENGCALINTERIMAPI-CIT-0016
+//! @SYMTestCaseDesc 		Delete the alarmed entries by time range 
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-Entry.005
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		Medium
+//! @SYMTestActions 		1. Create a Session. Create a Calendar file and open it.
+//!				2. Create entries with alarm. Store the entry in the calendar file.
+//!				3. Delete the alarmed entries by time range.
+//!				4. Verify that the alarmed entries are deleted by trying to fetch the alarmed entry.
+//! @SYMTestExpectedResults 	The alarmed entries are deleted successfully.
+//! @SYMTestType 		CIT
+
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiDeleteEntryByTimeRange \CITCalInterimApi\TestCalInterimApiEntryData1.ini DeleteAlarmedEntries_invalid
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFetchEntryAndCheckData \CITCalInterimApi\TestCalInterimApiEntryData1.ini FetchAndVerifyAlarmedEntry_invalid
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiDeleteEntryByTimeRange \CITCalInterimApi\TestCalInterimApiEntryData1.ini DeleteAlarmedEntries_valid
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFetchEntryAndCheckData \CITCalInterimApi\TestCalInterimApiEntryData1.ini FetchAndVerifyAlarmedEntry1_valid
+
+END_TESTCASE PIM-APPENGCALINTERIMAPI-CIT-0016
+
+START_TESTCASE PIM-APPENGCALINTERIMAPI-CIT-0017
+//! @SYMTestCaseID		PIM-APPENGCALINTERIMAPI-CIT-0017
+//! @SYMTestCaseDesc 		Delete the attendee property which is not present in the entry
+//! @SYMFssID			<App-Engines>/<CalInterimApi>
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		Low
+//! @SYMTestActions 		1. Create a Session. Create a Calendar file and open it.
+//!				2. Create entries with many attendees. Store the entry in the file.
+//!				3. Delete the attendee property which is not present in the entry and store it.
+//! @SYMTestExpectedResults 	The DeleteAttendeeL API leaves with error code KErrNotFound
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP !Result=Fail 100 TestCalInterimApiSuite TestCalInterimApiDeleteAttendee \CITCalInterimApi\TestCalInterimApiEntryData1.ini	DeleteAttendee
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCheckAttendee \CITCalInterimApi\TestCalInterimApiEntryData1.ini	checkAttendee
+
+END_TESTCASE PIM-APPENGCALINTERIMAPI-CIT-0017
+
+START_TESTCASE PIM-APPENGCALINTERIMAPI-CIT-0018
+//! @SYMTestCaseID		PIM-APPENGCALINTERIMAPI-CIT-0018
+//! @SYMTestCaseDesc 		Update the alarm details of the entry
+//! @SYMFssID			<App-Engines>/<CalInterimApi>- GSEntry.004
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a Session. Create a Calendar file and open it.
+//!				2. Create entries with alarm. Store the entry in the calendar file.
+//!				3. Fetch the entry and update the content property of the alarm and store the entry again.
+//!				4. Verify that the alarm property of the entry is updated by fetching the entry and checking //!				the alarm properties.
+//! @SYMTestExpectedResults 	The alarm property of the entry is updated successfully.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiAlarmProperties \CITCalInterimApi\TestCalInterimApiEntryData1.ini	replacealarm
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFilter \CITCalInterimApi\TestCalInterimApiEntryData1.ini FindInstance
+
+END_TESTCASE PIM-APPENGCALINTERIMAPI-CIT-0018
+
+START_TESTCASE PIM-APPENGCALINTERIMAPI-CIT-0019
+//! @SYMTestCaseID		PIM-APPENGCALINTERIMAPI-CIT-0019
+//! @SYMTestCaseDesc 		Delete the entries by time range and set the entry and delete time range out of the filter 
+//!				time range and check for notification
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-Entry.005
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		Medium
+//! @SYMTestActions 		1. Create a Session. Create a Calendar file and open it.
+//!				2. Register the session with the calendar Observer.
+//!				2. Create entries with start datetime and end date time out of the filter time range. Store 	
+//!				the entries in the file.
+//!				3. Delete the entries by time range and the entrys' time range is within the delete time 
+//!				range.
+//!				4. Set the delete time range out of the filter time range.
+//!				5. Verify that the entry is deleted by fetching the entry and check that the notification is 
+//!				not given as the time range of the entry is out of the filter time range.
+//! @SYMTestExpectedResults 	The notification is not recieved for both addition and deletion.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP   100 TestCalInterimApiSuite TestCalInterimApiModifierThread \CITCalInterimApi\TestCalInterimApiEntryData1.ini ObserverData_2
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiIterator \CITCalInterimApi\TestCalInterimApiEntryData1.ini check_iterator
+
+END_TESTCASE PIM-APPENGCALINTERIMAPI-CIT-0019
+
+START_TESTCASE PIM-APPENGCALINTERIMAPI-CIT-0020
+//! @SYMTestCaseID		PIM-APPENGCALINTERIMAPI-CIT-0020
+//! @SYMTestCaseDesc 		Register the session with the observer.Add the entries wherein the filter time range date is 
+//!				same as entry's date but with different time.Check for notification
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-Observer.001
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		Medium
+//! @SYMTestActions 		1. Create a Session. Create a Calendar file and open it.
+//!				2. Register the session with the calendar server.
+//!				3. Create the entry and store it.Set the filter time range of the observer same as entry's 
+//!				  date but with different time.
+//!				4. Check that the notification is not given for the addition of the entry.
+//! @SYMTestExpectedResults 	The notification is not received for the addition of the entry as the entry's time range is 
+//!				out of the filter time range
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP   100 TestCalInterimApiSuite TestCalInterimApiModifierThread \CITCalInterimApi\TestCalInterimApiEntryData1.ini observerData_3
+
+END_TESTCASE PIM-APPENGCALINTERIMAPI-CIT-0020
+
+START_TESTCASE PIM-APPENGCALINTERIMAPI-CIT-0021
+//! @SYMTestCaseID		PIM-APPENGCALINTERIMAPI-CIT-0021
+//! @SYMTestCaseDesc 		Fetch the entry by local id and call the API in the OOM loop
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-Entry.002
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		Low
+//! @SYMTestActions 		1. Create a Session. Create a Calendar file and open it.
+//!				2. Create an entry with repeat rule and set the local id of the entry.Store the entry
+//!				3. Fetch the entry by passing the local id of the entry and call the API in the OOM loop.
+//!				4. Check that the API leaves gracefully during OOM condition.
+//! @SYMTestExpectedResults 	The API leaves gracefully in case of OOM.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP	100	TestCalInterimApiSuite	TestCalInterimApiFetchEntryByLocalId \CITCalInterimApi\TestCalInterimApiEntryData1.ini FetchEntryByLocalId
+
+END_TESTCASE PIM-APPENGCALINTERIMAPI-CIT-0021
+
+START_TESTCASE PIM-APPENGCALINTERIMAPI-CIT-0022
+//! @SYMTestCaseID		PIM-APPENGCALINTERIMAPI-CIT-0022
+//! @SYMTestCaseDesc 		Fetch the entry by passing invalid local id 
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-Entry.002
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		Low
+//! @SYMTestActions 		1. Create a Session. Create a Calendar file and open it.
+//!				2. Fetch the entry by passing the invalid local id.
+//!				3. Check that the returned entry is NULL
+//! @SYMTestExpectedResults 	The entry is not returned.
+//! @SYMTestType 		CIT
+
+
+RUN_TEST_STEP !Result=Fail 100	TestCalInterimApiSuite	TestCalInterimApiFetchEntryByLocalId \CITCalInterimApi\TestCalInterimApiEntryData1.ini FetchEntryByLocalId_invalid
+
+END_TESTCASE PIM-APPENGCALINTERIMAPI-CIT-0022
+
+START_TESTCASE PIM-APPENGCALINTERIMAPI-CIT-0023
+//! @SYMTestCaseID		PIM-APPENGCALINTERIMAPI-CIT-0023
+//! @SYMTestCaseDesc 		Set the repeat count greater than 365 for a daily repeat rule.
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-Repeat.002
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		Low
+//! @SYMTestActions 		1. Create a Session. Create a Calendar file and open it.
+//!				2. Create an entry with daily repeat rule. Set the count of the entry greater than 365.
+//!				3. Verify that the instances are created for all the 365 days by finding the instances of the 
+//!				   entry
+//! @SYMTestExpectedResults 	The instances are created for all the days.
+//! @SYMTestType 		CIT
+
+
+RUN_TEST_STEP 500 TestCalInterimApiSuite TestCalInterimApiFilter \CITCalInterimApi\TestCalInterimApiEntryData1.ini FindInstances_4.3.23
+
+END_TESTCASE PIM-APPENGCALINTERIMAPI-CIT-0023
+
+START_TESTCASE PIM-APPENGCALINTERIMAPI-CIT-0024
+//! @SYMTestCaseID		PIM-APPENGCALINTERIMAPI-CIT-0024
+//! @SYMTestCaseDesc 		Register the session with the observer.Add,update and delete the entries by passing array of 
+//!				Uid's and check for notification.
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-Observer.001
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		Medium
+//! @SYMTestActions 		1. Create a Session. Create a Calendar file and open it.
+//!				2. Register the session with the calendar server. Add, update and delete the entries by 
+//!				passsing the array of uid of entries and check if the notifications are received correctly.
+//! @SYMTestExpectedResults 	The notifications are received successfully.
+//! @SYMTestType 		CIT
+
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite  TestCalInterimApiModifierThread \CITCalInterimApi\TestCalInterimApiEntryData1.ini ObserverData_4.3.24
+
+END_TESTCASE PIM-APPENGCALINTERIMAPI-CIT-0024
+
+START_TESTCASE PIM-APPENGCALINTERIMAPI-CIT-0025
+//! @SYMTestCaseID		PIM-APPENGCALINTERIMAPI-CIT-0025
+//! @SYMTestCaseDesc 		Register the session with the observer.Add,update and delete the entries by passing array of 
+//!				local id's and check for notification.
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-Observer.001
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		Low
+//! @SYMTestActions 		1. Create a Session. Create a Calendar file and open it.
+//!				2. Register the session with the calendar server. Add, update and delete the entries by 
+//!				passsing the array of local id of entries and check if the notifications are received 
+//!				correctly.
+//! @SYMTestExpectedResults 	The notifications are received successfully.
+//! @SYMTestType 		CIT
+
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite  TestCalInterimApiModifierThread \CITCalInterimApi\TestCalInterimApiEntryData1.ini ObserverData_4.3.25
+
+END_TESTCASE PIM-APPENGCALINTERIMAPI-CIT-0025
+
+START_TESTCASE PIM-APPENGCALINTERIMAPI-CIT-0026
+//! @SYMTestCaseID		PIM-APPENGCALINTERIMAPI-CIT-0026
+//! @SYMTestCaseDesc 		Create a non repeating entry and set the TZrules for the entry
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-Repeat.xxx
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		Medium
+//! @SYMTestActions 		1. Create a Session. Create a Calendar file and open it.
+//!				2. Set the time zone to london.Create an entry without repeat rule and Store it.
+//!				3. Set the tz rules of the entry.
+//! @SYMTestExpectedResults 	The SetTzRules() API leaves with KErrArgument
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\TestCalInterimApiEntryData1.ini london
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetTZRuleEntry \CITCalInterimApi\TestCalInterimApiEntryData1.ini TZ_NonRepeatingEntry
+
+END_TESTCASE PIM-APPENGCALINTERIMAPI-CIT-0026
+
+START_TESTCASE PIM-APPENGCALINTERIMAPI-CIT-0027
+//! @SYMTestCaseID		PIM-APPENGCALINTERIMAPI-CIT-0027
+//! @SYMTestCaseDesc 		Add bulk entries say 1000 entries and check for notifications
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-Entry.001
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a Session. Create a Calendar file and open it.
+//!				2. Register the session with the calendar server. Add large number of entries to the calendar 
+//!				file within the filter time range.
+//!				3. Verify that the notifications are received for all the entries.
+//! @SYMTestExpectedResults 	The notifications are received successfully
+//! @SYMTestType 		CIT
+
+
+RUN_TEST_STEP 190 TestCalInterimApiSuite  TestCalInterimApiModifierThread \CITCalInterimApi\TestCalInterimApiEntryData1.ini observerThread_BulkEntries
+
+RUN_TEST_STEP	100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\TestCalInterimApiEntryData1.ini Export_BulkEntries
+
+END_TESTCASE PIM-APPENGCALINTERIMAPI-CIT-0027
+
+START_TESTCASE PIM-APPENGCALINTERIMAPI-CIT-0028
+//! @SYMTestCaseID		PIM-APPENGCALINTERIMAPI-CIT-0028
+//! @SYMTestCaseDesc 		Delete large number of entries by passing the array of uid of entries
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-Entry.005
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a Session. Create a Calendar file and open it.
+//!				2. Add large number of entries in the calendar file.
+//!				3. Delete the entries by passing large number of entries in the UIDArray.
+//!				4. Verify that the entries are deleted by fetching the entries.
+//! @SYMTestExpectedResults 	All the entries in the array are deleted successfully.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 190 TestCalInterimApiSuite TestCalInterimApiReadData	\CITCalInterimApi\TestCalInterimApiEntryData1.ini	CreateBulkEntry
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiDeleteData \CITCalInterimApi\TestCalInterimApiEntryData1.ini DeleteByUid_BulkEntries
+
+END_TESTCASE PIM-APPENGCALINTERIMAPI-CIT-0028
+
+START_TESTCASE PIM-APPENGCALINTERIMAPI-CIT-0029
+//! @SYMTestCaseID		PIM-APPENGCALINTERIMAPI-CIT-0029
+//! @SYMTestCaseDesc 		Set the Priority value of the entry greater than 255
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-Data.005
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a Session. Create a Calendar file and open it.
+//!				2. Add an entry with/without repeat rule and set the priority of the entry greater than 255.
+//!				3. Store the entry in the calendar file.
+//!				4. Verify that the priority value is ignored if it is greater than 255 and set to the default value.
+//! @SYMTestExpectedResults 	The priority value of the entry is set to the default value ie. 0
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFetchEntryAndCheckData	\CITCalInterimApi\TestCalInterimApiEntryData1.ini CheckPriority
+
+END_TESTCASE PIM-APPENGCALINTERIMAPI-CIT-0029
+
+START_TESTCASE PIM-APPENGCALINTERIMAPI-CIT-0030
+//! @SYMTestCaseID		PIM-APPENGCALINTERIMAPI-CIT-0030
+//! @SYMTestCaseDesc 		Set the TODO status for the event
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-Data.006
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a Session. Create a Calendar file and open it.
+//!				2. Add an entry with/without repeat rule and set the todo status for the event
+//!				3. Store the entry in the calendar file.
+//! @SYMTestExpectedResults 	The StoreL() API leaves with error code KErrNotSupported
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiReadData	\CITCalInterimApi\TestCalInterimApiEntryData1.ini AddEntry1
+
+END_TESTCASE PIM-APPENGCALINTERIMAPI-CIT-0030
+
+START_TESTCASE PIM-APPENGCALINTERIMAPI-CIT-0031
+//! @SYMTestCaseID		PIM-APPENGCALINTERIMAPI-CIT-0031
+//! @SYMTestCaseDesc 		Set the event status for the todo entry
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-Data.006
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a Session. Create a Calendar file and open it.
+//!				2. Add an entry with/without repeat rule and set the event status for the todo
+//!				3. Store the entry in the calendar file.
+//! @SYMTestExpectedResults 	The StoreL() API leaves with error code KErrNotSupported
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiReadData \CITCalInterimApi\TestCalInterimApiEntryData1.ini AddEntry1
+
+END_TESTCASE PIM-APPENGCALINTERIMAPI-CIT-0031
+
+START_TESTCASE PIM-APPENGCALINTERIMAPI-CIT-0032
+//! @SYMTestCaseID		PIM-APPENGCALINTERIMAPI-CIT-0032
+//! @SYMTestCaseDesc 		Clear the repeat rule of the entry and try to add a child entry
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-Repeat.004
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a Session. Create a Calendar file and open it.
+//!				2. Add an entry with repeat rule and store it. 
+//!				3. Clear the repeat rule property of the entry and Store the entry in the calendar file.
+//!				4. Create a child entry and store it. verify it by fetching the entry and checking the array count.
+//! @SYMTestExpectedResults 	The StoreL() API leaves with error code KErrArgument. Only the parent entry is stored in the calendar file.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFetchEntryAndCheckData \CITCalInterimApi\TestCalInterimApiEntryData1.ini CheckChildEntry
+
+END_TESTCASE PIM-APPENGCALINTERIMAPI-CIT-0032
+
+START_TESTCASE	PIM-APPENGCALINTERIMAPI-ATTACHMENT-0033
+//! @SYMTestCaseID		PIM-APPENGCALINTERIMAPI-ATTACHMENT-0033
+//! @SYMTestCaseDesc 		Log the time taken for storing entries, fetching entries and creating instance view
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-Entry001, Entry002
+//! @SYMREQ			REQ5749		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a Session. Create and open the calendar file.
+//!				2. Create an entry and Set the properties.
+//!				3. Register the Current time. Store the entry in the calendar file. Register the current time again
+//!				4. Compute the time difference before and after storing the entry.
+//!				5. Close the session.
+//! @SYMTestExpectedResults 	The time taken for storing the attachment is logged.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCalPerformance \CITCalInterimApi\TestCalInterimApiEntryData1.ini PerformanceAddEntryWithoutAttach
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCalPerformance \CITCalInterimApi\TestCalInterimApiEntryData1.ini PerformanceFetchEntrywithoutAttach
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFilter \CITCalInterimApi\TestCalInterimApiEntryData1.ini Performance_instanceViewCreation9.2
+
+END_TESTCASE  PIM-APPENGCALINTERIMAPI-ATTACHMENT-0033
+
+PRINT Completed TestCalInterimApi_Tests
+
+PREFIX RUN_UTILS 
+MakeReadWrite 	c:\private\10003a5b\CalendarStressFile.dat
+DeleteFile		c:\private\10003a5b\CalendarStressFile.dat
+MakeReadWrite 	c:\private\10003a5b\calendarstresstestfile.datIdx
+DeleteFile		c:\private\10003a5b\calendarstresstestfile.datIdx
+MakeReadWrite 	c:\private\10003a5b\calendarfile.datIdx
+DeleteFile		c:\private\10003a5b\calendarfile.datIdx
+MakeReadWrite 	c:\private\10003a5b\calendarstressfile.datIdx
+DeleteFile		c:\private\10003a5b\calendarstressfile.datIdx
+MakeReadWrite	c:\private\10003a5b\CITTZRules1.dat
+DeleteFile		c:\private\10003a5b\CITTZRules1.dat
+MakeReadWrite	c:\private\10003a5b\CalendarObserver1.dat
+DeleteFile		c:\private\10003a5b\CalendarObserver1.dat
+MakeReadWrite	c:\citcalinterimapi\testdata\vcals\ExportvCals\Export_BulkEntries.vcs
+DeleteFile		c:\citcalinterimapi\testdata\vcals\ExportvCals\Export_BulkEntries.vcs
+MakeReadWrite	c:\private\10003a5b\calendarobserver.datIdx
+DeleteFile		c:\private\10003a5b\calendarobserver.datIdx
+MakeReadWrite	c:\private\10003a5b\calendarobserver1.datIdx
+DeleteFile		c:\private\10003a5b\calendarobserver1.datIdx
+MakeReadWrite	c:\private\10003a5b\CITCalInterimFile.dat
+DeleteFile		c:\private\10003a5b\CITCalInterimFile.dat
+MakeReadWrite	c:\private\10003a5b\CalendarFilePerformance.dat
+DeleteFile		c:\private\10003a5b\CalendarFilePerformance.dat
+MakeReadWrite	c:\private\10003a5b\citcalinterimfile1.datIdx
+DeleteFile		c:\private\10003a5b\citcalinterimfile1.datIdx
+MakeReadWrite	c:\private\10003a5b\calendarfileperformance.datIdx
+DeleteFile		c:\private\10003a5b\calendarfileperformance.datIdx
+MakeReadWrite	c:\private\10003a5b\citcalinterimfile.datIdx
+DeleteFile		c:\private\10003a5b\citcalinterimfile.datIdx
+MakeReadWrite	c:\private\10003a5b\CalendarFile1.dat
+DeleteFile		c:\private\10003a5b\CalendarFile1.dat
+MakeReadWrite	c:\private\10003a5b\CITCalInterimFile1.dat
+DeleteFile		c:\private\10003a5b\CITCalInterimFile1.dat
+MakeReadWrite	c:\private\10003a5b\CalendarFile.dat
+DeleteFile		c:\private\10003a5b\CalendarFile.dat
+MakeReadWrite	c:\citcalinterimapi\testdata\vcals\ExportvCals\Export202.vcs
+DeleteFile		c:\citcalinterimapi\testdata\vcals\ExportvCals\Export202.vcs
+MakeReadWrite	c:\private\10003a5b\CalendarObserver.dat
+DeleteFile		c:\private\10003a5b\CalendarObserver.dat
+MakeReadWrite	c:\private\10003a5b\CalendarStressTestFile.dat
+DeleteFile		c:\private\10003a5b\CalendarStressTestFile.dat
+MakeReadWrite	c:\private\10003a5b\calendarfile1.datIdx
+DeleteFile		c:\private\10003a5b\calendarfile1.datIdx
+MakeReadWrite	c:\citcalinterimapi\testdata\vcals\ExportvCals\Export201.vcs
+DeleteFile		c:\citcalinterimapi\testdata\vcals\ExportvCals\Export201.vcs
+REMOVE_PREFIX

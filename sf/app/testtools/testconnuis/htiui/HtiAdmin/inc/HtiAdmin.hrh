@@ -1,0 +1,66 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Command ids
+*
+*/
+
+#ifndef __HTIADMIN_HRH__
+#define __HTIADMIN_HRH__
+
+/* HtiAdmin enumerate command codes */
+enum THtiAdminIds
+    {
+    EHtiAdminStart = 1,
+    EHtiAdminStop,
+    EHtiAdminAbout,
+    EHtiAdminSubOptions,
+
+        EHtiAdminSubComms,
+                
+        EHtiAdminSubAutoStart,
+            EHtiAdminAutoStartEnable,
+            EHtiAdminAutoStartDisable,
+
+        EHtiAdminSubLogs,
+            EHtiAdminCreateLogFolder,
+            EHtiAdminRemoveLogFolder,
+            EHtiAdminClearLogs,
+
+        EHtiAdminSubPriority,
+            EHtiAdminPriorityBackground,
+            EHtiAdminPriorityForeground,
+            EHtiAdminPriorityHigh,
+            EHtiAdminPriorityAbsoluteHigh,
+
+        EHtiAdminSubWatchDog,
+            EHtiAdminWatchDogEnable,
+            EHtiAdminWatchDogDisable,
+
+        EHtiAdminSubConsole,
+            EHtiAdminConsoleEnable,
+            EHtiAdminConsoleDisable,
+
+        EHtiAdminSubErrorDialogs,
+            EHtiAdminErrorDialogsEnable,
+            EHtiAdminErrorDialogsDisable,
+
+        EHtiAdminSubSetParam,
+            EHtiAdminHtiCfg,
+            EHtiAdminHtiBtCommCfg,
+            EHtiAdminHtiSerialCommCfg,
+            EHtiAdminHtiIPCommCfg
+    };
+
+
+#endif // __HTIADMIN_HRH__

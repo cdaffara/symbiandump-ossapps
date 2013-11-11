@@ -1,0 +1,30 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+#ifndef __T_DECODESERVER__
+#define __T_DECODESERVER__
+
+file=ABI_DIR\BUILD_DIR\T_DecodeServer.exe	System\bin\T_DecodeServer.exe
+
+data=EPOCROOT##Epoc32\winscw\c\msgtest\imap\T_IMAP_DECODE.script msgtest\imap\T_IMAP_DECODE.script
+data=EPOCROOT##Epoc32\winscw\c\msgtest\imap\mail1_Base64.txt msgtest\imap\mail1_Base64.txt
+data=EPOCROOT##Epoc32\winscw\c\msgtest\imap\mail1_Base64_body.txt msgtest\imap\mail1_Base64_body.txt
+data=EPOCROOT##Epoc32\winscw\c\msgtest\imap\mail2_Base64.txt msgtest\imap\mail2_Base64.txt
+data=EPOCROOT##Epoc32\winscw\c\msgtest\imap\mail2_Base64_body.txt msgtest\imap\mail2_Base64_body.txt
+data=EPOCROOT##Epoc32\winscw\c\msgtest\imap\ImapDecode.ini msgtest\imap\ImapDecode.ini
+
+#endif

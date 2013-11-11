@@ -1,0 +1,72 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  MMP file for contact adapter unit tests.
+*
+*/
+
+#include<Digia/Eunit/EUnitCaps.h>
+#include <platform_paths.hrh>
+#include <defaultcaps.hrh>
+#include <data_caging_paths.hrh>
+
+// DEFINES
+MACRO 			__NSML_MODULETEST__
+
+// Build target
+TARGET          UT_nsmldummydataprovider.dll
+TARGETTYPE      dll
+UID             0x1000af5a 0x01700000
+
+CAPABILITY      EUNIT_CAPS
+VENDORID        0x00000000
+
+#if defined(ARMCC)
+DEFFILE		./def/eabicontactsdataprovider_test
+#elif defined(WINSCW)
+DEFFILE		./def/bwinscwcontactsdataprovider_test
+#endif
+
+// Source files
+SOURCEPATH      .
+SOURCE          dllmain.cpp
+SOURCE          cnsmldummydataprovider_test.cpp
+SOURCE          cnsmldummydatastore_test.cpp
+SOURCE 			cnsmladaptertestutilities.cpp 
+SOURCE          cnsmldummydatastorewaiter.cpp
+// Code under test
+SOURCEPATH      ../DummyAdapter/src
+SOURCE          nsmldummydataprovider.cpp
+SOURCE          nsmldummydatastore.cpp
+
+// Include paths
+USERINCLUDE     . ../DummyAdapter/inc
+
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE 	/epoc32/include/ecom
+SYSTEMINCLUDE 	/epoc32/include/syncml
+SYSTEMINCLUDE	/epoc32/include/internal
+SYSTEMINCLUDE   /epoc32/include/Digia/EUnit
+
+// Dependencies to system components
+LIBRARY         euser.lib
+LIBRARY         EUnit.lib
+LIBRARY         bafl.lib
+LIBRARY         smldataprovider.lib
+LIBRARY         smlstoreformat.lib
+LIBRARY         nsmlcontactsdataprovider.lib
+LIBRARY         efsrv.lib
+LIBRARY         cntmodel.lib
+LIBRARY         estor.lib
+LIBRARY         nsmldebug.lib
+

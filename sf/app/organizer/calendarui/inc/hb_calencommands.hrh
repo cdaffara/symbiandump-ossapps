@@ -1,0 +1,102 @@
+/*
+* Copyright (c) 2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Calendar controller commands
+*
+*/
+
+
+#ifndef HB_CALENCOMMANDS_HRH
+#define HB_CALENCOMMANDS_HRH
+
+
+// 1000 commands for each action ui.
+// We start from 10000 because otherwise we might overlap other command ranges,
+// e.g. Avkon == 3000.
+
+enum TCalenCommandBase
+    {
+    ECalenViewCommandBase               = 20000,
+    ECalenEditCommandBase               = 20100,
+    ECalenDeleteCommandBase             = 20200,
+    ECalenSettingsCommandBase           = 20300,
+    ECalenMapCommandBase		= 20400,
+    ECalenMissedAlarmCommandBase 	= 20500
+    };
+
+enum TCalenCommandId
+    {
+    ECalenMonthView                             = ECalenViewCommandBase,
+    ECalenWeekView,
+    ECalenAgendaView,
+    ECalenDayView,
+    ECalenTodoEditor,
+    ECalenTodoEditorDone,
+    ECalenForwardsToDayView,
+    ECalenNextView,
+    ECalenPrevView,
+    ECalenSwitchView,
+    ECalenShowToolbar,
+    ECalenHideToolbar,
+    ECalenUpdateToolbar,
+    ECalenHidePreview,
+    ECalenShowPreview,
+    ECalenStartActiveStep,
+    ECalenGotoToday,
+    ECalenGotoDate,
+    ECalenEventView,
+    ECalenCmdPromptThenEdit,    
+    ECalenFasterAppExit,
+    ECalenShowNextDay,
+    ECalenShowPrevDay,
+    ECalenNewMeeting                            = ECalenEditCommandBase,
+    ECalenNewAnniv,
+    ECalenNewDayNote,
+    ECalenNewReminder,
+    ECalenNewMeetingRequest,
+    ECalenNewEntry, 
+    ECalenEditCurrentEntry,
+    ECalenEditSeries,
+    ECalenEditOccurrence,
+    ECalenEditEntryFromViewer,
+    ECalenViewCurrentEntry,
+    ECalenNotifyFocusChange,
+    ECalenCompleteTodo,
+    ECalenRestoreTodo,
+    ECalenSend,
+    ECalenDeleteCurrentEntry                    = ECalenDeleteCommandBase,
+    ECalenDeleteEntryWithoutQuery,
+    ECalenDeleteSeries,
+    ECalenDeleteCurrentOccurrence,
+    ECalenDeleteAllEntries,
+    ECalenDeleteEntriesBeforeDate,
+    ECalenCancelDelete,
+    ECalenDeleteEntryFromViewer,
+    ECalenShowSettings                          = ECalenSettingsCommandBase,
+    ECalenGetLocation				= ECalenMapCommandBase,
+    ECalenShowLocation,
+    ECalenGetLocationAndSave,
+    ECalenMissedAlarmsView                      = ECalenMissedAlarmCommandBase,
+    ECalenMissedEventView,
+    ECalenCmdClear,
+    ECalenCmdClearAll,    						
+    ECalenCmdGotoCalendar,
+    ECalenMissedAlarmsViewFromIdle,
+    ECalenMissedEventViewFromIdle,
+    ECalenLastCommand,
+    ECalenRegionalPluginTapEvent
+    };
+
+#endif // HB_CALENCOMMANDS_HRH
+
+// End of file

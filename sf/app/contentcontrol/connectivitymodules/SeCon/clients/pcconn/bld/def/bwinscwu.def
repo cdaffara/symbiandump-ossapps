@@ -1,0 +1,9 @@
+EXPORTS
+	??0RSConPCConnSession@@QAE@XZ @ 1 NONAME ; RSConPCConnSession::RSConPCConnSession(void)
+	??1RSConPCConnSession@@QAE@XZ @ 2 NONAME ; RSConPCConnSession::~RSConPCConnSession(void)
+	?Close@RSConPCConnSession@@QAEXXZ @ 3 NONAME ; void RSConPCConnSession::Close(void)
+	?Connect@RSConPCConnSession@@QAEHXZ @ 4 NONAME ; int RSConPCConnSession::Connect(void)
+	?GetPacketL@RSConPCConnSession@@QAEHABVTDesC16@@ABVTDesC8@@AAPAVCBufFlat@@@Z @ 5 NONAME ; int RSConPCConnSession::GetPacketL(class TDesC16 const &, class TDesC8 const &, class CBufFlat * &)
+	?PutPacketL@RSConPCConnSession@@QAEHABVTDesC16@@ABVTDesC8@@AAPAVCBufFlat@@@Z @ 6 NONAME ; int RSConPCConnSession::PutPacketL(class TDesC16 const &, class TDesC8 const &, class CBufFlat * &)
+	?ResetServer@RSConPCConnSession@@QAEHXZ @ 7 NONAME ; int RSConPCConnSession::ResetServer(void)
+

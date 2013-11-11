@@ -1,0 +1,45 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:  Update package file for emailstore.
+;
+
+&EN
+
+; standard SIS file header
+#{"Email Store"},(0x2001FDA4),1,0,0,TYPE=SA,RU
+ 
+;Supports Series 60 v 3.0
+[0x101F7961], 0, 0, 0, {"Series60ProductID"}
+
+;Localized Vendor Name
+%{"Nokia"}
+
+;Unique Vendor name
+:"Nokia"
+
+;PreInstall
+"\epoc32\release\armv5\urel\EmailStorePreInstall.exe"       -"C:\sys\bin\EmailStorePreInstall.exe",FR,RB,RW
+
+;Message store
+"\epoc32\release\armv5\urel\MessageStoreClient.dll"         -"C:\sys\bin\MessageStoreClient.dll"
+"\epoc32\release\armv5\urel\MessageStoreServer.dll"         -"C:\sys\bin\MessageStoreServer.dll"
+"\epoc32\release\armv5\urel\MessageStoreExe.exe"            -"C:\sys\bin\MessageStoreExe.exe"
+"\epoc32\release\armv5\urel\DebugLog.dll"                   -"C:\sys\bin\DebugLog.dll"
+"\epoc32\release\armv5\urel\ImsPointSecMonitor.dll"         -"C:\sys\bin\ImsPointSecMonitor.dll"
+"\epoc32\release\armv5\urel\RfsMsgStorePlugin.dll"          -"C:\sys\bin\RfsMsgStorePlugin.dll"
+"\epoc32\data\z\resource\plugins\RfsMsgStorePlugin.rsc"     -"C:\resource\plugins\RfsMsgStorePlugin.rsc"
+
+
+;Base plugin
+"\epoc32\release\armv5\urel\baseplugin.dll"                 -"C:\sys\bin\baseplugin.dll"

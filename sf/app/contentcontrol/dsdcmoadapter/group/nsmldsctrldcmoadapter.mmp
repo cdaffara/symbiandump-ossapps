@@ -1,0 +1,53 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  DS plug-in adapter for DCMO
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+TARGET nsmldsctrldcmoadapter.dll
+TARGETTYPE PLUGIN
+
+// ECom Dll recognition UID followed by the unique UID for this dll
+UID 0x10009D8D 0x20022FBC
+VENDORID VID_DEFAULT
+CAPABILITY  CAP_ECOM_PLUGIN
+
+SOURCEPATH ../src
+SOURCE nsmldsctrldcmodapterproxy.cpp nsmldsctrldcmoadapter.cpp
+
+USERINCLUDE 		../inc 
+
+APP_LAYER_SYSTEMINCLUDE
+
+
+SYSTEMINCLUDE 	/epoc32/include/ecom
+SYSTEMINCLUDE   /epoc32/include/mw/hb/hbwidgets 
+SYSTEMINCLUDE   /epoc32/include/mw/hb/hbcore
+
+SOURCEPATH			../data
+start resource 20022FBC.rss
+TARGET nsmldsctrldcmoadapter.rsc
+LANGUAGE_IDS
+end
+
+
+LIBRARY 				euser.lib ECom.lib efsrv.lib 
+LIBRARY         centralrepository.lib
+LIBRARY					commonengine.lib  
+LIBRARY       hbcore.lib hbwidgets.lib
+
+SMPSAFE

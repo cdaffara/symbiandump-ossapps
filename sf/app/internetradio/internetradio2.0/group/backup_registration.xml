@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="yes"?> 
+    <backup_registration> 
+        <passive_backup>
+            <include_file name = "lastPlayed.dat"/>
+            <include_file name = "cacheDb.db"/>
+            <include_file name = "iSdsResponse.xml"/>
+            <include_file name = "Session"/>
+            <include_file name = "NmsLog"/>
+            <include_file name = "RadioReport.xml"/>
+            <include_file name = "LogUsage.gz"/>
+			<include_file name = "songhistoryDb.db"/>
+        </passive_backup> 
+      <proxy_data_manager sid="0x10202BE9"/>
+	<restore requires_reboot = "no"/> 
+</backup_registration> 

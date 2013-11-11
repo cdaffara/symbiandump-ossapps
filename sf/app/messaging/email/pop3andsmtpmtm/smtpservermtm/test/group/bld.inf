@@ -1,0 +1,120 @@
+// Copyright (c) 1999-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+PRJ_TESTMMPFILES
+T_smts00.mmp	
+T_SMTS01.mmp	
+T_SMTS02.mmp	
+T_SMTSSECURESOCKETS.mmp
+t_smtssmtpauth.mmp
+
+PRJ_TESTEXPORTS
+../data/RFC82201.TXT /epoc32/wins/c/msgtest/smts/rfc822/rfc82201.txt
+../data/RFC82202.TXT /epoc32/wins/c/msgtest/smts/rfc822/rfc82202.txt
+../data/RFC82203.TXT /epoc32/wins/c/msgtest/smts/rfc822/rfc82203.txt
+../data/RFC82204.TXT /epoc32/wins/c/msgtest/smts/rfc822/rfc82204.txt
+../data/RFC82205.TXT /epoc32/wins/c/msgtest/smts/rfc822/rfc82205.txt
+../data/RFC82206.TXT /epoc32/wins/c/msgtest/smts/rfc822/rfc82206.txt
+../data/RFC82207.TXT /epoc32/wins/c/msgtest/smts/rfc822/rfc82207.txt
+../data/RFC82208.TXT /epoc32/wins/c/msgtest/smts/rfc822/rfc82208.txt
+../data/RFC82209.TXT /epoc32/wins/c/msgtest/smts/rfc822/rfc82209.txt
+../data/smtslog.scr /epoc32/wins/c/msgtest/smts/scripts/smtslog.scr
+../data/imsk25.out /epoc32/wins/c/msgtest/smts/checkagainst/imsk25.out
+../data/t_smtsTlsNewSession.scr /epoc32/wins/c/msgtest/smts/scripts/t_smtstlsnewsession.scr
+../data/t_smtsTlsNoServices.scr /epoc32/wins/c/msgtest/smts/scripts/t_smtstlsnoservices.scr
+../data/t_smtsTlsNotSupported.scr /epoc32/wins/c/msgtest/smts/scripts/t_smtstlsnotsupported.scr
+../data/t_smtsTlsOk.scr /epoc32/wins/c/msgtest/smts/scripts/t_smtstlsok.scr
+../data/t_smtsTlsRefused.scr /epoc32/wins/c/msgtest/smts/scripts/t_smtstlsrefused.scr
+../data/t_smtsTlsStopResponding.scr /epoc32/wins/c/msgtest/smts/scripts/t_smtstlsstopresponding.scr
+../data/t_smtsTlsSyntaxError.scr /epoc32/wins/c/msgtest/smts/scripts/t_smtstlssyntaxerror.scr
+../data/t_smtsTlsTempFail.scr /epoc32/wins/c/msgtest/smts/scripts/t_smtstlstempfail.scr
+
+../data/imsk25_tls_no_smtp_auth_on_server.scr /epoc32/wins/c/msgtest/smts/scripts/imsk25_tls_no_smtp_auth_on_server.scr
+../data/imsk25_tls_no_smtp_auth.scr /epoc32/wins/c/msgtest/smts/scripts/imsk25_tls_no_smtp_auth.scr
+../data/imsk25_tls_login.scr /epoc32/wins/c/msgtest/smts/scripts/imsk25_tls_login.scr
+../data/imsk25_no_tls_wrong_username.scr /epoc32/wins/c/msgtest/smts/scripts/imsk25_no_tls_wrong_username.scr
+../data/imsk25_no_tls_wrong_password.scr /epoc32/wins/c/msgtest/smts/scripts/imsk25_no_tls_wrong_password.scr
+../data/imsk25_no_tls_plain.scr /epoc32/wins/c/msgtest/smts/scripts/imsk25_no_tls_plain.scr
+../data/imsk25_no_tls_no_smtp_auth_on_server.scr /epoc32/wins/c/msgtest/smts/scripts/imsk25_no_tls_no_smtp_auth_on_server.scr
+../data/imsk25_no_tls_login.scr /epoc32/wins/c/msgtest/smts/scripts/imsk25_no_tls_login.scr
+../data/imsk25_no_tls_cram_md5.scr /epoc32/wins/c/msgtest/smts/scripts/imsk25_no_tls_cram_md5.scr
+../data/imsk25_ehlo_fail_conitnue_with_helo.scr /epoc32/wins/c/msgtest/smts/scripts/imsk25_ehlo_fail_conitnue_with_helo.scr
+../data/imsk25_ehlo_fail_quit_if_tls_on.scr /epoc32/wins/c/msgtest/smts/scripts/imsk25_ehlo_fail_quit_if_tls_on.scr
+../data/imsk25_tls_cram.scr /epoc32/wins/c/msgtest/smts/scripts/imsk25_tls_cram.scr
+../data/imsk25_ehlo_fail_conitnue_with_hostname.scr /epoc32/wins/c/msgtest/smts/scripts/imsk25_ehlo_fail_conitnue_with_hostname.scr
+
+../data/imsk25_tls_no_smtp_auth_on_server.out /epoc32/wins/c/msgtest/smts/checkagainst/imsk25_tls_no_smtp_auth_on_server.out
+../data/imsk25_tls_no_smtp_auth.out /epoc32/wins/c/msgtest/smts/checkagainst/imsk25_tls_no_smtp_auth.out
+../data/imsk25_tls_login.out /epoc32/wins/c/msgtest/smts/checkagainst/imsk25_tls_login.out
+../data/imsk25_no_tls_wrong_username.out /epoc32/wins/c/msgtest/smts/checkagainst/imsk25_no_tls_wrong_username.out
+../data/imsk25_no_tls_wrong_password.out /epoc32/wins/c/msgtest/smts/checkagainst/imsk25_no_tls_wrong_password.out
+../data/imsk25_no_tls_plain.out /epoc32/wins/c/msgtest/smts/checkagainst/imsk25_no_tls_plain.out
+../data/imsk25_no_tls_no_smtp_auth_on_server.out /epoc32/wins/c/msgtest/smts/checkagainst/imsk25_no_tls_no_smtp_auth_on_server.out
+../data/imsk25_no_tls_login.out /epoc32/wins/c/msgtest/smts/checkagainst/imsk25_no_tls_login.out
+../data/imsk25_no_tls_cram_md5.out /epoc32/wins/c/msgtest/smts/checkagainst/imsk25_no_tls_cram_md5.out
+../data/imsk25_ehlo_fail_conitnue_with_helo.out /epoc32/wins/c/msgtest/smts/checkagainst/imsk25_ehlo_fail_conitnue_with_helo.out
+../data/imsk25_ehlo_fail_quit_if_tls_on.out /epoc32/wins/c/msgtest/smts/checkagainst/imsk25_ehlo_fail_quit_if_tls_on.out
+../data/imsk25_tls_cram.out /epoc32/wins/c/msgtest/smts/checkagainst/imsk25_tls_cram.out
+../data/imsk25_ehlo_fail_conitnue_with_hostname.out /epoc32/wins/c/msgtest/smts/checkagainst/imsk25_ehlo_fail_conitnue_with_hostname.out
+
+//for wincw 
+
+../data/RFC82201.TXT /epoc32/winscw/c/msgtest/smts/rfc822/rfc82201.txt
+../data/RFC82202.TXT /epoc32/winscw/c/msgtest/smts/rfc822/rfc82202.txt
+../data/RFC82203.TXT /epoc32/winscw/c/msgtest/smts/rfc822/rfc82203.txt
+../data/RFC82204.TXT /epoc32/winscw/c/msgtest/smts/rfc822/rfc82204.txt
+../data/RFC82205.TXT /epoc32/winscw/c/msgtest/smts/rfc822/rfc82205.txt
+../data/RFC82206.TXT /epoc32/winscw/c/msgtest/smts/rfc822/rfc82206.txt
+../data/RFC82207.TXT /epoc32/winscw/c/msgtest/smts/rfc822/rfc82207.txt
+../data/RFC82208.TXT /epoc32/winscw/c/msgtest/smts/rfc822/rfc82208.txt
+../data/RFC82209.TXT /epoc32/winscw/c/msgtest/smts/rfc822/rfc82209.txt
+../data/smtslog.scr /epoc32/winscw/c/msgtest/smts/scripts/smtslog.scr
+../data/imsk25.out /epoc32/winscw/c/msgtest/smts/checkagainst/imsk25.out
+../data/t_smtsTlsNewSession.scr /epoc32/winscw/c/msgtest/smts/scripts/t_smtstlsnewsession.scr
+../data/t_smtsTlsNoServices.scr /epoc32/winscw/c/msgtest/smts/scripts/t_smtstlsnoservices.scr
+../data/t_smtsTlsNotSupported.scr /epoc32/winscw/c/msgtest/smts/scripts/t_smtstlsnotsupported.scr
+../data/t_smtsTlsOk.scr /epoc32/winscw/c/msgtest/smts/scripts/t_smtstlsok.scr
+../data/t_smtsTlsRefused.scr /epoc32/winscw/c/msgtest/smts/scripts/t_smtstlsrefused.scr
+../data/t_smtsTlsStopResponding.scr /epoc32/winscw/c/msgtest/smts/scripts/t_smtstlsstopresponding.scr
+../data/t_smtsTlsSyntaxError.scr /epoc32/winscw/c/msgtest/smts/scripts/t_smtstlssyntaxerror.scr
+../data/t_smtsTlsTempFail.scr /epoc32/winscw/c/msgtest/smts/scripts/t_smtstlstempfail.scr
+
+../data/imsk25_tls_no_smtp_auth_on_server.scr /epoc32/winscw/c/msgtest/smts/scripts/imsk25_tls_no_smtp_auth_on_server.scr 
+../data/imsk25_tls_no_smtp_auth.scr /epoc32/winscw/c/msgtest/smts/scripts/imsk25_tls_no_smtp_auth.scr 
+../data/imsk25_tls_login.scr /epoc32/winscw/c/msgtest/smts/scripts/imsk25_tls_login.scr 
+../data/imsk25_no_tls_wrong_username.scr /epoc32/winscw/c/msgtest/smts/scripts/imsk25_no_tls_wrong_username.scr 
+../data/imsk25_no_tls_wrong_password.scr /epoc32/winscw/c/msgtest/smts/scripts/imsk25_no_tls_wrong_password.scr 
+../data/imsk25_no_tls_plain.scr /epoc32/winscw/c/msgtest/smts/scripts/imsk25_no_tls_plain.scr 
+../data/imsk25_no_tls_no_smtp_auth_on_server.scr /epoc32/winscw/c/msgtest/smts/scripts/imsk25_no_tls_no_smtp_auth_on_server.scr 
+../data/imsk25_no_tls_login.scr /epoc32/winscw/c/msgtest/smts/scripts/imsk25_no_tls_login.scr 
+../data/imsk25_no_tls_cram_md5.scr /epoc32/winscw/c/msgtest/smts/scripts/imsk25_no_tls_cram_md5.scr
+../data/imsk25_ehlo_fail_conitnue_with_helo.scr /epoc32/winscw/c/msgtest/smts/scripts/imsk25_ehlo_fail_conitnue_with_helo.scr
+../data/imsk25_ehlo_fail_conitnue_with_hostname.scr /epoc32/winscw/c/msgtest/smts/scripts/imsk25_ehlo_fail_conitnue_with_hostname.scr
+../data/imsk25_ehlo_fail_quit_if_tls_on.scr /epoc32/winscw/c/msgtest/smts/scripts/imsk25_ehlo_fail_quit_if_tls_on.scr 
+../data/imsk25_tls_cram.scr /epoc32/winscw/c/msgtest/smts/scripts/imsk25_tls_cram.scr
+
+../data/imsk25_tls_no_smtp_auth_on_server.out /epoc32/winscw/c/msgtest/smts/checkagainst/imsk25_tls_no_smtp_auth_on_server.out
+../data/imsk25_tls_no_smtp_auth.out /epoc32/winscw/c/msgtest/smts/checkagainst/imsk25_tls_no_smtp_auth.out
+../data/imsk25_tls_login.out /epoc32/winscw/c/msgtest/smts/checkagainst/imsk25_tls_login.out
+../data/imsk25_no_tls_wrong_username.out /epoc32/winscw/c/msgtest/smts/checkagainst/imsk25_no_tls_wrong_username.out
+../data/imsk25_no_tls_wrong_password.out /epoc32/winscw/c/msgtest/smts/checkagainst/imsk25_no_tls_wrong_password.out
+../data/imsk25_no_tls_plain.out /epoc32/winscw/c/msgtest/smts/checkagainst/imsk25_no_tls_plain.out
+../data/imsk25_no_tls_no_smtp_auth_on_server.out /epoc32/winscw/c/msgtest/smts/checkagainst/imsk25_no_tls_no_smtp_auth_on_server.out
+../data/imsk25_no_tls_login.out /epoc32/winscw/c/msgtest/smts/checkagainst/imsk25_no_tls_login.out
+../data/imsk25_no_tls_cram_md5.out /epoc32/winscw/c/msgtest/smts/checkagainst/imsk25_no_tls_cram_md5.out
+../data/imsk25_ehlo_fail_conitnue_with_helo.out /epoc32/winscw/c/msgtest/smts/checkagainst/imsk25_ehlo_fail_conitnue_with_helo.out
+../data/imsk25_ehlo_fail_quit_if_tls_on.out /epoc32/winscw/c/msgtest/smts/checkagainst/imsk25_ehlo_fail_quit_if_tls_on.out
+../data/imsk25_tls_cram.out /epoc32/winscw/c/msgtest/smts/checkagainst/imsk25_tls_cram.out
+../data/imsk25_ehlo_fail_conitnue_with_hostname.out /epoc32/winscw/c/msgtest/smts/checkagainst/imsk25_ehlo_fail_conitnue_with_hostname.out

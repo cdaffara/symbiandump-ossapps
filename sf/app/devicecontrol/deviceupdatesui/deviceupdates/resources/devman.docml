@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="0.9">
+    <object name="help" type="HbAction">
+        <string name="text" value="Help"/>
+    </object>
+    <object name="exit" type="HbAction">
+        <string name="text" value="Exit"/>
+    </object>
+    <section name="Portrait">
+        <widget name="p:view" type="HbView">
+            <widget name="content" role="HbView:widget" type="HbWidget">
+                <widget name="scrollArea" type="HbScrollArea">
+                    <widget name="scrollAreaContents" role="HbScrollArea:contents" type="HbWidget">
+                        <widget name="p:updatelabel" type="HbLabel">
+                            <enums name="textWrapping" value="TextWordWrap"/>
+                            <real name="z" value="1"/>
+                            <sizehint height="10.14925un" type="PREFERRED" width="48.80597un"/>
+                            <string name="plainText" value="To update your device software to latest available device software"/>
+                        </widget>
+                        <widget name="p:update" type="HbPushButton">
+                            <real name="z" value="2"/>
+                            <sizepolicy horizontalPolicy="Minimum" horizontalStretch="0" verticalPolicy="Preferred" verticalStretch="0"/>
+                            <sizehint height="5.97015un" type="PREFERRED" width="32.08955un"/>
+                            <string name="text" value="Update"/>
+                            <string name="state" value="normal"/>
+                        </widget>
+                        <widget name="p:advanced" type="HbPushButton">
+                            <real name="z" value="4"/>
+                            <sizepolicy horizontalPolicy="Minimum" horizontalStretch="0" verticalPolicy="Preferred" verticalStretch="0"/>
+                            <sizehint height="5.97015un" type="PREFERRED" width="32.38806un"/>
+                            <string name="text" value="Advanced"/>
+                            <string name="state" value="normal"/>
+                        </widget>
+                        <widget name="label" type="HbLabel">
+                            <real name="z" value="5"/>
+                            <sizehint height="3.8806un" type="PREFERRED" width="44.32836un"/>
+                            <bool name="enabled" value="TRUE"/>
+                            <bool name="visible" value="FALSE"/>
+                            <string name="plainText" value="Product Release"/>
+                            <fontspec name="fontSpec" role="Primary" textheight="26.8"/>
+                        </widget>
+                        <widget name="label_1" type="HbLabel">
+                            <real name="z" value="6"/>
+                            <sizehint height="3.8806un" type="PREFERRED" width="44.17911un"/>
+                            <bool name="enabled" value="FALSE"/>
+                            <bool name="visible" value="FALSE"/>
+                            <string name="plainText" value="Label"/>
+                        </widget>
+                        <widget name="label_2" type="HbLabel">
+                            <real name="z" value="7"/>
+                            <sizehint height="3.8806un" type="PREFERRED" width="44.32836un"/>
+                            <bool name="enabled" value="FALSE"/>
+                            <bool name="visible" value="FALSE"/>
+                            <string name="plainText" value="Software Version"/>
+                            <fontspec name="fontSpec" role="Primary" textheight="26.8"/>
+                        </widget>
+                        <widget name="label_3" type="HbLabel">
+                            <real name="z" value="8"/>
+                            <sizehint height="3.8806un" type="PREFERRED" width="44.32836un"/>
+                            <bool name="enabled" value="FALSE"/>
+                            <bool name="visible" value="FALSE"/>
+                            <string name="plainText" value="Label"/>
+                            <fontspec name="fontSpec" role="Secondary" textheight="23.45"/>
+                        </widget>
+                        <widget name="label_4" type="HbLabel">
+                            <real name="z" value="9"/>
+                            <sizehint height="3.8806un" type="PREFERRED" width="44.32836un"/>
+                            <bool name="visible" value="FALSE"/>
+                            <string name="plainText" value="Model"/>
+                            <fontspec name="fontSpec" role="Primary" textheight="26.8"/>
+                        </widget>
+                        <widget name="label_5" type="HbLabel">
+                            <real name="z" value="10"/>
+                            <sizehint height="3.8806un" type="PREFERRED" width="44.32836un"/>
+                            <bool name="visible" value="FALSE"/>
+                            <string name="plainText" value="Label"/>
+                            <fontspec name="fontSpec" role="Secondary" textheight="23.45"/>
+                        </widget>
+                        <widget name="label_6" type="HbLabel">
+                            <real name="z" value="11"/>
+                            <sizehint height="3.8806un" type="PREFERRED" width="44.32836un"/>
+                            <bool name="visible" value="FALSE"/>
+                            <string name="plainText" value="Type"/>
+                            <fontspec name="fontSpec" role="Primary" textheight="26.8"/>
+                        </widget>
+                        <widget name="label_7" type="HbLabel">
+                            <real name="z" value="12"/>
+                            <sizehint height="3.8806un" type="PREFERRED" width="44.32836un"/>
+                            <bool name="visible" value="FALSE"/>
+                            <string name="plainText" value="Label"/>
+                            <fontspec name="fontSpec" role="Secondary" textheight="23.45"/>
+                        </widget>
+                        <widget name="label_8" type="HbLabel">
+                            <real name="z" value="13"/>
+                            <sizehint height="3.8806un" type="PREFERRED" width="44.32836un"/>
+                            <bool name="visible" value="FALSE"/>
+                            <string name="plainText" value="Product Code"/>
+                            <fontspec name="fontSpec" role="Primary" textheight="26.8"/>
+                        </widget>
+                        <widget name="label_9" type="HbLabel">
+                            <real name="z" value="14"/>
+                            <sizehint height="3.8806un" type="PREFERRED" width="44.32836un"/>
+                            <bool name="visible" value="FALSE"/>
+                            <string name="plainText" value="Label"/>
+                            <fontspec name="fontSpec" role="Secondary" textheight="23.45"/>
+                        </widget>
+                        <widget name="label_10" type="HbLabel">
+                            <real name="z" value="15"/>
+                            <sizehint height="3.8806un" type="PREFERRED" width="44.32836un"/>
+                            <bool name="visible" value="FALSE"/>
+                            <string name="plainText" value="IMEI"/>
+                            <fontspec name="fontSpec" role="Primary" textheight="26.8"/>
+                        </widget>
+                        <widget name="label_11" type="HbLabel">
+                            <real name="z" value="16"/>
+                            <sizehint height="3.8806un" type="PREFERRED" width="44.32836un"/>
+                            <bool name="visible" value="FALSE"/>
+                            <string name="plainText" value="Label"/>
+                            <fontspec name="fontSpec" role="Secondary" textheight="23.45"/>
+                        </widget>
+                        <real name="z" value="0"/>
+                        <sizehint height="95.37314un" type="PREFERRED" width="53.73134un"/>
+                        <layout type="anchor">
+                            <anchoritem dst="p:updatelabel" dstEdge="LEFT" spacing="1.79105un" src="" srcEdge="LEFT"/>
+                            <anchoritem dst="p:updatelabel" dstEdge="TOP" spacing="1.04477un" src="" srcEdge="TOP"/>
+                            <anchoritem dst="p:update" dstEdge="TOP" spacing="11.19403un" src="" srcEdge="TOP"/>
+                            <anchoritem dst="p:update" dstEdge="RIGHT" spacing="-11.22387un" src="" srcEdge="RIGHT"/>
+                            <anchoritem dst="p:advanced" dstEdge="RIGHT" spacing="-11.07463un" src="" srcEdge="RIGHT"/>
+                            <anchoritem dst="p:advanced" dstEdge="BOTTOM" spacing="-1.68655un" src="" srcEdge="BOTTOM"/>
+                            <anchoritem dst="label" dstEdge="LEFT" spacing="2.53731un" src="" srcEdge="LEFT"/>
+                            <anchoritem dst="label" dstEdge="TOP" spacing="18.20896un" src="" srcEdge="TOP"/>
+                            <anchoritem dst="label_1" dstEdge="LEFT" spacing="2.38806un" src="" srcEdge="LEFT"/>
+                            <anchoritem dst="label_1" dstEdge="TOP" spacing="22.98508un" src="" srcEdge="TOP"/>
+                            <anchoritem dst="label_2" dstEdge="LEFT" spacing="2.38806un" src="" srcEdge="LEFT"/>
+                            <anchoritem dst="label_2" dstEdge="TOP" spacing="29.7015un" src="" srcEdge="TOP"/>
+                            <anchoritem dst="label_3" dstEdge="TOP" spacing="34.62687un" src="" srcEdge="TOP"/>
+                            <anchoritem dst="label_3" dstEdge="RIGHT" spacing="-7.01492un" src="" srcEdge="RIGHT"/>
+                            <anchoritem dst="label_4" dstEdge="TOP" spacing="42.2388un" src="" srcEdge="TOP"/>
+                            <anchoritem dst="label_4" dstEdge="RIGHT" spacing="-7.01492un" src="" srcEdge="RIGHT"/>
+                            <anchoritem dst="label_5" dstEdge="TOP" spacing="46.71642un" src="" srcEdge="TOP"/>
+                            <anchoritem dst="label_5" dstEdge="RIGHT" spacing="-7.01492un" src="" srcEdge="RIGHT"/>
+                            <anchoritem dst="label_6" dstEdge="TOP" spacing="53.73135un" src="" srcEdge="TOP"/>
+                            <anchoritem dst="label_6" dstEdge="RIGHT" spacing="-7.01492un" src="" srcEdge="RIGHT"/>
+                            <anchoritem dst="label_7" dstEdge="TOP" spacing="58.65672un" src="" srcEdge="TOP"/>
+                            <anchoritem dst="label_7" dstEdge="RIGHT" spacing="-7.01492un" src="" srcEdge="RIGHT"/>
+                            <anchoritem dst="label_8" dstEdge="TOP" spacing="66.11941un" src="" srcEdge="TOP"/>
+                            <anchoritem dst="label_8" dstEdge="RIGHT" spacing="-7.01492un" src="" srcEdge="RIGHT"/>
+                            <anchoritem dst="label_9" dstEdge="TOP" spacing="70.74627un" src="" srcEdge="TOP"/>
+                            <anchoritem dst="label_9" dstEdge="RIGHT" spacing="-7.01492un" src="" srcEdge="RIGHT"/>
+                            <anchoritem dst="label_10" dstEdge="TOP" spacing="77.46269un" src="" srcEdge="TOP"/>
+                            <anchoritem dst="label_10" dstEdge="RIGHT" spacing="-7.01492un" src="" srcEdge="RIGHT"/>
+                            <anchoritem dst="label_11" dstEdge="TOP" spacing="82.38806un" src="" srcEdge="TOP"/>
+                            <anchoritem dst="label_11" dstEdge="RIGHT" spacing="-7.01492un" src="" srcEdge="RIGHT"/>
+                        </layout>
+                    </widget>
+                    <enums name="verticalScrollBarPolicy" value="ScrollBarAlwaysOn"/>
+                    <enums name="horizontalScrollBarPolicy" value="ScrollBarAlwaysOff"/>
+                    <sizehint height="81.34329un" type="PREFERRED" width="52.23881un"/>
+                </widget>
+                <widget name="p:title" type="HbLabel">
+                    <real name="z" value="1"/>
+                    <real name="opacity" value="1"/>
+                    <sizehint height="4.62687un" type="PREFERRED" width="50.29851un"/>
+                    <enums name="focusPolicy" value="NoFocus"/>
+                    <string name="plainText" value="Device Updates"/>
+                    <fontspec name="fontSpec" role="Primary" textheight="26.8"/>
+                </widget>
+                <layout type="anchor">
+                    <anchoritem dst="scrollArea" dstEdge="LEFT" spacing="0.89552un" src="" srcEdge="LEFT"/>
+                    <anchoritem dst="scrollArea" dstEdge="TOP" spacing="3.5821un" src="" srcEdge="TOP"/>
+                    <anchoritem dst="p:title" dstEdge="LEFT" spacing="1.34328un" src="" srcEdge="LEFT"/>
+                    <anchoritem dst="p:title" dstEdge="TOP" spacing="0.14925un" src="" srcEdge="TOP"/>
+                </layout>
+            </widget>
+            <widget name="viewMenu" role="HbView:menu" type="HbMenu">
+                <ref object="help" role="HbMenu:addAction"/>
+                <ref object="exit" role="HbMenu:addAction"/>
+            </widget>
+            <string name="title" value=""/>
+        </widget>
+    </section>
+    <section name="Landscape">
+        <widget name="l:view" type="HbView">
+            <widget name="content_1" role="HbView:widget" type="HbWidget">
+                <widget name="scrollArea_1" type="HbScrollArea">
+                    <widget name="scrollAreaContents_1" role="HbScrollArea:contents" type="HbWidget">
+                        <widget name="l:updatelabel" type="HbLabel">
+                            <enums name="textWrapping" value="TextWordWrap"/>
+                            <real name="z" value="1"/>
+                            <sizehint height="9.10448un" type="PREFERRED" width="68.0597un"/>
+                            <string name="plainText" value="To update your device software to latest available device software"/>
+                        </widget>
+                        <widget name="l:update" type="HbPushButton">
+                            <real name="z" value="2"/>
+                            <sizepolicy horizontalPolicy="Minimum" horizontalStretch="0" verticalPolicy="Preferred" verticalStretch="0"/>
+                            <sizehint height="5.97015un" type="PREFERRED" width="18.20896un"/>
+                            <string name="text" value="Update"/>
+                            <string name="state" value="normal"/>
+                        </widget>
+                        <widget name="label_13" type="HbLabel">
+                            <real name="z" value="3"/>
+                            <sizehint height="3.8806un" type="PREFERRED" width="30.74627un"/>
+                            <sizehint height="3.8806un" type="MINIMUM" width="1.64179un"/>
+                            <bool name="enabled" value="FALSE"/>
+                            <bool name="visible" value="FALSE"/>
+                            <string name="plainText" value="Product Release"/>
+                            <fontspec name="fontSpec" role="Primary" textheight="26.8"/>
+                        </widget>
+                        <widget name="label_14" type="HbLabel">
+                            <real name="z" value="4"/>
+                            <sizehint height="3.8806un" type="PREFERRED" width="30.74627un"/>
+                            <bool name="enabled" value="FALSE"/>
+                            <bool name="visible" value="FALSE"/>
+                            <string name="plainText" value="Label"/>
+                            <fontspec name="fontSpec" role="Secondary" textheight="23.45"/>
+                        </widget>
+                        <widget name="label_15" type="HbLabel">
+                            <real name="z" value="5"/>
+                            <sizehint height="3.8806un" type="PREFERRED" width="30.74627un"/>
+                            <bool name="visible" value="FALSE"/>
+                            <string name="plainText" value="Software Version"/>
+                            <fontspec name="fontSpec" role="Primary" textheight="26.8"/>
+                        </widget>
+                        <widget name="label_16" type="HbLabel">
+                            <real name="z" value="6"/>
+                            <sizehint height="3.8806un" type="PREFERRED" width="30.74627un"/>
+                            <bool name="visible" value="FALSE"/>
+                            <string name="plainText" value="Label"/>
+                            <fontspec name="fontSpec" role="Secondary" textheight="23.45"/>
+                        </widget>
+                        <widget name="label_17" type="HbLabel">
+                            <real name="z" value="7"/>
+                            <sizehint height="3.8806un" type="PREFERRED" width="30.74627un"/>
+                            <bool name="visible" value="FALSE"/>
+                            <string name="plainText" value="Model"/>
+                            <fontspec name="fontSpec" role="Primary" textheight="26.8"/>
+                        </widget>
+                        <widget name="label_18" type="HbLabel">
+                            <real name="z" value="8"/>
+                            <sizehint height="3.8806un" type="PREFERRED" width="30.74627un"/>
+                            <bool name="visible" value="FALSE"/>
+                            <string name="plainText" value="Label"/>
+                            <fontspec name="fontSpec" role="Secondary" textheight="23.45"/>
+                        </widget>
+                        <widget name="label_19" type="HbLabel">
+                            <real name="z" value="9"/>
+                            <sizehint height="3.8806un" type="PREFERRED" width="30.74627un"/>
+                            <bool name="visible" value="FALSE"/>
+                            <string name="plainText" value="Type"/>
+                            <fontspec name="fontSpec" role="Primary" textheight="26.8"/>
+                        </widget>
+                        <widget name="label_20" type="HbLabel">
+                            <real name="z" value="10"/>
+                            <sizehint height="3.8806un" type="PREFERRED" width="30.74627un"/>
+                            <bool name="visible" value="FALSE"/>
+                            <string name="plainText" value="Label"/>
+                            <fontspec name="fontSpec" role="Secondary" textheight="23.45"/>
+                        </widget>
+                        <widget name="label_21" type="HbLabel">
+                            <real name="z" value="11"/>
+                            <sizehint height="3.8806un" type="PREFERRED" width="30.74627un"/>
+                            <bool name="visible" value="FALSE"/>
+                            <string name="plainText" value="Product Code"/>
+                            <fontspec name="fontSpec" role="Primary" textheight="26.8"/>
+                        </widget>
+                        <widget name="label_22" type="HbLabel">
+                            <real name="z" value="12"/>
+                            <sizehint height="3.8806un" type="PREFERRED" width="30.74627un"/>
+                            <bool name="visible" value="FALSE"/>
+                            <string name="plainText" value="Label"/>
+                            <fontspec name="fontSpec" role="Secondary" textheight="23.45"/>
+                        </widget>
+                        <widget name="label_23" type="HbLabel">
+                            <real name="z" value="13"/>
+                            <sizehint height="3.8806un" type="PREFERRED" width="30.74627un"/>
+                            <bool name="visible" value="FALSE"/>
+                            <string name="plainText" value="IMEI"/>
+                            <fontspec name="fontSpec" role="Primary" textheight="26.8"/>
+                        </widget>
+                        <widget name="label_24" type="HbLabel">
+                            <real name="z" value="14"/>
+                            <sizehint height="3.8806un" type="PREFERRED" width="30.74627un"/>
+                            <bool name="visible" value="FALSE"/>
+                            <string name="plainText" value="Label"/>
+                            <fontspec name="fontSpec" role="Secondary" textheight="23.45"/>
+                        </widget>
+                        <widget name="l:advanced" type="HbPushButton">
+                            <real name="z" value="15"/>
+                            <sizepolicy horizontalPolicy="Minimum" horizontalStretch="0" verticalPolicy="Preferred" verticalStretch="0"/>
+                            <sizehint height="5.97015un" type="PREFERRED" width="37.61194un"/>
+                            <string name="text" value="Advanced"/>
+                            <string name="state" value="normal"/>
+                        </widget>
+                        <real name="z" value="0"/>
+                        <sizehint height="56.56717un" type="PREFERRED" width="95.37314un"/>
+                        <layout type="anchor">
+                            <anchoritem dst="l:updatelabel" dstEdge="LEFT" spacing="2.08955un" src="" srcEdge="LEFT"/>
+                            <anchoritem dst="l:updatelabel" dstEdge="TOP" spacing="0.14925un" src="" srcEdge="TOP"/>
+                            <anchoritem dst="l:update" dstEdge="TOP" spacing="1.79104un" src="" srcEdge="TOP"/>
+                            <anchoritem dst="l:update" dstEdge="RIGHT" spacing="-5.85075un" src="" srcEdge="RIGHT"/>
+                            <anchoritem dst="label_13" dstEdge="LEFT" spacing="2.83582un" src="" srcEdge="LEFT"/>
+                            <anchoritem dst="label_13" dstEdge="TOP" spacing="10.74627un" src="" srcEdge="TOP"/>
+                            <anchoritem dst="label_14" dstEdge="TOP" spacing="10.59701un" src="" srcEdge="TOP"/>
+                            <anchoritem dst="label_14" dstEdge="RIGHT" spacing="-20.89552un" src="" srcEdge="RIGHT"/>
+                            <anchoritem dst="label_15" dstEdge="LEFT" spacing="2.83582un" src="" srcEdge="LEFT"/>
+                            <anchoritem dst="label_15" dstEdge="BOTTOM" spacing="-35.67165un" src="" srcEdge="BOTTOM"/>
+                            <anchoritem dst="label_16" dstEdge="RIGHT" spacing="-20.74628un" src="" srcEdge="RIGHT"/>
+                            <anchoritem dst="label_16" dstEdge="BOTTOM" spacing="-35.67165un" src="" srcEdge="BOTTOM"/>
+                            <anchoritem dst="label_17" dstEdge="LEFT" spacing="2.83582un" src="" srcEdge="LEFT"/>
+                            <anchoritem dst="label_17" dstEdge="BOTTOM" spacing="-29.55224un" src="" srcEdge="BOTTOM"/>
+                            <anchoritem dst="label_18" dstEdge="LEFT" spacing="43.73135un" src="" srcEdge="LEFT"/>
+                            <anchoritem dst="label_18" dstEdge="BOTTOM" spacing="-29.55224un" src="" srcEdge="BOTTOM"/>
+                            <anchoritem dst="label_19" dstEdge="LEFT" spacing="2.83582un" src="" srcEdge="LEFT"/>
+                            <anchoritem dst="label_19" dstEdge="BOTTOM" spacing="-23.28358un" src="" srcEdge="BOTTOM"/>
+                            <anchoritem dst="label_20" dstEdge="LEFT" spacing="43.73135un" src="" srcEdge="LEFT"/>
+                            <anchoritem dst="label_20" dstEdge="BOTTOM" spacing="-23.28358un" src="" srcEdge="BOTTOM"/>
+                            <anchoritem dst="label_21" dstEdge="LEFT" spacing="2.83582un" src="" srcEdge="LEFT"/>
+                            <anchoritem dst="label_21" dstEdge="BOTTOM" spacing="-17.01493un" src="" srcEdge="BOTTOM"/>
+                            <anchoritem dst="label_22" dstEdge="LEFT" spacing="43.73135un" src="" srcEdge="LEFT"/>
+                            <anchoritem dst="label_22" dstEdge="BOTTOM" spacing="-17.16418un" src="" srcEdge="BOTTOM"/>
+                            <anchoritem dst="label_23" dstEdge="LEFT" spacing="2.98507un" src="" srcEdge="LEFT"/>
+                            <anchoritem dst="label_23" dstEdge="BOTTOM" spacing="-10.74627un" src="" srcEdge="BOTTOM"/>
+                            <anchoritem dst="label_24" dstEdge="LEFT" spacing="43.73135un" src="" srcEdge="LEFT"/>
+                            <anchoritem dst="label_24" dstEdge="BOTTOM" spacing="-10.89552un" src="" srcEdge="BOTTOM"/>
+                            <anchoritem dst="l:advanced" dstEdge="RIGHT" spacing="-28.98508un" src="" srcEdge="RIGHT"/>
+                            <anchoritem dst="l:advanced" dstEdge="BOTTOM" spacing="-3.77612un" src="" srcEdge="BOTTOM"/>
+                        </layout>
+                    </widget>
+                    <enums name="verticalScrollBarPolicy" value="ScrollBarAlwaysOn"/>
+                    <sizehint height="38.80597un" type="PREFERRED" width="94.17911un"/>
+                </widget>
+                <widget name="l:title" type="HbLabel">
+                    <real name="z" value="1"/>
+                    <sizehint height="3.8806un" type="PREFERRED" width="94.47761un"/>
+                    <string name="plainText" value="Device Updates"/>
+                    <fontspec name="fontSpec" role="Primary" textheight="26.8"/>
+                </widget>
+                <layout type="anchor">
+                    <anchoritem dst="scrollArea_1" dstEdge="LEFT" spacing="0.74626un" src="" srcEdge="LEFT"/>
+                    <anchoritem dst="scrollArea_1" dstEdge="TOP" spacing="4.92538un" src="" srcEdge="TOP"/>
+                    <anchoritem dst="l:title" dstEdge="LEFT" spacing="0.74627un" src="" srcEdge="LEFT"/>
+                    <anchoritem dst="l:title" dstEdge="TOP" spacing="0.89552un" src="" srcEdge="TOP"/>
+                </layout>
+            </widget>
+            <widget name="viewMenu_1" role="HbView:menu" type="HbMenu">
+                <ref object="help" role="HbMenu:addAction"/>
+                <ref object="exit" role="HbMenu:addAction"/>
+            </widget>
+            <string name="title" value=""/>
+        </widget>
+    </section>
+    <metadata activeUIState="Portrait" display="NHD portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+        <uistate name="Portrait" sections="#common Portrait"/>
+        <uistate name="Landscape" sections="#common Landscape"/>
+    </metadata>
+</hbdocument>

@@ -1,0 +1,54 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: 
+*
+*/
+
+TARGET        cpixcontactsplugin.dll
+TARGETTYPE    PLUGIN
+ 
+#include        <platform_paths.hrh>
+
+CAPABILITY   CAP_GENERAL_DLL -AllFiles -DRM
+#include "../../../harvesterplugins/inc/s60performance.h"
+// ECom Dll recognition UID followed by the unique UID for this dll
+UID           0x10009D8D 0x2001F702 
+
+SOURCEPATH    ../src
+SOURCE        ccontactsplugin.cpp
+SOURCE        tproxy.cpp
+
+USERINCLUDE   ../inc ../traces
+
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE /epoc32/include/ecom
+
+SOURCEPATH    ../data
+start RESOURCE 2001f702.rss
+target  cpixcontactsplugin.rsc
+end
+
+LIBRARY       euser.lib
+LIBRARY       ecom.lib
+LIBRARY       efsrv.lib
+LIBRARY       cntmodel.lib
+LIBRARY       cpixharvesterplugininterface.lib
+LIBRARY       cpixsearchclient.lib
+
+// For logging
+LIBRARY 	  flogger.lib 
+
+EXPORTUNFROZEN
+
+

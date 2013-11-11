@@ -1,0 +1,48 @@
+// Copyright (c) 2006-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+TARGET			transporthandler.dll
+TARGETTYPE		dll
+
+CAPABILITY		All -TCB
+TARGETPATH		/system/libs
+UID				0x1000008d 0x10281D21
+VENDORID			0x70000001
+
+SOURCEPATH		../src
+SOURCE        	ctransportmanager.cpp
+SOURCE			ctcptransportlayer.cpp
+SOURCE			csocketconnector.cpp
+SOURCE			csocketcontroller.cpp
+SOURCE			csocketreader.cpp
+SOURCE			csocketwriter.cpp
+SOURCE			csocket.cpp
+SOURCE			csecuresocketcontroller.cpp
+
+USERINCLUDE		../inc
+USERINCLUDE		../../imaputils/inc
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+
+LIBRARY       	euser.lib
+LIBRARY			esock.lib
+LIBRARY			insock.lib
+LIBRARY			securesocket.lib
+LIBRARY			crypto.lib
+LIBRARY			x509.lib
+LIBRARY			x500.lib
+LIBRARY			efsrv.lib
+LIBRARY			imaputils.lib
+
+SMPSAFE

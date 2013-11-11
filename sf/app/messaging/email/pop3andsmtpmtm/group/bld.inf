@@ -1,0 +1,28 @@
+// Copyright (c) 2003-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+#include "../servermtmutils/group/bld.inf"
+#include "../autosend/group/bld.inf"
+#include "../clientmtms/group/bld.inf"
+#include "../popservermtm/group/bld.inf"
+#include "../smtpservermtm/group/bld.inf"
+
+PRJ_EXPORTS
+GtEmailMtm.hby	/epoc32/rom/include/gtemailmtm.hby
+GtEmailMtm.iby	/epoc32/rom/include/gtemailmtm.iby
+
+emailerr.ra		/epoc32/include/errors/generic/emailerr.ra
+emailerr.rls	/epoc32/include/errors/generic/emailerr.rls
+

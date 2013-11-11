@@ -1,0 +1,43 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:
+;
+;
+; Installtion file
+;
+;Languages
+&EN
+;
+; UID is the app's UID
+;
+#{"clearlisttest"},(0x20026F63),2,0,0
+;
+; List of localised vendor names
+%{"Vendor-EN"}
+
+; The non-localised, globally unique vendor name (mandatory)
+:"Nokia OY"
+;Supports Series 60 v 3.x
+;This line indicates that this installation is for the Series 60 platform v3.x
+;This line must appear _exactly_ as shown below in the sis file
+;If this line is missing or incorrect, the sis file will not be able
+;to be installed on Series 60 v3.x platforms
+(0x101F7961), 0, 0, 0, {"Series60ProductID"}
+;
+; Three files to install
+;
+"\epoc32\release\armv5\udeb\clearlisttest.exe"                   -"!:\sys\bin\clearlisttest.exe"
+
+
+

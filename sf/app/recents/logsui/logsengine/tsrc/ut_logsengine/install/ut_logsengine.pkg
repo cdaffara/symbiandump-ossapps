@@ -1,0 +1,37 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:
+;
+; A package file for creating an installation file for Logs 
+; which updates Logs binaries from ROM (eclipsing)
+
+; Supported languages
+&EN
+
+; Header
+#{"ut_logsengine"},(0xEfa329b2),1,0,0
+
+; Localised Vendor name
+%{"Symbian"}
+
+; Unique Vendor name
+:"Symbian"
+
+
+; -----------------------------------------------------------------------------------
+
+; Backup registration and restore
+"\epoc32\release\armv5\urel\ut_logsengine.exe"-"!:\sys\bin\ut_logsengine.exe"
+"\epoc32\data\z\resource\apps\ut_logsengine.rsc"-"!:\resource\apps\ut_logsengine.rsc"
+"\epoc32\data\z\private\10003a3f\import\apps\ut_logsengine_reg.rsc"-"!:\private\10003a3f\import\apps\ut_logsengine_reg.rsc"

@@ -1,0 +1,132 @@
+<< * OK Microsoft Exchange 2000 IMAP4rev1 server version 6.0.6249.0 (lon-cn-exchng2k.msexchange2k.closedtest.intra) ready.
+>> 1 CAPABILITY
+<< * CAPABILITY IMAP4 IMAP4rev1 IDLE LOGIN-REFERRALS MAILBOX-REFERRALS NAMESPACE LITERAL+ UIDPLUS CHILDREN AUTH=NTLM
+<< 1 OK CAPABILITY completed.
+>> 2 LOGIN davids davids
+<< 2 OK LOGIN completed.
+>> 3 SELECT "INBOX"
+<< * 1 EXISTS
+<< * 0 RECENT
+<< * FLAGS (\Answered \Flagged \Deleted \Seen \Draft)
+<< * OK [PERMANENTFLAGS (\Deleted \Seen \*)] Limited
+<< * OK [UIDVALIDITY 1] UIDs valid
+<< 3 OK [READ-WRITE] SELECT completed.
+>> 4 UID FETCH 1:* (UID FLAGS BODYSTRUCTURE BODY.PEEK[HEADER.FIELDS (Received Date Subject From Priority X-Priority X-MSMail-Priority Importance)])
+<< * 1 FETCH (UID 3263 FLAGS (\Seen) BODYSTRUCTURE ((("text" "plain" ("charset" "US-ASCII") NIL NIL "7bit" 1023 19 NIL NIL NIL) ("text" "html" ("charset" "US-ASCII") NIL NIL "7bit" 1060 24 NIL NIL NIL) "alternative" ("boundary" " _alternative 0056713280257037_ ") NIL NIL) ("application" "octet-stream" ("name" "test.vcf") NIL NIL "base64" 496 NIL ("attachment" ("filename" "test.vcf")) NIL) "mixed" ("boundary" " _mixed 0056713280257037_ ") NIL NIL) BODY[HEADER.FIELDS (Received Date Subject From)] {463}
+<< Received: from smtp01.symbian.com([10.2.100.7]) by 21cn.com(AIMC 2.9.5.6)
+<< 	with SMTP id jm10842cd95ba; Thr, 07 Jul 2005 23:46:59 +0800
+<< Received: from smtp01.symbian.com([206.165.101.41]) by 21cn.com(AIMC 2.9.5.8)
+<< 	with SMTP id AISP action; Thr, 07 Jul 2005 23:35:00 +0800
+<< Received: from ([10.23.58.99])
+<< 	by smtp01.symbian.com with ESMTP  id KP-GCN69.10474314;
+<< 	Thu, 07 Jul 2005 16:44:12  -0100
+<< Date: Thu, 7 Jul 2005 16:44:10 +0100
+<< Subject: Bismillah 2
+<< 
+<< )
+<< 4 OK UID FETCH completed.
+>> 5 LIST "" "%"
+<< * LIST (\Marked) "/" Inbox
+<< * LIST (\Marked) "/" Sent
+<< * LIST (\Marked) "/" Draft
+<< * LIST (\Marked) "/" Trash
+<< * LIST (\Marked) "/" Junkmail
+<< * LIST (\Marked) "/" Drafts
+<< * LIST (\Marked) "/" "Junk E-mail"
+<< * LIST (\Marked) "/" "Sent Items"
+<< 5 OK LIST completed.
+>> 6 LIST "" "INBOX/%"
+<< 6 OK LIST completed.
+>> 7 LIST "" "Sent/%"
+<< 7 OK LIST completed.
+>> 8 LIST "" "Draft/%"
+<< 8 OK LIST completed.
+>> 9 LIST "" "Trash/%"
+<< 9 OK LIST completed.
+>> 10 LIST "" "Junkmail/%"
+<< 10 OK LIST completed.
+>> 11 LIST "" "Drafts/%"
+<< 11 OK LIST completed.
+>> 12 LIST "" "Junk E-mail/%"
+<< 12 OK LIST completed.
+>> 13 LIST "" "Sent Items/%"
+<< 13 OK LIST completed.
+>> 14 IDLE
+<< + IDLE accepted, awaiting DONE command.
+>> DONE
+<< 14 OK IDLE completed.
+>> 15 UID FETCH 3263 (UID FLAGS BODYSTRUCTURE BODY.PEEK[HEADER.FIELDS (Received Date Subject From Reply-to To Cc Bcc Message-ID Return-Receipt-To X-Return-Receipt-To Disposition-Notification-To Disposition-Notification-Options Priority X-Priority X-MSMail-Priority Importance)])
+<< * 1 FETCH (UID 3263 FLAGS (\Seen) BODYSTRUCTURE ((("text" "plain" ("charset" "US-ASCII") NIL NIL "7bit" 1023 19 NIL NIL NIL) ("text" "html" ("charset" "US-ASCII") NIL NIL "7bit" 1060 24 NIL NIL NIL) "alternative" ("boundary" " _alternative 0056713280257037_ ") NIL NIL) ("application" "octet-stream" ("name" "test.vcf") NIL NIL "base64" 634 NIL ("attachment" ("filename" "test.vcf")) NIL) "mixed" ("boundary" " _mixed 0056713280257037_ ") NIL NIL) BODY[HEADER.FIELDS (Received Date Subject From Reply-to To Cc Bcc Message-ID Return-Receipt-To X-Return-Receipt-To Disposition-Notification-To Disposition-Notification-Options Priority X-Priority X-MSMail-Priority Importance)] {632}
+<< Received: from smtp01.symbian.com([10.2.100.7]) by 21cn.com(AIMC 2.9.5.6) with SMTP id jm10842cd95ba;
+<< 	 Thr, 07 Jul 2005 23:46:59 +0800
+<< Received: from smtp01.symbian.com([206.165.101.41]) by 21cn.com(AIMC 2.9.5.8) with SMTP id AISP action;
+<< 	 Thr, 07 Jul 2005 23:35:00 +0800
+<< Received: from ([10.23.58.99]) by smtp01.symbian.com with ESMTP  id KP-GCN69.10474314;
+<< 	 Thu, 07 Jul 2005 16:44:12  -0100
+<< Date: Thu, 7 Jul 2005 16:44:10 +0100
+<< Subject: Bismillah 2
+<< From: Sihem.Merah@symbian.com
+<< FROM: sihem.merah@symbian.com
+<< To: cacb2@21cn.com
+<< Message-ID: <OF08FC53DA.8C7AEAC2-ON80257037.00566BEC-80257037.00567134@Symbian.com>
+<< 
+<< )
+<< 15 OK UID FETCH completed.
+>> 16 UID FETCH 3263 (BODY[1.1]<0.20480> BODY[1.1.MIME])
+<< * 1 FETCH (BODY[1.1]<0.20480> BODY[1.1.MIME]<0> {1023}
+<< Content-Type: text/plain;
+<< 	charset="US-ASCII"
+<< 
+<< 
+<< 
+<< 
+<< ---- ********************************************************************** Symbian Software Ltd is a company registered in England and Wales with registered number 4190020 and registered office at 2-6 Boundary Row, Southwark, London,  SE1 8HP, UK. This message is intended only for use by the named addressee and may contain privileged and/or confidential information. If you are not the named addressee you should not disseminate, copy or take any action in reliance on it. If you have received this message in error please notify postmast er@symbian.com and delete the message and any attachments accompanying it immediately. Neither Symbian nor any of its subsidiaries accepts liability for any corruption, interception, amendment, tampering or viruses occurring to this message in transit or for any message sent by its employees which is not in compliance with Symbian corporate policy. **********************************************************************
+<< 
+<<  BODY[1.1.MIME] {50}
+<< Content-Type: text/plain;
+<< 	charset="US-ASCII"
+<< 
+<<  UID 3263)
+<< 16 OK UID FETCH completed.
+>> 17 UID FETCH 3263 (BODY[1.2]<0.20480> BODY[1.2.MIME])
+<< * 1 FETCH (BODY[1.2]<0.20480> BODY[1.2.MIME]<0> {1060}
+<< Content-Type: text/html;
+<< 	charset="US-ASCII"
+<< 
+<< <HTML><BODY>
+<< <P><hr size=1></P>
+<< <P><STRONG>
+<< ****************************************** Symbian Software Ltd is a company registered in England and Wales with registered number 4190020 and registered office at 2-6 Boundary Row, Southwark, London,  SE1 8HP, UK. This message is intended only for use by the named addressee and may contain privileged and/or confidential information. If you are not the named addressee you should not disseminate, copy or take any action in reliance on it. If you have received this message in error please notify postmaster@symbian.com and delete the message and any attachments accompanying it immediately. Neither Symbian nor any of its subsidiaries accepts liability for any corruption, interception, amendment, tampering or viruses occurring to this message in transit or for any message sent by its employees which is not in compliance with Symbian corporate policy. **********************************************************************
+<< </STRONG></P>
+<< </BODY></HTML>
+<< 
+<<  BODY[1.2.MIME] {49}
+<< Content-Type: text/html;
+<< 	charset="US-ASCII"
+<< 
+<<  UID 3263)
+<< 17 OK UID FETCH completed.
+>> 18 UID FETCH 3263 (BODY[2]<0.20480> BODY[2.MIME])
+<< * 1 FETCH (BODY[2]<0.20480> BODY[2.MIME]<0> {634}
+<< Content-Type: application/octet-stream;
+<< 	name="test.vcf"
+<< Content-Disposition: attachment; filename="test.vcf"
+<< Content-Transfer-Encoding: base64
+<< 
+<< QkVHSU46VkNBUkQNClZFUlNJT046Mi4xDQpOOlRlc3Rpbmc7U3ltYmlhbjtWY2FyZDtNcg0KRk46U3ltYmlhbiBWY2FyZCBUZXN0aW5nDQpOSUNLTkFNRTpTeW1ieQ0KVEVMO0hPTUU7Vk9JQ0U6MDEyMjMwMTIyMw0KVEVMO0NFTEw7Vk9JQ0U6MDc5ODA5ODA5ODANCkFEUjtIT01FOjs7O0NhbWJyaWRnZTs7O0VuZ2xhbmQNCkxBQkVMO0hPTUU7RU5DT0RJTkc9UVVPVEVELVBSSU5UQUJMRTpDYW1icmlkZ2U9MEQ9MEFFbmdsYW5kDQpVUkw7SE9NRTpodHRwOi8vd3d3LnN5bWJpYW4uY29tDQpFTUFJTDtQUkVGO0lOVEVSTkVUOnN5bWJ2Y2FyZHRlc3RAc3ltYmlhbi5jb20NClJFVjoyMDAyMTAwMVQxNTE0MDVaDQpFTkQ6VkNBUkQNCg==
+<< 
+<<  BODY[2.MIME] {150}
+<< Content-Type: application/octet-stream;
+<< 	name="test.vcf"
+<< Content-Disposition: attachment; filename="test.vcf"
+<< Content-Transfer-Encoding: base64
+<< 
+<<  UID 3263)
+<< 18 OK UID FETCH completed.
+>> 19 IDLE
+<< + IDLE accepted, awaiting DONE command.
+>> DONE
+<< 19 OK IDLE completed.
+>> 20 LOGOUT
+<< * BYE Microsoft Exchange 2000 IMAP4rev1 server version 6.0.6249.0 signing off.
+<< 20 OK LOGOUT completed.

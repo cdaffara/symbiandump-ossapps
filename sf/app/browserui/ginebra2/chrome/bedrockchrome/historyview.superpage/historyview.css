@@ -1,0 +1,111 @@
+body{
+  padding: 0px;
+  margin: 0px;
+  background-color: #889cbf;
+}
+
+.HistoryView{
+  overflow-y:hidden;
+  height:100%;
+}
+
+#BottomPad {
+ padding: 8px 10px 8px 10px;
+ height: 54px;
+}
+
+ul#folderMenu, ul#folderMenu ul {
+  list-style-type:none;
+  margin: 0;
+  padding: 0;
+}
+
+ul#folderMenu a {
+  display: block;
+  text-decoration: none;
+}
+
+ul#folderMenu li {
+}
+
+ul#folderMenu>li>a {
+  color: #000;
+  padding: 8px 10px;
+  height: 37px;
+  display: block;
+  background-repeat:repeat-x;
+  font-weight: bold;
+}
+
+ul#folderMenu li>a.opened {
+  background-image:url(icons/list_headerbg_open.png);
+}
+
+ul#folderMenu li>a.closed {
+  background-image:url(icons/list_headerbg_closed.png);
+}
+
+
+span.aTitle{
+  font-size: 20px;
+}
+
+.HistoryView div.HitsoryElement:active {
+  font-weight: bold;
+}
+
+
+.HistoryView div.HitsoryElement {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+span.aUrl{
+  color: #999999;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+span.aTime{
+  float:right;
+  margin-top: 20px;
+  color: #999999;
+  font-size: 12px;
+  font-weight: bold;
+  margin-left:10px
+}
+
+ul#folderMenu li>a.opened>div, ul#folderMenu li>a.closed>div{
+  float: right;
+  width:40px;
+  height:53px;
+  margin-top:-10px;
+}
+
+ul#folderMenu li>a.opened>div{
+  background-image:url(icons/list_headerarrow_open.png);
+}
+
+ul#folderMenu li>a.closed>div{
+  background-image:url(icons/list_headerarrow_closed.png);
+}
+
+ul#folderMenu li>ul>li>a {
+  color: #000;
+  padding: 8px 10px 8px 10px;
+  height: 54px;
+  display: block;
+  background-image:url(icons/list_itembg.png);
+  background-repeat:repeat-x;
+  overflow: hidden;
+  white-space:pre;
+  -webkit-user-select: none;
+}
+
+ul#folderMenu li>ul>li>a>img{
+  margin: 10px 10px 30px 0px;
+  float: left;
+ }
+

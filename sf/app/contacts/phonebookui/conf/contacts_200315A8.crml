@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<repository xmlns="http://www.s60.com/xml/cenrep/1" uidName="KSimImport" uidValue="0x200315A8" owner="0x20022EF9">
+  <access type="R" capabilities="ReadDeviceData"/>
+  <access type="W" capabilities="WriteDeviceData"/>
+  <key ref="KSimImport/KImportSim1Imsi" backup="true" name="Sim1 IMSI" int="0x00000001" type="string"/>
+  <key ref="KSimImport/KImportSim1Date" backup="true" name="Sim1 import date" int="0x00000002" type="int"/>
+  <key ref="KSimImport/KImportSim2Imsi" backup="true" name="Sim2 IMSI" int="0x00000003" type="string"/>
+  <key ref="KSimImport/KImportSim2Date" backup="true" name="Sim2 import date" int="0x00000004" type="int"/>
+  <key ref="KSimImport/KImportSim3Imsi" backup="true" name="Sim3 IMSI" int="0x00000005" type="string"/>
+  <key ref="KSimImport/KImportSim3Date" backup="true" name="Sim3 import date" int="0x00000006" type="int"/>
+  <key ref="KSimImport/KImportSim4Imsi" backup="true" name="Sim4 IMSI" int="0x00000007" type="string"/>
+  <key ref="KSimImport/KImportSim4Date" backup="true" name="Sim4 import date" int="0x00000008" type="int"/>
+  <key ref="KSimImport/KImportSim5Imsi" backup="true" name="Sim5 IMSI" int="0x00000009" type="string"/>
+  <key ref="KSimImport/KImportSim5Date" backup="true" name="Sim5 import date" int="0x0000000A" type="int"/>
+</repository>

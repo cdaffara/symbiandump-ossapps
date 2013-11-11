@@ -1,0 +1,96 @@
+CalenEventListViewItem[layoutName="custom"]{
+	layout: custom;
+}
+CalenEventListViewItem[layoutName="custom"][customstretch="true"]{
+	layout: custom-stretch;
+}
+
+
+
+CalenEventListViewItem::icon-1{
+    left: -var(hb-param-margin-gene-left);
+    fixed-width: var(hb-param-graphic-size-primary-small);
+    fixed-height: var(hb-param-graphic-size-primary-small);
+}
+
+CalenEventListViewItem::icon-2{
+    right: var(hb-param-margin-gene-middle-horizontal);
+    fixed-width: var(hb-param-graphic-size-secondary);
+    fixed-height: var(hb-param-graphic-size-secondary);
+}
+
+CalenEventListViewItem::icon-3{
+    right: var(hb-param-margin-gene-right);
+    fixed-width: var(hb-param-graphic-size-secondary);
+    fixed-height: var(hb-param-graphic-size-secondary);
+}
+
+CalenEventListViewItem::icon-4{
+    right: var(hb-param-margin-gene-right);
+     bottom: var(hb-param-margin-gene-bottom);
+    fixed-width: var(hb-param-graphic-size-secondary);
+    fixed-height: var(hb-param-graphic-size-secondary);
+}
+
+CalenEventListViewItem::text-1{
+	
+		left: -var(hb-param-margin-gene-left);
+    font-variant: secondary;
+		text-height: var(hb-param-text-height-secondary);
+		size-policy: maximum;
+	
+
+}
+
+CalenEventListViewItem::text-2{
+	top: -var(hb-param-margin-gene-top);
+		right: var(hb-param-margin-gene-middle-horizontal);
+	  left: -var(hb-param-margin-gene-middle-horizontal);
+	   bottom:var(hb-param-margin-gene-middle-vertical); 
+    font-variant: primary;
+    text-height: var(hb-param-text-height-primary);
+    text-align: left;
+ 
+}
+
+
+CalenEventListViewItem::text-3{
+      
+		right: var(hb-param-margin-gene-middle-horizontal);
+    bottom: var(hb-param-margin-gene-bottom);
+    font-variant: secondary;
+    text-height: var(hb-param-text-height-secondary);
+    text-align: left;
+}
+
+CalenEventListViewItem::text-4{
+	  bottom: var(hb-param-margin-gene-bottom);
+    font-variant: secondary;
+    text-height: var(hb-param-text-height-secondary);
+    	size-policy: maximum;
+}
+
+
+CalenEventListViewItem::text-2:landscape[customstretch="true"]{
+  top: -var(hb-param-margin-gene-top); 
+    bottom: var(hb-param-margin-gene-bottom);
+    left: -var(hb-param-margin-gene-middle-horizontal);
+    right: var(hb-param-margin-gene-middle-horizontal);
+    font-variant: primary;
+    text-height: var(hb-param-text-height-primary);
+    text-align: left; 
+    
+}
+
+CalenEventListViewItem::icon-3:landscape[customstretch="true"]{
+      right: var(hb-param-margin-gene-middle-horizontal);
+    fixed-width: var(hb-param-graphic-size-secondary);
+    fixed-height: var(hb-param-graphic-size-secondary);
+}
+
+CalenEventListViewItem::text-3:landscape[customstretch="true"]{
+    fixed-width: 40un;
+    font-variant: secondary;
+    text-height: var(hb-param-text-height-secondary);
+    text-align: left;
+}

@@ -1,0 +1,69 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Local audio playback project specification
+*
+*/
+
+
+
+#include <bldvariant.hrh>
+#include <data_caging_paths.hrh>
+#include <platform_paths.hrh>
+
+TARGET          mpxlocalaudioplayback.dll
+TARGETTYPE      PLUGIN
+UID             0x10009D8D 0x101FFC04
+
+VENDORID        VID_DEFAULT
+CAPABILITY      CAP_ECOM_PLUGIN
+
+VERSION 15.0
+
+//MACRO __S60_WMDRM_CONSUMPTION
+
+SOURCEPATH      ../src
+SOURCE          mpxlocalaudioplayback.cpp
+SOURCE          mpxlocalaudioplaybackproxy.cpp
+
+SOURCEPATH      ../data
+START RESOURCE  101ffc04.rss
+TARGET          mpxlocalaudioplayback.rsc
+END
+
+USERINCLUDE     ../inc
+USERINCLUDE     ../../inc
+
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE   /epoc32/include/ecom
+SYSTEMINCLUDE   /epoc32/include/caf
+
+LIBRARY         euser.lib
+LIBRARY         bafl.lib
+LIBRARY         ecom.lib
+LIBRARY         efsrv.lib
+LIBRARY         mediaclientaudio.lib
+LIBRARY         mmfcontrollerframework.lib 
+LIBRARY         audioequalizerutility.lib
+LIBRARY         customcommandutility.lib
+LIBRARY         apgrfx.lib
+LIBRARY         apmime.lib 
+LIBRARY         caf.lib
+LIBRARY         cafutils.lib
+LIBRARY         mmcommon.lib
+LIBRARY         mpxcommon.lib
+LIBRARY         mpxaudioeffectengine.lib
+
+SMPSAFE
+
+// End of File

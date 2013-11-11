@@ -1,0 +1,89 @@
+/*
+* Copyright (c) 2007-2008 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Constant definitions
+*
+*/
+
+
+#ifndef IPSSOSPLUGIN_HRH_
+#define IPSSOSPLUGIN_HRH_
+
+#define RD_101_EMAIL
+
+
+#define IPSSOSPLUGIN_DLL_UID                 0x2000E53D
+#define IPSSOSIMAP4PLUGIN_IMPLEMENTATION_UID 0x2000E53F
+#define IPSSOSPOP3PLUGIN_IMPLEMENTATION_UID  0x2000E53E
+
+#define IPS_SET_PLUGIN_UID                   0x2000B4E4
+#define IPS_SET_ECOM_IMPLEMENTATION_UID      0x2000B4E5
+#define IPS_SET_GS_PARENT_UID                0x2000B4E6
+
+// <cmail> Check whether this should be defined in Cmail.
+#undef RD_IPS_AO_PLUGIN
+// </cmail>
+
+// <qmail>
+//this needs to be the same as application id (nmailui)
+#define IPS_PROPERTY_CAT_UID                 0x200255BA
+// </qmail>
+
+#define IPS_EXTENDED_SETTINGS_UID            0x102071F1
+// <cmail> S60 UID update
+#define FREESTYLE_FSSERVER_SID               0x2001F40A
+// </cmail> S60 UID update
+
+enum TIpsPropertyKeys
+    {
+    KIPSSosEventPropertyKey = 0x1
+    };
+
+enum TIpsPropertyEvents
+    {
+    KIpsSosEmailSyncStarted,
+    KIpsSosEmailSyncCompleted,
+    KIpsSosEmailSyncOnHold,
+    EIPSSosPswErr,
+    EIPSSosCredientialsSet,
+    EIPSSosCredientialsCancelled,
+    EIPSSosSettingsChanged,
+    KIPSSosSmtpSendStartedSignal,
+    KIPSSosSmtpSendEndedSignal,
+    KIPSSosSmtpEmptyOutboxNow
+// <qmail> EIPSSosSmtpPswErr removed
+    };
+
+enum TIpsOpType
+    {
+    EIpsOpTypeUnknown,
+    EIpsOpTypeImap4SyncOp,
+    EIpsOpTypePop3SyncOp,
+    EIpsOpTypeOnlineOp,
+    EIpsOpTypeImap4PopulateOp,
+    EIpsOpTypeSmtp,
+// <qmail> new op types
+    EIpsOpTypeImap4Disconnect,
+    EIpsOpTypePop3Disconnect,
+    EIpsOpTypeFetchAttachmentOp,
+    EIpsOpTypeMoveRemoteOp,
+    EIpsOpTypePop3FetchOp,
+    EIpsOpTypeConnectAndRefreshFolderListOp,
+    EIpsOpTypeCreateMessageOp,
+    EIpsOpTypeMailStorerOp,
+    EIpsOpTypeMessagePartStorerOp,
+    EIpsOpTypeNewChildPartFromFile,
+    EIpsOpTypeRemoveChildPart
+// </qmail>
+    };
+#endif /*IPSSOSPLUGIN_HRH_*/

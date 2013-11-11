@@ -1,0 +1,77 @@
+/*
+* Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Includes additional application IBYs for PF52.50/ivalo
+*/
+
+#ifndef __CPIXHARVESTER_IBY__
+#define __CPIXHARVESTER_IBY__
+
+
+#ifdef FF_SEARCH_SW
+// Media Audio plugin
+ECOM_PLUGIN( cpixaudioplugin.dll, cpixaudioplugin.rsc)
+
+// Media Image plugin
+ECOM_PLUGIN( cpiximageplugin.dll, cpiximageplugin.rsc)
+
+// Media video plugin
+ECOM_PLUGIN( cpixvideoplugin.dll, cpixvideoplugin.rsc)
+
+//Message plugin
+ECOM_PLUGIN( cpixmessageplugin.dll, cpixmessageplugin.rsc)
+
+// Contact plugin
+ECOM_PLUGIN( cpixcontactsplugin.dll, cpixcontactsplugin.rsc)
+
+// File plugin
+ECOM_PLUGIN( cpixfileplugin.dll, cpixfileplugin.rsc)
+
+// Bookmark plugin
+//ECOM_PLUGIN( cpixbookmarksplugin.dll, cpixbookmarksplugin.rsc)
+
+//Calender plugin
+ECOM_PLUGIN( cpixcalendarplugin.dll, cpixcalendarplugin.rsc)
+
+// cpixfileserverplugin.pxt, file server pxt plugin
+file=ABI_DIR\BUILD_DIR\cpixfileserverplugin.pxt	SHARED_LIB_DIR\cpixfileserverplugin.pxt
+
+//Application plugin
+ECOM_PLUGIN( cpixapplicationsplugin.dll, cpixapplicationsplugin.rsc)
+
+// Notes plugin
+ECOM_PLUGIN( cpixnotesplugin.dll, cpixnotesplugin.rsc)
+
+// Email plugin
+ECOM_PLUGIN( cpixemailplugin.dll, cpixemailplugin.rsc)
+file=ABI_DIR\BUILD_DIR\qtemailfetcher.dll 	SHARED_LIB_DIR\qtemailfetcher.dll 
+	
+
+data=DATAZ_\private\10202be9\20029ac7.cre       private\10202be9\20029ac7.cre
+
+data=ZSYSTEM\install\cpixsearchapp_stub.sis    System\Install\cpixsearchapp_stub.sis
+
+data=DATAZ_\resource\qt\plugins\searchsrv\contentconfig\filesconfig.xml       resource\qt\plugins\searchsrv\contentconfig\filesconfig.xml
+data=DATAZ_\resource\qt\plugins\searchsrv\contentconfig\applicationconfig.xml       resource\qt\plugins\searchsrv\contentconfig\applicationconfig.xml
+data=DATAZ_\resource\qt\plugins\searchsrv\contentconfig\calendarconfig.xml       resource\qt\plugins\searchsrv\contentconfig\calendarconfig.xml
+data=DATAZ_\resource\qt\plugins\searchsrv\contentconfig\contactconfig.xml       resource\qt\plugins\searchsrv\contentconfig\contactconfig.xml
+data=DATAZ_\resource\qt\plugins\searchsrv\contentconfig\audioconfig.xml       resource\qt\plugins\searchsrv\contentconfig\audioconfig.xml
+data=DATAZ_\resource\qt\plugins\searchsrv\contentconfig\imageconfig.xml       resource\qt\plugins\searchsrv\contentconfig\imageconfig.xml
+data=DATAZ_\resource\qt\plugins\searchsrv\contentconfig\videoconfig.xml       resource\qt\plugins\searchsrv\contentconfig\videoconfig.xml
+data=DATAZ_\resource\qt\plugins\searchsrv\contentconfig\emailconfig.xml       resource\qt\plugins\searchsrv\contentconfig\emailconfig.xml
+data=DATAZ_\resource\qt\plugins\searchsrv\contentconfig\smsmmsconfig.xml       resource\qt\plugins\searchsrv\contentconfig\smsmmsconfig.xml
+data=DATAZ_\resource\qt\plugins\searchsrv\contentconfig\notesconfig.xml       resource\qt\plugins\searchsrv\contentconfig\notesconfig.xml
+
+#endif //FF_SEARCH_SW
+
+#endif // __CPIXHARVESTER_IBY__

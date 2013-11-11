@@ -1,0 +1,14 @@
+<hbwidget version="0.1">
+  <layout name="layout-conversation" type="mesh">
+    <meshitem src="msgStateIconIncoming" srcEdge="RIGHT" dst="" dstEdge="RIGHT"/>
+    <meshitem src="msgStateIconIncoming" srcEdge="CENTERV" dst="" dstEdge="CENTERV"/>
+
+    <meshitem src="msgStateIconOutgoing" srcEdge="LEFT" dst="" dstEdge="LEFT"/>
+    <meshitem src="msgStateIconOutgoing" srcEdge="CENTERV" dst="" dstEdge="CENTERV"/>
+    
+    <meshitem src="msgconvwidget" srcEdge="RIGHT" dst="msgStateIconIncoming" dstEdge="LEFT" />
+    <meshitem src="msgconvwidget" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="msgconvwidget" srcEdge="LEFT" dst="msgStateIconOutgoing" dstEdge="RIGHT"/>
+    <meshitem src="msgconvwidget" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+  </layout>
+</hbwidget>

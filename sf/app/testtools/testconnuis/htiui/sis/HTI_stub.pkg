@@ -1,0 +1,116 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+; 
+; Description: Installation file for HTI stub SIS
+
+
+; Languages
+&EN
+
+; Using UID of HtiFramework project
+#{"HTI"},(0x1020DEB6),2,28,0
+
+; Localised Vendor name
+%{"Nokia"}
+
+; Unique Vendor name
+:"Nokia"
+
+; Install files
+
+; HtiCfg library
+""- "z:\sys\bin\HtiCfg.dll"
+
+; HtiAdmin
+""- "z:\sys\bin\HtiAdmin.exe"
+""- "z:\Resource\Apps\HtiAdmin.rsc"
+""- "z:\private\10003a3f\import\apps\HtiAdmin_reg.rsc"
+
+; Serial comm module
+""- "z:\Resource\Plugins\HtiSerialCommEcomPlugin.rsc"
+""- "z:\sys\bin\HtiSerialCommEcomPlugin.dll"
+
+; BtSerial comm module
+""- "z:\sys\bin\HtiBtSerialComHelper.dll"
+""- "z:\sys\bin\HtiBtCommServer.dll"
+""- "z:\sys\bin\HtiBtCommInterface.dll"
+""- "z:\Resource\Plugins\HtiBtCommEcomPlugin.rsc"
+""- "z:\sys\bin\HtiBtCommEcomPlugin.dll"
+
+; IPComm module
+""- "z:\sys\bin\HtiIPCommServer.exe"
+""- "z:\sys\bin\HtiIPCommServerClient.dll"
+""- "z:\Resource\Plugins\HtiIPCommEcomPlugin.rsc"
+""- "z:\sys\bin\HtiIPCommEcomPlugin.dll"
+
+; USB serial comm module
+""- "z:\Resource\Plugins\HtiUsbSerialCommEcomPlugin.rsc"
+""- "z:\sys\bin\HtiUsbSerialCommEcomPlugin.dll"
+
+; Test service plug-ins
+""- "z:\sys\bin\HtiEchoServicePlugin.dll"
+""- "z:\Resource\Plugins\HtiEchoServicePlugin.rsc"
+""- "z:\sys\bin\HtiKeyEventServicePlugin.dll"
+""- "z:\Resource\Plugins\HtiKeyEventServicePlugin.rsc"
+""- "z:\sys\bin\HtiScreenshotServicePlugin.dll"
+""- "z:\Resource\Plugins\HtiScreenshotServicePlugin.rsc"
+""- "z:\sys\bin\HtiFtpServicePlugin.dll"
+""- "z:\Resource\Plugins\HtiFtpServicePlugin.rsc"
+""- "z:\sys\bin\HtiAppServicePlugin.dll"
+""- "z:\Resource\Plugins\HtiAppServicePlugin.rsc"
+""- "z:\sys\bin\HtiAppControl.dll"
+""- "z:\sys\bin\HtiStifTfServicePlugin.dll"
+""- "z:\Resource\Plugins\HtiStifTfServicePlugin.rsc"
+""- "z:\sys\bin\HtiSysInfoServicePlugin.dll"
+""- "z:\Resource\Plugins\HtiSysInfoServicePlugin.rsc"
+""- "z:\sys\bin\HtiAudioServicePlugin.dll"
+""- "z:\Resource\Plugins\HtiAudioServicePlugin.rsc"
+""- "z:\sys\bin\HtiMessagesServicePlugin.dll"
+""- "z:\Resource\Plugins\HtiMessagesServicePlugin.rsc"
+""- "z:\sys\bin\HtiPIMServicePlugin.dll"
+""- "z:\Resource\Plugins\HtiPIMServicePlugin.rsc"
+""- "z:\sys\bin\HtiIpProxyServicePlugin.dll"
+""- "z:\Resource\Plugins\HtiIpProxyServicePlugin.rsc"
+""- "z:\sys\bin\HtiCameraServicePlugin.dll"
+""- "z:\Resource\Plugins\HtiCameraServicePlugin.rsc"
+
+; Helper to add notepad memos
+""- "z:\sys\bin\HtiNpdHlp.exe"
+
+; File helper with capability ALL - for file operations to TCB folders
+""- "z:\sys\bin\HtiFileHlp.exe"
+
+; Tcb helper with capability ALL - for operations which need TCB capability
+""- "z:\sys\bin\HtiTcbHlp.exe"
+
+; Backup fake DLL used by HtiFtpServicePlugin
+""- "z:\sys\bin\HtiFtpBackupFake.dll"
+
+; HTI watchdog
+""- "z:\sys\bin\HtiWatchDog.exe"
+
+; HTI Restart
+""- "z:\sys\bin\HtiRestart.exe"
+
+; HTI device reboot
+""- "z:\sys\bin\HtiDeviceRebootUI.exe"
+
+; HTI Framework
+""- "z:\sys\bin\HtiFramework.exe"
+
+; AutoStart recogniser plug-in
+""- "z:\sys\bin\HtiAutoStart.dll"
+""- "z:\Resource\Plugins\HtiAutoStart.rsc"
+
+; HTI startup wait
+""- "z:\sys\bin\HtiStartupWait.dll"

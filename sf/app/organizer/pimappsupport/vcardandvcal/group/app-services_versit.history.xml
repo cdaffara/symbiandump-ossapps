@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<relnotes name="vCard and vCal">
+  <purpose>
+    vCard and vCalendar parsing and generation
+  </purpose>
+
+  <defect number="PDEF101412" title="vCal RRule imported incorrectly when no duration specified" revision="001">
+    vCal fix to ensure that when no duration is specified and no end date is given in the RRULE property, to set the duration value as 2 and thus comply with the expected default behaviour as per the RFC 2445 standard.
+  </defect>
+</relnotes>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<relnotes name="SMS MTM">
+  <purpose>
+    Message Type Module (MTM) plugin to Messaging Framework, supporting sending/receiving/editing of SMS messages.
+  </purpose>
+
+  <defect number="DEF144509 " title="Bell Mobility Canada -GSM/WCDMA -OTC-SMS-MO-to invalid destination is retried" revision="039">
+     Checking for the error codes to avoid sending messages to invlaid numbers.
+  </defect>
+  
+  <defect number="DEF142607 " title="smcm.dll contains ABSENT symbols" revision="038">
+     declared classes as non sharable classes
+  </defect>
+  
+  <defect number="DEF141877 " title="[Coverity]:SYMBIAN.CLEANUP_STACK checker error "revision="037">
+	Fix for coverity errors.
+  </defect>
+  
+  <defect number="DEF141652 " title="Messaging can not be launched and MTMInit is closed is detected when restarting the phone "revision="036">
+	Specific commsdat version is uesed instead of CMDBSession::LatestVersion
+  </defect>
+
+  <defect number="PDEF140601 " title="AT&T Any Message Delivering to unknown port Deletion " revision="035">
+	Introduced two new APIs in CSmsSettings class to set the "Discard UnknownPort Message" flag.
+  </defect>
+
+  <defect number="DEF140106" title="cannot create SMS through techview on NE1 and NE1S " revision="034">
+   CreateHeaderTableL() requires client application to have Write Device Data capability. The function was called inappropriately.
+  </defect>
+
+  <deliverystep number="1365" name="Store Message content in SQL" osproject="SymTB101" revision="033">
+   <preq number="2073" title="Store Message content in SQL">
+    Migration of Email and SMS headers to SQL.
+   </preq>
+    <milestone project="GT0478" number="3.3.2"/>
+  </deliverystep>
+
+
+  <deliverystep number="1462" name="Splitting mixed header files for Messaging" osproject="SymTB92" revision="032">
+   <preq number="2510" title=" Splitting mixed header files for Messaging">
+    Mixed header files will now contain only published All or published Partner or internal
+   </preq>
+    <milestone project="GT0465" number="3.5"/>
+  </deliverystep>
+
+  <defect number="DEF138040" title="[StrayScanner]CSmsSimParamOperation potential for E32USER-CBase 46" revision="031">
+    resolved stray event posibility for CSmsSimParamOperation constructor.  
+  </defect>
+
+  <defect number="DEF137853" title="EUpsDecSessionYes is not handled by SMS MTM" revision="030">
+    EUpsDecYes and EUpsDecSessionYes is now handled in SMS server mtm.  
+  </defect>
+
+  <deliverystep number="1472" name="Removal of CDMA support" osproject="Sphinx" revision="029">
+    <preq number="2002" title="Removal of CDMA support">
+    Removed BiowatchersCdma and multimode component.
+    </preq>
+    <milestone project="GT0358" number="3.6"/>
+  </deliverystep>
+
+  <defect number="PDEF129150" title="SMS sending sometimes fails the wrong message " revision="028">
+    Added a condition to check the scenario when one of the sms is locked.  
+  </defect>
+
+  <defect number="PDEF128414" title="SMS messages not sent when are prepared directly in the outbox" revision="027">
+	Added a condition to check if SMS is in preparation 
+  </defect> 
+
+  <defect number="PDEF128412" title="Array out of bounds panic in SMS server mtm" revision="026">
+	Added a condition to check boundary condition 
+  </defect> 
+
+  <defect number="DEF128077" title="@prototype tags in messaging" revision="025">
+    Add proper Im tag.
+  </defect>
+
+  <defect number="DEF127379" title="Many (simple) syntax errors in messaging code " revision="024">
+    Removed the class prefix to the operator and constructor functions.   
+  </defect>
+
+  <defect number="PDEF124476" title="leaked handles in msvserver" revision="023">
+    Closed RThread handle to avoid leak
+  </defect>
+
+ <deliverystep number="835" name="Messaging: New advanced APIs for searching and sorting for Message store" osproject="Sphinx" revision="022">
+   <preq number="1667" title="Enhanced search capabilities for message store">
+    For supportong new advanced APIs for searching and sorting for Message store, changes done in CSmsClientMtm::FindL
+   </preq>
+    <milestone project="GT0358" number="3.2.2"/>
+  </deliverystep>  
+
+  <defect number="PDEF119198" title="TMsvSmsEntry class has incorrect Doxygen tags " revision="021">
+	Corrected  Doxygen tags for  TMsvSmsEntry class.  
+  </defect> 
+
+  <defect number="PDEF115918" title="smuthdr.h - Function not deprecated which should be deprecated " revision="020">
+	Added tags for SMUTHDR.H file. 
+  </defect> 
+
+  <deliverystep number="808" name="Messaging: Unicode / Binary encoding for SMS in SendAs" osproject="Sphinx" revision="019">
+    <preq number="1881" title="UNICODE/Binary for SMS SendAs">
+    UNICODE/Binary for SMS SendAs
+  </preq>
+    <milestone project="GT0358" number="3.1"/>
+  </deliverystep>
+    
+ <defect number="PDEF115838" title="Messaging: Crash note 'Application closed:Main!' pops up after deleting the only " revision="018">
+	Phone has to return  message main menu without crash.for that added condition 
+  </defect>  
+
+   <defect number="PDEF114726" title="V and V Ricardo: sms with v-card" revision="017">
+	CWapRecipientSend have to generate a log ID for receiving delivery reports.
+  </defect>
+
+   <defect number="DEF112582" title="SendAs2ExampleClient doesnt seem to work as expected after an API change" revision="016">
+	The iSmsHeader.Recipient.Count, value was not getting incremented, if multiple recipient were added to the message.
+  </defect>
+
+   <defect number="PDEF111041" title="st_messaging_cdmasms fails with Progress Error:-40 " revision="015">
+	The message already contains BEGIN:VCARD so,do not insert this text again.
+  </defect>
+
+  <defect number="DEF111689" title="Filename Policy non-conformance generates warnings in checksource build " revision="014">
+    Replaced the #ifdef WINS with #ifdef WINSCW 
+  </defect>
+
+  <defect number="PDEF112122" title="Documentation for KSmcmSmsNumberMaxNumberLength refers to nonexistent functions " revision="013">
+	Edited the documentation for KSmcmSmsNumberMaxNumberLength.
+  </defect>
+
+  <defect number="PDEF111996" title="Wrong function referred to in TSmsMtmCommand " revision="012">
+	Edited the documentation for TSmsMtmCommand.
+  </defect>
+
+  <defect number="PDEF111620" title="SMS reception broken due to exception in TSmsUtilities::DoGetDetailsL " revision="011">
+	Need to check if the first and given name of the contact is greater than the MaxLength and set the pointer to MaxLength.
+  </defect>
+
+  <defect number="PDEF110773" title="Wrong text in Confirm delete dialog when deleting from Draft and Sent" revision="010">
+	Needs to check whether there is any data in the body before setting iDescription to the contents.
+  </defect>
+
+  <deliverystep number="695" name="PREQ1736 to MCL" osproject="Oghma" revision="009">
+    <preq number="1736" title="SMS Class 0 and Type 0 3GPP Compliance">
+    SMS Class 0 and Type 0 3GPP Compliance
+    </preq>
+    <milestone project="GT0342" number="3.6"/>
+  </deliverystep>
+  
+  <defect number="DEF108002" title="Warnings generated with checksource build  " revision="008">
+    Added condition to differentiate the winscw and armv5 def files for case sensitive 
+  </defect>
+
+  <defect number="PDEF108923" title="Klocwork errors: messaging_sms_multimode " revision="007">
+    Increased the size of the CSmsNumber::iAckInfo array such that it can be indexed by all the values in the TSmsAckType enumeration.
+  </defect>
+  
+  <deliverystep number="601" name="Implemented user prompting while sending/recieving the messages" osproject="Oghma" revision="006">
+    <preq number="1678" title="Messaging User Prompting">
+    Messaging User Prompting
+  </preq>
+    <milestone project="GT0342" number="3.4"/>
+  </deliverystep>
+
+  <deliverystep number="500" name="Messaging file name changes to support GNU compiler for Linux" osproject="Oghma" revision="005">
+    <preq number="1182" title="GNU Make-based build system">
+    GNU Make-based build system
+  </preq>
+    <milestone project="GT0342" number="3.3"/>
+  </deliverystep>
+
+  <defect number="DEF105400" title="Add missing IM tags to Messaging public header files" revision="004">
+    Added IM tag for all given header files.
+  </defect>
+
+  <defect number="PDEF107530" title="ServerMTM statemachine problem." revision="003">
+    Don't attempt to resend an SMS if the send fails with a GSM operation not allowed error code
+  </defect>
+
+  <defect number="PDEF105775" title="SMS that has failed to be sent to some recipients are not saved" revision="002">
+    SMS saved even if send to some recipients has failed
+  </defect>
+
+  <defect number="PDEF103385" title="Messaging SMS tests failing due to use of deprecated CommDB APIs" revision="001">
+    Change method of accessing modem bearer record in CommDB database to remove use of API combination which is no longer supported
+  </defect>
+</relnotes>

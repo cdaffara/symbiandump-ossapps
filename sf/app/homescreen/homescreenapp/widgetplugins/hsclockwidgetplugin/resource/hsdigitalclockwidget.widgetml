@@ -1,0 +1,32 @@
+<hbwidget version="0.1" type="HsDigitalClockWidget">
+
+    <layout name="digital_clock_layout" type="mesh">       
+        <meshitem src="background" srcEdge="TOP" dst="" dstEdge="TOP" />
+        <meshitem src="background" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+        <meshitem src="background" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+        <meshitem src="background" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+
+        <meshitem src="ampm" srcEdge="TOP" dst="toucharea" dstEdge="TOP" />
+        <meshitem src="ampm" srcEdge="LEFT" dst="toucharea" dstEdge="LEFT" />
+        
+        <meshitem src="digit1" srcEdge="CENTERV" dst="" dstEdge="CENTERV" />
+
+        <meshitem src="digit2" srcEdge="CENTERV" dst="" dstEdge="CENTERV" />
+        <meshitem src="digit2" srcEdge="LEFT" dst="digit1" dstEdge="RIGHT" />
+        <meshitem src="digit2" srcEdge="RIGHT" dst="" dstEdge="CENTERH" spacing="1.0un"/>
+        
+        <meshitem src="digit3" srcEdge="CENTERV" dst="" dstEdge="CENTERV" />
+        <meshitem src="digit3" srcEdge="RIGHT" dst="digit4" dstEdge="LEFT" />
+        <meshitem src="digit3" srcEdge="LEFT" dst="" dstEdge="CENTERH" spacing="-1.0un"/>
+
+        <meshitem src="digit4" srcEdge="CENTERV" dst="" dstEdge="CENTERV" />
+
+        <meshitem src="digit5" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+        
+        <meshitem src="digit6" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+        <meshitem src="digit6" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+        <meshitem src="digit6" srcEdge="LEFT" dst="digit5" dstEdge="RIGHT" />
+
+    </layout>
+    
+</hbwidget>

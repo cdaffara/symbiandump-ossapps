@@ -1,0 +1,30 @@
+// Copyright (c) 2005-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_TESTEXPORTS
+../scripts/crintegration.script				C:/cr6blc8w/scripts/crintegration.script
+../testdata/t_cr6blc8w_data1.ini 			C:/cr6blc8w/testdata/t_cr6blc8w_data1.ini
+../testdata/t_cr6blc8w_data2.ini 			C:/cr6blc8w/testdata/t_cr6blc8w_data2.ini
+../testdata/t_cr6blc8w_data3.ini 			C:/cr6blc8w/testdata/t_cr6blc8w_data3.ini
+../testdata/t_cr6blc8w_data4.ini 			C:/cr6blc8w/testdata/t_cr6blc8w_data4.ini
+../testdata/t_cal_dataexchange_import.vcs	C:/cr6blc8w/testdata/t_cal_dataexchange_import.vcs
+
+t_cr_6blc8w.iby	/epoc32/rom/include/t_cr_6blc8w.iby
+
+PRJ_TESTMMPFILES
+t_cr_6blc8w.mmp

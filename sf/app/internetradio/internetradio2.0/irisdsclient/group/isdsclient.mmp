@@ -1,0 +1,64 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+#include 		<platform_paths.hrh>
+
+TARGET        isdsclientinterface.dll
+TARGETTYPE    dll
+UID           0x1000008d 0x2002FFB7
+
+PAGED
+
+SOURCEPATH        ../src
+SOURCE            irisdsclient.cpp
+SOURCE		        irlanguagemapper.cpp
+
+USERINCLUDE       ../inc
+USERINCLUDE       ../../inc
+USERINCLUDE       ../../ircommon/inc
+USERINCLUDE       ../../irdataprovider/inc
+USERINCLUDE       ../../irnetworkcontroller/inc
+USERINCLUDE       ../../ircachemgmt/inc
+USERINCLUDE       ../../irxmlparser/inc
+USERINCLUDE       ../../irsessionlog/inc
+USERINCLUDE       ../../irsettings/inc
+
+// Default system include paths for application layer modules.
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE   OS_LAYER_PUBLIC_EXPORT_PATH(xml)
+
+SMPSAFE
+
+LIBRARY             charconv.lib
+LIBRARY             euser.lib
+LIBRARY             inetprotutil.lib
+LIBRARY             ircachemgmt.lib
+LIBRARY             irdataprovider.lib
+LIBRARY             irsessionlog.lib
+LIBRARY             irsettings.lib
+LIBRARY             irxmlparser.lib
+
+LIBRARY        flogger.lib
+
+#if defined(WINSCW)
+DEFFILE         ../bwinscw/ 
+#else
+DEFFILE         ../bmarm/ 
+#endif
+
+//CAPABILITY NetworkServices ProtServ ReadDeviceData ReadUserData SwEvent UserEnvironment WriteDeviceData WriteUserData TrustedUI
+CAPABILITY		CAP_GENERAL_DLL

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- adaptive-template - 02.19.04 - version 0.1 -->
+
+	<head>
+		<meta name="copyright" content="Copyright 2005 Nokia"/>
+		<title>XHTML-print template</title>
+		<style type="text/css">
+			@media print { @page {size:<<pageWidth>> <<pageHeight>>; margin:<<pageMargin>>;}}
+
+			body { padding:0mm; }
+
+			div.page { position:relative; page-break-after:always; }
+			div.page_last { position:relative;}
+
+			#img_frame {
+				overflow:hidden;
+				padding:0mm;
+				position:absolute;
+				width:<<imgFrameWidth>>; height:<<imgFrameHeight>>;}
+
+			<<framePosition>>
+			<<imageDetails>>
+
+		</style>
+	</head>
+
+	<body>
+		<<page>>
+	</body>
+</html>
+
+<!--
+<<positionStart>>
+			.position<<posId>> {top:<<positionTop>>; left:<<positionLeft>>;}<<positionEnd>>
+<<imgStart>>
+			.img_details<<detId>> { width:<<imgWidth>>; height:<<imgHeight>>; margin-<<imgMargin>>; image-orientation:<<imgOrientation>>;}<<imgEnd>>
+<<frameStart>>
+			<div id="img_frame" class="position<<posId>>">
+				<img class="img_details<<detId>>" src="<<imgName>>" alt=""/>
+			</div> <<frameEnd>>
+<<pageStart>>
+		<div class="<<pageType>>">
+			<<frame>>
+		</div> <<pageEnd>>
+-->

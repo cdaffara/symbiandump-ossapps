@@ -1,0 +1,75 @@
+/*
+* Copyright (c) 2005 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  mmp file for contacts adapter
+*
+*/
+
+#include <platform_paths.hrh>
+#include <defaultcaps.hrh>
+#include <data_caging_paths.hrh>
+
+CAPABILITY CAP_ECOM_PLUGIN
+
+TARGET          nsmlcontactsdataprovider.dll
+TARGETPATH		PLUGINS_1_DIR
+TARGETTYPE      PLUGIN
+UID             0x10009D8D 0x101F6DDD
+VENDORID		VID_DEFAULT
+
+#if defined(EABI)
+DEFFILE		./def/eabicontactsdataprovider
+#elif defined(WINSCW)
+DEFFILE		./def/bwinscwcontactsdataprovider
+#endif
+
+SOURCEPATH      ../src
+SOURCE          NSmlContactsDataProvider.cpp
+SOURCE          NSmlContactsDataStore.cpp
+
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE 	/epoc32/include/ecom
+SYSTEMINCLUDE 	/epoc32/include/syncml
+
+USERINCLUDE     ../inc ../../inc
+
+
+START RESOURCE 101F6DD6.rss
+HEADER
+TARGET 		nsmlcontactsdataprovider.rsc       
+TARGETPATH	ECOM_RESOURCE_DIR
+END 
+
+START RESOURCE NSmlContactsDataStoreFormat_1_1_2.rss
+HEADER
+TARGET 		NSmlContactsDataStoreFormat_1_1_2.rsc       
+TARGETPATH  RESOURCE_FILES_DIR 
+LANGUAGE_IDS
+END 
+
+START RESOURCE NSmlContactsDataStoreFormat_1_2.rss
+HEADER
+TARGET 		NSmlContactsDataStoreFormat_1_2.rsc       
+TARGETPATH  RESOURCE_FILES_DIR 
+LANGUAGE_IDS
+END 
+
+LIBRARY		ECom.lib bafl.lib euser.lib efsrv.lib estor.lib nsmldebug.lib sysutil.lib
+LIBRARY		nsmlchangefinder.lib cntmodel.lib wbxmllib.lib
+LIBRARY		nsmldatamod.lib smlstoreformat.lib smldataprovider.lib
+LIBRARY		nsmldshostclient.lib
+LIBRARY		nsmlcontactsdatastoreextension.lib
+
+
+
+SMPSAFE

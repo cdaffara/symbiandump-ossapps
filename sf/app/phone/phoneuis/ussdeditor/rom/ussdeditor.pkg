@@ -1,0 +1,33 @@
+;
+; Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description: For packing sat application update.
+;
+
+; Language
+&EN
+
+; SIS header: name, uid, version
+#{"ussdeditor"},(0x10005955),10,1,0, TYPE=PU 
+
+; Localised Vendor name
+%{"Vendor"}
+
+; Unique Vendor name
+:"Vendor"
+
+; Executable and default resource files
+"/epoc32/release/armv5/urel/ussdeditor.exe"    - "!:\sys\bin\ussdeditor.exe"
+"/epoc32/data/z/private/10003a3f/import/apps/ussdeditor_reg.rsc"    - "!:\private\10003a3f\import\apps\ussdeditor_reg.rsc"
+
+; Manual PKG post-rules from PRO files

@@ -1,0 +1,40 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Build description file for HtiNpdHlp
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+TARGET      HtiNpdHlp.exe
+TARGETTYPE  exe
+UID         0x1000008d 0x200212D5
+
+VENDORID    0x101FB657
+
+CAPABILITY      ALL -TCB
+
+SOURCE          ../src/HtiNpdHlp.cpp
+APP_LAYER_SYSTEMINCLUDE
+
+LIBRARY     euser.lib
+LIBRARY     efsrv.lib
+LIBRARY     cone.lib
+LIBRARY     npdlib.lib
+LIBRARY     flogger.lib
+
+SMPSAFE
+
+// End of File

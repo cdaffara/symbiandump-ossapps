@@ -1,0 +1,71 @@
+/* place overall style hooks here */
+
+/* Make chrome items appear to be non-selectable */
+::selection {
+  background: transparent;
+  color: inherit;
+}
+
+body {
+  margin:0px;
+  -webkit-user-select:none;
+}
+
+#StatusBarChromeId {
+ height: 26px;
+}
+
+#UrlSearchChromeId, #TitleUrlId {
+  height: 44px;
+  padding-top: 5px; 
+  border-top-width: 0px; 
+  border-top-color: #646f85;
+  color:black; 
+  background-color: white; 
+  border-bottom-color: #b0c4de;
+}
+
+/*
+#ToolbarChromeId {
+  height: 50px;
+}
+*/
+
+#WindowCountBarId {
+  height: 26px;
+}
+
+/* White-washed overlay. */
+#ShadingOverlayId {
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow:hidden;
+    left: 0;
+    right: 0;
+    top: 0;
+    opacity: 0.7;
+    z-index:-10;
+    display: block;
+}
+
+/* Toolbar CSS */
+
+#WebViewToolbarId, #WindowViewToolbarId, #RecentUrlViewToolbarId, #BookmarkViewToolbarId, #SettingsViewToolbarId {
+  height:58px;
+  width:100%;
+
+  /* Need to specify border-style for width to have effect*/
+  border-style:solid;
+  border-top-color:#2A3447;
+  border-top-width:3px;
+
+  padding-top:4px;
+}
+
+.ButtonSnippet {
+  height: 58px;
+  width:58px;
+
+}

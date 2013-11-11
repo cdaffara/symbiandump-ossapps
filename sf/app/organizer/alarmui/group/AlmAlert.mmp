@@ -1,0 +1,52 @@
+/*
+* Copyright (c) 2006-2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   Project definition file for project AlmAlert.
+*
+*/
+
+
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+
+// activate this macro to enable debug traces
+//MACRO           TRACE_ENTRY_EXIT_POINT
+//MACRO           TRACE_MODULE_ALMALERT
+
+TARGET          almalert.dll
+TARGETTYPE      DLL
+LANGUAGE_IDS
+
+UID             0x1000008D 0x1000599E
+
+VENDORID        VID_DEFAULT
+
+USERINCLUDE     ../inc
+USERINCLUDE     ../AppServerStuff/Inc
+
+APP_LAYER_SYSTEMINCLUDE
+
+SOURCEPATH      ../AppServerStuff/Src
+SOURCE          AlarmWrapper.cpp
+
+LIBRARY         akncapserverclient.lib
+LIBRARY         apparc.lib
+LIBRARY         avkon.lib
+LIBRARY         eikcore.lib
+LIBRARY         eiksrv.lib
+LIBRARY         euser.lib
+
+CAPABILITY      CAP_GENERAL_DLL
+
+
+// End of File

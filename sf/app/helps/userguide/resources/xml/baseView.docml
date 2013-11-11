@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="0.9">
+  <object name="help_config" type="QObject">
+	  <object name="action_all" type="HbAction">
+		  <icon name="icon" iconName="qtg_mono_help_all" />
+	  </object>
+	  <object name="action_find" type="HbAction">
+		  <icon name="icon" iconName="qtg_mono_search" />
+	  </object>
+    <object name="action_online_support" type="HbAction">
+      <icon name="icon" iconName="qtg_mono_online_support" />
+    </object>
+  </object>
+
+  <widget name="view_help" type="HbView">
+    <widget name="toolbar" type="HbToolBar" role="HbView:toolBar">
+      <ref object="action_all" role="HbToolBar:addAction" />
+      <ref object="action_find" role="HbToolBar:addAction" />
+      <ref object="action_online_support" role="HbToolBar:addAction" />
+    </widget>
+  </widget>
+
+  <connect sender="action_all" signal="triggered(bool)" receiver="view_help" slot="onToolbarAll()" />
+  <connect sender="action_find" signal="triggered(bool)" receiver="view_help" slot="onToolbarFind()" />
+  <connect sender="action_online_support" signal="triggered(bool)" receiver="view_help" slot="onToolbarOnlineSupport()" />
+  
+</hbdocument>

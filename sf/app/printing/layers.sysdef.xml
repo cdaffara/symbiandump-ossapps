@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE SystemDefinition SYSTEM "sysdef_1_4_0.dtd" [
+  <!ENTITY layer_real_source_path "sf/app/printing" >
+]>
+
+<SystemDefinition name="printing" schema="1.4.0">
+  <systemModel>
+    <layer name="app_layer">
+      <module name="printing">
+        <unit unitID="lcdo.printing" mrp="" bldFile="&layer_real_source_path;/group" name="printing" />
+      </module>
+    </layer>
+  </systemModel>
+</SystemDefinition>
+

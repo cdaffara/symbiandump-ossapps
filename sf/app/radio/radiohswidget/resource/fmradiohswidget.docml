@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="1.1">
+    <widget name="mainLayout" type="HbWidget">
+        <widget name="contentLayout" type="HbWidget">
+            <widget name="controlButtons" type="HbWidget">
+                <widget name="powerButton" type="HbPushButton">
+                    <icon iconName="qtg_mono_power" name="icon"/>
+                    <string name="text"/>
+                </widget>
+                <widget name="previousPushButton" type="HbPushButton">
+                    <icon iconName="qtg_mono_previous" name="icon"/>
+                    <string name="text"/>
+                </widget>
+                <widget name="nextPushButton" type="HbPushButton">
+                    <icon iconName="qtg_mono_next" name="icon"/>
+                    <string name="text"/>
+                </widget>
+                <real name="z" value="3"/>
+                <sizepolicy horizontalPolicy="Preferred" horizontalStretch="0" verticalPolicy="Preferred" verticalStretch="0"/>
+                <sizehint height="8un" type="PREFERRED" width="32un"/>
+                <sizehint height="8un" type="MINIMUM" width="32un"/>
+                <layout orientation="Horizontal" spacing="0un" type="linear">
+                    <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+                    <linearitem itemname="powerButton"/>
+                    <linearitem itemname="previousPushButton"/>
+                    <linearitem itemname="nextPushButton"/>
+                </layout>
+            </widget>
+            <widget name="tunerStackedLayout" type="HbWidget">
+                <widget name="tunerInformationStackedLayout" type="HbWidget">
+                    <widget name="lonelyRowLabel" type="HbLabel">
+                        <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+                        <sizehint type="PREFERRED" width="expr(32un - 2 * var(hb-param-margin-gene-middle-horizontal) )"/>
+                        <string name="toolTipText"/>
+                        <string name="windowTitle"/>
+                        <string name="textColor" value="#000000"/>
+                        <string name="plainText"/>
+                        <fontspec name="fontSpec" role="Primary" textheight="var(hb-param-text-height-secondary)"/>
+                    </widget>
+                    <widget name="twoRowsLayout" type="HbWidget">
+                        <widget name="firstRowLabel" type="HbLabel">
+                            <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+                            <real name="z" value="1"/>
+                            <sizehint type="PREFERRED" width="expr(32un - 2 * var(hb-param-margin-gene-middle-horizontal) )"/>
+                            <string locid="label for first row in two row layout" name="plainText"/>
+                            <fontspec name="fontSpec" role="Primary" textheight="var(hb-param-text-height-secondary)"/>
+                        </widget>
+                        <widget name="secondRowLabel" type="HbLabel">
+                            <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+                            <real name="z" value="2"/>
+                            <sizehint type="PREFERRED" width="expr(32un - 2 * var(hb-param-margin-gene-middle-horizontal) )"/>
+                            <string locid="label for second row in two row layout" name="plainText"/>
+                            <fontspec name="fontSpec" role="Secondary" textheight="var(hb-param-text-height-secondary)"/>
+                        </widget>
+                        <real name="z" value="3"/>
+                        <sizehint height="expr(10un - 2 * 1.5un  )" type="PREFERRED" width="expr(32un - 2 * var(hb-param-margin-gene-middle-horizontal) )"/>
+                        <layout orientation="Vertical" spacing="var(hb-param-margin-gene-middle-vertical)" type="linear">
+                            <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+                            <linearitem itemname="firstRowLabel"/>
+                            <linearitem itemname="secondRowLabel"/>
+                        </layout>
+                    </widget>
+                    <widget name="animationIcon" type="HbLabel">
+                        <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+                        <sizehint height="var(hb-param-graphic-size-primary-medium)" type="PREFERRED" width="var(hb-param-graphic-size-primary-medium)"/>
+                    </widget>
+                    <real name="z" value="1"/>
+                    <sizepolicy horizontalPolicy="Preferred" horizontalStretch="0" verticalPolicy="Preferred" verticalStretch="0"/>
+                    <sizehint height="7un" type="PREFERRED" width="30.5un"/>
+                    <sizehint height="expr(10un - 2 * 1.5un)" type="MINIMUM" width="expr(32un - 4   * var(hb-param-margin-gene-middle-horizontal))"/>
+                    <contentsmargins bottom="1.5un" left="var(hb-param-margin-gene-middle-horizontal)" right="var(hb-param-margin-gene-middle-horizontal)" top="1.5un"/>
+                    <sizehint height="2504062.01158un" type="MAXIMUM" width="2504062.01158un"/>
+                    <layout type="stacked">
+                        <stackitem itemname="lonelyRowLabel"/>
+                        <stackitem itemname="twoRowsLayout"/>
+                        <stackitem itemname="animationIcon"/>
+                    </layout>
+                </widget>
+                <widget name="tunerBackgroundPushButton" type="HbPushButton">
+                    <sizehint height="10un" type="PREFERRED" width="32un"/>
+                    <sizehint type="MINIMUM" width="32un"/>
+                    <string name="text"/>
+                    <string name="state" value="normal"/>
+                </widget>
+                <real name="z" value="3"/>
+                <sizehint height="10un" type="PREFERRED" width="32un"/>
+                <sizehint height="10un" type="MINIMUM" width="32un"/>
+                <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+                <layout type="stacked">
+                    <stackitem itemname="tunerInformationStackedLayout"/>
+                    <stackitem itemname="tunerBackgroundPushButton"/>
+                </layout>
+            </widget>
+            <real name="z" value="2"/>
+            <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+            <sizehint height="26.5un" type="FIXED" width="37un"/>
+            <sizehint height="26.5un" type="MINIMUM"/>
+            <sizehint height="26.5un" type="MAXIMUM" width="37un"/>
+            <layout orientation="Vertical" spacing="0un" type="linear">
+                <contentsmargins bottom="2un" left="2.5un" right="2.5un" top="5.5un"/>
+                <linearitem itemname="tunerStackedLayout" spacing="var(hb-param-margin-gene-middle-vertical)"/>
+                <linearitem itemname="controlButtons" spacing="0un"/>
+            </layout>
+        </widget>
+        <widget name="background" type="HbLabel">
+            <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+            <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+            <sizehint height="26.5un" type="FIXED" width="37un"/>
+            <icon iconName="qtg_graf_hsradio_bg" name="icon"/>
+        </widget>
+        <real name="z" value="1"/>
+        <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+        <sizehint height="26.5un" type="FIXED" width="37un"/>
+        <layout type="stacked">
+            <stackitem itemname="contentLayout"/>
+            <stackitem itemname="background"/>
+        </layout>
+    </widget>
+    <metadata activeUIState="Common ui state" display="NHD-3.2-inch_landscape" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+    </metadata>
+</hbdocument>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<creatorscript schemaVersion="1.0" scriptVersion="1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="creator.xsd">
+
+<!-- Create a note -->
+<note>
+    <fields>
+        <text>This is a Creator example note!</text>
+    </fields>
+</note>
+        
+<!-- Create 3 random notes with default content -->
+<note amount="3">
+    <fields>
+        <text/>
+    </fields>
+</note>
+
+<!-- Create a random note with maximum length -->
+<note>
+    <fields>
+        <text randomlength="max"/>
+    </fields>
+</note>
+
+</creatorscript>

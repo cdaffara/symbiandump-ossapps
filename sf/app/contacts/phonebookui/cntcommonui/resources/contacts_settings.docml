@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="1.0">
+    <widget name="view" type="HbView">
+        <widget name="content" role="HbView:widget" type="HbWidget">
+            <widget name="headerBox" type="HbGroupBox">
+                <bool name="collapsable" value="FALSE"/>
+                <string locid="txt_phob_subhead_presentation_settings" name="heading"/>
+            </widget>
+            <widget name="dataForm" type="HbDataForm">
+                <real name="z" value="1"/>
+            </widget>
+            <layout orientation="Vertical" spacing="0un" type="linear">
+                <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+                <linearitem itemname="headerBox"/>
+                <linearitem itemname="dataForm"/>
+            </layout>
+        </widget>
+        <string locid="txt_phob_title_contacts" name="title" value="Contacts"/>
+    </widget>
+ 
+   <metadata activeUIState="Common ui state" display="NHD portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+        <uistate name="landscape" sections="#common"/>
+        <uistate name="portrait" sections="#common"/>
+    </metadata>
+</hbdocument>

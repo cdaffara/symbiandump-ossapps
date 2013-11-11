@@ -1,0 +1,47 @@
+/*
+* Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: 
+*
+*/
+
+#include <platform_paths.hrh>
+
+PRJ_EXPORTS
+../group/backup_registration.xml    Z:/private/20011385/backup_registration.xml
+../rom/perfmon.iby CORE_IBY_EXPORT_PATH(tools,perfmon.iby)
+
+PRJ_MMPFILES
+#ifndef SBSV2
+  gnumakefile perfmon_icons_aif.mk
+
+  #ifdef MARM
+  gnumakefile perfmon_stub_sis.mk
+  #endif
+#endif
+
+#ifdef SBSV2
+  PRJ_EXTENSIONS
+  START EXTENSION s60/mifconv
+  OPTION TARGETFILE perfmon_aif.mif
+  OPTION SOURCEDIR ../icons
+  OPTION SOURCES -c8,8 qgn_menu_perfmon
+  END
+
+  #ifdef MARM
+  START EXTENSION app-services/buildstubsis
+  OPTION SRCDIR ../sis
+  OPTION SISNAME PerfMon_stub
+  END
+  #endif  
+#endif

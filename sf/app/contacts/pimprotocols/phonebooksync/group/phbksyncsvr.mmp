@@ -1,0 +1,41 @@
+// Copyright (c) 2001-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// MMP file for the Phonebook Synchroniser client API which provides the
+// client with the abilty to make requests on the server.
+// phbksyncsvr.dll Phonebook Synchroniser server and API
+// 
+//
+
+TARGET          phbksyncsvr.dll
+CAPABILITY      All -Tcb
+TARGETTYPE      DLL
+UID             0x101F4131 0x10003A71
+VENDORID        0x70000001
+
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+
+USERINCLUDE     ../inc
+
+SOURCEPATH	../Server
+SOURCE          SyncContactICCEntry.cpp
+
+SOURCEPATH	../Client
+SOURCE          phbksyncclisess.cpp
+
+LIBRARY         euser.lib
+LIBRARY         cntmodel.lib
+LIBRARY         estor.lib
+DEBUGLIBRARY    comsdbgutil.lib
+
+SMPSAFE

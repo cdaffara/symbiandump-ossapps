@@ -1,0 +1,155 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+LOAD_SUITE TestCalInterimApiSuite
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-014ON-1480 
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-014ON-1480 
+//! @SYMTestType CIT
+//! @SYMTestPriority 3
+//! @SYMREQ REQ4 
+//! @SYMTestCaseDesc Stress test
+//! @SYMTestActions
+//! Create session to the Calendar server
+//! Create empty Calendar file
+//! Add 2000 repeating and 3000 non repeating entries in distant past, present and future, 
+//! all entries will contain alarms and large attachments and many categories. 
+//! Repeating entries will also repeat daily for 2 years and contain large TZ rules.
+//! Create instance view over one month
+//! Close session and server
+//! Reopen session and calendar file
+//! Verify all entries and instances are correct
+//! 
+//! Repeat for updates(repeat rules, categories, alarms…), deletes (instances and entries), imports and  exports.
+
+//! @SYMTestExpectedResults 
+//! The times stored in X should roughly be greater than or equal to Y, 
+//! No degradation has resulted due to this PREQ being submitted.
+RUN_TEST_STEP 500 TestCalInterimApiSuite CalendarIndexTZBoundaryTest \calendarindexingtests\testdata\calendarindextests.ini TzBoundary
+RUN_TEST_STEP 500 TestCalInterimApiSuite CalendarIndexTZBoundaryTest \calendarindexingtests\testdata\calendarindextests.ini TzBoundaryPast
+RUN_TEST_STEP 500 TestCalInterimApiSuite CalendarIndexTZBoundaryTest \calendarindexingtests\testdata\calendarindextests.ini TzBoundaryRepeat
+RUN_TEST_STEP 500 TestCalInterimApiSuite CalendarIndexTZBoundaryTest \calendarindexingtests\testdata\calendarindextests.ini TzBoundaryRepeatPast
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-014ON-1480
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-015ON-1480 
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-015ON-1480 
+//! @SYMTestType CIT
+//! @SYMTestPriority 2
+//! @SYMREQ REQ4 
+//! @SYMTestCaseDesc File server error conditions test 
+//! @SYMTestActions
+//! Create session to the Calendar server
+//! Create empty Calendar file
+//! Set FS error condition to A (KErrDiskFull, KErrNotReady…)
+//! Add 1 entry
+//! Trap error in X
+//! Check that entry was not added
+//! Clear FS error condition
+//! Close session and server
+//! Reopen session and calendar file
+//! Check that entry was not added
+//! Add 100 entries
+//! Validate main index (all 100 entries should be present and correct)
+//! Set FS error condition to A
+//! Close session and server
+//! Clear FS error condition
+//! Reopen session and calendar file
+//! Validate main index (all 100 entries should be present and correct)
+//! Reopen session
+//! Create empty Calendar file
+//! Add 100 entries
+//! Close session and server
+//! Set FS error condition to A
+//! Reopen session
+//! Reopen calendar file
+//! Trap error in X2
+//! 
+//! Repeat for updates(repeat rules, categories, alarms…), deletes (instances and entries) and  imports.
+
+//! @SYMTestExpectedResults 
+//!X and X2 equal A, FS errors are propagated to the client when the index is being modified / loaded
+//!Check that entry was not added, If the index can't be marked dirty then the calendar file is not changed
+//!Validate main index, If index is not saved during server shutdown, index is regenerated at startup
+RUN_TEST_STEP 100 TestCalInterimApiSuite CalendarIndexDSTBoundaryTest \calendarindexingtests\testdata\calendarindextests.ini IndexDSTTest
+RUN_TEST_STEP 100 TestCalInterimApiSuite CalendarIndexDSTBoundaryTest \calendarindexingtests\testdata\calendarindextests.ini IndexDSTTestEST
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-015ON-1480 
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-018ON-1480 
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-018ON-1480
+//! @SYMTestType CIT
+//! @SYMTestPriority 3
+//! @SYMREQ REQ4 
+//! @SYMTestCaseDesc DST boundary test
+//! @SYMTestActions
+//! Create session to the Calendar server
+//! Create empty Calendar file
+//! Add entry 1 minute before DST change
+//! Add entry at DST change
+//! Add entry 1 minute after DST change
+//! Validate main index
+//! Change Date/Time to 10 seconds before DST change
+//! Wait until 10 second after DST change
+//! Validate main index 
+//! Close session/server
+//! Reopen session/calendar
+//! Validate main index
+//! Repeat for autumn DST change
+//! Repeat for southern hemisphere time-zone
+//! Repeat for time-zones with multiple DST changes
+//! Repeat for infinitely repeating entries
+//!
+//! @SYMTestExpectedResults 
+//! All verifications were successful, Index was updated correctly
+RUN_TEST_STEP 100 TestCalInterimApiSuite CalendarIndexCrashRecoveryTest \calendarindexingtests\testdata\calendarindextests.ini IndexCrashRecovery
+RUN_TEST_STEP 100 TestCalInterimApiSuite CalendarIndexCrashRecoveryTest \calendarindexingtests\testdata\calendarindextests.ini IndexCrashRecoveryPast
+RUN_TEST_STEP 100 TestCalInterimApiSuite CalendarIndexCrashRecoveryTest \calendarindexingtests\testdata\calendarindextests.ini IndexCrashRecoveryDual
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-018ON-1480 
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-019ON-1480
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-019ON-1480 
+//! @SYMTestType CIT
+//! @SYMTestPriority 3
+//! @SYMREQ REQ4 
+//! @SYMTestCaseDesc OOM test
+//! @SYMTestActions
+//! Create session to the Calendar server
+//! Store amount of heap stored on client and server in X
+//! Set heap allocation to fail at nth point
+//! Create empty Calendar file
+//! Trap error result in Y
+//! Store amount of heap stored on client and server in Z
+//! Verify main index
+//! Close session and server
+//! Reopen session and calendar file
+//! Verify main index
+//! Repeat until Y equals KErrNone
+//! Repeat for update, delete and add entry, also for fetching of entries and instances
+//! Repeat for calendar containing 10 repeating and 10 non repeating entries in distant past, present and future, all entries will contain alarms and large attachments and many categories. Repeating entries will also repeat daily for 2 years and contain large TZ rules
+//! 
+//! @SYMTestExpectedResults 
+//! X equals Z, no memory leaks occur when there is an allocation failure
+//! Y equal Kerrnone or kerrnomemory, Only memory errors generated when there is an allocation failure
+//! All verifications were successful, Index integrity not affected by allocation failures
+RUN_TEST_STEP 100 TestCalInterimApiSuite CalendarIndexOOMTest \calendarindexingtests\testdata\calendarindextests.ini IndexOOMStore
+RUN_TEST_STEP 100 TestCalInterimApiSuite CalendarIndexOOMTest \calendarindexingtests\testdata\calendarindextests.ini IndexOOMStorePast
+RUN_TEST_STEP 100 TestCalInterimApiSuite CalendarIndexOOMTest \calendarindexingtests\testdata\calendarindextests.ini IndexOOMDelete
+RUN_TEST_STEP 100 TestCalInterimApiSuite CalendarIndexOOMTest \calendarindexingtests\testdata\calendarindextests.ini IndexOOMDeletePast
+RUN_TEST_STEP 100 TestCalInterimApiSuite CalendarIndexOOMTest \calendarindexingtests\testdata\calendarindextests.ini IndexOOMUpdateChild
+RUN_TEST_STEP 100 TestCalInterimApiSuite CalendarIndexOOMTest \calendarindexingtests\testdata\calendarindextests.ini IndexOOMUpdateFixed
+RUN_TEST_STEP 100 TestCalInterimApiSuite CalendarIndexOOMTest \calendarindexingtests\testdata\calendarindextests.ini IndexOOMUpdateFloating
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-019ON-1480
+ 

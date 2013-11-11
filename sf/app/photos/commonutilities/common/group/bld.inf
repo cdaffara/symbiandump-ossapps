@@ -1,0 +1,72 @@
+/*
+* Copyright (c) 2008-2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   Project definition file for project glxdatasourcemanager.
+*
+*/
+
+
+#include <bldvariant.hrh>
+#include <platform_paths.hrh>
+
+PRJ_EXPORTS
+
+/* 
+* To rebuild the slideshow setting central repository txt file then rebuild 
+* the file using this tool
+* /epoc32/tools/cenrep> generate_cenrep_inifile.pl -r 3.1 -d S:mgallery/viewframework
+*           /uiutilities/cenrep  -rd S:/mgallery/viewframework/uiutilities/cenrep
+*/
+
+// flags for setting the orientation
+
+#ifdef GLX_ORIENTATION_LANDSCAPE
+	// for device
+	../cenrep/200009EE_orientation_landscape.txt   			/epoc32/data/z/private/10202be9/200009EE.txt
+	// for emulator
+	../cenrep/200009EE_orientation_landscape.txt   			/epoc32/release/winscw/udeb/z/private/10202be9/200009EE.txt
+#elif defined (GLX_ORIENTATION_PORTRAIT_LANDSCAPE)	
+	// for device
+	../cenrep/200009EE_orientation_portrait_landscape.txt   /epoc32/data/z/private/10202be9/200009EE.txt
+	// for emulator
+	../cenrep/200009EE_orientation_portrait_landscape.txt   /epoc32/release/winscw/udeb/z/private/10202be9/200009EE.txt
+#else // default case
+	// for device
+	../cenrep/200009EE_orientation_portrait_landscape.txt   /epoc32/data/z/private/10202be9/200009EE.txt
+	// for emulator
+	../cenrep/200009EE_orientation_portrait_landscape.txt   /epoc32/release/winscw/udeb/z/private/10202be9/200009EE.txt
+	//photos & ci_photos cenrep initialisation file
+	../cenrep/20007194.txt   z:/private/10202be9/20007194.txt
+	../cenrep/20007193.txt   z:/private/10202be9/20007193.txt
+	
+	
+#endif
+
+// Generic configuration interface for component cenrep settings  
+../../../conf/gallery.confml                        CONFML_EXPORT_PATH(gallery.confml,customsw)
+../../../conf/gallery_200009EE.crml	        CRML_EXPORT_PATH(gallery_200009EE.crml,customsw)
+
+../../../conf/photos.confml                        CONFML_EXPORT_PATH(photos.confml,customsw)
+../../../conf/photos_20007194.crml	        CRML_EXPORT_PATH(photos_20007194.crml,customsw)
+
+../../../conf/ci_photos.confml                        CONFML_EXPORT_PATH(ci_photos.confml,customsw)
+../../../conf/ci_photos_20007193.crml	        CRML_EXPORT_PATH(ci_photos_20007193.crml,customsw)
+
+../../../data/photos.docml		z:/resource/hb/splashml/photos.docml
+../../../data/photos.splashml	z:/resource/hb/splashml/photos.splashml
+PRJ_MMPFILES
+glxcommon.mmp
+
+
+PRJ_TESTMMPFILES
+#include "../test/group/bld.inf"

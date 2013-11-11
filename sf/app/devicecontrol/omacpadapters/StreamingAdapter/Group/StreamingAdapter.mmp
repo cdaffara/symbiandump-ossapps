@@ -1,0 +1,65 @@
+/*
+* Copyright (c) 2002-2006 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project specification file for streaming app settings adapter.
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+#include <data_caging_paths.hrh>
+
+TARGET          wpstreamingadapter.dll
+TARGETTYPE      PLUGIN
+UID             0x10009D8D 0x101F85CB
+VENDORID        VID_DEFAULT
+
+CAPABILITY      CAP_ECOM_PLUGIN
+
+SOURCEPATH      ../Src
+SOURCE          Streamingadapter.cpp
+SOURCE          StreamingadapterGroupProxy.cpp
+
+SOURCEPATH      ../Data
+
+START RESOURCE 101F85CB.rss
+TARGET wpstreamingadapter.rsc
+END
+
+START RESOURCE WPStreamingAdapterResource.rss
+HEADER
+TARGET wpstreamingadapterresource.rsc
+TARGETPATH RESOURCE_FILES_DIR
+LANGUAGE_IDS
+END
+
+
+USERINCLUDE     .
+USERINCLUDE     ../Inc
+USERINCLUDE     ../../bld
+
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE 	/epoc32/include/ecom
+
+LIBRARY         euser.lib
+LIBRARY         provisioningengine.lib
+LIBRARY         mpsettengine.lib
+LIBRARY         cmmanager.lib
+LIBRARY         commdb.lib
+DEBUGLIBRARY    flogger.lib
+
+
+SMPSAFE
+//end of file
+

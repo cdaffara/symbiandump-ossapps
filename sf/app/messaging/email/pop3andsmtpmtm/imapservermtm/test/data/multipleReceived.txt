@@ -1,0 +1,73 @@
+<< * OK Microsoft Exchange 2000 IMAP4rev1 server version 6.0.6249.0 (lon-cn-exchng2k.msexchange2k.closedtest.intra) ready.
+>> 1 CAPABILITY
+<< * CAPABILITY IMAP4 IMAP4rev1 IDLE LOGIN-REFERRALS MAILBOX-REFERRALS NAMESPACE LITERAL+ UIDPLUS CHILDREN AUTH=NTLM
+<< 1 OK CAPABILITY completed.
+>> 2 LOGIN davids davids
+<< 2 OK LOGIN completed.
+>> 3 SELECT "INBOX"
+<< * 1 EXISTS
+<< * 0 RECENT
+<< * FLAGS (\Seen \Answered \Flagged \Deleted \Draft $MDNSent)
+<< * OK [PERMANENTFLAGS (\Seen \Answered \Flagged \Deleted \Draft $MDNSent)] Permanent flags
+<< * OK [UNSEEN 1] Is the first unseen message
+<< * OK [UIDVALIDITY 1378] UIDVALIDITY value
+<< 3 OK [READ-WRITE] SELECT completed.
+>> 4 UID FETCH 1:* (UID FLAGS BODYSTRUCTURE BODY.PEEK[HEADER.FIELDS (Received Date Subject From Priority X-Priority X-MSMail-Priority Importance)])
+<< * 1 FETCH (UID 194 FLAGS (\Seen) BODYSTRUCTURE (("TEXT" "PLAIN" ("charset" "iso-8859-1") NIL NIL "QUOTED-PRINTABLE" 20 1 NIL NIL NIL)("TEXT" "HTML" ("charset" "iso-8859-1") NIL NIL "QUOTED-PRINTABLE" 355 6 NIL NIL NIL) "alternative" ("boundary" "----=_NextPart_000_0009_01C53A8E.CBCBDF30") NIL NIL) BODY[HEADER.FIELDS (Received Date Subject From)] {617}
+<< Received: from LONDAVIDS02 ([10.23.163.107]) by lon-cn-exchng2k.msexchange2k.closedtest.intra with Microsoft SMTPSVC(5.0.2195.5329);
+<< 	 Wed, 6 Apr 2005 09:52:12 +0100
+<< Received: from LONDAVIDS02 ([10.23.163.107]) by lon-cn-exchng2k.msexchange2k.closedtest.intra with Microsoft SMTPSVC(5.0.2195.5329);
+<< 	 Wed, 6 Apr 2005 09:52:32 +0100
+<< Received: from LONDAVIDS02 ([10.23.163.107]) by lon-cn-exchng2k.msexchange2k.closedtest.intra with Microsoft SMTPSVC(5.0.2195.5329);
+<< 	 Wed, 6 Apr 2005 09:22:32 +0100
+<< Date: Wed, 6 Apr 2005 09:55:42 +0100
+<< Subject: test1 msg
+<< From: "IMAP" <davids@msexchange2k.closedtest.intra>
+<< 
+<< )
+<< 4 OK FETCH completed.
+>> 5 LIST "" "%"
+<< * LIST (\Marked \HasNoChildren) "/" "Big Test inbox"
+<< * LIST (\HasNoChildren) "/" Calendar
+<< * LIST (\HasNoChildren) "/" Contacts
+<< * LIST (\HasNoChildren) "/" "Deleted Items"
+<< * LIST (\HasNoChildren) "/" Drafts
+<< * LIST (\Marked \HasNoChildren) "/" INBOX
+<< * LIST (\HasNoChildren) "/" Journal
+<< * LIST (\HasNoChildren) "/" Notes
+<< * LIST (\HasNoChildren) "/" Outbox
+<< * LIST (\Marked \HasNoChildren) "/" "Sent Items"
+<< * LIST (\HasNoChildren) "/" Tasks
+<< * LIST (\Noselect) "/" "Public Folders/"
+<< 5 OK LIST completed.
+>> 6 LIST "" "Big Test inbox/%"
+<< 6 OK LIST completed.
+>> 7 LIST "" "Calendar/%"
+<< 7 OK LIST completed.
+>> 8 LIST "" "Contacts/%"
+<< 8 OK LIST completed.
+>> 9 LIST "" "Deleted Items/%"
+<< 9 OK LIST completed.
+>> 10 LIST "" "Drafts/%"
+<< 10 OK LIST completed.
+>> 11 LIST "" "INBOX/%"
+<< 11 OK LIST completed.
+>> 12 LIST "" "Journal/%"
+<< 12 OK LIST completed.
+>> 13 LIST "" "Notes/%"
+<< 13 OK LIST completed.
+>> 14 LIST "" "Outbox/%"
+<< 14 OK LIST completed.
+>> 15 LIST "" "Sent Items/%"
+<< 15 OK LIST completed.
+>> 16 LIST "" "Tasks/%"
+<< 16 OK LIST completed.
+>> 17 LIST "" "Public Folders//%"
+<< 17 NO This a special mailbox and can not be selected or used as the destination for mailbox operations.
+>> 18 IDLE
+<< + IDLE accepted, awaiting DONE command.
+>> DONE
+<< 18 OK IDLE completed.
+>> 19 LOGOUT
+<< * BYE Microsoft Exchange 2000 IMAP4rev1 server version 6.0.6249.0 signing off.
+<< 19 OK LOGOUT completed.

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SystemDefinition schema="3.0.0" xmlns:qt="http://www.nokia.com/qt">
+ <package id="firsttimeuse" name="First Time Use" levels="support services ui app">
+	<!-- these empty collections are really components. Move down a directory and supply units -->
+   <collection id="ftuapplication" name="First Time Use Application" level="app"/>
+   <collection id="fturuntimeservices" name="First Time Use Runtime Services" level="services"/>
+   <collection id="wizardproviders" name="Wizard Providers" level="support"/>
+   <collection id="stateproviders" name="State Providers" level="support"/>
+   <collection id="runtimeproviders" name="Runtime Providers" level="support"/>
+
+   <collection id="firsttimeuse_info" name="First Time Use Info" level="ui">
+    <component id="firsttimeuse_build" name="First Time Use Build" filter="s60">
+      <unit bldFile="." qt:proFile="ftu.pro" qt:qmakeArgs="-r -config rom"/>
+     </component>
+    </collection>
+   </package>
+</SystemDefinition>

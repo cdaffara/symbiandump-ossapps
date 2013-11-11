@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SystemDefinition schema="3.0.0" xmlns:qt="http://www.nokia.com/qt">
+   <package id="recents" name="Recent Events" levels="engine support ui api">
+  <collection id="recents_plat" name="Recent Events Platform Interfaces" level="api">
+   <component id="logs_services_api" name="Logs Services API" class="api" filter="s60" introduced="^4">
+    <unit base="recents_plat/logs_services_api"/>
+   </component>
+   <component id="logs_engine_api" name="Logs Engine API" class="api" filter="s60" introduced="^4">
+    <unit base="recents_plat/logs_engine_api"/>
+   </component>
+   <component id="logs_timers_api" name="Logs Timers API" class="api" filter="s60">
+    <unit base="recents_plat/logs_timers_api"/>
+   </component>
+   <component id="logs_engine_api_extensions" name="Logs Engine API Extensions" class="api" filter="s60">
+    <unit base="recents_plat/logs_engine_api_extensions"/>
+   </component>
+  </collection>
+  <collection id="logsui" name="Logs UI" level="ui">
+    <!-- split into actual components -->
+   <component id="logsservices" filter="s60" name="Logs Services" introduced="^4">
+     <!-- <unit bldFile="logsui/logsservices" qt:proFile="logsui.pro"/> -->
+   </component>
+   <component id="logscntfinder" filter="s60" name="Logs Contact finder">
+    <!--<unit bldFile="logsui/logscntfinder" qt:proFile="logscntfinder.pro"/> -->
+   </component>
+   <component id="logsengine" filter="s60" name="Logs Engine" introduced="^4">
+    <!--<unit bldFile="logsui/logsengine" qt:proFile="logsengine.pro"/> -->
+   </component>
+   <component id="logsapp" filter="s60" name="Logs Application">
+    <!--<unit bldFile="logsui/logsapp" qt:proFile="logsapp.pro"/> -->
+   </component>
+   <component id="logsui_build" filter="s60" name="Logs UI Build">
+    <unit bldFile="logsui" qt:proFile="logsui.pro"/>
+   </component>
+  </collection>
+   </package>
+</SystemDefinition>

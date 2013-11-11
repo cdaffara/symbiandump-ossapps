@@ -1,0 +1,35 @@
+// Copyright (c) 2003-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+#ifndef __GTSMSMTM_IBY__
+#define __GTSMSMTM_IBY__
+
+#include <c32.iby>
+#include <esock.iby>
+#include <logeng.iby>
+#include <messageserver.iby>
+#include <scheduledsending.iby>
+#include <gtbioutils.iby>
+#include <cntmodel.iby>
+
+#include <smsstack.iby>
+file=ABI_DIR\BUILD_DIR\smcm.dll		SYSTEM_BINDIR\smcm.dll
+file=ABI_DIR\BUILD_DIR\smss.dll		SYSTEM_BINDIR\smss.dll
+
+ECOM_PLUGIN(smsgetdetdescdefault.dll, 10282fa6.rsc)
+
+#include "gtsmsmtm.hby"
+
+#endif

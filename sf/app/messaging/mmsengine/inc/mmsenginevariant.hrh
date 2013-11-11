@@ -1,0 +1,78 @@
+/*
+* Copyright (c) 2003, 2004 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   
+*      This file contains all the declarations to variate locally 
+*      MMS engine
+*
+*/
+
+
+
+#ifndef MMSENGINEVARIANT_HRH
+#define MMSENGINEVARIANT_HRH
+
+// Compile time variation flags.
+// Used to ensure that a given release always has the correct 
+// MMS encapsulation version.
+
+#if defined (__SERIES60_20__)
+// MMS version 1.0
+// major version = 1, minor version = 0, binary 0001 0000
+const TUint8 KMmsCurrentVersion = 0x10;
+
+#elif defined (__SERIES60_21__)
+// MMS version 1.1
+// major version = 1, minor version = 1, binary 0001 0001
+const TUint8 KMmsCurrentVersion = 0x11;
+
+#elif defined (__SERIES60_26__)
+// MMS version 1.2
+// major version = 1, minor version = 2, binary 0001 0002
+const TUint8 KMmsCurrentVersion = 0x12;
+
+#elif defined (__SERIES60_27__)
+// MMS version 1.2
+// major version = 1, minor version = 2, binary 0001 0002
+const TUint8 KMmsCurrentVersion = 0x12;
+
+#elif defined (__SERIES60_28__)
+// MMS version 1.2
+// major version = 1, minor version = 2, binary 0001 0002
+const TUint8 KMmsCurrentVersion = 0x12;
+
+#elif defined (__SERIES60_30__)
+// MMS version 1.2
+// major version = 1, minor version = 2, binary 0001 0002
+const TUint8 KMmsCurrentVersion = 0x12;
+
+#elif defined (__SERIES_90_10__)
+// MMS version 1.1
+// major version = 1, minor version = 1, binary 0001 0001
+const TUint8 KMmsCurrentVersion = 0x11;
+
+#elif defined (__SERIES_90_11__)
+// MMS version 1.1
+// major version = 1, minor version = 1, binary 0001 0001
+const TUint8 KMmsCurrentVersion = 0x11;
+
+#else
+// For the time being all who are not separately defined get 1.2
+// As new versions are defined, the default may change.
+// MMS version 1.2
+// major version = 1, minor version = 2 binary 0001 0002
+const TUint8 KMmsCurrentVersion = 0x12;
+
+#endif
+
+#endif // MMSENGINEVARIANT_HRH

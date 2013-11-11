@@ -1,0 +1,53 @@
+/*
+* Copyright (c) 2005 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   This file contains the set of localizable strings used in
+*                ical importer/exporter.
+*
+*/
+
+
+#define IMPORT_ERROR_RRULE_NUMRULES "Agenda can accept only 1 RRULE in a standard or daylight timezone component"
+
+//l:popup_note_window
+//r:5.0
+//
+#define IMPORT_ERROR_RRULE_NOFREQ "An RRULE must specify a frequency"
+
+//l:popup_note_window
+//r:5.0
+//
+#define IMPORT_ERROR_RRULE_NOTYEARLY "An RRULE must have a frequency of YEARLY if used in a timezone"
+
+//l:popup_note_window
+//r:5.0
+//
+#define IMPORT_ERROR_VALARM_NOTALLOWED "VALARM not allowed in this component"
+
+//l:popup_note_window
+//r:5.0
+//
+#define IMPORT_ERROR_VALARM_NOTRIGGER "Failed to find TRIGGER in VALARM"
+//l:popup_note_window
+//r:5.0
+//
+#define IMPORT_ERROR_VALARM_NOSTART "Cannot import absolute time in VALARM when no DTSTART in parent"
+
+//l:popup_note_window
+//r:5.0
+//
+#define IMPORT_ERROR_VALARM_AFTEREVENT "Alarm occurs after event"
+
+
+
+// End of File.

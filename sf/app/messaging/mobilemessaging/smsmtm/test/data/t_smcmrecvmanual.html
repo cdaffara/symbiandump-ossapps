@@ -1,0 +1,138 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage Express 2.0">
+<title></title>
+</head>
+
+<body>
+
+<h2>GT Messaging Test Harness T_SmcmRecvManual</h2>
+
+<p><font size="2">Copyright © 2002 </font><a
+href="http://www.symbian.com" target="_blank "><font size="2">Symbian
+Ltd</font></a><font size="2">. All rights reserved.</font></p>
+
+<p><strong>Test Harness:</strong> <font size="3">T_SmcmRecvManual</font></p>
+
+<p><strong>Component:</strong> SMS</p>
+
+<p><strong>Owner:</strong> AA</p>
+
+<p><strong>Brief Description:</strong> Waits to receive incoming
+SMS messages. Can also start and stop the watchers, and send
+messages to itself.</p>
+
+<p><strong>Detailed Description:</strong> Enables the user to
+observe incoming SMS messages. The use can:</p>
+
+<ul>
+    <li>Start and stop the watchers</li>
+    <li>Send a short (single-part) message to themselves</li>
+    <li>Send a long (2-part) message to themselves</li>
+    <li>Send all messages in sendrecv.script to themselves.</li>
+</ul>
+
+<p><strong>Input Files REQUIRED:</strong></p>
+
+<blockquote>
+    <p><tt>&lt;DRIVE&gt;:\msgtest\sms\defaults.script<br>
+    &lt;DRIVE&gt;:\msgtest\sms\sendrecv.script</tt></p>
+</blockquote>
+
+<p><strong>Intermediate Files Produced:</strong> None</p>
+
+<p><strong>Output files produced:</strong> <tt>&lt;DRIVE&gt;:\msglogs\T_SmcmRecvManual.&lt;PLATFORM&gt;.&lt;VARIANT&gt;.log</tt></p>
+
+<p><strong>Building Instructions:</strong></p>
+
+<blockquote>
+    <p><tt>cd \msg\smcm<br>
+    bldmake bldfiles<br>
+    abld test build</tt></p>
+</blockquote>
+
+<p><strong>Running Instructions:</strong></p>
+
+<p>All Platforms:</p>
+
+<blockquote>
+    <p>1. Build T_CreateDb test harness from COMMDB component:</p>
+    <blockquote>
+        <p><tt>cd \commdb\group<br>
+        bldmake bldfiles<br>
+        abld test build t_createdb</tt></p>
+    </blockquote>
+    <p>2. Run T_CreateDb and select the your modem (probably GSM
+    Mobile Phone)</p>
+    <p>3. Build the test utilities:</p>
+    <blockquote>
+        <p><tt>cd \msg\testutils\group<br>
+        bldmake bldfiles<br>
+        abld test build</tt></p>
+    </blockquote>
+    <p>4. Build <em>this</em> test harness:</p>
+    <blockquote>
+        <p><tt>cd \msg\smcm<br>
+        bldmake bldfiles<br>
+        abld test build </tt><strong><tt>t_smcmrecvmanual</tt></strong></p>
+    </blockquote>
+    <p>5. Edit <tt>\epoc32\wins\c\msgtest\sms\</tt><strong><tt>defaults.script</tt></strong>.
+    Replace the telephone number (&quot;Recipients&quot;) with <em>your</em>
+    mobile's number. You may also need to change the service
+    centre (&quot;SC&quot;) number (the default is for <a
+    href="http://www.vodafone.co.uk" target="_blank ">Vodafone UK</a>).
+    For example, change the telephone number like so:</p>
+    <blockquote>
+        <p><tt>[Defaults]<br>
+        </tt><strong><tt>SC= +447785016005<br>
+        </tt></strong><tt>Encoding= 7<br>
+        DeliveryReport= DEF<br>
+        Bearer= NBS<br>
+        </tt><font color="#FF0000"><strike><tt>Recipients= +447747065xxx</tt></strike></font><tt><br>
+        </tt><font color="#0000FF"><tt>Recipients= +447747065511</tt></font><tt><br>
+        <br>
+        endscript</tt></p>
+    </blockquote>
+</blockquote>
+
+<p>WINS Only:</p>
+
+<blockquote>
+    <p>1. Run T_CreateDb.exe (if it has not already been run) and
+    select your modem (GSM mobile phone).</p>
+    <p>2. <tt>\epoc32\release\wins\&lt;VARIANT&gt;\T_SmcmRecvManual.exe</tt>
+    can be used at the command prompt or executable can be run
+    from Windows Explorer.</p>
+</blockquote>
+
+<p>Platform other than WINS:</p>
+
+<blockquote>
+    <p>1. Copy <tt>\epoc32\release\&lt;PLATFORM&gt;\&lt;VARIANT&gt;\</tt><strong><tt>T_SmcmRecvManual.exe</tt></strong>
+    onto the other platform (or onto the CF card)</p>
+    <p>2. Copy <tt>\epoc32\release\&lt;PLATFORM&gt;\&lt;VARIANT&gt;\</tt><strong><tt>T_CreateDb.exe</tt></strong>
+    onto the other platform (or onto the CF card)</p>
+    <p>3. Copy <tt>\epoc32\release\&lt;PLATFORM&gt;\&lt;VARIANT&gt;\</tt><strong><tt>MsvTestUtils.DLL</tt></strong>
+    into <tt>&lt;DRIVE&gt;:\system\libs</tt> on the other
+    platform (or onto the CF card)</p>
+    <p>4. Copy <tt>\epoc32\release\&lt;PLATFORM&gt;\&lt;VARIANT&gt;\</tt><strong><tt>SmsTestUtils.DLL</tt></strong>
+    into <tt>&lt;DRIVE&gt;:\system\libs</tt> on the other
+    platform (or onto the CF card)</p>
+    <p>5. Copy <tt>\epoc32\wins\c\msgtest\sms\</tt><strong><tt>sendrecv.script</tt></strong>
+    and <strong><tt>defaults.script</tt></strong> into <tt>&lt;DRIVE&gt;:\msgtest\sms</tt>
+    on the other platform (or onto the CF card)</p>
+    <p>6. <strong>Run T_CreateDb.exe</strong> on the other
+    platform (if it has not already been run) and select your
+    modem (GSM mobile phone).</p>
+    <p>7. <strong>Run T_SmcmRecvManual.exe</strong> on the other
+    platform.</p>
+</blockquote>
+
+<p><font size="2">Copyright © 2002 </font><a
+href="http://www.symbian.com" target="_blank "><font size="2">Symbian
+Ltd</font></a><font size="2">. All rights reserved.</font></p>
+</body>
+</html>

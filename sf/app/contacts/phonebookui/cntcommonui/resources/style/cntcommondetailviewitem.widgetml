@@ -1,0 +1,24 @@
+<hbwidget version="0.1" type="cntcommondetailviewitem">
+  <layout name="customLayout" type="mesh">
+    <meshitem src="combobox" srcEdge="TOP" dst="" dstEdge="TOP"  spacing="-var(hb-param-margin-gene-top)" />
+    <meshitem src="combobox" srcEdge="LEFT" dst="" dstEdge="LEFT"  spacing="-var(hb-param-margin-gene-left)" />
+    <meshitem src="combobox" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)" />
+    
+    <meshitem src="editbox" srcEdge="TOP" dst="combobox" dstEdge="BOTTOM" spacing="-var(hb-param-margin-gene-middle-vertical)" />
+    <meshitem src="editbox" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacing="var(hb-param-margin-gene-bottom)" />
+    <meshitem src="editbox" srcEdge="LEFT" dst="combobox" dstEdge="LEFT" spacing="-var(hb-param-margin-gene-left)" />
+    <meshitem src="editbox" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)" />
+  </layout>
+  
+  <layout name="customLayout-landscape" type="mesh">
+    <meshitem src="combobox" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="-var(hb-param-margin-gene-left)" />
+    <meshitem src="combobox" srcEdge="RIGHT" dst="" dstEdge="CENTERH" />
+    <meshitem src="combobox" srcEdge="TOP" dst="" dstEdge="TOP" spacing="-var(hb-param-margin-gene-top)" />
+		<meshitem src="editbox" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacing="var(hb-param-margin-gene-bottom)" />
+
+    <meshitem src="editbox" srcEdge="LEFT" dst="combobox" dstEdge="RIGHT" spacing="-var(hb-param-margin-gene-left)" />
+    <meshitem src="editbox" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)" />
+    <meshitem src="editbox" srcEdge="TOP" dst="" dstEdge="TOP" spacing="-var(hb-param-margin-gene-top)" />
+		<meshitem src="editbox" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacing="var(hb-param-margin-gene-bottom)" />
+  </layout>
+</hbwidget>

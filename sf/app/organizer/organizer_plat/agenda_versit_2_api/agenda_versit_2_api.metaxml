@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<api id="e144fd9e160bf92c5f646c6b4d0e8fff" dataversion="2.0">
+  <name>Agenda Versit 2 API</name>
+  <description>Converts an iCalendar stream to an array of agenda entires and vise versa</description>
+  <type>c++</type>
+  <collection>calendarengines</collection>
+  <libs>
+    <lib name="AgnVersit2.lib" />
+  </libs>
+  <release category="platform"/>
+  <attributes>
+     <!-- This indicates wether the api provedes separate html documentation -->
+     <!-- or is the additional documentation generated from headers. -->
+     <!-- If you are unsuere then the value is "no" -->
+     <htmldocprovided>no</htmldocprovided>
+     <adaptation>no</adaptation>
+  </attributes>
+</api>

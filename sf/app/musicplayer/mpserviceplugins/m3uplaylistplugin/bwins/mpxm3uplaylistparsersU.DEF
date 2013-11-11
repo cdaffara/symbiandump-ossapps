@@ -1,0 +1,17 @@
+EXPORTS
+	??0CMPXM3uPlaylistExporter@@IAE@PAVRFs@@PAVMMPXPlaylistPluginObserver@@ABVCMPXMedia@@AAVTRequestStatus@@@Z @ 1 NONAME ; CMPXM3uPlaylistExporter::CMPXM3uPlaylistExporter(class RFs *, class MMPXPlaylistPluginObserver *, class CMPXMedia const &, class TRequestStatus &)
+	??0CMPXM3uPlaylistImporter@@IAE@PAVRFs@@PAVMMPXPlaylistPluginObserver@@ABV?$CArrayFix@USCharacterSet@CCnvCharacterSetConverter@@@@2AAVTRequestStatus@@@Z @ 2 NONAME ; CMPXM3uPlaylistImporter::CMPXM3uPlaylistImporter(class RFs *, class MMPXPlaylistPluginObserver *, class CArrayFix<struct CCnvCharacterSetConverter::SCharacterSet> const &, class CArrayFix<struct CCnvCharacterSetConverter::SCharacterSet> const &, class TRequestStatus &)
+	??1CMPXM3uPlaylistExporter@@UAE@XZ @ 3 NONAME ; CMPXM3uPlaylistExporter::~CMPXM3uPlaylistExporter(void)
+	??1CMPXM3uPlaylistImporter@@UAE@XZ @ 4 NONAME ; CMPXM3uPlaylistImporter::~CMPXM3uPlaylistImporter(void)
+	?ConstructL@CMPXM3uPlaylistExporter@@MAEXABVTDesC16@@@Z @ 5 NONAME ; void CMPXM3uPlaylistExporter::ConstructL(class TDesC16 const &)
+	?ConstructL@CMPXM3uPlaylistImporter@@MAEXABVTDesC16@@@Z @ 6 NONAME ; void CMPXM3uPlaylistImporter::ConstructL(class TDesC16 const &)
+	?DoCancel@CMPXM3uPlaylistExporter@@MAEXXZ @ 7 NONAME ; void CMPXM3uPlaylistExporter::DoCancel(void)
+	?DoCancel@CMPXM3uPlaylistImporter@@MAEXXZ @ 8 NONAME ; void CMPXM3uPlaylistImporter::DoCancel(void)
+	?DoTaskStep@CMPXM3uPlaylistExporter@@MAEXXZ @ 9 NONAME ; void CMPXM3uPlaylistExporter::DoTaskStep(void)
+	?DoTaskStep@CMPXM3uPlaylistImporter@@MAEXXZ @ 10 NONAME ; void CMPXM3uPlaylistImporter::DoTaskStep(void)
+	?DoTaskStepL@CMPXM3uPlaylistImporter@@MAEXXZ @ 11 NONAME ; void CMPXM3uPlaylistImporter::DoTaskStepL(void)
+	?NewL@CMPXM3uPlaylistExporter@@SAPAV1@PAVRFs@@PAVMMPXPlaylistPluginObserver@@ABVCMPXMedia@@ABVTDesC16@@AAVTRequestStatus@@@Z @ 12 NONAME ; class CMPXM3uPlaylistExporter * CMPXM3uPlaylistExporter::NewL(class RFs *, class MMPXPlaylistPluginObserver *, class CMPXMedia const &, class TDesC16 const &, class TRequestStatus &)
+	?NewL@CMPXM3uPlaylistImporter@@SAPAV1@PAVRFs@@PAVMMPXPlaylistPluginObserver@@ABVTDesC16@@ABV?$CArrayFix@USCharacterSet@CCnvCharacterSetConverter@@@@3AAVTRequestStatus@@@Z @ 13 NONAME ; class CMPXM3uPlaylistImporter * CMPXM3uPlaylistImporter::NewL(class RFs *, class MMPXPlaylistPluginObserver *, class TDesC16 const &, class CArrayFix<struct CCnvCharacterSetConverter::SCharacterSet> const &, class CArrayFix<struct CCnvCharacterSetConverter::SCharacterSet> const &, class TRequestStatus &)
+	?RunL@CMPXM3uPlaylistExporter@@MAEXXZ @ 14 NONAME ; void CMPXM3uPlaylistExporter::RunL(void)
+	?RunL@CMPXM3uPlaylistImporter@@MAEXXZ @ 15 NONAME ; void CMPXM3uPlaylistImporter::RunL(void)
+

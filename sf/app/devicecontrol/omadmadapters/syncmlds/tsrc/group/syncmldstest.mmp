@@ -1,0 +1,63 @@
+/*
+* Copyright (c) 2008 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Implementation of DM adapter test component
+* 	This is part of omadmextensions/adapter test application.
+*
+*/
+
+
+
+
+#include <platform_paths.hrh>
+
+TARGET          syncmldstest.dll
+TARGETTYPE      dll
+UID             0x1000008D 0x101FB3E3
+
+CAPABILITY	ALL -TCB
+/* Remove comments and replace 0x00000000 with correct vendor id */
+// VENDORID 	0x00000000
+
+//TARGETPATH      ?target_path
+DEFFILE         syncmldstest.def
+
+SOURCEPATH      ../src
+SOURCE          dmatest.cpp
+SOURCE          TestDmDDFObject.cpp
+SOURCE          syncmldstest.cpp
+SOURCE          syncmldstestBlocks.cpp
+
+
+USERINCLUDE     ../inc 
+USERINCLUDE		  ../../inc
+
+SYSTEMINCLUDE   /epoc32/include/ecom
+APP_LAYER_SYSTEMINCLUDE
+
+
+LIBRARY         apgrfx.lib apmime.lib
+LIBRARY         euser.lib ecom.lib
+LIBRARY         stiftestinterface.lib
+LIBRARY         stiftestengine.lib
+LIBRARY         efsrv.lib
+LIBRARY         estor.lib 
+LIBRARY         SWInstCli.lib
+
+LANG			SC
+
+
+
+SMPSAFE
+// End of File
+

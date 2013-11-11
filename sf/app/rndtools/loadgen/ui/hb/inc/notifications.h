@@ -1,0 +1,50 @@
+/*
+* Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: 
+*
+*/
+
+
+#ifndef NOTIFICATIONS_H_
+#define NOTIFICATIONS_H_
+
+#include <hbmessagebox.h>
+
+
+class Notifications : public HbPopup
+    {
+
+	Q_OBJECT 	
+	
+public:
+    
+    /**
+     * shows about box
+     */
+    static void about();
+    
+    /** 
+     * shows error message 
+     */
+    static void error(const QString& errorMessage);
+	
+    /**
+     * shows global HbGlobalCommonNote type note
+     */
+	static void showGlobalNote(const QString& text, HbMessageBox::MessageBoxType type, HbPopup::DefaultTimeout timeout = HbPopup::ConfirmationNoteTimeout);
+    };
+
+
+
+#endif // NOTIFICATIONS_H_

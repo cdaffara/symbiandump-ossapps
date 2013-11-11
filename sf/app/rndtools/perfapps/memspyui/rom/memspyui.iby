@@ -1,0 +1,38 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+#ifndef MEMSPYUI_IBY
+#define MEMSPYUI_IBY
+
+
+S60_APP_EXE(MemSpyUI)
+S60_APP_AIF_ICONS(MemSpyUI)
+S60_APP_RESOURCE(MemSpyUI)
+SCALABLE_IMAGE(APP_BITMAP_DIR,APP_BITMAP_DIR,MemSpyUI)
+data=ZPRIVATE\10003a3f\import\APPS\MemSpyUI_reg.RSC Private\10003a3f\import\Apps\MemSpyUI_reg.rsc
+
+
+data=ZPRIVATE\2002129F\MemSpyEComInterfaceIds.xml							\private\2002129F\MemSpyEComInterfaceIds.xml
+data=ZPRIVATE\2002129F\MemSpyProcessMemoryTrackingAutoStartConfig.xml		\private\2002129F\MemSpyProcessMemoryTrackingAutoStartConfig.xml
+
+// Stub SIS
+data=ZSYSTEM\Install\MemSpy_stub.sis                                        \system\install\MemSpy_stub.sis
+
+// MemSpyWindowServerHelper
+file=ABI_DIR\BUILD_DIR\memspywindowserverhelper.dll							SHARED_LIB_DIR\memspywindowserverhelper.dll
+
+#endif

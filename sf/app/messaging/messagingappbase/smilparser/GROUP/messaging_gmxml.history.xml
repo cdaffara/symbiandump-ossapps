@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<relnotes name="SMIL Parser">
+  <purpose>
+    SMIL parsing implemented via generic XML Parser / Composer with a "mini-DOM" API able to perform syntax checking against simple DTDs. Replaces SMIL Translater implementation of 7.0s.
+  </purpose>
+
+  <deliverystep number="1842" name="CR1934: Messaging: Moving XML Parser" osproject="SymTB9.2" revision="012">
+  <cr number="1934" title="Restructuring of the MCL">Adding SMIL parser into webservices-xml package.</cr> 
+  <milestone project="GT0539" number="3.4" /> 
+  </deliverystep>
+  
+   
+  <defect number="DEF142365" title="GCC-E: Simple syntax error" revision="011">
+      syntax error in function declaration
+    </defect>
+
+  <defect number="DEF138034" title="GMXML parser could cause stray event panics" revision="010">
+      stray scanner defect.
+    </defect>
+
+  <deliverystep number="1462" name="Splitting mixed header files for Messaging" osproject="SymTB92" revision="009">
+   <preq number="2510" title=" Splitting mixed header files for Messaging">
+    Mixed header files will now contain only published All or published Partner or internal
+   </preq>
+    <milestone project="GT0465" number="3.5"/>
+  </deliverystep>
+  
+  <defect number="DEF128078" title="@prototype tags in messaging" revision="008">
+      Added IM tag message server.
+    </defect>
+  <defect number="PDEF126520" title="[Folder name missing characters" revision="007">
+    written a new api which handles the case when there is quotation in file name.
+  </defect>
+
+  <defect number="DEF125067" title="[coverity] - CHECKED_RETURN - messaging/gmxml/xmlparser/src/gmxmlparser.cpp" revision="006">
+    Checked the if condition is not false for the AppendChild function.
+  </defect>
+
+  <defect number="PDEF115899" title="xmlparser panics when out of memory" revision="005">
+    Added a new exported leaving function. This is BR approved and BR number is BR2302.3
+  </defect>
+
+  <defect number="DEF108002" title="Warnings generated with checksource build  " revision="004">
+    Added condition to differentiate the winscw and armv5 def files for case sensitive 
+  </defect>
+
+  <defect number="DEF105400" title="Add missing IM tags to Messaging public header files" revision="003">
+    Added IM tag for all given header files.
+  </defect>
+
+  <defect number="INC105134" title="GmXML consumes whitespace characters" revision="002">
+    Now GmXML component restrict for eating white spaces
+  </defect>
+
+  <deliverystep number="500" name="Messaging file name changes to support GNU compiler for Linux" osproject="Oghma" revision="001">
+    <preq number="1182" title="GNU Make-based build system">
+    GNU Make-based build system
+  </preq>
+    <milestone project="GT0342" number="3.3"/>
+  </deliverystep>
+</relnotes>

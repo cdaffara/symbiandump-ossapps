@@ -1,0 +1,46 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   The clocknitzplugin registration resource.
+*
+*/
+
+// System includes
+#include <registryinfov2.rh>
+
+// The registry info.
+RESOURCE REGISTRY_INFO theInfo
+    {
+    resource_format_version = RESOURCE_FORMAT_VERSION_2;
+    dll_uid = 0x200159A5;
+    interfaces =
+        {
+        INTERFACE_INFO
+            {
+            interface_uid = 0x200159A7;
+            implementations =
+                {
+                IMPLEMENTATION_INFO
+                    {
+                    implementation_uid = 0x200159A5;
+                    version_no = 1;
+                    display_name = "Clock-NITZ-Plugin";
+                    default_data = "Default";
+                    rom_only = 0;
+                    }
+                };
+            }
+        };
+    }
+
+// End of file.

@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<api id="88ff7f54da50174b0b24c5e88b015e73" dataversion="1.0">
+  <name>DS Data Modification API</name>
+  <description>Exports Data Modification API to make possible to modify contact's data directly from operator specific contact adapters</description>
+  <type>c++</type>
+  <subsystem>omads</subsystem>
+  <libs>
+    <lib name="nsmldatamod.lib" />
+  </libs>
+  <release category="domain"/>
+  <attributes>
+     <!-- This indicates wether the api provedes separate html documentation -->
+     <!-- or is the additional documentation generated from headers. -->
+     <!-- If you are unsuere then the value is "no" -->
+     <htmldocprovided>no</htmldocprovided>
+     <adaptation>no</adaptation>
+  </attributes>
+</api>

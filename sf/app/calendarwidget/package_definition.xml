@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SystemDefinition schema="3.0.0" xmlns:qt="http://www.nokia.com/qt">
+   <package id="calendarwidget" name="Calendar Widget" levels="build app">
+    <collection id="calendarwidget_info" name="Calendar Widget Info" level="build">
+     <component id="calendarwidget_rom" name="Calendar Widget ROM" filter="s60,dfs_build" introduced="^4">
+      <unit bldFile="rom"/>
+     </component>
+    </collection>
+    <collection id="calendarwidgetinstaller" name="Calendar Widget Installer" level="build">
+		<!-- collection is really a component, need to move down a directory -->
+     <component id="calendarwidgetinstaller_build" name="Calendar Widget Installer Build" filter="s60,dfs_build" introduced="^4">
+	  <unit bldFile="calendarwidgetinstaller" qt:proFile="calendarwidgetinstaller.pro"/>
+     </component>
+    </collection>
+    <collection id="calendarwidgetplugin" name="Calendar Widget Plugin" level="app">
+		<!-- collection is really a component, need to move down a directory -->
+     <component id="calendarwidgetplugin_build" name="Calendar Widget Plugin Build" filter="s60,dfs_build" introduced="^4" class="plugin">
+	  <unit bldFile="calendarwidgetplugin" qt:proFile="calendarwidgetplugin.pro"/>
+     </component>
+     <component id="calendarwidgetplugin_test" name="Calendar Widget Plugin Test" filter="s60,dfs_build" introduced="^4">
+      <unit bldFile="calendarwidgetplugin/tsrc" qt:proFile="tsrc.pro"/>
+     </component>
+    </collection>
+   </package>
+</SystemDefinition>

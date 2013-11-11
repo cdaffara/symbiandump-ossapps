@@ -1,0 +1,54 @@
+/*
+* Copyright (c) 2008-2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   Resource definitions *
+*/
+
+
+
+// INCLUDES
+
+#include <ecom/registryinfo.rh>									//Ecom Registry
+
+#include "glxcollectionplugintags.hrh"					//Uid of the Dll and the Implementaion
+#include <glxcollectionplugintype.hrh>					//Uid of the Gallery for opaque-data
+#include <glxcollectionpluginpriority.hrh>      //Uid of the plugine for priority in opaque-data
+#include <glxgallery.loc>												//LOC file for the strings
+
+//#include <mpxcollectionplugin.h>
+
+RESOURCE REGISTRY_INFO theInfo
+    {
+    dll_uid = KGlxTagCollectionPluginDllUid;
+    
+    interfaces =
+        {
+        INTERFACE_INFO
+            {
+            interface_uid = 0x101FFC36;  //KMPXCollectionInterfaceUid;
+            implementations =
+                {
+                IMPLEMENTATION_INFO
+                    {
+                    implementation_uid = KGlxTagCollectionPluginImplementationUid;
+                    version_no = 1;
+                    display_name = qtn_lgal_view_title_tags;                    
+                    default_data = "";                   
+                    opaque_data = "<t>"EGlxCollectionPluginShowInMainListView"</t>"
+                                  "<i>"EGlxCollectionPluginTags"</i>"
+                                  "<f>0x0001</f>";   // KMPXVpFeaturePreLoaded (yet to be defined) Keeps the plugin loaded
+                    }
+                };
+            }
+        };
+    }

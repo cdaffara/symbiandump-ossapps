@@ -1,0 +1,77 @@
+EXPORTS
+	?ImplementationGroupProxy@@YAPBUTImplementationProxy@@AAH@Z @ 1 NONAME ; struct TImplementationProxy const * ImplementationGroupProxy(int &)
+	?DoWriteItemL@CNSmlContactsDataStore@@MAEXABVTDesC8@@@Z @ 2 NONAME ; void CNSmlContactsDataStore::DoWriteItemL(class TDesC8 const &)
+	?DoSupportedServerFiltersL@CNSmlContactsDataProvider@@MAEABV?$RPointerArray@VCSyncMLFilter@@@@XZ @ 3 NONAME ; class RPointerArray<class CSyncMLFilter> const & CNSmlContactsDataProvider::DoSupportedServerFiltersL(void)
+	?DoModifiedItems@CNSmlContactsDataStore@@MBEABVMSmlDataItemUidSet@@XZ @ 4 NONAME ; class MSmlDataItemUidSet const & CNSmlContactsDataStore::DoModifiedItems(void) const
+	?DoReadItemL@CNSmlContactsDataStore@@MAEXAAVTDes8@@@Z @ 5 NONAME ; void CNSmlContactsDataStore::DoReadItemL(class TDes8 &)
+	?DoDeletedItems@CNSmlContactsDataStore@@MBEABVMSmlDataItemUidSet@@XZ @ 6 NONAME ; class MSmlDataItemUidSet const & CNSmlContactsDataStore::DoDeletedItems(void) const
+	?ConstructL@CNSmlContactsDataStore@@IAEXXZ @ 7 NONAME ; void CNSmlContactsDataStore::ConstructL(void)
+	?NewL@CNSmlContactsDataStore@@SAPAV1@XZ @ 8 NONAME ; class CNSmlContactsDataStore * CNSmlContactsDataStore::NewL(void)
+	?DoGenerateFieldFilterQueryL@CNSmlContactsDataProvider@@MAEXABV?$RPointerArray@VCSyncMLFilter@@@@AAVTDes16@@AAV?$RPointerArray@VCSmlDataProperty@@@@AAVTDesC16@@@Z @ 9 NONAME ; void CNSmlContactsDataProvider::DoGenerateFieldFilterQueryL(class RPointerArray<class CSyncMLFilter> const &, class TDes16 &, class RPointerArray<class CSmlDataProperty> &, class TDesC16 &)
+	??0CNSmlContactsDataStore@@IAE@XZ @ 10 NONAME ; CNSmlContactsDataStore::CNSmlContactsDataStore(void)
+	?DoResetChangeInfoL@CNSmlContactsDataStore@@MAEXAAVTRequestStatus@@@Z @ 11 NONAME ; void CNSmlContactsDataStore::DoResetChangeInfoL(class TRequestStatus &)
+	?DoBeginBatchL@CNSmlContactsDataStore@@MAEXXZ @ 12 NONAME ; void CNSmlContactsDataStore::DoBeginBatchL(void)
+	?DoSoftDeletedItems@CNSmlContactsDataStore@@MBEABVMSmlDataItemUidSet@@XZ @ 13 NONAME ; class MSmlDataItemUidSet const & CNSmlContactsDataStore::DoSoftDeletedItems(void) const
+	??1CNSmlContactsDataStore@@UAE@XZ @ 14 NONAME ; CNSmlContactsDataStore::~CNSmlContactsDataStore(void)
+	?GetStoreFormatResourceFileL@CNSmlContactsDataProvider@@MBEABVTDesC16@@XZ @ 15 NONAME ; class TDesC16 const & CNSmlContactsDataProvider::GetStoreFormatResourceFileL(void) const
+	?SetOwnStoreFormatL@CNSmlContactsDataStore@@IAEXXZ @ 16 NONAME ; void CNSmlContactsDataStore::SetOwnStoreFormatL(void)
+	?AddBufferListL@CNSmlContactsDataStore@@IAEPAVCBufBase@@AAHHH@Z @ 17 NONAME ; class CBufBase * CNSmlContactsDataStore::AddBufferListL(int &, int, int)
+	?LdoMergeLC@CNSmlContactsDataStore@@IAEPAVCBufBase@@AAHABVTDesC8@@@Z @ 18 NONAME ; class CBufBase * CNSmlContactsDataStore::LdoMergeLC(int &, class TDesC8 const &)
+	?DoListStoresLC@CNSmlContactsDataStore@@QAEPAVCDesC16Array@@XZ @ 19 NONAME ; class CDesC16Array * CNSmlContactsDataStore::DoListStoresLC(void)
+	?StripPropertyL@CNSmlContactsDataStore@@IBEXAAPAVCBufBase@@ABVTDesC8@@@Z @ 20 NONAME ; void CNSmlContactsDataStore::StripPropertyL(class CBufBase * &, class TDesC8 const &) const
+	??0CNSmlContactsDataProvider@@IAE@XZ @ 21 NONAME ; CNSmlContactsDataProvider::CNSmlContactsDataProvider(void)
+	?ConstructL@CNSmlContactsDataProvider@@IAEXXZ @ 22 NONAME ; void CNSmlContactsDataProvider::ConstructL(void)
+	?DoCommitChangeInfoL@CNSmlContactsDataStore@@MAEXAAVTRequestStatus@@ABVMSmlDataItemUidSet@@@Z @ 23 NONAME ; void CNSmlContactsDataStore::DoCommitChangeInfoL(class TRequestStatus &, class MSmlDataItemUidSet const &)
+	?DoOnFrameworkEvent@CNSmlContactsDataProvider@@MAEXW4TSmlFrameworkEvent@@HH@Z @ 24 NONAME ; void CNSmlContactsDataProvider::DoOnFrameworkEvent(enum TSmlFrameworkEvent, int, int)
+	?DoDeleteAllItemsL@CNSmlContactsDataStore@@MAEXAAVTRequestStatus@@@Z @ 25 NONAME ; void CNSmlContactsDataStore::DoDeleteAllItemsL(class TRequestStatus &)
+	?LdoAddItemL@CNSmlContactsDataStore@@IAEHAAHABVTDesC8@@HAAVTTime@@@Z @ 26 NONAME ; int CNSmlContactsDataStore::LdoAddItemL(int &, class TDesC8 const &, int, class TTime &)
+	??1CNSmlContactsDataProvider@@UAE@XZ @ 27 NONAME ; CNSmlContactsDataProvider::~CNSmlContactsDataProvider(void)
+	?DefaultStoreNameL@CNSmlContactsDataStore@@QBEABVTDesC16@@XZ @ 28 NONAME ; class TDesC16 const & CNSmlContactsDataStore::DefaultStoreNameL(void) const
+	?DoSetRemoteStoreFormatL@CNSmlContactsDataStore@@MAEXABVCSmlDataStoreFormat@@@Z @ 29 NONAME ; void CNSmlContactsDataStore::DoSetRemoteStoreFormatL(class CSmlDataStoreFormat const &)
+	?DriveBelowCriticalLevelL@CNSmlContactsDataStore@@IAEHH@Z @ 30 NONAME ; int CNSmlContactsDataStore::DriveBelowCriticalLevelL(int)
+	?ExecuteBufferL@CNSmlContactsDataStore@@IAEHAAV?$RArray@H@@@Z @ 31 NONAME ; int CNSmlContactsDataStore::ExecuteBufferL(class RArray<int> &)
+	?GetDataMod@CNSmlContactsDataStore@@MAEAAVCNSmlDataModBase@@XZ @ 32 NONAME ; class CNSmlDataModBase & CNSmlContactsDataStore::GetDataMod(void)
+	?DoSoftDeleteItemL@CNSmlContactsDataStore@@MAEXHAAVTRequestStatus@@@Z @ 33 NONAME ; void CNSmlContactsDataStore::DoSoftDeleteItemL(int, class TRequestStatus &)
+	?DoMoveItemL@CNSmlContactsDataStore@@MAEXHHAAVTRequestStatus@@@Z @ 34 NONAME ; void CNSmlContactsDataStore::DoMoveItemL(int, int, class TRequestStatus &)
+	?DoDefaultStoreL@CNSmlContactsDataProvider@@MAEABVTDesC16@@XZ @ 35 NONAME ; class TDesC16 const & CNSmlContactsDataProvider::DoDefaultStoreL(void)
+	?LdoUpdateItemL@CNSmlContactsDataStore@@IAEHHABVTDesC8@@HAAVTTime@@@Z @ 36 NONAME ; int CNSmlContactsDataStore::LdoUpdateItemL(int, class TDesC8 const &, int, class TTime &)
+	?DoStoreName@CNSmlContactsDataStore@@MBEABVTDesC16@@XZ @ 37 NONAME ; class TDesC16 const & CNSmlContactsDataStore::DoStoreName(void) const
+	?DoCreateItemL@CNSmlContactsDataStore@@MAEXAAHHHABVTDesC8@@1AAVTRequestStatus@@@Z @ 38 NONAME ; void CNSmlContactsDataStore::DoCreateItemL(int &, int, int, class TDesC8 const &, class TDesC8 const &, class TRequestStatus &)
+	??1CNSmlContactsBufferItem@CNSmlContactsDataStore@@UAE@XZ @ 39 NONAME ; CNSmlContactsDataStore::CNSmlContactsBufferItem::~CNSmlContactsBufferItem(void)
+	?DoListStoresLC@CNSmlContactsDataProvider@@MAEPAVCDesC16Array@@XZ @ 40 NONAME ; class CDesC16Array * CNSmlContactsDataProvider::DoListStoresLC(void)
+	?DoSupportsOperation@CNSmlContactsDataProvider@@MBEHVTUid@@@Z @ 41 NONAME ; int CNSmlContactsDataProvider::DoSupportsOperation(class TUid) const
+	?DoCommitChangeInfoL@CNSmlContactsDataStore@@MAEXAAVTRequestStatus@@@Z @ 42 NONAME ; void CNSmlContactsDataStore::DoCommitChangeInfoL(class TRequestStatus &)
+	?NewL@CNSmlContactsDataProvider@@SAPAV1@XZ @ 43 NONAME ; class CNSmlContactsDataProvider * CNSmlContactsDataProvider::NewL(void)
+	?DoGenerateRecordFilterQueryLC@CNSmlContactsDataProvider@@MAEPAVHBufC16@@ABV?$RPointerArray@VCSyncMLFilter@@@@W4TSyncMLFilterMatchType@@AAVTDes16@@AAW4TSyncMLFilterType@@AAVTDesC16@@@Z @ 44 NONAME ; class HBufC16 * CNSmlContactsDataProvider::DoGenerateRecordFilterQueryLC(class RPointerArray<class CSyncMLFilter> const &, enum TSyncMLFilterMatchType, class TDes16 &, enum TSyncMLFilterType &, class TDesC16 &)
+	?DoExecuteBufferL@CNSmlContactsDataStore@@MAEHAAV?$RArray@H@@@Z @ 45 NONAME ; int CNSmlContactsDataStore::DoExecuteBufferL(class RArray<int> &)
+	?DoCheckSupportedServerFiltersL@CNSmlContactsDataProvider@@MAEXABVCSmlDataStoreFormat@@AAV?$RPointerArray@VCSyncMLFilter@@@@AAW4TSyncMLFilterChangeInfo@@@Z @ 46 NONAME ; void CNSmlContactsDataProvider::DoCheckSupportedServerFiltersL(class CSmlDataStoreFormat const &, class RPointerArray<class CSyncMLFilter> &, enum TSyncMLFilterChangeInfo &)
+	?DoRevertTransaction@CNSmlContactsDataStore@@MAEXAAVTRequestStatus@@@Z @ 47 NONAME ; void CNSmlContactsDataStore::DoRevertTransaction(class TRequestStatus &)
+	?DoCommitItemL@CNSmlContactsDataStore@@MAEXAAVTRequestStatus@@@Z @ 48 NONAME ; void CNSmlContactsDataStore::DoCommitItemL(class TRequestStatus &)
+	?DoDeleteItemL@CNSmlContactsDataStore@@MAEXHAAVTRequestStatus@@@Z @ 49 NONAME ; void CNSmlContactsDataStore::DoDeleteItemL(int, class TRequestStatus &)
+	?CreateDataStoreLC@CNSmlContactsDataProvider@@MBEPAVCNSmlContactsDataStore@@XZ @ 50 NONAME ; class CNSmlContactsDataStore * CNSmlContactsDataProvider::CreateDataStoreLC(void) const
+	?DoHasSyncHistory@CNSmlContactsDataStore@@MBEHXZ @ 51 NONAME ; int CNSmlContactsDataStore::DoHasSyncHistory(void) const
+	?DoCommitBatchL@CNSmlContactsDataStore@@MAEXAAV?$RArray@H@@AAVTRequestStatus@@@Z @ 52 NONAME ; void CNSmlContactsDataStore::DoCommitBatchL(class RArray<int> &, class TRequestStatus &)
+	?DoMaxObjectSize@CNSmlContactsDataStore@@MBEHXZ @ 53 NONAME ; int CNSmlContactsDataStore::DoMaxObjectSize(void) const
+	?DoReplaceItemL@CNSmlContactsDataStore@@MAEXHHHHAAVTRequestStatus@@@Z @ 54 NONAME ; void CNSmlContactsDataStore::DoReplaceItemL(int, int, int, int, class TRequestStatus &)
+	?DoCloseItem@CNSmlContactsDataStore@@MAEXXZ @ 55 NONAME ; void CNSmlContactsDataStore::DoCloseItem(void)
+	?DoCommitTransactionL@CNSmlContactsDataStore@@MAEXAAVTRequestStatus@@@Z @ 56 NONAME ; void CNSmlContactsDataStore::DoCommitTransactionL(class TRequestStatus &)
+	?LdoAddItemsL@CNSmlContactsDataStore@@IAEHAAV?$RArray@H@@AAPAVCBufBase@@HAAVTTime@@@Z @ 57 NONAME ; int CNSmlContactsDataStore::LdoAddItemsL(class RArray<int> &, class CBufBase * &, int, class TTime &)
+	?LdoFetchItemL@CNSmlContactsDataStore@@IAEHAAHAAVCBufBase@@@Z @ 58 NONAME ; int CNSmlContactsDataStore::LdoFetchItemL(int &, class CBufBase &)
+	?DoStoreFormatL@CNSmlContactsDataProvider@@MAEABVCSmlDataStoreFormat@@XZ @ 59 NONAME ; class CSmlDataStoreFormat const & CNSmlContactsDataProvider::DoStoreFormatL(void)
+	?GetStoreFormatResourceFileL@CNSmlContactsDataStore@@MBEABVTDesC16@@XZ @ 60 NONAME ; class TDesC16 const & CNSmlContactsDataStore::GetStoreFormatResourceFileL(void) const
+	?DoCancelBatch@CNSmlContactsDataStore@@MAEXXZ @ 61 NONAME ; void CNSmlContactsDataStore::DoCancelBatch(void)
+	?NewLC@CNSmlContactsDataProvider@@KAPAV1@XZ @ 62 NONAME ; class CNSmlContactsDataProvider * CNSmlContactsDataProvider::NewLC(void)
+	?ConstructL@CNSmlContactsDataStore@@IAEXABVTDesC16@@@Z @ 63 NONAME ; void CNSmlContactsDataStore::ConstructL(class TDesC16 const &)
+	?DoCheckServerFiltersL@CNSmlContactsDataProvider@@MAEXAAV?$RPointerArray@VCSyncMLFilter@@@@AAW4TSyncMLFilterChangeInfo@@@Z @ 64 NONAME ; void CNSmlContactsDataProvider::DoCheckServerFiltersL(class RPointerArray<class CSyncMLFilter> &, enum TSyncMLFilterChangeInfo &)
+	?DoCancelRequest@CNSmlContactsDataStore@@MAEXXZ @ 65 NONAME ; void CNSmlContactsDataStore::DoCancelRequest(void)
+	?DoOpenItemL@CNSmlContactsDataStore@@MAEXHAAH00AAVTDes8@@1AAVTRequestStatus@@@Z @ 66 NONAME ; void CNSmlContactsDataStore::DoOpenItemL(int, int &, int &, int &, class TDes8 &, class TDes8 &, class TRequestStatus &)
+	?DoBeginTransactionL@CNSmlContactsDataStore@@MAEXXZ @ 67 NONAME ; void CNSmlContactsDataStore::DoBeginTransactionL(void)
+	?DoAddedItems@CNSmlContactsDataStore@@MBEABVMSmlDataItemUidSet@@XZ @ 68 NONAME ; class MSmlDataItemUidSet const & CNSmlContactsDataStore::DoAddedItems(void) const
+	?DoSetRemoteMaxObjectSize@CNSmlContactsDataStore@@MAEXH@Z @ 69 NONAME ; void CNSmlContactsDataStore::DoSetRemoteMaxObjectSize(int)
+	?StripPropertyL@CNSmlContactsDataStore@@IBEXAAPAVHBufC8@@ABVTDesC8@@@Z @ 70 NONAME ; void CNSmlContactsDataStore::StripPropertyL(class HBufC8 * &, class TDesC8 const &) const
+	?DoOpenL@CNSmlContactsDataStore@@MAEXABVTDesC16@@AAVMSmlSyncRelationship@@AAVTRequestStatus@@@Z @ 71 NONAME ; void CNSmlContactsDataStore::DoOpenL(class TDesC16 const &, class MSmlSyncRelationship &, class TRequestStatus &)
+	?DoMovedItems@CNSmlContactsDataStore@@MBEABVMSmlDataItemUidSet@@XZ @ 72 NONAME ; class MSmlDataItemUidSet const & CNSmlContactsDataStore::DoMovedItems(void) const
+	?DoNewStoreInstanceLC@CNSmlContactsDataProvider@@MAEPAVCSmlDataStore@@XZ @ 73 NONAME ; class CSmlDataStore * CNSmlContactsDataProvider::DoNewStoreInstanceLC(void)
+	?ExportContactsL@CNSmlContactsDataStore@@MAEHABVTUid@@AAVCBufBase@@@Z @ 74 NONAME ; int CNSmlContactsDataStore::ExportContactsL(class TUid const &, class CBufBase &)
+	?ImportContactsL@CNSmlContactsDataStore@@MAEPAV?$CArrayFixFlat@VTUid@@@@ABVTDesC8@@@Z @ 75 NONAME ; class CArrayFixFlat<class TUid> * CNSmlContactsDataStore::ImportContactsL(class TDesC8 const &)
+

@@ -1,0 +1,74 @@
+/*
+* Copyright (c) 2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   Project definition file 
+*
+*/
+
+
+
+#include "../../../../../group/glxbuildcommon.mmh"
+
+TARGET          ut_cglxnavigablelist.dll
+TARGETTYPE      dll
+UID             0x1000af5a 0x01700000
+
+CAPABILITY              ALL -TCB
+
+#ifndef WINSCW
+EPOCALLOWDLLDATA
+#endif
+
+SOURCEPATH              ../ut_cglxnavigablelist
+SOURCE                  ut_cglxnavigablelist.cpp
+SOURCEPATH             ../src
+SOURCE                  glxlistreconstruction.cpp
+SOURCE                  _glxnotification.cpp
+SOURCE                  _glxlisttesthelpers.cpp
+
+// Sources required by the test suite
+SOURCEPATH              ../../src
+SOURCE                  glxstaticitemlist.cpp
+SOURCE                  glxmedia.cpp
+SOURCE                  glxitemlist.cpp
+SOURCE                  glxnavigablelist.cpp
+SOURCE                  glxlistutils.cpp
+SOURCE                  glxthumbnailutility.cpp
+SOURCEPATH              ../ut_cglxnavigablelist
+SOURCE                  ut_cglxnavigablelist_dllmain.cpp
+
+USERINCLUDE             ../ut_cglxnavigablelist
+
+// User include folders required by the tested code
+USERINCLUDE             ../src
+USERINCLUDE             ../../src
+USERINCLUDE             ../../inc
+
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE           /epoc32/include/Digia/EUnit
+
+// System include folders required by the tested code
+SYSTEMINCLUDE           /epoc32/include/oem
+SYSTEMINCLUDE           ../../../../inc
+
+LIBRARY                 EUnit.lib
+LIBRARY                 EUnitUtil.lib
+LIBRARY                 euser.lib
+
+// Libraries required by the tested code
+LIBRARY                 mpxcommon.lib
+LIBRARY                 Lbs.lib
+
+EXPORTUNFROZEN
+SMPSAFE
+// End of file

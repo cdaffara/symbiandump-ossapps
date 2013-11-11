@@ -1,0 +1,33 @@
+/*
+* Copyright (c) 2005 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Defines for DS agenda adapter
+*
+*/
+
+
+
+// DEFINES
+#ifdef RD_DS_ICAL_SUPPORT
+#ifdef __I_CAL_SUPPORT
+#define __NSML_USE_ICAL_FEATURE
+#endif // __I_CAL_SUPPORT
+
+#endif
+
+#ifdef __NSML_DEBUG__ 
+#define __NSML_MORE_DEBUG_FOR_ITEMS__	// If this flag is defined
+					                    // then debug dumb includes
+					                    // old item and new data at replace
+    				                    // commands
+#endif // __NSML_DEBUG__

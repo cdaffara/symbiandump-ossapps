@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE SystemDefinition SYSTEM "sysdef_1_5_1.dtd" [
+  <!ENTITY layer_real_source_path "sf/app/radio" >
+]>
+
+<SystemDefinition name="radio" schema="1.5.1">
+  <systemModel>
+    <layer name="app_layer">
+      <module name="radio">
+        <unit unitID="vado.radio" mrp="" bldFile="&layer_real_source_path;" name="radio" proFile="radio.pro" qmakeArgs="-r" />        
+      </module>
+    </layer>
+    <layer name="qt_unit_test_layer">
+      <module name="vado.radiopresetstorage_qt.tsrc">
+        <unit unitID="vado.radiopresetstorage" mrp="" bldFile="&layer_real_source_path;/radioapp/radiopresetstorage/tsrc" proFile="t_radiopresetstorage.pro" name="unittest.radiopresetstorage"/>
+      </module>
+      <module name="vado.radiouiengine_qt.tsrc">
+        <unit unitID="vado.radiouiengine" mrp="" bldFile="&layer_real_source_path;/radioapp/radiouiengine/tsrc" proFile="t_radiouiengine.pro" name="unittest.radiouiengine"/>
+      </module>
+    </layer>
+  </systemModel>
+</SystemDefinition>

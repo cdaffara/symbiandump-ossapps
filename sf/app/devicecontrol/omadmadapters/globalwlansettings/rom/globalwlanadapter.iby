@@ -1,0 +1,35 @@
+/*
+* Copyright (c) 2008 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   Image description file for project GlobalWLANAdapter
+*
+*/
+
+
+
+REM SyncML Device Management internet adapter
+
+#include <bldvariant.hrh>
+
+#ifndef __GLOBALWLANADAPTER_IBY__
+#define __GLOBALWLANADAPTER_IBY__
+
+#ifdef __SYNCML_DM // nothing should be installed from this .iby file if __SYNCML_DM feature is not selected
+
+#ifdef __SYNCML_DM_WLAN 
+ECOM_PLUGIN(globalwlanadapter.dll,globalwlanadapter.rsc)
+#endif // __SYNCML_DM_WLAN
+
+#endif //__SYNCML_DM
+
+#endif //__GLOBALWLANADAPTER_IBY__

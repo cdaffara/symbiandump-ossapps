@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="0.9">
+    <object name="cnt:editgroupdetail" type="HbAction">
+        <string name="text" locid="txt_phob_opt_edit_group_details" value="Edit group details"/>
+    </object>
+    <widget name="view" type="HbView">
+        <widget name="content" role="HbView:widget" type="HbWidget">
+            <widget name="groupBox" type="HbGroupBox">
+                <bool name="collapsable" value="FALSE"/>
+            </widget>            
+            <widget name="listView" type="HbListView">
+                <sizehint height="1.0un" type="PREFERRED" width="1.0un"/>
+                <sizepolicy horizontalPolicy="MinimumExpanding" horizontalStretch="0" verticalPolicy="MinimumExpanding" verticalStretch="0"/>
+                <string name="scrollingStyle" value="PanWithFollowOn"/>
+                <string name="clampingStyle" value="BounceBackClamping"/>
+            </widget>
+            <layout orientation="Vertical" spacing="0.0un" type="linear">
+                <contentsmargins bottom="0.0un" left="0.0un" right="0.0un" top="0.0un"/>
+                <linearitem itemname="groupBox"/>
+                <linearitem itemname="listView"/>
+            </layout>
+        </widget>
+        <widget name="viewMenu" role="HbView:menu" type="HbMenu">
+            <ref object="cnt:editgroupdetail" role="HbMenu:addAction"/>
+        </widget>
+        <string locid="txt_phob_title_contacts" name="title" value="Contacts"/>
+    </widget>
+    <metadata activeUIState="Common ui state" display="QHD portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+    </metadata>
+</hbdocument>

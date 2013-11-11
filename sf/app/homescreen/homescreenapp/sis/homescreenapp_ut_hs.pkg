@@ -1,0 +1,117 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:
+;
+
+; Language
+&EN
+
+; SIS header: name, uid, version
+#{"hsapp_ut_hs"},(0x20022F48),1,0,0
+
+; Localised Vendor name
+%{"Nokia"}
+
+; Unique Vendor name
+:"Nokia"
+
+; Supports S60 5th Edition
+[0x1028315F], 0, 0, 0, {"S60ProductID"}
+
+;--------------- hsapplication ---------------
+"/epoc32/release/armv5/urel/t_hsapplicationexe.exe"                         - "c:/sys/bin/t_hsapplicationexe.exe"
+"/epoc32/data/z/private/10003a3f/import/apps/t_hsapplicationexe_reg.rsc"    - "c:/private/10003a3f/import/apps/t_hsapplicationexe_reg.rsc"
+"/epoc32/data/z/resource/apps/t_hsapplicationexe.rsc"                       - "c:/resource/apps/t_hsapplicationexe.rsc"
+"/epoc32/release/armv5/urel/mockstateplugins.dll"                                                  - "c:/sys/bin/mockstateplugins.dll"
+"/epoc32/data/z/private/20022f5f/hsresources/plugins/stateplugins/mockstateplugins.qtplugin"     - "c:/private/20022f5f/hsresources/plugins/stateplugins/mockstateplugins.qtplugin"
+"/epoc32/data/z/private/20022f5f/hsresources/plugins/stateplugins/mockstateplugins.xml"          - "c:/private/20022f5f/hsresources/plugins/stateplugins/mockstateplugins.xml"
+
+;--------------- hsapplicationlauncher ---------------
+"/epoc32/release/armv5/urel/t_hsapplicationlauncher.exe"                         - "c:/sys/bin/t_hsapplicationlauncher.exe"
+"/epoc32/data/z/private/10003a3f/import/apps/t_hsapplicationlauncher_reg.rsc"    - "c:/private/10003a3f/import/apps/t_hsapplicationlauncher_reg.rsc"
+"/epoc32/data/z/resource/apps/t_hsapplicationlauncher.rsc"                       - "c:/resource/apps/t_hsapplicationlauncher.rsc"
+
+;--------------- hsutils ---------------
+"/epoc32/release/armv5/urel/t_hsutils.exe"                         - "c:/sys/bin/t_hsutils.exe"
+"/epoc32/data/z/private/10003a3f/import/apps/t_hsutils_reg.rsc"    - "c:/private/10003a3f/import/apps/t_hsutils_reg.rsc"
+"/epoc32/data/z/resource/apps/t_hsutils.rsc"                       - "c:/resource/apps/t_hsutils.rsc"
+
+;--------------- hsdomainmodel ---------------
+"/epoc32/release/armv5/urel/t_hsdomainmodel.exe"                         - "c:/sys/bin/t_hsdomainmodel.exe"
+"/epoc32/data/z/private/10003a3f/import/apps/t_hsdomainmodel_reg.rsc"    - "c:/private/10003a3f/import/apps/t_hsdomainmodel_reg.rsc"
+"/epoc32/data/z/resource/apps/t_hsdomainmodel.rsc"                       - "c:/resource/apps/t_hsdomainmodel.rsc"
+
+
+"../hsdomainmodel/tsrc/t_hsdomainmodel/hsdomainmodeltest.db"    - "c:/private/20022F59/hsdomainmodeltest.db"
+"../hsdomainmodel/tsrc/t_hsdomainmodel/resource/default_portrait.png"       - "c:/private/20022F59/wallpapers/scene/default_landscape.png"
+"../hsdomainmodel/tsrc/t_hsdomainmodel/resource/default_landscape.png"  - "c:/private/20022F59/wallpapers/scene/default_portrait.png"
+"../hsdomainmodel/tsrc/t_hsdomainmodel/resource/default_portrait.png"       - "c:/private/20022F59/wallpapers/page/default_landscape.png"
+"../hsdomainmodel/tsrc/t_hsdomainmodel/resource/default_landscape.png"  - "c:/private/20022F59/wallpapers/page/default_portrait.png"
+
+"/epoc32/release/armv5/urel/mockwidgetplugin.dll"                                               - "c:/sys/bin/mockwidgetplugin.dll"
+"/epoc32/data/z/private/20022F59/hsresources/plugins/widgetplugins/mockwidgetplugin.qtplugin"   - "c:/private/20022F59/hsresources/plugins/widgetplugins/mockwidgetplugin.qtplugin"
+"/epoc32/data/z/private/20022F59/hsresources/plugins/widgetplugins/mockwidgetplugin.xml"        - "c:/private/20022F59/hsresources/plugins/widgetplugins/mockwidgetplugin.xml"
+"/epoc32/data/z/resource/qt/translations/mockwidgetplugin.qm"                                   - "c:/resource/qt/translations/mockwidgetplugin.qm"
+
+"/epoc32/release/armv5/urel/mockwidgetplugintoosmall.dll"                                               - "c:/sys/bin/mockwidgetplugintoosmall.dll"
+"/epoc32/data/z/private/20022F59/hsresources/plugins/widgetplugins/mockwidgetplugintoosmall.qtplugin"   - "c:/private/20022F59/hsresources/plugins/widgetplugins/mockwidgetplugintoosmall.qtplugin"
+"/epoc32/data/z/private/20022F59/hsresources/plugins/widgetplugins/mockwidgetplugintoosmall.xml"        - "c:/private/20022F59/hsresources/plugins/widgetplugins/mockwidgetplugintoosmall.xml"
+
+"/epoc32/release/armv5/urel/mockwidgetplugintoobig.dll"                                             - "c:/sys/bin/mockwidgetplugintoobig.dll"
+"/epoc32/data/z/private/20022F59/hsresources/plugins/widgetplugins/mockwidgetplugintoobig.qtplugin" - "c:/private/20022F59/hsresources/plugins/widgetplugins/mockwidgetplugintoobig.qtplugin"
+"/epoc32/data/z/private/20022F59/hsresources/plugins/widgetplugins/mockwidgetplugintoobig.xml"      - "c:/private/20022F59/hsresources/plugins/widgetplugins/mockwidgetplugintoobig.xml"
+
+"/epoc32/release/armv5/urel/mockwidgetplugincheater.dll"                                             - "c:/sys/bin/mockwidgetplugincheater.dll"
+"/epoc32/data/z/private/20022F59/hsresources/plugins/widgetplugins/mockwidgetplugincheater.qtplugin" - "c:/private/20022F59/hsresources/plugins/widgetplugins/mockwidgetplugincheater.qtplugin"
+"/epoc32/data/z/private/20022F59/hsresources/plugins/widgetplugins/mockwidgetplugincheater.xml"      - "c:/private/20022F59/hsresources/plugins/widgetplugins/mockwidgetplugincheater.xml"
+
+
+;--------------- serviceproviders ---------------
+
+;--------------- stateplugins ---------------
+;hshomescreenstateplugin
+"/epoc32/release/armv5/urel/t_hshomescreenstateplugin.exe"                         - "c:/sys/bin/t_hshomescreenstateplugin.exe"
+"/epoc32/data/z/private/10003a3f/import/apps/t_hshomescreenstateplugin_reg.rsc"    - "c:/private/10003a3f/import/apps/t_hshomescreenstateplugin_reg.rsc"
+"/epoc32/data/z/resource/apps/t_hshomescreenstateplugin.rsc"                       - "c:/resource/apps/t_hshomescreenstateplugin.rsc"
+
+;--------------- widgetplugins ---------------
+;hsshortcutwidgetlugin
+;t_hsshortcutwidget:
+"/epoc32/release/armv5/urel/t_hsshortcutwidget.exe"                         - "c:/sys/bin/t_hsshortcutwidget.exe"
+"/epoc32/data/z/private/10003a3f/import/apps/t_hsshortcutwidget_reg.rsc"    - "c:/private/10003a3f/import/apps/t_hsshortcutwidget_reg.rsc"
+"/epoc32/data/z/resource/apps/t_hsshortcutwidget.rsc"                       - "c:/resource/apps/t_hsshortcutwidget.rsc"
+
+;hsclockwidgetplugin
+;t_hsclockwidgetplugin:
+"/epoc32/release/armv5/urel/t_hsclockwidgetplugin.exe"                      - "c:/sys/bin/t_hsclockwidgetplugin.exe"
+"/epoc32/data/z/private/10003a3f/import/apps/t_hsclockwidgetplugin_reg.rsc" - "c:/private/10003a3f/import/apps/t_hsclockwidgetprovider_reg.rsc"
+"/epoc32/data/z/resource/apps/t_hsclockwidgetplugin.rsc"                    - "c:/resource/apps/t_hsclockwidgetprovider.rsc"
+
+;--------------- hshomescreenclientplugin -----------------------
+;hshomescreenclientplugin
+"/epoc32/release/armv5/urel/t_hshomescreenclientplugin.exe"                       - "c:/sys/bin/t_hshomescreenclientplugin.exe"
+"/epoc32/data/z/private/10003a3f/import/apps/t_hshomescreenclientplugin_reg.rsc"  - "c:/private/10003a3f/import/apps/t_hshomescreenclientplugin_reg.rsc"
+"/epoc32/data/z/resource/apps/t_hshomescreenclientplugin.rsc"                     - "c:/resource/apps/t_hshomescreenclientplugin.rsc"
+
+;--------------- hswidgetuninstaller -----------------------
+;hswidgetuninstaller
+"/epoc32/release/armv5/urel/t_hswidgetuninstaller.exe"                      - "c:/sys/bin/t_hswidgetuninstaller.exe"
+"/epoc32/data/z/private/10003a3f/import/apps/t_hswidgetuninstaller_reg.rsc" - "c:/private/10003a3f/import/apps/t_hswidgetuninstaller_reg.rsc"
+"/epoc32/data/z/resource/apps/t_hswidgetuninstaller.rsc"                    - "c:/resource/apps/t_hswidgetuninstaller.rsc"
+"../hswidgetuninstaller/tsrc/t_hswidgetuninstaller/empty.manifest"          - "c:/private/20022F42/empty.manifest"
+"../hswidgetuninstaller/tsrc/t_hswidgetuninstaller/fail_new.manifest"       - "c:/private/20022F42/fail_new.manifest"
+"../hswidgetuninstaller/tsrc/t_hswidgetuninstaller/ok_new.manifest"         - "c:/private/20022F42/ok_new.manifest"
+"../hswidgetuninstaller/tsrc/t_hswidgetuninstaller/ok_old.manifest"         - "c:/private/20022F42/ok_old.manifest"
+"../hswidgetuninstaller/tsrc/t_hswidgetuninstaller/version10.manifest"      - "c:/private/20022F42/version10.manifest"
+"../hswidgetuninstaller/tsrc/t_hswidgetuninstaller/version12.manifest"      - "c:/private/20022F42/version12.manifest"

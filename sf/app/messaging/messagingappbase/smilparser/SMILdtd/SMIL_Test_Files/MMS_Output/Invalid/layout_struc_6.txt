@@ -1,0 +1,32 @@
+<?XML version="1.0" ?>
+<!DOCTYPE smil SYSTEM "mms_smil.dtd">
+
+<!-- Focus of this test: layout element, structure variations -->
+<!-- Focus of this test: layout element, structure variations -->
+<!-- 'layout' contains 2 'root-layout' elements, which is an ERROR -->
+<smil>
+   <head>
+      <layout>
+         <!-- This is a "landscape" screen -->
+         <root-layout width="352" height="144"/>
+         <root-layout width="300" height="100"/>
+      </layout>
+   </head>
+   <body>
+      <par dur="8s">
+         <img src="FirstImage.jpg" region="Image"/>
+         <text src="FirstText.txt" region="Text"/>
+         <audio src="FirstSound.amr"/>
+      </par>
+      <par dur="7s">
+         <img src="SecondImage.jpg" region="Image"/>
+         <text src="SecondText.txt" region="Text"/>
+         <audio src="SecondSound.amr"/>
+      </par>
+      <par dur="4s">
+         <img src="ThirdImage.jpg" region="Image"/>
+         <text src="ThirdText.txt" region="Text"/>
+         <audio src="ThirdSound.amr"/>
+      </par>
+   </body>
+</smil>

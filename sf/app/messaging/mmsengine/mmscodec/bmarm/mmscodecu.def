@@ -1,0 +1,13 @@
+EXPORTS
+	DecodeHeadersL__10CMmsDecodeR16MMmsEntryWrapperR11CMmsHeadersR8CBufFlatiiPiT6 @ 1 NONAME ; CMmsDecode::DecodeHeadersL(MMmsEntryWrapper &, CMmsHeaders &, CBufFlat &, int, int, int *, int *)
+	EncodeHeadersL__10CMmsEncodeR11CMmsHeadersR8CBufFlat @ 2 NONAME R3UNUSED ; CMmsEncode::EncodeHeadersL(CMmsHeaders &, CBufFlat &)
+	NewL__10CMmsDecodeR3RFs @ 3 NONAME R3UNUSED ; CMmsDecode::NewL(RFs &)
+	NewL__10CMmsEncodeR3RFs @ 4 NONAME R3UNUSED ; CMmsEncode::NewL(RFs &)
+	StartL__10CMmsDecodeR16MMmsEntryWrapperR11CMmsHeadersR8CBufFlatR14TRequestStatusii @ 5 NONAME ; CMmsDecode::StartL(MMmsEntryWrapper &, CMmsHeaders &, CBufFlat &, TRequestStatus &, int, int)
+	StartL__10CMmsEncodeR16MMmsEntryWrapperR11CMmsHeadersR8CBufFlatR14TRequestStatus @ 6 NONAME ; CMmsEncode::StartL(MMmsEntryWrapper &, CMmsHeaders &, CBufFlat &, TRequestStatus &)
+	NewL__15CMmsServerEntryR3RFsR15CMsvServerEntryls @ 7 NONAME ; CMmsServerEntry::NewL(RFs &, CMsvServerEntry &, long, short)
+	SetCurrentEntry__15CMmsServerEntryl @ 8 NONAME R3UNUSED ; CMmsServerEntry::SetCurrentEntry(long)
+	ProcessDRML__6MmsDrmG6TPtrC8T1RiRP6HBufC8Rl @ 9 NONAME ; MmsDrm::ProcessDRML(TPtrC8, TPtrC8, int &, HBufC8 *&, long &)
+	ExtractNextDataPartL__10CMmsDecodeR8CBufFlatRiN22 @ 10 NONAME ; CMmsDecode::ExtractNextDataPartL(CBufFlat &, int &, int &, int &)
+	DecodeAttachmentsL__10CMmsDecodeR16MMmsEntryWrapperR11CMmsHeadersR8CBufFlatiRiR14TRequestStatusii @ 11 NONAME ; CMmsDecode::DecodeAttachmentsL(MMmsEntryWrapper &, CMmsHeaders &, CBufFlat &, int, int &, TRequestStatus &, int, int)
+

@@ -1,0 +1,63 @@
+// Copyright (c) 2001-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// $Workfile: btsmtm.mmp $
+// $Author: Stevep $
+// $Revision: 12 $
+// $Date: 4/12/01 11:51 $
+// btsmtm.dll Bluetooth server MTM
+// btmtm.rsc OBEX MTM registration resource file
+// 
+//
+
+/**
+ @file
+*/
+
+
+TARGET		btsmtm.dll
+TARGETTYPE	dll
+
+CAPABILITY ReadDeviceData WriteDeviceData ProtServ NetworkControl NetworkServices LocalServices ReaduserData WriteUserData
+TARGETPATH	/system/libs
+UID		0x10003C5E 0x10009ED4	// 0x10003C5E = KUidMtmServerComponent
+VENDORID 0x70000001
+								// 0x10009ED4 = KBtServerMtmV1DllUid 
+
+SOURCEPATH	../source
+SOURCE		btsmtm.cpp btsmtmdll.cpp  btsendop.cpp  
+
+USERINCLUDE	../include ../../../../../../../mw/messagingmw/messagingfw/msgsrvnstore/server/inc
+USERINCLUDE ../../btclient/Include
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+
+SOURCEPATH	.
+START RESOURCE	btmtm.rss
+TARGETPATH      resource/messaging/mtm
+END
+
+
+LIBRARY		euser.lib msgs.lib
+LIBRARY		obexservermtm.lib	//CObexServerSendOperation, CObexServerMtm
+LIBRARY		irobex.lib	//CObexClient
+LIBRARY		obexmtmutil.lib	//CObexHeader
+LIBRARY		btcmtm.lib		//CBtHeader
+LIBRARY		bluetooth.lib	//TBTDevAddr etc.
+LIBRARY		esock.lib		//TSockAddr...
+
+#ifdef WINSCW
+DEFFILE		BTSMTM.DEF   
+#else
+DEFFILE		btsmtm.def
+#endif
+SMPSAFE

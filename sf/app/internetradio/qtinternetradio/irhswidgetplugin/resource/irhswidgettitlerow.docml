@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="1.1">
+    <widget name="titlerow_layout" type="HbWidget">
+        <widget name="station_logo_layout" type="HbWidget">
+            <widget name="station_logo" type="HbLabel">
+                <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+                <icon iconName="qtg_large_internet_radio" name="icon"/>
+                <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+                <sizehint height="11un" type="FIXED" width="11un"/>
+                <sizehint height="11un" type="MINIMUM" width="11un"/>
+                <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+                <sizehint height="11un" type="MAXIMUM" width="11un"/>
+            </widget>
+            <layout orientation="Vertical" spacing="0un" type="linear">
+                <contentsmargins bottom="expr(var(hb-param-margin-gene-middle-vertical))" left="expr(var(hb-param-margin-gene-middle-horizontal))" right="expr(var(hb-param-margin-gene-middle-horizontal))" top="expr(var(hb-param-margin-gene-middle-vertical))"/>
+                <stretchitem stretchfactor="1"/>
+                <linearitem itemname="station_logo"/>
+                <stretchitem stretchfactor="1"/>
+            </layout>
+        </widget>
+        <widget name="upper_side_text_layout" type="HbWidget">
+            <widget name="station_name" type="HbLabel">
+                <enums name="alignment" value="AlignLeft|AlignVCenter|AlignLeading"/>
+                <sizepolicy horizontalPolicy="Preferred" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+                <sizehint height="expr(var(hb-param-text-height-secondary))" type="PREFERRED"/>
+                <sizehint height="expr(var(hb-param-text-height-secondary))" type="MINIMUM"/>
+                <sizehint height="expr(var(hb-param-text-height-secondary))" type="MAXIMUM"/>
+                <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+                <fontspec name="fontSpec" role="Primary" textheight="expr(var(hb-param-text-height-secondary))"/>
+            </widget>
+            <sizepolicy horizontalPolicy="Preferred" horizontalStretch="0" verticalPolicy="Preferred" verticalStretch="0"/>
+            <layout orientation="Vertical" spacing="0un" type="linear">
+                <contentsmargins bottom="expr(var(hb-param-margin-gene-middle-vertical))" left="0un" right="expr(var(hb-param-margin-gene-middle-horizontal))" top="expr(var(hb-param-margin-gene-middle-vertical))"/>
+                <stretchitem stretchfactor="1"/>
+                <linearitem itemname="station_name"/>
+                <stretchitem stretchfactor="1"/>
+            </layout>
+        </widget>
+        <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+        <sizehint height="expr(11un+var(hb-param-margin-gene-middle-vertical)*2)" type="FIXED" width="46un"/>
+        <sizehint height="expr(11un+var(hb-param-margin-gene-middle-vertical)*2)" type="MINIMUM" width="46un"/>
+        <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+        <sizehint height="expr(11un+var(hb-param-margin-gene-middle-vertical)*2)" type="MAXIMUM" width="46un"/>
+        <layout orientation="Horizontal" spacing="0un" type="linear">
+            <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+            <linearitem itemname="station_logo_layout"/>
+            <linearitem itemname="upper_side_text_layout"/>
+        </layout>
+    </widget>
+    <metadata activeUIState="Common ui state" display="NHD-3.2-inch_portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+    </metadata>
+</hbdocument>

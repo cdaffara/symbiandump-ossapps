@@ -1,0 +1,43 @@
+EXPORTS
+	?qt_metacast@MsgHistory@@UAEPAXPBD@Z @ 1 NONAME ; void * MsgHistory::qt_metacast(char const *)
+	?messageAdded@MsgHistory@@IAEXAAVMsgItem@@@Z @ 2 NONAME ; void MsgHistory::messageAdded(class MsgItem &)
+	?id@MsgItem@@QBEHXZ @ 3 NONAME ; int MsgItem::id(void) const
+	??_EMsgItem@@UAE@I@Z @ 4 NONAME ; MsgItem::~MsgItem(unsigned int)
+	?setTimeStamp@MsgItem@@QAEXI@Z @ 5 NONAME ; void MsgItem::setTimeStamp(unsigned int)
+	?trUtf8@MsgHistory@@SA?AVQString@@PBD0H@Z @ 6 NONAME ; class QString MsgHistory::trUtf8(char const *, char const *, int)
+	?setId@MsgItem@@QAEXH@Z @ 7 NONAME ; void MsgItem::setId(int)
+	?setDirection@MsgItem@@QAEXW4MsgDirection@1@@Z @ 8 NONAME ; void MsgItem::setDirection(enum MsgItem::MsgDirection)
+	?subscribe@MsgHistory@@QAE_NH@Z @ 9 NONAME ; bool MsgHistory::subscribe(int)
+	?messagesReady@MsgHistory@@IAEXAAV?$QList@VMsgItem@@@@@Z @ 10 NONAME ; void MsgHistory::messagesReady(class QList<class MsgItem> &)
+	?trUtf8@MsgHistory@@SA?AVQString@@PBD0@Z @ 11 NONAME ; class QString MsgHistory::trUtf8(char const *, char const *)
+	?messageChanged@MsgHistory@@IAEXAAVMsgItem@@@Z @ 12 NONAME ; void MsgHistory::messageChanged(class MsgItem &)
+	?isAttributeSet@MsgItem@@QBE_NW4MsgAttribute@1@@Z @ 13 NONAME ; bool MsgItem::isAttributeSet(enum MsgItem::MsgAttribute) const
+	?markRead@MsgHistory@@QAE_NH@Z @ 14 NONAME ; bool MsgHistory::markRead(int)
+	??1MsgItem@@UAE@XZ @ 15 NONAME ; MsgItem::~MsgItem(void)
+	?getMessages@MsgHistory@@QAE_NH@Z @ 16 NONAME ; bool MsgHistory::getMessages(int)
+	?type@MsgItem@@QBE?AW4MsgType@1@XZ @ 17 NONAME ; enum MsgItem::MsgType MsgItem::type(void) const
+	??0MsgHistory@@QAE@PAVQObject@@@Z @ 18 NONAME ; MsgHistory::MsgHistory(class QObject *)
+	?setState@MsgItem@@QAEXW4MsgState@1@@Z @ 19 NONAME ; void MsgItem::setState(enum MsgItem::MsgState)
+	?timeStamp@MsgItem@@QBE?AVQDateTime@@XZ @ 20 NONAME ; class QDateTime MsgItem::timeStamp(void) const
+	?changeAttributes@MsgItem@@QAEXGG@Z @ 21 NONAME ; void MsgItem::changeAttributes(unsigned short, unsigned short)
+	?unSubscribe@MsgHistory@@QAE_NH@Z @ 22 NONAME ; bool MsgHistory::unSubscribe(int)
+	?body@MsgItem@@QBE?AVQString@@XZ @ 23 NONAME ; class QString MsgItem::body(void) const
+	?metaObject@MsgHistory@@UBEPBUQMetaObject@@XZ @ 24 NONAME ; struct QMetaObject const * MsgHistory::metaObject(void) const
+	?tr@MsgHistory@@SA?AVQString@@PBD0H@Z @ 25 NONAME ; class QString MsgHistory::tr(char const *, char const *, int)
+	??1MsgHistory@@UAE@XZ @ 26 NONAME ; MsgHistory::~MsgHistory(void)
+	?setType@MsgItem@@QAEXW4MsgType@1@@Z @ 27 NONAME ; void MsgItem::setType(enum MsgItem::MsgType)
+	??0MsgItem@@QAE@XZ @ 28 NONAME ; MsgItem::MsgItem(void)
+	?direction@MsgItem@@QBE?AW4MsgDirection@1@XZ @ 29 NONAME ; enum MsgItem::MsgDirection MsgItem::direction(void) const
+	??0MsgItem@@QAE@ABV0@@Z @ 30 NONAME ; MsgItem::MsgItem(class MsgItem const &)
+	?setBody@MsgItem@@QAEXABVQString@@@Z @ 31 NONAME ; void MsgItem::setBody(class QString const &)
+	?staticMetaObject@MsgHistory@@2UQMetaObject@@B @ 32 NONAME ; struct QMetaObject const MsgHistory::staticMetaObject
+	?clearMessages@MsgHistory@@QAE_NH@Z @ 33 NONAME ; bool MsgHistory::clearMessages(int)
+	?messageDeleted@MsgHistory@@IAEXAAVMsgItem@@@Z @ 34 NONAME ; void MsgHistory::messageDeleted(class MsgItem &)
+	?setPhoneNumber@MsgItem@@QAEXABVQString@@@Z @ 35 NONAME ; void MsgItem::setPhoneNumber(class QString const &)
+	??_EMsgHistory@@UAE@I@Z @ 36 NONAME ; MsgHistory::~MsgHistory(unsigned int)
+	?tr@MsgHistory@@SA?AVQString@@PBD0@Z @ 37 NONAME ; class QString MsgHistory::tr(char const *, char const *)
+	?qt_metacall@MsgHistory@@UAEHW4Call@QMetaObject@@HPAPAX@Z @ 38 NONAME ; int MsgHistory::qt_metacall(enum QMetaObject::Call, int, void * *)
+	?getStaticMetaObject@MsgHistory@@SAABUQMetaObject@@XZ @ 39 NONAME ; struct QMetaObject const & MsgHistory::getStaticMetaObject(void)
+	?state@MsgItem@@QBE?AW4MsgState@1@XZ @ 40 NONAME ; enum MsgItem::MsgState MsgItem::state(void) const
+	?phoneNumber@MsgItem@@QBE?AVQString@@XZ @ 41 NONAME ; class QString MsgItem::phoneNumber(void) const
+

@@ -1,0 +1,102 @@
+/*
+* Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  This is the project specification file for CPixBrowserPlugin
+*
+*/
+
+//#include <domain/osextensions/platform_paths.hrh>
+#include <data_caging_paths.hrh>
+#include <platform_paths.hrh>
+
+TARGET		  npCPixPlugin.dll
+TARGETTYPE    PLUGIN
+UID			  0x10009D8D 0x2001f6f9 // old test UID 0x0F3DD41C
+
+EPOCALLOWDLLDATA
+CAPABILITY    CAP_GENERAL_DLL -DRM
+VENDORID   VID_DEFAULT
+
+DEFFILE         npCPixPlugin.def
+NOSTRICTDEF
+
+SOURCEPATH      ../data
+START RESOURCE 2001F6F9.rss
+	TARGET npCPixPlugin.rsc
+END
+
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE   /epoc32/include/libc
+SYSTEMINCLUDE   /epoc32/include/ecom
+
+USERINCLUDE ../inc
+USERINCLUDE ../inc/idl
+//USERINCLUDE ../../SearchClient/inc
+USERINCLUDE ../../../cfg
+
+SOURCEPATH ../src
+SOURCE CCPixNPPlugin.cpp 
+SOURCE CCPixNPPluginEcom.cpp 
+SOURCE CCPixNPPluginInterface.cpp 
+SOURCE CObjectInterface.cpp 
+SOURCE CNPSearchDocument.cpp 
+SOURCE CCPixNPSearcher.cpp 
+SOURCE CCPixNPSearcherInterface.cpp 
+SOURCE CNPDocumentFieldInterface.cpp 
+SOURCE CNPSearchDocumentInterface.cpp 
+SOURCE CCPixNPSearcherObserver.cpp
+SOURCE CNPDocumentField.cpp 
+SOURCE CPixNPExceptions.cpp 
+SOURCE NPUtils.cpp 
+SOURCE msvui.cpp // Message Viewer
+SOURCE CMobileInfo.cpp // Getting MCC
+
+LIBRARY ecom.lib
+LIBRARY euser.lib
+
+LIBRARY charconv.lib			// CnvUtfConverter
+LIBRARY fbscli.lib 				// CFbsBitmap
+LIBRARY bitgdi.lib				// CFbsBitGc
+LIBRARY cone.lib				// CCoeEnv
+LIBRARY CPixSearchClient.lib	// CPixSearchClient
+LIBRARY inetprotutil.lib
+
+//LIBRARY calenlauncher.lib		// Calendar Item View //@TODO: Not supported in TB10.1
+
+LIBRARY eikcore.lib				// Contact Item Viewer
+//LIBRARY pbkview.lib				// Contact Item Viewer //@TODO: Not supported in TB10.1
+
+LIBRARY msgs.lib				// Message Viewer
+LIBRARY mtur.lib				// Message Viewer
+
+LIBRARY mnclientlib.lib			// Maps
+LIBRARY lbs.lib 				// TCoordinate
+
+LIBRARY avkon.lib				// Application exit observation
+LIBRARY apparc.lib				// Application exit observation
+
+LIBRARY etel3rdparty.lib		// Obtaining IMSI code
+LIBRARY efsrv.lib               //For RFs
+LIBRARY           flogger.lib 	// Logging
+LIBRARY apgrfx.lib              //RApaLsSession
+LIBRARY ws32.lib                //RWsSession
+
+#ifdef __S60_50__
+LIBRARY npscript.lib
+#else
+#ifdef WINSCW
+LIBRARY JavaScriptCore_sdk.lib
+#else
+LIBRARY JavaScriptCore.lib
+#endif
+#endif

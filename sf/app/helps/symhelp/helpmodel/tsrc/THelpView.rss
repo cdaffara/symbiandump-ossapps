@@ -1,0 +1,87 @@
+// Copyright (c) 2003-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+NAME THVW
+
+#include <techview/eikon.rh>
+#include "THelpView.hrh"
+
+//
+// STANDARD APP RESOURCES
+//
+RESOURCE RSS_SIGNATURE { }
+
+RESOURCE TBUF { buf=""; }
+
+RESOURCE EIK_APP_INFO
+	{
+	menubar	= r_helpview_menubar;
+	hotkeys = r_helpview_hotkeys;
+	}
+
+RESOURCE HOTKEYS r_helpview_hotkeys
+    {
+    control=
+        {
+        HOTKEY { command=EEikCmdExit;			key='e'; },
+        HOTKEY { command=EHlpCmdSearchDone;		key='d'; } 
+        };
+    }
+
+RESOURCE MENU_BAR r_helpview_menubar
+    {
+    titles=
+        {
+        MENU_TITLE { menu_pane = r_helpview_file_menu;	txt="File"; },
+        MENU_TITLE { menu_pane = r_helpview_view_menu;	txt="View"; },
+        MENU_TITLE { menu_pane = r_helpview_tools_menu;	txt="Tools"; }
+		};
+    }
+
+RESOURCE MENU_PANE r_helpview_file_menu
+	{
+	items=
+		{
+		MENU_ITEM { command=EEikCmdExit; txt="Close"; }
+        };
+    }
+
+RESOURCE MENU_PANE r_helpview_view_menu
+	{
+	items=
+		{
+		MENU_ITEM { command=EEikCmdZoomIn;	txt="Zoom in"; },
+		MENU_ITEM { command=EEikCmdZoomOut; txt="Zoom out"; }
+		};
+	}
+
+RESOURCE MENU_PANE r_helpview_tools_menu
+	{
+	items=
+		{
+		MENU_ITEM { command=EHlpCmdSearch;		txt="Search"<KEllipsis>; },
+ 		MENU_ITEM { command=EHlpCmdSearchDone;	txt="Hide results"; }
+		};
+    }
+
+
+
+//
+// TEXT RESOURCEs
+//
+RESOURCE TBUF r_helpview_text_no_search_results { buf = "No search results found"; }
+RESOURCE TBUF r_helpview_text_no_topic_for_id	{ buf = "Topic not found"; }
+RESOURCE TBUF r_helpview_text_searching			{ buf = "Searching"<KEllipsis>; }
+

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<testreport version="3.0" date="2009-10-29T10:37:50Z" xmlns="xmlreporter.xsd">
+<testparameters>
+<testparameter name="EUnit version">EUnit 5.1.1</testparameter>
+<testparameter name="Test executor">ExeRunner</testparameter>
+<testparameter name="Target">WINSCW</testparameter>
+<testparameter name="Platform">256</testparameter>
+<testparameter name="Device">0x00004D24</testparameter>
+<testparameter name="Test dll&apos;s">ut_tphonecmdparamcallheaderdata</testparameter>
+<testparameter name="Environment">ExeEnv</testparameter>
+<testparameter name="Logger in use">RDebug</testparameter>
+<testparameter name="Logger in use">XML</testparameter>
+<testparameter name="Test case timeout in seconds">30</testparameter>
+<testparameter name="Resource checking mode">Error</testparameter>
+<testparameter name="Panic note dismissal">None</testparameter>
+</testparameters>
+<dll name="ut_tphonecmdparamcallheaderdata" size="2">
+<testsuite name="EUnit - Phone - TPhoneCmdParamCallHeaderData" type="UNIT" size="2">
+<testcase name="SetCallFlag - SetCallFlag - Normal " class="UT_TPhoneCmdParamCallHeaderData" method="SetCallFlag - SetCallFlag- Normal" type="FUNCTIONALITY">
+<result status="OK"></result>
+</testcase>
+<testcase name="SetCallFlag - SetCallFlag, video and diverted" class="UT_TPhoneCmdParamCallHeaderData" method="SetCallFlag - SetCallFlag, video and diverted" type="FUNCTIONALITY">
+<result status="OK"></result>
+</testcase>
+</testsuite>
+</dll>
+</testreport>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument context="RadioStationsView" version="0.9">
+    <object name="sv:scan_action" type="HbAction">
+        <string name="text" locid="txt_rad_opt_search_all_stations" />
+    </object>    
+    <object name="sv:multi_selection_action" type="HbAction">
+        <string name="text" locid="txt_common_opt_delete" />
+    </object>    
+    <object name="loudspeaker_action" type="HbAction">
+        <string name="text" locid="txt_common_opt_activate_loudspeaker" />
+    </object>
+    <object name="exit_action" type="HbAction">
+        <string name="text" locid="txt_common_opt_exit" />
+    </object>
+    <object name="sv:play_action" type="HbAction">
+        <string name="text" locid="txt_common_menu_play_music" />
+    </object>
+    <object name="sv:rename_action" type="HbAction">
+        <string name="text" locid="txt_common_menu_rename_item" />
+    </object>
+    <object name="sv:toggle_favorite_action" type="HbAction">
+        <string name="text" locid="txt_rad_menu_add_to_favourites" />
+    </object>
+    <object name="sv:delete_action" type="HbAction">
+        <string name="text" locid="txt_common_menu_delete" />
+    </object>
+    <object name="sv:local_stations_button" type="HbAction">
+        <bool name="checkable" value="TRUE"/>
+        <icon iconName="qtg_mono_radio_stations" name="icon"/>
+    </object>
+    <object name="sv:favorite_stations_button" type="HbAction">
+        <bool name="checkable" value="TRUE"/>
+        <icon iconName="qtg_mono_favourites" name="icon"/>
+    </object>
+    <widget name="view" type="HbView">
+        <icon name="nowPlayingIcon" iconName="qtg_mono_play" />
+        <icon name="favoriteIcon" iconName="qtg_small_favorite" />
+        <icon name="nonFavoriteIcon" iconName="qtg_small_star_non_favourited" />
+        <widget name="mMenu" role="HbView:menu" type="HbMenu">
+            <ref object="sv:scan_action" role="HbMenu:addAction"/>
+            <ref object="sv:multi_selection_action" role="HbMenu:addAction"/>
+            <ref object="loudspeaker_action" role="HbMenu:addAction"/>
+            <ref object="exit_action" role="HbMenu:addAction"/>
+        </widget>
+        <widget name="sv:toolbar" role="HbView:toolBar" type="HbToolBar">
+            <enums name="orientation" value="Horizontal"/>
+            <ref object="sv:local_stations_button" role="HbToolBar:addAction"/>
+            <ref object="sv:favorite_stations_button" role="HbToolBar:addAction"/>
+        </widget>
+        <widget name="content" role="HbView:widget" type="HbWidget">
+            <widget name="sv:heading_banner" type="HbGroupBox">
+                <sizepolicy horizontalPolicy="Expanding" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+                <sizehint height="expr(var(hb-param-text-height-secondary)+2*var(hb-param-margin-gene-middle-vertical))" type="PREFERRED"/>
+                <fontspec name="fontSpec" role="Secondary" textheight="var(hb-param-text-height-secondary)"/>
+                <string name="heading" locid="txt_rad_subhead_local_stations" />
+            </widget>
+            <widget name="sv:stacked_widget" type="HbWidget">
+                <widget name="sv:scan_button" type="HbPushButton">
+                    <bool name="visible" value="FALSE"/>
+                </widget>
+                <widget name="sv:empty_container" type="HbWidget">
+                    <bool name="visible" value="FALSE"/>
+                    <widget name="sv:empty_title" type="HbLabel">
+                        <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+                        <string locid="txt_rad_info_no_stations" name="plainText"/>
+                        <fontspec name="fontSpec" role="Title" textheight="33.5"/>
+                    </widget>
+                    <widget name="sv:empty_text" type="HbLabel">
+                        <enums name="textWrapping" value="TextWordWrap"/>
+                        <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+                        <sizehint height="320" type="PREFERRED" width="240"/>
+                        <string locid="txt_rad_info_no_stations_search_stations_automat" name="plainText"/>
+                        <fontspec name="fontSpec" role="Title" textheight="33.5"/>
+                    </widget>
+                    <layout orientation="Vertical" spacing="var(hb-param-margin-gene-middle-vertical)" type="linear">
+                        <contentsmargins bottom="var(hb-param-margin-gene-bottom)" left="var(hb-param-margin-gene-left)" right="var(hb-param-margin-gene-right)" top="var(hb-param-margin-gene-top)"/>
+                        <stretchitem stretchfactor="2"/>
+                        <linearitem itemname="sv:empty_title"/>
+                        <stretchitem stretchfactor="1"/>
+                        <linearitem itemname="sv:empty_text"/>
+                        <stretchitem stretchfactor="2"/>
+                    </layout>
+                </widget>
+                <widget name="sv:stations_list" type="HbListView">
+                    <sizehint height="320" type="PREFERRED" width="240"/>
+                    <bool name="visible" value="TRUE"/>
+                </widget>
+                <layout type="stacked">
+                    <stackitem itemname="sv:scan_button"/>
+                    <stackitem itemname="sv:empty_container"/>
+                    <stackitem itemname="sv:stations_list"/>
+                </layout>
+            </widget>
+            <layout type="anchor">
+                <anchoritem dst="sv:heading_banner" dstEdge="TOP" spacing="0un" src="" srcEdge="TOP"/>
+                <anchoritem dst="sv:heading_banner" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="sv:heading_banner" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="sv:stacked_widget" dstEdge="TOP" spacing="0un" src="sv:heading_banner" srcEdge="BOTTOM"/>
+                <anchoritem dst="sv:stacked_widget" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="sv:stacked_widget" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="sv:stacked_widget" dstEdge="BOTTOM" spacing="0un" src="" srcEdge="BOTTOM"/>
+            </layout>
+        </widget>
+        <string name="title" locid="txt_rad_title_fm_radio"/>
+    </widget>
+
+    <widget name="sv:context_menu" type="HbMenu">
+        <ref object="sv:play_action" role="HbMenu:addAction" />
+        <ref object="sv:rename_action" role="HbMenu:addAction" />
+        <ref object="sv:toggle_favorite_action" role="HbMenu:addAction" />
+        <ref object="sv:delete_action" role="HbMenu:addAction" />
+    </widget>
+
+    <section name="show_scan_text">
+        <widget name="sv:stations_list">
+            <bool name="visible" value="FALSE"/>
+        </widget>
+        <widget name="sv:empty_container">
+            <bool name="visible" value="TRUE"/>
+        </widget>
+        <widget name="sv:scan_button">
+            <bool name="visible" value="TRUE"/>
+        </widget>
+    </section>
+    <section name="hide_scan_text">
+        <widget name="sv:stations_list">
+            <bool name="visible" value="TRUE"/>
+        </widget>
+        <widget name="sv:empty_container">
+            <bool name="visible" value="FALSE"/>
+        </widget>
+        <widget name="sv:scan_button">
+            <bool name="visible" value="FALSE"/>
+        </widget>
+    </section>
+    <section name="show_all_stations">
+        <object name="sv:local_stations_button">
+            <bool name="checked" value="TRUE"/>
+        </object>
+        <object name="sv:favorite_stations_button">
+            <bool name="checked" value="FALSE"/>
+        </object>
+        <object name="sv:multi_selection_action">
+            <string name="text" locid="txt_common_opt_delete" />
+        </object>
+        <widget name="sv:heading_banner">
+            <string name="heading" locid="txt_rad_subhead_local_stations" />
+        </widget>
+        <widget name="sv:scan_button">
+            <bool name="visible" value="TRUE"/>
+        </widget>
+        <widget name="sv:empty_title">
+            <string name="plainText" locid="txt_rad_info_no_stations" />
+        </widget>
+        <widget name="sv:empty_text">
+            <string name="plainText" locid="txt_rad_info_no_stations_search_stations_automat" />
+        </widget>
+    </section>
+    <section name="show_favorites">
+        <object name="sv:local_stations_button">
+            <bool name="checked" value="FALSE"/>
+        </object>
+        <object name="sv:favorite_stations_button">
+            <bool name="checked" value="TRUE"/>
+        </object>
+        <object name="sv:multi_selection_action">
+            <string name="text" locid="txt_common_opt_remove" />
+        </object>
+        <widget name="sv:heading_banner">
+            <string name="heading" locid="txt_rad_subhead_favourites" />
+        </widget>
+        <widget name="sv:scan_button">
+            <bool name="visible" value="FALSE"/>
+        </widget>
+        <widget name="sv:empty_title">
+            <string name="plainText" locid="txt_rad_info_no_favourite_stations" />
+        </widget>
+        <widget name="sv:empty_text">
+            <string name="plainText" locid="txt_rad_info_no_favourites_add_favourites_to_see" />
+        </widget>
+    </section>
+    <metadata activeUIState="Common ui state" display="NHD portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+    </metadata>
+</hbdocument>

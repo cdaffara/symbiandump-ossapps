@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="1.2">
+    <widget name="view" type="HbView">
+        <widget name="container" role="HbView:widget" type="HbWidget">
+            <widget name="label" type="HbGroupBox">
+                <bool name="marqueeHeading" value="TRUE"/>
+                <string name="heading" value="."/>
+                <fontspec name="fontSpec" role="Title" textheight="0"/>
+            </widget>
+            <widget name="emptyViewLabelContainer" type="HbWidget">
+                <widget name="emptyViewLabel" type="HbLabel">
+                    <enums name="alignment" value="AlignHCenter"/>
+                    <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Minimum" verticalStretch="0"/>
+                    <contentsmargins bottom="0un" left="0un" right="0un" top="var(hb-param-text-height-primary)"/>
+                    <enums name="elideMode" value="ElideMiddle"/>
+                    <bool name="visible" value="TRUE"/>
+                    <string locid="txt_applib_formlabel_no_search_results" name="plainText"/>
+                    <fontspec name="fontSpec" role="Primary" textheight="var(hb-param-text-height-primary)"/>
+                </widget>
+                <layout orientation="Horizontal" spacing="0.0un" type="linear">
+                    <stretchitem stretchfactor="1"/>
+                    <linearitem itemname="emptyViewLabel"/>
+                    <stretchitem stretchfactor="1"/>
+                </layout>
+            </widget>
+            <widget name="listView" type="HbListView">
+                <bool name="itemRecycling" value="TRUE"/>
+                <enums name="horizontalScrollBarPolicy" value="ScrollBarAutoHide"/>
+                <bool name="frictionEnabled" value="TRUE"/>
+            </widget>
+            <widget name="searchPanel" type="HbSearchPanel"/>
+        </widget>
+        <string locid="txt_applib_title_applications" name="title"/>
+    </widget>
+    <section name="searchViewLabeledList">
+        <widget name="view" type="HbView">
+            <widget name="container" role="HbView:widget" type="HbWidget">
+                <widget name="label" type="HbGroupBox">
+                    <bool name="visible" value="TRUE"/>
+                </widget>
+                <widget name="emptyViewLabelContainer" type="HbWidget">
+                    <bool name="visible" value="FALSE"/>
+                </widget>
+                <widget name="listView" type="HbListView">
+                    <bool name="visible" value="TRUE"/>
+                </widget>
+                <layout orientation="Vertical" spacing="0un" type="linear">
+                    <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+                    <linearitem itemname="label"/>
+                    <linearitem itemname="listView"/>
+                    <stretchitem stretchfactor="100"/>
+                    <linearitem itemname="searchPanel"/>
+                </layout>
+            </widget>
+            <string locid="txt_applib_title_applications" name="title"/>
+            <bool name="contentFullScreen" value="TRUE"/>
+        </widget>
+    </section>
+    <section name="searchViewList">
+        <widget name="view" type="HbView">
+            <widget name="container" role="HbView:widget" type="HbWidget">
+                <widget name="label" type="HbGroupBox">
+                    <bool name="visible" value="FALSE"/>
+                </widget>
+                <widget name="emptyViewLabelContainer" type="HbWidget">
+                    <bool name="visible" value="FALSE"/>
+                </widget>
+                <widget name="listView" type="HbListView">
+                    <bool name="visible" value="TRUE"/>
+                </widget>
+                <layout orientation="Vertical" spacing="0.0un" type="linear">
+                    <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+                    <linearitem itemname="listView"/>
+                    <stretchitem stretchfactor="100"/>
+                    <linearitem itemname="searchPanel"/>
+                </layout>
+            </widget>
+            <string locid="txt_applib_title_applications" name="title"/>
+            <bool name="contentFullScreen" value="TRUE"/>
+        </widget>
+    </section>
+    <section name="searchViewLabeledEmpty">
+        <widget name="view" type="HbView">
+            <widget name="container" role="HbView:widget" type="HbWidget">
+                <widget name="label" type="HbGroupBox">
+                    <bool name="visible" value="TRUE"/>
+                </widget>
+                <widget name="emptyViewLabelContainer" type="HbWidget">
+                    <bool name="visible" value="TRUE"/>
+                </widget>
+                <widget name="listView" type="HbListView">
+                    <bool name="visible" value="FALSE"/>
+                </widget>
+                <layout orientation="Vertical" spacing="0un" type="linear">
+                    <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+                    <linearitem itemname="label"/>
+                    <linearitem itemname="emptyViewLabelContainer"/>
+                    <stretchitem stretchfactor="100"/>
+                    <linearitem itemname="searchPanel"/>
+                </layout>
+            </widget>
+            <string locid="txt_applib_title_applications" name="title"/>
+        </widget>
+    </section>
+    <section name="searchViewEmpty">
+        <widget name="view" type="HbView">
+            <widget name="container" role="HbView:widget" type="HbWidget">
+                <widget name="emptyViewLabelContainer" type="HbWidget">
+                    <bool name="visible" value="TRUE"/>
+                </widget>
+                <widget name="label" type="HbGroupBox">
+                    <bool name="visible" value="FALSE"/>
+                </widget>
+                <widget name="listView" type="HbListView">
+                    <bool name="visible" value="FALSE"/>
+                </widget>
+                <layout orientation="Vertical" spacing="0un" type="linear">
+                    <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+                    <linearitem itemname="emptyViewLabelContainer"/>
+                    <stretchitem stretchfactor="100"/>
+                    <linearitem itemname="searchPanel"/>
+                </layout>
+            </widget>
+            <string locid="txt_applib_title_applications" name="title"/>
+        </widget>
+    </section>
+    <metadata activeUIState="Search Labeled List" display="NHD-3.2-inch_portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+        <uistate name="Common ui" sections="#common"/>
+        <uistate name="Search Labeled List" sections="#common searchViewLabeledList"/>
+        <uistate name="Search List state" sections="#common searchViewList"/>
+        <uistate name="Search Empty Labeled View" sections="#common searchViewLabeledEmpty"/>
+        <uistate name="Search Empty View" sections="#common searchViewEmpty"/>
+        <dummydata objectName="listView" section="#common" value="app_list_template5"/>
+        <dummydata objectName="listView" section="searchViewLabeledList" value="app_list_template5"/>
+        <dummydata objectName="listView" section="searchViewList" value="app_list_template5"/>
+        <dummydata objectName="listView" section="searchViewLabeledEmpty" value="app_list_template5"/>
+        <dummydata objectName="listView" section="searchViewEmpty" value="app_list_template5"/>
+    </metadata>
+</hbdocument>

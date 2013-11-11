@@ -1,0 +1,29 @@
+/*
+* Copyright (c) 2008 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*
+*/
+
+#ifndef PRESENCECACHE_IBY
+#define PRESENCECACHE_IBY
+
+#include <data_caging_paths_for_iby.hrh>
+
+file=ABI_DIR\BUILD_DIR\presencecacheutils.dll SHARED_LIB_DIR\presencecacheutils.dll
+file=ABI_DIR\BUILD_DIR\presencecacheclient2.dll SHARED_LIB_DIR\presencecacheclient2.dll
+file=ABI_DIR\BUILD_DIR\presencecacheserver2.exe PROGRAMS_DIR\presencecacheserver2.exe
+
+#endif // PRESENCECACHE_IBY
+
+// End of file

@@ -1,0 +1,242 @@
+/*
+* Copyright (c) 2010 Kanrikogaku Kenkyusho, Ltd.
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the License "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Kanrikogaku Kenkyusho, Ltd. - Initial contribution
+*
+* Contributors:
+*
+* Description:  
+*
+*/
+
+//  LOCALISATION STRINGS
+
+// Caption string for app.
+#define text_directprint_captionstring "DirectPrint"
+
+#define text_directprint_loc_resource_file "\\resource\\apps\\directprintapp"
+
+#define text_directprint_setting_directory "c:\\system\\data\\"
+#define text_directprint_setting_file "c:\\system\\data\\directprintsetting.dat"
+
+// Menu item string
+#define text_directprint_menu_item_help  		"Help"
+#define text_directprint_menu_item_about		"About"
+#define text_directprint_menu_item_exit  		"Back"
+
+// About dialog
+#define text_directprint_about_dialog_title		"About"
+#define text_directprint_about_dialog_text		"DirectPrintApp Version 1.0.0\n\nAuthor: K3"
+
+// error message 
+#define text_directprint_msg_print_in_use		"Print in use"
+#define text_directprint_msg_param_incorrect	"Incorrect parameter"
+#define text_directprint_msg_param_file_not_found	"File not found"
+#define text_directprint_msg_bearer_open_err	"Bearer open error [%d]"
+#define text_directprint_msg_submit_print_err	"Printing failed [%d]"
+#define text_directprint_msg_preview_err		"Preview failed"
+
+// progress message 
+#define text_directprint_printing_progress		"Printing... %d/%d"
+#define text_directprint_searching_progress		"Searching..."
+
+// information message 
+#define text_directprint_msg_now_printing		"Now printing"
+
+// Global menu item
+#define text_directprint_menu_print				"Print"
+#define text_directprint_menu_preview			"Preview"
+#define text_directprint_menu_change			"Change"
+
+#define text_directprint_toolbar_print			"Print"
+#define text_directprint_toolbar_preview		"Preview"
+
+#define text_directprint_mainview_title			"Print"
+#define text_directprint_mainview_menu_propertysetting 	"Property settings"
+#define text_directprint_mainview_menu_exit 		"Exit"
+#define text_directprint_mainview_toolbar_propertysetting 	"Property"
+#define text_directprint_mainview_item_printername		"Printer Name"
+#define text_directprint_mainview_item_bearer			"Bearer"
+#define text_directprint_mainview_item_propertysettings	"Property Settings"
+
+#define text_directprint_printerlist_title			"Printer list"
+#define text_directprint_printerlist_menu_search	"Search"
+#define text_directprint_printerlist_menu_new		"New"
+#define text_directprint_printerlist_menu_edit		"Edit"
+#define text_directprint_printerlist_menu_delete	"Delete"
+
+#define text_directprint_printersearch_title	"Printer search"
+#define text_directprint_searchresult_menu_search	"Search"
+
+#define text_directprint_printersetting_title		"Printer settings"
+#define text_directprint_printersetting_item_printername	"Printer name"
+#define text_directprint_printersetting_item_driver			"Driver"
+#define text_directprint_printersetting_item_bearer			"Bearer"
+#define text_directprint_printersetting_item_accesspoint	"Access point"
+#define text_directprint_printersetting_item_host			"Host"
+#define text_directprint_printersetting_item_port			"Port"
+#define text_directprint_printersetting_item_username		"User name"
+#define text_directprint_printersetting_item_que			"Que"
+#define text_directprint_printersetting_item_type			"Type"
+
+#define text_directprint_propertysetting_title		"Property settings"
+#define text_directprint_propertysetting_tab_paper	"Paper"
+#define text_directprint_propertysetting_tab_page	"Page"
+#define text_directprint_propertysetting_tab_margin	"Margin"
+#define text_directprint_propertysetting_tab_header	"Header"
+#define text_directprint_propertysetting_tab_footer	"Footer"
+#define text_directprint_propertysetting_item_papersize		"Paper Size"
+#define text_directprint_propertysetting_item_orientation	"Orientation"
+#define text_directprint_propertysetting_item_mediatype		"Media type"
+#define text_directprint_propertysetting_item_printpage		"Print page"
+#define text_directprint_propertysetting_item_printrange	"Print range"
+#define text_directprint_propertysetting_item_copy			"Number of copies"
+#define text_directprint_propertysetting_item_leftmargin	"Margin from left"
+#define text_directprint_propertysetting_item_rightmargin	"Margin from right"
+#define text_directprint_propertysetting_item_topmargin		"Margin from top"
+#define text_directprint_propertysetting_item_bottommargin	"Margin from bottom"
+#define text_directprint_propertysetting_item_headertext	"Header text"
+#define text_directprint_propertysetting_item_headerdistance	"Distance from top"
+#define text_directprint_propertysetting_item_headerfirstpage	"Include on first page"
+#define text_directprint_propertysetting_item_footertext	"Footer text"
+#define text_directprint_propertysetting_item_footerdistance	"Distance from bottom"
+#define text_directprint_propertysetting_item_footerfirstpage	"Include on first page"
+#define text_directprint_propertysetting_item_boaderless	"Boaderless"
+
+#define text_directprint_orientation_portrate		"Portrate"
+#define text_directprint_orientation_landscape		"Landscape"
+
+#define text_directprint_range_all		"All"
+#define text_directprint_range_odd		"Odd"
+#define text_directprint_range_even		"Even"
+
+#define text_directprint_yes	"Yes"
+#define text_directprint_no		"No"
+
+#define text_directprint_previewview_title		"Preview"
+#define text_directprint_previewview_expand		"Expand"
+#define text_directprint_previewview_reduce		"Reduce"
+
+
+
+
+
+// ---------------------------------------------------------------------------- 
+//
+// For directprint engine
+//
+// ---------------------------------------------------------------------------- 
+//
+//
+
+// d:Paper size capability presented in the list box in print settings view
+// l:list_setting_pane_t1
+#define qtn_print_settings_paper_size "Paper size"
+
+// d:Paper size "Automatic" in the print settings view settings value
+// l:list_set_graphic_pane_t1
+#define qtn_print_paper_size_auto "Automatic"
+
+// d:Paper size "US Letter" in the print settings view list box / pop-up window
+// l:list_set_graphic_pane_t1
+#define qtn_print_paper_size_letter "US Letter"
+
+// d:Paper size "A4" in the print settings view list box / pop-up window
+// l:list_set_graphic_pane_t1
+#define qtn_print_paper_size_a4 "A4"
+
+// d:Paper size "A6" in the print settings view list box / pop-up window
+// l:list_set_graphic_pane_t1
+#define qtn_print_paper_size_a6 "A6"
+
+// d:Paper size "4x6" in the print settings view list box / pop-up window
+// d:4x6 means paper size of 4 inches by 6 inches. This needs to be converted
+// d:in country localizations that use metric system
+// l:list_set_graphic_pane_t1
+#define qtn_print_paper_size_4x6 "4x6"
+
+// d:Paper size "5x7" in the print settings view list box / pop-up window
+// d:5x7 means paper size of 5 inches by 7 inches. This needs to be converted
+// d:in country localizations that use metric system
+// l:list_set_graphic_pane_t1
+#define qtn_print_paper_size_5x7 "5x7"
+
+// d:Paper size "Sticker" in the print settings view list box / pop-up window
+// l:list_set_graphic_pane_t1
+#define qtn_print_paper_size_sticker "Sticker"
+
+// d:Print quality capability presented in the list box in print settings view
+// l:list_setting_pane_t1
+#define qtn_print_settings_print_quality "Print quality"
+
+// d:Print quality "Automatic" in the print settings view list box / pop-up window
+// l:list_set_graphic_pane_t1
+#define qtn_print_quality_auto "Automatic"
+
+// d:Print quality "Normal" in the print settings view list box / pop-up window
+// l:list_set_graphic_pane_t1
+#define qtn_print_quality_normal "Normal"
+
+// d:Print quality "Draft" in the print settings view list box / pop-up window
+// l:list_set_graphic_pane_t1
+#define qtn_print_quality_draft "Draft"
+
+// d:Print quality "Fine" in the print settings view list box / pop-up window
+// l:list_set_graphic_pane_t1
+#define qtn_print_quality_fine "Fine"
+
+// d:Template capability as settings item in settings view
+// l:list_setting_pane_t1
+#define qtn_print_settings_template "Images per page"
+
+// d:Template 1 per page "1 borderless" in the print settings view list box / pop-up window
+// l:list_set_graphic_pane_t1
+#define qtn_print_settings_bless "1 borderless"
+
+// d:Default printer "PictBridge" in the print settings view list box / pop-up window
+// l:list_set_graphic_pane_t1
+#define qtn_print_settings_default_usb "PictBridge"
+
+// d:Default printer "Bluetooth" in the print settings view list box / pop-up window
+// l:list_set_graphic_pane_t1
+#define qtn_print_settings_default_bt "Bluetooth"
+
+// d:Default printer "WLAN printer" in the print settings view list box / pop-up window
+// l:list_set_graphic_pane_t1
+#define qtn_print_settings_default_wlan "WLAN printer"
+
+// d:Default printer "LPR printer" in the print settings view list box / pop-up window
+// l:list_set_graphic_pane_t1
+#define qtn_print_settings_default_lpr "LPR"
+
+// d:Text on the device discovery pop-up list
+// l:list_single_large_graphic_pane_t1_cp2/opt1
+#define qtn_print_memory_card "Memory card"
+
+// d: Text when there is no printer selected in settings view
+// l: list_set_graphic_pane_t1  
+// r: 6.2
+#define qtn_print_no_printer "No printer"
+
+#define qtn_print_settings_accesspoint "Access point"
+#define qtn_print_settings_host "Host"
+#define qtn_print_settings_port "Port"
+#define qtn_print_settings_user "User name"
+#define qtn_print_settings_que "Que"
+
+#define qtn_print_settings_extent "Extent Item"
+#define qtn_print_settings_extent2 "Extent Item2"
+#define qtn_print_settings_extent_select1 "Select1"
+#define qtn_print_settings_extent_select2 "Select2"
+#define qtn_print_settings_extent_select3 "Select3"
+#define qtn_print_settings_extent_select4 "Select4"
+
+
+
+// End of File

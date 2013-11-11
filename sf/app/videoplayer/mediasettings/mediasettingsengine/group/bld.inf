@@ -1,0 +1,41 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the License "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   This file provides the information required for building the*
+*/
+
+
+
+// Version : %version: 8 %
+
+#include <platform_paths.hrh>
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+//
+//  Export the loc, stub sis iby files for S60 5.0
+//
+../rom/mpsettropmodel.iby      	CORE_APP_LAYER_IBY_EXPORT_PATH(mpsettropmodel.iby)
+../rom/mpsettropmodelrsc.iby    CORE_APP_LAYER_IBY_EXPORT_PATH(mpsettropmodelrsc.iby)
+
+// Generic configuration interface for component cenrep settings  
+// mediasettings_101F880B implementation specifics for cenrep data
+../conf/mediasettings.confml              APP_LAYER_CONFML(mediasettings.confml)
+../conf/mediasettings_101F880B.crml 	  APP_LAYER_CRML(mediasettings_101F880B.crml)
+
+PRJ_MMPFILES
+../group/MPSettROPModel.mmp
+
+PRJ_TESTMMPFILES

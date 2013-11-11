@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SystemDefinition xmlns:sf="http://www.symbian.org/system-definition" id-namespace="http://www.nokia.com/schema/drd/system-definition" schema="3.0.0" xmlns:qt="http://www.nokia.com/qt">
+  <package id="sf:commonemail" name="Email Apps" levels="service support ui app">
+    <collection id="commonemail_test" name="Email Apps Test" level="support">     
+    <component id="tsrc_build" name="Tsrc Build" filter="s60,test,qt_unit_test" introduced="^4">
+      <unit bldFile="../../tsrc" qt:proFile="tsrc.pro"/>
+     </component>
+    </collection>
+    <collection id="sf:emailuis" name="Email UIs" level="app">
+     <component id="nmhswidget" filter="test,s60,widget_tools" name="Nmail Homescreen Widget">
+	 <!-- temporary built from nmail.pro as a workaround to ServiceFW bug on service regisrtations, fix expected on wk18 MCL
+      <unit bldFile="emailuis/nmhswidget/tsrc/nmhswidgettestapp" qt:proFile="nmhswidgettestapp.pro"/>
+	  -->
+     </component>
+    </collection>
+  </package>
+</SystemDefinition>

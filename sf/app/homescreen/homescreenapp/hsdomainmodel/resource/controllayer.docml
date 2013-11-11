@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="0.9">
+    <widget name="controlLayer" type="HbWidget">
+        <widget name="pageIndicator" type="HsPageIndicator">
+            <sizehint height="2.5un" type="PREFERRED"/>
+        </widget>
+        <widget name="trashBin" type="HsTrashBinWidget">
+            <sizehint type="PREFERRED" height="11un" width="11un"/>
+        </widget>
+        <layout type="anchor">
+            <anchoritem dst="pageIndicator" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+            <anchoritem dst="pageIndicator" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+            <anchoritem dst="pageIndicator" dstEdge="BOTTOM" spacing="-1un" src="" srcEdge="BOTTOM"/>
+            <anchoritem dst="trashBin" dstEdge="CENTERH" spacing="0un" src="" srcEdge="CENTERH"/>
+            <anchoritem dst="trashBin" dstEdge="BOTTOM" spacing="-1un" src="" srcEdge="BOTTOM"/>
+        </layout>
+    </widget>
+    <metadata activeUIState="Common ui state" display="NHD portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+    </metadata>
+</hbdocument>

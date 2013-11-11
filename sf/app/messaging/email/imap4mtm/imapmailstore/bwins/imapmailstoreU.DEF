@@ -1,0 +1,37 @@
+EXPORTS
+	?BodyPartRemainingSize@CFetchBodyInfo@@QAEJXZ @ 1 NONAME ; long CFetchBodyInfo::BodyPartRemainingSize(void)
+	?BytesFetched@CFetchBodyInfo@@QAEJXZ @ 2 NONAME ; long CFetchBodyInfo::BytesFetched(void)
+	?Caf@CFetchBodyInfo@@QBEPAVCImCaf@@XZ @ 3 NONAME ; class CImCaf * CFetchBodyInfo::Caf(void) const
+	?CancelRequest@CImapMailStore@@QAEHAAVMMailStoreObserver@@@Z @ 4 NONAME ; int CImapMailStore::CancelRequest(class MMailStoreObserver &)
+	?CancelRequest@CImapMailStore@@QAEHJ@Z @ 5 NONAME ; int CImapMailStore::CancelRequest(long)
+	?CharsetId@CFetchBodyInfo@@QBEIXZ @ 6 NONAME ; unsigned int CFetchBodyInfo::CharsetId(void) const
+	?ContentTransferEncoding@CFetchBodyInfo@@QBE?AW4TImEncodingType@@XZ @ 7 NONAME ; enum TImEncodingType CFetchBodyInfo::ContentTransferEncoding(void) const
+	?CreateAttachmentInfoL@CImapMailStore@@QAEXJ@Z @ 8 NONAME ; void CImapMailStore::CreateAttachmentInfoL(long)
+	?IncrementBytesFetched@CFetchBodyInfo@@QAEXJ@Z @ 9 NONAME ; void CFetchBodyInfo::IncrementBytesFetched(long)
+	?InitialiseStoreAttachmentL@CImapMailStore@@QAEXHAAVCImapSettings@@AAVCFetchBodyInfo@@HAAVMMailStoreObserver@@@Z @ 10 NONAME ; void CImapMailStore::InitialiseStoreAttachmentL(int, class CImapSettings &, class CFetchBodyInfo &, int, class MMailStoreObserver &)
+	?InitialiseStoreBody16L@CImapMailStore@@QAEXHAAVCImapSettings@@AAVCFetchBodyInfo@@HAAVMMailStoreObserver@@H@Z @ 11 NONAME ; void CImapMailStore::InitialiseStoreBody16L(int, class CImapSettings &, class CFetchBodyInfo &, int, class MMailStoreObserver &, int)
+	?InitialiseStoreBody8L@CImapMailStore@@QAEXHAAVCImapSettings@@AAVCFetchBodyInfo@@HAAVMMailStoreObserver@@H@Z @ 12 NONAME ; void CImapMailStore::InitialiseStoreBody8L(int, class CImapSettings &, class CFetchBodyInfo &, int, class MMailStoreObserver &, int)	
+	?IsText@CFetchBodyInfo@@QAEHXZ @ 13 NONAME ; int CFetchBodyInfo::IsText(void)
+	?NewL@CFetchBodyInfo@@SAPAV1@J@Z @ 14 NONAME ; class CFetchBodyInfo * CFetchBodyInfo::NewL(long)
+	?NewL@CImapMailStore@@SAPAV1@AAVCMsvServerEntry@@@Z @ 15 NONAME ; class CImapMailStore * CImapMailStore::NewL(class CMsvServerEntry &)
+	?NewLC@CFetchBodyInfo@@SAPAV1@J@Z @ 16 NONAME ; class CFetchBodyInfo * CFetchBodyInfo::NewLC(long)
+	?PartId@CFetchBodyInfo@@QAEJXZ @ 17 NONAME ; long CFetchBodyInfo::PartId(void)
+	?RelativePath@CFetchBodyInfo@@QBEPAVHBufC8@@XZ @ 18 NONAME ; class HBufC8 * CFetchBodyInfo::RelativePath(void) const
+	?RequestCount@CImapMailStore@@QBEHXZ @ 19 NONAME ; int CImapMailStore::RequestCount(void) const
+	?ResetCaf@CFetchBodyInfo@@QAEXXZ @ 20 NONAME ; void CFetchBodyInfo::ResetCaf(void)
+	?SetBodyPartRemainingSize@CFetchBodyInfo@@QAEXJ@Z @ 21 NONAME ; void CFetchBodyInfo::SetBodyPartRemainingSize(long)
+	?SetCaf@CFetchBodyInfo@@QAEXPAVCImCaf@@@Z @ 22 NONAME ; void CFetchBodyInfo::SetCaf(class CImCaf *)
+	?SetCharsetId@CFetchBodyInfo@@QAEXI@Z @ 23 NONAME ; void CFetchBodyInfo::SetCharsetId(unsigned int)
+	?SetContentTransferEncoding@CFetchBodyInfo@@QAEXW4TImEncodingType@@@Z @ 24 NONAME ; void CFetchBodyInfo::SetContentTransferEncoding(enum TImEncodingType)
+	?SetIsText@CFetchBodyInfo@@QAEXH@Z @ 25 NONAME ; void CFetchBodyInfo::SetIsText(int)
+	?SetPartId@CFetchBodyInfo@@QAEXJ@Z @ 26 NONAME ; void CFetchBodyInfo::SetPartId(long)
+	?SetRelativePathL@CFetchBodyInfo@@QAEXABVTDesC8@@@Z @ 27 NONAME ; void CFetchBodyInfo::SetRelativePathL(class TDesC8 const &)
+	?SetSizeToFetch@CFetchBodyInfo@@QAEXJ@Z @ 28 NONAME ; void CFetchBodyInfo::SetSizeToFetch(long)
+	?SizeToFetch@CFetchBodyInfo@@QAEJXZ @ 29 NONAME ; long CFetchBodyInfo::SizeToFetch(void)
+	?StoreAttachmentChunkL@CImapMailStore@@QAEXPAVHBufC8@@JH@Z @ 30 NONAME ; void CImapMailStore::StoreAttachmentChunkL(class HBufC8 *, long, int)
+	?StoreBodyChunk16L@CImapMailStore@@QAEXPAVHBufC8@@JHH@Z @ 31 NONAME ; void CImapMailStore::StoreBodyChunk16L(class HBufC8 *, long, int, int)
+	?StoreBodyChunk8L@CImapMailStore@@QAEXPAVHBufC8@@JHH@Z @ 32 NONAME ; void CImapMailStore::StoreBodyChunk8L(class HBufC8 *, long, int, int)
+	?StorePartL@CImapMailStore@@QAEXPAVCImHeader@@JAAVMMailStoreObserver@@@Z @ 33 NONAME ; void CImapMailStore::StorePartL(class CImHeader *, long, class MMailStoreObserver &)
+	?StorePartL@CImapMailStore@@QAEXPAVCImMimeHeader@@JAAVMMailStoreObserver@@@Z @ 34 NONAME ; void CImapMailStore::StorePartL(class CImMimeHeader *, long, class MMailStoreObserver &)
+	?InitialiseStorePlainBodyTextL@CImapMailStore@@QAEXHAAVCImapSettings@@AAVCFetchBodyInfo@@HAAVMMailStoreObserver@@AAVMChunkOutOfOrderObserver@@H@Z @ 35 NONAME ; void CImapMailStore::InitialiseStorePlainBodyTextL(int, class CImapSettings &, class CFetchBodyInfo &, int, class MMailStoreObserver &, class MChunkOutOfOrderObserver &, int)
+	?StorePlainBodyTextL@CImapMailStore@@QAEHPAVHBufC8@@JHH@Z @ 36 NONAME ; int CImapMailStore::StorePlainBodyTextL(class HBufC8 *, long, int, int)

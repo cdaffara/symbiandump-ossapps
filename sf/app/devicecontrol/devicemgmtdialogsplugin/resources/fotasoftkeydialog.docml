@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="1.1">
+    <object name="lblOK" type="HbAction">
+        <string name="role" value="HbDialog:primaryAction"/>
+        <string name="text" value="OK"/>
+    </object>
+    <object name="qtl_dialog_softkey_2_right" type="HbAction">
+        <string name="role" value="HbDialog:secondaryAction"/>
+        <string name="text" value="Cancel"/>
+    </object>
+    <widget name="dialog" type="HbDialog">
+        <sizehint height="42.38806un" type="PREFERRED" width="50.5un"/>
+        <widget name="lblHeaind" role="HbDialog:headingWidget" type="HbLabel">
+            <enums name="alignment" value="AlignLeft|AlignLeading"/>
+            <contentsmargins bottom="var(hb-param-margin-gene-popup)" left="var(hb-param-margin-gene-popup)" right="var(hb-param-margin-gene-popup)" top="var(hb-param-margin-gene-popup)"/>
+            <string name="plainText" value="Device Updates"/>
+            <fontspec name="fontSpec" role="Primary" textheight="var(hb-param-text-height-primary)"/>
+        </widget>
+        <widget name="container" role="HbDialog:contentWidget" type="HbWidget">
+            <widget name="lblContent" type="HbLabel">
+                <enums name="textWrapping" value="TextWordWrap"/>
+                <real name="z" value="2"/>
+                <contentsmargins bottom="var(hb-param-margin-gene-popup)" left="var(hb-param-margin-gene-popup)" right="var(hb-param-margin-gene-popup)" top="var(hb-param-margin-gene-popup)"/>
+                <bool name="visible" value="TRUE"/>
+                <string name="plainText" value="%N KB free memory needed for update. Delete some data now or update later."/>
+                <fontspec name="fontSpec" role="Primary" textheight="var(hb-param-text-height-primary)"/>
+            </widget>
+            <real name="z" value="0"/>
+            <layout spacing="0un" type="grid">
+                <contentsmargins bottom="var(hb-param-margin-view-bottom)" left="var(hb-param-margin-view-left)" right="var(hb-param-margin-view-right)" top="var(hb-param-margin-view-top)"/>
+                <griditem column="0" itemname="lblContent" row="0"/>
+            </layout>
+        </widget>
+        <ref object="lblOK" role="HbWidget:addAction"/>
+    </widget>
+    <metadata activeUIState="Common ui state" display="NHD-3.2-inch_portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+    </metadata>
+</hbdocument>

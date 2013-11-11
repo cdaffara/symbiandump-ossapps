@@ -1,0 +1,26 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+#ifndef __TESTSHAREUI_IBY__
+#define __TESTSHAREUI_IBY__
+
+REM DLL
+file=ABI_DIR\UREL\testshareui.exe                   SHARED_LIB_DIR\testshareui.exe
+data=DATAZ_\resource\apps\testshareui.rsc                      resource\apps\testshareui.rsc
+data=DATAZ_\private\10003a3f\import\apps\testshareui_reg.rsc   private\10003a3f\import\apps\testshareui_reg.rsc
+data=DATAZ_\resource\apps\0x2002DD18.mif                         resource\apps\0x2002DD18.mif
+
+#endif // __TESTSHAREUI_IBY__

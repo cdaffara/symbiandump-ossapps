@@ -1,0 +1,82 @@
+/*
+ * Copyright (c) 2007-2010 Sebastian Brannstrom, Lars Persson, EmbedDev AB
+ *
+ * All rights reserved.
+ * This component and the accompanying materials are made available
+ * under the terms of the License "Eclipse Public License v1.0"
+ * which accompanies this distribution, and is available
+ * at the URL "http://www.eclipse.org/legal/epl-v10.html".
+ *
+ * Initial Contributors:
+ * EmbedDev AB - initial contribution.
+ *
+ * Contributors:
+ *
+ * Description:
+ *
+ */
+ 
+// MPX integration can not be enabled for self signed versions 
+MACRO ENABLE_MPX_INTEGRATION
+#define ENABLE_MPX_INTEGRATION
+ 
+TARGET podcastengine.dll
+TARGETTYPE DLL
+UID             0x1000008d 0xA11F867F
+
+SOURCEPATH ..\src
+USERINCLUDE ..\inc
+SYSTEMINCLUDE \epoc32\include 
+SYSTEMINCLUDE \epoc32\include\mw
+SYSTEMINCLUDE \epoc32\include\platform
+SYSTEMINCLUDE \epoc32\include\platform\mw
+SYSTEMINCLUDE \epoc32\include\stdapis
+
+SOURCE			HttpClient.cpp
+SOURCE			HttpEventHandler.cpp 
+SOURCE			FeedParser.cpp 
+SOURCE			FeedEngine.cpp 
+SOURCE			ShowInfo.cpp
+SOURCE			FeedInfo.cpp
+SOURCE			FeedTimer.cpp
+SOURCE			ShowEngine.cpp
+SOURCE			SettingsEngine.cpp
+SOURCE			MetaDataReader.cpp 
+SOURCE			OpmlParser.cpp 
+SOURCE			PodcastUtils.cpp
+SOURCE			PodCastModel.cpp  
+SOURCE			ImageHandler.cpp
+SOURCE 			ConnectionEngine.cpp
+
+LIBRARY	sqlite3.lib
+LIBRARY	euser.lib 
+LIBRARY	bafl.lib
+LIBRARY	efsrv.lib
+LIBRARY	mediaclientaudio.lib
+LIBRARY	inetprotutil.lib
+LIBRARY	charconv.lib
+LIBRARY	xmlframework.lib
+LIBRARY	http.lib 
+LIBRARY	flogger.lib
+LIBRARY	ezlib.lib
+LIBRARY	estor.lib 
+LIBRARY	commdb.lib
+LIBRARY esock.lib
+LIBRARY mmfcontrollerframework.lib 
+LIBRARY apgrfx.lib
+LIBRARY cone.lib
+LIBRARY apmime.lib 
+LIBRARY cmmanager.lib
+LIBRARY fbscli.lib
+LIBRARY imageconversion.lib 
+LIBRARY bitmaptransforms.lib 
+LIBRARY eikcore.lib 
+#ifdef ENABLE_MPX_INTEGRATION  
+LIBRARY mpxcollectionhelper.lib
+#endif
+LIBRARY commonui.lib  // CDocumentHandler
+LIBRARY apparc.lib
+LIBRARY avkon.lib
+LIBRARY centralrepository.lib
+
+CAPABILITY All -TCB

@@ -1,0 +1,52 @@
+/*
+* Copyright (c) 2007-2007 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project definition file for project Preset Server RFS plugin.
+*
+*/
+
+#include <platform_paths.hrh>
+
+TARGET                  psrfsplugin.dll
+TARGETTYPE              PLUGIN
+UID                     0x10009D8D 0x10282BB2
+
+CAPABILITY              CAP_ECOM_PLUGIN
+VENDORID                VID_DEFAULT
+
+#ifdef __S60_50__
+PAGED
+#endif //__S60_50__
+
+SOURCEPATH              ../rfspluginsrc
+SOURCE                  Psrfsplugin.cpp
+SOURCE                  Psrfspluginproxy.cpp
+
+SOURCEPATH              ../resources
+START RESOURCE          10282bb2.rss
+TARGET                  psrfsplugin.rsc
+END // RESOURCE
+
+USERINCLUDE             ../include
+USERINCLUDE             ../rfsplugininc
+
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE   OS_LAYER_PUBLIC_EXPORT_PATH(ecom)
+
+SMPSAFE
+
+LIBRARY                 ecom.lib
+LIBRARY                 efsrv.lib
+LIBRARY                 euser.lib
+LIBRARY                 platformenv.lib
+LIBRARY        		bafl.lib

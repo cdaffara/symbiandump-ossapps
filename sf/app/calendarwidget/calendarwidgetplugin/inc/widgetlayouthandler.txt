@@ -1,0 +1,22 @@
+class IWidgetLayoutHandler
+{
+    // OPTIONAL: turns on/off the layout handler
+    Q_PROPERTY(bool enable RW)
+    // OPTIONAL: returns the enabled state of the layout handler
+    Q_PROPERTY(bool isEnabled R)
+public: // public invokable methods
+public signals:
+    // OPTIONAL: emited by the handler when the widget must update its content
+    void updateWidget();
+    // OPTIONAL: update widget
+    void updateLayout(const QString &layoutFile);
+public slots:
+    // MANDATORY: the slot initializes the layout handler internals and connects to the owner
+    void initializeLayout(const HbDocumentLoader &layoutLoader, QObject *owner);
+    // MANDATORY: updates the layout content
+    void updateLayout();
+    //OPTIONAL: reacts on gestures
+    void onTap(QPointF& point);
+    // OPTIONAL: updates the layout upon theme change
+    void onThemeChange();
+};

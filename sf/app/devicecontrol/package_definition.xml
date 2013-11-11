@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SystemDefinition schema="3.0.0" xmlns:qt="http://www.nokia.com/qt">
+  <package id="devicecontrol" name="Device Control Daemons" levels="support mid app">
+    <collection id="devicemgmtdialogsplugin" name="Device Management Dialogs Plugin" level="support">
+		<!-- need to put component at the proper directory level -->
+      <component id="devicemanagementnotifiersplugin" name="Device Management Notifiers Plugin" filter="s60" introduced="^4" class="plugin">
+        <unit bldFile="devicemgmtdialogsplugin" qt:proFile="devicemgmtdialogsplugin.pro"/>
+      </component>
+    </collection>
+    <collection id="devicemgmtindicatorsplugin" name="Device Management Indicators Plugin" level="support">
+		<!-- collectino is really a component. Need to move down a dir -->
+      <component id="devicemgmtindicatorsplugin_build" name="Device Management Indicators Plugin Build" filter="s60" introduced="^4" class="plugin">
+        <unit bldFile="devicemgmtindicatorsplugin" qt:proFile="devicemgmtindicatorsplugin.pro"/>
+      </component>
+    </collection>
+    <collection id="deviceupdatesui" name="Device Updates UI" level="app">
+      <component id="deviceupdates" name="Device Updates" filter="s60" introduced="^4">
+        <unit bldFile="deviceupdatesui/deviceupdates" qt:proFile="deviceupdates.pro"/>
+      </component>
+      <component id="deviceupdatesplugin" name="Device Updates Plugin" filter="s60" introduced="^4" class="plugin">
+        <unit bldFile="deviceupdatesui/deviceupdatesplugin" qt:proFile="deviceupdatesplugin.pro"/>
+      </component>
+      <component id="deviceupdatesqtsp" name="Device Updates Qt Service Provider" filter="s60" introduced="^4">
+        <unit bldFile="deviceupdatesui/deviceupdatesqtsp" qt:proFile="deviceupdatesqtsp.pro"/>
+      </component>
+    </collection>
+    <collection id="clientprovisioning" name="Client Provisioning" level="mid">
+      <component id="cpqtsp" name="Client Provisioning Qt Service Provider" filter="s60" introduced="^4">
+        <unit bldFile="clientprovisioning/cpqtsp" qt:proFile="cpqtsp.pro"/>
+      </component>
+    </collection>
+    <collection id="applicationmanagement" name="Applicaton Management" level="mid">
+      <component id="applicationmgmtserver" name="Applicaton Management Server" filter="s60" introduced="^4">
+        <unit bldFile="applicationmanagement/server" qt:proFile="server.pro"/>
+      </component>
+      <component id="applicationmgmt_build" name="Applicaton Management Build" filter="s60" introduced="^4">
+		<!-- need to break up into components or move down a directory -->
+        <unit bldFile="applicationmanagement/group"/>
+      </component>
+    </collection>
+    <collection id="omadmadapters" name="OMA DM Adapters" level="support">
+      <component id="omadmadapters_build" name="OMA DM Adapters Build" filter="s60">
+		<!-- need to split IBY into the components or make this a ROM component -->
+        <unit bldFile="omadmadapters/bld"/> 
+      </component>
+      <component id="devinfo" name="Device Info" filter="s60">
+		<unit bldFile="omadmadapters/devinfo/bld"/>
+      </component>
+      <component id="devdetail" name="Device Detail" filter="s60">
+		 <unit bldFile="omadmadapters/devdetail/bld"/>
+      </component>
+      <component id="syncmldm" name="SyncML DM" filter="s60">
+			<unit bldFile="omadmadapters/syncmldm/bld"/>
+      </component>
+      <component id="syncmldm12" name="SyncML DM 1.2" filter="s60">
+		 <unit bldFile="omadmadapters/syncmldm12/bld"/>
+      </component>
+      <component id="omadm_browseradapter" name="Browser Adapter" filter="s60" class="plugin">
+		<!--  <unit bldFile="omadmadapters/browseradapter/bld"/> -->
+      </component>
+      <component id="omadm_streamingadapter" name="Streaming Adapter" filter="s60" class="plugin">
+		<unit bldFile="omadmadapters/streamingadapter/bld"/>
+      </component>
+      <component id="globalwlansettings" name="Global WLAN Settings" filter="s60">
+		<unit bldFile="omadmadapters/globalwlansettings/group"/>
+      </component>
+      <component id="nsmldminternet" name="nsmldminternet" filter="s60">
+		<unit bldFile="omadmadapters/nsmldminternet/group"/>
+      </component>
+      <component id="nsmldmalwaysonadapter" name="Always Online Device Management Adapter" filter="s60" introduced="9.1" class="plugin">
+		<unit bldFile="omadmadapters/nsmldmalwaysonadapter/group"/>
+      </component>
+      <component id="nsmldmbmadapter" name="NSML DM BM Adapter" filter="s60" class="plugin">
+		<unit bldFile="omadmadapters/nsmldmbmadapter/group"/>
+      </component>
+      <component id="connmoadapter" name="Connection Management Object Adapter" filter="s60" class="plugin">
+		 <unit bldFile="omadmadapters/connmoadapter/group"/>
+      </component>
+      <component id="syncmlds" name="SyncML Data Sync" filter="s60">
+      <meta rel="config">
+       <defined condition="__SYNCML_DM_DS"/>
+      </meta>
+		<unit bldFile="omadmadapters/syncmlds/bld"/>
+      </component>
+      <component id="omadm_email" name="OMA DM Email" filter="s60">
+      <meta rel="config">
+       <defined condition="__SYNCML_DM_EMAIL"/>
+      </meta>
+		<unit bldFile="omadmadapters/email/bld"/>
+      </component>
+      <component id="omadm_mms" name="OMA DM MMS" filter="s60">
+      <meta rel="config">
+       <defined condition="__SYNCML_DM_MMS"/>
+      </meta>
+		<unit bldFile="omadmadapters/mms/bld"/>
+      </component>
+      <component id="omadm_fota" name="OMA DM FOTA" filter="s60">
+      <meta rel="config">
+       <defined condition="__SYNCML_DM_FOTA"/>
+      </meta>
+		<unit bldFile="omadmadapters/fota/bld"/>
+      </component>
+      <component id="omadm_imps" name="OMA DM IMPS" filter="s60">
+      <meta rel="config">
+       <defined condition="__SYNCML_DM_IMPS"/>
+      </meta>
+		<!--  <unit bldFile="omadmadapters/imps/bld"/> -->
+      </component>
+      <component id="dcmodmadapter" name="DC Management Object  DM Adapter" filter="s60" class="plugin">
+		<unit bldFile="omadmadapters/dcmodmadapter/group"/>
+      </component>
+    </collection>
+    <collection id="omadcmoadapters" name="OMA DC Management Object Adapters" level="support">
+      <component id="omadcmoadapters_build" name="OMA DCMA Adapters Build" filter="s60" introduced="^4">
+		<!-- need to break up into components  -->
+        <unit bldFile="omadcmoadapters/group"/>
+      </component>
+    </collection>
+    <collection id="omacpadapters" name="OMA Client Provisioning Adapters" level="support">
+      <component id="omacpadapters_build" name="OMA CP Adapters Build" filter="s60" introduced="^4">
+		<!-- need to break up into components  -->
+        <unit bldFile="omacpadapters/bld"/>
+      </component>
+    </collection>
+  </package>
+</SystemDefinition>
+
+
+
+
+

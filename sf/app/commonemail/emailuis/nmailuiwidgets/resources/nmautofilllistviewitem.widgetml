@@ -1,0 +1,23 @@
+<hbwidget version="0.1" type="NmAutoFillListViewItem">
+<layout name="landscape-111" type="mesh">
+        <meshitem src="AutoFillListViewDisplayName" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="-var(hb-param-margin-gene-left)" />
+        <meshitem src="AutoFillListViewDisplayName" srcEdge="TOP" dst="" dstEdge="TOP" spacing="-var(hb-param-margin-gene-top)"/>
+        <meshitem src="AutoFillListViewDisplayName" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacing="var(hb-param-margin-gene-bottom)"/>
+        <meshitem src="AutoFillListViewDisplayName" srcEdge="RIGHT" dst="AutoFillListViewAddress" dstEdge="LEFT" spacing="var(hb-param-margin-gene-middle-vertical)"/>
+        
+        <meshitem src="AutoFillListViewAddress" srcEdge="TOP" dst="" dstEdge="TOP" spacing="-var(hb-param-margin-gene-top)"/>
+        <meshitem src="AutoFillListViewAddress" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacing="var(hb-param-margin-gene-bottom)"/>
+        <meshitem src="AutoFillListViewAddress" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)"/>
+    </layout>
+
+    <layout name="portrait-111" type="mesh">
+        <meshitem src="AutoFillListViewDisplayName" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="-var(hb-param-margin-gene-left)" />
+        <meshitem src="AutoFillListViewDisplayName" srcEdge="TOP" dst="" dstEdge="TOP" spacing="-var(hb-param-margin-gene-top)" />
+        <meshitem src="AutoFillListViewDisplayName" srcEdge="BOTTOM" dst="AutoFillListViewAddress" dstEdge="TOP" spacing="var(hb-param-margin-gene-middle-horizontal)"/>
+        <meshitem src="AutoFillListViewDisplayName" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+
+        <meshitem src="AutoFillListViewAddress" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacing="var(hb-param-margin-gene-bottom)" />
+        <meshitem src="AutoFillListViewAddress" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)" />
+        <meshitem src="AutoFillListViewAddress" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="-var(hb-param-margin-gene-left)" />
+    </layout>
+</hbwidget>

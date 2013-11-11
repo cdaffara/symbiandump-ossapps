@@ -1,0 +1,794 @@
+// Create a DOM tree for a simple SMIL file
+
+createdomtree
+setatt id "1 smil"
+getatt id
+getid
+create head append
+create body append
+firstchild
+setatt id "1.1 head"
+nextsibling
+setatt id "1.2 body"
+prevsibling
+create layout append
+firstchild
+setid "1.1.1 layout first value"
+getid
+getatt id
+removeid
+getatt id
+setatt id "1.1.1 layout"
+getid
+create region append
+firstchild
+setatt id "1.1.1.3 region"
+parent
+create root-layout insert 1
+firstchild
+setatt id "1.1.1.1 root-layout"
+parent
+create region insert 2
+firstchild
+nextsibling
+setatt id "1.1.1.2 region"
+rootsmil
+lastchild
+create par insert 0
+lastchild
+setatt id "1.2.1 par"
+create text insert 0
+lastchild
+setatt id "1.2.1.2 text"
+parent
+create audio append
+create img insert 1
+lastchild
+setatt id "1.2.1.3 audio"
+
+// Exercise the attribute access routines with valid and invalid
+// attribute names and values. GT121UT3204 - GT121UT3206.
+
+setatt fill hold
+getatt fill
+
+unsetatt fill
+getatt fill
+
+// Invalid attribute name
+setatt fills hold
+getatt fills
+unsetatt fills
+
+// Invalid attribute value
+unsetatt fill
+setatt fill holds
+getatt fill
+
+
+setatt systemCaptions on
+getatt systemCaptions
+
+unsetatt systemCaptions
+getatt systemCaptions
+
+// Invalid attribute name
+setatt systemCaption off
+getatt systemCaption
+unsetatt systemCaption
+
+// Invalid attribute value
+unsetatt systemCaptions
+setatt systemCaptions onf
+getatt systemCaptions
+
+
+setatt author "Fred Smith"
+getatt author
+
+unsetatt author
+getatt author
+
+// Invalid attribute name
+setatt authr "Fred Smith"
+getatt authr
+unsetatt authr
+
+// Valid attributes for timed media elements
+setatt clipBegin "now"
+setatt clipEnd "then"
+getatt clipBegin
+getatt clipEnd
+
+// Resume creating the rest of the tree
+prevsibling
+prevsibling
+setatt id "1.2.1.1 img"
+
+// Valid attributes for timed media elements but invalid for img & text
+setatt clipBegin "now"
+setatt clipEnd "then"
+getatt clipBegin
+getatt clipEnd
+
+// Navigation Tests GT121UT3203
+
+// Attempt to navigate off the ends of child lists
+
+// This should return an error:
+prevsibling
+
+nextsibling
+nextsibling
+
+// This should return an error:
+nextsibling
+
+
+// Attempt to navigate into non-existent child element lists
+
+// This should return an error:
+firstchild
+
+// This should return an error:
+lastchild
+
+
+// Attempt to navigate off the root of the DOM tree
+parent
+parent
+parent
+
+// This should return an error:
+parent
+
+
+// We should be at the 'smil' element, and all of the children in the tree should be legal
+getatt id
+legalchildren
+
+// Navigate to the 'par'
+lastchild
+lastchild
+getatt id
+
+// Element Creation and Insertion with Valid Arguments Test GT121UT3201
+
+// Append each element type to child list
+create a append
+create anchor append
+create animation append
+create area append
+create audio append
+create body append
+create head append
+create img append
+create layout append
+create meta append
+create par append
+create ref append
+create region append
+create root-layout append
+create seq append
+create switch append
+create text append
+create textstream append
+create video append
+
+// Not all of these are legal children
+legalchildren
+
+// Give them ids
+firstchild
+nextsibling
+nextsibling
+nextsibling
+setatt id "a appended"
+nextsibling
+setatt id "anchor appended"
+nextsibling
+setatt id "animation appended"
+nextsibling
+setatt id "area appended"
+nextsibling
+setatt id "audio appended"
+nextsibling
+setatt id "body appended"
+nextsibling
+setatt id "head appended"
+nextsibling
+setatt id "img appended"
+nextsibling
+setatt id "layout appended"
+nextsibling
+
+// This should return an error. Meta doesn't have an id attribute.
+setatt id "meta appended"
+
+nextsibling
+setatt id "par appended"
+nextsibling
+setatt id "ref appended"
+nextsibling
+setatt id "region appended"
+nextsibling
+setatt id "root-layout appended"
+nextsibling
+setatt id "seq appended"
+nextsibling
+setatt id "switch appended"
+nextsibling
+setatt id "text appended"
+nextsibling
+setatt id "textstream appended"
+nextsibling
+setatt id "video appended"
+
+// Confirm that we are at the end of the list
+nextsibling
+
+// Now Insert another set of elements, of each type, in the child list
+parent
+
+create a insert 1
+create anchor insert 2
+create animation insert 3
+create area insert 4
+create audio insert 5
+create body insert 6
+create head insert 7
+create img insert 8
+create layout insert 9
+create meta insert 10
+create par insert 11
+create ref insert 12
+create region insert 13
+create root-layout insert 14
+create seq insert 15
+create switch insert 16
+create text insert 17
+create textstream insert 18
+create video insert 19
+
+// Give them ids
+firstchild
+setatt id "a inserted"
+nextsibling
+setatt id "anchor inserted"
+nextsibling
+setatt id "animation inserted"
+nextsibling
+setatt id "area inserted"
+nextsibling
+setatt id "audio inserted"
+nextsibling
+setatt id "body inserted"
+nextsibling
+setatt id "head inserted"
+nextsibling
+setatt id "img inserted"
+nextsibling
+setatt id "layout inserted"
+nextsibling
+
+// This should return an error. Meta doesn't have an id attribute.
+setatt id "meta inserted"
+
+nextsibling
+setatt id "par inserted"
+nextsibling
+setatt id "ref inserted"
+nextsibling
+setatt id "region inserted"
+nextsibling
+setatt id "root-layout inserted"
+nextsibling
+setatt id "seq inserted"
+nextsibling
+setatt id "switch inserted"
+nextsibling
+setatt id "text inserted"
+nextsibling
+setatt id "textstream inserted"
+nextsibling
+setatt id "video inserted"
+
+// Confirm that the next sibling is 1.2.1.1 img
+nextsibling
+getatt id
+
+// Now create another set of elements, of each type, and Replace some of the existing elements
+parent
+
+create a replace 1
+create anchor replace 3
+create animation replace 5
+create area replace 7
+create audio replace 9
+create body replace 11
+create head replace 13
+create img replace 15
+create layout replace 17
+create meta replace 19
+create par replace 23
+create ref replace 25
+create region replace 27
+create root-layout replace 29
+create seq replace 31
+create switch replace 33
+create text replace 35
+create textstream replace 37
+create video replace 39
+
+// Leave the replacement element ids unset, and check what ids we have
+
+// 'a' element, id not set
+firstchild
+getatt id
+
+// anchor
+nextsibling
+getatt id
+
+// anchor, id not set
+nextsibling
+getatt id
+
+// area
+nextsibling
+getatt id
+
+// animation, id not set
+nextsibling
+getatt id
+
+// body
+nextsibling
+getatt id
+
+// area, id not set
+nextsibling
+getatt id
+
+// img
+nextsibling
+getatt id
+
+// audio, id not set
+nextsibling
+getatt id
+
+// meta, does not have an id attribute
+nextsibling
+getatt id
+
+// body, id not set
+nextsibling
+getatt id
+
+// ref
+nextsibling
+getatt id
+
+// head, id not set
+nextsibling
+getatt id
+
+// root-layout
+nextsibling
+getatt id
+
+// img, id not set
+nextsibling
+getatt id
+
+// switch
+nextsibling
+getatt id
+
+// layout, id not set
+nextsibling
+getatt id
+
+// textstream
+nextsibling
+getatt id
+
+// meta, does not have an id attribute
+nextsibling
+getatt id
+
+
+// 1.2.1.1 img
+nextsibling
+getatt id
+
+// 1.2.1.2 text
+nextsibling
+getatt id
+
+// 1.2.1.3 audio
+nextsibling
+getatt id
+
+
+// par, id not set
+nextsibling
+getatt id
+
+// anchor
+nextsibling
+getatt id
+
+// ref, id not set
+nextsibling
+getatt id
+
+// area
+nextsibling
+getatt id
+
+// region, id not set
+nextsibling
+getatt id
+
+// body
+nextsibling
+getatt id
+
+// root-layout, id not set
+nextsibling
+getatt id
+
+// img
+nextsibling
+getatt id
+
+// seq, id not set
+nextsibling
+getatt id
+
+// meta, does not have an id attribute
+nextsibling
+getatt id
+
+// switch, id not set
+nextsibling
+getatt id
+
+// ref
+nextsibling
+getatt id
+
+// text, id not set
+nextsibling
+getatt id
+
+// root-layout
+nextsibling
+getatt id
+
+// textstream, id not set
+nextsibling
+getatt id
+
+// switch
+nextsibling
+getatt id
+
+// video, id not set
+nextsibling
+getatt id
+
+// textstream
+nextsibling
+getatt id
+
+// video
+nextsibling
+getatt id
+
+// Confirm that we are at the end of the list
+nextsibling
+
+
+// Delete all of the elements that were replaced, and check again what ids we have in the child list.
+parent
+
+deletechild 39
+deletechild 37
+deletechild 35
+deletechild 33
+deletechild 31
+deletechild 29
+deletechild 27
+deletechild 25
+deletechild 23
+deletechild 19
+deletechild 17
+deletechild 15
+deletechild 13
+deletechild 11
+deletechild 9
+deletechild 7
+deletechild 5
+deletechild 3
+deletechild 1
+
+// Check what ids we have
+
+// anchor
+firstchild
+getatt id
+
+// area
+nextsibling
+getatt id
+
+// body
+nextsibling
+getatt id
+
+// img
+nextsibling
+getatt id
+
+// meta, does not have an id attribute
+nextsibling
+getatt id
+
+// ref
+nextsibling
+getatt id
+
+// root-layout
+nextsibling
+getatt id
+
+// switch
+nextsibling
+getatt id
+
+// textstream
+nextsibling
+getatt id
+
+
+// 1.2.1.1 img
+nextsibling
+getatt id
+
+// 1.2.1.2 text
+nextsibling
+getatt id
+
+// 1.2.1.3 audio
+nextsibling
+getatt id
+
+
+// anchor
+nextsibling
+getatt id
+
+// area
+nextsibling
+getatt id
+
+// body
+nextsibling
+getatt id
+
+// img
+nextsibling
+getatt id
+
+// meta, does not have an id attribute
+nextsibling
+getatt id
+
+// ref
+nextsibling
+getatt id
+
+// root-layout
+nextsibling
+getatt id
+
+// switch
+nextsibling
+getatt id
+
+// textstream
+nextsibling
+getatt id
+
+// video
+nextsibling
+getatt id
+
+// Confirm that we are at the end of the list
+nextsibling
+
+
+// Test the functions of type
+// First<element type>Child()
+// Last<element type>Child()
+// Next<element type>Sibling()
+// Previous<element type>Sibling()
+parent
+
+first img
+getatt id
+
+next img
+getatt id
+
+// This will be invalid
+next audio
+
+next img
+getatt id
+
+// Confirm that there are no more
+next img
+
+parent
+
+last img
+getatt id
+
+prev img
+getatt id
+
+prev img
+getatt id
+
+// Confirm that there are no more
+prev img
+
+parent
+
+// There is no such function for this element type
+first area
+
+first ref
+getatt id
+
+next ref
+getatt id
+
+// Confirm that there are no more
+next ref
+
+parent
+
+last ref
+getatt id
+
+prev ref
+getatt id
+
+// Confirm that there are no more
+prev ref
+
+parent
+
+first textstream
+getatt id
+
+next textstream
+getatt id
+
+// Confirm that there are no more
+next textstream
+
+parent
+
+last textstream
+getatt id
+
+prev textstream
+getatt id
+
+// Confirm that there are no more
+prev textstream
+
+parent
+
+first text
+getatt id
+
+// Confirm that there are no more
+next text
+
+parent
+
+last text
+getatt id
+
+// Confirm that there are no more
+prev text
+
+parent
+
+first audio
+getatt id
+
+// Confirm that there are no more
+next audio
+
+parent
+
+last audio
+getatt id
+
+// Confirm that there are no more
+prev audio
+
+parent
+
+first video
+getatt id
+
+// Confirm that there are no more
+next video
+
+parent
+
+last video
+getatt id
+
+// Confirm that there are no more
+prev video
+
+parent
+
+// Attempt to navigate to a valid element type, that is not there
+first seq
+last seq
+
+
+// Element Creation and Insertion, with Invalid Arguments Test GT121UT3202
+
+// Use n = -3 for start of list (specified with NULL parameter),
+// and no element to insert.
+create a insert -3
+create anchor insert -3
+create animation insert -3
+
+// Use n = -2 for start of list (specified with pointer to first child),
+// and no element to insert.
+create a insert -2
+create anchor insert -2
+create animation insert -2
+
+// Use n = -1 for invalid pointer specifying place to insert.
+create a insert -1
+create anchor insert -1
+create animation insert -1
+
+
+// Use n = -2 for start of list, and no element to insert.
+create area replace -2
+create audio replace -2
+create body replace -2
+
+// Use n = -1 for invalid pointer specifying child to replace.
+create area replace -1
+create audio replace -1
+create body replace -1
+
+// Use n = 0 for NULL, in place of pointer to child to replace.
+create area replace 0
+create audio replace 0
+create body replace 0
+
+
+// Try the Delete (remove child) function with invalid arguments.
+
+// Use n = -1 for invalid pointer specifying child to remove.
+deletechild -1
+
+// Use n = 0 for NULL, in place of pointer to child to remove.
+deletechild 0

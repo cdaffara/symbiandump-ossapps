@@ -1,0 +1,67 @@
+/*
+* Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*     This file contains Bio MTM info resource.
+*
+*/
+
+
+
+//  INCLUDES
+#include <mtmconfig.rh>
+
+//  CONSTANTS  
+//  MACROS  
+
+//  RESOURCE DEFINITIONS 
+
+#include <e32capability.h>
+
+RESOURCE MTM_INFO_FILE
+    {
+    mtm_type_uid = 0x10001262;
+    technology_type_uid = 0x10008A30;
+    components = 
+        {
+        MTM_COMPONENT_V2
+            {
+            human_readable_name = "Bio Message client";
+            component_uid = KUidMtmServerComponentVal;
+            entry_point = 1;
+            version = VERSION_V2 {};
+            filename = "BIOS.dll";
+            },
+        MTM_COMPONENT_V2
+            {
+            human_readable_name = "dummy smart msg.";
+            component_uid = KUidMtmClientComponentVal;
+            entry_point = 1;
+            version = VERSION_V2 {};
+            filename = "bioc.dll";
+            }
+        };
+    }
+
+RESOURCE MTM_CAPABILITIES
+    {
+    send_capability = 1;
+    body_capability = 1;
+    }
+
+RESOURCE MTM_SECURITY_CAPABILITY_SET
+    {
+    capabilities = { ECapabilityLocalServices };
+    }
+
+// End of File

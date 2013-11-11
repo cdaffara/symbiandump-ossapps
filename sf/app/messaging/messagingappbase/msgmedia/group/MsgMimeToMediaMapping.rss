@@ -1,0 +1,129 @@
+/*
+* Copyright (c) 2005 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   Resource file for MIME type to media type mapping
+*
+*/
+
+
+
+//  RESOURCE IDENTIFIER
+NAME    MMMM
+
+//  INCLUDES
+#include <bldvariant.hrh>
+#include <eikon.rh>
+#include "MsgMimeToMediaMapping.rh"
+#include "MsgMedia.hrh"
+
+
+RESOURCE RSS_SIGNATURE { }
+
+
+//  RESOURCE DEFINITIONS
+
+// -----------------------------------------------------------------------------
+// R_MSG_MEDIAGROUPS
+// Notice! All the MIME types must be 8-bit descriptors.
+// -----------------------------------------------------------------------------
+//
+RESOURCE MSG_MEDIA_TYPE_LIST r_msg_mediagroups
+    {
+    mediagroups =
+        {
+        MSG_MEDIA_GROUP
+            {
+            // This "black list" group must be kept first!
+            id = EMsgMediaUnknown;
+            mimetypes =
+                {
+#ifndef RD_SVGT_IN_MESSAGING
+                // SVG-T
+                LBUF { txt = "image/svg+xml"; },
+#endif 
+                // TIFF images
+                LBUF { txt = "image/tiff"; },
+                // Audio playlist
+                LBUF { txt = "audio/mpegurl"; },
+                // Audio streaming URL
+                LBUF { txt = "audio/x-pn-realaudio-plugin"; }
+                };
+            },
+        MSG_MEDIA_GROUP
+            {
+            id = EMsgMediaText;
+            mimetypes =
+                {
+                LBUF { txt = "text/plain"; }
+                };
+            },
+        MSG_MEDIA_GROUP
+            {
+            id = EMsgMediaXhtml;
+            mimetypes =
+                {
+                LBUF { txt = "text/html"; },
+                LBUF { txt = "application/xhtml+xml"; },
+                LBUF { txt = "application/vnd.wap.xhtml+xml"; }
+                };
+            },
+#ifdef RD_SVGT_IN_MESSAGING
+        MSG_MEDIA_GROUP
+            {
+            // This must be before the "image/*" wildcard match
+            id = EMsgMediaSvg;
+            mimetypes =
+                {
+                LBUF { txt = "image/svg+xml"; }
+                };
+            },
+#endif
+        MSG_MEDIA_GROUP
+            {
+            id = EMsgMediaImage;
+            mimetypes =
+                {
+                LBUF { txt = "image/*"; }
+                };
+            },
+        // Video group must be before audio group, because there is mime type 
+        // 'audio/vnd.rn-realaudio' in this. Otherwise 'audio/*' catches the video type.
+        // 'application/x-pn-realmedia' added also to the list, because
+        // a .ra file is resolved as 'application/x-pn-realmedia' instead of 'audio/vnd.rn-realaudio',
+        // which some tools propose.
+        MSG_MEDIA_GROUP
+            {
+            id = EMsgMediaVideo;
+            mimetypes =
+                {
+                LBUF { txt = "video/*"; },
+                LBUF { txt = "application/vnd.rn-realmedia"; },
+                LBUF { txt = "audio/vnd.rn-realaudio"; },
+                LBUF { txt = "application/x-pn-realmedia"; }
+                };
+            },
+        // See comment in video group
+        MSG_MEDIA_GROUP
+            {
+            id = EMsgMediaAudio;
+            mimetypes =
+                {
+                LBUF { txt = "audio/*"; },
+                LBUF { txt = "application/vnd.nokia.ringing-tone"; }
+                };
+            }
+        };
+    }
+
+
+// End of File

@@ -1,0 +1,210 @@
+MsgListViewItem:portrait {
+  layout: layout-portrait;
+}
+
+MsgListViewItem:landscape {
+  layout: layout-landscape;
+}
+
+MsgListViewItem[layoutName="custom"]:portrait{
+  layout:layout-portrait;
+}
+
+MsgListViewItem[layoutName="custom"]:landscape{
+  layout:layout-landscape;
+}
+
+MsgListViewItem::newMsgIndicator[layoutName="custom"]:portrait {
+  left:-var(hb-param-margin-view-left);
+  size-policy-horizontal: fixed;
+  size-policy-vertical: fixed;
+  pref-width: 1.25un;
+  pref-height: 15.1un;
+  aspect-ratio: ignore;
+}
+
+MsgListViewItem[unReadMsg="true"]::addressLabel[layoutName="custom"]:portrait {
+  top:-var(hb-param-margin-gene-top);
+  left:-var(hb-param-margin-gene-middle-horizontal);
+  right:var(hb-param-margin-gene-middle-horizontal);
+  bottom:var(hb-param-margin-gene-middle-vertical);
+  text-align: left;
+  font-variant: primary;
+  text-height:var(hb-param-text-height-primary);
+  text-line-count-min:1;
+  text-line-count-max:1;
+}
+
+MsgListViewItem[unReadMsg="false"]::addressLabel[layoutName="custom"]:portrait {
+  top:-var(hb-param-margin-gene-top);
+  left:-var(hb-param-margin-gene-middle-horizontal);
+  right:var(hb-param-margin-gene-middle-horizontal);
+  bottom:var(hb-param-margin-gene-middle-vertical);
+  text-align: left;
+  font-variant: secondary;
+  text-height:var(hb-param-text-height-primary);
+  text-line-count-min:1;
+  text-line-count-max:1;
+}
+
+MsgListViewItem[unReadMsg="true"]::previewLabel[layoutName="custom"]:portrait {
+  left:-var(hb-param-margin-gene-middle-horizontal);
+  bottom:-var(hb-param-margin-gene-bottom);
+  right:var(hb-param-margin-gene-middle-horizontal);
+  text-align: left top;
+  font-variant: primary;
+  text-height: var(hb-param-text-height-secondary);
+  text-line-count-min:2;
+  text-line-count-max:2;
+}
+
+MsgListViewItem[unReadMsg="false"]::previewLabel[layoutName="custom"]:portrait {
+  left:-var(hb-param-margin-gene-middle-horizontal);
+  bottom:-var(hb-param-margin-gene-bottom);
+  right:var(hb-param-margin-gene-middle-horizontal);
+  text-align: left top;
+  font-variant: secondary;
+  text-height: var(hb-param-text-height-secondary);
+  text-line-count-min:2;
+  text-line-count-max:2;
+}
+
+MsgListViewItem[unReadMsg="true"]::timeLabel[layoutName="custom"]:portrait {
+  right:var(hb-param-margin-gene-right);
+  bottom:var(hb-param-margin-gene-bottom);
+  size-policy-horizontal: fixed;
+  pref-width:12un;
+  text-align: right;
+  font-variant: primary;
+  text-height: var(hb-param-text-height-tiny);
+  text-line-count-min:1;
+  text-line-count-max:1;
+}
+
+MsgListViewItem[unReadMsg="false"]::timeLabel[layoutName="custom"]:portrait {
+  right:var(hb-param-margin-gene-right);
+  bottom:var(hb-param-margin-gene-bottom);
+  size-policy-horizontal: fixed;
+  pref-width:12un;
+  text-align: right;
+  font-variant: secondary;
+  text-height: var(hb-param-text-height-tiny);
+  text-line-count-min:1;
+  text-line-count-max:1;
+}
+
+MsgListViewItem::unreadCount[layoutName="custom"]:portrait {
+  right:var(hb-param-margin-gene-right);
+  size-policy-horizontal: fixed;
+  min-width: 5un;
+  text-align: right;
+  font-variant: primary;
+  text-height: var(hb-param-text-height-primary);
+  text-line-count-min:1;
+  text-line-count-max:1;
+}
+
+MsgListViewItem::msgCommonIndicator[layoutName="custom"]:portrait {
+  size-policy-horizontal: fixed;
+  size-policy-vertical: fixed;
+  pref-width: var(hb-param-graphic-size-secondary);
+  pref-height: var(hb-param-graphic-size-secondary);
+  aspect-ratio: ignore;
+}
+
+
+/*Landscape mode*/
+
+MsgListViewItem::newMsgIndicator[layoutName="custom"]:landscape {
+  left:-var(hb-param-margin-view-left);
+  size-policy-horizontal: fixed;
+  size-policy-vertical: ignore;
+  pref-width: 1.25un;
+  pref-height: -1;
+  aspect-ratio: ignore;
+}
+
+MsgListViewItem[unReadMsg="true"]::addressLabel[layoutName="custom"]:landscape {
+  top:-var(hb-param-margin-gene-top);
+  left:-var(hb-param-margin-gene-left);
+  right:var(hb-param-margin-gene-middle-horizontal);
+  bottom:var(hb-param-margin-gene-bottom);
+  text-align: left;
+  font-variant: primary;
+  text-height:var(hb-param-text-height-primary);
+  text-line-count-min:1;
+  text-line-count-max:1;
+}
+
+MsgListViewItem[unReadMsg="false"]::addressLabel[layoutName="custom"]:landscape {
+  top:-var(hb-param-margin-gene-top);
+  left:-var(hb-param-margin-gene-left);
+  right:var(hb-param-margin-gene-middle-horizontal);
+  bottom:var(hb-param-margin-gene-bottom);
+  text-align: left;
+  font-variant: secondary;
+  text-height:var(hb-param-text-height-primary);
+  text-line-count-min:1;
+  text-line-count-max:1;
+}
+
+MsgListViewItem[unReadMsg="true"]::previewLabel[layoutName="custom"]:landscape {
+  right:var(hb-param-margin-gene-middle-horizontal);
+  text-align: left;
+  font-variant: primary;
+  text-height: var(hb-param-text-height-secondary);
+  text-line-count-min:1;
+  text-line-count-max:1;
+}
+
+MsgListViewItem[unReadMsg="false"]::previewLabel[layoutName="custom"]:landscape {
+  right:var(hb-param-margin-gene-middle-horizontal);
+  text-align: left;
+  font-variant: secondary;
+  text-height: var(hb-param-text-height-secondary);
+  text-line-count-min:1;
+  text-line-count-max:1;
+}
+
+MsgListViewItem::unreadCount[layoutName="custom"]:landscape {
+  right:var(hb-param-margin-gene-middle-horizontal);
+  size-policy-horizontal: fixed;
+  min-width: 5un;
+  text-align: right;
+  font-variant: primary;
+  text-height: var(hb-param-text-height-primary);
+  text-line-count-min:1;
+  text-line-count-max:1;
+}
+
+MsgListViewItem::msgCommonIndicator[layoutName="custom"]:landscape {
+  size-policy-horizontal: fixed;
+  size-policy-vertical: fixed;
+  pref-width: var(hb-param-graphic-size-secondary);
+  pref-height: var(hb-param-graphic-size-secondary);
+  aspect-ratio: ignore;
+}
+
+MsgListViewItem[unReadMsg="true"]::timeLabel[layoutName="custom"]:landscape {
+  right:var(hb-param-margin-gene-right);
+  size-policy-horizontal: fixed;
+  pref-width:12un;
+  text-align: right;
+  font-variant: primary;
+  text-height: var(hb-param-text-height-tiny);
+  text-line-count-min:1;
+  text-line-count-max:1;
+}
+
+MsgListViewItem[unReadMsg="false"]::timeLabel[layoutName="custom"]:landscape {
+  right:var(hb-param-margin-gene-right);
+  size-policy-horizontal: fixed;
+  pref-width:12un;
+  text-align: right;
+  font-variant: secondary;
+  text-height: var(hb-param-text-height-tiny);
+  text-line-count-min:1;
+  text-line-count-max:1;
+}
+
+

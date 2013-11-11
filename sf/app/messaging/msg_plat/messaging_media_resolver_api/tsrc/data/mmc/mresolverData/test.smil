@@ -1,0 +1,22 @@
+
+<!-- 
+Copyright: Copyright Nokia(2002), All Rights Reserved.
+Author:Wang Xiao  
+File Name: ti_1.smil
+Expected Behavior: The image with bitmap 1 is shown indefinitely.
+-->
+
+
+<smil>
+	<head>
+		<layout>
+			<root-layout backgroundColor="red"/>
+			<region id="unscaled" width="100%" height="100%"/>
+		</layout>
+	</head>
+	<body dur="indefinite">
+		<img src="Pictures/smile1.gif" region="unscaled" begin="0s"/>
+	</body>
+</smil>
+
+

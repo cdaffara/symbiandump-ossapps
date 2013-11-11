@@ -1,0 +1,54 @@
+/*
+* Copyright (c) 2008 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project definition file
+*
+*/
+
+
+
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+
+TARGET                  presencecacheutils.dll
+TARGETTYPE              DLL
+UID                     0x1000008d 0xEF006001  // todo: number
+
+CAPABILITY              CAP_GENERAL_DLL
+VENDORID                VID_DEFAULT
+
+SOURCEPATH              ../src
+SOURCE                  prestrace.cpp 
+SOURCE                  presencecachebuddyinfo.cpp
+SOURCE                  presenceobjecthelpers.cpp
+
+
+USERINCLUDE             ../inc
+USERINCLUDE             ../../inc
+USERINCLUDE             ../../../inc
+USERINCLUDE ../../presence_cache_api/inc 
+// APP_LAYER_SYSTEMINCLUDE
+APP_LAYER_SYSTEMINCLUDE
+// SYSTEMINCLUDE           ../../presence_cache_api/inc 
+
+
+LIBRARY                 euser.lib
+LIBRARY                 bafl.lib
+LIBRARY                 estor.lib
+LIBRARY                 ecom.lib
+// UNICODE CONVERSION
+LIBRARY                 charconv.lib
+		
+// DEBUG
+LIBRARY         flogger.lib //todo: remove to DEBUGLIBRARY when ready.
+

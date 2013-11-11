@@ -1,0 +1,57 @@
+/*
+* Copyright (c) 2004 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:    DM Fota Adapter
+*
+*/
+
+
+
+
+#include "defaultcaps.hrh"
+#include  <platform_paths.hrh>
+
+CAPABILITY		CAP_GENERAL_DLL
+TARGET          nsmldmfotaadapter.dll
+TARGETTYPE      PLUGIN
+UID             0x10009D8D 0x101F9A08
+VENDORID        VID_DEFAULT
+
+//Default system include paths for app layer modules.
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE 	/epoc32/include/ecom
+
+
+USERINCLUDE     ../inc
+USERINCLUDE     ../../inc
+
+SOURCEPATH      ../src
+SOURCE          nsmldmfotaadapter.cpp
+SOURCE          nsmldmfotaadapterdb.cpp
+
+START RESOURCE nsmldmfotaadapter.rss
+LANGUAGE_IDS
+END
+
+
+
+LIBRARY        	euser.lib ecom.lib nsmldebug.lib
+LIBRARY         efsrv.lib edbms.lib estor.lib
+LIBRARY         sysutil.lib bafl.lib
+LIBRARY			fotaengine.lib
+LIBRARY			syncmlclientapi.lib
+LIBRARY			nsmlprivateapi.lib
+LIBRARY         centralrepository.lib
+LIBRARY     	nsmldmtreedbclient.lib
+LIBRARY			flogger.lib
+SMPSAFE

@@ -1,0 +1,50 @@
+// Copyright (c) 2002-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+TARGET         te_phbksync.exe
+CAPABILITY     All -Tcb
+TARGETTYPE     EXE
+UID            0x1000007A 0x10208C4E
+
+SOURCEPATH    .
+SOURCE        TE_PhBkSyncBase.cpp
+SOURCE        TE_PhBkSyncServer.cpp
+SOURCE        TestConnectSteps.cpp
+SOURCE        TestDeleteContactSteps.cpp
+SOURCE        TestDoSynchronisationSteps.cpp
+SOURCE        TestGetContactFormatSteps.cpp
+SOURCE        TestGetSyncModeSteps.cpp
+SOURCE        TestOpenSteps.cpp
+SOURCE        TestOtherSteps.cpp
+SOURCE        TestSetSyncModeSteps.cpp
+SOURCE        TestValidateContactSteps.cpp
+SOURCE        TestVersionSteps.cpp
+SOURCE        TestWriteContactSteps.cpp
+SOURCE        TestReadingIniFile.cpp
+USERINCLUDE   ../../inc
+USERINCLUDE   ../../plugin
+USERINCLUDE   ../../Server
+USERINCLUDE   ../../Client
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+
+LIBRARY       euser.lib efsrv.lib
+LIBRARY       phbksyncsvr.lib cntmodel.lib 
+LIBRARY       testexecutelogclient.lib
+LIBRARY       testexecuteutils.lib
+LIBRARY       sbeclient.lib
+
+VENDORID 0x70000001
+
+SMPSAFE

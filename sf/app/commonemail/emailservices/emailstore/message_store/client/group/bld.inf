@@ -1,0 +1,45 @@
+/*
+* Copyright (c) 2003-2006 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Message store client build file.
+*
+*/
+
+
+
+
+PRJ_EXPORTS
+../api/MsgStoreTypes.h                          |../../../../../inc/MsgStoreTypes.h
+../api/MsgStorePropertyKeys.h                   |../../../../../inc/MsgStorePropertyKeys.h
+../api/MsgStorePropertyContainer.h              |../../../../../inc/MsgStorePropertyContainer.h   
+../api/MsgStoreWritablePropertyContainer.h      |../../../../../inc/MsgStoreWritablePropertyContainer.h   
+../api/MsgStorePropertyContainerWithContent.h   |../../../../../inc/MsgStorePropertyContainerWithContent.h   
+../api/MsgStoreAccount.h                        |../../../../../inc/MsgStoreAccount.h   
+../api/MsgStoreObserver.h                       |../../../../../inc/MsgStoreObserver.h   
+../api/MsgStoreMailBoxObserver.h                |../../../../../inc/MsgStoreMailBoxObserver.h 
+../api/MsgStoreMessagePart.h                    |../../../../../inc/MsgStoreMessagePart.h 
+../api/MsgStoreMessage.h                        |../../../../../inc/MsgStoreMessage.h   
+../api/MsgStoreFolder.h                         |../../../../../inc/MsgStoreFolder.h   
+../api/MsgStoreSearchCriteria.h                 |../../../../../inc/MsgStoreSearchCriteria.h
+../api/MsgStoreSortCriteria.h                   |../../../../../inc/MsgStoreSortCriteria.h
+../api/MsgStoreSortResultIterator.h             |../../../../../inc/MsgStoreSortResultIterator.h 
+../api/MsgStoreMailBox.h                        |../../../../../inc/MsgStoreMailBox.h   
+../api/MsgStore.h                               |../../../../../inc/MsgStore.h   
+../api/MsgStoreAPI.h                            |../../../../../inc/MsgStoreAPI.h   
+../api/MsgStoreFolderUtils.h                    |../../../../../inc/MsgStoreFolderUtils.h
+../api/MsgStoreAddress.h                        |../../../../../inc/MsgStoreAddress.h
+
+PRJ_MMPFILES
+MessageStoreClient.mmp
+
+PRJ_TESTMMPFILES

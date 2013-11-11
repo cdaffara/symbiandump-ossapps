@@ -1,0 +1,27 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+#ifndef __CLASS0SMSUINOTIFIER_IBY__
+#define __CLASS0SMSUINOTIFIER_IBY__
+
+REM The Class0SMS UI Notifier
+
+ECOM_PLUGIN(class0smsUInotifier.dll, 2000C382.rsc)
+
+file=ABI_DIR\DEBUG_DIR\class0smsTxtnotifier.dll                 sys\bin\tnotifiers\class0smsTxtnotifier.dll
+
+#endif

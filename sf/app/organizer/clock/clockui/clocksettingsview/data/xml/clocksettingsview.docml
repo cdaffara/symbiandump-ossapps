@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="0.9">
+    <widget name="clockSettingsView" type="HbView">
+        <widget name="clockSettingsViewWidget" role="HbView:widget" type="HbWidget">
+            <widget name="subtitleGroupBox" type="HbGroupBox">
+                <string locid="txt_clock_subhead_settings" name="heading" value="Settings"/>
+                <real name="z" value="1"/>
+                <bool name="collapsable" value="FALSE"/>
+            </widget>
+            <widget name="dataForm" type="HbDataForm">
+                <real name="z" value="11"/>
+                <string name="description" value=""/>
+                <string name="heading" value=""/>
+            </widget>
+            <layout type="anchor">
+                <anchoritem dst="subtitleGroupBox" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="subtitleGroupBox" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="subtitleGroupBox" dstEdge="TOP" spacing="0un" src="" srcEdge="TOP"/>
+                <anchoritem dst="dataForm" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="dataForm" dstEdge="TOP" spacing="0un" src="subtitleGroupBox" srcEdge="BOTTOM"/>
+                <anchoritem dst="dataForm" dstEdge="RIGHT" spacing="-0un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="dataForm" dstEdge="BOTTOM" spacing="0un" src="" srcEdge="BOTTOM"/>
+            </layout>
+        </widget>
+        <widget name="viewMenu" role="HbView:menu" type="HbMenu"/>
+        <string locid="txt_clock_title_clock2" name="title" value="Clock"/>
+    </widget>
+    <section name="landscape">
+        <widget name="clockSettingsViewWidget" role="HbView:widget" type="HbWidget">
+            <layout type="anchor">
+                <anchoritem dst="subtitleGroupBox" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="subtitleGroupBox" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="subtitleGroupBox" dstEdge="TOP" spacing="0un" src="" srcEdge="TOP"/>
+                <anchoritem dst="dataForm" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="dataForm" dstEdge="TOP" spacing="0un" src="subtitleGroupBox" srcEdge="BOTTOM"/>
+                <anchoritem dst="dataForm" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="dataForm" dstEdge="BOTTOM" spacing="0un" src="" srcEdge="BOTTOM"/>
+            </layout>
+        </widget>
+    </section>
+    <section name="portrait">
+        <widget name="clockSettingsViewWidget" role="HbView:widget" type="HbWidget">
+            <layout type="anchor">
+                <anchoritem dst="subtitleGroupBox" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="subtitleGroupBox" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="subtitleGroupBox" dstEdge="TOP" spacing="0un" src="" srcEdge="TOP"/>
+                <anchoritem dst="dataForm" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="dataForm" dstEdge="TOP" spacing="0un" src="subtitleGroupBox" srcEdge="BOTTOM"/>
+                <anchoritem dst="dataForm" dstEdge="RIGHT" spacing="-0un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="dataForm" dstEdge="BOTTOM" spacing="0un" src="" srcEdge="BOTTOM"/>
+            </layout>
+        </widget>
+    </section>
+    <metadata activeUIState="Common ui state" display="NHD portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+        <uistate name="portrait" sections="#common portrait"/>
+        <uistate name="landscape" sections="#common landscape"/>
+    </metadata>
+</hbdocument>

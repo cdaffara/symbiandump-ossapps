@@ -1,0 +1,932 @@
+qtn_lgal_tooltip_new_album/*
+* Copyright (c) 2007-2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   Localisation file for Gallery/Photos application
+*
+*/
+
+
+
+/*
+  The syntax of a logical name entry in this file is the following:
+
+  // d:context description (line 1)
+  // d:context description (line N)
+  // l:layout id
+  // w:
+  // r:release information
+  //
+  #define qtn_<?feature_or_application>_?freetext "?text"
+
+  where
+      "qtn_" starts a logical name.  Note: "text_" has been used in
+           old logical names, but is deprecated.
+      "?feature/application" is 2-5 lower-case characters and/or numbers
+           identifying the larger context of the display text.
+      "?freetext" is the free text portion of the logical name.
+           It may contain only lower-case letters ('a' to 'z'), numbers
+           ('0' to '9'), and the underscore ('_').  The total length of
+           the logical name does must not exceed 50 characters.
+      "d:" Starts a description line clarifying the entry's context with
+           information like:
+           - Is a word a verb gin imperative or is it a noun?  (For instance,
+             what does "Set" mean?)
+           - What will replace %U (unicode text parameter) or %N (number
+             parameter) included in texts?  (For instance, is it a phone
+             number or an e-mail address?)
+      "l:" Starts a layout id information (one line).
+           "P" and "No" are symbols in LAF's information table
+                - "P" is parent pane or current pane
+                - "No" is reference number in table
+      "r:" Starts a release information: one line indicating in which
+           gallery increment (NOT RELEASE) the text was used for the first time.
+
+*/
+
+// -----------------------------------------------------------------------------
+//
+// Abbreviations
+//
+// -----------------------------------------------------------------------------
+
+// d:UPnP: Universal Plug and Play. A communication technology that is used to show and play digital content and transfer content in home networks.
+// d:DRM: Digital Rights Management. DRM is used to control how commercial content can be shared and viewed to protect the interest of content creators.
+// d:In English language, "home network" should be shortened to "home net." if the longer version does not fit.
+
+
+
+// d:Delete single item confirmation note
+// d:%U will be replaced with name of item about to be deleted
+// l:popup_note_window/opt2
+// r:4.0
+//
+#define qtn_lgal_note_delete_image		"Delete?\n%U"
+
+// d:Delete multiple items confirmation note
+// d:%N will be replaced with count of items about to be deleted
+// l:popup_note_window/opt2
+// r:6.0
+//
+#define qtn_lgal_note_delete_items      "Delete %N items?"
+
+// d:Delete a single album or tag (or other container) confirmation note
+// d:%U will be replaced with name of the album or tag 
+// d:about to be deleted
+// l:popup_note_window/opt2
+// r:4.0
+//
+#define qtn_lgal_note_delete_container		"Delete? (The files will not be deleted.)\n %U"
+
+// d:Remove single item from album confirmation note
+// d:Command doesn't delete original item from gallery
+// d:%U will be replaced with name of item about to be removed
+// d:When translating this to other languages make sure that
+// d:later "Note: the file will not..." part will get translated also.
+// l:popup_note_window
+// r:6.0 (4.0, but new English)
+//
+#define qtn_lgal_note_remove_name_album 	"Remove from album? (The file will not be deleted.)\n%U "
+
+// d:Remove multiple items from album confirmation note
+// d:Command doesn't delete original items from gallery
+// d:%N will be replaced with count of items about to be removed from album
+// d:When translating this to other languages make sure that
+// d:later "Note: the files will not..." part will get translated also.
+// l:popup_note_window
+// r:6.0 (4.0, but new English)
+//
+#define qtn_lgal_note_remove_items_album 	"Remove %N items from album? (The files will not be deleted.)"
+
+// d:Remove single item from tag confirmation note
+// d:Command doesn't delete original item from gallery
+// d:%U will be replaced with name of item about to be removed
+// d:When translating this to other languages make sure that
+// d:later "Note: the file will not..." part will get translated also.
+// l:popup_note_window
+// r:6.0
+//
+#define qtn_lgal_note_remove_name_tag 	"Remove from tag? (The file will not be deleted.)\n%U "
+
+
+// d:Remove multiple items from album confirmation note
+// d:Command doesn't delete original items from gallery
+// d:%N will be replaced with count of items about to be removed from album
+// d:When translating this to other languages make sure that
+// d:later "Note: the files will not..." part will get translated also.
+// l:popup_note_window
+// r:6.0
+//
+#define qtn_lgal_note_remove_items_tag 		"Remove %N items from tag? (The files will not be deleted.)"
+
+// d:delete location information note title
+// l:popup_note_window
+// r:6.0
+//
+#define qtn_lgal_note_delete_location 		"Delete location information? (This cannot be undone)"
+
+//
+// album pop-up texts
+//
+
+// d:New Album option in select album pop-up
+// l:list_single_pane_t1_cp2/opt1
+// r:4.0
+//
+#define qtn_lgal_album_create 			"New Album"
+
+// d:Query for entering a name in album popup
+// l:heading_pane_t1
+// r:6.0
+//
+#define qtn_lgal_query_enter_name		"Enter name:"
+
+// d:Default name for a new album
+// d:When the end-user creates a new album this string will be used as a default name
+// l:query_popup_data_pane/opt1
+// r:4.0
+//
+#define qtn_lgal_name_album         		"Album"
+
+//
+// Tag picker popup texts
+//
+
+// d:New tag option in tag picker pop-up
+// l:list_single_pane_t1_cp2/opt1
+// r:6.0
+//
+#define qtn_lgal_tag_create 			"New Tag"
+
+// d:Default name for a new tag
+// d:When the end-user creates a new tag this string will be used as a default name
+// l:query_popup_data_pane/opt1
+// r:6.0
+//
+#define qtn_lgal_name_tag         		"Tag"
+
+//
+// Wait and progress notes
+//
+
+// d:Generic progress or wait note text
+// d:Shown when device is busy
+// l:popup_note_wait_window
+// r:4.0
+//
+#define qtn_lgal_note_wait_processing		"Processing"
+
+
+// d:Generic added note
+// d:shown on completion of adding more than one item to an album or tag
+// l:popup_note_window/opt2
+// r:6.5
+//
+#define qtn_lgal_note_added_multi			"Added"
+
+//
+// options menu
+//
+
+// d:Option in Options Menu
+// d:Option name for "Adding focused / selected item(s) to an album"
+// d:Opens the Select Album pop-up
+// l:list_single_pane_t1_cp2
+// r:4.0
+//
+#define qtn_lgal_options_add_to_album		"Add to album"
+
+// d:Option in Album list view Options Menu
+// d:Option name for Creating a new album. 
+// l:list_single_pane_t1_cp2
+// r:4.0
+//
+#define qtn_lgal_options_new_album 		"New album"
+
+
+// d:Option in Options Menu
+// d:Option name for "delete marked media files or focused media file"
+// d:Selecting this option deletes the files phone the phone memory
+// d:and memory card.
+// l:list_single_pane_t1_cp2
+// r:6.0
+//
+#define qtn_lgal_options_delete			"Delete"
+
+// d:Option in Options Menu
+// d:Option name for "Edit" submenu title
+// l:list_single_pane_t1_cp2
+// r:4.0
+//
+#define qtn_lgal_options_edit			"Edit"
+
+// d:Option in Tile view Options Menu
+// d:Move and copy option menu.
+// d:This option opens submenu where the Move/Copy commands can be executed.
+// l:list_single_pane_t1_cp2
+// r:4.0
+//
+#define qtn_lgal_move_copy      		"Move and copy"
+
+// d:Option in Move and copy submenu
+// d:Choosing this option allows user to move images or videos to 
+// d:memory card or phone memory from current memory location
+// l:list_single_popup_submenu_pane_t1
+// r:6.0
+//
+#define qtn_lgal_options_move      		"Move"
+
+// d:Option in Move and copy submenu
+// d:Choosing this option allows user to copy images or videos to 
+// d:memory card or phone memory 
+// l:list_single_popup_submenu_pane_t1
+// r:6.0
+//
+#define qtn_lgal_options_copy      		"Copy"
+
+
+// d:Option in Options Menu
+// d:Option name for "Removing focused/selected item(s) from the album"
+// d:This option is available in album tile and album fullscreen views 
+// l:list_single_pane_t1_cp2
+// r:4.0
+//
+#define qtn_lgal_options_remove_from_album 	"Remove from album"
+
+
+// d:Option in Options Menu
+// d:Option name for "Removing focused/selected item(s) from the tag"
+// d:This option is available in tags tile view and tags full screen view 
+// l:list_single_pane_t1_cp2
+// r:4.0
+//
+#define qtn_lgal_options_remove_from_tag 	"Remove from tag"
+
+// d:Option in Options Menu
+// d:Choosing this option will allow the user to give a new name for the 
+// d:selected file or album
+// l:list_single_pane_t1_cp2
+// r:6.0
+//
+#define qtn_lgal_options_rename			"Rename"
+
+// d:Submenu in Options Menu
+// d:Submenu name for Slide show
+// d:opens the Slide show submenu
+// l:list_single_pane_t1_cp2
+// r:4.0
+//
+#define qtn_lgal_options_slideshow		"Slide show"
+
+// d:Submenu option in slide show Options Menu
+// d:Choosing this option opens the slide show settings dialog and allows
+// d:the user to change the slide show settings
+// l:list_single_popup_submenu_pane_t1
+// r:4.0
+//
+#define qtn_lgal_options_slideshow_settings_general "Settings"
+
+
+// d:Submenu in Options Menu
+// d:This text is used as submenu title for "use items" submenu 
+// d:when only one image is selected
+// d:Submenu contains commands for using the image for different purposes, such as wallpaper or assign to contact
+// l:list_single_pane_t1_cp2
+// r:4.0
+//
+#define qtn_lgal_options_use_image_as		"Use image"
+
+// d:Submenu in Options Menu
+// d:This text is used when multiple items are selected (image and video, or images and/or videos)
+// d:Submenu contains commands for using the images/videos in various ways.
+// l:list_single_pane_t1_cp2
+// r:4.0
+//
+#define qtn_lgal_options_use_items		"Use items"
+
+// d:Submenu in Options Menu
+// d:Submenu contains commands for using the video for different purposes, such as ring tone
+// l:list_single_pane_t1_cp2
+// r:4.0
+//
+#define qtn_lgal_options_use_video_as		"Use video"
+
+
+// d:Option in Options Menu
+// d:Choosing this option will enter a mode in which the focused
+// d:image or video is shown on a remote display via a wireless link,
+// d:as the user navigates from item to item
+// l:list_single_popup_submenu_pane_t1 
+// r:4.0
+//
+#define qtn_lgal_options_show_ext		"Show on home network"
+
+// d:Option in Options Menu
+// d:Choosing this option will stop showing items on home network.
+// d:(See qtn_lgal_options_show_ext)
+// l:list_single_popup_submenu_pane_t1
+// r:4.0
+//
+#define qtn_lgal_options_stop_show		"Stop showing"		
+
+// d:Option in Options Menu
+// d:Choosing this option will copy items to the home network.
+// l:list_single_popup_submenu_pane_t1
+// r:6.5
+//
+#define qtn_lgal_options_copy_to_home_net "Copy to home network" 
+
+// d:Home network submenu
+// d:Choosing this option will invoke the home network submenu
+// l:list_single_pane_t1_cp2/opt3 
+// r:6.5
+//
+#define qtn_lgal_options_home_network "Home network"
+
+// d:Option in Home network sub menu
+// d:Choosing this option will enter a mode in which the focused
+// d:image or video is shown on a remote display via a wireless link,
+// d:as the user navigates from item to item
+// l:list_single_popup_submenu_pane_t1
+// r:6.5
+//
+#define qtn_lgal_options_sub_show_ext "Show on home network" 
+
+// d:Option in Home network sub menu
+// d:Choosing this option will stop showing items on home network.
+// l:list_single_popup_submenu_pane_t1
+// r:6.5
+#define qtn_lgal_options_sub_stop_show "Stop showing"
+
+// d:Submenu name in Options Menu
+// d:This submenu contains different printing options for focused/selected item(s)
+// l:list_single_pane_t1_cp2
+// r:4.0
+//
+#define qtn_lgal_options_print_menu "Print" 
+
+
+// d:Option in Options Menu
+// d:This submenu allows user to view and edit the properties
+// l:list_single_pane_t1_cp2 
+// r:6.0
+//
+#define qtn_lgal_options_properties_edit 	"Edit"
+
+
+// d:Option in Options Menu
+// d:This submenu item allows users to show the item on a map
+// d:if the item contains location data
+// l:list_single_pane_t1_cp2
+// r:6.0
+//
+#define qtn_lgal_option_show_on_map             "Show on map"
+
+
+// d:Title text when marking mode is set to on in the grid view
+// l:title_pane_t2/opt9
+// r:8.0
+//	
+#define qtn_lgal_title_marking_mode             "Mark items"
+
+// d:Title of photos suite main view
+// l:title_pane_t2/opt9
+// r:8.0
+//
+#define qtn_lgal_title_main_view                "Photos"	
+
+// d:Title of the grid view showing the items of one month.
+// l:title_pane_t2/opt9
+// r:8.0
+//
+#define qtn_lgal_title_months                   "Months"
+
+// d:Title of months grid view
+// l:title_pane_t2/opt9
+// r:8.0
+//
+#define qtn_lgal_title_month_year               "%0U %1U"
+
+// d:Title of captured grid view
+// l:title_pane_t2/opt9
+// r:8.0
+//
+#define qtn_lgal_title_captured                 "Captured"
+
+// d:Title of albums list view
+// l:title_pane_t2/opt9
+// r:8.0
+//
+#define qtn_lgal_title_albums                   "Albums"
+
+// d:Title of the favourites album grid view
+// l:title_pane_t2/opt9
+// r:8.0
+//
+#define qtn_lgal_title_favourites               "Favourites"
+
+
+// d:Title of the tags browser view
+// l:title_pane_t2/opt9
+// r:8.0
+//
+#define qtn_lgal_title_tags                     "Tags"
+
+// d:Title of the downloads grid view
+// l:title_pane_t2/opt9
+// r:8.0
+//
+#define qtn_lgal_title_downloads                "Downloads"
+
+// d:Title of details view
+// l:title_pane_t2/opt9
+// r:8.0
+//
+#define qtn_lgal_title_details                  "Details"
+
+// d:Title of the select container multiselection list view when tags are selected
+// l:title_pane_t2/opt9
+// r:8.0
+//
+#define qtn_lgal_title_select_tags              "Select tags"
+
+// d:Title of the select container multiselection list view when albums are selected
+// l:title_pane_t2/opt9
+// r:8.0
+//
+#define qtn_lgal_title_select_albums            "Select albums"
+
+// d:Title of the fetcher when only one image has to be selected
+// l:title_pane_t2/opt9
+// r:8.0
+//
+#define qtn_lgal_title_fetcher_select_image     "Select image:"
+
+// d:Title of the fetcher when only one video has to be selected
+// l:title_pane_t2/opt9
+// r:8.0
+//
+#define qtn_lgal_title_fetcher_select_video     "Select video:"
+
+// d:Title of the fetcher when more than one images have to be selected
+// l:title_pane_t2/opt9
+// r:8.0
+//
+#define qtn_lgal_title_fetcher_select_images   "Select images:"
+
+// d:Title of the fetcher when more than one videos have to be selected
+// l:title_pane_t2/opt9
+// r:8.0
+//
+#define qtn_lgal_title_fetcher_select_videos    "Select videos:"
+
+// d:Title for captured item in photos suite main view
+// l:list_logical_template_8_title
+// r:8.0
+//
+#define qtn_lgal_list_title_captured_nseries    "Captured"
+
+// d:Title for months item in photos suite main view
+// l:list_logical_template_8_title
+// r:8.0
+//
+#define qtn_lgal_list_title_months_nseries      "Months"
+
+// d:Title for albums item in photos suite main view
+// l:list_logical_template_8_title
+// r:8.0
+//
+#define qtn_lgal_list_title_albums_nseries      "Albums"
+
+// d:Title for tags item in photos suite main view
+// l:list_logical_template_8_title
+// r:8.0
+//
+#define qtn_lgal_list_title_tags_nseries        "Tags"
+
+// d:Title for downloads item in photos suite main view
+// l:list_logical_template_8_title
+// r:8.0
+//
+#define qtn_lgal_list_title_downloads_nseries   "Downloads"
+
+// d:Title for a month item in Months list view. %0U is a 
+// d:month and %1U is the year.AVKON 3-character month 
+// d:strings are used to populate %0U.
+// l:list_logical_template_8_title
+// r:8.0
+//
+#define qtn_lgal_list_title_month_year_nseries  "%0U %1U"
+
+
+// d:Title for favourites item in albums list view
+// l:list_logical_template_8_title
+// r:8.0
+//
+#define qtn_lgal_list_title_favourites_nseries  "Favourites"
+
+// d:Number of items (images or videos) in category.
+// d:Shown in photos suite main view when captured album category is focused.
+// d:Used when no images or videos exist in the category.
+// l:list_logical_template_8_detail
+// r:8.0
+//
+#define qtn_lgal_list_detail_no_img_vid_nseries             "No images or videos"
+
+// d:Number of tags and number of items the tag(s) has been added to.
+// d:Shown in photos suite main view when tags category is focused.
+// d:Used when no tagged items are present.
+// l:list_logical_template_8_detail
+// r:8.0
+//
+#define qtn_lgal_list_detail_no_tagged_items_nseries        "No tagged images or videos"
+
+
+// d:Title field in the details view.
+// l:list_logical_template_6_title
+// r:8.0
+//
+#define qtn_lgal_details_title_nseries						"Title"
+
+// d:Albums field in the details view.
+// l:list_logical_template_5_title
+// r:8.0
+//
+#define qtn_lgal_details_albums_nseries             "Albums"
+
+// d:Tags field in the details view.
+// l:list_logical_template_5_title
+// r:8.0
+//
+#define qtn_lgal_details_tags_nseries               "Tags"
+
+// d:Description field in the details view.
+// l:list_logical_template_5_title
+// r:8.0
+//
+#define qtn_lgal_details_description_nseries        "Description"
+
+// d:Location field in the details view.
+// l:list_logical_template_5_title
+// r:8.0
+//
+#define qtn_lgal_details_location_nseries           "Location"
+
+// d:Resolution field in the details view.
+// l:list_logical_template_5_title
+// r:8.0
+//
+#define qtn_lgal_details_resolution_title_nseries   "Resolution"
+
+// d:Duration field in the details view.
+// l:list_logical_template_5_title
+// r:8.0
+//
+#define qtn_lgal_details_duration_nseries           "Duration"
+
+// d:Usage rights field in the details view.
+// l:list_logical_template_5_title
+// r:8.0
+//
+#define qtn_lgal_detail_drm_nseries                 "Usage rights"
+
+// d:Resolution of the item
+// d:Used in the resolution pane of the details view
+// d:%0N is the width of the video/image in pixels and %1N is the height in pixels.
+// l:list_logical_template_5_detail
+// r:8.0
+//
+#define qtn_lgal_details_resolution_detail_nseries	"%0N x %1N"
+
+// d:Index of the displayed item among the total number of items 
+// d:in the previous grid view.
+// d:Used in the full screen view.
+// l:photos_counter_text
+// r:8.0
+//
+#define qtn_lgal_item_counter	"%0N/%1N"
+
+// d:Displayed in an empty grid view
+// d:Used when a user enter the grid view when no items are present
+// l:grid_view_text_empty
+// r:8.0
+//
+#define qtn_lgal_empty_grid_no_items_nseries	"No images or videos to display"
+
+// d:Displayed in an empty cloud view.
+// d:Used when a user enter the tag browser view when no tags have been assigned 
+// d:to any items
+// l:grid_view_text_empty
+// r:8.0
+//
+#define qtn_lgal_empty_tag_browser_nseries		"No tags added to images or videos"
+
+// d:Used when user enter months list view when no items 
+// d:are yet on the device.
+// l:list_view_text_empty
+// r:8.0
+//
+#define qtn_lgal_empty_list_no_captured_items_nseries		"No captured images or videos"
+
+// d:Zoom ratio
+// l:slider_3_counter_text
+// r:8.0
+//
+#define qtn_lgal_zoom_ratio_nseries		"%N %"
+
+// d:Video length.
+// d:Used in metadata pane in grid view
+// d:when video length is less than 1 hour.
+// l:Metadata_pane_1_detail
+// r:8.0
+//
+#define qtn_lgal_metapane_length_min_nseries	"%U min"
+
+// d:Video length.
+// d:Used in metadata pane in grid view
+// d:when video length is more than 1 hour.
+// l:Metadata_pane_1_detail
+// r:8.0
+//
+#define qtn_lgal_metapane_length_hrs_nseries	"%U hrs"
+
+// d:Text prompt to download images in downloads grid.
+// d:Used when image download link is present
+// l:metadata_pane_2_title
+// r:8.0
+//
+#define qtn_lgal_grid_meta_download_images_nseries	"Download images"
+
+// d:Text prompt to download videos in downloads grid.
+// d:Used when video download link is present
+// l:metadata_pane_2_title
+// r:8.0
+//
+#define qtn_lgal_grid_meta_download_videos_nseries	"Download videos"
+
+// d:Text to display the number of items assigned with a tag.
+// d:Used in tags browser view when more than 1 items are
+// d:assigned with a tag.
+// l:Deswcc_tb_highlight_text2
+// r:8.0
+//
+#define qtn_lgal_tag_popup_multi_items  "%N items"
+
+// d:Text to display the number of items assigned with a tag.
+// d:Used in tags browser view when exactly 1 item is assigned
+// d:to a tag.
+// l:Deswcc_tb_highlight_text2
+// r:8.0
+//
+#define qtn_lgal_tag_popup_one_item     "1 item"
+
+// d:No location information note 
+// l:popup_note_window
+// r:8.0
+//
+#define qtn_lgal_note_no_location	"No location information. Record location by turning on the location setting in Camera."
+
+// d:Confirmation note shown  when the user adds one item to an album 
+// l:popup_note_window
+// r:8.0
+//
+#define qtn_lgal_note_added_one_item_album		"Added"
+
+// d:Confirmation note shown  when the user adds multiple item to an album 
+// l:popup_note_window
+// r:8.0
+//
+#define qtn_lgal_note_added_multi_item_album		"Added"
+
+// d:Confirmation note shown  when the user adds one item to an tag 
+// l:popup_note_window
+// r:8.0
+//
+#define qtn_lgal_note_added_one_item_tag		"Added"
+
+// d:Confirmation note shown  when the user adds multiple item to an tag 
+// l:popup_note_window
+// r:8.0
+//
+#define qtn_lgal_note_added_multi_item_tag		"Added"
+
+// d:Tooltip displayed when user focuses on delete icon in the toolbar.
+// l:toolbar_text_tooltip
+// r:8.0
+//
+#define qtn_lgal_tooltip_delete	        "Delete "
+
+// d:Tooltip displayed when user focuses on mark items icon in the toolbar.
+// d:Used to turn on the marking mode in grid view
+// l:toolbar_text_tooltip
+// r:8.0
+//
+#define qtn_lgal_tooltip_mark_items     "Mark items"
+
+// d:Tooltip displayed when user focuses on un mark icon in the toolbar.
+// d:Used to stop or turn off the marking mode in grid view
+// l:toolbar_text_tooltip
+// r:8.0
+//
+#define qtn_lgal_tooltip_unmark_all   "Unmark all"
+
+// d:Tooltip displayed when user focuses on send icon in the toolbar.
+// l:toolbar_text_tooltip
+// r:8.0
+//
+#define qtn_lgal_tooltip_send           "Send"
+
+// d:Tooltip displayed when user focuses on new album icon in the toolbar.
+// l:toolbar_text_tooltip
+// r:8.0
+//
+#define qtn_lgal_tooltip_new_album      "New album"
+
+// d:Tooltip displayed when user focuses on play icon in the toolbar.
+// d:Used when video item is in focus in the grid view.
+// l:toolbar_text_tooltip
+// r:8.0
+//
+#define qtn_lgal_tooltip_play           "Play "
+
+// d:Tooltip displayed when user focuses on rename icon in the toolbar.
+// l:toolbar_text_tooltip
+// r:8.0
+//
+#define qtn_lgal_tooltip_rename         "Rename "
+
+// d:Tooltip displayed when user focuses on start slideshow icon in the toolbar.
+// l:toolbar_text_tooltip
+// r:8.0
+//
+#define qtn_lgal_tooltip_slideshow      "Start slideshow"
+
+// d:Details options menu string.
+// d:Used to open details view
+// l:list_single_pane_t1_cp2
+// r:8.0
+//
+#define qtn_lgal_options_details        "Details"
+
+// d:View options menu string.
+// d:Shown in Details view when Usage rights item is focused.
+// d:Opens the DRM details view provided by S60
+// l:list_single_pane_t1_cp2
+// r:8.0
+//
+#define qtn_lgal_options_view           "View"
+
+
+// d:Top-level option to open image rotate sub-menu
+// l:list_single_pane_t1_cp2/opt3
+// r:8.0
+//
+#define qtn_lgal_options_rotate             "Rotate"
+
+
+// d:Rotate sub-meu option
+// d:Used to rotate the image to left.
+// l:list_single_popup_submenu_pane_t1
+// r:8.0
+//
+#define qtn_lgal_options_rotate_left                "Left"
+
+// d:Rotate sub-meu option
+// d:Used to rotate the image to right.
+// l:list_single_popup_submenu_pane_t1
+// r:8.0
+//
+#define qtn_lgal_options_rotate_right               "Right"
+
+// d:Slideshow submenu option
+// d:Used to start the slide show
+// l:list_single_popup_submenu_pane_t1
+// r:8.0
+//
+#define qtn_lgal_options_slideshow_play							"Play"
+
+// d:Fullscreen metapane option
+// d:Used to open the details view where all the image/video details will be listed
+// l:metadata_pane_5_detail
+// r:8.0
+//
+#define qtn_lgal_metapane_more_details							"More details"
+
+// d:File size shown in metapane
+// d:Used to display the file size of the focused item.
+// l:list_logical_template_5_title
+// r:8.0
+//
+#define qtn_lgal_details_file_size_nseries					"File size"
+
+// d:Details view list option
+// d:Date and time of the image/video when it was shot 
+// l:list_logical_template_5_title
+// r:8.0
+//
+#define qtn_lgal_details_date_time_nseries					"Date and time"
+
+
+// d:Fullscreen option in metapane
+// d:Show on map
+// l:metadata_pane_6_detail
+// r:8.0
+//
+#define qtn_lgal_metapane_show_map          "Show map"
+
+// d:image fetcher
+// d:If there are no items to show in the  image fetcher view, this text is displayed.
+// l:grid_view_text_empty
+// r:8.0
+//
+#define qtn_lgal_empty_grid_no_images_nseries             "No images to display"
+
+// d:video fetcher
+// d:If there are no items to show in the fetcher view, this text is displayed.
+// l:grid_view_text_empty
+// r:8.0
+//
+#define qtn_lgal_empty_grid_no_videos_nseries             "No videos to display"
+
+
+// d:info note
+// d:This information note is shown when the user presses Slideshow toolbar button and all the items of the container are non-playable items..
+// l:popup_note_window
+// r:8.0
+//
+#define qtn_lgal_note_no_images_to_play_slideshow           "No images to play slideshow"
+
+// d:Number of items (images or videos) in category. Shown in list view when
+// d:camera album, all images and videos and downloads category is focused.
+// d:Used when 1 item exists in the category.
+// l:list_logical_template_8_detail
+// r:8.0
+//
+#define qtn_lgal_list_detail_one_item	  "1 item"
+
+// d:Number of items (images or videos) in category. Shown in list view when
+// d:camera album, all images and videos and downloads category is focused.
+// d:Used when 0 or more than 1 items exist in the category.
+// l:list_logical_template_8_detail
+// r:8.0
+//
+#define qtn_lgal_list_detail_multi_item	           "%N items"
+
+// d:the text showing the 'from' month - year 'to' month - year
+// d:when highlighting the months item in main menu
+// d:Abbreviated month name %0U and full year %1U of oldest item and
+// d:Abbreviated month name %2U and full year %3U of newest item
+// l:list_logical_template_8_detail
+// r:8.0
+//
+#define qtn_lgal_list_title_month_year             "%0U %1U - %2U %3U"
+
+// d:Number of albums in category. Shown in list view when
+// d:albums category is focused.
+// d:Used when 1 album exists in the category.
+// l:list_logical_template_8_detail
+// r:8.0
+//
+#define qtn_lgal_list_detail_one_alb	       "1 album"
+
+// d:Number of albums in category. Shown in list view when
+// d:albums category is focused.
+// d:Used when 0 or more than 1 albums exist in the category.
+// l:list_logical_template_8_detail
+// r:8.0
+//
+#define qtn_lgal_list_detail_multi_alb	       "%N albums"
+
+// d:Number of tags in category. Shown in list view when
+// d:tags category is focused.
+// d:Used when 1 tag exists in the category.
+// l:list_logical_template_8_detail
+// r:8.0
+//
+#define qtn_lgal_list_detail_one_tag           "1 tag"
+
+// d:Number of tags in category. Shown in list view when
+// d:tags category is focused.
+// d:Used when 0 or more than 1 tags exist in the category.
+// l:list_logical_template_8_detail
+// r:8.0
+//
+#define qtn_lgal_list_detail_multi_tag             "%N tags"
+
+
+// d:Number of tags in category. Shown in list view when
+// d:tags category is focused.
+// d:Used when 0 or more than 1 tags exist in the category.
+// l:list_logical_template_8_detail
+// r:8.0
+//
+#define qtn_lgal_view_subtitle_tags_no_tags                "No tags"

@@ -1,0 +1,137 @@
+<hbwidget version="0.1" type="cnteditviewheadingitem">
+
+  <layout name="customLayout" type="mesh">
+    <meshitem src="icon" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="-var(hb-param-margin-gene-left)" />
+    <meshitem src="icon" srcEdge="TOP" dst="" dstEdge="TOP" spacing="-1.0un" />
+
+    <meshitem src="text" srcEdge="LEFT" dst="icon" dstEdge="RIGHT" spacing="-var(hb-param-margin-gene-middle-horizontal)" />
+    <meshitem src="text" srcEdge="TOP" dst="" dstEdge="TOP" spacing="-1.0un" />
+    <meshitem src="text" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)" />
+
+    <meshitem src="second_text" srcEdge="TOP" dst="text" dstEdge="BOTTOM" spacing="-var(hb-param-margin-gene-middle-vertical)" />
+    <meshitem src="second_text" srcEdge="LEFT" dst="text" dstEdge="LEFT" />
+    <meshitem src="second_text" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacing="1.0un" />
+    <meshitem src="second_text" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)" />
+
+    <meshitem src="background" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="background" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+    <meshitem src="background" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+    <meshitem src="background" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+
+    <meshitem src="iconArea" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="iconArea" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+    <meshitem src="iconArea" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+    <meshitem src="iconArea" srcEdge="RIGHT" dst="icon" dstEdge="RIGHT" />
+    
+    <meshitem src="highlight" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+    <meshitem src="highlight" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+    <meshitem src="highlight" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="highlight" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+  </layout>
+  
+  <layout name="customLayoutNoSecondText" type="mesh">
+    <meshitem src="icon" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="-var(hb-param-margin-gene-left)" />
+    <meshitem src="icon" srcEdge="TOP" dst="" dstEdge="TOP" spacing="-1.0un" />
+	<meshitem src="icon" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacing="1.0un" />
+
+    <meshitem src="text" srcEdge="LEFT" dst="icon" dstEdge="RIGHT" spacing="-var(hb-param-margin-gene-middle-horizontal)" />
+    <meshitem src="text" srcEdge="CENTERV" dst="icon" dstEdge="CENTERV" />
+    <meshitem src="text" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)" />
+
+    <meshitem src="background" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="background" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+    <meshitem src="background" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+    <meshitem src="background" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+
+    <meshitem src="iconArea" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="iconArea" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+    <meshitem src="iconArea" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+    <meshitem src="iconArea" srcEdge="RIGHT" dst="icon" dstEdge="RIGHT" />
+    
+    <meshitem src="highlight" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+    <meshitem src="highlight" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+    <meshitem src="highlight" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="highlight" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+  </layout>
+  
+  <layout name="customLayoutNoText" type="mesh">
+    <meshitem src="icon" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="-var(hb-param-margin-gene-left)" />
+    <meshitem src="icon" srcEdge="TOP" dst="" dstEdge="TOP" spacing="-1.0un" />
+	<meshitem src="icon" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacing="1.0un" />
+
+    <meshitem src="second_text" srcEdge="LEFT" dst="icon" dstEdge="RIGHT" spacing="-var(hb-param-margin-gene-middle-horizontal)" />
+    <meshitem src="second_text" srcEdge="CENTERV" dst="" dstEdge="CENTERV" />
+    <meshitem src="second_text" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)" />
+
+    <meshitem src="background" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="background" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+    <meshitem src="background" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+    <meshitem src="background" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+
+    <meshitem src="iconArea" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="iconArea" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+    <meshitem src="iconArea" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+    <meshitem src="iconArea" srcEdge="RIGHT" dst="icon" dstEdge="RIGHT" />
+    
+    <meshitem src="highlight" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+    <meshitem src="highlight" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+    <meshitem src="highlight" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="highlight" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+  </layout>
+
+  <layout name="customLayout-landscape" type="mesh">
+    <meshitem src="text" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="-var(hb-param-margin-gene-left)" />
+    <meshitem src="text" srcEdge="TOP" dst="" dstEdge="TOP" spacing="-1.0un" />
+    <meshitem src="text" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)" />
+
+    <meshitem src="second_text" srcEdge="TOP" dst="text" dstEdge="BOTTOM" spacing="-var(hb-param-margin-gene-middle-vertical)" />
+    <meshitem src="second_text" srcEdge="LEFT" dst="text" dstEdge="LEFT" />
+    <meshitem src="second_text" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacing="1.0un" />
+    <meshitem src="second_text" srcEdge="RIGHT" dst="text" dstEdge="RIGHT" />
+
+    <meshitem src="background" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="background" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+    <meshitem src="background" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+    <meshitem src="background" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+    
+    <meshitem src="highlight" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+    <meshitem src="highlight" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+    <meshitem src="highlight" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="highlight" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+  </layout>
+
+  <layout name="customLayoutNoSecondText-landscape" type="mesh">
+    <meshitem src="text" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="-var(hb-param-margin-gene-left)" />
+    <meshitem src="text" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)" />
+    <meshitem src="text" srcEdge="TOP" dst="" dstEdge="TOP" spacing="-var(hb-param-margin-gene-top)" />
+    <meshitem src="text" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacing="var(hb-param-margin-gene-bottom)" />
+
+    <meshitem src="background" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="background" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+    <meshitem src="background" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+    <meshitem src="background" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+    
+    <meshitem src="highlight" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+    <meshitem src="highlight" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+    <meshitem src="highlight" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="highlight" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+  </layout>
+  
+  <layout name="customLayoutNoText-landscape" type="mesh">
+    <meshitem src="second_text" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="-var(hb-param-margin-gene-left)" />
+    <meshitem src="second_text" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)" />
+    <meshitem src="second_text" srcEdge="TOP" dst="" dstEdge="TOP" spacing="-var(hb-param-margin-gene-top)" />
+    <meshitem src="second_text" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacing="var(hb-param-margin-gene-bottom)" />
+
+    <meshitem src="background" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="background" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+    <meshitem src="background" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+    <meshitem src="background" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+    
+    <meshitem src="highlight" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+    <meshitem src="highlight" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+    <meshitem src="highlight" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="highlight" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+  </layout>
+
+</hbwidget>

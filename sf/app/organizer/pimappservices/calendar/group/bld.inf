@@ -1,0 +1,65 @@
+// Copyright (c) 2006-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+../inc/calalarm.h SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(calalarm.h)
+../inc/calattachment.h SYMBIAN_APP_LAYER_PLATFORM_EXPORT_PATH(calattachment.h)
+../inc/calattachmentmanager.h SYMBIAN_APP_LAYER_PLATFORM_EXPORT_PATH(calattachmentmanager.h)
+../inc/calcategory.h SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(calcategory.h)
+../inc/calcategorymanager.h SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(calcategorymanager.h)
+../inc/calchangecallback.h SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(calchangecallback.h)
+../inc/calcommon.h SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(calcommon.h)
+../inc/calcontent.h SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(calcontent.h)
+../inc/caldataexchange.h SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(caldataexchange.h)
+../inc/caldataformat.h SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(caldataformat.h)
+../inc/calentry.h SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(calentry.h)
+../inc/calentryview.h SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(calentryview.h)
+../inc/calinstance.h SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(calinstance.h)
+../inc/calinstanceview.h SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(calinstanceview.h)
+../inc/CalinterimApiPanic.h SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(calinterimapipanic.h)
+../inc/caliterator.h SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(caliterator.h)
+../inc/calnotification.h SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(calnotification.h)
+../inc/calprogresscallback.h SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(calprogresscallback.h)
+../inc/calrrule.h SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(calrrule.h)
+../inc/calsession.h SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(calsession.h)
+../inc/caltime.h SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(caltime.h)
+../inc/caluser.h SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(caluser.h)
+#ifdef SYMBIAN_OLD_EXPORT_LOCATION
+../inc/calversit.h			/epoc32/include/app-services/private/calversit.h
+#endif
+../inc/calinstanceiterator.h SYMBIAN_APP_LAYER_PLATFORM_EXPORT_PATH(calinstanceiterator.h)
+../inc/calcalendarinfo.h SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(calcalendarinfo.h)
+../inc/calcalendariterator.h SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(calcalendariterator.h)
+../inc/calfilechangenotification.h SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(calfilechangenotification.h)
+
+./agnmodel.iby	/epoc32/rom/include/agnmodel.iby
+./calinterimapi.iby	/epoc32/rom/include/calinterimapi.iby
+
+// ConfML Files
+../conf/calendar.confml                APP_LAYER_EXPORTS_CONFML(calendar.confml)
+../conf/calendar_10003a5b.crml	       APP_LAYER_EXPORTS_CRML(calendar_10003a5b.crml)
+
+// DOCUMENTATION
+backup_registration.xml  z:/private/10003a5b/backup_registration.xml
+
+PRJ_MMPFILES
+./agnmodel.mmp
+./agsvexe.mmp
+./calinterimapi.mmp
+
+#include "../test/group/bld.inf"

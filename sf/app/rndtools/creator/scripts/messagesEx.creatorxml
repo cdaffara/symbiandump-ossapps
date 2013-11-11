@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<creatorscript schemaVersion="1.0" scriptVersion="1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="creator.xsd">
+
+<contact-set id="1">
+   <contact amount="6">
+      <fields>
+         <firstname/>
+         <lastname/>
+         <mobilephonegen/>
+         <emailgen/>
+      </fields>
+   </contact>
+</contact-set>
+
+<message amount="5" type="sms">
+   <fields>
+      <to/>
+      <folder>inbox</folder>
+      <text>This is an example SMS created by Creator.</text>
+      <status>new</status>
+   </fields>
+</message>
+
+<message type="mms">
+   <fields>
+      <to/>
+      <folder>sent</folder>
+      <subject>Good music!</subject>
+      <status>new</status>
+      <attachmentid>MP3-250kB</attachmentid>
+   </fields>
+</message>
+
+<message type="email">
+   <fields>
+      <from>
+         <contact-set-reference id="1"/>
+      </from> 
+      <folder>inbox</folder>
+      <subject/>
+      <text randomlength="max"/>
+      <status>new</status>
+      <attachmentid>JPEG-200kB</attachmentid>
+   </fields>
+</message>
+
+<message amount="5" type="sms">
+   <fields>
+      <from incvalueforeachcopy="true">123456</from>
+      <folder>inbox</folder>
+      <text>This is an example SMS created by Creator.</text>
+      <status>new</status>
+   </fields>
+</message>
+
+</creatorscript>

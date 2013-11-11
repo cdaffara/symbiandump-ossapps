@@ -1,0 +1,12 @@
+EXPORTS
+	?GetLandmarkFullAddress@CMyLocationsDatabaseManager@@QAEXAAV?$TBuf@$0PP@@@PBVCPosLandmark@@@Z @ 1 NONAME ; void CMyLocationsDatabaseManager::GetLandmarkFullAddress(class TBuf<255> &, class CPosLandmark const *)
+	?CheckIfAddressChanged@CMyLocationsDatabaseManager@@QAEHABVTDesC16@@KW4TUidSourceType@@@Z @ 2 NONAME ; int CMyLocationsDatabaseManager::CheckIfAddressChanged(class TDesC16 const &, unsigned long, enum TUidSourceType)
+	?UpdateCalendarLocationById@CMyLocationsDatabaseManager@@QAEXKKABVTDesC16@@@Z @ 3 NONAME ; void CMyLocationsDatabaseManager::UpdateCalendarLocationById(unsigned long, unsigned long, class TDesC16 const &)
+	??0CMyLocationsDatabaseManager@@QAE@XZ @ 4 NONAME ; CMyLocationsDatabaseManager::CMyLocationsDatabaseManager(void)
+	?CheckIfAddressChanged@CMyLocationsDatabaseManager@@QAEHABVCPosLandmark@@KW4TUidSourceType@@@Z @ 5 NONAME ; int CMyLocationsDatabaseManager::CheckIfAddressChanged(class CPosLandmark const &, unsigned long, enum TUidSourceType)
+	?UpdateMapTilePath@CMyLocationsDatabaseManager@@QAEXKKAAV?$TBuf@$0BAA@@@@Z @ 6 NONAME ; void CMyLocationsDatabaseManager::UpdateMapTilePath(unsigned long, unsigned long, class TBuf<256> &)
+	?UpdateEntryName@CMyLocationsDatabaseManager@@QAEXKW4TUidSourceType@@ABVTDesC16@@@Z @ 7 NONAME ; void CMyLocationsDatabaseManager::UpdateEntryName(unsigned long, enum TUidSourceType, class TDesC16 const &)
+	?ConstructL@CMyLocationsDatabaseManager@@QAEXXZ @ 8 NONAME ; void CMyLocationsDatabaseManager::ConstructL(void)
+	?GetAllCalendarEntry@CMyLocationsDatabaseManager@@QAEXAAV?$QList@VQCalendarLocationDetails@@@@@Z @ 9 NONAME ; void CMyLocationsDatabaseManager::GetAllCalendarEntry(class QList<class QCalendarLocationDetails> &)
+	?UpdateDatabaseL@CMyLocationsDatabaseManager@@QAEXPAVCPosLandmark@@KKK@Z @ 10 NONAME ; void CMyLocationsDatabaseManager::UpdateDatabaseL(class CPosLandmark *, unsigned long, unsigned long, unsigned long)
+

@@ -1,0 +1,112 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+PRINT Run Import/Export Soak/Stress Test
+
+LOAD_SUITE TestCalInterimApiSuite
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0012AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0012AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Import multiple vCal's simultaneously (stress)
+//! @SYMTestActions Import large number of vCal's (say 400), store entries in database.
+//! @SYMTestExpectedResults Verify if 400 entries present in database.
+
+RUN_TEST_STEP 190 TestCalInterimApiSuite TestCalInterimApiImportExportCreateStressData \CITCalInterimApi\testdata\TestCalInterimApiImportExportSoakStress.ini stress
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportSoakStress.ini exportStress
+RUN_TEST_STEP 190 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportSoakStress.ini vCal25
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportExportCountEntry \CITCalInterimApi\testdata\TestCalInterimApiImportExportSoakStress.ini verify
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0012AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0013AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0013AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Repeated Imported Operations (soak)
+//! @SYMTestActions Import a vCal to an entry and store this entry in database. 
+//		    Import same vCal to an entry say 10 times, and store in database.
+//! @SYMTestExpectedResults Importing multiple times should have no effect, and 1 entry should be present in database.
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportSoakStress.ini vCal26
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportSoakStress.ini vCal26
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportSoakStress.ini vCal26
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportSoakStress.ini vCal26
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportSoakStress.ini vCal26
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportSoakStress.ini vCal26
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportSoakStress.ini vCal26
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportSoakStress.ini vCal26
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportSoakStress.ini vCal26
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportSoakStress.ini vCal26
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportExportCountEntry \CITCalInterimApi\testdata\TestCalInterimApiImportExportSoakStress.ini verifySoak
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0013AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0024AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0024AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Export multiple entries (stress)
+//! @SYMTestActions Export (say 400 - specified in ini file), to a vcs file
+//! @SYMTestExpectedResults Exporting of the entries should have been done succesfully
+
+RUN_TEST_STEP 190 TestCalInterimApiSuite TestCalInterimApiImportExportCreateStressData \CITCalInterimApi\testdata\TestCalInterimApiImportExportSoakStress.ini stress
+RUN_TEST_STEP	100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportSoakStress.ini exportStress1
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0012AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0025AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0025AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Repeated Exported Operations (soak)
+//! @SYMTestActions Export an entry to a vCal.  Repeat this say 10 times (specified in ini)
+//! @SYMTestExpectedResults Exporting multiple times should have no effect
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportSoakStress.ini vCal26
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExportSoak \CITCalInterimApi\testdata\TestCalInterimApiImportExportSoakStress.ini exportSoak
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0025AP-1090HP
+
+PREFIX RUN_UTILS 
+MakeReadWrite 	c:\citcalinterimapi\testdata\vcals\ExportedvCals\vCalSoak.vcs
+DeleteFile		c:\citcalinterimapi\testdata\vcals\ExportedvCals\vCalSoak.vcs
+MakeReadWrite 	c:\private\10003a5b\CITCalInterimSoak.dat
+DeleteFile		c:\private\10003a5b\CITCalInterimSoak.dat
+MakeReadWrite 	c:\citcalinterimapi\testdata\vcals\importvcals\vCal25.vcs
+DeleteFile		c:\citcalinterimapi\testdata\vcals\importvcals\vCal25.vcs
+MakeReadWrite 	c:\citcalinterimapi\testdata\vcals\ExportedvCals\vCalStress.vcs
+DeleteFile		c:\citcalinterimapi\testdata\vcals\ExportedvCals\vCalStress.vcs
+MakeReadWrite 	c:\private\10003a5b\CITCalInterimStress.dat
+DeleteFile		c:\private\10003a5b\CITCalInterimStress.dat
+REMOVE_PREFIX
+

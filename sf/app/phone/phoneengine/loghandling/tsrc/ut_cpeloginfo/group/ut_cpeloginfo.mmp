@@ -1,0 +1,66 @@
+/*
+* Copyright (c) 2005-2007 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*
+*/
+
+#include <platform_paths.hrh>
+
+TARGET          UT_CPELogInfo.dll
+TARGETTYPE      dll
+UID             0x1000af5a 0x01700000
+
+CAPABILITY      ALL -TCB //-DRM
+VENDORID        VID_DEFAULT
+
+SOURCEPATH          ../src
+SOURCE              UT_CPELogInfo.cpp
+SOURCE              UT_CPELogInfo_DllMain.cpp
+
+// mocks
+//SOURCEPATH          ../../../../../../internal/mocks/phoneengine/loghandling
+//SOURCE              mock_cpeloghandling.cpp
+
+// Sources required by the test suite
+SOURCEPATH          ../../../../loghandling/src
+SOURCE              cpeloginfo.cpp
+
+USERINCLUDE         ../src
+
+// User include folders required by the tested code
+USERINCLUDE         ../../../../inc
+
+APP_LAYER_SYSTEMINCLUDE   // Application layer domain APIs
+SYSTEMINCLUDE       /epoc32/include/ecom
+SYSTEMINCLUDE       /epoc32/include/Digia/EUnit
+SYSTEMINCLUDE       ../../../../loghandling/inc
+SYSTEMINCLUDE       ../../../../inc  // phoneengine inc
+SYSTEMINCLUDE       ../../../../../inc // phone inc
+
+LIBRARY             EUnit.lib
+LIBRARY             EUnitUtil.lib
+LIBRARY             customapi.lib
+LIBRARY             efsrv.lib
+LIBRARY             engineinfo.lib
+LIBRARY             euser.lib
+LIBRARY             flogger.lib // For logging
+LIBRARY             logcli.lib 
+LIBRARY             logwrap.lib 
+LIBRARY             centralrepository.lib
+LIBRARY             ecom.lib
+LIBRARY             serviceprovidersettings.lib
+//LIBRARY             symbianmock.lib
+
+
+SMPSAFE

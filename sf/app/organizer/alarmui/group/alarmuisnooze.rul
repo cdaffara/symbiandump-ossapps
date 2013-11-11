@@ -1,0 +1,114 @@
+<!-- defines a rules to snooze and stop an active alarm on a doubletap or turndown event -->
+<script xmlns="http://www.nokia.com/ns/cep/script/1.0/" xmlns:cep="http://www.nokia.com/ns/cep/1.0/">
+
+    <!-- active sensor channels when alarm expires -->
+		<if>
+        <equals>
+            <contextRef source='Sensor' type='Setting.Active'/>
+            <string>Off</string>
+        </equals>
+        <actions>
+        </actions>
+    </if>
+    <!-- Check if we have an active alarm and we receive an event -->
+    <elseIf>
+        <and>
+            <!-- Must have an active alarm and receive new double tap event or orientation event from sensor -->
+            <!-- ...alarm is active... -->
+            <notEqual>
+                <contextRef source='AlarmUI' type='State'/>
+                <string>Inactive</string>
+            </notEqual>
+            <or>
+                <and>
+                    <!-- Check that double tap interaction is set -->
+                    <equals>
+                        <contextRef source='Sensor' type='Setting.TappingInteraction.SilenceAlarm'/>
+                        <string>On</string>
+                    </equals>
+                    <!-- ...and we receive a new doubletap event from sensors -->
+                    <contextUpdated>
+                        <contextRef source='Sensor' type='Event.DoubleTap'/>
+        	          </contextUpdated>
+                </and>
+    	          <and>
+                    <!-- Check that turning interaction is set -->
+                    <equals>
+                        <contextRef source='Sensor' type='Setting.TurningInteraction.SilenceAlarm'/>
+                        <string>On</string>
+                    </equals>
+                    <!-- ...and previous orientation is not 'Undefined' ... -->
+                    <notEqual>
+                        <contextRef source='Sensor' type='Event.Orientation.Previous'/>
+                        <string>Undefined</string>
+                    </notEqual>
+                    <!-- ...and we receive a new orientation event from sensors... -->
+		                <contextChanged>
+		                    <contextRef source='Sensor' type='Event.Orientation'/>
+		    	          </contextChanged>
+    	        	    <equals>
+                        <contextRef source='Sensor' type='Event.Orientation'/>
+                      	<string>DisplayDownwards</string>
+    	              </equals>
+    	          </and>
+            </or>
+        </and>
+        <actions>
+           <!-- snooze the alarm -->
+            <AlarmUI.Snooze dummy='dummy'/>
+
+            <!-- request vibra feedback -->
+            <Vibra Mode='Start' Delay='0' Repeats='2' RepeatInterval='200' Duration='50' Intensity='50'/>
+        </actions>
+    </elseIf>
+    <!-- stop an active alarm on a 'Stop' command -->
+    <elseIf>
+        <and>
+            <!-- alarm is active... -->
+            <notEqual>
+                <contextRef source='AlarmUI' type='State'/>
+                <string>Inactive</string>
+            </notEqual>
+            <!-- ...and we got a new stop command -->
+            <contextUpdated>
+                <contextRef source='AlarmUI' type='Command'/>
+            </contextUpdated>
+            <equals>
+                <contextRef source='AlarmUI' type='Command'/>
+                <string>Stop</string>
+            </equals>
+        </and>
+        <actions>
+            <!-- stop the alarm -->
+            <AlarmUI.Stop dummy='dummy'/>
+
+            <!-- request vibra feedback -->
+            <Vibra Mode='Start' Delay='0' Repeats='2' RepeatInterval='200' Duration='50' Intensity='50'/>
+        </actions>
+    </elseIf>
+    <!-- snooze an active alarm on a 'Snooze' command -->
+    <elseIf>
+        <and>
+            <!-- alarm is active... -->
+            <notEqual>
+                <contextRef source='AlarmUI' type='State'/>
+                <string>Inactive</string>
+            </notEqual>
+            <!-- ...and we got a new stop command -->
+            <contextUpdated>
+                <contextRef source='AlarmUI' type='Command'/>
+            </contextUpdated>
+            <equals>
+                <contextRef source='AlarmUI' type='Command'/>
+                <string>Snooze</string>
+            </equals>
+        </and>
+        <actions>
+            <!-- snooze the alarm -->
+            <AlarmUI.Snooze dummy='dummy'/>
+
+            <!-- request vibra feedback -->
+            <Vibra Mode='Start' Delay='0' Repeats='2' RepeatInterval='200' Duration='50' Intensity='50'/>
+        </actions>
+    </elseIf>
+</script>    

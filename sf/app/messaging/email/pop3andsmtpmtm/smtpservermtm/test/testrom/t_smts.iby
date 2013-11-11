@@ -1,0 +1,65 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+REM
+REM T_SMTS.IBY
+REM
+
+REM data
+
+data=EPOCROOT##epoc32\wins\C\msgtest\smts\checkagainst\imsk25.out		System\MsgTest\msgtest\smts\checkagainst\imsk25.out
+
+data=EPOCROOT##epoc32\wins\C\msgtest\smts\rfc822\RFC82201.TXT	System\MsgTest\msgtest\smts\rfc822\RFC82201.TXT
+data=EPOCROOT##epoc32\wins\C\msgtest\smts\rfc822\RFC82202.TXT	System\MsgTest\msgtest\smts\rfc822\RFC82202.TXT
+data=EPOCROOT##epoc32\wins\C\msgtest\smts\rfc822\RFC82203.TXT	System\MsgTest\msgtest\smts\rfc822\RFC82203.TXT
+data=EPOCROOT##epoc32\wins\C\msgtest\smts\rfc822\RFC82204.TXT	System\MsgTest\msgtest\smts\rfc822\RFC82204.TXT
+data=EPOCROOT##epoc32\wins\C\msgtest\smts\rfc822\RFC82205.TXT	System\MsgTest\msgtest\smts\rfc822\RFC82205.TXT
+data=EPOCROOT##epoc32\wins\C\msgtest\smts\rfc822\RFC82206.TXT	System\MsgTest\msgtest\smts\rfc822\RFC82206.TXT
+data=EPOCROOT##epoc32\wins\C\msgtest\smts\rfc822\RFC82207.TXT	System\MsgTest\msgtest\smts\rfc822\RFC82207.TXT
+data=EPOCROOT##epoc32\wins\C\msgtest\smts\rfc822\RFC82208.TXT	System\MsgTest\msgtest\smts\rfc822\RFC82208.TXT
+data=EPOCROOT##epoc32\wins\C\msgtest\smts\rfc822\RFC82209.TXT	System\MsgTest\msgtest\smts\rfc822\RFC82209.TXT
+
+
+data=EPOCROOT##epoc32\wins\C\msgtest\smts\scripts\smtslog.scr								System\MsgTest\msgtest\smts\scripts\smtslog.scr
+data=EPOCROOT##epoc32\wins\C\msgtest\smts\scripts\t_smtsTlsNewSession.scr					System\MsgTest\msgtest\smts\scripts\t_smtsTlsNewSession.scr
+data=EPOCROOT##epoc32\wins\C\msgtest\smts\scripts\t_smtsTlsNoServices.scr					System\MsgTest\msgtest\smts\scripts\t_smtsTlsNoServices.scr
+data=EPOCROOT##epoc32\wins\C\msgtest\smts\scripts\t_smtsTlsNotSupported.scr					System\MsgTest\msgtest\smts\scripts\t_smtsTlsNotSupported.scr
+data=EPOCROOT##epoc32\wins\C\msgtest\smts\scripts\t_smtsTlsOk.scr							System\MsgTest\msgtest\smts\scripts\t_smtsTlsOk.scr
+data=EPOCROOT##epoc32\wins\C\msgtest\smts\scripts\t_smtsTlsRefused.scr						System\MsgTest\msgtest\smts\scripts\t_smtsTlsRefused.scr
+data=EPOCROOT##epoc32\wins\C\msgtest\smts\scripts\t_smtsTlsStopResponding.scr				System\MsgTest\msgtest\smts\scripts\t_smtsTlsStopResponding.scr
+data=EPOCROOT##epoc32\wins\C\msgtest\smts\scripts\t_smtsTlsSyntaxError.scr					System\MsgTest\msgtest\smts\scripts\t_smtsTlsSyntaxError.scr
+data=EPOCROOT##epoc32\wins\C\msgtest\smts\scripts\t_smtsTlsTempFail.scr						System\MsgTest\msgtest\smts\scripts\t_smtsTlsTempFail.scr
+data=EPOCROOT##epoc32\wins\C\msgtest\smts\scripts\imsk25_tls_no_smtp_auth_on_server.scr		System\MsgTest\msgtest\smts\scripts\imsk25_tls_no_smtp_auth_on_server.scr
+data=EPOCROOT##epoc32\wins\C\msgtest\smts\scripts\imsk25_tls_no_smtp_auth.scr				System\MsgTest\msgtest\smts\scripts\imsk25_tls_no_smtp_auth.scr
+data=EPOCROOT##epoc32\wins\C\msgtest\smts\scripts\imsk25_tls_login.scr						System\MsgTest\msgtest\smts\scripts\imsk25_tls_login.scr
+data=EPOCROOT##epoc32\wins\C\msgtest\smts\scripts\imsk25_no_tls_wrong_username.scr			System\MsgTest\msgtest\smts\scripts\imsk25_no_tls_wrong_username.scr
+data=EPOCROOT##epoc32\wins\C\msgtest\smts\scripts\imsk25_no_tls_wrong_password.scr			System\MsgTest\msgtest\smts\scripts\imsk25_no_tls_wrong_password.scr
+data=EPOCROOT##epoc32\wins\C\msgtest\smts\scripts\imsk25_no_tls_plain.scr					System\MsgTest\msgtest\smts\scripts\imsk25_no_tls_plain.scr
+data=EPOCROOT##epoc32\wins\C\msgtest\smts\scripts\imsk25_no_tls_no_smtp_auth_on_server.scr	System\MsgTest\msgtest\smts\scripts\imsk25_no_tls_no_smtp_auth_on_server.scr
+data=EPOCROOT##epoc32\wins\C\msgtest\smts\scripts\imsk25_no_tls_login.scr					System\MsgTest\msgtest\smts\scripts\imsk25_no_tls_login.scr
+data=EPOCROOT##epoc32\wins\C\msgtest\smts\scripts\imsk25_no_tls_cram_md5.scr				System\MsgTest\msgtest\smts\scripts\imsk25_no_tls_cram_md5.scr
+data=EPOCROOT##epoc32\wins\C\msgtest\smts\scripts\imsk25_ehlo_fail_conitnue_with_helo.scr				System\MsgTest\msgtest\smts\scripts\imsk25_ehlo_fail_conitnue_with_helo.scr
+data=EPOCROOT##epoc32\wins\C\msgtest\smts\scripts\imsk25_ehlo_fail_quit_if_tls_on.scr				System\MsgTest\msgtest\smts\scripts\imsk25_ehlo_fail_quit_if_tls_on.scr
+
+
+
+REM harnesses
+file=ABI_DIR\BUILD_DIR\T_SMTS00.exe				System\MsgTest\T_SMTS00.exe
+file=ABI_DIR\BUILD_DIR\T_SMTS01.exe				System\MsgTest\T_SMTS01.exe
+file=ABI_DIR\BUILD_DIR\T_SMTSSECURESOCKETS.exe 	System\MsgTest\T_SMTSSECURESOCKETS.exe
+file=ABI_DIR\BUILD_DIR\T_SMTSSMTPAUTH.exe 		System\MsgTest\T_SMTSSMTPAUTH.exe
+

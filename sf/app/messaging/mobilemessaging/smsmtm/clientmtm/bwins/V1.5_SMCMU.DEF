@@ -1,0 +1,263 @@
+EXPORTS
+	?NewL@CSmsClientMtm@@SAPAV1@AAVCRegisteredMtmDll@@AAVCMsvSession@@@Z @ 1 NONAME ; public: static class CSmsClientMtm * __cdecl CSmsClientMtm::NewL(class CRegisteredMtmDll &,class CMsvSession &)
+	?Dummy_Export_1@TSmsUtilities@@QAEXXZ @ 2 NONAME ; public: void __thiscall TSmsUtilities::Dummy_Export_1(void)
+	??1CSmsHeader@@UAE@XZ @ 3 NONAME ; public: virtual __thiscall CSmsHeader::~CSmsHeader(void)
+	??1CSmsNumber@@UAE@XZ @ 4 NONAME ; public: virtual __thiscall CSmsNumber::~CSmsNumber(void)
+	??1CSmsSettings@@UAE@XZ @ 5 NONAME ; public: virtual __thiscall CSmsSettings::~CSmsSettings(void)
+	?Dummy_Export_2@TSmsUtilities@@QAEXXZ @ 6 NONAME ; public: void __thiscall TSmsUtilities::Dummy_Export_2(void)
+	?AddSCAddressL@CSmsSettings@@QAEXABVTDesC16@@0@Z @ 7 NONAME ; public: void __thiscall CSmsSettings::AddSCAddressL(class TDesC16 const &,class TDesC16 const &)
+	?BioTypeChangedL@CSmsClientMtm@@UAEXVTUid@@@Z @ 8 NONAME ; public: virtual void __thiscall CSmsClientMtm::BioTypeChangedL(class TUid)
+	?CopyL@CSmsMessageSettings@@UAEXABV1@@Z @ 9 NONAME ; public: virtual void __thiscall CSmsMessageSettings::CopyL(class CSmsMessageSettings const &)
+	?CopyL@CSmsNumber@@QAEAAV1@ABV1@@Z @ 10 NONAME ; public: class CSmsNumber & __thiscall CSmsNumber::CopyL(class CSmsNumber const &)
+	?CopyL@CSmsSettings@@QAEXABV1@@Z @ 11 NONAME ; public: void __thiscall CSmsSettings::CopyL(class CSmsSettings const &)
+	?ExternalizeL@CSmsHeader@@QBEXAAVRMsvWriteStream@@@Z @ 12 NONAME ; public: void __thiscall CSmsHeader::ExternalizeL(class RMsvWriteStream &)const 
+	?ExternalizeL@CSmsMessageSettings@@UBEXAAVRWriteStream@@@Z @ 13 NONAME ; public: virtual void __thiscall CSmsMessageSettings::ExternalizeL(class RMsvWriteStream &)const 
+	?ExternalizeL@CSmsNumber@@UBEXAAVRWriteStream@@@Z @ 14 NONAME ; public: virtual void __thiscall CSmsNumber::ExternalizeL(class RWriteStream &)const 
+	?ExternalizeL@CSmsSettings@@UBEXAAVRWriteStream@@@Z @ 15 NONAME ; public: virtual void __thiscall CSmsSettings::ExternalizeL(class RMsvWriteStream &)const 
+	?GetDescription@TSmsUtilities@@SAHABVCSmsMessage@@AAVTDes16@@H@Z @ 16 NONAME ; public: static int __cdecl TSmsUtilities::GetDescription(class CSmsMessage const &,class TDes16 &,int)
+	?GetDetails@TSmsUtilities@@SAHAAVRFs@@ABVCSmsMessage@@AAVTDes16@@H@Z @ 17 NONAME ; public: static int __cdecl TSmsUtilities::GetDetails(class RFs &,class CSmsMessage const &,class TDes16 &,int)
+	?GetDetails@TSmsUtilities@@SAHAAVRFs@@ABVTDesC16@@AAVTDes16@@H@Z @ 18 NONAME ; public: static int __cdecl TSmsUtilities::GetDetails(class RFs &,class TDesC16 const &,class TDes16 &,int)
+	?GetSmsSettingsL@CSmsHeader@@QBEXAAVCSmsMessageSettings@@@Z @ 19 NONAME ; public: void __thiscall CSmsHeader::GetSmsSettingsL(class CSmsMessageSettings &)const 
+	?InternalizeL@CSmsHeader@@QAEXAAVRMsvReadStream@@@Z @ 20 NONAME ; public: void __thiscall CSmsHeader::InternalizeL(class RMsvReadStream &)
+	?InternalizeL@CSmsMessageSettings@@UAEXAAVRReadStream@@@Z @ 21 NONAME ; public: virtual void __thiscall CSmsMessageSettings::InternalizeL(class RMsvReadStream &)
+	?InternalizeL@CSmsNumber@@UAEXAAVRReadStream@@@Z @ 22 NONAME ; public: virtual void __thiscall CSmsNumber::InternalizeL(class RReadStream &)
+	?InternalizeL@CSmsSettings@@UAEXAAVRReadStream@@@Z @ 23 NONAME ; public: virtual void __thiscall CSmsSettings::InternalizeL(class RMsvReadStream &)
+	?NewL@CSmsHeader@@SAPAV1@PAVCSmsMessage@@@Z @ 24 NONAME ; public: static class CSmsHeader * __cdecl CSmsHeader::NewL(class CSmsMessage *)
+	?NewL@CSmsHeader@@SAPAV1@W4TSmsPDUType@CSmsPDU@@AAVCEditableText@@@Z @ 25 NONAME ; public: static class CSmsHeader * __cdecl CSmsHeader::NewL(enum CSmsPDU::TSmsPDUType,class CEditableText &)
+	?NewL@CSmsNumber@@SAPAV1@ABV1@@Z @ 26 NONAME ; public: static class CSmsNumber * __cdecl CSmsNumber::NewL(class CSmsNumber const &)
+	?NewL@CSmsNumber@@SAPAV1@XZ @ 27 NONAME ; public: static class CSmsNumber * __cdecl CSmsNumber::NewL(void)
+	?NewL@CSmsSettings@@SAPAV1@XZ @ 28 NONAME ; public: static class CSmsSettings * __cdecl CSmsSettings::NewL(void)
+	?PopulateMsgEntry@TSmsUtilities@@SAXAAVTMsvEntry@@ABVCSmsMessage@@JVTUid@@@Z @ 29 NONAME ; public: static void __cdecl TSmsUtilities::PopulateMsgEntry(class TMsvEntry &,class CSmsMessage const &,long,class TUid)
+	?RemoveSCAddress@CSmsSettings@@QAEXH@Z @ 30 NONAME ; public: void __thiscall CSmsSettings::RemoveSCAddress(int)
+	?RestoreL@CSmsHeader@@QAEXAAVCMsvStore@@@Z @ 31 NONAME ; public: void __thiscall CSmsHeader::RestoreL(class CMsvStore &)
+	?RestoreL@CSmsSettings@@QAEXAAVCMsvStore@@@Z @ 32 NONAME ; public: void __thiscall CSmsSettings::RestoreL(class CMsvStore &)
+	?RestoreServiceAndSettingsL@CSmsClientMtm@@QAEXXZ @ 33 NONAME ; public: void __thiscall CSmsClientMtm::RestoreServiceAndSettingsL(void)
+	?ServiceIdL@TSmsUtilities@@SAXAAVCMsvEntry@@AAJVTUid@@PAVCMsvEntrySelection@@@Z @ 34 NONAME ; public: static void __cdecl TSmsUtilities::ServiceIdL(class CMsvEntry &,long &,class TUid,class CMsvEntrySelection *)
+	?ServiceIdL@TSmsUtilities@@SAXAAVCMsvServerEntry@@AAJVTUid@@PAVCMsvEntrySelection@@@Z @ 35 NONAME ; public: static void __cdecl TSmsUtilities::ServiceIdL(class CMsvServerEntry &,long &,class TUid,class CMsvEntrySelection *)
+	?SetSmsSettingsL@CSmsHeader@@QAEXABVCSmsMessageSettings@@@Z @ 36 NONAME ; public: void __thiscall CSmsHeader::SetSmsSettingsL(class CSmsMessageSettings const &)
+	?StoreL@CSmsHeader@@QBEXAAVCMsvStore@@@Z @ 37 NONAME ; public: void __thiscall CSmsHeader::StoreL(class CMsvStore &)const 
+	?StoreL@CSmsSettings@@QBEXAAVCMsvStore@@@Z @ 38 NONAME ; public: void __thiscall CSmsSettings::StoreL(class CMsvStore &)const 
+	?ProgressL@CSmsSimParamOperation@@UAEABVTDesC8@@XZ @ 39 NONAME ; public: virtual class TDesC8 const & __thiscall CSmsSimParamOperation::ProgressL(void)
+	?ReadSimParamsL@CSmsClientMtm@@QAEPAVCSmsSimParamOperation@@AAVTRequestStatus@@@Z @ 40 NONAME ; public: class CSmsSimParamOperation * __thiscall CSmsClientMtm::ReadSimParamsL(class TRequestStatus &)
+	?ServiceCentersLC@CSmsSimParamOperation@@QBEPAVCMobilePhoneSmspList@@XZ @ 41 NONAME ; public: class CMobilePhoneSmspList * __thiscall CSmsSimParamOperation::ServiceCentersLC(void)const 
+	?Address@CSmsNumber@@QBE?AVTPtrC16@@XZ @ 42 NONAME ; public: class TPtrC16  __thiscall CSmsNumber::Address(void)const 
+	?Name@CSmsNumber@@QBE?AVTPtrC16@@XZ @ 43 NONAME ; public: class TPtrC16  __thiscall CSmsNumber::Name(void)const 
+	?SetAddressL@CSmsNumber@@QAEXABVTDesC16@@@Z @ 44 NONAME ; public: void __thiscall CSmsNumber::SetAddressL(class TDesC16 const &)
+	?SetNameL@CSmsNumber@@QAEXABVTDesC16@@@Z @ 45 NONAME ; public: void __thiscall CSmsNumber::SetNameL(class TDesC16 const &)
+	?CreateMessageL@CSmsClientMtm@@UAEXJ@Z @ 46 NONAME ; public: virtual void __thiscall CSmsClientMtm::CreateMessageL(long)
+	?ServiceIdL@TSmsUtilities@@SAXAAVCMsvSession@@AAJVTUid@@PAVCMsvEntrySelection@@@Z @ 47 NONAME ; public: static void __cdecl TSmsUtilities::ServiceIdL(class CMsvSession &,long &,class TUid,class CMsvEntrySelection *)
+	?RestoreSimParamsL@CSmsSimParamOperation@@SAXAAVCMsvStore@@AAVCMobilePhoneSmspList@@@Z @ 48 NONAME ; public: static void __cdecl CSmsSimParamOperation::RestoreSimParamsL(class CMsvStore &,class CMobilePhoneSmspList &)
+	?StoreSimParamsL@CSmsSimParamOperation@@SAXAAVCMsvStore@@ABVCMobilePhoneSmspList@@@Z @ 49 NONAME ; public: static void __cdecl CSmsSimParamOperation::StoreSimParamsL(class CMsvStore &,class CMobilePhoneSmspList const &)
+	?WriteSimParamsL@CSmsClientMtm@@QAEPAVCSmsSimParamOperation@@ABVCMobilePhoneSmspList@@AAVTRequestStatus@@@Z @ 50 NONAME ; public: class CSmsSimParamOperation * __thiscall CSmsClientMtm::WriteSimParamsL(class CMobilePhoneSmspList const &,class TRequestStatus &)
+	?SaveExternalL@CSmsSettings@@QAEXAAVCMsvStore@@@Z @ 51 NONAME ; void CSmsSettings::SaveExternalL(class CMsvStore &)
+	?OpenResourceFileL@TSmsUtilities@@SA?AVRResourceFile@@AAVRFs@@@Z @ 52 NONAME ; public: static class RResourceFile  __cdecl TSmsUtilities::OpenResourceFileL(class RFs &)
+	?ReadResourceStringL@TSmsUtilities@@SAXVRResourceFile@@HAAVTDes16@@@Z @ 53 NONAME ; public: static void __cdecl TSmsUtilities::ReadResourceStringL(class RResourceFile,int,class TDes16 &)
+	?AckStatus@CSmsNumber@@QBE?AW4TSmsAckStatus@1@W4TSmsAckType@@@Z @ 54 NONAME ; enum CSmsNumber::TSmsAckStatus CSmsNumber::AckStatus(enum TSmsAckType) const
+	?AckSummary@TMsvSmsEntry@@QBE?AW4TMsvSmsEntryAckSummary@1@W4TSmsAckType@@@Z @ 55 NONAME ; enum TMsvSmsEntry::TMsvSmsEntryAckSummary TMsvSmsEntry::AckSummary(enum TSmsAckType) const
+	?MessageId@TMsvSmsEntry@@QBEHAAJ@Z @ 56 NONAME ; int TMsvSmsEntry::MessageId(long &) const
+	?SetAckStatus@CSmsNumber@@QAEXW4TSmsAckType@@W4TSmsAckStatus@1@@Z @ 57 NONAME ; void CSmsNumber::SetAckStatus(enum TSmsAckType, enum CSmsNumber::TSmsAckStatus)
+	?SetAckSummary@TMsvSmsEntry@@QAEXW4TSmsAckType@@W4TMsvSmsEntryAckSummary@1@@Z @ 58 NONAME ; void TMsvSmsEntry::SetAckSummary(enum TSmsAckType, enum TMsvSmsEntry::TMsvSmsEntryAckSummary)
+	?SetMessageId@TMsvSmsEntry@@QAEXJH@Z @ 59 NONAME ; void TMsvSmsEntry::SetMessageId(long, int)
+	??1CSmsEmailFields@@UAE@XZ @ 60 NONAME ; CSmsEmailFields::~CSmsEmailFields(void)
+	?AddAddressL@CSmsEmailFields@@QAEXABVTDesC16@@@Z @ 61 NONAME ; void CSmsEmailFields::AddAddressL(class TDesC16 const &)
+	?Addresses@CSmsEmailFields@@QBEABVMDesC16Array@@XZ @ 62 NONAME ; class MDesC16Array const & CSmsEmailFields::Addresses(void) const
+	?ComposeLC@CSmsEmailFields@@QBEPAVHBufC16@@XZ @ 63 NONAME ; class HBufC16 * CSmsEmailFields::ComposeLC(void) const
+	?EmailFields@CSmsHeader@@QBEABVCSmsEmailFields@@XZ @ 64 NONAME ; class CSmsEmailFields const & CSmsHeader::EmailFields(void) const
+	?HasAddress@CSmsEmailFields@@QBEHXZ @ 65 NONAME ; int CSmsEmailFields::HasAddress(void) const
+	?Length@CSmsEmailFields@@QBEHXZ @ 66 NONAME ; int CSmsEmailFields::Length(void) const
+	?NewL@CSmsEmailFields@@SAPAV1@ABV1@@Z @ 67 NONAME ; class CSmsEmailFields * CSmsEmailFields::NewL(class CSmsEmailFields const &)
+	?NewL@CSmsEmailFields@@SAPAV1@XZ @ 68 NONAME ; class CSmsEmailFields * CSmsEmailFields::NewL(void)
+	?RemoveAddress@CSmsEmailFields@@QAEXH@Z @ 69 NONAME ; void CSmsEmailFields::RemoveAddress(int)
+	?Reset@CSmsEmailFields@@QAEXXZ @ 70 NONAME ; void CSmsEmailFields::Reset(void)
+	?SetEmailFieldsL@CSmsHeader@@QAEXABVCSmsEmailFields@@@Z @ 71 NONAME ; void CSmsHeader::SetEmailFieldsL(class CSmsEmailFields const &)
+	?SetSubjectL@CSmsEmailFields@@QAEXABVTDesC16@@@Z @ 72 NONAME ; void CSmsEmailFields::SetSubjectL(class TDesC16 const &)
+	?Subject@CSmsEmailFields@@QBEABVTDesC16@@XZ @ 73 NONAME ; class TDesC16 const & CSmsEmailFields::Subject(void) const
+	??0TMsvSmsSimOperationParams@@QAE@JW4TMsvSmsStorage@@@Z @ 74 NONAME ABSENT ; TMsvSmsSimOperationParams::TMsvSmsSimOperationParams(long, enum TMsvSmsStorage)
+	??0TMsvSmsSimOperationParams@@QAE@XZ @ 75 NONAME ABSENT ; TMsvSmsSimOperationParams::TMsvSmsSimOperationParams(void)
+	??0TSmsCdmaEndPointInfo@@QAE@XZ @ 76 NONAME ABSENT ; TSmsCdmaEndPointInfo::TSmsCdmaEndPointInfo(void)
+	??0TSmsReplyOptions@@QAE@HHHH@Z @ 77 NONAME ABSENT ; TSmsReplyOptions::TSmsReplyOptions(int, int, int, int)
+	??0TSmsReplyOptions@@QAE@XZ @ 78 NONAME ABSENT ; TSmsReplyOptions::TSmsReplyOptions(void)
+	?AbsoluteValidityPeriod@CSmsMessageSettingsProxy@@QBE?AVTDateTime@@XZ @ 79 NONAME ABSENT ; class TDateTime CSmsMessageSettingsProxy::AbsoluteValidityPeriod(void) const
+	?AcknowledgementRequested@CSmsHeader@@QBEHW4TSmsAckType@@@Z @ 80 NONAME ABSENT ; int CSmsHeader::AcknowledgementRequested(enum TSmsAckType) const
+	?ActivateMessageSetting@TSmsMessageSettingsCdma@@QAEXEH@Z @ 81 NONAME ABSENT ; void TSmsMessageSettingsCdma::ActivateMessageSetting(unsigned char, int)
+	?AddEMSInformationElementL@TMsvMessageSms@@QAEXABVCEmsInformationElement@@@Z @ 82 NONAME ABSENT ; void TMsvMessageSms::AddEMSInformationElementL(class CEmsInformationElement const &)
+	?AddressType@CSmsNumber@@QBE?AW4TMsvAddressType@@XZ @ 83 NONAME ABSENT ; enum TMsvAddressType CSmsNumber::AddressType(void) const
+	?AddressType@TMsvMessageBio@@QBE?AW4TMsvAddressType@@XZ @ 84 NONAME ABSENT ; enum TMsvAddressType TMsvMessageBio::AddressType(void) const
+	?AlertOnDelivery@CSmsSettings@@QBEEXZ @ 85 NONAME ABSENT ; unsigned char CSmsSettings::AlertOnDelivery(void) const
+	?AlertOnDelivery@TSmsMessageSettingsCdma@@QBEEXZ @ 86 NONAME ABSENT ; unsigned char TSmsMessageSettingsCdma::AlertOnDelivery(void) const
+	?BioMessage@CSmsHeader@@QAEAAVTMsvMessageBio@@XZ @ 87 NONAME ABSENT ; class TMsvMessageBio & CSmsHeader::BioMessage(void)
+	?BioMessage@CSmsHeader@@QBEABVTMsvMessageBio@@XZ @ 88 NONAME ABSENT ; class TMsvMessageBio const & CSmsHeader::BioMessage(void) const
+	?BioMsgIdType@TMsvMessageBio@@QBE?AW4TBioMsgIdType@@XZ @ 89 NONAME ABSENT ; enum TBioMsgIdType TMsvMessageBio::BioMsgIdType(void) const
+	?CallBackNumber@TSmsMessageSettingsCdma@@QBE?AVTPtrC16@@XZ @ 90 NONAME ABSENT ; class TPtrC16 TSmsMessageSettingsCdma::CallBackNumber(void) const
+	?CanConcatenate@TSmsMessageSettingsGsm@@QBEHXZ @ 91 NONAME ABSENT ; int TSmsMessageSettingsGsm::CanConcatenate(void) const
+	?Cdma@CSmsMessageSettingsProxy@@QAEAAVTSmsMessageSettingsCdma@@XZ @ 92 NONAME ABSENT ; class TSmsMessageSettingsCdma & CSmsMessageSettingsProxy::Cdma(void)
+	?Cdma@CSmsMessageSettingsProxy@@QBEABVTSmsMessageSettingsCdma@@XZ @ 93 NONAME ABSENT ; class TSmsMessageSettingsCdma const & CSmsMessageSettingsProxy::Cdma(void) const
+	?CdmaMessage@CSmsHeader@@QAEAAVTMsvMessageCdma@@XZ @ 94 NONAME ABSENT ; class TMsvMessageCdma & CSmsHeader::CdmaMessage(void)
+	?CdmaMessage@CSmsHeader@@QBEABVTMsvMessageCdma@@XZ @ 95 NONAME ABSENT ; class TMsvMessageCdma const & CSmsHeader::CdmaMessage(void) const
+	?Class@TSmsErrorExtractionCdma@@SAEH@Z @ 96 NONAME ABSENT ; unsigned char TSmsErrorExtractionCdma::Class(int)
+	?Code@TSmsErrorExtractionCdma@@SAEH@Z @ 97 NONAME ABSENT ; unsigned char TSmsErrorExtractionCdma::Code(int)
+	?ConvertAddressTypeFromCdma@TSmsUtilities@@SA?AW4TMsvAddressType@@EE@Z @ 98 NONAME ABSENT ; enum TMsvAddressType TSmsUtilities::ConvertAddressTypeFromCdma(unsigned char, unsigned char)
+	?ConvertAddressTypeToCdma@TSmsUtilities@@SAXW4TMsvAddressType@@AAVTSmsCdmaEndPointInfo@@@Z @ 99 NONAME ABSENT ; void TSmsUtilities::ConvertAddressTypeToCdma(enum TMsvAddressType, class TSmsCdmaEndPointInfo &)
+	?ConvertCdmaToRelativeTime@TSmsUtilities@@SAHEAAW4TSmsRelativeTimeUnit@@AAK@Z @ 100 NONAME ABSENT ; int TSmsUtilities::ConvertCdmaToRelativeTime(unsigned char, enum TSmsRelativeTimeUnit &, unsigned long &)
+	?ConvertCharacterEncodingToCdmaL@TSmsUtilities@@SAEG@Z @ 101 NONAME ABSENT ; unsigned char TSmsUtilities::ConvertCharacterEncodingToCdmaL(unsigned short)
+	?ConvertCharacterEncodingToGsmL@TSmsUtilities@@SA?AW4TSmsAlphabet@TSmsDataCodingScheme@@G@Z @ 102 NONAME ABSENT ; enum TSmsDataCodingScheme::TSmsAlphabet TSmsUtilities::ConvertCharacterEncodingToGsmL(unsigned short)
+	?ConvertFromMinutes@TSmsUtilities@@SAHAAW4TSmsRelativeTimeUnit@@AAKH@Z @ 103 NONAME ABSENT ; int TSmsUtilities::ConvertFromMinutes(enum TSmsRelativeTimeUnit &, unsigned long &, int)
+	?ConvertMinutesToCdma@TSmsUtilities@@SAHHAAE@Z @ 104 NONAME ABSENT ; int TSmsUtilities::ConvertMinutesToCdma(int, unsigned char &)
+	?ConvertRelativeTimeToCdma@TSmsUtilities@@SAHAAEW4TSmsRelativeTimeUnit@@K@Z @ 105 NONAME ABSENT ; int TSmsUtilities::ConvertRelativeTimeToCdma(unsigned char &, enum TSmsRelativeTimeUnit, unsigned long)
+	?ConvertToMinutes@TSmsUtilities@@SAHW4TSmsRelativeTimeUnit@@KAAH@Z @ 106 NONAME ABSENT ; int TSmsUtilities::ConvertToMinutes(enum TSmsRelativeTimeUnit, unsigned long, int &)
+	?DefaultTeleservice@CSmsSettings@@QBEGXZ @ 107 NONAME ABSENT ; unsigned short CSmsSettings::DefaultTeleservice(void) const
+	?DeliveryAck@TSmsReplyOptions@@QBEHXZ @ 108 NONAME ABSENT ; int TSmsReplyOptions::DeliveryAck(void) const
+	?DeliveryTimeFormat@TMsvMessageCdma@@QBE?AW4TSmsTimePeriodFormat@@XZ @ 109 NONAME ABSENT ; enum TSmsTimePeriodFormat TMsvMessageCdma::DeliveryTimeFormat(void) const
+	?DigitMode@CSmsSettings@@QBE?AW4TSmsCdmaDigitMode@@XZ @ 110 NONAME ABSENT ; enum TSmsCdmaDigitMode CSmsSettings::DigitMode(void) const
+	?EMailGatewayNumber@CSmsSettings@@QBE?AVTPtrC16@@XZ @ 111 NONAME ABSENT ; class TPtrC16 CSmsSettings::EMailGatewayNumber(void) const
+	?Encoding@CSmsMessageSettingsProxy@@QBEGXZ @ 112 NONAME ABSENT ; unsigned short CSmsMessageSettingsProxy::Encoding(void) const
+	?Encoding@TMsvMessageBio@@QBEGXZ @ 113 NONAME ABSENT ; unsigned short TMsvMessageBio::Encoding(void) const
+	?FindRecipient@CSmsHeader@@QBEHABVTDesC16@@AAPAVCSmsNumber@@@Z @ 114 NONAME ABSENT ; int CSmsHeader::FindRecipient(class TDesC16 const &, class CSmsNumber * &) const
+	?FindRecipient@CSmsHeader@@QBEHHAAPAVCSmsNumber@@@Z @ 115 NONAME ABSENT ; int CSmsHeader::FindRecipient(int, class CSmsNumber * &) const
+	?Folder@TMsvSmsSimOperationParams@@QBEJXZ @ 116 NONAME ABSENT ; long TMsvSmsSimOperationParams::Folder(void) const
+	?GenerateCdmaMessageL@TSmsGenerator@@CAPAVCCdmaSmsMessage@@AAVCSmsHeader@@ABVCRichText@@@Z @ 117 NONAME ABSENT ; class CCdmaSmsMessage * TSmsGenerator::GenerateCdmaMessageL(class CSmsHeader &, class CRichText const &)
+	?GenerateGsmMessageL@TSmsGenerator@@CAPAVCSmsMessage@@AAVCSmsHeader@@ABVCRichText@@@Z @ 118 NONAME ABSENT ; class CSmsMessage * TSmsGenerator::GenerateGsmMessageL(class CSmsHeader &, class CRichText const &)
+	?GetAlertOnDeliveryL@TMsvMessageCdma@@QBEHAAE@Z @ 119 NONAME ABSENT ; int TMsvMessageCdma::GetAlertOnDeliveryL(unsigned char &) const
+	?GetCallbackNumberL@TMsvMessageCdma@@QBEPAVHBufC16@@XZ @ 120 NONAME ABSENT ; class HBufC16 * TMsvMessageCdma::GetCallbackNumberL(void) const
+	?GetCdmaMessageTypeL@TSmsUtilities@@SAEGW4TSmsMessageBearing@@@Z @ 121 NONAME ABSENT ; unsigned char TSmsUtilities::GetCdmaMessageTypeL(unsigned short, enum TSmsMessageBearing)
+	?GetClass@TMsvMessageGsm@@QBEHAAHAAW4TMsvSmsGsmClass@@@Z @ 122 NONAME ABSENT ; int TMsvMessageGsm::GetClass(int &, enum TMsvSmsGsmClass &) const
+	?GetCommandType@TMsvMessageGsm@@QBEHAAW4TMsvSmsGsmCommand@@@Z @ 123 NONAME ABSENT ; int TMsvMessageGsm::GetCommandType(enum TMsvSmsGsmCommand &) const
+	?GetDefaultMessageSettingsL@CSmsHeader@@QBEXAAVCSmsSettings@@@Z @ 124 NONAME ABSENT ; void CSmsHeader::GetDefaultMessageSettingsL(class CSmsSettings &) const
+	?GetDeferredDeliveryTimeAbsoluteL@TMsvMessageCdma@@QAEHAAVTDateTime@@@Z @ 125 NONAME ABSENT ; int TMsvMessageCdma::GetDeferredDeliveryTimeAbsoluteL(class TDateTime &)
+	?GetDeferredDeliveryTimeRelativeL@TMsvMessageCdma@@QBEHAAW4TSmsRelativeTimeUnit@@AAK@Z @ 126 NONAME ABSENT ; int TMsvMessageCdma::GetDeferredDeliveryTimeRelativeL(enum TSmsRelativeTimeUnit &, unsigned long &) const
+	?GetDescriptionCdma@TSmsUtilities@@SAHAAVRFs@@ABVCCdmaSmsMessage@@AAVTDes16@@H@Z @ 127 NONAME ABSENT ; int TSmsUtilities::GetDescriptionCdma(class RFs &, class CCdmaSmsMessage const &, class TDes16 &, int)
+	?GetDetailsCdma@TSmsUtilities@@SAHAAVRFs@@ABVCCdmaSmsMessage@@AAVTDes16@@H@Z @ 128 NONAME ABSENT ; int TSmsUtilities::GetDetailsCdma(class RFs &, class CCdmaSmsMessage const &, class TDes16 &, int)
+	?GetEMSInformationElementsL@TMsvMessageSms@@QBEABV?$RPointerArray@$$CBVCEmsInformationElement@@@@XZ @ 129 NONAME ABSENT ; class RPointerArray<class CEmsInformationElement const > const & TMsvMessageSms::GetEMSInformationElementsL(void) const
+	?GetGsmMessageTypeL@TSmsUtilities@@SA?AW4TSmsPDUType@CSmsPDU@@GW4TSmsMessageBearing@@@Z @ 130 NONAME ABSENT ; enum CSmsPDU::TSmsPDUType TSmsUtilities::GetGsmMessageTypeL(unsigned short, enum TSmsMessageBearing)
+	?GetLanguageIndicatorL@TMsvMessageCdma@@QBEHAAE@Z @ 131 NONAME ABSENT ; int TMsvMessageCdma::GetLanguageIndicatorL(unsigned char &) const
+	?GetMessageDepositIndexL@TMsvMessageCdma@@QBEHAAG@Z @ 132 NONAME ABSENT ; int TMsvMessageCdma::GetMessageDepositIndexL(unsigned short &) const
+	?GetMessageDisplayModeL@TMsvMessageCdma@@QBEHAAE@Z @ 133 NONAME ABSENT ; int TMsvMessageCdma::GetMessageDisplayModeL(unsigned char &) const
+	?GetMessageServiceCenterTimeStamp@TMsvMessageSms@@QBEHAAVTDateTime@@AAH@Z @ 134 NONAME ABSENT ; int TMsvMessageSms::GetMessageServiceCenterTimeStamp(class TDateTime &, int &) const
+	?GetNumberOfMessagesL@TMsvMessageCdma@@QBEHAAE@Z @ 135 NONAME ABSENT ; int TMsvMessageCdma::GetNumberOfMessagesL(unsigned char &) const
+	?GetOriginatingSubAddressL@TMsvMessageCdma@@QBEPAVHBufC16@@XZ @ 136 NONAME ABSENT ; class HBufC16 * TMsvMessageCdma::GetOriginatingSubAddressL(void) const
+	?GetPriorityIndicatorL@TMsvMessageCdma@@QBEHAAE@Z @ 137 NONAME ABSENT ; int TMsvMessageCdma::GetPriorityIndicatorL(unsigned char &) const
+	?GetPrivacyIndicatorL@TMsvMessageCdma@@QBEHAAE@Z @ 138 NONAME ABSENT ; int TMsvMessageCdma::GetPrivacyIndicatorL(unsigned char &) const
+	?GetRejectDuplicates@TMsvMessageGsm@@QBEHAAH@Z @ 139 NONAME ABSENT ; int TMsvMessageGsm::GetRejectDuplicates(int &) const
+	?GetReplyPath@TMsvMessageGsm@@QBEHAAH@Z @ 140 NONAME ABSENT ; int TMsvMessageGsm::GetReplyPath(int &) const
+	?GetServiceCenterAddress@TMsvMessageGsm@@QBEHAAVTPtrC16@@@Z @ 141 NONAME ABSENT ; int TMsvMessageGsm::GetServiceCenterAddress(class TPtrC16 &) const
+	?GetUserResponseCodeL@TMsvMessageCdma@@QBEHAAE@Z @ 142 NONAME ABSENT ; int TMsvMessageCdma::GetUserResponseCodeL(unsigned char &) const
+	?GetValidityPeriodAbsolute@TMsvMessageSms@@QBEHAAVTDateTime@@@Z @ 143 NONAME ABSENT ; int TMsvMessageSms::GetValidityPeriodAbsolute(class TDateTime &) const
+	?GetValidityPeriodRelative@TMsvMessageSms@@QBEHAAW4TSmsRelativeTimeUnit@@AAK@Z @ 144 NONAME ABSENT ; int TMsvMessageSms::GetValidityPeriodRelative(enum TSmsRelativeTimeUnit &, unsigned long &) const
+	?Gsm@CSmsMessageSettingsProxy@@QAEAAVTSmsMessageSettingsGsm@@XZ @ 145 NONAME ABSENT ; class TSmsMessageSettingsGsm & CSmsMessageSettingsProxy::Gsm(void)
+	?Gsm@CSmsMessageSettingsProxy@@QBEABVTSmsMessageSettingsGsm@@XZ @ 146 NONAME ABSENT ; class TSmsMessageSettingsGsm const & CSmsMessageSettingsProxy::Gsm(void) const
+	?GsmMessage@CSmsHeader@@QAEAAVTMsvMessageGsm@@XZ @ 147 NONAME ABSENT ; class TMsvMessageGsm & CSmsHeader::GsmMessage(void)
+	?GsmMessage@CSmsHeader@@QBEABVTMsvMessageGsm@@XZ @ 148 NONAME ABSENT ; class TMsvMessageGsm const & CSmsHeader::GsmMessage(void) const
+	?IsMessageSettingActive@TSmsMessageSettingsCdma@@QBEHE@Z @ 149 NONAME ABSENT ; int TSmsMessageSettingsCdma::IsMessageSettingActive(unsigned char) const
+	?Language@TSmsMessageSettingsCdma@@QBEEXZ @ 150 NONAME ABSENT ; unsigned char TSmsMessageSettingsCdma::Language(void) const
+	?MessageBearing@CSmsHeader@@QBE?AW4TSmsMessageBearing@@XZ @ 151 NONAME ABSENT ; enum TSmsMessageBearing CSmsHeader::MessageBearing(void) const
+	?MessageConversion@TSmsMessageSettingsGsm@@QBE?AW4TSmsPIDConversion@@XZ @ 152 NONAME ABSENT ; enum TSmsPIDConversion TSmsMessageSettingsGsm::MessageConversion(void) const
+	?MessageDisplayMode@CSmsSettings@@QBEEXZ @ 153 NONAME ABSENT ; unsigned char CSmsSettings::MessageDisplayMode(void) const
+	?MessageId@CSmsNumber@@QBEHXZ @ 154 NONAME ABSENT ; int CSmsNumber::MessageId(void) const
+	?MessageSettings@CSmsSettings@@QAEAAVCSmsMessageSettingsProxy@@XZ @ 155 NONAME ABSENT ; class CSmsMessageSettingsProxy & CSmsSettings::MessageSettings(void)
+	?MessageSettings@CSmsSettings@@QBEABVCSmsMessageSettingsProxy@@XZ @ 156 NONAME ABSENT ; class CSmsMessageSettingsProxy const & CSmsSettings::MessageSettings(void) const
+	?MessageType@CSmsHeader@@QAEGXZ @ 157 NONAME ABSENT ; unsigned short CSmsHeader::MessageType(void)
+	?NewL@CSmsHeader@@SAPAV1@GAAVCEditableText@@@Z @ 158 NONAME ABSENT ; class CSmsHeader * CSmsHeader::NewL(unsigned short, class CEditableText &)
+	?NewL@CSmsHeader@@SAPAV1@GAAVCEditableText@@G@Z @ 159 NONAME ABSENT ; class CSmsHeader * CSmsHeader::NewL(unsigned short, class CEditableText &, unsigned short)
+	?NewL@CSmsHeader@@SAPAV1@PAVCCdmaSmsMessage@@@Z @ 160 NONAME ABSENT ; class CSmsHeader * CSmsHeader::NewL(class CCdmaSmsMessage *)
+	?OriginatingAddress@TMsvMessageBio@@QBE?AVTPtrC16@@XZ @ 161 NONAME ABSENT ; class TPtrC16 TMsvMessageBio::OriginatingAddress(void) const
+	?PopulateMsgEntryCdma@TSmsUtilities@@SAXAAVTMsvEntry@@ABVCCdmaSmsMessage@@JVTUid@@@Z @ 162 NONAME ABSENT ; void TSmsUtilities::PopulateMsgEntryCdma(class TMsvEntry &, class CCdmaSmsMessage const &, long, class TUid)
+	?PreferedLanguageList@CSmsSettings@@QAEAAV?$CArrayFixFlat@E@@XZ @ 163 NONAME ABSENT ; class CArrayFixFlat<unsigned char> & CSmsSettings::PreferedLanguageList(void)
+	?PreferedLanguageList@CSmsSettings@@QBEABV?$CArrayFixFlat@E@@XZ @ 164 NONAME ABSENT ; class CArrayFixFlat<unsigned char> const & CSmsSettings::PreferedLanguageList(void) const
+	?Priority@TSmsMessageSettingsCdma@@QBEEXZ @ 165 NONAME ABSENT ; unsigned char TSmsMessageSettingsCdma::Priority(void) const
+	?Privacy@TSmsMessageSettingsCdma@@QBEEXZ @ 166 NONAME ABSENT ; unsigned char TSmsMessageSettingsCdma::Privacy(void) const
+	?ReadAck@TSmsReplyOptions@@QBEHXZ @ 167 NONAME ABSENT ; int TSmsReplyOptions::ReadAck(void) const
+	?RejectDuplicate@TSmsMessageSettingsGsm@@QBEHXZ @ 168 NONAME ABSENT ; int TSmsMessageSettingsGsm::RejectDuplicate(void) const
+	?RelativeValidityPeriod@CSmsMessageSettingsProxy@@QBEABVTTimeIntervalMinutes@@XZ @ 169 NONAME ABSENT ; class TTimeIntervalMinutes const & CSmsMessageSettingsProxy::RelativeValidityPeriod(void) const
+	?RemoveEMSInformationElementL@TMsvMessageSms@@QAEPAVCEmsInformationElement@@IW4TSmsInformationElementIdentifier@CSmsInformationElement@@@Z @ 170 NONAME ABSENT ; class CEmsInformationElement * TMsvMessageSms::RemoveEMSInformationElementL(unsigned int, enum CSmsInformationElement::TSmsInformationElementIdentifier)
+	?RemoveEMSInformationElementsL@TMsvMessageSms@@QAEPAV?$RPointerArray@VCEmsInformationElement@@@@IW4TSmsInformationElementIdentifier@CSmsInformationElement@@@Z @ 171 NONAME ABSENT ; class RPointerArray<class CEmsInformationElement> * TMsvMessageSms::RemoveEMSInformationElementsL(unsigned int, enum CSmsInformationElement::TSmsInformationElementIdentifier)
+	?ReplyOptions@CSmsMessageSettingsProxy@@QBEABVTSmsReplyOptions@@XZ @ 172 NONAME ABSENT ; class TSmsReplyOptions const & CSmsMessageSettingsProxy::ReplyOptions(void) const
+	?ReplyPath@TSmsMessageSettingsGsm@@QBEHXZ @ 173 NONAME ABSENT ; int TSmsMessageSettingsGsm::ReplyPath(void) const
+	?ReplyWithOriginalMessage@CSmsSettings@@QBE?AW4TSmsReplyWithOriginal@@XZ @ 174 NONAME ABSENT ; enum TSmsReplyWithOriginal CSmsSettings::ReplyWithOriginalMessage(void) const
+	?ResetEMSL@TMsvMessageSms@@QAEXXZ @ 175 NONAME ABSENT ; void TMsvMessageSms::ResetEMSL(void)
+	?ResetMessageParameters@TMsvMessageCdma@@QAEXXZ @ 176 NONAME ABSENT ; void TMsvMessageCdma::ResetMessageParameters(void)
+	?ResetSIMSlots@CSmsHeader@@QAEXXZ @ 177 NONAME ABSENT ; void CSmsHeader::ResetSIMSlots(void)
+	?RestoreL@CSmsHeader@@SAPAV1@AAVCMsvStore@@AAVCEditableText@@@Z @ 178 NONAME ABSENT ; class CSmsHeader * CSmsHeader::RestoreL(class CMsvStore &, class CEditableText &)
+	?SetAbsoluteValidityPeriod@CSmsMessageSettingsProxy@@QAEXABVTDateTime@@@Z @ 179 NONAME ABSENT ; void CSmsMessageSettingsProxy::SetAbsoluteValidityPeriod(class TDateTime const &)
+	?SetAcknowledgementRequest@CSmsHeader@@QAEXW4TSmsAckType@@H@Z @ 180 NONAME ABSENT ; void CSmsHeader::SetAcknowledgementRequest(enum TSmsAckType, int)
+	?SetAddressL@CSmsNumber@@QAEXABVTDesC16@@W4TMsvAddressType@@@Z @ 181 NONAME ABSENT ; void CSmsNumber::SetAddressL(class TDesC16 const &, enum TMsvAddressType)
+	?SetAlertOnDelivery@CSmsSettings@@QAEXE@Z @ 182 NONAME ABSENT ; void CSmsSettings::SetAlertOnDelivery(unsigned char)
+	?SetAlertOnDelivery@TSmsMessageSettingsCdma@@QAEXE@Z @ 183 NONAME ABSENT ; void TSmsMessageSettingsCdma::SetAlertOnDelivery(unsigned char)
+	?SetAlertOnDeliveryL@TMsvMessageCdma@@QAEHE@Z @ 184 NONAME ABSENT ; int TMsvMessageCdma::SetAlertOnDeliveryL(unsigned char)
+	?SetBioMsgIdType@TMsvMessageBio@@QAEXW4TBioMsgIdType@@@Z @ 185 NONAME ABSENT ; void TMsvMessageBio::SetBioMsgIdType(enum TBioMsgIdType)
+	?SetCallBackNumberL@TSmsMessageSettingsCdma@@QAEXABVTDesC16@@@Z @ 186 NONAME ABSENT ; void TSmsMessageSettingsCdma::SetCallBackNumberL(class TDesC16 const &)
+	?SetCallbackNumberL@TMsvMessageCdma@@QAEHABVTDesC16@@@Z @ 187 NONAME ABSENT ; int TMsvMessageCdma::SetCallbackNumberL(class TDesC16 const &)
+	?SetCanConcatenate@TSmsMessageSettingsGsm@@QAEXH@Z @ 188 NONAME ABSENT ; void TSmsMessageSettingsGsm::SetCanConcatenate(int)
+	?SetClass@TMsvMessageGsm@@QAEHHW4TMsvSmsGsmClass@@@Z @ 189 NONAME ABSENT ; int TMsvMessageGsm::SetClass(int, enum TMsvSmsGsmClass)
+	?SetCommandType@TMsvMessageGsm@@QAEHW4TMsvSmsGsmCommand@@@Z @ 190 NONAME ABSENT ; int TMsvMessageGsm::SetCommandType(enum TMsvSmsGsmCommand)
+	?SetDefaultMessageSettingsL@CSmsHeader@@QAEXABVCSmsSettings@@@Z @ 191 NONAME ABSENT ; void CSmsHeader::SetDefaultMessageSettingsL(class CSmsSettings const &)
+	?SetDefaultTeleservice@CSmsSettings@@QAEXG@Z @ 192 NONAME ABSENT ; void CSmsSettings::SetDefaultTeleservice(unsigned short)
+	?SetDeferredDeliveryTimeAbsoluteL@TMsvMessageCdma@@QAEHABVTDateTime@@@Z @ 193 NONAME ABSENT ; int TMsvMessageCdma::SetDeferredDeliveryTimeAbsoluteL(class TDateTime const &)
+	?SetDeferredDeliveryTimeRelativeL@TMsvMessageCdma@@QAEHW4TSmsRelativeTimeUnit@@K@Z @ 194 NONAME ABSENT ; int TMsvMessageCdma::SetDeferredDeliveryTimeRelativeL(enum TSmsRelativeTimeUnit, unsigned long)
+	?SetDeliveryAck@TSmsReplyOptions@@QAEXH@Z @ 195 NONAME ABSENT ; void TSmsReplyOptions::SetDeliveryAck(int)
+	?SetDigitMode@CSmsSettings@@QAEXW4TSmsCdmaDigitMode@@@Z @ 196 NONAME ABSENT ; void CSmsSettings::SetDigitMode(enum TSmsCdmaDigitMode)
+	?SetEMailGatewayNumberL@CSmsSettings@@QAEXABVTDesC16@@@Z @ 197 NONAME ABSENT ; void CSmsSettings::SetEMailGatewayNumberL(class TDesC16 const &)
+	?SetEncoding@CSmsMessageSettingsProxy@@QAEXG@Z @ 198 NONAME ABSENT ; void CSmsMessageSettingsProxy::SetEncoding(unsigned short)
+	?SetEncoding@TMsvMessageBio@@QAEXG@Z @ 199 NONAME ABSENT ; void TMsvMessageBio::SetEncoding(unsigned short)
+	?SetFolder@TMsvSmsSimOperationParams@@QAEXJ@Z @ 200 NONAME ABSENT ; void TMsvSmsSimOperationParams::SetFolder(long)
+	?SetLanguage@TSmsMessageSettingsCdma@@QAEXE@Z @ 201 NONAME ABSENT ; void TSmsMessageSettingsCdma::SetLanguage(unsigned char)
+	?SetLanguageIndicatorL@TMsvMessageCdma@@QAEHE@Z @ 202 NONAME ABSENT ; int TMsvMessageCdma::SetLanguageIndicatorL(unsigned char)
+	?SetMessageConversion@TSmsMessageSettingsGsm@@QAEXW4TSmsPIDConversion@@@Z @ 203 NONAME ABSENT ; void TSmsMessageSettingsGsm::SetMessageConversion(enum TSmsPIDConversion)
+	?SetMessageDepositIndexL@TMsvMessageCdma@@QAEHG@Z @ 204 NONAME ABSENT ; int TMsvMessageCdma::SetMessageDepositIndexL(unsigned short)
+	?SetMessageDisplayMode@CSmsSettings@@QAEXE@Z @ 205 NONAME ABSENT ; void CSmsSettings::SetMessageDisplayMode(unsigned char)
+	?SetMessageId@CSmsNumber@@QAEXH@Z @ 206 NONAME ABSENT ; void CSmsNumber::SetMessageId(int)
+	?SetPriority@TSmsMessageSettingsCdma@@QAEXE@Z @ 207 NONAME ABSENT ; void TSmsMessageSettingsCdma::SetPriority(unsigned char)
+	?SetPriorityIndicatorL@TMsvMessageCdma@@QAEHE@Z @ 208 NONAME ABSENT ; int TMsvMessageCdma::SetPriorityIndicatorL(unsigned char)
+	?SetPrivacy@TSmsMessageSettingsCdma@@QAEXE@Z @ 209 NONAME ABSENT ; void TSmsMessageSettingsCdma::SetPrivacy(unsigned char)
+	?SetPrivacyIndicatorL@TMsvMessageCdma@@QAEHE@Z @ 210 NONAME ABSENT ; int TMsvMessageCdma::SetPrivacyIndicatorL(unsigned char)
+	?SetReadAck@TSmsReplyOptions@@QAEXH@Z @ 211 NONAME ABSENT ; void TSmsReplyOptions::SetReadAck(int)
+	?SetRejectDuplicate@TSmsMessageSettingsGsm@@QAEXH@Z @ 212 NONAME ABSENT ; void TSmsMessageSettingsGsm::SetRejectDuplicate(int)
+	?SetRejectDuplicates@TMsvMessageGsm@@QAEHH@Z @ 213 NONAME ABSENT ; int TMsvMessageGsm::SetRejectDuplicates(int)
+	?SetRelativeValidityPeriod@CSmsMessageSettingsProxy@@QAEXABVTTimeIntervalMinutes@@@Z @ 214 NONAME ABSENT ; void CSmsMessageSettingsProxy::SetRelativeValidityPeriod(class TTimeIntervalMinutes const &)
+	?SetReplyOptions@CSmsMessageSettingsProxy@@QAEXABVTSmsReplyOptions@@@Z @ 215 NONAME ABSENT ; void CSmsMessageSettingsProxy::SetReplyOptions(class TSmsReplyOptions const &)
+	?SetReplyPath@TSmsMessageSettingsGsm@@QAEXH@Z @ 216 NONAME ABSENT ; void TSmsMessageSettingsGsm::SetReplyPath(int)
+	?SetReplyPathProvided@TMsvMessageGsm@@QAEHH@Z @ 217 NONAME ABSENT ; int TMsvMessageGsm::SetReplyPathProvided(int)
+	?SetReplyWithOriginalMessage@CSmsSettings@@QAEXW4TSmsReplyWithOriginal@@@Z @ 218 NONAME ABSENT ; void CSmsSettings::SetReplyWithOriginalMessage(enum TSmsReplyWithOriginal)
+	?SetServiceCenterAddressL@TMsvMessageGsm@@QAEHABVTDesC16@@@Z @ 219 NONAME ABSENT ; int TMsvMessageGsm::SetServiceCenterAddressL(class TDesC16 const &)
+	?SetSmsStore@TMsvSmsSimOperationParams@@QAEXW4TMsvSmsStorage@@@Z @ 220 NONAME ABSENT ; void TMsvSmsSimOperationParams::SetSmsStore(enum TMsvSmsStorage)
+	?SetTransportAck@TSmsReplyOptions@@QAEXH@Z @ 221 NONAME ABSENT ; void TSmsReplyOptions::SetTransportAck(int)
+	?SetUserAck@CSmsNumber@@QAEXE@Z @ 222 NONAME ABSENT ; void CSmsNumber::SetUserAck(unsigned char)
+	?SetUserAck@TSmsReplyOptions@@QAEXH@Z @ 223 NONAME ABSENT ; void TSmsReplyOptions::SetUserAck(int)
+	?SetUserResponseCodeL@TMsvMessageCdma@@QAEHE@Z @ 224 NONAME ABSENT ; int TMsvMessageCdma::SetUserResponseCodeL(unsigned char)
+	?SetValidityPeriodAbsoluteL@TMsvMessageSms@@QAEHABVTDateTime@@@Z @ 225 NONAME ABSENT ; int TMsvMessageSms::SetValidityPeriodAbsoluteL(class TDateTime const &)
+	?SetValidityPeriodFormat@CSmsMessageSettingsProxy@@QAEXW4TSmsTimePeriodFormat@@@Z @ 226 NONAME ABSENT ; void CSmsMessageSettingsProxy::SetValidityPeriodFormat(enum TSmsTimePeriodFormat)
+	?SetValidityPeriodRelativeL@TMsvMessageSms@@QAEHW4TSmsRelativeTimeUnit@@K@Z @ 227 NONAME ABSENT ; int TMsvMessageSms::SetValidityPeriodRelativeL(enum TSmsRelativeTimeUnit, unsigned long)
+	?SmsBearer@CSmsHeader@@QBE?AW4TSmsBearers@@XZ @ 228 NONAME ABSENT ; enum TSmsBearers CSmsHeader::SmsBearer(void) const
+	?SmsMessage@CSmsHeader@@QAEAAVTMsvMessageSms@@XZ @ 229 NONAME ABSENT ; class TMsvMessageSms & CSmsHeader::SmsMessage(void)
+	?SmsMessage@CSmsHeader@@QBEABVTMsvMessageSms@@XZ @ 230 NONAME ABSENT ; class TMsvMessageSms const & CSmsHeader::SmsMessage(void) const
+	?SmsStore@TMsvSmsSimOperationParams@@QBE?AW4TMsvSmsStorage@@XZ @ 231 NONAME ABSENT ; enum TMsvSmsStorage TMsvSmsSimOperationParams::SmsStore(void) const
+	?TeleserviceId@TMsvMessageCdma@@QBEGXZ @ 232 NONAME ABSENT ; unsigned short TMsvMessageCdma::TeleserviceId(void) const
+	?TransportAck@TSmsReplyOptions@@QBEHXZ @ 233 NONAME ABSENT ; int TSmsReplyOptions::TransportAck(void) const
+	?UserAck@CSmsNumber@@QBEEXZ @ 234 NONAME ABSENT ; unsigned char CSmsNumber::UserAck(void) const
+	?UserAck@TSmsReplyOptions@@QBEHXZ @ 235 NONAME ABSENT ; int TSmsReplyOptions::UserAck(void) const
+	?ValidateAddress@CSmsNumber@@QBEHXZ @ 236 NONAME ABSENT ; int CSmsNumber::ValidateAddress(void) const
+	?ValidityPeriodFormat@CSmsMessageSettingsProxy@@QBE?AW4TSmsTimePeriodFormat@@XZ @ 237 NONAME ABSENT ; enum TSmsTimePeriodFormat CSmsMessageSettingsProxy::ValidityPeriodFormat(void) const
+	?ValidityPeriodFormat@TMsvMessageSms@@QBE?AW4TSmsTimePeriodFormat@@XZ @ 238 NONAME ABSENT ; enum TSmsTimePeriodFormat TMsvMessageSms::ValidityPeriodFormat(void) const
+	??1CSmsAccount@@UAE@XZ @ 239 NONAME ; CSmsAccount::~CSmsAccount(void)
+	??1CSmsServiceCenter@@UAE@XZ @ 240 NONAME ; CSmsServiceCenter::~CSmsServiceCenter(void)
+	?AddServiceCenterL@CSmsSettings@@QAEXABVTDesC16@@0@Z @ 241 NONAME ; void CSmsSettings::AddServiceCenterL(class TDesC16 const &, class TDesC16 const &)
+	?Address@CSmsServiceCenter@@QBE?AVTPtrC16@@XZ @ 242 NONAME ; class TPtrC16 CSmsServiceCenter::Address(void) const
+	?CopyL@CSmsServiceCenter@@QAEAAV1@ABV1@@Z @ 243 NONAME ; class CSmsServiceCenter & CSmsServiceCenter::CopyL(class CSmsServiceCenter const &)
+	?DefaultServiceCenter@CSmsSettings@@QBEHXZ @ 244 NONAME ; int CSmsSettings::DefaultServiceCenter(void) const
+	?GetServiceCenter@CSmsSettings@@QBEAAVCSmsServiceCenter@@H@Z @ 245 NONAME ; class CSmsServiceCenter & CSmsSettings::GetServiceCenter(int) const
+	?InitialiseDefaultSettingsL@CSmsAccount@@QAEXAAVCMsvScheduleSettings@@AAVCMsvOffPeakTimes@@AAVCMsvSendErrorActions@@AAVCMsvSysAgentActions@@@Z @ 246 NONAME ; void CSmsAccount::InitialiseDefaultSettingsL(class CMsvScheduleSettings &, class CMsvOffPeakTimes &, class CMsvSendErrorActions &, class CMsvSysAgentActions &)
+	?InitialiseDefaultSettingsL@CSmsAccount@@QAEXAAVCSmsSettings@@@Z @ 247 NONAME ; void CSmsAccount::InitialiseDefaultSettingsL(class CSmsSettings &)
+	?LoadSettingsL@CSmsAccount@@QAEXAAVCMsvScheduleSettings@@AAVCMsvOffPeakTimes@@AAVCMsvSendErrorActions@@AAVCMsvSysAgentActions@@@Z @ 248 NONAME ; void CSmsAccount::LoadSettingsL(class CMsvScheduleSettings &, class CMsvOffPeakTimes &, class CMsvSendErrorActions &, class CMsvSysAgentActions &)
+	?LoadSettingsL@CSmsAccount@@QAEXAAVCSmsSettings@@@Z @ 249 NONAME ; void CSmsAccount::LoadSettingsL(class CSmsSettings &)
+	?Name@CSmsServiceCenter@@QBE?AVTPtrC16@@XZ @ 250 NONAME ; class TPtrC16 CSmsServiceCenter::Name(void) const
+	?NewL@CSmsAccount@@SAPAV1@XZ @ 251 NONAME ; class CSmsAccount * CSmsAccount::NewL(void)
+	?NewL@CSmsServiceCenter@@SAPAV1@ABV1@@Z @ 252 NONAME ; class CSmsServiceCenter * CSmsServiceCenter::NewL(class CSmsServiceCenter const &)
+	?NewL@CSmsServiceCenter@@SAPAV1@XZ @ 253 NONAME ; class CSmsServiceCenter * CSmsServiceCenter::NewL(void)
+	?NewLC@CSmsAccount@@SAPAV1@XZ @ 254 NONAME ; class CSmsAccount * CSmsAccount::NewLC(void)
+	?NewLC@CSmsSettings@@SAPAV1@XZ @ 255 NONAME ; class CSmsSettings * CSmsSettings::NewLC(void)
+	?RemoveServiceCenter@CSmsSettings@@QAEXH@Z @ 256 NONAME ; void CSmsSettings::RemoveServiceCenter(int)
+	?SaveSettingsL@CSmsAccount@@QBEXABVCMsvScheduleSettings@@ABVCMsvOffPeakTimes@@ABVCMsvSendErrorActions@@ABVCMsvSysAgentActions@@@Z @ 257 NONAME ; void CSmsAccount::SaveSettingsL(class CMsvScheduleSettings const &, class CMsvOffPeakTimes const &, class CMsvSendErrorActions const &, class CMsvSysAgentActions const &) const
+	?SaveSettingsL@CSmsAccount@@QBEXABVCSmsSettings@@@Z @ 258 NONAME ; void CSmsAccount::SaveSettingsL(class CSmsSettings const &) const
+	?ServiceCenterCount@CSmsSettings@@QBEHXZ @ 259 NONAME ; int CSmsSettings::ServiceCenterCount(void) const
+	?SetAddressL@CSmsServiceCenter@@QAEXABVTDesC16@@@Z @ 260 NONAME ; void CSmsServiceCenter::SetAddressL(class TDesC16 const &)
+	?SetDefaultServiceCenter@CSmsSettings@@QAEXH@Z @ 261 NONAME ; void CSmsSettings::SetDefaultServiceCenter(int)
+	?SetNameL@CSmsServiceCenter@@QAEXABVTDesC16@@@Z @ 262 NONAME ; void CSmsServiceCenter::SetNameL(class TDesC16 const &)

@@ -1,0 +1,52 @@
+/*
+* Copyright (c) 2004 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  CGI Script Utils mmp file
+*
+*/
+
+
+#include "defaultcaps.hrh"
+#include <platform_paths.hrh>
+
+TARGET          nsmlCGIScriptParser.dll
+TARGETTYPE      dll
+UID             0x1000008d 0x101F6DE4
+CAPABILITY 	CAP_GENERAL_DLL
+VENDORID 	VID_DEFAULT
+
+
+#if defined(EABI)
+DEFFILE		./def/eabicgiscriptparser
+#elif defined(WINSCW)
+DEFFILE		./def/bwinscwcgiscriptparser
+#elif defined(WINS)
+DEFFILE		./def/bwinscgiscriptparser
+#else
+DEFFILE		./def/bmarmcgiscriptparser
+#endif
+
+APP_LAYER_SYSTEMINCLUDE
+USERINCLUDE     ../inc
+
+SOURCEPATH      ../src
+SOURCE		nsmlcgiscriptparser.cpp
+SOURCE          NSmlCGIScript.cpp
+SOURCE          NSmlCGIScriptParseStateInfo.cpp
+SOURCE          NSmlCGIScriptParseData.cpp
+
+LIBRARY         euser.lib InetProtUtil.lib
+
+
+
+SMPSAFE

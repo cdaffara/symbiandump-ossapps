@@ -1,0 +1,31 @@
+/*
+* Copyright (c) 2002 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   IBY file for non-localizable elements of Calendar.app
+*
+*/
+
+#ifndef CALENLUNAR_VARIANT_IBY
+#define CALENLUNAR_VARIANT_IBY
+
+#ifdef __SERIES60_LUNAR_CALENDAR
+
+#ifdef RD_CALENDAR_PLUGIN_FW
+ECOM_PLUGIN( calenlunarchineseplugin.dll , calenlunarchineseplugin.rsc )
+#endif
+
+#endif // __SERIES60_LUNAR_CALENDAR
+
+#endif // CALENLUNAR_IBY
+
+//  End of File

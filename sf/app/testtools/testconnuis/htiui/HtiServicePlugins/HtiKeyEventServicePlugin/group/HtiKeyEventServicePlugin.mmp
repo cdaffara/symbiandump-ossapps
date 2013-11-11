@@ -1,0 +1,56 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  ECOM implementation of key event service
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+TARGET          HtiKeyEventServicePlugin.dll
+TARGETTYPE      PLUGIN
+
+// ECom Dll recognition UID followed by the unique UID for this dll
+UID             0x10009D8D 0x1020DEC0
+
+VENDORID        0x101FB657
+
+CAPABILITY      ALL -TCB
+
+SOURCEPATH      ../src
+SOURCE          proxy.cpp
+SOURCE          HtiKeyEventServicePlugin.cpp
+SOURCE          KeyEventHandler.cpp
+SOURCE          PointerEventHandler.cpp
+SOURCE			MultiTouchPointerEventHandler.cpp MultiTouchPointerEvent.cpp
+
+USERINCLUDE     ../inc
+APP_LAYER_SYSTEMINCLUDE
+
+START RESOURCE  ../data/1020DEC0.rss
+TARGET          HtiKeyEventServicePlugin.rsc
+END
+
+LIBRARY         apgrfx.lib
+LIBRARY         centralrepository.lib
+LIBRARY         cenrepnotifhandler.lib
+LIBRARY         ecom.lib
+LIBRARY         euser.lib
+LIBRARY         ws32.lib
+LIBRARY         flogger.lib
+LIBRARY         hal.lib
+
+SMPSAFE
+
+// End of file

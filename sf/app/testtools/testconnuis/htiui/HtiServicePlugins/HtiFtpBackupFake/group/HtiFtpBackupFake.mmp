@@ -1,0 +1,45 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Build description file for HtiFtpBackupFake
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+TARGET          HtiFtpBackupFake.dll
+TARGETTYPE      DLL
+
+// HtiFtpBackupFakeInterface UID followed by the unique UID for this DLL
+UID             0x20022D5F 0x20022D60
+
+VENDORID        0x101FB657
+
+CAPABILITY      ALL -TCB
+
+SOURCEPATH      ../src
+SOURCE          HtiFtpBackupFake.cpp
+
+USERINCLUDE     ../inc
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE   /epoc32/include/connect
+
+LIBRARY         euser.lib
+LIBRARY         efsrv.lib
+LIBRARY         sbeclient.lib
+LIBRARY         flogger.lib
+
+SMPSAFE
+
+// End of File

@@ -1,0 +1,26 @@
+<hbwidget version="0.1" type="HsShortcutWidget">
+  
+  <layout name="icon_text_shortcut" type="mesh">    
+    <meshitem src="background" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="background" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+    <meshitem src="background" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+    <meshitem src="background" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+    
+    <meshitem src="icon" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="icon" srcEdge="CENTERH" dst="" dstEdge="CENTERH" />
+    
+    <meshitem src="text" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+    <meshitem src="text" srcEdge="CENTERH" dst="" dstEdge="CENTERH" />
+  </layout>
+  
+  <layout name="icon_shortcut" type="mesh">    
+    <meshitem src="background" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="background" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+    <meshitem src="background" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+    <meshitem src="background" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+    
+    <meshitem src="icon" srcEdge="CENTERV" dst="" dstEdge="CENTERV" />
+    <meshitem src="icon" srcEdge="CENTERH" dst="" dstEdge="CENTERH" />
+  </layout>
+  
+</hbwidget>

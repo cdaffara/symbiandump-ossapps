@@ -1,0 +1,217 @@
+// Copyright (c) 1999-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+
+PRJ_TESTMMPFILES
+T_pops4.mmp	manual
+T_pops5.mmp	manual
+T_pops6.mmp	manual
+T_POPSECURESOCKETS.mmp  manual
+T_pops_synchronise.mmp manual
+T_PopFullDsk.mmp manual
+T_popsCancelProgress.mmp manual
+#if (defined SYMBIAN_EMAIL_CAPABILITY_SUPPORT)
+t_popsaslauthmechanism.mmp manual
+#endif
+
+
+PRJ_TESTEXPORTS
+../data/Synchronise/t_pops_synchronise_02_18.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_02_18.out
+../data/Synchronise/t_pops_synchronise_02_18.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_02_18.scr
+../data/Synchronise/t_pops_synchronise_04.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_04.out
+../data/Synchronise/t_pops_synchronise_04.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_04.scr
+../data/Synchronise/t_pops_synchronise_05.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_05.out
+../data/Synchronise/t_pops_synchronise_05.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_05.scr
+../data/Synchronise/t_pops_synchronise_06.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_06.out
+../data/Synchronise/t_pops_synchronise_06.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_06.scr
+../data/Synchronise/t_pops_synchronise_07.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_07.out
+../data/Synchronise/t_pops_synchronise_07.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_07.scr
+../data/Synchronise/t_pops_synchronise_08.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_08.out
+../data/Synchronise/t_pops_synchronise_08.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_08.scr
+../data/Synchronise/t_pops_synchronise_09.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_09.out
+../data/Synchronise/t_pops_synchronise_09.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_09.scr
+../data/Synchronise/t_pops_synchronise_10.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_10.out
+../data/Synchronise/t_pops_synchronise_10.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_10.scr
+../data/Synchronise/t_pops_synchronise_11.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_11.out
+../data/Synchronise/t_pops_synchronise_11.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_11.scr
+../data/Synchronise/t_pops_synchronise_12.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_12.out
+../data/Synchronise/t_pops_synchronise_12.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_12.scr
+../data/Synchronise/t_pops_synchronise_13.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_13.out
+../data/Synchronise/t_pops_synchronise_13.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_13.scr
+../data/Synchronise/t_pops_synchronise_14.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_14.out
+../data/Synchronise/t_pops_synchronise_14.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_14.scr
+../data/Synchronise/t_pops_synchronise_15.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_15.out
+../data/Synchronise/t_pops_synchronise_15.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_15.scr
+../data/Synchronise/t_pops_synchronise_19.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_19.out
+../data/Synchronise/t_pops_synchronise_19.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_19.scr
+../data/Synchronise/t_pops_synchronise_21.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_21.out
+../data/Synchronise/t_pops_synchronise_21.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_21.scr
+../data/Synchronise/t_pops_synchronise_22.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_22.out
+../data/Synchronise/t_pops_synchronise_22.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_22.scr
+../data/Synchronise/t_pops_synchronise_23.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_23.out
+../data/Synchronise/t_pops_synchronise_23.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_23.scr
+../data/Synchronise/t_pops_synchronise_24.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_24.out
+../data/Synchronise/t_pops_synchronise_24.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_24.scr
+../data/Synchronise/t_pops_synchronise_25.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_25.out
+../data/Synchronise/t_pops_synchronise_25.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_25.scr
+../data/Synchronise/t_pops_synchronise_27.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_27.out
+../data/Synchronise/t_pops_synchronise_27.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_27.scr
+../data/Synchronise/t_pops_synchronise_28.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_28.out
+../data/Synchronise/t_pops_synchronise_28.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_28.scr
+../data/Synchronise/t_pops_synchronise_30.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_30.out
+../data/Synchronise/t_pops_synchronise_30.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_30.scr
+../data/Synchronise/t_pops_synchronise_31.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_31.out
+../data/Synchronise/t_pops_synchronise_31.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_31.scr
+../data/Synchronise/t_pops_synchronise_32.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_32.out
+../data/Synchronise/t_pops_synchronise_32.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_32.scr
+../data/Synchronise/t_pops_synchronise_33.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_33.out
+../data/Synchronise/t_pops_synchronise_33.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_33.scr
+../data/Synchronise/t_pops_synchronise_34.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_34.out
+../data/Synchronise/t_pops_synchronise_34.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_34.scr
+../data/Synchronise/t_pops_synchronise_35.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_35.out
+../data/Synchronise/t_pops_synchronise_35.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_35.scr
+../data/Synchronise/t_pops_synchronise_36.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_36.out
+../data/Synchronise/t_pops_synchronise_36.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_36.scr
+../data/Synchronise/t_pops_synchronise_37.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_37.out
+../data/Synchronise/t_pops_synchronise_37.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_37.scr
+../data/Synchronise/t_pops_synchronise_38.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_38.out
+../data/Synchronise/t_pops_synchronise_38.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_38.scr
+../data/Synchronise/t_pops_synchronise_39.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_39.out
+../data/Synchronise/t_pops_synchronise_39.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_39.scr
+../data/Synchronise/t_pops_synchronise_40.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_40.out
+../data/Synchronise/t_pops_synchronise_40.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_40.scr
+../data/Synchronise/t_pops_synchronise_41.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_41.out
+../data/Synchronise/t_pops_synchronise_41.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_41.scr
+../data/Synchronise/t_pops_synchronise_42.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_42.out
+../data/Synchronise/t_pops_synchronise_42.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_42.scr
+../data/Synchronise/t_pops_synchronise_45_61_62.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_45_61_62.out
+../data/Synchronise/t_pops_synchronise_45_61_62.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_45_61_62.scr
+../data/Synchronise/t_pops_synchronise_47_48.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_47_48.out
+../data/Synchronise/t_pops_synchronise_47_48.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_47_48.scr
+../data/Synchronise/t_pops_synchronise_49_50.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_49_50.out
+../data/Synchronise/t_pops_synchronise_49_50.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_49_50.scr
+../data/Synchronise/t_pops_synchronise_51.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_51.out
+../data/Synchronise/t_pops_synchronise_51.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_51.scr
+../data/Synchronise/t_pops_synchronise_52.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_52.out
+../data/Synchronise/t_pops_synchronise_52.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_52.scr
+../data/Synchronise/t_pops_synchronise_54.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_54.out
+../data/Synchronise/t_pops_synchronise_54.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_54.scr
+../data/Synchronise/t_pops_synchronise_55.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_55.out
+../data/Synchronise/t_pops_synchronise_55.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_55.scr
+../data/Synchronise/t_pops_synchronise_56.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_56.out
+../data/Synchronise/t_pops_synchronise_56.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_56.scr
+../data/Synchronise/t_pops_synchronise_57.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_57.out
+../data/Synchronise/t_pops_synchronise_57.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_57.scr
+../data/Synchronise/t_pops_synchronise_58.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_58.out
+../data/Synchronise/t_pops_synchronise_58.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_58.scr
+../data/Synchronise/t_pops_synchronise_64.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_64.out
+../data/Synchronise/t_pops_synchronise_64.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_64.scr
+../data/Synchronise/t_pops_synchronise_65_66.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_65_66.out
+../data/Synchronise/t_pops_synchronise_65_66.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_65_66.scr
+../data/Synchronise/t_pops_synchronise_67_68.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_67_68.out
+../data/Synchronise/t_pops_synchronise_67_68.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_67_68.scr
+../data/Synchronise/t_pops_synchronise_70.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_70.out
+../data/Synchronise/t_pops_synchronise_70.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_70.scr
+../data/Synchronise/t_pops_synchronise_71.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_71.out
+../data/Synchronise/t_pops_synchronise_71.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_71.scr
+../data/Synchronise/t_pops_synchronise_73to75.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_73to75.out
+../data/Synchronise/t_pops_synchronise_73to75.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_73to75.scr
+../data/Synchronise/t_pops_synchronise_76.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_76.out
+../data/Synchronise/t_pops_synchronise_76.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_76.scr
+../data/Synchronise/t_pops_synchronise_77.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_77.out
+../data/Synchronise/t_pops_synchronise_77.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_77.scr
+../data/Synchronise/t_pops_synchronise_78.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_78.out
+../data/Synchronise/t_pops_synchronise_78.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_78.scr
+../data/Synchronise/t_pops_synchronise_79_80.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_79_80.out
+../data/Synchronise/t_pops_synchronise_79_80.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_79_80.scr
+../data/Synchronise/t_pops_synchronise_empty.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_empty.out
+../data/Synchronise/t_pops_synchronise_empty.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_empty.scr
+../data/Synchronise/t_pops_synchronise_no_synch.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_no_synch.out
+../data/Synchronise/t_pops_synchronise_no_synch.scr /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_no_synch.scr
+../data/Synchronise/t_pops_synchronise_uid_refresh.out /epoc32/winscw/c/msgtest/pops/t_pops_synchronise_uid_refresh.out
+
+../data/connect.out /epoc32/winscw/c/msgtest/pops/connect.out
+../data/connect.scr /epoc32/winscw/c/msgtest/pops/connect.scr
+../data/connect_and_quit.out /epoc32/winscw/c/msgtest/pops/connect_and_quit.out
+../data/connect_and_quit1.out /epoc32/winscw/c/msgtest/pops/connect_and_quit1.out
+../data/delete_all.out /epoc32/winscw/c/msgtest/pops/delete_all.out
+../data/download_all1.out /epoc32/winscw/c/msgtest/pops/download_all1.out
+../data/download_all1.scr /epoc32/winscw/c/msgtest/pops/download_all1.scr
+../data/download_all10.out /epoc32/winscw/c/msgtest/pops/download_all10.out
+../data/download_all10.scr /epoc32/winscw/c/msgtest/pops/download_all10.scr
+../data/download_all2.out /epoc32/winscw/c/msgtest/pops/download_all2.out
+../data/download_all2.scr /epoc32/winscw/c/msgtest/pops/download_all2.scr
+../data/download_all3.out /epoc32/winscw/c/msgtest/pops/download_all3.out
+../data/download_all3.scr /epoc32/winscw/c/msgtest/pops/download_all3.scr
+../data/download_all4.out /epoc32/winscw/c/msgtest/pops/download_all4.out
+../data/download_all4.scr /epoc32/winscw/c/msgtest/pops/download_all4.scr
+../data/download_all5.out /epoc32/winscw/c/msgtest/pops/download_all5.out
+../data/download_all5.scr /epoc32/winscw/c/msgtest/pops/download_all5.scr
+../data/download_all6.out /epoc32/winscw/c/msgtest/pops/download_all6.out
+../data/download_all6.scr /epoc32/winscw/c/msgtest/pops/download_all6.scr
+../data/download_all7.out /epoc32/winscw/c/msgtest/pops/download_all7.out
+../data/download_all7.scr /epoc32/winscw/c/msgtest/pops/download_all7.scr
+../data/download_all8.out /epoc32/winscw/c/msgtest/pops/download_all8.out
+../data/download_all8.scr /epoc32/winscw/c/msgtest/pops/download_all8.scr
+../data/download_all9.out /epoc32/winscw/c/msgtest/pops/download_all9.out
+../data/download_all9.scr /epoc32/winscw/c/msgtest/pops/download_all9.scr
+../data/missing_fields_download.out /epoc32/winscw/c/msgtest/pops/missing_fields_download.out
+../data/missing_fields_download.scr /epoc32/winscw/c/msgtest/pops/missing_fields_download.scr
+../data/missing_fields_sync.scr /epoc32/winscw/c/msgtest/pops/missing_fields_sync.scr
+../data/online_local_copy.dmp /epoc32/winscw/c/msgtest/pops/online_local_copy.dmp
+../data/online_local_move.dmp /epoc32/winscw/c/msgtest/pops/online_local_move.dmp
+../data/online_populate.dmp /epoc32/winscw/c/msgtest/pops/online_populate.dmp
+../data/poplog.scr /epoc32/winscw/c/msgtest/pops/poplog.scr
+../data/popprog.scr /epoc32/winscw/c/msgtest/pops/popprog.scr
+../data/populate_twice.scr /epoc32/winscw/c/msgtest/pops/populate_twice.scr
+../data/second_connect.dmp /epoc32/winscw/c/msgtest/pops/second_connect.dmp
+../data/tpops5_connect_copy.out /epoc32/winscw/c/msgtest/pops/tpops5_connect_copy.out
+../data/tpops5_connect_copy.scr /epoc32/winscw/c/msgtest/pops/tpops5_connect_copy.scr
+../data/tpops5_connect_quit.out /epoc32/winscw/c/msgtest/pops/tpops5_connect_quit.out
+../data/tpops5_connect_quit.scr /epoc32/winscw/c/msgtest/pops/tpops5_connect_quit.scr
+../data/tpops5_connect_quit1.out /epoc32/winscw/c/msgtest/pops/tpops5_connect_quit1.out
+../data/t_popTlsCannotConnect.scr /epoc32/winscw/c/msgtest/pops/scripts/t_poptlscannotconnect.scr
+../data/t_popTlsCantLogin.scr /epoc32/winscw/c/msgtest/pops/scripts/t_poptlscantlogin.scr
+../data/t_popTlsInvalidPassword.scr /epoc32/winscw/c/msgtest/pops/scripts/t_poptlsinvalidpassword.scr
+../data/t_popTlsInvalidUser.scr /epoc32/winscw/c/msgtest/pops/scripts/t_poptlsinvaliduser.scr
+../data/t_popTlsNotSupported.scr /epoc32/winscw/c/msgtest/pops/scripts/t_poptlsnotsupported.scr
+../data/t_popTlsOk.scr /epoc32/winscw/c/msgtest/pops/scripts/t_poptlsok.scr
+../data/t_popTlsStopResponding1.scr /epoc32/winscw/c/msgtest/pops/scripts/t_poptlsstopresponding1.scr
+../data/t_popTlsStopResponding2.scr /epoc32/winscw/c/msgtest/pops/scripts/t_poptlsstopresponding2.scr
+../data/t_popTlsStopResponding3.scr /epoc32/winscw/c/msgtest/pops/scripts/t_poptlsstopresponding3.scr
+../data/t_popApopTlsOk.scr /epoc32/winscw/c/msgtest/pops/scripts/t_popapoptlsok.scr
+../data/T_PopFullDsk_Populate.scr 	 /epoc32/winscw/c/msgtest/pops/t_popfulldsk_populate.scr
+../data/T_PopFullDsk_OfflineCopy.scr /epoc32/winscw/c/msgtest/pops/t_popfulldsk_offlinecopy.scr
+../data/T_PopFullDsk_CopyAll.scr	 /epoc32/winscw/c/msgtest/pops/t_popfulldsk_copyall.scr
+../data/T_PopFullDsk_Msg.eml	 /epoc32/winscw/c/msgtest/pops/t_popfulldsk_msg.eml
+../data/download_two.scr 	/epoc32/winscw/c/msgtest/pops/download_two.scr
+../data/download_two.out 	/epoc32/winscw/c/msgtest/pops/download_two.out
+../data/download_two.dmp 	/epoc32/winscw/c/msgtest/pops/download_two.dmp
+../data/tpops5_second_delete.out /epoc32/winscw/c/msgtest/pops/tpops5_second_delete.out
+../data/tpops5_second_delete.dmp	/epoc32/winscw/c/msgtest/pops/tpops5_second_delete.dmp
+../data/tpops5_second_offline_delete.dmp	/epoc32/winscw/c/msgtest/pops/tpops5_second_offline_delete.dmp
+../data/download_large_param.scr 	/epoc32/winscw/c/msgtest/pops/download_large_param.scr
+../data/download_large_param.out 	/epoc32/winscw/c/msgtest/pops/download_large_param.out
+../data/tpops5_connect_top.scr		/epoc32/winscw/c/msgtest/pops/tpops5_connect_top.scr
+../data/tpops5_connect_top.out		/epoc32/winscw/c/msgtest/pops/tpops5_connect_top.out
+../data/tpops5_connect_top.dmp		/epoc32/winscw/c/msgtest/pops/tpops5_connect_top.dmp
+
+../script/t_popsecuresockets.script	/epoc32/winscw/c/msgtest/pops/scripts/t_popsecuresockets.script
+../script/t_pops5test.script	/epoc32/winscw/c/msgtest/pops/scripts/t_pops5test.script
+../script/t_pops_synchronise.script	/epoc32/winscw/c/msgtest/pops/scripts/t_pops_synchronise.script
+../script/MachineIP.txt /epoc32/winscw/c/msgtest/pops/scripts/machineip.txt
+#if (defined SYMBIAN_EMAIL_CAPABILITY_SUPPORT)
+../script/t_popsaslauthmechanism.script	/epoc32/winscw/c/msgtest/pops/scripts/t_popsaslauthmechanism.script
+#endif

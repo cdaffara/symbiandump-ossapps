@@ -1,0 +1,134 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+[All]
+Defaults= defaults.script
+
+[NBS:InternetConfig]
+Type= Submit
+Class= 2
+Bearer= NBS
+BioUid= 268457263
+Message= 
+password
+Mname:Demon
+Muid:yashar
+Mpwd:dig23ler
+Madr:Brahim@yashar.Demon.co.uk
+Mrcv:pop3.demon.co.uk
+Mpro:PO
+Msnd:post.demon.co.uk
+Iname:Demon
+Iuid:yashar
+Ipwd:dig23ler
+Itel:+44 845 2121666
+Idns1:158.152.1.58
+Idns2:158.152.1.43
+DeliveryReport= NO
+
+[NBS:MailboxConfig]
+Type= Submit
+Class= 2
+Bearer= NBS
+BioUid= 268457263
+Message= 
+password
+Mname:Demon
+Madr:Brahim@yashar.Demon.co.uk
+Mrcv:pop3.demon.co.uk
+Msnd:post.demon.co.uk
+Mpro:PO
+DeliveryReport= NO
+
+[Message]
+Type= Submit
+Class= 2
+Message= This is a 200 char mesge
+This is a 200 char mesge
+This is a 200 char mesge
+This is a 200 char mesge
+This is a 200 char mesge
+This is a 200 char mesge
+This is a 200 char mesge
+This is a 200 char mesge
+Encoding= 7
+DeliveryReport= NO
+
+[Message]
+Type= Submit
+Class= 2
+Message= This is a 200 8bit mesge
+This is a 200 8bit mesge
+This is a 200 8bit mesge
+This is a 200 8bit mesge
+This is a 200 8bit mesge
+This is a 200 8bit mesge
+This is a 200 8bit mesge
+This is a 200 8bit mesge
+Encoding= 8
+DeliveryReport= NO
+
+[StatusReport]
+Type= SR
+Message= Message received loud and clear
+
+[VCard]
+Type= Deliver
+Bearer= WAP
+Message=
+begin:vcard
+n:;Julia
+adr:;;;;;;
+version:2.1
+email;internet:julia.blumin@symbian.com
+fn:Julia Blumin
+end:vcard
+BioUid= 268457268
+Bearer= WAP
+Encoding= 8
+
+[VCal]
+Type= Deliver
+Bearer= WAP
+Message= BEGIN:VCALENDAR
+VERSION:1.0
+BEGIN:VEVENT
+CATEGORIES:MEETING
+DTSTART:20000610T090000
+DALARM:20000610T085900;;;
+AALARM:20000610T085900;;;
+SUMMARY:B
+DESCRIPTION:Meet Santa
+END:VEVENT
+END:VCALENDAR
+BioUid= 268457267
+
+[RT]
+Type= Deliver
+Bearer= WAP
+File= tone1.rtp
+BioUid= 268457269
+Encoding= 8
+
+[Logo]
+Type= Deliver
+Bearer= WAP
+File= logo1.olp
+BioUid= 268457270
+Encoding= 8
+
+endscript
+

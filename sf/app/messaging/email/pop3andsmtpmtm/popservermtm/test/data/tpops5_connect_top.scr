@@ -1,0 +1,517 @@
++OK InterMail POP3 server ready.
++OK please send PASS command
++OK phill.b1 is welcome here
++OK 5 32966
++OK 5 messages
+1 2537
+2 18068
+3 2154
+4 6880
+5 3327
+.
++OK 5 messages
+1 psion8.952427949:20:13434:10
+2 psion8.952428159:20:19143:16
+3 psion8.952362190:20:03972:5
+4 psion8.952362192:20:03229:41
+5 psion8.952362180:20:03922:1
+.
++OK Capability list follows
+TOP
+USER
+PIPELINING
+EXPIRE NEVER
+UIDL
+SASL NTLM
+.
++OK 921 octets
+Return-Path: <phillb@emccsoft.com>
+Received: from emccpdc.emccsoft.com ([62.255.249.161])
+          by mta07-svc.ntlworld.com
+          (InterMail vM.4.01.03.37 201-229-121-137-20020806) with ESMTP
+          id <20040419073525.ESEN81.mta07-svc.ntlworld.com@emccpdc.emccsoft.com>
+          for <phill.b1@ntlworld.com>; Mon, 19 Apr 2004 08:35:25 +0100
+content-class: urn:content-classes:message
+Subject: test email 1
+MIME-Version: 1.0
+Content-Type: text/plain;
+        charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Date: Mon, 19 Apr 2004 08:34:11 +0100
+X-MimeOLE: Produced By Microsoft Exchange V6.0.6249.0
+Message-ID: <1EB97FA248F8DB4CBCDDA6798B114CEF2D89EB@emccpdc.emccsoft.com>
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+Thread-Topic: test email 1
+Thread-Index: AcQl4LUG6sgOwWs9QlG2VixDNIVCVw==
+From: "Phill Brady" <phillb@emccsoft.com>
+To: <phill.b1@ntlworld.com>
+
+This is test email 1
+.
++OK 925 octets
+Return-Path: <phillb@emccsoft.com>
+Received: from emccpdc.emccsoft.com ([62.255.249.161])
+          by mta07-svc.ntlworld.com
+          (InterMail vM.4.01.03.37 201-229-121-137-20020806) with ESMTP
+          id <20040419073535.ESOR81.mta07-svc.ntlworld.com@emccpdc.emccsoft.com>
+          for <phill.b1@ntlworld.com>; Mon, 19 Apr 2004 08:35:36 +0100
+content-class: urn:content-classes:message
+Subject: test email 2
+MIME-Version: 1.0
+Content-Type: text/plain;
+        charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Date: Mon, 19 Apr 2004 08:34:55 +0100
+X-MimeOLE: Produced By Microsoft Exchange V6.0.6249.0
+Message-ID: <1EB97FA248F8DB4CBCDDA6798B114CEF2D89EC@emccpdc.emccsoft.com>
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+Thread-Topic: test email 1
+Thread-Index: AcQl4LUG6sgOwWs9QlG2VixDNIVCVwAAALlA
+From: "Phill Brady" <phillb@emccsoft.com>
+To: <phill.b1@ntlworld.com>
+
+This is test email 2
+.
++OK 946 octets
+Return-Path: <phillb@emccsoft.com>
+Received: from emccpdc.emccsoft.com ([62.255.249.161])
+          by mta06-svc.ntlworld.com
+          (InterMail vM.4.01.03.37 201-229-121-137-20020806) with ESMTP
+          id <20040419073708.QTDN24531.mta06-svc.ntlworld.com@emccpdc.emccsoft.c
+om>
+          for <phill.b1@ntlworld.com>; Mon, 19 Apr 2004 08:37:08 +0100
+content-class: urn:content-classes:message
+Subject: test email 3
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+        boundary="----_=_NextPart_001_01C425E0.F3F3D7C4"
+Date: Mon, 19 Apr 2004 08:35:56 +0100
+X-MimeOLE: Produced By Microsoft Exchange V6.0.6249.0
+Message-ID: <1EB97FA248F8DB4CBCDDA6798B114CEF2D89ED@emccpdc.emccsoft.com>
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+Thread-Topic: test email 1
+Thread-Index: AcQl4LUG6sgOwWs9QlG2VixDNIVCVwAACAnQ
+From: "Phill Brady" <phillb@emccsoft.com>
+To: <phill.b1@ntlworld.com>
+
+This is a multi-part message in MIME format.
+.
++OK 946 octets
+Return-Path: <phillb@emccsoft.com>
+Received: from emccpdc.emccsoft.com ([62.255.249.161])
+          by mta06-svc.ntlworld.com
+          (InterMail vM.4.01.03.37 201-229-121-137-20020806) with ESMTP
+          id <20040419073733.QTVG24531.mta06-svc.ntlworld.com@emccpdc.emccsoft.c
+om>
+          for <phill.b1@ntlworld.com>; Mon, 19 Apr 2004 08:37:33 +0100
+content-class: urn:content-classes:message
+Subject: test email 4
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+        boundary="----_=_NextPart_001_01C425E1.04AB74D2"
+Date: Mon, 19 Apr 2004 08:36:24 +0100
+X-MimeOLE: Produced By Microsoft Exchange V6.0.6249.0
+Message-ID: <1EB97FA248F8DB4CBCDDA6798B114CEF2D89EE@emccpdc.emccsoft.com>
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+Thread-Topic: test email 1
+Thread-Index: AcQl4LUG6sgOwWs9QlG2VixDNIVCVwAAEK9A
+From: "Phill Brady" <phillb@emccsoft.com>
+To: <phill.b1@ntlworld.com>
+
+This is a multi-part message in MIME format.
+.
++OK 950 octets
+Return-Path: <phillb@emccsoft.com>
+Received: from emccpdc.emccsoft.com ([62.255.249.161])
+          by mta02-svc.ntlworld.com
+          (InterMail vM.4.01.03.37 201-229-121-137-20020806) with ESMTP
+          id <20040419073659.OBDM7608.mta02-svc.ntlworld.com@emccpdc.emccsoft.co
+m>
+          for <phill.b1@ntlworld.com>; Mon, 19 Apr 2004 08:37:01 +0100
+content-class: urn:content-classes:message
+Subject: test email 5
+MIME-Version: 1.0
+Content-Type: multipart/mixed;
+        boundary="----_=_NextPart_001_01C425E1.291CC67C"
+Date: Mon, 19 Apr 2004 08:37:26 +0100
+X-MimeOLE: Produced By Microsoft Exchange V6.0.6249.0
+Message-ID: <1EB97FA248F8DB4CBCDDA6798B114CEF2D89EF@emccpdc.emccsoft.com>
+X-MS-Has-Attach: yes
+X-MS-TNEF-Correlator:
+Thread-Topic: test email 1
+Thread-Index: AcQl4LUG6sgOwWs9QlG2VixDNIVCVwAAEK9AAAAESiA=
+From: "Phill Brady" <phillb@emccsoft.com>
+To: <phill.b1@ntlworld.com>
+
+This is a multi-part message in MIME format.
+.
+
++OK 1163 octets
+Return-Path: <phillb@emccsoft.com>
+Received: from emccpdc.emccsoft.com ([62.255.249.161])
+          by mta07-svc.ntlworld.com
+          (InterMail vM.4.01.03.37 201-229-121-137-20020806) with ESMTP
+          id <20040419073525.ESEN81.mta07-svc.ntlworld.com@emccpdc.emccsoft.com>
+          for <phill.b1@ntlworld.com>; Mon, 19 Apr 2004 08:35:25 +0100
+content-class: urn:content-classes:message
+Subject: test email 1
+MIME-Version: 1.0
+Content-Type: text/plain;
+        charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Date: Mon, 19 Apr 2004 08:34:11 +0100
+X-MimeOLE: Produced By Microsoft Exchange V6.0.6249.0
+Message-ID: <1EB97FA248F8DB4CBCDDA6798B114CEF2D89EB@emccpdc.emccsoft.com>
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+Thread-Topic: test email 1
+Thread-Index: AcQl4LUG6sgOwWs9QlG2VixDNIVCVw==
+From: "Phill Brady" <phillb@emccsoft.com>
+To: <phill.b1@ntlworld.com>
+
+This is test email 1
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+
+.
++OK 1919 octets
+Return-Path: <phillb@emccsoft.com>
+Received: from emccpdc.emccsoft.com ([62.255.249.161])
+          by mta07-svc.ntlworld.com
+          (InterMail vM.4.01.03.37 201-229-121-137-20020806) with ESMTP
+          id <20040419073535.ESOR81.mta07-svc.ntlworld.com@emccpdc.emccsoft.com>
+          for <phill.b1@ntlworld.com>; Mon, 19 Apr 2004 08:35:36 +0100
+content-class: urn:content-classes:message
+Subject: test email 2
+MIME-Version: 1.0
+Content-Type: text/plain;
+        charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Date: Mon, 19 Apr 2004 08:34:55 +0100
+X-MimeOLE: Produced By Microsoft Exchange V6.0.6249.0
+Message-ID: <1EB97FA248F8DB4CBCDDA6798B114CEF2D89EC@emccpdc.emccsoft.com>
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+Thread-Topic: test email 1
+Thread-Index: AcQl4LUG6sgOwWs9QlG2VixDNIVCVwAAALlA
+From: "Phill Brady" <phillb@emccsoft.com>
+To: <phill.b1@ntlworld.com>
+
+This is test email 2
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+
+.
++OK 1990 octets
+Return-Path: <phillb@emccsoft.com>
+Received: from emccpdc.emccsoft.com ([62.255.249.161])
+          by mta06-svc.ntlworld.com
+          (InterMail vM.4.01.03.37 201-229-121-137-20020806) with ESMTP
+          id <20040419073708.QTDN24531.mta06-svc.ntlworld.com@emccpdc.emccsoft.c
+om>
+          for <phill.b1@ntlworld.com>; Mon, 19 Apr 2004 08:37:08 +0100
+content-class: urn:content-classes:message
+Subject: test email 3
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+        boundary="----_=_NextPart_001_01C425E0.F3F3D7C4"
+Date: Mon, 19 Apr 2004 08:35:56 +0100
+X-MimeOLE: Produced By Microsoft Exchange V6.0.6249.0
+Message-ID: <1EB97FA248F8DB4CBCDDA6798B114CEF2D89ED@emccpdc.emccsoft.com>
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+Thread-Topic: test email 1
+Thread-Index: AcQl4LUG6sgOwWs9QlG2VixDNIVCVwAACAnQ
+From: "Phill Brady" <phillb@emccsoft.com>
+To: <phill.b1@ntlworld.com>
+This is a multi-part message in MIME format.
+------_=_NextPart_001_01C425E0.F3F3D7C4
+Content-Type: text/plain;
+        charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+This is test email 3
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+
+.
++OK 2154 octets
+Return-Path: <phillb@emccsoft.com>
+Received: from emccpdc.emccsoft.com ([62.255.249.161])
+          by mta06-svc.ntlworld.com
+          (InterMail vM.4.01.03.37 201-229-121-137-20020806) with ESMTP
+          id <20040419073733.QTVG24531.mta06-svc.ntlworld.com@emccpdc.emccsoft.c
+om>
+          for <phill.b1@ntlworld.com>; Mon, 19 Apr 2004 08:37:33 +0100
+content-class: urn:content-classes:message
+Subject: test email 4
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+        boundary="----_=_NextPart_001_01C425E1.04AB74D2"
+Date: Mon, 19 Apr 2004 08:36:24 +0100
+X-MimeOLE: Produced By Microsoft Exchange V6.0.6249.0
+Message-ID: <1EB97FA248F8DB4CBCDDA6798B114CEF2D89EE@emccpdc.emccsoft.com>
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+Thread-Topic: test email 1
+Thread-Index: AcQl4LUG6sgOwWs9QlG2VixDNIVCVwAAEK9A
+From: "Phill Brady" <phillb@emccsoft.com>
+To: <phill.b1@ntlworld.com>
+This is a multi-part message in MIME format.
+------_=_NextPart_001_01C425E1.04AB74D2
+Content-Type: text/plain;
+        charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+This is test email 4
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+------_=_NextPart_001_01C425E1.04AB74D2
+Content-Type: text/html;
+        charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html; =
+charset=3Diso-8859-1">
+<TITLE></TITLE>
+<META content=3D"MSHTML 6.00.2800.1400" name=3DGENERATOR></HEAD>
+<BODY>
+<P><FONT size=3D2>This is test email 4<BR><BR>test test test<BR>test =
+test=20
+test<BR>test test test<BR>test test test<BR>test test test<BR>test test=20
+test<BR>test test test<BR>test test test<BR>test test test<BR>test test=20
+test<BR>test test test<BR>test test test<BR>test test test<BR>test test=20
+test<BR>test test test<BR></FONT></P></BODY></HTML>
+------_=_NextPart_001_01C425E1.04AB74D2--
+
+.
+
++OK 3867 octets
+Return-Path: <phillb@emccsoft.com>
+Received: from emccpdc.emccsoft.com ([62.255.249.161])
+          by mta02-svc.ntlworld.com
+          (InterMail vM.4.01.03.37 201-229-121-137-20020806) with ESMTP
+          id <20040419073659.OBDM7608.mta02-svc.ntlworld.com@emccpdc.emccsoft.co
+m>
+          for <phill.b1@ntlworld.com>; Mon, 19 Apr 2004 08:37:01 +0100
+content-class: urn:content-classes:message
+Subject: test email 5
+MIME-Version: 1.0
+Content-Type: multipart/mixed;
+        boundary="----_=_NextPart_001_01C425E1.291CC67C"
+Date: Mon, 19 Apr 2004 08:37:26 +0100
+X-MimeOLE: Produced By Microsoft Exchange V6.0.6249.0
+Message-ID: <1EB97FA248F8DB4CBCDDA6798B114CEF2D89EF@emccpdc.emccsoft.com>
+X-MS-Has-Attach: yes
+X-MS-TNEF-Correlator:
+Thread-Topic: test email 1
+Thread-Index: AcQl4LUG6sgOwWs9QlG2VixDNIVCVwAAEK9AAAAESiA=
+From: "Phill Brady" <phillb@emccsoft.com>
+To: <phill.b1@ntlworld.com>
+This is a multi-part message in MIME format.
+------_=_NextPart_001_01C425E1.291CC67C
+Content-Type: text/plain;
+        charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+This is test email 5
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+test test test
+ <<emblem[1].gif>>=20
+------_=_NextPart_001_01C425E1.291CC67C
+Content-Type: image/gif;
+        name="emblem[1].gif"
+Content-Transfer-Encoding: base64
+Content-Description: emblem[1].gif
+Content-Disposition: attachment;
+        filename="emblem[1].gif"
+R0lGODlh+gD6APf/ACEhISkpKTExMTk5OUJCQkpKSlJSUlpaWmNjY2tra3Nzc3t7e4SEhISEjISE
+lIyMjIyMlIyMpZSUhJSUlJSUnJSUpZSUrZycjJycnJycpZycrZyctZycvZycxqWlhKWljKWllKWl
+nKWlpaWlraWltaWlvaWlxqWlzq2tc62te62thK2tjK2tlK2tnK2tpa2tra2tta2tva2txq2tzq2t
+1q2t3rW1WrW1Y7W1a7W1c7W1e7W1hLW1jLW1lLW1nLW1rbW1tbW1vbW1xrW1zrW11rW13rW157W1
+7729Qr29Sr29Ur29Wr29Y729a729c729e729hL29jL29lL29nL29pb29rb29tb29vb29xr29zr29
+1r293r295729772998YQIcYQKcYYKcYYMcYhMcYhOcYpOcYpQsYxQsYxSsYxUsY5UsY5WsZCWsZC
+Y8ZKY8ZKa8ZSa8ZSc8ZSe8Zae8ZahMZjhMZjjMZrjMZrlMZzlMZznMZ7nMZ7pcZ7rcaErcaEtcaM
+tcaMvcaUvcaUxsacxsaczsac1sal1sal3sat3sat58a158a178a978a998bGKcbGMcbGOcbGQsbG
+SsbGUsbGWsbGY8bGa8bGc8bGe8bGhMbGjMbGlMbGnMbGpcbGrcbGtcbGvcbGxsbGzsbG1sbG3sbG
+78bG98DAwM7GIc7OGM7OIc7OKc7OMc7OOc7OQs7OSs7OUs7OWs7OY87Oa87Oc87Oe87Ovc7Oxs7O
+zs7O1s7O3tbWCNbWENbWGNbWIdbWKdbWMdbWOdbWQtbWStbWUtbWWtbWY9bWa9bWztbW1tbW3t7e
+AN7eCN7eGN7eKd7eMd7eOd7eQt7eSt7eUt7e3t7e5+fnAOfnEOfnIefnKefnMefnOefnQufn5+/v
+AO/vEO/vGO/vIe/vKe/vMe/v7/fvGPf3APf3CPf3EPf3GPf3Iff39//OAP//AP//CP///wAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAKgALAAAAAD6APoA
+QAj/AFEJHEiwoMGDCBMqXMiwocOHECNKnEixosWLGDNq3Mixo8ePIEOKHEmypMmTKE/WCTMGzZs5
+aMYsIliHTRhFBNvMIXjoy8yUQIMK5agTYZcwfArOUSOQDhuCXtSguUOmoBc0elAdKkPmTZsxbLwU
+PDXmDyo3fgiZ6ZIHjUA/YboUlItKT6KhePMujBMmjqOFbe7o3cioEKpAYe4mCuPHy6AzYMzUGTin
+jNjBmDO+STrwT5gyaBhp/YIzc2ZCdN3QMdgozCDTsAkyYvMTcZzLAw0H7TABg2/fGUJgCE6hBMIj
+FURgEMG8eXMMG3CXZPNUYJ02qBKZcSM9NklGZvAI/zzVRtDAQ2Z25i0B48UPIDCAAHkvv759IC8e
+PHhR/woQ/wBeEaB8Al5hXF6NmKHGTwLF4YZ3Gfkhhh+LHLLSggINwllmNIji4Ye4jCJKLiN6mMuJ
+KOYiX4onmshiLsrACKMyM0Ao0CFhEGIjRHh8EQYagAzkhR5jbCjSCRmI8IJ78L3H3w8wiKABXQcR
+kUU13mCpTJbecIllljB2KeaYXWIpipIaLETDCAD+918QQJRQREqM1EFGGXGMQccpOxokyBphuKGb
+QFRWdIoJGmRAgZLt6feACAT+V2B/kn54ZqT4HWHQCJj6Z0UQVgABKn9u+ufmqVdkwGdBJoSChasi
+BP9YoChX0GqrpSpiAIEGJsxgyqocncKHGWHUcdeOjuBhExho1FGHGV+ooSNGJ0Ra4LVXvBCrpSW+
+qMy337YpoBUFvmDEQCZgK+m1607aLhDnomJErR7S+6EI3I6CSy76phjjt7lgMIEoylRTcDUII0xD
+R3+MMcYhXtQxBmxoBGKQF2RYzBEN9obo7bcEg5vwyFtWI0q7AtKK7QinnGBrrTDbCsTLNNdqAipB
+pDhiLle0yC8uJ5MI7tAGIwzEwQhzSaY35RBBlHp96kUDFkl/OWY5TGP9Qs0yc32yh/99aG+93Nr7
+Qoy56JLMt7rIiOLOb5N4RdVLd4m1LlxErTdeMWD/IUooovjtYSg40DJLDtx++B+K95G6885AGDw0
+2kwYvoMyayujC+a5OL3357HNEIIUIRhUwyW1zHLMMcYYUww11EwDyw6VSMPNEypCMc444vTezu+/
+
+.
+
++OK phill.b1 InterMail POP3 server signing off.

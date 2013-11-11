@@ -1,0 +1,96 @@
+/*
+* Copyright (c) 2003-2006 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Email Interface base implementation project file.
+*
+*/
+
+
+
+#include <platform_paths.hrh>
+
+//<qmail>
+// Removed from 10.1
+//#include "../../../../inc/emailversionnumbers.hrh" // KEmailBinaryVersionNumber
+//</qmail>
+#include "../../../../inc/emailtraceconfig.hrh"
+#include "../../inc/EmailStoreUids.hrh"
+
+TARGET            baseplugin.dll
+TARGETTYPE        dll
+UID KUidSharedLibrary KUidBasePlugin
+CAPABILITY        CAP_GENERAL_DLL
+VENDORID          VID_DEFAULT
+
+//<qmail>
+// Removed from 10.1
+//VERSION           KEmailBinaryVersionNumber
+//</qmail>
+KEmailBinaryDemandPaging
+
+
+MACRO DEBUG_USE_PROJECT_LOGGING_OPTIONS
+MACRO DEBUG_LOG_OPTION_ENTER
+MACRO DEBUG_LOG_OPTION_EXIT
+MACRO DEBUG_LOG_OPTION_ERRORS
+MACRO DEBUG_LOG_OPTION_INFO
+
+// *************************************
+// INCLUDE PATHS
+// *************************************
+
+USERINCLUDE ../inc
+
+USERINCLUDE ../../../../inc
+SYSTEMINCLUDE /epoc32/include/ecom
+
+APP_LAYER_SYSTEMINCLUDE
+
+SOURCEPATH ../src
+SOURCE BasePlugin.cpp
+SOURCE basepluginmisc.cpp
+SOURCE basepluginparts.cpp
+SOURCE basepluginnotifications.cpp
+SOURCE BasePluginPanic.cpp
+SOURCE baseplugintranslator.cpp
+SOURCE MailIterator.cpp
+SOURCE BaseMrInfoObject.cpp
+SOURCE basepluginfetch.cpp
+SOURCE baseplugindelayedops.cpp
+SOURCE basepluginresourceloader.cpp
+SOURCE nestedao.cpp
+
+// *************************************
+// OTHER STUFF
+// *************************************
+
+// Special OOM test in server thread. Changes def file!
+// MACRO _OOM_TEST
+
+LIBRARY     euser.lib
+LIBRARY     ecom.lib
+LIBRARY     charconv.lib
+LIBRARY     bafl.lib
+LIBRARY     efsrv.lib
+LIBRARY     gdi.lib
+LIBRARY     calinterimapi.lib
+
+LIBRARY     messagestoreclient.lib
+LIBRARY     fsfwcommonlib.lib
+
+LIBRARY     debuglog.lib
+#ifdef TRACE_INTO_FILE
+LIBRARY     flogger.lib
+#endif // TRACE_INTO_FILE
+
+SMPSAFE

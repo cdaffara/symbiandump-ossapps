@@ -1,0 +1,38 @@
+/*
+* Copyright (c) 2006-2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+ *
+*/
+
+
+
+#include <bldvariant.hrh>
+
+PRJ_EXPORTS
+
+PRJ_MMPFILES
+
+PRJ_TESTMMPFILES
+t_glxresolutionutilitiy.mmp
+// if photos publishes zooming state, include the zoom state publisher test
+#ifdef GLX_PUBLISH_ZOOMING_STATE
+t_glxzoomstatepublisher.mmp
+#endif
+
+#ifdef WINSCW
+// on WINSCW copy the test DLLs to z/sys/bin
+gnumakefile move_tests_to_sys_bin.mk support
+#endif
+
+// End of file

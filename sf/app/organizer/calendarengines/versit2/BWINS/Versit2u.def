@@ -1,0 +1,78 @@
+EXPORTS
+	?AddComponentL@CICalBase@@QAEAAVCICalComponent@@W4TICalComponentType@1@@Z @ 1 NONAME ; class CICalComponent & CICalBase::AddComponentL(enum CICalBase::TICalComponentType)
+	?AddPropertyL@CICalBase@@QAEAAVCICalProperty@@ABVTDesC16@@0@Z @ 2 NONAME ; class CICalProperty & CICalBase::AddPropertyL(class TDesC16 const &, class TDesC16 const &)
+	?AddPropertyL@CICalBase@@QAEAAVCICalProperty@@ABVTDesC16@@PAVCICalValue@@@Z @ 3 NONAME ; class CICalProperty & CICalBase::AddPropertyL(class TDesC16 const &, class CICalValue *)
+	?AddPropertyParamL@CICalProperty@@QAEAAVCICalPropertyParam@@ABVTDesC16@@0@Z @ 4 NONAME ; class CICalPropertyParam & CICalProperty::AddPropertyParamL(class TDesC16 const &, class TDesC16 const &)
+	?AddPropertyParamL@CICalProperty@@QAEAAVCICalPropertyParam@@ABVTDesC16@@PAVCICalValue@@@Z @ 5 NONAME ; class CICalPropertyParam & CICalProperty::AddPropertyParamL(class TDesC16 const &, class CICalValue *)
+	?AddValueL@CICalProperty@@QAEXABVTDesC16@@@Z @ 6 NONAME ; void CICalProperty::AddValueL(class TDesC16 const &)
+	?AddValueL@CICalProperty@@QAEXPAVCICalValue@@@Z @ 7 NONAME ; void CICalProperty::AddValueL(class CICalValue *)
+	?AddValueL@CICalPropertyParam@@QAEXABVTDesC16@@@Z @ 8 NONAME ; void CICalPropertyParam::AddValueL(class TDesC16 const &)
+	?AddValueL@CICalPropertyParam@@QAEXPAVCICalValue@@@Z @ 9 NONAME ; void CICalPropertyParam::AddValueL(class CICalValue *)
+	?BinaryLC@CICalValue@@QBEPAVHBufC8@@XZ @ 10 NONAME ; class HBufC8 * CICalValue::BinaryLC(void) const
+	?BooleanL@CICalValue@@QBEHXZ @ 11 NONAME ; int CICalValue::BooleanL(void) const
+	?Cal@CICalParser@@QAEAAVCICal@@H@Z @ 12 NONAME ; class CICal & CICalParser::Cal(int)
+	?CalCount@CICalParser@@QBEHXZ @ 13 NONAME ; int CICalParser::CalCount(void) const
+	?ComponentExists@CICalBase@@QBEHW4TICalComponentType@1@@Z @ 14 NONAME ; int CICalBase::ComponentExists(enum CICalBase::TICalComponentType) const
+	?Components@CICalBase@@QBEABV?$RPointerArray@VCICalComponent@@@@XZ @ 15 NONAME ; class RPointerArray<class CICalComponent> const & CICalBase::Components(void) const
+	?CreateICalComponentL@CICalComponent@@SAPAV1@ABVTDesC16@@W4TICalMethod@CICalBase@@@Z @ 16 NONAME ; class CICalComponent * CICalComponent::CreateICalComponentL(class TDesC16 const &, enum CICalBase::TICalMethod)
+	?CreateICalComponentL@CICalComponent@@SAPAV1@W4TICalComponentType@CICalBase@@W4TICalMethod@3@@Z @ 17 NONAME ; class CICalComponent * CICalComponent::CreateICalComponentL(enum CICalBase::TICalComponentType, enum CICalBase::TICalMethod)
+	?CreateICalComponentLC@CICalComponent@@SAPAV1@ABVTDesC16@@W4TICalMethod@CICalBase@@@Z @ 18 NONAME ; class CICalComponent * CICalComponent::CreateICalComponentLC(class TDesC16 const &, enum CICalBase::TICalMethod)
+	?CreateICalComponentLC@CICalComponent@@SAPAV1@W4TICalComponentType@CICalBase@@W4TICalMethod@3@@Z @ 19 NONAME ; class CICalComponent * CICalComponent::CreateICalComponentLC(enum CICalBase::TICalComponentType, enum CICalBase::TICalMethod)
+	?DurationL@CICalValue@@QBE?AVTTimeIntervalSeconds@@XZ @ 20 NONAME ; class TTimeIntervalSeconds CICalValue::DurationL(void) const
+	?ExternalizeL@CICal@@QAEXAAVRWriteStream@@@Z @ 21 NONAME ; void CICal::ExternalizeL(class RWriteStream &)
+	?FindParam@CICalProperty@@QBEPBVCICalPropertyParam@@ABVTDesC16@@@Z @ 22 NONAME ; class CICalPropertyParam const * CICalProperty::FindParam(class TDesC16 const &) const
+	?FindProperty@CICalBase@@QBEPBVCICalProperty@@ABVTDesC16@@@Z @ 23 NONAME ; class CICalProperty const * CICalBase::FindProperty(class TDesC16 const &) const
+	?FreqL@CICalRuleSegment@@QBE?AW4TFreq@1@XZ @ 24 NONAME ; enum CICalRuleSegment::TFreq CICalRuleSegment::FreqL(void) const
+	?GetDateL@CICalValue@@QBEXAAVTTime@@@Z @ 25 NONAME ; void CICalValue::GetDateL(class TTime &) const
+	?GetDateTimeL@CICalValue@@QBEXAAVTTime@@AAW4TTimeZoneType@1@H@Z @ 26 NONAME ; void CICalValue::GetDateTimeL(class TTime &, enum CICalValue::TTimeZoneType &, int) const
+	?GetDayL@CICalValue@@QBEXAAW4TDay@@AAH@Z @ 27 NONAME ; void CICalValue::GetDayL(enum TDay &, int &) const
+	?GetFloatL@CICalValue@@QBEXAAN@Z @ 28 NONAME ; void CICalValue::GetFloatL(double &) const
+	?GetPeriodL@CICalValue@@QBEXAAVTTime@@AAW4TTimeZoneType@1@01@Z @ 29 NONAME ; void CICalValue::GetPeriodL(class TTime &, enum CICalValue::TTimeZoneType &, class TTime &, enum CICalValue::TTimeZoneType &) const
+	?GetRecurrenceRuleL@CICalValue@@QBEXAAV?$RPointerArray@VCICalRuleSegment@@@@@Z @ 30 NONAME ; void CICalValue::GetRecurrenceRuleL(class RPointerArray<class CICalRuleSegment> &) const
+	?GetTimeL@CICalValue@@QBEXAAVTTime@@AAW4TTimeZoneType@1@@Z @ 31 NONAME ; void CICalValue::GetTimeL(class TTime &, enum CICalValue::TTimeZoneType &) const
+	?IntegerL@CICalValue@@QBEHXZ @ 32 NONAME ; int CICalValue::IntegerL(void) const
+	?InternalizeL@CICalParser@@QAEXAAVRReadStream@@@Z @ 33 NONAME ; void CICalParser::InternalizeL(class RReadStream &)
+	?MonthL@CICalValue@@QBE?AW4TMonth@@XZ @ 34 NONAME ; enum TMonth CICalValue::MonthL(void) const
+	?NewL@CICal@@SAPAV1@XZ @ 35 NONAME ; class CICal * CICal::NewL(void)
+	?NewL@CICalParser@@SAPAV1@XZ @ 36 NONAME ; class CICalParser * CICalParser::NewL(void)
+	?NewL@CICalProperty@@SAPAV1@ABVTDesC16@@0@Z @ 37 NONAME ; class CICalProperty * CICalProperty::NewL(class TDesC16 const &, class TDesC16 const &)
+	?NewL@CICalProperty@@SAPAV1@ABVTDesC16@@PAVCICalValue@@@Z @ 38 NONAME ; class CICalProperty * CICalProperty::NewL(class TDesC16 const &, class CICalValue *)
+	?NewL@CICalPropertyParam@@SAPAV1@ABVTDesC16@@0@Z @ 39 NONAME ; class CICalPropertyParam * CICalPropertyParam::NewL(class TDesC16 const &, class TDesC16 const &)
+	?NewL@CICalPropertyParam@@SAPAV1@ABVTDesC16@@PAVCICalValue@@@Z @ 40 NONAME ; class CICalPropertyParam * CICalPropertyParam::NewL(class TDesC16 const &, class CICalValue *)
+	?NewL@CICalValue@@SAPAV1@XZ @ 41 NONAME ; class CICalValue * CICalValue::NewL(void)
+	?NewLC@CICal@@SAPAV1@XZ @ 42 NONAME ; class CICal * CICal::NewLC(void)
+	?NewLC@CICalParser@@SAPAV1@XZ @ 43 NONAME ; class CICalParser * CICalParser::NewLC(void)
+	?NewLC@CICalProperty@@SAPAV1@ABVTDesC16@@0@Z @ 44 NONAME ; class CICalProperty * CICalProperty::NewLC(class TDesC16 const &, class TDesC16 const &)
+	?NewLC@CICalProperty@@SAPAV1@ABVTDesC16@@PAVCICalValue@@@Z @ 45 NONAME ; class CICalProperty * CICalProperty::NewLC(class TDesC16 const &, class CICalValue *)
+	?NewLC@CICalPropertyParam@@SAPAV1@ABVTDesC16@@0@Z @ 46 NONAME ; class CICalPropertyParam * CICalPropertyParam::NewLC(class TDesC16 const &, class TDesC16 const &)
+	?NewLC@CICalPropertyParam@@SAPAV1@ABVTDesC16@@PAVCICalValue@@@Z @ 47 NONAME ; class CICalPropertyParam * CICalPropertyParam::NewLC(class TDesC16 const &, class CICalValue *)
+	?NewLC@CICalValue@@SAPAV1@XZ @ 48 NONAME ; class CICalValue * CICalValue::NewLC(void)
+	?Parameters@CICalProperty@@QBEABV?$RPointerArray@VCICalPropertyParam@@@@XZ @ 49 NONAME ; class RPointerArray<class CICalPropertyParam> const & CICalProperty::Parameters(void) const
+	?Properties@CICalBase@@QBEABV?$RPointerArray@VCICalProperty@@@@XZ @ 50 NONAME ; class RPointerArray<class CICalProperty> const & CICalBase::Properties(void) const
+	?SetBinaryL@CICalValue@@QAEXABVTDesC8@@@Z @ 51 NONAME ; void CICalValue::SetBinaryL(class TDesC8 const &)
+	?SetBooleanL@CICalValue@@QAEXH@Z @ 52 NONAME ; void CICalValue::SetBooleanL(int)
+	?SetDateL@CICalValue@@QAEXABVTTime@@@Z @ 53 NONAME ; void CICalValue::SetDateL(class TTime const &)
+	?SetDateTimeL@CICalValue@@QAEXABVTTime@@W4TTimeZoneType@1@@Z @ 54 NONAME ; void CICalValue::SetDateTimeL(class TTime const &, enum CICalValue::TTimeZoneType)
+	?SetDayL@CICalValue@@QAEXW4TDay@@H@Z @ 55 NONAME ; void CICalValue::SetDayL(enum TDay, int)
+	?SetDurationL@CICalValue@@QAEXVTTimeIntervalSeconds@@@Z @ 56 NONAME ; void CICalValue::SetDurationL(class TTimeIntervalSeconds)
+	?SetFloatL@CICalValue@@QAEXABN@Z @ 57 NONAME ; void CICalValue::SetFloatL(double const &)
+	?SetIntegerL@CICalValue@@QAEXH@Z @ 58 NONAME ; void CICalValue::SetIntegerL(int)
+	?SetMethodL@CICal@@QAEXW4TICalMethod@CICalBase@@@Z @ 59 NONAME ; void CICal::SetMethodL(enum CICalBase::TICalMethod)
+	?SetMonthL@CICalValue@@QAEXW4TMonth@@@Z @ 60 NONAME ; void CICalValue::SetMonthL(enum TMonth)
+	?SetPeriodL@CICalValue@@QAEXABVTTime@@W4TTimeZoneType@1@01@Z @ 61 NONAME ; void CICalValue::SetPeriodL(class TTime const &, enum CICalValue::TTimeZoneType, class TTime const &, enum CICalValue::TTimeZoneType)
+	?SetRecurrenceRuleL@CICalValue@@QAEXABVTDesC16@@@Z @ 62 NONAME ; void CICalValue::SetRecurrenceRuleL(class TDesC16 const &)
+	?SetTextL@CICalValue@@QAEXABVTDesC16@@@Z @ 63 NONAME ; void CICalValue::SetTextL(class TDesC16 const &)
+	?SetTimeL@CICalValue@@QAEXABVTTime@@W4TTimeZoneType@1@@Z @ 64 NONAME ; void CICalValue::SetTimeL(class TTime const &, enum CICalValue::TTimeZoneType)
+	?SetUtcOffsetL@CICalValue@@QAEXVTTimeIntervalSeconds@@@Z @ 65 NONAME ; void CICalValue::SetUtcOffsetL(class TTimeIntervalSeconds)
+	?TextL@CICalValue@@QBEABVTDesC16@@XZ @ 66 NONAME ; class TDesC16 const & CICalValue::TextL(void) const
+	?Type@CICalBase@@QBE?AW4TICalComponentType@1@XZ @ 67 NONAME ; enum CICalBase::TICalComponentType CICalBase::Type(void) const
+	?Type@CICalProperty@@QBEABVTDesC16@@XZ @ 68 NONAME ; class TDesC16 const & CICalProperty::Type(void) const
+	?Type@CICalPropertyParam@@QBEABVTDesC16@@XZ @ 69 NONAME ; class TDesC16 const & CICalPropertyParam::Type(void) const
+	?Type@CICalRuleSegment@@QBE?AW4TSegmentType@1@XZ @ 70 NONAME ; enum CICalRuleSegment::TSegmentType CICalRuleSegment::Type(void) const
+	?TypeName@CICalRuleSegment@@QBEABVTDesC16@@XZ @ 71 NONAME ; class TDesC16 const & CICalRuleSegment::TypeName(void) const
+	?TypeStringL@CICalBase@@QBEABVTDesC16@@XZ @ 72 NONAME ; class TDesC16 const & CICalBase::TypeStringL(void) const
+	?UtcOffsetL@CICalValue@@QBE?AVTTimeIntervalSeconds@@XZ @ 73 NONAME ; class TTimeIntervalSeconds CICalValue::UtcOffsetL(void) const
+	?Values@CICalProperty@@QBEABV?$RPointerArray@VCICalValue@@@@XZ @ 74 NONAME ; class RPointerArray<class CICalValue> const & CICalProperty::Values(void) const
+	?Values@CICalPropertyParam@@QBEABV?$RPointerArray@VCICalValue@@@@XZ @ 75 NONAME ; class RPointerArray<class CICalValue> const & CICalPropertyParam::Values(void) const
+	?Values@CICalRuleSegment@@QBEABV?$RPointerArray@VCICalValue@@@@XZ @ 76 NONAME ; class RPointerArray<class CICalValue> const & CICalRuleSegment::Values(void) const
+

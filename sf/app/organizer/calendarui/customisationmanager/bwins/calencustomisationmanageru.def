@@ -1,0 +1,27 @@
+EXPORTS
+	?SetPluginAvailabilityL@CCalenCustomisationManager@@QAEXVTUid@@H@Z @ 1 NONAME ; void CCalenCustomisationManager::SetPluginAvailabilityL(class TUid, int)
+	?PluginInfoFinder@CCalenCustomisationManager@@SAHPBVTUid@@ABVCImplementationInformation@@@Z @ 2 NONAME ; int CCalenCustomisationManager::PluginInfoFinder(class TUid const *, class CImplementationInformation const &)
+	?HandleNotificationL@CCalenCustomisationManager@@AAEXW4TCalenNotification@@@Z @ 3 NONAME ; void CCalenCustomisationManager::HandleNotificationL(enum TCalenNotification)
+	?HandleNotification@CCalenCustomisationManager@@UAEXW4TCalenNotification@@@Z @ 4 NONAME ; void CCalenCustomisationManager::HandleNotification(enum TCalenNotification)
+	?CreateActivePluginListL@CCalenCustomisationManager@@AAEXXZ @ 5 NONAME ; void CCalenCustomisationManager::CreateActivePluginListL(void)
+	?LoadPluginsBasedOnVariantL@CCalenCustomisationManager@@AAEXXZ @ 6 NONAME ; void CCalenCustomisationManager::LoadPluginsBasedOnVariantL(void)
+	?AddPluginL@CCalenCustomisationManager@@AAEXPAVCCalenCustomisation@@VTUid@@@Z @ 7 NONAME ; void CCalenCustomisationManager::AddPluginL(class CCalenCustomisation *, class TUid)
+	?OfferMenu@CCalenCustomisationManager@@QAEXPAVHbMenu@@@Z @ 8 NONAME ; void CCalenCustomisationManager::OfferMenu(class HbMenu *)
+	?PluginInfoArray@CCalenCustomisationManager@@QBEABV?$RPointerArray@VCImplementationInformation@@@@XZ @ 9 NONAME ; class RPointerArray<class CImplementationInformation> const & CCalenCustomisationManager::PluginInfoArray(void) const
+	?DisablePluginL@CCalenCustomisationManager@@AAEXVTUid@@@Z @ 10 NONAME ; void CCalenCustomisationManager::DisablePluginL(class TUid)
+	??_ECCalenCustomisationManager@@UAE@I@Z @ 11 NONAME ; CCalenCustomisationManager::~CCalenCustomisationManager(unsigned int)
+	?InfobarTextL@CCalenCustomisationManager@@QAEPAVQString@@XZ @ 12 NONAME ; class QString * CCalenCustomisationManager::InfobarTextL(void)
+	?NewL@CCalenCustomisationManager@@SAPAV1@AAVMCalenServicesFactory@@AAVMCalenServices@@@Z @ 13 NONAME ; class CCalenCustomisationManager * CCalenCustomisationManager::NewL(class MCalenServicesFactory &, class MCalenServices &)
+	?ActivePlugins@CCalenCustomisationManager@@QBEABV?$RArray@VTUid@@@@XZ @ 14 NONAME ; class RArray<class TUid> const & CCalenCustomisationManager::ActivePlugins(void) const
+	?PluginAvailabilityFinder@CCalenCustomisationManager@@CAHPBVTUid@@ABUTCalenPluginAvailability@1@@Z @ 15 NONAME ; int CCalenCustomisationManager::PluginAvailabilityFinder(class TUid const *, struct CCalenCustomisationManager::TCalenPluginAvailability const &)
+	?UnloadPluginsL@CCalenCustomisationManager@@QAEXABV?$RArray@VTUid@@@@@Z @ 16 NONAME ; void CCalenCustomisationManager::UnloadPluginsL(class RArray<class TUid> const &)
+	??1CCalenCustomisationManager@@UAE@XZ @ 17 NONAME ; CCalenCustomisationManager::~CCalenCustomisationManager(void)
+	?LoadPluginL@CCalenCustomisationManager@@AAEXVTUid@@@Z @ 18 NONAME ; void CCalenCustomisationManager::LoadPluginL(class TUid)
+	?GetCommandHandlerL@CCalenCustomisationManager@@QAEPAVMCalenCommandHandler@@H@Z @ 19 NONAME ; class MCalenCommandHandler * CCalenCustomisationManager::GetCommandHandlerL(int)
+	??0CCalenCustomisationManager@@AAE@AAVMCalenServicesFactory@@AAVMCalenServices@@@Z @ 20 NONAME ; CCalenCustomisationManager::CCalenCustomisationManager(class MCalenServicesFactory &, class MCalenServices &)
+	?DoImmediatePluginLoadingL@CCalenCustomisationManager@@AAEXXZ @ 21 NONAME ; void CCalenCustomisationManager::DoImmediatePluginLoadingL(void)
+	?FindPluginL@CCalenCustomisationManager@@AAEPAVCCalenCustomisation@@VTUid@@@Z @ 22 NONAME ; class CCalenCustomisation * CCalenCustomisationManager::FindPluginL(class TUid)
+	?ConstructL@CCalenCustomisationManager@@AAEXXZ @ 23 NONAME ; void CCalenCustomisationManager::ConstructL(void)
+	?EnablePluginL@CCalenCustomisationManager@@AAEXVTUid@@@Z @ 24 NONAME ; void CCalenCustomisationManager::EnablePluginL(class TUid)
+	?Infobar@CCalenCustomisationManager@@QAEPAVHbWidget@@XZ @ 25 NONAME ; class HbWidget * CCalenCustomisationManager::Infobar(void)
+

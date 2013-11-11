@@ -1,0 +1,21 @@
+HbWidget {
+    margin-left: 0un;
+    margin-top: 0un;
+}
+MsgUnifiedEditorAddress {
+	layout:layout-default;
+}
+
+MsgUnifiedEditorAddress::launchBtn {
+	right: var(hb-param-margin-gene-right);
+	fixed-width: 9.5un;
+	fixed-height: 7.46un;
+}
+
+MsgUnifiedEditorAddress::addressField {
+	left: -var(hb-param-margin-gene-left);
+	right: var(hb-param-margin-gene-middle-horizontal);
+	min-height: 7.46un;
+	}
+
+

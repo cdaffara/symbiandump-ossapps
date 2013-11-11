@@ -1,0 +1,19 @@
+<?XML version="1.0" ?>
+<!DOCTYPE smil SYSTEM "mms_smil.dtd">
+
+<!-- Focus of this test: smil element, structure variations -->
+<!-- Focus of this test: smil element, structure variations -->
+<!-- A 'smil' containing a 'body' only -->
+<smil>
+   <body>
+      <par dur="8s">
+         <audio src="FirstSound.amr"/>
+      </par>
+      <par dur="7s">
+         <audio src="SecondSound.amr"/>
+      </par>
+      <par dur="4s">
+         <audio src="ThirdSound.amr"/>
+      </par>
+   </body>
+</smil>

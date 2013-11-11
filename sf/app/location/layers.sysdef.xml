@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE SystemDefinition SYSTEM "sysdef_1_5_1.dtd" [
+  <!ENTITY layer_real_source_path "sf/app/location" >
+]>
+<SystemDefinition name="location" schema="1.5.1">
+  <systemModel>
+    <layer name="app_layer">
+    	<module name="location">
+		<unit unitID="lodo.location.pro" mrp="" bldFile="&layer_real_source_path;" name="location_pro" proFile="location.pro"/>
+      </module>
+    </layer>
+  </systemModel>
+</SystemDefinition>

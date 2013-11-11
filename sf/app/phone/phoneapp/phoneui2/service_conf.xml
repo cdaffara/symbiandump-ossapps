@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<service>
+  <name>phoneui</name>
+  <description>Phone services</description>
+  <filepath>No path</filepath>
+  <interface>
+    <name>com.nokia.symbian.ICallDial</name>
+    <description>Dial interface</description>
+    <version>1.0</version>
+    <capabilities></capabilities>
+  </interface>
+  <interface>
+    <name>com.nokia.symbian.IDtmfPlay</name>
+    <description>DTMF interface</description>
+    <version>1.0</version>
+    <capabilities></capabilities>
+  </interface>
+  <interface>
+    <name>com.nokia.symbian.IStart</name>
+    <description>Bring Telephone UI to foreground</description>
+    <version>1.0</version>
+    <capabilities></capabilities>
+  </interface>
+  <interface>
+     <name>com.nokia.symbian.IUriView</name>
+     <version>1.0</version>
+     <description>Interface for handling tel and cti URIs</description>
+     <customproperty key="schemes">tel, cti</customproperty>
+     <capabilities></capabilities>
+  </interface>
+</service>

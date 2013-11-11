@@ -1,0 +1,42 @@
+// Copyright (c) 2006-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+PRINT Run all test scripts in the CalInterimApi test suite
+
+LOAD_SUITE TestCalInterimApiInterimApiSuite
+
+RUN_SCRIPT \CITCalInterimApi\scripts\TestCalInterimApiSuite.script
+RUN_SCRIPT \CITCalInterimApi\scripts\TestCalInterimApiAlarm.script
+RUN_SCRIPT \CITCalInterimApi\scripts\TestCalInterimApiFind.script
+RUN_SCRIPT \CITCalInterimApi\scripts\TestCalInterimApiAsync.script
+RUN_SCRIPT \CITCalInterimApi\scripts\TestCalInterimApiDataCompatibility.script
+RUN_SCRIPT \CITCalInterimApi\scripts\TestCalInterimApiEntryData.script
+RUN_SCRIPT \CITCalInterimApi\scripts\TestCalInterimApiDeleteEntry.script
+RUN_SCRIPT \CITCalInterimApi\scripts\TestCalInterimApiCategory.script
+RUN_SCRIPT \CITCalInterimApi\scripts\TestCalInterimApiParentChild.script
+RUN_SCRIPT \CITCalInterimApi\scripts\TestCalInterimApiCopyEntries.script
+RUN_SCRIPT \CITCalInterimApi\scripts\TestCalInterimApiConcurrentFileAccess.script
+RUN_SCRIPT \CITCalInterimApi\scripts\TestCalInterimApiImportExport.script
+RUN_SCRIPT \CITCalInterimApi\scripts\TestCalInterimApiImportExportSoakStress.script
+RUN_SCRIPT \CITCalInterimApi\scripts\TestCalInterimApiImportExportAsync.script
+RUN_SCRIPT \CITCalInterimApi\scripts\TestCalInterimApiLastModified.script
+RUN_SCRIPT \CITCalInterimApi\scripts\TestCalInterimApiModifiedLocalIds.script
+RUN_SCRIPT \CITCalInterimApi\scripts\TestCalInterimApiTZChanges.script
+RUN_SCRIPT \CITCalInterimApi\scripts\TestCalInterimApiTZRules.script
+RUN_SCRIPT \CITCalInterimApi\scripts\TestCalInterimApiAlarmSuite.script
+RUN_SCRIPT \CITCalInterimApi\scripts\TestCalInterimApiStartupSuite.script
+RUN_SCRIPT \CITCalInterimApi\scripts\TestCalInterimApiObserver.script
+
+

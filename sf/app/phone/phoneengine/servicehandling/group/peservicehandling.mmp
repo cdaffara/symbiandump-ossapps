@@ -1,0 +1,48 @@
+/*
+* Copyright (c)  Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project specification file for Service Handling dll
+*
+*/
+
+
+#include <data_caging_paths.hrh>
+#include <platform_paths.hrh>
+
+TARGET                  peservicehandling.dll
+TARGETTYPE              DLL
+UID                     0x1000008d 0x200194FD
+
+CAPABILITY              CAP_GENERAL_DLL
+VENDORID                VID_DEFAULT
+VERSION                 10.0
+
+SOURCEPATH              ../src
+SOURCE                  cpeservicehandling.cpp
+
+USERINCLUDE             ../inc
+
+APP_LAYER_SYSTEMINCLUDE 
+
+SYSTEMINCLUDE   ../../inc       // PhoneEngine private headers
+SYSTEMINCLUDE   ../../../inc    // Telephony internal headers
+
+LIBRARY                 euser.lib
+// <-- QT PHONE START -->
+//LIBRARY                 cch.lib   
+// <-- QT PHONE END -->
+LIBRARY                 flogger.lib     // for logging
+
+
+
+SMPSAFE

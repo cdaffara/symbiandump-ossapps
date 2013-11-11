@@ -1,0 +1,40 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+LOAD_SUITE TestCalInterimApiSuite
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-012ON-1480 
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-012ON-1480 
+//! @SYMTestType CIT
+//! @SYMTestPriority 4
+//! @SYMREQ REQ2 
+//! @SYMTestCaseDesc Data compatibility test
+//! @SYMTestActions
+//! Copy calendar file created by 9.2 Symbian OS CalInterimAPI containing many repeating and non repeating entries
+//! Create session to the Calendar server
+//! Open Calendar file
+//! Validate main index
+//! Validate the GUid, local uid and category index.
+//! Close session and server
+//! Check that index file was created
+//! 
+//! @SYMTestExpectedResults 
+//! All checks should be successful, Index file is saved for DB from earlier release of the model
+//! All validations should be successful, The index was retrieved and contains the correct instances / entries for old implementations
+RUN_TEST_STEP 200 TestCalInterimApiSuite CalendarIndexAlarmEntriesTest \calendarindexingtests\testdata\calendarindextests.ini AlarmIndexSingle
+RUN_TEST_STEP 200 TestCalInterimApiSuite CalendarIndexAlarmEntriesTest \calendarindexingtests\testdata\calendarindextests.ini AlarmIndexRepeat
+RUN_TEST_STEP 200 TestCalInterimApiSuite CalendarIndexAlarmEntriesTest \calendarindexingtests\testdata\calendarindextests.ini AlarmIndexMultiple
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-012ON-1480

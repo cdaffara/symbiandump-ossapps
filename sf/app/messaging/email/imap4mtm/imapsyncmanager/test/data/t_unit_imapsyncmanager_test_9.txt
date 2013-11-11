@@ -1,0 +1,141 @@
+From: test908@msexchange2k.closedtest.intra
+To: test908@msexchange2k.closedtest.intra
+Subject: test_9
+Date: Sun, 23 May 2004 17:35:32 +0530
+MIME-Version: 1.0
+Content-Type: multipart/mixed;
+	boundary="----=_NextPart_000_0078_01C440EC.58FAAFA0"
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook Express 5.50.4922.1500
+X-MimeOLE: Produced By Microsoft MimeOLE V5.50.4925.2800
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0078_01C440EC.58FAAFA0
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: 7bit
+
+Internet access on the Nokia 9200 Series Communicator is necessarily limited
+by the speed of the phone's GSM connection. As a consequence, testing and
+debugging Internet-based applications on hardware can be both expensive and
+tedious. The RAS IAP application alleviates this problem by enabling you to
+connect to the Internet over a much faster serial connection, via your PCThe
+application demonstrates how the Symbian OS Communications database (CommDb)
+API may be used to configure an Internet Access Point (IAP). To some extent
+it also shows the common paradigm for using most DBMS derived APIs.An
+Internet Access Point defines ISP, modem, charge card and location records
+that can be used together to make an Internet connection. The IAP for the
+RAS connection specifies an ISP and modem record (charge card and location
+records are required for this type of IAP). The CommDb is a standard DBMS
+database. Modems, ISPs, charge cards, locations, IAPs etc are all stored in
+their own tables within the database. There may be a number of records
+within each table (e.g., there may be a number of IAPs, modems, ISPs, etc.).
+As described in the preceding section, each IAP record defines the set of
+ISP, modem, charge card, and location that can be used together. In other
+words, an IAP record defines a set of records the other tables.The
+implication of the above statement is that sets of CommDb records are
+accessed through their associated table. The other implication is that you
+cannot create an IAP record until you have already created the other
+records. Finally, the fact that there may be many records in a table implies
+that each record must be uniquely identified.2. Copy an existing CommDb that
+has a correctly configured IAP. This method "works", but has several
+problems. Firstly, Symbian does not guarantee that the CommDb will be binary
+compatible between releases. In practice this has not been an issue, but it
+is something to keep in mind. Secondly, while you are using your RAS IAP,
+you don't have access to IAPs you configured in the "real" CommDb. Finally,
+and most importantly, CommDb configuration should be targeted to the
+platform; The CommDb that you use for RAS connections may well disable some
+of your other phone services.. Add an IAP to your existing (proven) CommDb
+using RAS IAP. The advantage of this method is that you get to retain the
+CommDb that your manufacturer put onto the phone, and therefore can expect
+the device to continue to work with the new IAP! Also, the CommDb API is
+binary compatible between releases, so you can rely on this method as you
+change phone. It is also by far the simplest method! Rather than coding the
+application from first principles, I used the standard Minimal Eikon
+Application Developer (MEAD) and Menu Builder tools to create an application
+that I could easily customize. I then modified the engine to write to the
+CommDb, and the UI to call the engine as appropriate. Each of these exports
+calls non-exported functions to actually implement the creation and deletion
+of the components of the IAP
+
+------=_NextPart_000_0078_01C440EC.58FAAFA0
+Content-Type: image/jpeg;
+	name="MS.JPG"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment;
+	filename="MS.JPG"
+
+/9j/4AAQSkZJRgABAgIAAAAAAAD/4QAKUElDAAEyMgD/wAARCAAgACADAREAAhEBAxEB/9sAhAAZ
+ERIVEg8ZFRQVHBoZHSU+KCUiIiVMNjktPlpPX11ZT1dVZHCPeWRqh2tVV32qfoeUmaCioGB4sL2v
+nLuPnaCaARocHCUgJUkoKEmaZ1dnmpqampqampqampqampqampqampqampqampqampqampqampqa
+mpqampqampqampqampr/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMF
+BQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkq
+NDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqi
+o6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFR
+B2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVW
+V1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrC
+w8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/AOnkdYo2kdgq
+ICzE9gKAONGoXbXkt7DM0LStu2dV28AAjoeB1rGVS0j0qWCU6SbdmzWs/EseVj1BBC56SJyh/qK1
+i+ZaHHWoTou0jcjkSVA8bq6NyGU5BpmJl60Wu2j0yJ9rSgvK2M7UHtkdTgfnWNeqqUOYqO5nXFjF
+YaXO1yiSSsxEcqrynGFyewyM/jjnv50Krq1FyOy6rudTqSnU572f5GHK8Uqlw5DAYUev4V7ND29C
+ajBau33G2IlQrwc3Lbb/AIYsaM15/aEUFlO8XmH58cgDucHjpXoY2lSgk0rNnlRbZu290La8uH1F
+Xtprh8qZPubQDtUMCRwOvTk183jaVWbTSukbRaMi4iubeeT7ScTyKQ7Bgd6ng9O3pnHt04uEoSj7
+uy/A5ajnBtt7mYqs0mzADdxjgV9BHEQw+Hi4O/z+8G0lc6jwpYeVbveyD55vlT2Uf4n+QrkrVnWn
+zM2SsjekjSVCkiK6NwVYZBrEZiXvhtG+exl8lgMCN8snc4HcckmocEyJQUtzI/s67e9jsZoWiaU4
+LdRtHUg9+P5iojTtIyjStK7OyjRYo1jRQqIAqgdgK2Og/9k=
+
+------=_NextPart_000_0078_01C440EC.58FAAFA0
+Content-Type: text/plain;
+	name="3kb.txt"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: attachment;
+	filename="3kb.txt"
+
+Internet access on the Nokia 9200 Series Communicator is necessarily =
+limited by the speed of the phone's GSM connection. As a consequence, =
+testing and debugging Internet-based applications on hardware can be =
+both expensive and tedious. The RAS IAP application alleviates this =
+problem by enabling you to connect to the Internet over a much faster =
+serial connection, via your PCThe application demonstrates how the =
+Symbian OS Communications database (CommDb) API may be used to configure =
+an Internet Access Point (IAP). To some extent it also shows the common =
+paradigm for using most DBMS derived APIs.An Internet Access Point =
+defines ISP, modem, charge card and location records that can be used =
+together to make an Internet connection. The IAP for the RAS connection =
+specifies an ISP and modem record (charge card and location records are =
+required for this type of IAP). The CommDb is a standard DBMS database. =
+Modems, ISPs, charge cards, locations, IAPs etc are all stored in their =
+own tables within the database. There may be a number of records within =
+each table (e.g., there may be a number of IAPs, modems, ISPs, etc.). As =
+described in the preceding section, each IAP record defines the set of =
+ISP, modem, charge card, and location that can be used together. In =
+other words, an IAP record defines a set of records the other tables.The =
+implication of the above statement is that sets of CommDb records are =
+accessed through their associated table. The other implication is that =
+you cannot create an IAP record until you have already created the other =
+records. Finally, the fact that there may be many records in a table =
+implies that each record must be uniquely identified.2. Copy an existing =
+CommDb that has a correctly configured IAP. This method "works", but has =
+several problems. Firstly, Symbian does not guarantee that the CommDb =
+will be binary compatible between releases. In practice this has not =
+been an issue, but it is something to keep in mind. Secondly, while you =
+are using your RAS IAP, you don't have access to IAPs you configured in =
+the "real" CommDb. Finally, and most importantly, CommDb configuration =
+should be targeted to the platform; The CommDb that you use for RAS =
+connections may well disable some of your other phone services.. Add an =
+IAP to your existing (proven) CommDb using RAS IAP. The advantage of =
+this method is that you get to retain the CommDb that your manufacturer =
+put onto the phone, and therefore can expect the device to continue to =
+work with the new IAP! Also, the CommDb API is binary compatible between =
+releases, so you can rely on this method as you change phone. It is also =
+by far the simplest method! Rather than coding the application from =
+first principles, I used the standard Minimal Eikon Application =
+Developer (MEAD) and Menu Builder tools to create an application that I =
+could easily customize. I then modified the engine to write to the =
+CommDb, and the UI to call the engine as appropriate. Each of these =
+exports calls non-exported functions to actually implement the creation =
+and deletion of the components of the IAP
+------=_NextPart_000_0078_01C440EC.58FAAFA0--

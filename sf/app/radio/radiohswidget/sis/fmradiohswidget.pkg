@@ -1,0 +1,55 @@
+;
+; Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:
+;
+
+; Language
+&EN
+
+; SIS header: name, uid, version
+#{"fmradiohswidget"}, (0x2002E6D6), 1, 0, 0, TYPE=SA, RU
+
+; Localised Vendor name
+%{"Vendor"}
+
+; Unique Vendor name
+:"Vendor"
+
+; Manual PKG pre-rules from PRO files
+; Default HW/platform dependencies
+[0x101F7961],0,0,0,{"S60ProductID"}
+[0x102032BE],0,0,0,{"S60ProductID"}
+[0x102752AE],0,0,0,{"S60ProductID"}
+[0x1028315F],0,0,0,{"S60ProductID"}
+
+"../resource/fmradiohswidget.manifest"                                                     - "!:/private/20022F35/import/widgetregistry/20022F7E/fmradiohswidget.manifest",FM,"application/hs-widget-uninstall+xml",RR,RW
+ 
+"/epoc32/release/armv5/urel/fmradiohswidget.dll"                                           - "!:/sys/bin/fmradiohswidget.dll"
+"/epoc32/data/z/private/20022F35/import/widgetregistry/2002E6D6/fmradiohswidget.qtplugin"  - "!:/private/20022F35/import/widgetregistry/2002E6D6/fmradiohswidget.qtplugin"
+"../resource/fmradiohswidget.manifest"                                                     - "!:/private/20022F35/import/widgetregistry/2002E6D6/radiohswidget.manifest"
+"../resource/fmradiohswidget.xml"                                                          - "!:/private/20022F35/import/widgetregistry/2002E6D6/radiohswidget.xml"
+;"/epoc32/data/z/private/20022F35/import/widgetregistry/2002E6D6/fmradiohswidget.png"      - "!:/private/20022F35/import/widgetregistry/2002E6D6/radiohswidget.png"
+
+ 
+;"/epoc32/release/armv5/urel/fmradiohswidget.dll"              - "!:/sys/bin/fmradiohswidget.dll"
+;"../radiohswidget/qmakepluginstubs/fmradiohswidget.qtplugin"  - "!:/private/20022F35/import/widgetregistry/2002E6D6/fmradiohswidget.qtplugin"
+;"../radiohswidget/resource/fmradiohswidget.manifest"          - "!:/private/20022F35/import/widgetregistry/2002E6D6/fmradiohswidget.manifest"
+;"../radiohswidget/resource/fmradiohswidget.s60xml"            - "!:/private/20022F35/import/widgetregistry/2002E6D6/fmradiohswidget.xml"
+;"../radiohswidget/resource/fmradiohswidget.css"               - "!:/private/20022F35/import/widgetregistry/2002E6D6/fmradiohswidget.css"
+;;"/epoc32/data/z/private/20022F35/import/widgetregistry/2002E6D6/fmradiohswidget.s60xml"  - "!:/private/20022F35/import/widgetregistry/2002E6D6/fmradiohswidget.xml"
+;;"../radiohswidget/resource/fmradiohswidget.xml"              - "!:/private/20022F35/import/widgetregistry/2002E6D6/fmradiohswidget.xml"
+;;"../radiohswidget/resource/fmradiohswidget_icon.png"         - "!:/private/20022F35/import/widgetregistry/2002E6D6/fmradiohswidget_icon.png"
+
+;"/epoc32/data/z/resource/qt/translations/fmradiohswidget.qm"        - "!:/resource/qt/translations/fmradiohswidget.qm"
+;"/epoc32/data/z/resource/qt/translations/fmradiohswidget_en_us.qm"  - "!:/resource/qt/translations/fmradiohswidget_en_us.qm"

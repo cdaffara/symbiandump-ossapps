@@ -1,0 +1,32 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors: 
+*
+* Description:
+* The iby file for clockresources
+*
+*/
+
+#ifndef __CLOCKRESOURCES_IBY__
+#define __CLOCKRESOURCES_IBY__
+
+#include <data_caging_paths_for_iby.hrh>
+
+S60_APP_RESOURCE(clock)
+data=DATAZ_/QT_TRANSLATIONS_DIR/clock.qm QT_TRANSLATIONS_DIR/clock.qm
+data=DATAZ_/QT_TRANSLATIONS_DIR/clockalarmeditor.qm QT_TRANSLATIONS_DIR/clockalarmeditor.qm
+data=DATAZ_/QT_TRANSLATIONS_DIR/clockcityselectionlist.qm QT_TRANSLATIONS_DIR/clockcityselectionlist.qm
+data=DATAZ_/QT_TRANSLATIONS_DIR/clocksettingsview.qm QT_TRANSLATIONS_DIR/clocksettingsview.qm
+
+#endif			// __CLOCKRESOURCES_IBY__
+
+// End of file

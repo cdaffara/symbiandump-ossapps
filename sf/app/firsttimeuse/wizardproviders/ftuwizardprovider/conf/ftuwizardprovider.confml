@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration xmlns="http://www.s60.com/xml/confml/1" name="FtuWizardConfiguration" version="1">
+  <feature ref="KCrUidFtuWizardProvider" name="First Time Use Wizard Plugins">
+    <desc>Defines which FTU Wizards are displayed when application is run.</desc>
+    <setting ref="KFtuNumberOfWizardPlugins" name="Number of Ftu Wizard Plugins" type="int">
+      <desc>Configures how many ftu plug-ins will be loaded. List plug-ins below. The value of a single key is the interface identifier in literal format.</desc>
+    </setting>
+    <setting ref="KFtuWizardPluginPlaceholder1" name="Undefined 1" type="string">
+      <desc>Value is the interface identifier in literal format.</desc>
+    </setting>
+    <setting ref="KFtuWizardPluginPlaceholder2" name="Undefined 2" type="string">
+      <desc>Value is the interface identifier in literal format.</desc>
+    </setting>
+    <setting ref="KFtuWizardPluginPlaceholder3" name="Undefined 3" type="string">
+      <desc>Value is the interface identifier in literal format.</desc>
+    </setting>
+    <setting ref="KFtuWizardPluginPlaceholder4" name="Undefined 4" type="string">
+      <desc>Value is the interface identifier in literal format.</desc>
+    </setting>
+    <setting ref="KFtuWizardPluginPlaceholder5" name="Undefined 5" type="string">
+      <desc>Value is the interface identifier in literal format.</desc>
+    </setting>
+    <setting ref="KFtuWizardPluginPlaceholder6" name="Undefined 6" type="string">
+      <desc>Value is the interface identifier in literal format.</desc>
+    </setting>
+    <setting ref="KFtuWizardPluginPlaceholder7" name="Undefined 7" type="string">
+      <desc>Value is the interface identifier in literal format.</desc>
+    </setting>
+    <setting ref="KFtuWizardPluginPlaceholder8" name="Undefined 8" type="string">
+      <desc>Value is the interface identifier in literal format.</desc>
+    </setting>
+    <setting ref="KFtuWizardPluginPlaceholder9" name="Undefined 9" type="string">
+      <desc>Value is the interface identifier in literal format.</desc>
+    </setting>
+    <setting ref="KFtuWizardPluginPlaceholder10" name="Undefined 10" type="string">
+      <desc>Value is the interface identifier in literal format.</desc>
+    </setting>
+    <setting ref="KFtuWizardPluginPlaceholder11" name="Undefined 11" type="string">
+      <desc>Value is the interface identifier in literal format.</desc>
+    </setting>
+    <setting ref="KFtuWizardPluginPlaceholder12" name="Undefined 12" type="string">
+      <desc>Value is the interface identifier in literal format.</desc>
+    </setting>
+    <setting ref="KFtuWizardPluginPlaceholder13" name="Undefined 13" type="string">
+      <desc>Value is the interface identifier in literal format.</desc>
+    </setting>
+    <setting ref="KFtuWizardPluginPlaceholder14" name="Undefined 14" type="string">
+      <desc>Value is the interface identifier in literal format.</desc>
+    </setting>
+    <setting ref="KFtuWizardPluginPlaceholder15" name="Undefined 15" type="string">
+      <desc>Value is the interface identifier in literal format.</desc>
+    </setting>
+  </feature>
+  <data>
+    <KCrUidFtuWizardProvider>
+      <KFtuNumberOfWizardPlugins>2</KFtuNumberOfWizardPlugins>
+      <KFtuWizardPluginPlaceholder1>dataimportftuwizard.manifest</KFtuWizardPluginPlaceholder1>
+      <KFtuWizardPluginPlaceholder2>ftuemailwizardplugin.manifest</KFtuWizardPluginPlaceholder2>
+      <KFtuWizardPluginPlaceholder3></KFtuWizardPluginPlaceholder3>
+      <KFtuWizardPluginPlaceholder4></KFtuWizardPluginPlaceholder4>
+      <KFtuWizardPluginPlaceholder5></KFtuWizardPluginPlaceholder5>
+      <KFtuWizardPluginPlaceholder6></KFtuWizardPluginPlaceholder6>
+      <KFtuWizardPluginPlaceholder7></KFtuWizardPluginPlaceholder7>
+      <KFtuWizardPluginPlaceholder8></KFtuWizardPluginPlaceholder8>
+      <KFtuWizardPluginPlaceholder9></KFtuWizardPluginPlaceholder9>
+      <KFtuWizardPluginPlaceholder10></KFtuWizardPluginPlaceholder10>
+      <KFtuWizardPluginPlaceholder11></KFtuWizardPluginPlaceholder11>
+      <KFtuWizardPluginPlaceholder12></KFtuWizardPluginPlaceholder12>
+      <KFtuWizardPluginPlaceholder13></KFtuWizardPluginPlaceholder13>
+      <KFtuWizardPluginPlaceholder14></KFtuWizardPluginPlaceholder14>
+      <KFtuWizardPluginPlaceholder15></KFtuWizardPluginPlaceholder15>
+    </KCrUidFtuWizardProvider>
+  </data>
+</configuration>

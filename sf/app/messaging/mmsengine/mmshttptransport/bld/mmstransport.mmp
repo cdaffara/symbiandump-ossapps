@@ -1,0 +1,86 @@
+/*
+* Copyright (c) 2002-2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*     This is project specification file for the mmstransport.dll.
+*
+*/
+
+
+
+#include <platform_paths.hrh>
+
+#include "../../group/mmsopt.mph"
+
+TARGET          mmstransport.dll
+TARGETTYPE      dll
+UID             0x1000008d 0x101f4691
+CAPABILITY      CAP_GENERAL_DLL
+VENDORID        VID_DEFAULT
+VERSION 	10.0
+PAGED
+
+SOURCEPATH      ../src
+
+// Macro _NO_MMSS_LOGGING_ to get rid of all logging
+// uncomment to delete logs, comment out to enable logs
+// Master control _MMS_ALL_LOGGING_OFF_
+// is in file mmsengine/group/mmsopt.mph
+// Comment out _MMS_ALL_LOGGING_OFF_ in that file to enable logging
+// in all mms components
+#ifdef _MMS_ALL_LOGGING_OFF_
+MACRO _NO_MMSS_LOGGING_
+#define _NO_MMSS_LOGGING_
+#endif
+
+SOURCE          mmssession.cpp
+SOURCE          mmstransaction.cpp
+SOURCE          mmsoperationtimer.cpp
+SOURCE          mmsbearerstatus.cpp
+SOURCE          mmstransport.cpp
+
+USERINCLUDE     ../inc
+USERINCLUDE     ../../mmsserver/inc
+USERINCLUDE     ../../mmscodec/inc
+USERINCLUDE     ../../inc
+
+SYSTEMINCLUDE   ../../../inc
+APP_LAYER_SYSTEMINCLUDE
+
+LIBRARY         euser.lib
+LIBRARY         msgs.lib
+LIBRARY         esock.lib
+// Http libraries
+LIBRARY         http.lib
+LIBRARY         inetprotutil.lib
+LIBRARY         BAFL.lib
+LIBRARY         ecom.lib
+LIBRARY         featmgr.lib
+
+#ifndef _NO_MMSS_LOGGING_
+LIBRARY         flogger.lib
+#else
+DEBUGLIBRARY    flogger.lib
+#endif
+
+#if defined( ARMCC )
+deffile         ../eabi/mmstransport.def
+#elif defined( WINSCW )
+deffile         ../bwinscw/mmstransport.def
+#endif
+
+
+
+SMPSAFE
+
+// End of File

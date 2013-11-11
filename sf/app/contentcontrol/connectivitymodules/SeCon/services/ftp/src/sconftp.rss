@@ -1,0 +1,41 @@
+/*
+* Copyright (c) 2002-2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Resource file for sconftp.dll
+*
+*/
+
+
+// -----------------------------------------------------------------------------
+//  RESOURCE IDENTIFIER
+// -----------------------------------------------------------------------------
+//
+NAME SFTP
+
+// -----------------------------------------------------------------------------
+//  INCLUDE FILES
+// -----------------------------------------------------------------------------
+//
+#include <eikon.rh>
+#include <eikon.rsg>
+
+#include <sconftp.loc>
+
+
+RESOURCE RSS_SIGNATURE { }
+
+RESOURCE TBUF r_secon_value_device      { buf = qtn_secon_device; }
+RESOURCE TBUF r_secon_value_mmc         { buf = qtn_secon_mmc; }
+RESOURCE TBUF r_secon_value_mass_storage { buf = qtn_secon_mass_storage; }
+RESOURCE TBUF r_secon_data_folder       { buf = qtn_secon_data_folder; }
+RESOURCE TBUF r_secon_unknown_supplier  { buf = qtn_secon_unknown_supplier; }

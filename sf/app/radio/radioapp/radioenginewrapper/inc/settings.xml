@@ -1,0 +1,93 @@
+<radiosettings>
+    <setting name="maxvolume" value="10000" />
+    <setting name="FrequencyStepSize" value="100000" />
+    <setting name="Region" value="0" />
+    <setting name="MinFrequency" value="87500000" />
+    <setting name="MaxFrequency" value="108000000" />
+
+    <Station>
+        <setting name="Frequency" value="9500000" />
+        <RdsGroup interval="3" count="100">
+            <RdsItem type="PiCode" delay="0">0x54A8</RdsItem>
+            <RdsItem type="PsName" delay="1">Yle Suomi</RdsItem>
+        </RdsGroup>
+        <RdsGroup interval="3" count="100">
+    	    <Rds>
+            <RdsItem type="PiCode" delay="0">0x5fA8</RdsItem>
+            <RdsItem type="PsName" delay="1">Yle Oulu</RdsItem>
+            </Rds>
+        </RdsGroup>
+    </Station>
+
+    <Station>
+        <setting name="Frequency" value="88000000" />
+        <Rds type="PsName"><!-- Static PS -->
+            <setting name="SendInterval" value="8" />
+            <setting name="SendCount" value="4" />
+            <setting name="RdsContent" value="Radio Nova" />
+        </Rds>
+        <Rds type="PiCode">
+            <setting name="SendInterval" value="8" />
+            <setting name="RdsContent" value="0x54A8" />
+        </Rds>
+        <Rds type="Rt">
+            <setting name="SendInterval" value="4" />
+            <setting name="RdsContent" value="Radio Nova runs" />
+            <setting name="RdsContent" value="some ads in the" />
+            <setting name="RdsContent" value="radio text." />
+        </Rds>
+    </Station>
+    
+    <Station>
+        <setting name="Frequency" value="89000000" />
+        <Rds type="PsName">
+            <setting name="SendInterval" value="5" />
+            <setting name="SendCount" value="4" />
+            <setting name="RdsContent" value="Radio Rock" />
+        </Rds>
+        <Rds type="Pty">
+            <setting name="SendInterval" value="4" />
+            <setting name="RdsContent" value="12" />
+        </Rds>
+    </Station>
+    
+    <Station>
+        <setting name="Frequency" value="98000000" />
+        <Rds type="PsName">
+            <setting name="SendInterval" value="5" />
+            <setting name="RdsContent" value="Radio Mega" />
+        </Rds>
+        <Rds type="Rt">
+            <setting name="SendInterval" value="8" />
+            <setting name="RtPlusItem" value="Now playing: [artist] - [title]">
+                <setting name="RtPlusTag" value="artist">
+                    <setting name="delay" value="2" />
+                    <setting name="RdsContent" value="Metallica" />
+                </setting>
+                <setting name="RtPlusTag" value="title">
+                    <setting name="delay" value="2" />
+                    <setting name="RdsContent" value="One" />
+                </setting>
+            </setting>
+        </Rds>
+    </Station>
+    
+    <Station>
+        <setting name="Frequency" value="103000000" />
+        <Rds type="PsName"><!-- Dynamic PS -->
+            <setting name="SendInterval" value="2" />
+            <setting name="RdsContent" value="Radio Mega" />
+            <setting name="RdsContent" value="iskee" />
+            <setting name="RdsContent" value="makkarat" />
+            <setting name="RdsContent" value="ruutuun" />
+        </Rds>
+        <Rds type="Rt">
+            <setting name="SendInterval" value="4" />
+            <setting name="RdsContent" value="This is" />
+            <setting name="RdsContent" value="an example usage of" />
+            <setting name="RdsContent" value="radio text in a" />
+            <setting name="RdsContent" value="radio station." />
+        </Rds>
+    </Station>
+
+</radiosettings>

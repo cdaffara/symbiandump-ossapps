@@ -1,0 +1,82 @@
+/*
+* Copyright (c) 2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   CGlxCache unit test project file
+*
+*/
+
+
+
+TARGET          t_cglxcache.dll
+TARGETTYPE      dll
+UID             0x1000af5a 0x01700000
+
+CAPABILITY              ALL -TCB
+VENDORID                0x00000000
+
+#ifndef WINSCW
+EPOCALLOWDLLDATA
+#endif
+
+SOURCEPATH              ../t_cglxcache
+SOURCE                  t_cglxcache_dllmain.cpp
+SOURCE                  t_cglxcache.cpp
+
+// Sources required by the test suite
+SOURCEPATH              ../../src
+SOURCE                  glxcache.cpp
+
+SOURCE                  glxcachemanager.cpp
+SOURCE                  glxerrormanager.cpp
+SOURCE                  glxfetcherror.cpp
+SOURCE                  glxfetcherrorarray.cpp
+SOURCE                  glxgarbagecollector.cpp
+SOURCE                  glxitemlist.cpp
+SOURCE                  glxlistutils.cpp
+SOURCE                  glxmedia.cpp
+SOURCE                  glxmedialist.cpp
+SOURCE                  glxnavigablelist.cpp
+SOURCE                  glxstaticitemlist.cpp
+SOURCE                  glxmedialistarray.cpp
+
+USERINCLUDE             ../t_cglxcache
+
+// User include folders required by the tested code
+USERINCLUDE             ../inc
+USERINCLUDE             ../../inc
+
+SYSTEMINCLUDE           ../../../../inc
+SYSTEMINCLUDE           ../../../../commonui/inc
+SYSTEMINCLUDE           ../../../../common/inc
+
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE           /epoc32/include/Digia/EUnit
+
+LIBRARY                 EUnit.lib
+LIBRARY                 EUnitUtil.lib
+LIBRARY                 euser.lib
+LIBRARY                 estor.lib
+LIBRARY                 fbscli.lib
+LIBRARY                 lbs.lib
+
+LIBRARY                 mpxcollectionutility.lib
+LIBRARY                 mpxcommon.lib
+
+LIBRARY                 glxcommonui.lib
+LIBRARY                 glxcommon.lib
+LIBRARY                 glxmedialists.lib
+LIBRARY                 glxlogging.lib
+
+EXPORTUNFROZEN
+SMPSAFE
+// End of file

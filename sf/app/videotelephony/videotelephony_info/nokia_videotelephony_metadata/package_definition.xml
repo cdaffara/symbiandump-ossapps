@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SystemDefinition xmlns:sf="http://www.symbian.org/system-definition" id-namespace="http://www.nokia.com/schema/drd/system-definition" schema="3.0.1">
+  <package id="sf:videotelephony" name="Video Telephony Apps" levels="engine plugin prot ui">
+    <collection id="packetvideoengine" name="PacketVideo Engine" level="engine">
+      <component id="packetvideoenginebinaries" filter="s60" name="Packet Video Engine Binaries">
+       <unit bldFile="../../packetvideoengine/packetvideoenginebinaries/group"/>
+      </component>
+    </collection>
+    <collection id="vtprotocols" name="Video Telephony Protocols" level="prot" replace="sf:vtprotocolsstub">
+    	<!--  this collection is really a component, move down a directory -->
+      <component id="vtprotocols_build" filter="s60" name="Video Telephony Protocols Build">
+       <unit bldFile="../../vtprotocols/group"/>
+      </component>
+    </collection>
+  </package>
+</SystemDefinition>

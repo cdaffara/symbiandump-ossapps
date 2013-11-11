@@ -1,0 +1,103 @@
+/*
+* Copyright (c) 2007-2010 Sebastian Brannstrom, Lars Persson, EmbedDev AB
+*
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the License "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* EmbedDev AB - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+#ifndef PODCAST_HRH
+#define PODCAST_HRH
+
+enum TPodcastCommandIds
+	{
+	EPodcastView = 0x1000,
+	EPodcastViewMain,	
+	EPodcastViewNewShows,
+	EPodcastViewDownloadedShows,
+	EPodcastViewPendingShows,
+	EPodcastViewFeeds,
+	EPodcastPlay,
+	// Feeds commands
+	EPodcastAddFeed,
+	EPodcastEditFeed,
+	EPodcastDeleteFeed,
+	EPodcastDeleteFeedHardware,
+	EPodcastDeleteAllPlayed,
+	EPodcastUpdateFeed,
+	EPodcastUpdateAllFeeds,
+	EPodcastCancelUpdateAllFeeds,
+	EPodcastImportExportFeeds,
+	EPodcastImportFeeds,
+	EPodcastExportFeeds,
+	// Show commands
+	EPodcastDownloadShow,
+	EPodcastDeleteShow,
+	EPodcastRemoveDownload,
+	EPodcastMoveDownloadUp,
+	EPodcastMoveDownloadDown,
+	EPodcastRemoveAllDownloads,
+	EPodcastSuspendDownloads,
+	EPodcastResumeDownloads,
+	EPodcastMarkAllPlayed,
+	EPodcastMarkAsPlayed,
+	EPodcastMarkAsUnplayed,
+	EPodcastShowInfo,
+	// Common commands
+	EPodcastBack,
+	EPodcastSettings,
+	EPodcastSelectShowDir,
+	EPodcastAbout,
+	EPodcastHide,
+	EPodcastHelp,
+	EPodcastSearch,
+	EPodcastAddSearchResult,
+	EPodcastResetDb
+};
+
+enum TPodcastControl
+	{
+	EPodcastListViewListCtrl= 0x1000,	
+	EPodcastSettingShowDir,
+	EPodcastSettingAutoDownload,
+	EPodcastSettingAutoUpdate,
+	EPodcastSettingMaxsimdls,
+	EPodcastSettingConnection,
+	EPodcastSettingIAPList,
+	EPodcastAboutDlg,
+	EPodcastFeedsToolbarExtension,
+	EQueryControl,
+	EPodcastShowInfoImage,
+	EWaitDlg
+	};
+
+enum TShowsIconIndex
+	{
+	EShowIcon = 0,
+	ENewShowIcon,
+	EQuedShowIcon,
+	EDownloadingShowIcon,
+	EDownloadedShowIcon,
+	EDownloadedNewShowIcon,
+	EFailedShowIcon,
+	ESuspendedShowIcon
+	};
+
+enum TConnectionSetting {
+	EConnectionDefault = 0,
+	EConnectionAlwaysAsk = 1,
+	EConnectionUseNetwork = 2,
+	EConnectionUseIap = 0x7FFF
+};
+
+#endif

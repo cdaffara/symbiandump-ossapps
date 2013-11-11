@@ -1,0 +1,221 @@
+<html>
+ <link rel="stylesheet" id="CSSLink" type="text/css" href="chrome.css"/>
+ <link rel="stylesheet" id="CSSLink" type="text/css" href="zoombar.snippet/zoombar.css"/>
+ <link rel="stylesheet" id="CSSLink" type="text/css" href="download.snippet/download.css"/>
+ <link rel="stylesheet" id="CSSLink" type="text/css" href="contextmenu.snippet/ContextMenu.css"/>
+ <link rel="stylesheet" id="CSSLink" type="text/css" href="bookmarkview.superpage/bookmarkDialog.css"/>
+ <link rel="stylesheet" id="CSSLink" type="text/css" href="historyview.superpage/clearhistorydialog.css"/>
+ <link rel="stylesheet" id="CSSLink" type="text/css" href="windowcount.snippet/windowcount.css"/>
+ <link rel="stylesheet" id="CSSLink" type="text/css" href="networkstatus.snippet/networkstatus.css">
+ <link rel="stylesheet" id="CSSLink" type="text/css" href="outofmemory.snippet/outofmemorydialog.css"/>
+ <link rel="stylesheet" id="CSSLink" type="text/css" href="prompt.snippet/prompt.css">
+
+<head>
+  <script src="../js/Bind.js" type="text/javascript"></script>
+  <script src="../js/SimpleButton.js" type="text/javascript"></script>
+  <script src="statusbar.snippet/statusbar.js" type="text/javascript"></script>
+  <script src="networkstatus.snippet/networkstatus.js" type="text/javascript"></script>
+  <script src="prompt.snippet/prompt.js" type="text/javascript"></script>
+  <script src="zoombar.snippet/zoombar.js" type="text/javascript"></script>
+  <script src="download.snippet/download.js" type="text/javascript"></script>
+  <script src="windowcount.snippet/windowcount.js" type="text/javascript"></script>
+  <script src="bookmarkview.superpage/bookmarkDialog.js" type="text/javascript"></script>
+  <script src="historyview.superpage/clearhistorydialog.js" type="text/javascript"></script>
+  <script src="chrome.js" type="text/javascript"></script>
+  <script src="contextmenu.snippet/ContextMenu.js" type="text/javascript"></script>
+  <script src="contextmenu.snippet/ViewContextMenu.js" type="text/javascript"></script>
+  <script src="outofmemory.snippet/outofmemorydialog.js" type="text/javascript"></script>
+  <script type="text/javascript">
+     window.chrome.chromeComplete.connect(onChromeComplete);
+  </script>
+</head>
+
+
+<body leftmargin="0" topmargin="0">
+
+  <div class = "GinebraSnippet" id="WindowCountBarId" name="wcbar" data-GinebraVisible="false">
+    <script type="text/javascript">
+      var wc = new WindowCountBar('WindowCountBarId');
+    </script>
+  </div>
+
+  <div class = "GinebraSnippet" id="StatusBarChromeId" name="statusbar" data-GinebraAnchor="AnchorTop" data-GinebraVisible="true">
+    <link rel="stylesheet" id="CSSLink" type="text/css" href="statusbar.snippet/statusbar.css"/>
+    <script type="text/javascript">
+      var statusbar = new StatusBar();
+    </script>
+  </div>
+
+
+  <!-- Native UrlSearch -->
+
+  <div class="GinebraSnippet" id="UrlSearchChromeId" name="urlsearch" data-GinebraNativeClass="UrlSearchSnippet" data-GinebraVisible="true">
+  </div>
+
+  <div class = "GinebraSnippet" id="NetworkStatusChromeId" name="networkstatus" 
+    data-GinebraItemType="popup" data-GinebraHidesContent="true" data-GinebraVisible="false" data-GinebraAnchor="AnchorCenter"
+    style="width: 310px; height: 230px">
+    <script type="text/javascript">
+      var networkstatus = new NetworkStatusDialog();
+    </script>
+  </div>
+  
+  <div class = "GinebraSnippet" id="PromptChromeId" name="prompt" 
+    data-GinebraItemType="popup" data-GinebraHidesContent="true" data-GinebraVisible="false" data-GinebraAnchor="AnchorCenter"
+    style="width: 310px; height: 200px">
+    <script type="text/javascript">
+      var prompts = new promptDialog();
+    </script>
+  </div>
+
+    <!--  Most Visited Pages-->
+    <div class = "GinebraSnippet" id="MostVisitedViewId" data-GinebraVisible="false" data-GinebraHidesContent="true" data-GinebraNativeClass="MostVisitedPagesWidget"  data-GinebraItemLinkedTo="MostVisitedButtonSnippet" style="width:1%; height:1px; color:red; opacity:0.5">
+    </div>
+
+  <!-- Overlay semi-transparent background over the screen to white-wash it. -->
+  <!-- The top can be anchored to the URL search bar or the status bar as needed. -->
+  <!--div class = "GinebraSnippet" id="ShadingOverlayId" data-GinebraAnchor="AnchorBottom AnchorLeft AnchorRight" data-GinebraHidesContent="true" data-GinebraVisible="false">
+  </div-->
+
+  <!-- URL Suggestions page snippet (search, bookmarks, and history) -->
+  <div class = "GinebraSnippet"
+    id="SuggestsChromeId"
+    name="pagesnippet"
+    style="width:320; height: 200px;"
+    data-GinebraNativeClass="PageSnippet"
+    data-GinebraHidesContent="true"
+    data-GinebraVisible="false">
+  </div>
+
+  <div class = "GinebraSnippet" id="ZoomBarId" 
+    data-GinebraItemType="popup" 
+    data-GinebraVisible="false" 
+    data-GinebraHidesContent="true" 
+    data-GinebraItemLinkedTo="ZoomButtonSnippet" 
+    data-GinebraPopupModal="false">
+    <script type="text/javascript">
+      var zoombar = new ZoomBar();
+    </script>
+  </div>
+
+  <!-- ContextMenu -->
+  <div style="height: 1000px;">
+      <div class = "GinebraSnippet ContextMenu"
+          id="ContextMenuId"
+          data-GinebraItemType="popup"
+          data-GinebraHidesContent="true"
+          data-GinebraVisible="false"
+          data-GinebraItemLinkedTo="MenuButtonSnippet"
+          style="width:320;">
+          <script type="text/javascript">
+              new ContextMenu("ContextMenuId");
+          </script>
+      </div>
+  </div>
+
+
+<!-- Native Window View Toolbar -->
+  <div class="GinebraSnippet" id="WindowViewToolbarId" data-GinebraVisible="false" data-GinebraHidesContent="true" data-GinebraAnchor="AnchorBottom" data-GinebraNativeClass="WindowToolbar" >
+
+  <div class = "GinebraSnippet ButtonSnippet" id="WinBackButton" data-GinebraVisible="true" data-GinebraHidesContent="true"   data-GinebraNativeClass="ActionButton">
+  </div>
+
+  <div class = "GinebraSnippet ButtonSnippet" id="WinAddWindow" data-GinebraVisible="true" data-GinebraHidesContent="true"  data-GinebraNativeClass="ActionButton" >
+  </div>
+
+  </div>
+
+<!-- Native Bookmarks Toolbar -->
+  <div class="GinebraSnippet" id="BookmarkViewToolbarId" data-GinebraVisible="false" data-GinebraHidesContent="true" data-GinebraAnchor="AnchorBottom" data-GinebraNativeClass="BookmarksToolbar" >
+
+    <div class = "GinebraSnippet ButtonSnippet" id="BookmarksBackButton" data-GinebraVisible="true" data-GinebraHidesContent="true"   data-GinebraNativeClass="ActionButton">
+    </div>
+
+    <div class = "GinebraSnippet ButtonSnippet" id="BookmarksAddButton" data-GinebraVisible="true" data-GinebraHidesContent="true"  data-GinebraNativeClass="ActionButton" >
+    </div>
+
+  </div>
+
+<!-- Native Recent URL Toolbar -->
+  <div class="GinebraSnippet" id="RecentUrlViewToolbarId" data-GinebraVisible="false" data-GinebraHidesContent="true" data-GinebraAnchor="AnchorBottom" data-GinebraNativeClass="RecentUrlToolbar" >
+
+    <div class = "GinebraSnippet ButtonSnippet" id="RecentBackButton" data-GinebraVisible="true" data-GinebraHidesContent="true"   data-GinebraNativeClass="ActionButton">
+    </div>
+
+    <div class = "GinebraSnippet ButtonSnippet" id="RecentClearallButton" data-GinebraVisible="true" data-GinebraHidesContent="true"  data-GinebraNativeClass="ActionButton" >
+    </div>
+
+  </div>
+
+<!-- Settings View Toolbar -->
+  <div class="GinebraSnippet" id="SettingsViewToolbarId" data-GinebraVisible="false" data-GinebraHidesContent="true" data-GinebraAnchor="AnchorBottom"  data-GinebraNativeClass="SettingsToolbar" >
+
+    <div class = "GinebraSnippet ButtonSnippet" id="SettingsBackButton" data-GinebraVisible="true" data-GinebraHidesContent="true"   data-GinebraNativeClass="ActionButton">
+    </div>
+
+    <div class = "GinebraSnippet ButtonSnippet" id="SettingsFeedbackButton" data-GinebraVisible="true" data-GinebraHidesContent="true"  data-GinebraNativeClass="ActionButton" >
+    </div>
+
+  </div>
+
+<!-- MAIN Toolbar -->
+  <div class="GinebraSnippet" id="WebViewToolbarId" data-GinebraVisible="true" data-GinebraHidesContent="true" data-GinebraAnchor="AnchorBottom" data-GinebraNativeClass="ContentToolbar" >
+
+  <div class = "GinebraSnippet ButtonSnippet" id="BackButtonSnippet" data-GinebraVisible="true" data-GinebraHidesContent="true"   data-GinebraNativeClass="ActionButton">
+  </div>
+
+  <div class="GinebraSnippet" id="ButtonContainer" data-GinebraVisible="true" data-GinebraHidesContent="true" data-GinebraContainer="true">
+
+
+    <div class="GinebraSnippet ButtonSnippet" id="MostVisitedButtonSnippet" data-GinebraVisible="true"   data-GinebraNativeClass="ActionButton" >
+    </div>
+
+    <div class="GinebraSnippet ButtonSnippet" id="ZoomButtonSnippet" data-GinebraVisible="true"  data-GinebraNativeClass="ActionButton" >
+    </div>
+
+    <div class="GinebraSnippet ButtonSnippet" id="MenuButtonSnippet" data-GinebraVisible="true"  data-GinebraNativeClass="ActionButton" >
+    </div>
+
+  </div>
+
+  <div class = "GinebraSnippet ButtonSnippet" id="ToggleTBButtonSnippet" data-GinebraVisible="true" data-GinebraHidesContent="true"  data-GinebraNativeClass="ActionButton" >
+  </div>
+
+  </div>
+
+  <--Inline the bookmark dialog. Use the native text edit snippet for text input-->
+ 
+<div class="GinebraSnippet" id="ClearHistoryDialogId" data-GinebraItemType="popup" data-GinebraHidesContent="true" data-GinebraVisible="false" data-GinebraAnchor="AnchorCenter">
+  	<script type="text/javascript">
+        addDialog = new clearHistoryDialog();
+    </script>    
+   </div>
+ 
+ 
+ <div class="GinebraSnippet" id="BookmarkDialogId" data-GinebraItemType="popup" data-GinebraHidesContent="true" data-GinebraVisible="false" data-GinebraAnchor="AnchorCenter">
+  	<script type="text/javascript">
+        addDialog = new bookmarkDialog();
+    </script>    
+   </div>
+   
+  
+  
+  <div class="GinebraSnippet" id="DownloadDialogId"
+    data-GinebraItemType="popup"
+    data-GinebraHidesContent="true"
+    data-GinebraVisible="false"
+    style="width:310px; height:87px">
+    <script type="text/javascript">
+      writeDownloadDialog();
+    </script>
+  </div>
+
+
+  <div class="GinebraSnippet" id="OutOfMemoryDialogId" data-GinebraItemType="popup" data-GinebraHidesContent="true" data-GinebraVisible="false" data-GinebraAnchor="AnchorCenter">
+    <script type="text/javascript">
+      addDialog = new outOfMemoryDialog();
+    </script>    
+  </div>
+
+</body>
+</html>

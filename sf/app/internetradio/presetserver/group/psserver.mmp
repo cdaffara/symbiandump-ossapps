@@ -1,0 +1,64 @@
+/*
+* Copyright (c) 2006-2007 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project definition file for project PresetServer
+*
+*/
+
+#include <platform_paths.hrh>
+
+TARGET                  psserver.exe
+TARGETTYPE              EXE
+#ifdef __S60_50__
+EPOCHEAPSIZE            0x1000 0x300000 // 4KB - 3MB
+#endif //__S60_50__
+UID                     0x1000008D 0x10281CB5
+#ifdef __S60_50__
+VERSION                 10.0
+#endif //__S60_50__
+
+CAPABILITY              None
+VENDORID                VID_DEFAULT
+
+#ifdef __S60_50__
+PAGED
+#endif //__S60_50__
+
+SOURCEPATH              ../serversrc
+SOURCE                  Psdatabase.cpp
+SOURCE                  Psdatabasecleanup.cpp
+SOURCE                  Pspendingpreset.cpp
+SOURCE                  Psscheduler.cpp
+SOURCE                  Psserver.cpp
+SOURCE                  Pssession.cpp
+SOURCE                  Psshutdown.cpp
+SOURCE                  Pspropertyobserver.cpp
+
+USERINCLUDE             ../include
+USERINCLUDE             ../serverinc
+USERINCLUDE             ../clientinc
+
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE   OS_LAYER_PUBLIC_EXPORT_PATH(ecom)
+SYSTEMINCLUDE   OS_LAYER_PUBLIC_EXPORT_PATH(connect)
+
+SMPSAFE
+
+LIBRARY                 bafl.lib
+LIBRARY                 ecom.lib
+LIBRARY                 edbms.lib
+LIBRARY                 efsrv.lib
+LIBRARY                 estor.lib
+LIBRARY                 euser.lib
+LIBRARY                 platformenv.lib
+

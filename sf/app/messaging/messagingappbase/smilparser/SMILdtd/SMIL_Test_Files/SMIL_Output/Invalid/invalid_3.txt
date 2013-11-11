@@ -1,0 +1,34 @@
+<?XML version="1.0" ?>
+<!DOCTYPE SMIL PUBLIC "-//W3C//DTD SMIL 2.0 Basic//EN"
+"http://www.w3.org/TR/REC-smil/2000/SMIL20Basic.dtd">
+
+<!-- Focus of this test: img element, attribute variations -->
+<!-- Focus of this test: img element, attribute variations -->
+<!-- Use of '"' in quoted string -->
+<smil xmlns="http://www.w3.org/TR/REC-smil/2000/SMIL20/Basic">
+   <head>
+      <!-- This is a "landscape" screen -->
+      <layout>
+         <root-layout width="352" height="144"/>
+         <region id="Image" width="176" height="144" left="0" top="0"/>
+         <region id="Text" width="176" height="144" left="176" top="0"/>
+      </layout>
+   </head>
+   <body>
+      <par dur="1000s">
+         <img id="Photo1" class="class1 class2" title="Ice cream factory, photo" xml:lang="en-GB" abstract="An exciting picture of an ice cream factory" alt="Ice cream factory: photo" author="J. Smith" copyright="Copyright (c) 1999-2000 Symbian Ltd.  All rights reserved." longdesc="http://www.example.org/IceCreamFactory.html" src="Photo" dur="1000s" repeatCount="1.0" repeatDur="1000s" begin="0s" end="1000s" min="1000s" max="1000s" fill="remove" systemBitrate="28800" systemCaptions="on" systemLanguage="en" systemOverdubOrSubtitle="overdub" systemRequired="aNamespacePrefix" systemScreenSize="640X480" systemScreenDepth="16" systemAudioDesc="on" systemOperatingSystem="symbianos" systemCPU="arm32" systemComponent="http://www.example.org/SomeCodec" region="Image"/>
+         <text src="FirstText.txt" region="Text"/>
+         <audio src="FirstSound.amr"/>
+      </par>
+      <par dur="7s">
+         <img src="SecondImage.jpg" region="Image"/>
+         <text src="SecondText.txt" region="Text"/>
+         <audio src="SecondSound.amr"/>
+      </par>
+      <par dur="4s">
+         <img src="ThirdImage.jpg" region="Image"/>
+         <text src="ThirdText.txt" region="Text"/>
+         <audio src="ThirdSound.amr"/>
+      </par>
+   </body>
+</smil>

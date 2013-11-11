@@ -1,0 +1,52 @@
+// Copyright (c) 2004-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// T_PARSE_UTCServer.mmp
+// Using relative paths for sourcepath and user includes
+// 
+//
+
+#if (defined WINS && !defined EKA2)
+TARGET      T_PARSE_UTCServer.dll
+TARGETTYPE  dll
+UID             0x1000008d 0x101F777C
+VENDORID 0x70000001
+#else
+TARGET       t_parse_utcserver.exe
+TARGETTYPE  exe
+UID             0x1000007A 0x101F777C
+VENDORID 0x70000001
+#endif
+
+CAPABILITY All -TCB
+
+SOURCEPATH  ../src
+SOURCE		T_PARSE_UTCServer.cpp
+SOURCE		T_PARSE_UTCStep.cpp	
+
+USERINCLUDE   ../inc ../../../../pop3andsmtpmtm/clientmtms/inc
+USERINCLUDE		../../../../pop3andsmtpmtm/servermtmutils/inc
+USERINCLUDE	../../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/email/inc
+USERINCLUDE	../../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/base/inc
+USERINCLUDE	../../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/server/inc
+USERINCLUDE	../../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/sms/inc
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+OS_LAYER_ESTLIB_SYSTEMINCLUDE  
+LIBRARY     euser.lib
+LIBRARY		testexecuteutils.lib
+LIBRARY		testexecutelogclient.lib
+LIBRARY		msgs.lib efsrv.lib etext.lib imcm.lib bafl.lib
+LIBRARY		emailtestutils.lib msvtestutils.lib imut.lib
+
+
+SMPSAFE

@@ -1,0 +1,356 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//
+PRINT Run all TestCalIndexFile Tests
+//
+RUN_UTILS MkDir C:\private\10003a5b\
+RUN_UTILS MkDir E:\private\
+RUN_UTILS MkDir E:\private\10003a5b\
+
+LOAD_SUITE TestCalIndexFileSuite
+//
+
+// 
+START_TESTCASE PIM-CT-PERFIDX-DEV-SC-0001
+//! @SYMTestCaseID		PIM-CT-PERFIDX-DEV-SC-0001
+//! @SYMTestCaseDesc 		Ensure that migration to the index version of the calendar is BC.
+//!				Ensure that index file is created correctly 
+//!
+//! @SYMFssID			<App-Engines><AgnModel>/AFM.1.2
+//! @SYMFssID			<App-Engines><AgnModel>/File.003
+//! @SYMFssID			<App-Engines><AgnModel>/File.004
+//! @SYMREQ			REQ6105
+//! @SYMREQ			REQ6106
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions		1. Ensure that the private data folder used by the calendar does not contain
+//!				   anindex file and copy a known calendar file to the folder.
+//!				2. Open the agenda model via the CalInterimApi methods.
+//!				3. Using a CalInterimApi view check that the entries from the known calendar 
+//!				   file are present.
+//!				4.Close the agenda model
+//!				5.Use the file system to see that index file is present. 
+//!				6.Open the agenda model again and check that all entries are still present.
+//!			
+//! @SYMTestExpectedResults	Assuming the calendar file to be named Calendar:
+//!				In step 5, a file call CalendarIdx will be present. 
+//!				In step 6, the entries retrieved will be the same as those retrieved in 
+//!				step 3 and will match the data know to be in the database.
+//! @SYMTestType 		CT
+
+
+// The following test steps open the agenda with a pre-indexing version of the calendar database
+// each with different content
+RUN_TEST_STEP 100 TestCalIndexFileSuite TestCalIndexFileOpenStep  \CalIndexFileTestData\opentest.ini test1 
+RUN_TEST_STEP 100 TestCalIndexFileSuite TestCalIndexFileOpenStep  \CalIndexFileTestData\opentest.ini test2 
+RUN_TEST_STEP 100 TestCalIndexFileSuite TestCalIndexFileOpenStep  \CalIndexFileTestData\opentest.ini test3 
+RUN_TEST_STEP 100 TestCalIndexFileSuite TestCalIndexFileOpenStep  \CalIndexFileTestData\opentest.ini test5 
+
+// The following test steps ensure that the agenda can be opened with the index files from the above steps.
+RUN_TEST_STEP 100 TestCalIndexFileSuite TestCalIndexFileOpenwithIndexStep  \CalIndexFileTestData\opentest.ini test1 
+RUN_TEST_STEP 100 TestCalIndexFileSuite TestCalIndexFileOpenwithIndexStep  \CalIndexFileTestData\opentest.ini test2 
+RUN_TEST_STEP 100 TestCalIndexFileSuite TestCalIndexFileOpenwithIndexStep  \CalIndexFileTestData\opentest.ini test3 
+RUN_TEST_STEP 100 TestCalIndexFileSuite TestCalIndexFileOpenwithIndexStep  \CalIndexFileTestData\opentest.ini test5 
+END_TESTCASE PIM-CT-PERFIDX-DEV-SC-0001
+
+
+START_TESTCASE PIM-CT-PERFIDX-DEV-0011
+//! @SYMTestCaseID		PIM-CT-PERFIDX-DEV-0011
+//! @SYMTestCaseDesc 		Ensure that the backward DC after PREQ2049 which changed the format of index file.
+//!				Ensure that index file is created correctly 
+//!
+//! @SYMFssID			<App-Engines><AgnModel>/AFM.1.2
+//! @SYMFssID			<App-Engines><AgnModel>/File.003
+//! @SYMFssID			<App-Engines><AgnModel>/File.004
+//! @SYMREQ			REQ6105
+//! @SYMREQ			REQ6106
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions		1. Ensure that the private data folder used by the calendar does not contain
+//!				   anindex file and copy a known calendar file to the folder.
+//!				2. Open the agenda model via the CalInterimApi methods.
+//!				3. Using a CalInterimApi view check that the entries from the known calendar 
+//!				   file are present.
+//!				4.Close the agenda model
+//!				5.Use the file system to see that index file is present. 
+//!				6.Open the agenda model again and check that all entries are still present.
+//!			
+//! @SYMTestExpectedResults	Assuming the calendar file to be named Calendar:
+//!				In step 5, a file call CalendarIdx will be present. 
+//!				In step 6, the entries retrieved will be the same as those retrieved in 
+//!				step 3 and will match the data know to be in the database.
+//! @SYMTestType 		CT
+
+// The following test step open the agenda with its index file created by Calendar after PREQ2049
+RUN_TEST_STEP 100 TestCalIndexFileSuite TestCalIndexFileOpenStep  \CalIndexFileTestData\opentest.ini test5 
+
+// The following test steps ensure that the agenda can be opened with the index files from the above steps.
+RUN_TEST_STEP 100 TestCalIndexFileSuite TestCalIndexFileOpenwithIndexStep  \CalIndexFileTestData\opentest.ini test5 
+END_TESTCASE PIM-CT-PERFIDX-DEV-0011
+
+
+START_TESTCASE PIM-CT-PERFIDX-DEV-0010
+// NOTE: This test case requires the presence of a removable drive, specifically E. This must be set up (a) for the H4 board by having an MMC
+//       card in the proper slot or (b) for WINSCW by having the following line in the epoc.ini "_EPOC_DRIVE_E \\epoc32\\winscw\\e" and having
+//       the mapped drive created.
+//       If this is NOT done, then the test will fail with -18 (KErrNotReady)
+//
+
+//! @SYMTestCaseID		PIM-CT-PERFIDX-DEV-0010
+//! @SYMTestCaseDesc 		Ensure that the index is built and used when the calendar file is stored on a removable medium (i.e. non C:\ drive)
+//!
+//! @SYMFssID			<App-Engines><AgnModel>/AFM.1.2
+//! @SYMFssID			<App-Engines><AgnModel>/File.003
+//! @SYMFssID			<App-Engines><AgnModel>/File.004
+//! @SYMREQ			REQ6105
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		Medium
+//! @SYMTestActions		1. Ensure that the private data folder used by the calendar does not contain
+//!				   anindex file and copy a known calendar file to the folder. The data folder
+//!				   should be on a removable drive,
+//!				2. Open the agenda model via the CalInterimApi methods.
+//!				3. Using a CalInterimApi view check that the entries from the known calendar 
+//!				   file are present.
+//!				4.Close the agenda model
+//!				5.Use the file system to see that index file is present. 
+//!				6.Open the agenda model again and check that all entries are still present.
+//!			
+//! @SYMTestExpectedResults	Assuming the calendar file to be named Calendar:
+//!				In step 5, a file call CalendarIdx will be present. 
+//!				In step 6, the entries retrieved will be the same as those retrieved in 
+//!				step 3 and will match the data know to be in the database.
+//! @SYMTestType 		CT
+
+RUN_TEST_STEP 100 TestCalIndexFileSuite TestCalIndexFileOpenStep  \CalIndexFileTestData\opentest.ini test4 
+END_TESTCASE PIM-CT-PERFIDX-DEV-0010
+
+
+
+START_TESTCASE PIM-CT-PERFIDX-DEV-0002
+//! @SYMTestCaseID		PIM-CT-PERFIDX-DEV-0002
+//! @SYMTestCaseDesc 		Ensure that a corrupt index file will be ignored and a proper index file 
+//!				built when the server shuts down
+//!
+//! @SYMFssID			<App-Engines><AgnModel>/AFM.1.2
+//! @SYMFssID			<App-Engines><AgnModel>/File.003
+//! @SYMFssID			<App-Engines><AgnModel>/File.004
+//! @SYMREQ			REQ6105
+//! @SYMREQ			REQ6106
+//! @SYMREQ			REQ6109
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions		1.Ensure that the private data folder used by the calendar contains a known calendar 
+//!				  and a corresponding index file that is a corrupted version of a valid index file.
+//!				2.Open the agenda model.
+//!				3.Check that the entries from the known calendar file are present.
+//!				4.Close the agenda model
+//!				5.Use the file system to see that index file is present. 
+//!				6.Open the agenda model again and check that all entries are still present.
+//!			
+//! @SYMTestExpectedResults	Assuming the calendar file to be named Calendar:
+//!				In step 5, a file call CalendarIdx will be present. 
+//!				In step 6, the entries retrieved will be the same as those retrieved in step 3 and 
+//!				will match the data know to be in the database.
+//! @SYMTestType 		CT
+
+// The three test cases use a corrupted index file for different versions of calendar database.
+RUN_TEST_STEP 100 TestCalIndexFileSuite TestCalIndexFileOpenwithIndexStep  \CalIndexFileTestData\corruptindex.ini test1 
+RUN_TEST_STEP 100 TestCalIndexFileSuite TestCalIndexFileOpenwithIndexStep  \CalIndexFileTestData\corruptindex.ini test2 
+RUN_TEST_STEP 100 TestCalIndexFileSuite TestCalIndexFileOpenwithIndexStep  \CalIndexFileTestData\corruptindex.ini test3 
+
+END_TESTCASE PIM-CT-PERFIDX-DEV-0002
+
+
+
+START_TESTCASE PIM-CT-PERFIDX-DEV-0003
+//! @SYMTestCaseID		PIM-CT-PERFIDX-DEV-0003
+//! @SYMTestCaseDesc 		Ensure that adding a calendar entry (an action which changes the internal indexing) results 
+//!				in the index file being deleted.
+//!				Ensure that the correct index file is created on shutdown so that the system still knows about the added entry.
+//!
+//! @SYMFssID			<App-Engines><AgnModel>/ME.1.1
+//! @SYMFssID			<App-Engines><AgnModel>/MEF.1.2
+//! @SYMREQ			REQ6105
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions		1.Ensure that the private data folder used by the calendar contains a known calendar 
+//!				  and a corresponding valid index file.
+//!				2.Open the agenda model.
+//!				3.Check that the entries from the known calendar file are present.
+//!				4.Add an entry
+//!				5.Use the file system to see that the index file is not present.
+//!				6.Close the agenda model
+//!				7.Use the file system to see that index file is present. 
+//!				8.Open the agenda model again and check that all entries including the one added in step 4 are still present
+//!			
+//! @SYMTestExpectedResults	Assuming the calendar file to be named Calendar:
+//!				In step 5, a file call CalendarIdx will not be present. 
+//!				In step 7, a file call CalendarIdx will be present. 
+//!				In step 8, the entries retrieved will be the same as those retrieved in step 3 and will match the 
+//!				data known to be in the database plus the additional entry added in step 4.
+//! @SYMTestType 		CT
+
+RUN_TEST_STEP 100 TestCalIndexFileSuite TestCalIndexFileAddEntryStep  \CalIndexFileTestData\crudentries.ini test1 
+END_TESTCASE PIM-CT-PERFIDX-DEV-0003
+
+
+START_TESTCASE PIM-CT-PERFIDX-DEV-0004
+//! @SYMTestCaseID		PIM-CT-PERFIDX-DEV-0004
+//! @SYMTestCaseDesc 		Ensure that deleting a calendar entry (an action which changes the internal indexing) results 
+//!				in the index file being deleted.
+//!				Ensure that the correct index file is created on shutdown so that the system no longer shows
+//!				the deleted entry
+//!
+//! @SYMFssID			<App-Engines><AgnModel>/MEF.1.4
+//! @SYMREQ			REQ6105
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions		1.Ensure that the private data folder used by the calendar contains a known calendar and a corresponding valid index file.
+//!				2.Open the agenda model.
+//!				3.Check that the entries from the known calendar file are present.
+//!				4.Delete an entry
+//!				5.Use the file system to see that the index file is not present.
+//!				6.Close the agenda model
+//!				7.Use the file system to see that index file is present. 
+//!				8.Open the agenda model again and check that all entries except the one deleted in step 4 are still present
+
+//!			
+//! @SYMTestExpectedResults	Assuming the calendar file to be named Calendar:
+//!				In step 5, a file call CalendarIdx will not be present. 
+//!				In step 7, a file call CalendarIdx will be present. 
+//!				In step 8, the entries retrieved will be the same as those retrieved in step 3 and will match the data know to be 
+//!				in the database minus the entry deleted in step 4.
+//! @SYMTestType 		CT
+
+RUN_TEST_STEP 100 TestCalIndexFileSuite TestCalIndexFileDeleteEntryStep   \CalIndexFileTestData\crudentries.ini test2 
+END_TESTCASE PIM-CT-PERFIDX-DEV-0004
+
+
+START_TESTCASE PIM-CT-PERFIDX-DEV-0005
+//! @SYMTestCaseID		PIM-CT-PERFIDX-DEV-0005
+//! @SYMTestCaseDesc 		Ensure that modifying a calendar entry (an action which changes the internal indexing) results in the 
+//!				index file being deleted.
+//!				Ensure that the correct index file is created on shutdown so that the system has the updated version of the entry.
+//!
+//! @SYMFssID			<App-Engines><AgnModel>/MEF.1.9
+//! @SYMREQ			REQ6105
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions		1.Ensure that the private data folder used by the calendar contains a known calendar and a corresponding valid index file.
+//!				2.Open the agenda model.
+//!				3.Check that the entries from the known calendar file are present.
+//!				4.Modify an entry
+//!				5.Use the file system to see that the index file is not present.
+//!				6.Close the agenda model
+//!				7.Use the file system to see that index file is present. 
+//!				8.Open the agenda model again and check that all entries are still present and that the modifications 
+//!				  made to the entry selected for step 4 are still present.
+
+//!			
+//! @SYMTestExpectedResults	Assuming the calendar file to be named Calendar:
+//!				In step 5, a file call CalendarIdx will not be present. 
+//!				In step 7, a file call CalendarIdx will be present. 
+//!				In step 8, the entries retrieved will be the same as those retrieved in step 3 with the exception of the entry 
+//!				chosen for modification which should still have the modified fields.
+//! @SYMTestType 		CT
+RUN_TEST_STEP 100 TestCalIndexFileSuite TestCalIndexFileModifyEntryStep   \CalIndexFileTestData\crudentries.ini test3 
+END_TESTCASE PIM-CT-PERFIDX-DEV-0005
+
+
+
+
+START_TESTCASE PIM-CT-PERFIDX-DEV-0006
+//! @SYMTestCaseID		PIM-CT-PERFIDX-DEV-0006
+//! @SYMTestCaseDesc 		Ensure that if all entries in a calendar database are deleted that the index file does not contain any entries
+//!
+//! @SYMFssID			<App-Engines><AgnModel>/MEF.1.4
+//! @SYMREQ			REQ6105
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		Medium
+//! @SYMTestActions		1.Ensure that the private data folder used by the calendar contains a known calendar and a corresponding valid index file.
+//!				2.Open the agenda model.
+//!				3.Check that the entries from the known calendar file are present.
+//!				4.Delete all entries
+//!				5.Use the file system to see that the index file has been deleted.
+//!				6.Close the agenda model
+//!				7.Use the file system to see that index file is present. (The calendar database may still be present but have no info.)
+//!				8.Open the agenda model
+//!				9.Check that it contains no entries
+//!			
+//! @SYMTestExpectedResults	Assuming the calendar file to be named Calendar:
+//!				In step 5, a file call CalendarIdx will not be present. 
+//!				In step 7, a file call CalendarIdx will be present, but will contain no information.
+//!				In step 9, there should be no entries that can be retrieved.
+//! @SYMTestType 		CT
+
+RUN_TEST_STEP 100 TestCalIndexFileSuite TestCalIndexFileDeleteAllStep    \CalIndexFileTestData\crudentries.ini test4  
+END_TESTCASE PIM-CT-PERFIDX-DEV-0006
+
+
+
+
+START_TESTCASE PIM-CT-PERFIDX-DEV-0008
+//! @SYMTestCaseID		PIM-CT-PERFIDX-DEV-0008
+//! @SYMTestCaseDesc 		Ensure that the first addition of an entry to a previously unused calendar database (i.e. the calendar 
+//!				file does not exist at the start of the test case)  causes both the calendar database and index file to be created.
+//!
+//! @SYMFssID			<App-Engines><AgnModel>/AFM.1.1
+//! @SYMFssID			<App-Engines><AgnModel>/AFM.1.2 
+//! @SYMFssID			<App-Engines><AgnModel>/ME.1.1
+//! @SYMFssID			<App-Engines><AgnModel>/MEF.1.2
+//! @SYMFssID			<App-Engines><AgnModel>/File.002
+//! @SYMFssID			<App-Engines><AgnModel>/File.003
+//! @SYMFssID			<App-Engines><AgnModel>/File.004
+//! @SYMREQ			REQ6105
+//! @SYMREQ			REQ6109
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions		1.Start an agenda session using a calendar file name know to not be on the system
+//!				2.Add an entry to the database
+//!				3.Close the agenda session
+//!				4.Use the file system to look for the calendar file and its associated index.
+//!			
+//! @SYMTestExpectedResults	Assuming the calendar file to be named Calendar:
+//!				In step 4, a file call CalendarIdx will  be present. 
+//!				In step 4, a file call Calendar will be present.
+//! @SYMTestType 		CT
+
+RUN_TEST_STEP 100 TestCalIndexFileSuite TestCalIndexFileCreateDbStep	\CalIndexFileTestData\crudentries.ini test5 
+END_TESTCASE PIM-CT-PERFIDX-DEV-0008
+
+
+
+
+
+START_TESTCASE PIM-CT-PERFIDX-DEV-0009
+//! @SYMTestCaseID		PIM-CT-PERFIDX-DEV-0009
+//! @SYMTestCaseDesc 		Ensure that when a calendar database is deleted the associated index file is deleted.
+//!
+//! @SYMFssID			<App-Engines><AgnModel>/File.005
+//! @SYMREQ			REQ6105
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions		1.Use CalInterimApi to delete a known calendar database file.
+//!				2.Check the contents of the directory where the calendar file was
+//! @SYMTestExpectedResults	In step 2, neither the calendar file nor its associated index file are in the directory
+//! @SYMTestType 		CT
+
+RUN_TEST_STEP 100 TestCalIndexFileSuite TestCalIndexFileDeleteDbStep  \CalIndexFileTestData\crudentries.ini test6
+END_TESTCASE PIM-CT-PERFIDX-DEV-0009
+
+
+
+PRINT Completed TestCalIndexFile Tests

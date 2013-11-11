@@ -1,0 +1,44 @@
+/*
+ * Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+ * All rights reserved.
+ * This component and the accompanying materials are made available
+ * under the terms of "Eclipse Public License v1.0"
+ * which accompanies this distribution, and is available
+ * at the URL "http://www.eclipse.org/legal/epl-v10.html".
+ *
+ * Initial Contributors:
+ * Nokia Corporation - initial contribution.
+ *
+ * Contributors: 
+ *
+ * Description:
+ * The iby file for Notes component
+ *
+ */
+
+#ifndef NOTES_IBY
+#define NOTES_IBY
+
+S60_APP_EXE(notes)
+
+data=DATAZ_\private\10003a3f\import\apps\notes_reg.rsc		\private\10003a3f\import\apps\notes_reg.rsc
+data=\epoc32\data\z\resource\qt\plugins\notes\noteseditorplugin.qtplugin             resource\qt\plugins\notes\noteseditorplugin.qtplugin
+
+// Stub sis
+data=DATAZ_\system\install\notes_stub.sis             \System\Install\notes_stub.sis
+
+// Splashml
+data=ZRESOURCE\hb\splashml\notesapplication.splashml  		RESOURCE_FILES_DIR\hb\splashml\notesapplication.splashml
+data=ZRESOURCE\hb\splashml\notesapplication.docml  			RESOURCE_FILES_DIR\hb\splashml\notesapplication.docml
+
+file=ABI_DIR\BUILD_DIR\notesmodel.dll						SHARED_LIB_DIR\notesmodel.dll
+file=ABI_DIR\BUILD_DIR\noteseditor.dll						SHARED_LIB_DIR\noteseditor.dll
+file=ABI_DIR\BUILD_DIR\notesviews.dll						SHARED_LIB_DIR\notesviews.dll
+file=ABI_DIR\BUILD_DIR\notesviewmanager.dll					SHARED_LIB_DIR\notesviewmanager.dll
+file=ABI_DIR\BUILD_DIR\notesappcontroller.dll				SHARED_LIB_DIR\notesappcontroller.dll
+file=ABI_DIR\BUILD_DIR\notesmodelhandler.dll				SHARED_LIB_DIR\notesmodelhandler.dll
+file=ABI_DIR\BUILD_DIR\noteseditorplugin.dll				SHARED_LIB_DIR\noteseditorplugin.dll
+
+#endif // NOTES_IBY
+
+// End of file	--Don't remove this.

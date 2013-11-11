@@ -1,0 +1,27 @@
+AgendaEventViewerItem::primaryTextItem{
+    color: var(qtc_list_item_content_normal);
+}
+
+AgendaEventViewerItem::primaryTextItem[state="pressed"]{
+    color: var(qtc_list_item_pressed);
+}
+
+AgendaEventViewerItem::primaryTextItem[state="disabled"]{
+    color: var(qtc_list_item_disabled);
+}
+
+AgendaEventViewerItem::secondaryTextItem{
+    color: var(qtc_list_item_content_normal);
+}
+
+AgendaEventViewerItem::secondaryTextItem[state="pressed"]{
+    color: var(qtc_list_item_pressed);
+}
+
+AgendaEventViewerItem::secondaryTextItem[state="disabled"]{
+    color: var(qtc_list_item_disabled);
+}
+
+AgendaEventViewerItem::primaryRightIconItem{
+    color: var(qtc_list_item_content_normal);
+}

@@ -1,0 +1,48 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  RRFS (Restore Factory Settings) Plugin resource file
+*
+*/
+
+NAME EAXP
+
+#include <RegistryInfo.rh>
+#include "emailstoreuids.hrh"
+
+RESOURCE REGISTRY_INFO theInfo
+    {
+    // UID for the DLL 
+    dll_uid = KRfsMsgStorePluginDllUid;
+    // Declare array of interface info
+    interfaces = 
+        {
+        INTERFACE_INFO
+            {
+            // UID of interface that is implemented
+            interface_uid = 0x102073BB;            
+            implementations = 
+                {
+                // Info for RFSPlugin
+                IMPLEMENTATION_INFO
+                    {
+                    implementation_uid = KRfsMsgStorePluginImpUid;
+                    version_no         = KRfsMsgStoreVersionNumber;
+                    display_name       = "RFS Message Store Plugin";
+                    default_data       = "NDI"; // N = Normal RFS, D = Deep RFS, I = Init RFS (FirstBoot RFS)
+                    opaque_data        = "";
+                    }
+                };
+            }
+        };
+    }

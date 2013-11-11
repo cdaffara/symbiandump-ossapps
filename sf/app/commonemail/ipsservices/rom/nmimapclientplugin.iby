@@ -1,0 +1,29 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+#ifndef NMIMAPCLIENTPLUGIN_IBY__
+#define NMIMAPCLIENTPLUGIN_IBY__
+
+#include <bldvariant.hrh>
+
+#ifdef FF_EMAIL_FRAMEWORK
+
+file=ABI_DIR\BUILD_DIR\nmimapclientplugin.dll		SHARED_LIB_DIR\nmimapclientplugin.dll     PAGED
+data=\epoc32\data\z\resource\qt\plugins\nmail\uiext\nmimapclientplugin.qtplugin		resource\qt\plugins\nmail\uiext\nmimapclientplugin.qtplugin
+
+#endif //FF_EMAIL_FRAMEWORK
+
+#endif 

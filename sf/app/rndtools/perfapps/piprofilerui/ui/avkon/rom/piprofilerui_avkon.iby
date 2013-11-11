@@ -1,0 +1,33 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   
+*
+*/
+
+
+
+#ifndef __PROFILERGUI_IBY__
+#define __PROFILERGUI_IBY__
+
+S60_APP_EXE(PIProfilerUI)
+S60_APP_AIF_ICONS(PIProfilerUI)
+S60_APP_RESOURCE(PIProfilerUI)
+SCALABLE_IMAGE(APP_BITMAP_DIR, APP_BITMAP_DIR, PIProfilerui_ExtraIcons)
+#ifdef S60_UPGRADABLE_APP_REG_RSC
+  S60_UPGRADABLE_APP_REG_RSC(PIProfilerUI)
+#else
+  S60_APP_AIF_RSC(PIProfilerUI)
+#endif
+
+#endif // __PROFILERGUI_IBY__

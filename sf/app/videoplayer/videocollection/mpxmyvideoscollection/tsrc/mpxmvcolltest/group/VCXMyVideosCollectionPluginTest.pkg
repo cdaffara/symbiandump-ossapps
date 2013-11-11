@@ -1,0 +1,73 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of the License "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:  Package file for My videos mpx collection plugin STIF tests;
+
+; Languages
+&EN
+
+; Provide value for uid
+#{"VCXMyVideosCollectionPluginTest"},(0x101FB3E3),1,0,0,TYPE=SA, RU
+
+; Localised Vendor name
+%{"Nokia"}
+
+; Unique Vendor name
+:"Nokia"
+[0x101F7961],0,0,0,{"S60ProductID"}
+[0x102032BE],0,0,0,{"S60ProductID"}
+[0x102752AE],0,0,0,{"S60ProductID"}
+[0x1028315F],0,0,0,{"S60ProductID"}
+
+; Logo
+; None
+
+; Package signature - Optional
+; None
+
+; Start of Package body
+
+; Condition blocks
+; None
+
+; Options list
+; None
+
+; Install files
+"/epoc32/release/armv5/urel/VCXMyVideosCollectionPluginTest.dll"   - "!:/Sys/Bin/VCXMyVideosCollectionPluginTest.dll"
+
+"../conf/VCXMyVideosCollectionPluginTest.cfg"                      - "C:/TestFramework/VCXMyVideosCollectionPluginTest.cfg"
+"../conf/VCXMyVideosCollectionPluginTestCategories.cfg"            - "C:/TestFramework/VCXMyVideosCollectionPluginTestCategories.cfg"
+"../conf/VCXMyVideosCollectionPluginTestAlbums.cfg"                - "C:/TestFramework/VCXMyVideosCollectionPluginTestAlbums.cfg"
+
+"../conf/vcxmvcollectionplugintest.inc"                            - "C:/TestFramework/vcxmvcollectionplugintest.inc"
+"../conf/VCXDrives.inc"                                            - "C:/TestFramework/VCXDrives.inc"
+"../conf/VCXErrors.inc"                                            - "C:/TestFramework/VCXErrors.inc"
+
+; The testframework.ini files won't install with sis, only for ATS test runs.
+"../init/TestFramework.ini"                                    -  "C:/TestFramework/TestFramework.ini"
+
+"../Data/MMC/video_3gp.3gp"                                     -  "c:/testing/data/video_3gp.xxx"
+"../Data/MMC/video_wmv.dat"                                     -  "c:/testing/data/video_wmv.xxx"
+"../Data/MMC/video_mpeg4.mp4"                                   -  "c:/testing/data/video_mpeg4.xxx"
+
+; Embedded SIS
+; None
+
+; End of Package body
+
+; PKG dependencies
+; None
+
+; PKG capabilities
+; None

@@ -1,0 +1,55 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+REM
+REM T_SMCM.IBY
+REM
+
+REM data
+
+data=EPOCROOT##epoc32\wins\C\sms\SimParameter.script	System\MsgTest\sms\SimParameter.script
+data=EPOCROOT##epoc32\wins\C\sms\smssc_config.txt		System\MsgTest\sms\smssc_config.txt
+
+
+data=EPOCROOT##epoc32\wins\C\msgtest\sms\sms.script					System\MsgTest\msgtest\sms\sms.script
+data=EPOCROOT##epoc32\wins\C\msgtest\sms\smsenum.script					System\MsgTest\msgtest\sms\smsenum.script
+data=EPOCROOT##epoc32\wins\C\msgtest\sms\wap.script				System\MsgTest\msgtest\sms\wap.script
+data=EPOCROOT##epoc32\wins\C\msgtest\sms\nbs.script				System\MsgTest\msgtest\sms\nbs.script
+data=EPOCROOT##epoc32\wins\C\msgtest\sms\biofication.script		System\MsgTest\msgtest\sms\biofication.script
+data=EPOCROOT##epoc32\wins\C\msgtest\sms\smcmsimtsytest_config.txt	System\MsgTest\msgtest\sms\smcmsimtsytest_config.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\sms\sendrecv.script			System\MsgTest\msgtest\sms\sendrecv.script
+data=EPOCROOT##epoc32\wins\C\msgtest\sms\Nokia8210.txt				System\MsgTest\msgtest\sms\Nokia8210.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\sms\EricssonT300.txt			System\MsgTest\msgtest\sms\EricssonT300.txt
+data=EPOCROOT##epoc32\wins\C\msgtest\sms\logo1.olp					System\MsgTest\msgtest\sms\logo1.olp
+data=EPOCROOT##epoc32\wins\C\msgtest\sms\tone1.rtp					System\MsgTest\msgtest\sms\tone1.rtp
+data=EPOCROOT##epoc32\wins\C\msgtest\sms\tone2.rtp					System\MsgTest\msgtest\sms\tone2.rtp
+data=EPOCROOT##epoc32\wins\C\msgtest\sms\tone3.rtp					System\MsgTest\msgtest\sms\tone3.rtp
+data=EPOCROOT##epoc32\wins\C\msgtest\sms\t_smssendrecv.html		System\MsgTest\msgtest\sms\t_smssendrecv.html
+
+
+data=EPOCROOT##epoc32\wins\C\ems\anims.mbm		System\MsgTest\ems\anims.mbm
+data=EPOCROOT##epoc32\wins\C\ems\pics.mbm		System\MsgTest\ems\pics.mbm
+
+
+REM harnesses
+file=ABI_DIR\BUILD_DIR\T_SMCM1.exe				System\MsgTest\T_SMCM1.exe
+file=ABI_DIR\BUILD_DIR\T_SMCM2.exe				System\MsgTest\T_SMCM2.exe
+file=ABI_DIR\BUILD_DIR\T_SMCMFAIL.exe  			System\MsgTest\T_SMCMFAIL.exe
+file=ABI_DIR\BUILD_DIR\T_SMSCANCEL.exe			System\MsgTest\T_SMSCANCEL.exe
+file=ABI_DIR\BUILD_DIR\T_SMSSENDRECV.exe   		System\MsgTest\T_SMSSENDRECV.exe
+file=ABI_DIR\BUILD_DIR\T_SMSBIOFICATION.exe	 	System\MsgTest\T_SMSBIOFICATION.exe
+

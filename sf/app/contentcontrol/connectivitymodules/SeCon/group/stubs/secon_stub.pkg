@@ -1,0 +1,38 @@
+;
+; Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description: Sis-stub file for Service Controllers
+;
+; Languages
+&EN
+
+; Header
+#{"Service Controllers"},(0x101F99F6),1,73,0, TYPE=SA
+
+; Localised Vendor name
+%{"Nokia"}
+
+; Unique Vendor name
+:"Nokia"
+
+; Files to install
+""-"z:\sys\bin\sconpcconnserver.exe"
+""-"z:\sys\bin\sconpcconnclient.dll"
+""-"z:\sys\bin\sconpcd.dll"
+""-"z:\resource\sconftp.r??"
+""-"z:\sys\bin\sconftp.dll"
+""-"z:\sys\bin\sconcsc.dll"
+""-"z:\sys\bin\sconconmlhandler.dll"
+""-"z:\sys\bin\catalogspcconnectivityplugin.dll"
+""-"z:\sys\bin\cntparserserver.dll"
+""-"z:\sys\bin\cntparserserverexe.exe"

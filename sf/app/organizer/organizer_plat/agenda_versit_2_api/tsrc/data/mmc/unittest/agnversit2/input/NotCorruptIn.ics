@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+X-SLIGHTLYSHORT-VALUE:This value is just exactly the maximum allowed length
+X-A-LONG-PROPERTY-VALUE:This value is too long, but is possible to parse to handle outlook oddities
+X-ZERO-LENGTH-LINE-CONTINUE:This value is the right length but is continued
+ 
+X-AWEIRDVALUE:This value has lots of whitespace on the end                   
+                                                 
+X-NO-VALUE
+X-ANEMPTYVALUE:
+X-LOTSOFCOLONS::::test
+X-AVERYLONGPARAMETER;param=This parameter has such a long value that it has 
+ been split over multiple lines:value
+X-ANEMPTYPARAMETER;param=:value
+X-AMISSINGEQUALS;param:value
+X-LOTSOFSEMICOLONS;;;;param=value;;:value
+X-PARAMSWITHNOVALUE;param=value:
+X-ESCAPECHARCROSSINGLINE1:This value is divided between two lines at the p\
+ ,oint at which an escaped character is inserted
+X-ESCAPECHARCROSSINGLINE2:This value is divided between two lines just af\,
+ er the point at which an escaped character is inserted
+X-ESCAPECHARCROSSINGLINE3:This value is divided between two lines just befo
+ \,re the point at which an escaped character is inserted
+END:VCALENDAR

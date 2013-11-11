@@ -1,0 +1,70 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   *
+*/
+
+
+
+
+#include   <bldvariant.hrh>
+#include   <data_caging_paths.hrh>
+#include   <platform_paths.hrh>   //APP_LAYER_SYSTEMINCLUDE
+
+#include   "../../../../../glxbuildcommon.mmh"
+
+TARGET          glxtagcollectionplugin.dll
+TARGETTYPE      PLUGIN
+UID  			0x10009D8D  0x2000A764	
+
+CAPABILITY      CAP_ECOM_PLUGIN
+
+SOURCEPATH      ../src
+SOURCE          glxtagcollectionplugin.cpp
+SOURCE          glxtagcollectionpluginproxy.cpp
+
+
+SOURCEPATH		../../Common/Src
+USERINCLUDE		../../../commonutilities/common/inc
+SOURCE			glxcollectionplugintestbase.cpp
+SOURCE			glxasyncnotifier.cpp
+
+
+
+SOURCEPATH      ../data
+START RESOURCE  2000A764.rss
+TARGET          glxtagcollectionplugin.rsc 
+END
+
+USERINCLUDE     ../inc
+
+       
+SYSTEMINCLUDE   ../../../../../../inc
+SYSTEMINCLUDE   ../../../../thumbnailcreator/inc
+
+APP_LAYER_SYSTEMINCLUDE
+
+SYSTEMINCLUDE   /epoc32/include/ecom
+
+LIBRARY         euser.lib
+LIBRARY         ecom.lib
+LIBRARY         efsrv.lib
+LIBRARY         estor.lib
+LIBRARY         mpxcommon.lib
+LIBRARY         fbscli.lib 
+
+
+LIBRARY         glxthumbnailcreator.lib
+
+SMPSAFE
+// End of File

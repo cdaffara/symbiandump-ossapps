@@ -1,0 +1,26 @@
+EXPORTS
+	?processMessages@QEmailFetcher@@QAEXH@Z @ 1 NONAME ; void QEmailFetcher::processMessages(int)
+	?tr@QEmailFetcher@@SA?AVQString@@PBD0@Z @ 2 NONAME ; class QString QEmailFetcher::tr(char const *, char const *)
+	?StartHarvesting@QEmailFetcher@@QAEXXZ @ 3 NONAME ; void QEmailFetcher::StartHarvesting(void)
+	?initialize@QEmailFetcher@@AAEXXZ @ 4 NONAME ; void QEmailFetcher::initialize(void)
+	?getStaticMetaObject@QEmailFetcher@@SAABUQMetaObject@@XZ @ 5 NONAME ; struct QMetaObject const & QEmailFetcher::getStaticMetaObject(void)
+	??1QEmailFetcher@@UAE@XZ @ 6 NONAME ; QEmailFetcher::~QEmailFetcher(void)
+	?getSearchDocumentL@QEmailFetcher@@AAEPAVCSearchDocument@@ABVNmApiMessageEnvelope@EmailClientApi@@_K1@Z @ 7 NONAME ; class CSearchDocument * QEmailFetcher::getSearchDocumentL(class EmailClientApi::NmApiMessageEnvelope const &, unsigned long long, unsigned long long)
+	?processNextMailbox@QEmailFetcher@@AAEXXZ @ 8 NONAME ; void QEmailFetcher::processNextMailbox(void)
+	?trUtf8@QEmailFetcher@@SA?AVQString@@PBD0H@Z @ 9 NONAME ; class QString QEmailFetcher::trUtf8(char const *, char const *, int)
+	??_EQEmailFetcher@@UAE@I@Z @ 10 NONAME ; QEmailFetcher::~QEmailFetcher(unsigned int)
+	?NotifyHarvestingComplete@QEmailFetcher@@AAEXXZ @ 11 NONAME ; void QEmailFetcher::NotifyHarvestingComplete(void)
+	?handleMessageEvent@QEmailFetcher@@QAEXW4NmApiMessageEvent@EmailClientApi@@_K1V?$QList@_K@@@Z @ 12 NONAME ; void QEmailFetcher::handleMessageEvent(enum EmailClientApi::NmApiMessageEvent, unsigned long long, unsigned long long, class QList<unsigned long long>)
+	?trUtf8@QEmailFetcher@@SA?AVQString@@PBD0@Z @ 13 NONAME ; class QString QEmailFetcher::trUtf8(char const *, char const *)
+	?qt_metacall@QEmailFetcher@@UAEHW4Call@QMetaObject@@HPAPAX@Z @ 14 NONAME ; int QEmailFetcher::qt_metacall(enum QMetaObject::Call, int, void * *)
+	?tr@QEmailFetcher@@SA?AVQString@@PBD0H@Z @ 15 NONAME ; class QString QEmailFetcher::tr(char const *, char const *, int)
+	?staticMetaObject@QEmailFetcher@@2UQMetaObject@@B @ 16 NONAME ; struct QMetaObject const QEmailFetcher::staticMetaObject
+	?handleMailboxesListed@QEmailFetcher@@QAEXH@Z @ 17 NONAME ; void QEmailFetcher::handleMailboxesListed(int)
+	?emailServiceIntialized@QEmailFetcher@@QAEX_N@Z @ 18 NONAME ; void QEmailFetcher::emailServiceIntialized(bool)
+	?processNextFolder@QEmailFetcher@@AAEXXZ @ 19 NONAME ; void QEmailFetcher::processNextFolder(void)
+	?qt_metacast@QEmailFetcher@@UAEPAXPBD@Z @ 20 NONAME ; void * QEmailFetcher::qt_metacast(char const *)
+	?newInstance@QEmailFetcher@@SAPAV1@AAVMEmailItemObserver@@@Z @ 21 NONAME ; class QEmailFetcher * QEmailFetcher::newInstance(class MEmailItemObserver &)
+	?handleMailFoldersListed@QEmailFetcher@@QAEXH@Z @ 22 NONAME ; void QEmailFetcher::handleMailFoldersListed(int)
+	?metaObject@QEmailFetcher@@UBEPBUQMetaObject@@XZ @ 23 NONAME ; struct QMetaObject const * QEmailFetcher::metaObject(void) const
+	??0QEmailFetcher@@AAE@AAVMEmailItemObserver@@@Z @ 24 NONAME ; QEmailFetcher::QEmailFetcher(class MEmailItemObserver &)
+

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="1.1">
+    <object name="add_to_homescreen" type="HbAction">
+        <string locid="txt_applib_button_add_to_homescreen" name="text"/>
+    </object>
+    <object name="close" type="HbAction">
+        <string locid="txt_common_button_close" name="text"/>
+    </object>
+    <widget name="preview_dialog" type="HbDialog">
+        <enums name="dismissPolicy" value="NoDismiss"/>
+        <widget name="label" role="HbDialog:headingWidget" type="HbLabel"/>
+        <widget name="container" role="HbDialog:contentWidget" type="HbWidget">
+            <widget name="icon_box" type="HbLabel">
+                <enums name="alignment" value="AlignAbsolute|AlignVCenter|AlignHCenter"/>
+                <enums name="aspectRatioMode" value="KeepAspectRatio"/>
+                <sizehint height="var(hb-param-text-height-secondary)" type="MINIMUM"/>
+                <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+                <string locid="txt_applib_info_no_preview_available" name="plainText"/>
+                <fontspec name="fontSpec" role="Secondary" textheight="var(hb-param-text-height-secondary)"/>
+            </widget>
+            
+            <real name="z" value="0"/>
+           <layout type="anchor">
+                <anchoritem dst="icon_box" dstEdge="LEFT" src="" spacing="0.0un" srcEdge="LEFT"/>
+                <anchoritem dst="icon_box" dstEdge="TOP" src="" spacing="0.0un" srcEdge="TOP"/>
+                <anchoritem dst="icon_box" dstEdge="RIGHT" src="" spacing="0.0un" srcEdge="RIGHT"/>
+                <anchoritem dst="icon_box" dstEdge="BOTTOM" src="" spacing="0.0un" srcEdge="BOTTOM"/>
+            </layout>
+        </widget>
+        <ref object="add_to_homescreen" role="HbWidget:addAction"/>
+        <ref object="close" role="HbWidget:addAction"/>
+    </widget>
+    <metadata activeUIState="Common ui state" display="NHD-3.2-inch_portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+    </metadata>
+</hbdocument>

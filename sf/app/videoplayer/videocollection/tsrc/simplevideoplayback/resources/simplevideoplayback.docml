@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="1.1">
+    <widget name="view" type="SvpbView">
+        <widget name="transparentWindow" type="HbTransparentWindow">
+            <real name="z" value="1"/>
+            <sizepolicy horizontalPolicy="Ignored" horizontalStretch="0" verticalPolicy="Ignored" verticalStretch="0"/>
+            <layout type="anchor"/>
+        </widget>
+        <layout type="anchor">
+            <anchoritem dst="transparentWindow" dstEdge="TOP" spacing="0un" src="" srcEdge="TOP"/>
+            <anchoritem dst="transparentWindow" dstEdge="BOTTOM" spacing="0un" src="" srcEdge="BOTTOM"/>
+            <anchoritem dst="transparentWindow" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+            <anchoritem dst="transparentWindow" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+        </layout>
+    </widget>
+    <metadata activeUIState="Common ui state" display="NHD-3.2-inch_portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+    </metadata>
+</hbdocument>

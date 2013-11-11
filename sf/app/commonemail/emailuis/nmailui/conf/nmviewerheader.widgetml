@@ -1,0 +1,19 @@
+<hbwidget version="0.1" type="NmViewerHeader">
+    <layout name="customheader" type="mesh">   
+      <meshitem src="headergroupbox" srcEdge="TOP" dst="" dstEdge="TOP" spacing="0un"/>
+      <meshitem src="headergroupbox" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="0un"/>
+      <meshitem src="headergroupbox" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="0un"/> 
+      <meshitem src="headergroupbox" srcEdge="BOTTOM" dst="sent" dstEdge="TOP" spacing="var(hb-param-margin-gene-top)"/> 
+                 
+      <meshitem src="sent" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="-var(hb-param-margin-gene-left)"/>
+      <meshitem src="sent" srcEdge="RIGHT" dst="prioicon" dstEdge="LEFT" spacing="1un"/>
+      
+      <meshitem src="subject" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="-var(hb-param-margin-gene-left)"/>
+      <meshitem src="subject" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)"/> 
+      <meshitem src="subject" srcEdge="TOP" dst="sent" dstEdge="BOTTOM" spacing="-var(hb-param-margin-gene-middle-vertical)"/>
+      <meshitem src="subject" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacing="var(hb-param-margin-gene-bottom)"/>
+      
+      <meshitem src="prioicon" srcEdge="CENTERV" dst="sent" dstEdge="CENTERV"/>      
+      <meshitem src="prioicon" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)"/> 
+  </layout>
+</hbwidget>

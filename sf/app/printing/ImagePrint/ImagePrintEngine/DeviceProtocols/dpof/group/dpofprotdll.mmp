@@ -1,0 +1,86 @@
+/*
+* Copyright (c) 2004-2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*
+*/
+
+
+#include <platform_paths.hrh>
+#include <bldvariant.hrh>
+#include <data_caging_paths.hrh>
+
+#include "../../../inc/logdef.h"
+
+deffile dpofprotdll.def
+
+TARGET		dpofprotdll.dll
+TARGETTYPE	PLUGIN
+CAPABILITY 	CAP_ECOM_PLUGIN
+
+UID			0x10009D8D 0x01007781
+
+APP_LAYER_SYSTEMINCLUDE
+
+USERINCLUDE		. ../inc ../src
+USERINCLUDE		../../../ImagePrintLibrary/inc
+USERINCLUDE     ../../../ImagePrintServer/inc
+USERINCLUDE     ../../../inc
+USERINCLUDE     ../../../../inc
+USERINCLUDE		../../../../clog/inc
+
+SOURCEPATH		../src
+
+SOURCE		cdpofprintingdevice.cpp
+SOURCE		crsdpofengine.cpp
+SOURCE		rsutils.cpp
+SOURCE		cprintjob.cpp
+SOURCE		cprinterelement.cpp
+SOURCE		ccapabilityinfo.cpp
+SOURCE		ccapabilityarray.cpp
+SOURCE		cprintercapabilities.cpp
+SOURCE		main.cpp
+SOURCE		cfilemanager.cpp
+SOURCE		cconfirmationquery.cpp
+
+START RESOURCE ../data/01007781.rss 
+TARGET dpofprotdll.rsc  
+END
+
+START RESOURCE ../data/dpof.rss
+#ifdef __S60_50__
+	LANGUAGE_IDS
+#else
+	LANG SC
+#endif
+HEADER
+TARGETPATH      resource/imageprintdata/protocols
+END
+
+STATICLIBRARY   clog.lib
+DEBUGLIBRARY	flogger.lib
+
+LIBRARY			euser.lib
+LIBRARY			fbscli.lib
+LIBRARY 		estor.lib
+LIBRARY 		bafl.lib
+LIBRARY     	ecom.lib
+LIBRARY 		efsrv.lib
+LIBRARY			platformenv.lib
+LIBRARY			sysutil.lib
+LIBRARY     	commonengine.lib
+LIBRARY     	aknnotify.lib
+LIBRARY     	eiksrv.lib  
+
+// End of File
+

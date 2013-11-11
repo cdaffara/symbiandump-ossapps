@@ -1,0 +1,43 @@
+/*
+* Copyright (c) 2008 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*	 This file provides the information required for building the
+*        email store.
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+../inc/emailstorepskeys.h              |../../../inc/emailstorepskeys.h
+../inc/EmailStoreUids.hrh              |../../../inc/EmailStoreUids.hrh
+../rom/emailstore.iby                  CORE_APP_LAYER_IBY_EXPORT_PATH(emailstore.iby)
+../sis/emailstore_stub.sis             /epoc32/data/z/system/install/emailstore_stub.sis
+
+PRJ_MMPFILES
+
+/*---------------------------------------*/
+/* Build the Message Store components    */
+/*---------------------------------------*/
+// No crypto code used by the messagestore.
+// #include "../cryptoapi/bld.inf"
+#include "../message_store/group/bld.inf"
+#include "../base_plugin/group/bld.inf"
+#include "../preinstall/group/bld.inf"
+
+PRJ_TESTMMPFILES

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="1.0">
+    <object name="logs_act_voice_call" type="HbAction">
+        <string locid="txt_common_opt_voice_call" name="text" value="Voice call"/>
+    </object>
+    <object name="logs_act_video_call" type="HbAction">
+        <string locid="txt_common_opt_video_call" name="text" value="Video call"/>
+    </object>
+    <object name="logs_act_internet_call" type="HbAction">
+        <string locid="txt_common_opt_internet_call" name="text" value="Internet call"/>
+    </object>
+    <object name="logs_act_create_message" type="HbAction">
+        <string locid="txt_common_opt_send_message" name="text" value="Create message"/>
+    </object>
+    <object name="logs_act_add_to_contacts" type="HbAction">
+        <string locid="txt_common_opt_add_to_contacts" name="text" value="Add to contacts"/>
+    </object>
+    <object name="logs_act_open_contact" type="HbAction">
+        <string locid="txt_dialer_ui_opt_open_contact" name="text" value="Open contact"/>
+    </object>   
+    <object name="logs_act_copy_number" type="HbAction">
+        <string locid="txt_dialer_opt_copy_number" name="text" value="Copy number"/>
+    </object>
+    <object name="logs_act_delete_event" type="HbAction">
+        <string locid="txt_common_opt_delete" name="text" value="Delete event"/>
+    </object>
+    <object name="logs_act_dialer" type="HbAction">
+        <icon iconName="qtg_mono_dialer" name="icon"/>
+        <string name="toolTip" value="Dialer"/>
+    </object>
+    <object name="logs_act_contacts" type="HbAction">
+        <icon iconName="qtg_mono_contacts" name="icon"/>
+        <string name="toolTip" value="Contacts"/>
+    </object>
+    <object name="logs_act_show" type="HbAction">
+        <icon iconName="qtg_mono_show_view" name="icon"/>
+        <string name="toolTip" value="Show"/>
+    </object>
+    <object name="logs_act_recent" type="HbAction">
+        <string locid="txt_dialer_ui_list_recent" name="text" value="Recent calls"/>
+    </object>
+    <object name="logs_act_received" type="HbAction">
+        <string locid="txt_dialer_ui_list_received" name="text" value="Received calls"/>
+    </object>
+    <object name="logs_act_dialled" type="HbAction">
+        <string locid="txt_dialer_ui_list_dialled" name="text" value="Dialled calls"/>
+    </object>
+    <object name="logs_act_missed" type="HbAction">
+        <string locid="txt_dialer_ui_list_missed" name="text" value="Missed calls"/>
+    </object>
+    <widget name="logs_details_view" type="HbView">
+        <widget name="logs_content" role="HbView:widget" type="HbWidget">
+            <widget name="container" type="HbWidget">
+                <widget name="logs_groupbox_remote_party_info" type="HbGroupBox">
+                    <bool name="collapsable" value="FALSE"/>
+                    <string name="heading"/>
+                </widget>
+                <widget name="logs_details_list_view" type="HbListView">
+                    <widget name="listItemPrototype" role="HbAbstractView:prototype" type="HbListViewItem"/>
+                </widget>
+                <real name="z" value="1"/>
+                <layout orientation="Vertical" type="linear">
+                    <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+                    <linearitem itemname="logs_groupbox_remote_party_info"/>
+                    <linearitem itemname="logs_details_list_view"/>
+                </layout>
+            </widget>		
+            <contentsmargins bottom="expr(var(hb-param-margin-view-bottom))" left="expr(var(hb-param-margin-view-left))" right="expr(var(hb-param-margin-view-right))" top="expr(var(hb-param-margin-view-top))"/>
+            <layout type="anchor">
+                <anchoritem dst="container" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="container" dstEdge="TOP" spacing="0un" src="" srcEdge="TOP"/>
+                <anchoritem dst="container" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="container" dstEdge="BOTTOM" spacing="0un" src="" srcEdge="BOTTOM"/>
+            </layout>
+        </widget>
+        <widget name="logs_toolbar" role="HbView:toolBar" type="HbToolBar">
+            <enums name="orientation" value="Horizontal"/>
+            <ref object="logs_act_contacts" role="HbToolBar:addAction"/>
+            <ref object="logs_act_dialer" role="HbToolBar:addAction"/>
+            <ref object="logs_act_show" role="HbToolBar:addAction"/>
+        </widget>
+        <widget name="logs_details_view_menu" role="HbView:menu" type="HbMenu">
+            <ref object="logs_act_voice_call" role="HbMenu:addAction"/>
+            <ref object="logs_act_video_call" role="HbMenu:addAction"/>
+            <ref object="logs_act_internet_call" role="HbMenu:addAction"/>
+            <ref object="logs_act_create_message" role="HbMenu:addAction"/>
+            <ref object="logs_act_add_to_contacts" role="HbMenu:addAction"/>
+            <ref object="logs_act_open_contact" role="HbMenu:addAction"/>
+            <ref object="logs_act_copy_number" role="HbMenu:addAction"/>
+            <ref object="logs_act_delete_event" role="HbMenu:addAction"/>
+        </widget>
+        <string locid="txt_dial_title_dialer" name="title" value="Dialer"/>
+    </widget>
+    <!-- Context menu -->    
+    <widget name="logs_show_filter_menu" type="HbMenu">
+        <ref object="logs_act_recent" role="HbMenu:addAction"/>
+        <ref object="logs_act_dialled" role="HbMenu:addAction"/>
+        <ref object="logs_act_received" role="HbMenu:addAction"/>
+        <ref object="logs_act_missed" role="HbMenu:addAction"/>
+    </widget>
+    <connect receiver="logs_details_view" sender="logs_act_voice_call" signal="triggered(bool)" slot="initiateVoiceCall()"/>
+    <connect receiver="logs_details_view" sender="logs_act_video_call" signal="triggered(bool)" slot="initiateVideoCall()"/>
+    <connect receiver="logs_details_view" sender="logs_act_internet_call" signal="triggered(bool)" slot="notSupported()"/>
+    <connect receiver="logs_details_view" sender="logs_act_create_message" signal="triggered(bool)" slot="sendMessage()"/>
+    <connect receiver="logs_details_view" sender="logs_act_add_to_contacts" signal="triggered(bool)" slot="addToContacts()"/>
+    <connect receiver="logs_details_view" sender="logs_act_open_contact" signal="triggered(bool)" slot="openContact()"/>
+    <connect receiver="logs_details_view" sender="logs_act_copy_number" signal="triggered(bool)" slot="copyNumberToClipboard()"/>
+    <connect receiver="logs_details_view" sender="logs_act_delete_event" signal="triggered(bool)" slot="deleteEvent()"/>
+    <connect receiver="logs_details_view" sender="logs_act_dialer" signal="triggered(bool)" slot="openDialpad()"/>
+    <connect receiver="logs_details_view" sender="logs_act_contacts" signal="triggered(bool)" slot="openContactsApp()"/>
+    <connect receiver="logs_details_view" sender="logs_act_show" signal="triggered(bool)" slot="showFilterMenu()"/>
+    <connect receiver="logs_details_view" sender="logs_show_filter_menu" signal="triggered(HbAction*)" slot="changeFilter(HbAction*)"/>
+    <section name="portrait_dialpad">
+        <widget name="logs_label_empty_list" type="HbLabel">
+            <rect height="var(hb-param-text-height-primary)" name="geometry" width="expr(var(hb-param-screen-width)-2*var(hb-param-margin-gene-screen))" x="var(hb-param-margin-gene-screen)" y="8.5un"/>
+        </widget>
+        <widget name="logs_toolbar" role="HbView:toolBar" type="HbToolBar">
+            <bool name="visible" value="FALSE"/>
+        </widget>
+        <widget name="logs_content" role="HbView:widget" type="HbWidget">
+            <contentsmargins bottom="expr(var(hb-param-screen-height)*0.55)" left="expr(var(hb-param-margin-view-left))" right="expr(var(hb-param-margin-view-right))" top="expr(var(hb-param-margin-view-top))"/>
+        </widget>
+    </section>
+    <section name="landscape_dialpad">
+        <widget name="logs_toolbar" role="HbView:toolBar" type="HbToolBar">
+            <bool name="visible" value="FALSE"/>
+        </widget>
+        <widget name="logs_content" role="HbView:widget" type="HbWidget">
+            <contentsmargins bottom="expr(var(hb-param-margin-view-bottom))" left="expr(var(hb-param-margin-view-left))" right="expr(var(hb-param-screen-height)/2)" top="expr(var(hb-param-margin-view-top))"/>
+        </widget>
+    </section>
+    <section name="default">
+        <widget name="logs_toolbar" role="HbView:toolBar" type="HbToolBar">
+            <bool name="visible" value="TRUE"/>
+        </widget>
+        <widget name="logs_content" role="HbView:widget" type="HbWidget">
+            <contentsmargins bottom="expr(var(hb-param-margin-view-bottom))" left="expr(var(hb-param-margin-view-left))" right="expr(var(hb-param-margin-view-right))" top="expr(var(hb-param-margin-view-top))"/>
+        </widget>
+    </section>
+    <metadata activeUIState="Common ui state" display="NHD portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+        <uistate name="portrait" sections="#common portrait_dialpad"/>
+        <uistate name="landscape" sections="#common landscape_dialpad"/>
+        <uistate name="default" sections="#common default"/>
+        <dummydata objectName="logs_details_list_view" section="#common" value="app_list_template5"/>
+    </metadata>
+</hbdocument>

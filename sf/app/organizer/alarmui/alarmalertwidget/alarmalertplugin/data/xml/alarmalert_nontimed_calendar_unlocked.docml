@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="1.1">
+    <object name="snoozeAction" type="HbAction">
+        <string name="text" value="Snooze"/>
+    </object>
+    <object name="stopAction" type="HbAction">
+        <string name="text" value="Stop"/>
+    </object>
+    <widget name="dialog" type="HbDialog">
+        <sizepolicy horizontalPolicy="Preferred" horizontalStretch="0" verticalPolicy="Maximum" verticalStretch="0"/>
+        <ref object="snoozeAction" role="HbWidget:addAction"/>
+        <ref object="stopAction" role="HbWidget:addAction"/>
+        <widget name="heading" role="HbDialog:headingWidget" type="HbLabel">
+            <enums name="alignment" value="AlignLeft|AlignLeading"/>
+            <string name="plainText" value="Calendar alarm"/>
+        </widget>
+        <widget name="container" role="HbDialog:contentWidget" type="HbWidget">
+            <widget name="alarmDate" type="HbLabel">
+                <real name="z" value="1"/>
+                <string name="plainText" value="Popup says alarm date"/>
+            </widget>
+            <widget name="alarmDescription" type="HbLabel">
+                <real name="z" value="2"/>
+                <string name="plainText" value="Popup says alarm description"/>
+            </widget>
+            <widget name="alarmLocation" type="HbLabel">
+                <real name="z" value="3"/>
+                <string name="plainText" value="alarm location"/>
+            </widget>
+            <widget name="alarmIcon" type="HbLabel">
+                <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+                <icon iconName="qtg_small_smiley_very_cool" name="icon"/>
+                <real name="z" value="4"/>
+                <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+                <sizehint height="15un" type="FIXED" width="15un"/>
+            </widget>
+            <layout type="anchor">
+                <anchoritem dst="alarmDate" dstEdge="LEFT" spacing="2.53731un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="alarmDate" dstEdge="BOTTOM" spacing="-4.92537un" src="" srcEdge="BOTTOM"/>
+                <anchoritem dst="alarmDescription" dstEdge="LEFT" spacing="19.10448un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="alarmDescription" dstEdge="BOTTOM" spacing="-7.46269un" src="" srcEdge="BOTTOM"/>
+                <anchoritem dst="alarmLocation" dstEdge="TOP" spacing="10.59702un" src="" srcEdge="TOP"/>
+                <anchoritem dst="alarmLocation" dstEdge="RIGHT" spacing="6.23881un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="alarmIcon" dstEdge="LEFT" spacing="5.97015un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="alarmIcon" dstEdge="TOP" spacing="1.19403un" src="" srcEdge="TOP"/>
+            </layout>
+        </widget>
+    </widget>
+    <section name="nonTimedAlarmPortrait">
+        <widget name="container" role="HbDialog:contentWidget" type="HbWidget">
+            <layout type="anchor">
+                <anchoritem dst="alarmDate" dstEdge="LEFT" spacing="var(hb-param-margin-gene-popup)" src="" srcEdge="LEFT"/>
+                <anchoritem dst="alarmDate" dstEdge="TOP" spacing="var(hb-param-margin-gene-popup)" src="" srcEdge="TOP"/>
+                <anchoritem dst="alarmDate" dstEdge="RIGHT" spacing="-var(hb-param-margin-gene-popup)" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="alarmDescription" dstEdge="LEFT" spacing="var(hb-param-margin-gene-popup)" src="" srcEdge="LEFT"/>
+                <anchoritem dst="alarmDescription" dstEdge="TOP" spacing="var(hb-param-margin-gene-popup)" src="alarmDate" srcEdge="BOTTOM"/>
+                <anchoritem dst="alarmDescription" dstEdge="RIGHT" spacing="-var(hb-param-margin-gene-popup)" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="alarmLocation" dstEdge="LEFT" spacing="var(hb-param-margin-gene-popup)" src="" srcEdge="LEFT"/>
+                <anchoritem dst="alarmLocation" dstEdge="TOP" spacing="var(hb-param-margin-gene-popup)" src="alarmDescription" srcEdge="BOTTOM"/>
+                <anchoritem dst="alarmLocation" dstEdge="RIGHT" spacing="-var(hb-param-margin-gene-popup)" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="alarmIcon" dstEdge="TOP" spacing="var(hb-param-margin-gene-popup)" src="alarmLocation" srcEdge="BOTTOM"/>
+                <anchoritem dst="alarmIcon" dstEdge="BOTTOM" spacing="expr(-var(hb-param-margin-gene-popup) )" src="" srcEdge="BOTTOM"/>
+                <anchoritem dst="alarmIcon" dstEdge="CENTERH" spacing="0un" src="" srcEdge="CENTERH"/>
+            </layout>
+        </widget>
+        <widget name="alarmDescription" type="HbLabel">
+            <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+            <sizehint height="expr(3 * var(hb-param-text-height-primary) )" type="PREFERRED"/>
+            <fontspec name="fontSpec" role="Primary" textheight="26.8"/>
+            <enums name="textWrapping" value="TextWordWrap"/>
+        </widget>
+        <widget name="alarmIcon" type="HbLabel">
+            <icon iconName="qtg_large_calendar_alarm" name="icon"/>
+            <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+            <bool name="visible" value="TRUE"/>
+        </widget>
+        <widget name="alarmDate" type="HbLabel">
+            <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+            <sizehint height="var(hb-param-text-height-primary)" type="PREFERRED"/>
+            <fontspec name="fontSpec" role="Primary" textheight="26.8"/>
+        </widget>
+        <widget name="alarmLocation" type="HbLabel">
+            <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+            <fontspec name="fontSpec" role="Secondary" textheight="23.45"/>
+        </widget>
+    </section>
+    <section name="nonTimedAlarmLandscape">
+        <widget name="container" role="HbDialog:contentWidget" type="HbWidget">
+            <layout type="anchor">
+                <anchoritem dst="alarmLocation" dstEdge="LEFT" spacing="expr(var(hb-param-margin-gene-popup) )" src="" srcEdge="LEFT"/>
+                <anchoritem dst="alarmLocation" dstEdge="TOP" spacing="2un" src="alarmDescription" srcEdge="BOTTOM"/>
+                <anchoritem dst="alarmLocation" dstEdge="RIGHT" spacing="expr(-var(hb-param-margin-gene-popup) )" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="alarmLocation" dstEdge="BOTTOM" spacing="-2un" src="" srcEdge="BOTTOM"/>
+                <anchoritem dst="alarmDescription" dstEdge="LEFT" spacing="expr(var(hb-param-margin-gene-popup) )" src="" srcEdge="LEFT"/>
+                <anchoritem dst="alarmDescription" dstEdge="TOP" spacing="expr(var(hb-param-margin-gene-popup) )" src="alarmDate" srcEdge="BOTTOM"/>
+                <anchoritem dst="alarmDescription" dstEdge="RIGHT" spacing="expr(-var(hb-param-margin-gene-popup) )" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="alarmDate" dstEdge="LEFT" spacing="expr(var(hb-param-margin-gene-popup) )" src="" srcEdge="LEFT"/>
+                <anchoritem dst="alarmDate" dstEdge="TOP" spacing="expr(var(hb-param-margin-gene-popup) )" src="" srcEdge="TOP"/>
+                <anchoritem dst="alarmDate" dstEdge="RIGHT" spacing="expr(-var(hb-param-margin-gene-popup) )" src="" srcEdge="RIGHT"/>
+            </layout>
+        </widget>
+        <widget name="alarmDescription" type="HbLabel">
+            <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+            <sizehint height="expr(3 * var(hb-param-text-height-primary) )" type="PREFERRED"/>
+            <fontspec name="fontSpec" role="Primary" textheight="26.8"/>
+            <enums name="textWrapping" value="TextWordWrap"/>
+        </widget>
+        <widget name="alarmIcon" type="HbLabel">
+            <bool name="visible" value="FALSE"/>
+        </widget>
+        <widget name="alarmDate" type="HbLabel">
+            <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+            <sizehint height="var(hb-param-text-height-primary)" type="PREFERRED"/>
+            <fontspec name="fontSpec" role="Primary" textheight="26.8"/>
+        </widget>
+        <widget name="alarmLocation" type="HbLabel">
+            <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+            <sizehint height="var(hb-param-text-height-secondary)" type="PREFERRED"/>
+            <fontspec name="fontSpec" role="Secondary" textheight="23.45"/>
+        </widget>
+    </section>
+    <metadata activeUIState="nonTimedAlarmPortrait" display="NHD-3.2-inch_portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+        <uistate name="nonTimedAlarmPortrait" sections="#common nonTimedAlarmPortrait"/>
+        <uistate name="nonTimedAlarmLandscape" sections="#common nonTimedAlarmLandscape"/>
+    </metadata>
+</hbdocument>

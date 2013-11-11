@@ -1,0 +1,41 @@
+;
+; Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:
+;
+
+; Language
+&EN
+
+; SIS header: name, uid, version
+#{"urischemeservicetestapp"},(0xee4b29ef),1,0,0
+
+; Localised Vendor name
+%{"Vendor"}
+
+; Unique Vendor name
+:"Vendor"
+
+; Manual PKG pre-rules from PRO files
+; Default dependency to Qt libraries
+(0x2001E61C), 4, 6, 3, {"Qt"}
+; Default HW/platform dependencies
+[0x101F7961],0,0,0,{"S60ProductID"}
+[0x102032BE],0,0,0,{"S60ProductID"}
+[0x102752AE],0,0,0,{"S60ProductID"}
+[0x1028315F],0,0,0,{"S60ProductID"}
+ 
+; Executable and default resource files
+"/epoc32/release/armv5/urel/urischemeservicetestapp.exe"    - "c:\sys\bin\urischemeservicetestapp.exe"
+"/epoc32/data/z/resource/apps/urischemeservicetestapp.rsc"    - "c:\resource\apps\urischemeservicetestapp.rsc"
+"/epoc32/data/z/private/10003a3f/import/apps/urischemeservicetestapp_reg.rsc"    - "c:\private\10003a3f\import\apps\urischemeservicetestapp_reg.rsc"

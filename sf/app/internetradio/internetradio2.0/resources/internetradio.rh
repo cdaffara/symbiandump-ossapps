@@ -1,0 +1,195 @@
+/*
+* Copyright (c) 2006-2007 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Resource headers for project S60VisualRAdio
+*
+*/
+
+
+#ifndef VISUALRADIO_RH
+#define VISUALRADIO_RH
+
+#include <avkon.hrh>
+#include <aknsconstants.hrh>
+#include "ir.hrh"
+
+// ---------------------------------------------------------------------------
+// Visual Radio layout guide specific struct.
+// The layout rect is defined by giving four of the positioning or size values.
+// For initializing TAknTextComponentLayout, which can be
+// used to layout CEikLabel with CAknLayoutUtils::LayoutLabel
+// ---------------------------------------------------------------------------
+//
+STRUCT IR_TEXT_LAYOUT
+    {
+    WORD C = 215;			// color, default is black
+    WORD l = ELayoutEmpty;	// left
+    WORD t = ELayoutEmpty;	// top
+    WORD r = ELayoutEmpty;	// right
+    WORD b = ELayoutEmpty;	// bottom
+    WORD H = ELayoutEmpty;	// height
+    WORD W = ELayoutEmpty;	// width
+    WORD J;					// justification
+    WORD font;				// font ID
+    }
+
+// ---------------------------------------------------------------------------
+// Struct for defining the bitmap button control
+// ---------------------------------------------------------------------------
+//
+STRUCT IR_BITMAPBUTTON_CONTROL_DATA
+    {
+    LTEXT bmpfile;
+    STRUCT items[];
+    }
+
+// ---------------------------------------------------------------------------
+// Struct for defining the layout and key to react on for bitmap button
+// ---------------------------------------------------------------------------
+//
+STRUCT IR_BITMAP_BUTTON_LAYOUT
+    {
+    WORD keys; // The keys on which this button reacts on.
+    DOUBLE relative_x; // Relative value for x coordinate
+    DOUBLE relative_y; // Relative value for y coordinate
+    DOUBLE relative_width; // Relative value for width in relation to parent layout's width
+    DOUBLE relative_height; // Relative value for height in relation to parent layout's height
+    }
+
+// ---------------------------------------------------------------------------
+// Struct for defining a bitmap button item
+// ---------------------------------------------------------------------------
+//
+STRUCT IR_BITMAPBUTTON_ITEM
+    {
+    LONG cmdid; // Command to execute when the button is pressed
+    LTEXT bmpfile;
+    LONG enabledbmpid;
+    LONG enabledmaskid;
+    LONG disabledbmpid;
+    LONG disabledmaskid;
+    LONG pressedbmpid;
+    LONG pressedmaskid;
+    STRUCT portrait_layout; // IR_BITMAP_BUTTON_LAYOUT
+    STRUCT landscape_layout; // IR_BITMAP_BUTTON_LAYOUT
+    }
+
+// ---------------------------------------------------------------------------
+// Layouts for the bitmap buttons
+// ---------------------------------------------------------------------------
+//
+STRUCT IR_BITMAPBUTTON_LAYOUT_ARRAY
+    {
+    LLINK layouts[];
+    }
+
+// ---------------------------------------------------------------------------
+// Frequency editor struct
+// ---------------------------------------------------------------------------
+//
+STRUCT IR_FREQUENCY_EDITOR
+    {
+    BYTE flags = 0;
+    }
+
+// ---------------------------------------------------------------------------
+// Struct for defining a fadable icon
+// ---------------------------------------------------------------------------
+//
+STRUCT IR_FADABLE_ICON
+    {
+    LTEXT bmpfile;
+    LONG bitmap;
+    LONG mask;
+    WORD fadetime = 1000; // fading time in milliseconds, defaults to one second
+    BYTE invisible_percentage = 0; // Percentage how much the icon is shown when it is faded out
+    }
+
+// ---------------------------------------------------------------------------
+// Struct for defining a bitmap animation composed of fadable icons.
+// ---------------------------------------------------------------------------
+//
+STRUCT IR_BITMAP_ANIMATION
+    {
+    LONG frameInterval;         // Interval between frames.
+    STRUCT frames[];            // Bitmap animation frames of type IR_FADABLE_ICON.
+    }
+    STRUCT PBK2_ICON_INFO
+    {
+    /// Version number
+    BYTE version = 0;
+
+    /// Icon info id
+    /// @see PHONEBOOK2_ICON_ID
+    STRUCT pbk2IconInfoId;
+
+    /// MBM file name
+    LTEXT mbmFileName;
+
+    /// Icon bitmap id
+    LONG iconId;
+
+    /// Mask bitmap id
+    LONG maskId;
+
+    /// Major skin id of the icon
+    LONG skinIdMajor = EAknsMajorNone;
+
+    /// Minor skin id of the icon
+    LONG skinIdMinor = EAknsMinorNone;
+
+    /// Major color table id of the icon
+    LONG colorIdMajor = EAknsMajorNone;
+
+    /// Minor color table id of the icon
+    LONG colorIdMinor = EAknsMinorNone;
+
+    /// Index of the icon color in color table
+    LONG colorIndex = 0;
+
+    /// Index of the default color
+    LONG defaultColorIndex = 0;
+    }
+
+    
+    // --------------------------------------------------------------------------
+// PBK2_ICON_ARRAY resource structure
+// --------------------------------------------------------------------------
+//
+STRUCT PBK2_ICON_ARRAY
+    {
+    /// An id for the icon array
+    /// @see TPbk2IconArrayId
+    BYTE arrayId = ENow2NullIconArrayId;//EPbk2NullIconArrayId
+
+    /// Array of PHONEBOOK2_ICON_ID structures
+    /// @see PHONEBOOK2_ICON_ID
+    STRUCT icons[];
+    }
+
+    STRUCT PHONEBOOK2_ICON_ID
+    {
+    /// The UID that specifies whose icon this is. It is used to identify
+    // icons from different components that are used in the same data
+    // structure. The UID could be e.g a Phonebook 2 UID for application
+    // defined icons and an ECom implementation UID for UI extension icons.
+    LONG ownerUid = KPbk2NullIconIdOwnerUid;
+
+    /// The id of the icon inside the component.
+    BYTE id = EPbk2NullIconId;
+    }
+
+    
+    
+
+#endif // VISUALRADIO_RH

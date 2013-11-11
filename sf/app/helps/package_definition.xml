@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SystemDefinition schema="3.0.0" xmlns:qt="http://www.nokia.com/qt">
+  <package id="helps" name="Help Apps" levels="eng tools if ui">
+   <collection id="userguide" name="User Guide" level="if">
+	<!-- collection is really a component. Move down a directory -->
+    <component id="userguide_build" name="User Guide Build"  filter="s60" introduced="^4">
+      <unit bldFile="userguide" qt:proFile="Userguide.pro"/>
+    </component>
+   </collection>
+  </package>
+</SystemDefinition>

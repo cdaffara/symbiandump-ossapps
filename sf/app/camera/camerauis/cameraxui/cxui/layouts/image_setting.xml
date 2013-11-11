@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cxui>
+    <!--
+    | CxUi image mode settings definition.
+    |
+    | settings_list:
+    | * parameter "id" must match id string in CxeSettingIds namespace.
+    | * item:
+    |   * parameter "value" must match the Cxe namespace value
+    |     for that particular setting, e.g. Cxe::ExposureAuto == 0.
+    -->
+    <settings>
+
+        <!-- Flash (setting list) -->
+        <setting_list id="flash_mode"
+                      heading="txt_cam_title_flash_mode"
+                      preview="0"
+                      type="SingleLineListBox"
+                      setting_icon="">
+            <item string="txt_cam_list_automatic_flash" value="0" icon="qtg_mono_autoflash" />
+            <item string="txt_cam_list_reduce_red_eye"  value="1" icon="qtg_mono_redeye" />
+            <item string="txt_cam_list_flash_on"        value="2" icon="qtg_mono_flash" />
+            <item string="txt_cam_list_flash_off"       value="3" icon="qtg_mono_flash_off" />
+        </setting_list>
+
+        <!-- Still Show post-capture (setting list) -->
+        <setting_list id="still_showcaptured"
+                      heading="txt_cam_title_show_captured_image"
+                      preview="0"
+                      type="SingleLineListBox"
+                      setting_icon="">
+            <lnItem string="txt_cam_list_ln_sec" lnValue="2"  value="2000" icon="" />
+            <lnItem string="txt_cam_list_ln_sec" lnValue="4" value="4000" icon="" />
+            <lnItem string="txt_cam_list_ln_sec" lnValue="10" value="10000" icon="" />
+            <item   string="txt_cam_list_continuous" value="-1" icon="" />
+            <item   string="txt_cam_list_never"        value="0"  icon="" />
+        </setting_list>
+
+        <!-- self timer (setting list) -->
+        <setting_list id="selfTimer"
+                      heading="txt_cam_title_self_timer"
+                      preview="0"
+                      type="SingleLineListBox"
+                      setting_icon="">
+            <item string="txt_cam_list_off_timer" value="-1" icon="" />
+            <lnItem string="txt_cam_list_ln_seconds" lnValue="2"  value="2" icon="" />
+            <lnItem string="txt_cam_list_ln_seconds" lnValue="10" value="10" icon="" />
+            <lnItem string="txt_cam_list_ln_seconds" lnValue="20" value="20" icon="" />
+        </setting_list>
+
+        <!-- White balance (setting list) -->
+        <setting_list id="white_balance"
+                      heading="txt_cam_title_white_balance"
+                      preview="1"
+                      type="SingleLineListBox"
+                      setting_icon="">
+            <item string="txt_cam_list_automatic_whitebal" value="0" icon="" />
+            <item string="txt_cam_list_sunny"              value="1" icon="" />
+            <item string="txt_cam_list_cloudy"             value="2" icon="" />
+            <item string="txt_cam_list_incandescent"       value="3" icon="" />
+            <item string="txt_cam_list_fluorescent"        value="4" icon="" />
+        </setting_list>
+
+        <!-- Color tone (setting list) -->
+        <setting_list id="color_tone"
+                      heading="txt_cam_title_color_tone"
+                      preview="1"
+                      type="SingleLineListBox"
+                      setting_icon="">
+            <item string="txt_cam_list_normal"   value="0" icon="" />
+            <item string="txt_cam_list_sepia"    value="1" icon="" />
+            <item string="txt_cam_list_white"    value="3" icon="" />
+            <item string="txt_cam_list_vivid"    value="4" icon="" />
+        </setting_list>
+
+        <!-- ISO Light sensitivity (setting list) -->
+        <setting_list id="light_sensitivity"
+                      heading="txt_cam_title_light_sensitivity"
+                      preview="1"
+                      type="SingleLineListBox"
+                      setting_icon="">
+            <item string="txt_cam_list_automatic_lightsens" value="0" icon="" />
+            <l1Item string="txt_cam_list_iso_l1" l1Value="100"  value="100" icon="" />
+            <l1Item string="txt_cam_list_iso_l1" l1Value="200"  value="200" icon="" />
+            <l1Item string="txt_cam_list_iso_l1" l1Value="400"  value="400" icon="" />
+            <l1Item string="txt_cam_list_iso_l1" l1Value="800"  value="800" icon="" />
+        </setting_list>
+        
+        <!-- GeoTagging (setting list) -->
+        <setting_list id="geotagging"
+                      heading="txt_cam_title_geotagging"
+                      preview="0"
+                      type="SingleLineListBox"
+                      setting_icon="">
+            <item string="txt_cam_list_geotagging_on"   value="1" icon="qtg_mono_geotag" />
+            <item string="txt_cam_list_geotagging_off"    value="0" icon="" />
+        </setting_list>
+
+        <!-- Exposure compensation (setting slider) -->
+        <setting_slider id="ev_compensation_value" heading="txt_cam_title_exposure_compensation" setting_icon="">
+            <setup min="txt_cam_slidervalue_l1_minus" max="txt_cam_slidervalue_l1_plus" l1Value="2" minorStep="0.5" majorStep="1"/>
+        </setting_slider>
+
+        <!-- Contrast (setting slider) -->
+        <setting_slider id="contrast" heading="txt_cam_title_contrast" setting_icon="">
+            <setup min="txt_cam_slidervalue_l1_minus" max="txt_cam_slidervalue_l1_plus" l1Value="2" minorStep="0.5" majorStep="1"/>
+        </setting_slider>
+
+        <!-- Sharpness (setting slider) -->
+        <setting_slider id="sharpness" heading="txt_cam_title_sharpness" setting_icon="">
+            <setup min="txt_cam_slidervalue_l1_minus" max="txt_cam_slidervalue_l1_plus" l1Value="2" minorStep="0.5" majorStep="1"/>
+        </setting_slider>
+
+        <!-- Still scene modes -->
+        <setting_list id="still_scene_mode"
+                      heading="txt_cam_title_scene_mode"
+                      preview="0"
+                      type="SingleLineListBox">
+
+            <item string="txt_cam_list_automatic_scene" value="image_scene_auto"           icon="qtg_mono_automatic" />
+            <item string="txt_cam_list_closeup"         value="image_scene_macro"          icon="qtg_mono_close_up" />
+            <item string="txt_cam_list_landscape"       value="image_scene_scenery"        icon="qtg_mono_landscape" />
+            <item string="txt_cam_list_portrait"        value="image_scene_portrait"       icon="qtg_mono_portrait" />
+            <item string="txt_cam_list_sports"          value="image_scene_sports"         icon="qtg_mono_sport" />
+            <item string="txt_cam_list_night"           value="image_scene_night"          icon="qtg_mono_night" />
+            <item string="txt_cam_list_night_portrait"  value="image_scene_night_portrait" icon="qtg_mono_night_portrait" />
+        </setting_list>
+        
+        <!-- Face tracking (setting list) -->
+        <setting_list id="face_tracking"
+                      heading="txt_cam_title_facetracking"
+                      preview="1"
+                      type="SingleLineListBox"
+                      setting_icon="">
+            <item string="txt_cam_list_facetracking_on" value="1" icon="qtg_mono_face_tracking" />
+            <item string="txt_cam_list_facetracking_off" value="0" icon="" />
+        </setting_list>
+
+    </settings>
+</cxui>

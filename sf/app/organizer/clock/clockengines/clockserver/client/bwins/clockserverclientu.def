@@ -1,0 +1,16 @@
+EXPORTS
+	??0RClkSrvInterface@@QAE@XZ @ 1 NONAME ; RClkSrvInterface::RClkSrvInterface(void)
+	?ActivateAllProtocols@RClkSrvInterface@@QAEHXZ @ 2 NONAME ; int RClkSrvInterface::ActivateAllProtocols(void)
+	?ActivateProtocol@RClkSrvInterface@@QAEHH@Z @ 3 NONAME ; int RClkSrvInterface::ActivateProtocol(int)
+	?Connect@RClkSrvInterface@@QAEHXZ @ 4 NONAME ; int RClkSrvInterface::Connect(void)
+	?DeActivateAllProtocols@RClkSrvInterface@@QAEHXZ @ 5 NONAME ; int RClkSrvInterface::DeActivateAllProtocols(void)
+	?DeActivateProtocol@RClkSrvInterface@@QAEHH@Z @ 6 NONAME ; int RClkSrvInterface::DeActivateProtocol(int)
+	?GetCurrentMcc@RClkSrvInterface@@QAEHAAH@Z @ 7 NONAME ; int RClkSrvInterface::GetCurrentMcc(int &)
+	?GetCurrentTimeZondId@RClkSrvInterface@@QAEHAAH@Z @ 8 NONAME ; int RClkSrvInterface::GetCurrentTimeZondId(int &)
+	?GetProtocolInfo@RClkSrvInterface@@QAEHHAAUtimeAttributes@@@Z @ 9 NONAME ; int RClkSrvInterface::GetProtocolInfo(int, struct timeAttributes &)
+	?IsAutoTimeUpdateOn@RClkSrvInterface@@QAEHAAH@Z @ 10 NONAME ; int RClkSrvInterface::IsAutoTimeUpdateOn(int &)
+	?IsProtocolActive@RClkSrvInterface@@QAEHHAAH@Z @ 11 NONAME ; int RClkSrvInterface::IsProtocolActive(int, int &)
+	?NotifyOnChange@RClkSrvInterface@@QAEXAAJ0AAVTRequestStatus@@@Z @ 12 NONAME ; void RClkSrvInterface::NotifyOnChange(long &, long &, class TRequestStatus &)
+	?NotifyOnChangeCancel@RClkSrvInterface@@QAEXXZ @ 13 NONAME ; void RClkSrvInterface::NotifyOnChangeCancel(void)
+	?Version@RClkSrvInterface@@QBE?AVTVersion@@XZ @ 14 NONAME ; class TVersion RClkSrvInterface::Version(void) const
+

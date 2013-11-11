@@ -1,0 +1,74 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+#ifndef __GTEMAILMTM_IBY__
+#define __GTEMAILMTM_IBY__
+
+#include <charconv.iby>
+#include <commdb.iby>
+#include <esock.iby>
+#include <tcpip6.iby>
+#include <logeng.iby>
+#include <messageserver.iby>
+#include <cntmodel.iby>
+#include <charconv_all_plugins.iby>
+
+// This check is for chosing which IMAP version to use.
+// As SYMBIAN_CENTREP_NOC is only defined in Symbian OS 9.3 and above
+// version 2 of the IMAP component will be built.
+#ifdef SYMBIAN_CENTREP_NOC
+#define USE_IMAP_V2
+#endif
+
+REM Email Engine MTMs
+
+file=ABI_DIR\BUILD_DIR\imcm.dll				System\Libs\imcm.dll
+file=ABI_DIR\BUILD_DIR\imut.dll				System\Libs\imut.dll
+file=ABI_DIR\BUILD_DIR\mobilitypolicyprovider.dll	System\Libs\mobilitypolicyprovider.dll
+#ifdef __MOBILITY_TEST_FRAMEWORK
+file=ABI_DIR\BUILD_DIR\mobilitytestframework.dll	System\Libs\mobilitytestframework.dll
+#endif __MOBILITY_TEST_FRAMEWORK
+file=ABI_DIR\BUILD_DIR\pops.dll				System\Libs\pops.dll
+file=ABI_DIR\BUILD_DIR\smts.dll				System\Libs\smts.dll
+file=ABI_DIR\BUILD_DIR\autosend.exe			System\Programs\autosend.exe
+
+#ifndef NO_IMAP_IN_ROM
+file=ABI_DIR\BUILD_DIR\imps.dll		System\Libs\imps.dll
+#ifdef USE_IMAP_V2		// Extra DLLs for IMAPv2
+file=ABI_DIR\BUILD_DIR\imaputils.dll			System\Libs\imaputils.dll
+file=ABI_DIR\BUILD_DIR\imapmailstore.dll		System\Libs\imapmailstore.dll
+file=ABI_DIR\BUILD_DIR\imapofflinecontrol.dll		System\Libs\imapofflinecontrol.dll
+file=ABI_DIR\BUILD_DIR\impapprotocolcontroller.dll	System\Libs\impapprotocolcontroller.dll
+file=ABI_DIR\BUILD_DIR\imapsession.dll			System\Libs\imapsession.dll
+file=ABI_DIR\BUILD_DIR\imapsettings.dll			System\Libs\imapsettings.dll
+file=ABI_DIR\BUILD_DIR\imapsyncmanager.dll		System\Libs\imapsyncmanager.dll
+file=ABI_DIR\BUILD_DIR\transporthandler.dll		System\Libs\transporthandler.dll
+#endif	// USE_IMAP_V2
+#endif	// NO_IMAP_IN_ROM
+
+ECOM_PLUGIN(mobilitypolicydefault.dll, 10283067.rsc)
+
+#ifdef __MOBILITY_TEST_FRAMEWORK
+ECOM_PLUGIN(mobilitypolicynetteststub.dll, 102857AC.rsc)
+#endif //__MOBILITY_TEST_FRAMEWORK
+
+data=EPOCROOT##epoc32\data\Z\private\10202BE9\10001028.txt	private\10202BE9\10001028.txt
+data=EPOCROOT##epoc32\data\Z\private\10202BE9\10001029.txt	private\10202BE9\10001029.txt
+data=EPOCROOT##epoc32\data\Z\private\10202BE9\1000102A.txt	private\10202BE9\1000102A.txt
+
+#include "gtemailmtm.hby"
+
+#endif

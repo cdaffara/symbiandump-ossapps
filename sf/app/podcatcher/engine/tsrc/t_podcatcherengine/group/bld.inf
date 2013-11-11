@@ -1,0 +1,31 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+* 
+* Description:
+*
+*/
+
+PRJ_PLATFORMS
+// specify the platforms your component needs to be built for here
+// defaults to WINS MARM so you can ignore this if you just build these
+	
+	DEFAULT
+
+PRJ_TESTEXPORTS
+// NOTE: If using ARS requirements all export operations should be done under this.
+// 'abld test export'
+../conf/T_PodcatcherEngine.cfg		c:/testframework/podcatcher/t_podcatcherengine.cfg
+
+PRJ_TESTMMPFILES
+
+	T_PodcatcherEngine.mmp

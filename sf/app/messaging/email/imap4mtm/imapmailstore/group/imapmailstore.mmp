@@ -1,0 +1,39 @@
+// Copyright (c) 2006-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// imapmailstore.dll IMAP API used to access the messaging mail store.
+// 
+//
+
+/**
+ @file
+*/
+
+TARGET		imapmailstore.dll
+TARGETTYPE	dll
+
+CAPABILITY 	ReadUserData WriteDeviceData NetworkServices WriteUserData ReadDeviceData ProtServ NetworkControl LocalServices 
+TARGETPATH	system/libs
+UID		0x1000008d 0x10281D22
+VENDORID	0x70000001
+SOURCEPATH	../src
+SOURCE		cimapmailstore.cpp cqueueentrybase.cpp cimheaderqueueentry.cpp cimmimeheaderqueueentry.cpp cbodyqueueentry8.cpp cbodyqueueentry16.cpp cattachmentqueueentry.cpp cstoreutilities.cpp  cfetchbodyinfo.cpp cmsvplainbodytextqueueentry.cpp
+USERINCLUDE	../inc ../../../pop3andsmtpmtm/clientmtms/inc ../../../pop3andsmtpmtm/servermtmutils/inc
+USERINCLUDE	../../imapsession/inc 
+USERINCLUDE	../../imaputils/inc 
+USERINCLUDE	../../imapsettings/inc 
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+LIBRARY     	euser.lib efsrv.lib msgs.lib imut.lib 
+LIBRARY     	imcm.lib bafl.lib charconv.lib
+LIBRARY     	etext.lib imapsettings.lib imaputils.lib
+SMPSAFE

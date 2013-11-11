@@ -1,0 +1,31 @@
+HbListViewItem[layoutName="default"]{
+    layout:logs-portrait;
+}
+
+HbListViewItem[layoutName="logsLandscape"]{
+    layout:logs-landscape;
+}
+
+HbListViewItem[layoutName="logsLandscapeDialpad"]{
+    layout:logs-landscape;
+}
+
+HbListViewItem::text-2[layoutName="default"]{
+    max-width:-1;
+    text-height: var(hb-param-text-height-secondary);
+}
+
+HbListViewItem::text-1[layoutName="logsLandscape"]{	
+    pref-width: expr(var(hb-param-screen-width)/2 - var(hb-param-graphic-size-primary-medium) - var(hb-param-margin-gene-left) - var(hb-param-margin-gene-middle-horizontal));
+}
+
+HbListViewItem::text-2[layoutName="logsLandscape"]{	
+    max-width:-1;
+    text-height: var(hb-param-text-height-secondary);
+}
+
+HbListViewItem::text-2[layoutName="logsLandscapeDialpad"]{
+    max-width: 0.0un;
+    text-height: 0.0un;
+}
+

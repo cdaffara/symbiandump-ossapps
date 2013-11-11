@@ -1,0 +1,211 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+[All]
+Defaults= defaults.script
+
+[TwoRecipients]
+Message= This message is going to my two buddies
+Recipients= Default|Default
+
+[PlainOldMessage]
+Message= Hello, this is a plain SMS message.
+
+[Plain8BitMessage]
+Message= Hello, this is a 8-bit SMS message.
+Encoding= 8
+
+[NoStatusReport]
+Message= No status report requested.
+DeliveryReport= NO
+
+[BigHonkingMsg]
+Message= A big message to ya!
+Ya' know.  Lots of text makes
+a message big.
+More text blah, blah, blah!
+Blah blah blah.
+And a bit more to make sure
+that this is a big honking
+howling messages.
+Yup.  A very big message!
+Okay - and then some more.
+
+[BigHonking8Msg]
+Message= This is a big 8-bit message!
+Ya' know.  Lots of text makes
+a message big.
+More text blah, blah, blah!
+Blah blah blah.
+And a bit more to make sure
+that this is a big honking
+howling messages.
+Yup.  A very big message!
+Okay - and then some more.
+Encoding= 8
+
+[WAP:vCalendar]
+Bearer= WAP
+BioUid= 268457267
+Message=
+BEGIN:VCALENDAR
+VERSION:1.0
+BEGIN:VEVENT
+END:VEVENT
+END:VCALENDAR
+Encoding= 7
+
+[WAP:vCalendar]
+Bearer= WAP
+BioUid= 268457267
+Message=
+BEGIN:VCALENDAR
+VERSION:1.0
+BEGIN:VEVENT
+X-EPOCAGENDAENTRYTYPE:APPOINTMENT
+DESCRIPTION:ModifiedAppointment
+UID:2
+CLASS:PUBLIC
+DCREATED:19991020T000000Z
+LAST-MODIFIED:19991020T165400Z
+DTSTART:19991020T090000Z
+DTEND:19991020T100000Z
+END:VEVENT
+END:VCALENDAR
+Encoding= 8
+
+[WAP:vCard]
+Bearer= WAP
+BioUid= 268457268
+Message=
+begin:vcard 
+n:;Julia
+adr:;;;;;;
+version:2.1
+fn:Julia Blumin
+end:vcard
+
+[WAP:vCard]
+Bearer= WAP
+BioUid= 268457268
+Message=
+begin:vcard 
+n:;Julia
+adr:;;;;;;
+version:2.1
+fn:Julia Blumin
+end:vcard
+Encoding= 8
+
+[NBS:MboxCnfg]
+Bearer= NBS
+BioUid= 268457263
+Message= 
+password
+Mname:Demon
+Madr:Brahim@yashar.Demon.co.uk
+Mrcv:pop3.demon.co.uk
+Msnd:post.demon.co.uk
+Mpro:PO
+
+[NBS:InternetCnfg]
+Bearer= NBS
+BioUid= 268457263
+Message= 
+password
+Iname:Demon
+Itel:+44 845 2121666
+Idns1:158.152.1.58
+Idns2:158.152.1.43
+
+[NBS:ComBizCard]
+Bearer= NBS
+BioUid= 268457265
+Message= 
+Business Card
+Da Card
+Biz Cards Lmtd
+Biz Whiz
+tel 411
+tel (home) 411
+fax 411
+me@here.com
+1122 Boogie Woogie Avenue
+Big Town
+WC1 000
+United Kingdom
+
+[NBS:ComBizCardBigger]
+Bearer= NBS
+BioUid= 268457265
+Message= 
+Business Card
+Da Card
+Biz Cards Lmtd
+Biz Whiz
+tel 411
+tel (home) 411
+fax 411
+me@here.com
+1122 Boogie Woogie Avenue
+Big Town
+WC1 000
+United Kingdom
+Gubbins
+More Gubbins
+Huge heaps of Gubbins
+Mountain of Gubbins, higher than is possibly feasible.
+
+
+[NBS:EmailNotify]
+Bearer= NBS
+BioUid= 268457264
+Message= 
+10
+From: 411
+Subject: A Message Notification
+
+[NBS:InternetConfig]
+Bearer= NBS
+BioUid= 268457263
+Message= 
+password
+Mname:Demon
+Muid:yashar
+Mpwd:dig23ler
+Madr:Brahim@yashar.Demon.co.uk
+Mrcv:pop3.demon.co.uk
+Mpro:PO
+Msnd:post.demon.co.uk
+Iname:Demon
+Iuid:yashar
+Ipwd:dig23ler
+Itel:+44 845 2121666
+Idns1:158.152.1.58
+Idns2:158.152.1.43
+
+[NBS:MailboxConfig]
+Bearer= NBS
+BioUid= 268457263
+Message= 
+password
+Mname:Demon
+Madr:Brahim@yashar.Demon.co.uk
+Mrcv:pop3.demon.co.uk
+Msnd:post.demon.co.uk
+Mpro:PO
+
+endscript

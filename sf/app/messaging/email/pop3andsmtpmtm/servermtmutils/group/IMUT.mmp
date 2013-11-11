@@ -1,0 +1,60 @@
+// Copyright (c) 2003-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// imut.dll Email server-side utilities
+// 
+//
+
+/**
+ @file
+*/
+
+
+TARGET          imut.dll
+TARGETTYPE      dll
+
+CAPABILITY All -TCB
+UID             0x1000008d 0x10004837
+VENDORID 0x70000001
+SOURCEPATH      ../src
+SOURCE          IMUTDLL.CPP IMCVUTIL.CPP IMCVSEND.CPP imcvrecv.cpp IMCVCODC.CPP
+SOURCE          IMSK.CPP IMSKSCR.CPP imutcon.cpp cimsocketidletimer.cpp cimcaf.cpp CMsvPlainBodyTextEntry.CPP
+SOURCE          cimmobilitymanager.cpp
+USERINCLUDE     ../inc ../../clientmtms/inc
+USERINCLUDE     ../mobilitypolicyprovider/inc ../mobilitytestframework/inc
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+LIBRARY         euser.lib bafl.lib efsrv.lib etext.lib esock.lib logwrap.lib securesocket.lib
+LIBRARY         insock.lib charconv.lib commsdat.lib msgs.lib imcm.lib 
+LIBRARY         commdb.lib
+LIBRARY         caf.lib cafutils.lib
+LIBRARY         esocksvr.lib netmeta.lib
+LIBRARY         mobilitypolicyprovider.lib
+
+#ifdef __MOBILITY_TEST_FRAMEWORK
+LIBRARY mobilitytestframework.lib
+#endif //__MOBILITY_TEST_FRAMEWORK
+
+#include        "../../../../../../mw/messagingmw/messagingfw/msgtests/group/msgopt.mph"
+
+START WINS
+	baseaddress     0x4AD20000
+END
+
+#ifdef WINSCW
+DEFFILE v2_imut.def
+#else
+DEFFILE v2_imut.DEF
+#endif
+
+
+SMPSAFE

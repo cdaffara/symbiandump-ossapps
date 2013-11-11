@@ -1,0 +1,89 @@
+EXPORTS
+	_ZN13CSmsClientMtm4NewLER17CRegisteredMtmDllR11CMsvSession @ 1 NONAME ; CSmsClientMtm :: NewL ( CRegisteredMtmDll & , CMsvSession & )
+	_ZN13TSmsUtilities14Dummy_Export_1Ev @ 2 NONAME ; TSmsUtilities :: Dummy_Export_1 ( void )
+	_ZN13CSmsClientMtm15BioTypeChangedLE4TUid @ 3 NONAME ; CSmsClientMtm :: BioTypeChangedL ( TUid )
+	_ZN10CSmsNumber5CopyLERKS_ @ 4 NONAME ; CSmsNumber :: CopyL ( CSmsNumber const & )
+	_ZN12CSmsSettings5CopyLERKS_ @ 5 NONAME ; CSmsSettings :: CopyL ( CSmsSettings const & )
+	_ZN19CSmsMessageSettings5CopyLERKS_ @ 6 NONAME ; CSmsMessageSettings :: CopyL ( CSmsMessageSettings const & )
+	_ZNK10CSmsHeader12ExternalizeLER15RMsvWriteStream @ 7 NONAME ; CSmsHeader :: ExternalizeL ( RMsvWriteStream & ) const
+	_ZNK10CSmsNumber12ExternalizeLER12RWriteStream @ 8 NONAME ; CSmsNumber :: ExternalizeL ( RWriteStream & ) const
+	_ZNK12CSmsSettings12ExternalizeLER12RWriteStream @ 9 NONAME ; CSmsSettings :: ExternalizeL ( RWriteStream & ) const
+	_ZNK19CSmsMessageSettings12ExternalizeLER12RWriteStream @ 10 NONAME ; CSmsMessageSettings :: ExternalizeL ( RWriteStream & ) const
+	_ZN13TSmsUtilities14GetDescriptionERK11CSmsMessageR6TDes16i @ 11 NONAME ; TSmsUtilities :: GetDescription ( CSmsMessage const & , TDes16 & , int )
+	_ZN13TSmsUtilities10GetDetailsER3RFsRK11CSmsMessageR6TDes16i @ 12 NONAME ; TSmsUtilities :: GetDetails ( RFs & , CSmsMessage const & , TDes16 & , int )
+	_ZN13TSmsUtilities10GetDetailsER3RFsRK7TDesC16R6TDes16i @ 13 NONAME ; TSmsUtilities :: GetDetails ( RFs & , TDesC16 const & , TDes16 & , int )
+	_ZNK10CSmsHeader15GetSmsSettingsLER19CSmsMessageSettings @ 14 NONAME ; CSmsHeader :: GetSmsSettingsL ( CSmsMessageSettings & ) const
+	_ZN10CSmsHeader12InternalizeLER14RMsvReadStream @ 15 NONAME ; CSmsHeader :: InternalizeL ( RMsvReadStream & )
+	_ZN10CSmsNumber12InternalizeLER11RReadStream @ 16 NONAME ; CSmsNumber :: InternalizeL ( RReadStream & )
+	_ZN10CSmsNumberD1Ev @ 17 NONAME ; CSmsNumber ::!Extra_ctor_dtor ( void )
+	_ZN10CSmsNumberD2Ev @ 18 NONAME ; CSmsNumber ::!Extra_ctor_dtor ( void )
+	_ZN10CSmsHeader4NewLEP11CSmsMessage @ 19 NONAME ; CSmsHeader :: NewL ( CSmsMessage * )
+	_ZN10CSmsHeader4NewLEN7CSmsPDU11TSmsPDUTypeER13CEditableText @ 20 NONAME ; CSmsHeader :: NewL ( CSmsPDU :: TSmsPDUType , CEditableText & )
+	_ZN10CSmsNumber4NewLEv @ 21 NONAME ; CSmsNumber :: NewL ( void )
+	_ZN10CSmsNumber4NewLERKS_ @ 22 NONAME ; CSmsNumber :: NewL ( CSmsNumber const & )
+	_ZN12CSmsSettings4NewLEv @ 23 NONAME ; CSmsSettings :: NewL ( void )
+	_ZN13TSmsUtilities16PopulateMsgEntryER9TMsvEntryRK11CSmsMessagel4TUid @ 24 NONAME ; TSmsUtilities :: PopulateMsgEntry ( TMsvEntry & , CSmsMessage const & , long , TUid )
+	_ZN12CSmsSettings15RemoveSCAddressEi @ 25 NONAME ; CSmsSettings :: RemoveSCAddress ( int )
+	_ZN10CSmsHeader8RestoreLER9CMsvStore @ 26 NONAME ; CSmsHeader :: RestoreL ( CMsvStore & )
+	_ZN12CSmsSettings8RestoreLER9CMsvStore @ 27 NONAME ; CSmsSettings :: RestoreL ( CMsvStore & )
+	_ZN13CSmsClientMtm26RestoreServiceAndSettingsLEv @ 28 NONAME ; CSmsClientMtm :: RestoreServiceAndSettingsL ( void )
+	_ZN13TSmsUtilities10ServiceIdLER15CMsvServerEntryRl4TUidP18CMsvEntrySelection @ 29 NONAME ; TSmsUtilities :: ServiceIdL ( CMsvServerEntry & , long & , TUid , CMsvEntrySelection * )
+	_ZN13TSmsUtilities10ServiceIdLER9CMsvEntryRl4TUidP18CMsvEntrySelection @ 30 NONAME ; TSmsUtilities :: ServiceIdL ( CMsvEntry & , long & , TUid , CMsvEntrySelection * )
+	_ZN10CSmsHeader15SetSmsSettingsLERK19CSmsMessageSettings @ 31 NONAME ; CSmsHeader :: SetSmsSettingsL ( CSmsMessageSettings const & )
+	_ZNK10CSmsHeader6StoreLER9CMsvStore @ 32 NONAME ; CSmsHeader :: StoreL ( CMsvStore & ) const
+	_ZNK12CSmsSettings6StoreLER9CMsvStore @ 33 NONAME ; CSmsSettings :: StoreL ( CMsvStore & ) const
+	_ZN10CSmsHeaderD0Ev @ 34 NONAME ; CSmsHeader :: ~CSmsHeader ( void )
+	_ZN10CSmsNumberD0Ev @ 35 NONAME ; CSmsNumber :: ~CSmsNumber ( void )
+	_ZN12CSmsSettingsD0Ev @ 36 NONAME ; CSmsSettings :: ~CSmsSettings ( void )
+	_ZN13TSmsUtilities14Dummy_Export_2Ev @ 37 NONAME ; TSmsUtilities :: Dummy_Export_2 ( void )
+	_ZN12CSmsSettings13AddSCAddressLERK7TDesC16S2_ @ 38 NONAME ; CSmsSettings :: AddSCAddressL ( TDesC16 const & , TDesC16const& )
+	_ZN21CSmsSimParamOperation9ProgressLEv @ 39 NONAME ; CSmsSimParamOperation :: ProgressL ( void )
+	_ZN13CSmsClientMtm14ReadSimParamsLER14TRequestStatus @ 40 NONAME ; CSmsClientMtm :: ReadSimParamsL ( TRequestStatus & )
+	_ZNK21CSmsSimParamOperation16ServiceCentersLCEv @ 41 NONAME ; CSmsSimParamOperation :: ServiceCentersLC ( void ) const
+	_ZNK10CSmsNumber7AddressEv @ 42 NONAME ; CSmsNumber :: Address ( void ) const
+	_ZNK10CSmsNumber4NameEv @ 43 NONAME ; CSmsNumber :: Name ( void ) const
+	_ZN10CSmsNumber11SetAddressLERK7TDesC16 @ 44 NONAME ; CSmsNumber :: SetAddressL ( TDesC16 const & )
+	_ZN10CSmsNumber8SetNameLERK7TDesC16 @ 45 NONAME ; CSmsNumber :: SetNameL ( TDesC16 const & )
+	_ZN13CSmsClientMtm14CreateMessageLEl @ 46 NONAME ; CSmsClientMtm :: CreateMessageL ( long )
+	_ZN13TSmsUtilities10ServiceIdLER11CMsvSessionRl4TUidP18CMsvEntrySelection @ 47 NONAME ; TSmsUtilities :: ServiceIdL ( CMsvSession & , long & , TUid , CMsvEntrySelection * )
+	_ZN21CSmsSimParamOperation17RestoreSimParamsLER9CMsvStoreR20CMobilePhoneSmspList @ 48 NONAME ; CSmsSimParamOperation :: RestoreSimParamsL ( CMsvStore & , CMobilePhoneSmspList & )
+	_ZN21CSmsSimParamOperation15StoreSimParamsLER9CMsvStoreRK20CMobilePhoneSmspList @ 49 NONAME ; CSmsSimParamOperation :: StoreSimParamsL ( CMsvStore & , CMobilePhoneSmspList const & )
+	_ZN13CSmsClientMtm15WriteSimParamsLERK20CMobilePhoneSmspListR14TRequestStatus @ 50 NONAME ; CSmsClientMtm :: WriteSimParamsL ( CMobilePhoneSmspList const & , TRequestStatus & )
+	_ZN12CSmsSettings13SaveExternalLER9CMsvStore @ 51 NONAME ; CSmsSettings :: SaveExternalL ( CMsvStore & )
+	_ZN13TSmsUtilities17OpenResourceFileLER3RFs @ 52 NONAME ; TSmsUtilities :: OpenResourceFileL ( RFs & )
+	_ZN13TSmsUtilities19ReadResourceStringLE13RResourceFileiR6TDes16 @ 53 NONAME ; TSmsUtilities :: ReadResourceStringL ( RResourceFile , int , TDes16 & )
+	_ZNK12TMsvSmsEntry10AckSummaryE11TSmsAckType @ 54 NONAME ; TMsvSmsEntry :: AckSummary ( TSmsAckType ) const
+	_ZNK12TMsvSmsEntry9MessageIdERl @ 55 NONAME ; TMsvSmsEntry :: MessageId ( long & ) const
+	_ZN10CSmsNumber12SetAckStatusE11TSmsAckTypeNS_13TSmsAckStatusE @ 56 NONAME ; CSmsNumber :: SetAckStatus ( TSmsAckType , CSmsNumber :: TSmsAckStatus )
+	_ZN12TMsvSmsEntry13SetAckSummaryE11TSmsAckTypeNS_22TMsvSmsEntryAckSummaryE @ 57 NONAME ; TMsvSmsEntry :: SetAckSummary ( TSmsAckType , TMsvSmsEntry :: TMsvSmsEntryAckSummary )
+	_ZN12TMsvSmsEntry12SetMessageIdEli @ 58 NONAME ; TMsvSmsEntry :: SetMessageId ( long , int )
+	_ZNK10CSmsNumber9AckStatusE11TSmsAckType @ 59 NONAME ; CSmsNumber :: AckStatus ( TSmsAckType ) const
+	_ZN10CSmsHeaderD2Ev @ 60 NONAME ; CSmsHeader ::!Extra_ctor_dtor ( void )
+	_ZN19CSmsMessageSettings12InternalizeLER11RReadStream @ 61 NONAME ; CSmsMessageSettings :: InternalizeL ( RReadStream & )
+	_ZN12CSmsSettings12InternalizeLER11RReadStream @ 62 NONAME ; CSmsSettings :: InternalizeL ( RReadStream & )
+	_ZN10CSmsHeaderD1Ev @ 63 NONAME ; CSmsHeader ::!Extra_ctor_dtor ( void )
+	_ZN12CSmsSettingsD2Ev @ 64 NONAME ; CSmsSettings ::!Extra_ctor_dtor ( void )
+	_ZN12CSmsSettingsD1Ev @ 65 NONAME ; CSmsSettings ::!Extra_ctor_dtor ( void )
+	_ZTI10CSmsNumber @ 66 NONAME ABSENT ; !Table ( )
+	_ZTI12CSmsSettings @ 67 NONAME ABSENT ; !Table ( )
+	_ZTI19CSmsMessageSettings @ 68 NONAME ABSENT ; !Table ( )
+	_ZTV10CSmsNumber @ 69 NONAME ABSENT ; !Table ( )
+	_ZTV12CSmsSettings @ 70 NONAME ABSENT ; !Table ( )
+	_ZTV19CSmsMessageSettings @ 71 NONAME ABSENT ; !Table ( )
+	_ZN10CSmsHeader15SetEmailFieldsLERK15CSmsEmailFields @ 72 NONAME
+	_ZN15CSmsEmailFields11AddAddressLERK7TDesC16 @ 73 NONAME
+	_ZN15CSmsEmailFields11SetSubjectLERK7TDesC16 @ 74 NONAME
+	_ZN15CSmsEmailFields13RemoveAddressEi @ 75 NONAME
+	_ZN15CSmsEmailFields4NewLERKS_ @ 76 NONAME
+	_ZN15CSmsEmailFields4NewLEv @ 77 NONAME
+	_ZN15CSmsEmailFields5ResetEv @ 78 NONAME
+	_ZN15CSmsEmailFieldsD0Ev @ 79 NONAME
+	_ZN15CSmsEmailFieldsD1Ev @ 80 NONAME
+	_ZN15CSmsEmailFieldsD2Ev @ 81 NONAME
+	_ZNK10CSmsHeader11EmailFieldsEv @ 82 NONAME
+	_ZNK15CSmsEmailFields10HasAddressEv @ 83 NONAME
+	_ZNK15CSmsEmailFields6LengthEv @ 84 NONAME
+	_ZNK15CSmsEmailFields7SubjectEv @ 85 NONAME
+	_ZNK15CSmsEmailFields9AddressesEv @ 86 NONAME
+	_ZNK15CSmsEmailFields9ComposeLCEv @ 87 NONAME
+

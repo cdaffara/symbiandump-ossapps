@@ -1,0 +1,1090 @@
+
+---------------------- Sending Email 1 size=1955 ------------------------
+
+From: FirstNameSecondNameThirdName AllJoined <ralph.greenwell@virgin.net>
+Reply-to: =?ISO-8859-1?B?Uul1bmlvbiCr6WNvbG9naWUgcw==?= =?ISO-8859-1?B?b25vcmW7IE1vbnRy6WFsemFjUg==?=
+  <ibrahim@sinister6.demon.co.uk>
+To: "Ralphie ABCabc123" ralph-greenwell@psion.com (COMMENT), "Zac Boy"
+  <zac@demon.co.uk>
+Cc: Important folk:me myself and i<meMyself@atEye.net>, "Sam
+  Irving"@Other-Host, Standard
+  Distribution:/main/davis/people/standard@Other-Host,
+  "<Jones>standard.dist.3"@Tops-20-Host>
+Bcc: A B and C<meMyself@atEye.net>, "Sam Irving" @Other-Host
+Subject: If you can read this you understand the example.
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+X-Priority: 1 (Highest)
+Importance: high
+Message-ID: <GQhrDwbd9LDv.MQshCbDr@psion.com>
+X-Mailer: EPOC Email Version 2.10
+MIME-Version: 1.0
+Content-Language: i-default
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+EMAIL HEADER TEST #1
+
+    From: three 'words' sperated by space, tab etc. Should be joined =
+up
+Reply-to: QP encoded words seperated by text
+      To: Word with QP encoding + space(as _), Word in comment delimiters =
+(),=20
+ Subject: Two binary encoded words, seperated by space, which should be =
+removed to
+          reveal a sentence.
+
+
+
+---------------------- Sending Email 2 size=1165 ------------------------
+
+From: RalphGreenwell <ralph.greenwell@virgin.net>
+Reply-to: Mzac R <ibrahim@sinister6.demon.co.uk>
+To: "Ralphie" ralph-greenwell@psion.com (COMMENT), "Zac Boy"
+  <zac@demon.co.uk>
+Subject: If you can read this yo
+ =?ISO-8859-x?B?dSB1bmRlcnN0YW5kIHRoZSBleGFtcGxlLg==?=
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+Message-ID: <xCbVfqsND4NB.F3GJcxjq@psion.com>
+X-Mailer: EPOC Email Version 2.10
+MIME-Version: 1.0
+Content-Language: i-default
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+MIME EMAIL WITH ENCODED HEADER FIELDS
+From: <word> <word>
+ReplyTo: <word> text <word>
+Subject: ONly first encoded word should be decoded, second has incorrect =
+charset
+
+
+---------------------- Sending Email 3 size=3057 ------------------------
+
+From: =?rubbish?Q?FirstName?=SecondName <ralph.greenwell@virgin.net>
+Reply-to: =?ISO-8859-1?B?Uul1bmlvbiCr6WNvbG9naWUgcw==?= =?ISO-8859-1?B?b25vcmW7IE1vbnRy6WFsemFjUg==?=
+  <ibrahim@sinister6.demon.co.uk>
+To: "Ralphie ABCabc123" ralph-greenwell@psion.com (COMMENT), "Zac Boy"
+  <zac@demon.co.uk>
+Cc: Important folk:=ISO-8859-1?Q?me?=	 =?ISO-8859-1?Q?_myself?= and
+  i<meMyself@atEye.net>, "Sam Irving"@Other-Host, Standard
+  Distribution:/main/davis/people/standard@Other-Host, =???=, =?ISO-8859-1??=
+  dd@dd.com, =??AA?= dd2@dd.com, =?ISO-8859-1?Too-long?"bob"?=  
+  bob@Other-Host
+Bcc: =?ISO-8859-1Q?A?=	=?ISO-8859-1?Q?_B and C<meMyself@atEye.net>, =?ISO-8859-1?Q?"Sam Irving"=  
+  abe@Other-Host, =?ISO-8859-1?Q?"Sam Irving"=  =?ISO-8859-1?Q?"Sam Irving"?= 
+  abe@Other-Host, =?ISO-8859-1?Q?"Sam Irving"= 
+  abe@Other-Host  =?ISO-8859-1?Q?"Sam Irving"?=, =?ISO-8859-1?Q?"Sam Irving"= 
+  abe@Other-Host  =?ISO-8859-1?Q?"Sam Irving"?=, =?ISO-8859-1?Q?"Sam Irving"= 
+  abe@Other-?Host  =?ISO-8859-1?Q?"Sam Irving"?=
+Subject: If you can read this yo
+ =?ISO-8859-x?B?dSB1bmRlcnN0YW5kIHRoZSBleGFtcGxlLg==?=
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+X-Priority: 1 (Highest)
+Importance: high
+Message-ID: <t6kz5nthvmxj.4tbXc3pt@psion.com>
+X-Mailer: EPOC Email Version 2.10
+MIME-Version: 1.0
+Content-Language: i-default
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+INVALID ENCODED HEADER
+
+From: incorrect charset
+
+Cc: 1, First, missing opening
+Cc: 2, 'empty' 'word', no address
+Cc: 3, 'empty' 'word' +something in charset
+Cc: 4, 'empty' 'word' +something in encoding type
+Cc: 5, OK 'word' + invalid charset - too many characters
+
+Bcc: 1, word missing second ?
+Bcc: 1, Second 'wprd' missing word-end ?=3D
+BCc: 2, first word has missing end
+BCc: 2, first word has missing end + ok 2nd word
+BCc: 2, first word has missing end + ok 2nd word after address
+BCc: 2, first word has missing end and ? + ok 2nd word after address(which =
+has a ?)
+
+Subject: two adjoining words not seperated by a space
+
+
+---------------------- Sending Email 4 size=2072 ------------------------
+
+From: <ibrahim@symbian.com> =?ISO-8859-1?B?Pz8/Pz8/Pz8/Pz8/Pz+1Pz8/Pw==?=
+Reply-to: =?ISO-8859-1?B?Pz8/Pz8/Pz8/Pz8/Pz+1Pz8/Pw==?=<dd@dd.com>
+To:
+  <html>=?ISO-8859-1?B?Pz8=?=<dd@dd.com> Réunion «écologie sonore» Montréal
+Cc: bob@Other-Host
+Bcc: =?MOD-UTF-7?B?"Just some plain old Mod-Utf-7 text?=abe@Other-Host,	=?BGFBBFFFBFBsdfsdf?B?"Just some plain old Mod-Utf-7 text?=
+  abe@Other-Host, =?GB-2312-80?Q?=C4=E3=C5=C4=D2=BB=CE=D2=C5=C4?=
+  abe@Other-Host, =?ISO-8859-1?B?Pz8/Pz8=?= abe@Other-Host
+Subject: =?Big-5?Q?=A1H=A1H=A1H=A1H=A1H=A1H=A1=D3=A1H=A1H=A1H?=
+ =?Big-5?Q?=A1H=A1H=A1H=A1H=A1H=A1H=A1H=A1H=A1H=A1H?= .BETA.ZZ118
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+Message-ID: <zQ4rQTnj4P3s.PssPDcRK@psion.com>
+X-Mailer: EPOC Email Version 2.10
+MIME-Version: 1.0
+Content-Language: i-default
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+ENCODED HEADER : testing different charsets
+
+From: UTF7
+ReplyTo : UTF8
+To: UTF7 followed by UTF8 followed by ISO-8859-1
+Subject decoded is =
+=C4_=AEp=B6=B3=B1g=AFu=B2b=C1I=AEv=BBy=BF=FD.BETA.ZZ118
+RESOURCE LBUF charset_name_list
+	{
+	buffer=3D "10003C80\tUTF-7\n"
+               	"10003C91\tUTF-8\n"
+		"10003C95\tMOD-UTF-7\n"
+		"10003b10\tISO-8859-1\tus-ascii\n"
+               	"10000fbe\tGB-2312-80\tGB2312\n"
+		"10000fbf\tBig-5\tBig5\n"
+		"10000fbd\tShift-JIS\tShift_JIS\n"
+		"1000401a\tGB/T 12345-90\n"
+		"10003ecb\tGBK\n";
+
+
+---------------------- Sending Email 5 size=713 ------------------------
+
+From: gregory.laverylong@AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAsymbiannnnnnnnn.com
+To: gregory.lavery@symbian.com, gregorylavery@hotmail.com,
+  gregorylavery@netscape.net
+Subject: email header folding
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+Message-ID: <QG0VNXJNx22y.DHvfQsk4@psion.com>
+X-Mailer: EPOC Email Version 2.10
+MIME-Version: 1.0
+Content-Language: i-default
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+ddd
+
+
+---------------------- Sending Email 6 size=755 ------------------------
+
+From: gregory.laverylong@AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAsymbiannnnnnnnnx.com
+To: gregory.lavery@symbian.com,
+  gregorylavery@hotmmmmmmmmmmmmmmmmmmmail.com, gregorylavery@netscape.net
+Subject: email header folding 2
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+Message-ID: <4GXYQC5PTfQh.hMPPZxNL@psion.com>
+X-Mailer: EPOC Email Version 2.10
+MIME-Version: 1.0
+Content-Language: i-default
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+eee
+
+
+---------------------- Sending Email 7 size=1171 ------------------------
+
+From: ibrahim rahman <ibrahim.rahman@internet-test.plc.psion.com>
+To: abf75@dial.pipex.com
+Subject: [Fwd: Message with attachmet]
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+Message-ID: <pDtdf8jfkB0p.bnpFbHWQ@psion.com>
+X-Mailer: EPOC Email Version 2.10
+MIME-Version: 1.0
+Content-Language: i-default
+Content-Type: multipart/mixed;
+  boundary="EPOC32-FDbn9Ht2JwZjjkppHkcsrjs1FYMb5G296LVc2BG31_2PCX,'"
+
+This is a MIME Message
+
+--EPOC32-FDbn9Ht2JwZjjkppHkcsrjs1FYMb5G296LVc2BG31_2PCX,'
+Content-Type: text/plain; charset=US-ASCII
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+Outer message text, inner is "attachh"
+Also contains outer and inner attachments:
+inner .11
+outer SSS.txt
+
+--EPOC32-FDbn9Ht2JwZjjkppHkcsrjs1FYMb5G296LVc2BG31_2PCX,'
+Content-Type: message/rfc822
+Content-Disposition: attachment;
+	filename="attach 8.eml"
+
+From: =?ISO-8859-1?B?0HVtYiAmIGR1bWJlcq4=?= <ibrahim@sinister6.demon.co.uk>
+Reply-to: =?ISO-8859-1?B?0HVtYiAmIGR1bWJlcq4=?=
+  <ibrahim@sinister6.demon.co.uk>
+To: ibrahim.rahman@sinister6.demon.co.uk, ibahim@sinister6.demon.co.uk,
+  test@psion7.demon.co.uk
+Subject: attach 8
+Date: Wed, 10 Mar 1999 16:27:42 +0000
+Message-ID: <kkNVPyBzw37l.cpjknWT9@psion.com>
+X-Mailer: EPOC Email Version 2.10
+MIME-Version: 1.0
+Content-Language: i-default
+Content-Type: multipart/mixed;
+  boundary="EPOC32-rqFRNfKBb+,bxH,cN-'+wFLTHBqtsWdrQmT-2q-TTD6G33yR"
+
+--EPOC32-rqFRNfKBb+,bxH,cN-'+wFLTHBqtsWdrQmT-2q-TTD6G33yR
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+attachh
+--EPOC32-rqFRNfKBb+,bxH,cN-'+wFLTHBqtsWdrQmT-2q-TTD6G33yR
+Content-Type: application/octet-stream
+Content-Disposition: attachment;
+	filename="Attachment.ll"
+Content-Transfer-Encoding: base64
+
+eQAAEI0AABA2SAAQ80Zt0UVQT0MAIAAAXt+sKwAAAAABAGMAwLptH+8i4AAD
+AAAATAcBAAAAAAAAEAAAAAAQAAAgAAAAAAAAAAAAAAAAABAAAAAADQAAAJgG
+AQBMAAAAXPAAAHwAAAAAAAAAyAcBALANAQAAAAAAXgEAAHg4AOoAEKDhAACf
+5ag4AOoAAAAQAACf5ag4AOoAAAAQASCg4QAQoOEAAJ/lpjgA6gAAABABIKDh
+ABCg4QAAn+WkOADqAAAAEAAQoOEAAJ/lozgA6gAAABAAAJ/lozgA6gAAABAA
+AJ/lozgA6gAAABAAAJ/lozgA6gAAABAAAJ/lozgA6gAAABAAEKDhAACf5aI4
+AOoAAAAQADCg4wAwgOUGMKDjBDCA5Q7woOEBABHjDvCgAZw4AOrwQS3pAICg
+4QFAoOECYKDhBgCg4Zk4AOsEAKDhmjgA6wBQoOEAMJTl8DTD4wNwheAGAKDh
+lDgA6wAQoOEUAJjoBwBV4RwAACoBMNXkKzBD4gM8oOFDzKDhUABc4/f//4p0
+MJ/lAzDc5wM8oOFDzKDhQABc4wQAABoAEGHgBgCg4YQ4AOsAAKDj8IG96AYA
+AAA=
+
+--EPOC32-rqFRNfKBb+,bxH,cN-'+wFLTHBqtsWdrQmT-2q-TTD6G33yR--
+
+--EPOC32-FDbn9Ht2JwZjjkppHkcsrjs1FYMb5G296LVc2BG31_2PCX,'
+Content-Type: text/plain; charset=US-ASCII
+Content-Disposition: attachment;
+	filename="iso-8859-1_Q_=A7=A7=A7=2Etxt_=.txt"
+Content-Transfer-Encoding: base64
+
+c2ZzZGYNCg0K
+
+--EPOC32-FDbn9Ht2JwZjjkppHkcsrjs1FYMb5G296LVc2BG31_2PCX,'--
+
+
+
+---------------------- Sending Email 8 size=659 ------------------------
+
+From: ibrahim rahman <ibrahim.rahman@internet-test.plc.psion.com>
+To: abf75@dial.pipex.com
+Subject: [Fwd: simple text]
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+Message-ID: <RbDrm7xlFQKf.Hr8NVyQj@psion.com>
+X-Mailer: EPOC Email Version 2.10
+MIME-Version: 1.0
+Content-Language: i-default
+Content-Type: multipart/mixed;
+  boundary="EPOC32-X+GgGq9jk-289QKcx3nfTl3v,BXjhKnBwqlLrr03FzG+8Z2l"
+
+This is a MIME Message
+
+--EPOC32-X+GgGq9jk-289QKcx3nfTl3v,BXjhKnBwqlLrr03FzG+8Z2l
+Content-Type: text/plain; charset=x-user-defined
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+outer message for simple text
+nothing too fancy
+
+--EPOC32-X+GgGq9jk-289QKcx3nfTl3v,BXjhKnBwqlLrr03FzG+8Z2l
+Content-Type: message/rfc822
+Content-Disposition: attachment;
+	filename="simple text.eml"
+Content-Transfer-Encoding: 7bit
+
+From: ibrahim rahman <ibrahim.rahman@internet-test.plc.psion.com>
+To: =?ISO-8859-1?B?wMHCw8TFxsfIycrLzM3Oz9DR0tPU1dbX2A==?=
+  <ibrahim.rahman@symbian.com>
+Subject: simple text
+Date: Tue, 15 Jun 1999 11:36:06 +0000
+Message-ID: <dXKwzbJS7cVb.v4XxCJHr@psion.com>
+X-Mailer: EPOC Email Version 2.10
+MIME-Version: 1.0
+Content-Language: i-default
+Content-Type: text/plain; charset=US-ASCII
+Content-Transfer-Encoding: quoted-printable
+
+simple text message
+nothing fancy
+
+
+--EPOC32-X+GgGq9jk-289QKcx3nfTl3v,BXjhKnBwqlLrr03FzG+8Z2l--
+
+
+
+---------------------- Sending Email 9 size=2338 ------------------------
+
+From: ibrahim rahman <ibrahim.rahman@internet-test.plc.psion.com>
+To: abf75@dial.pipex.com
+Subject: [Fwd: attach 8]
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+Message-ID: <hb1ccQPppxZ1.GjZNPglq@psion.com>
+X-Mailer: EPOC Email Version 2.10
+MIME-Version: 1.0
+Content-Language: i-default
+Content-Type: multipart/mixed;
+  boundary="EPOC32-KPb9mqSs70pszb'X5rtc50jSmxGTKJ6fqLvGwsjg,CLqPlP9"
+
+This is a MIME Message
+
+--EPOC32-KPb9mqSs70pszb'X5rtc50jSmxGTKJ6fqLvGwsjg,CLqPlP9
+Content-Type: text/plain; charset=US-ASCII
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+ouer & inner binary attachments
+
+--EPOC32-KPb9mqSs70pszb'X5rtc50jSmxGTKJ6fqLvGwsjg,CLqPlP9
+Content-Type: message/rfc822
+Content-Disposition: attachment;
+	filename="attach 8.eml"
+
+From: =?ISO-8859-1?B?0HVtYiAmIGR1bWJlcq4=?= <ibrahim@sinister6.demon.co.uk>
+Reply-to: =?ISO-8859-1?B?0HVtYiAmIGR1bWJlcq4=?=
+  <ibrahim@sinister6.demon.co.uk>
+To: ibrahim.rahman@sinister6.demon.co.uk, ibahim@sinister6.demon.co.uk,
+  test@psion7.demon.co.uk
+Subject: attach 8
+Date: Wed, 10 Mar 1999 16:27:42 +0000
+Message-ID: <bCRVXJkbJK2N.HWvwmj1C@psion.com>
+X-Mailer: EPOC Email Version 2.10
+MIME-Version: 1.0
+Content-Language: i-default
+Content-Type: multipart/mixed;
+  boundary="EPOC32-wkXJFb8QM-QRJdl_bRPf9xYkFbk7wWTDTjd9zxD_wqlZ,qpy"
+
+--EPOC32-wkXJFb8QM-QRJdl_bRPf9xYkFbk7wWTDTjd9zxD_wqlZ,qpy
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+attachh
+--EPOC32-wkXJFb8QM-QRJdl_bRPf9xYkFbk7wWTDTjd9zxD_wqlZ,qpy
+Content-Type: application/octet-stream
+Content-Disposition: attachment;
+	filename="Attachment.ll"
+Content-Transfer-Encoding: base64
+
+eQAAEI0AABA2SAAQ80Zt0UVQT0MAIAAAXt+sKwAAAAABAGMAwLptH+8i4AAD
+AAAATAcBAAAAAAAAEAAAAAAQAAAgAAAAAAAAAAAAAAAAABAAAAAADQAAAJgG
+AQBMAAAAXPAAAHwAAAAAAAAAyAcBALANAQAAAAAAXgEAAHg4AOoAEKDhAACf
+5ag4AOoAAAAQAACf5ag4AOoAAAAQASCg4QAQoOEAAJ/lpjgA6gAAABABIKDh
+ABCg4QAAn+WkOADqAAAAEAAQoOEAAJ/lozgA6gAAABAAAJ/lozgA6gAAABAA
+AJ/lozgA6gAAABAAAJ/lozgA6gAAABAAAJ/lozgA6gAAABAAEKDhAACf5aI4
+AOoAAAAQADCg4wAwgOUGMKDjBDCA5Q7woOEBABHjDvCgAZw4AOrwQS3pAICg
+4QFAoOECYKDhBgCg4Zk4AOsEAKDhmjgA6wBQoOEAMJTl8DTD4wNwheAGAKDh
+lDgA6wAQoOEUAJjoBwBV4RwAACoBMNXkKzBD4gM8oOFDzKDhUABc4/f//4p0
+MJ/lAzDc5wM8oOFDzKDhQABc4wQAABoAEGHgBgCg4YQ4AOsAAKDj8IG96AYA
+AAA=
+
+--EPOC32-wkXJFb8QM-QRJdl_bRPf9xYkFbk7wWTDTjd9zxD_wqlZ,qpy--
+
+--EPOC32-KPb9mqSs70pszb'X5rtc50jSmxGTKJ6fqLvGwsjg,CLqPlP9
+Content-Type: application
+Content-Disposition: attachment;
+	filename="TELECA1.TXT.pgp"
+Content-Transfer-Encoding: base64
+
+qANQR1DBwU4DEG7WG1JyqjMQB/9ACAxo+jgzi9A6qvcTL/bcLK4ZtwYZ27uX
+u87nXVBYXkwXdg31GPwr1f4xOZLxSx7lSam1TwYHZxN8C+3AG+DGFP+pDbxS
+M9RbuPN61mnh6z02JdSns06wyGNh/2/ClxwgmVYnJ7GZw17d75pnGrUx625j
+050nlt+ZYO9yV0WZLcHQUAUJXZINP9EOedKSgrqJ64uc2sXAVQKjpBSCp9+t
+BOQzUuqHHtMo41Ef81MPRLwQZWTSI0zvcpniFT7o5U6sdyvc3aQwX111+3JA
+JwnTVsmdazltL7ZOl9NIAkmJlXFIfOYSxcTw4lvOjTful1mgfIktQxzH3WmW
+MW4Ockh/B/wIGQLpoFZJSIccAMqrw83TJUxCJSwUZFAmFQOUJp0Z+WDm9gIS
+JgLkKiydry2uiG1K6ZAZ/NagVwRg5sQuPzWKS/wWR1PVBjxFpxUN1zNY1anS
+lu2Zt+cjlnGqEpen9OsSoIkctii3Xrzbj6eUoFtMiE9XG2b/NETixdPy/dO0
+AW4vWS4CkxjBsV9yRDA7BwgVhRqsy+Yq7FcF/PrGaaP3wWTLIMLbVDW2+JMq
+MYrx6V3J/6d9VngL4GRt2EfRVa5dnZGkA1CMokB7MvDRqbVAvZUnx7+43YJM
+yJsGYo9L2yWbPgDOrKsetOtameOBLn0/9FbSbgncvkGK/vufuIDaycIoQeKq
+mUCaEiqEX0tgXXzCwVLclhWbpTijLR7hQ3xwtKr/uhSpUq0JiEmLyKR9Ftrb
+pli9IIinVTlxeZVaCNdCJFq2IVcBkJSEDORy7MAmaie6JwncZAMKCtb4t/Nk
+9scYyZe2Q1OL0uAY9Ha77nJuvdaEkslnACPaoMNNBQAspgjvtqhauEwDz2SQ
+pwVZvwGss97bdHET4pGrLYaHbERq8azjsboNt4bSXAJUXOsDxHIp1TPX6Hyh
+qg6xDmtumX0BK8z4dfThmg3MezDvXK6YSUzgpCJ0RvGEDxWxst6HZrvDtE2G
+fLzbDbxjw6DgCjpqb6T1gtTt1uuGKuIYJLqepsJGrKzTDd3p/iCEMzPCCwrr
+n01JQvvq4X+sWYIP+4psNRshxn/XkEOsciFhbcztSEKDrphkXXaS4w1aWC9j
+TTfXIUUxJpkMURcEqT02P36J8voK3Y+PN5DOKjNd0Ftc+zJg8bQHuzo/HxmM
+r23BYPtQoYccFGiZIgWrEcBjsXrZXMKcmvFiFxutrYTteCBDqPYRzKx0sxHF
+xnnVsmeOnJbD6wwuYKtNm5t7bDdDFhE5hqtkRSamqL4UrZmPU6OlY01BCA9x
+ZGT6Bhb6NWz+vPEa+P8vfCUfdhwFcUY8bNotWMJ8rsouGjDLgwdZ/qs/VSzt
+j/ghnhZS2b9WhBujmFO0NRfUoGKrVfebSgmPx23xlp6XuAyBJrZA1hWLzQ6O
+tP4Cz6v+OMFJva2e1tO3nST4mS8r8H1r+5keTMKAoP4SdZa6faQK8Xc+FFqr
+AyWgsSSrMuJs1E0YGXb25bZlkblm0MYsq5PSdmzEEOnGhZXTvwNXB9VKk/m8
+o+SMp4/afdPADp8hN8qJcCJilMgnyJlEJ1ClP+e1GJkxBWPV8elevlGE4Gxk
+dJG19vlu74k1HM7Vay432MmYk6hoDEmSu9lDn+/e33VSDQfFJJqLkqv+q+n2
+1O7KDm3y31kYj/CXC8CCt/4r4pxm
+
+--EPOC32-KPb9mqSs70pszb'X5rtc50jSmxGTKJ6fqLvGwsjg,CLqPlP9--
+
+
+
+---------------------- Sending Email 10 size=1013 ------------------------
+
+From: ibrahim rahman <ibrahim.rahman@internet-test.plc.psion.com>
+To: abf75@dial.pipex.com
+Subject: =?us-pascii?Q?Encoded Subject Line=9F?=
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+Message-ID: <39vQxgcMx07X.D00zLsYD@psion.com>
+X-Mailer: EPOC Email Version 2.10
+MIME-Version: 1.0
+Content-Language: i-default
+Content-Type: multipart/mixed;
+  boundary="EPOC32-Z0+HW-Q-FfvLvWwd9qPgM_X6,QRFBqD0w6wV13Qwh1q3ZvpS"
+
+This is a MIME Message
+
+--EPOC32-Z0+HW-Q-FfvLvWwd9qPgM_X6,QRFBqD0w6wV13Qwh1q3ZvpS
+Content-Type: text/plain; charset=us-pascii
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+Some QP encoded text 4.
+Second Line  .
+Third Line =A1 followed by blank line.
+
+Fourth and very looooooooooooooooooooooooooooooooooooooooggggggggggggg =
+line.
+
+--EPOC32-Z0+HW-Q-FfvLvWwd9qPgM_X6,QRFBqD0w6wV13Qwh1q3ZvpS
+Content-Type: text/plain; charset=ISO-8859-2
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+1. A funny a in iso2 =B1
+2. A funny z in iso2 =AE
+
+
+Fourth and very looooooooooooooooooooooooooooooooooooooooggggggggggggg =
+line.
+
+--EPOC32-Z0+HW-Q-FfvLvWwd9qPgM_X6,QRFBqD0w6wV13Qwh1q3ZvpS
+Content-Type: application
+Content-Disposition: attachment;
+	filename="TELECA1.TXT"
+Content-Transfer-Encoding: base64
+
+0M8R4KGxGuEAAAAAAAAAAAAAAAAAAAAAPgADAP7/CQAGAAAAAAAAAAAAAAAB
+AAAACwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
+--EPOC32-Z0+HW-Q-FfvLvWwd9qPgM_X6,QRFBqD0w6wV13Qwh1q3ZvpS--
+
+
+
+---------------------- Sending Email 11 size=1120 ------------------------
+
+From: =?utf-9?B?w6Agw77DtMO1w74=?= <ibrahim.rahman@symbian.com>
+To: =?ISO-8859-1?B?30CuINHS09TV1g==?= <test@psion7.demon.co.uk>
+Subject: =?ISO-8859-1?B?4CD+9PX+?=
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+Message-ID: <gGZds0DqghnN.Z05R4tZy@psion.com>
+X-Mailer: EPOC Email Version 2.10
+MIME-Version: 1.0
+Content-Language: i-default
+Content-Type: multipart/alternative;
+  boundary="EPOC32-HQZXY4zgXnjjq28nTMmMyQPYcJmMqYJBW9gwJLp4_sbBL0kr"
+
+This is a MIME Message
+
+--EPOC32-HQZXY4zgXnjjq28nTMmMyQPYcJmMqYJBW9gwJLp4_sbBL0kr
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+BIG TEXT=3D20
+=3DC3=3D9F@=3DC2=3DAE =
+=3DC3=3D91=3DC3=3D92=3DC3=3D93=3DC3=3D94=3DC3=3D95=3DC3=3D96
+
+--EPOC32-HQZXY4zgXnjjq28nTMmMyQPYcJmMqYJBW9gwJLp4_sbBL0kr
+Content-Type: text/plain; charset=UTF-8
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+BIG TEXT=20
+=C3=9F@=C2=AE =C3=91=C3=92=C3=93=C3=94=C3=95=C3=96
+
+--EPOC32-HQZXY4zgXnjjq28nTMmMyQPYcJmMqYJBW9gwJLp4_sbBL0kr
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: base64
+
+PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMCBU
+cmFuc2l0aW9uYWwvL0VOIj4NCjxIVE1MPjxIRUFEPg0KPE1FVEEgY29udGVu
+dD0idGV4dC9odG1sOyBjaGFyc2V0PXV0Zi04IiBodHRwLWVxdWl2PUNvbnRl
+bnQtVHlwZT4NCjxNRVRBIGNvbnRlbnQ9Ik1TSFRNTCA1LjAwLjI5MTkuNjMw
+NyIgbmFtZT1HRU5FUkFUT1I+DQo8U1RZTEU+PC9TVFlMRT4NCjwvSEVBRD4N
+CjxCT0RZIGJnQ29sb3I9I2UxZTBkMj4NCjxESVY+PEZPTlQgZmFjZT1Bcmlh
+bCBzaXplPTI+PFNUUk9ORz5CSUcgVEVYVCA8L1NUUk9ORz48L0ZPTlQ+PC9E
+SVY+DQo8RElWPjxGT05UIGZhY2U9IlRpbWVzIE5ldyBSb21hbiI+DQo8UD7D
+n0DCriDDkcOSw5PDlMOVw5Y8L1A+PC9GT05UPjwvRElWPjwvQk9EWT48L0hU
+TUw+DQoNCg==
+
+--EPOC32-HQZXY4zgXnjjq28nTMmMyQPYcJmMqYJBW9gwJLp4_sbBL0kr--
+
+
+
+---------------------- Sending Email 12 size=5892 ------------------------
+
+From: "psion7.demon.co.uk" <ibrahim.rahman@symbian.com>
+To: "=?ISO-8859-1?B?30CuINHS09TV1g==?=" <test@psion7.demon.co .uk>
+Subject: Testing UTF7
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+Message-ID: <zy2ZZXFkmGXK.L2pdv1j4@psion.com>
+X-Mailer: EPOC Email Version 2.10
+MIME-Version: 1.0
+Content-Language: i-default
+Content-Type: multipart/alternative;
+  boundary="EPOC32-Jtl5'HN5Zm2FWKj2JSrgFh6DW430B,yCQKHgtSX41HY+P6Sh"
+
+This is a MIME Message
+
+--EPOC32-Jtl5'HN5Zm2FWKj2JSrgFh6DW430B,yCQKHgtSX41HY+P6Sh
+Content-Type: text/plain; charset=UTF-7
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+Tue, 11 Apr 2000 15:02:08 GMT
+Will Knight
+
+      Mobile telecommunications giants Ericsson, Nokia and Motorola =
+announced plans Tuesday to co-operate on the development on standard for =
+secure mobile electronic transactions.=20
+=20
+      The trio are expected to release technical details of the project by =
+the end of May and say other companies will be invited to contribute to the =
+development of the standard. The companies hope to have formulated the =
+framework by the summer follwing input from other firms.=20
+=20
+      Key features of this new open standard will include security =
+functions built into WAP including WTLS (Wireless Transport Layer =
+Security), WIM (Wireless Identification Module) and wireless Public Key =
+technologies (PKI) technologies.=20
+
+      The government is currently auctioning off the licences needed to =
+operate Third Generation (3G) or Universal Mobile Telecommunications =
+Systems (UMTS) networks. These will allow service providers to deliver =
+greatly increased bandwidth to mobile Internet devices.=20
+=20
+      Mobile Internet devices are, through the migration to this =
+technology, expected to become an increasingly important part of =
+Internet-based business, offering a new and more user-friendly way for =
+Internet users to spend online. The success of this emerging technology =
+consequently depends heavily on customer confidence in the security of =
+online transactions.=20
+=20
+      President of Nokia Mobile Phones, Matti Alahuhta outlines just how =
+important this new project in a statement issued at today's announcement. =
+
+=20
+      +ACI-Integrating security and transaction applications on a common =
+core standard and platform will create global mass market for mobile =
+e-business. This will benefit all participants from various industries =
+within the value chain, in addition to hundreds of millions of consumers =
+throughout the world.+ACI-
+    =20
+=20
+
+--EPOC32-Jtl5'HN5Zm2FWKj2JSrgFh6DW430B,yCQKHgtSX41HY+P6Sh
+Content-Type: text/html; charset=UTF-7
+Content-Transfer-Encoding: base64
+
+Ky92OEFQQUFoLURPQ1RZUEUgSFRNTCBQVUJMSUMgK0FDSS0tLy9XM0MvL0RU
+RCBIVE1MIDQuMCBUcmFuc2l0aW9uYWwvL0VOK0FDSUFQZy0NCitBRHctSFRN
+TCtBRDRBUEEtSEVBRCtBRDQtDQorQUR3LU1FVEEgY29udGVudCtBRDBBSWct
+dGV4dC9odG1sK0FEcy0gY2hhcnNldCtBRDAtdXRmLTcrQUNJLSBodHRwLWVx
+dWl2K0FEMC1Db250ZW50LVR5cGUrQUQ0LQ0KK0FEdy1NRVRBIGNvbnRlbnQr
+QUQwQUlnLU1TSFRNTCA1LjAwLjI5MTkuNjMwNytBQ0ktIG5hbWUrQUQwLUdF
+TkVSQVRPUitBRDQtDQorQUR3LVNUWUxFK0FENEFQQS0vU1RZTEUrQUQ0LQ0K
+K0FEdy0vSEVBRCtBRDQtDQorQUR3LUJPRFkgYmdDb2xvcitBRDBBSXctZTFl
+MGQyK0FENC0NCitBRHctRElWK0FENEFQQS1GT05UIGNvbG9yK0FEMEFJdy1j
+MjAwMDAgZmFjZStBRDAtQXJpYWwgc2l6ZStBRDAtMitBRDQtVHVlLCAxMSBB
+cHIgMjAwMCAxNTowMjowOCANCkdNVCtBRHctL0ZPTlQrQUQ0QVBBLVUrQUQ0
+QVBBLUZPTlQgY29sb3IrQUQwQUl3LTAwMDBmZiBmYWNlK0FEMC1BcmlhbCBz
+aXplK0FEMC0yK0FENC0NCitBRHctUCtBRDQtV2lsbCBLbmlnaHQrQUR3LS9Q
+K0FENEFQQS0vVStBRDRBUEEtL0ZPTlQrQUQ0LQ0KK0FEdy1UQUJMRSBib3Jk
+ZXIrQUQwLTAgY2VsbFBhZGRpbmcrQUQwLTIgY2VsbFNwYWNpbmcrQUQwLTAg
+d2lkdGgrQUQwLTU5MitBRDQtDQogICtBRHctVEJPRFkrQUQ0LQ0KICArQUR3
+LVRSK0FENC0NCiAgICArQUR3LVREK0FENEFQQS1VK0FENEFQQS1GT05UIGNv
+bG9yK0FEMEFJdy0wMDAwZmYgZmFjZStBRDAtQXJpYWwgc2l6ZStBRDAtMitB
+RDRBUEEtL1UrQUQ0QVBBLS9GT05UK0FENEFQQS1GT05UIA0KICAgICAgY29s
+b3IrQUQwQUl3LTAwMDAwMCBmYWNlK0FEMEFJZy1UaW1lcyBOZXcgUm9tYW4r
+QUNJQVBnLQ0KICAgICAgK0FEdy1QK0FENC1Nb2JpbGUgdGVsZWNvbW11bmlj
+YXRpb25zIGdpYW50cyBFcmljc3NvbiwgTm9raWEgYW5kIE1vdG9yb2xhIGFu
+bm91bmNlZCANCiAgICAgIHBsYW5zIFR1ZXNkYXkgdG8gY28tb3BlcmF0ZSBv
+biB0aGUgZGV2ZWxvcG1lbnQgb24gc3RhbmRhcmQgZm9yIHNlY3VyZSANCiAg
+ICAgIG1vYmlsZSBlbGVjdHJvbmljIHRyYW5zYWN0aW9ucy4gK0FEdy0vUCtB
+RDQtDQogICAgICArQUR3LVArQUQ0LVRoZSB0cmlvIGFyZSBleHBlY3RlZCB0
+byByZWxlYXNlIHRlY2huaWNhbCBkZXRhaWxzIG9mIHRoZSBwcm9qZWN0IGJ5
+IA0KICAgICAgdGhlIGVuZCBvZiBNYXkgYW5kIHNheSBvdGhlciBjb21wYW5p
+ZXMgd2lsbCBiZSBpbnZpdGVkIHRvIGNvbnRyaWJ1dGUgdG8gDQogICAgICB0
+aGUgZGV2ZWxvcG1lbnQgb2YgdGhlIHN0YW5kYXJkLiBUaGUgY29tcGFuaWVz
+IGhvcGUgdG8gaGF2ZSBmb3JtdWxhdGVkIHRoZSANCiAgICAgIGZyYW1ld29y
+ayBieSB0aGUgc3VtbWVyIGZvbGx3aW5nIGlucHV0IGZyb20gb3RoZXIgZmly
+bXMuICtBRHctL1ArQUQ0LQ0KICAgICAgK0FEdy1QK0FENC1LZXkgZmVhdHVy
+ZXMgb2YgdGhpcyBuZXcgb3BlbiBzdGFuZGFyZCB3aWxsIGluY2x1ZGUgc2Vj
+dXJpdHkgZnVuY3Rpb25zIA0KICAgICAgYnVpbHQgaW50byBXQVAgaW5jbHVk
+aW5nIFdUTFMgKFdpcmVsZXNzIFRyYW5zcG9ydCBMYXllciBTZWN1cml0eSks
+IFdJTSANCiAgICAgIChXaXJlbGVzcyBJZGVudGlmaWNhdGlvbiBNb2R1bGUp
+IGFuZCB3aXJlbGVzcyBQdWJsaWMgS2V5IHRlY2hub2xvZ2llcyANCiAgICAg
+IChQS0kpIHRlY2hub2xvZ2llcy4gK0FEdy0vUCtBRDQtDQogICAgICArQUR3
+LVArQUQ0LVRoZSBnb3Zlcm5tZW50IGlzIGN1cnJlbnRseSArQUR3LS9GT05U
+K0FENEFQQS1VK0FENEFQQS1GT05UIGNvbG9yK0FEMEFJdy0wMDAwZmYgDQog
+ICAgICBmYWNlK0FEMEFJZy1UaW1lcyBOZXcgUm9tYW4rQUNJQVBnLWF1Y3Rp
+b25pbmcgb2ZmK0FEdy0vVStBRDRBUEEtL0ZPTlQrQUQ0QVBBLUZPTlQgY29s
+b3IrQUQwQUl3LTAwMDAwMCANCiAgICAgIGZhY2UrQUQwQUlnLVRpbWVzIE5l
+dyBSb21hbitBQ0lBUGctIHRoZSBsaWNlbmNlcyBuZWVkZWQgdG8gb3BlcmF0
+ZSBUaGlyZCBHZW5lcmF0aW9uIA0KICAgICAgKDNHKSBvciBVbml2ZXJzYWwg
+TW9iaWxlIFRlbGVjb21tdW5pY2F0aW9ucyBTeXN0ZW1zIChVTVRTKSBuZXR3
+b3Jrcy4gVGhlc2UgDQogICAgICB3aWxsIGFsbG93IHNlcnZpY2UgcHJvdmlk
+ZXJzIHRvIGRlbGl2ZXIgZ3JlYXRseSBpbmNyZWFzZWQgYmFuZHdpZHRoIHRv
+IA0KICAgICAgbW9iaWxlIEludGVybmV0IGRldmljZXMuICtBRHctL1ArQUQ0
+LQ0KICAgICAgK0FEdy1QK0FENC1Nb2JpbGUgSW50ZXJuZXQgZGV2aWNlcyBh
+cmUsIHRocm91Z2ggdGhlIG1pZ3JhdGlvbiB0byB0aGlzIHRlY2hub2xvZ3ks
+IA0KICAgICAgZXhwZWN0ZWQgdG8gYmVjb21lIGFuIGluY3JlYXNpbmdseSBp
+bXBvcnRhbnQgcGFydCBvZiBJbnRlcm5ldC1iYXNlZCANCiAgICAgIGJ1c2lu
+ZXNzLCBvZmZlcmluZyBhIG5ldyBhbmQgbW9yZSB1c2VyLWZyaWVuZGx5IHdh
+eSBmb3IgSW50ZXJuZXQgdXNlcnMgdG8gDQogICAgICBzcGVuZCBvbmxpbmUu
+IFRoZSBzdWNjZXNzIG9mIHRoaXMgZW1lcmdpbmcgdGVjaG5vbG9neSBjb25z
+ZXF1ZW50bHkgZGVwZW5kcyANCiAgICAgIGhlYXZpbHkgb24gY3VzdG9tZXIg
+Y29uZmlkZW5jZSBpbiB0aGUgc2VjdXJpdHkgb2Ygb25saW5lIHRyYW5zYWN0
+aW9ucy4gDQorQUR3LS9QK0FENC0NCiAgICAgICtBRHctUCtBRDQtUHJlc2lk
+ZW50IG9mIE5va2lhIE1vYmlsZSBQaG9uZXMsIE1hdHRpIEFsYWh1aHRhIG91
+dGxpbmVzIGp1c3QgaG93IA0KICAgICAgaW1wb3J0YW50IHRoaXMgbmV3IHBy
+b2plY3QgaW4gYSBzdGF0ZW1lbnQgaXNzdWVkIGF0IHRvZGF5J3MgYW5ub3Vu
+Y2VtZW50LiANCiAgICAgICtBRHctL1ArQUQ0LQ0KICAgICAgK0FEdy1QK0FE
+NEFJZy1JbnRlZ3JhdGluZyBzZWN1cml0eSBhbmQgdHJhbnNhY3Rpb24gYXBw
+bGljYXRpb25zIG9uIGEgY29tbW9uIGNvcmUgDQogICAgICBzdGFuZGFyZCBh
+bmQgcGxhdGZvcm0gd2lsbCBjcmVhdGUgZ2xvYmFsIG1hc3MgbWFya2V0IGZv
+ciBtb2JpbGUgDQogICAgICBlLWJ1c2luZXNzLiBUaGlzIHdpbGwgYmVuZWZp
+dCBhbGwgcGFydGljaXBhbnRzIGZyb20gdmFyaW91cyBpbmR1c3RyaWVzIA0K
+ICAgICAgd2l0aGluIHRoZSB2YWx1ZSBjaGFpbiwgaW4gYWRkaXRpb24gdG8g
+aHVuZHJlZHMgb2YgbWlsbGlvbnMgb2YgY29uc3VtZXJzIA0KICAgICAgdGhy
+b3VnaG91dCB0aGUgd29ybGQuK0FDSUFQQS0vRk9OVCtBRDRBUEEtL1ArQUQ0
+QVBBLS9URCtBRDRBUEEtL1RSK0FENEFQQS0vVEJPRFkrQUQ0QVBBLS9UQUJM
+RStBRDRBUEEtRk9OVCBjb2xvcitBRDBBSXctMDAwMDAwIA0KZmFjZStBRDBB
+SWctVGltZXMgTmV3IFJvbWFuK0FDSUFQZ0E4LS9GT05UK0FENEFQQS0vRElW
+K0FENEFQQS0vQk9EWStBRDRBUEEtL0hUTUwrQUQ0LQ0KDQo=
+
+--EPOC32-Jtl5'HN5Zm2FWKj2JSrgFh6DW430B,yCQKHgtSX41HY+P6Sh--
+
+
+
+---------------------- Sending Email 13 size=2707 ------------------------
+
+From: "Keval Pindoria" <keval.pindoria@internet-test.plc.psion.com>
+To: "Keval Pindoria" <keval.pindoria@internet-test.plc.psion.com>
+Subject: Testing filename parameter encoding/decoding
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+Message-ID: <30Zmly78SrqJ.St06S1qx@psion.com>
+X-Mailer: EPOC Email Version 2.10
+MIME-Version: 1.0
+Content-Language: i-default
+Content-Type: multipart/mixed;
+  boundary="EPOC32-S4BZNfM,,0RLP8zcbG-RJ_6gStvcP3q-_lDgjMRRY6nns,v7"
+
+This is a MIME Message
+
+--EPOC32-S4BZNfM,,0RLP8zcbG-RJ_6gStvcP3q-_lDgjMRRY6nns,v7
+Content-Type: application/octet-stream
+Content-Disposition: attachment;
+	filename="iso-8859-1_q_=c1=c2=c3.doc_="
+Content-Transfer-Encoding: base64
+
+0M8R4KGxGuEAAAAAAAAAAAAAAAAAAAAAPgADAP7/CQAGAAAAAAAAAAAAAAAB
+AAAACwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
+--EPOC32-S4BZNfM,,0RLP8zcbG-RJ_6gStvcP3q-_lDgjMRRY6nns,v7
+Content-Type: application/octet-stream
+Content-Disposition: attachment;
+	filename="Word file.doc"
+Content-Transfer-Encoding: base64
+
+0M8R4KGxGuEAAAAAAAAAAAAAAAAAAAAAPgADAP7/CQAGAAAAAAAAAAAAAAAB
+AAAACwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
+--EPOC32-S4BZNfM,,0RLP8zcbG-RJ_6gStvcP3q-_lDgjMRRY6nns,v7
+Content-Type: application/octet-stream
+Content-Disposition: attachment;
+	filename="iso-8859-1_B_w8TFxi5kYXQ=_="
+Content-Transfer-Encoding: base64
+
+Q2hhbmdlIDExODQ1IG9uIDE5OTkvMTIvMjAgYnkgSWJyYWhpbVJAbG9uLWVu
+Z2J1aWxkMDFfbWFpbmxpbmUgJ01vdmVkIEhMUE1PREVMIGZyb20gQ3J5c3Rh
+bC50eHQnDQpDaGFuZ2UgMTE4MzMgb24gMTk5OS8xMi8yMCBieSB3aWxsckBs
+b24td2lsbHJfbWFpbmxpbmUgJ1JldmlzZSBidWlsZHJvbS5jbWQgdG8gY2Fs
+bCBhIG4nDQpDaGFuZ2UgMTE4MjQgb24gMTk5OS8xMi8yMCBieSBWZWlra29Q
+QGxvbi12ZWlra29wICdNb3ZlZCBobHBtb2RlbCBmcm9tIENyeXN0YWwgYnJh
+Jw0KQ2hhbmdlIDExNzk0IG9uIDE5OTkvMTIvMjAgYnkgTEFORVJAbG9uLWxh
+bmVyX2Vwb2MgJ0FkZGVkIGEgbmV3IGZ1bmN0aW9uIENGYnNCaXRHYzonDQpD
+aGFuZ2UgMTE3NzEgb24gMTk5OS8xMi8yMCBieSBDaHJpc0RAbG9uLWNocmlz
+ZC1hZ25tb2RlbCAnRml4ZWQgIk1lbW9yeSBsZWFrIGluIFJBZ2VuZGFTZScN
+CkNoYW5nZSAxMTc2OCBvbiAxOTk5LzEyLzIwIGJ5IEdyYWhhbUFAbG9uLWdy
+YWhhbWEgJ0ZpeGVkIEVURVhUIGRlZmVjdCBFRE5DRFVHLTRFTk0nDQpDaGFu
+Z2UgMTE2NzAgb24gMTk5OS8xMi8xNyBieSBWQU1TSUtAbG9uLWJtZXRlc3Qw
+MSAnQ2hhbmdlIDExNjM5IG9uIDE5OTkvMTIvMTcgYnkgVicNCkNoYW5nZSAx
+MTY2OSBvbiAxOTk5LzEyLzE3IGJ5IEFuZHJld0Bsb24tYW5kcmV3X2phdmFw
+aG9uZSAnRml4ZWQgcHJvYmxlbXMgd2l0aCB0aGUgY29tbW9uICcNCkNoYW5n
+ZSAxMTY0MiBvbiAxOTk5LzEyLzE3IGJ5IERvdWdGQExvbi1Eb3VnRl9XU0VS
+ViAnR2VuZXJhbCByZWxlYXNlIHdpdGggYSBmZXcgYnVnICcNCkNoYW5nZSAx
+MTYyOSBvbiAxOTk5LzEyLzE3IGJ5IEJpbGxCQGxvbi1iaWxsYm9uICctIEZp
+cnN0IFJlbGVhc2Ugb2YgSXJUcmFucCBDb2RlJw0K
+
+--EPOC32-S4BZNfM,,0RLP8zcbG-RJ_6gStvcP3q-_lDgjMRRY6nns,v7
+Content-Type: application/octet-stream
+Content-Disposition: attachment;
+	filename="iso-8859-1_q_=07=08=09_="
+Content-Transfer-Encoding: base64
+
+Q2hhbmdlIDExODQ1IG9uIDE5OTkvMTIvMjAgYnkgSWJyYWhpbVJAbG9uLWVu
+Z2J1aWxkMDFfbWFpbmxpbmUgJ01vdmVkIEhMUE1PREVMIGZyb20gQ3J5c3Rh
+bC50eHQnDQpDaGFuZ2UgMTE4MzMgb24gMTk5OS8xMi8yMCBieSB3aWxsckBs
+b24td2lsbHJfbWFpbmxpbmUgJ1JldmlzZSBidWlsZHJvbS5jbWQgdG8gY2Fs
+bCBhIG4nDQpDaGFuZ2UgMTE4MjQgb24gMTk5OS8xMi8yMCBieSBWZWlra29Q
+QGxvbi12ZWlra29wICdNb3ZlZCBobHBtb2RlbCBmcm9tIENyeXN0YWwgYnJh
+Jw0KQ2hhbmdlIDExNzk0IG9uIDE5OTkvMTIvMjAgYnkgTEFORVJAbG9uLWxh
+bmVyX2Vwb2MgJ0FkZGVkIGEgbmV3IGZ1bmN0aW9uIENGYnNCaXRHYzonDQpD
+aGFuZ2UgMTE3NzEgb24gMTk5OS8xMi8yMCBieSBDaHJpc0RAbG9uLWNocmlz
+ZC1hZ25tb2RlbCAnRml4ZWQgIk1lbW9yeSBsZWFrIGluIFJBZ2VuZGFTZScN
+CkNoYW5nZSAxMTc2OCBvbiAxOTk5LzEyLzIwIGJ5IEdyYWhhbUFAbG9uLWdy
+YWhhbWEgJ0ZpeGVkIEVURVhUIGRlZmVjdCBFRE5DRFVHLTRFTk0nDQpDaGFu
+Z2UgMTE2NzAgb24gMTk5OS8xMi8xNyBieSBWQU1TSUtAbG9uLWJtZXRlc3Qw
+MSAnQ2hhbmdlIDExNjM5IG9uIDE5OTkvMTIvMTcgYnkgVicNCkNoYW5nZSAx
+MTY2OSBvbiAxOTk5LzEyLzE3IGJ5IEFuZHJld0Bsb24tYW5kcmV3X2phdmFw
+aG9uZSAnRml4ZWQgcHJvYmxlbXMgd2l0aCB0aGUgY29tbW9uICcNCkNoYW5n
+ZSAxMTY0MiBvbiAxOTk5LzEyLzE3IGJ5IERvdWdGQExvbi1Eb3VnRl9XU0VS
+ViAnR2VuZXJhbCByZWxlYXNlIHdpdGggYSBmZXcgYnVnICcNCkNoYW5nZSAx
+MTYyOSBvbiAxOTk5LzEyLzE3IGJ5IEJpbGxCQGxvbi1iaWxsYm9uICctIEZp
+cnN0IFJlbGVhc2Ugb2YgSXJUcmFucCBDb2RlJw0K
+
+--EPOC32-S4BZNfM,,0RLP8zcbG-RJ_6gStvcP3q-_lDgjMRRY6nns,v7--
+
+
+
+---------------------- Sending Email 14 size=1380 ------------------------
+
+From: "psion9.demon.co.uk" <ibrahim.rahman@symbian.com>
+To: "=?ISO-8859-1?B?30CuINHS09TV1g==?=" <test@psion7.demon.co.uk>
+Subject: =?ISO-8859-1?B?oaKjpKWmp6ipqqusra6vsLGys7S1trc=?= 
+ =?ISO-8859-1?B?uLm6u7y9vr/AwcLDxMXGx8jJysvMzc4=?= 
+ =?ISO-8859-1?B?z9DR0tPU1dbX2Nna29zd3t/g4eLj5OU=?= 
+ =?ISO-8859-1?B?5ufo6err7O3u7/Dx8vT29/j5+vv8/f7/?=
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+Message-ID: <jL7YBY2qXmDx.PJ03YMpt@psion.com>
+X-Mailer: EPOC Email Version 2.10
+MIME-Version: 1.0
+Content-Language: i-default
+Content-Type: multipart/alternative;
+  boundary="EPOC32-+'jJ3b1+YRqY9+NN4Bl'81kFsqP6Wn,CK0cgLVkJR9F'dkz8"
+
+This is a MIME Message
+
+--EPOC32-+'jJ3b1+YRqY9+NN4Bl'81kFsqP6Wn,CK0cgLVkJR9F'dkz8
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+=A1=A2=A3=A4=A5=A6=A7=A8=A9=AA=AB=AC=AD=AE=AF=B0=B1=B2=B3=B4=B5=B6=B7=B8=B9=BA=
+=BB=BC=BD=BE=BF=C0=C1=C2=C3=C4=C5=C6=C7=C8=C9=CA=CB=CC=CD=CE=CF=D0=D1=D2=D3=D4=
+=D5=D6=D7=D8=D9=DA=DB=DC=DD=DE=DF=E0=E1=E2=E3=E4=E5=E6=E7=E8=E9=EA=EB=EC=ED=EE=
+=EF=F0=F1=F2=F4=F6=F7=F8=F9=FA=FB=FC=FD=FE=FF
+
+
+--EPOC32-+'jJ3b1+YRqY9+NN4Bl'81kFsqP6Wn,CK0cgLVkJR9F'dkz8
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: base64
+
+PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMCBU
+cmFuc2l0aW9uYWwvL0VOIj4NCjxIVE1MPjxIRUFEPg0KPE1FVEEgY29udGVu
+dD0idGV4dC9odG1sOyBjaGFyc2V0PWlzby04ODU5LTEiIGh0dHAtZXF1aXY9
+Q29udGVudC1UeXBlPg0KPE1FVEEgY29udGVudD0iTVNIVE1MIDUuMDAuMjkx
+OS42MzA3IiBuYW1lPUdFTkVSQVRPUj4NCjxTVFlMRT48L1NUWUxFPg0KPC9I
+RUFEPg0KPEJPRFkgYmdDb2xvcj0jZTFlMGQyPg0KPERJVj48Rk9OVCBmYWNl
+PSJUaW1lcyBOZXcgUm9tYW4iPg0KPFA+oaKjpKWmp6ipqqusJnNoeTuur7Cx
+srO0tba3uLm6u7y9vr/AwcLDxMXGx8jJysvMzc7P0NHS09TV1tfY2drb3N3e
+3+Dh4uPk5ebn6Onq6+zt7u/w8fL09vf4+fr7/P3+/zwvUD48L0ZPTlQ+PC9E
+SVY+PC9CT0RZPjwvSFRNTD4NCg0K
+
+--EPOC32-+'jJ3b1+YRqY9+NN4Bl'81kFsqP6Wn,CK0cgLVkJR9F'dkz8--
+
+
+
+---------------------- Sending Email 15 size=691 ------------------------
+
+From: Lars =?ISO-8859-1?B?rkCp?= Persson <exchange1@symbian.se>
+Reply-to: Lars Persson <>
+To: exchange1@symbian.se
+Subject: LOVE =?ISO-8859-1?B?Pw==?= ME!
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+Disposition-Notification-To: Lars Persson <>
+X-Priority: 1 (Highest)
+Importance: high
+Message-ID: <wmjMzmFTP5Mq.KZ8Lqlp6@psion.com>
+X-Mailer: EPOC Email Version 2.10
+MIME-Version: 1.0
+Content-Language: i-default
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+his should be a internet link hopefully!!
+Checking that conversion wiorks with corrupt encoded data.
+
+
+---------------------- Sending Email 16 size=2231 ------------------------
+
+From: NODDYHa Ha<noddy.@plc.psion.com>"=?ISO-8859-1?B?0dJERFk=?= Ha Ha"
+To: "abcdefghi <noddy.@plc.psion.com>
+Cc: "=?ISO-8859-1?B?0dJERFk=?=" <noddy.@plc.psion.com>, "=?ISO-8859-1?B?0dJERFk=?=" 
+  noddy.@plc.psion.com, =?ISO-8859-1?B?0dJERFk=?= Noddy
+  <noddy.@plc.psion.com>, =?ISO-8859-1?B?0dJERFk=?= Noddy
+  noddy.@plc.psion.com, =?ISO-8859-1?B?0dJERFk=?= IS
+  CRAP<noddy.@plc.psion.com>,
+  <noddy.@plc.psion.com> "=?ISO-8859-1?B?0dJERFk=?=",
+  noddy.@plc.psion.com "=?ISO-8859-1?B?0dJERFk=?=",
+  <noddy.@plc.psion.com> =?ISO-8859-1?B?0dJERFk=?= Noddy,
+  noddy.@plc.psion.com =?ISO-8859-1?B?0dJERFk=?= Noddy,
+  <noddy.@plc.psion.com>=?ISO-8859-1?B?0dJERFk=?= IS CRAP
+Bcc: "=?ISO-8859-1?B?0dJERFkgSGEgSGEiIG5vZGR5Lg==?= =?ISO-8859-1?B?QHBsYy5wc2lvbi5jb20g0dJERFk=?= IS CRAP, =?ISO-8859-1?B?0dJERFk=?= Ha
+  Ha<noddy.@plc.psion.com> "ÑÒDDY Ha Ha", "=?ISO-8859-1?B?0dJERFk=?= Ha Ha"
+  <noddy.@plc.psion.com>ÑÒDDY IS CRAP, "=?ISO-8859-1?B?0dJERFk=?= Ha Ha"
+  <noddy.@plc.psion.com> ÑÒDDY IS CRAP, 
+ =?ISO-8859-1?B?0dJERFkgSGEgSGEgbm9kZHkuQA==?= 
+ =?ISO-8859-1?B?cGxjLnBzaW9uLmNvbSAi0dJERFk=?= Ha Ha", "
+ =?ISO-8859-1?B?0dJERFkgSGEgSGEiIG5vZGR5Lg==?= 
+ =?ISO-8859-1?B?QHBsYy5wc2lvbi5jb20g0dJERFk=?= IS CRAP
+Subject: =?ISO-8859-1?B?wCBGZXcgRU7HT0RFRA==?= Words
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+Message-ID: <bltPSZ1pK2NK.NbknwMGv@psion.com>
+X-Mailer: EPOC Email Version 2.10
+MIME-Version: 1.0
+Content-Language: i-default
+Content-Type: multipart/mixed;
+  boundary="EPOC32-xrV5DFpBrpy8P3NWzCng9wyTLpHk8fW7v1BlMvYJ6srjnxnS"
+
+This is a MIME Message
+
+--EPOC32-xrV5DFpBrpy8P3NWzCng9wyTLpHk8fW7v1BlMvYJ6srjnxnS
+Content-Type: application/octet-stream
+Content-Disposition: attachment;
+	filename="=?ISO-8859-1?B?YWKpZC5kb2M=?="
+Content-Transfer-Encoding: base64
+
+0M8R4KGxGuEAAAAAAAAAAAAAAAAAAAAAPgADAP7/CQAGAAAAAAAAAAAAAAAB
+AAAACwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
+--EPOC32-xrV5DFpBrpy8P3NWzCng9wyTLpHk8fW7v1BlMvYJ6srjnxnS
+Content-Type: application/octet-stream
+Content-Disposition: attachment;
+	filename="=?ISO-8859-1?B?YWKpZC5kb2M=?="
+Content-Transfer-Encoding: base64
+
+0M8R4KGxGuEAAAAAAAAAAAAAAAAAAAAAPgADAP7/CQAGAAAAAAAAAAAAAAAB
+AAAACwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAA+dqZ/filenamAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+
+--EPOC32-xrV5DFpBrpy8P3NWzCng9wyTLpHk8fW7v1BlMvYJ6srjnxnS
+Content-Type: application/octet-stream
+Content-Disposition: attachment;
+	filename="=?ISO-8859-1?B?YWKpZC5kb2M=?="
+Content-Transfer-Encoding: base64
+
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAA==
+
+--EPOC32-xrV5DFpBrpy8P3NWzCng9wyTLpHk8fW7v1BlMvYJ6srjnxnS--
+
+
+
+---------------------- Sending Email 17 size=7609 ------------------------
+
+From: heidihi@hi-de-hi.co.uk
+To: alyx_capp@hotmail.com "Alex Capp",
+  I_like_my_laugh@hotmail.com "Alex MacDonald",
+  drewp3@hotmail.com "Andrew Papas", arnbee82@hotmail.com "Anna Bartram",
+  annabriggs83@hotmail.com "Anna Briggs",
+  keystone@friend.ly.net "Auntie Julia",
+  orelyloo@hotmail.com "aurelie chauvet", aairey@hotmail.com "Aurora Airey",
+  beckyinkster@hotmail.com "Becky Inkster",
+  b_westwood@hotmail.com "Ben Westwood",
+  wangjian_wx@hotmail.com "Ben (wang jian)",
+  bexplum21@hotmail.com "Bex Plumbly", firstgrowth@aol.com "Bradbury",
+  bryonylangford@hotmail.com "Bryony Langford", cj@camillajane.com "Camilla",
+  s0300039@nus.edu.sg "Catherine Alice Struthers",
+  chali7699@sina.com.cn "Chali", scooby_baker@hotmail.com "Chris Baker",
+  claire_jack_son@hotmail.com "Claire Jackson",
+  kirinki@angelfire.com "Clare Judkins", davidfrances@btconnect.com "Dad",
+  english_elf@hotmail.com "Dan Habe", dmc114@york.ac.uk "Dave Coleman",
+  daejson@hotmail.com "David Johnson", Dbeeuk@yahoo.com "Deb Heys",
+  eggy@11theorchard.freeserve.co.uk "Eggy",
+  elsie.01@orange.net              "Eleanor Jones",
+  emma.mc@lineone.net "Emma McGonigle",
+  flora_mcm@hotmail.com "Flora McMichael",
+  cecky_waugh@hotmail.com "francesca waugh",
+  gemble_trixy_pixie@hotmail.com "Gemble",
+  lancs@highburt.demon.co.uk "Geoff and Karen Lancaster",
+  genggrace@yahoo.com.cn "Grace", awadie.h@mailcity.com "Halim",
+  hwraight@yahoo.com "Helen Wraight", ugm1hla@leeds.ac.uk "Helen Anthony",
+  jan_duchek@seznam.cz "Jan Duchek", jasmine_alice_jag@hotmail.com "Jasmine",
+  joannerestrepo@hotmail.com "Jo Restrepo",
+  abbess@hotmail.com              "Jennifer Dorrian",
+  julems@gmx.de "Juliane", katiea321@hotmail.com "kat armitage",
+  morzanella@yahoo.com "Katalin Csomor",
+  jhm1cas@leeds.ac.uk "Kate Struthers",
+  jessicarabbit18@hotmail.com "Katie Jenkins",
+  Trinibeanie17@hotmail.com "Katriona Anderson", kirimk@hotmail.com "Kiri",
+  kostoula_r@hotmail.com "Konstantina Rogoti",
+  kri.gun@spray.se "Kristin Gunnarsson",
+  bellabondini@hotmail.com "Louise Bond",
+  louise_eyre@hotmail.com "Louise Eyre", JGray@DBUP.Textron.com "lucy gray",
+  Dme@the-palace.freeserve.co.uk              "Luigi (Dme)",
+  mandeepbaveja@yahoo.com "Mandeep Baveja",
+  mlemare@yahoo.co.uk "Megan Le Mare", donglebix@yahoo.com "Mike Negus",
+  hilaryfrances@hotmail.com "Mum", n8gar@yahoo.com "Nate Garland",
+  niall.saville@bigfoot.com "Niall Saville",
+  nicolaaaaas@hotmail.com "Nic Baird", nomdesouris@yahoo.co.uk "Nichola",
+  nicola_fader@hotmail.com "Nicola Fader",
+  nicarris@hotmail.com "Nicola Harris",
+  oliviermbpfanner@hotmail.com "Oli Pfanner",
+  flipflop88@hotmail.com "Olivia Saunders",
+  owl@bms.umist.ac.uk "Owen Lancaster",
+  patsywool@yahoo.co.uk "Pat Woolhouse", paulplatt@ntlworld.com "Paul Platt",
+  pauladougill@yahoo.co.uk "Paula Dougill",
+  petermcmichael@hotmail.com "Peter McMichael",
+  exotic1603@yahoo.com "Ranee Teeluck",
+  reubencoulter@hotmail.com "Reuben Coulter",
+  rjsteele@btinternet.com "Richard Steele", rosnoble@hotmail.com "Ros Noble",
+  ruthcapper@hotmail.com "Ruth Capper", samgeall@hotmail.com "Sam Geall",
+  turnipcake@hotmail.com "Sandy", starrysez@hotmail.com "Sarah Allen",
+  sarah_a81@hotmail.com "Sarah Anderson",
+  saskiabacon@btopenworld.com "Saskia Bacon",
+  saskiavinall@hotmail.com "saskia vinall", Tcnosapien@yahoo.com "Saul",
+  shenth@a4internet.com "Shenth Ravindra",
+  si_hawkins@yahoo.co.uk "Simon Hawkins", soph7@yahoo.com "Sophie Giles",
+  sofamarshall@hotmail.com "Sophie Marshall",
+  goodfella_sp@hotmail.com "Sophie Patterson",
+  chien_de_feu@hotmail.com "Tanneguy Viellard",
+  tnugent458@yahoo.com "Tim Nugent", vickyf22@hotmail.com "Vicky Field",
+  phantomnoise@yahoo.co.uk "zvensk xye",
+  auyingying@hotmail.com "ClaireWarburton", rbeecroft@hotmail.com, <
+  ollie_enigma@hotmail.com >
+Subject: hope this works!
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+Message-ID: <gV7ZLrpnKYSS.c56PX2d4@psion.com>
+X-Mailer: EPOC Email Version 2.10
+MIME-Version: 1.0
+Content-Language: i-default
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Dear All,
+.
+
+
+---------------------- Sending Email 18 size=2052 ------------------------
+
+From: Timo <timo.puronen@digia.com>
+To: timo@penguin.digia
+Subject: vcard
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+Message-ID: <JKlSLVkRYF6x.HDLRvMwP@psion.com>
+X-Mailer: EPOC Email Version 2.10
+MIME-Version: 1.0
+Content-Language: i-default
+Content-Type: multipart/mixed;
+  boundary="EPOC32-34pTN32CP6+-nh-MKQgSt0z2MPYqR4pMmv-+R08GmR4T9hBf"
+
+This is a MIME Message
+
+--EPOC32-34pTN32CP6+-nh-MKQgSt0z2MPYqR4pMmv-+R08GmR4T9hBf
+Content-Type: text/plain; charset=US-ASCII
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+vcard test
+
+--EPOC32-34pTN32CP6+-nh-MKQgSt0z2MPYqR4pMmv-+R08GmR4T9hBf
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Disposition: attachment;
+	filename="Pein kanssa juttuja.vcs"
+Content-Transfer-Encoding: base64
+
+QkVHSU46VkNBTEVOREFSDQpQUk9ESUQ6LS8vTWljcm9zb2Z0IENvcnBvcmF0
+aW9uLy9PdXRsb29rIDkuMCBNSU1FRElSLy9FTg0KVkVSU0lPTjoxLjANCkJF
+R0lOOlZFVkVOVA0KRFRTVEFSVDoyMDAxMTExMlQxMTAwMDBaDQpEVEVORDoy
+MDAxMTExMlQxNDAwMDBaDQpVSUQ6Q0QwMDAwMDA4Qjk1MTFEMTgyRDgwMEMw
+NEZCMTYyNUQxRjMwRjlGMUI2MTg5MTQyQjFDMUMzN0I4RTlCQ0Q4Rg0KU1VN
+TUFSWTtFTkNPRElORz1RVU9URUQtUFJJTlRBQkxFOlBlaW4ga2Fuc3NhIGp1
+dHR1amENClBSSU9SSVRZOjMNCkVORDpWRVZFTlQNCkVORDpWQ0FMRU5EQVIN
+Cg==
+
+--EPOC32-34pTN32CP6+-nh-MKQgSt0z2MPYqR4pMmv-+R08GmR4T9hBf
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Disposition: attachment;
+	filename="Pein kanssa juttuja.vcs"
+Content-Transfer-Encoding: base64
+
+QkVHSU46VkNBTEVOREFSDQpQUk9ESUQ6LS8vTWljcm9zb2Z0IENvcnBvcmF0
+aW9uLy9PdXRsb29rIDkuMCBNSU1FRElSLy9FTg0KVkVSU0lPTjoxLjANCkJF
+R0lOOlZFVkVOVA0KRFRTVEFSVDoyMDAxMTExMlQxMTAwMDBaDQpEVEVORDoy
+MDAxMTExMlQxNDAwMDBaDQpVSUQ6Q0QwMDAwMDA4Qjk1MTFEMTgyRDgwMEMw
+NEZCMTYyNUQxRjMwRjlGMUI2MTg5MTQyQjFDMUMzN0I4RTlCQ0Q4Rg0KU1VN
+TUFSWTtFTkNPRElORz1RVU9URUQtUFJJTlRBQkxFOlBlaW4ga2Fuc3NhIGp1
+dHR1amENClBSSU9SSVRZOjMNCkVORDpWRVZFTlQNCkVORDpWQ0FMRU5EQVIN
+Cg==
+
+--EPOC32-34pTN32CP6+-nh-MKQgSt0z2MPYqR4pMmv-+R08GmR4T9hBf
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Disposition: attachment;
+	filename="Pein kanssa juttuja.vcs"
+Content-Transfer-Encoding: base64
+
+QkVHSU46VkNBTEVOREFSDQpQUk9ESUQ6LS8vTWljcm9zb2Z0IENvcnBvcmF0
+aW9uLy9PdXRsb29rIDkuMCBNSU1FRElSLy9FTg0KVkVSU0lPTjoxLjANCkJF
+R0lOOlZFVkVOVA0KRFRTVEFSVDoyMDAxMTExMlQxMTAwMDBaDQpEVEVORDoy
+MDAxMTExMlQxNDAwMDBaDQpVSUQ6Q0QwMDAwMDA4Qjk1MTFEMTgyRDgwMEMw
+NEZCMTYyNUQxRjMwRjlGMUI2MTg5MTQyQjFDMUMzN0I4RTlCQ0Q4Rg0KU1VN
+TUFSWTtFTkNPRElORz1RVU9URUQtUFJJTlRBQkxFOlBlaW4ga2Fuc3NhIGp1
+dHR1amENClBSSU9SSVRZOjMNCkVORDpWRVZFTlQNCkVORDpWQ0FMRU5EQVIN
+Cg==
+
+--EPOC32-34pTN32CP6+-nh-MKQgSt0z2MPYqR4pMmv-+R08GmR4T9hBf
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 9.0 =
+MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20011112T110000Z
+DTEND:20011112T140000Z
+UID:CD0000008B9511D182D800C04FB1625D1F30F9F1B6189142B1C1C37B8E9BCD8F
+SUMMARY;ENCODING=3DQUOTED-PRINTABLE:Pein kanssa =
+juttuja
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR
+--EPOC32-34pTN32CP6+-nh-MKQgSt0z2MPYqR4pMmv-+R08GmR4T9hBf
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Disposition: attachment;
+	filename="Pein kanssa juttuja.vcs"
+Content-Transfer-Encoding: base64
+
+QkVHSU46VkNBTEVOREFSDQpQUk9ESUQ6LS8vTWljcm9zb2Z0IENvcnBvcmF0
+aW9uLy9PdXRsb29rIDkuMCBNSU1FRElSLy9FTg0KVkVSU0lPTjoxLjANCkJF
+R0lOOlZFVkVOVA0KRFRTVEFSVDoyMDAxMTExMlQxMTAwMDBaDQpEVEVORDoy
+MDAxMTExMlQxNDAwMDBaDQpVSUQ6Q0QwMDAwMDA4Qjk1MTFEMTgyRDgwMEMw
+NEZCMTYyNUQxRjMwRjlGMUI2MTg5MTQyQjFDMUMzN0I4RTlCQ0Q4Rg0KU1VN
+TUFSWTtFTkNPRElORz1RVU9URUQtUFJJTlRBQkxFOlBlaW4ga2Fuc3NhIGp1
+dHR1amENClBSSU9SSVRZOjMNCkVORDpWRVZFTlQNCkVORDpWQ0FMRU5EQVIN
+Cg==
+
+--EPOC32-34pTN32CP6+-nh-MKQgSt0z2MPYqR4pMmv-+R08GmR4T9hBf--
+
+

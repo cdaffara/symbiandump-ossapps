@@ -1,0 +1,58 @@
+// Copyright (c) 2002-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// agnversit.dll Provides dynamic interface for vCalendar import/export
+// 
+//
+
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+
+CAPABILITY	All -TCB
+target		agnversit.dll
+TARGETTYPE	plugin	
+UID		0x10009D8D 0x102035F5
+
+start resource	../src/102035f5.rss
+targetpath 	/resource/plugins
+target		agnversit.rsc
+end
+
+VENDORID	0x70000001
+SOURCEPATH	../src
+
+userinclude	../Inc
+userinclude ../../calendar/inc
+
+
+SOURCEPATH	../src
+source		agnversit.cpp agmvcalx.cpp agmvcali.cpp
+
+library	apparc.lib
+library bafl.lib
+library calinterimapi.lib
+library charconv.lib
+library conarc.lib
+library	efsrv.lib
+library	estor.lib
+library	etext.lib
+library	euser.lib 
+library gdi.lib
+library tzclient.lib
+library vcal.lib
+library versit.lib
+
+START WINS
+BASEADDRESS     0x7d340000
+END
+
+SMPSAFE

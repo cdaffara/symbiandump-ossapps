@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="1.0">
+    <object name="action" type="HbAction">
+        <string name="role" value="HbDialog:primaryAction"/>
+        <string locid="txt_lint_button_done" name="text"/>
+    </object>
+    <widget name="dialog" type="HbDialog">
+        <widget name="container" role="HbDialog:contentWidget" type="HbWidget">
+            <widget name="mapLabel" type="HbLabel">
+                <real name="z" value="3"/>
+                <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+                <sizehint height="expr((var(hb-param-screen-width)-(2*var(hb-param-margin-gene-popup))-(2*var(hb-param-margin-gene-screen)))*3/4)" type="FIXED" width="expr(var(hb-param-screen-width)-(2*var(hb-param-margin-gene-popup))-(2*var(hb-param-margin-gene-screen)))"/>
+                <sizehint height="expr((var(hb-param-screen-width)-(2*var(hb-param-margin-gene-popup))-(2*var(hb-param-margin-gene-screen)))*3/4)" type="MINIMUM" width="expr(var(hb-param-screen-width)-(2*var(hb-param-margin-gene-popup))-(2*var(hb-param-margin-gene-screen)))"/>
+                <sizehint height="expr((var(hb-param-screen-width)-(2*var(hb-param-margin-gene-popup))-(2*var(hb-param-margin-gene-screen)))*3/4)" type="MAXIMUM" width="expr(var(hb-param-screen-width)-(2*var(hb-param-margin-gene-popup))-(2*var(hb-param-margin-gene-screen)))"/>
+                <bool name="visible" value="TRUE"/>
+            </widget>
+            <widget name="titleLabel" type="HbLabel">
+                <string name="plainText"/>
+            </widget>
+            <widget name="addressMiddle" type="HbLabel">
+                <string name="plainText"/>
+            </widget>
+            <widget name="addressBottom" type="HbLabel">
+                <string name="plainText"/>
+            </widget>
+            <real name="z" value="0"/>
+            <layout spacing="var(hb-param-margin-gene-popup)" type="grid">
+                <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+                <griditem column="0" itemname="mapLabel" row="0"/>
+                <griditem column="0" itemname="addressBottom" row="3"/>
+                <griditem column="0" itemname="titleLabel" row="1"/>
+                <griditem column="0" itemname="addressMiddle" row="2"/>
+            </layout>
+        </widget>
+        <rect height="67.31343un" name="geometry" width="46.71642un" x="2un" y="14.02985un"/>
+        <sizepolicy horizontalPolicy="Preferred" horizontalStretch="0" verticalPolicy="Preferred" verticalStretch="0"/>
+        <ref object="action" role="HbDialog:primaryAction"/>
+    </widget>
+    <metadata activeUIState="Common ui state" display="NHD portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+    </metadata>
+</hbdocument>

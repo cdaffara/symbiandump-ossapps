@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<container xmlns="http://www.symbianfoundation.org/xml/implml/1">
+    <tag name="target" value="rofs2"/>
+    <tag name="target" value="rofs3"/>
+    
+    <settingRefsOverride>
+       <settingRef value="ApplicationLibrary.OperatorStoreURLIcon"/>
+    </settingRefsOverride>
+    
+    <content xmlns="http://www.s60.com/xml/content/2">
+        <output dir="content/private/20022F35/customsvg" flatten="true" file="operatorstore.svg">
+        <input>
+            <include files="${ApplicationLibrary.OperatorStoreURLIcon.localPath}"/>
+        </input>        
+        </output>
+    </content>
+
+</container>

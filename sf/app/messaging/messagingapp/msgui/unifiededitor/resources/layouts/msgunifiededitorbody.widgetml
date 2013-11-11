@@ -1,0 +1,68 @@
+<hbwidget version="0.1">
+
+  <layout name="layout-portrait" type="mesh">     
+  
+     <meshitem src="audioItem" srcEdge="TOP" dst="" dstEdge="TOP"  />
+     <meshitem src="audioItem" srcEdge="LEFT" dst="" dstEdge="LEFT"  />
+     <meshitem src="audioItem" srcEdge="RIGHT" dst="" dstEdge="RIGHT"  />
+     
+     <meshitem src="pixmap" srcEdge="TOP" dst="audioItem" dstEdge="BOTTOM"  />
+     <meshitem src="pixmap" srcEdge="LEFT" dst="" dstEdge="LEFT"  />  
+     <meshitem src="pixmap" srcEdge="RIGHT" dst="" dstEdge="RIGHT"  />  
+     
+     <meshitem src="textEdit" srcEdge="TOP" dst="pixmap" dstEdge="BOTTOM" />
+     <meshitem src="textEdit" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+     <meshitem src="textEdit" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+     <meshitem src="textEdit" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+           
+     <meshitem src="charCounter" srcEdge="CENTERH" dst="charCounterFrame" dstEdge="CENTERH" />
+     <meshitem src="charCounter" srcEdge="CENTERV" dst="charCounterFrame" dstEdge="CENTERV" />
+
+     <meshitem src="charCounterFrame" srcEdge="TOP" dst="textEdit" dstEdge="TOP" />
+     <meshitem src="charCounterFrame" srcEdge="RIGHT" dst="textEdit" dstEdge="RIGHT" />
+     
+  </layout>
+  
+  <layout name="layout-landscape-no-image" type="mesh">     
+     
+     <meshitem src="audioItem" srcEdge="TOP" dst="" dstEdge="TOP"  />
+     <meshitem src="audioItem" srcEdge="LEFT" dst="" dstEdge="LEFT"  />
+     <meshitem src="audioItem" srcEdge="RIGHT" dst="" dstEdge="RIGHT"  />
+
+     <meshitem src="textEdit" srcEdge="TOP" dst="audioItem" dstEdge="BOTTOM" />
+     <meshitem src="textEdit" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+     <meshitem src="textEdit" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+     <meshitem src="textEdit" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+     
+     <meshitem src="charCounter" srcEdge="CENTERH" dst="charCounterFrame" dstEdge="CENTERH" />
+     <meshitem src="charCounter" srcEdge="CENTERV" dst="charCounterFrame" dstEdge="CENTERV" />
+
+     <meshitem src="charCounterFrame" srcEdge="TOP" dst="textEdit" dstEdge="TOP" />
+     <meshitem src="charCounterFrame" srcEdge="RIGHT" dst="textEdit" dstEdge="RIGHT" />
+  
+  </layout>
+  
+  <layout name="layout-landscape-image" type="mesh">     
+     
+     <meshitem src="audioItem" srcEdge="TOP" dst="" dstEdge="TOP"  />
+     <meshitem src="audioItem" srcEdge="LEFT" dst="" dstEdge="LEFT"  />
+     <meshitem src="audioItem" srcEdge="RIGHT" dst="" dstEdge="RIGHT"  />
+
+     <meshitem src="textEdit" srcEdge="TOP" dst="audioItem" dstEdge="BOTTOM" />
+     <meshitem src="textEdit" srcEdge="LEFT" dst="" dstEdge="CENTERH" />
+     <meshitem src="textEdit" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+     <meshitem src="textEdit" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+     
+     <meshitem src="pixmap" srcEdge="TOP" dst="audioItem" dstEdge="BOTTOM"  />    
+     <meshitem src="pixmap" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+     <meshitem src="pixmap" srcEdge="RIGHT" dst="textEdit" dstEdge="LEFT" />
+
+     <meshitem src="charCounter" srcEdge="CENTERH" dst="charCounterFrame" dstEdge="CENTERH" />
+     <meshitem src="charCounter" srcEdge="CENTERV" dst="charCounterFrame" dstEdge="CENTERV" />
+
+     <meshitem src="charCounterFrame" srcEdge="TOP" dst="textEdit" dstEdge="TOP" />
+     <meshitem src="charCounterFrame" srcEdge="RIGHT" dst="textEdit" dstEdge="RIGHT" />
+
+  </layout>
+  
+</hbwidget>

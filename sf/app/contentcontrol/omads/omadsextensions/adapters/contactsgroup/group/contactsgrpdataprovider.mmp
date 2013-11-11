@@ -1,0 +1,74 @@
+/*
+* Copyright (c) 2008-2010 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project definition file for project Contacts Group DS adapter
+*
+*/
+
+
+#include <platform_paths.hrh>
+#include <defaultcaps.hrh>
+#include <data_caging_paths.hrh>
+
+TARGET          contactsgrpdataprovider.dll
+TARGETTYPE      PLUGIN
+UID             0x10009d8d 0x101FF972
+
+CAPABILITY      CAP_ECOM_PLUGIN
+VENDORID        VID_DEFAULT
+
+SOURCEPATH      ..\src
+SOURCE          contactsgrpdataprovider.cpp
+SOURCE          contactsgrpdatastore.cpp
+SOURCE          contactsgrpconverter.cpp
+SOURCE          changefinder.cpp
+SOURCE          snapshotitem.cpp
+
+USERINCLUDE     ..\inc
+
+APP_LAYER_SYSTEMINCLUDE
+
+SOURCEPATH      ..\src
+
+START RESOURCE  contactsgrpdataprovider.rss
+HEADER
+TARGET          contactsgrpdataprovider.rsc
+TARGETPATH      ECOM_RESOURCE_DIR
+END
+
+START RESOURCE  contactsgrpdatastore.rss
+HEADER
+TARGET          contactsgrpdatastore.rsc  
+TARGETPATH      RESOURCE_FILES_DIR
+END
+
+
+DEBUGLIBRARY    flogger.lib
+LIBRARY         euser.lib
+LIBRARY         estor.lib
+LIBRARY         ecom.lib
+LIBRARY         smldataprovider.lib
+LIBRARY         bafl.lib
+LIBRARY         nsmlchangefinder.lib
+LIBRARY         efsrv.lib
+LIBRARY         smlstoreformat.lib
+LIBRARY         SenXml.lib 
+LIBRARY         charconv.lib 
+LIBRARY         sysutil.lib
+LIBRARY         hash.lib
+LIBRARY         cntmodel.lib
+LIBRARY         vcard.lib
+LIBRARY         versit.lib
+
+
+SMPSAFE

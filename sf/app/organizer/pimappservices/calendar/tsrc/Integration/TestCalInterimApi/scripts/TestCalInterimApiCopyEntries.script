@@ -1,0 +1,105 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//
+PRINT Run all TestCalInterimApi copy entries tests
+//
+
+LOAD_SUITE TestCalInterimApiSuite
+//
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-PREQ1090-COPYENTRIES-0001
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-COPYENTRIES-0001
+//! @SYMTestCaseDesc 		Copy the entry with copytype as ECopyAll and check the local uid of the entry	
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-REQ5770
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Creates entries based on the data read from the text file TestCalInterimApiCopyEntriesData.txt
+//!				2.	Retrieve a stored entry 
+//!				3.      Create a new entry 
+//!				4.	Copy the stored entry details on to new Entry
+//1				5.	While copying it, don't specify any options like ECopyAll or EDontCopyId
+//!				6.	Store the copied entry in the Calender 
+//!				7.	Get the local id of original & copied entry.
+
+
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiReadData	\CITCalInterimApi\TestCalInterimApiCopyEntries.ini	ReadData
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCopyEntry \CITCalInterimApi\TestCalInterimApiCopyEntries.ini CopyEntry1
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-PREQ1090-COPYENTRIES-0001
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-PREQ1090-COPYENTRIES-0002
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-COPYENTRIES-0002
+//! @SYMTestCaseDesc 		Copy the entry with copytype as ECopyAll and check the local uid of the entry	
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-REQ5770
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Creates entries based on the data read from the text file TestCalInterimApiCopyEntriesData.txt
+//! 		 		2.	Retrieve a stored entry 
+//!				3.      Create a new entry 
+//!				4.	Copy the stored entry details on to new Entry
+//1				5.	While copying specify option EDontCopyId
+//!				6.	Store the copied entry in the Calender 
+//!				7.	Get the local id of original & copied entry.
+
+
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiReadData	\CITCalInterimApi\TestCalInterimApiCopyEntries.ini	ReadData
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCopyEntry \CITCalInterimApi\TestCalInterimApiCopyEntries.ini CopyEntry2
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-PREQ1090-COPYENTRIES-0002
+
+
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-PREQ1090-COPYENTRIES-0003
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-COPYENTRIES-0003
+//! @SYMTestCaseDesc 		Copy the entry with copytype as ECopyAll and check the local uid of the entry
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-REQ5770
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Creates entries based on the data read from the text file TestCalInterimApiCopyEntriesData.txt
+//! 		 		2.	Retrieve a stored entry 
+//!				3.      Create a new entry 
+//!				4.	Copy the stored entry details on to new Entry
+//!				5.	While copying specify option ECopyAll
+//!				6.	Store the copied entry in the Calender 
+//!				7.	Get the local id of original & copied entry.
+
+
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiReadData \CITCalInterimApi\TestCalInterimApiCopyEntries.ini	ReadData
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCopyEntry \CITCalInterimApi\TestCalInterimApiCopyEntries.ini CopyEntry3
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-PREQ1090-COPYENTRIES-0003
+
+
+PRINT Completed TestCalInterimApi_Tests
+
+PREFIX RUN_UTILS 
+MakeReadWrite 	c:\private\10003a5b\calendar.datIdx
+DeleteFile		c:\private\10003a5b\calendar.datIdx
+MakeReadWrite 	c:\private\10003a5b\Calendar.dat
+DeleteFile		c:\private\10003a5b\Calendar.dat
+REMOVE_PREFIX

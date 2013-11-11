@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SystemDefinition schema="3.0.0" xmlns:qt="http://www.nokia.com/qt">
+ <package id="contentcontrol" name="Content Control Daemons" levels="plugin framework app">
+  <collection id="contentctrl_plat" name="Content Control Daemons Platforn Interfaces" level="app">
+  <component id="ds_contact_adapter_customization_api" name="DS Contact Adapter Customization API" class="api" filter="s60" introduced="^3">
+   <meta rel="Api" href="contentctrl_plat/ds_contact_adapter_customization_api/ds_contact_adapter_customization_api.metaxml"/>
+   <unit bldFile="contentctrl_plat/ds_contact_adapter_customization_api/group"/>
+   </component>
+   <component id="ds_contactsdatastoreextension_api" name="DS Contacts Data Store Extension API" class="api" filter="s60" introduced="^4">
+    <meta rel="Api" href="contentctrl_plat/ds_contactsdatastoreextension_api/ds_contactsdatastoreextension_api.metaxml"/>
+    <unit bldFile="contentctrl_plat/ds_contactsdatastoreextension_api/group"/>
+   </component>
+   <component id="ds_data_modification_api" name="DS Data Modification API" class="api" filter="s60" introduced="^3">
+    <meta rel="Api" href="contentctrl_plat/ds_data_modification_api/ds_data_modification_api.metaxml"/>
+    <unit bldFile="contentctrl_plat/ds_data_modification_api/group"/>
+   </component>
+  </collection>
+  <collection id="connectivitymodules" name="Connectivity Modules" level="framework">
+   <component id="secon" filter="s60" name="Service Controllers">
+    <unit bldFile="connectivitymodules/secon/group"/>
+   </component>
+  </collection>
+  <collection id="dsdcmoadapter" name="Data Sync DCMO Adapter" level="plugin">
+   <!-- Component at wrong rank, should move down a directory -->
+   <component id="dsdcmoadapter_build" filter="s60" name="Data Sync Control DCMO Adapter">
+    <unit bldFile="dsdcmoadapter/group"/>
+   </component>
+  </collection>
+  <collection id="omads" name="OMA Data Sync" level="app">
+   <component id="omads_build" filter="s60" name="OMA DS Build">
+    <unit bldFile="omads/group"/> <!-- need to remove #include and rename and OMA DS ROM -->
+   </component>
+   <component id="omadsextensions" filter="s60" name="OMA DS Extensions" class="plugin">
+    <unit bldFile="omads/omadsextensions/group"/>
+   </component>
+   <component id="omadsextensions_qt" filter="s60" name="OMA DS Qt Extensions" class="plugin">
+    <unit bldFile="omads/omadsextensions" qt:proFile="omadsextensions.pro"/>
+   </component>
+  </collection>
+ </package>
+</SystemDefinition>

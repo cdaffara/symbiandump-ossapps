@@ -1,0 +1,189 @@
+
+/*********************************** LAYOUTS **********************************/
+
+@variables
+{
+  bubble_width:expr(var(hb-param-screen-width)-var(hb-param-margin-gene-middle-horizontal)-var(hb-param-graphic-size-primary-small)-var(hb-param-margin-gene-left)-var(hb-param-margin-gene-right));
+  bubble_height:expr((3*var(bubble_width))/4);
+}
+
+MsgConversationWidget:portrait
+{
+  layout:layout-msg-portrait;
+}
+
+MsgConversationWidget:landscape
+{
+  layout:layout-msg-landscape;
+}
+
+/********************* UNREAD INDICATOR / NEW ITEM ICON ************************/
+
+MsgConversationWidget::newItemIcon
+{
+  left:-0.25un;
+  top:-1.0un;
+  bottom:1.0un;
+  size-policy:fixed preferred;
+  fixed-width:1.25un;
+}
+
+/*********************************** BUBBLE ***********************************/
+
+MsgConversationWidget::bubble
+{
+  left:0.0un;
+  top:0.0un;
+  right:0.0un;
+  bottom:0.0un;
+  zvalue:-1;
+}
+
+/********************************** BODYTEXT **********************************/
+
+MsgConversationWidget::bodyText
+{
+  left:-var(hb-param-margin-gene-left);
+  top:-var(hb-param-margin-gene-middle-vertical);
+  right:1.0un;
+  text-height:var(hb-param-text-height-secondary);
+  font-variant:primary;
+  text-line-count-min:1;
+  text-line-count-max:30;
+}
+
+MsgConversationWidget[isMMS="true"]::bodyText
+{
+	top:-var(hb-param-margin-gene-middle-vertical);
+}
+
+MsgConversationWidget[hasImage="true"]::bodyText:landscape
+{
+	left:-var(hb-param-margin-gene-middle-horizontal);
+}
+
+MsgConversationWidget[hasAudio="true"]::bodyText:landscape
+{
+	left:-var(hb-param-margin-gene-middle-horizontal);
+}
+
+
+MsgConversationWidget::headerItem
+{
+    top:-var(hb-param-margin-gene-top);
+    left:-var(hb-param-margin-gene-left);
+}
+
+MsgConversationWidget::headerItem:landscape
+{
+    left:-var(hb-param-margin-gene-middle-horizontal);
+}
+
+/********************************** SUBJECT ***********************************/
+
+MsgConversationWidget::subject
+{
+  right:var(hb-param-margin-gene-middle-horizontal);
+  text-align:left;
+  text-height:var(hb-param-text-height-primary);
+  font-variant:primary;
+  text-line-count-min:1;
+  text-line-count-max:1;
+}
+
+
+/******************************* ATTACHMENT ICON ******************************/
+
+MsgConversationWidget::attachment
+{
+  right:1.0un;
+  center-vertical:0.0un;
+  aspect-ratio:ignore;
+  size-policy:fixed fixed;
+  pref-width:var(hb-param-graphic-size-secondary);
+  pref-height:var(hb-param-graphic-size-secondary);
+}
+
+/********************************* PRIORITY ICON ******************************/
+
+MsgConversationWidget::priority
+{
+  right:0.5un;
+  center-vertical:0.0un;
+  aspect-ratio:ignore;
+  size-policy:fixed fixed;
+  pref-width:var(hb-param-graphic-size-secondary);
+  pref-height:var(hb-param-graphic-size-secondary);
+}
+
+/******************************** IMAGE / PREVIEW *****************************/
+
+MsgConversationWidget::preview
+{
+  left:-var(hb-param-margin-gene-left);
+  top:-var(hb-param-margin-gene-middle-vertical);
+  size-policy:fixed fixed;
+  aspect-ratio:ignore;
+}
+
+MsgConversationWidget[hasImage="false"][hasAudio="true"]::preview
+{
+  zvalue:1;
+  pref-width:var(hb-param-graphic-size-primary-small);
+  pref-height:var(hb-param-graphic-size-primary-small);
+}
+
+MsgConversationWidget::preview:landscape
+{
+  left:-var(hb-param-margin-gene-left);
+  top:-var(hb-param-margin-gene-top);
+  bottom:var(hb-param-margin-gene-bottom);
+  size-policy:fixed fixed;
+  aspect-ratio:ignore;
+}
+
+/****************************** TIMESTAMP TEXT ********************************/
+
+MsgConversationWidget::timeStamp
+{
+  left:-var(hb-param-margin-gene-left);
+  right:1.0un;
+  bottom:var(hb-param-margin-gene-bottom);
+  top:-var(hb-param-margin-gene-middle-vertical);
+  text-align:left;
+  text-height:var(hb-param-text-height-tiny);
+  font-variant:primary;
+  text-line-count-max:1;
+  text-line-count-min:1;
+}
+
+MsgConversationWidget[hasImage="true"]::timeStamp:landscape
+{
+  left:-var(hb-param-margin-gene-middle-horizontal);
+}
+
+MsgConversationWidget[hasAudio="true"]::timeStamp:landscape
+{
+  left:-var(hb-param-margin-gene-middle-horizontal);
+}
+
+/******************************* OVERLAY PLAY ICON ****************************/
+
+MsgConversationWidget::playIcon
+{
+  zvalue:1;
+  left:-var(hb-param-margin-gene-middle-horizontal);
+  top:-var(hb-param-margin-gene-middle-vertical);
+  aspect-ratio:ignore;
+  size-policy:fixed fixed;
+  pref-width:var(hb-param-graphic-size-primary-small);
+  pref-height:var(hb-param-graphic-size-primary-small);
+}
+
+MsgConversationWidget::playIcon:landscape
+{
+  top:-var(hb-param-margin-gene-top);
+}
+
+
+/* EOF */

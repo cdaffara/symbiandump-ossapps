@@ -1,0 +1,45 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors: 
+*
+* Description:
+* The iby file for clockengine
+*
+*/
+
+#ifndef __CLOCKENGINES_IBY__
+#define __CLOCKENGINES_IBY__
+
+// Binaries
+file=ABI_DIR\BUILD_DIR\clockserver.exe						PROGRAMS_DIR\clockserver.exe
+file=ABI_DIR\BUILD_DIR\clockserverclient.dll				SHARED_LIB_DIR\clockserverclient.dll
+file=ABI_DIR\BUILD_DIR\clocktimesourceinterface.dll			SHARED_LIB_DIR\clocktimesourceinterface.dll
+file=ABI_DIR\BUILD_DIR\clocktimezoneresolver.dll			SHARED_LIB_DIR\clocktimezoneresolver.dll
+file=ABI_DIR\BUILD_DIR\clockecomlistener.dll				SHARED_LIB_DIR\clockecomlistener.dll
+
+// Stub sis files
+//data=DATAZ_\system\install\clock2_stub.sis					\system\install\clock2_stub.sis
+//data=DATAZ_\system\install\clock2_server_stub.sis			\system\install\clock2_server_stub.sis
+//data=DATAZ_\system\install\clocknitzplugin_stub.sis			\system\install\nitzplugin_stub.sis
+
+// ECOM plugins
+ECOM_PLUGIN( clocknitzplugin.dll, clocknitzplugin.rsc )
+
+// TODO : The following will be uncommented once implemented.
+// Backup registration files
+// data=DATAZ_\private\10005906\backup_registration.xml		private\10005906\backup_registration.xml
+// data=DATAZ_\private\10005903\backup_registration.xml		private\10005903\backup_registration.xml
+// data=DATAZ_\private\200159A2\backup_registration.xml		private\200159A2\backup_registration.xml
+
+#endif			// __CLOCKENGINES_IBY__
+
+// End of file

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="1.0">
+    <widget name="dialog" type="HbDialog">
+        <widget name="heading" role="HbDialog:headingWidget" type="HbLabel">
+            <string locid="txt_phob_title_contacts" name="plainText"/>
+        </widget>
+        <widget name="container" role="HbDialog:contentWidget" type="HbWidget">
+        	<widget name="markAll" type="CntFetchMarkAll">
+        		<bool name="visible" value="FALSE"/>
+        	</widget>
+            <widget name="emptyLabel" type="HbLabel">
+                <fontspec name="fontSpec" role="Primary"/>
+                <string name="alignment" value="AlignCenter"/>
+                <string locid="txt_phob_info_no_matching_contacts" name="plainText"/>
+                <bool name="visible" value="FALSE"/>
+            </widget>
+            <widget name="listView" type="HbListView">
+                <bool name="visible" value="FALSE"/>
+            </widget>
+            <widget name="searchPanel" type="HbSearchPanel">
+                <bool name="visible" value="FALSE"/>
+            </widget>			
+        </widget>        
+        <enums name="dismissPolicy" value="NoDismiss"/>
+        <bool name="modal" value="TRUE"/>
+    </widget>
+
+    <section name="find_list">
+        <widget name="container" role="HbDialog:contentWidget" type="HbWidget">
+			<widget name="markAll" type="CntFetchMarkAll">
+				<bool name="visible" value="TRUE"/>
+			</widget>
+            <widget name="emptyLabel" type="HbLabel">
+                <bool name="visible" value="FALSE"/>
+            </widget>
+            <widget name="listView" type="HbListView">
+                <bool name="visible" value="TRUE"/>
+            </widget>
+            <widget name="searchPanel" type="HbSearchPanel">
+                <bool name="visible" value="TRUE"/>
+            </widget>
+            <layout orientation="Vertical" spacing="0un" type="linear">
+                <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+                <linearitem itemname="markAll"/>
+                <linearitem itemname="listView"/>
+                <linearitem itemname="searchPanel"/>
+            </layout>
+        </widget>
+    </section>
+	
+	<section name="find_list_single">
+        <widget name="container" role="HbDialog:contentWidget" type="HbWidget">
+		    <widget name="emptyLabel" type="HbLabel">
+                <bool name="visible" value="FALSE"/>
+            </widget>
+            <widget name="listView" type="HbListView">
+                <bool name="visible" value="TRUE"/>
+            </widget>
+            <widget name="searchPanel" type="HbSearchPanel">
+                <bool name="visible" value="TRUE"/>
+            </widget>
+            <layout orientation="Vertical" spacing="0un" type="linear">
+                <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+                <linearitem itemname="listView"/>
+                <linearitem itemname="searchPanel"/>
+            </layout>
+        </widget>
+    </section>
+	
+	<section name="find_list_landscape">
+            <widget name="container" role="HbDialog:contentWidget" type="HbWidget">
+				<widget name="markAll" type="CntFetchMarkAll">
+					<bool name="visible" value="FALSE"/>
+				</widget>
+				<widget name="emptyLabel" type="HbLabel">
+					<bool name="visible" value="FALSE"/>
+				</widget>
+				<widget name="listView" type="HbListView">
+					<bool name="visible" value="TRUE"/>
+				</widget>
+				<widget name="searchPanel" type="HbSearchPanel">
+					<bool name="visible" value="TRUE"/>
+				</widget>
+				<layout orientation="Vertical" spacing="0un" type="linear">
+					<contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+					<linearitem itemname="listView"/>
+					<linearitem itemname="searchPanel"/>
+				</layout>
+			</widget>
+    </section>
+
+    <section name="find_empty">
+        <widget name="container" role="HbDialog:contentWidget" type="HbWidget">
+			<widget name="markAll" type="CntFetchMarkAll">
+				<bool name="visible" value="TRUE"/>
+			</widget>
+            <widget name="emptyLabel" type="HbLabel">
+                <bool name="visible" value="TRUE"/>
+            </widget>
+            <widget name="listView" type="HbListView">
+                <bool name="visible" value="FALSE"/>
+            </widget>
+            <widget name="searchPanel" type="HbSearchPanel">
+                <bool name="visible" value="TRUE"/>
+            </widget>
+            <layout orientation="Vertical" spacing="0un" type="linear">
+                <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+                <linearitem itemname="markAll"/>
+                <linearitem itemname="emptyLabel"/>
+                <linearitem itemname="searchPanel"/>
+            </layout>
+        </widget>
+    </section>
+
+	<section name="find_empty_single">
+        <widget name="container" role="HbDialog:contentWidget" type="HbWidget">
+            <widget name="emptyLabel" type="HbLabel">
+                <bool name="visible" value="TRUE"/>
+            </widget>
+            <widget name="listView" type="HbListView">
+                <bool name="visible" value="FALSE"/>
+            </widget>
+            <widget name="searchPanel" type="HbSearchPanel">
+                <bool name="visible" value="TRUE"/>
+            </widget>
+            <layout orientation="Vertical" spacing="0un" type="linear">
+                <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+                <linearitem itemname="emptyLabel"/>
+                <linearitem itemname="searchPanel"/>
+            </layout>
+        </widget>
+    </section>
+	
+	<section name="find_empty_landscape">
+			<widget name="container" role="HbDialog:contentWidget" type="HbWidget">
+				<widget name="markAll" type="CntFetchMarkAll">
+					<bool name="visible" value="FALSE"/>
+				</widget>
+				<widget name="emptyLabel" type="HbLabel">
+					<bool name="visible" value="TRUE"/>
+				</widget>
+				<widget name="listView" type="HbListView">
+					<bool name="visible" value="FALSE"/>
+				</widget>
+				<widget name="searchPanel" type="HbSearchPanel">
+					<bool name="visible" value="TRUE"/>
+				</widget>
+				<layout orientation="Vertical" spacing="0un" type="linear">
+					<contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+					<linearitem itemname="emptyLabel"/>
+					<linearitem itemname="searchPanel"/>
+				</layout>
+			</widget>
+    </section>
+	
+    <section name="size_section">
+        <widget name="dialog" type="HbDialog">
+            <widget name="container" role="HbDialog:contentWidget" type="HbWidget">
+                <sizehint height="expr(var(hb-param-screen-height) - 2* var(hb-param-margin-gene-screen))" type="PREFERRED" width="expr(var(hb-param-screen-width) - 2* var(hb-param-margin-gene-screen))"/>
+            </widget>
+	    </widget>
+    </section>
+	
+    <metadata activeUIState="Common ui state" display="NHD portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+        <uistate name="find_list" sections="#common find_list"/>
+        <uistate name="find_empty" sections="#common find_empty"/>
+        <uistate name="size_section" sections="#common size_section"/>
+    </metadata>
+</hbdocument>

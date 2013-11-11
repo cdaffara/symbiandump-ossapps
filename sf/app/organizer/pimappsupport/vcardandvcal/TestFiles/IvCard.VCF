@@ -1,0 +1,29 @@
+BEGIN:VCARD
+VERSION:2.1
+DESCRIPTION:Tests for various bug fixes.
+EMAIL:a\\b
+N:;;\;;\;\;;\;\;\;;\;;\;
+N:Example\;A;N;\;
+TEL;HOME;VOICE:\;090123456789\;\;
+EMAIL;INTERNET:\\\;symbian.foundation@exp.example.test
+ADR;HOME:"P.O. Box123";"Extended Address123-456";"Street";"Locality";"Region";"Postal Code";"Country";\;
+DESCRIPTION:Get
+ your
+ glad
+ rags
+ on
+ for
+ the
+ night
+ of the year. Get down to the Example Night Club. Starts 8.00pm. 
+N;CHARSET=chinese;ENCODING=BASE64:RmFtaWx5O6jFqMao0qjTqNyo16jeqOOo5KjpOzs7U3VmZml4
+
+BDAY:19950415
+BDAY:1995-04-15
+BDAY:1995/04/15
+BDAY:1995\04\15
+BDAY:1995#04#15
+ADR;HOME;ENCODING=QUOTED-PRINTABLE:;;Home=20address1=0D=0AHome=20address2;;;;
+EMAIL;INTERNET;HOME:homeemail
+URL;HOME:homewebpage
+END:VCARD

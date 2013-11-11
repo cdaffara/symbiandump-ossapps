@@ -1,0 +1,91 @@
+/*
+* Copyright (c) 2004-2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0""
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: 
+*     FileManager / FileManagerBkupEngine constants.
+*
+*/
+
+
+
+#ifndef __BAENGINE_HRH__
+#define __BAENGINE_HRH__
+
+// Partial backup categories bitmask values
+enum MAEngineBackupCategories
+    {
+    EBUCatSettings = 0x1,
+    EBUCatMessages = 0x2,
+    EBUCatContacts = 0x4,
+    EBUCatCalendar = 0x8,
+    EBUCatBookmarks = 0x10,
+    EBUCatUserFiles = 0x20,
+    EBUCatAllInOne = 0x8000000,
+    EBUCatAllSeparately = 0x7FFFFFF 
+    // Set as 0xFFFFFFF (EBUCatAllInOne+EBUCatAllSeparately) if archive containing 
+    // data from all data owners needs to be created.
+    };
+
+// Bitmask values for special ruling of which category data owner belongs to
+#define EBUCatSpecNone      0x0              
+#define EBUCatSpecSystem    0x1
+#define EBUCatSpecJava      0x2
+#define EBUCatSpecPublic    0x4
+#define EBUCatSpecAll       0x8
+
+#ifndef RD_MULTIPLE_DRIVE
+
+// Drive list enumeration - see TDriveNumber
+// (these must match F32's TDriveNumber exactly)
+enum TMMCDriveNumber
+    {
+    EMMCDriveNumberA = 0,
+    EMMCDriveNumberB,
+    EMMCDriveNumberC,
+    EMMCDriveNumberD,
+    EMMCDriveNumberE,
+    EMMCDriveNumberF,
+    EMMCDriveNumberG,
+    EMMCDriveNumberH,
+    EMMCDriveNumberI,
+    EMMCDriveNumberJ,
+    EMMCDriveNumberK,
+    EMMCDriveNumberL,
+    EMMCDriveNumberM,
+    EMMCDriveNumberN,
+    EMMCDriveNumberO,
+    EMMCDriveNumberP,
+    EMMCDriveNumberQ,
+    EMMCDriveNumberR,
+    EMMCDriveNumberS,
+    EMMCDriveNumberT,
+    EMMCDriveNumberU,
+    EMMCDriveNumberV,
+    EMMCDriveNumberW,
+    EMMCDriveNumberX,
+    EMMCDriveNumberY,
+    EMMCDriveNumberZ
+    };
+
+#else // RD_MULTIPLE_DRIVE
+
+// Defines drive caterories for multiple drives to setup backup sources and restore targets
+#define EBkupDeviceMemories       0x1
+#define EBkupInternalMassStorages 0x2
+#define EBkupExternalMassStorages 0x4
+
+#endif // RD_MULTIPLE_DRIVE
+
+#endif // __BAENGINE_HRH__
+
+// End of File

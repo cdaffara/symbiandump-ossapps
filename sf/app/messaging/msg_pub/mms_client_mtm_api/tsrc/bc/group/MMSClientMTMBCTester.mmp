@@ -1,0 +1,79 @@
+/*
+* Copyright (c) 2006-2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:         Project specification file for MMSClientMTMBCTester
+*
+*/
+
+
+
+
+
+
+
+#include <data_caging_paths.hrh>
+#include <platform_paths.hrh>
+
+#include <BC_PLAT.h>
+
+TARGET          MMSClientMTMBCTester.dll
+TARGETTYPE      dll
+UID             0x1000008D 0x101FB3E7
+CAPABILITY      ALL -TCB
+VENDORID        VID_DEFAULT
+
+
+DEFFILE         MMSClientMTMBCTester.def
+
+
+/***
+* Remove comments from the two lines below to include an additional test case
+* that requires an internal MMS Server Settings API
+***/
+//MACRO MMSCLIENTMTMBCTESTER_INTERNAL_TESTING
+//#define MMSCLIENTMTMBCTESTER_INTERNAL_TESTING
+
+
+SOURCEPATH      ../src
+SOURCE          MMSClientMTMBCTester.cpp
+SOURCE          MMSClientMTMBCTesterCases.cpp
+SOURCE			MMSClientMTMBCTesterController.cpp
+SOURCE			MMSClientMTMBCTesterTools.cpp
+
+
+USERINCLUDE     ../inc 
+APP_LAYER_SYSTEMINCLUDE
+
+
+LIBRARY         euser.lib
+LIBRARY         StifTestInterface.lib
+LIBRARY			msgs.lib
+LIBRARY			efsrv.lib
+LIBRARY			charconv.lib
+
+/***
+* MMS Server Settings library is used only if it's available
+***/
+#ifdef MMSCLIENTMTMBCTESTER_INTERNAL_TESTING
+LIBRARY			mmsserversettings.lib
+#endif // MMSCLIENTMTMBCTESTER_INTERNAL_TESTING
+
+
+LANG            SC
+
+
+
+SMPSAFE
+
+
+// End of file: MMSClientMTMBCTester.mmp

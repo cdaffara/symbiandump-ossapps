@@ -1,0 +1,16 @@
+EXPORTS
+	??1CPbapLogViewEvent@@UAE@XZ @ 1 NONAME ; CPbapLogViewEvent::~CPbapLogViewEvent(void)
+	??1CPbapLogWrapper@@UAE@XZ @ 2 NONAME ; CPbapLogWrapper::~CPbapLogWrapper(void)
+	?Cancel@CPbapLogViewEvent@@QAEXXZ @ 3 NONAME ; void CPbapLogViewEvent::Cancel(void)
+	?ClientAvailable@CPbapLogWrapper@@QBEHXZ @ 4 NONAME ; int CPbapLogWrapper::ClientAvailable(void) const
+	?CountL@CPbapLogViewEvent@@QAEHXZ @ 5 NONAME ; int CPbapLogViewEvent::CountL(void)
+	?Event@CPbapLogViewEvent@@QBEABVCLogEvent@@XZ @ 6 NONAME ; class CLogEvent const & CPbapLogViewEvent::Event(void) const
+	?FirstL@CPbapLogViewEvent@@QAEHAAVTRequestStatus@@@Z @ 7 NONAME ; int CPbapLogViewEvent::FirstL(class TRequestStatus &)
+	?GetString@CPbapLogWrapper@@QBEHAAVTDes16@@H@Z @ 8 NONAME ; int CPbapLogWrapper::GetString(class TDes16 &, int) const
+	?NewL@CPbapLogViewEvent@@SAPAV1@AAVCPbapLogWrapper@@@Z @ 9 NONAME ; class CPbapLogViewEvent * CPbapLogViewEvent::NewL(class CPbapLogWrapper &)
+	?NewL@CPbapLogViewEvent@@SAPAV1@AAVCPbapLogWrapper@@AAVMPbapLogEngViewObserver@@@Z @ 10 NONAME ; class CPbapLogViewEvent * CPbapLogViewEvent::NewL(class CPbapLogWrapper &, class MPbapLogEngViewObserver &)
+	?NewL@CPbapLogWrapper@@SAPAV1@AAVRFs@@@Z @ 11 NONAME ; class CPbapLogWrapper * CPbapLogWrapper::NewL(class RFs &)
+	?NextL@CPbapLogViewEvent@@QAEHAAVTRequestStatus@@@Z @ 12 NONAME ; int CPbapLogViewEvent::NextL(class TRequestStatus &)
+	?SetFilterL@CPbapLogViewEvent@@QAEHABVCLogFilter@@AAVTRequestStatus@@@Z @ 13 NONAME ; int CPbapLogViewEvent::SetFilterL(class CLogFilter const &, class TRequestStatus &)
+	?SetFilterL@CPbapLogViewEvent@@QAEHABVCLogFilterList@@AAVTRequestStatus@@@Z @ 14 NONAME ; int CPbapLogViewEvent::SetFilterL(class CLogFilterList const &, class TRequestStatus &)
+

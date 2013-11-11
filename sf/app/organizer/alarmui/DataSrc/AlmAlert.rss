@@ -1,0 +1,105 @@
+/*
+* Copyright (c) 2006-2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   Resource definitions for project AknAlarmService.
+*
+*/
+
+
+
+//  RESOURCE IDENTIFIER
+NAME ALRT
+
+#include <eikon.rh>
+#include <AlmAlert.loc>
+#include "AlmAlertVariant.hrh"
+
+
+RESOURCE RSS_SIGNATURE { }
+
+
+//----------------------------------------------------
+//
+//    r_eikalarm_clock_alarm_type
+//    An alarm title for Clock alarm
+//
+//----------------------------------------------------
+//
+RESOURCE TBUF r_eikalarm_clock_alarm_type
+{
+    buf = qtn_quest_clock_alarm_occur;
+}
+
+
+//----------------------------------------------------
+//
+//    r_eikalarm_confirmation
+//    Confirmation text for power on
+//
+//----------------------------------------------------
+//
+RESOURCE TBUF r_eikalarm_confirmation
+{
+    buf = qtn_quest_switch_phone_on;
+}
+
+//----------------------------------------------------
+//
+//    r_eikalarm_todo_title
+//    Title for To-Do alarm.
+//
+//----------------------------------------------------
+//
+RESOURCE TBUF r_eikalarm_todo_title
+{
+    buf = qtn_todo_alarm_heading;
+}
+
+//----------------------------------------------------
+//
+//    r_eikalarm_todo_due
+//    To-Do alarm: line 2.
+//
+//----------------------------------------------------
+//
+RESOURCE TBUF r_eikalarm_todo_due
+{
+    buf = qtn_todo_alarm_due;
+}
+
+//----------------------------------------------------
+//
+//    r_eikalarm_note_snooze
+//    Snooze information note, plural.
+//
+//----------------------------------------------------
+//
+RESOURCE TBUF r_eikalarm_note_snooze
+{
+    buf = qtn_clk_note_snooze_multiply;
+}
+
+//----------------------------------------------------
+//
+//    r_eikalarm_note_snooze
+//    Snooze information note, singular.
+//
+//----------------------------------------------------
+//
+RESOURCE TBUF r_eikalarm_note_snooze_one
+{
+    buf = qtn_clk_note_snooze_multiply_one;
+}
+
+
+// End of file

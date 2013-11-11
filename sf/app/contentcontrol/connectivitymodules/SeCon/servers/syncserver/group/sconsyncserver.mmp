@@ -1,0 +1,66 @@
+/*
+* Copyright (c) 2009-2010 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  sconsyncserver mmp file
+*
+*/
+
+
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+
+
+TARGET          sconsyncserver.exe
+TARGETTYPE      exe
+
+// Same capabilities than in DS Ui application
+CAPABILITY      LocalServices ReadUserData WriteUserData ReadDeviceData WriteDeviceData NetworkServices UserEnvironment ProtServ SwEvent NetworkControl Location
+
+UID             0x0 0x2001A964
+VENDORID        VID_DEFAULT
+
+EPOCSTACKSIZE   0x2000
+EPOCHEAPSIZE	0x500 0x800000 	// minimum and maximum heap sizes
+
+SOURCEPATH      ../src
+SOURCE          sconsyncserver.cpp
+SOURCE          sconsyncsession.cpp
+SOURCE          sconsyncrelationship.cpp
+SOURCE          sconasynchandler.cpp
+SOURCE          cscontimeout.cpp
+
+// common components (dataproviderinfo)
+SOURCEPATH      ../../../clients/syncclient/src
+USERINCLUDE     ../../../clients/syncclient/inc
+SOURCE          scondataproviderinfo.cpp
+
+USERINCLUDE     ../inc
+
+// Default system include paths
+APP_LAYER_SYSTEMINCLUDE
+
+// For temporary use only
+SYSTEMINCLUDE   /epoc32/include/syncml
+
+DEBUGLIBRARY    flogger.lib
+LIBRARY         euser.lib
+LIBRARY         efsrv.lib
+LIBRARY         bafl.lib
+LIBRARY         ecom.lib
+LIBRARY         estor.lib // CDictionaryFileStore
+LIBRARY         smldataprovider.lib
+LIBRARY         nsmlchangefinder.lib
+LIBRARY         smlstoreformat.lib
+LIBRARY         charconv.lib
+
+

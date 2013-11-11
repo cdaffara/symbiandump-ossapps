@@ -1,0 +1,39 @@
+/*
+* Copyright (c) 2005 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  build info file for application management client & server
+*
+*/
+
+
+
+#include <platform_paths.hrh>
+
+PRJ_EXPORTS
+//../rom/1020781c.txt /epoc32/data/Z/private/10202be9/1020781c.txt
+//../rom/1020781c.txt /epoc32/RELEASE/winscw/UDEB/z/private/10202be9/1020781c.txt
+//../rom/1020781c.txt /epoc32/RELEASE/winscw/UREL/z/private/10202be9/1020781c.txt
+
+../rom/appmgmt.iby	CORE_APP_LAYER_IBY_EXPORT_PATH(appmgmt.iby)
+// Generic configuration interface for component cenrep settings  
+../conf/application_management.confml                        APP_LAYER_CONFML(application_management.confml)
+../conf/application_management_200267FB.crml 	        APP_LAYER_CRML(application_management_200267FB.crml)
+
+PRJ_MMPFILES
+
+#include "../options/group/bld.inf"
+#include "../client/group/bld.inf"
+//#include "../server/bld.inf"
+//#include "../RfsPlugin/group/bld.inf"
+#include "../amadapter2/group/bld.inf"
+#include "../omascomoadapter/group/bld.inf"

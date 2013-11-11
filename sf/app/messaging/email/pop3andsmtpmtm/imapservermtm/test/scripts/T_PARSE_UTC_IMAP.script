@@ -1,0 +1,34 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//! @file
+//! @SYMTestCaseID MSG-IMAP-0243
+//! @SYMTestType UT
+//! @SYMTestPriority High
+//! @SYMPREQ 234
+//! @SYMDEF T_ImapParseUtcServer.exe
+//! @SYMTestCaseDesc Each test case tests for correct parsing of date header information by the IMAP system.
+//! @SYMTestActions Connects to the dummy IMAP server using loop back address, syncs known emails from the server.
+//! @SYMTestExpectedResults Tests that the dates used to time-stamp message store entries are as expected.
+
+PRINT Run all T_Parse_UTCServer Tests 
+LOAD_SUITE T_ImapParseUtcServer -SharedData
+
+RUN_TEST_STEP 1000 T_ImapParseUtcServer TestUTCParse c:\msgtest\imap\ImapUTCTest.ini  SectionOne
+RUN_TEST_STEP 1000 T_ImapParseUtcServer TestUTCParse c:\msgtest\imap\ImapUTCTest.ini  SectionTwo
+RUN_TEST_STEP 1000 T_ImapParseUtcServer TestUTCParse c:\msgtest\imap\ImapUTCTest.ini  SectionThree
+RUN_TEST_STEP 1000 T_ImapParseUtcServer TestUTCParse c:\msgtest\imap\ImapUTCTest.ini  SectionFour
+RUN_TEST_STEP 1000 T_ImapParseUtcServer TestUTCParse c:\msgtest\imap\ImapUTCTest.ini  SectionFive
+RUN_TEST_STEP 1000 T_ImapParseUtcServer TestUTCParse c:\msgtest\imap\ImapUTCTest.ini  SectionSix

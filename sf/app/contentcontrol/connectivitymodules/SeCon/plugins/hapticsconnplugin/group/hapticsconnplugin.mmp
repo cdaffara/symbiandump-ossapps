@@ -1,0 +1,60 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Haptics connection plugin project definition file.
+*
+*/
+
+
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+
+VENDORID        VID_DEFAULT
+
+CAPABILITY      CAP_ECOM_PLUGIN
+
+TARGET          hapticsconnplugin.dll
+TARGETTYPE      PLUGIN
+
+UID             0x10009D8D 0x2001FE54
+
+SOURCEPATH     	../src
+
+SOURCE          hapticsconnplugin.cpp
+SOURCE          hapticsconntimer.cpp
+SOURCE          hapticsmsghandler.cpp
+SOURCE          hapticsbridgeclient.cpp
+SOURCE          proxy.cpp
+
+SOURCEPATH     	../data
+
+START RESOURCE 2001FE54.rss
+  TARGET        hapticsconnplugin.rsc
+END 
+
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE /epoc32/include/stdapis
+
+USERINCLUDE     ../inc
+
+LIBRARY         flogger.lib
+LIBRARY         euser.lib
+LIBRARY         ecom.lib			
+LIBRARY         efsrv.lib
+LIBRARY         avkon.lib
+LIBRARY         bafl.lib
+LIBRARY         platformenv.lib
+LIBRARY         irobex.lib
+LIBRARY         hwrmhapticspacketizer.lib
+
+

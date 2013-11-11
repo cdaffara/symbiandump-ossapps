@@ -1,0 +1,14 @@
+EXPORTS
+	??1CFBFileOpClient@@UAE@XZ @ 1 NONAME ; CFBFileOpClient::~CFBFileOpClient(void)
+	?Attribs@CFBFileOpClient@@QAEHABVTDesC16@@IIABVTTime@@I@Z @ 2 NONAME ; int CFBFileOpClient::Attribs(class TDesC16 const &, unsigned int, unsigned int, class TTime const &, unsigned int)
+	?Copy@CFBFileOpClient@@QAEHABVTDesC16@@0I@Z @ 3 NONAME ; int CFBFileOpClient::Copy(class TDesC16 const &, class TDesC16 const &, unsigned int)
+	?CreateEmptyFile@CFBFileOpClient@@QAEHABVTDesC16@@@Z @ 4 NONAME ; int CFBFileOpClient::CreateEmptyFile(class TDesC16 const &)
+	?Delete@CFBFileOpClient@@QAEHABVTDesC16@@I@Z @ 5 NONAME ; int CFBFileOpClient::Delete(class TDesC16 const &, unsigned int)
+	?EraseMBR@CFBFileOpClient@@QAEHI@Z @ 6 NONAME ; int CFBFileOpClient::EraseMBR(unsigned int)
+	?MkDirAll@CFBFileOpClient@@QAEHABVTDesC16@@@Z @ 7 NONAME ; int CFBFileOpClient::MkDirAll(class TDesC16 const &)
+	?NewL@CFBFileOpClient@@SAPAV1@XZ @ 8 NONAME ; class CFBFileOpClient * CFBFileOpClient::NewL(void)
+	?PartitionDrive@CFBFileOpClient@@QAEHII@Z @ 9 NONAME ; int CFBFileOpClient::PartitionDrive(unsigned int, unsigned int)
+	?Rename@CFBFileOpClient@@QAEHABVTDesC16@@0I@Z @ 10 NONAME ; int CFBFileOpClient::Rename(class TDesC16 const &, class TDesC16 const &, unsigned int)
+	?RmDir@CFBFileOpClient@@QAEHABVTDesC16@@I@Z @ 11 NONAME ; int CFBFileOpClient::RmDir(class TDesC16 const &, unsigned int)
+	?CancelOp@CFBFileOpClient@@QAEXXZ @ 12 NONAME ; void CFBFileOpClient::CancelOp(void)
+

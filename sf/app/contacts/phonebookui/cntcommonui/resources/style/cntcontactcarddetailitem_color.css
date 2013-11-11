@@ -1,0 +1,15 @@
+CntContactCardDetailItem[state = "normal"]::text{
+	color: var(qtc_list_item_title_normal);
+}
+
+CntContactCardDetailItem[state = "normal"]::valueText{
+	color: var(qtc_list_item_content_normal);
+}
+
+CntContactCardDetailItem[state = "pressed"]::text{
+	color: var(qtc_list_item_pressed);
+}
+
+CntContactCardDetailItem[state = "pressed"]::valueText{
+	color: var(qtc_list_item_pressed);
+}

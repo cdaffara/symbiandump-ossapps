@@ -1,0 +1,48 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  This file contains declarations for constants of Podcast
+*                Collection. The file can be included in C++ or resource file.
+*
+*/
+
+
+
+#ifndef MPXPODCASTCOLLECTIONDB_HRH
+#define MPXPODCASTCOLLECTIONDB_HRH
+
+enum TMCBrowseType
+    {
+    EBrowseAll = 0,
+    EBrowseTitle,
+    EBrowsePubDate,
+    EBrowseRecentlyAdded,
+    EBrowseNotPlayed
+    };
+
+enum TMPXPublishDate
+    {
+    EMPXPublishToday,
+    EMPXPublishYesterday,
+    EMPXPublishThisWeek,
+    EMPXPublishLastWeek,
+    EMPXPublish2WeekAgo,
+    EMPXPublish3WeekAgo,
+    EMPXPublishLastMonth,
+    EMPXPublishEarlier,
+    EMPXPublishUnknown
+    };
+
+#endif      // MPXPODCASTCOLLECTIONDB_HRH
+
+// End of File

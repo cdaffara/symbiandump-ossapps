@@ -1,0 +1,50 @@
+/*
+* Copyright (c) 2006-2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   Image description file for project Alarm UI.
+*
+*/
+
+
+
+#ifndef __ALMALERT_IBY__
+#define __ALMALERT_IBY__
+
+
+
+file=ABI_DIR\BUILD_DIR\AlmAlert.dll           SHARED_LIB_DIR\AlmAlert.dll
+file=ABI_DIR\BUILD_DIR\AknAlarmService.dll    SHARED_LIB_DIR\AknAlarmService.dll
+
+data=/epoc32/data/z/resource/plugins/devicedialogs/alarmalertplugin.qtplugin		resource/plugins/devicedialogs/alarmalertplugin.qtplugin
+file=ABI_DIR/BUILD_DIR/alarmalertplugin.dll		SHARED_LIB_DIR/alarmalertplugin.dll
+file=ABI_DIR/BUILD_DIR/alarmalertwidget.dll		SHARED_LIB_DIR/alarmalertwidget.dll
+
+// Stub sis
+data=DATAZ_\system\install\alarmui_stub.sis             \System\Install\alarmui_stub.sis
+
+#ifndef _IMAGE_TYPE_PRD
+// Exclude from production image. 
+// TSW error : HMAA-7JVGBG 
+data=DATAZ_\data\sounds\digital\clock.aac     data\sounds\digital\clock.aac
+data=DATAZ_\data\sounds\digital\alarm.aac     data\sounds\digital\alarm.aac
+#endif
+
+#ifdef RD_CONTEXT_FRAMEWORK
+// Context framework scripts
+data=\epoc32\data\Z\private\10282BC4\Rules\alarmuisnooze.rul    private\10282BC4\Rules\alarmuisnooze.rul
+#endif // RD_CONTEXT_FRAMEWORK
+
+#endif  // __ALMALERT_IBY__
+
+
+// End of File

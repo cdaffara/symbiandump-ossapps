@@ -1,0 +1,17 @@
+<?xml version="1.0" standalone="yes"?>
+<backup_registration>
+
+    <passive_backup>
+        <include_directory name="\"/>
+        <exclude name="MemSpy_Passive_Excluded.txt"/>
+    </passive_backup>
+
+    <system_backup/>
+
+    <public_backup>
+        <include_directory name="C:\Data\Others\MemSpy\"/>
+    </public_backup>
+
+    <restore requires_reboot = "no"/>
+
+</backup_registration>

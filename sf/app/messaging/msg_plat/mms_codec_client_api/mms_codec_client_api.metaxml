@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<api id="c25ce59ddac7aa5e0a82ab3fe0e86879" dataversion="2.0">
+  <name>MMS Codec Client API</name>
+  <description>API for getting and settings encoded MMS messages. This API makes it possible to implement MMS Data Synchronization.</description>
+  <type>c++</type>
+  <collection>mmsengine</collection>
+  <libs>
+    <lib name="mmscodecclient.lib" />
+  </libs>
+  <release category="platform"/>
+  <attributes>
+     <!-- This indicates wether the api provedes separate html documentation -->
+     <!-- or is the additional documentation generated from headers. -->
+     <!-- If you are unsuere then the value is "no" -->
+     <htmldocprovided>no</htmldocprovided>
+     <adaptation>no</adaptation>
+  </attributes>
+</api>

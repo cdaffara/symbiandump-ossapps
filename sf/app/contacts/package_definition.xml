@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SystemDefinition schema="3.0.0" xmlns:qt="http://www.nokia.com/qt">
+ <package id="contacts" name="Contacts Apps" levels="engine support services plugin ui">
+  <collection id="contacts_plat" name="Contacts Apps Platform Interfaces" level="ui">
+	<!-- none of these APIs are built here. Are they on the way in,  way out or just built elsewhere?-->
+   <component id="contacts_services_api" name="Contacts Services API" class="api" filter="s60"  introduced="^4">
+    <unit base="contacts_plat/contacts_services_api"/>
+   </component>
+   <component id="contacts_ui_api" name="Contacts UI API" class="api" filter="s60"  introduced="^4">
+    <unit base="contacts_plat/contacts_ui_api"/>
+   </component>
+   <component id="contacts_ui_extensions_api" name="Contacts UI Extensions API" class="api" filter="s60" introduced="^4">
+    <unit base="contacts_plat/contacts_ui_extensions_api"/>
+   </component>
+   <component id="presence_cache_api" name="Presence Cache API" class="api" filter="s60">	
+    <meta rel="Api" href="contacts_plat/presence_cache_api/presence_cache_api.metaxml"/>
+    <unit base="contacts_plat/presence_cache_api"/>
+   </component>
+  </collection>
+  <collection id="phonebookui" name="Phonebook UI" level="ui">
+   <component id="cnthistorymodel" filter="s60" name="Contacts History Model" introduced="^4">
+    <!--<unit bldFile="phonebookui/cnthistorymodel" qt:proFile="cnthistorymodel.pro"/> -->
+   </component>
+   <component id="cntcommonui" filter="s60" name="Phonebook Common UI" introduced="^4">
+    <!--<unit bldFile="phonebookui/cntcommonui" qt:proFile="cntcommonui.pro"/> -->
+   </component>
+   <component id="phonebookapp" filter="s60" name="Phonebook Application" introduced="^4">
+    <!--<unit bldFile="phonebookui/phonebookapp" qt:proFile="phonebookapp.pro"/> -->
+   </component>
+   <component id="phonebookservices" filter="s60" name="Phonebook Services" introduced="^4">
+    <!--<unit bldFile="phonebookui/phonebookservices" qt:proFile="phonebookservices.pro"/> -->
+   </component>
+   <component id="phonebookui_build" filter="s60" name="Phonebook UI Build" introduced="^4">
+    <!-- break up into components -->
+    <unit bldFile="phonebookui" qt:proFile="phonebookui.pro"/>
+   </component>
+  </collection>
+  <collection id="phonebookengines" name="Phonebook Engines" level="engine">
+   <component id="cntfindplugin" filter="s60" name="Contacts Find Plugin" class="plugin" introduced="^2">
+    <unit bldFile="phonebookengines/cntfindplugin" qt:proFile="cntfindplugin.pro"/>
+   </component>
+   <component id="cntsortplugin" filter="s60" name="Contacts Sort Plugin" class="plugin" introduced="^2">
+    <unit bldFile="phonebookengines/cntsortplugin" qt:proFile="cntsortplugin.pro"/>
+   </component>
+   <component id="qtcontactsmobility" filter="s60" name="Qt Contacts Mobility" class="plugin" introduced="^4">
+	<!-- need to move to this actual dir rather than including something from another collection -->
+    <!-- <unit bldFile="qtcontactsmobility" qt:proFile="qtcontactsmobility.pro"/> -->
+   </component>
+   <component id="cntlistmodel" filter="s60" name="Contact List Model" introduced="^4">
+    <unit bldFile="phonebookengines/cntlistmodel" qt:proFile="cntlistmodel.pro"/>
+   </component>
+   <component id="cntactions" filter="s60" name="Contacts Actions" introduced="^4">
+    <unit bldFile="phonebookengines/cntactions" qt:proFile="cntactions.pro"/>
+   </component>
+   <component id="cntsimutility" filter="s60" name="Contacts SIM Utility" introduced="^4">
+    <unit bldFile="phonebookengines/cntsimutility" qt:proFile="cntsimutility.pro"/>
+   </component>
+   <component id="cntimageutility" name="Contacts Image Utility" filter="s60" introduced="^4">
+      <unit bldFile="phonebookengines/cntimageutility" qt:proFile="cntimageutility.pro"/>
+   </component>
+  </collection>
+  <collection id="pimprotocols" name="PIM Protocols" level="services">
+   <component id="phonebooksync" name="Phonebook Sync" purpose="optional" class="plugin" filter="s60">
+    <unit bldFile="pimprotocols/phonebooksync/group" mrp="pimprotocols/phonebooksync/group/telephony_phbksync.mrp"/>
+   </component>
+   <component id="pbap" filter="s60" name="Bluetooth PBAP" introduced="9.2" purpose="optional">
+    <unit bldFile="pimprotocols/pbap/group" mrp="pimprotocols/pbap/group/bluetooth_accesshost.mrp"/>
+   </component>
+  </collection>
+  <collection id="presencecache" name="Presence Cache" level="support">
+   <component id="presencecachesymbian" filter="s60" name="Presence Cache Symbian" introduced="^4">
+    <unit bldFile="presencecache/presencecachesymbian" qt:proFile="presencecachesymbian.pro"/>
+   </component>
+   <component id="presencecacheqt" filter="s60" name="Presence Cache Qt" introduced="^4">
+    <unit bldFile="presencecache/presencecacheqt" qt:proFile="presencecacheqt.pro"/>
+   </component>
+  </collection>
+  <collection id="contactwidgethsplugin" name="Contact Widget Homescreen Plugin" level="plugin">
+	<!-- collection is really a component, move down a directory -->
+   <component id="contactwidgethsplugin_build" name="Contact Widget Homescreen Plugin Build" introduced="^4" filter="s60">
+      <unit bldFile="contactwidgethsplugin" qt:proFile="contactwidgethsplugin.pro"/>
+   </component>
+  </collection>
+ </package>
+</SystemDefinition>

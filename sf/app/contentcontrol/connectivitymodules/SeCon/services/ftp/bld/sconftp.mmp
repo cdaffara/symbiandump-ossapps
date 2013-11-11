@@ -1,0 +1,76 @@
+/*
+* Copyright (c) 2005-2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  File Transfer Controller mmp file
+*
+*/
+
+
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+
+VENDORID        VID_DEFAULT
+
+CAPABILITY      CAP_GENERAL_DLL
+
+TARGET          sconftp.dll
+TARGETTYPE      DLL
+
+UID             0x10009D8D 0x101F968A
+
+#if defined(ARMCC)
+DEFFILE ./def/eabiu
+#elif defined(WINSCW)
+DEFFILE ./def/bwinscw
+#elif defined(WINS)
+DEFFILE ./def/bwins
+#elif defined(ARM)
+DEFFILE ./def/bmarm
+#endif
+
+SOURCEPATH      ../src
+SOURCE          sconfshandler.cpp
+SOURCE          sconftp.cpp
+SOURCE          sconinboxhandler.cpp
+
+USERINCLUDE     ../../../inc
+USERINCLUDE     ../inc
+USERINCLUDE     ../../../cntparser/inc
+
+// Default system include paths.
+APP_LAYER_SYSTEMINCLUDE
+
+
+START RESOURCE  ../src/sconftp.rss
+HEADER
+TARGETPATH      RESOURCE_FILES_DIR
+LANGUAGE_IDS
+END
+
+
+LIBRARY         efsrv.lib               // For File server
+LIBRARY         euser.lib               // Base library
+LIBRARY         irobex.lib              // For Object exchange
+LIBRARY         obexutils.lib
+LIBRARY         msgs.lib                // For Inbox entry
+LIBRARY         charconv.lib            // For Unicode conversion
+LIBRARY         bafl.lib                // Basic Application Framework Library
+LIBRARY         commonengine.lib        // For resource reader
+LIBRARY         platformenv.lib         // For pathinfo
+LIBRARY         cntparserserver.lib     // for contacts
+LIBRARY         directorylocalizer.lib  // For localizing directories
+LIBRARY         sysutil.lib
+LIBRARY         centralrepository.lib
+DEBUGLIBRARY    flogger.lib             // For debug logging
+
+

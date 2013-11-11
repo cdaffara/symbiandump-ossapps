@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE SystemDefinition SYSTEM "sysdef_1_5_1.dtd" [
+  <!ENTITY layer_real_source_path "sf/app/settingsuis" >
+]>
+
+<SystemDefinition name="settingsuis" schema="1.5.1">
+  <systemModel>
+    <layer name="app_layer">
+    	<module name="themeplugin">
+        <unit unitID="themeplugin" mrp="" bldFile="&layer_real_source_path;/controlpanelplugins/themeplugin" name="themeplugin" proFile="themeplugin.pro" qmakeArgs="-r -config rom"/>
+      </module>
+      <module name="langandregplugin">
+        <unit unitID="langandregplugin" mrp="" bldFile="&layer_real_source_path;/controlpanelplugins/langandregplugin" name="langandregplugin" proFile="languageplugin.pro" qmakeArgs="-r -config rom"/>
+      </module>
+      <module name="aboutplugin">
+        <unit unitID="aboutplugin" mrp="" bldFile="&layer_real_source_path;/controlpanelplugins/aboutplugin" name="aboutplugin" proFile="aboutplugin.pro" qmakeArgs="-r -config rom"/>
+      </module>
+      <module name="controlpanelui">
+        <unit unitID="controlpanelui" mrp="" bldFile="&layer_real_source_path;/controlpanelui" name="controlpanelui" proFile="controlpanelui.pro" qmakeArgs="-r -config rom"/>
+      </module>
+    </layer>
+    <layer name="qt_unit_test_layer">
+      <module name="controlpanelui_tests">
+        <unit unitID="presdoe.controlpanelui_tests" mrp="" bldFile="&layer_real_source_path;/controlpanelui/tsrc" proFile="tsrc.pro" name="controlpanelui_tests" qmakeArgs="-r"/>
+      </module>
+    </layer>
+  </systemModel>
+</SystemDefinition>

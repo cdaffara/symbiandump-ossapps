@@ -1,0 +1,52 @@
+/*
+* Copyright (c) 2002 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: Implementation of dm adapters
+* 	This is part of omadmextensions.
+*
+*/
+
+
+
+
+
+#include "defaultcaps.hrh"
+#include  <platform_paths.hrh>
+
+CAPABILITY      CAP_ECOM_PLUGIN
+TARGET          nsmldmdevinfoadapter.dll
+TARGETTYPE      PLUGIN
+UID             0x10009D8D 0x101F6DE8
+VENDORID        VID_DEFAULT
+
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE 	/epoc32/include/ecom
+SOURCEPATH      ../src
+
+USERINCLUDE     ../inc ../../inc
+USERINCLUDE     ../../devdetail/inc
+SOURCE          nsmldmdevinfoadapter.cpp
+
+START RESOURCE nsmldmdevinfoadapter.rss
+LANGUAGE_IDS
+END
+
+
+
+LIBRARY         euser.lib 
+LIBRARY         ecom.lib 
+LIBRARY         nsmldebug.lib
+LIBRARY         nsmlagentcommon.lib
+LIBRARY     	featmgr.lib
+
+SMPSAFE

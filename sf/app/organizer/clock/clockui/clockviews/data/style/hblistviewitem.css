@@ -1,0 +1,69 @@
+
+HbListViewItem[layoutName="citylist"]:portrait{
+    layout: citylist-portrait;
+}
+
+HbListViewItem[layoutName="citylist"]:landscape{
+    layout: citylist-landscape;
+}
+
+HbListViewItem[layoutName="citylist"]::icon-1{
+    top: -var(hb-param-margin-gene-top);
+    left: -var(hb-param-margin-gene-left);
+
+    fixed-height: var(hb-param-graphic-size-primary-large);
+    fixed-width: var(hb-param-graphic-size-primary-large);
+}
+
+HbListViewItem[layoutName="citylist"]::text-1{
+    top: -var(hb-param-margin-gene-top);
+    left: -var(hb-param-margin-gene-middle-horizontal);
+    
+    text-height: var(hb-param-text-height-tiny);
+    font-variant: secondary;
+    text-align: left;
+}
+
+HbListViewItem[layoutName="citylist"]::icon-2{
+    top: -var(hb-param-margin-gene-top);
+    left: -var(hb-param-margin-gene-middle-horizontal);
+    right: var(hb-param-margin-gene-right);
+
+    fixed-height: var(hb-param-graphic-size-secondary);
+    fixed-width: var(hb-param-graphic-size-secondary);
+}
+
+HbListViewItem[layoutName="citylist"]::text-2{
+    top: -var(hb-param-margin-gene-middle-vertical);
+    bottom: var(hb-param-margin-gene-middle-vertical);
+    
+    text-height: var(hb-param-text-height-primary);
+    font-variant: primary;
+    text-align: left;
+}
+
+HbListViewItem[layoutName="citylist"]::text-3{
+    bottom: var(hb-param-margin-gene-bottom);
+    text-height: var(hb-param-text-height-tiny);
+    font-variant: secondary;
+}
+
+HbListViewItem[layoutName="citylist"]::text-3:portrait {
+    text-align: left;
+    size-policy: preferred;
+}
+
+HbListViewItem[layoutName="citylist"]::text-3:landscape {
+    text-align: right;
+    size-policy: maximum;
+}
+
+HbListViewItem[layoutName="citylist"]::text-4{
+	left = -var(hb-param-margin-gene-middle-horizontal);
+    right: var(hb-param-margin-gene-right);
+    
+    text-height: var(hb-param-text-height-tiny);
+    font-variant: secondary;
+    text-align: right;
+    size-policy: maximum;
+}

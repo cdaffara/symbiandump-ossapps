@@ -1,0 +1,95 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+TARGET        Cap_TestCalApiPolicing.exe
+TARGETTYPE    exe
+UID	      0x1000007A 0x101F7784
+SOURCEPATH	  .
+SOURCE        CSuite.CPP
+SOURCE        EOpenAgenda1_CSTEP.CPP
+SOURCE        ECloseAgenda1_CSTEP.CPP
+SOURCE        ETransmitBuffer1_CSTEP.CPP
+SOURCE        EGetInstanceExtractor1_CSTEP.CPP
+SOURCE        EPreviousDayWithInstance1_CSTEP.CPP
+SOURCE        ENextDayWithInstance1_CSTEP.CPP
+SOURCE        ECreateEntryIterator1_CSTEP.CPP
+SOURCE        EEntryIteratorNext1_CSTEP.CPP
+SOURCE        EEntryIteratorPosition1_CSTEP.CPP
+SOURCE        ECreateDateIterator1_CSTEP.CPP
+SOURCE        EDateIteratorPrevious1_CSTEP.CPP
+SOURCE        EDateIteratorNext1_CSTEP.CPP
+SOURCE        EDateIteratorAtStart1_CSTEP.CPP
+SOURCE        EDateIteratorAtEnd1_CSTEP.CPP
+SOURCE        EDateIteratorCurrentKey1_CSTEP.CPP
+SOURCE        EDateIteratorGoto1_CSTEP.CPP
+SOURCE        EDateIteratorGotoLessOrEqual1_CSTEP.CPP
+SOURCE        ECompactFile1_CSTEP.CPP
+SOURCE        ECompactionStatus1_CSTEP.CPP
+SOURCE        EGetEntryUidsSinceDate1_CSTEP.CPP
+SOURCE        EGetFileId1_CSTEP.CPP
+SOURCE        EGetCategoryListCount1_CSTEP.CPP
+SOURCE        ECategoryFilter1_CSTEP.CPP
+SOURCE        EStartBuildIndex1_CSTEP.CPP
+SOURCE        EGetListFileNames1_CSTEP.CPP
+SOURCE        ECancelTask1_CSTEP.CPP
+SOURCE        EAgnResourceCount1_CSTEP.CPP
+SOURCE        EAgnSetHeapFailure1_CSTEP.CPP
+SOURCE        EAgendaFileExists1_CSTEP.CPP
+SOURCE        EDisableChangeBroadcast1_CSTEP.CPP
+SOURCE        EEnableChangeBroadcast1_CSTEP.CPP
+SOURCE        ERequestChangeNotificationParameters21_CSTEP.CPP
+SOURCE        ERequestChangeNotification21_CSTEP.CPP
+SOURCE        ECancelChangeNotification21_CSTEP.CPP
+SOURCE        ERequestProgress1_CSTEP.CPP
+SOURCE        ESetUpdateAlarm1_CSTEP.CPP
+SOURCE        ESetEnablePubSubNotification1_CSTEP.CPP
+SOURCE        ERestoreAlarmAction1_CSTEP.CPP
+SOURCE        EFetchEntry1_CSTEP.CPP
+SOURCE        EFetchSimpleEntry1_CSTEP.CPP
+SOURCE        EDateIteratorCurrentElement1_CSTEP.CPP
+SOURCE        EFetchEntryByUID1_CSTEP.CPP
+SOURCE        ERestoreText1_CSTEP.CPP
+SOURCE        EGetCategoryListItem1_CSTEP.CPP
+SOURCE        EGetRelatedGuid1_CSTEP.CPP
+SOURCE        EGetChangesSinceLastNotification1_CSTEP.CPP
+SOURCE        EFindInstances1_CSTEP.CPP
+SOURCE        EUpdateEntry1_CSTEP.CPP
+SOURCE        EAddEntry1_CSTEP.CPP
+SOURCE        EDeleteEntry1_CSTEP.CPP
+SOURCE        EAddEntrySizes1_CSTEP.CPP
+SOURCE        EAddCategoryToList1_CSTEP.CPP
+SOURCE        EDeleteAgendaFile1_CSTEP.CPP
+SOURCE        ETidyByDateReadParams1_CSTEP.CPP
+SOURCE        ETidyByDateStart1_CSTEP.CPP
+SOURCE        ECategoryStart1_CSTEP.CPP
+SOURCE        ECategoryStartAsyn1_CSTEP.CPP
+SOURCE        ECreateAgendaFile1_CSTEP.CPP
+SOURCE        EFetchEntryByGuid1_CSTEP.CPP
+SOURCE        EDeleteEntriesByLocalUid1_CSTEP.CPP
+SOURCE        EDeleteEntryByGuid1_CSTEP.CPP
+SOURCE        ECommit1_CSTEP.CPP
+SOURCE        ERollback1_CSTEP.CPP
+USERINCLUDE   ..\..\..\..\shared\inc
+
+SYSTEMINCLUDE \epoc32\include \epoc32\include\test
+LIBRARY       euser.lib 
+
+//For TEF 
+LIBRARY		testexecuteutils.lib 
+LIBRARY		testexecutelogclient.lib 
+
+MACRO __SECURE_API__
+CAPABILITY All -TCB

@@ -1,0 +1,41 @@
+;
+; Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description: SMS plugin pkg file
+;
+
+
+;*Unique (Non-Localised) Vendor name
+;This is used in combination with signing to prevent the unauthroized
+;upgrade ofa a package by someone other than the rightful vendor.
+:"Nokia"
+
+;*Localized Vendor Name
+;This specifies the localised vendor name(s) correspodning to language(s).
+%{"Nokia"}
+
+;Language - standard language definitions
+&EN
+
+;package-header
+#{"SMS DS Plugin"},(0x10206B5C),1,14,0,TYPE=SA, RU
+
+; S60 v5.2
+[0x20022E6D], 0, 0, 0, {"Series60ProductID"}
+
+"\epoc32\data\z\resource\smsdatastore.rsc"             -"c:\resource\smsdatastore.rsc"
+"\epoc32\data\z\resource\plugins\smsdataprovider.rsc"  -"c:\resource\plugins\smsdataprovider.rsc"
+"\epoc32\release\armv5\urel\smsdataprovider.dll"       -"c:\sys\bin\smsdataprovider.dll"
+
+"\epoc32\data\Z\private\101F99F6\capability\10206b5c.xml"   -"c:\private\101F99F6\import\10206b5c.xml"
+"backup_registration.xml"                                   -"c:\private\10202D56\import\packages\10206B5C\backup_registration.xml"

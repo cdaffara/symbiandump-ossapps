@@ -1,0 +1,197 @@
+/*
+* Copyright (c) 2005 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   This file contains defines the resources used in the
+*                ical importer/exporter.
+*
+*/
+
+
+
+NAME AVT2
+
+#include "agnversit2strings.loc" //Localised strings used by AgnVersit2
+#include "agnversit2strings.hrh"
+#include <badef.rh> //LBUF
+
+
+RESOURCE BA_RSS_SIGNATURE {}
+
+// The following resources define localisable strings used by AgnVersit2
+// The prodid field will be written directly to a generated *.ics file
+// TZID resources are used to generate names for timezones, these have no meaning outside 
+// of the generated *.ics file and can generally be left alone
+// X-PARAM resources define custom properties for Agenda entries
+// CAT resources map to agenda categories
+
+RESOURCE LBUF r_ical_prodid
+	{
+	txt =  PROD_ID_VALUE;
+	}
+
+RESOURCE LBUF r_tzid_utc
+	{
+	txt = TZID_TEXT_UTC;
+	}
+
+RESOURCE LBUF r_tzid_plus
+	{
+	txt =  TZID_TEXT_PLUS;
+	}
+
+RESOURCE LBUF r_tzid_minus
+	{
+	txt =  TZID_TEXT_MINUS;
+	}
+
+RESOURCE LBUF r_tzid_slash
+	{
+	txt =  TZID_TEXT_SLASH;
+	}
+	
+RESOURCE LBUF r_tzid_standard
+	{
+	txt =  TZID_TEXT_STANDARD;
+	}
+
+RESOURCE LBUF r_tzid_daylight
+	{
+	txt =  TZID_TEXT_DAYLIGHT;
+	}
+
+RESOURCE LBUF r_errimport_numrules
+	{
+	txt =  IMPORT_ERROR_RRULE_NUMRULES;
+	}
+
+RESOURCE LBUF r_errimport_nofreq
+	{
+	txt =  IMPORT_ERROR_RRULE_NOFREQ;
+	}
+
+RESOURCE LBUF r_errimport_notyearly
+	{
+	txt =  IMPORT_ERROR_RRULE_NOTYEARLY;
+	}
+
+RESOURCE LBUF r_errimport_notallowed
+	{
+	txt =  IMPORT_ERROR_VALARM_NOTALLOWED;
+	}
+
+RESOURCE LBUF r_errimport_notrigger
+	{
+	txt =  IMPORT_ERROR_VALARM_NOTRIGGER;
+	}
+
+RESOURCE LBUF r_errimport_nostart
+	{
+	txt =  IMPORT_ERROR_VALARM_NOSTART;
+	}
+
+RESOURCE LBUF r_errimport_afterevent
+	{
+	txt =  IMPORT_ERROR_VALARM_AFTEREVENT;
+	}
+
+RESOURCE LBUF r_xparam_type
+	{
+	txt = X_PARAM_TYPE;
+	}
+
+RESOURCE LBUF r_xparam_appt
+	{
+	txt = X_PARAM_APPT;
+	}
+
+RESOURCE LBUF r_xparam_todo
+	{
+	txt = X_PARAM_TODO;
+	}
+
+RESOURCE LBUF r_xparam_event
+	{
+	txt = X_PARAM_EVENT;
+	}
+
+RESOURCE LBUF r_xparam_reminder
+	{
+	txt = X_PARAM_REMINDER;
+	}
+
+RESOURCE LBUF r_xparam_anniversary
+	{
+	txt = X_PARAM_ANNIVERSARY;
+	}
+
+RESOURCE LBUF r_cat_appointment
+	{
+	txt = CAT_APPOINTMENT;
+	}
+
+RESOURCE LBUF r_cat_business
+	{
+	txt = CAT_BUSINESS;
+	}
+
+RESOURCE LBUF r_cat_education
+	{
+	txt = CAT_EDUCATION;
+	}
+	
+RESOURCE LBUF r_cat_holiday
+	{
+	txt = CAT_HOLIDAY;
+	}
+
+RESOURCE LBUF r_cat_meeting
+	{
+	txt = CAT_MEETING;
+	}
+	
+RESOURCE LBUF r_cat_misc
+	{
+	txt = CAT_MISC;
+	}
+
+RESOURCE LBUF r_cat_personal
+	{
+	txt = CAT_PERSONAL;
+	}
+	
+RESOURCE LBUF r_cat_phonecall
+	{
+	txt = CAT_PHONECALL;
+	}
+	
+RESOURCE LBUF r_cat_sick
+	{
+	txt = CAT_SICK;
+	}
+
+RESOURCE LBUF r_cat_special
+	{
+	txt = CAT_SPECIAL;
+	}
+
+RESOURCE LBUF r_cat_travel
+	{
+	txt = CAT_TRAVEL;
+	}
+	
+RESOURCE LBUF r_cat_vacation
+	{
+	txt = CAT_VACATION;
+	}
+
+// End of file.

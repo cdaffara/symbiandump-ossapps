@@ -1,0 +1,130 @@
+<< * OK Microsoft Exchange 2000 IMAP4rev1 server version 6.0.6249.0 (lon-cn-exchng2k.msexchange2k.closedtest.intra) ready.
+>> 1 CAPABILITY
+<< * CAPABILITY IMAP4 IMAP4rev1 IDLE LOGIN-REFERRALS MAILBOX-REFERRALS NAMESPACE LITERAL+ UIDPLUS CHILDREN AUTH=NTLM
+<< 1 OK CAPABILITY completed.
+>> 2 LOGIN davids davids
+<< 2 OK LOGIN completed.
+>> 3 SELECT "INBOX"
+<< * 1 EXISTS
+<< * 0 RECENT
+<< * FLAGS (\Seen \Answered \Flagged \Deleted \Draft $MDNSent)
+<< * OK [PERMANENTFLAGS (\Seen \Answered \Flagged \Deleted \Draft $MDNSent)] Permanent flags
+<< * OK [UIDVALIDITY 1378] UIDVALIDITY value
+<< 3 OK [READ-WRITE] SELECT completed.
+>> 4 UID FETCH 1:* (UID FLAGS BODYSTRUCTURE BODY.PEEK[HEADER.FIELDS (Received Date Subject From Priority X-Priority X-MSMail-Priority Importance)])
+<< * 1 FETCH (UID 32461 FLAGS (\Recent) BODYSTRUCTURE ("TEXT" "PLAIN" ("charset" "ISO-2022-JP") NIL NIL "BASE64" 1489 25 NIL NIL NIL) BODY[HEADER.FIELDS (Received Date Subject From)] {309}
+<< Received: from [127.0.0.1] ([10.23.179.168]) by lon-cn-exchng2k.msexchange2k.closedtest.intra with Microsoft SMTPSVC(5.0.2195.5329);
+<< 	 Wed, 6 Jul 2005 12:08:21 +0100
+<< Date: Tue, 01 Feb 2005 16:38:02 +0900
+<< Subject: =?ISO-2022-JP?B?QVNDSUkxMDAwGyRCSjg7ehsoQg==?=
+<< From: tomonori <tomonori1000@yahoo.co.jp>
+<< 
+<< )
+<< 4 OK FETCH completed.
+>> 5 LIST "" "%"
+<< * LIST (\Marked \HasNoChildren) "/" "Big Test inbox"
+<< * LIST (\HasNoChildren) "/" Calendar
+<< * LIST (\HasNoChildren) "/" Contacts
+<< * LIST (\HasNoChildren) "/" "Deleted Items"
+<< * LIST (\HasNoChildren) "/" Drafts
+<< * LIST (\Marked \HasNoChildren) "/" INBOX
+<< * LIST (\HasNoChildren) "/" Journal
+<< * LIST (\HasNoChildren) "/" Notes
+<< * LIST (\HasNoChildren) "/" Outbox
+<< * LIST (\Marked \HasNoChildren) "/" "Sent Items"
+<< * LIST (\HasNoChildren) "/" Tasks
+<< * LIST (\Noselect) "/" "Public Folders/"
+<< 5 OK LIST completed.
+>> 6 LIST "" "Big Test inbox/%"
+<< 6 OK LIST completed.
+>> 7 LIST "" "Calendar/%"
+<< 7 OK LIST completed.
+>> 8 LIST "" "Contacts/%"
+<< 8 OK LIST completed.
+>> 9 LIST "" "Deleted Items/%"
+<< 9 OK LIST completed.
+>> 10 LIST "" "Drafts/%"
+<< 10 OK LIST completed.
+>> 11 LIST "" "INBOX/%"
+<< 11 OK LIST completed.
+>> 12 LIST "" "Journal/%"
+<< 12 OK LIST completed.
+>> 13 LIST "" "Notes/%"
+<< 13 OK LIST completed.
+>> 14 LIST "" "Outbox/%"
+<< 14 OK LIST completed.
+>> 15 LIST "" "Sent Items/%"
+<< 15 OK LIST completed.
+>> 16 LIST "" "Tasks/%"
+<< 16 OK LIST completed.
+>> 17 LIST "" "Public Folders//%"
+<< 17 NO This a special mailbox and can not be selected or used as the destination for mailbox operations.
+>> 18 IDLE
+<< + IDLE accepted, awaiting DONE command.
+>> DONE
+<< 18 OK IDLE completed.
+>> 19 UID FETCH 32461 (UID FLAGS BODYSTRUCTURE BODY.PEEK[HEADER.FIELDS (Received Date Subject From Reply-to To Cc Bcc Message-ID Return-Receipt-To X-Return-Receipt-To Disposition-Notification-To Disposition-Notification-Options Priority X-Priority X-MSMail-Priority Importance)])
+<< * 1 FETCH (UID 32461 FLAGS (\Recent) BODYSTRUCTURE ("TEXT" "PLAIN" ("charset" "ISO-2022-JP") NIL NIL "BASE64" 1489 25 NIL NIL NIL) BODY[HEADER.FIELDS (Received Date Subject From Reply-to To Cc Bcc Message-ID Return-Receipt-To X-Return-Receipt-To Disposition-Notification-To Disposition-Notification-Options Priority X-Priority X-MSMail-Priority Importance)] {405}
+<< Received: from [127.0.0.1] ([10.23.179.168]) by lon-cn-exchng2k.msexchange2k.closedtest.intra with Microsoft SMTPSVC(5.0.2195.5329);
+<< 	 Wed, 6 Jul 2005 12:08:21 +0100
+<< Date: 
+<< Tue, 01 Feb 2005 16:38:02 +0900
+<< Subject: =?ISO-2022-JP?B?QVNDSUkxMDAwGyRCSjg7ehsoQg==?=
+<< From: tomonori <tomonori1000@yahoo.co.jp>
+<< To: mot1008jp@yahoo.co.jp
+<< Message-ID: <JG2005020116374116.5681349@yahoo.co.jp>
+<< X-Priority: 3
+<< 
+<< )
+<< 19 OK FETCH completed.
+>> 20 UID FETCH 32461 (BODY[1]<0.20480> BODY[1.MIME])
+<< * 1 FETCH (BODY[1]<0> {1489}
+<< YWJjZGVmZ2hpamFiY2RlZmdoaWphYmNkZWZnaGlqYWJjZGVmZ2hpamFiY2RlZmdoaWphYmNk
+<< ZWZnaGlqYWJjZGVmZ2hpamFiY2RlZmdoaWphYmNkZWZnaGlqYWJjZGVmZ2hpamFiY2RlZmdo
+<< aWphYmNkZWZnaGlqYWJjZGVmZ2hpamFiY2RlZmdoaWphYmNkZWZnaGlqYWJjZGVmZ2hpamFi
+<< Y2RlZmdoaWphYmNkZWZnaGlqYWJjZGVmZ2hpamFiY2RlZmdoaWphYmNkZWZnaGlqYWJjZGVm
+<< Z2hpamFiY2RlZmdoaWphYmNkZWZnaGlqYWJjZGVmZ2hpamFiY2RlZmdoaWphYmNkZWZnaGlq
+<< YWJjZGVmZ2hpamFiY2RlZmdoaWphYmNkZWZnaGlqYWJjZGVmZ2hpamFiY2RlZmdoaWphYmNk
+<< ZWZnaGlqYWJjZGVmZ2hpamFiY2RlZmdoaWphYmNkZWZnaGlqYWJjZGVmZ2hpamFiY2RlZmdo
+<< aWphYmNkZWZnaGlqYWJjZGVmZ2hpamFiY2RlZmdoaWphYmNkZWZnaGlqYWJjZGVmZ2hpamFi
+<< Y2RlZmdoaWphYmNkZWZnaGlqYWJjZGVmZ2hpamFiY2RlZmdoaWphYmNkZWZnaGlqYWJjZGVm
+<< Z2hpamFiY2RlZmdoaWphYmNkZWZnaGlqYWJjZGVmZ2hpamFiY2RlZmdoaWphYmNkZWZnaGlq
+<< YWJjZGVmZ2hpamFiY2RlZmdoaWphYmNkZWZnaGlqYWJjZGVmZ2hpamFiY2RlZmdoaWphYmNk
+<< ZWZnaGlqYWJjZGVmZ2hpamFiY2RlZmdoaWphYmNkZWZnaGlqYWJjZGVmZ2hpamFiY2RlZmdo
+<< aWphYmNkZWZnaGlqYWJjZGVmZ2hpamFiY2RlZmdoaWphYmNkZWZnaGlqYWJjZGVmZ2hpamFi
+<< Y2RlZmdoaWphYmNkZWZnaGlqYWJjZGVmZ2hpamFiY2RlZmdoaWphYmNkZWZnaGlqYWJjZGVm
+<< Z2hpamFiY2RlZmdoaWphYmNkZWZnaGlqYWJjZGVmZ2hpamFiY2RlZmdoaWphYmNkZWZnaGlq
+<< YWJjZGVmZ2hpamFiY2RlZmdoaWphYmNkZWZnaGlqYWJjZGVmZ2hpamFiY2RlZmdoaWphYmNk
+<< ZWZnaGlqYWJjZGVmZ2hpamFiY2RlZmdoaWphYmNkZWZnaGlqYWJjZGVmZ2hpamFiY2RlZmdo
+<< aWphYmNkZWZnaGlqYWJjZGVmZ2hpamFiY2RlZmdoaWphYmNkZWZnaGlqYWJjZGVmZ2hpamFi
+<< Y2RlZmdoaWphYmNkZWZnaGlqYWJjZGUxMjM0NQ==
+<< __________________________________
+<< Let's Celebrate Together!
+<< Yahoo! JAPAN
+<< http://pr.mail.yahoo.co.jp/so2005/
+<< 
+<<  BODY[1.MIME] {687}
+<< Received: from [127.0.0.1] ([10.23.179.168]) by lon-cn-exchng2k.msexchange2k.closedtest.intra with Microsoft SMTPSVC(5.0.2195.5329);
+<< 	 Wed, 6 Jul 2005 12:08:21 +0100
+<< MIME-Version: 1.0
+<< Date: Tue, 01 Feb 2005 16:38:02 +0900
+<< Subject: =?ISO-2022-JP?B?QVNDSUkxMDAwGyRCSjg7ehsoQg==?=
+<< From: tomonori <tomonori1000@yahoo.co.jp>
+<< To: mot1008jp@yahoo.co.jp
+<< Message-ID: <JG2005020116374116.5681349@yahoo.co.jp>
+<< Content-Type: text/plain; charset=ISO-2022-JP
+<< Content-Transfer-Encoding: Base64
+<< X-Mailer: JsvMail 5.5 (Shuriken Pro3 Trial)
+<< X-Priority: 3
+<< Return-Path: tomjan@msexchange2k.closedtest.intra
+<< X-OriginalArrivalTime: 06 Jul 2005 11:08:21.0640 (UTC) FILETIME=[0568A880:01C5821B]
+<< 
+<<  UID 32461 FLAGS (\Seen \Recent))
+<< 20 OK FETCH completed.
+>> 21 IDLE
+<< + IDLE accepted, awaiting DONE command.
+>> DONE
+<< 21 OK IDLE completed.
+>> 22 LOGOUT
+<< * BYE Microsoft Exchange 2000 IMAP4rev1 server version 6.0.6249.0 signing off.
+<< 22 OK LOGOUT completed.

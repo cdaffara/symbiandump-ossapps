@@ -1,0 +1,87 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+REM SyncML Device Management
+
+#include <bldvariant.hrh>
+
+#ifndef __OMADMADAPTERS_IBY__
+#define __OMADMADAPTERS_IBY__
+
+#ifdef __SYNCML_DM // nothing should be installed from this .iby file if __SYNCML_DM feature is not selected
+
+
+REM  SyncML Device Management plug-in adapters
+ECOM_PLUGIN(nsmldmdevdetailadapter.dll,nsmldmdevdetailadapter.rsc)
+ECOM_PLUGIN(nsmldmdevinfoadapter.dll,nsmldmdevinfoadapter.rsc)
+#ifdef __SYNCML_DM_1_1_2
+ECOM_PLUGIN(nsmldmsettingsadapter.dll,nsmldmsettingsadapter.rsc)
+#else
+ECOM_PLUGIN(nsmldmsettingsadapter12.dll,nsmldmsettingsadapter12.rsc)
+#endif
+
+#ifdef FF_DM_STREAMING_ADAPTER
+ECOM_PLUGIN(nsmldmstreamingadapter.dll,nsmldmstreamingadapter.rsc)
+#endif
+
+#ifdef FF_DM_BROWSER_ADAPTER
+REM ECOM_PLUGIN(nsmldmbrowseradapter.dll,nsmldmbrowseradapter.rsc)
+#endif
+
+#ifdef __SYNCML_DS //  SyncML data synchronization
+#ifdef __SYNCML_DM_DS //  SyncML device management data sync settings plug-in
+ECOM_PLUGIN(nsmldssettingsadapter.dll,nsmldssettingsadapter.rsc)
+#endif // __SYNCML_DM_DS
+#endif // __SYNCML_DS
+
+#ifdef __SYNCML_DM_EMAIL //  SyncML device management email settings plug-in
+ECOM_PLUGIN(nsmldmemailadapter.dll,nsmldmemailadapter.rsc)
+#endif // __SYNCML_DM_EMAIL
+
+#ifdef __SYNCML_DM_MMS //  SyncML device management MMS settings plug-in
+ECOM_PLUGIN(nsmldmmmsadapter.dll,nsmldmmmsadapter.rsc)
+#endif // __SYNCML_DM_MMS
+
+#ifdef __SYNCML_DM_FOTA // SyncML device management Firmware update plug-in
+ECOM_PLUGIN(nsmldmfotaadapter.dll,nsmldmfotaadapter.rsc)
+data=ABI_DIR\BUILD_DIR\z\private\100012a5\policy\101F9A02.SPD		private\100012a5\policy\101F9A02.SPD
+#endif // __SYNCML_DM_FOTA
+
+
+#ifdef FF_DM_CONNMO_ADAPTER 
+// old internet adapter is not used in that case for access point provisioning.
+ECOM_PLUGIN(connmoadapter.dll,connmoadapter.rsc)
+#else
+ECOM_PLUGIN(nsmlinternetadapter.dll,nsmlinternetadapter.rsc)
+#endif FF_DM_CONNMO_ADAPTER
+
+#ifdef __SYNCML_DM_WLAN 
+ECOM_PLUGIN(globalwlanadapter.dll,globalwlanadapter.rsc)
+#endif // __SYNCML_DM_WLAN
+
+#ifdef __ALWAYS_ONLINE_PDPCONTEXT2
+ECOM_PLUGIN( nsmldmalwaysonadapter.dll, nsmldmalwaysonadapter.rsc )
+#endif // __ALWAYS_ONLINE_PDPCONTEXT2
+
+ECOM_PLUGIN( nsmldmbmadapter.dll, nsmldmbmadapter.rsc )
+
+#ifdef FF_RUNTIME_DEVICE_CAPABILITY_CONFIGURATION
+ECOM_PLUGIN(dcmodmadapter.dll,dcmodmadapter.rsc)
+#endif
+
+#endif //__SYNCML_DM
+
+#endif //__OMADMADAPTERS_IBY__

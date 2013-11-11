@@ -1,0 +1,55 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+/**
+@file
+
+@SYMPurpose obexservermtm.dll Base classes for bluetooth and IR server MTMs
+*/
+
+TARGET			obexservermtm.dll
+TARGETTYPE		dll
+
+CAPABILITY ReadDeviceData WriteDeviceData ProtServ NetworkControl NetworkServices LocalServices ReaduserData WriteUserData
+UID				0x1000008d 0x10009ED1 //KObexServerMtmV1DllUid 
+VENDORID 0x70000001
+
+SOURCEPATH		../source
+SOURCE			obexServerMtm.cpp obexServerMtmDll.cpp 
+source			obexSendOp_common.cpp
+source			obexSendOp_debug.cpp
+source			obexSendOp_normal.cpp
+
+USERINCLUDE		../include 
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+
+LIBRARY			euser.lib  msgs.lib
+LIBRARY			efsrv.lib
+LIBRARY			obexmtmutil.lib
+LIBRARY			irobex.lib  // For Obex object send
+LIBRARY			apmime.lib apgrfx.lib // For mime recognition in ObexSendOperation
+  
+#ifdef WINSCW
+DEFFILE		v2_obexservermtm.DEF
+#else
+DEFFILE		v2_obexservermtm.def
+#endif
+
+
+
+
+SMPSAFE

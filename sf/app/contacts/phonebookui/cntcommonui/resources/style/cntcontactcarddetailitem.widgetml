@@ -1,0 +1,28 @@
+<hbwidget version="0.1" type="cntcontactcarddetailitem">
+  <layout name="customLayout" type="mesh">
+    <meshitem src="icon" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="-var(hb-param-margin-gene-left)" />
+    <meshitem src="icon" srcEdge="TOP" dst="" dstEdge="TOP" spacing="-var(hb-param-margin-gene-top)" />
+
+    <meshitem src="secondaryIcon" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)" />
+    <meshitem src="secondaryIcon" srcEdge="CENTERV" dst="text" dstEdge="CENTERV" />
+
+    <meshitem src="text" srcEdge="LEFT" dst="icon" dstEdge="RIGHT" spacing="-var(hb-param-margin-gene-middle-horizontal)" />
+    <meshitem src="text" srcEdge="TOP" dst="" dstEdge="TOP" spacing="-var(hb-param-margin-gene-top)" />
+    <meshitem src="text" srcEdge="RIGHT" dst="secondaryIcon" dstEdge="LEFT" spacing="var(hb-param-margin-gene-middle-horizontal)" />
+
+    <meshitem src="valueText" srcEdge="TOP" dst="text" dstEdge="BOTTOM" spacing="-var(hb-param-margin-gene-middle-vertical)" />
+    <meshitem src="valueText" srcEdge="LEFT" dst="text" dstEdge="LEFT" />
+    <meshitem src="valueText" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacing="var(hb-param-margin-gene-bottom)" />
+    <meshitem src="valueText" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)" />
+
+    <meshitem src="background" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="background" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+    <meshitem src="background" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+    <meshitem src="background" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+
+    <meshitem src="highlight" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+    <meshitem src="highlight" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+    <meshitem src="highlight" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="highlight" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+  </layout> 
+</hbwidget>

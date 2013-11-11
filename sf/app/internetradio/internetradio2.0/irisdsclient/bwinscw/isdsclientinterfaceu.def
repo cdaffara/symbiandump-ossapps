@@ -1,0 +1,18 @@
+EXPORTS
+	?GetDataProvider@CIRIsdsClient@@QAEPAVCIRDataProvider@@XZ @ 1 NONAME ; class CIRDataProvider * CIRIsdsClient::GetDataProvider(void)
+	?GetMultiplePresetsL@CIRIsdsClient@@QAEXABV?$RArray@H@@AAH@Z @ 2 NONAME ; void CIRIsdsClient::GetMultiplePresetsL(class RArray<int> const &, int &)
+	?GetOtaStatusL@CIRIsdsClient@@QAEXAAH@Z @ 3 NONAME ; void CIRIsdsClient::GetOtaStatusL(int &)
+	?IRGetIRIDL@CIRIsdsClient@@QAEXXZ @ 4 NONAME ; void CIRIsdsClient::IRGetIRIDL(void)
+	?IRISDSCancelRequest@CIRIsdsClient@@QAEXXZ @ 5 NONAME ; void CIRIsdsClient::IRISDSCancelRequest(void)
+	?IRISDSMultiSearchL@CIRIsdsClient@@QAEXABVTDesC16@@000@Z @ 6 NONAME ; void CIRIsdsClient::IRISDSMultiSearchL(class TDesC16 const &, class TDesC16 const &, class TDesC16 const &, class TDesC16 const &)
+	?IRISDSPostL@CIRIsdsClient@@QAEXAAV?$TBuf@$0BAA@@@@Z @ 7 NONAME ; void CIRIsdsClient::IRISDSPostL(class TBuf<256> &)
+	?IRISDSSearchL@CIRIsdsClient@@QAEXABVTDesC16@@@Z @ 8 NONAME ; void CIRIsdsClient::IRISDSSearchL(class TDesC16 const &)
+	?IRIsdsClientIntefaceL@CIRIsdsClient@@QAEHIW4TIRIsdsClientInterfaces@1@H@Z @ 9 NONAME ; int CIRIsdsClient::IRIsdsClientIntefaceL(unsigned int, enum CIRIsdsClient::TIRIsdsClientInterfaces, int)
+	?IRIsdsClientIntefaceL@CIRIsdsClient@@QAEHW4TIRIsdsclientInterfaceIDs@1@@Z @ 10 NONAME ; int CIRIsdsClient::IRIsdsClientIntefaceL(enum CIRIsdsClient::TIRIsdsclientInterfaceIDs)
+	?IRIsdsIsCategoryCachedL@CIRIsdsClient@@QAEHW4TIRIsdsclientInterfaceIDs@1@@Z @ 11 NONAME ; int CIRIsdsClient::IRIsdsIsCategoryCachedL(enum CIRIsdsClient::TIRIsdsclientInterfaceIDs)
+	?IRIsdsIsChannelCachedL@CIRIsdsClient@@QAEHI@Z @ 12 NONAME ; int CIRIsdsClient::IRIsdsIsChannelCachedL(unsigned int)
+	?NewL@CIRIsdsClient@@SAPAV1@AAVMIsdsResponseObserver@@ABVTDesC16@@@Z @ 13 NONAME ; class CIRIsdsClient * CIRIsdsClient::NewL(class MIsdsResponseObserver &, class TDesC16 const &)
+	?PurgeOtaInfoL@CIRIsdsClient@@QAEXXZ @ 14 NONAME ; void CIRIsdsClient::PurgeOtaInfoL(void)
+	?ReleaseResources@CIRIsdsClient@@QAEXXZ @ 15 NONAME ; void CIRIsdsClient::ReleaseResources(void)
+	?SyncPresetL@CIRIsdsClient@@QAEHHABVTDesC16@@@Z @ 16 NONAME ; int CIRIsdsClient::SyncPresetL(int, class TDesC16 const &)
+

@@ -1,0 +1,1377 @@
+
+---------------------- Sending Email 1 size=833 ------------------------
+
+From: Ralph Greenwell <ralph.greenwell@virgin.net>
+Reply-to: ralph.greenwell@virgin.net
+To: ralph-greenwell@psion.com
+Subject: Simple MIME Email, plain text
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+Disposition-Notification-To: ralph.greenwell@virgin.net
+Message-ID: <lPF5DXygjXkB.MCHKcyfl@psion.com>
+X-Mailer: EPOC Email Version 2.10
+MIME-Version: 1.0
+Content-Language: i-default
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+This is a test mail with no hi-order characters or anything nasty that =
+will
+screw up the reading code.
+
+Which is nice.
+
+
+---------------------- Sending Email 2 size=659 ------------------------
+
+From: Ralph Greenwell <ralph-greenwell@psion.com>
+To: "Greenwell,Ralph" <ralph.greenwell@virgin.net>
+Subject: casca
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+Message-ID: <mLvKlfzfwJQz.CNMJszlB@psion.com>
+X-Mailer: EPOC Email Version 2.10
+MIME-Version: 1.0
+Content-Language: i-default
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+This message body contains a few QP encoded characters.....
+$%& {|} [\]
+but that's about all, really.
+
+
+
+---------------------- Sending Email 3 size=1166 ------------------------
+
+From: Ralph Greenwell <ralph-greenwell@psion.com>
+To: Ralph Greenwell <ralph-greenwell@psion.com>
+Cc: "ralph.greenwell" <ralph.greenwell@virgin.net>, "ralph.greenwell"
+  <ralph.greenwell@virgin.net>, "ralph.greenwell"
+  <ralph.greenwell@virgin.net>, "ralph.greenwell"
+  <ralph.greenwell@virgin.net>
+Subject: test
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+Message-ID: <MwnlyJbYRQ1v.F3XTPmcq@psion.com>
+X-Mailer: EPOC Email Version 2.10
+MIME-Version: 1.0
+Content-Language: i-default
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+This is a longer bit of QP text which exhibits the line soft line-wrapping =
+requirement when a single line of text exceeds 80 characters. Wibble wibble =
+wibble all this should appear as a single chunk of contiguous text when =
+seen on the emulator.
+
+
+---------------------- Sending Email 4 size=853 ------------------------
+
+From: "Richard J. Gillingham" <RGillingham@swedge.demon.co.uk>
+To: Ralph Greenwell <Ralph-Greenwell@psion.com>
+Subject: $2 a go go.
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+Message-ID: <Q39wc0TnzCxk.jNqZWfCX@psion.com>
+X-Mailer: EPOC Email Version 2.10
+MIME-Version: 1.0
+Content-Language: i-default
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+This text demonstrates how the =3D character has to be     =20
+encoded so that it can be displayed in th decoded text.           =
+
+There should also be some rather long space breaks in      =20
+here since there are some encoded spaces at the line ends.
+
+
+---------------------- Sending Email 5 size=515 ------------------------
+
+From: CXH%mimi@magic.itg.ti.com
+To: ralph-greenwell@psion.com
+Subject: Food
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+Message-ID: <lsfypH0kQ2Fx.22v5wK1G@psion.com>
+X-Mailer: EPOC Email Version 2.10
+MIME-Version: 1.0
+Content-Language: i-default
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+And this text is 7bit encoded
+
+
+
+---------------------- Sending Email 6 size=572 ------------------------
+
+From: CXH%mimi@magic.itg.ti.com
+To: ralph-greenwell@psion.com
+Subject: Food
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+Message-ID: <72tDmDhDlrLY.0htXyd3h@psion.com>
+X-Mailer: EPOC Email Version 2.10
+MIME-Version: 1.0
+Content-Language: i-default
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+And this text is 8bit encoded, or so the header says
+with the Content-Type =3D text..... mmmmmmmm
+
+
+---------------------- Sending Email 7 size=1340 ------------------------
+
+From: Test message <abf75@dial.pipex.com>
+To: keith-de-mendonca@psion.com
+Subject: Test message No. 7 - MIME text and attachment
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+Message-ID: <qN3MF6bqvYgk.MfGmZqbk@psion.com>
+X-Mailer: EPOC Email Version 2.10
+MIME-Version: 1.0
+Content-Language: i-default
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+ROOT, 4096, Children=3D1, Size=3D12405688, Store=3D-----, P=3DMedium, =
+Other=3D-----    , Det:Root-Details=0A   SERVICE, 4097, Children=3D4, =
+Size=3D0, Store=3D-----, P=3DLow   , Other=3D-----    , Det:Local=0A      =
+FOLDER, 4098, Children=3D2, Size=3D0, Store=3D-----, P=3DLow   , =
+Other=3D-----    , Det:Inbox=0A         MESSAGE, 1048576, Children=3D0, =
+Size=3D84, Store=3DHMR--, P=3DMedium, Other=3D-----    , =
+Det:CXH%mimi@magic.itg.ti.com=0A         MESSAGE, 1048577, Children=3D0, =
+Size=3D149, Store=3DHMR--, P=3DMedium, Other=3D-----    , =
+Det:CXH%mimi@magic.itg.ti.com=0A      FOLDER, 4099, Children=3D0, Size=3D0, =
+Store=3D-----, P=3DLow   , Other=3D-----    , Det:Outbox=0A      FOLDER, =
+4100, Children=3D0, Size=3D0, Store=3D-----, P=3DLow   , Other=3D-----    , =
+Det:Draft=0A      FOLDER, 4101, Children=3D0, Size=3D0, Store=3D-----, =
+P=3DLow   , Other=3D-----    , Det:Sent=0A
+
+
+---------------------- Sending Email 8 size=1184 ------------------------
+
+From: Test message <abf75@dial.pipex.com>
+To: keith-de-mendonca@psion.com
+Subject: Test message No. 7 - MIME text and attachment
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+Message-ID: <ckPWYfzsbZBM.W95hjj9g@psion.com>
+X-Mailer: EPOC Email Version 2.10
+MIME-Version: 1.0
+Content-Language: i-default
+Content-Description: Some Base64 encoded text
+Content-Disposition: attachment;
+Content-Transfer-Encoding: quoted-printable
+
+Uk9PVCwgNDA5NiwgQ2hpbGRyZW49MSwgU2l6ZT0xMjQwNTY4OCwgU3RvcmU9
+LS0tLS0sIFA9TWVkaXVtLCBPdGhlcj0tLS0tLSAgICAsIERldDpSb290LURl
+dGFpbHMKICAgU0VSVklDRSwgNDA5NywgQ2hpbGRyZW49NCwgU2l6ZT0wLCBT
+dG9yZT0tLS0tLSwgUD1Mb3cgICAsIE90aGVyPS0tLS0tICAgICwgRGV0Okxv
+Y2FsCiAgICAgIEZPTERFUiwgNDA5OCwgQ2hpbGRyZW49MSwgU2l6ZT0wLCBT
+dG9yZT0tLS0tLSwgUD1Mb3cgICAsIE90aGVyPS0tLS0tICAgICwgRGV0Oklu
+Ym94CiAgICAgICAgIE1FU1NBR0UsIDEwNDg1NzYsIENoaWxkcmVuPTAsIFNp
+emU9MTI0MywgU3RvcmU9SE0tLS0sIFA9TWVkaXVtLCBPdGhlcj0tLS0tLSAg
+ICAsIERldDpUZXN0IG1lc3NhZ2UgPGFiZjc1QGRpYWwucGlwZXguY29tPgog
+ICAgICBGT0xERVIsIDQwOTksIENoaWxkcmVuPTAsIFNpemU9MCwgU3RvcmU9
+LS0tLS0sIFA9TG93ICAgLCBPdGhlcj0tLS0tLSAgICAsIERldDpPdXRib3gK
+ICAgICAgRk9MREVSLCA0MTAwLCBDaGlsZHJlbj0wLCBTaXplPTAsIFN0b3Jl
+PS0tLS0tLCBQPUxvdyAgICwgT3RoZXI9LS0tLS0gICAgLCBEZXQ6RHJhZnQK
+ICAgICAgRk9MREVSLCA0MTAxLCBDaGlsZHJlbj0wLCBTaXplPTAsIFN0b3Jl
+PS0tLS0tLCBQPUxvdyAgICwgT3RoZXI9LS0tLS0gICAgLCBEZXQ6U2VudAo=
+
+
+
+---------------------- Sending Email 9 size=1374 ------------------------
+
+From: Ralph Greenwell <ralph-greenwell@psion.com>
+Subject: 
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+Message-ID: <NKSLBJwLVdV5.6hrBjNbs@psion.com>
+X-Mailer: EPOC Email Version 2.10
+MIME-Version: 1.0
+Content-Language: i-default
+Content-Description: HTML document
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: base64
+
+PGh0bWw+DQo8aGVhZD4NCjx0aXRsZT5FUE9DIFdvcmxkPC90aXRsZT4NCjxt
+ZXRhIGh0dHAtZXF1aXY9IkNvbnRlbnQtVHlwZSIgY29udGVudD0idGV4dC9o
+dG1sOyBjaGFyc2V0PWlzby04ODU5LTEiPg0KPC9oZWFkPg0KDQo8ZnJhbWVz
+ZXQgY29scz0iMTQwLCoiIHJvd3M9IioiIGZyYW1lYm9yZGVyPSJOTyIgZnJh
+bWVzcGFjaW5nPSIwIiBib3JkZXI9IjAiIGJvcmRlcmNvbG9yPSIjRkZGRkZG
+Ij4gDQogIDxmcmFtZSBzcmM9Im5hdmJhci5odG1sIiBmcmFtZWJvcmRlcj0i
+Tk8iIGJvcmRlcj0iMCIgbm9yZXNpemUgYm9yZGVyY29sb3I9IiNGRkZGRkYi
+IG5hbWU9Im5hdmJhciIgbWFyZ2lud2lkdGg9IjMiIG1hcmdpbmhlaWdodD0i
+MCIgc2Nyb2xsaW5nPSJBVVRPIj4NCiAgDQoNCjxmcmFtZSBzcmM9Im1haW4u
+aHRtbCIgZnJhbWVib3JkZXI9Ik5PIiBib3JkZXI9IjAiIG5vcmVzaXplIGJv
+cmRlcmNvbG9yPSIjRkZGRkZGIiBuYW1lPSJtYWlucGFnZSIgbWFyZ2lud2lk
+dGg9IjAiIG1hcmdpbmhlaWdodD0iMCIgc2Nyb2xsaW5nPSJBVVRPIj4gICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgDQo8
+L2ZyYW1lc2V0Pg0KPG5vZnJhbWVzPjxib2R5IGJnY29sb3I9IiNGRkZGRkYi
+Pg0KPE1FVEEgSFRUUC1FUVVJVj0iUkVGUkVTSCIgQ09OVEVOVD0iMTsgVVJM
+PSJodHRwOi8vZGV2ZWxvcGVyLmVwb2N3b3JsZC5jb20vbWFpbi5odG1sIj4N
+CjxiPjxmb250IGZhY2U9IkFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWYi
+PlBsZWFzZSBnbyB0byA8YSBocmVmPSJodHRwOi8vZGV2ZWxvcGVyLmVwb2N3
+b3JsZC5jb20vbWFpbi5odG1sIj5odHRwOi8vZGV2ZWxvcGVyLmVwb2N3b3Js
+ZC5jb20vbWFpbi5odG1sPC9hPjwvZm9udD48L2I+LiANCjwvYm9keT48L25v
+ZnJhbWVzPg0KPC9odG1sPg0KIj48L25vZnJhbWVzPg0K
+
+
+
+---------------------- Sending Email 10 size=1434 ------------------------
+
+From: Ralph Greenwell <ralph-greenwell@psion.com>
+Subject: 7bit encoded text/HTML message
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+Message-ID: <RPFbfd3BBfdK.vMRvDVgp@psion.com>
+X-Mailer: EPOC Email Version 2.10
+MIME-Version: 1.0
+Content-Language: i-default
+Content-Description: HTML document
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: base64
+
+PGh0bWw+DQo8aGVhZD4NCjx0aXRsZT5FUE9DIFdvcmxkPC90aXRsZT4NCjxt
+ZXRhIGh0dHAtZXF1aXY9IkNvbnRlbnQtVHlwZSIgY29udGVudD0idGV4dC9o
+dG1sOyBjaGFyc2V0PWlzby04ODU5LTEiPg0KPC9oZWFkPg0KDQo8ZnJhbWVz
+ZXQgY29scz0iMTQwLCoiIHJvd3M9IioiIGZyYW1lYm9yZGVyPSJOTyIgZnJh
+bWVzcGFjaW5nPSIwIiBib3JkZXI9IjAiIGJvcmRlcmNvbG9yPSIjRkZGRkZG
+Ij4gDQogIDxmcmFtZSBzcmM9Im5hdmJhci5odG1sIiBmcmFtZWJvcmRlcj0i
+Tk8iIGJvcmRlcj0iMCIgbm9yZXNpemUgYm9yZGVyY29sb3I9IiNGRkZGRkYi
+IG5hbWU9Im5hdmJhciIgbWFyZ2lud2lkdGg9IjMiIG1hcmdpbmhlaWdodD0i
+MCIgc2Nyb2xsaW5nPSJBVVRPIj4NCiAgDQoNCjxmcmFtZSBzcmM9Im1haW4u
+aHRtbCIgZnJhbWVib3JkZXI9Ik5PIiBib3JkZXI9IjAiIG5vcmVzaXplIGJv
+cmRlcmNvbG9yPSIjRkZGRkZGIiBuYW1lPSJtYWlucGFnZSIgbWFyZ2lud2lk
+dGg9IjAiIG1hcmdpbmhlaWdodD0iMCIgc2Nyb2xsaW5nPSJBVVRPIj4gICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgDQo8
+L2ZyYW1lc2V0Pg0KPG5vZnJhbWVzPjxib2R5IGJnY29sb3I9IiNGRkZGRkYi
+Pg0KPE1FVEEgSFRUUC1FUVVJVj0iUkVGUkVTSCIgQ09OVEVOVD0iMTsgVVJM
+PSJodHRwOi8vZGV2ZWxvcGVyLmVwb2N3b3JsZC5jb20vbWFpbi5odG1sIj4N
+CjxiPjxmb250IGZhY2U9IkFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWYi
+PlBsZWFzZSBnbyB0byA8YSBocmVmPSJodHRwOi8vZGV2ZWxvcGVyLmVwb2N3
+b3JsZC5jb20vbWFpbi5odG1sIj5odHRwOi8vZGV2ZWxvcGVyLmVwb2N3b3Js
+ZC5jb20vbWFpbi5odG1sPC9hPjwvZm9udD48L2I+LiANCjwvYm9keT48L25v
+ZnJhbWVzPg0KPC9odG1sPg0KIj48L25vZnJhbWVzPg0K
+
+
+
+---------------------- Sending Email 11 size=1441 ------------------------
+
+From: Steven Wonder <ralph-greenwell@psion.com>
+Subject: 8bit encoded text/HTML message
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+Message-ID: <GYWqGtq1wzLZ.FTkFMP1L@psion.com>
+X-Mailer: EPOC Email Version 2.10
+MIME-Version: 1.0
+Content-Language: i-default
+Content-Description: HTML document
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: base64
+
+PGh0bWw+DQo8aGVhZD4NCjx0aXRsZT5FUE9DIFdvcmxkPC90aXRsZT4NCjxt
+ZXRhIGh0dHAtZXF1aXY9IkNvbnRlbnQtVHlwZSIgY29udGVudD0idGV4dC9o
+dG1sOyBjaGFyc2V0PWlzby04ODU5LTEiPg0KPC9oZWFkPg0KDQo8ZnJhbWVz
+ZXQgY29scz0iMTQwLCoiIHJvd3M9IioiIGZyYW1lYm9yZGVyPSJOTyIgZnJh
+bWVzcGFjaW5nPSIwIiBib3JkZXI9IjAiIGJvcmRlcmNvbG9yPSIjRkZGRkZG
+Ij4gDQogIDxmcmFtZSBzcmM9Im5hdmJhci5odG1sIiBmcmFtZWJvcmRlcj0i
+Tk8iIGJvcmRlcj0iMCIgbm9yZXNpemUgYm9yZGVyY29sb3I9IiNGRkZGRkYi
+IG5hbWU9Im5hdmJhciIgbWFyZ2lud2lkdGg9IjMiIG1hcmdpbmhlaWdodD0i
+MCIgc2Nyb2xsaW5nPSJBVVRPIj4NCiAgDQoNCjxmcmFtZSBzcmM9Im1haW4u
+aHRtbCIgZnJhbWVib3JkZXI9Ik5PIiBib3JkZXI9IjAiIG5vcmVzaXplIGJv
+cmRlcmNvbG9yPSIjRkZGRkZGIiBuYW1lPSJtYWlucGFnZSIgbWFyZ2lud2lk
+dGg9IjAiIG1hcmdpbmhlaWdodD0iMCIgc2Nyb2xsaW5nPSJBVVRPIj4gICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgDQo8
+L2ZyYW1lc2V0Pg0KPG5vZnJhbWVzPjxib2R5IGJnY29sb3I9IiNGRkZGRkYi
+Pg0KPE1FVEEgSFRUUC1FUVVJVj0iUkVGUkVTSCIgQ09OVEVOVD0iMTsgVVJM
+PSJodHRwOi8vZGV2ZWxvcGVyLmVwb2N3b3JsZC5jb20vbWFpbi5odG1sIj4N
+CjxiPjxmb250IGZhY2U9IkFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWYi
+PlBsZWFzZSBnbyB0byB0aGUgYWJ5cyBhdDxhIGhyZWY9Imh0dHA6Ly9kZXZl
+bG9wZXIuZXBvY3dvcmxkLmNvbS9tYWluLmh0bWwiPmh0dHA6Ly9kZXZlbG9w
+ZXIuZXBvY3dvcmxkLmNvbS9tYWluLmh0bWw8L2E+PC9mb250PjwvYj4uIA0K
+PC9ib2R5Pjwvbm9mcmFtZXM+DQo8L2h0bWw+DQoiPjwvbm9mcmFtZXM+DQo=
+
+
+
+---------------------- Sending Email 12 size=1428 ------------------------
+
+From: Steven Wonder <ralph-greenwell@psion.com>
+Subject: QP encoded text/HTML message
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+Message-ID: <2tL2RlFtZxYW.vk0l1sfp@psion.com>
+X-Mailer: EPOC Email Version 2.10
+MIME-Version: 1.0
+Content-Language: i-default
+Content-Description: HTML document
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: base64
+
+PGh0bWw+DQo8aGVhZD4NCjx0aXRsZT5FUE9DIFdvcmxkPC90aXRsZT4NCjxt
+ZXRhIGh0dHAtZXF1aXY9IkNvbnRlbnQtVHlwZSIgY29udGVudD0idGV4dC9o
+dG1sOyBjaGFyc2V0PWlzby04ODU5LTEiPg0KPC9oZWFkPg0KDQo8ZnJhbWVz
+ZXQgY29scz0iMTQwLCoiIHJvd3M9IioiIGZyYW1lYm9yZGVyPSJOTyIgZnJh
+bWVzcGFjaW5nPSIwIiBib3JkZXI9IjAiIGJvcmRlcmNvbG9yPSIjRkZGRkZG
+Ij4gDQogIDxmcmFtZSBzcmM9Im5hdmJhci5odG1sIiBmcmFtZWJvcmRlcj0i
+Tk8iIGJvcmRlcj0iMCIgbm9yZXNpemUgYm9yZGVyY29sb3I9IiNGRkZGRkYi
+IG5hbWU9Im5hdmJhciIgbWFyZ2lud2lkdGg9IjMiIG1hcmdpbmhlaWdodD0i
+MCIgc2Nyb2xsaW5nPSJBVVRPIj4NCiAgDQoNCjxmcmFtZSBzcmM9Im1haW4u
+aHRtbCIgZnJhbWVib3JkZXI9Ik5PIiBib3JkZXI9IjAiIG5vcmVzaXplIGJv
+cmRlcmNvbG9yPSIjRkZGRkZGIiBuYW1lPSJtYWlucGFnZSIgbWFyZ2lud2lk
+dGg9IjAiIG1hcmdpbmhlaWdodD0iMCIgc2Nyb2xsaW5nPSJBVVRPIj4gICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgDQo8
+L2ZyYW1lc2V0Pg0KPG5vZnJhbWVzPjxib2R5IGJnY29sb3I9IiNGRkZGRkYi
+Pg0KPE1FVEEgSFRUUC1FUVVJVj0iUkVGUkVTSCIgQ09OVEVOVD0iMTsgVVJM
+PSJodHRwOi8vZGV2ZWxvcGVyLmVwb2N3b3JsZC5jb20vbWFpbi5odG1sIj4N
+CjxiPjxmb250IGZhY2U9IkFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWYi
+PlBsZWFzZSBnbyB0byA8YSBocmVmPSJodHRwOi8vZGV2ZWxvcGVyLmVwb2N3
+b3JsZC5jb20vbWFpbi5odG1sIj5odHRwOi8vZGV2ZWxvcGVyLmVwb2N3b3Js
+ZC5jb20vbWFpbi5odG1sPC9hPjwvZm9udD48L2I+LiANCjwvYm9keT48L25v
+ZnJhbWVzPg0KPC9odG1sPg0KIj48L25vZnJhbWVzPg0KDQo=
+
+
+
+---------------------- Sending Email 13 size=1424 ------------------------
+
+From: Steven Wonder <ralph-greenwell@psion.com>
+Subject: UU encoded text/HTML message
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+Message-ID: <2M8Pl12VwLt7.rZSrdndK@psion.com>
+X-Mailer: EPOC Email Version 2.10
+MIME-Version: 1.0
+Content-Language: i-default
+Content-Description: HTML document
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: base64
+
+PGh0bWw+DQo8aGVhZD4NCjx0aXRsZT5FUE9DIFdvcmxkPC90aXRsZT4NCjxt
+ZXRhIGh0dHAtZXF1aXY9IkNvbnRlbnQtVHlwZSIgY29udGVudD0idGV4dC9o
+dG1sOyBjaGFyc2V0PWlzby04ODU5LTEiPg0KPC9oZWFkPg0KDQo8ZnJhbWVz
+ZXQgY29scz0iMTQwLCoiIHJvd3M9IioiIGZyYW1lYm9yZGVyPSJOTyIgZnJh
+bWVzcGFjaW5nPSIwIiBib3JkZXI9IjAiIGJvcmRlcmNvbG9yPSIjRkZGRkZG
+Ij4gDQogIDxmcmFtZSBzcmM9Im5hdmJhci5odG1sIiBmcmFtZWJvcmRlcj0i
+Tk8iIGJvcmRlcj0iMCIgbm9yZXNpemUgYm9yZGVyY29sb3I9IiNGRkZGRkYi
+IG5hbWU9Im5hdmJhciIgbWFyZ2lud2lkdGg9IjMiIG1hcmdpbmhlaWdodD0i
+MCIgc2Nyb2xsaW5nPSJBVVRPIj4NCiAgDQoNCjxmcmFtZSBzcmM9Im1haW4u
+aHRtbCIgZnJhbWVib3JkZXI9Ik5PIiBib3JkZXI9IjAiIG5vcmVzaXplIGJv
+cmRlcmNvbG9yPSIjRkZGRkZGIiBuYW1lPSJtYWlucGFnZSIgbWFyZ2lud2lk
+dGg9IjAiIG1hcmdpbmhlaWdodD0iMCIgc2Nyb2xsaW5nPSJBVVRPIj4gICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgDQo8
+L2ZyYW1lc2V0Pg0KPG5vZnJhbWVzPjxib2R5IGJnY29sb3I9IiNGRkZGRkYi
+Pg0KPE1FVEEgSFRUUC1FUVVJVj0iUkVGUkVTSCIgQ09OVEVOVD0iMTsgVVJM
+PSJodHRwOi8vZGV2ZWxvcGVyLmVwb2N3b3JsZC5jb20vbWFpbi5odG1sIj4N
+CjxiPjxmb250IGZhY2U9IkFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWYi
+PlBsZWFzZSBnbyB0byA8YSBocmVmPSJodHRwOi8vZGV2ZWxvcGVyLmVwb2N3
+b3JsZC5jb20vbWFpbi5odG1sIj5odHRwOi8vZGV2ZWxvcGVyLmVwb2N3b3Js
+ZC5jb20vbWFpbi5odG1sPC9hPjwvZm9udD48L2I+LiANCjwvYm9keT48L25v
+ZnJhbWVzPg0KPC9odG1sPg0KIj48L25vZnJhbWVzPg==
+
+
+
+---------------------- Sending Email 14 size=1424 ------------------------
+
+From: Steven Wonder <ralph-greenwell@psion.com>
+Subject: UU encoded text/HTML message
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+Message-ID: <tnPHtdRcTcGl.rjpqRdTk@psion.com>
+X-Mailer: EPOC Email Version 2.10
+MIME-Version: 1.0
+Content-Language: i-default
+Content-Description: "developer_epocworld.html base64 encoded"
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: base64
+
+PGh0bWw+DQo8aGVhZD4NCjx0aXRsZT5FUE9DIFdvcmxkPC90aXRsZT4NCjxt
+ZXRhIGh0dHAtZXF1aXY9IkNvbnRlbnQtVHlwZSIgY29udGVudD0idGV4dC9o
+dG1sOyBjaGFyc2V0PWlzby04ODU5LTEiPg0KPC9oZWFkPg0KDQo8ZnJhbWVz
+ZXQgY29scz0iMTQwLCoiIHJvd3M9IioiIGZyYW1lYm9yZGVyPSJOTyIgZnJh
+bWVzcGFjaW5nPSIwIiBib3JkZXI9IjAiIGJvcmRlcmNvbG9yPSIjRkZGRkZG
+Ij4gDQogIDxmcmFtZSBzcmM9Im5hdmJhci5odG1sIiBmcmFtZWJvcmRlcj0i
+Tk8iIGJvcmRlcj0iMCIgbm9yZXNpemUgYm9yZGVyY29sb3I9IiNGRkZGRkYi
+IG5hbWU9Im5hdmJhciIgbWFyZ2lud2lkdGg9IjMiIG1hcmdpbmhlaWdodD0i
+MCIgc2Nyb2xsaW5nPSJBVVRPIj4NCiAgDQoNCjxmcmFtZSBzcmM9Im1haW4u
+aHRtbCIgZnJhbWVib3JkZXI9Ik5PIiBib3JkZXI9IjAiIG5vcmVzaXplIGJv
+cmRlcmNvbG9yPSIjRkZGRkZGIiBuYW1lPSJtYWlucGFnZSIgbWFyZ2lud2lk
+dGg9IjAiIG1hcmdpbmhlaWdodD0iMCIgc2Nyb2xsaW5nPSJBVVRPIj4gICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgDQo8
+L2ZyYW1lc2V0Pg0KPG5vZnJhbWVzPjxib2R5IGJnY29sb3I9IiNGRkZGRkYi
+Pg0KPE1FVEEgSFRUUC1FUVVJVj0iUkVGUkVTSCIgQ09OVEVOVD0iMTsgVVJM
+PSJodHRwOi8vZGV2ZWxvcGVyLmVwb2N3b3JsZC5jb20vbWFpbi5odG1sIj4N
+CjxiPjxmb250IGZhY2U9IkFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWYi
+PlBsZWFzZSBnbyB0byA8YSBocmVmPSJodHRwOi8vZGV2ZWxvcGVyLmVwb2N3
+b3JsZC5jb20vbWFpbi5odG1sIj5odHRwOi8vZGV2ZWxvcGVyLmVwb2N3b3Js
+ZC5jb20vbWFpbi5odG1sPC9hPjwvZm9udD48L2I+LiANCjwvYm9keT48L25v
+ZnJhbWVzPg0KPC9odG1sPg0KIj48L25vZnJhbWVzPg==
+
+
+
+---------------------- Sending Email 15 size=1900 ------------------------
+
+From: Steven Wonder <ralph-greenwell@psion.com>
+Subject: BinHex encoded text/HTML message
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+Message-ID: <MFDVJ6sLskkG.pGlbVWtr@psion.com>
+X-Mailer: EPOC Email Version 2.10
+MIME-Version: 1.0
+Content-Language: i-default
+Content-Description: HTML document
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: base64
+
+KFRoaXMgZmlsZSBtdXN0IGJlIGNvbnZlcnRlZCB3aXRoIEJpbkhleCA0LjAp
+DQo6Jyc0UEdROVhFaCJQRlBwUEYncE1HZnBiRSczWkQoNFlFISJTRydlWEAl
+QzU4ISEhISEhJFNgISEhISFSISRhDQpTRydlWDJKZCsyJ0tQQkAzcSQzU21H
+J1BkRSc4cTQ5IjIzYiJBRWgqWEMkYFtHJ1BkRSc4cSQzU21FQDlkQjUiDQpT
+Ryg0YCxAOWFHQFBmMjUqJEVmamRDQGpkLDk0akYnOEwpJzBbRVI0UEVSM3Ap
+UjRQSCgzW0QoNFlFJFhKQmZLDQpLRlIwUEckZVRGZm1ZMSRKZTE1ZGEpTWkw
+I01gW0QnOUtDJGkwI0pkKzInQ2JCQGVQRmY5ZCknMFtFKC1wKU0lDQpkLSNg
+VSlMImJFaEdjMjUpVSlMIlFGUSZZQ0AqW0ZRNFBGTWRMNk5tTCknQ2JCQGVQ
+RmgiS0JmUFpDY2RMLSMpDQpKQlFwYkMnOWIyNSlgKUwiTEVoKk5DQSpNRWZh
+W0ZNZEwpZEMnNE5DJzRMKXEpIWQrKSMhbUNSKktFQDhKRmgqDQpNMjUqWkJB
+Q0xCQSlaRCg0WUUjKUpDUipLRUA5TEVoKk5DQSlwKU5qMilMIkxFaCpOQ0Ep
+cClNIUwpJ2pbRlE5DQpjREFUUCknKltGUTRQRlEwW0UncGIyNSlNNE5DJzRO
+QycpTCJaQkBlUDI1KlpCQUNMQkEpTCknZUtGUUdURVJHDQpUQyg0UzI1KWMp
+TCJZQkEqUkRAalNDQFBSRCgzcClNIUwpKDBNRlFwWEUnUFpDY2RMMzk5ODZi
+KXEkM1NKKSFkDQorJDNTbUNSKktFQDhKRmgqTTI1KllCQFBaLFFLZEVAYEwp
+J0NiQkBlUEJRcGJDJzliMjUqMTZiKUpCUXBiQyc5DQpiMjUpYClMIlpFaCpQ
+RmZQa0M1IkxFaCpOQ0EqTUVmYVtGTWRMKWRDJzROQyc0TClKRVEmWUM2ZExF
+QCZURVIiDQpLQ2Y4TCknZUtGUUdURVJHVEMoNFMyNSlgKUwiWUJBKlJEQGpT
+Q0BQUkQoM3ApTSFMKSgwTUZRcFhFJ1BaQ2NkDQpMMzk5ODZiKXEpIyFKKSMh
+SikjIUopIyFKKSMhSikjIUopIyFKKSMhSikjIUopIyFKKSMhSikjIUopIyFK
+KSMhDQpKKSMhSikhZCsyI3BRRlEmWUNBMFBHJGkwI01hWkVmQ2JCQGVQRmNp
+bUJRcE5INSJMQ2YwW0UncGIyNSlNNE5DDQonNE5DJylNaTAjTWEwNDk0Iikl
+Szg5JiFZNDkmOTU5QnApUComNFAqJjhkSkwpJTAyNlA0JjZQM3ApTSVsKSY5
+DQo1NiRkTEQoNGRGJFNbLGY0UEdROVhFaCJQRkxqUEYncE1HZnBiRSczWkJm
+cFksZmVLREBpWkQoNFlFIylxJDNTDQptQk1pbUNRcFpHIyJRQkAwUDI1KiJG
+UVBLRSNgSjUnOVhHUTlkREAwSywjImNCQGpjLEEwUEZRUFEpTWozRSc5DQpL
+RmY4SkNmbUpHJ21KMiclSkQoKlBDTWRMRCg0ZEYkU1ssZjRQR1E5WEVoIlBG
+TGpQRidwTUdmcGJFJzNaQmZwDQpZLGZlS0RAaVpEKDRZRSMpcUQoNGRGJFNb
+LGY0UEdROVhFaCJQRkxqUEYncE1HZnBiRSczWkJmcFksZmVLREBpDQpaRCg0
+WUUkYFtCNmltLGZDW0VSM3EyI3BMMkxpSiQzU20sZipbQyhOcTIjcFpFZkNi
+QkBlUEZjaTAjTWBbRCg0DQpZRSRpMCNMKXEyI3BaRWZDYkJAZVBGY2pJbTMh
+IToNCg==
+
+
+
+---------------------- Sending Email 16 size=853 ------------------------
+
+From: Ralph Greenwell <ralph.greenwell@virgin.net>
+Reply-to: ralph.greenwell@virgin.net
+To: ralph-greenwell@psion.com
+Subject: Simple MIME Email, plain text
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+Disposition-Notification-To: ralph.greenwell@virgin.net
+Message-ID: <VN1GWkKVC4J4.PYbPsh4g@psion.com>
+X-Mailer: EPOC Email Version 2.10
+MIME-Version: 1.0
+Content-Language: i-default
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+This is a =AC=AC=AC test mail with no hi-order characters or anything nasty =
+that will
+screw up the reading code.
+
+Which is nice.
+
+
+---------------------- Sending Email 17 size=11003 ------------------------
+
+From: "Chris Gibson" <chris.gibson@symbian.com>
+To: <smtp@lon-msgtest06.intra>
+Subject: attachment with name as space
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+Message-ID: <6CzwJddsgBJZ.ZgdkDxMG@psion.com>
+X-Mailer: EPOC Email Version 2.10
+MIME-Version: 1.0
+Content-Language: i-default
+Content-Type: multipart/mixed;
+  boundary="EPOC32-Z3X-JZ__qGlHQ404-nJvn5fcXHwN2qW0RJvg-0c67C'6C'8w"
+
+This is a MIME Message
+
+--EPOC32-Z3X-JZ__qGlHQ404-nJvn5fcXHwN2qW0RJvg-0c67C'6C'8w
+Content-Type: multipart/alternative;
+  boundary="EPOC32-7Tl,X,bsFM2Kz33R2NVpFb8y'2LHdFQDQj3Ty3+X4x8S9HWX"
+
+--EPOC32-7Tl,X,bsFM2Kz33R2NVpFb8y'2LHdFQDQj3Ty3+X4x8S9HWX
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+This message is to test attachments names are handled =
+correctly.
+
+--EPOC32-7Tl,X,bsFM2Kz33R2NVpFb8y'2LHdFQDQj3Ty3+X4x8S9HWX
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: base64
+
+PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMCBU
+cmFuc2l0aW9uYWwvL0VOIj4NCjxIVE1MPjxIRUFEPg0KPE1FVEEgaHR0cC1l
+cXVpdj1Db250ZW50LVR5cGUgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0
+PWlzby04ODU5LTEiPg0KPE1FVEEgY29udGVudD0iTVNIVE1MIDUuNTAuNDgw
+Ny4yMzAwIiBuYW1lPUdFTkVSQVRPUj4NCjxTVFlMRT48L1NUWUxFPg0KPC9I
+RUFEPg0KPEJPRFkgYmdDb2xvcj0jZjVmNGVmPg0KPERJVj48Rk9OVCBmYWNl
+PUFyaWFsIHNpemU9Mj5UaGlzIG1lc3NhZ2UgaXMgdG8gdGVzdCBhdHRhY2ht
+ZW50cyBuYW1lcyBhcmUgDQpoYW5kbGVkIGNvcnJlY3RseS48L0ZPTlQ+PC9E
+SVY+PC9CT0RZPjwvSFRNTD4NCg0K
+
+--EPOC32-7Tl,X,bsFM2Kz33R2NVpFb8y'2LHdFQDQj3Ty3+X4x8S9HWX--
+
+--EPOC32-Z3X-JZ__qGlHQ404-nJvn5fcXHwN2qW0RJvg-0c67C'6C'8w
+Content-Type: application
+Content-Disposition: attachment;
+	filename="_"
+Content-Transfer-Encoding: base64
+
+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
+AAC9JgAAAAA=
+
+--EPOC32-Z3X-JZ__qGlHQ404-nJvn5fcXHwN2qW0RJvg-0c67C'6C'8w--
+
+
+
+---------------------- Sending Email 18 size=11025 ------------------------
+
+From: "Chris Gibson" <chris.gibson@symbian.com>
+To: <smtp@lon-msgtest06.intra>
+Subject: attachment with name with only extension
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+Message-ID: <XRflq8KnKnND.Fgp3Cpxr@psion.com>
+X-Mailer: EPOC Email Version 2.10
+MIME-Version: 1.0
+Content-Language: i-default
+Content-Type: multipart/mixed;
+  boundary="EPOC32-DVtDXSr2SMrbk6Djkg_PPnJ-'5tgMr0BY-1WkS66D'bS,d19"
+
+This is a MIME Message
+
+--EPOC32-DVtDXSr2SMrbk6Djkg_PPnJ-'5tgMr0BY-1WkS66D'bS,d19
+Content-Type: multipart/alternative;
+  boundary="EPOC32-vlZMqKKHfjjBv8K4j6xnbvbhx5NkKhX_tKDhpB20FFHft+f_"
+
+--EPOC32-vlZMqKKHfjjBv8K4j6xnbvbhx5NkKhX_tKDhpB20FFHft+f_
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+This message is to test attachments names are handled =
+correctly.
+
+--EPOC32-vlZMqKKHfjjBv8K4j6xnbvbhx5NkKhX_tKDhpB20FFHft+f_
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: base64
+
+PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMCBU
+cmFuc2l0aW9uYWwvL0VOIj4NCjxIVE1MPjxIRUFEPg0KPE1FVEEgaHR0cC1l
+cXVpdj1Db250ZW50LVR5cGUgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0
+PWlzby04ODU5LTEiPg0KPE1FVEEgY29udGVudD0iTVNIVE1MIDUuNTAuNDgw
+Ny4yMzAwIiBuYW1lPUdFTkVSQVRPUj4NCjxTVFlMRT48L1NUWUxFPg0KPC9I
+RUFEPg0KPEJPRFkgYmdDb2xvcj0jZjVmNGVmPg0KPERJVj48Rk9OVCBmYWNl
+PUFyaWFsIHNpemU9Mj5UaGlzIG1lc3NhZ2UgaXMgdG8gdGVzdCBhdHRhY2ht
+ZW50cyBuYW1lcyBhcmUgDQpoYW5kbGVkIGNvcnJlY3RseS48L0ZPTlQ+PC9E
+SVY+PC9CT0RZPjwvSFRNTD4NCg0K
+
+--EPOC32-vlZMqKKHfjjBv8K4j6xnbvbhx5NkKhX_tKDhpB20FFHft+f_--
+
+--EPOC32-DVtDXSr2SMrbk6Djkg_PPnJ-'5tgMr0BY-1WkS66D'bS,d19
+Content-Type: application
+Content-Disposition: attachment;
+	filename="Attachment.zip"
+Content-Transfer-Encoding: base64
+
+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
+AAC9JgAAAAA=
+
+--EPOC32-DVtDXSr2SMrbk6Djkg_PPnJ-'5tgMr0BY-1WkS66D'bS,d19--
+
+
+
+---------------------- Sending Email 19 size=11041 ------------------------
+
+From: "Chris Gibson" <chris.gibson@symbian.com>
+To: <smtp@lon-msgtest06.intra>
+Subject: attachment with name only in Content-Disposition
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+Message-ID: <QxvPCvsSTnDJ.PLjWFYpK@psion.com>
+X-Mailer: EPOC Email Version 2.10
+MIME-Version: 1.0
+Content-Language: i-default
+Content-Type: multipart/mixed;
+  boundary="EPOC32-B+bWjL9R'-t4SmkBSt1-ZMDN'fVK-rDml,wtLl_0fMKs0DCP"
+
+This is a MIME Message
+
+--EPOC32-B+bWjL9R'-t4SmkBSt1-ZMDN'fVK-rDml,wtLl_0fMKs0DCP
+Content-Type: multipart/alternative;
+  boundary="EPOC32-DWxxDwh6wrgxd_Js3pVHB8FqG1W_Mxy404nJsFfJbxSCBD+q"
+
+--EPOC32-DWxxDwh6wrgxd_Js3pVHB8FqG1W_Mxy404nJsFfJbxSCBD+q
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+This message is to test attachments names are handled =
+correctly.
+
+--EPOC32-DWxxDwh6wrgxd_Js3pVHB8FqG1W_Mxy404nJsFfJbxSCBD+q
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: base64
+
+PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMCBU
+cmFuc2l0aW9uYWwvL0VOIj4NCjxIVE1MPjxIRUFEPg0KPE1FVEEgaHR0cC1l
+cXVpdj1Db250ZW50LVR5cGUgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0
+PWlzby04ODU5LTEiPg0KPE1FVEEgY29udGVudD0iTVNIVE1MIDUuNTAuNDgw
+Ny4yMzAwIiBuYW1lPUdFTkVSQVRPUj4NCjxTVFlMRT48L1NUWUxFPg0KPC9I
+RUFEPg0KPEJPRFkgYmdDb2xvcj0jZjVmNGVmPg0KPERJVj48Rk9OVCBmYWNl
+PUFyaWFsIHNpemU9Mj5UaGlzIG1lc3NhZ2UgaXMgdG8gdGVzdCBhdHRhY2ht
+ZW50cyBuYW1lcyBhcmUgDQpoYW5kbGVkIGNvcnJlY3RseS48L0ZPTlQ+PC9E
+SVY+PC9CT0RZPjwvSFRNTD4NCg0K
+
+--EPOC32-DWxxDwh6wrgxd_Js3pVHB8FqG1W_Mxy404nJsFfJbxSCBD+q--
+
+--EPOC32-B+bWjL9R'-t4SmkBSt1-ZMDN'fVK-rDml,wtLl_0fMKs0DCP
+Content-Type: application
+Content-Disposition: attachment;
+	filename="vi manual.zip"
+Content-Transfer-Encoding: base64
+
+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
+AAC9JgAAAAA=
+
+--EPOC32-B+bWjL9R'-t4SmkBSt1-ZMDN'fVK-rDml,wtLl_0fMKs0DCP--
+
+
+
+---------------------- Sending Email 20 size=817 ------------------------
+
+From: Ralph Greenwell <ralph.greenwell@virgin.net>
+Reply-to: ralph.greenwell@virgin.net
+To: ralph-greenwell@psion.com
+Subject: Simple MIME Email, plain text, blank CTE
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+Disposition-Notification-To: ralph.greenwell@virgin.net
+Message-ID: <d8Gq94398Xmc.N2RP60yJ@psion.com>
+X-Mailer: EPOC Email Version 2.10
+MIME-Version: 1.0
+Content-Language: i-default
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+A simple email with Content-Transfer-Encoding left blank. Should =
+default
+to 7 bit.
+
+
+---------------------- Sending Email 21 size=1006 ------------------------
+
+From: "test" <test@ban-subanib01.intra>
+To: <test@ban-subanib01.intra>
+Subject: 2 
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+Message-ID: <NPxG7YgGx2sg.cgwhnjcX@psion.com>
+X-Mailer: EPOC Email Version 2.10
+MIME-Version: 1.0
+Content-Language: i-default
+Content-Type: multipart/mixed;
+  boundary="EPOC32-,y-4jpBXkP_t+GcWSYJx'rhDZGbvKvChGpVlfN+FpVqw1,hC"
+
+This is a MIME Message
+
+--EPOC32-,y-4jpBXkP_t+GcWSYJx'rhDZGbvKvChGpVlfN+FpVqw1,hC
+Content-Type: multipart/alternative;
+  boundary="EPOC32-D3Rj,f,kvBb93sHZ+BmbnBspfdHC7P8Y6lTh'ybwsMhCtwWx"
+
+--EPOC32-D3Rj,f,kvBb93sHZ+BmbnBspfdHC7P8Y6lTh'ybwsMhCtwWx
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+
+--EPOC32-D3Rj,f,kvBb93sHZ+BmbnBspfdHC7P8Y6lTh'ybwsMhCtwWx
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: base64
+
+PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMCBU
+cmFuc2l0aW9uYWwvL0VOIj4NCjxIVE1MPjxIRUFEPg0KPE1FVEEgaHR0cC1l
+cXVpdj1Db250ZW50LVR5cGUgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0
+PWlzby04ODU5LTEiPg0KPE1FVEEgY29udGVudD0iTVNIVE1MIDYuMDAuMjgw
+MC4xNDkxIiBuYW1lPUdFTkVSQVRPUj4NCjxTVFlMRT48L1NUWUxFPg0KPC9I
+RUFEPg0KPEJPRFkgYmdDb2xvcj0jZmZmZmZmPg0KPERJVj48Rk9OVCBmYWNl
+PUFyaWFsIHNpemU9Mj48L0ZPTlQ+Jm5ic3A7PC9ESVY+PC9CT0RZPjwvSFRN
+TD4NCg0K
+
+--EPOC32-D3Rj,f,kvBb93sHZ+BmbnBspfdHC7P8Y6lTh'ybwsMhCtwWx--
+
+--EPOC32-,y-4jpBXkP_t+GcWSYJx'rhDZGbvKvChGpVlfN+FpVqw1,hC
+Content-Type: text/directory; profile=vcard; charset=ISO-8859-1
+Content-Disposition: attachment;
+	filename="oma_058.vcf"
+Content-Transfer-Encoding: base64
+
+QkVHSU46VkNBUkQNClZFUlNJT046Mi4xDQpOO0NIQVJTRVQ9VVRGLTg7RU5D
+T0RJTkc9UVVPVEVELVBSSU5UQUJMRTpvbWENCkZOO0NIQVJTRVQ9VVRGLTg7
+RU5DT0RJTkc9UVVPVEVELVBSSU5UQUJMRTpvbWENCkVNQUlMO1BSRUY7SU5U
+RVJORVQ6dnVvdGFyaUB0cm1haTAxLml0LmNlbGx1bGFyZGF0YS5jb20NCkVO
+RDpWQ0FSRA0KDQo=
+
+--EPOC32-,y-4jpBXkP_t+GcWSYJx'rhDZGbvKvChGpVlfN+FpVqw1,hC--
+
+

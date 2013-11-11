@@ -1,0 +1,73 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+[All]
+Defaults= defaults.script
+
+[FormatTest1]
+Message= This is a standard message with some formatting applied
+EmsFormat= 2 10 8 23 19 7 64
+
+[FormatTest2]
+Message= 
+This is a very large message which should extend over 200 characters. Formattin
+g should be applied from the start of 'Formatting' up to a certain point which 
+will be defined later. OK, NOW. Now there shouldn't be anymore formatting.
+EmsFormat= 1 70 121 23
+
+[FormatTest3]
+Message= 
+This is a very large message which should extend over 200 characters. Formattin
+g should be applied from the start of 'Formatting' up to a certain point which 
+will be defined later. OK, NOW. Now there shouldn't be anymore formatting. This
+ one differs from the previous test in that it is UCS2 encoding
+EmsFormat= 1 70 121 23
+Encoding= 16
+
+[Picture]
+Message=
+This should have three EMS pictures after this message... Here's the first one:
+ now the second one:  finally the third one: 
+EmsPicture= 3 80 0 100 1 124 2
+
+[Animation]
+Message=
+This should have two animations and a user defined animation. The first one can
+be found here:  Now the second:  Now the predefined one:  WOW!!
+EmsAnimation= 2 95 0 112 1
+EmsPredefAnim= 1 137 4
+
+[Sound]
+Message=
+This message should have a pre-defined sound right here:  .... and now a user d
+efined sound right here:  ....
+EmsPredefSound= 1 38 5
+EmsUserSound= 1 106 abcdefghijklmn
+
+[UserPrompt]
+Message= This is a UP message
+EmsUserPrompt= 1 0 1
+EmsPicture= 1 0 2
+
+[BigFormatWithLargePicture]
+Message= 
+This is a very large message which should test the problem when formatting get
+s spread over one PDU and there is a large picture in the middle.
+EmsFormat= 1 0 145 64
+EmsPicture= 1 15 1
+
+
+endscript

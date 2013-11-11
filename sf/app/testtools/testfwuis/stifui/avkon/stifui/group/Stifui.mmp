@@ -1,0 +1,123 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+* 
+* Description: STIFUI MMP file.
+*
+*/
+
+#include <platform_paths.hrh>
+
+SMPSAFE
+
+TARGET 			Stifui.exe
+TARGETTYPE 		exe
+UID             0x100039ce 0x1028311D 
+VENDORID	    0x101FB657
+SECUREID        0x102073DC
+CAPABILITY      AllFiles SwEvent CommDD
+
+START RESOURCE  ../data/Stifui.rss
+	HEADER
+	TARGETPATH  resource/apps
+END 
+
+SOURCEPATH      ../data
+START RESOURCE  ./Stifui_reg.rss
+	DEPENDS stifui.rsg
+	TARGETPATH  /private/10003a3f/apps
+END
+
+SOURCEPATH ../src
+
+
+SOURCE  AppUIApp.cpp 
+SOURCE  AppUIAppUi.cpp
+SOURCE  AppUIDocument.cpp
+SOURCE  View.cpp
+SOURCE  Container.cpp
+SOURCE  UIStoreHandler.cpp
+
+SOURCE  MainMenuView.cpp
+SOURCE  MainMenuContainer.cpp
+
+SOURCE  TestCaseMenuView.cpp
+SOURCE  TestCaseMenuContainer.cpp
+
+SOURCE  StartCasesView.cpp
+SOURCE  StartCasesContainer.cpp
+
+SOURCE  StartedCasesMenuView.cpp
+SOURCE  StartedCasesMenuContainer.cpp
+
+SOURCE  ShowStartedCasesView.cpp
+SOURCE  ShowStartedCasesContainer.cpp
+
+SOURCE  TestCaseOutputView.cpp
+SOURCE  TestCaseOutputContainer.cpp
+
+SOURCE  Testmodulesmenuview.cpp
+SOURCE  TestModulesMenuContainer.cpp
+
+SOURCE	StatisticsView.cpp
+SOURCE	StatisticsContainer.cpp
+
+SOURCE  TestSetBaseMenuView.cpp
+SOURCE  TestSetBaseMenuContainer.cpp
+
+SOURCE  TestSetMenuView.cpp
+SOURCE  TestSetMenuContainer.cpp
+
+SOURCE  TestSetInsertMenuView.cpp
+SOURCE  TestSetInsertMenuContainer.cpp
+
+SOURCE  TestSetStartedCasesView.cpp
+SOURCE  TestSetStartedCasesContainer.cpp
+
+//SOURCE  MenuListBox.cpp
+
+SOURCE  MenuListBox.cpp CreatedTestSetMenuContainer.cpp CreatedTestSetMenuView.cpp
+
+USERINCLUDE ../inc
+
+APP_LAYER_SYSTEMINCLUDE
+
+LIBRARY euser.lib
+LIBRARY apparc.lib
+LIBRARY cone.lib
+LIBRARY eikcore.lib 
+
+LIBRARY eikcoctl.lib
+LIBRARY avkon.lib
+
+LIBRARY stiftestengine.lib
+LIBRARY stiftestinterface.lib
+LIBRARY bafl.lib
+LIBRARY eikctl.lib 		// For adding icons
+LIBRARY StifTFwIf.lib 
+LIBRARY efsrv.lib
+
+LIBRARY egul.lib
+LIBRARY aknskins.lib
+LIBRARY aknicon.lib
+
+START WINS      
+// ?wins_specific_information
+END
+
+START MARM
+// ?marm_specific_information
+END
+ 
+EPOCHEAPSIZE    0x10000 0x500000
+EPOCSTACKSIZE   32768
+// End of file

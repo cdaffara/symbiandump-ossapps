@@ -1,0 +1,45 @@
+EXPORTS
+	??0RPhoneBookSession@@QAE@XZ @ 1 NONAME ; public: __thiscall RPhoneBookSession::RPhoneBookSession(void)
+	??0TContactFieldsV1@RPhoneBookSession@@QAE@XZ @ 2 NONAME ; public: __thiscall RPhoneBookSession::TContactFieldsV1::TContactFieldsV1(void)
+	?CancelRequest@RPhoneBookSession@@QAEXW4TPhonebookSyncRequestCancel@@@Z @ 3 NONAME ; public: void __thiscall RPhoneBookSession::CancelRequest(enum TPhonebookSyncRequestCancel)
+	?Close@RPhoneBookSession@@QAEXXZ @ 4 NONAME ; public: void __thiscall RPhoneBookSession::Close(void)
+	?Connect@RPhoneBookSession@@QAEHXZ @ 5 NONAME ; public: int __thiscall RPhoneBookSession::Connect(void)
+	?DeleteContact@RPhoneBookSession@@QAEXAAVTRequestStatus@@J@Z @ 6 NONAME ; public: void __thiscall RPhoneBookSession::DeleteContact(class TRequestStatus &,long)
+	?DoSynchronisation@RPhoneBookSession@@QAEXAAVTRequestStatus@@@Z @ 7 NONAME ; public: void __thiscall RPhoneBookSession::DoSynchronisation(class TRequestStatus &)
+	?ExtensionId@TContactFieldsV1@RPhoneBookSession@@QBEHXZ @ 8 NONAME ; public: int __thiscall RPhoneBookSession::TContactFieldsV1::ExtensionId(void)const 
+	?GetContactFormat@RPhoneBookSession@@QAEHAAVTDes8@@@Z @ 9 NONAME ; public: int __thiscall RPhoneBookSession::GetContactFormat(class TDes8 &)
+	?GetPhoneBookCacheState@RPhoneBookSession@@QAEHAAW4TSyncState@1@@Z @ 10 NONAME ; public: int __thiscall RPhoneBookSession::GetPhoneBookCacheState(enum RPhoneBookSession::TSyncState &)
+	?GetPhoneBookId@RPhoneBookSession@@QAEHAAJW4TSyncIdType@1@@Z @ 11 NONAME ; public: int __thiscall RPhoneBookSession::GetPhoneBookId(long &,enum RPhoneBookSession::TSyncIdType)
+	?GetSyncMode@RPhoneBookSession@@QAEHAAW4TPhonebookSyncMode@1@@Z @ 12 NONAME ; public: int __thiscall RPhoneBookSession::GetSyncMode(enum RPhoneBookSession::TPhonebookSyncMode &)
+	?SetSyncMode@RPhoneBookSession@@QAEHW4TPhonebookSyncMode@1@@Z @ 13 NONAME ; public: int __thiscall RPhoneBookSession::SetSyncMode(enum RPhoneBookSession::TPhonebookSyncMode)
+	?UpdateLookuptable@RPhoneBookSession@@QAEHJH@Z @ 14 NONAME ; public: int __thiscall RPhoneBookSession::UpdateLookuptable(long,int)
+	?ValidateContact@RPhoneBookSession@@QAEHW4TValidateOperation@MContactSynchroniser@@J@Z @ 15 NONAME ; public: int __thiscall RPhoneBookSession::ValidateContact(enum MContactSynchroniser::TValidateOperation,long)
+	?Version@RPhoneBookSession@@QBE?AVTVersion@@XZ @ 16 NONAME ; public: class TVersion  __thiscall RPhoneBookSession::Version(void)const 
+	?WriteContact@RPhoneBookSession@@QAEXAAVTRequestStatus@@AAVCContactICCEntry@@AAH@Z @ 17 NONAME ; public: void __thiscall RPhoneBookSession::WriteContact(class TRequestStatus &,class CContactICCEntry &,int &)
+	?__DbgCheckHeap@RPhoneBookSession@@QAEHH@Z @ 18 NONAME ; public: int __thiscall RPhoneBookSession::__DbgCheckHeap(int)
+	?__DbgFailNext@RPhoneBookSession@@QAEHH@Z @ 19 NONAME ; public: int __thiscall RPhoneBookSession::__DbgFailNext(int)
+	?__DbgMarkEnd@RPhoneBookSession@@QAEHH@Z @ 20 NONAME ; public: int __thiscall RPhoneBookSession::__DbgMarkEnd(int)
+	?__DbgMarkHeap@RPhoneBookSession@@QAEHXZ @ 21 NONAME ; public: int __thiscall RPhoneBookSession::__DbgMarkHeap(void)
+	??0TContactFieldsV2@RPhoneBookSession@@QAE@XZ @ 22 NONAME ; public: __thiscall RPhoneBookSession::TContactFieldsV2::TContactFieldsV2(void)
+	?CancelRequest@RPhoneBookSession@@QAEXW4TPhonebookSyncRequestCancel@@VTUid@@@Z @ 23 NONAME ; public: void __thiscall RPhoneBookSession::CancelRequest(enum TPhonebookSyncRequestCancel,class TUid)
+	?DoSynchronisation@RPhoneBookSession@@QAEXAAVTRequestStatus@@VTUid@@@Z @ 24 NONAME ; public: void __thiscall RPhoneBookSession::DoSynchronisation(class TRequestStatus &,class TUid)
+	?GetPhoneBookCacheState@RPhoneBookSession@@QAEHAAW4TSyncState@1@VTUid@@@Z @ 25 NONAME ; public: int __thiscall RPhoneBookSession::GetPhoneBookCacheState(enum RPhoneBookSession::TSyncState &,class TUid)
+	?GetPhoneBookId@RPhoneBookSession@@QAEHAAJW4TSyncIdType@1@VTUid@@@Z @ 26 NONAME ; public: int __thiscall RPhoneBookSession::GetPhoneBookId(long &,enum RPhoneBookSession::TSyncIdType,class TUid)
+	?GetSyncMode@RPhoneBookSession@@QAEHAAW4TPhonebookSyncMode@1@VTUid@@@Z @ 27 NONAME ; public: int __thiscall RPhoneBookSession::GetSyncMode(enum RPhoneBookSession::TPhonebookSyncMode &,class TUid)
+	?SetSyncMode@RPhoneBookSession@@QAEHW4TPhonebookSyncMode@1@VTUid@@@Z @ 28 NONAME ; public: int __thiscall RPhoneBookSession::SetSyncMode(enum RPhoneBookSession::TPhonebookSyncMode,class TUid)
+	?UpdateLookuptable@RPhoneBookSession@@QAEHJHVTUid@@@Z @ 29 NONAME ; public: int __thiscall RPhoneBookSession::UpdateLookuptable(long,int,class TUid)
+	?WriteContact@RPhoneBookSession@@QAEXAAVTRequestStatus@@AAVCContactICCEntry@@AAHAAVTUid@@@Z @ 30 NONAME ; public: void __thiscall RPhoneBookSession::WriteContact(class TRequestStatus &,class CContactICCEntry &,int &,class TUid &)
+	?GetLastSyncError@RPhoneBookSession@@QAEHAAH@Z @ 31 NONAME ; public: int __thiscall RPhoneBookSession::GetLastSyncError(int &)
+	?GetLastSyncError@RPhoneBookSession@@QAEHAAHVTUid@@@Z @ 32 NONAME ; public: int __thiscall RPhoneBookSession::GetLastSyncError(int &,class TUid)
+	?NotifyPhBkCacheStateChange@RPhoneBookSession@@QAEXAAVTRequestStatus@@@Z @ 33 NONAME ; public: void __thiscall RPhoneBookSession::NotifyPhBkCacheStateChange(class TRequestStatus &)
+	?NotifyPhBkCacheStateChange@RPhoneBookSession@@QAEXAAVTRequestStatus@@VTUid@@@Z @ 34 NONAME ; public: void __thiscall RPhoneBookSession::NotifyPhBkCacheStateChange(class TRequestStatus &,class TUid)
+	?GetFreeSlotsL@RPhoneBookSession@@QBEXAAV?$RArray@H@@@Z @ 35 NONAME ; public: void __thiscall RPhoneBookSession::GetFreeSlotsL(class RArray<int> &)const 
+	?GetFreeSlotsL@RPhoneBookSession@@QBEXAAV?$RArray@H@@VTUid@@@Z @ 36 NONAME ; public: void __thiscall RPhoneBookSession::GetFreeSlotsL(class RArray<int> &,class TUid)const 
+	?GetNumSlots@RPhoneBookSession@@QBEHAAH@Z @ 37 NONAME ; public: int __thiscall RPhoneBookSession::GetNumSlots(int &)const 
+	?GetNumSlots@RPhoneBookSession@@QBEHAAHVTUid@@@Z @ 38 NONAME ; public: int __thiscall RPhoneBookSession::GetNumSlots(int 
+	?GetSlotId@RPhoneBookSession@@QBEHHAAJ@Z @ 39 NONAME ; public: int __thiscall RPhoneBookSession::GetSlotId(int,long &)const 
+	?GetSlotId@RPhoneBookSession@@QBEHHAAJVTUid@@@Z @ 40 NONAME ; public: int __thiscall RPhoneBookSession::GetSlotId(int,long &,class TUid)const
+	?PhBkSyncServerThread@@YAHPAX@Z @ 41 NONAME ; int __cdecl PhBkSyncServerThread(void *)
+	?ShutdownServer@RPhoneBookSession@@QAEHH@Z @ 42 NONAME ; int RPhoneBookSession::ShutdownServer(int)
+	??0TContactFieldsV3@RPhoneBookSession@@QAE@XZ @ 43 NONAME ; RPhoneBookSession::TContactFieldsV3::TContactFieldsV3(void)
+

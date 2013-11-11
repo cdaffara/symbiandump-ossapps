@@ -1,0 +1,71 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:
+;
+
+; Language
+&EN
+
+; SIS header: name, uid, version
+# {"videoplayer"}, (0x200211FE), 10,10,3, TYPE=SA
+
+; Localised Vendor name
+%{"Nokia"}
+
+; Unique Vendor name
+:"Nokia"
+
+;
+; Collection Plugin
+;
+"" - "z:\sys\bin\vcxmyvideoscollectionplugin.dll" 
+"" - "z:\resource\plugins\vcxmyvideoscollectionplugin.r*" 
+
+;
+; Playback Plugin
+;
+"" - "z:\sys\bin\mpxvideohelixplayback.dll" 
+"" - "z:\resource\plugins\mpxvideohelixplayback.r*" 
+
+;
+; Video playback view
+;
+"" - "z:\sys\bin\videoplaybackview.dll" 
+"" - "z:\sys\bin\videoplaybackviewplugin.dll" 
+"" - "z:\resource\plugins\videoplaybackviewplugin.r*" 
+
+;
+; Collection view and wrapper
+;
+"" - "z:\sys\bin\videocollectionview.dll" 
+"" - "z:\resource\plugins\videocollectionview.r*" 
+"" - "z:\sys\bin\videocollectionwrapper.dll" 
+"" - "z:\sys\bin\videofiledetailsview.dll" 
+"" - "z:\resource\plugins\videofiledetailsview.r*" 
+
+;
+; Executable and default resource files
+;
+"" - "z:\sys\bin\videoplayerengine.dll" 
+"" - "z:\sys\bin\videoplayer.exe" 
+"" - "z:\resource\apps\videoplayer.r*" 
+"" - "z:\private\10003a3f\import\apps\videoplayer_reg.rsc" 
+"" - "z:\resource\qt\translations\videos*.qm"
+
+;
+; Media settings
+;
+"" - "z:/sys/bin/mpsettropmodel.dll"
+"" - "z:/resource/plugins/mpsettropmodel.r*"
+"" - "z:/sys/bin/videosettingsplugin.dll"

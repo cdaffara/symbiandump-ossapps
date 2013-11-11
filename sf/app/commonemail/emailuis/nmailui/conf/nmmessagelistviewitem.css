@@ -1,0 +1,38 @@
+NmMessageListViewItem:portrait {
+  layout:portrait;
+}
+
+NmMessageListViewItem:landscape {
+  layout:landscape;
+}
+
+NmMessageListViewItem::sender {
+  fixed-height: var(hb-param-text-height-primary);
+  text-align: left;
+  text-wrap-mode: no-wrap;
+}
+
+NmMessageListViewItem::time {
+  fixed-height: var(hb-param-text-height-secondary);
+  fixed-width: 12un;
+  text-align: right;
+  text-wrap-mode: no-wrap;
+}
+
+NmMessageListViewItem::subject {
+  fixed-height: var(hb-param-text-height-secondary);
+  text-align: left;
+  text-wrap-mode: no-wrap;
+}
+
+NmMessageListViewItem::icon1::icon {
+  alignment: right;
+  fixed-height: var(hb-param-graphic-size-primary-small);
+  fixed-width: var(hb-param-graphic-size-primary-small);
+}
+
+NmMessageListViewItem::icon2::icon {
+  alignment: right;
+  fixed-height: var(hb-param-graphic-size-primary-small);
+  fixed-width: var(hb-param-graphic-size-primary-small);
+}

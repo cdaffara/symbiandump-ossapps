@@ -1,0 +1,21 @@
+EXPORTS
+	?getStaticMetaObject@IsProviderDBManager@@SAABUQMetaObject@@XZ @ 1 NONAME ; struct QMetaObject const & IsProviderDBManager::getStaticMetaObject(void)
+	??_EIsProviderDBManager@@UAE@I@Z @ 2 NONAME ; IsProviderDBManager::~IsProviderDBManager(unsigned int)
+	?GetCountryList@IsProviderDBManager@@QAE_NAAVQStringList@@@Z @ 3 NONAME ; bool IsProviderDBManager::GetCountryList(class QStringList &)
+	?SelectedProvider@IsProviderDBManager@@QAEPAVServiceProvider@@XZ @ 4 NONAME ; class ServiceProvider * IsProviderDBManager::SelectedProvider(void)
+	?SetSelectedProvider@IsProviderDBManager@@QAE_NH@Z @ 5 NONAME ; bool IsProviderDBManager::SetSelectedProvider(int)
+	?OpenDatabase@IsProviderDBManager@@AAE_NXZ @ 6 NONAME ; bool IsProviderDBManager::OpenDatabase(void)
+	?GetCountryCode@IsProviderDBManager@@AAE?AVQString@@XZ @ 7 NONAME ; class QString IsProviderDBManager::GetCountryCode(void)
+	?GetProviders@IsProviderDBManager@@QAE_NAAV?$QList@VServiceProvider@@@@@Z @ 8 NONAME ; bool IsProviderDBManager::GetProviders(class QList<class ServiceProvider> &)
+	??0IsProviderDBManager@@QAE@PAVQObject@@@Z @ 9 NONAME ; IsProviderDBManager::IsProviderDBManager(class QObject *)
+	?qt_metacast@IsProviderDBManager@@UAEPAXPBD@Z @ 10 NONAME ; void * IsProviderDBManager::qt_metacast(char const *)
+	?metaObject@IsProviderDBManager@@UBEPBUQMetaObject@@XZ @ 11 NONAME ; struct QMetaObject const * IsProviderDBManager::metaObject(void) const
+	?trUtf8@IsProviderDBManager@@SA?AVQString@@PBD0@Z @ 12 NONAME ; class QString IsProviderDBManager::trUtf8(char const *, char const *)
+	??1IsProviderDBManager@@UAE@XZ @ 13 NONAME ; IsProviderDBManager::~IsProviderDBManager(void)
+	?staticMetaObject@IsProviderDBManager@@2UQMetaObject@@B @ 14 NONAME ; struct QMetaObject const IsProviderDBManager::staticMetaObject
+	?CloseDatabase@IsProviderDBManager@@AAEXXZ @ 15 NONAME ; void IsProviderDBManager::CloseDatabase(void)
+	?qt_metacall@IsProviderDBManager@@UAEHW4Call@QMetaObject@@HPAPAX@Z @ 16 NONAME ; int IsProviderDBManager::qt_metacall(enum QMetaObject::Call, int, void * *)
+	?trUtf8@IsProviderDBManager@@SA?AVQString@@PBD0H@Z @ 17 NONAME ; class QString IsProviderDBManager::trUtf8(char const *, char const *, int)
+	?tr@IsProviderDBManager@@SA?AVQString@@PBD0H@Z @ 18 NONAME ; class QString IsProviderDBManager::tr(char const *, char const *, int)
+	?tr@IsProviderDBManager@@SA?AVQString@@PBD0@Z @ 19 NONAME ; class QString IsProviderDBManager::tr(char const *, char const *)
+

@@ -1,0 +1,16 @@
+<hbwidget version="0.1">
+  <layout name="layout-default" type="mesh">
+    
+    <meshitem src="attachmentIcon" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="attachmentIcon" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+    <meshitem src="attachmentIcon" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+    
+    <meshitem src="attachmentDetails" srcEdge="RIGHT" dst="" dstEdge="RIGHT"/>
+    <meshitem src="attachmentDetails" srcEdge="CENTERV" dst="" dstEdge="CENTERV"/>
+
+    <meshitem src="attachmentName" srcEdge="LEFT" dst="attachmentIcon" dstEdge="RIGHT"/>
+    <meshitem src="attachmentName" srcEdge="CENTERV" dst="" dstEdge="CENTERV"/>
+    <meshitem src="attachmentName" srcEdge="RIGHT" dst="attachmentDetails" dstEdge="LEFT"/>
+    
+  </layout>
+</hbwidget>

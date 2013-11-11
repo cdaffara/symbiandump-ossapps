@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SystemDefinition schema="3.0.0" xmlns:qt="http://www.nokia.com/qt">
+ <package id="phone" name="Phone Apps" levels="engine plugin ui app">
+  <collection id="phoneapp" name="Phone Application" level="app">
+   <component id="blacklist" filter="s60" name="Phone Blacklist Clearing" class="plugin">
+    <unit bldFile="phoneapp/blacklist/group"/>
+   </component>
+   <component id="phoneringingtoneplayer" filter="s60" name="Phone Ringingtone Player" introduced="^4">
+    <unit bldFile="phoneapp/phoneringingtoneplayer/group"/>
+   </component>
+   <component id="phoneuicontrol" filter="s60" name="Phone UI Control">
+    <unit bldFile="phoneapp/phoneuicontrol/group"/>
+   </component>
+   <component id="phoneuistates" filter="s60" name="Phone UI States">
+    <unit bldFile="phoneapp/phoneuistates/group"/>
+   </component>
+   <component id="phoneuiutils" filter="s60" name="Phone UI Utils">
+    <unit bldFile="phoneapp/phoneuiutils/group"/>
+   </component>   
+   <component id="silenceactionplugin" filter="s60" name="Silence Action Plugin" class="plugin">
+    <unit bldFile="phoneapp/silenceactionplugin/group"/>
+   </component>
+   <component id="phonemediatorcenter" filter="s60" name="Phone Mediator Center">
+    <unit bldFile="phoneapp/phonemediatorcenter/group"/>
+   </component>
+   <component id="phoneuiview2" filter="s60" name="Phone UI View">
+    <unit bldFile="phoneapp/phoneuiview2" qt:proFile="phoneuiview2.pro"/>
+   </component>
+   <component id="phoneuiqtviewadapter" filter="s60" name="Phone UI Qt View Adapter" introduced="^4" class="plugin">
+    <unit bldFile="phoneapp/phoneuiqtviewadapter" qt:proFile="phoneuiqtviewadapter.pro"/>
+   </component>
+   <component id="phonestringloader" filter="s60" name="Phone String Loader" introduced="^4">
+    <unit bldFile="phoneapp/phonestringloader" qt:proFile="phonestringloader.pro"/>
+   </component>
+   <component id="phoneui2" filter="s60" name="Phone UI">
+    <unit bldFile="phoneapp/phoneui2" qt:proFile="phoneui2.pro"/>
+   </component>
+   <component id="phoneuivoipextension" filter="s60" name="Phone UI">
+    <unit bldFile="phoneapp/phoneuivoipextension/group"/>
+   </component>   
+  </collection>
+  <collection id="phoneengine" name="Phone Engine" level="engine">
+   <component id="phonecntfinder2" filter="s60" name="Phone Contact Finder">
+    <unit bldFile="phoneengine/phonecntfinder2" qt:proFile="phonecntfinder2.pro"/>
+   </component>
+   <component id="audiohandling" filter="s60" name="Phone Audio Handling">
+    <unit bldFile="phoneengine/audiohandling/group"/>
+   </component>
+   <component id="callhandling" filter="s60" name="Call Handling">
+    <unit bldFile="phoneengine/callhandling/group"/>
+   </component>
+   <component id="contacthandling2" filter="s60" name="Phone Contact Handling">
+    <unit bldFile="phoneengine/contacthandling2/group"/>
+   </component>
+   <component id="loghandling" filter="s60" name="Phone Log Handling">
+    <unit bldFile="phoneengine/loghandling/group"/>
+   </component>
+   <component id="engineinfo" filter="s60" name="Phone Engine Info">
+    <unit bldFile="phoneengine/engineinfo/group"/>
+   </component>
+   <component id="phonemodel" filter="s60" name="Phone Model">
+    <unit bldFile="phoneengine/phonemodel" qt:proFile="phonemodel.pro"/>
+   </component>
+   <component id="servicehandling" filter="s60" name="Phone Service Handling">
+    <unit bldFile="phoneengine/servicehandling/group"/>
+   </component>
+   <component id="phoneservices" filter="s60" name="Phone Server" introduced="^4">
+    <unit bldFile="phoneengine/phoneservices" qt:proFile="phoneservices.pro"/>
+   </component>
+   <component id="networkhandlingstarter" filter="s60" name="Network Handling Starter" introduced="^4">
+    <unit bldFile="phoneengine/networkhandlingstarter" qt:proFile="networkhandlingstarter.pro"/>
+   </component>
+  </collection>
+  <collection id="phoneuis" name="Phone UIs" level="ui">
+   <component id="bubblemanager2" filter="s60" name="Phone Bubble Manager">
+    <unit bldFile="phoneuis/bubblemanager2" qt:proFile="bubblemanager2.pro"/>
+   </component>
+   <component id="telephonydevicemode" filter="s60" name="Telephony Device Mode">
+    <unit bldFile="phoneuis/telephonydevicemode/group"/>
+   </component>
+   <component id="ussdeditor" filter="s60" name="USSD Editor" introduced="^4">
+    <unit bldFile="phoneuis/ussdeditor" qt:proFile="ussdeditor.pro"/>
+   </component>
+  </collection>
+  <collection id="phone_plat" name="Phone Apps Platform Interfaces" level="app">
+   <component id="3d_ringing_tone_enabler_api" name="3D Ringing Tone Enabler API" class="api" filter="s60">
+    <meta rel="Api" href="phone_plat/3d_ringing_tone_enabler_api/3d_ringing_tone_enabler_api.metaxml"/>
+    <unit bldFile="phone_plat/3d_ringing_tone_enabler_api/group"/>
+   </component>
+   <component id="telephony_comms_information_api" name="Telephony Comms Information API" class="api" filter="s60">
+    <meta rel="Api" href="phone_plat/telephony_comms_information_api/telephony_comms_information_api.metaxml"/>
+    <unit bldFile="phone_plat/telephony_comms_information_api/group"/>
+   </component>
+   <component id="telephony_information_api" name="Telephony Information API" class="api" filter="s60">
+    <meta rel="Api" href="phone_plat/telephony_information_api/telephony_information_api.metaxml"/>
+    <unit bldFile="phone_plat/telephony_information_api/group"/>
+   </component>
+   <component id="telephony_device_mode_api" name="Telephony Device Mode API" class="api" filter="s60">
+    <meta rel="Api" href="phone_plat/telephony_device_mode_api/telephony_device_mode_api.metaxml"/>
+    <unit bldFile="phone_plat/telephony_device_mode_api/group"/>
+   </component>
+   <component id="telephony_menu_extension_api" name="Telephony Menu Extension API" class="api" filter="s60"  introduced="^4">
+    <meta rel="Api" href="phone_plat/telephony_menu_extension_api/telephony_menu_extension_api.metaxml"/>
+    <unit bldFile="phone_plat/telephony_menu_extension_api/group"/>
+   </component>   
+   <component id="telephony_remote_party_information_api" name="Telephony Remote Party Information API" class="api" filter="s60">
+    <meta rel="Api" href="phone_plat/telephony_remote_party_information_api/telephony_remote_party_information_api.metaxml"/>
+    <unit bldFile="phone_plat/telephony_remote_party_information_api/group"/>
+   </component>
+   <component id="telephony_video_mailbox_settings_api" name="Telephony Video Mailbox Settings API" class="api" filter="s60">
+    <meta rel="Api" href="phone_plat/telephony_video_mailbox_settings_api/telephony_video_mailbox_settings_api.metaxml"/>
+    <unit bldFile="phone_plat/telephony_video_mailbox_settings_api/group"/>
+   </component>
+   <component id="telephony_microphone_mute_status_api" name="Telephony Microphone Mute Status API" class="api" filter="s60">
+    <meta rel="Api" href="phone_plat/telephony_microphone_mute_status_api/telephony_microphone_mute_status_api.metaxml"/>
+    <unit bldFile="phone_plat/telephony_microphone_mute_status_api/group"/>
+   </component>
+   <component id="telephony_logging_extension_api" name="Telephony Logging Extension API" class="api" filter="s60">
+    <unit bldFile="phone_plat/telephony_logging_extension_api/group"/>
+   </component>
+   <component id="telephony_matching_extension_api" name="Telephony Matching Extension API" class="api" filter="s60">
+    <unit bldFile="phone_plat/telephony_matching_extension_api/group"/>
+   </component>
+   <component id="phone_application_commands_api" name="Phone Application Commands API" class="api" filter="s60">
+    <unit bldFile="phone_plat/phone_application_commands_api/group"/>
+   </component>
+   <component id="phone_application_voip_commands_api" name="Phone Application VOIP Commands API" class="api" filter="s60">
+    <unit bldFile="phone_plat/phone_application_voip_commands_api/group"/>
+   </component>
+   <component id="phone_telephony_mediator_api" name="Telephony Mediator API" class="api" filter="s60">
+    <unit bldFile="phone_plat/telephony_mediator_api/group"/>
+   </component>
+   <component id="video_telephony_mediator_api" name="Video Telephony Mediator API" class="api" filter="s60">
+    <unit bldFile="phone_plat/video_telephony_mediator_api/group"/>
+   </component>
+   <component id="video_telephony_control_mediator_api" name="Video Telephony Control Mediator API" class="api" filter="s60" introduced="^4">
+    <unit bldFile="phone_plat/video_telephony_control_mediator_api/group"/>
+   </component>
+  </collection>
+  <collection id="phoneplugins" name="Phone Plugins" level="plugin">
+   <component id="csplugin" filter="s60" name="Circuit Switched Plugin" class="plugin" introduced="^4">
+    <unit bldFile="phoneplugins/csplugin/group"/>
+   </component>
+   <component id="phoneindicatorplugin" filter="s60" name="Phone Indicator Plugin" class="plugin" introduced="^4">
+    <unit bldFile="phoneplugins/phoneindicatorplugin" qt:proFile="phoneindicatorplugin.pro"/>
+   </component>
+   <component id="dialerwidgetplugin" filter="s60" name="Dialer Widget Plugin" class="plugin" introduced="^4">
+    <unit bldFile="phoneplugins/dialerwidgetplugin" qt:proFile="dialerwidgetplugin.pro"/>
+   </component>
+   <component id="infowidgetplugin" filter="s60" name="Info Widget Plugin" class="plugin" introduced="^4">
+    <unit bldFile="phoneplugins/infowidgetplugin" qt:proFile="infowidgetplugin.pro"/>
+   </component>
+  </collection>
+  <collection id="phonesettings" name="Phone Settings" level="plugin">
+   <component id="cpphonesettingsplugins" filter="s60" name="Control Panel Phone Settings Plugins" class="plugin" introduced="^4">
+    <unit bldFile="phonesettings/cpphonesettingsplugins" qt:proFile="cpphonesettingsplugins.pro"/>
+   </component>
+  </collection>
+ </package>
+</SystemDefinition>

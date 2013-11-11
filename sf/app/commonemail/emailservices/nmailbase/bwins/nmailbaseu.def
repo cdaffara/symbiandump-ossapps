@@ -1,0 +1,174 @@
+EXPORTS
+	??0NmMailboxPrivate@@QAE@XZ @ 1 NONAME ; NmMailboxPrivate::NmMailboxPrivate(void)
+	?setParentId@NmFolder@@QAEXVNmId@@@Z @ 2 NONAME ; void NmFolder::setParentId(class NmId)
+	?lastUpdated@NmFolder@@QBE?AVQDateTime@@XZ @ 3 NONAME ; class QDateTime NmFolder::lastUpdated(void) const
+	?messageCount@NmFolder@@QBEIXZ @ 4 NONAME ; unsigned int NmFolder::messageCount(void) const
+	?folderId@NmMessageEnvelope@@QBE?AVNmId@@XZ @ 5 NONAME ; class NmId NmMessageEnvelope::folderId(void) const
+	?clearCcRecipients@NmMessageEnvelope@@QAEXXZ @ 6 NONAME ; void NmMessageEnvelope::clearCcRecipients(void)
+	??1NmMessagePrivate@@UAE@XZ @ 7 NONAME ; NmMessagePrivate::~NmMessagePrivate(void)
+	??0NmMessagePart@@IAE@V?$QExplicitlySharedDataPointer@VNmMessagePartPrivate@@@@@Z @ 8 NONAME ; NmMessagePart::NmMessagePart(class QExplicitlySharedDataPointer<class NmMessagePartPrivate>)
+	?htmlBodyPart@NmMessage@@QBEPBVNmMessagePart@@XZ @ 9 NONAME ; class NmMessagePart const * NmMessage::htmlBodyPart(void) const
+	?findContentPart@NmMessagePart@@IBEPBV1@ABVQString@@@Z @ 10 NONAME ; class NmMessagePart const * NmMessagePart::findContentPart(class QString const &) const
+	?subFolderCount@NmFolder@@QBEIXZ @ 11 NONAME ; unsigned int NmFolder::subFolderCount(void) const
+	?isMessage@NmMessagePart@@QBE_NXZ @ 12 NONAME ; bool NmMessagePart::isMessage(void) const
+	?setSender@NmMessageEnvelope@@QAEXABVNmAddress@@@Z @ 13 NONAME ; void NmMessageEnvelope::setSender(class NmAddress const &)
+	?priority@NmMessageEnvelope@@QBE?AW4NmMessagePriority@@XZ @ 14 NONAME ; enum NmMessagePriority NmMessageEnvelope::priority(void) const
+	??0NmMessage@@AAE@ABVNmMessageEnvelope@@V?$QExplicitlySharedDataPointer@VNmMessagePartPrivate@@@@@Z @ 15 NONAME ; NmMessage::NmMessage(class NmMessageEnvelope const &, class QExplicitlySharedDataPointer<class NmMessagePartPrivate>)
+	?attachmentName@NmMessagePart@@QBE?AVQString@@XZ @ 16 NONAME ; class QString NmMessagePart::attachmentName(void) const
+	??1NmFolder@@UAE@XZ @ 17 NONAME ; NmFolder::~NmFolder(void)
+	??4NmFolder@@QAEAAV0@ABV0@@Z @ 18 NONAME ; class NmFolder & NmFolder::operator=(class NmFolder const &)
+	?setContentType@NmMessagePart@@QAEXABVQString@@@Z @ 19 NONAME ; void NmMessagePart::setContentType(class QString const &)
+	??_ENmMessageEnvelopePrivate@@UAE@I@Z @ 20 NONAME ; NmMessageEnvelopePrivate::~NmMessageEnvelopePrivate(unsigned int)
+	?setFlag@NmMessageEnvelopePrivate@@QAEXW4NmMessageFlag@@_N@Z @ 21 NONAME ; void NmMessageEnvelopePrivate::setFlag(enum NmMessageFlag, bool)
+	?setLastUpdated@NmFolder@@QAEXVQDateTime@@@Z @ 22 NONAME ; void NmFolder::setLastUpdated(class QDateTime)
+	?setCcRecipients@NmMessageEnvelope@@QAEXV?$QList@VNmAddress@@@@@Z @ 23 NONAME ; void NmMessageEnvelope::setCcRecipients(class QList<class NmAddress>)
+	?binaryContent@NmMessagePart@@QBEABVQByteArray@@XZ @ 24 NONAME ; class QByteArray const & NmMessagePart::binaryContent(void) const
+	?flags@NmMessageEnvelopePrivate@@QBE?AV?$QFlags@W4NmMessageFlag@@@@XZ @ 25 NONAME ; class QFlags<enum NmMessageFlag> NmMessageEnvelopePrivate::flags(void) const
+	?toRecipients@NmMessageEnvelope@@QBEAAV?$QList@VNmAddress@@@@XZ @ 26 NONAME ; class QList<class NmAddress> & NmMessageEnvelope::toRecipients(void) const
+	??0NmAddress@@QAE@XZ @ 27 NONAME ; NmAddress::NmAddress(void)
+	?setSubject@NmMessageEnvelope@@QAEXABVQString@@@Z @ 28 NONAME ; void NmMessageEnvelope::setSubject(class QString const &)
+	?envelope@NmMessage@@QBEABVNmMessageEnvelope@@XZ @ 29 NONAME ; class NmMessageEnvelope const & NmMessage::envelope(void) const
+	??0NmMessagePart@@QAE@ABVNmId@@@Z @ 30 NONAME ; NmMessagePart::NmMessagePart(class NmId const &)
+	?textContent@NmMessagePart@@QBEABVQString@@XZ @ 31 NONAME ; class QString const & NmMessagePart::textContent(void) const
+	?clearToRecipients@NmMessageEnvelope@@QAEXXZ @ 32 NONAME ; void NmMessageEnvelope::clearToRecipients(void)
+	??0NmMessageEnvelopePrivate@@QAE@XZ @ 33 NONAME ; NmMessageEnvelopePrivate::NmMessageEnvelopePrivate(void)
+	??4NmAddress@@QAEAAV0@ABV0@@Z @ 34 NONAME ; class NmAddress & NmAddress::operator=(class NmAddress const &)
+	??0NmMessage@@QAE@ABVNmMessagePart@@@Z @ 35 NONAME ; NmMessage::NmMessage(class NmMessagePart const &)
+	??1NmMailboxPrivate@@UAE@XZ @ 36 NONAME ; NmMailboxPrivate::~NmMailboxPrivate(void)
+	??_ENmAddress@@UAE@I@Z @ 37 NONAME ; NmAddress::~NmAddress(unsigned int)
+	?setFolderId@NmFolder@@QAEXVNmId@@@Z @ 38 NONAME ; void NmFolder::setFolderId(class NmId)
+	?unreadMessageCount@NmFolder@@QBEIXZ @ 39 NONAME ; unsigned int NmFolder::unreadMessageCount(void) const
+	?removeChildPart@NmMessagePart@@QAEXABVNmId@@@Z @ 40 NONAME ; void NmMessagePart::removeChildPart(class NmId const &)
+	?setId@NmMailbox@@QAEXABVNmId@@@Z @ 41 NONAME ; void NmMailbox::setId(class NmId const &)
+	?fetchedSize@NmMessagePart@@QBEIXZ @ 42 NONAME ; unsigned int NmMessagePart::fetchedSize(void) const
+	?setMailboxId@NmMessageEnvelope@@QAEXABVNmId@@@Z @ 43 NONAME ; void NmMessageEnvelope::setMailboxId(class NmId const &)
+	?setTextContent@NmMessagePart@@QAEXABVQString@@0@Z @ 44 NONAME ; void NmMessagePart::setTextContent(class QString const &, class QString const &)
+	?isTextContent@NmMessagePartPrivate@@QBE_NXZ @ 45 NONAME ; bool NmMessagePartPrivate::isTextContent(void) const
+	??0NmMessage@@QAE@ABVNmMessageEnvelope@@@Z @ 46 NONAME ; NmMessage::NmMessage(class NmMessageEnvelope const &)
+	?setDisplayName@NmAddress@@QAEXABVQString@@@Z @ 47 NONAME ; void NmAddress::setDisplayName(class QString const &)
+	?folderType@NmFolder@@QBE?AW4NmFolderType@@XZ @ 48 NONAME ; enum NmFolderType NmFolder::folderType(void) const
+	??_ENmAddressPrivate@@UAE@I@Z @ 49 NONAME ; NmAddressPrivate::~NmAddressPrivate(unsigned int)
+	??0NmMessageEnvelope@@QAE@V?$QExplicitlySharedDataPointer@VNmMessageEnvelopePrivate@@@@@Z @ 50 NONAME ; NmMessageEnvelope::NmMessageEnvelope(class QExplicitlySharedDataPointer<class NmMessageEnvelopePrivate>)
+	??0NmMessage@@QAE@ABV0@@Z @ 51 NONAME ; NmMessage::NmMessage(class NmMessage const &)
+	?setBccRecipients@NmMessageEnvelope@@QAEXV?$QList@VNmAddress@@@@@Z @ 52 NONAME ; void NmMessageEnvelope::setBccRecipients(class QList<class NmAddress>)
+	??1NmMessageEnvelope@@UAE@XZ @ 53 NONAME ; NmMessageEnvelope::~NmMessageEnvelope(void)
+	?plainTextBodyPart@NmMessage@@QAEPAVNmMessagePart@@XZ @ 54 NONAME ; class NmMessagePart * NmMessage::plainTextBodyPart(void)
+	??0NmMessagePart@@QAE@XZ @ 55 NONAME ; NmMessagePart::NmMessagePart(void)
+	?id@NmMailbox@@QBE?AVNmId@@XZ @ 56 NONAME ; class NmId NmMailbox::id(void) const
+	??0NmMessagePartPrivate@@QAE@XZ @ 57 NONAME ; NmMessagePartPrivate::NmMessagePartPrivate(void)
+	??0NmFolderPrivate@@QAE@XZ @ 58 NONAME ; NmFolderPrivate::NmFolderPrivate(void)
+	?setUnseenCount@NmFolder@@QAEXI@Z @ 59 NONAME ; void NmFolder::setUnseenCount(unsigned int)
+	??9NmAddress@@QBE_NABV0@@Z @ 60 NONAME ; bool NmAddress::operator!=(class NmAddress const &) const
+	?setFlags@NmMessageEnvelopePrivate@@QAEXV?$QFlags@W4NmMessageFlag@@@@_N@Z @ 61 NONAME ; void NmMessageEnvelopePrivate::setFlags(class QFlags<enum NmMessageFlag>, bool)
+	??1NmMailbox@@UAE@XZ @ 62 NONAME ; NmMailbox::~NmMailbox(void)
+	??_ENmFolder@@UAE@I@Z @ 63 NONAME ; NmFolder::~NmFolder(unsigned int)
+	?isRead@NmMessageEnvelope@@QBE_NXZ @ 64 NONAME ; bool NmMessageEnvelope::isRead(void) const
+	?address@NmMailbox@@QBE?AVNmAddress@@XZ @ 65 NONAME ; class NmAddress NmMailbox::address(void) const
+	?mailboxId@NmFolder@@QBE?AVNmId@@XZ @ 66 NONAME ; class NmId NmFolder::mailboxId(void) const
+	?clearBccRecipients@NmMessageEnvelope@@QAEXXZ @ 67 NONAME ; void NmMessageEnvelope::clearBccRecipients(void)
+	??0NmAddress@@QAE@ABV0@@Z @ 68 NONAME ; NmAddress::NmAddress(class NmAddress const &)
+	?address@NmAddress@@QBE?AVQString@@XZ @ 69 NONAME ; class QString NmAddress::address(void) const
+	?setRead@NmMessageEnvelope@@QAEX_N@Z @ 70 NONAME ; void NmMessageEnvelope::setRead(bool)
+	?setPriority@NmMessageEnvelope@@QAEXW4NmMessagePriority@@@Z @ 71 NONAME ; void NmMessageEnvelope::setPriority(enum NmMessagePriority)
+	??4NmMessage@@AAEAAV0@ABV0@@Z @ 72 NONAME ; class NmMessage & NmMessage::operator=(class NmMessage const &)
+	??_ENmMessagePartPrivate@@UAE@I@Z @ 73 NONAME ; NmMessagePartPrivate::~NmMessagePartPrivate(unsigned int)
+	?setUnreadMessageCount@NmFolder@@QAEXI@Z @ 74 NONAME ; void NmFolder::setUnreadMessageCount(unsigned int)
+	?hasAttachments@NmMessageEnvelope@@QBE_NXZ @ 75 NONAME ; bool NmMessageEnvelope::hasAttachments(void) const
+	?contentDescription@NmMessagePart@@QBE?AVQString@@XZ @ 76 NONAME ; class QString NmMessagePart::contentDescription(void) const
+	?flags@NmMessageEnvelope@@QBE?AV?$QFlags@W4NmMessageFlag@@@@XZ @ 77 NONAME ; class QFlags<enum NmMessageFlag> NmMessageEnvelope::flags(void) const
+	?isReplied@NmMessageEnvelope@@QBE_NXZ @ 78 NONAME ; bool NmMessageEnvelope::isReplied(void) const
+	?displayName@NmAddress@@QBE?AVQString@@XZ @ 79 NONAME ; class QString NmAddress::displayName(void) const
+	?setSubFolderCount@NmFolder@@QAEXI@Z @ 80 NONAME ; void NmFolder::setSubFolderCount(unsigned int)
+	?subject@NmMessageEnvelope@@QBE?AVQString@@XZ @ 81 NONAME ; class QString NmMessageEnvelope::subject(void) const
+	?setSize@NmMessagePart@@QAEXI@Z @ 82 NONAME ; void NmMessagePart::setSize(unsigned int)
+	?setPartId@NmMessagePart@@UAEXABVNmId@@@Z @ 83 NONAME ; void NmMessagePart::setPartId(class NmId const &)
+	?contentId@NmMessagePart@@QAE?AVQString@@XZ @ 84 NONAME ; class QString NmMessagePart::contentId(void)
+	??_ENmMessagePart@@UAE@I@Z @ 85 NONAME ; NmMessagePart::~NmMessagePart(unsigned int)
+	?setBinaryContent@NmMessagePart@@QAEXABVQByteArray@@ABVQString@@@Z @ 86 NONAME ; void NmMessagePart::setBinaryContent(class QByteArray const &, class QString const &)
+	??_ENmMailbox@@UAE@I@Z @ 87 NONAME ; NmMailbox::~NmMailbox(unsigned int)
+	?setForwarded@NmMessageEnvelope@@QAEX_N@Z @ 88 NONAME ; void NmMessageEnvelope::setForwarded(bool)
+	??0NmMessage@@QAE@ABVNmId@@00@Z @ 89 NONAME ; NmMessage::NmMessage(class NmId const &, class NmId const &, class NmId const &)
+	??1NmFolderPrivate@@UAE@XZ @ 90 NONAME ; NmFolderPrivate::~NmFolderPrivate(void)
+	?findContentPart@NmMessagePart@@IAEPAV1@ABVQString@@@Z @ 91 NONAME ; class NmMessagePart * NmMessagePart::findContentPart(class QString const &)
+	??_ENmMessagePrivate@@UAE@I@Z @ 92 NONAME ; NmMessagePrivate::~NmMessagePrivate(unsigned int)
+	?name@NmMailbox@@QBE?AVQString@@XZ @ 93 NONAME ; class QString NmMailbox::name(void) const
+	?isMessage@NmMessagePartPrivate@@QBE_NXZ @ 94 NONAME ; bool NmMessagePartPrivate::isMessage(void) const
+	?setChildParts@NmMessagePart@@QAEXV?$QList@PAVNmMessagePart@@@@@Z @ 95 NONAME ; void NmMessagePart::setChildParts(class QList<class NmMessagePart *>)
+	?appendAttachments@NmMessagePart@@QBEXAAV?$QList@PAVNmMessagePart@@@@@Z @ 96 NONAME ; void NmMessagePart::appendAttachments(class QList<class NmMessagePart *> &) const
+	?bccRecipients@NmMessageEnvelope@@QBEAAV?$QList@VNmAddress@@@@XZ @ 97 NONAME ; class QList<class NmAddress> & NmMessageEnvelope::bccRecipients(void) const
+	??0NmMailbox@@QAE@XZ @ 98 NONAME ; NmMailbox::NmMailbox(void)
+	?setName@NmMailbox@@QAEXABVQString@@@Z @ 99 NONAME ; void NmMailbox::setName(class QString const &)
+	??0NmAddressPrivate@@QAE@XZ @ 100 NONAME ; NmAddressPrivate::NmAddressPrivate(void)
+	?setContentId@NmMessagePart@@QAEXABVQString@@@Z @ 101 NONAME ; void NmMessagePart::setContentId(class QString const &)
+	?setMessageCount@NmFolder@@QAEXI@Z @ 102 NONAME ; void NmFolder::setMessageCount(unsigned int)
+	?setMessageId@NmMessageEnvelope@@QAEXABVNmId@@@Z @ 103 NONAME ; void NmMessageEnvelope::setMessageId(class NmId const &)
+	??0NmMessage@@QAE@ABVNmId@@0@Z @ 104 NONAME ; NmMessage::NmMessage(class NmId const &, class NmId const &)
+	??0NmAddress@@QAE@ABVQString@@0@Z @ 105 NONAME ; NmAddress::NmAddress(class QString const &, class QString const &)
+	??8NmMessageEnvelope@@QBE_NABV0@@Z @ 106 NONAME ; bool NmMessageEnvelope::operator==(class NmMessageEnvelope const &) const
+	?setAttachmentName@NmMessagePart@@QAEXABVQString@@@Z @ 107 NONAME ; void NmMessagePart::setAttachmentName(class QString const &)
+	?messageId@NmMessageEnvelope@@QBE?AVNmId@@XZ @ 108 NONAME ; class NmId NmMessageEnvelope::messageId(void) const
+	?setName@NmFolder@@QAEXVQString@@@Z @ 109 NONAME ; void NmFolder::setName(class QString)
+	??0NmFolder@@QAE@V?$QExplicitlySharedDataPointer@VNmFolderPrivate@@@@@Z @ 110 NONAME ; NmFolder::NmFolder(class QExplicitlySharedDataPointer<class NmFolderPrivate>)
+	?setSentTime@NmMessageEnvelope@@QAEXABVQDateTime@@@Z @ 111 NONAME ; void NmMessageEnvelope::setSentTime(class QDateTime const &)
+	??0NmMessageEnvelope@@QAE@ABV0@@Z @ 112 NONAME ; NmMessageEnvelope::NmMessageEnvelope(class NmMessageEnvelope const &)
+	??0NmMessage@@QAE@ABVNmId@@@Z @ 113 NONAME ; NmMessage::NmMessage(class NmId const &)
+	??0NmAddress@@QAE@ABVQString@@@Z @ 114 NONAME ; NmAddress::NmAddress(class QString const &)
+	?htmlBodyPart@NmMessage@@QAEPAVNmMessagePart@@XZ @ 115 NONAME ; class NmMessagePart * NmMessage::htmlBodyPart(void)
+	??_ENmFolderPrivate@@UAE@I@Z @ 116 NONAME ; NmFolderPrivate::~NmFolderPrivate(unsigned int)
+	?name@NmFolder@@QBE?AVQString@@XZ @ 117 NONAME ; class QString NmFolder::name(void) const
+	?setFolderId@NmMessageEnvelope@@QAEXABVNmId@@@Z @ 118 NONAME ; void NmMessageEnvelope::setFolderId(class NmId const &)
+	??4NmMailbox@@QAEAAV0@ABV0@@Z @ 119 NONAME ; class NmMailbox & NmMailbox::operator=(class NmMailbox const &)
+	??0NmFolder@@QAE@VNmId@@@Z @ 120 NONAME ; NmFolder::NmFolder(class NmId)
+	?setHasAttachments@NmMessageEnvelope@@QAEX_N@Z @ 121 NONAME ; void NmMessageEnvelope::setHasAttachments(bool)
+	?setMailboxId@NmFolder@@QAEXVNmId@@@Z @ 122 NONAME ; void NmFolder::setMailboxId(class NmId)
+	?envelope@NmMessage@@QAEAAVNmMessageEnvelope@@XZ @ 123 NONAME ; class NmMessageEnvelope & NmMessage::envelope(void)
+	?plainTextBodyPart@NmMessage@@QBEPBVNmMessagePart@@XZ @ 124 NONAME ; class NmMessagePart const * NmMessage::plainTextBodyPart(void) const
+	?setFolderType@NmFolder@@QAEXW4NmFolderType@@@Z @ 125 NONAME ; void NmFolder::setFolderType(enum NmFolderType)
+	?setContentDescription@NmMessagePart@@QAEXABVQString@@@Z @ 126 NONAME ; void NmMessagePart::setContentDescription(class QString const &)
+	??8NmAddress@@QBE_NABV0@@Z @ 127 NONAME ; bool NmAddress::operator==(class NmAddress const &) const
+	??9NmMessageEnvelope@@QBE_NABV0@@Z @ 128 NONAME ; bool NmMessageEnvelope::operator!=(class NmMessageEnvelope const &) const
+	?mailboxId@NmMessageEnvelope@@QBE?AVNmId@@XZ @ 129 NONAME ; class NmId NmMessageEnvelope::mailboxId(void) const
+	?setToRecipients@NmMessageEnvelope@@QAEXV?$QList@VNmAddress@@@@@Z @ 130 NONAME ; void NmMessageEnvelope::setToRecipients(class QList<class NmAddress>)
+	??1NmMessage@@UAE@XZ @ 131 NONAME ; NmMessage::~NmMessage(void)
+	?size@NmMessagePart@@QBEIXZ @ 132 NONAME ; unsigned int NmMessagePart::size(void) const
+	??1NmAddressPrivate@@UAE@XZ @ 133 NONAME ; NmAddressPrivate::~NmAddressPrivate(void)
+	?sentTime@NmMessageEnvelope@@QBE?AVQDateTime@@XZ @ 134 NONAME ; class QDateTime NmMessageEnvelope::sentTime(void) const
+	?childParts@NmMessagePart@@QBEAAV?$QList@PAVNmMessagePart@@@@XZ @ 135 NONAME ; class QList<class NmMessagePart *> & NmMessagePart::childParts(void) const
+	?partId@NmMessagePart@@UBE?AVNmId@@XZ @ 136 NONAME ; class NmId NmMessagePart::partId(void) const
+	??0NmMailbox@@QAE@ABV0@@Z @ 137 NONAME ; NmMailbox::NmMailbox(class NmMailbox const &)
+	??4NmMessageEnvelope@@QAEAAV0@ABV0@@Z @ 138 NONAME ; class NmMessageEnvelope & NmMessageEnvelope::operator=(class NmMessageEnvelope const &)
+	??1NmMessagePartPrivate@@UAE@XZ @ 139 NONAME ; NmMessagePartPrivate::~NmMessagePartPrivate(void)
+	??8NmMailbox@@QBE_NABV0@@Z @ 140 NONAME ; bool NmMailbox::operator==(class NmMailbox const &) const
+	??0NmMailbox@@QAE@V?$QExplicitlySharedDataPointer@VNmMailboxPrivate@@@@@Z @ 141 NONAME ; NmMailbox::NmMailbox(class QExplicitlySharedDataPointer<class NmMailboxPrivate>)
+	?unseenCount@NmFolder@@QBEIXZ @ 142 NONAME ; unsigned int NmFolder::unseenCount(void) const
+	?ccRecipients@NmMessageEnvelope@@QBEAAV?$QList@VNmAddress@@@@XZ @ 143 NONAME ; class QList<class NmAddress> & NmMessageEnvelope::ccRecipients(void) const
+	?sender@NmMessageEnvelope@@QBE?AVNmAddress@@XZ @ 144 NONAME ; class NmAddress NmMessageEnvelope::sender(void) const
+	?setContentDisposition@NmMessagePart@@QAEXABVQString@@@Z @ 145 NONAME ; void NmMessagePart::setContentDisposition(class QString const &)
+	?removeAllChildParts@NmMessagePart@@QAEXXZ @ 146 NONAME ; void NmMessagePart::removeAllChildParts(void)
+	?contentDisposition@NmMessagePart@@QBE?AVQString@@XZ @ 147 NONAME ; class QString NmMessagePart::contentDisposition(void) const
+	??0NmMessagePrivate@@QAE@XZ @ 148 NONAME ; NmMessagePrivate::NmMessagePrivate(void)
+	?setAddress@NmMailbox@@QAEXABVNmAddress@@@Z @ 149 NONAME ; void NmMailbox::setAddress(class NmAddress const &)
+	??_ENmMailboxPrivate@@UAE@I@Z @ 150 NONAME ; NmMailboxPrivate::~NmMailboxPrivate(unsigned int)
+	?parentId@NmFolder@@QBE?AVNmId@@XZ @ 151 NONAME ; class NmId NmFolder::parentId(void) const
+	?folderId@NmFolder@@QBE?AVNmId@@XZ @ 152 NONAME ; class NmId NmFolder::folderId(void) const
+	??1NmMessagePart@@UAE@XZ @ 153 NONAME ; NmMessagePart::~NmMessagePart(void)
+	??0NmMessagePart@@IAE@ABV0@@Z @ 154 NONAME ; NmMessagePart::NmMessagePart(class NmMessagePart const &)
+	??0NmAddress@@QAE@V?$QExplicitlySharedDataPointer@VNmAddressPrivate@@@@@Z @ 155 NONAME ; NmAddress::NmAddress(class QExplicitlySharedDataPointer<class NmAddressPrivate>)
+	?addChildPart@NmMessagePart@@QAEXPAV1@@Z @ 156 NONAME ; void NmMessagePart::addChildPart(class NmMessagePart *)
+	?isFlagSet@NmMessageEnvelopePrivate@@QBE_NW4NmMessageFlag@@@Z @ 157 NONAME ; bool NmMessageEnvelopePrivate::isFlagSet(enum NmMessageFlag) const
+	??_ENmMessageEnvelope@@UAE@I@Z @ 158 NONAME ; NmMessageEnvelope::~NmMessageEnvelope(unsigned int)
+	??_ENmMessage@@UAE@I@Z @ 159 NONAME ; NmMessage::~NmMessage(unsigned int)
+	?contentType@NmMessagePart@@QBE?AVQString@@XZ @ 160 NONAME ; class QString NmMessagePart::contentType(void) const
+	??1NmMessageEnvelopePrivate@@UAE@XZ @ 161 NONAME ; NmMessageEnvelopePrivate::~NmMessageEnvelopePrivate(void)
+	?setAddress@NmAddress@@QAEXABVQString@@@Z @ 162 NONAME ; void NmAddress::setAddress(class QString const &)
+	?isForwarded@NmMessageEnvelope@@QBE_NXZ @ 163 NONAME ; bool NmMessageEnvelope::isForwarded(void) const
+	??1NmAddress@@UAE@XZ @ 164 NONAME ; NmAddress::~NmAddress(void)
+	?setReplied@NmMessageEnvelope@@QAEX_N@Z @ 165 NONAME ; void NmMessageEnvelope::setReplied(bool)
+	?attachmentList@NmMessage@@QBEXAAV?$QList@PAVNmMessagePart@@@@@Z @ 166 NONAME ; void NmMessage::attachmentList(class QList<class NmMessagePart *> &) const
+	??0NmMessageEnvelope@@QAE@ABVNmId@@@Z @ 167 NONAME ; NmMessageEnvelope::NmMessageEnvelope(class NmId const &)
+	??0NmFolder@@QAE@ABV0@@Z @ 168 NONAME ; NmFolder::NmFolder(class NmFolder const &)
+	??0NmMessage@@QAE@XZ @ 169 NONAME ; NmMessage::NmMessage(void)
+	?setFetchedSize@NmMessagePart@@QAEXI@Z @ 170 NONAME ; void NmMessagePart::setFetchedSize(unsigned int)
+	??0NmMessageEnvelope@@QAE@XZ @ 171 NONAME ; NmMessageEnvelope::NmMessageEnvelope(void)
+	??4NmMessagePart@@AAEAAV0@ABV0@@Z @ 172 NONAME ; class NmMessagePart & NmMessagePart::operator=(class NmMessagePart const &)
+

@@ -1,0 +1,38 @@
+// Copyright (c) 2005-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+TARGET			tcal_servershutdown.exe
+
+TARGETTYPE		exe
+CAPABILITY   		ALL -TCB
+
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+USERINCLUDE	      .
+
+SOURCEPATH	.
+SOURCE			tcal_servershutdown.cpp
+
+LIBRARY			euser.lib caltestlib.lib calinterimapi.lib hal.lib ecom.lib bafl.lib pimtestclient.lib
+LIBRARY         alarmclient.lib
+DEBUGLIBRARY estor.lib
+
+
+VENDORID 0x70000001
+
+#ifdef SYMBIAN_SYSTEM_STATE_MANAGEMENT
+UID 0 0xE6AEDA09
+#endif
+
+SMPSAFE

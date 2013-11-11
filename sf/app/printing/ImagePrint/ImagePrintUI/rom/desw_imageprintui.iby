@@ -1,0 +1,48 @@
+/*
+* Copyright (c) 2004-2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Image Print UI components. 
+*
+*/
+
+
+#ifndef DESW_IMAGEPRINTUI_IBY
+#define DESW_IMAGEPRINTUI_IBY
+
+#include <imageprintdef.iby>
+
+// Image Print application information file 
+
+data=DATAZ_\APP_BITMAP_DIR\imageprintapp_aif.mif              		APP_BITMAP_DIR\imageprintapp_aif.mif
+
+// Non-localisable application registration file
+data=DATAZ_\Private\10003A3F\Apps\imageprintapp_reg.rsc				Private\10003A3F\Apps\imageprintapp_reg.rsc
+
+// Image Print UI Binaries
+FILE=ABI_DIR\IP_DIR\imageprintengine.dll      	SHARED_LIB_DIR\imageprintengine.dll
+
+IP_APP(imageprintapp)
+
+// UI Resources / Bitmaps
+SCALABLE_IMAGE( APP_BITMAP_DIR,APP_BITMAP_DIR, imgprintbitmaps )
+
+// View Dll for release 3 purposes. 
+FILE=ABI_DIR\IP_DIR\imgpprintdll.dll      			SHARED_LIB_DIR\imgpprintdll.dll
+
+// Aiw plugin
+IP_PLUGIN(aiwprintingprovider.dll,101ffaa2.rsc)
+
+// Image Print Engine centrep ini file
+DATA=DATAZ_\private\10202be9\10208a35.txt				Private\10202be9\10208a35.txt
+
+#endif // DESWIMAGEPRINTUI_IBY

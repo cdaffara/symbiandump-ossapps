@@ -1,0 +1,45 @@
+<?XML version="1.0" ?>
+<!DOCTYPE SMIL PUBLIC "-//W3C//DTD SMIL 2.0 Basic//EN"
+"http://www.w3.org/TR/REC-smil/2000/SMIL20Basic.dtd">
+
+<!-- Focus of this test: anchor element, attribute variations -->
+<!-- Focus of this test: anchor element, attribute variations -->
+<!-- href SPECIFIED -->
+<!-- nohref IMPLIED -->
+<!-- target SPECIFIED -->
+<!-- dur, repeatCount, repeatDur, begin, end, min, max, accesskey, tabindex, alt, id, class, title,
+     xml:lang SPECIFIED -->
+<!-- coords SPECIFIED in the Spatial anchors, & IMPLIED in the Temporal ones -->
+<!-- sourceLevel, destinationLevel SPECIFIED -->
+<!-- fill SPECIFIED="remove" -->
+<!-- skip-content SPECIFIED="true" -->
+<!-- sourcePlaystate SPECIFIED="play" -->
+<!-- destinationPlaystate SPECIFIED="play" -->
+<!-- show SPECIFIED="new" -->
+<!-- external SPECIFIED="true" -->
+<!-- actuate SPECIFIED="onRequest" -->
+<!-- shape SPECIFIED="rect" in the Spatial anchors -->
+<smil xmlns="http://www.w3.org/TR/REC-smil/2000/SMIL20/Basic">
+   <head>
+      <!-- This is a "landscape" screen -->
+      <layout>
+         <root-layout width="352" height="144"/>
+         <region id="source" width="176" height="144" left="0" top="0"/>
+         <region id="destination" width="176" height="144" left="176" top="0"/>
+      </layout>
+   </head>
+   <body>
+      <seq>
+         <!-- Temporal anchors -->
+         <video src="video" region="source" title="Interview">
+            <anchor dur="20s" repeatCount="1.0" repeatDur="20s" begin="0s" end="20s" min="20s" max="20s" fill="remove" skip-content="true" sourceLevel="100%" destinationLevel="100%" sourcePlaystate="play" destinationPlaystate="play" show="new" accesskey="a" tabindex="1" target="destination" external="true" actuate="onRequest" href="http://www.example.org/AudioVideo" alt="first question" id="firstQ" class="class1 class2" title="first question" xml:lang="en-GB"/>
+            <anchor dur="50s" begin="prev.end" end="70s" target="destination" href="http://www.example.org/Style" id="firstA" title="first answer"/>
+         </video>
+         <!-- Spatial anchors -->
+         <video src="video" region="source" title="Interview">
+            <anchor shape="rect" coords="5,5,50,50" title="Journalist" target="destination" href="http://www.example.org/AudioVideo"/>
+            <anchor shape="rect" coords="60,5,100,50" title="Subject" target="destination" href="http://www.example.org/Style"/>
+         </video>
+      </seq>
+   </body>
+</smil>

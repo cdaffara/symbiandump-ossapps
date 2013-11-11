@@ -1,0 +1,37 @@
+// Copyright (c) 2003-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// T_IMCM_CANCEL.MMP
+// 
+//
+
+TARGET		t_imcm_asynchronous_operation_cancellation_test.exe
+TARGETTYPE		exe
+
+CAPABILITY All -TCB
+SOURCEPATH		../src
+USERINCLUDE		../inc ../../inc
+USERINCLUDE		../../../../pop3andsmtpmtm/servermtmutils/inc
+USERINCLUDE		../../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/base/inc
+USERINCLUDE		../../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/email/inc
+USERINCLUDE		../../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/server/inc
+SOURCE		T_IMCM_ASYNCHRONOUS_OPERATION_CANCELLATION_TEST.cpp
+
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+LIBRARY       	euser.lib imcm.lib msgs.lib efsrv.lib
+LIBRARY		emailtestutils.lib msvtestutils.lib
+
+
+VENDORID 0x70000001
+
+SMPSAFE

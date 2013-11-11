@@ -1,0 +1,55 @@
+/*
+* Copyright (c) 2004-2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*     This is project specification file for the mtm registry.
+*
+*/
+
+
+#include <data_caging_paths.hrh>
+#include <platform_paths.hrh>
+
+TARGETTYPE none
+APP_LAYER_SYSTEMINCLUDE
+MW_LAYER_SYSTEMINCLUDE
+
+START RESOURCE  ./resource/notregistry.rss
+TARGET          not.rsc
+TARGETPATH      MTM_INFO_FILE_DIR
+LANGUAGE_IDS
+END
+
+START RESOURCE  ./resource/mmsregistry.rss
+TARGET          mms.rsc
+TARGETPATH      MTM_INFO_FILE_DIR
+LANGUAGE_IDS
+END
+
+START RESOURCE  ./resource/smsregistry.rss
+TARGET          sms.rsc
+TARGETPATH      MTM_INFO_FILE_DIR
+LANGUAGE_IDS
+END
+
+START RESOURCE  ./resource/bioregistry.rss
+TARGET          biomtm.rsc
+TARGETPATH      MTM_INFO_FILE_DIR
+LANGUAGE_IDS
+END
+
+
+
+SMPSAFE
+
+//  End of File

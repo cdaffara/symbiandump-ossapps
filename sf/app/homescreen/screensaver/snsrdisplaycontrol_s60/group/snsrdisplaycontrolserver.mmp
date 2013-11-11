@@ -1,0 +1,39 @@
+/*
+* Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Container for blank screen.
+*
+*/
+
+#include <platform_paths.hrh>
+
+TARGET          snsrdisplaycontrolserver.exe
+TARGETTYPE      EXE
+UID             0x1000008E 0x20031E00
+SECUREID        0x20031E00
+VENDORID        VID_DEFAULT
+
+CAPABILITY      ReadDeviceData WriteDeviceData PowerMgmt
+
+USERINCLUDE     ../inc
+APP_LAYER_SYSTEMINCLUDE
+
+SOURCEPATH      ../src
+SOURCE          snsrdisplaycontrolserver.cpp 
+SOURCE          snsrdisplaycontrolsession.cpp
+
+LIBRARY         euser.lib
+LIBRARY         power_save_display_mode.lib
+LIBRARY         hal.lib
+
+SMPSAFE

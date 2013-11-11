@@ -1,0 +1,32 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+#ifndef __T_PARSE_UTC_IMAP__
+#define __T_PARSE_UTC_IMAP__
+
+file=ABI_DIR\BUILD_DIR\T_ImapParseUtcServer.exe	System\bin\T_ImapParseUtcServer.exe
+
+data=EPOCROOT##Epoc32\winscw\c\msgtest\imap\T_PARSE_UTC_IMAP.script msgtest\imap\T_PARSE_UTC_IMAP.script
+data=EPOCROOT##Epoc32\winscw\c\msgtest\imap\multipleReceived.txt msgtest\imap\multipleReceived.txt
+data=EPOCROOT##Epoc32\winscw\c\msgtest\imap\NoReceived.txt msgtest\imap\NoReceived.txt
+data=EPOCROOT##Epoc32\winscw\c\msgtest\imap\noReceivednoDate.txt msgtest\imap\noReceivednoDate.txt
+data=EPOCROOT##Epoc32\winscw\c\msgtest\imap\EmbeddedMsg.txt msgtest\imap\EmbeddedMsg.txt
+data=EPOCROOT##Epoc32\winscw\c\msgtest\imap\EmbeddedMsgNoReceived.txt msgtest\imap\EmbeddedMsgNoReceived.txt
+data=EPOCROOT##Epoc32\winscw\c\msgtest\imap\EmbeddedMsgNoReceivedNoDate.txt msgtest\imap\EmbeddedMsgNoReceivedNoDate.txt
+data=EPOCROOT##Epoc32\winscw\c\msgtest\imap\ImapUTCTest.ini msgtest\imap\ImapUTCTest.ini
+
+#endif

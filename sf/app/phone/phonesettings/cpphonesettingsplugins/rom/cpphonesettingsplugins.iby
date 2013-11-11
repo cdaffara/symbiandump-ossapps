@@ -1,0 +1,45 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+#ifndef __PHONESETTINGSPLUGINS_IBY__
+#define __PHONESETTINGSPLUGINS_IBY__
+
+#include <bldvariant.hrh>
+
+file=ABI_DIR/BUILD_DIR/cptelephonyutils.dll             SHARED_LIB_DIR/cptelephonyutils.dll
+file=ABI_DIR/BUILD_DIR/cptelephonyplugin.dll            SHARED_LIB_DIR/cptelephonyplugin.dll
+file=ABI_DIR/BUILD_DIR/cpcallsplugin.dll                SHARED_LIB_DIR/cpcallsplugin.dll
+file=ABI_DIR/BUILD_DIR/cpnetworkplugin.dll              SHARED_LIB_DIR/cpnetworkplugin.dll
+file=ABI_DIR/BUILD_DIR/cpdivertplugin.dll               SHARED_LIB_DIR/cpdivertplugin.dll
+file=ABI_DIR/BUILD_DIR/cpbarringplugin.dll              SHARED_LIB_DIR/cpbarringplugin.dll
+
+
+data=DATAZ_/resource/qt/plugins/controlpanel/cptelephonyplugin.qtplugin          resource/qt/plugins/controlpanel/cptelephonyplugin.qtplugin
+data=DATAZ_/resource/qt/plugins/controlpanel/cpcallsplugin.qtplugin              resource/qt/plugins/controlpanel/cpcallsplugin.qtplugin
+data=DATAZ_/resource/qt/plugins/controlpanel/cpnetworkplugin.qtplugin            resource/qt/plugins/controlpanel/cpnetworkplugin.qtplugin
+data=DATAZ_/resource/qt/plugins/controlpanel/cpdivertplugin.qtplugin             resource/qt/plugins/controlpanel/cpdivertplugin.qtplugin
+data=DATAZ_/resource/qt/plugins/controlpanel/cpbarringplugin.qtplugin            resource/qt/plugins/controlpanel/cpbarringplugin.qtplugin
+
+// SIS stubs
+data=ZSYSTEM\install\cpbarringplugin_stub.sis           System\Install\cpbarringplugin_stub.sis
+data=ZSYSTEM\install\cpcallsplugin_stub.sis             System\Install\cpcallsplugin_stub.sis
+data=ZSYSTEM\install\cpnetworkplugin_stub.sis           System\Install\cpnetworkplugin_stub.sis
+data=ZSYSTEM\install\cptelephonyutils_stub.sis          System\Install\cptelephonyutils_stub.sis
+data=ZSYSTEM\install\cpdivertplugin_stub.sis            System\Install\cpdivertplugin_stub.sis
+data=ZSYSTEM\install\cptelephonyplugin_stub.sis         System\Install\cptelephonyplugin_stub.sis
+
+#endif

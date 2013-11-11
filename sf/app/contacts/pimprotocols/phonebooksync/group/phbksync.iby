@@ -1,0 +1,26 @@
+// Copyright (c) 2002-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+#ifndef __PHBKSYNC_IBY__
+#define __PHBKSYNC_IBY__
+
+#include <etelsat.iby>
+
+ECOM_PLUGIN(phbksyncplugin.dll,1020428C.rsc)
+
+file=ABI_DIR\DEBUG_DIR\phbksyncsvr.dll     SYSTEM_BINDIR\phbksyncsvr.dll
+file=ABI_DIR\DEBUG_DIR\phbksyncsvrexe.exe  system\programs\phbksyncsvrexe.exe
+
+#endif

@@ -1,0 +1,180 @@
+/*
+* Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: 
+*
+*/
+
+
+
+
+#ifndef __CREATOR_HRH__
+#define __CREATOR_HRH__
+
+
+enum TCreatorIds
+    {
+
+    // Phonebook entries shuld be the first, bacause some other entries references them
+    ECmdCreatePhoneBookEntries = 1,
+    ECmdCreatePhoneBookEntryContacts,
+    ECmdCreatePhoneBookEntryGroups,
+    ECmdCreatePhoneBookEntrySubscribedContacts,
+    
+    ECmdCreateFromFile,
+
+    ECmdCreateCalendarEntries,
+    ECmdCreateCalendarEntryAppointments,
+    ECmdCreateCalendarEntryEvents,
+    ECmdCreateCalendarEntryAnniversaries,
+    ECmdCreateCalendarEntryToDos,
+    ECmdCreateCalendarEntryReminders,
+
+    ECmdCreateBrowserEntries,
+    ECmdCreateBrowserBookmarkEntries,
+    ECmdCreateBrowserBookmarkFolderEntries,
+    ECmdCreateBrowserSavedPageEntries,
+    ECmdCreateBrowserSavedPageFolderEntries,
+
+    ECmdCreateFileEntries,
+    ECmdCreateFileEntryEmptyFolder,
+
+    ECmdCreateFileEntry3GPP_70kB,
+    ECmdCreateFileEntryAAC_100kB,
+    ECmdCreateFileEntryAMR_20kB,
+    ECmdCreateFileEntryBMP_25kB,
+    ECmdCreateFileEntryDeck_1kB,
+    ECmdCreateFileEntryDOC_20kB,
+    ECmdCreateFileEntryGIF_2kB,
+    ECmdCreateFileEntryHTML_20kB,
+    ECmdCreateFileEntryJAD_1kB,
+    ECmdCreateFileEntryJAR_10kB,
+    ECmdCreateFileEntryJP2_65kB,
+    ECmdCreateFileEntryJPEG_200kB,
+    ECmdCreateFileEntryJPEG_25kB,
+    ECmdCreateFileEntryJPEG_500kB,
+    ECmdCreateFileEntryMIDI_10kB,
+    ECmdCreateFileEntryMP3_250kB,
+    ECmdCreateFileEntryMP4_200kB,
+    ECmdCreateFileEntryMXMF_40kB,
+    ECmdCreateFileEntryPNG_15kB,
+    ECmdCreateFileEntryPPT_40kB,
+    ECmdCreateFileEntryRAM_1kB,
+    ECmdCreateFileEntryRM_95kB,
+    ECmdCreateFileEntryRNG_1kB,
+    ECmdCreateFileEntrySVG_15kB,
+    ECmdCreateFileEntrySWF_15kB,
+    ECmdCreateFileEntryTIF_25kB,
+    ECmdCreateFileEntryTXT_10kB,
+    ECmdCreateFileEntryTXT_70kB,
+    ECmdCreateFileEntryVCF_1kB,
+    ECmdCreateFileEntryVCS_1kB,
+    ECmdCreateFileEntryWAV_20kB,
+    ECmdCreateFileEntryXLS_15kB,
+    ECmdCreateFileEntrySISX_10kB,
+    ECmdCreateFileEntryWMA_50kB,
+    ECmdCreateFileEntryWMV_200kB,
+
+    ECmdCreateLogEntries,
+    ECmdCreateLogEntryMissedCalls,
+    ECmdCreateLogEntryReceivedCalls,
+    ECmdCreateLogEntryDialledNumbers,
+
+    ECmdCreateMessagingEntries,
+    ECmdCreateMessagingEntryCBSTopics,
+    ECmdCreateMessagingEntryDocumentsFolders,
+    ECmdCreateMessagingEntrySMSMessageCenters,
+    ECmdCreateMessagingEntryMailboxes,
+    ECmdCreateMessagingEntryMessages,
+    ECmdCreateMessagingEntryMessagesViaScript,
+    ECmdCreateMessagingEntryTemplates,
+
+    ECmdCreateRandomEntrySMSInbox,
+    ECmdCreateRandomEntrySMSDrafts,
+    ECmdCreateRandomEntrySMSOutbox,
+    ECmdCreateRandomEntrySMSSent,
+    ECmdCreateRandomEntryMMSInbox,
+    ECmdCreateRandomEntryMMSDrafts,
+    ECmdCreateRandomEntryMMSOutbox,
+    ECmdCreateRandomEntryMMSSent,
+    ECmdCreateRandomEntryAMSInbox,
+    ECmdCreateRandomEntryAMSDrafts,
+    ECmdCreateRandomEntryAMSOutbox,
+    ECmdCreateRandomEntryAMSSent,
+    ECmdCreateRandomEntryEmailInbox,
+    ECmdCreateRandomEntryEmailDrafts,
+    ECmdCreateRandomEntryEmailOutbox,
+    ECmdCreateRandomEntryEmailSent,
+    ECmdCreateRandomEntryBIOInbox,
+    ECmdCreateRandomEntryBIODrafts,
+    ECmdCreateRandomEntryBIOOutbox,
+    ECmdCreateRandomEntryBIOSent,
+    ECmdCreateRandomEntryIRInbox,
+    ECmdCreateRandomEntryIRDrafts,
+    ECmdCreateRandomEntryIROutbox,
+    ECmdCreateRandomEntryIRSent,
+    ECmdCreateRandomEntryBTInbox,
+    ECmdCreateRandomEntryBTDrafts,
+    ECmdCreateRandomEntryBTOutbox,
+    ECmdCreateRandomEntryBTSent,
+
+    ECmdCreateMiscEntries,
+    ECmdCreateMiscEntryAccessPoints,
+    ECmdCreateMiscEntryAppMenuFolders,
+    ECmdCreateMiscEntryIMPSServers,
+    ECmdCreateMiscEntryNotes,
+    ECmdCreateMiscEntrySyncSettings,
+    ECmdCreateMiscEntryLandmarks,
+
+    ECmdDeleteEntries,
+    ECmdDeleteAllEntries,
+    ECmdDeleteAllCreatorEntries,
+    ECmdDeleteContacts,
+    ECmdDeleteCreatorContacts,
+    ECmdDeleteContactGroups,
+    ECmdDeleteCreatorContactGroups,
+    ECmdDeleteCalendarEntries,
+    ECmdDeleteCreatorCalendarEntries,
+    ECmdDeleteBrowserBookmarks,
+    ECmdDeleteCreatorBrowserBookmarks,
+    ECmdDeleteBrowserBookmarkFolders,
+    ECmdDeleteCreatorBrowserBookmarkFolders,
+    ECmdDeleteBrowserSavedPages,
+    ECmdDeleteCreatorBrowserSavedPages,
+    ECmdDeleteBrowserSavedPageFolders,
+    ECmdDeleteCreatorBrowserSavedPageFolders,
+    ECmdDeleteCreatorFiles,
+    ECmdDeleteLogs,
+    ECmdDeleteCreatorLogs,
+    ECmdDeleteMessages,
+    ECmdDeleteCreatorMessages,
+    ECmdDeleteMailboxes,
+    ECmdDeleteCreatorMailboxes,
+    ECmdDeleteIAPs,
+    ECmdDeleteCreatorIAPs,
+    ECmdDeleteIMPSs,
+    ECmdDeleteCreatorIMPSs,
+    ECmdDeleteNotes,
+    // ECmdDeleteCreatorNotes, not supported
+    ECmdDeleteLandmarks,
+    ECmdDeleteCreatorLandmarks,
+
+    ECmdAboutCreator,
+
+    ECmdSelectRandomDataFile,
+
+    EProgressNote
+
+    };
+
+#endif // __CREATOR_HRH__

@@ -1,0 +1,39 @@
+/*
+* Copyright (c) 2006-2007 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  A header file for both the C++ compiler and the resource compiler.
+*
+*/
+
+
+
+#ifndef SILENCEACTIONPLUGINCONST_HRH
+#define SILENCEACTIONPLUGINCONST_HRH
+
+
+// Plug-in specific UIDs (ECom)
+#define KSilenceActionPluginDllUid 0x10282E76
+#define KSilenceActionPluginImplementationUid 0x10282E77
+
+/**
+* Defines that logging of plugin is enabled.
+*/
+#undef LOGGING_ENABLED
+
+/**
+* Defines current logging mode in a file.
+* Otherwise RDebug is used.
+*/
+#undef LOGGING_MODE_FILE
+
+#endif // SILENCEACTIONPLUGINCONST_HRH

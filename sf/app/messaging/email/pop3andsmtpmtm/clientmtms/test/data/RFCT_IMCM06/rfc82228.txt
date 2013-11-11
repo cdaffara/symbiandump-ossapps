@@ -1,0 +1,65 @@
+Return-Path: <owain@orees.freeserve.co.uk>
+Received: from mwinf3214.me.freeserve.com (mwinf3214.me.freeserve.com)
+	by mwinb3005 (SMTP Server) with LMTP; Thu, 17 Feb 2005 11:23:40 +0100
+X-Sieve: Server Sieve 2.2
+Received: by mwinf3214.me.freeserve.com (SMTP Server, from userid 1003)
+	id 4A97C18001BD; Thu, 17 Feb 2005 11:23:40 +0100 (CET)
+Received: from smtp01.symbian.com (smtp01.symbian.com [206.165.101.41])
+	by mwinf3214.me.freeserve.com (SMTP Server) with ESMTP id 25C9118001B5
+	for <owain@orees.freeserve.co.uk>; Thu, 17 Feb 2005 11:23:40 +0100 (CET)
+Received: from ([10.23.58.99])
+	by smtp01.symbian.com with ESMTP  id KP-GCN69.6734390;
+	Thu, 17 Feb 2005 10:22:44  0000
+Received: from LONMESSPOOL04 ([10.23.163.11])
+          by lonnotes03.symbian.intra (Lotus Domino 653HF214)
+          with ESMTP id 2005021710224347-25795 ;
+          Thu, 17 Feb 2005 10:22:43 +0000 
+From: "Freeserve" <owain@orees.freeserve.co.uk>
+To: <owain@orees.freeserve.co.uk>
+Subject: FS Outlook to FS Mozilla
+Date: Thu, 17 Feb 2005 10:22:42 -0000
+Message-ID: <000001c514da$9df0fed0$0ba3170a@LONMESSPOOL04>
+MIME-Version: 1.0
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.6626
+Importance: Normal
+X-MimeOLE: Produced By Microsoft MimeOLE V5.50.4942.400
+X-MIMETrack: Itemize by SMTP Server on SymbianUK03/Symbian(653HF214|December 28, 2004) at
+ 17/02/2005 10:22:43,
+	Serialize by Router on LONMAILHUB01/LON/H/Symbian(653HF214|December 28, 2004) at
+ 17/02/2005 10:22:44,
+	Serialize complete at 17/02/2005 10:22:44
+Content-Transfer-Encoding: 7bit
+Content-Type: text/calendar; method=REQUEST;
+	charset="utf-8"
+Envelope-to: owain@orees.freeserve.co.uk
+X-me-spamlevel: not-spam
+X-me-spamrating: 10.041354
+
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 10.0 MIMEDIR//EN
+VERSION:2.0
+METHOD:REQUEST
+BEGIN:VEVENT
+ATTENDEE;CN=owain@orees.freeserve.co.uk;ROLE=REQ-PARTICIPANT;RSVP=TRUE:MAILTO:owain@orees.freeserve.co.uk
+ORGANIZER:MAILTO:owain@orees.freeserve.co.uk
+DTSTART:20050220T160000Z
+DTEND:20050220T163000Z
+TRANSP:OPAQUE
+SEQUENCE:0
+UID:040000008200E00074C5B7101A82E0080000000030B97C9DDA14C5010000000000000000100
+ 00000DE05E43A871B564C8186B8DE39B40F19
+DTSTAMP:20050217T102242Z
+DESCRIPTION:When: 20 February 2005 16:00-16:30 (GMT) Greenwich Mean Time :
+  Dublin\, Edinburgh\, Lisbon\, London.\n\n*~*~*~*~*~*~*~*~*~*\n\n\n
+SUMMARY:FS Outlook to FS Mozilla
+PRIORITY:5
+CLASS:PUBLIC
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+END:VCALENDAR

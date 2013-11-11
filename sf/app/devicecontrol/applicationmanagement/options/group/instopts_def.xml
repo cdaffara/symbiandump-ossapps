@@ -1,0 +1,124 @@
+<instoptexamples>
+<!-- 
+Each option can be left out (by commenting it away or removing). 
+The start tag above is only to make this file viewable using IE etc browsers.
+
+Empty or illegal (unknown) attribute values are interpreted as "no" was chosen 
+and installation will not be completed.
+
+-->
+
+<InstOpts>
+ <!-- 
+ value: Installation drive letter 
+ Special value: '!' uses any drive having enough space. 
+ -->
+ <StdOpt name="drive" value="e"/> 
+ 
+ <!-- ISO language code
+ Special value: '*' uses phone's default language 
+ -->   	
+ <StdOpt name="lang" value="FI" /> 
+ 
+ <!--	
+  Name: upgrade
+  Possible Values: yes | no 
+  Description: Tells what is answered to "Application exists, do you want to upgrade?" like question.
+  -->
+ <StdOpt name="upgrade" value="yes"/>
+ 
+ <!--	
+  Description: Kill existing application if running.
+  Possible Values: yes | no 
+  -->
+ <StdOpt name="kill" value="yes"/> 
+ 
+ <!--	
+  Description: Response to package info dialog. It also sets policy to
+  handle all other warnings than ocsp, and FileTexts and possible questions
+  in the package. 
+  Possible Values: yes | no 
+  -->
+ <StdSymOpt name="pkginfo" value="yes"/> 
+ 
+ <!--	
+  Description: Response to options dialog. 
+  This either selects all or none options.
+  Possible Values: yes | no 
+  -->
+ <StdSymOpt name="optionals" value="yes"/>  
+
+ <!--	
+  Description: Response to "grant capabilities" dialog.
+  Possible Values: yes | no 
+  NOTE: This has been commented out as an example. If now
+  	content package needs to be granted some capabilities,
+  	installation will fail because of missing option.
+  -->
+ <!-- <StdSymOpt name="capabilities" value="yes"/> --> 
+ 
+ <!--	
+  Description: Response to install untrusted application dialog.
+  Possible Values: yes | no
+  -->
+ <StdSymOpt name="untrusted" value="yes"/> 
+  
+  <!--	
+  Description: Determines whether OCSP check will be done automatically.
+  Possible Values: yes | no 
+  -->
+ <StdSymOpt name="ocsp" value="yes"/> 
+ 
+  <!--	
+  Description: Determines whether OCSP warnings will ignored automatically.
+  Possible Values: yes | no 
+  -->
+ <StdSymOpt name="ignoreocspwarn" value="yes"/> 
+ 
+  <!--	
+  Description: Determines whether files will be overwritten automatically,
+  if the file exists.
+  Possible Values: yes | no
+  -->
+ <StdSymOpt name="fileoverwrite" value="yes"/> 
+
+
+  <!--	
+  Description: Determines whether RMS data will be updated
+  in midlet (java) install.
+  Possible Values: yes | no 
+  -->
+ <StdSymOpt name="upgradedata" value="no"/>
+ 
+
+ <!-- Download username  -->
+ <StdOpt name="httpusername" value="username"/>
+  <!-- Download password  -->
+ <StdOpt name="httppassword" value="password"/>
+  <!-- Allow download 
+ Possible Values: yes | no  -->
+ <StdOpt name="download" value="yes"/>
+  <!-- 
+  Direct DM tree reference 
+ <StdOpt name="conref" value="./AP/APId011"/>
+-->
+</InstOpts>
+ 
+<UninstOpts>
+<!--	
+  Description: Kill existing application if running.
+  Possible Values: yes | no 
+  -->
+ <StdOpt name="kill" value="yes"/> 
+ 
+ <!--	
+  Description: Determines whether we should continue uninstall if any
+  of the component's dependendants still exist in device
+  Possible Values: yes | no 
+  -->
+ <StdSymOpt name="allowdependencybreak" value="yes"/> 
+ 
+ 
+</UninstOpts>
+
+</instoptexamples>

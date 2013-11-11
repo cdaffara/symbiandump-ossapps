@@ -1,0 +1,36 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:  Offers message creation and sending services.
+;
+;
+
+
+
+; Language
+&EN
+
+; SIS header: name, uid, version
+#{"testshareui"},(0x2002DD18),1,0,0, TYPE = SA,RU
+
+; Localised Vendor name
+%{"Nokia"}
+
+; Unique Vendor name
+:"Nokia"
+
+; Executable and default resource files
+"/epoc32/release/armv5/urel/testshareui.exe"    - "!:\sys\bin\testshareui.exe",FR,RI
+"/epoc32/data/z/resource/apps/testshareui.rsc"    - "!:\resource\apps\testshareui.rsc"
+"/epoc32/data/z/private/10003a3f/import/apps/testshareui_reg.rsc"    - "!:\private\10003a3f\import\apps\testshareui_reg.rsc"
+;"/epoc32/data/z/resource/apps/0x2002DD18.mif"    - "!:\resource\apps\0x2002DD18.mif"

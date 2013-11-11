@@ -1,0 +1,129 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+#ifndef __CALINTERIMAPITEST_IBY__
+#define __CALINTERIMAPITEST_IBY__
+
+#include <CoreAppsTest.iby>
+
+REM Calendar Interim API Model testcode
+
+file=ABI_DIR\BUILD_DIR\TCAL_ALARM.EXE		System\Programs\CalInterimAPITest\TCAL_ALARM.EXE
+file=ABI_DIR\BUILD_DIR\TCAL_alarmattach.EXE	System\Programs\CalInterimAPITest\TCAL_alarmattach.EXE
+file=ABI_DIR\BUILD_DIR\TCAL_attach.EXE		System\Programs\CalInterimAPITest\TCAL_attach.EXE
+file=ABI_DIR\BUILD_DIR\TCAL_ATTENDEE.EXE	System\Programs\CalInterimAPITest\TCAL_ATTENDEE.EXE
+file=ABI_DIR\BUILD_DIR\TCAL_CATEGORY.EXE	System\Programs\CalInterimAPITest\TCAL_CATEGORY.EXE
+file=ABI_DIR\BUILD_DIR\TCAL_DATAEXCHANGE.EXE	System\Programs\CalInterimAPITest\TCAL_DATAEXCHANGE.EXE
+file=ABI_DIR\BUILD_DIR\TCAL_datasync.EXE	System\Programs\CalInterimAPITest\TCAL_datasync.EXE
+file=ABI_DIR\BUILD_DIR\TCAL_dc.EXE		System\Programs\CalInterimAPITest\TCAL_dc.EXE
+file=ABI_DIR\BUILD_DIR\TCAL_DELETE.EXE		System\Programs\CalInterimAPITest\TCAL_DELETE.EXE
+file=ABI_DIR\BUILD_DIR\TCAL_ENTRYATTRIBUTES.EXE	System\Programs\CalInterimAPITest\TCAL_ENTRYATTRIBUTES.EXE
+file=ABI_DIR\BUILD_DIR\TCAL_FILEACCESS.EXE	System\Programs\CalInterimAPITest\TCAL_FILEACCESS.EXE
+file=ABI_DIR\BUILD_DIR\TCAL_GSENTRY.EXE		System\Programs\CalInterimAPITest\TCAL_GSENTRY.EXE
+file=ABI_DIR\BUILD_DIR\TCAL_INSTANCE.EXE	System\Programs\CalInterimAPITest\TCAL_INSTANCE.EXE
+file=ABI_DIR\BUILD_DIR\TCAL_ITERATOR.EXE	System\Programs\CalInterimAPITest\TCAL_ITERATOR.EXE
+file=ABI_DIR\BUILD_DIR\TCAL_INSTANCEITERATOR.EXE	System\Programs\CalInterimAPITest\TCAL_INSTANCEITERATOR.EXE
+file=ABI_DIR\BUILD_DIR\TCAL_INSTANCEITERATOR_ALL.EXE	System\Programs\CalInterimAPITest\TCAL_INSTANCEITERATOR_ALL.EXE
+file=ABI_DIR\BUILD_DIR\TCAL_INSTANCEITERATOR_UID.EXE	System\Programs\CalInterimAPITest\TCAL_INSTANCEITERATOR_UID.EXE
+file=ABI_DIR\BUILD_DIR\TCAL_INSTANCEITERATOR_PERFORMANCE.EXE	System\Programs\CalInterimAPITest\TCAL_INSTANCEITERATOR_PERFORMANCE.EXE
+file=ABI_DIR\BUILD_DIR\tcal_sortedinstanceiterator.exe		System\Programs\CalInterimAPITest\tcal_sortedinstanceiterator.exe
+file=ABI_DIR\BUILD_DIR\TCAL_FETCHINSTANCE.EXE	System\Programs\CalInterimAPITest\TCAL_FETCHINSTANCE.EXE
+file=ABI_DIR\BUILD_DIR\TCAL_COMPACT.EXE		System\Programs\CalInterimAPITest\TCAL_COMPACT.EXE
+file=ABI_DIR\BUILD_DIR\TCAL_multi_threads_access.exe	System\Programs\CalInterimAPITest\TCAL_multi_threads_access.exe
+file=ABI_DIR\BUILD_DIR\TCAL_NOTIFICATION.EXE	System\Programs\CalInterimAPITest\TCAL_NOTIFICATION.EXE
+file=ABI_DIR\BUILD_DIR\TCAL_observer.EXE	System\Programs\CalInterimAPITest\TCAL_observer.EXE
+file=ABI_DIR\BUILD_DIR\TCAL_pubsubnotification.EXE	System\Programs\CalInterimAPITest\TCAL_pubsubnotification.EXE
+file=ABI_DIR\BUILD_DIR\TCAL_QUEUEALARMONSTARTUP.EXE	System\Programs\CalInterimAPITest\TCAL_QUEUEALARMONSTARTUP.EXE
+file=ABI_DIR\BUILD_DIR\TCAL_recur.EXE		System\Programs\CalInterimAPITest\TCAL_recur.EXE
+file=ABI_DIR\BUILD_DIR\TCAL_removable_media.EXE	System\Programs\CalInterimAPITest\TCAL_removable_media.EXE
+file=ABI_DIR\BUILD_DIR\TCAL_RPTRULES.EXE	System\Programs\CalInterimAPITest\TCAL_RPTRULES.EXE
+file=ABI_DIR\BUILD_DIR\TCAL_startup_performance.EXE	System\Programs\CalInterimAPITest\TCAL_startup_performance.EXE
+file=ABI_DIR\BUILD_DIR\TCAL_TZ.EXE		System\Programs\CalInterimAPITest\TCAL_TZ.EXE
+file=ABI_DIR\BUILD_DIR\TCAL_tz_instance.EXE	System\Programs\CalInterimAPITest\TCAL_tz_instance.EXE
+file=ABI_DIR\BUILD_DIR\tcal_undatedtodo.EXE	System\Programs\CalInterimAPITest\tcal_undatedtodo.EXE
+file=ABI_DIR\BUILD_DIR\t_recurrence.exe		System\Programs\CalInterimAPITest\t_recurrence.exe
+file=ABI_DIR\BUILD_DIR\t_testcopy.exe		System\Programs\CalInterimAPITest\t_testcopy.exe
+file=ABI_DIR\BUILD_DIR\t_utc_conversions.exe	System\Programs\CalInterimAPITest\t_utc_conversions.exe
+file=ABI_DIR\BUILD_DIR\t_vcal_tz_rules.exe	System\Programs\CalInterimAPITest\t_vcal_tz_rules.exe
+file=ABI_DIR\BUILD_DIR\t_vcal2.exe		System\Programs\CalInterimAPITest\t_vcal2.exe
+file=ABI_DIR\BUILD_DIR\t_vcal3.exe		System\Programs\CalInterimAPITest\t_vcal3.exe
+file=ABI_DIR\BUILD_DIR\t_vcal4.exe		System\Programs\CalInterimAPITest\t_vcal4.exe
+file=ABI_DIR\BUILD_DIR\t_vcal5oom.exe		System\Programs\CalInterimAPITest\t_vcal5oom.exe
+file=ABI_DIR\BUILD_DIR\tfailadd.exe		System\Programs\CalInterimAPITest\tfailadd.exe
+file=ABI_DIR\BUILD_DIR\tfaildel.exe		System\Programs\CalInterimAPITest\tfaildel.exe
+file=ABI_DIR\BUILD_DIR\toomadd.exe		System\Programs\CalInterimAPITest\toomadd.exe
+file=ABI_DIR\BUILD_DIR\toomfet.exe		System\Programs\CalInterimAPITest\toomfet.exe
+file=ABI_DIR\BUILD_DIR\toomupd.exe		System\Programs\CalInterimAPITest\toomupd.exe
+file=ABI_DIR\BUILD_DIR\toomdel.exe		System\Programs\CalInterimAPITest\toomdel.exe
+file=ABI_DIR\BUILD_DIR\TCAL_OOMFIND.EXE        	System\Programs\CalInterimAPITest\TCAL_OOMFIND.EXE
+file=ABI_DIR\BUILD_DIR\tcal_finddaywithinstance.EXE        	System\Programs\CalInterimAPITest\tcal_finddaywithinstance.EXE
+file=ABI_DIR\BUILD_DIR\tcal_servershutdown.exe  System\Programs\CalInterimAPITest\tcal_servershutdown.exe
+file=ABI_DIR\BUILD_DIR\tcal_filesize.exe  System\Programs\CalInterimAPITest\tcal_filesize.exe
+file=ABI_DIR\BUILD_DIR\tcal_tz_basic.exe  System\Programs\CalInterimAPITest\tcal_tz_basic.exe
+file=ABI_DIR\BUILD_DIR\tcal_tzdbchange.exe  System\Programs\CalInterimAPITest\tcal_tzdbchange.exe
+file=ABI_DIR\BUILD_DIR\tcal_multiplefiles.exe  System\Programs\CalInterimAPITest\tcal_multiplefiles.exe
+file=ABI_DIR\BUILD_DIR\tcal_backuprestore.exe  System\Programs\CalInterimAPITest\tcal_backuprestore.exe
+file=ABI_DIR\BUILD_DIR\tcal_calendarinfo.exe  System\Programs\CalInterimAPITest\tcal_calendarinfo.exe
+file=ABI_DIR\BUILD_DIR\tcal_filechangenotification.exe  System\Programs\CalInterimAPITest\tcal_filechangenotification.exe
+
+data=DATAZ_\private\10003a5b\tcal_dc_81		private\10003a5b\tcal_dc_81
+data=DATAZ_\private\10003a5b\tcal_dc_91		private\10003a5b\tcal_dc_91
+data=DATAZ_\private\10003a5b\tcal_dc_92		private\10003a5b\tcal_dc_92
+data=DATAZ_\private\10003a5b\tcal_dc_94		private\10003a5b\tcal_dc_94
+data=DATAZ_\private\10003a5b\tcal_dc_95		private\10003a5b\tcal_dc_95
+data=DATAZ_\private\10003a5b\tcal_dc_91_1200	private\10003a5b\tcal_dc_91_1200
+data=DATAZ_\private\10003a5b\tcal_dc_92_corrupt	private\10003a5b\tcal_dc_92_corrupt
+data=DATAZ_\private\10003a5b\tcal_dc_92_CalFile_Clean		private\10003a5b\tcal_dc_92_CalFile_Clean
+data=DATAZ_\private\10003a5b\tcal_dc_92_CalFile_EntriesAdded	private\10003a5b\tcal_dc_92_CalFile_EntriesAdded
+data=DATAZ_\private\10003a5b\tcal_dc_91_CalFile_Clean		private\10003a5b\tcal_dc_91_CalFile_Clean
+data=DATAZ_\private\10003a5b\tcal_dc_91_CalFile_EntriesAdded	private\10003a5b\tcal_dc_91_CalFile_EntriesAdded
+data=DATAZ_\private\10003a5b\tcal_delete_calendar		private\10003a5b\tcal_delete_calendar
+
+
+data=DATAZ_\calendar_attachments\tcal_attach.jpg 	calendar_attachments\tcal_attach.jpg
+data=DATAZ_\calendar_attachments\tcal_attach2.jpg 	calendar_attachments\tcal_attach2.jpg
+data=DATAZ_\calendar_attachments\tcal_attach3.txt 	calendar_attachments\tcal_attach3.txt
+data=DATAZ_\calendar_attachments\tcal_attach4.doc 	calendar_attachments\tcal_attach4.doc
+data=DATAZ_\calendar_attachments\tcal_attach5.bmp 	calendar_attachments\tcal_attach5.bmp
+data=DATAZ_\calendar_attachments\tcal_attach6.gif 	calendar_attachments\tcal_attach6.gif
+data=DATAZ_\calendar_attachments\tcal_attach7.xls 	calendar_attachments\tcal_attach7.xls
+
+file=ABI_DIR\BUILD_DIR\CALTESTLIB.DLL		System\Libs\CALTESTLIB.DLL
+
+data=DATAC_\LongUTFuid.vcs	LongUTFuid.vcs
+data=DATAC_\NewExportLongUID.vcs	NewExportLongUID.vcs
+
+data=DATAZ_\TestCalAttachments\longtail1.jpg           TestCalAttachments\longtail1.jpg
+data=DATAZ_\TestCalAttachments\attach1.jpg             TestCalAttachments\attach1.jpg
+data=DATAZ_\TestCalAttachments\tcal_attach6.gif        TestCalAttachments\tcal_attach6.gif
+data=DATAZ_\TestCalAttachments\tcal_attach4.doc        TestCalAttachments\tcal_attach4.doc
+data=DATAZ_\TestCalAttachments\tcal_attach7.xls        TestCalAttachments\tcal_attach7.xls
+data=DATAZ_\TestCalAttachments\attachment_test1.txt    TestCalAttachments\attachment_test1.txt
+data=DATAZ_\TestCalAttachments\attachment_test2.txt    TestCalAttachments\attachment_test2.txt
+data=DATAZ_\TestCalAttachments\attachment_test3.txt    TestCalAttachments\attachment_test3.txt
+data=DATAZ_\TestCalAttachments\tcal_attach5.bmp        TestCalAttachments\tcal_attach5.bmp
+data=DATAZ_\TestCalAttachments\tail.jpg                TestCalAttachments\tail.jpg
+data=DATAZ_\TestCalAttachments\doll.jpg                TestCalAttachments\doll.jpg
+data=DATAZ_\TestCalAttachments\attachBR.jpg            TestCalAttachments\attachBR.jpg
+data=DATAZ_\TestCalAttachments\tcal_attachment7.gif    TestCalAttachments\tcal_attachment7.gif
+
+data=DATAZ_\private\10003a5b\tcal_servershutdown_calfile	private\10003a5b\tcal_servershutdown_calfile
+data=DATAZ_\private\10003a5b\tcal_servershutdown_calfile_multi_file	private\10003a5b\tcal_servershutdown_calfile_multi_file
+data=DATAZ_\private\10003a5b\tcal_servershutdown_calfile_v91	private\10003a5b\tcal_servershutdown_calfile_v91
+data=DATAZ_\private\10202be9\10003a5b.txt						private\10202be9\10003a5b.txt
+data=DATAZ_\tzdb.dbz											tzdb.dbz
+
+#endif // __CALINTERIMAPITEST_IBY__

@@ -1,0 +1,28 @@
+<hbwidget type="RadioCarouselItem" version="0.1">
+    <layout name="default" type="mesh">
+        <meshitem src="name_label" srcEdge="TOP" dst="genre_label" dstEdge="BOTTOM" />
+
+        <meshitem src="genre_label" srcEdge="TOP" dst="" dstEdge="TOP" />
+        <meshitem src="genre_label" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+        <meshitem src="genre_label" srcEdge="LEFT" dst="star_button" dstEdge="RIGHT" />
+        <meshitem src="star_button" srcEdge="TOP" dst="" dstEdge="TOP" />
+        <meshitem src="star_button" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+
+        <meshitem src="name_label" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+        <meshitem src="name_label" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+
+        <meshitem src="rt_label" srcEdge="TOP" dst="" dstEdge="TOP" />
+        <meshitem src="rt_label" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+        <meshitem src="rt_label" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+        <meshitem src="rt_label" srcEdge="BOTTOM" dst="url_label" dstEdge="TOP" />
+
+        <meshitem src="url_label" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+        <meshitem src="url_label" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+        <meshitem src="url_label" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+
+        <meshitem src="favorite_touch_area" srcEdge="TOP" dst="star_button" dstEdge="TOP" />
+        <meshitem src="favorite_touch_area" srcEdge="LEFT" dst="star_button" dstEdge="LEFT" />
+        <meshitem src="favorite_touch_area" srcEdge="RIGHT" dst="star_button" dstEdge="RIGHT" />
+        <meshitem src="favorite_touch_area" srcEdge="BOTTOM" dst="star_button" dstEdge="BOTTOM" />
+    </layout>
+</hbwidget>

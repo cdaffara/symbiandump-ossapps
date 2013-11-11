@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service>
+    <name>mockstateplugins</name>
+    <filepath>mockstateplugins</filepath>
+    <description>Mocked Homescreen State Plugins</description>
+    <interface>
+        <name>com.nokia.homescreen.state.HsLoadSceneState</name>
+        <version>1.1</version>
+        <description>Mocked test implementation for homescreen's state</description>
+        <capabilities></capabilities>
+    </interface>
+    <interface>
+        <name>com.nokia.homescreen.state.HsIdleState</name>
+        <version>1.1</version>
+        <description>Mocked test implementation for homescreen's state</description>
+        <capabilities></capabilities>
+    </interface>
+    <interface>
+        <name>com.nokia.homescreen.state.HsAppLibraryState</name>
+        <version>1.1</version>
+        <description>Mocked test implementation for homescreen's state</description>
+        <capabilities></capabilities>
+    </interface>
+    <interface>
+        <name>com.nokia.homescreen.state.HsMenuWorkerState</name>
+        <version>1.1</version>
+        <description>Mocked test implementation for homescreen's state</description>
+        <capabilities></capabilities>
+    </interface>
+    <interface>
+        <name>com.nokia.homescreen.state.HsRootState</name>
+        <version>1.1</version>
+        <description>Mocked test implementation for homescreen's state</description>
+        <capabilities></capabilities>
+    </interface>
+    <interface>
+        <name>com.nokia.homescreen.state.HsBackupRestoreState</name>
+        <version>1.1</version>
+        <description>Mocked test implementation for homescreen's state</description>
+        <capabilities></capabilities>
+    </interface>
+</service>

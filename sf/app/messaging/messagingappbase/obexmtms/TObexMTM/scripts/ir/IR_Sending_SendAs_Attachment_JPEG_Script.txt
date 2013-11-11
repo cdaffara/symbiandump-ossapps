@@ -1,0 +1,24 @@
+// *****************************************
+//  OBEX SendAs Test Script
+//  This test is expected to succeed.
+// *****************************************
+
+[main]
+obex_client_test obex
+
+[obex]
+// remove the folder c\system\mail
+//clean_message_folder
+// select the transport type and create the service entry in the root
+obex_select_mtm ir
+select_root_folder
+create_service
+// create the message and set some message attributes
+sendas_create
+sendas_add_recipient "John Doe"
+sendas_set_subject "Who spilt my pint?"
+sendas_add_attachment "c:\msgtest\obexsmoke\mediaobjects\Photo.jpg"
+// save, validate then send the message
+sendas_save_message
+sendas_validate_message
+send_message succeed

@@ -1,0 +1,522 @@
+/*
+* Copyright (c) 2002-2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*
+*/
+
+
+//  RESOURCE IDENTIFIER
+NAME    IGPR // 4 letter ID
+
+//  INCLUDES
+
+#include <eikon.rh>
+#include <avkon.rsg>
+#include <avkon.rh>
+#include <avkon.hrh>
+#include <avkon.mbg>
+#include <avkon.loc>
+#include <AvkonIcons.hrh>
+#include <appinfo.rh>
+#include <data_caging_paths_strings.hrh>
+#include <btnotif.mbg>
+#include <imageprintapp.loc>
+
+#include "imageprintapp.hrh"
+
+//  Maximum and minimum number
+#define MIN_TINT_NAME -2147483646
+#define MAX_TINT_NAME 2147483647
+
+//  RESOURCE DEFINITIONS 
+
+RESOURCE RSS_SIGNATURE { }
+RESOURCE TBUF { buf="ImagePrint"; }
+
+/**
+ *  Application resource
+ */
+RESOURCE EIK_APP_INFO
+    {
+    menubar = r_settings_view_menubar;
+    cba = R_AVKON_SOFTKEYS_OPTIONS_BACK;
+    }
+
+/**
+ *  Main view resource
+ */
+RESOURCE AVKON_VIEW r_settings_view
+    {
+    menubar = r_settings_view_menubar;
+    cba = R_AVKON_SOFTKEYS_OPTIONS_BACK;
+    }
+
+RESOURCE AVKON_VIEW r_empty_view
+    {
+    menubar = R_AVKON_MENUPANE_EMPTY;
+    cba = R_AVKON_SOFTKEYS_EMPTY;
+    }
+
+/**
+ *  Main view menubar
+ */
+RESOURCE MENU_BAR r_settings_view_menubar
+    {
+    titles =
+        {
+        MENU_TITLE 
+            { 
+            menu_pane = r_profile_list_view_menu; 
+            txt = " ";  // Won't be visible, "Options" is shown
+            }
+        };
+    }
+
+/**
+ *  Main view menupane
+ */
+RESOURCE MENU_PANE r_profile_list_view_menu
+    {           
+    items =
+        {
+       MENU_ITEM
+            {
+            command = ESettingsChangeItem;
+            txt = qtn_print_settings_opt_change;
+            flags = EEikMenuItemAction;//Add for Single click event 
+            },
+        MENU_ITEM
+            {
+            command = ESettingsPrint;
+            txt = qtn_print_menu_opt_print;            
+            },
+        MENU_ITEM
+            {
+            command = ECmdPrintHelp;
+            txt = qtn_options_help;
+            },
+        MENU_ITEM
+            {
+            command = ESettingsExit;
+            txt = qtn_print_menu_opt_exit;
+            }
+        };
+    }
+
+RESOURCE LOCALISABLE_APP_INFO r_imageprintapp_localisable_app_info
+    {
+    caption_and_icon =
+        CAPTION_AND_ICON_INFO
+            {
+            caption = qtn_app_caption_string;
+            number_of_icons = 1;
+            icon_file = APP_BITMAP_DIR"\\imageprintapp_aif.mif";   
+        };
+    }
+
+/** 
+ *  Dialog resource for print progress note 
+ */
+RESOURCE DIALOG r_print_progress_prog_note
+    {
+    flags = EAknProgressNoteFlags;
+    buttons = R_AVKON_SOFTKEYS_CANCEL;
+    items =
+        {
+        DLG_LINE
+            {
+            type = EBitmapCtrl;
+            id = EBrandingBitmap;   
+            },        
+        DLG_LINE
+            {
+            type = EAknCtNote;
+            id = EPrintWaitNote;
+            control = AVERELL_NOTE
+                {
+                layout = EProgressLayout;
+                singular_label = qtn_print_progress_prompt;
+                imagefile = AVKON_ICON_FILE;
+                imageid = EMbmAvkonQgn_note_progress;
+                imagemask = EMbmAvkonQgn_note_progress_mask;                
+                };
+            }
+        };
+    }
+
+/** 
+ *  Dialog resource for plain print progress note 
+ */
+RESOURCE DIALOG r_print_progress_plain_prog_note
+    {
+    flags = EAknProgressNoteFlags;
+    buttons = R_AVKON_SOFTKEYS_CANCEL;
+    items =
+        {
+        DLG_LINE
+            {
+            type = EAknCtNote;
+            id = EPrintWaitNote;
+            control = AVERELL_NOTE
+                {
+                layout = EProgressLayout;
+                singular_label = qtn_print_progress_prompt;
+                imagefile = AVKON_ICON_FILE;
+                imageid = EMbmAvkonQgn_note_progress;
+                imagemask = EMbmAvkonQgn_note_progress_mask;                
+                };
+            }
+        };
+    }
+
+/**
+ *  MMC printing completed dialog
+ */
+RESOURCE DIALOG r_mmc_printing_completed
+    {
+    flags = EEikDialogFlagNoDrag | EEikDialogFlagNoTitleBar |
+            EEikDialogFlagCbaButtons;
+    buttons = R_AVKON_SOFTKEYS_OK_EMPTY;
+    items = 
+        {
+        DLG_LINE
+            {
+            type = EAknCtNote;
+            id  = EPrintProgressNote;
+            control = AVKON_NOTE
+                {
+                layout = EConfirmationLayout;
+                singular_label = qtn_print_mmc_print_note;
+                };
+            }
+        };
+    }
+
+/**
+ *  Connect USB printer dialog
+ */
+RESOURCE DIALOG r_connect_usb
+    {
+    flags = EAknInformationNoteFlags;
+    buttons = R_AVKON_SOFTKEYS_CANCEL;
+    items = 
+        {
+        DLG_LINE
+            {
+            type = EAknCtNote;
+            id = EAknNoteNoType;
+            control = AVKON_NOTE
+                {
+                layout = ENoteWithImageLayout;
+                singular_label = qtn_print_connect_usb_note;
+                };
+            }
+        };
+    }
+
+/**
+ *  Confirmation dialog for "no printers" note
+ */
+RESOURCE DIALOG r_no_printers_confirmation
+    {
+    flags = EGeneralQueryFlags;
+    buttons = R_AVKON_SOFTKEYS_YES_NO;
+    items =
+        {
+        DLG_LINE
+            {
+            type = EAknCtQuery;
+            id = ENoPrintersConfirmation;
+            control = AVKON_CONFIRMATION_QUERY
+                {
+                layout = EConfirmationQueryLayout;
+                };
+            }
+        };
+    }
+
+RESOURCE DIALOG r_cancel_printing_dialog
+    {
+    flags = EAknWaitNoteFlags | EEikDialogFlagWait;
+    buttons = R_AVKON_SOFTKEYS_EMPTY;
+    items=
+        {
+        DLG_LINE
+            {
+            type = EAknCtNote;
+            id = 1;
+            control= AVKON_NOTE 
+                { 
+                layout = EWaitLayout;
+                animation =R_QGN_GRAF_WAIT_BAR_ANIM;
+                };
+            }
+        };
+    }
+
+// Image array for pop-up animation
+RESOURCE ARRAY r_imageprint_animation_images
+    {
+    items =
+        {
+        BMPANIM_FRAME { bmpid=18; maskid=19; },
+        BMPANIM_FRAME { bmpid=16; maskid=17; },
+        BMPANIM_FRAME { bmpid=20; maskid=21; },
+        BMPANIM_FRAME { bmpid=16; maskid=17; }
+        };
+    }
+
+RESOURCE ARRAY r_bt_animation_for_popuplist_images
+    {
+    items=
+        {
+        BMPANIM_FRAME {bmpid=EMbmBtnotifQgn_note_bt_popup_2;  maskid=EMbmBtnotifQgn_note_bt_popup_2_mask; },
+        BMPANIM_FRAME {bmpid=EMbmBtnotifQgn_note_bt_popup;    maskid=EMbmBtnotifQgn_note_bt_popup_mask;   },
+        BMPANIM_FRAME {bmpid=EMbmBtnotifQgn_note_bt_popup_3;  maskid=EMbmBtnotifQgn_note_bt_popup_3_mask; },
+        BMPANIM_FRAME {bmpid=EMbmBtnotifQgn_note_bt_popup;    maskid=EMbmBtnotifQgn_note_bt_popup_mask;   }
+        };
+    }
+
+// Animation for searching devices popup-list
+RESOURCE BMPANIM_DATA r_imageprint_animation
+    {
+    frameinterval = 200;
+    playmode = EAknBitmapAnimationPlayModeCycle;
+    bmpfile = APP_BITMAP_DIR"\\btnotif.mbm";
+    frames = r_bt_animation_for_popuplist_images;
+    }
+
+/**
+ *  Generic popup setting item
+ */
+RESOURCE AVKON_SETTING_PAGE r_setting_generic_protocol_page
+    {    
+    //softkey_resource = R_AVKON_SOFTKEYS_OK_CANCEL;// removed due to single click
+    softkey_resource = R_AVKON_SOFTKEYS_CANCEL ;
+    type = EAknCtPopupSettingList;
+    editor_resource_id = r_empty_protocol_setting_list;
+    }
+
+RESOURCE POPUP_SETTING_LIST r_empty_protocol_setting_list
+    {
+    }
+
+RESOURCE CBA r_avkon_softkeys_stop
+    {
+    buttons =
+        {
+        CBA_BUTTON 
+            { 
+            txt = " ";
+            },
+        CBA_BUTTON 
+            { 
+            id = EAknSoftkeyCancel; 
+            txt= qtn_clk_softkey_stop; 
+            }
+        };
+    }
+    
+
+
+/** 
+ *
+ *  Resource strings
+ *
+ */
+
+RESOURCE TBUF r_settings_imageprint_mmc_print_note { buf = qtn_print_mmc_print_note; }
+RESOURCE TBUF r_settings_imageprint_mmc_print_note_one_picture { buf = qtn_print_mmc_print_note_one_picture; }
+RESOURCE TBUF r_txt_imageprint_title_printsettings { buf = qtn_app_caption_string; }
+RESOURCE TBUF r_printjob_images { buf = qtn_printjob_images; }
+RESOURCE TBUF r_printjob_image { buf = qtn_printjob_image; }	
+RESOURCE TBUF r_print_selected_printer { buf = qtn_print_selected_printer; }	
+RESOURCE TBUF r_print_memory_card { buf = qtn_print_memory_card; }	
+RESOURCE TBUF r_print_no_printer { buf = qtn_print_no_printer; }	
+
+RESOURCE TBUF r_qtn_print_progress_note_title { buf = qtn_print_progress_prompt; } 
+RESOURCE TBUF r_qtn_print_not_found_error { buf = qtn_print_not_found_error; }	
+RESOURCE TBUF r_qtn_print_no_printers { buf = qtn_print_no_printers; }	
+RESOURCE TBUF r_qtn_print_settings_default_usb { buf = qtn_print_settings_default_usb; }	
+RESOURCE TBUF r_qtn_print_settings_default_bt { buf = qtn_print_settings_default_bt; }	
+RESOURCE TBUF r_qtn_print_settings_default_wlan { buf = qtn_print_settings_default_wlan; }	
+RESOURCE TBUF r_qtn_print_wrongtype_note { buf = qtn_print_wrongtype_note; }	
+RESOURCE TBUF r_qtn_print_selectnew_note { buf = qtn_print_selectnew_note; }	
+RESOURCE TBUF r_qtn_print_concurrent_note { buf = qtn_print_concurrent_note; }	
+RESOURCE TBUF r_qtn_print_memory_card { buf = qtn_print_memory_card; }
+RESOURCE TBUF r_qtn_print_settings_noc {buf = qtn_print_settings_noc; }	
+RESOURCE TBUF r_qtn_print_progress_prompt_cancel { buf = qtn_print_progress_prompt_cancel; }	
+
+RESOURCE TBUF r_qtn_popup_list_title { buf = qtn_print_selectprinter_prompt; }
+RESOURCE TBUF r_qtn_copy_progress_note_title { buf = qtn_print_progress_prompt_mmc; }
+RESOURCE TBUF r_qtn_popup_list_title2 { buf = qtn_print_selectprinter_prompt2; }	
+RESOURCE TBUF r_qtn_search_again { buf = qtn_print_search_again; } 
+
+RESOURCE TBUF r_note_imageprint_error_ink_out { buf = qtn_print_outofink_error; }	
+RESOURCE TBUF r_note_imageprint_error_paper_load { buf = qtn_print_paper_load_error; }
+RESOURCE TBUF r_note_imageprint_error_paper_eject { buf = qtn_print_paper_eject_error; }	
+RESOURCE TBUF r_note_imageprint_error_paper_media { buf = qtn_print_paper_media_error; }	
+RESOURCE TBUF r_note_imageprint_error_paper_jam { buf = qtn_print_paper_jam_error; }	
+RESOURCE TBUF r_note_imageprint_error_paper_combination { buf = qtn_print_paper_combination_error; }	
+RESOURCE TBUF r_note_imageprint_error_paper_low { buf = qtn_print_paper_low_error; }	
+RESOURCE TBUF r_note_imageprint_error_paper { buf = qtn_print_paper_error; }	
+RESOURCE TBUF r_note_imageprint_error_ink_low { buf = qtn_print_inklow_error; }		
+RESOURCE TBUF r_note_imageprint_error_ink_waste { buf = qtn_print_ink_waste_error; }	
+RESOURCE TBUF r_note_imageprint_error_ink { buf = qtn_print_ink_error; }	
+RESOURCE TBUF r_note_imageprint_error_file_decode { buf = qtn_print_file_decode_error; }	
+RESOURCE TBUF r_note_imageprint_error_file { buf = qtn_print_file_error; }
+RESOURCE TBUF r_note_imageprint_error_hardware_cover_open { buf = qtn_print_hardware_cover_open_error; }	
+RESOURCE TBUF r_note_imageprint_error_hardware_fatal { buf = qtn_print_hardware_fatal_error; }	
+RESOURCE TBUF r_note_imageprint_error_hardware_servicecall { buf = qtn_print_hardware_servicecall_error; }	
+RESOURCE TBUF r_note_imageprint_error_hardware_printer_unavailable { buf = qtn_print_hardware_printer_unavailable_error; }	
+RESOURCE TBUF r_note_imageprint_error_hardware_printer_busy { buf = qtn_print_hardware_printer_busy_error; }	
+RESOURCE TBUF r_note_imageprint_error_hardware_lever { buf = qtn_print_hardware_lever_error; }	
+RESOURCE TBUF r_note_imageprint_error_hardware_no_marking_agent { buf = qtn_print_hardware_no_marking_agent_error; }	
+RESOURCE TBUF r_note_imageprint_error_hardware_ink_cover_open { buf = qtn_print_hardware_ink_cover_open_error; }	
+RESOURCE TBUF r_note_imageprint_error_hardware_no_ink_cartridge { buf = qtn_print_hardware_no_ink_cartridge_error; }	
+RESOURCE TBUF r_note_imageprint_error_hardware { buf = qtn_print_hardware_error; }	
+RESOURCE TBUF r_note_imageprint_error_output_area_almost_full { buf = qtn_print_output_area_almost_full_error; }	
+RESOURCE TBUF r_note_imageprint_error_output_area_full { buf = qtn_print_output_area_full_error; }	
+RESOURCE TBUF r_note_imageprint_error_marker_supply_low { buf = qtn_print_marker_supply_low_error; }	
+RESOURCE TBUF r_note_imageprint_error_marker_supply_empty { buf = qtn_print_marker_supply_empty_error; }	
+RESOURCE TBUF r_note_imageprint_error_marker_failure { buf = qtn_print_marker_failure_error; }	
+RESOURCE TBUF r_note_imageprint_error_printer_paused { buf = qtn_print_paused_error; }	
+RESOURCE TBUF r_note_imageprint_error_paper_out { buf = qtn_print_outofpaper_error; }	
+
+RESOURCE TBUF r_note_print_status_error { buf = qtn_print_status_error; }	
+RESOURCE TBUF r_note_send_print_error { buf = qtn_print_send_error; }	
+RESOURCE TBUF r_note_disconnect_print_error { buf = qtn_print_disconnect_error; }	
+RESOURCE TBUF r_note_general_print_error { buf = qtn_print_general_error; }	
+RESOURCE TBUF r_note_connect_print_error { buf = qtn_print_connect_error; }	
+RESOURCE TBUF r_note_imageprint_mmccopyfail { buf = qtn_print_note_mmccopyfail; }	
+
+RESOURCE ARRAY r_default_printer_selection_popup_texts
+    {
+    items =
+        {
+        LBUF
+          {
+          txt = qtn_print_settings_default_bt;
+          },        
+        LBUF
+          {
+          txt = qtn_print_memory_card;
+          },
+        LBUF
+          {
+          txt = qtn_print_settings_default_usb;
+          },
+        LBUF
+          {
+          txt = qtn_print_settings_default_wlan;
+          }
+        };
+    }
+
+RESOURCE DIALOG r_hidden_dialog
+    {
+    flags = EAknWaitNoteFlags | EEikDialogFlagWait;
+    buttons = R_AVKON_SOFTKEYS_CANCEL;
+    items = 
+        {
+        DLG_LINE
+            {
+            type = EAknCtNote;
+            id = EGeneralNote;
+            control = AVERELL_NOTE
+                {
+                layout = EWaitLayout;
+                singular_label = qtn_print_progress_prompt_pro;
+                animation = R_QGN_GRAF_WAIT_BAR_ANIM;
+                };
+            }
+        };
+    }
+    
+RESOURCE DIALOG r_startwait_dialog
+    {
+    flags = EAknWaitNoteFlags;
+    buttons = R_AVKON_SOFTKEYS_EMPTY;
+    items = 
+        {
+        DLG_LINE
+            {
+            type = EAknCtNote;
+            id = EGeneralNote;
+            control = AVERELL_NOTE
+                {
+                layout = EWaitLayout;
+                singular_label = qtn_print_progress_prompt_pro;
+                animation = R_QGN_GRAF_WAIT_BAR_ANIM;
+                };
+            }
+        };
+    }    
+
+RESOURCE DIALOG r_launch_wlan_wizard_query
+    {
+    flags = EGeneralQueryFlags | EEikDialogFlagNoBorder | EEikDialogFlagNoShadow;
+    buttons = R_AVKON_SOFTKEYS_OK_CANCEL;
+    items=
+        {
+        DLG_LINE
+            {
+            type = EAknCtPopupHeadingPane;
+            id = EAknMessageQueryHeaderId;
+            control = AVKON_HEADING
+                {
+                label = qtn_launch_wlan_wizard_query_header;
+                };
+            },
+        DLG_LINE
+            {
+            type = EAknCtMessageQuery;
+            id = EAknMessageQueryContentId;
+            control = AVKON_MESSAGE_QUERY
+                {
+                message = qtn_launch_wlan_wizard_query_msg;
+                };
+            }
+        };
+    }
+
+// Image print number of copies dialog resource.
+
+RESOURCE DIALOG r_noc_query
+	{
+	flags = EGeneralQueryFlags;
+	buttons = R_AVKON_SOFTKEYS_OK_CANCEL;
+	items =
+		{
+		DLG_LINE
+			{
+			type = EAknCtQuery;
+			id = EGeneralQuery;
+			control = AVKON_DATA_QUERY
+				{
+				layout = ENumberLayout;		
+				label = qtn_print_settings_noc;
+				control = AVKON_INTEGER_EDWIN 
+					{
+					min = 1; 
+					max = 999;
+					maxlength = 3;
+					unset_value=1;
+					}; 
+				};
+			}
+		};
+	}
+
+// End of File

@@ -1,0 +1,703 @@
+
+---------------------- Sending Email 1 size=1793 ------------------------
+
+From: FirstNameSecondNameThirdName AllJoined <ralph.greenwell@virgin.net>
+Reply-to: Réunion «écologie sonore» MontréalzacR
+  <ibrahim@sinister6.demon.co.uk>
+To: "Ralphie ABCabc123" ralph-greenwell@psion.com (COMMENT), "Zac Boy"
+  <zac@demon.co.uk>
+Cc: Important folk:me myself and i<meMyself@atEye.net>, "Sam
+  Irving"@Other-Host, Standard
+  Distribution:/main/davis/people/standard@Other-Host,
+  "<Jones>standard.dist.3"@Tops-20-Host>
+Bcc: A B and C<meMyself@atEye.net>, "Sam Irving" @Other-Host
+Subject: If you can read this you understand the example.
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+X-Priority: 1 (Highest)
+Importance: high
+Message-ID: <kSDzT7Sp45Nv.DWStjK8j@psion.com>
+X-Mailer: EPOC Email Version 2.10
+
+EMAIL HEADER TEST #1    From: three 'words' sperated by space, tab etc. 
+Should be joined upReply-to: QP encoded words seperated by text      To: 
+Word with QP encoding + space(as _), Word in comment delimiters (), 
+ Subject: Two binary encoded words, seperated by space, which should be 
+removed to          reveal a sentence.
+
+
+---------------------- Sending Email 2 size=958 ------------------------
+
+From: RalphGreenwell <ralph.greenwell@virgin.net>
+Reply-to: Mzac R <ibrahim@sinister6.demon.co.uk>
+To: "Ralphie" ralph-greenwell@psion.com (COMMENT), "Zac Boy"
+  <zac@demon.co.uk>
+Subject: If you can read this yo
+ =?ISO-8859-x?B?dSB1bmRlcnN0YW5kIHRoZSBleGFtcGxlLg==?=
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+Message-ID: <YXxPhdlYgdmG.Cm3JbPln@psion.com>
+X-Mailer: EPOC Email Version 2.10
+
+MIME EMAIL WITH ENCODED HEADER FIELDSFrom: <word> <word>ReplyTo: <word> 
+text <word>Subject: ONly first encoded word should be decoded, second has 
+incorrect charset
+
+
+---------------------- Sending Email 3 size=2895 ------------------------
+
+From: =?rubbish?Q?FirstName?=SecondName <ralph.greenwell@virgin.net>
+Reply-to: Réunion «écologie sonore» MontréalzacR
+  <ibrahim@sinister6.demon.co.uk>
+To: "Ralphie ABCabc123" ralph-greenwell@psion.com (COMMENT), "Zac Boy"
+  <zac@demon.co.uk>
+Cc: Important folk:=ISO-8859-1?Q?me?=	 =?ISO-8859-1?Q?_myself?= and
+  i<meMyself@atEye.net>, "Sam Irving"@Other-Host, Standard
+  Distribution:/main/davis/people/standard@Other-Host, =???=, =?ISO-8859-1??=
+  dd@dd.com, =??AA?= dd2@dd.com, =?ISO-8859-1?Too-long?"bob"?=  
+  bob@Other-Host
+Bcc: =?ISO-8859-1Q?A?=	=?ISO-8859-1?Q?_B and C<meMyself@atEye.net>, =?ISO-8859-1?Q?"Sam Irving"=  
+  abe@Other-Host, =?ISO-8859-1?Q?"Sam Irving"=  =?ISO-8859-1?Q?"Sam Irving"?= 
+  abe@Other-Host, =?ISO-8859-1?Q?"Sam Irving"= 
+  abe@Other-Host  =?ISO-8859-1?Q?"Sam Irving"?=, =?ISO-8859-1?Q?"Sam Irving"= 
+  abe@Other-Host  =?ISO-8859-1?Q?"Sam Irving"?=, =?ISO-8859-1?Q?"Sam Irving"= 
+  abe@Other-?Host  =?ISO-8859-1?Q?"Sam Irving"?=
+Subject: If you can read this yo
+ =?ISO-8859-x?B?dSB1bmRlcnN0YW5kIHRoZSBleGFtcGxlLg==?=
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+X-Priority: 1 (Highest)
+Importance: high
+Message-ID: <PKFdpTQTrVyq.cThtDdt4@psion.com>
+X-Mailer: EPOC Email Version 2.10
+
+INVALID ENCODED HEADERFrom: incorrect charsetCc: 1, First, missing 
+openingCc: 2, 'empty' 'word', no addressCc: 3, 'empty' 'word' +something in 
+charsetCc: 4, 'empty' 'word' +something in encoding typeCc: 5, OK 'word' + 
+invalid charset - too many charactersBcc: 1, word missing second 
+?Bcc: 1, Second 'wprd' missing word-end ?=BCc: 2, first word has missing 
+endBCc: 2, first word has missing end + ok 2nd wordBCc: 2, first word has 
+missing end + ok 2nd word after addressBCc: 2, first word has missing end 
+and ? + ok 2nd word after address(which has a ?)Subject: two adjoining 
+words not seperated by a space
+
+
+---------------------- Sending Email 4 size=1910 ------------------------
+
+From: <ibrahim@symbian.com> ??????????????µ????
+Reply-to: ??????????????µ????<dd@dd.com>
+To: <html>??<dd@dd.com> Réunion «écologie sonore» Montréal
+Cc: bob@Other-Host
+Bcc: =?MOD-UTF-7?B?"Just some plain old Mod-Utf-7 text?=abe@Other-Host,	=?BGFBBFFFBFBsdfsdf?B?"Just some plain old Mod-Utf-7 text?=
+  abe@Other-Host, =?GB-2312-80?Q?=C4=E3=C5=C4=D2=BB=CE=D2=C5=C4?=
+  abe@Other-Host, ????? abe@Other-Host
+Subject: =?Big-5?Q?=A1H=A1H=A1H=A1H=A1H=A1H=A1=D3=A1H=A1H=A1H?=
+ =?Big-5?Q?=A1H=A1H=A1H=A1H=A1H=A1H=A1H=A1H=A1H=A1H?= .BETA.ZZ118
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+Message-ID: <GfnbTgZGvrZZ.NlXd2khK@psion.com>
+X-Mailer: EPOC Email Version 2.10
+
+ENCODED HEADER : testing different charsetsFrom: UTF7ReplyTo : 
+UTF8To: UTF7 followed by UTF8 followed by ISO-8859-1Subject decoded is 
+Ä_®p¶³±g¯u²bÁI®v»y¿ý.BETA.ZZ118RESOURCE LBUF charset_name_list	{	buffer= 
+"10003C80\tUTF-7\n"               	"10003C91\tUTF-8\n"		
+"10003C95\tMOD-UTF-7\n"		"10003b10\tISO-8859-1\tus-ascii\n"               
+	"10000fbe\tGB-2312-80\tGB2312\n"		"10000fbf\tBig-5\tBig5\n"		
+"10000fbd\tShift-JIS\tShift_JIS\n"		"1000401a\tGB/T 12345-90\n"		
+"10003ecb\tGBK\n";
+
+
+---------------------- Sending Email 5 size=502 ------------------------
+
+From: gregory.laverylong@AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAsymbiannnnnnnnn.com
+To: gregory.lavery@symbian.com, gregorylavery@hotmail.com,
+  gregorylavery@netscape.net
+Subject: email header folding
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+Message-ID: <NZn3xZQd5vjn.KyGZPQ0q@psion.com>
+X-Mailer: EPOC Email Version 2.10
+
+ddd
+
+
+---------------------- Sending Email 6 size=544 ------------------------
+
+From: gregory.laverylong@AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAsymbiannnnnnnnnx.com
+To: gregory.lavery@symbian.com,
+  gregorylavery@hotmmmmmmmmmmmmmmmmmmmail.com, gregorylavery@netscape.net
+Subject: email header folding 2
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+Message-ID: <jczHCw877lpg.WPM80jCr@psion.com>
+X-Mailer: EPOC Email Version 2.10
+
+eee
+
+
+---------------------- Sending Email 7 size=977 ------------------------
+
+From: ibrahim rahman <ibrahim.rahman@internet-test.plc.psion.com>
+To: abf75@dial.pipex.com
+Subject: [Fwd: Message with attachmet]
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+Message-ID: <DC0WrNqf0zBl.wWlJnBDr@psion.com>
+X-Mailer: EPOC Email Version 2.10
+
+Outer message text, inner is "attachh"Also contains outer and inner 
+attachments:inner .11outer SSS.txt
+attachh
+begin 644 Attachment.ll
+M>0``$(T``!`V2``0\T9MT4503T,`(```7M^L*P`````!`&,`P+IM'^\BX``#
+M````3`<!````````$``````0```@`````````````````!``````#0```)@&
+M`0!,````7/```'P`````````R`<!`+`-`0``````7@$``'@X`.H`$*#A``"?
+MY:@X`.H````0``"?Y:@X`.H````0`2"@X0`0H.$``)_EIC@`Z@```!`!(*#A
+M`!"@X0``G^6D.`#J````$``0H.$``)_EHS@`Z@```!```)_EHS@`Z@```!``
+M`)_EHS@`Z@```!```)_EHS@`Z@```!```)_EHS@`Z@```!``$*#A``"?Y:(X
+M`.H````0`#"@XP`P@.4&,*#C!#"`Y0[PH.$!`!'C#O"@`9PX`.KP02WI`("@
+MX0%`H.$"8*#A!@"@X9DX`.L$`*#AFC@`ZP!0H.$`,)3E\#3#XP-PA>`&`*#A
+ME#@`ZP`0H.$4`)CH!P!5X1P``"H!,-7D*S!#X@,\H.%#S*#A4`!<X_?__XIT
+M,)_E`S#<YP,\H.%#S*#A0`!<XP0``!H`$&'@!@"@X80X`.L``*#C\(&]Z`8`
+"```
+`
+end
+
+begin 644 iso-8859-1_Q_=A7=A7=A7=2Etxt_=.txt
+)<V9S9&8-"@T*
+`
+end
+
+
+---------------------- Sending Email 8 size=465 ------------------------
+
+From: ibrahim rahman <ibrahim.rahman@internet-test.plc.psion.com>
+To: abf75@dial.pipex.com
+Subject: [Fwd: simple text]
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+Message-ID: <sbXRvSlCYnZ3.ts1jT7xF@psion.com>
+X-Mailer: EPOC Email Version 2.10
+
+outer message for simple textnothing too fancy
+simple text messagenothing fancy
+
+
+---------------------- Sending Email 9 size=2144 ------------------------
+
+From: ibrahim rahman <ibrahim.rahman@internet-test.plc.psion.com>
+To: abf75@dial.pipex.com
+Subject: [Fwd: attach 8]
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+Message-ID: <cdnKdzmZQwF8.3QC3Rfy6@psion.com>
+X-Mailer: EPOC Email Version 2.10
+
+ouer & inner binary attachments
+attachh
+begin 644 Attachment.ll
+M>0``$(T``!`V2``0\T9MT4503T,`(```7M^L*P`````!`&,`P+IM'^\BX``#
+M````3`<!````````$``````0```@`````````````````!``````#0```)@&
+M`0!,````7/```'P`````````R`<!`+`-`0``````7@$``'@X`.H`$*#A``"?
+MY:@X`.H````0``"?Y:@X`.H````0`2"@X0`0H.$``)_EIC@`Z@```!`!(*#A
+M`!"@X0``G^6D.`#J````$``0H.$``)_EHS@`Z@```!```)_EHS@`Z@```!``
+M`)_EHS@`Z@```!```)_EHS@`Z@```!```)_EHS@`Z@```!``$*#A``"?Y:(X
+M`.H````0`#"@XP`P@.4&,*#C!#"`Y0[PH.$!`!'C#O"@`9PX`.KP02WI`("@
+MX0%`H.$"8*#A!@"@X9DX`.L$`*#AFC@`ZP!0H.$`,)3E\#3#XP-PA>`&`*#A
+ME#@`ZP`0H.$4`)CH!P!5X1P``"H!,-7D*S!#X@,\H.%#S*#A4`!<X_?__XIT
+M,)_E`S#<YP,\H.%#S*#A0`!<XP0``!H`$&'@!@"@X80X`.L``*#C\(&]Z`8`
+"```
+`
+end
+
+begin 644 TELECA1.TXT.pgp
+MJ`-01U#!P4X#$&[6&U)RJC,0!_]`"`QH^C@SB]`ZJO<3+_;<+*X9MP89V[N7
+MN\[G75!87DP7=@WU&/PKU?XQ.9+Q2Q[E2:FU3P8'9Q-\"^W`&^#&%/^I#;Q2
+M,]1;N/-ZUFGAZSTV)=2GLTZPR&-A_V_"EQP@F58G)[&9PU[=[YIG&K4QZVYC
+MTYTGEM^98.]R5T69+<'04`4)79(-/]$.>=*2@KJ)ZXN<VL7`50*CI!2"I]^M
+M!.0S4NJ''M,HXU$?\U,/1+P09632(TSO<IGB%3[HY4ZL=RO<W:0P7UUU^W)`
+M)PG35LF=:SEM+[9.E]-(`DF)E7%(?.82Q<3PXEO.C3?NEUF@?(DM0QS'W6F6
+M,6X.<DA_!_P(&0+IH%9)2(<<`,JKP\W3)4Q")2P49%`F%0.4)IT9^6#F]@(2
+M)@+D*BR=KRVNB&U*Z9`9_-:@5P1@YL0N/S6*2_P61U/5!CQ%IQ4-US-8U:G2
+MENV9M^<CEG&J$I>G].L2H(D<MBBW7KS;CZ>4H%M,B$]7&V;_-$3BQ=/R_=.T
+M`6XO62X"DQC!L5]R1#`[!P@5A1JLR^8J[%<%_/K&::/WP63+(,+;5#6V^),J
+M,8KQZ5W)_Z=]5G@+X&1MV$?15:Y=G9&D`U",HD![,O#1J;5`O94GQ[^XW8),
+MR)L&8H]+VR6;/@#.K*L>M.M:F>.!+GT_]%;2;@G<OD&*_ON?N(#:R<(H0>*J
+MF4":$BJ$7TM@77S"P5+<EA6;I3BC+1[A0WQPM*K_NA2I4JT)B$F+R*1]%MK;
+MIEB]((BG53EQ>95:"-=")%JV(5<!D)2$#.1R[,`F:B>Z)PG<9`,*"M;XM_-D
+M]L<8R9>V0U.+TN`8]':[[G)NO=:$DLEG`"/:H,--!0`LI@COMJA:N$P#SV20
+MIP59OP&LL][;='$3XI&K+8:';$1J\:SCL;H-MX;27`)47.L#Q'(IU3/7Z'RA
+MJ@ZQ#FMNF7T!*\SX=?3AF@W,>S#O7*Z824S@I")T1O&$#Q6QLMZ'9KO#M$V&
+M?+S;#;QCPZ#@"CIJ;Z3U@M3MUNN&*N(8)+J>IL)&K*S3#=WI_B"$,S/""PKK
+MGTU)0OOJX7^L68(/^XIL-1LAQG_7D$.L<B%A;<SM2$*#KIAD77:2XPU:6"]C
+M33?7(44Q)ID,41<$J3TV/WZ)\OH*W8^/-Y#.*C-=T%M<^S)@\;0'NSH_'QF,
+MKVW!8/M0H8<<%&B9(@6K$<!CL7K97,*<FO%B%QNMK83M>"!#J/81S*QTLQ'%
+MQGG5LF>.G);#ZPPN8*M-FYM[;#=#%A$YAJMD12:FJ+X4K9F/4Z.E8TU!"`]Q
+M9&3Z!A;Z-6S^O/$:^/\O?"4?=AP%<48\;-HM6,)\KLHN&C#+@P=9_JL_52SM
+MC_@AGA92V;]6A!NCF%.T-1?4H&*K5?>;2@F/QVWQEIZ7N`R!)K9`UA6+S0Z.
+MM/X"SZO^.,%)O:V>UM.WG23XF2\K\'UK^YD>3,*`H/X2=9:Z?:0*\7<^%%JK
+M`R6@L22K,N)LU$T8&7;VY;9ED;EFT,8LJY/2=FS$$.G&A973OP-7!]5*D_F\
+MH^2,IX_:?=/`#I\A-\J)<")BE,@GR)E$)U"E/^>U&)DQ!6/5\>E>OE&$X&QD
+M=)&U]OEN[XDU',[5:RXWV,F8DZAH#$F2N]E#G^_>WW52#0?%))J+DJO^J^GV
+5U.[*#FWRWUD8C_"7"\""M_XKXIQF
+`
+end
+
+
+---------------------- Sending Email 10 size=819 ------------------------
+
+From: ibrahim rahman <ibrahim.rahman@internet-test.plc.psion.com>
+To: abf75@dial.pipex.com
+Subject: =?us-pascii?Q?Encoded Subject Line=9F?=
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+Message-ID: <YL3rsGRCcc2g.1YWGZZsc@psion.com>
+X-Mailer: EPOC Email Version 2.10
+
+Some QP encoded text 4.Second Line  .Third Line ¡ followed by blank 
+line.Fourth and very looooooooooooooooooooooooooooooooooooooooggggggggggggg 
+line.
+1. A funny a in iso2 ?2. A funny z in iso2 ŽFourth and very 
+looooooooooooooooooooooooooooooooooooooooggggggggggggg line.
+begin 644 TELECA1.TXT
+MT,\1X*&Q&N$`````````````````````/@`#`/[_"0`&```````````````!
+M````"P``````````````````````````````````````````````````````
+5````````````````````````````
+`
+end
+
+
+---------------------- Sending Email 11 size=920 ------------------------
+
+From: =?utf-9?B?w6Agw77DtMO1w74=?= <ibrahim.rahman@symbian.com>
+To: ß@® ÑÒÓÔÕÖ <test@psion7.demon.co.uk>
+Subject: à þôõþ
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+Message-ID: <9y4PZb79trg5.MdXMJxMd@psion.com>
+X-Mailer: EPOC Email Version 2.10
+
+BIG TEXT=20=C3=9F@=C2=AE 
+=C3=91=C3=92=C3=93=C3=94=C3=95=C3=96
+BIG TEXT ß@® ÑÒÓÔÕÖ
+begin 644 Attachment.html
+M/"%$3T-465!%($A434P@4%5"3$E#("(M+R]7,T,O+T141"!(5$U,(#0N,"!4
+M<F%N<VET:6]N86PO+T5.(CX-"CQ(5$U,/CQ(14%$/@T*/$U%5$$@8V]N=&5N
+M=#TB=&5X="]H=&UL.R!C:&%R<V5T/75T9BTX(B!H='1P+65Q=6EV/4-O;G1E
+M;G0M5'EP93X-"CQ-151!(&-O;G1E;G0](DU32%1-3"`U+C`P+C(Y,3DN-C,P
+M-R(@;F%M93U'14Y%4D%43U(^#0H\4U193$4^/"]35%E,13X-"CPO2$5!1#X-
+M"CQ"3T19(&)G0V]L;W(](V4Q93!D,CX-"CQ$258^/$9/3E0@9F%C93U!<FEA
+M;"!S:7IE/3(^/%-44D].1SY"24<@5$585"`\+U-44D].1SX\+T9/3E0^/"]$
+M258^#0H\1$E6/CQ&3TY4(&9A8V4](E1I;65S($YE=R!2;VUA;B(^#0H\4#[#
+MGT#"KB##D<.2PY/#E,.5PY8\+U`^/"]&3TY4/CPO1$E6/CPO0D]$63X\+TA4
+'34P^#0H-"@
+`
+end
+
+
+---------------------- Sending Email 12 size=5692 ------------------------
+
+From: "psion7.demon.co.uk" <ibrahim.rahman@symbian.com>
+To: "ß\@® ÑÒÓÔÕÖ" <test@psion7.demon.co .uk>
+Subject: Testing UTF7
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+Message-ID: <dPf605LtVzSj.XsPhTfNb@psion.com>
+X-Mailer: EPOC Email Version 2.10
+
+Tue, 11 Apr 2000 15:02:08 GMTWill Knight      Mobile telecommunications 
+giants Ericsson, Nokia and Motorola announced plans Tuesday to co-operate 
+on the development on standard for secure mobile electronic transactions. 
+       The trio are expected to release technical details of the project by 
+the end of May and say other companies will be invited to contribute to the 
+development of the standard. The companies hope to have formulated the 
+framework by the summer follwing input from other firms.        Key 
+features of this new open standard will include security functions built 
+into WAP including WTLS (Wireless Transport Layer Security), WIM (Wireless 
+Identification Module) and wireless Public Key technologies (PKI) 
+technologies.       The government is currently auctioning off the licences 
+needed to operate Third Generation (3G) or Universal Mobile 
+Telecommunications Systems (UMTS) networks. These will allow service 
+providers to deliver greatly increased bandwidth to mobile Internet 
+devices.        Mobile Internet devices are, through the migration to this 
+technology, expected to become an increasingly important part of 
+Internet-based business, offering a new and more user-friendly way for 
+Internet users to spend online. The success of this emerging technology 
+consequently depends heavily on customer confidence in the security of 
+online transactions.        President of Nokia Mobile Phones, Matti 
+Alahuhta outlines just how important this new project in a statement issued 
+at today's announcement.        "Integrating security and transaction 
+applications on a common core standard and platform will create global mass 
+market for mobile e-business. This will benefit all participants from 
+various industries within the value chain, in addition to hundreds of 
+millions of consumers throughout the world."      
+begin 644 Attachment.html
+M*R]V.$%004%H+41/0U194$4@2%1-3"!054),24,@*T%#22TM+R]7,T,O+T14
+M1"!(5$U,(#0N,"!4<F%N<VET:6]N86PO+T5.*T%#24%09RT-"BM!1'<M2%1-
+M3"M!1#1!4$$M2$5!1"M!1#0M#0HK041W+4U%5$$@8V]N=&5N="M!1#!!26<M
+M=&5X="]H=&UL*T%$<RT@8VAA<G-E="M!1#`M=71F+3<K04-)+2!H='1P+65Q
+M=6EV*T%$,"U#;VYT96YT+51Y<&4K040T+0T**T%$=RU-151!(&-O;G1E;G0K
+M040P04EG+4U32%1-3"`U+C`P+C(Y,3DN-C,P-RM!0TDM(&YA;64K040P+4=%
+M3D52051/4BM!1#0M#0HK041W+5-464Q%*T%$-$%002TO4U193$4K040T+0T*
+M*T%$=RTO2$5!1"M!1#0M#0HK041W+4)/1%D@8F=#;VQO<BM!1#!!27<M93%E
+M,&0R*T%$-"T-"BM!1'<M1$E6*T%$-$%002U&3TY4(&-O;&]R*T%$,$%)=RUC
+M,C`P,#`@9F%C92M!1#`M07)I86P@<VEZ92M!1#`M,BM!1#0M5'5E+"`Q,2!!
+M<'(@,C`P,"`Q-3HP,CHP."`-"D=-5"M!1'<M+T9/3E0K040T05!!+54K040T
+M05!!+49/3E0@8V]L;W(K040P04EW+3`P,#!F9B!F86-E*T%$,"U!<FEA;"!S
+M:7IE*T%$,"TR*T%$-"T-"BM!1'<M4"M!1#0M5VEL;"!+;FEG:'0K041W+2]0
+M*T%$-$%002TO52M!1#1!4$$M+T9/3E0K040T+0T**T%$=RU404),12!B;W)D
+M97(K040P+3`@8V5L;%!A9&1I;F<K040P+3(@8V5L;%-P86-I;F<K040P+3`@
+M=VED=&@K040P+34Y,BM!1#0M#0H@("M!1'<M5$)/1%DK040T+0T*("`K041W
+M+512*T%$-"T-"B`@("`K041W+51$*T%$-$%002U5*T%$-$%002U&3TY4(&-O
+M;&]R*T%$,$%)=RTP,#`P9F8@9F%C92M!1#`M07)I86P@<VEZ92M!1#`M,BM!
+M1#1!4$$M+U4K040T05!!+2]&3TY4*T%$-$%002U&3TY4(`T*("`@("`@8V]L
+M;W(K040P04EW+3`P,#`P,"!F86-E*T%$,$%)9RU4:6UE<R!.97<@4F]M86XK
+M04-)05!G+0T*("`@("`@*T%$=RU0*T%$-"U-;V)I;&4@=&5L96-O;6UU;FEC
+M871I;VYS(&=I86YT<R!%<FEC<W-O;BP@3F]K:6$@86YD($UO=&]R;VQA(&%N
+M;F]U;F-E9"`-"B`@("`@('!L86YS(%1U97-D87D@=&\@8V\M;W!E<F%T92!O
+M;B!T:&4@9&5V96QO<&UE;G0@;VX@<W1A;F1A<F0@9F]R('-E8W5R92`-"B`@
+M("`@(&UO8FEL92!E;&5C=')O;FEC('1R86YS86-T:6]N<RX@*T%$=RTO4"M!
+M1#0M#0H@("`@("`K041W+5`K040T+51H92!T<FEO(&%R92!E>'!E8W1E9"!T
+M;R!R96QE87-E('1E8VAN:6-A;"!D971A:6QS(&]F('1H92!P<F]J96-T(&)Y
+M(`T*("`@("`@=&AE(&5N9"!O9B!-87D@86YD('-A>2!O=&AE<B!C;VUP86YI
+M97,@=VEL;"!B92!I;G9I=&5D('1O(&-O;G1R:6)U=&4@=&\@#0H@("`@("!T
+M:&4@9&5V96QO<&UE;G0@;V8@=&AE('-T86YD87)D+B!4:&4@8V]M<&%N:65S
+M(&AO<&4@=&\@:&%V92!F;W)M=6QA=&5D('1H92`-"B`@("`@(&9R86UE=V]R
+M:R!B>2!T:&4@<W5M;65R(&9O;&QW:6YG(&EN<'5T(&9R;VT@;W1H97(@9FER
+M;7,N("M!1'<M+U`K040T+0T*("`@("`@*T%$=RU0*T%$-"U+97D@9F5A='5R
+M97,@;V8@=&AI<R!N97<@;W!E;B!S=&%N9&%R9"!W:6QL(&EN8VQU9&4@<V5C
+M=7)I='D@9G5N8W1I;VYS(`T*("`@("`@8G5I;'0@:6YT;R!705`@:6YC;'5D
+M:6YG(%=43%,@*%=I<F5L97-S(%1R86YS<&]R="!,87EE<B!396-U<FET>2DL
+M(%=)32`-"B`@("`@("A7:7)E;&5S<R!)9&5N=&EF:6-A=&EO;B!-;V1U;&4I
+M(&%N9"!W:7)E;&5S<R!0=6)L:6,@2V5Y('1E8VAN;VQO9VEE<R`-"B`@("`@
+M("A02TDI('1E8VAN;VQO9VEE<RX@*T%$=RTO4"M!1#0M#0H@("`@("`K041W
+M+5`K040T+51H92!G;W9E<FYM96YT(&ES(&-U<G)E;G1L>2`K041W+2]&3TY4
+M*T%$-$%002U5*T%$-$%002U&3TY4(&-O;&]R*T%$,$%)=RTP,#`P9F8@#0H@
+M("`@("!F86-E*T%$,$%)9RU4:6UE<R!.97<@4F]M86XK04-)05!G+6%U8W1I
+M;VYI;F<@;V9F*T%$=RTO52M!1#1!4$$M+T9/3E0K040T05!!+49/3E0@8V]L
+M;W(K040P04EW+3`P,#`P,"`-"B`@("`@(&9A8V4K040P04EG+51I;65S($YE
+M=R!2;VUA;BM!0TE!4&<M('1H92!L:6-E;F-E<R!N965D960@=&\@;W!E<F%T
+M92!4:&ER9"!'96YE<F%T:6]N(`T*("`@("`@*#-'*2!O<B!5;FEV97)S86P@
+M36]B:6QE(%1E;&5C;VUM=6YI8V%T:6]N<R!3>7-T96US("A53513*2!N971W
+M;W)K<RX@5&AE<V4@#0H@("`@("!W:6QL(&%L;&]W('-E<G9I8V4@<')O=FED
+M97)S('1O(&1E;&EV97(@9W)E871L>2!I;F-R96%S960@8F%N9'=I9'1H('1O
+M(`T*("`@("`@;6]B:6QE($EN=&5R;F5T(&1E=FEC97,N("M!1'<M+U`K040T
+M+0T*("`@("`@*T%$=RU0*T%$-"U-;V)I;&4@26YT97)N970@9&5V:6-E<R!A
+M<F4L('1H<F]U9V@@=&AE(&UI9W)A=&EO;B!T;R!T:&ES('1E8VAN;VQO9WDL
+M(`T*("`@("`@97AP96-T960@=&\@8F5C;VUE(&%N(&EN8W)E87-I;F=L>2!I
+M;7!O<G1A;G0@<&%R="!O9B!);G1E<FYE="UB87-E9"`-"B`@("`@(&)U<VEN
+M97-S+"!O9F9E<FEN9R!A(&YE=R!A;F0@;6]R92!U<V5R+69R:65N9&QY('=A
+M>2!F;W(@26YT97)N970@=7-E<G,@=&\@#0H@("`@("!S<&5N9"!O;FQI;F4N
+M(%1H92!S=6-C97-S(&]F('1H:7,@96UE<F=I;F<@=&5C:&YO;&]G>2!C;VYS
+M97%U96YT;'D@9&5P96YD<R`-"B`@("`@(&AE879I;'D@;VX@8W5S=&]M97(@
+M8V]N9FED96YC92!I;B!T:&4@<V5C=7)I='D@;V8@;VYL:6YE('1R86YS86-T
+M:6]N<RX@#0HK041W+2]0*T%$-"T-"B`@("`@("M!1'<M4"M!1#0M4')E<VED
+M96YT(&]F($YO:VEA($UO8FEL92!0:&]N97,L($UA='1I($%L86AU:'1A(&]U
+M=&QI;F5S(&IU<W0@:&]W(`T*("`@("`@:6UP;W)T86YT('1H:7,@;F5W('!R
+M;VIE8W0@:6X@82!S=&%T96UE;G0@:7-S=65D(&%T('1O9&%Y)W,@86YN;W5N
+M8V5M96YT+B`-"B`@("`@("M!1'<M+U`K040T+0T*("`@("`@*T%$=RU0*T%$
+M-$%)9RU);G1E9W)A=&EN9R!S96-U<FET>2!A;F0@=')A;G-A8W1I;VX@87!P
+M;&EC871I;VYS(&]N(&$@8V]M;6]N(&-O<F4@#0H@("`@("!S=&%N9&%R9"!A
+M;F0@<&QA=&9O<FT@=VEL;"!C<F5A=&4@9VQO8F%L(&UA<W,@;6%R:V5T(&9O
+M<B!M;V)I;&4@#0H@("`@("!E+6)U<VEN97-S+B!4:&ES('=I;&P@8F5N969I
+M="!A;&P@<&%R=&EC:7!A;G1S(&9R;VT@=F%R:6]U<R!I;F1U<W1R:65S(`T*
+M("`@("`@=VET:&EN('1H92!V86QU92!C:&%I;BP@:6X@861D:71I;VX@=&\@
+M:'5N9')E9',@;V8@;6EL;&EO;G,@;V8@8V]N<W5M97)S(`T*("`@("`@=&AR
+M;W5G:&]U="!T:&4@=V]R;&0N*T%#24%002TO1D].5"M!1#1!4$$M+U`K040T
+M05!!+2]41"M!1#1!4$$M+U12*T%$-$%002TO5$)/1%DK040T05!!+2]404),
+M12M!1#1!4$$M1D].5"!C;VQO<BM!1#!!27<M,#`P,#`P(`T*9F%C92M!1#!!
+M26<M5&EM97,@3F5W(%)O;6%N*T%#24%09T$X+2]&3TY4*T%$-$%002TO1$E6
+C*T%$-$%002TO0D]$62M!1#1!4$$M+TA434PK040T+0T*#0H
+`
+end
+
+
+---------------------- Sending Email 13 size=2513 ------------------------
+
+From: "Keval Pindoria" <keval.pindoria@internet-test.plc.psion.com>
+To: "Keval Pindoria" <keval.pindoria@internet-test.plc.psion.com>
+Subject: Testing filename parameter encoding/decoding
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+Message-ID: <JcsQPZS6FgcT.vXBpNYHv@psion.com>
+X-Mailer: EPOC Email Version 2.10
+
+begin 644 iso-8859-1_q_=c1=c2=c3.doc_=
+MT,\1X*&Q&N$`````````````````````/@`#`/[_"0`&```````````````!
+M````"P``````````````````````````````````````````````````````
+5````````````````````````````
+`
+end
+
+begin 644 Word file.doc
+MT,\1X*&Q&N$`````````````````````/@`#`/[_"0`&```````````````!
+M````"P``````````````````````````````````````````````````````
+5````````````````````````````
+`
+end
+
+begin 644 iso-8859-1_B_w8TFxi5kYXQ=_=
+M0VAA;F=E(#$Q.#0U(&]N(#$Y.3DO,3(O,C`@8GD@26)R86AI;5)`;&]N+65N
+M9V)U:6QD,#%?;6%I;FQI;F4@)TUO=F5D($A,4$U/1$5,(&9R;VT@0W)Y<W1A
+M;"YT>'0G#0I#:&%N9V4@,3$X,S,@;VX@,3DY.2\Q,B\R,"!B>2!W:6QL<D!L
+M;VXM=VEL;')?;6%I;FQI;F4@)U)E=FES92!B=6EL9')O;2YC;60@=&\@8V%L
+M;"!A(&XG#0I#:&%N9V4@,3$X,C0@;VX@,3DY.2\Q,B\R,"!B>2!696EK:V]0
+M0&QO;BUV96EK:V]P("=-;W9E9"!H;'!M;V1E;"!F<F]M($-R>7-T86P@8G)A
+M)PT*0VAA;F=E(#$Q-SDT(&]N(#$Y.3DO,3(O,C`@8GD@3$%.15)`;&]N+6QA
+M;F5R7V5P;V,@)T%D9&5D(&$@;F5W(&9U;F-T:6]N($-&8G-":71'8SHG#0I#
+M:&%N9V4@,3$W-S$@;VX@,3DY.2\Q,B\R,"!B>2!#:')I<T1`;&]N+6-H<FES
+M9"UA9VYM;V1E;"`G1FEX960@(DUE;6]R>2!L96%K(&EN(%)!9V5N9&%392<-
+M"D-H86YG92`Q,3<V."!O;B`Q.3DY+S$R+S(P(&)Y($=R86AA;4%`;&]N+6=R
+M86AA;6$@)T9I>&5D($5415A4(&1E9F5C="!%1$Y#1%5'+31%3DTG#0I#:&%N
+M9V4@,3$V-S`@;VX@,3DY.2\Q,B\Q-R!B>2!604U324M`;&]N+6)M971E<W0P
+M,2`G0VAA;F=E(#$Q-C,Y(&]N(#$Y.3DO,3(O,3<@8GD@5B<-"D-H86YG92`Q
+M,38V.2!O;B`Q.3DY+S$R+S$W(&)Y($%N9')E=T!L;VXM86YD<F5W7VIA=F%P
+M:&]N92`G1FEX960@<')O8FQE;7,@=VET:"!T:&4@8V]M;6]N("<-"D-H86YG
+M92`Q,38T,B!O;B`Q.3DY+S$R+S$W(&)Y($1O=6=&0$QO;BU$;W5G1E]74T52
+M5B`G1V5N97)A;"!R96QE87-E('=I=&@@82!F97<@8G5G("<-"D-H86YG92`Q
+M,38R.2!O;B`Q.3DY+S$R+S$W(&)Y($)I;&Q"0&QO;BUB:6QL8F]N("<M($9I
+><G-T(%)E;&5A<V4@;V8@27)4<F%N<"!#;V1E)PT*
+`
+end
+
+begin 644 iso-8859-1_q_=07=08=09_=
+M0VAA;F=E(#$Q.#0U(&]N(#$Y.3DO,3(O,C`@8GD@26)R86AI;5)`;&]N+65N
+M9V)U:6QD,#%?;6%I;FQI;F4@)TUO=F5D($A,4$U/1$5,(&9R;VT@0W)Y<W1A
+M;"YT>'0G#0I#:&%N9V4@,3$X,S,@;VX@,3DY.2\Q,B\R,"!B>2!W:6QL<D!L
+M;VXM=VEL;')?;6%I;FQI;F4@)U)E=FES92!B=6EL9')O;2YC;60@=&\@8V%L
+M;"!A(&XG#0I#:&%N9V4@,3$X,C0@;VX@,3DY.2\Q,B\R,"!B>2!696EK:V]0
+M0&QO;BUV96EK:V]P("=-;W9E9"!H;'!M;V1E;"!F<F]M($-R>7-T86P@8G)A
+M)PT*0VAA;F=E(#$Q-SDT(&]N(#$Y.3DO,3(O,C`@8GD@3$%.15)`;&]N+6QA
+M;F5R7V5P;V,@)T%D9&5D(&$@;F5W(&9U;F-T:6]N($-&8G-":71'8SHG#0I#
+M:&%N9V4@,3$W-S$@;VX@,3DY.2\Q,B\R,"!B>2!#:')I<T1`;&]N+6-H<FES
+M9"UA9VYM;V1E;"`G1FEX960@(DUE;6]R>2!L96%K(&EN(%)!9V5N9&%392<-
+M"D-H86YG92`Q,3<V."!O;B`Q.3DY+S$R+S(P(&)Y($=R86AA;4%`;&]N+6=R
+M86AA;6$@)T9I>&5D($5415A4(&1E9F5C="!%1$Y#1%5'+31%3DTG#0I#:&%N
+M9V4@,3$V-S`@;VX@,3DY.2\Q,B\Q-R!B>2!604U324M`;&]N+6)M971E<W0P
+M,2`G0VAA;F=E(#$Q-C,Y(&]N(#$Y.3DO,3(O,3<@8GD@5B<-"D-H86YG92`Q
+M,38V.2!O;B`Q.3DY+S$R+S$W(&)Y($%N9')E=T!L;VXM86YD<F5W7VIA=F%P
+M:&]N92`G1FEX960@<')O8FQE;7,@=VET:"!T:&4@8V]M;6]N("<-"D-H86YG
+M92`Q,38T,B!O;B`Q.3DY+S$R+S$W(&)Y($1O=6=&0$QO;BU$;W5G1E]74T52
+M5B`G1V5N97)A;"!R96QE87-E('=I=&@@82!F97<@8G5G("<-"D-H86YG92`Q
+M,38R.2!O;B`Q.3DY+S$R+S$W(&)Y($)I;&Q"0&QO;BUB:6QL8F]N("<M($9I
+><G-T(%)E;&5A<V4@;V8@27)4<F%N<"!#;V1E)PT*
+`
+end
+
+
+---------------------- Sending Email 14 size=1180 ------------------------
+
+From: "psion9.demon.co.uk" <ibrahim.rahman@symbian.com>
+To: "ß\@® ÑÒÓÔÕÖ" <test@psion7.demon.co.uk>
+Subject: ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòôö÷øùúûüýþÿ
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+Message-ID: <Y1SNgMGdP5qL.wSvrbTQz@psion.com>
+X-Mailer: EPOC Email Version 2.10
+
+¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíî
+ïðñòôö÷øùúûüýþÿ
+begin 644 Attachment.html
+M/"%$3T-465!%($A434P@4%5"3$E#("(M+R]7,T,O+T141"!(5$U,(#0N,"!4
+M<F%N<VET:6]N86PO+T5.(CX-"CQ(5$U,/CQ(14%$/@T*/$U%5$$@8V]N=&5N
+M=#TB=&5X="]H=&UL.R!C:&%R<V5T/6ES;RTX.#4Y+3$B(&AT='`M97%U:78]
+M0V]N=&5N="U4>7!E/@T*/$U%5$$@8V]N=&5N=#TB35-(5$U,(#4N,#`N,CDQ
+M.2XV,S`W(B!N86UE/4=%3D52051/4CX-"CQ35%E,13X\+U-464Q%/@T*/"](
+M14%$/@T*/$)/1%D@8F=#;VQO<CTC93%E,&0R/@T*/$1)5CX\1D].5"!F86-E
+M/2)4:6UE<R!.97<@4F]M86XB/@T*/%`^H:*CI*6FIZBIJJNL)G-H>3NNK["Q
+MLK.TM;:WN+FZN[R]OK_`P<+#Q,7&Q\C)RLO,S<[/T-'2T]35UM?8V=K;W-W>
+MW^#AXN/DY>;GZ.GJZ^SM[N_P\?+T]O?X^?K[_/W^_SPO4#X\+T9/3E0^/"]$
+5258^/"]"3T19/CPO2%1-3#X-"@T*
+`
+end
+
+
+---------------------- Sending Email 15 size=529 ------------------------
+
+From: Lars ®@© Persson <exchange1@symbian.se>
+Reply-to: Lars Persson <>
+To: exchange1@symbian.se
+Subject: LOVE ? ME!
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+Disposition-Notification-To: Lars Persson <>
+X-Priority: 1 (Highest)
+Importance: high
+Message-ID: <wvKYK1mFw112.FbbkrRdG@psion.com>
+X-Mailer: EPOC Email Version 2.10
+
+his should be a internet link hopefully!!Checking that conversion wiorks 
+with corrupt encoded data.
+
+
+---------------------- Sending Email 16 size=2037 ------------------------
+
+From: NODDYHa Ha<noddy.@plc.psion.com>"ÑÒDDY Ha Ha"
+To: "abcdefghi <noddy.@plc.psion.com>
+Cc: "ÑÒDDY" <noddy.@plc.psion.com>, "ÑÒDDY"  noddy.@plc.psion.com, ÑÒDDY Noddy
+  <noddy.@plc.psion.com>, ÑÒDDY Noddy noddy.@plc.psion.com, ÑÒDDY IS
+  CRAP<noddy.@plc.psion.com>, <noddy.@plc.psion.com> "ÑÒDDY",
+  noddy.@plc.psion.com "ÑÒDDY", <noddy.@plc.psion.com> ÑÒDDY Noddy,
+  noddy.@plc.psion.com ÑÒDDY Noddy, <noddy.@plc.psion.com>ÑÒDDY IS CRAP
+Bcc: "ÑÒDDY Ha Ha" noddy.@plc.psion.com ÑÒDDY IS CRAP, ÑÒDDY Ha
+  Ha<noddy.@plc.psion.com> "ÑÒDDY Ha Ha", "ÑÒDDY Ha Ha"
+  <noddy.@plc.psion.com>ÑÒDDY IS CRAP, "ÑÒDDY Ha Ha"
+  <noddy.@plc.psion.com> ÑÒDDY IS CRAP, ÑÒDDY Ha Ha
+  noddy.@plc.psion.com "ÑÒDDY Ha Ha", "ÑÒDDY Ha Ha"
+  noddy.@plc.psion.com ÑÒDDY IS CRAP
+Subject: À Few ENÇODED Words
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+Message-ID: <xH1PwWmxNJ3N.QqNzCmF1@psion.com>
+X-Mailer: EPOC Email Version 2.10
+
+begin 644 ab©d.doc
+MT,\1X*&Q&N$`````````````````````/@`#`/[_"0`&```````````````!
+M````"P``````````````````````````````````````````````````````
+5````````````````````````````
+`
+end
+
+begin 644 ab©d.doc
+MT,\1X*&Q&N$`````````````````````/@`#`/[_"0`&```````````````!
+M````"P``````````````````````````````````````````````````````
+M````````````````````````````^=J9_?BE>G:F````````````````````
+H``````````````````````````````````````````````````````
+`
+end
+
+begin 644 ab©d.doc
+M````````````````````````````````````````````````````````````
+*``````````````
+`
+end
+
+
+---------------------- Sending Email 17 size=7447 ------------------------
+
+From: heidihi@hi-de-hi.co.uk
+To: alyx_capp@hotmail.com "Alex Capp",
+  I_like_my_laugh@hotmail.com "Alex MacDonald",
+  drewp3@hotmail.com "Andrew Papas", arnbee82@hotmail.com "Anna Bartram",
+  annabriggs83@hotmail.com "Anna Briggs",
+  keystone@friend.ly.net "Auntie Julia",
+  orelyloo@hotmail.com "aurelie chauvet", aairey@hotmail.com "Aurora Airey",
+  beckyinkster@hotmail.com "Becky Inkster",
+  b_westwood@hotmail.com "Ben Westwood",
+  wangjian_wx@hotmail.com "Ben (wang jian)",
+  bexplum21@hotmail.com "Bex Plumbly", firstgrowth@aol.com "Bradbury",
+  bryonylangford@hotmail.com "Bryony Langford", cj@camillajane.com "Camilla",
+  s0300039@nus.edu.sg "Catherine Alice Struthers",
+  chali7699@sina.com.cn "Chali", scooby_baker@hotmail.com "Chris Baker",
+  claire_jack_son@hotmail.com "Claire Jackson",
+  kirinki@angelfire.com "Clare Judkins", davidfrances@btconnect.com "Dad",
+  english_elf@hotmail.com "Dan Habe", dmc114@york.ac.uk "Dave Coleman",
+  daejson@hotmail.com "David Johnson", Dbeeuk@yahoo.com "Deb Heys",
+  eggy@11theorchard.freeserve.co.uk "Eggy",
+  elsie.01@orange.net              "Eleanor Jones",
+  emma.mc@lineone.net "Emma McGonigle",
+  flora_mcm@hotmail.com "Flora McMichael",
+  cecky_waugh@hotmail.com "francesca waugh",
+  gemble_trixy_pixie@hotmail.com "Gemble",
+  lancs@highburt.demon.co.uk "Geoff and Karen Lancaster",
+  genggrace@yahoo.com.cn "Grace", awadie.h@mailcity.com "Halim",
+  hwraight@yahoo.com "Helen Wraight", ugm1hla@leeds.ac.uk "Helen Anthony",
+  jan_duchek@seznam.cz "Jan Duchek", jasmine_alice_jag@hotmail.com "Jasmine",
+  joannerestrepo@hotmail.com "Jo Restrepo",
+  abbess@hotmail.com              "Jennifer Dorrian",
+  julems@gmx.de "Juliane", katiea321@hotmail.com "kat armitage",
+  morzanella@yahoo.com "Katalin Csomor",
+  jhm1cas@leeds.ac.uk "Kate Struthers",
+  jessicarabbit18@hotmail.com "Katie Jenkins",
+  Trinibeanie17@hotmail.com "Katriona Anderson", kirimk@hotmail.com "Kiri",
+  kostoula_r@hotmail.com "Konstantina Rogoti",
+  kri.gun@spray.se "Kristin Gunnarsson",
+  bellabondini@hotmail.com "Louise Bond",
+  louise_eyre@hotmail.com "Louise Eyre", JGray@DBUP.Textron.com "lucy gray",
+  Dme@the-palace.freeserve.co.uk              "Luigi (Dme)",
+  mandeepbaveja@yahoo.com "Mandeep Baveja",
+  mlemare@yahoo.co.uk "Megan Le Mare", donglebix@yahoo.com "Mike Negus",
+  hilaryfrances@hotmail.com "Mum", n8gar@yahoo.com "Nate Garland",
+  niall.saville@bigfoot.com "Niall Saville",
+  nicolaaaaas@hotmail.com "Nic Baird", nomdesouris@yahoo.co.uk "Nichola",
+  nicola_fader@hotmail.com "Nicola Fader",
+  nicarris@hotmail.com "Nicola Harris",
+  oliviermbpfanner@hotmail.com "Oli Pfanner",
+  flipflop88@hotmail.com "Olivia Saunders",
+  owl@bms.umist.ac.uk "Owen Lancaster",
+  patsywool@yahoo.co.uk "Pat Woolhouse", paulplatt@ntlworld.com "Paul Platt",
+  pauladougill@yahoo.co.uk "Paula Dougill",
+  petermcmichael@hotmail.com "Peter McMichael",
+  exotic1603@yahoo.com "Ranee Teeluck",
+  reubencoulter@hotmail.com "Reuben Coulter",
+  rjsteele@btinternet.com "Richard Steele", rosnoble@hotmail.com "Ros Noble",
+  ruthcapper@hotmail.com "Ruth Capper", samgeall@hotmail.com "Sam Geall",
+  turnipcake@hotmail.com "Sandy", starrysez@hotmail.com "Sarah Allen",
+  sarah_a81@hotmail.com "Sarah Anderson",
+  saskiabacon@btopenworld.com "Saskia Bacon",
+  saskiavinall@hotmail.com "saskia vinall", Tcnosapien@yahoo.com "Saul",
+  shenth@a4internet.com "Shenth Ravindra",
+  si_hawkins@yahoo.co.uk "Simon Hawkins", soph7@yahoo.com "Sophie Giles",
+  sofamarshall@hotmail.com "Sophie Marshall",
+  goodfella_sp@hotmail.com "Sophie Patterson",
+  chien_de_feu@hotmail.com "Tanneguy Viellard",
+  tnugent458@yahoo.com "Tim Nugent", vickyf22@hotmail.com "Vicky Field",
+  phantomnoise@yahoo.co.uk "zvensk xye",
+  auyingying@hotmail.com "ClaireWarburton", rbeecroft@hotmail.com, <
+  ollie_enigma@hotmail.com >
+Subject: hope this works!
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+Message-ID: <yQblnShXNZrQ.PN5mV2L6@psion.com>
+X-Mailer: EPOC Email Version 2.10
+
+Dear All,.
+
+
+---------------------- Sending Email 18 size=1858 ------------------------
+
+From: Timo <timo.puronen@digia.com>
+To: timo@penguin.digia
+Subject: vcard
+Date: Mon,  2 Dec 1996 23:59:59 +0000
+Message-ID: <zxY1hNFYXmYq.Cl90wzg9@psion.com>
+X-Mailer: EPOC Email Version 2.10
+
+vcard test
+begin 644 Pein kanssa juttuja.vcs
+M0D5'24XZ5D-!3$5.1$%2#0I04D]$240Z+2\O36EC<F]S;V9T($-O<G!O<F%T
+M:6]N+R]/=71L;V]K(#DN,"!-24U%1$E2+R]%3@T*5D524TE/3CHQ+C`-"D)%
+M1TE..E9%5D5.5`T*1%135$%25#HR,#`Q,3$Q,E0Q,3`P,#!:#0I$5$5.1#HR
+M,#`Q,3$Q,E0Q-#`P,#!:#0I5240Z0T0P,#`P,#`X0CDU,3%$,3@R1#@P,$,P
+M-$9",38R-40Q1C,P1CE&,4(V,3@Y,30R0C%#,4,S-T(X13E"0T0X1@T*4U5-
+M34%263M%3D-/1$E.1SU154]4140M4%))3E1!0DQ%.E!E:6X@:V%N<W-A(&IU
+M='1U:F$-"E!224]22519.C,-"D5.1#I6159%3E0-"D5.1#I60T%,14Y$05(-
+!"@
+`
+end
+
+begin 644 Pein kanssa juttuja.vcs
+M0D5'24XZ5D-!3$5.1$%2#0I04D]$240Z+2\O36EC<F]S;V9T($-O<G!O<F%T
+M:6]N+R]/=71L;V]K(#DN,"!-24U%1$E2+R]%3@T*5D524TE/3CHQ+C`-"D)%
+M1TE..E9%5D5.5`T*1%135$%25#HR,#`Q,3$Q,E0Q,3`P,#!:#0I$5$5.1#HR
+M,#`Q,3$Q,E0Q-#`P,#!:#0I5240Z0T0P,#`P,#`X0CDU,3%$,3@R1#@P,$,P
+M-$9",38R-40Q1C,P1CE&,4(V,3@Y,30R0C%#,4,S-T(X13E"0T0X1@T*4U5-
+M34%263M%3D-/1$E.1SU154]4140M4%))3E1!0DQ%.E!E:6X@:V%N<W-A(&IU
+M='1U:F$-"E!224]22519.C,-"D5.1#I6159%3E0-"D5.1#I60T%,14Y$05(-
+!"@
+`
+end
+
+begin 644 Pein kanssa juttuja.vcs
+M0D5'24XZ5D-!3$5.1$%2#0I04D]$240Z+2\O36EC<F]S;V9T($-O<G!O<F%T
+M:6]N+R]/=71L;V]K(#DN,"!-24U%1$E2+R]%3@T*5D524TE/3CHQ+C`-"D)%
+M1TE..E9%5D5.5`T*1%135$%25#HR,#`Q,3$Q,E0Q,3`P,#!:#0I$5$5.1#HR
+M,#`Q,3$Q,E0Q-#`P,#!:#0I5240Z0T0P,#`P,#`X0CDU,3%$,3@R1#@P,$,P
+M-$9",38R-40Q1C,P1CE&,4(V,3@Y,30R0C%#,4,S-T(X13E"0T0X1@T*4U5-
+M34%263M%3D-/1$E.1SU154]4140M4%))3E1!0DQ%.E!E:6X@:V%N<W-A(&IU
+M='1U:F$-"E!224]22519.C,-"D5.1#I6159%3E0-"D5.1#I60T%,14Y$05(-
+!"@
+`
+end
+
+BEGIN:VCALENDARPRODID:-//Microsoft Corporation//Outlook 9.0 
+MIMEDIR//ENVERSION:1.0BEGIN:VEVENTDTSTART:20011112T110000ZDTEND:20011112T14000
+0ZUID:CD0000008B9511D182D800C04FB1625D1F30F9F1B6189142B1C1C37B8E9BCD8FSUMMARY;
+ENCODING=QUOTED-PRINTABLE:Pein kanssa 
+juttujaPRIORITY:3END:VEVENTEND:VCALENDAR
+begin 644 Pein kanssa juttuja.vcs
+M0D5'24XZ5D-!3$5.1$%2#0I04D]$240Z+2\O36EC<F]S;V9T($-O<G!O<F%T
+M:6]N+R]/=71L;V]K(#DN,"!-24U%1$E2+R]%3@T*5D524TE/3CHQ+C`-"D)%
+M1TE..E9%5D5.5`T*1%135$%25#HR,#`Q,3$Q,E0Q,3`P,#!:#0I$5$5.1#HR
+M,#`Q,3$Q,E0Q-#`P,#!:#0I5240Z0T0P,#`P,#`X0CDU,3%$,3@R1#@P,$,P
+M-$9",38R-40Q1C,P1CE&,4(V,3@Y,30R0C%#,4,S-T(X13E"0T0X1@T*4U5-
+M34%263M%3D-/1$E.1SU154]4140M4%))3E1!0DQ%.E!E:6X@:V%N<W-A(&IU
+M='1U:F$-"E!224]22519.C,-"D5.1#I6159%3E0-"D5.1#I60T%,14Y$05(-
+!"@
+`
+end
+

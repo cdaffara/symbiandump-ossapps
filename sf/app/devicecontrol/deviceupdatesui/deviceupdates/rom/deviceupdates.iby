@@ -1,0 +1,12 @@
+#ifndef __DEVICEUPDATES_IBY__
+#define __DEVICEUPDATES_IBY__
+
+#include <data_caging_paths_for_iby.hrh> 
+
+file=ABI_DIR/BUILD_DIR/deviceupdates.exe PROGRAMS_DIR/deviceupdates.exe
+file=ABI_DIR/BUILD_DIR/deviceupdatesplugin.dll SHARED_LIB_DIR/deviceupdatesplugin.dll
+data=DATAZ_/private/10003a3f/import/apps/deviceupdates_reg.rsc private/10003a3f/import/apps/deviceupdates_reg.rsc
+data = DATAZ_/private/10202be9/101f6de5.txt    private/10202be9/101f6de5.txt
+data=/epoc32/data/c/resource/qt/plugins/controlpanel/deviceupdatesplugin.qtplugin					resource/qt/plugins/controlpanel/deviceupdatesplugin.qtplugin
+
+#endif

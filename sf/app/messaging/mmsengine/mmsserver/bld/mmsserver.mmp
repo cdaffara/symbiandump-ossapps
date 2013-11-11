@@ -1,0 +1,108 @@
+/*
+* Copyright (c) 2002 - 2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*     This is project specification file for the mmssrv.dll.
+*
+*/
+
+
+
+#include <platform_paths.hrh>
+
+#include "../../group/mmsopt.mph"
+
+TARGET          mmssrv.dll
+TARGETTYPE      dll
+UID             0x10003C5E 0x100058DB
+CAPABILITY      CAP_GENERAL_DLL
+VENDORID        VID_DEFAULT
+VERSION 	10.0
+PAGED
+
+SOURCEPATH      ../src
+
+// Macro _NO_MMSS_LOGGING_ to get rid of all logging
+// uncomment to delete logs, comment out to enable logs
+// Master control _MMS_ALL_LOGGING_OFF_
+// is in file mmsengine/group/mmsopt.mph
+// Comment out _MMS_ALL_LOGGING_OFF_ in that file to enable logging
+// in all mms components
+#ifdef _MMS_ALL_LOGGING_OFF_
+MACRO _NO_MMSS_LOGGING_
+#define _NO_MMSS_LOGGING_
+#endif
+
+SOURCE          mmsserver.cpp
+SOURCE          mmssendoperation.cpp
+SOURCE          mmsreceivemessage.cpp
+SOURCE          mmsschedulesend.cpp
+SOURCE          mmsscheduledentry.cpp
+SOURCE          mmslog.cpp
+SOURCE          mmsbaseoperation.cpp
+SOURCE          mmsforwardoperation.cpp
+SOURCE          mmsdeleteoperation.cpp
+SOURCE          mmsmmboxlist.cpp
+SOURCE          mmsreadreport.cpp
+
+USERINCLUDE     ../inc
+USERINCLUDE     ../../inc
+USERINCLUDE     ../../mmshttptransport/inc
+USERINCLUDE     ../../mmscodec/inc
+USERINCLUDE     ../../mmsconninit/inc
+USERINCLUDE     ../../mmsserversettings/inc
+USERINCLUDE     ../../mmsmessage/inc
+
+SYSTEMINCLUDE   ../../../inc
+APP_LAYER_SYSTEMINCLUDE
+
+LIBRARY         mmstransport.lib
+LIBRARY         mmsmessage.lib
+LIBRARY         mmsgenutils.lib
+LIBRARY         mmscodec.lib
+LIBRARY         euser.lib
+LIBRARY         msgs.lib
+LIBRARY         efsrv.lib
+LIBRARY         apparc.lib
+LIBRARY         schsend.lib
+LIBRARY         estor.lib
+LIBRARY         bafl.lib
+LIBRARY         logwrap.lib
+LIBRARY         logcli.lib
+LIBRARY         mmsconninit.lib
+LIBRARY         esock.lib
+LIBRARY         centralrepository.lib
+LIBRARY         mmsserversettings.lib
+LIBRARY         charconv.lib
+LIBRARY         apgrfx.lib
+LIBRARY         apmime.lib
+LIBRARY         msgcommonutils.lib
+
+#ifndef _NO_MMSS_LOGGING_
+LIBRARY         flogger.lib
+#else
+DEBUGLIBRARY    flogger.lib
+#endif
+
+#if defined(ARMCC)
+deffile         ../eabi/mmsserver.def
+#elif defined( WINS )
+DEFFILE         ../bwins/mmsserver.def
+#elif defined( MARM )
+DEFFILE         ../bmarm/mmsserver.def
+#endif
+
+SMPSAFE
+
+
+// End of File

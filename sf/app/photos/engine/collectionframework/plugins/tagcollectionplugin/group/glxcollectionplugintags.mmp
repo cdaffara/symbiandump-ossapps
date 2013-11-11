@@ -1,0 +1,77 @@
+/*
+* Copyright (c) 2008-2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   
+*
+*/
+
+
+
+#include   <bldvariant.hrh>
+#include   <data_caging_paths.hrh>
+#include   <platform_paths.hrh> //APP_LAYER_SYSTEMINCLUDE
+
+#include "../../../../../group/glxbuildcommon.mmh"
+
+TARGET          glxcollectionplugintags.dll
+TARGETTYPE      PLUGIN
+UID  			0x10009D8D  0x200071BC
+
+#ifndef WINSCW
+EPOCALLOWDLLDATA
+#endif 
+
+CAPABILITY      CAP_ECOM_PLUGIN
+
+SOURCEPATH      ../src
+SOURCE          glxcollectionplugintags.cpp
+SOURCE          glxcollectionplugintagsproxy.cpp
+
+//RESOURCE - Ecom Plugin
+
+SOURCEPATH      ../data
+START RESOURCE  200071BC.rss
+TARGET          glxcollectionplugintags.rsc 
+END
+
+SOURCEPATH      ../data
+START RESOURCE  glxplugintags.rss
+HEADER
+TARGETPATH      ECOM_RESOURCE_DIR
+LANGUAGE_IDS
+END
+
+USERINCLUDE     ../inc
+
+// System includes from the source tree
+SYSTEMINCLUDE         ../../../../../inc							//Gallery includes			
+SYSTEMINCLUDE         ../../../../../gallery/loc							//Gallery Loc
+SYSTEMINCLUDE         ../../../datasource/manager/inc			//DataSource Include
+SYSTEMINCLUDE         ../../../../../commonutilities/common/inc
+
+
+// System includes from epoc32/include
+APP_LAYER_SYSTEMINCLUDE
+
+SYSTEMINCLUDE   /epoc32/include/ecom
+
+LIBRARY         commonengine.lib
+LIBRARY         euser.lib								//Mandatory
+LIBRARY         ecom.lib								//Ecom Library
+LIBRARY         estor.lib
+LIBRARY         mpxcommon.lib							//CollectionPath Level			
+LIBRARY         glxdatasourcemanager.lib				//DataSource Request
+LIBRARY         glxcommon.lib							//Filters
+LIBRARY         flogger.lib
+SMPSAFE
+// End of File

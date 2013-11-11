@@ -1,0 +1,20 @@
+<hbwidget version="0.1">
+  <layout name="layout-default" type="mesh">
+    <meshitem src="mediaIcon" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+    <meshitem src="mediaIcon" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="mediaIcon" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+
+    <meshitem src="text-1" srcEdge="LEFT" dst="mediaIcon" dstEdge="RIGHT"/>
+    <meshitem src="text-1" srcEdge="RIGHT" dst="text-2" dstEdge="LEFT"/>
+    <meshitem src="text-1" srcEdge="CENTERV" dst="" dstEdge="CENTERV"/>
+
+    <meshitem src="text-2" srcEdge="LEFT" dst="text-1" dstEdge="RIGHT"/>
+    <meshitem src="text-2" srcEdge="RIGHT" dst="" dstEdge="RIGHT"/>
+    <meshitem src="text-2" srcEdge="CENTERV" dst="" dstEdge="CENTERV"/>
+
+    <meshitem src="bgFrame" srcEdge="LEFT" dst="" dstEdge="LEFT"/>
+    <meshitem src="bgFrame" srcEdge="TOP" dst="" dstEdge="TOP"/>
+    <meshitem src="bgFrame" srcEdge="RIGHT" dst="" dstEdge="RIGHT"/>
+    <meshitem src="bgFrame" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM"/>
+  </layout>
+</hbwidget>

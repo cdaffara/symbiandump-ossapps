@@ -1,0 +1,21 @@
+220 LON-msgtest06.intra ESMTP CommuniGate Pro 4.0.6 is glad to see you!
+250-LON-msgtest06.intra is pleased to meet you
+250-HELP
+250-PIPELINING
+250-ETRN
+250-DSN
+250-TURN
+250-ATRN
+250-SIZE 1048576
+250-STARTTLS
+250-AUTH=LOGIN
+250-AUTH LOGIN PLAIN CRAM-MD5 DIGEST-MD5 MSN
+250 EHLO
+334 PDY5LjEwNTU1MDgwMDJATE9OLW1zZ3Rlc3QwNi5pbnRyYT4=
+535 authentication failed: incorrect password or account name
+250 SMTP state reset
+250 smtp@lon-msgtest06.intra sender accepted
+250 test@psion9.demon.co.uk will relay mail from a client address
+354 Enter mail, end with "." on a line by itself
+250 130309 message accepted for delivery
+221 LON-msgtest06.intra CommuniGate Pro SMTP closing connection

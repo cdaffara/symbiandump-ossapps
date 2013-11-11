@@ -1,0 +1,118 @@
+;
+; Copyright (c) 2008 - 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:   Stub package file for project Gallery
+;
+
+; -------- general --------
+
+; Languages
+&EN
+
+; Package header
+#{"photos"},(0x20000A14),1,0,0,TYPE=SA
+
+; Localised Vendor name
+%{"Nokia, Qt"}
+
+; Unique Vendor name
+:"Nokia, Qt"
+
+"" - "z:\sys\bin\photos.exe"		
+"" - "z:\private\10003a3f\import\apps\photos_reg.rsc"
+"" - "z:\resource\apps\photos.rsc"
+
+; -------- files --------
+; engines
+"" - "z:\sys\bin\glxcommonui.dll"
+"" - "z:\sys\bin\glxcommon.dll"
+
+; datasource
+"" - "z:\sys\bin\glxdatasourcemanager.dll"
+"" - "z:\sys\bin\glxdatasourcemde.dll"
+"" - "z:\resource\plugins\glxdatasourcemde.rsc"
+
+; collection plugins
+"" - "z:\sys\bin\glxcollectionpluginalbums.dll"
+"" - "z:\resource\plugins\glxcollectionpluginalbums.rsc"
+"" - "z:\resource\plugins\glxpluginalbums.rsc"
+
+"" - "z:\sys\bin\glxcollectionpluginall.dll"
+"" - "z:\resource\plugins\glxcollectionpluginall.rsc"
+"" - "z:\resource\plugins\glxpluginall.rsc"
+
+"" - "z:\sys\bin\glxcollectionplugincamera.dll"
+"" - "z:\resource\plugins\glxcollectionplugincamera.rsc"
+"" - "z:\resource\plugins\glxplugincamera.rsc"
+
+"" - "z:\sys\bin\glxcollectionplugindownloads.dll"
+"" - "z:\resource\plugins\glxcollectionplugindownloads.rsc"
+"" - "z:\resource\plugins\glxplugindownloads.rsc"
+
+"" - "z:\sys\bin\glxcollectionpluginmonths.dll"
+"" - "z:\resource\plugins\glxcollectionpluginmonths.rsc"
+"" - "z:\resource\plugins\glxpluginmonths.rsc"
+
+"" - "z:\sys\bin\glxcollectionplugintags.dll"
+"" - "z:\resource\plugins\glxcollectionplugintags.rsc"
+"" - "z:\resource\plugins\glxplugintags.rsc"
+
+"" - "z:\sys\bin\glxcollectionpluginimageviewer.dll"
+"" - "z:\resource\plugins\glxcollectionpluginimageviewer.rsc"
+
+; Glx logging client
+"" - "z:\sys\bin\glxlogging.dll"
+
+; commandhandlers
+"" - "z:\sys\bin\glxcommandhandlerbase.dll"
+"" - "z:\sys\bin\glxcommoncommandhandlers.dll"
+
+;engines
+"" - "z:\sys\bin\glxdrmutility.dll"
+"" - "z:\sys\bin\glxmedialists.dll"
+"" - "z:\sys\bin\glxtvout.dll"
+
+;OOM plugin
+"" - "z:\sys\bin\glxmemoryplugin.dll"
+
+; viewmanagement
+"" - "z:\sys\bin\glxstatehandler.dll"
+"" - "z:\sys\bin\glxviewmanager.dll"
+
+; qt dlls
+"" - "z:\sys\bin\glxdrmutilitywrapper.dll"
+"" - "z:\sys\bin\glxexternalutility.dll"
+"" - "z:\sys\bin\glximagedecoderwrapper.dll"
+"" - "z:\sys\bin\glxloggerqt.dll"
+"" - "z:\sys\bin\glxtvoutwrapper.dll"
+"" - "z:\sys\bin\glxmedialistwrapper.dll"
+"" - "z:\sys\bin\glxlistmodel.dll"
+"" - "z:\sys\bin\glxfavmediamodel.dll"
+"" - "z:\sys\bin\glxlistmodel.dll"
+"" - "z:\sys\bin\glxmodelwrapper.dll"
+"" - "z:\sys\bin\glxviews.dll"
+"" - "z:\sys\bin\glxviewutilities.dll"
+"" - "z:\sys\bin\glxzoomwidget.dll"
+"" - "z:\sys\bin\glxdetailscustomwidgets.dll"
+"" - "z:\sys\bin\glxdetailscustomplugin.dll"
+
+
+"" - "z:\private\10202BE9\20007194.txt"
+"" - "z:\private\10202BE9\20007193.txt"
+
+"" - "z:\resource\qt\translations\photos.qm"
+
+
+;splashscreen
+"" - "z:\resource\hb\splashml\photos.splashml"
+"" - "z:\resource\hb\splashml\photos.docml"

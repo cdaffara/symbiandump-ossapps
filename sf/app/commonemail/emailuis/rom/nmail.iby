@@ -1,0 +1,43 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+#ifndef __NMAIL_IBY__
+#define __NMAIL_IBY__
+#include <bldvariant.hrh>
+
+#ifdef FF_EMAIL_FRAMEWORK
+
+// this macro is from hb_apps.iby
+#define HB_UPGRADABLE_APP_REG_RSC(NAME) data=DATAZ_\PRIVATE\10003A3F\IMPORT\APPS\ ## NAME ## _reg.rsc        Private\10003a3f\import\apps\ ## NAME ## _reg.rsc
+
+file=ABI_DIR\BUILD_DIR\nmailui.exe                  SHARED_LIB_DIR\nmailui.exe   
+HB_UPGRADABLE_APP_REG_RSC(nmailui)
+
+file=ABI_DIR\BUILD_DIR\nmailuiengine.dll	SHARED_LIB_DIR\nmailuiengine.dll    PAGED
+file=ABI_DIR\BUILD_DIR\nmailbase.dll		SHARED_LIB_DIR\nmailbase.dll        PAGED
+file=ABI_DIR\BUILD_DIR\nmailuiwidgets.dll		SHARED_LIB_DIR\nmailuiwidgets.dll        PAGED
+
+//the following are for the splash screens
+data=ZRESOURCE\hb\splashml\mail_messagelist.splashml    RESOURCE_FILES_DIR\hb\splashml\mail_messagelist.splashml
+data=ZRESOURCE\hb\splashml\mail_messagelist.docml       RESOURCE_FILES_DIR\hb\splashml\mail_messagelist.docml
+data=ZRESOURCE\hb\splashml\mail_editor.splashml         RESOURCE_FILES_DIR\hb\splashml\mail_editor.splashml
+data=ZRESOURCE\hb\splashml\mail_editor.docml            RESOURCE_FILES_DIR\hb\splashml\mail_editor.docml
+data=ZRESOURCE\hb\splashml\mail_viewer.splashml         RESOURCE_FILES_DIR\hb\splashml\mail_viewer.splashml
+data=ZRESOURCE\hb\splashml\mail_viewer.docml            RESOURCE_FILES_DIR\hb\splashml\mail_viewer.docml
+
+#endif //FF_EMAIL_FRAMEWORK
+
+#endif

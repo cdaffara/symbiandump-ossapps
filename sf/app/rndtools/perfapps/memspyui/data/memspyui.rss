@@ -1,0 +1,1156 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+
+// Resource Identifier
+NAME MEMS
+
+// System includes
+#include <data_caging_paths_strings.hrh>
+#include <appinfo.rh>
+#include <eikon.rh>
+#include <EIKCORE.rsg>
+#include <eikon.rsg>
+#include <avkon.rh>
+#include <eikon.rsg>
+#include <avkon.rsg>
+#include <avkon.mbg>
+#include <avkon.loc>
+#include <AvkonIcons.hrh>
+#include <bldvariant.hrh>
+
+
+// User includes
+#include "../ui/avkon/inc/MemSpy.hrh"
+
+
+RESOURCE RSS_SIGNATURE { }
+
+RESOURCE TBUF { buf="MemSpy"; }
+
+RESOURCE EIK_APP_INFO
+    {
+    hotkeys = r_memspy_hotkeys;
+    menubar = r_memspy_menubar;
+    cba     = R_AVKON_SOFTKEYS_OPTIONS_EXIT;     
+    }
+
+
+
+
+
+
+RESOURCE HOTKEYS r_memspy_hotkeys
+    {
+    control=
+        {
+        HOTKEY { command=EAknCmdExit; key='e'; }
+        };
+    }
+
+
+RESOURCE MENU_BAR r_memspy_menubar
+    {
+    titles=
+        {
+        MENU_TITLE { menu_pane=r_memspy_menupane;                   txt = "Main Menu"; }
+        };
+    }
+
+
+
+
+RESOURCE MENU_PANE r_memspy_menupane_stack
+    {
+    items=
+        {
+		MENU_ITEM { command = EMemSpyCmdStackInfoThread;            txt = "Info"; }
+#ifndef __WINS__
+		,
+		MENU_ITEM { command = EMemSpyCmdStackData;                  cascade = r_memspy_menupane_stack_data; txt = "Data"; }
+#endif
+        };
+    }
+
+
+RESOURCE MENU_PANE r_memspy_menupane_stack_data
+    {
+    items=
+        {
+		MENU_ITEM { command=EMemSpyCmdStackDataUser;                txt = "User stack data"; },
+		MENU_ITEM { command=EMemSpyCmdStackDataKernel;              txt = "Kernel stack data"; }
+        };
+    }
+
+
+
+
+
+
+RESOURCE MENU_PANE r_memspy_menupane_heap
+    {
+    items=
+        {
+		MENU_ITEM { command = EMemSpyCmdHeapInfoThread;             txt = "Info"; },
+		MENU_ITEM { command = EMemSpyCmdHeapData;                   cascade = r_memspy_menupane_heap_data; txt = "Data"; }
+        };
+    }
+
+
+RESOURCE MENU_PANE r_memspy_menupane_heap_data
+    {
+    items=
+        {
+		MENU_ITEM { command = EMemSpyCmdHeapCellListing;            txt = "Cell list"; }
+#ifndef __WINS__
+		,
+		MENU_ITEM { command = EMemSpyCmdHeapDataDump;               txt = "Heap data"; }
+#endif
+        };
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+RESOURCE MENU_PANE r_memspy_menupane_auto_capture
+    {
+    items=
+        {
+		MENU_ITEM { command = EMemSpyCmdAutoCaptureToggle;          txt = "Enable/Disable"; },
+		MENU_ITEM { command = EMemSpyCmdAutoCaptureRetryTime;       txt = "Timer period"; },
+		MENU_ITEM { command = EMemSpyCmdAutoCaptureOperationType;   txt = "Operation type"; }
+        };
+    }
+
+
+RESOURCE TBUF r_memspy_auto_capture_enable
+    {
+    buf = "Enable";
+    }
+
+
+RESOURCE TBUF r_memspy_auto_capture_disable
+    {
+    buf = "Disable";
+    }
+
+
+RESOURCE LISTBOX r_memspy_auto_capture_operation_listbox
+    {
+    flags = 0; //EEikListBoxMultipleSelection;
+    }
+
+
+RESOURCE AVKON_SETTING_PAGE r_memspy_auto_capture_operation_types_settings_page
+    { 
+    number              = EAknSettingPageNoOrdinalDisplayed;
+    label               = "Operation type";
+    softkey_resource    = R_AVKON_SOFTKEYS_OK_CANCEL;
+    type                = EAknSetListBox;
+    editor_resource_id  = r_memspy_auto_capture_operation_listbox;
+    }
+
+
+RESOURCE ARRAY r_memspy_auto_capture_operation_types
+    {
+    items =
+        {
+		LBUF { txt = "General Info (Text)"; },
+		LBUF { txt = "General Info (Detailed)"; },
+		//
+		LBUF { txt = "User Heap Info (Text)"; },
+		LBUF { txt = "User Heap Info (CSV)"; },
+		//
+		LBUF { txt = "User Heap Cell List (Text)"; },
+		//
+		LBUF { txt = "User Heap Data (Binary)"; },
+		LBUF { txt = "Kernel Heap Data (Binary)"; },
+		//
+		LBUF { txt = "User Stack Info (Text)"; },
+		LBUF { txt = "User Stack Info (CSV)"; },
+		//
+		LBUF { txt = "User Stack Data (Binary)"; },
+		LBUF { txt = "Kernel Stack Data (Binary)"; }
+        };
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+RESOURCE MENU_PANE r_memspy_menupane_phone_info_general
+    {
+    items=
+        {
+		MENU_ITEM { command = EMemSpyCmdPhoneInfoGeneralSummary;			txt = "Summary"; },
+		MENU_ITEM { command = EMemSpyCmdPhoneInfoGeneralDetailed;			txt = "Detailed Info"; }//,
+		//MENU_ITEM { command = EMemSpyCmdPhoneInfoGeneralHandles;			txt = "Handle Info"; },
+		//MENU_ITEM { command = EMemSpyCmdPhoneInfoGeneralKernelContainers;	txt = "Kernel Containers"; }
+        };
+    }
+
+
+RESOURCE MENU_PANE r_memspy_menupane_phone_info_heap
+    {
+    items=
+        {
+		MENU_ITEM { command = EMemSpyCmdPhoneInfoHeapInfoSummary;       txt = "Detailed Summary"; },
+		MENU_ITEM { command = EMemSpyCmdPhoneInfoHeapInfoCompact;		txt = "Compact Summary"; },
+		MENU_ITEM { command = EMemSpyCmdPhoneInfoHeapCellListing;       txt = "Cell Listing"; },
+		MENU_ITEM { command = EMemSpyCmdPhoneInfoHeapDump;			    txt = "Data (Binary)"; }
+        };
+    }
+
+
+RESOURCE MENU_PANE r_memspy_menupane_phone_info_stack
+    {
+    items=
+        {
+		MENU_ITEM { command = EMemSpyCmdPhoneInfoStackInfo;             txt = "Detailed Summary"; },
+		MENU_ITEM { command = EMemSpyCmdPhoneInfoStackInfoCompact;      txt = "Compact Summary"; },
+		MENU_ITEM { command = EMemSpyCmdPhoneInfoStackDumpUser;         txt = "User Stacks (Binary)"; },
+		MENU_ITEM { command = EMemSpyCmdPhoneInfoStackDumpKernel;       txt = "Kernel Stacks (Binary)"; }
+        };
+    }
+
+
+RESOURCE MENU_PANE r_memspy_menupane_phone_info
+    {
+    items=
+        {
+		MENU_ITEM { command = EMemSpyCmdPhoneInfoGeneral;           txt = "General";        cascade = r_memspy_menupane_phone_info_general; },
+		MENU_ITEM { command = EMemSpyCmdPhoneInfoHeap;              txt = "Heap";           cascade = r_memspy_menupane_phone_info_heap; },
+		MENU_ITEM { command = EMemSpyCmdPhoneInfoStack;             txt = "Stack";          cascade = r_memspy_menupane_phone_info_stack; }
+        };
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+RESOURCE MENU_PANE r_memspy_menupane_process_sort
+    {
+    items=
+        {
+		MENU_ITEM { command = EMemSpyCmdProcessSortById;            txt = "By Id"; },
+		MENU_ITEM { command = EMemSpyCmdProcessSortByName;          txt = "By Name"; },
+		MENU_ITEM { command = EMemSpyCmdProcessSortByThreadCount;   txt = "By Number of Threads"; },
+		MENU_ITEM { command = EMemSpyCmdProcessSortByCodeSegs;      txt = "By Code Segments"; },
+		MENU_ITEM { command = EMemSpyCmdProcessSortByHeapUsage;     txt = "By Heap Usage"; },
+		MENU_ITEM { command = EMemSpyCmdProcessSortByStackUsage;    txt = "By Stack Usage"; }
+        };
+    }
+
+RESOURCE MENU_PANE r_memspy_menupane_process_info
+    {
+    items=
+        {
+		MENU_ITEM { command = EMemSpyCmdProcessInfoSummary;         txt = "Summary"; },
+		MENU_ITEM { command = EMemSpyCmdProcessInfoHandles;			txt = "Handles"; }
+        };
+    }
+*/
+
+
+RESOURCE MENU_PANE r_memspy_menupane_process_end
+    {
+    items=
+        {
+		MENU_ITEM { command = EMemSpyCmdProcessEndKill;				txt = "Kill"; },
+		MENU_ITEM { command = EMemSpyCmdProcessEndPanic;			txt = "Panic"; },
+		MENU_ITEM { command = EMemSpyCmdProcessEndTerminate;        txt = "Terminate"; }
+        };
+    }
+
+
+RESOURCE MENU_PANE r_memspy_menupane_process
+    {
+    items=
+        {
+        //MENU_ITEM { command = EMemSpyCmdProcessInfo;                txt = "Info";       cascade = r_memspy_menupane_process_info; },
+        //MENU_ITEM { command = EMemSpyCmdProcessSort;                txt = "Sort";       cascade = r_memspy_menupane_process_sort; },
+		MENU_ITEM { command = EMemSpyCmdProcessEnd;                 txt = "End";       cascade = r_memspy_menupane_process_end; }		
+        };
+    }       
+
+
+
+
+
+
+
+RESOURCE MENU_PANE r_memspy_menupane_thread_priority
+    {
+    items=
+        {
+		MENU_ITEM { command = EMemSpyCmdThreadSetPriorityAbsoluteVeryLow;           txt = "Abs. Very Low"; },
+		MENU_ITEM { command = EMemSpyCmdThreadSetPriorityAbsoluteLowNormal;         txt = "Abs. Low Normal"; },
+		MENU_ITEM { command = EMemSpyCmdThreadSetPriorityAbsoluteLow;				txt = "Abs. Low"; },
+		MENU_ITEM { command = EMemSpyCmdThreadSetPriorityAbsoluteBackgroundNormal;	txt = "Abs. Background Normal"; },
+		MENU_ITEM { command = EMemSpyCmdThreadSetPriorityAbsoluteBackground;        txt = "Abs. Background "; },
+		MENU_ITEM { command = EMemSpyCmdThreadSetPriorityAbsoluteForegroundNormal;  txt = "Abs. Foreground Normal"; },
+		MENU_ITEM { command = EMemSpyCmdThreadSetPriorityAbsoluteForeground;        txt = "Abs. Foreground"; },
+		MENU_ITEM { command = EMemSpyCmdThreadSetPriorityAbsoluteHighNormal;        txt = "Abs. High Normal"; },
+		MENU_ITEM { command = EMemSpyCmdThreadSetPriorityAbsoluteHigh;				txt = "Abs. High"; },
+		MENU_ITEM { command = EMemSpyCmdThreadSetPriorityAbsoluteRealTime1;         txt = "Abs. Real Time 1"; },
+		MENU_ITEM { command = EMemSpyCmdThreadSetPriorityAbsoluteRealTime2;         txt = "Abs. Real Time 2"; },
+		MENU_ITEM { command = EMemSpyCmdThreadSetPriorityAbsoluteRealTime3;         txt = "Abs. Real Time 3"; },
+		MENU_ITEM { command = EMemSpyCmdThreadSetPriorityAbsoluteRealTime4;         txt = "Abs. Real Time 4"; },
+		MENU_ITEM { command = EMemSpyCmdThreadSetPriorityAbsoluteRealTime5;         txt = "Abs. Real Time 5"; },
+		MENU_ITEM { command = EMemSpyCmdThreadSetPriorityAbsoluteRealTime6;         txt = "Abs. Real Time 6"; },
+		MENU_ITEM { command = EMemSpyCmdThreadSetPriorityAbsoluteRealTime7;         txt = "Abs. Real Time 7"; },
+		MENU_ITEM { command = EMemSpyCmdThreadSetPriorityAbsoluteRealTime8;         txt = "Abs. Real Time 8"; }
+        };
+    }
+
+/*
+RESOURCE MENU_PANE r_memspy_menupane_thread_info
+    {
+    items=
+        {
+		MENU_ITEM { command = EMemSpyCmdThreadInfoHandles;			txt = "Handles"; }
+        };
+    }
+*/
+
+RESOURCE MENU_PANE r_memspy_menupane_thread_end
+    {
+    items=
+        {
+		MENU_ITEM { command = EMemSpyCmdThreadEndKill;				txt = "Kill"; },
+		MENU_ITEM { command = EMemSpyCmdThreadEndPanic;				txt = "Panic"; },
+		MENU_ITEM { command = EMemSpyCmdThreadEndTerminate;			txt = "Terminate"; }
+        };
+    }
+
+
+RESOURCE MENU_PANE r_memspy_menupane_thread
+    {
+    items=
+        {
+ 		//MENU_ITEM { command = EMemSpyCmdThreadInfo;					txt = "Info";				cascade = r_memspy_menupane_thread_info; },
+		MENU_ITEM { command = EMemSpyCmdThreadSetPriority;          txt = "Change Priority";	cascade = r_memspy_menupane_thread_priority; },
+		MENU_ITEM { command = EMemSpyCmdThreadEnd;					txt = "End";				cascade = r_memspy_menupane_thread_end; }
+        };
+    }
+
+
+
+
+
+
+
+
+
+RESOURCE MENU_PANE r_memspy_menupane_output
+    {
+    items=
+        {
+		MENU_ITEM { command = EMemSpyCmdOutputToDebug;              txt = "Switch to Debug output"; },
+		MENU_ITEM { command = EMemSpyCmdOutputToFile;               txt = "Switch to File output"; }
+        };
+    }
+
+
+RESOURCE MENU_PANE r_memspy_menupane_tools
+    {
+    items=
+        {
+		MENU_ITEM { command = EMemSpyCmdToolsListOpenFiles;         txt = "List open files"; },
+		MENU_ITEM { command = EMemSpyCmdOutput;                     txt = "Change output mode";       cascade = r_memspy_menupane_output; }
+        };
+    }
+
+
+RESOURCE MENU_PANE r_memspy_menupane_view
+    {
+    items=
+        {
+		MENU_ITEM { command = EMemSpyCmdViewRefresh;                txt = "Refresh"; },
+		MENU_ITEM { command = EMemSpyCmdViewOutputToSink;           txt = "Output Contents"; }
+        };
+    }
+
+
+RESOURCE MENU_PANE r_memspy_menupane_images
+    {
+    items=
+        {
+		MENU_ITEM { command = EMemSpyCmdImagesListing;              txt = "Output Listing"; },
+		MENU_ITEM { command = EMemSpyCmdImagesSlideshow;            txt = "Slideshow"; }
+#ifndef __WINS__
+		,
+		MENU_ITEM { command = EMemSpyCmdImagesSaveAllToMemoryCard;  txt = "Save All to Memory Card"; }
+#endif
+        };
+    }
+
+
+
+RESOURCE MENU_PANE r_memspy_menupane_server_list_output
+    {
+    items=
+        {
+		MENU_ITEM { command = EMemSpyCmdServerListOutputListCSV;      txt = "Listing"; },
+		MENU_ITEM { command = EMemSpyCmdServerListOutputListDetailed; txt = "Detailed Listing"; }
+        };
+    }
+
+
+RESOURCE MENU_PANE r_memspy_menupane_server_list_sort
+    {
+    items=
+        {
+		MENU_ITEM { command = EMemSpyCmdServerListSortByName;           txt = "By Name"; },
+		MENU_ITEM { command = EMemSpyCmdServerListSortBySessionCount;   txt = "By Number of Sessions"; }
+        };
+    }
+
+
+RESOURCE MENU_PANE r_memspy_menupane_server_list
+    {
+    items=
+        {
+		MENU_ITEM { command = EMemSpyCmdServerListOutput;               txt = "Output";       cascade = r_memspy_menupane_server_list_output; },
+		MENU_ITEM { command = EMemSpyCmdServerListSort;                 txt = "Sort";         cascade = r_memspy_menupane_server_list_sort; }
+        };
+    }
+
+
+
+RESOURCE MENU_PANE r_memspy_menupane_chunk_list_sort
+    {
+    items=
+        {
+		MENU_ITEM { command = EMemSpyCmdChunkSortByName;                txt = "By Name"; },
+		MENU_ITEM { command = EMemSpyCmdChunkSortBySize;                txt = "By Size"; }
+        };
+    }
+
+
+RESOURCE MENU_PANE r_memspy_menupane_chunk_list
+    {
+    items=
+        {
+		MENU_ITEM { command = EMemSpyCmdChunkListing;                   txt = "Output Listing"; },
+		MENU_ITEM { command = EMemSpyCmdChunkSort;                      txt = "Sort";         cascade = r_memspy_menupane_chunk_list_sort; }
+        };
+    }
+
+
+RESOURCE MENU_PANE r_memspy_menupane_codeseg_list_filter_by_capability
+    {
+    items=
+        {
+		MENU_ITEM { command = EMemSpyCmdCodeSegShowCapsWithTCBProcess;              txt = "TCB (Exe)"; },
+		MENU_ITEM { command = EMemSpyCmdCodeSegShowCapsWithTCBAll;                  txt = "TCB (All)"; },
+		MENU_ITEM { command = EMemSpyCmdCodeSegShowCapsWithCommDDProcess;           txt = "Comm DD (Exe)"; },
+		MENU_ITEM { command = EMemSpyCmdCodeSegShowCapsWithCommDDAll;               txt = "Comm DD (All)"; },
+		MENU_ITEM { command = EMemSpyCmdCodeSegShowCapsWithPowerMgmtProcess;        txt = "Power Mgmt (Exe)"; },
+		MENU_ITEM { command = EMemSpyCmdCodeSegShowCapsWithPowerMgmtAll;            txt = "Power Mgmt (All)"; },
+		MENU_ITEM { command = EMemSpyCmdCodeSegShowCapsWithMultimediaDDProcess;     txt = "Multimedia DD (Exe)"; },
+		MENU_ITEM { command = EMemSpyCmdCodeSegShowCapsWithMultimediaDDAll;         txt = "Multimedia DD (All)"; },
+		MENU_ITEM { command = EMemSpyCmdCodeSegShowCapsWithReadDeviceDataProcess;   txt = "Read Device Data (Exe)"; },
+		MENU_ITEM { command = EMemSpyCmdCodeSegShowCapsWithReadDeviceDataAll;       txt = "Read Device Data (All)"; },
+		MENU_ITEM { command = EMemSpyCmdCodeSegShowCapsWithWriteDeviceDataProcess;  txt = "Write Device Data (Exe)"; },
+		MENU_ITEM { command = EMemSpyCmdCodeSegShowCapsWithWriteDeviceDataAll;      txt = "Write Device Data (All)"; },
+		MENU_ITEM { command = EMemSpyCmdCodeSegShowCapsWithDRMProcess;              txt = "DRM (Exe)"; },
+		MENU_ITEM { command = EMemSpyCmdCodeSegShowCapsWithDRMAll;                  txt = "DRM (All)"; },
+		MENU_ITEM { command = EMemSpyCmdCodeSegShowCapsWithTrustedUIProcess;        txt = "Trusted UI (Exe)"; },
+		MENU_ITEM { command = EMemSpyCmdCodeSegShowCapsWithTrustedUIAll;            txt = "Trusted UI (All)"; },
+		MENU_ITEM { command = EMemSpyCmdCodeSegShowCapsWithProtServProcess;         txt = "Prot Serv (Exe)"; },
+		MENU_ITEM { command = EMemSpyCmdCodeSegShowCapsWithProtServAll;             txt = "Prot Serv (All)"; },
+		MENU_ITEM { command = EMemSpyCmdCodeSegShowCapsWithDiskAdminProcess;        txt = "Disk Admin (Exe)"; },
+		MENU_ITEM { command = EMemSpyCmdCodeSegShowCapsWithDiskAdminAll;            txt = "Disk Admin (All)"; },
+		MENU_ITEM { command = EMemSpyCmdCodeSegShowCapsWithNetworkControlProcess;   txt = "Network Ctrl (Exe)"; },
+		MENU_ITEM { command = EMemSpyCmdCodeSegShowCapsWithNetworkControlAll;       txt = "Network Ctrl (All)"; },
+		MENU_ITEM { command = EMemSpyCmdCodeSegShowCapsWithAllFilesProcess;         txt = "All Files (Exe)"; },
+		MENU_ITEM { command = EMemSpyCmdCodeSegShowCapsWithAllFilesAll;             txt = "All Files (All)"; },
+		MENU_ITEM { command = EMemSpyCmdCodeSegShowCapsWithSwEventProcess;          txt = "SW Event (Exe)"; },
+		MENU_ITEM { command = EMemSpyCmdCodeSegShowCapsWithSwEventAll;              txt = "SW Event (All)"; },
+		MENU_ITEM { command = EMemSpyCmdCodeSegShowCapsWithNetworkServicesProcess;  txt = "Network Serv (Exe)"; },
+		MENU_ITEM { command = EMemSpyCmdCodeSegShowCapsWithNetworkServicesAll;      txt = "Network Serv (All)"; },
+		MENU_ITEM { command = EMemSpyCmdCodeSegShowCapsWithLocalServicesProcess;    txt = "Local Serv (Exe)"; },
+		MENU_ITEM { command = EMemSpyCmdCodeSegShowCapsWithLocalServicesAll;        txt = "Local Serv (All)"; },
+		MENU_ITEM { command = EMemSpyCmdCodeSegShowCapsWithReadUserDataProcess;     txt = "Read User Data (Exe)"; },
+		MENU_ITEM { command = EMemSpyCmdCodeSegShowCapsWithReadUserDataAll;         txt = "Read User Data (All)"; },
+		MENU_ITEM { command = EMemSpyCmdCodeSegShowCapsWithWriteUserDataProcess;    txt = "Write User Data (Exe)"; },
+		MENU_ITEM { command = EMemSpyCmdCodeSegShowCapsWithWriteUserDataAll;        txt = "Write User Data (All)"; },
+		MENU_ITEM { command = EMemSpyCmdCodeSegShowCapsWithLocationProcess;         txt = "Location (Exe)"; },
+		MENU_ITEM { command = EMemSpyCmdCodeSegShowCapsWithLocationAll;             txt = "Location (All)"; },
+		MENU_ITEM { command = EMemSpyCmdCodeSegShowCapsWithSurroundingsDDProcess;   txt = "Surroundings DD (Exe)"; },
+		MENU_ITEM { command = EMemSpyCmdCodeSegShowCapsWithSurroundingsDDAll;       txt = "Surroundings DD (All)"; },
+		MENU_ITEM { command = EMemSpyCmdCodeSegShowCapsWithUserEnvProcess;          txt = "User Env (Exe)"; },
+		MENU_ITEM { command = EMemSpyCmdCodeSegShowCapsWithUserEnvAll;              txt = "User Env (All)"; }
+        };
+    }
+
+
+
+RESOURCE MENU_PANE r_memspy_menupane_codeseg_list_filter
+    {
+    items=
+        {
+		MENU_ITEM { command = EMemSpyCmdCodeSegShowItemsAll;                    txt = "None"; },
+		MENU_ITEM { command = EMemSpyCmdCodeSegShowItemsGlobalData;             txt = "By Global Data"; },
+		MENU_ITEM { command = EMemSpyCmdCodeSegShowCaps;                        txt = "By Capability";         cascade = r_memspy_menupane_codeseg_list_filter_by_capability; }
+        };
+    }
+
+
+RESOURCE MENU_PANE r_memspy_menupane_codeseg_list_sort
+    {
+    items=
+        {
+		MENU_ITEM { command = EMemSpyCmdCodeSegSortByName;               txt = "By Name"; },
+		MENU_ITEM { command = EMemSpyCmdCodeSegSortByCodeSize;           txt = "By Code Size"; },
+		MENU_ITEM { command = EMemSpyCmdCodeSegSortByDataSize;           txt = "By Total Data Size"; },
+		MENU_ITEM { command = EMemSpyCmdCodeSegSortByUid;                txt = "By Uid"; }
+        };
+    }
+
+
+RESOURCE MENU_PANE r_memspy_menupane_codeseg_list
+    {
+    items=
+        {
+		MENU_ITEM { command = EMemSpyCmdCodeSegListing;                 txt = "Output Listing"; },
+		MENU_ITEM { command = EMemSpyCmdCodeSegShow;                    txt = "Filter";       cascade = r_memspy_menupane_codeseg_list_filter; },
+		MENU_ITEM { command = EMemSpyCmdCodeSegSort;                    txt = "Sort";         cascade = r_memspy_menupane_codeseg_list_sort; }
+        };
+    }
+
+
+
+
+
+RESOURCE MENU_PANE r_memspy_menupane_active_objects
+    {
+    items=
+        {
+		MENU_ITEM { command = EMemSpyCmdActiveObjectListing;            txt = "Output Listing"; }
+        };
+    }
+
+
+
+
+RESOURCE MENU_PANE r_memspy_menupane_ram
+    {
+    items=
+        {
+		MENU_ITEM { command = EMemSpyCmdRAMAvkonIconCacheDisabled;      txt = "Disable Icon Cache"; },
+		MENU_ITEM { command = EMemSpyCmdRAMAvkonIconCacheEnabled;       txt = "Enable Icon Cache"; }
+        };
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+RESOURCE MENU_PANE r_memspy_menupane_kernel_containers
+    {
+    items=
+        {
+		MENU_ITEM { command = EMemSpyCmdKernelContainersOutput;                     txt = "Output list"; }
+        };
+    }
+
+
+RESOURCE MENU_PANE r_memspy_menupane_kernel_objects
+    {
+    items=
+        {
+        MENU_ITEM { command = EMemSpyCmdKernelObjectTerminate;                     txt = "Terminate"; },
+        MENU_ITEM { command = EMemSpyCmdKernelObjectSwitchTo;                      txt = "Switch to"; },
+        MENU_ITEM { command = EMemSpyCmdKernelObjectEnd;                           txt = "End"; },
+        MENU_ITEM { command = EMemSpyCmdKernelObjectPanic;                         txt = "Panic"; }
+        };
+    }
+
+
+RESOURCE MENU_PANE r_memspy_menupane_kernel_heap
+    {
+    items=
+        {
+		MENU_ITEM { command = EMemSpyCmdKernelHeapDump;                             txt = "Dump Heap"; }
+        };
+    }
+
+
+
+RESOURCE MENU_PANE r_memspy_menupane_memory_tracking
+    {
+    items=
+        {
+		MENU_ITEM { command = EMemSpyCmdMemoryTrackingStart;						txt = "Start"; },
+		MENU_ITEM { command = EMemSpyCmdMemoryTrackingStop;							txt = "Stop"; },
+		MENU_ITEM { command = EMemSpyCmdMemoryTrackingTotalWithSharedMem;			txt = "Include shared memory in Total"; },
+		MENU_ITEM { command = EMemSpyCmdMemoryTrackingTotalWithoutSharedMem;		txt = "Exclude shared memory from Total"; },
+		MENU_ITEM { command = EMemSpyCmdMemoryTrackingHWMReset;						txt = "Reset HWM"; }
+        };
+    }
+
+
+
+RESOURCE MENU_PANE r_memspy_menupane_memory_tracking_hwm
+    {
+    items=
+        {
+		MENU_ITEM { command = EMemSpyCmdMemoryTrackingHWMReset;						txt = "Reset"; }
+        };
+    }
+
+
+
+RESOURCE MENU_PANE r_memspy_menupane_memory_tracking_autostart
+    {
+    items=
+        {
+		MENU_ITEM { command = EMemSpyCmdMemoryTrackingAutoStartItemAdd;				txt = "Add"; },
+		MENU_ITEM { command = EMemSpyCmdMemoryTrackingAutoStartItemEdit;			txt = "Edit"; },
+		MENU_ITEM { command = EMemSpyCmdMemoryTrackingAutoStartItemDelete;			txt = "Remove"; },
+		MENU_ITEM { command = EMemSpyCmdMemoryTrackingAutoStartItemDeleteAll;		txt = "Remove All"; },
+		MENU_ITEM { command = EMemSpyCmdMemoryTrackingAutoStartItemImport;			txt = "Import"; }
+        };
+    }
+
+
+
+
+RESOURCE MENU_PANE r_memspy_menupane_window_groups
+    {
+    items=
+        {
+        MENU_ITEM { command = EMemSpyCmdWindowGroupTerminate;                     txt = "Terminate"; },
+        MENU_ITEM { command = EMemSpyCmdWindowGroupSwitchTo;                      txt = "Switch to"; },
+        MENU_ITEM { command = EMemSpyCmdWindowGroupEnd;                           txt = "End"; },
+        MENU_ITEM { command = EMemSpyCmdWindowGroupPanic;                         txt = "Panic"; }
+        };
+    }
+
+
+
+
+
+
+
+RESOURCE MENU_PANE r_memspy_menupane
+    {
+    items=
+        {
+		// This item is visible if the view supports child views
+		MENU_ITEM { command = EMemSpyCmdOpen;						txt = "Open"; },
+		
+		// These are view-specific menu cascades that are not shown unless a specific view is open
+		MENU_ITEM { command = EMemSpyCmdServerList;						txt = "Server List";        cascade = r_memspy_menupane_server_list; },
+		MENU_ITEM { command = EMemSpyCmdChunk;							txt = "Chunk";              cascade = r_memspy_menupane_chunk_list; },
+		MENU_ITEM { command = EMemSpyCmdCodeSeg;						txt = "Code Segment";       cascade = r_memspy_menupane_codeseg_list; },
+		MENU_ITEM { command = EMemSpyCmdImages;							txt = "Images";             cascade = r_memspy_menupane_images; },
+		MENU_ITEM { command = EMemSpyCmdActiveObject;					txt = "Active Object";      cascade = r_memspy_menupane_active_objects; },
+		MENU_ITEM { command = EMemSpyCmdHeap;							txt = "Heap";               cascade = r_memspy_menupane_heap; },
+		MENU_ITEM { command = EMemSpyCmdStack;							txt = "Stack";              cascade = r_memspy_menupane_stack; },
+		MENU_ITEM { command = EMemSpyCmdRAM;							txt = "RAM";                cascade = r_memspy_menupane_ram; },
+		MENU_ITEM { command = EMemSpyCmdProcess;						txt = "Process";            cascade = r_memspy_menupane_process; },
+		MENU_ITEM { command = EMemSpyCmdThread;							txt = "Thread";             cascade = r_memspy_menupane_thread; },
+		MENU_ITEM { command = EMemSpyCmdKernelContainers;				txt = "Kernel Objects";     cascade = r_memspy_menupane_kernel_containers; },
+		MENU_ITEM { command = EMemSpyCmdKernelObjects;                  txt = "Kernel Object";      cascade = r_memspy_menupane_kernel_objects; },
+		MENU_ITEM { command = EMemSpyCmdKernelHeap;						txt = "Kernel Heap";        cascade = r_memspy_menupane_kernel_heap; },
+		MENU_ITEM { command = EMemSpyCmdMemoryTracking;					txt = "Memory Tracking";    cascade = r_memspy_menupane_memory_tracking; },
+		MENU_ITEM { command = EMemSpyCmdMemoryTrackingHWM;				txt = "Memory HWM";			cascade = r_memspy_menupane_memory_tracking_hwm; },
+		MENU_ITEM { command = EMemSpyCmdMemoryTrackingAutoStart;		txt = "Auto-Start Items";   cascade = r_memspy_menupane_memory_tracking_autostart; },
+		MENU_ITEM { command = EMemSpyCmdWindowGroups;                   txt = "Window Group";       cascade = r_memspy_menupane_window_groups; },
+		
+		// These are standard menu items that are always visible
+		MENU_ITEM { command = EMemSpyCmdView;							txt = "View";               cascade = r_memspy_menupane_view; },
+		MENU_ITEM { command = EMemSpyCmdTools;							txt = "Tools";              cascade = r_memspy_menupane_tools; },
+		MENU_ITEM { command = EMemSpyCmdPhoneInfo;						txt = "Phone Information";  cascade = r_memspy_menupane_phone_info; },
+		MENU_ITEM { command = EMemSpyCmdAutoCapture;					txt = "Automatic Capture";  cascade = r_memspy_menupane_auto_capture; },
+
+		// About
+        MENU_ITEM { command = EMemSpyCmdToolsAbout;						txt = "About"; },
+		
+		// One or other is visible, depending on whether it is a top level menu item
+		MENU_ITEM { command = EAknSoftkeyBack;							txt = "Back"; },
+		MENU_ITEM { command = EAknCmdExit;								txt = "Exit"; }
+        };
+    }
+
+
+RESOURCE DIALOG r_memspy_device_wide_operation_progress_dialog
+    {
+    title   = "Performing operation..";
+    flags   = EAknProgressNoteFlags | EEikDialogFlagWait;
+    buttons = R_AVKON_SOFTKEYS_CANCEL;
+    items   =
+        {
+        DLG_LINE
+            {
+            type    = EAknCtNote;
+            id      = EMemSpyCtrlIdProgressNote;
+            control = AVKON_NOTE 
+                { 
+                layout      = EProgressLayout;
+                imagefile   = AVKON_ICON_FILE;
+                imageid     = EMbmAvkonQgn_note_progress;
+                imagemask   = EMbmAvkonQgn_note_progress_mask;
+                };
+            }
+        };
+    }
+
+
+RESOURCE DIALOG r_memspy_export_to_memorycard_dialog
+    {
+    title   = "Save Bitmaps to Memory Card";
+    flags   = EAknProgressNoteFlags | EEikDialogFlagWait;
+    buttons = R_AVKON_SOFTKEYS_CANCEL;
+    items   =
+        {
+        DLG_LINE
+            {
+            type    = EAknCtNote;
+            id      = EMemSpyCtrlIdProgressNote;
+            control = AVKON_NOTE 
+                { 
+                layout      = EProgressLayout;
+                imagefile   = AVKON_ICON_FILE;
+                imageid     = EMbmAvkonQgn_note_progress;
+                imagemask   = EMbmAvkonQgn_note_progress_mask;
+                };
+            }
+        };
+    }
+
+
+RESOURCE DIALOG r_memspy_device_wide_settings
+    {
+    flags = EGeneralQueryFlags;
+    buttons = R_AVKON_SOFTKEYS_OK_CANCEL;
+    items =
+        {
+        DLG_LINE
+            {
+            type    = EAknCtQuery;
+            id      = EGeneralQuery;
+            control = AVKON_DATA_QUERY 
+                { 
+                layout  = ENumberLayout;
+                label   = "Frequency (seconds)";
+                control = AVKON_INTEGER_EDWIN
+                    {
+                    min         =    5;
+                    max         = 3600;
+                    maxlength   =    4;
+                    };
+                };
+            }
+        };
+    }
+
+
+RESOURCE DIALOG r_memspy_preparing_info_item_container_wait_note
+    {
+    flags   = EAknWaitNoteFlags | EEikDialogFlagWait;
+    buttons = R_AVKON_SOFTKEYS_EMPTY;
+    items   =
+        {
+        DLG_LINE
+            {
+            type    = EAknCtNote;
+            id      = EMemSpyCtrlIdWaitNote;
+            control = AVKON_NOTE 
+                { 
+                layout          = EWaitLayout;
+                singular_label  = "Preparing items...";
+                imagefile       = AVKON_ICON_FILE;
+                imageid         = EMbmAvkonQgn_note_progress;
+                imagemask       = EMbmAvkonQgn_note_progress_mask;
+                animation       = R_QGN_GRAF_WAIT_BAR_ANIM;
+                };
+            }
+        };
+    }
+
+
+
+
+
+RESOURCE DIALOG r_memspy_image_slideshow
+    {
+    title   = "Image Slideshow...";
+    flags   = EEikDialogFlagNoDrag | EEikDialogFlagCbaButtons | EEikDialogFlagWait;
+    buttons = R_AVKON_SOFTKEYS_CANCEL;
+    items   =
+        {
+        DLG_LINE
+            {
+            type    = EEikCtImage;
+            id      = EMemSpyCtrlIdSlideShowImage;
+            control = IMAGE
+                {
+                };
+            }
+        };
+    }
+
+
+
+
+
+
+RESOURCE DIALOG r_memspy_heap_tracker_timer_period
+    {
+    flags   = EGeneralQueryFlags;
+    buttons = R_AVKON_SOFTKEYS_OK_CANCEL;
+    items   =
+        {
+        DLG_LINE
+            {
+            type    = EAknCtQuery;
+            id      = EGeneralQuery;
+            control = AVKON_DATA_QUERY 
+                { 
+                layout  = ENumberLayout;
+                label   = "Frequency (seconds)";
+                control = AVKON_INTEGER_EDWIN
+                    {
+                    min         =   30;
+                    max         = 3600;
+                    maxlength   =    4;
+                    };
+                };
+            }
+        };
+    }
+
+
+RESOURCE DIALOG r_memspy_heap_tracker_name_filter
+    {
+    flags   = EAknDialogGenericQueryFlags;
+    buttons = R_AVKON_SOFTKEYS_OK_CANCEL;
+    items   =
+        {
+        DLG_LINE
+            {
+            type    = EAknCtQuery;
+            id      = EGeneralQuery;
+            control = AVKON_DATA_QUERY 
+                { 
+                layout  = EDataLayout;
+                label   = "Thread Name Filter";
+                control = EDWIN
+                    {
+                    flags               = 0;
+                    width               = 8;
+                    lines               = 1;
+                    maxlength           = 16;
+                    avkon_flags         = EAknEditorFlagNoT9 | EAknEditorFlagLatinInputModesOnly;
+                    allowed_input_modes = EAknEditorTextInputMode | EAknEditorNumericInputMode;
+                    default_input_mode  = EAknEditorTextInputMode;
+                    };
+                };
+            }
+        };
+    }
+
+RESOURCE DIALOG r_memspy_memory_tracking_process_uid_dialog
+    {
+    flags	= EAknDialogGenericQueryFlags;
+    buttons	= R_AVKON_SOFTKEYS_OK_CANCEL;
+    items	=
+        {
+        DLG_LINE
+            {
+            type    = EAknCtQuery;
+            id      = EGeneralQuery;
+            control = AVKON_DATA_QUERY 
+                { 
+                layout	= EDataLayout;
+                label	= "Process Uid (Hex)";
+                control = EDWIN
+                    {
+                    flags				= 0;
+                    width				= 8;
+                    lines				= 1;
+                    maxlength			= 8;
+                    avkon_flags			= EAknEditorFlagNoT9 | EAknEditorFlagLatinInputModesOnly;
+                    allowed_input_modes = EAknEditorTextInputMode | EAknEditorNumericInputMode;
+                    default_input_mode	= EAknEditorNumericInputMode;
+                    };
+                };
+            }
+        };
+    }
+
+
+RESOURCE DIALOG r_memspy_memory_tracking_import_from_installed_xml_dialog
+	{
+	flags	= EGeneralQueryFlags;
+	buttons	= R_AVKON_SOFTKEYS_YES_NO;
+	items	=
+		{
+        DLG_LINE
+            {
+            type    = EAknCtQuery;
+            id      = EGeneralQuery;
+            control = AVKON_CONFIRMATION_QUERY 
+                { 
+		        layout		= EConfirmationLayout;
+			    label		= "Import auto-start items\nfrom installed XML file?";
+				animation	= R_QGN_NOTE_QUERY_ANIM;
+				};
+			}
+		};
+	}
+
+
+RESOURCE DIALOG r_memspy_memory_tracking_import_from_userdefined_xml_dialog
+	{
+	flags	= EGeneralQueryFlags;
+	buttons	= R_AVKON_SOFTKEYS_YES_NO;
+	items	=
+		{
+        DLG_LINE
+            {
+            type    = EAknCtQuery;
+            id      = EGeneralQuery;
+            control = AVKON_CONFIRMATION_QUERY 
+                { 
+		        layout		= EConfirmationLayout;
+			    label		= "Import auto-start items\nfrom custom XML file?";
+				animation	= R_QGN_NOTE_QUERY_ANIM;
+				};
+			}
+		};
+	}
+
+    
+RESOURCE DIALOG r_memspyui_about_dialog
+	{
+    flags = EGeneralQueryFlags | EEikDialogFlagNoBorder | EEikDialogFlagNoShadow;
+    buttons = R_AVKON_SOFTKEYS_OK_EMPTY;
+    items=
+		{
+        DLG_LINE
+			{
+            type = EAknCtPopupHeadingPane;
+            id = EAknMessageQueryHeaderId;
+            control = AVKON_HEADING
+				{
+                label = "About MemSpy";
+                headinglayout = R_AVKON_WML_SIGN_QUERY_HEADING_PANE;
+				};
+			},
+        DLG_LINE
+			{
+            type = EAknCtMessageQuery;
+            id = EAknMessageQueryContentId;
+            control = AVKON_MESSAGE_QUERY
+				{
+                message = "Version 2.2.2 - 21st September 2010. Copyright © 2010 Nokia Corporation and/or its subsidiary(-ies). All rights reserved. Licensed under Eclipse Public License v1.0.";
+				};
+			}
+		};
+	}
+
+
+
+RESOURCE DIALOG r_memspy_ram_memory_delta_dialog
+    {
+	flags = EGeneralQueryFlags;
+    buttons = R_AVKON_SOFTKEYS_OK_EMPTY__OK;
+    items =
+        {
+        DLG_LINE
+            {
+            type = EAknCtNote;
+		    id = EGeneralNote;
+            control = AVKON_NOTE 
+                { 
+                layout = EGeneralLayout;
+                singular_label = "Memory Delta";
+                animation = R_QGN_NOTE_INFO_ANIM;
+                };
+            }
+        };
+    }
+
+
+RESOURCE DIALOG r_memspy_panic_system_critical_thread_or_process
+	{
+	flags	= EGeneralQueryFlags;
+	buttons	= R_AVKON_SOFTKEYS_YES_NO;
+	items	=
+		{
+        DLG_LINE
+            {
+            type    = EAknCtQuery;
+            id      = EGeneralQuery;
+            control = AVKON_CONFIRMATION_QUERY 
+                { 
+		        layout		= EConfirmationLayout;
+			    label		= "Terminating/killing/panicking item will cause a reboot.\nContinue?";
+				animation	= R_QGN_NOTE_QUERY_ANIM;
+				};
+			}
+		};
+	}
+
+RESOURCE DIALOG r_memspy_kernel_object_details_dialog
+    {
+    flags = EGeneralQueryFlags | EEikDialogFlagNoBorder | EEikDialogFlagNoShadow;
+
+    buttons = R_AVKON_SOFTKEYS_OK_EMPTY;
+    items=
+        {
+        DLG_LINE
+            {
+            type = EAknCtPopupHeadingPane;
+            id = EAknMessageQueryHeaderId;
+            control = AVKON_HEADING
+                {
+                label = "Object details";
+                headinglayout = R_AVKON_WML_SIGN_QUERY_HEADING_PANE;
+                };
+            },
+        DLG_LINE
+            {
+            type = EAknCtMessageQuery;
+            id = EAknMessageQueryContentId;
+            control = AVKON_MESSAGE_QUERY
+                {
+                message = ".";
+                };
+            }
+        };
+    }
+
+RESOURCE AVKON_SETTING_PAGE r_memspyui_swmt_categories_setting_page
+    {
+    type = EAknSetListBox;
+    editor_resource_id = r_memspyui_swmt_categories_items_listbox;
+    label = "SWMT Categories";
+    }   
+
+RESOURCE LISTBOX r_memspyui_swmt_categories_items_listbox
+    {
+    flags = EAknListBoxMultipleSelection;
+    }
+
+// ---------------------------------------------------------
+//   
+//    RESOURCE LOCALISABLE_APP_INFO
+//
+// ---------------------------------------------------------
+//
+RESOURCE LOCALISABLE_APP_INFO r_memspyui_localisable_app_info
+    {
+    short_caption = "MemSpy";
+    caption_and_icon = 
+    CAPTION_AND_ICON_INFO
+        {
+        caption = "MemSpy";
+
+        number_of_icons = 1;
+
+        // Note for ROM-based apps it is recommended to add the drive letter
+        // icon_file = "z:"APP_BITMAP_DIR"\\myapp_aif.mif";
+        icon_file = APP_BITMAP_DIR"\\memspyui_aif.mif";
+        };
+    }
+
+
+RESOURCE DIALOG r_memspy_wait_note
+    {
+	flags = EAknWaitNoteFlags;
+    items =
+        {
+        DLG_LINE
+            {
+            type = EAknCtNote;
+            id = EGeneralNote; 	//EWaitNoteId;
+            control = AVKON_NOTE 
+                { 
+				layout = EWaitLayout;
+                singular_label = "Please wait...";     
+                imagefile       = AVKON_ICON_FILE;
+                imageid         = EMbmAvkonQgn_note_progress;
+                imagemask       = EMbmAvkonQgn_note_progress_mask;
+                animation       = R_QGN_GRAF_WAIT_BAR_ANIM;
+                };
+            }
+        };
+    }
+

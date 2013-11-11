@@ -1,0 +1,25 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//creates an email for sending
+//checks that the date given is utc
+
+
+PRINT Run all t_smtp_utc_server Tests 
+LOAD_SUITE t_smtp_utc_server -SharedData
+
+START_TESTCASE 1
+RUN_TEST_STEP 1000 t_smtp_utc_server SmtpUtcEntryStep
+END_TESTCASE 1

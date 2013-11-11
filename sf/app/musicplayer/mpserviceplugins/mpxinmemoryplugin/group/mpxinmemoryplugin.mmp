@@ -1,0 +1,59 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Collection file db plugin project specification
+*
+*/
+
+
+
+#include <bldvariant.hrh>
+#include <data_caging_paths.hrh>
+#include <platform_paths.hrh>
+
+TARGET          mpxinmemoryplugin.dll
+TARGETTYPE      PLUGIN
+UID             0x10009D8D 0x101FFCD9
+
+VENDORID        VID_DEFAULT
+CAPABILITY      CAP_ECOM_PLUGIN
+
+VERSION 15.0
+
+SOURCEPATH      ../src
+SOURCE          mpxinmemoryplugin.cpp
+SOURCE          mpxmusicmemoryplugin.cpp
+SOURCE          mpxinmemorypluginproxy.cpp
+
+SOURCEPATH      ../data
+START RESOURCE  101FFCD9.RSS
+TARGET          mpxinmemoryplugin.rsc
+END
+
+USERINCLUDE     ../inc
+
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE   /epoc32/include/ecom
+
+LIBRARY         apgrfx.lib
+LIBRARY         euser.lib
+LIBRARY         ecom.lib
+LIBRARY         efsrv.lib
+LIBRARY         estor.lib
+LIBRARY         bafl.lib 
+LIBRARY         mpxcommon.lib
+LIBRARY         mpxmetadataextractor.lib
+
+SMPSAFE
+
+// End of File

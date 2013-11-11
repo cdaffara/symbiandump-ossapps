@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument context="CxuiStillPrecaptureView" version="1.1">
+    <object name="cxui_action_goto_2_camera" type="HbAction">
+        <string name="text" value="Go to 2nd camera"/>
+    </object>
+    <object name="cxui_action_goto_photos" type="HbAction">
+        <string locid="txt_cam_opt_go_to_photos" name="text" value="Go to Photos"/>
+    </object>
+    <object name="cxui_action_self_timer" type="HbAction">
+        <string name="settingskey" value="selfTimer"/>
+        <string locid="txt_cam_opt_self_timer" name="text" value="Self timer"/>
+    </object>
+    <object name="cxui_action_stillpostcapture" type="HbAction">
+        <string name="settingskey" value="still_showcaptured"/>
+        <string locid="txt_cam_opt_show_captured_image" name="text" value="Show captured image"/>
+    </object>
+    <object name="cxui_action_settings" type="HbAction">
+        <string locid="txt_cam_opt_camera_settings" name="text" value="Camera settings"/>
+    </object>
+    <object name="cxui_action_image_quality" type="HbAction">
+        <string name="settingskey" value="imageQuality"/>
+        <string locid="txt_cam_opt_image_quality" name="text" value="Image quality"/>
+    </object>
+    <object name="cxui_action_still_geotagging" type="HbAction">
+        <string name="settingskey" value="geotagging"/>
+        <string locid="txt_cam_opt_geotagging" name="text" value="Geotagging"/>
+    </object>
+    <object name="cxui_action_capture" type="HbAction">
+        <icon iconName="qtg_mono_capture" name="icon"/>
+    </object>
+    <object name="cxui_action_goto_video" type="HbAction">
+        <icon iconName="qtg_mono_change_cam_mode" name="icon"/>
+    </object>
+    <object name="cxui_action_flash" type="HbAction">
+        <icon iconName="qtg_mono_flash" name="icon"/>
+        <string name="settingskey" value="flash_mode"/>
+    </object>
+    <object name="cxui_action_scenemodes" type="HbAction">
+        <icon iconName="qtg_mono_automatic" name="icon"/>
+    </object>
+    <widget name="still_capture_view" type="HbView">
+        <widget name="still_container" role="HbView:widget" type="HbWidget">
+            <widget name="transparent" type="HbTransparentWindow">
+                <real name="z" value="0"/>
+            </widget>
+            <layout type="anchor">
+                <anchoritem dst="transparent" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="transparent" dstEdge="TOP" spacing="0un" src="" srcEdge="TOP"/>
+                <anchoritem dst="transparent" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="transparent" dstEdge="BOTTOM" spacing="0un" src="" srcEdge="BOTTOM"/>
+            </layout>
+        </widget>
+        <string locid="txt_cam_title_camera" name="title" value="Camera"/>
+        <bool name="contentFullScreen" value="TRUE"/>
+        <enums name="viewFlags" value="ViewTitleBarTransparent|ViewTitleBarFloating|ViewTitleBarHidden|ViewStatusBarTransparent|ViewStatusBarFloating|ViewStatusBarHidden"/>
+    </widget>
+    <section name="still_capture_indicators">
+        <widget name="still_container" role="HbView:widget" type="HbWidget">
+            <widget name="indicatorContainer" type="HbWidget">
+                <widget name="mode_indicator" type="HbLabel">
+                    <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+                    <icon iconName="qtg_mono_camera" name="icon"/>
+                    <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+                    <sizehint height="var(hb-param-graphic-size-primary-small)" type="FIXED" width="var(hb-param-graphic-size-primary-small)"/>
+                </widget>
+                <widget name="quality_indicator" type="HbLabel">
+                    <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+                    <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+                    <sizehint height="var(hb-param-graphic-size-primary-small)" type="FIXED" width="var(hb-param-graphic-size-primary-small)"/>
+                    <bool name="visible" value="TRUE"/>
+                </widget>
+                <widget name="flash_indicator" type="HbLabel">
+                    <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+                    <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+                    <sizehint height="var(hb-param-graphic-size-primary-small)" type="FIXED" width="var(hb-param-graphic-size-primary-small)"/>
+                    <bool name="visible" value="TRUE"/>
+                </widget>
+                <widget name="still_geotagging_indicator" type="HbLabel">
+                    <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+                    <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+                    <sizehint height="var(hb-param-graphic-size-primary-small)" type="FIXED" width="var(hb-param-graphic-size-primary-small)"/>
+                    <bool name="visible" value="TRUE"/>
+                </widget>
+                <widget name="face_tracking_indicator" type="HbLabel">
+                    <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+                    <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+                    <sizehint height="var(hb-param-graphic-size-primary-small)" type="FIXED" width="var(hb-param-graphic-size-primary-small)"/>
+                    <bool name="visible" value="TRUE"/>
+                </widget>
+                <real name="z" value="5"/>
+                <bool name="visible" value="FALSE"/>
+                <layout orientation="Horizontal" spacing="var(hb-param-margin-gene-middle-horizontal)" type="linear">
+                    <contentsmargins bottom="var(hb-param-margin-gene-middle-vertical)" left="var(hb-param-margin-gene-middle-horizontal)" right="var(hb-param-margin-gene-middle-horizontal)" top="var(hb-param-margin-gene-middle-vertical)"/>
+                    <linearitem itemname="mode_indicator"/>
+                    <linearitem itemname="quality_indicator"/>
+                    <linearitem itemname="flash_indicator"/>
+                    <linearitem itemname="still_geotagging_indicator"/>
+                    <linearitem itemname="face_tracking_indicator"/>
+                </layout>
+            </widget>
+            <layout type="anchor">
+                <anchoritem dst="transparent" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="transparent" dstEdge="TOP" spacing="0un" src="" srcEdge="TOP"/>
+                <anchoritem dst="transparent" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="transparent" dstEdge="BOTTOM" spacing="0un" src="" srcEdge="BOTTOM"/>
+                <anchoritem dst="indicatorContainer" dstEdge="LEFT" spacing="11un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="indicatorContainer" dstEdge="TOP" spacing="var(hb-param-margin-gene-top)" src="" srcEdge="TOP"/>
+            </layout>
+        </widget>
+    </section>
+    <section name="still_capture_with_widgets">
+        <widget name="still_capture_view" type="HbView">
+            <widget name="still_view_menu" role="HbView:menu" type="HbMenu"/>
+            <widget name="still_container" role="HbView:widget" type="HbWidget">
+                <widget name="toolbar" type="HbToolBar">
+                    <enums name="layoutDirection" value="RightToLeft"/>
+                    <real name="z" value="7"/>
+                    <sizehint type="PREFERRED" width="var(hb-param-widget-toolbar-height)"/>
+                    <enums name="orientation" value="Vertical"/>
+                    <bool name="visible" value="FALSE"/>
+                    <ref object="cxui_action_capture" role="HbWidget:addAction"/>
+                    <ref object="cxui_action_flash" role="HbWidget:addAction"/>
+                    <ref object="cxui_action_scenemodes" role="HbWidget:addAction"/>
+                    <ref object="cxui_action_goto_video" role="HbWidget:addAction"/>
+                </widget>
+                <widget name="zoom" type="HbSlider">
+                    <real name="z" value="2"/>
+                    <sizehint height="40un" type="PREFERRED" width="9un"/>
+                    <enums name="orientation" value="Vertical"/>
+                    <bool name="visible" value="FALSE"/>
+                    <bool name="toolTipVisible" value="FALSE"/>
+                </widget>
+                <widget name="images_left_container" type="HbWidget">
+                    <widget name="images_remaining" type="HbLabel">
+                        <real name="z" value="1"/>
+                        <string name="textColor" value="#ffffff"/>
+                        <string name="plainText" value="9999"/>
+                        <fontspec name="fontSpec" role="Undefined" textheight="var(hb-param-text-height-tiny)"/>
+                    </widget>
+                    <real name="z" value="1"/>
+                    <layout orientation="Horizontal" spacing="var(hb-param-margin-gene-middle-horizontal)" type="linear">
+                        <contentsmargins bottom="var(hb-param-margin-gene-middle-vertical)" left="var(hb-param-margin-gene-middle-horizontal)" right="var(hb-param-margin-gene-middle-horizontal)" top="var(hb-param-margin-gene-middle-vertical)"/>
+                        <linearitem itemname="images_remaining"/>
+                    </layout>
+                </widget>
+                <widget name="still_precapture_selftimer_container" type="HbWidget">
+                    <widget name="selftimer_button_container" type="HbWidget">
+                        <widget name="still_selftimer_start_button" type="HbPushButton">
+                            <real name="z" value="5"/>
+                            <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+                            <sizehint type="FIXED" width="20un"/>
+                            <string locid="txt_cam_button_start" name="text" value="Start"/>
+                            <fontspec name="fontSpec" role="Undefined" textheight="var(hb-param-text-height-tiny)"/>
+                        </widget>
+                        <widget name="still_selftimer_cancel_button" type="HbPushButton">
+                            <real name="z" value="4"/>
+                            <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+                            <sizehint type="FIXED" width="20un"/>
+                            <string locid="txt_cam_button_cancel" name="text" value="Cancel"/>
+                            <fontspec name="fontSpec" role="Undefined" textheight="var(hb-param-text-height-tiny)"/>
+                        </widget>
+                        <real name="z" value="0"/>
+                        <bool name="visible" value="TRUE"/>
+                        <layout orientation="Horizontal" spacing="var(hb-param-margin-gene-middle-horizontal)" type="linear">
+                            <contentsmargins bottom="0un" left="0un" right="0un" top="var(hb-param-margin-gene-top)"/>
+                            <linearitem itemname="still_selftimer_start_button"/>
+                            <linearitem itemname="still_selftimer_cancel_button"/>
+                        </layout>
+                    </widget>
+                    <widget name="selftimer_icon_container" type="HbWidget">
+                        <widget name="still_selftimer_icon" type="HbLabel">
+                            <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+                            <icon iconName="qtg_mono_countdown_timer" name="icon"/>
+                            <real name="z" value="2"/>
+                            <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+                            <sizehint height="var(hb-param-graphic-size-function)" type="FIXED" width="var(hb-param-graphic-size-function)"/>
+                            <bool name="visible" value="TRUE"/>
+                        </widget>
+                        <widget name="still_selftimer_counter" type="HbLabel">
+                            <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+                            <real name="z" value="4"/>
+                            <string name="textColor" value="#ffffff"/>
+                            <string name="plainText" value="00"/>
+                            <fontspec name="fontSpec" role="Undefined" textheight="var(hb-param-text-height-primary)"/>
+                        </widget>
+                        <real name="z" value="9"/>
+                        <bool name="visible" value="TRUE"/>
+                        <layout orientation="Horizontal" spacing="var(hb-param-margin-gene-middle-horizontal)" type="linear">
+                            <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+                            <stretchitem stretchfactor="1"/>
+                            <linearitem itemname="still_selftimer_icon"/>
+                            <linearitem itemname="still_selftimer_counter"/>
+                            <stretchitem stretchfactor="1"/>
+                        </layout>
+                    </widget>
+                    <real name="z" value="1"/>
+                    <layout orientation="Vertical" spacing="0un" type="linear">
+                        <linearitem itemname="selftimer_icon_container"/>
+                        <linearitem itemname="selftimer_button_container"/>
+                    </layout>
+                </widget>
+                <real name="z" value="1"/>
+                <layout type="anchor">
+                    <anchoritem dst="toolbar" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                    <anchoritem dst="toolbar" dstEdge="BOTTOM" spacing="0un" src="" srcEdge="BOTTOM"/>
+                    <anchoritem dst="toolbar" dstEdge="TOP" spacing="var(hb-param-widget-chrome-height)" src="" srcEdge="TOP"/>
+                    <anchoritem dst="zoom" dstEdge="CENTERV" spacing="0un" src="toolbar" srcEdge="CENTERV"/>
+                    <anchoritem dst="zoom" dstEdge="RIGHT" spacing="-var(hb-param-margin-gene-screen)" src="" srcEdge="RIGHT"/>
+                    <anchoritem dst="transparent" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                    <anchoritem dst="transparent" dstEdge="TOP" spacing="0un" src="" srcEdge="TOP"/>
+                    <anchoritem dst="transparent" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                    <anchoritem dst="transparent" dstEdge="BOTTOM" spacing="0un" src="" srcEdge="BOTTOM"/>
+                    <anchoritem dst="images_left_container" dstEdge="BOTTOM" spacing="-var(hb-param-margin-gene-bottom)" src="" srcEdge="BOTTOM"/>
+                    <anchoritem dst="images_left_container" dstEdge="LEFT" spacing="11un" src="" srcEdge="LEFT"/>
+                    <anchoritem dst="still_precapture_selftimer_container" dstEdge="CENTERH" spacing="0" src="" srcEdge="CENTERH"/>
+                    <anchoritem dst="still_precapture_selftimer_container" dstEdge="CENTERV" spacing="0" src="" srcEdge="CENTERV"/>
+                    <anchoritem dst="indicatorContainer" dstEdge="LEFT" spacing="11un" src="" srcEdge="LEFT"/>
+                    <anchoritem dst="indicatorContainer" dstEdge="TOP" spacing="var(hb-param-margin-gene-top)" src="" srcEdge="TOP"/>
+                </layout>
+            </widget>
+        </widget>
+        <connect receiver="still_capture_view" sender="cxui_action_image_quality" signal="triggered(bool)" slot="launchSetting()"/>
+        <connect receiver="still_capture_view" sender="cxui_action_still_geotagging" signal="triggered(bool)" slot="launchSetting()"/>
+        <connect receiver="still_capture_view" sender="still_view_menu" signal="aboutToShow()" slot="disableControlsTimeout()"/>
+        <connect receiver="still_capture_view" sender="still_view_menu" signal="aboutToHide()" slot="hideControls()"/>
+        <connect receiver="still_capture_view" sender="cxui_action_goto_photos" signal="triggered(bool)" slot="launchPhotosApp()"/>
+        <connect receiver="still_capture_view" sender="cxui_action_self_timer" signal="triggered(bool)" slot="launchSetting()"/>
+        <connect receiver="still_capture_view" sender="cxui_action_settings" signal="triggered(bool)" slot="showSettingsGrid()"/>
+        <connect receiver="still_capture_view" sender="cxui_action_stillpostcapture" signal="triggered(bool)" slot="launchSetting()"/>
+        <connect receiver="still_capture_view" sender="cxui_action_goto_2_camera" signal="triggered(bool)" slot="requestCameraSwitch()"/>
+        <connect receiver="still_capture_view" sender="zoom" signal="valueChanged(int)" slot="zoomTo(int)"/>
+        <connect receiver="still_capture_view" sender="cxui_action_capture" signal="triggered(bool)" slot="focusAndCapture()"/>
+        <connect receiver="still_capture_view" sender="cxui_action_goto_video" signal="triggered(bool)" slot="goToVideo()"/>
+        <connect receiver="still_capture_view" sender="cxui_action_goto_video" signal="triggered(bool)" slot="hideControls()"/>
+        <connect receiver="still_capture_view" sender="cxui_action_flash" signal="triggered(bool)" slot="launchSetting()"/>
+        <connect receiver="still_capture_view" sender="cxui_action_scenemodes" signal="triggered(bool)" slot="launchScenesView()"/>
+    </section>
+    <section name="still_standalone_mode">
+        <widget name="still_view_menu" role="HbView:menu" type="HbMenu">
+            <ref object="cxui_action_goto_photos" role="HbWidget:addAction"/>
+            <ref object="cxui_action_self_timer" role="HbWidget:addAction"/>
+            <ref object="cxui_action_settings" role="HbWidget:addAction"/>
+            <widget name="still_submenu_general" role="HbMenu:menu" type="HbMenu">
+                <string locid="txt_cam_opt_general_settings" name="title" value="General settings"/>
+                <ref object="cxui_action_stillpostcapture" role="HbWidget:addAction"/>
+                <ref object="cxui_action_image_quality" role="HbWidget:addAction"/>
+                <ref object="cxui_action_still_geotagging" role="HbWidget:addAction"/>
+            </widget>
+        </widget>
+    </section>
+    <section name="still_embedded_mode">
+        <widget name="still_view_menu" role="HbView:menu" type="HbMenu">
+            <ref object="cxui_action_self_timer" role="HbWidget:addAction"/>
+            <ref object="cxui_action_settings" role="HbWidget:addAction"/>
+            <widget name="still_submenu_general" role="HbMenu:menu" type="HbMenu">
+                <string locid="txt_cam_opt_general_settings" name="title" value="General settings"/>
+                <ref object="cxui_action_image_quality" role="HbMenu:addAction"/>
+                <ref object="cxui_action_still_geotagging" role="HbMenu:addAction"/>
+            </widget>
+        </widget>
+    </section>
+    <metadata activeUIState="still_standalone_mode" display="NHD-3.2-inch_landscape" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+        <uistate name="still_capture_with_widgets" sections="#common still_capture_with_widgets"/>
+        <uistate name="still_standalone_mode" sections="#common still_capture_with_widgets still_standalone_mode"/>
+        <uistate name="still_embedded_mode" sections="#common still_capture_with_widgets still_embedded_mode"/>
+    </metadata>
+</hbdocument>

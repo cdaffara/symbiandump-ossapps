@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="1.1">
+    <widget name="mMultiSelectionDialog" type="VideoListSelectionDialog">
+        <sizepolicy horizontalPolicy="Expanding" horizontalStretch="0" verticalPolicy="Expanding" verticalStretch="0"/>
+        <sizehint height="var(hb-param-screen-height)" type="PREFERRED" width="var(hb-param-screen-width)"/>
+        <widget name="contentContainer" role="HbDialog:contentWidget" type="HbWidget">
+            <widget name="mListContainer" type="HbStackedWidget">
+                <sizehint height="23.8806un" type="PREFERRED" width="23.8806un"/>
+            </widget>
+            <widget name="mHeadingLabel" type="HbLabel">
+                <sizepolicy horizontalPolicy="Expanding" horizontalStretch="0" verticalPolicy="Preferred" verticalStretch="0"/>
+                <sizehint height="3.9un" type="PREFERRED" width="47.04478un"/>
+                <sizehint height="3.9un" type="MAXIMUM"/>
+                <string name="plainText" value="Label"/>
+                <fontspec name="fontSpec" role="Primary" textheight="26.8"/>
+            </widget>
+            <widget name="mCheckBoxContainer" type="HbWidget">
+                <widget name="mCheckMarkAll" type="HbCheckBox">
+                    <sizehint height="6un" type="PREFERRED" width="4un"/>
+                    <sizehint height="4un" type="MINIMUM"/>
+                </widget>
+                <widget name="mCheckBoxText" type="HbLabel">
+                    <enums name="alignment" value="AlignAbsolute|AlignLeft|AlignVCenter|AlignLeading"/>
+                    <sizepolicy horizontalPolicy="Expanding" horizontalStretch="0" verticalPolicy="Preferred" verticalStretch="0"/>
+                    <sizehint height="3.9un" type="PREFERRED" width="25.22703un"/>
+                    <string locid="txt_videos_setlabel_mark_all" name="plainText" value="Mark All"/>
+                    <fontspec name="fontSpec" role="Primary" textheight="26.8"/>
+                </widget>
+                <widget name="mSelectionCount" type="HbLabel">
+                    <enums name="alignment" value="AlignRight|AlignTrailing"/>
+                    <sizepolicy horizontalPolicy="Expanding" horizontalStretch="0" verticalPolicy="Preferred" verticalStretch="0"/>
+                    <sizehint height="3.9un" type="PREFERRED" width="20.22703un"/>
+                    <string name="plainText" value="Label"/>
+                    <fontspec name="fontSpec" role="Primary" textheight="26.8"/>
+                </widget>
+                <bool name="focusLooping" value="FALSE"/>
+                <real name="z" value="2"/>
+                <sizepolicy horizontalPolicy="Expanding" horizontalStretch="0" verticalPolicy="Preferred" verticalStretch="0"/>
+                <sizehint height="5un" type="PREFERRED" width="23.8806un"/>
+                <sizehint height="5un" type="MAXIMUM"/>
+                <layout type="anchor">
+                    <anchoritem dst="mSelectionCount" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                    <anchoritem dst="mSelectionCount" dstEdge="TOP" spacing="0.5un" src="" srcEdge="TOP"/>
+                    <anchoritem dst="mSelectionCount" dstEdge="LEFT" spacing="0un" src="mCheckBoxText" srcEdge="RIGHT"/>
+                    <anchoritem dst="mCheckBoxText" dstEdge="TOP" spacing="0.5un" src="" srcEdge="TOP"/>
+                    <anchoritem dst="mCheckMarkAll" dstEdge="TOP" spacing="-1.79104un" src="" srcEdge="TOP"/>
+                    <anchoritem dst="mCheckMarkAll" dstEdge="RIGHT" spacing="-1.69403un" src="mCheckBoxText" srcEdge="LEFT"/>
+                    <anchoritem dst="mCheckMarkAll" dstEdge="LEFT" spacing="-1.19403un" src="" srcEdge="LEFT"/>
+                </layout>
+            </widget>
+            <layout orientation="Vertical" type="linear">
+                <linearitem itemname="mHeadingLabel"/>
+                <linearitem itemname="mCheckBoxContainer"/>
+                <linearitem itemname="mListContainer"/>
+            </layout>
+        </widget>
+    </widget>
+    <metadata activeUIState="Common ui state" display="NHD-3.2-inch_portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+    </metadata>
+</hbdocument>

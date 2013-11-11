@@ -1,0 +1,56 @@
+HsShortcutWidget {
+  layout: icon_shortcut;
+}
+
+HsShortcutWidget[text] {
+  layout: icon_text_shortcut;
+}
+
+HsShortcutWidget[!text] {
+  layout: icon_shortcut;
+}
+
+HsShortcutWidget::background {
+  border-width: 0.0un;
+  fixed-width: 12un;
+  fixed-height: 12un;
+  zvalue: 0;
+}
+
+HsShortcutWidget[text]::background {
+  border-width: 0.0un;
+  fixed-width: 12un;
+  fixed-height: expr(12.5un + var(hb-param-text-height-tiny));
+  zvalue: 0;
+}
+
+HsShortcutWidget[!text]::background {
+  border-width: 0.0un;
+  fixed-width: 12un;
+  fixed-height: 12un;
+  zvalue: 0;
+}
+
+HsShortcutWidget::icon{
+  left: -0.5un;
+  right: 0.5un;
+  top: -0.5un;
+  bottom: 0.5un;
+  fixed-width: 11.0un;
+  fixed-height: 11.0un;
+  zvalue: 1;
+}
+
+HsShortcutWidget::text{
+  left: -0.5un;
+  right: 0.5un;
+  top: 0.0un;
+  bottom: 0.5un;
+  fixed-width: 11.0un;
+  font-variant: secondary;
+  text-align: center center;
+	text-height: var(hb-param-text-height-tiny);
+	text-line-count-max: 1;
+	color: var(qtc_hs_list_item_title_normal);
+	zvalue: 2;
+}

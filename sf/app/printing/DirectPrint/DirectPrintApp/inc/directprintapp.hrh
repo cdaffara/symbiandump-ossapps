@@ -1,0 +1,107 @@
+/*
+* Copyright (c) 2010 Kanrikogaku Kenkyusho, Ltd.
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the License "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Kanrikogaku Kenkyusho, Ltd. - Initial contribution
+*
+* Contributors:
+*
+* Description:  
+*
+*/
+
+#ifndef __DIRECTPRINTAPP_HRH__
+#define __DIRECTPRINTAPP_HRH__
+
+#define _UID3 0x2002BB28
+
+enum TDirectPrintViewIds
+	{
+	EDirectPrintMainViewId = 1,
+	EDirectPrintPrinterListViewId,
+	EDirectPrintSearchResultViewId,
+	EDirectPrintPrinterSettingViewId,
+	EDirectPrintPreviewViewId,
+	EDirectPrintPropertyViewId
+	};
+
+// DirectPrintApp enumerate command codes
+enum TDirectPrintCommandIds
+	{
+	EDirectPrintCmdIdMainViewPrint = 0x6001, // start value must not be 0
+	EDirectPrintCmdIdMainViewPreview,
+	EDirectPrintCmdIdMainViewPrinterList,
+	EDirectPrintCmdIdMainViewPrinterSetting,
+	EDirectPrintCmdIdMainViewPropertySetting,
+
+	EDirectPrintCmdIdMainViewHelp,
+	EDirectPrintCmdIdMainViewAbout,
+	EDirectPrintCmdIdMainViewExit,
+
+	EDirectPrintCmdIdPrinterListViewSearch,
+	EDirectPrintCmdIdPrinterListViewNew,
+	EDirectPrintCmdIdPrinterListViewEdit,
+	EDirectPrintCmdIdPrinterListViewDelete,
+	EDirectPrintCmdIdPrinterListViewDone,
+
+	EDirectPrintCmdIdSearchResultViewSearch,
+	EDirectPrintCmdIdSearchResultViewSelect,
+	EDirectPrintCmdIdSearchResultViewCancel,
+
+	EDirectPrintCmdIdPrinterSettingViewChange,
+	EDirectPrintCmdIdPrinterSettingViewBack,
+
+	EDirectPrintCmdIdPropertySettingViewChange,
+	EDirectPrintCmdIdPropertySettingViewPrint,
+	EDirectPrintCmdIdPropertySettingViewPreview,
+	EDirectPrintCmdIdPropertySettingViewBack,
+
+	EDirectPrintCmdIdPreviewViewPrint,
+	EDirectPrintCmdIdPreviewViewExpand,
+	EDirectPrintCmdIdPreviewViewReduce,
+	EDirectPrintCmdIdPreviewViewBack
+	};
+
+enum TDirectPrintPropertyTabIds
+	{
+	EDirectPrintPaperSettingTab = 0,
+	EDirectPrintPageSettingTab,
+	EDirectPrintMarginSettingTab,
+	EDirectPrintHeaderSettingTab,
+	EDirectPrintFooterSettingTab
+	};
+
+enum TDirectPrintPropertyItemIds
+	{
+	EDirectPrintPaperPaperSize = 0,
+	EDirectPrintPaperOrientation,
+	EDirectPrintPaperHight,
+	EDirectPrintPaperWidth,
+	EDirectPrintPagePrintPage,
+	EDirectPrintPagePrintRange,
+	EDirectPrintPageCopy,
+	EDirectPrintMarginLeftMargin,
+	EDirectPrintMarginRightMargin,
+	EDirectPrintMarginTopMargin,
+	EDirectPrintMarginBottomMargin,
+	EDirectPrintHeaderHeaderText,
+	EDirectPrintHeaderDistance,
+	EDirectPrintHeaderFirstPage,
+	EDirectPrintFooterFooterText,
+	EDirectPrintFooterDistance,
+	EDirectPrintFooterFirstPage,
+	EDirectPrintPropertyItemEnd
+	};
+
+enum TDirectPrintCtrlIds
+	{
+	EDirectPrintCtrlIdPrintProgressNote = 1,
+	EDirectPrintCtrlIdSearchProgressNote
+	};
+
+#endif // __DIRECTPRINTAPP_HRH__

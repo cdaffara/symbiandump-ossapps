@@ -1,0 +1,49 @@
+/*
+* Copyright (c) 2005 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: Implementation of applicationmanagement components
+*
+*/
+  
+
+// To get the APP_LAYER_SYSTEMINCLUDE-definition
+#include <platform_paths.hrh>
+#include "defaultcaps.hrh"
+
+TARGET        applicationmanagementclient.dll
+TARGETTYPE    dll
+UID           0x1000008d 0x2001247C
+#if 0
+CAPABILITY    CAP_CLIENT_DLL -TCB -DRM WriteDeviceData
+#endif
+CAPABILITY    CAP_CLIENT_DLL
+
+SOURCEPATH    ../src
+SOURCE        ApplicationManagementClient.cpp
+
+USERINCLUDE   . ../../inc 
+APP_LAYER_SYSTEMINCLUDE
+
+LIBRARY       euser.lib
+LIBRARY				bafl.lib
+LIBRARY 			flogger.lib
+LIBRARY				efsrv.lib
+LIBRARY         apparc.lib         
+LIBRARY         apgrfx.lib
+LIBRARY         estor.lib
+LIBRARY         cone.lib
+LIBRARY         eikcore.lib
+LIBRARY			centralrepository.lib
+
+
+//SMPSAFE

@@ -1,0 +1,74 @@
+;
+; Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:    
+;
+
+; Languages
+&EN
+
+; Provide value for uid
+#{"TestAppregister"},(0x00000000),1,1,0,TYPE=SA
+
+; Series60 product id for S60 3.0
+[0x101F7961], 0, 0, 0, {"Series60ProductID"}
+
+; Localised Vendor name
+%{"Nokia"}
+
+; Unique Vendor name
+:"Nokia"
+
+; Logo
+; None
+
+; Package signature - Optional
+; None
+
+; Start of Package body
+
+; Condition blocks
+; None
+
+; Options list
+; None
+
+; Install files
+"/epoc32/release/armv5/urel/AppRegExec_test.dll"   -   "!:/Sys/Bin/AppRegExec_test.dll"
+
+;TestData Binaries
+"../data/Hello3.exe"	-	"c:/Sys/Bin/Hello3.exe"
+"../data/Hello3.RSC"	-	"c:/resource/apps/Hello3.RSC"
+"../data/Hello3_reg.RSC" - "c:/data/Hello3_reg.RSC"
+
+;exe
+"../data/AppRegExec.exe"	-"c:/Sys/Bin/AppRegExec.exe"
+"../data/AppUnRegister.exe" -"c:/Sys/Bin/AppUnRegister.exe"
+
+;init file
+"../init/testframework_AppRegExec.ini"	-	"C:/TestFramework/TestFramework_AppRegExec.ini"
+
+;cfg file
+"../conf/AppRegExec_test.cfg"	-	"C:/Testframework/AppRegExec_test.cfg"
+
+  
+; Embedded SIS 
+; None
+
+; End of Package body
+
+; PKG dependencies
+; None
+
+; PKG capabilities
+; None

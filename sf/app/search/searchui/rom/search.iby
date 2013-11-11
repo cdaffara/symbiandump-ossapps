@@ -1,0 +1,56 @@
+/*
+* Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  search IBY file
+*/
+
+#ifndef __SEARCH_IBY__
+#define __SEARCH_IBY
+
+
+#ifdef FF_SEARCH_SW
+#include <bldvariant.hrh>
+#include <data_caging_paths_for_iby.hrh>
+S60_APP_EXE( Searchapplication)
+
+
+// Application registration file.
+data=DATAZ_/private/10003a3f/import/apps/Searchapplication_reg.rsc	/private/10003a3f/import/apps/Searchapplication_reg.rsc
+
+
+
+//SearchIndevice handler
+file=/epoc32/release/armv5/urel/searchindevicehandler.dll SHARED_LIB_DIR/searchindevicehandler.dll
+
+//Searchonline handler
+file=/epoc32/release/armv5/urel/searchonlinehandler.dll SHARED_LIB_DIR/searchonlinehandler.dll
+
+
+
+//runtime provider dll
+file=/epoc32/release/armv5/urel/searchruntimeprovider.dll SHARED_LIB_DIR/searchruntimeprovider.dll
+
+
+
+
+//state provider dll
+file=/epoc32/release/armv5/urel/searchstateprovider.dll SHARED_LIB_DIR/searchstateprovider.dll
+
+
+// Stub sis
+data=DATAZ_\system\install\searchui_stub.sis             \System\Install\searchui_stub.sis
+
+#endif //FF_SEARCH_SW
+
+#endif // __SEARCH_IBY__
+

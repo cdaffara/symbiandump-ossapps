@@ -1,0 +1,9 @@
+; security policy file for Music Collection
+[database]
+read
+capability = None
+write
+capability = WriteDeviceData
+schema
+capability = WriteDeviceData
+

@@ -1,0 +1,19 @@
+EXPORTS
+	?SendPresetWithLogoL@CIRLogoDownloadEngine@@QAEXXZ @ 1  NONAME ; void CIRLogoDownloadEngine::SendPresetWithLogoL(void)
+	?GetCacheLogoL@CIRLogoDownloadEngine@@QAEXABVTDesC16@@AAH@Z @ 2  NONAME ; void CIRLogoDownloadEngine::GetCacheLogoL(class TDesC16 const &, int &)
+	?CancelTransaction@CIRLogoDownloadEngine@@QAEXXZ @ 3  NONAME ; void CIRLogoDownloadEngine::CancelTransaction(void)
+	?SendRequestL@CIRLogoDownloadEngine@@QAEXPAVCIRIsdsPreset@@PAVMLogoDownloadObserver@@HHH@Z @ 4  NONAME ; void CIRLogoDownloadEngine::SendRequestL(class CIRIsdsPreset *, class MLogoDownloadObserver *, int, int, int)
+	?NewL@CIRDataProvider@@SAPAV1@AAVMIRDataProviderObserver@@@Z @ 5  NONAME ; class CIRDataProvider * CIRDataProvider::NewL(class MIRDataProviderObserver &)
+	?IsLogoCachedL@CIRLogoDownloadEngine@@QAEHPAVCIRIsdsPreset@@HH@Z @ 6  NONAME ; int CIRLogoDownloadEngine::IsLogoCachedL(class CIRIsdsPreset *, int, int)
+	?SendRequestL@CIRLogoDownloadEngine@@QAEXPAVCIRIsdsPreset@@HH@Z @ 7  NONAME ; void CIRLogoDownloadEngine::SendRequestL(class CIRIsdsPreset *, int, int)
+	?NewL@CIRLogoDownloadEngine@@SAPAV1@XZ @ 8  NONAME ; class CIRLogoDownloadEngine * CIRLogoDownloadEngine::NewL(void)
+	?SendCacheLogo@CIRLogoDownloadEngine@@QAEAAVTDesC8@@XZ @ 9  NONAME ; class TDesC8 & CIRLogoDownloadEngine::SendCacheLogo(void)
+	??1CIRLogoDownloadEngine@@UAE@XZ @ 10  NONAME ; CIRLogoDownloadEngine::~CIRLogoDownloadEngine(void)
+	?IRHttpCancelRequest@CIRDataProvider@@QAEXXZ @ 11  NONAME ; void CIRDataProvider::IRHttpCancelRequest(void)
+	?IsRunning@CIRLogoDownloadEngine@@QBEHXZ @ 12  NONAME ; int CIRLogoDownloadEngine::IsRunning(void) const
+	?NewL@CIRDataProvider@@SAPAV1@AAVMIRDataProviderObserver@@ABVTDesC16@@@Z @ 13  NONAME ; class CIRDataProvider * CIRDataProvider::NewL(class MIRDataProviderObserver &, class TDesC16 const &)
+	?GetLogoDownloadEngine@CIRHttpDataProvider@@QAEPAVCIRLogoDownloadEngine@@XZ @ 14  NONAME ; class CIRLogoDownloadEngine * CIRHttpDataProvider::GetLogoDownloadEngine(void)
+	?ReleaseResources@CIRDataProvider@@QAEXXZ @ 15  NONAME ; void CIRDataProvider::ReleaseResources(void)
+	?GetHttpDataProvider@CIRDataProvider@@QAEPAVCIRHttpDataProvider@@XZ @ 16  NONAME ; class CIRHttpDataProvider * CIRDataProvider::GetHttpDataProvider(void)
+	?IRHttpIssueRequestL@CIRDataProvider@@QAEXAAVCIRHttpRequestData@@@Z @ 17  NONAME ; void CIRDataProvider::IRHttpIssueRequestL(class CIRHttpRequestData &)
+

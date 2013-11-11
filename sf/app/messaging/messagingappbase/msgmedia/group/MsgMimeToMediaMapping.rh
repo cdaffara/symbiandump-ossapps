@@ -1,0 +1,44 @@
+/*
+* Copyright (c) 2005 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   Resource structs for MIME type to media type mapping
+*
+*/
+
+
+
+//  STRUCTURE DEFINITIONS
+
+// -----------------------------------------------------------------------------
+// MSG_MEDIA_GROUP
+// One media group, e.g. EMsgMediaImage and a list of MIME types
+// that belong to that group.
+// -----------------------------------------------------------------------------
+//
+STRUCT MSG_MEDIA_GROUP
+    {
+    LONG id; // TMsgMediaType
+    STRUCT mimetypes[]; // array of LTEXT
+    }
+
+// -----------------------------------------------------------------------------
+// MSG_MEDIA_TYPE_LIST
+// List of all media groups.
+// -----------------------------------------------------------------------------
+//
+STRUCT MSG_MEDIA_TYPE_LIST
+    {
+    STRUCT mediagroups[]; // array of MSG_MEDIA_GROUP
+    }
+
+// End of File

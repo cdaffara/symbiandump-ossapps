@@ -1,0 +1,47 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   This is project specification file for the clockserverclient.
+*
+*/
+
+// System includes
+#include <platform_paths.hrh>
+
+// Target information
+TARGET				clockserverclient.dll
+TARGETTYPE			dll
+
+// Uid and Capability information
+UID					0x1000008C 0x200159A6
+CAPABILITY			CAP_CLIENT_DLL
+
+// Source information
+SOURCEPATH			../src
+SOURCE				clockserverclt.cpp
+
+// System include information
+APP_LAYER_SYSTEMINCLUDE
+
+// User include information
+USERINCLUDE			../inc
+USERINCLUDE			../../server/inc
+USERINCLUDE			../../../inc
+USERINCLUDE			../../../../inc
+
+// Library information
+LIBRARY				euser.lib
+LIBRARY				flogger.lib
+LIBRARY				efsrv.lib
+
+// End of file

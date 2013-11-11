@@ -1,0 +1,41 @@
+EXPORTS
+	?BearerMobility@CImapSettings@@QBEHXZ @ 1 NONAME ; int CImapSettings::BearerMobility(void) const
+	?DefaultAttachmentName@CImapSettings@@QBEABVTDesC16@@XZ @ 2 NONAME ; class TDesC16 const & CImapSettings::DefaultAttachmentName(void) const
+	?DefaultPartialMessageFooter@CImapSettings@@QBEPBVHBufC8@@XZ @ 3 NONAME ; class HBufC8 const * CImapSettings::DefaultPartialMessageFooter(void) const
+	?DeleteEmailsWhenDisconnecting@CImapSettings@@QBEHXZ @ 4 NONAME ; int CImapSettings::DeleteEmailsWhenDisconnecting(void) const
+	?DisconnectedUserMode@CImapSettings@@QBEHXZ @ 5 NONAME ; int CImapSettings::DisconnectedUserMode(void) const
+	?FetchSize@CImapSettings@@QBEIXZ @ 6 NONAME ; unsigned int CImapSettings::FetchSize(void) const
+	?FolderPath@CImapSettings@@QBE?BVTPtrC8@@XZ @ 7 NONAME ; class TPtrC8 const CImapSettings::FolderPath(void) const
+	?FolderSyncDisabled@CImapSettings@@QBEHXZ @ 8 NONAME ; int CImapSettings::FolderSyncDisabled(void) const
+	?GetSyncDownloadRuleL@CImapSettings@@QBEHW4TRulesType@CImapSyncDownloadRules@@AAVTImImap4GetPartialMailInfo@@@Z @ 9 NONAME ; int CImapSettings::GetSyncDownloadRuleL(enum CImapSyncDownloadRules::TRulesType, class TImImap4GetPartialMailInfo &) const
+	?GetTransportBufferSizesL@CImapSettings@@QBEXAAI0@Z @ 10 NONAME ; void CImapSettings::GetTransportBufferSizesL(unsigned int &, unsigned int &) const
+	?IAPPreferences@CImapSettings@@QBEABVCImIAPPreferences@@XZ @ 11 NONAME ; class CImIAPPreferences const & CImapSettings::IAPPreferences(void) const
+	?ImapIdle@CImapSettings@@QBEHXZ @ 12 NONAME ; int CImapSettings::ImapIdle(void) const
+	?ImapIdleTimeout@CImapSettings@@QBEHXZ @ 13 NONAME ; int CImapSettings::ImapIdleTimeout(void) const
+	?InboxSynchronisationLimit@CImapSettings@@QBEJXZ @ 14 NONAME ; long CImapSettings::InboxSynchronisationLimit(void) const
+	?LoadSettingsL@CImapSettings@@QAEXJ@Z @ 15 NONAME ; void CImapSettings::LoadSettingsL(long)
+	?LoginName@CImapSettings@@QBE?BVTPtrC8@@XZ @ 16 NONAME ; class TPtrC8 const CImapSettings::LoginName(void) const
+	?MailboxSynchronisationLimit@CImapSettings@@QBEJXZ @ 17 NONAME ; long CImapSettings::MailboxSynchronisationLimit(void) const
+	?NewL@CImapSettings@@SAPAV1@AAVCMsvServerEntry@@@Z @ 18 NONAME ; class CImapSettings * CImapSettings::NewL(class CMsvServerEntry &)
+	?Password@CImapSettings@@QBE?BVTPtrC8@@XZ @ 19 NONAME ; class TPtrC8 const CImapSettings::Password(void) const
+	?PathSeparator@CImapSettings@@QBEABVTDesC16@@XZ @ 20 NONAME ; class TDesC16 const & CImapSettings::PathSeparator(void) const
+	?Port@CImapSettings@@QBEIXZ @ 21 NONAME ; unsigned int CImapSettings::Port(void) const
+	?SSLWrapper@CImapSettings@@QBEHXZ @ 22 NONAME ; int CImapSettings::SSLWrapper(void) const
+	?SearchString@CImapSettings@@QBE?BVTPtrC8@@XZ @ 23 NONAME ; class TPtrC8 const CImapSettings::SearchString(void) const
+	?SecureSockets@CImapSettings@@QBEHXZ @ 24 NONAME ; int CImapSettings::SecureSockets(void) const
+	?ServerAddress@CImapSettings@@QBE?BVTPtrC16@@XZ @ 25 NONAME ; class TPtrC16 const CImapSettings::ServerAddress(void) const
+	?ServiceId@CImapSettings@@QBEJXZ @ 26 NONAME ; long CImapSettings::ServiceId(void) const
+	?SetCurrentBearerType@CImapSettings@@QAEXK@Z @ 27 NONAME ; void CImapSettings::SetCurrentBearerType(unsigned long)
+	?SetPathSeparatorL@CImapSettings@@QAEXE@Z @ 28 NONAME ; void CImapSettings::SetPathSeparatorL(unsigned char)
+	?SettingsLoaded@CImapSettings@@QBEHXZ @ 29 NONAME ; int CImapSettings::SettingsLoaded(void) const
+	?Store8BitData@CImapSettings@@QBEHXZ @ 30 NONAME ; int CImapSettings::Store8BitData(void) const
+	?StorePlainText@CImapSettings@@QBEHXZ @ 31 NONAME ; int CImapSettings::StorePlainText(void) const
+	?Subscribe@CImapSettings@@QBE?AW4TFolderSubscribeType@@XZ @ 32 NONAME ; enum TFolderSubscribeType CImapSettings::Subscribe(void) const
+	?Synchronise@CImapSettings@@QBE?AW4TFolderSyncType@@XZ @ 33 NONAME ; enum TFolderSyncType CImapSettings::Synchronise(void) const
+	?TlsSslDomain@CImapSettings@@QBE?AVTPtrC8@@XZ @ 34 NONAME ; class TPtrC8 CImapSettings::TlsSslDomain(void) const
+	?UpdatingSeenFlags@CImapSettings@@QBEHXZ @ 35 NONAME ; int CImapSettings::UpdatingSeenFlags(void) const
+	?UseExpunge@CImapSettings@@QBEHXZ @ 36 NONAME ; int CImapSettings::UseExpunge(void) const
+	?UseSyncDownloadRules@CImapSettings@@QBEHXZ @ 37 NONAME ; int CImapSettings::UseSyncDownloadRules(void) const
+	?IMAP4Auth@CImapSettings@@QBEHXZ @ 38 NONAME ; int CImapSettings::IMAP4Auth(void) const
+	?FallBack@CImapSettings@@QBEHXZ @ 39 NONAME ; int CImapSettings::FallBack(void) const
+

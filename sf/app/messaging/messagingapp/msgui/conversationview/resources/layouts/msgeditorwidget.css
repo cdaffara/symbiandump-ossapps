@@ -1,0 +1,37 @@
+MsgEditorWidget
+{
+  layout:layout-msg-editor;
+}
+
+MsgEditorWidget::msgEditor
+{
+  left:-var(hb-param-margin-gene-middle-horizontal);
+  right:var(hb-param-margin-gene-middle-horizontal);
+  bottom:var(hb-param-margin-gene-middle-vertical);
+  top:-var(hb-param-margin-gene-middle-vertical); 
+  min-height:7.46un;
+}
+
+MsgEditorWidget::sendButton
+{
+  top:-var(hb-param-margin-gene-middle-vertical);
+  right:var(hb-param-margin-gene-middle-horizontal);
+  bottom:var(hb-param-margin-gene-middle-vertical);
+  fixed-width: 9.34un;
+  fixed-height: 7.46un;
+}
+
+MsgEditorWidget::charCounter
+{
+    text-height:var(hb-param-text-height-tiny);
+    text-align:centre;
+    text-line-count-min: 1;
+    text-line-count-max: 1;
+}
+
+MsgEditorWidget::charCounterFrame
+{
+    size-policy: fixed, fixed ;
+    pref-height: expr(var(hb-param-text-height-tiny)+2*var(hb-param-margin-gene-middle-vertical));
+    pref-width: expr(var(hb-param-text-height-tiny)*3 + 2*var(hb-param-margin-gene-middle-horizontal));
+}

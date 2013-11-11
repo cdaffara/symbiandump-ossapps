@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="0.6">
+    <object name="logs_act_exit" type="HbAction">
+        <string name="iconText" value="Exit"/>
+        <string name="text" value="Exit"/>
+        <string name="toolTip" value="Exit"/>
+    </object>
+    <widget name="logs_dialer_view" type="HbView">
+        <widget name="logs_content" role="HbView:widget" type="HbWidget">
+            <widget name="logs_label_search_results" type="HbLabel">
+                <zvalue value="1.0E-4"/>
+                <sizehint height="25" type="PREFERRED" width="127"/>
+                <sizehint height="25" type="MINIMUM" width="24"/>
+                <string name="text" value="Search results"/>
+            </widget>
+            <widget name="logs_list_view" type="HbListView">
+                <zvalue value="2.0001"/>
+            </widget>
+            <widget name="container" type="HbWidget">
+                <widget name="pushButton_5" type="HbPushButton">
+                    <string name="text" value="5"/>
+                </widget>
+                <widget name="pushButton_1" type="HbPushButton">
+                    <string name="text" value="1"/>
+                </widget>
+                <widget name="pushButton_2" type="HbPushButton">
+                    <string name="text" value="2"/>
+                </widget>
+                <widget name="pushButton_3" type="HbPushButton">
+                    <string name="text" value="3"/>
+                </widget>
+                <widget name="pushButton_4" type="HbPushButton">
+                    <string name="text" value="4"/>
+                </widget>
+                <widget name="pushButton_6" type="HbPushButton">
+                    <string name="text" value="6"/>
+                </widget>
+                <widget name="pushButton_8" type="HbPushButton">
+                    <string name="text" value="8"/>
+                </widget>
+                <widget name="pushButton_9" type="HbPushButton">
+                    <string name="text" value="9"/>
+                </widget>
+                <widget name="pushButton_7" type="HbPushButton">
+                    <string name="text" value="7"/>
+                </widget>
+                <widget name="pushButton_0" type="HbPushButton">
+                    <string name="text" value="0"/>
+                </widget>
+                <widget name="pushButton_10" type="HbPushButton">
+                    <string name="text" value="C"/>
+                </widget>
+                <zvalue value="0.0"/>
+                <sizehint height="23.8806un" type="PREFERRED" width="23.8806un"/>
+                <layout type="grid">
+                    <griditem column="0" itemname="pushButton_1" row="0"/>
+                    <griditem column="1" itemname="pushButton_2" row="0"/>
+                    <griditem column="2" itemname="pushButton_3" row="0"/>
+                    <griditem column="0" itemname="pushButton_4" row="1"/>
+                    <griditem column="1" itemname="pushButton_5" row="1"/>
+                    <griditem column="2" itemname="pushButton_6" row="1"/>
+                    <griditem column="0" itemname="pushButton_7" row="2"/>
+                    <griditem column="1" itemname="pushButton_8" row="2"/>
+                    <griditem column="2" itemname="pushButton_9" row="2"/>
+                    <griditem column="1" itemname="pushButton_0" row="3"/>
+                    <griditem column="2" itemname="pushButton_10" row="3"/>
+                </layout>
+            </widget>
+            <layout orientation="Vertical" type="linear">
+                <linearitem itemname="logs_label_search_results"/>
+                <linearitem itemname="logs_list_view"/>
+                <linearitem itemname="container"/>
+            </layout>
+        </widget>
+        <widget name="logs_view_menu" role="HbView:menu" type="HbMenu">
+            <sizehint height="142" type="PREFERRED" width="85"/>
+            <sizehint height="142" type="MINIMUM" width="85"/>
+            <ref object="logs_act_exit" role="HbMenu:addAction"/>
+        </widget>
+        <string name="title" value="Dialer"/>
+    </widget>
+    <connect receiver="logs_dialer_view" sender="logs_act_exit" signal="triggered(bool)" slot="closeView()"/>
+    <metadata activeUIState="Common ui state" display="QHD portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+    </metadata>
+</hbdocument>

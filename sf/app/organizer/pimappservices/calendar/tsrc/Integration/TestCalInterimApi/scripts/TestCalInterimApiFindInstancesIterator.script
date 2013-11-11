@@ -1,0 +1,232 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//! @file
+//! @SYMTestSuiteName	TestCalInterimApiSuite 
+//! @SYMScriptTestEnvironment
+//!
+
+Print Run Iterator based FindInstances tests
+
+LOAD_SUITE TestCalInterimApiSuite
+ 
+START_TESTCASE PIM-APPENG-CalInterimAPI-Iterator-I-001-HP
+//!
+//! @SYMTestCaseID 	PIM-APPENG-CalInterimAPI-Iterator-I-001-HP
+//! @SYMTestCaseDesc 	Perform search using Iterator based FindInstanceL Api
+//! @SYMTestType 	CIT
+//! @SYMTestPriority 	High
+//! @SYMPREQ 		1090
+//! @SYMFssID-REQ  	<App-Engines>/<CalInterimApi>-REQ5761
+//! @SYMTestStatus 	Implemented
+//! @SYMTestActions 	1. Create large number of calendar entries. 
+//!			2. Perform search using Iterator based FindInstanceL Api.
+//!			3. Call NextL on the iterator until all the matching instances have been returned.
+//!			4. Validate the instances count, as well as the actual instances returned.
+//!
+//! @SYMTestExpectedResults All the matching instances are returned in the subsequent NextL calls and no matching instance is lost.
+//!
+RUN_TEST_STEP	100	TestCalInterimApiSuite	TestCalInterimApiReadData			\CITCalInterimApi\TestCalInterimApiFindInstancesIterator.ini	addentries
+RUN_TEST_STEP	50 	TestCalInterimApiSuite	TestCalInterimApiFindInstancesIterator		\CITCalInterimApi\TestCalInterimApiFindInstancesIterator.ini	iterator_operations
+END_TESTCASE PIM-APPENG-CalInterimAPI-Iterator-I-001-HP
+
+START_TESTCASE PIM-APPENG-CalInterimAPI-Iterator-I-002-HP
+//! 
+//! @SYMTestCaseID PIM-APPENG-CalInterimAPI-Iterator-I-002-HP
+//! @SYMTestCaseDesc 	Calling NextL when there is no match found by FindInstanceL 
+//! @SYMTestType 	CIT
+//! @SYMTestPriority 	High
+//! @SYMPREQ 		1090
+//! @SYMFssID-REQ  	<App-Engines>/<CalInterimApi>-REQ5761
+//! @SYMTestStatus 	Implemented
+//! @SYMTestActions 	1. Create an iterator.
+//!			2. Perform such a search with FindInstanceL so that there are no matching instances.
+//!			3. Call NextL on the iterator.
+//! @SYMTestExpectedResults No results should be returned. And call to NextL should NOT Leave
+//!
+RUN_TEST_STEP	50 	TestCalInterimApiSuite	TestCalInterimApiFindInstancesIterator		\CITCalInterimApi\TestCalInterimApiFindInstancesIterator.ini	deliberatenomatch1
+RUN_TEST_STEP	50 	TestCalInterimApiSuite	TestCalInterimApiFindInstancesIterator		\CITCalInterimApi\TestCalInterimApiFindInstancesIterator.ini	deliberatenomatch2
+RUN_TEST_STEP	50 	TestCalInterimApiSuite	TestCalInterimApiFindInstancesIterator		\CITCalInterimApi\TestCalInterimApiFindInstancesIterator.ini	deliberatenomatch3
+END_TESTCASE PIM-APPENG-CalInterimAPI-Iterator-I-002-HP
+
+START_TESTCASE PIM-APPENG-CalInterimAPI-Iterator-I-004-HP
+//! 
+//! @SYMTestCaseID PIM-APPENG-CalInterimAPI-Iterator-I-004-HP
+//! @SYMTestCaseDesc Perform search involving a set of matching instances and when the server is busy performing the search, add/modify/delete instances that match with the search criteria from another thread.
+//! @SYMTestType 	CIT
+//! @SYMTestPriority 	High
+//! @SYMPREQ 		1090
+//! @SYMFssID-REQ  	<App-Engines>/<CalInterimApi>-REQ5761
+//! @SYMTestStatus 	Implemented
+//! @SYMTestActions 	1. Create large number of calendar entries. 
+//!			2. Create an Iterator.
+//!			3. Perform such a search with FindInstanceL that there are a set of matching results.
+//!			4. When the search is being performed, simultaneously update all the entries in the database from another thread.
+//!
+//! @SYMTestExpectedResults The FindInstanceL API does not crash, and it returns valid results. 
+//!			    i.e, if an instance is updated after it has been caught in the match, the search-results contain the older version. 
+//!			    If it happens before it has been caught, the search contains the latest version.
+//!
+CONCURRENT
+RUN_TEST_STEP	50 	TestCalInterimApiSuite	TestCalInterimApiFindInstancesIterator		\CITCalInterimApi\TestCalInterimApiFindInstancesIterator.ini	iterator_operations
+RUN_TEST_STEP	100	TestCalInterimApiSuite	TestCalInterimApiUpdateAllInstances 		\CITCalInterimApi\TestCalInterimApiFindInstancesIterator.ini	updateallentries
+CONSECUTIVE
+END_TESTCASE PIM-APPENG-CalInterimAPI-Iterator-I-004-HP
+
+START_TESTCASE PIM-APPENG-CalInterimAPI-Iterator-I-005-HP
+//! 
+//! @SYMTestCaseID PIM-APPENG-CalInterimAPI-Iterator-I-005-HP
+//! @SYMTestCaseDesc Out of Memory Tests
+//! @SYMTestType 	CIT
+//! @SYMTestPriority 	High
+//! @SYMPREQ 		1090
+//! @SYMFssID-REQ  	<App-Engines>/<CalInterimApi>-REQ5761
+//! @SYMTestStatus 	Implemented
+//! @SYMTestActions 	1. Create iterators, perform various text searches and NextL calls in an Out Of Memory loop.
+//! @SYMTestExpectedResults The operations leave gracefully with KErrNoMemory and there is no unexpected thread/process crash when memory is low.
+//!
+//!
+RUN_TEST_STEP	  100	TestCalInterimApiSuite	TestCalInterimApiReadData			\CITCalInterimApi\TestCalInterimApiFindInstancesIterator.ini	addentries
+RUN_TEST_STEP     50 	TestCalInterimApiSuite	TestCalInterimApiFindInstancesIterator	\CITCalInterimApi\TestCalInterimApiFindInstancesIterator.ini	alloctest
+END_TESTCASE PIM-APPENG-CalInterimAPI-Iterator-I-005-HP
+
+
+// Additional tests for Iterator
+START_TESTCASE PIM-APPENG-CalInterimAPI-Iterator-006
+//! @SYMTestCaseID  	PIM-APPENG-CalInterimAPI-Iterator-006
+//! @SYMTestCaseDesc	Perform independent search using three iterators for the same client(view).
+//! @SYMTestType 	CIT
+//! @SYMTestPriority 	High
+//! @SYMPREQ 		1090
+//! @SYMFssID-REQ  	<App-Engines>/<CalInterimApi>-REQ5761
+//! @SYMTestStatus 	Implemented
+//! @SYMTestActions 	1. Create an instance view containing some calendar entries.
+//!			2. Create three iterators to search for three distinct search criteria.
+//!			3. Fetch the matching instances from the iterators.
+//! @SYMTestExpectedResults FindInstanceL API does not crash, and it returns the correct instances.
+//!
+RUN_TEST_STEP	50 	TestCalInterimApiSuite	TestCalInterimApiFindInstancesIterator		\CITCalInterimApi\TestCalInterimApiFindInstancesIterator.ini	multipleiteratordistinctsearch
+END_TESTCASE PIM-APPENG-CalInterimAPI-Iterator-006
+
+START_TESTCASE PIM-APPENG-CalInterimAPI-Iterator-007
+//! @SYMTestCaseID  	PIM-APPENG-CalInterimAPI-Iterator-007
+//! @SYMTestCaseDesc	Perform same search using three iterators for the same client (view).
+//! @SYMTestType 	CIT
+//! @SYMTestPriority 	High
+//! @SYMPREQ 		1090
+//! @SYMFssID-REQ  	<App-Engines>/<CalInterimApi>-REQ5761
+//! @SYMTestStatus 	Implemented
+//! @SYMTestActions 	1. Create an instance view containing some calendar entries.
+//!			2. Create three iterators in the same view and search for same search criteria.
+//!			3. Fetch the matching instances from the iterators.
+//! @SYMTestExpectedResults FindInstanceL API does not crash, and it returns the correct instances.
+//!
+RUN_TEST_STEP	50 	TestCalInterimApiSuite	TestCalInterimApiFindInstancesIterator		\CITCalInterimApi\TestCalInterimApiFindInstancesIterator.ini	multipleiteratorsamesearch
+END_TESTCASE PIM-APPENG-CalInterimAPI-Iterator-007
+
+START_TESTCASE PIM-APPENG-CalInterimAPI-Iterator-008
+//! @SYMTestCaseID  	PIM-APPENG-CalInterimAPI-Iterator-008
+//! @SYMTestCaseDesc	Add instances after iterator search is over.
+//! @SYMTestType 	CIT
+//! @SYMTestPriority 	High
+//! @SYMPREQ 		1090
+//! @SYMFssID-REQ  	<App-Engines>/<CalInterimApi>-REQ5761
+//! @SYMTestStatus 	Implemented
+//! @SYMTestActions 	1. Create an instance view containing some calendar entries.
+//!			2. Create an iterator such that there are more than 32 matching instances for the search criteria.
+//!			3. Add entries that matches the search criteria.
+//!			4. Get the list of matching instances from the iterator.
+//! @SYMTestExpectedResults	The result should not contain the newly added instances. In other words, it should still refer to old instances
+//!
+RUN_TEST_STEP	50 	TestCalInterimApiSuite	TestCalInterimApiFindInstancesIterator		\CITCalInterimApi\TestCalInterimApiFindInstancesIterator.ini	iteratoraddinstances
+END_TESTCASE PIM-APPENG-CalInterimAPI-Iterator-008
+
+
+START_TESTCASE PIM-APPENG-CalInterimAPI-Iterator-009
+//! @SYMTestCaseID  	PIM-APPENG-CalInterimAPI-Iterator-009
+//! @SYMTestCaseDesc	Update some matching instances(using UpdateL()) after iterator search is over.
+//! @SYMTestType 	CIT
+//! @SYMTestPriority 	High
+//! @SYMPREQ 		1090
+//! @SYMFssID-REQ  	<App-Engines>/<CalInterimApi>-REQ5761
+//! @SYMTestStatus 	Implemented
+//! @SYMTestActions 	1. Create an instance view containing some calendar entries.
+//!			2. Create an iterator 
+//!			3. Invoke UpdateL() to update all instances in the calendar file.
+//!			4. Get the list of matching instances from the iterator.
+//! @SYMTestExpectedResults	Iterator should still reflect old information. All the matching instances are found.
+//!
+RUN_TEST_STEP	100		TestCalInterimApiSuite	TestCalInterimApiReadData				\CITCalInterimApi\TestCalInterimApiFindInstancesIterator.ini	addentries
+RUN_TEST_STEP	 50 		TestCalInterimApiSuite	TestCalInterimApiFindInstancesIterator			\CITCalInterimApi\TestCalInterimApiFindInstancesIterator.ini	iteratorupdateinstances
+END_TESTCASE PIM-APPENG-CalInterimAPI-Iterator-009
+
+START_TESTCASE PIM-APPENG-CalInterimAPI-Iterator-0010
+//! @SYMTestCaseID  	PIM-APPENG-CalInterimAPI-Iterator-0010
+//! @SYMTestCaseDesc	Update matching instances(using StoreL()) after iterator search is over.
+//! @SYMTestType 	CIT
+//! @SYMTestPriority 	High
+//! @SYMPREQ 		1090
+//! @SYMFssID-REQ  	<App-Engines>/<CalInterimApi>-REQ5761
+//! @SYMTestStatus 	Implemented
+//! @SYMTestActions 	1. Create an instance view containing some calendar entries.
+//!			2. Create an iterator 
+//!			3. Invoke StoreL()  to update all instances in the calendar file.
+//!			4. Get the list of matching instances from the iterator.
+//! @SYMTestExpectedResults Iterator should still reflect old information. All the matching instances are found.
+//!
+RUN_TEST_STEP	100		TestCalInterimApiSuite	TestCalInterimApiReadData			\CITCalInterimApi\TestCalInterimApiFindInstancesIterator.ini	addentries
+RUN_TEST_STEP	50 	TestCalInterimApiSuite	TestCalInterimApiFindInstancesIterator		\CITCalInterimApi\TestCalInterimApiFindInstancesIterator.ini	iteratorstoreinstances
+END_TESTCASE PIM-APPENG-CalInterimAPI-Iterator-0010
+
+START_TESTCASE PIM-APPENG-CalInterimAPI-Iterator-0014
+//! @SYMTestCaseID  	PIM-APPENG-CalInterimAPI-Iterator-0014
+//! @SYMTestCaseDesc	Update matching instances(using StoreL()) when search using multiple iterators is over.
+//! @SYMTestType 	CIT
+//! @SYMTestPriority 	High
+//! @SYMPREQ 		1090
+//! @SYMFssID-REQ  	<App-Engines>/<CalInterimApi>-REQ5761
+//! @SYMTestStatus 	Implemented
+//! @SYMTestActions 	1. Create an instance view containing some calendar entries.
+//!			2. Create three iterators for three distinct search criteria. 
+//!			3. Invoke StoreL() and update the instances
+//!			4. Get the list of matching instances from the iterators.
+//! @SYMTestExpectedResults	Iterator should still reflect old information. All the matching instances are found.
+//!
+RUN_TEST_STEP	100	TestCalInterimApiSuite	TestCalInterimApiReadData			\CITCalInterimApi\TestCalInterimApiFindInstancesIterator.ini		addentries
+RUN_TEST_STEP	50 	TestCalInterimApiSuite	TestCalInterimApiFindInstancesIterator		\CITCalInterimApi\TestCalInterimApiFindInstancesIterator.ini		iterator_operations
+RUN_TEST_STEP   50 	TestCalInterimApiSuite	TestCalInterimApiFindInstancesIterator		\CITCalInterimApi\TestCalInterimApiFindInstancesIterator.ini		multipleiteratorstoreinstances
+END_TESTCASE PIM-APPENG-CalInterimAPI-Iterator-0014
+
+START_TESTCASE PIM-APPENG-CalInterimAPI-Iterator-0016
+//! @SYMTestCaseID  	PIM-APPENG-CalInterimAPI-Iterator-0016
+//! @SYMTestCaseDesc	Search concurrently using iterators from different threads
+//! @SYMTestType 	CIT
+//! @SYMTestPriority 	High
+//! @SYMPREQ 		1090
+//! @SYMFssID-REQ  	<App-Engines>/<CalInterimApi>-REQ5761
+//! @SYMTestStatus 	Implemented
+//! @SYMTestActions 	1. Launch 2 seperate threads
+//!			2. Concurrently, create an iterator in each thread with same search criteria.
+//!			3. Get the list of matching instances from the iterators.
+//! @SYMTestExpectedResults FindInstanceL() should not crash and the correct instances should be returned.
+//!
+RUN_TEST_STEP	100	TestCalInterimApiSuite	TestCalInterimApiReadData			\CITCalInterimApi\TestCalInterimApiFindInstancesIterator.ini	addentries
+CONCURRENT
+RUN_TEST_STEP	50 	TestCalInterimApiSuite	TestCalInterimApiFindInstancesIterator		\CITCalInterimApi\TestCalInterimApiFindInstancesIterator.ini	concurrentsearchiterator
+RUN_TEST_STEP	50 	TestCalInterimApiSuite	TestCalInterimApiFindInstancesIterator		\CITCalInterimApi\TestCalInterimApiFindInstancesIterator.ini	concurrentsearchiterator
+CONSECUTIVE
+END_TESTCASE PIM-APPENG-CalInterimAPI-Iterator-0016
+
+PRINT Completed Iterator based FindInstances tests

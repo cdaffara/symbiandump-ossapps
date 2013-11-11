@@ -1,0 +1,37 @@
+<hbwidget version="0.1" type="CalenDayItem">
+    <!-- layout for timed and all-day event bubble -->
+    <layout name="noIconLayout" type="mesh">
+        <meshitem src="backgroundFrame" srcEdge="TOP" dst="" dstEdge="TOP" />
+        <meshitem src="backgroundFrame" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+        <meshitem src="backgroundFrame" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+        <meshitem src="backgroundFrame" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+      
+        <meshitem src="colorStripe" srcEdge="TOP" dst="" dstEdge="TOP" />
+        <meshitem src="colorStripe" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />      
+        <meshitem src="colorStripe" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="-var(hb-param-margin-gene-middle-horizontal)"/>
+        <meshitem src="colorStripe" srcEdge="RIGHT" dst="eventDescription" dstEdge="LEFT" spacing="var(hb-param-margin-gene-middle-horizontal)"/>
+        
+        <meshitem src="eventDescription" srcEdge="TOP" dst="" dstEdge="TOP" spacing="-var(hb-param-margin-gene-top)" />
+        <meshitem src="eventDescription" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacing="var(hb-param-margin-gene-bottom)" />
+        <meshitem src="eventDescription" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)"/>
+    </layout>
+	
+    <layout name="noIconNoTextLayout" type="mesh">
+        <meshitem src="backgroundFrame" srcEdge="TOP" dst="" dstEdge="TOP" />
+        <meshitem src="backgroundFrame" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+        <meshitem src="backgroundFrame" srcEdge="LEFT" dst="" dstEdge="LEFT"/>
+        <meshitem src="backgroundFrame" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+      
+        <meshitem src="colorStripe" srcEdge="TOP" dst="" dstEdge="TOP" />
+        <meshitem src="colorStripe" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />      
+        <meshitem src="colorStripe" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="-var(hb-param-margin-gene-middle-horizontal)"/>
+        <meshitem src="colorStripe" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-middle-horizontal)"/>
+    </layout>
+	
+    <layout name="noIconNoTextNoBkgLayout" type="mesh">
+        <meshitem src="colorStripe" srcEdge="TOP" dst="" dstEdge="TOP" />
+        <meshitem src="colorStripe" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />      
+        <meshitem src="colorStripe" srcEdge="LEFT" dst="" dstEdge="LEFT"/>
+        <meshitem src="colorStripe" srcEdge="RIGHT" dst="" dstEdge="RIGHT"/>
+    </layout>
+</hbwidget>

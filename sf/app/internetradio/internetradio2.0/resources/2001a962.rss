@@ -1,0 +1,55 @@
+/*
+* Copyright (c) 2001 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  ECom plugin registration resource for IRActionHandler.
+*
+*/
+
+
+#include <ahpluginuids.hrh>
+#include <ecom/registryinfov2.rh>
+
+#include "iractionhandler.hrh"
+
+// ---------------------------------------------------------------------------
+// Resource information for the ECOM DLL.
+// ---------------------------------------------------------------------------
+//
+RESOURCE REGISTRY_INFO theInfo
+    {
+    resource_format_version = RESOURCE_FORMAT_VERSION_2;
+
+    dll_uid = KIRActionHandlerDllUid;
+
+    interfaces = 
+        {
+        INTERFACE_INFO
+            {
+            // AH plugin interface
+            interface_uid = KAHPluginInterfaceUid;
+
+            implementations = 
+                {
+                // VR Action handler AH plugin implementation
+                IMPLEMENTATION_INFO
+                    {
+                    implementation_uid = KIRActionHandlerImplementationUid;
+                    version_no         = 1;
+                    display_name       = "IRActionHandlerPlugin";
+                    default_data       = "";
+                    opaque_data        = "";
+                    }
+                };
+            }
+        };
+    }

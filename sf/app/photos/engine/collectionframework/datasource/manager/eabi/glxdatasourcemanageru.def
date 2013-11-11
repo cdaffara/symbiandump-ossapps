@@ -1,0 +1,85 @@
+EXPORTS
+	_ZN11CGlxRequestD0Ev @ 1 NONAME
+	_ZN11CGlxRequestD1Ev @ 2 NONAME
+	_ZN11CGlxRequestD2Ev @ 3 NONAME
+	_ZN14CGlxDataSource12TryStartTaskEi @ 4 NONAME
+	_ZN14CGlxDataSource13CancelRequestER29MGlxDataSourceRequestObserver @ 5 NONAME
+	_ZN14CGlxDataSource16BroadcastMessageER9CMPXMedia @ 6 NONAME
+	_ZN14CGlxDataSource18DataSourceRequestLEP11CGlxRequestR29MGlxDataSourceRequestObserver @ 7 NONAME
+	_ZN14CGlxDataSource18HandleTaskCompleteEP18CGlxDataSourceTask @ 8 NONAME
+	_ZN14CGlxDataSource4RunLEv @ 9 NONAME
+	_ZN14CGlxDataSource5CloseER28MGlxDataSourceUpdateObserver @ 10 NONAME
+	_ZN14CGlxDataSource8DoCancelEv @ 11 NONAME
+	_ZN14CGlxDataSource8RunErrorEi @ 12 NONAME
+	_ZN14CGlxDataSourceC2Ev @ 13 NONAME
+	_ZN14CGlxDataSourceD0Ev @ 14 NONAME
+	_ZN14CGlxDataSourceD1Ev @ 15 NONAME
+	_ZN14CGlxDataSourceD2Ev @ 16 NONAME
+	_ZN14CGlxGetRequest4NewLERK6RArrayI11TGlxMediaIdERKS0_I13TMPXAttributeES8_RK4TUidP9CMPXMediai @ 17 NONAME
+	_ZN14MGlxDataSource15OpenDataSourceLERK4TUidR28MGlxDataSourceUpdateObserver @ 18 NONAME
+	_ZN15CGlxStringCache21LoadLocalizedStringLCERK7TDesC16i @ 19 NONAME
+	_ZN15CGlxStringCache4NewLEv @ 20 NONAME
+	_ZN17CGlxIdListRequest4NewLE11TGlxMediaIdRK4TUidP9CMPXMediaR18CMPXCollectionPath @ 21 NONAME
+	_ZN18CGlxDataSourceTask12ListToMediaLERK6RArrayI11TGlxMediaIdE @ 22 NONAME
+	_ZN18CGlxDataSourceTask15CreateResponseLEv @ 23 NONAME
+	_ZN18CGlxDataSourceTask21HandleRequestCompleteEi @ 24 NONAME
+	_ZN18CGlxDataSourceTaskC2EP11CGlxRequestR29MGlxDataSourceRequestObserverP14CGlxDataSource @ 25 NONAME
+	_ZN18CGlxDataSourceTaskD0Ev @ 26 NONAME
+	_ZN18CGlxDataSourceTaskD1Ev @ 27 NONAME
+	_ZN18CGlxDataSourceTaskD2Ev @ 28 NONAME
+	_ZN20CGlxThumbnailRequest16SetThumbnailInfoEP14CGlxtnFileInfo @ 29 NONAME
+	_ZN20CGlxThumbnailRequest4NewLE20TGlxThumbnailRequestRK4TUidiP9CMPXMedia @ 30 NONAME
+	_ZN24CGlxCollectionPluginBase12FindAllSyncLERK9CMPXMediaRK6TArrayI13TMPXAttributeE @ 31 NONAME
+	_ZN24CGlxCollectionPluginBase13CancelRequestEv @ 32 NONAME
+	_ZN24CGlxCollectionPluginBase13DefaultFilterEi @ 33 NONAME
+	_ZN24CGlxCollectionPluginBase13HandleMessageER9CMPXMedia @ 34 NONAME
+	_ZN24CGlxCollectionPluginBase14HandleResponseEP9CMPXMediaP11CGlxRequestRKi @ 35 NONAME
+	_ZN24CGlxCollectionPluginBase15GetCapabilitiesEv @ 36 NONAME
+	_ZN24CGlxCollectionPluginBase21LoadLocalizedStringLCERK7TDesC16i @ 37 NONAME
+	_ZN24CGlxCollectionPluginBase22IsUpdateMessageIgnoredER9CMPXMedia @ 38 NONAME
+	_ZN24CGlxCollectionPluginBase27HandleCpiAttributeResponseLEP9CMPXMedia6TArrayI13TMPXAttributeES2_I11TGlxMediaIdE @ 39 NONAME
+	_ZN24CGlxCollectionPluginBase32CpiAttributeAdditionalAttributesERK13TMPXAttributeR6RArrayIS0_E @ 40 NONAME
+	_ZN24CGlxCollectionPluginBase4AddLERK9CMPXMedia @ 41 NONAME
+	_ZN24CGlxCollectionPluginBase4SetLERK9CMPXMedia @ 42 NONAME
+	_ZN24CGlxCollectionPluginBase5OpenLERK18CMPXCollectionPathRK6TArrayI13TMPXAttributeEP9CMPXMedia @ 43 NONAME
+	_ZN24CGlxCollectionPluginBase6MediaLERK18CMPXCollectionPathRK6TArrayI13TMPXAttributeERKS3_I11TCapabilityEP9CMPXMedia @ 44 NONAME
+	_ZN24CGlxCollectionPluginBase7RemoveLERK18CMPXCollectionPath @ 45 NONAME
+	_ZN24CGlxCollectionPluginBase7RemoveLERK9CMPXMedia @ 46 NONAME
+	_ZN24CGlxCollectionPluginBase8CommandLE21TMPXCollectionCommandi @ 47 NONAME
+	_ZN24CGlxCollectionPluginBase8CommandLER9CMPXMedia @ 48 NONAME
+	_ZN24CGlxCollectionPluginBase8FindAllLERK9CMPXMediaRK6TArrayI13TMPXAttributeE @ 49 NONAME
+	_ZN24CGlxCollectionPluginBaseC1Ev @ 50 NONAME
+	_ZN24CGlxCollectionPluginBaseC2Ev @ 51 NONAME
+	_ZN24CGlxCollectionPluginBaseD0Ev @ 52 NONAME
+	_ZN24CGlxCollectionPluginBaseD1Ev @ 53 NONAME
+	_ZN24CGlxCollectionPluginBaseD2Ev @ 54 NONAME
+	_ZNK11CGlxRequest19CollectionPluginUidEv @ 55 NONAME
+	_ZNK11CGlxRequest6FilterEv @ 56 NONAME
+	_ZNK20CGlxThumbnailRequest11AttributeIdEv @ 57 NONAME
+	_ZNK20CGlxThumbnailRequest13ThumbnailInfoEv @ 58 NONAME
+	_ZNK20CGlxThumbnailRequest16ThumbnailRequestER20TGlxThumbnailRequest @ 59 NONAME
+	_ZNK20CGlxThumbnailRequest6ItemIdEv @ 60 NONAME
+	_ZTI11CGlxRequest @ 61 NONAME ; #<TI>#
+	_ZTI14CGlxDataSource @ 62 NONAME ; #<TI>#
+	_ZTI14CGlxGetRequest @ 63 NONAME ; #<TI>#
+	_ZTI17CGlxIdListRequest @ 64 NONAME ; #<TI>#
+	_ZTI18CGlxCommandRequest @ 65 NONAME ; #<TI>#
+	_ZTI18CGlxDataSourceTask @ 66 NONAME ; #<TI>#
+	_ZTI20CGlxThumbnailRequest @ 67 NONAME ; #<TI>#
+	_ZTI24CGlxCollectionPluginBase @ 68 NONAME ; #<TI>#
+	_ZTV11CGlxRequest @ 69 NONAME ; #<VT>#
+	_ZTV14CGlxDataSource @ 70 NONAME ; #<VT>#
+	_ZTV14CGlxGetRequest @ 71 NONAME ; #<VT>#
+	_ZTV17CGlxIdListRequest @ 72 NONAME ; #<VT>#
+	_ZTV18CGlxCommandRequest @ 73 NONAME ; #<VT>#
+	_ZTV18CGlxDataSourceTask @ 74 NONAME ; #<VT>#
+	_ZTV20CGlxThumbnailRequest @ 75 NONAME ; #<VT>#
+	_ZTV24CGlxCollectionPluginBase @ 76 NONAME ; #<VT>#
+	_ZThn24_N24CGlxCollectionPluginBase14HandleResponseEP9CMPXMediaP11CGlxRequestRKi @ 77 NONAME ; #<thunk>#
+	_ZThn28_N14CGlxDataSource13CancelRequestER29MGlxDataSourceRequestObserver @ 78 NONAME ; #<thunk>#
+	_ZThn28_N14CGlxDataSource18DataSourceRequestLEP11CGlxRequestR29MGlxDataSourceRequestObserver @ 79 NONAME ; #<thunk>#
+	_ZThn28_N14CGlxDataSource5CloseER28MGlxDataSourceUpdateObserver @ 80 NONAME ; #<thunk>#
+	_ZThn28_N24CGlxCollectionPluginBase13HandleMessageER9CMPXMedia @ 81 NONAME ; #<thunk>#
+	_ZN24CGlxCollectionPluginBase21LoadLocalizedStringLCERK7TDesC16 @ 82 NONAME
+	_ZN24CGlxCollectionPluginBase29initializeTextResolverSymbianEv @ 83 NONAME
+

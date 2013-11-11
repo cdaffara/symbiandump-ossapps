@@ -1,0 +1,42 @@
+/*
+* Copyright (c) 2006-2007 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: Build file for silence action plugin.
+*
+*/
+
+
+#ifdef RD_CONTEXT_FRAMEWORK
+#include  <platform_paths.hrh>
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+../data/silence.rul\
+    /epoc32/release/winscw/udeb/z/private/10282bc4/rules/silence.rul
+
+../data/silence.rul\
+    /epoc32/data/z/private/10282bc4/rules/silence.rul
+
+../rom/silenceactionplugin_stub.sis\
+    /epoc32/data/z/system/install/silenceactionplugin_stub.sis
+    
+../rom/silenceactionplugin.iby\
+    CORE_APP_LAYER_IBY_EXPORT_PATH(silenceactionplugin.iby)
+
+PRJ_MMPFILES
+silenceactionplugin.mmp
+
+PRJ_TESTMMPFILES
+#endif // RD_CONTEXT_FRAMEWORK

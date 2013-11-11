@@ -1,0 +1,57 @@
+/*
+* Copyright (c) 2002 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  ECOM DLL interface & implementation description resource for
+*                this DLL.
+*
+*/
+
+
+//  INCLUDES
+#include <registryinfo.rh>
+
+#include "ProvisioningUIDs.h"
+
+//  RESOURCE DEFINITIONS 
+// -----------------------------------------------------------------------------
+//   
+// theInfo
+// ECOM DLL interface & implementation description resource.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE REGISTRY_INFO theInfo
+    {
+    dll_uid = 0x101F85CB;
+    interfaces =
+        {
+        INTERFACE_INFO
+            {
+            interface_uid = KProvisioningAdapterInterface;
+            implementations =
+                {
+                IMPLEMENTATION_INFO
+                    {
+                    implementation_uid = 0x101F85CC;
+                    version_no = 1;
+                    display_name = "WP STREAMING PA";// Use short name to save RAM and ROM space
+                    default_data = "";
+                    opaque_data = "10"; // Adapter priority
+                    }
+                };
+            }
+        };
+    }
+            
+// End of File
+

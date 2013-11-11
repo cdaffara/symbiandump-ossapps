@@ -1,0 +1,321 @@
+/*
+* Copyright (c) 2004 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  This file contains all the resources for the Music Collection
+*
+*/
+
+
+//  INCLUDES
+#include <bldvariant.hrh>
+#include <badef.rh>
+#include <pathconfiguration.hrh>
+#include "mpxcollectiondb.hrh"
+
+STRUCT MENU_ITEM
+    {
+    LONG   id;
+    STRUCT name;
+    }
+
+STRUCT MENU_ITEM_ARRAY
+    {
+    STRUCT array_of_menu_items[];
+    }
+
+//  RESOURCE IDENTIFIER
+NAME    OAMC // 4 letter ID
+
+//  RESOURCE DEFINITIONS
+
+RESOURCE BA_RSS_SIGNATURE { }
+
+//----------------------------------------------------
+//
+//    r_mc_music_library_menu_items
+//    Menu items to be displayed in the music library view
+//
+//----------------------------------------------------
+//
+RESOURCE MENU_ITEM_ARRAY r_mc_menu_items_array
+    {
+    array_of_menu_items =
+        {
+        MENU_ITEM {id = EBrowseAll;      name = LBUF {txt = qtn_mus_all_tracks;};},
+        MENU_ITEM {id = EBrowsePlaylist; name = LBUF {txt = qtn_mus_playlists;};},
+        MENU_ITEM {id = EBrowseArtist;   name = LBUF {txt = qtn_mus_artists;};},
+        MENU_ITEM {id = EBrowseAlbum;    name = LBUF {txt = qtn_mus_albums;};},
+#ifdef __ENABLE_PODCAST_IN_MUSIC_MENU        
+        MENU_ITEM {id = EBrowsePodcasts; name = LBUF {txt = qtn_mus_podcasts;};},
+#endif
+        MENU_ITEM {id = EBrowseGenre;    name = LBUF {txt = qtn_mus_genres;};},
+        MENU_ITEM {id = EBrowseComposer; name = LBUF {txt = qtn_mus_composers;};}        
+        };
+    }
+
+RESOURCE TBUF { buf="MPXCOLLECTIONDBRES"; }
+
+//----------------------------------------------------
+//
+//    r_mc_music_library_title_items
+//    titles to be displayed in the music player
+//
+//    added album for ganes
+//----------------------------------------------------
+//
+RESOURCE MENU_ITEM_ARRAY r_mc_title_items_array
+    {
+    array_of_menu_items =
+        {
+        MENU_ITEM {id = EBrowseAll;      name = LBUF {txt = qtn_mus_title_tracks;};},
+        MENU_ITEM {id = EBrowsePlaylist; name = LBUF {txt = qtn_mus_title_pls;};},
+        MENU_ITEM {id = EBrowseArtist;   name = LBUF {txt = qtn_mus_title_artists;};},
+        MENU_ITEM {id = EBrowseAlbum;    name = LBUF {txt = qtn_mus_title_artists_and_albums;};},
+#ifdef __ENABLE_PODCAST_IN_MUSIC_MENU                
+        MENU_ITEM {id = EBrowsePodcasts; name = LBUF {txt = qtn_mus_podcasts;};},
+#endif        
+        MENU_ITEM {id = EBrowseGenre;    name = LBUF {txt = qtn_mus_title_genres;};},
+        MENU_ITEM {id = EBrowseComposer; name = LBUF {txt = qtn_mus_title_composers;};},     
+        MENU_ITEM {id = EBrowseAlbumSong;    name = LBUF {txt = qtn_mus_title_album;};}
+        };
+    }
+
+
+// ** DEFAULT MUSIC FOLDER STRINGS
+
+//----------------------------------------------------
+//
+//    r_mc_default_music_folders
+//
+//----------------------------------------------------
+//
+RESOURCE ARRAY r_mc_default_music_folders
+    {
+    items =
+        {
+        LBUF {txt = text_memory_card_root_path;},
+        LBUF {txt = text_phone_memory_root_path;}
+        };
+    }
+
+//----------------------------------------------------
+//
+//    r_mc_music_file_extensions
+//    file extensions which be scanned by music collection
+//
+//----------------------------------------------------
+//
+RESOURCE ARRAY r_mc_music_file_extensions
+    {
+    items =
+        {
+#if (defined __WMA || defined __WINDOWS_MEDIA)
+        LBUF {txt = ".wma";},
+#endif
+        LBUF {txt = ".mp3";},
+        LBUF {txt = ".m4a";},
+        LBUF {txt = ".aac";}
+        };
+    }
+
+//----------------------------------------------------
+//
+//    r_mc_file_extensions_mime
+//    file extensions which can be scanned by music
+//    collection, however, these files types must be
+//    checked whether their MIME types match as well
+//    because they can be DRM or video files
+//
+//----------------------------------------------------
+//
+RESOURCE ARRAY r_mc_file_extensions_mime
+    {
+    items =
+        {
+        LBUF {txt = "";},
+#ifdef RD_RA_SUPPORT_FOR_MUSIC_PLAYER
+        LBUF {txt = ".ra";},
+        LBUF {txt = ".rm";},
+#endif
+        LBUF {txt = ".mp4";},
+        LBUF {txt = ".3gpp";},
+        LBUF {txt = ".3gp";},
+        LBUF {txt = ".3gpp2";},
+        LBUF {txt = ".3g2";},
+        LBUF {txt = ".3ga";},
+        LBUF {txt = ".dcf";},
+        LBUF {txt = ".dm";},
+        LBUF {txt = ".odf";}
+        };
+    }
+
+//----------------------------------------------------
+//
+//    r_mc_file_extensions_drm
+//    file extensions which can be scanned by music
+//    collection, however, these files types must be
+//    checked which type of DRM is used
+//
+//----------------------------------------------------
+//
+RESOURCE ARRAY r_mc_file_extensions_drm
+    {
+    items =
+        {
+        LBUF {txt = "";},
+        LBUF {txt = ".dcf";},
+        LBUF {txt = ".dm";},
+        LBUF {txt = ".odf";},
+        LBUF {txt = ".o4a";}
+        };
+    }
+
+//----------------------------------------------------
+//
+//    r_mc_mime_types
+//    Mime types which be scanned by music collection
+//
+//----------------------------------------------------
+//
+RESOURCE ARRAY r_mc_mime_types
+    {
+    items =
+        {
+#ifdef __WMA
+        LBUF {txt = "audio/x-ms-wma";},
+#endif
+#ifdef RD_RA_SUPPORT_FOR_MUSIC_PLAYER
+        LBUF {txt = "audio/x-pn-realaudio";},
+        LBUF {txt = "audio/x-realaudio";},
+        LBUF {txt = "audio/vnd.rn-realaudio";},
+//        LBUF {txt = "application/vnd.rn-realmedia";}
+#endif
+        LBUF {txt = "audio/mpeg";},
+        LBUF {txt = "audio/aac";},
+        LBUF {txt = "audio/mp3";},
+        LBUF {txt = "audio/x-mp3";},
+        LBUF {txt = "audio/mp4";},
+        LBUF {txt = "audio/3gpp";},
+        LBUF {txt = "audio/m4a";},
+        LBUF {txt = "audio/3gpp2";},
+        LBUF {txt = "audio/mpeg4";}
+        };
+    }
+
+// ** All songs for an artist
+RESOURCE LBUF r_mc_all_songs_for_artist
+    {
+    txt = qtn_nmp_all_by;
+    }
+
+// ** Recently played
+RESOURCE LBUF r_mc_recently_played_playlist
+    {
+    txt = qtn_mus_pl_recently_played;
+    }
+
+// ** Most played
+RESOURCE LBUF r_mc_most_played_playlist
+    {
+    txt = qtn_mus_pl_most_played;
+    }
+
+// ** Recently added
+RESOURCE LBUF r_mc_recently_added_playlist
+    {
+    txt = qtn_mus_pl_recently_downloaded;
+    }
+    
+// ---------------------------------------------------------------------------
+// r_mpx_qtn_mus_music_num_songs
+// Number of songs text
+// ---------------------------------------------------------------------------
+//
+RESOURCE LBUF r_mpx_qtn_mus_music_num_songs
+    {
+    txt = qtn_mus_music_num_songs;
+    }
+
+// ---------------------------------------------------------------------------
+// r_mpx_qtn_mus_music_one_song
+// One song text
+// ---------------------------------------------------------------------------
+//
+RESOURCE LBUF r_mpx_qtn_mus_music_one_song
+    {
+    txt = qtn_mus_music_one_song;
+    }
+
+// ---------------------------------------------------------------------------
+// r_mpx_qtn_mus_music
+// Collection Plugin Name
+// ---------------------------------------------------------------------------
+//
+RESOURCE LBUF r_mpx_qtn_mus_music
+    {
+    txt = qtn_mus_music;
+    }
+
+// ---------------------------------------------------------------------------
+// r_mpx_qtn_mus_title_music_menu
+// Music Menu Title
+// ---------------------------------------------------------------------------
+//
+RESOURCE LBUF r_mpx_qtn_mus_title_music_menu
+    {
+    txt = qtn_mus_title_music_menu;
+    }
+
+#ifdef __ENABLE_MUSIC_TEXT_ALIGNMENT
+// ---------------------------------------------------------------------------
+// r_mpx_qtn_mp_title_my_music_menu_nseries
+// My Music Menu Title
+// ---------------------------------------------------------------------------
+//
+RESOURCE LBUF r_mpx_qtn_mp_title_my_music_menu_nseries
+    {
+    txt = qtn_mp_title_my_music_menu_nseries;
+    }
+#endif //__ENABLE_MUSIC_TEXT_ALIGNMENT
+
+// ---------------------------------------------------------------------------
+// r_mc_title_most_played
+// Title for Most Played item in the playlists menu
+// ---------------------------------------------------------------------------
+//
+RESOURCE LBUF r_mc_title_most_played
+    {
+    txt = qtn_mus_title_most_played;
+    }
+
+// ---------------------------------------------------------------------------
+// r_mpx_qtn_mus_title_music_menu
+// Title for Recently Played item in the playlists menu
+// ---------------------------------------------------------------------------
+//
+RESOURCE LBUF r_mc_title_recently_played
+    {
+    txt = qtn_mus_title_recently_played;
+    }
+
+// ---------------------------------------------------------------------------
+// r_mpx_qtn_mus_title_music_menu
+// Title for Recently Added item in the playlists menu
+// ---------------------------------------------------------------------------
+//
+RESOURCE LBUF r_mc_title_recently_downloaded
+    {
+    txt = qtn_mus_title_recently_downloaded;
+    }
+
+// End of File

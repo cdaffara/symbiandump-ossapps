@@ -1,0 +1,39 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: The project specification file for probe
+*
+*/
+
+#include <platform_paths.hrh>
+MACRO       EPOC_SDK=0x07010000
+
+TARGET	probe.prt
+TARGETTYPE	dll
+
+UID		0x10003D38 0x101F6D2C
+
+VENDORID    VID_DEFAULT
+// CAPABILITY  ALL -TCB
+CAPABILITY      CommDD PowerMgmt ReadDeviceData WriteDeviceData TrustedUI ProtServ NetworkControl NetworkServices LocalServices ReadUserData WriteUserData // as c32 process 
+
+SOURCEPATH	../src
+
+SOURCE		family.cpp prt.cpp sap.cpp
+
+USERINCLUDE		../inc
+APP_LAYER_SYSTEMINCLUDE
+
+LIBRARY		euser.lib esock.lib inhook6.lib nifman.lib
+LIBRARY		efsrv.lib esocksvr.lib mbufmgr.lib
+

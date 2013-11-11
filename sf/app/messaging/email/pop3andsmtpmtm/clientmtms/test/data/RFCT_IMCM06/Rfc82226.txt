@@ -1,0 +1,71 @@
+Message-ID: <33661944.1A7F@psion.com>
+Date: Tue, 29 Apr 1997 16:52:36 +0100
+From: Ralph Greenwell <ralph-greenwell@psion.com>
+Organization: Symbian Ltd
+Content-MD5: Ng9Ocpk+K07qtcEw5965zA==
+Subject: VCARD, VCAL and ICAL message
+MIME-Version: 1.0
+Content-Type: multipart/mixed
+ ; boundary="_boundary___________________level_1"
+
+--_boundary___________________level_1
+Content-Type: text/directory;
+        charset="iso-8859-1";
+        profile="vCard"
+Content-ID: <id3@host.com>
+Content-Transfer-Encoding: Quoted-Printable
+
+BEGIN:VCARD
+VERSION:3.0
+N:Stenerson;Derik
+FN:Derik Stenerson
+ORG:Microsoft Corporation
+ADR;TYPE=WORK,POSTAL,PARCEL:;;One Microsoft Way;
+ Redmond;WA;98052-6399;USA
+TEL;TYPE=WORK,MSG:+1-425-936-5522
+TEL;TYPE=WORK,FAX:+1-425-936-7329
+EMAIL;TYPE=INTERNET:deriks@Microsoft.com
+END:VCARD
+
+--_boundary___________________level_1
+Content-Type:text/x-vcalendar; method=REQUEST; charset=US-ASCII
+Content-Transfer-Encoding: 7bit
+
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//RDU Software//NONSGML HandCal//EN
+BEGIN:VFREEBUSY
+ORGANIZER:MAILTO:jsmith@host.com
+DTSTART:19980313T141711Z
+DTEND:19980410T141711Z
+FREEBUSY:19980314T233000Z/19980315T003000Z
+FREEBUSY:19980316T153000Z/19980316T163000Z
+FREEBUSY:19980318T030000Z/19980318T040000Z
+URL:http://www.host.com/calendar/busytime/jsmith.ifb
+END:VFREEBUSY
+END:VCALENDAR
+
+--_boundary___________________level_1
+Content-Type:text/calendar; method=REQUEST; charset=US-ASCII;
+                 Component=vevent
+Content-Transfer-Encoding: 7bit
+Content-Disposition: attachment; filename="event.vcs"
+
+BEGIN:VCALENDAR
+PRODID:-//ACME/DesktopCalendar//EN
+PROFILE:REQUEST
+PROFILE-VERSION:1.0
+VERSION:2.0
+BEGIN:VEVENT
+ORGANIZER:foo1@example.com
+ATTENDEE;ROLE=CHAIR;ATTSTAT=ACCEPTED:foo1@example.com
+ATTENDEE;RSVP=YES;TYPE=INDIVIDUAL:mailto:foo2@example.com
+ATTENDEE;RSVP=YES;TYPE=INDIVIDUAL:mailto:foo3@example.com
+DTSTAMP:19970611T190000Z
+DTSTART:19970621T170000Z
+DTEND:199706211T173000Z
+SUMMARY:Let's discuss the attached document
+UID:calsvr.example.com-873970198738777-8aa
+END:VCALENDAR
+
+--_boundary___________________level_1--

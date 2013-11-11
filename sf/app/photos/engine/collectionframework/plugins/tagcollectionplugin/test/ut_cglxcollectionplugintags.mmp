@@ -1,0 +1,66 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: 
+*
+*/
+
+
+
+#include "../../../../../group/glxbuildcommon.mmh"
+
+TARGET          ut_cglxcollectionplugintags.dll
+TARGETTYPE      dll
+UID             0x1000af5a 0x01700000
+
+CAPABILITY              ALL -TCB
+
+SOURCEPATH              Src
+SOURCE                  ut_cglxcollectionplugintags.cpp
+
+// Sources required by the test suite
+SOURCEPATH              Src
+SOURCE                  ut_cglxcollectionplugintags_DllMain.cpp
+
+//Source of the test code
+SOURCEPATH              ../src
+SOURCE                  glxcollectionplugintags.cpp
+
+
+USERINCLUDE             Src
+
+// System includes from the source tree
+SYSTEMINCLUDE           ../inc
+SYSTEMINCLUDE           ../../../../../commonutilities/common/inc
+SYSTEMINCLUDE           ../../../../../inc
+SYSTEMINCLUDE           ../../../../loc
+SYSTEMINCLUDE           ../../../datasource/manager/inc
+SYSTEMINCLUDE           ../../../thumbnailcreator/inc
+
+APP_LAYER_SYSTEMINCLUDE
+
+SYSTEMINCLUDE           /epoc32/include/Digia/EUnit
+SYSTEMINCLUDE           /epoc32/include/ecom
+
+LIBRARY                 EUnit.lib
+LIBRARY                 EUnitUtil.lib
+LIBRARY                 euser.lib
+LIBRARY                 commonengine.lib
+LIBRARY                 ecom.lib								//Ecom Library
+LIBRARY                 estor.lib
+LIBRARY                 mpxcommon.lib							//CollectionPath Level			
+
+LIBRARY                 glxdatasourcemanager.lib				//DataSource Request
+LIBRARY                 glxcommon.lib							//Filters
+SMPSAFE
+// End of file

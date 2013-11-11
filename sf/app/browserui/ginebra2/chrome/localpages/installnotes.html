@@ -1,0 +1,73 @@
+<html>
+  <title>Bedrock Browser Release Notes</title>
+  <link rel="stylesheet" type="text/css" href="subpage.css"/>
+  <head>
+  </head>
+  <body>
+    <div id="sub_left"><a id="backbutt" href="startpage.html"><img src="back.png" height="80" /></a><img src="button3.png" width="200" /></div>
+    <div id="sub_right"><img src="nokia_logo.png" width="160" /></div>
+    <br/>
+    <div id="rel_notes">
+    <center><b>Release Notes for Bedrock Browser Alpha 1</b></center><br/>
+    <br/>Updated: 17-Dec-2009
+    <br/>
+    <br/>NOTE: These release notes were current as of the time the software was packaged for release. For up-to-date release notes, visit the Browser Team's Wiki pages.
+    <br/>
+    <h4>Overview of the Release:</h4>
+    The Bedrock Browser is Nokia's latest web browser based on the latest open-source WebKit
+    engine and built using the Qt application framework.<p/>
+    The Bedrock project's mission is to provide a fast, easy to use, web-standards based browser
+    that can compete alongside the best of the mobile browsers.<p/>
+    In addition to providing basic browser functionality, Bedrock allows for almost infinite extensiblity
+    by utilizing an HTML/CSS/JavaScript UI framework we call "Ginebra".<p/>
+    All of the UI components you see in the Bedrock Browser are rendered using Ginebra and can be modified
+    as easily as one can modify a web page.<p/>
+    This release of Bedrock is the Alpha 1 release. It has VERY limited functionality and less-than-acceptable performance at this time but is built upon
+    the extensible framework that will allow the Browser team to add new functionality quickly and with minimal native code changes<p/>
+    Please review the rest of the Release Notes and provide feedback on this release via the Survey Link on the start page.
+    <h4>Target Platforms/Devices:</h4>
+    <ul>
+    <li>Release is packaged as SISX that can only be installed on N97 CE (not R&D) devices.</li>
+    <li>Only devices whose IMEI number is registered with the browser team will be able to run this software.</li>
+    </ul>
+    <h4>Prerequisites:</h4>
+    <ul>
+    <li>Nokia N97 device, Consumer version (CE) (R&D phones will not run the software)</li>
+    <li>Latest platform software loaded/updated onto the device. This release has been tested with: N97 Software Version 12.0.024 dated 04/08/09</li>
+    <li>Sufficient free space (11-12 MB minimum) on C: drive.</li>
+    <li>NOTE: It is required for this release that you install ALL of the provided software packages on the C: drive.</li>
+    <li>Default network setup on the device. The N97 connection settings must contain a default Destination Network of "Internet" that contains the proper access points (APs). The browser will connect to the network via this "Internet" Destination Network. </li>
+    <li>IMPORTANT: Ensure that the default access point (as defined in the connection settings for the Destination Network) is available when running the Bedrock browser. There have been cases where an unavailable WLAN AP prevented loading of pages. </li>
+    </ul>
+    <h4>Functionality to Evaluate:</h4>
+    The following features are implemented and we encourage you to try them out!
+    <ul>
+    <li>URL Entry: Enter a new URL via the entry box at the top of the UI.</li>
+    <li>Page Load/Cancel/Refresh: Using the button to the right of the URL entry box.</li>
+    <li>Basic "Back": The "Back" button in the lower-left of the UI will go back one page.</li>
+    <li>Zooming: Basic incremental zoom-in/zoom-out is available via the two zoom buttons.</li>
+    <li>Visual History: A "coverflow" UI for navigation through your browser history is available from the "Go Anywhere" button in the lower-right of the UI.</li>
+    <li>Browser Exit: Looking for an Exit button/command? You won't find one. Press the red "call-end" key to exit the browser.</li>
+    <li>WLAN: Due to performance issues in general, it is recommended that you add a WLAN access point and use that by default.</li>
+    </ul>
+    <h4>Known Limitations:</h4>
+    <ul>
+    <li>WebKit Performance: There are a number of known issues with the Qt WebKit used in the release of Bedrock. Some have a major impact on performance of the engine. See our wiki page for more details.</li>
+    <li>Out of Memory Handling: Handling of low memory conditions is not yet optimized for browsing large web pages. In some case, loading large or image-intensive pages can cause the browser to lock-up or crash. Please report the sites/pages to us if you experience this.</li>
+    <li>We don't recommend running ACID3 or any browser stress testing on this release.</li>
+    <li>Bookmarking: There is no support for bookmarking a page at this time. We recommend using an online bookmark service.</li>
+    <li>Multiple Windows: There is a button the bottom toolbar that will (in a later release) bring up our Windows Manager UI. But this is not currently available.</li>
+    <li>Theme support: Please use the default theme of the device (named "NSeries 1") when running the browser. Other themes can be chosen, but there may be visual anomolies when doing so.</li>
+    <li>UI Performance: We are still evaluating and responding to performance issues. When using this Alpha release, please be patient when performing actions. Avoid repeating the same actions quickly in response to a lack of response. Once a button or link is pressed or a touch gesture is applied, it may take some time for the resulting action to be reflected in the UI.</li>
+    <li>The N97's 4-way / select navi-key is not yet fully integrated into the browser. The 4-way navi-key may scroll lists and move focus in some areas of the UI, but those keys have no effect in the content view of the browser. There is NO pointer in this Alpha release, so mouse events will be limited. Also, there is no way to navigate to and then select a link or other element in the content view.</li>
+    <li>Avoid changing the browser orientation from landscape to portrait and vice-versa. It is STRONGLY recommend that you launch the browser while the device is in LANDSCAPE orientation with the hardware keyboard deployed. Closing the keyboard should be avoided as this will switch the device to portrait mode. The browser UI "chrome" has been optimized for landscape orientation only for this release.</li>
+    <li>While loading secure pages (https://) is supported in this release, the browser UI will NOT give any indication that the loaded page is secure (no "lock" icon) and there are not warning messages displayed when moving from secure to un-secure pages or posting form data to un-secure servers. </li>
+    <li>HTTP authentication is supported but the masking of the characters as the password is entered is not yet enabled. </li>
+    <li>Form field input masking is not yet supported. This can cause some form entry use cases to fail if the data entered is not formatted correctly.</li>
+    <li>Text Prediction / T9 Issues: Please be sure that when entering any text into any edit field (especially the URL entry box!) that text prediction is turned OFF.</li>
+    </ul>
+    <h4>END OF RELEASE NOTES</h4>
+    </div>
+</body>
+</html>
+

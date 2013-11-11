@@ -1,0 +1,99 @@
+/*
+* Copyright (c) 2005-2010 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  PC Connectivity Signaling Module
+*
+*/
+
+
+// To get the MW_LAYER_SYSTEMINCLUDE-definition
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+
+VENDORID        VID_DEFAULT
+
+CAPABILITY      CAP_GENERAL_DLL
+
+TARGETPATH      sys/bin
+
+TARGET          sconpcd.dll
+TARGETTYPE      DLL
+UID             0x10009D8D 0x101F968B
+
+#if defined(ARMCC)
+DEFFILE	./def/eabiu
+#elif defined(WINSCW) 
+DEFFILE	./def/bwinscw
+#elif defined(WINS)
+DEFFILE	./def/bwins
+#elif defined(ARM)
+DEFFILE	./def/bmarm
+#endif
+
+SOURCEPATH      ../src
+SOURCE          sconpcd.cpp
+SOURCE          sconqueue.cpp
+SOURCE          sconinstqueue.cpp
+SOURCE          sconbrqueue.cpp
+SOURCE          sconinstaller.cpp
+SOURCE          sconbackuprestore.cpp
+SOURCE          sconsbeclient.cpp
+SOURCE          sconpcdutility.cpp
+SOURCE          sconmetadata.cpp
+SOURCE          sconvideoparser.cpp
+SOURCE          sconsynchandler.cpp
+SOURCE          cscontimeout.cpp
+
+SOURCEPATH      ../../../common/conmltask/src
+SOURCE          sconconmltask.cpp
+
+USERINCLUDE     ../inc
+USERINCLUDE     ../../../inc
+USERINCLUDE     ../../../common/conmltask/inc
+USERINCLUDE     ../../../clients/syncclient/inc
+
+// Default system include paths
+APP_LAYER_SYSTEMINCLUDE
+
+
+LIBRARY         euser.lib 
+LIBRARY         swinstcli.lib
+LIBRARY         sbeclient.lib
+LIBRARY         sisregistryclient.lib
+LIBRARY         javaregistryclient.lib
+LIBRARY         platformenv.lib
+LIBRARY         efsrv.lib
+LIBRARY         sysutil.lib
+LIBRARY         commonengine.lib        // For resource reader
+// LIBRARY         widgetregistryclient.lib
+LIBRARY         metadatautility.lib
+LIBRARY         exiflib.lib
+LIBRARY         charconv.lib
+LIBRARY         caf.lib                 // for Content Access
+LIBRARY         mediaclientvideo.lib    // for CVideoPlayerUtility
+LIBRARY         ws32.lib                // for RWsSession
+LIBRARY         tneengine.lib           // for CTNEVideoClipInfo
+LIBRARY         imageconversion.lib         // for CImageEncoder
+LIBRARY         mmfcontrollerframework.lib  // for CMMFMetaDataEntry
+LIBRARY         bafl.lib                    // for BaflUtils
+
+LIBRARY         ecom.lib
+LIBRARY         estor.lib // CDictionaryFileStore
+LIBRARY         sconsyncclient.lib
+LIBRARY         smlstoreformat.lib
+LIBRARY	        centralrepository.lib
+LIBRARY         sif.lib
+DEBUGLIBRARY    flogger.lib
+// End of file
+
+

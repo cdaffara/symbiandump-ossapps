@@ -1,0 +1,11 @@
+EXPORTS
+	?NewL@CIrClientMtm@@SAPAV1@AAVCRegisteredMtmDll@@AAVCMsvSession@@@Z @ 1 NONAME ; public: static class CIrClientMtm * __cdecl CIrClientMtm::NewL(class CRegisteredMtmDll &,class CMsvSession &)
+	??1CIrHeader@@UAE@XZ @ 2 NONAME ; public: virtual __thiscall CIrHeader::~CIrHeader(void)
+	?Addr@CIrHeader@@UBE?AVTPtrC8@@XZ @ 3 NONAME ; public: virtual class TPtrC8  __thiscall CIrHeader::Addr(void)const 
+	?ConstructL@CIrHeader@@QAEXXZ @ 4 NONAME ; public: void __thiscall CIrHeader::ConstructL(void)
+	?ExternalizeL@CIrHeader@@UBEXAAVRMsvWriteStream@@@Z @ 5 NONAME ; public: virtual void __thiscall CIrHeader::ExternalizeL(class RMsvWriteStream &)const 
+	?InternalizeL@CIrHeader@@UAEXAAVRMsvReadStream@@@Z @ 6 NONAME ; public: virtual void __thiscall CIrHeader::InternalizeL(class RMsvReadStream &)
+	?IrProtocolInfo@CIrHeader@@UBEABVTObexIrProtocolInfo@@XZ @ 7 NONAME ; public: virtual class TObexIrProtocolInfo const & __thiscall CIrHeader::IrProtocolInfo(void)const 
+	?NewL@CIrHeader@@SAPAV1@XZ @ 8 NONAME ; public: static class CIrHeader * __cdecl CIrHeader::NewL(void)
+	?SetAddrL@CIrHeader@@UAEXABVTDesC8@@@Z @ 9 NONAME ; public: virtual void __thiscall CIrHeader::SetAddrL(class TDesC8 const &)
+

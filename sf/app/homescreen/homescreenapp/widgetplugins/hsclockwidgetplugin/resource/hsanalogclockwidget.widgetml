@@ -1,0 +1,26 @@
+<hbwidget version="0.1" type="HsAnalogClockWidget">
+
+    <layout name="analog_clock_layout" type="mesh">
+        <meshitem src="background" srcEdge="TOP" dst="" dstEdge="TOP" />
+        <meshitem src="background" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+        <meshitem src="background" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+        <meshitem src="background" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+
+        <meshitem src="hour_hand" srcEdge="TOP" dst="" dstEdge="TOP" />
+        <meshitem src="hour_hand" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+        <meshitem src="hour_hand" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+        <meshitem src="hour_hand" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+        
+        <meshitem src="minute_hand" srcEdge="TOP" dst="" dstEdge="TOP" />
+        <meshitem src="minute_hand" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+        <meshitem src="minute_hand" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+        <meshitem src="minute_hand" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+        
+        <meshitem src="second_hand" srcEdge="TOP" dst="" dstEdge="TOP" />
+        <meshitem src="second_hand" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+        <meshitem src="second_hand" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+        <meshitem src="second_hand" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+
+    </layout>
+
+</hbwidget>

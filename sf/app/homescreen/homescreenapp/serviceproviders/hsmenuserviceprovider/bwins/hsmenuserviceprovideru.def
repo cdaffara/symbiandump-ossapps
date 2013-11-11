@@ -1,0 +1,63 @@
+EXPORTS
+	?trUtf8@HsMenuEntryRemovedHandler@@SA?AVQString@@PBD0@Z @ 1 NONAME ; class QString HsMenuEntryRemovedHandler::trUtf8(char const *, char const *)
+	??1HsMenuItemModel@@UAE@XZ @ 2 NONAME ; HsMenuItemModel::~HsMenuItemModel(void)
+	?touch@HsMenuService@@SAXH@Z @ 3 NONAME ; void HsMenuService::touch(int)
+	??_EHsMenuItemModel@@UAE@I@Z @ 4 NONAME ; HsMenuItemModel::~HsMenuItemModel(unsigned int)
+	?preloadIcons@HsMenuItemModel@@QAEXXZ @ 5 NONAME ; void HsMenuItemModel::preloadIcons(void)
+	??1HsMenuCollectionsItemModel@@UAE@XZ @ 6 NONAME ; HsMenuCollectionsItemModel::~HsMenuCollectionsItemModel(void)
+	?tr@HsMenuItemModel@@SA?AVQString@@PBD0H@Z @ 7 NONAME ; class QString HsMenuItemModel::tr(char const *, char const *, int)
+	??0HsMenuItemModel@@QAE@ABVCaQuery@@PAVQObject@@@Z @ 8 NONAME ; HsMenuItemModel::HsMenuItemModel(class CaQuery const &, class QObject *)
+	?tr@HsMenuEntryRemovedHandler@@SA?AVQString@@PBD0H@Z @ 9 NONAME ; class QString HsMenuEntryRemovedHandler::tr(char const *, char const *, int)
+	??0HsMenuCollectionsItemModel@@QAE@ABVCaQuery@@PAVQObject@@@Z @ 10 NONAME ; HsMenuCollectionsItemModel::HsMenuCollectionsItemModel(class CaQuery const &, class QObject *)
+	?allCollectionsId@HsMenuService@@SAHXZ @ 11 NONAME ; int HsMenuService::allCollectionsId(void)
+	?qt_metacast@HsMenuItemModel@@UAEPAXPBD@Z @ 12 NONAME ; void * HsMenuItemModel::qt_metacast(char const *)
+	?getCollectionModel@HsMenuService@@SAPAVHsMenuItemModel@@HW4HsSortAttribute@Hs@@ABVQString@@@Z @ 13 NONAME ; class HsMenuItemModel * HsMenuService::getCollectionModel(int, enum Hs::HsSortAttribute, class QString const &)
+	?metaObject@HsMenuEntryRemovedHandler@@UBEPBUQMetaObject@@XZ @ 14 NONAME ; struct QMetaObject const * HsMenuEntryRemovedHandler::metaObject(void) const
+	?trUtf8@HsMenuEntryRemovedHandler@@SA?AVQString@@PBD0H@Z @ 15 NONAME ; class QString HsMenuEntryRemovedHandler::trUtf8(char const *, char const *, int)
+	?data@HsMenuCollectionsItemModel@@UBE?AVQVariant@@ABVQModelIndex@@H@Z @ 16 NONAME ; class QVariant HsMenuCollectionsItemModel::data(class QModelIndex const &, int) const
+	?launchTaskSwitcher@HsMenuService@@SA_NXZ @ 17 NONAME ; bool HsMenuService::launchTaskSwitcher(void)
+	?getName@HsMenuService@@SA?AVQString@@H@Z @ 18 NONAME ; class QString HsMenuService::getName(int)
+	??_EHsMenuCollectionsItemModel@@UAE@I@Z @ 19 NONAME ; HsMenuCollectionsItemModel::~HsMenuCollectionsItemModel(unsigned int)
+	?qt_metacall@HsMenuItemModel@@UAEHW4Call@QMetaObject@@HPAPAX@Z @ 20 NONAME ; int HsMenuItemModel::qt_metacall(enum QMetaObject::Call, int, void * *)
+	?staticMetaObject@HsMenuItemModel@@2UQMetaObject@@B @ 21 NONAME ; struct QMetaObject const HsMenuItemModel::staticMetaObject
+	?qt_metacast@HsMenuEntryRemovedHandler@@UAEPAXPBD@Z @ 22 NONAME ; void * HsMenuEntryRemovedHandler::qt_metacast(char const *)
+	?addApplicationsToCollection@HsMenuService@@SA_NABV?$QList@H@@H@Z @ 23 NONAME ; bool HsMenuService::addApplicationsToCollection(class QList<int> const &, int)
+	?organizeCollection@HsMenuService@@SA_NHAAV?$QList@H@@@Z @ 24 NONAME ; bool HsMenuService::organizeCollection(int, class QList<int> &)
+	?getInstalledModel@HsMenuService@@SAPAVHsMenuItemModel@@W4HsSortAttribute@Hs@@@Z @ 25 NONAME ; class HsMenuItemModel * HsMenuService::getInstalledModel(enum Hs::HsSortAttribute)
+	?metaObject@HsMenuItemModel@@UBEPBUQMetaObject@@XZ @ 26 NONAME ; struct QMetaObject const * HsMenuItemModel::metaObject(void) const
+	?tr@HsMenuEntryRemovedHandler@@SA?AVQString@@PBD0@Z @ 27 NONAME ; class QString HsMenuEntryRemovedHandler::tr(char const *, char const *)
+	?createCollection@HsMenuService@@SAHABVQString@@@Z @ 28 NONAME ; int HsMenuService::createCollection(class QString const &)
+	?data@HsMenuItemModel@@UBE?AVQVariant@@ABVQModelIndex@@H@Z @ 29 NONAME ; class QVariant HsMenuItemModel::data(class QModelIndex const &, int) const
+	?executeAction@HsMenuService@@SAHABVCaEntry@@ABVQString@@PAVQObject@@PBD@Z @ 30 NONAME ; int HsMenuService::executeAction(class CaEntry const &, class QString const &, class QObject *, char const *)
+	?launchSoftwareUpdate@HsMenuService@@SAHXZ @ 31 NONAME ; int HsMenuService::launchSoftwareUpdate(void)
+	?getStaticMetaObject@HsMenuItemModel@@SAABUQMetaObject@@XZ @ 32 NONAME ; struct QMetaObject const & HsMenuItemModel::getStaticMetaObject(void)
+	?executeAction@HsMenuService@@SAHHABVQString@@PAVQObject@@PBD@Z @ 33 NONAME ; int HsMenuService::executeAction(int, class QString const &, class QObject *, char const *)
+	?touch@HsMenuService@@SAXABV?$QList@H@@@Z @ 34 NONAME ; void HsMenuService::touch(class QList<int> const &)
+	?getSecondLine@HsMenuCollectionsItemModel@@ABE?AVQString@@PBVCaEntry@@@Z @ 35 NONAME ; class QString HsMenuCollectionsItemModel::getSecondLine(class CaEntry const *) const
+	?sortOrder@HsMenuServiceUtils@@SA?AW4SortOrder@Qt@@W4HsSortAttribute@Hs@@@Z @ 36 NONAME ; enum Qt::SortOrder HsMenuServiceUtils::sortOrder(enum Hs::HsSortAttribute)
+	?newIconNeeded@HsMenuItemModel@@QBE_NABVQModelIndex@@@Z @ 37 NONAME ; bool HsMenuItemModel::newIconNeeded(class QModelIndex const &) const
+	?getAllApplicationsModel@HsMenuService@@SAPAVHsMenuItemModel@@W4HsSortAttribute@Hs@@@Z @ 38 NONAME ; class HsMenuItemModel * HsMenuService::getAllApplicationsModel(enum Hs::HsSortAttribute)
+	?uninstallChange@HsMenuItemModel@@AAEXHH@Z @ 39 NONAME ; void HsMenuItemModel::uninstallChange(int, int)
+	??1HsMenuEntryRemovedHandler@@UAE@XZ @ 40 NONAME ; HsMenuEntryRemovedHandler::~HsMenuEntryRemovedHandler(void)
+	?trUtf8@HsMenuItemModel@@SA?AVQString@@PBD0H@Z @ 41 NONAME ; class QString HsMenuItemModel::trUtf8(char const *, char const *, int)
+	??_EHsMenuEntryRemovedHandler@@UAE@I@Z @ 42 NONAME ; HsMenuEntryRemovedHandler::~HsMenuEntryRemovedHandler(unsigned int)
+	?getCollectionNames@HsMenuService@@SA?AVQStringList@@XZ @ 43 NONAME ; class QStringList HsMenuService::getCollectionNames(void)
+	?mAllCollectionsId@HsMenuService@@0HA @ 44 NONAME ; int HsMenuService::mAllCollectionsId
+	?removeCollection@HsMenuService@@SA_NH@Z @ 45 NONAME ; bool HsMenuService::removeCollection(int)
+	?collectionIdByType@HsMenuService@@SAHABVQString@@@Z @ 46 NONAME ; int HsMenuService::collectionIdByType(class QString const &)
+	?staticMetaObject@HsMenuEntryRemovedHandler@@2UQMetaObject@@B @ 47 NONAME ; struct QMetaObject const HsMenuEntryRemovedHandler::staticMetaObject
+	?entryChanged@HsMenuEntryRemovedHandler@@EAEXHW4ChangeType@@@Z @ 48 NONAME ; void HsMenuEntryRemovedHandler::entryChanged(int, enum ChangeType)
+	?sortBy@HsMenuServiceUtils@@SA?AW4SortAttribute@@W4HsSortAttribute@Hs@@@Z @ 49 NONAME ; enum SortAttribute HsMenuServiceUtils::sortBy(enum Hs::HsSortAttribute)
+	?getAllCollectionsModel@HsMenuService@@SAPAVHsMenuItemModel@@XZ @ 50 NONAME ; class HsMenuItemModel * HsMenuService::getAllCollectionsModel(void)
+	?setSort@HsMenuItemModel@@QAEXW4HsSortAttribute@Hs@@@Z @ 51 NONAME ; void HsMenuItemModel::setSort(enum Hs::HsSortAttribute)
+	??0HsMenuEntryRemovedHandler@@QAE@HPAVQObject@@PBD@Z @ 52 NONAME ; HsMenuEntryRemovedHandler::HsMenuEntryRemovedHandler(int, class QObject *, char const *)
+	?qt_metacall@HsMenuEntryRemovedHandler@@UAEHW4Call@QMetaObject@@HPAPAX@Z @ 53 NONAME ; int HsMenuEntryRemovedHandler::qt_metacall(enum QMetaObject::Call, int, void * *)
+	?notify@HsMenuEntryRemovedHandler@@IAEXXZ @ 54 NONAME ; void HsMenuEntryRemovedHandler::notify(void)
+	?touch@HsMenuService@@SAXABVCaEntry@@@Z @ 55 NONAME ; void HsMenuService::touch(class CaEntry const &)
+	?subscribe@HsMenuEntryRemovedHandler@@AAEXH@Z @ 56 NONAME ; void HsMenuEntryRemovedHandler::subscribe(int)
+	?trUtf8@HsMenuItemModel@@SA?AVQString@@PBD0@Z @ 57 NONAME ; class QString HsMenuItemModel::trUtf8(char const *, char const *)
+	?renameCollection@HsMenuService@@SA_NHABVQString@@@Z @ 58 NONAME ; bool HsMenuService::renameCollection(int, class QString const &)
+	?removeApplicationFromCollection@HsMenuService@@SA_NHH@Z @ 59 NONAME ; bool HsMenuService::removeApplicationFromCollection(int, int)
+	?tr@HsMenuItemModel@@SA?AVQString@@PBD0@Z @ 60 NONAME ; class QString HsMenuItemModel::tr(char const *, char const *)
+	?getStaticMetaObject@HsMenuEntryRemovedHandler@@SAABUQMetaObject@@XZ @ 61 NONAME ; struct QMetaObject const & HsMenuEntryRemovedHandler::getStaticMetaObject(void)
+

@@ -1,0 +1,20 @@
+CntFetchMarkAll{
+    layout:default;
+}
+
+CntFetchMarkAll::counter
+{
+    fixed-width: 14un;
+    text-align: right;
+    text-height: var(hb-param-text-height-tiny);
+    text-line-count-max: 1;
+    text-line-count-min: 1;
+    font-variant:secondary;
+    right:var(hb-param-margin-gene-popup);	
+}
+
+CntFetchMarkAll  > HbCheckBox::text
+{
+    text-line-count-max: 1;
+    text-line-count-min: 1;
+}

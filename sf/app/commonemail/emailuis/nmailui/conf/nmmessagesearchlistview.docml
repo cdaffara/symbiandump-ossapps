@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="1.1">
+    <widget name="NmMessageSearchView" type="HbView">
+        <widget name="Container" role="HbView:widget" type="HbWidget">
+            <widget name="SearchPanel" type="HbSearchPanel">
+                <real name="z" value="1"/>
+            </widget>
+            <widget name="MessageTreeList" type="HbTreeView">
+                <fontspec name="fontSpec" role="Secondary" textheight="var(hb-param-text-height-secondary)"/>
+            </widget>
+            <widget name="MessageNoMessages" type="HbLabel">
+                <enums name="textWrapping" value="TextWordWrap"/>
+                <enums name="alignment" value="AlignLeft|AlignVCenter|AlignHCenter|AlignLeading"/>
+                <sizehint height="expr(var(hb-param-screen-height) )" type="PREFERRED" width="expr(var(hb-param-screen-width) )"/>
+                <bool name="enabled" value="FALSE"/>
+                <bool name="visible" value="FALSE"/>
+                <string locid="txt_mail_dblist_no_messages_matched_your_search" name="plainText"/>
+                <fontspec name="fontSpec" role="Primary" textheight="var(hb-param-text-height-primary)"/>
+            </widget>
+        </widget>
+        <string name="title" value="Search"/>
+    </widget>
+    <section name="portrait">
+        <widget name="Container" role="HbView:widget" type="HbWidget">
+            <widget name="MessageNoMessages" type="HbLabel">
+                <contentsmargins bottom="0un" left="expr(var(hb-param-margin-indentation) )" right="expr(var(hb-param-margin-indentation) )" top="0un"/>
+            </widget>
+            <layout orientation="Vertical" spacing="0un" type="linear">
+                <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+                <linearitem itemname="MessageNoMessages"/>
+                <linearitem itemname="MessageTreeList"/>
+                <stretchitem stretchfactor="1"/>
+                <linearitem itemname="SearchPanel"/>
+            </layout>
+        </widget>
+    </section>
+    <section name="landscape">
+        <widget name="Container" role="HbView:widget" type="HbWidget">
+            <widget name="MessageNoMessages" type="HbLabel">
+                <contentsmargins bottom="0un" left="expr(var(hb-param-margin-gene-center-align) )" right="expr(var(hb-param-margin-gene-center-align) )" top="0un"/>
+            </widget>
+            <layout orientation="Vertical" spacing="0un" type="linear">
+                <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+                <linearitem itemname="MessageNoMessages"/>
+                <linearitem itemname="MessageTreeList"/>
+                <stretchitem stretchfactor="1"/>
+                <linearitem itemname="SearchPanel"/>
+            </layout>
+        </widget>
+    </section>
+    <metadata activeUIState="landscape" display="NHD-3.2-inch_landscape" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+        <uistate name="portrait" sections="#common portrait"/>
+        <uistate name="landscape" sections="#common landscape"/>
+        <dummydata objectName="MessageTreeList" section="#common" value="app_tree_template3"/>
+    </metadata>
+</hbdocument>

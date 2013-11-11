@@ -1,0 +1,21 @@
+EXPORTS
+	?ImplementationGroupProxy@@YAPBUTImplementationProxy@@AAH@Z @ 1 NONAME ; struct TImplementationProxy const * ImplementationGroupProxy(int &)
+	??1CIpsPlgSingleOpWatcher@@UAE@XZ @ 2 NONAME ; CIpsPlgSingleOpWatcher::~CIpsPlgSingleOpWatcher(void)
+	?NewL@CIpsPlgImap4Plugin@@SAPAV1@XZ @ 3 NONAME ; class CIpsPlgImap4Plugin * CIpsPlgImap4Plugin::NewL(void)
+	??1CIpsPlgSosBasePlugin@@UAE@XZ @ 4 NONAME ; CIpsPlgSosBasePlugin::~CIpsPlgSosBasePlugin(void)
+	?GetOutboxChildrensL@CIpsPlgSmtpOperation@@QAEPAVCMsvEntrySelection@@XZ @ 5 NONAME ; class CMsvEntrySelection * CIpsPlgSmtpOperation::GetOutboxChildrensL(void)
+	?NewLC@CIpsPlgPop3Plugin@@SAPAV1@XZ @ 6 NONAME ; class CIpsPlgPop3Plugin * CIpsPlgPop3Plugin::NewLC(void)
+	?NewL@CIpsPlgSingleOpWatcher@@SAPAV1@AAVMIpsPlgSingleOpWatcher@@@Z @ 7 NONAME ; class CIpsPlgSingleOpWatcher * CIpsPlgSingleOpWatcher::NewL(class MIpsPlgSingleOpWatcher &)
+	?NewLC@CIpsPlgSmtpService@@SAPAV1@AAVCMsvSession@@AAVCIpsPlgSosBasePlugin@@@Z @ 8 NONAME ; class CIpsPlgSmtpService * CIpsPlgSmtpService::NewLC(class CMsvSession &, class CIpsPlgSosBasePlugin &)
+	?NewLC@CIpsPlgSmtpOperation@@SAPAV1@AAVCMsvSession@@AAVTRequestStatus@@PAVMFSMailRequestObserver@@H@Z @ 9 NONAME ; class CIpsPlgSmtpOperation * CIpsPlgSmtpOperation::NewLC(class CMsvSession &, class TRequestStatus &, class MFSMailRequestObserver *, int)
+	?NewL@CIpsPlgImap4PopulateOp@@SAPAV1@AAVCMsvSession@@AAVTRequestStatus@@JAAVCIpsPlgTimerOperation@@ABVTImImap4GetPartialMailInfo@@ABVCMsvEntrySelection@@VTFSMailMsgId@@PAVMFSMailRequestObserver@@HPAVCIpsPlgEventHandler@@H@Z @ 10 NONAME ; class CIpsPlgImap4PopulateOp * CIpsPlgImap4PopulateOp::NewL(class CMsvSession &, class TRequestStatus &, long, class CIpsPlgTimerOperation &, class TImImap4GetPartialMailInfo const &, class CMsvEntrySelection const &, class TFSMailMsgId, class MFSMailRequestObserver *, int, class CIpsPlgEventHandler *, int)
+	?StartSendL@CIpsPlgSmtpOperation@@QAEXJ@Z @ 11 NONAME ; void CIpsPlgSmtpOperation::StartSendL(long)
+	?EmptyOutboxFromPendingMessagesL@CIpsPlgSmtpOperation@@QAEHJ@Z @ 12 NONAME ; int CIpsPlgSmtpOperation::EmptyOutboxFromPendingMessagesL(long)
+	?NewLC@CIpsPlgImap4Plugin@@SAPAV1@XZ @ 13 NONAME ; class CIpsPlgImap4Plugin * CIpsPlgImap4Plugin::NewLC(void)
+	?NewL@CIpsPlgPop3Plugin@@SAPAV1@XZ @ 14 NONAME ; class CIpsPlgPop3Plugin * CIpsPlgPop3Plugin::NewL(void)
+	?NewL@CIpsPlgSmtpOperation@@SAPAV1@AAVCMsvSession@@AAVTRequestStatus@@PAVMFSMailRequestObserver@@H@Z @ 15 NONAME ; class CIpsPlgSmtpOperation * CIpsPlgSmtpOperation::NewL(class CMsvSession &, class TRequestStatus &, class MFSMailRequestObserver *, int)
+	?SetOperation@CIpsPlgSingleOpWatcher@@QAEXPAVCMsvOperation@@@Z @ 16 NONAME ; void CIpsPlgSingleOpWatcher::SetOperation(class CMsvOperation *)
+	?NewLC@CIpsPlgSingleOpWatcher@@SAPAV1@AAVMIpsPlgSingleOpWatcher@@@Z @ 17 NONAME ; class CIpsPlgSingleOpWatcher * CIpsPlgSingleOpWatcher::NewLC(class MIpsPlgSingleOpWatcher &)
+	?Operation@CIpsPlgSingleOpWatcher@@QBEAAVCMsvOperation@@XZ @ 18 NONAME ; class CMsvOperation & CIpsPlgSingleOpWatcher::Operation(void) const
+	?NewL@CIpsPlgSmtpService@@SAPAV1@AAVCMsvSession@@AAVCIpsPlgSosBasePlugin@@@Z @ 19 NONAME ; class CIpsPlgSmtpService * CIpsPlgSmtpService::NewL(class CMsvSession &, class CIpsPlgSosBasePlugin &)
+

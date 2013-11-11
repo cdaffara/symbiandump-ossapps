@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="1.1">
+    <widget name="mglxslideshow" type="HbView">
+        <widget name="content" role="HbView:widget" type="HbWidget">
+            <widget name="mslideshowwidget" type="HbWidget">
+                <real name="z" value="14"/>
+                <sizehint height="95.52239un" type="PREFERRED" width="53.73134un"/>
+                <string name="alignment" value="AlignVCenter|AlignHCenter"/>
+                <string name="scrollDirections" value="Horizontal"/>
+            </widget>
+            <widget name="mContinueButton" type="HbPushButton">
+                <real name="z" value="10"/>
+                <real name="opacity" value="0.7"/>
+                <sizehint height="expr(var(hb-param-margin-gene-top)+var(hb-param-margin-gene-bottom)+var(hb-param-graphic-size-function))" type="PREFERRED" width="expr(var(hb-param-margin-gene-top)+var(hb-param-margin-gene-bottom)+var(hb-param-graphic-size-function))"/>
+                <string name="text"/>
+                <bool name="visible" value="FALSE"/>
+                <string name="state" value="normal"/>
+            </widget>
+            <real name="z" value="12"/>
+            <layout type="anchor">
+                <anchoritem dst="mslideshowwidget" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="mslideshowwidget" dstEdge="TOP" spacing="0un" src="" srcEdge="TOP"/>
+                <anchoritem dst="mslideshowwidget" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="mslideshowwidget" dstEdge="BOTTOM" spacing="0un" src="" srcEdge="BOTTOM"/>
+                <anchoritem dst="mContinueButton" dstEdge="CENTERV" spacing="0un" src="" srcEdge="CENTERV"/>
+                <anchoritem dst="mContinueButton" dstEdge="CENTERH" spacing="0un" src="" srcEdge="CENTERH"/>
+            </layout>
+        </widget>
+        <string locid="txt_photos_title_photos" name="title" value="Photos"/>
+        <bool name="contentFullScreen" value="TRUE"/>
+        <real name="z" value="10"/>
+        <string name="titleBarFlags" value="TitleBarHidden|TitleBarTransparent"/>
+    </widget>
+    <metadata activeUIState="Common ui state" display="NHD-3.2-inch_portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+    </metadata>
+</hbdocument>

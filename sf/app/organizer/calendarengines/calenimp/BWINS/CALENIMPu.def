@@ -1,0 +1,15 @@
+EXPORTS
+	??1CCalenExporter@@UAE@XZ @ 1 NONAME ; CCalenExporter::~CCalenExporter(void)
+	??1CCalenImporter@@UAE@XZ @ 2 NONAME ; CCalenImporter::~CCalenImporter(void)
+	?ExportICalL@CCalenExporter@@QAEXABV?$RPointerArray@VCCalEntry@@@@AAVRWriteStream@@@Z @ 3 NONAME ; void CCalenExporter::ExportICalL(class RPointerArray<class CCalEntry> const &, class RWriteStream &)
+	?ExportICalL@CCalenExporter@@QAEXABVCCalEntry@@AAVRWriteStream@@@Z @ 4 NONAME ; void CCalenExporter::ExportICalL(class CCalEntry const &, class RWriteStream &)
+	?ExportVCalL@CCalenExporter@@QAEXABV?$RPointerArray@VCCalEntry@@@@AAVRWriteStream@@@Z @ 5 NONAME ; void CCalenExporter::ExportVCalL(class RPointerArray<class CCalEntry> const &, class RWriteStream &)
+	?ExportVCalL@CCalenExporter@@QAEXABVCCalEntry@@AAVRWriteStream@@@Z @ 6 NONAME ; void CCalenExporter::ExportVCalL(class CCalEntry const &, class RWriteStream &)
+	?ImportICalendarL@CCalenImporter@@QAEXAAVRReadStream@@AAV?$RPointerArray@VCCalEntry@@@@@Z @ 7 NONAME ; void CCalenImporter::ImportICalendarL(class RReadStream &, class RPointerArray<class CCalEntry> &)
+	?ImportVCalendarL@CCalenImporter@@QAEXAAVRReadStream@@AAV?$RPointerArray@VCCalEntry@@@@@Z @ 8 NONAME ; void CCalenImporter::ImportVCalendarL(class RReadStream &, class RPointerArray<class CCalEntry> &)
+	?NewL@CCalenExporter@@SAPAV1@AAVCCalSession@@@Z @ 9 NONAME ; class CCalenExporter * CCalenExporter::NewL(class CCalSession &)
+	?NewL@CCalenImporter@@SAPAV1@AAVCCalSession@@@Z @ 10 NONAME ; class CCalenImporter * CCalenImporter::NewL(class CCalSession &)
+	?DisplayNextOnly@TAgnRpt@@QBEHXZ @ 11 NONAME ABSENT ; int TAgnRpt::DisplayNextOnly(void) const
+	?SetDisplayNextOnly@TAgnRpt@@QAEXH@Z @ 12 NONAME ABSENT ; void TAgnRpt::SetDisplayNextOnly(int)
+	?SetImportMode@CCalenImporter@@QAEXW4TCalenImportMode@@@Z @ 13 NONAME ; void CCalenImporter::SetImportMode(enum TCalenImportMode)
+

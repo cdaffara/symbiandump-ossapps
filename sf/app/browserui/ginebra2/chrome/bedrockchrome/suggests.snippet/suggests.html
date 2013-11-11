@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-EN">
+
+<head>
+   <link rel="stylesheet" id="CSSLink" type="text/css" href="suggests.css"/>
+   <script src="suggests.js" type="text/javascript"></script>
+   <script src="../../js/Bind.js" type="text/javascript"></script>
+</head>
+
+<body onload="searchSuggests.loadComplete()">
+    <img src="icons/topshadow.png" alt="background image" class="floatImg" id="TopShadowImgId" />
+
+    <!-- this div provides the background color and border -->
+    <div id="PageBorderId">
+    </div>
+
+    <!-- this div provides the bottom gradient -->
+    <div id="PageBottomShadowId">
+    </div>
+
+    <div class = "SuggestView" id="SuggestsId">
+        <script type="text/javascript">
+            var searchSuggests = new Suggests();
+        </script>
+    </div>
+</body>
+</html>

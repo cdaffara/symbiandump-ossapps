@@ -1,0 +1,1740 @@
+/*
+* Copyright (c) 2010 Kanrikogaku Kenkyusho, Ltd.
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the License "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Kanrikogaku Kenkyusho, Ltd. - Initial contribution
+*
+* Contributors:
+*
+* Description:  
+*
+*/
+
+//  RESOURCE IDENTIFIER
+NAME DIRE	// 4 letter ID
+
+
+//  INCLUDES
+#include <eikon.rh>
+#include <avkon.rsg>
+#include <avkon.mbg>
+#include <avkon.rh>
+#include <appinfo.rh>
+#include "DirectPrintApp.hrh"
+#include "DirectPrintApp.loc"
+
+#define AVKON_BMPFILE_NAME "z:\\resource\\apps\\avkon2.mbm"
+
+//  RESOURCE DEFINITIONS
+// -----------------------------------------------------------------------------
+//
+//	Define the resource file signature
+//	This resource should be empty.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE RSS_SIGNATURE
+	{
+	}
+
+// -----------------------------------------------------------------------------
+//
+//	Default Document Name
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE TBUF r_default_document_name
+	{
+	buf="DIRE";
+	}
+
+// -----------------------------------------------------------------------------
+//
+//	Define default menu and CBA key.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE EIK_APP_INFO
+	{
+	menubar = r_directprint_menubar;
+	cba = R_AVKON_SOFTKEYS_OPTIONS_EXIT;
+	}
+
+
+// -----------------------------------------------------------------------------
+//
+//   r_directprint_menubar
+//   Main menubar
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE MENU_BAR r_directprint_menubar
+	{
+	titles =
+		{
+		MENU_TITLE { menu_pane = r_directprint_menu; }
+		};
+	}
+
+
+// -----------------------------------------------------------------------------
+//
+//   r_directprint_menu
+//   Menu for "Options"
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_directprint_menu
+	{
+	items =
+		{
+		MENU_ITEM
+				{
+				command = EDirectPrintCmdIdMainViewHelp;
+				txt = text_directprint_menu_item_help;
+				},
+		MENU_ITEM
+				{
+				command = EDirectPrintCmdIdMainViewAbout;
+				txt = text_directprint_menu_item_about;
+				},
+		MENU_ITEM
+				{
+				command = EAknSoftkeyExit;
+				txt = text_directprint_menu_item_exit;
+				}
+		};
+	}
+
+// -----------------------------------------------------------------------------
+//
+// About dialog resource.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE DIALOG r_about_query_dialog
+	{
+	flags = EGeneralQueryFlags | EEikDialogFlagNoBorder | EEikDialogFlagNoShadow;
+	buttons = R_AVKON_SOFTKEYS_OK_EMPTY;
+	items=
+		{
+		DLG_LINE 
+			{
+			type = EAknCtPopupHeadingPane;
+			id = EAknMessageQueryHeaderId;
+			itemflags = EEikDlgItemNonFocusing;
+			control = AVKON_HEADING
+				{
+				};
+			},
+		DLG_LINE
+			{
+			type = EAknCtMessageQuery;
+			id = EAknMessageQueryContentId;
+			control = AVKON_MESSAGE_QUERY
+				{
+				};
+			}
+		};
+	}
+
+//-----------------------------------------------------------------------------
+//
+//    r_directprint_print_progress_note
+//    For progress note.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE DIALOG r_directprint_print_progress_note
+    {
+    flags = EAknProgressNoteFlags;
+    buttons = R_AVKON_SOFTKEYS_CANCEL;
+    items =
+        {
+        DLG_LINE
+            {
+            type = EAknCtNote;
+            id = EDirectPrintCtrlIdPrintProgressNote;
+            control = AVKON_NOTE
+                {
+                layout = EProgressLayout;
+                singular_label = text_directprint_printing_progress;
+                imagefile = AVKON_BMPFILE_NAME;
+                imageid = EMbmAvkonQgn_note_progress;
+                imagemask = EMbmAvkonQgn_note_progress_mask;
+                };
+            }
+        };
+    }
+
+//-----------------------------------------------------------------------------
+//
+//    r_directprint_search_progress_note
+//    For progress note.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE DIALOG r_directprint_search_progress_note
+    {
+    flags = EAknProgressNoteFlags;
+    buttons = R_AVKON_SOFTKEYS_CANCEL;
+    items =
+        {
+        DLG_LINE
+            {
+            type = EAknCtNote;
+            id = EDirectPrintCtrlIdSearchProgressNote;
+            control = AVKON_NOTE
+                {
+                layout = EProgressLayout;
+                singular_label = text_directprint_searching_progress;
+                imagefile = AVKON_BMPFILE_NAME;
+                imageid = EMbmAvkonQgn_note_progress;
+                imagemask = EMbmAvkonQgn_note_progress_mask;
+				animation = R_QGN_GRAF_WAIT_BAR_ANIM;
+
+                };
+            }
+        };
+    }
+
+
+// -----------------------------------------------------------------------------
+//
+// Resources for messages.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE TBUF r_directprint_caption_string     { buf=text_directprint_captionstring; }
+RESOURCE TBUF r_directprint_about_dialog_title { buf=text_directprint_about_dialog_title; }
+RESOURCE TBUF r_directprint_about_dialog_text    { buf=text_directprint_about_dialog_text; }
+
+RESOURCE TBUF r_directprint_msg_print_in_use        { buf=text_directprint_msg_print_in_use; }
+RESOURCE TBUF r_directprint_msg_param_file_not_found { buf=text_directprint_msg_param_file_not_found; }
+RESOURCE TBUF r_directprint_msg_param_incorrect     { buf=text_directprint_msg_param_incorrect; }
+RESOURCE TBUF r_directprint_msg_bearer_open_err     { buf=text_directprint_msg_bearer_open_err; }
+RESOURCE TBUF r_directprint_msg_submit_print_err    { buf=text_directprint_msg_submit_print_err; }
+RESOURCE TBUF r_directprint_msg_preview_err { buf=text_directprint_msg_preview_err; }
+
+RESOURCE TBUF r_directprint_msg_printing_progress { buf=text_directprint_printing_progress; }
+RESOURCE TBUF r_directprint_msg_searching_progress { buf=text_directprint_searching_progress; }
+
+RESOURCE TBUF r_directprint_msg_now_printing { buf=text_directprint_msg_now_printing; }
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_localisable_app_info
+//
+// ---------------------------------------------------------------------------- 
+//
+RESOURCE LOCALISABLE_APP_INFO r_directprint_localisable_app_info
+	{
+	short_caption = text_directprint_captionstring;
+	caption_and_icon = 
+	CAPTION_AND_ICON_INFO
+		{
+		caption = text_directprint_captionstring;
+		number_of_icons = 1;
+		icon_file = "\\resource\\apps\\DirectPrintApp.mif";
+		};
+	}
+
+// -----------------------------------------------------------------------------
+//
+// Resources for messages.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE TBUF r_directprint_setting_directory { buf=text_directprint_setting_directory; }
+RESOURCE TBUF r_directprint_setting_file      { buf=text_directprint_setting_file; }
+
+////////////////////////////////////////////////////////////////////////////////
+//
+// Print Main View
+//
+////////////////////////////////////////////////////////////////////////////////
+//
+//
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_mainview
+//
+// ---------------------------------------------------------------------------- 
+//
+RESOURCE AVKON_VIEW r_directprint_mainview
+	{
+	cba = R_AVKON_SOFTKEYS_OPTIONS_BACK;
+	menubar = r_directprint_mainview_options_menu;
+	toolbar = r_directprint_mainview_toolbar;
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_mainview_title
+//
+// ---------------------------------------------------------------------------- 
+//
+RESOURCE TITLE_PANE r_directprint_mainview_title
+	{
+	txt = text_directprint_mainview_title;
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_mainview_options_menu
+//
+// ---------------------------------------------------------------------------- 
+//
+RESOURCE MENU_BAR r_directprint_mainview_options_menu
+	{
+	titles =
+		{
+		MENU_TITLE
+			{
+			menu_pane = r_directprint_mainview_options_menu_pane;
+			}
+		};
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_mainview_options_menu_pane
+//
+// ---------------------------------------------------------------------------- 
+//
+RESOURCE MENU_PANE r_directprint_mainview_options_menu_pane
+	{
+	items =
+		{
+		MENU_ITEM
+			{
+			command = EDirectPrintCmdIdMainViewPrint;
+			txt = text_directprint_menu_print;
+			},
+		MENU_ITEM
+			{
+			command = EDirectPrintCmdIdMainViewPreview;
+			txt = text_directprint_menu_preview;
+			},
+		MENU_ITEM
+			{
+			command = EDirectPrintCmdIdMainViewPropertySetting;
+			txt = text_directprint_mainview_menu_propertysetting;
+			},
+		MENU_ITEM
+			{
+			command = EDirectPrintCmdIdMainViewExit;
+			txt = text_directprint_mainview_menu_exit;
+			}
+		};
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_mainview_options_menu_pane
+//
+// ---------------------------------------------------------------------------- 
+//
+RESOURCE AVKON_TOOLBAR r_directprint_mainview_toolbar
+	{
+	flags = KAknToolbarFixed;
+	items =
+		{
+		TBAR_CTRL
+			{
+			type = EAknCtButton;
+			id = EDirectPrintCmdIdMainViewPrint;
+			control = AVKON_BUTTON
+				{
+				flags = 0;
+				states = 
+					{
+					AVKON_BUTTON_STATE
+						{
+						txt = text_directprint_toolbar_print;
+						}
+					};
+				};
+			},
+		TBAR_CTRL
+			{
+			type = EAknCtButton;
+			id = EDirectPrintCmdIdMainViewPreview;
+			control = AVKON_BUTTON
+				{
+				flags = 0;
+				states = 
+					{
+					AVKON_BUTTON_STATE
+						{
+						txt = text_directprint_toolbar_preview;
+						}
+					};
+				};
+			},
+		TBAR_CTRL
+			{
+			type = EAknCtButton;
+			id = EDirectPrintCmdIdMainViewPropertySetting;
+			control = AVKON_BUTTON
+				{
+				flags = 0;
+				states = 
+					{
+					AVKON_BUTTON_STATE
+						{
+						txt = text_directprint_mainview_toolbar_propertysetting;
+						}
+					};
+				};
+			}
+		};
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_mainview_listbox
+//
+// ---------------------------------------------------------------------------- 
+//
+RESOURCE LISTBOX r_directprint_mainview_listbox
+	{
+	flags = EAknListBoxSelectionList;
+//	array_id = r_directprint_mainview_listbox_items;
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_mainview_listbox_items
+//
+// ---------------------------------------------------------------------------- 
+//
+RESOURCE ARRAY r_directprint_mainview_listbox_items
+	{
+	items =
+		{
+		LBUF
+			{
+			txt = text_directprint_mainview_item_printername;
+			},
+		LBUF
+			{
+			txt = text_directprint_mainview_item_bearer;
+			},
+		LBUF
+			{
+			txt = text_directprint_mainview_item_propertysettings;
+			}
+		};
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// Resources for item title.
+//
+// ---------------------------------------------------------------------------- 
+//
+RESOURCE TBUF r_directprint_mainview_item_printername      { buf=text_directprint_mainview_item_printername; }
+RESOURCE TBUF r_directprint_mainview_item_bearer           { buf=text_directprint_mainview_item_bearer; }
+RESOURCE TBUF r_directprint_mainview_item_propertysettings { buf=text_directprint_mainview_item_propertysettings; }
+
+////////////////////////////////////////////////////////////////////////////////
+//
+// Printer List View
+//
+////////////////////////////////////////////////////////////////////////////////
+//
+// 
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_printerlist_view
+//
+// ---------------------------------------------------------------------------- 
+//
+RESOURCE AVKON_VIEW r_directprint_printerlist_view
+	{
+	cba = R_AVKON_SOFTKEYS_OPTIONS_DONE;
+	menubar = r_directprint_printerlist_options_menu;
+	toolbar = r_directprint_printerlist_toolbar;
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_printerlist_title
+//
+// ---------------------------------------------------------------------------- 
+//
+RESOURCE TITLE_PANE r_directprint_printerlist_title
+	{
+	txt = text_directprint_printerlist_title;
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_printerlist_options_menu
+//
+// ---------------------------------------------------------------------------- 
+//
+RESOURCE MENU_BAR r_directprint_printerlist_options_menu
+	{
+	titles =
+		{
+		MENU_TITLE
+			{
+			menu_pane = r_directprint_printerlist_options_menu_pane;
+			}
+		};
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_printerlist_options_menu_pane
+//
+// ---------------------------------------------------------------------------- 
+//
+RESOURCE MENU_PANE r_directprint_printerlist_options_menu_pane
+	{
+	items =
+		{
+		MENU_ITEM
+			{
+			command = EDirectPrintCmdIdPrinterListViewSearch;
+			txt = text_directprint_printerlist_menu_search;
+			},
+		MENU_ITEM
+			{
+			command = EDirectPrintCmdIdPrinterListViewNew;
+			txt = text_directprint_printerlist_menu_new;
+			},
+		MENU_ITEM
+			{
+			command = EDirectPrintCmdIdPrinterListViewEdit;
+			txt = text_directprint_printerlist_menu_edit;
+			},
+		MENU_ITEM
+			{
+			command = EDirectPrintCmdIdPrinterListViewDelete;
+			txt = text_directprint_printerlist_menu_delete;
+			}
+		};
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_printerlist_toolbar
+//
+// ---------------------------------------------------------------------------- 
+//
+RESOURCE AVKON_TOOLBAR r_directprint_printerlist_toolbar
+	{
+	flags = KAknToolbarFixed;
+	items =
+		{
+		TBAR_CTRL
+			{
+			type = EAknCtButton;
+			id = EDirectPrintCmdIdPrinterListViewSearch;
+			control = AVKON_BUTTON
+				{
+				flags = 0;
+				states = 
+					{
+					AVKON_BUTTON_STATE
+						{
+						txt = text_directprint_printerlist_menu_search;
+						}
+					};
+				};
+			},
+		TBAR_CTRL
+			{
+			type = EAknCtButton;
+			id = EDirectPrintCmdIdPrinterListViewNew;
+			control = AVKON_BUTTON
+				{
+				flags = 0;
+				states = 
+					{
+					AVKON_BUTTON_STATE
+						{
+						txt = text_directprint_printerlist_menu_new;
+						}
+					};
+				};
+			},
+		TBAR_CTRL
+			{
+			type = EAknCtButton;
+			id = EDirectPrintCmdIdPrinterListViewEdit;
+			control = AVKON_BUTTON
+				{
+				flags = 0;
+				states = 
+					{
+					AVKON_BUTTON_STATE
+						{
+						txt = text_directprint_printerlist_menu_edit;
+						}
+					};
+				};
+			}
+		};
+	}
+
+////////////////////////////////////////////////////////////////////////////////
+//
+// Printer search result View
+//
+////////////////////////////////////////////////////////////////////////////////
+//
+//
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_searchresult_view
+//
+// ---------------------------------------------------------------------------- 
+//
+//
+RESOURCE AVKON_VIEW r_directprint_searchresult_view
+	{
+	cba = R_AVKON_SOFTKEYS_OPTIONS_CANCEL;
+	menubar = r_directprint_searchresult_options_menu;
+	toolbar = r_directprint_searchresult_toolbar;
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_printersearch_title
+//
+// ---------------------------------------------------------------------------- 
+//
+// 
+RESOURCE TITLE_PANE r_directprint_printersearch_title
+	{
+	txt = text_directprint_printersearch_title;
+	}
+
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_printerlist_options_menu
+//
+// ---------------------------------------------------------------------------- 
+//
+RESOURCE MENU_BAR r_directprint_searchresult_options_menu
+	{
+	titles =
+		{
+		MENU_TITLE
+			{
+			menu_pane = r_directprint_searchresult_options_menu_pane;
+			}
+		};
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_printerlist_options_menu_pane
+//
+// ---------------------------------------------------------------------------- 
+//
+RESOURCE MENU_PANE r_directprint_searchresult_options_menu_pane
+	{
+	items =
+		{
+		MENU_ITEM
+			{
+			command = EDirectPrintCmdIdSearchResultViewSearch;
+			txt = text_directprint_searchresult_menu_search;
+			}
+		};
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_printerlist_toolbar
+//
+// ---------------------------------------------------------------------------- 
+//
+RESOURCE AVKON_TOOLBAR r_directprint_searchresult_toolbar
+	{
+	flags = KAknToolbarFixed;
+	items =
+		{
+		TBAR_CTRL
+			{
+			type = EAknCtButton;
+			id = EDirectPrintCmdIdSearchResultViewSearch;
+			control = AVKON_BUTTON
+				{
+				flags = 0;
+				states = 
+					{
+					AVKON_BUTTON_STATE
+						{
+						txt = text_directprint_searchresult_menu_search;
+						}
+					};
+				};
+			}
+		};
+	}
+
+////////////////////////////////////////////////////////////////////////////////
+//
+// Printer Setting View
+//
+////////////////////////////////////////////////////////////////////////////////
+//
+//
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_printersetting_view
+//
+// ---------------------------------------------------------------------------- 
+//
+// 
+RESOURCE AVKON_VIEW r_directprint_printersetting_view
+	{
+	cba = R_AVKON_SOFTKEYS_OPTIONS_BACK;
+	menubar = r_directprint_printersetting_options_menu;
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_printersetting_title
+//
+// ---------------------------------------------------------------------------- 
+//
+// 
+RESOURCE TITLE_PANE r_directprint_printersetting_title
+	{
+	txt = text_directprint_printersetting_title;
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_printersetting_options_menu
+//
+// ---------------------------------------------------------------------------- 
+//
+//
+RESOURCE MENU_BAR r_directprint_printersetting_options_menu
+	{
+	titles =
+		{
+		MENU_TITLE
+			{
+			menu_pane = r_directprint_printersetting_options_menu_pane;
+			}
+		};
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_printersetting_options_menu_pane
+//
+// ---------------------------------------------------------------------------- 
+//
+//
+RESOURCE MENU_PANE r_directprint_printersetting_options_menu_pane
+	{
+	items =
+		{
+		MENU_ITEM
+			{
+			command = EDirectPrintCmdIdPrinterSettingViewChange;
+			txt = text_directprint_menu_change;
+			}
+		};
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_printersetting_item_list
+//
+// ---------------------------------------------------------------------------- 
+//
+//
+RESOURCE AVKON_SETTING_ITEM_LIST r_directprint_printersetting_item_list
+	{
+	title = text_directprint_printersetting_title;
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_printersetting_popup_setting_page
+//
+// ---------------------------------------------------------------------------- 
+//
+//
+RESOURCE AVKON_SETTING_PAGE r_directprint_printersetting_popup_setting_page
+	{
+	type = EAknCtPopupSettingList;
+	editor_resource_id = r_directprint_printersetting_popup_setting_list;
+	}
+	
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_printersetting_popup_setting_list
+//
+// ---------------------------------------------------------------------------- 
+//
+//
+RESOURCE POPUP_SETTING_LIST r_directprint_printersetting_popup_setting_list
+	{
+	flags = 0;
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_printersetting_text_setting_page
+//
+// ---------------------------------------------------------------------------- 
+//
+//
+RESOURCE AVKON_SETTING_PAGE r_directprint_printersetting_text_setting_page
+	{
+	type = EEikCtEdwin;
+	editor_resource_id = r_directprint_printersetting_text_edwin;
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_printersetting_text_setting_page
+//
+// ---------------------------------------------------------------------------- 
+//
+//
+RESOURCE EDWIN r_directprint_printersetting_text_edwin
+	{
+	width = 10;
+	maxlength = 50;
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_printersetting_integer_setting_page
+//
+// ---------------------------------------------------------------------------- 
+//
+//
+RESOURCE AVKON_SETTING_PAGE r_directprint_printersetting_integer_setting_page
+	{
+	type = EAknCtIntegerEdwin;
+	editor_resource_id = r_directprint_printersetting_integer_edwin;
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_printersetting_integer_edwin
+//
+// ---------------------------------------------------------------------------- 
+//
+//
+RESOURCE AVKON_INTEGER_EDWIN r_directprint_printersetting_integer_edwin
+	{
+	min = 0;
+	max = 65535;
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_printersetting_ipfield_setting_page
+//
+// ---------------------------------------------------------------------------- 
+//
+//
+RESOURCE AVKON_SETTING_PAGE r_directprint_printersetting_ipfield_setting_page
+	{
+	type = EAknCtIpFieldEditor;
+	editor_resource_id = r_directprint_printersetting_ip_editor;
+	}
+	
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_printersetting_ip_editor
+//
+// ---------------------------------------------------------------------------- 
+//
+//
+RESOURCE IP_FIELD_EDITOR r_directprint_printersetting_ip_editor
+	{
+	min_field_values = IP_FIELD
+		{ 
+		first_field = 0;
+		second_field = 0;
+		third_field = 0;
+		fourth_field = 0;
+		};
+	max_field_values = IP_FIELD
+		{
+		first_field = 255;
+		second_field = 255;
+		third_field = 255;
+		fourth_field = 255;
+		};
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_printersetting_driver_popup_setting_texts
+//
+// ---------------------------------------------------------------------------- 
+//
+//
+RESOURCE AVKON_POPUP_SETTING_TEXTS r_directprint_printersetting_driver_popup_setting_texts
+	{
+	setting_texts_resource = r_directprint_printersetting_driver_texts;
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_printersetting_driver_texts
+//
+// ---------------------------------------------------------------------------- 
+//
+//
+RESOURCE ARRAY r_directprint_printersetting_driver_texts
+	{
+	items =
+		{
+		AVKON_ENUMERATED_TEXT { value=0; text = "General";},
+		AVKON_ENUMERATED_TEXT { value=1; text = "Canon";},
+		AVKON_ENUMERATED_TEXT { value=2; text = "HP";}
+		};
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_printersetting_bearer_popup_setting_texts
+//
+// ---------------------------------------------------------------------------- 
+//
+//
+RESOURCE AVKON_POPUP_SETTING_TEXTS r_directprint_printersetting_bearer_popup_setting_texts
+	{
+	setting_texts_resource = r_directprint_printersetting_bearer_texts;
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_printersetting_bearer_texts
+//
+// ---------------------------------------------------------------------------- 
+//
+//
+RESOURCE ARRAY r_directprint_printersetting_bearer_texts
+	{
+	items =
+		{
+		AVKON_ENUMERATED_TEXT { value=0; text = "File output";},
+		AVKON_ENUMERATED_TEXT { value=1; text = "LPR";}
+		};
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_printersetting_bearer_popup_setting_texts
+//
+// ---------------------------------------------------------------------------- 
+//
+//
+RESOURCE AVKON_POPUP_SETTING_TEXTS r_directprint_printersetting_accesspoint_popup_setting_texts
+	{
+	setting_texts_resource = r_directprint_printersetting_accesspoint_texts;
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_printersetting_accesspoint_texts
+//
+// ---------------------------------------------------------------------------- 
+//
+//
+RESOURCE ARRAY r_directprint_printersetting_accesspoint_texts
+	{
+	items =
+		{
+		AVKON_ENUMERATED_TEXT { value=0; text = "WLAN_ap1";},
+		AVKON_ENUMERATED_TEXT { value=1; text = "WLAN_ap2";}
+		};
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_printersetting_type_popup_setting_texts
+//
+// ---------------------------------------------------------------------------- 
+//
+//
+RESOURCE AVKON_POPUP_SETTING_TEXTS r_directprint_printersetting_type_popup_setting_texts
+	{
+	setting_texts_resource = r_directprint_printersetting_type_texts;
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_printersetting_type_texts
+//
+// ---------------------------------------------------------------------------- 
+//
+//
+RESOURCE ARRAY r_directprint_printersetting_type_texts
+	{
+	items =
+		{
+		AVKON_ENUMERATED_TEXT { value=0; text = "MP990";},
+		AVKON_ENUMERATED_TEXT { value=1; text = "MP640";},
+		AVKON_ENUMERATED_TEXT { value=2; text = "MP560";},
+		AVKON_ENUMERATED_TEXT { value=3; text = "MX860";}
+		};
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_printersetting_popup_setting_texts
+//
+// ---------------------------------------------------------------------------- 
+//
+//
+RESOURCE AVKON_POPUP_SETTING_TEXTS r_directprint_printersetting_popup_setting_texts
+	{
+	setting_texts_resource = r_directprint_printersetting_texts;
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_printersetting_type_texts
+//
+// ---------------------------------------------------------------------------- 
+//
+//
+RESOURCE ARRAY r_directprint_printersetting_texts
+	{
+	items =
+		{
+		AVKON_ENUMERATED_TEXT { value=0; text = "dummy";}
+		};
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// Resources for item title.
+//
+// ---------------------------------------------------------------------------- 
+//
+RESOURCE TBUF r_directprint_printersetting_item_printername { buf=text_directprint_printersetting_item_printername; }
+RESOURCE TBUF r_directprint_printersetting_item_driver      { buf=text_directprint_printersetting_item_driver; }
+RESOURCE TBUF r_directprint_printersetting_item_bearer      { buf=text_directprint_printersetting_item_bearer; }
+RESOURCE TBUF r_directprint_printersetting_item_accesspoint { buf=text_directprint_printersetting_item_accesspoint; }
+RESOURCE TBUF r_directprint_printersetting_item_host        { buf=text_directprint_printersetting_item_host; }
+RESOURCE TBUF r_directprint_printersetting_item_port        { buf=text_directprint_printersetting_item_port; }
+RESOURCE TBUF r_directprint_printersetting_item_username    { buf=text_directprint_printersetting_item_username; }
+RESOURCE TBUF r_directprint_printersetting_item_que         { buf=text_directprint_printersetting_item_que; }
+RESOURCE TBUF r_directprint_printersetting_item_type        { buf=text_directprint_printersetting_item_type; }
+
+////////////////////////////////////////////////////////////////////////////////
+//
+// Property Setting View
+//
+////////////////////////////////////////////////////////////////////////////////
+//
+//
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_propertysetting_view
+//
+// ---------------------------------------------------------------------------- 
+//
+//
+RESOURCE AVKON_VIEW r_directprint_propertysetting_view
+	{
+	cba = R_AVKON_SOFTKEYS_OPTIONS_BACK;
+	menubar = r_directprint_propertysetting_options_menu;
+	toolbar = r_directprint_propertysetting_toolbar;
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_propertysetting_title
+//
+// ---------------------------------------------------------------------------- 
+//
+// 
+RESOURCE TITLE_PANE r_directprint_propertysetting_title
+	{
+	txt = text_directprint_propertysetting_title;
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_propertysetting_options_menu
+//
+// ---------------------------------------------------------------------------- 
+//
+//
+RESOURCE MENU_BAR r_directprint_propertysetting_options_menu
+	{
+	titles =
+		{
+		MENU_TITLE
+			{
+			menu_pane = r_directprint_propertysetting_options_menu_pane;
+			}
+		};
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_propertysetting_options_menu_pane
+//
+// ---------------------------------------------------------------------------- 
+//
+//
+RESOURCE MENU_PANE r_directprint_propertysetting_options_menu_pane
+	{
+	items =
+		{
+		MENU_ITEM
+			{
+			command = EDirectPrintCmdIdPropertySettingViewChange;
+			txt = text_directprint_menu_change;
+			},
+		MENU_ITEM
+			{
+			command = EDirectPrintCmdIdPropertySettingViewPrint;
+			txt = text_directprint_menu_print;
+			},
+		MENU_ITEM
+			{
+			command = EDirectPrintCmdIdPropertySettingViewPreview;
+			txt = text_directprint_menu_preview;
+			}
+		};
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_propertysetting_toolbar
+//
+// ---------------------------------------------------------------------------- 
+//
+//
+RESOURCE AVKON_TOOLBAR r_directprint_propertysetting_toolbar
+	{
+	flags = KAknToolbarFixed;
+	items =
+		{
+		TBAR_CTRL
+			{
+			type = EAknCtButton;
+			id = EDirectPrintCmdIdPropertySettingViewPrint;
+			control = AVKON_BUTTON
+				{
+				flags = 0;
+				states = 
+					{
+					AVKON_BUTTON_STATE
+						{
+						txt = text_directprint_toolbar_print;
+						}
+					};
+				};
+			},
+		TBAR_CTRL
+			{
+			type = EAknCtButton;
+			id = EDirectPrintCmdIdPropertySettingViewPreview;
+			control = AVKON_BUTTON
+				{
+				flags = 0;
+				states = 
+					{
+					AVKON_BUTTON_STATE
+						{
+						txt = text_directprint_toolbar_preview;
+						}
+					};
+				};
+			}
+		};
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_propertysetting_navi_decorator
+//
+// ---------------------------------------------------------------------------- 
+//
+//
+RESOURCE NAVI_DECORATOR r_directprint_propertysetting_navi_decorator
+	{
+	type = ENaviDecoratorControlTabGroup;
+	control = TAB_GROUP
+		{
+		tab_width = EAknTabWidthWithTwoLongTabs;
+		active = 0;
+		tabs =
+			{
+			TAB
+				{
+				id = EDirectPrintPaperSettingTab;
+				txt = text_directprint_propertysetting_tab_paper;
+				},
+			TAB
+				{
+				id = EDirectPrintPageSettingTab;
+				txt = text_directprint_propertysetting_tab_page;
+				},
+			TAB
+				{
+				id = EDirectPrintMarginSettingTab;
+				txt = text_directprint_propertysetting_tab_margin;
+				},
+			TAB
+				{
+				id = EDirectPrintHeaderSettingTab;
+				txt = text_directprint_propertysetting_tab_header;
+				},
+			TAB
+				{
+				id = EDirectPrintFooterSettingTab;
+				txt = text_directprint_propertysetting_tab_footer;
+				}
+			};
+		};
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_propertysetting_setting_item_list
+//
+// ---------------------------------------------------------------------------- 
+//
+//
+RESOURCE AVKON_SETTING_ITEM_LIST r_directprint_propertysetting_setting_item_list
+	{
+	title = text_directprint_propertysetting_title;
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_propertysetting_popup_setting_page
+//
+// ---------------------------------------------------------------------------- 
+//
+//
+RESOURCE AVKON_SETTING_PAGE r_directprint_propertysetting_popup_setting_page
+	{
+	type = EAknCtPopupSettingList;
+	editor_resource_id = r_directprint_propertysetting_popup_setting_list;
+	}
+	
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_propertysetting_popup_setting_list
+//
+// ---------------------------------------------------------------------------- 
+//
+//
+RESOURCE POPUP_SETTING_LIST r_directprint_propertysetting_popup_setting_list
+	{
+	flags = 0;
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_propertysetting_text_setting_page
+//
+// ---------------------------------------------------------------------------- 
+//
+//
+RESOURCE AVKON_SETTING_PAGE r_directprint_propertysetting_text_setting_page
+	{
+	type = EEikCtEdwin;
+	editor_resource_id = r_directprint_propertysetting_text_edwin;
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_propertysetting_text_edwin
+//
+// ---------------------------------------------------------------------------- 
+//
+//
+RESOURCE EDWIN r_directprint_propertysetting_text_edwin
+	{
+	width = 10;
+	maxlength = 50;
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_propertysetting_integer_setting_page
+//
+// ---------------------------------------------------------------------------- 
+//
+//
+RESOURCE AVKON_SETTING_PAGE r_directprint_propertysetting_integer_setting_page
+	{
+	type = EAknCtIntegerEdwin;
+	editor_resource_id = r_directprint_propertysetting_integer_edwin;
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_propertysetting_integer_edwin
+//
+// ---------------------------------------------------------------------------- 
+//
+//
+RESOURCE AVKON_INTEGER_EDWIN r_directprint_propertysetting_integer_edwin
+	{
+	min = 0;
+	max = 150;
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_propertysetting_size_popup_setting_texts
+//
+// ---------------------------------------------------------------------------- 
+//
+//
+RESOURCE AVKON_POPUP_SETTING_TEXTS r_directprint_propertysetting_size_popup_setting_texts
+	{
+	setting_texts_resource = r_directprint_propertysetting_size_texts;
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_propertysetting_size_texts
+//
+// ---------------------------------------------------------------------------- 
+//
+//
+RESOURCE ARRAY r_directprint_propertysetting_size_texts
+	{
+	items =
+		{
+		AVKON_ENUMERATED_TEXT { value=0; text = "A4";},
+		AVKON_ENUMERATED_TEXT { value=1; text = "A5";},
+		AVKON_ENUMERATED_TEXT { value=2; text = "B5";},
+		AVKON_ENUMERATED_TEXT { value=3; text = "Letter";},
+		AVKON_ENUMERATED_TEXT { value=4; text = "Regal";},
+		AVKON_ENUMERATED_TEXT { value=5; text = "Post card";},
+		AVKON_ENUMERATED_TEXT { value=6; text = "Envelope";}
+		};
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_propertysetting_orientation_popup_setting_texts
+//
+// ---------------------------------------------------------------------------- 
+//
+//
+RESOURCE AVKON_POPUP_SETTING_TEXTS r_directprint_propertysetting_orientation_popup_setting_texts
+	{
+	setting_texts_resource = r_directprint_propertysetting_orientation_texts;
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_propertysetting_orientation_texts
+//
+// ---------------------------------------------------------------------------- 
+//
+//
+RESOURCE ARRAY r_directprint_propertysetting_orientation_texts
+	{
+	items =
+		{
+		AVKON_ENUMERATED_TEXT
+			{
+			value=0; 
+			text = text_directprint_orientation_portrate;
+			},
+		AVKON_ENUMERATED_TEXT
+			{
+			value=1;
+			text = text_directprint_orientation_landscape;
+			}
+		};
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_propertysetting_mediatype_popup_setting_texts
+//
+// ---------------------------------------------------------------------------- 
+//
+//
+RESOURCE AVKON_POPUP_SETTING_TEXTS r_directprint_propertysetting_mediatype_popup_setting_texts
+	{
+	setting_texts_resource = r_directprint_propertysetting_mediatype_texts;
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_propertysetting_orientation_texts
+//
+// ---------------------------------------------------------------------------- 
+//
+//
+RESOURCE ARRAY r_directprint_propertysetting_mediatype_texts
+	{
+	items =
+		{
+		AVKON_ENUMERATED_TEXT
+			{
+			value = 0; 
+			text = "Plain";
+			},
+		AVKON_ENUMERATED_TEXT
+			{
+			value=1;
+			text = "Photo";
+			}
+		};
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_propertysetting_boaderless_popup_setting_texts
+//
+// ---------------------------------------------------------------------------- 
+//
+//
+RESOURCE AVKON_POPUP_SETTING_TEXTS r_directprint_propertysetting_boaderless_popup_setting_texts
+	{
+	setting_texts_resource = r_directprint_propertysetting_boaderless_texts;
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_propertysetting_orientation_texts
+//
+// ---------------------------------------------------------------------------- 
+//
+//
+RESOURCE ARRAY r_directprint_propertysetting_boaderless_texts
+	{
+	items =
+		{
+		AVKON_ENUMERATED_TEXT
+			{
+			value = 0; 
+			text = "OFF";
+			},
+		AVKON_ENUMERATED_TEXT
+			{
+			value=1;
+			text = "ON";
+			}
+		};
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_propertysetting_page_popup_setting_texts
+//
+// ---------------------------------------------------------------------------- 
+//
+//
+RESOURCE AVKON_POPUP_SETTING_TEXTS r_directprint_propertysetting_range_popup_setting_texts
+	{
+	setting_texts_resource = r_directprint_propertysetting_range_texts;
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_propertysetting_range_texts
+//
+// ---------------------------------------------------------------------------- 
+//
+//
+RESOURCE ARRAY r_directprint_propertysetting_range_texts
+	{
+	items =
+		{
+		AVKON_ENUMERATED_TEXT { value=0; text = text_directprint_range_all;},
+		AVKON_ENUMERATED_TEXT { value=1; text = text_directprint_range_odd;},
+		AVKON_ENUMERATED_TEXT { value=2; text = text_directprint_range_even;}
+		};
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_propertysetting_print_popup_setting_texts
+//
+// ---------------------------------------------------------------------------- 
+//
+//
+RESOURCE AVKON_POPUP_SETTING_TEXTS r_directprint_propertysetting_print_popup_setting_texts
+	{
+	setting_texts_resource = r_directprint_propertysetting_print_texts;
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_propertysetting_print_texts
+//
+// ---------------------------------------------------------------------------- 
+//
+//
+RESOURCE ARRAY r_directprint_propertysetting_print_texts
+	{
+	items =
+		{
+		AVKON_ENUMERATED_TEXT { value=0; text = text_directprint_no;},
+		AVKON_ENUMERATED_TEXT { value=1; text = text_directprint_yes;}
+		};
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// Resources for item title.
+//
+// ---------------------------------------------------------------------------- 
+//
+RESOURCE TBUF r_directprint_propertysetting_item_papersize       { buf=text_directprint_propertysetting_item_papersize; }
+RESOURCE TBUF r_directprint_propertysetting_item_orientation     { buf=text_directprint_propertysetting_item_orientation; }
+RESOURCE TBUF r_directprint_propertysetting_item_mediatype       { buf=text_directprint_propertysetting_item_mediatype; }
+RESOURCE TBUF r_directprint_propertysetting_item_printpage       { buf=text_directprint_propertysetting_item_printpage; }
+RESOURCE TBUF r_directprint_propertysetting_item_printrange      { buf=text_directprint_propertysetting_item_printrange; }
+RESOURCE TBUF r_directprint_propertysetting_item_copy            { buf=text_directprint_propertysetting_item_copy; }
+RESOURCE TBUF r_directprint_propertysetting_item_leftmargin      { buf=text_directprint_propertysetting_item_leftmargin; }
+RESOURCE TBUF r_directprint_propertysetting_item_rightmargin     { buf=text_directprint_propertysetting_item_rightmargin; }
+RESOURCE TBUF r_directprint_propertysetting_item_topmargin       { buf=text_directprint_propertysetting_item_topmargin; }
+RESOURCE TBUF r_directprint_propertysetting_item_bottommargin    { buf=text_directprint_propertysetting_item_bottommargin; }
+RESOURCE TBUF r_directprint_propertysetting_item_headertext      { buf=text_directprint_propertysetting_item_headertext; }
+RESOURCE TBUF r_directprint_propertysetting_item_headerdistance  { buf=text_directprint_propertysetting_item_headerdistance; }
+RESOURCE TBUF r_directprint_propertysetting_item_headerfirstpage { buf=text_directprint_propertysetting_item_headerfirstpage; }
+RESOURCE TBUF r_directprint_propertysetting_item_footertext      { buf=text_directprint_propertysetting_item_footertext; }
+RESOURCE TBUF r_directprint_propertysetting_item_footerdistance  { buf=text_directprint_propertysetting_item_footerdistance; }
+RESOURCE TBUF r_directprint_propertysetting_item_footerfirstpage { buf=text_directprint_propertysetting_item_footerfirstpage; }
+
+RESOURCE TBUF r_directprint_propertysetting_item_boaderless      { buf=text_directprint_propertysetting_item_boaderless; }
+
+////////////////////////////////////////////////////////////////////////////////
+//
+// Preview View
+//
+////////////////////////////////////////////////////////////////////////////////
+//
+//
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_preview_view
+//
+// ---------------------------------------------------------------------------- 
+//
+//
+RESOURCE AVKON_VIEW r_directprint_preview_view
+	{
+	cba = R_AVKON_SOFTKEYS_OPTIONS_BACK;
+	menubar = r_directprint_preview_options_menu;
+	toolbar = r_directprint_preview_toolbar;
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_preview_title
+//
+// ---------------------------------------------------------------------------- 
+//
+// 
+RESOURCE TITLE_PANE r_directprint_preview_title
+	{
+	txt = text_directprint_previewview_title;
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_preview_options_menu
+//
+// ---------------------------------------------------------------------------- 
+//
+//
+RESOURCE MENU_BAR r_directprint_preview_options_menu
+	{
+	titles =
+		{
+		MENU_TITLE
+			{
+			menu_pane = r_directprint_preview_options_menu_pane;
+			}
+		};
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_preview_options_menu_pane
+//
+// ---------------------------------------------------------------------------- 
+//
+//
+RESOURCE MENU_PANE r_directprint_preview_options_menu_pane
+	{
+	items =
+		{
+		MENU_ITEM
+			{
+			command = EDirectPrintCmdIdPreviewViewPrint;
+			txt = text_directprint_menu_print;
+			},
+		MENU_ITEM
+			{
+			command = EDirectPrintCmdIdPreviewViewExpand;
+			txt = text_directprint_previewview_expand;
+			},
+		MENU_ITEM
+			{
+			command = EDirectPrintCmdIdPreviewViewReduce;
+			txt = text_directprint_previewview_reduce;
+			}
+		};
+	}
+
+// ---------------------------------------------------------------------------- 
+//
+// r_directprint_preview_toolbar
+//
+// ---------------------------------------------------------------------------- 
+//
+//
+RESOURCE AVKON_TOOLBAR r_directprint_preview_toolbar
+	{
+	flags = KAknToolbarFixed;
+	items =
+		{
+		TBAR_CTRL
+			{
+			type = EAknCtButton;
+			id = EDirectPrintCmdIdPreviewViewPrint;
+			control = AVKON_BUTTON
+				{
+				flags = 0;
+				states = 
+					{
+					AVKON_BUTTON_STATE
+						{
+						txt = text_directprint_toolbar_print;
+						}
+					};
+				};
+			},
+		TBAR_CTRL
+			{
+			type = EAknCtButton;
+			id = EDirectPrintCmdIdPreviewViewExpand;
+			control = AVKON_BUTTON
+				{
+				flags = 0;
+				states = 
+					{
+					AVKON_BUTTON_STATE
+						{
+						txt = text_directprint_previewview_expand;
+						}
+					};
+				};
+			},
+		TBAR_CTRL
+			{
+			type = EAknCtButton;
+			id = EDirectPrintCmdIdPreviewViewReduce;
+			control = AVKON_BUTTON
+				{
+				flags = 0;
+				states = 
+					{
+					AVKON_BUTTON_STATE
+						{
+						txt = text_directprint_previewview_reduce;
+						}
+					};
+				};
+			}
+		};
+	}
+
+
+
+
+
+// ---------------------------------------------------------------------------- 
+//
+// For directprint engine
+//
+// ---------------------------------------------------------------------------- 
+//
+//
+
+// d:List box format string - do not localize this!
+#define qtn_lbox_format "\t%0U\t\t%1U"
+
+// Resource strings
+RESOURCE TBUF R_QTN_LBOX_FORMAT { buf = qtn_lbox_format; }
+RESOURCE TBUF R_EMPTY { buf = ""; }
+
+// Paper sizes
+RESOURCE TBUF R_QTN_STR_PAPER_SIZE { buf = qtn_print_settings_paper_size; }
+RESOURCE TBUF R_QTN_STR_SIZE_AUTO { buf = qtn_print_paper_size_auto; }
+RESOURCE TBUF R_QTN_STR_SIZE_LETTER { buf = qtn_print_paper_size_letter; }
+RESOURCE TBUF R_QTN_STR_SIZE_A4 { buf = qtn_print_paper_size_a4; }
+RESOURCE TBUF R_QTN_STR_SIZE_A6 { buf = qtn_print_paper_size_a6; }
+RESOURCE TBUF R_QTN_STR_SIZE_4X6 { buf = qtn_print_paper_size_4x6; }
+RESOURCE TBUF R_QTN_STR_SIZE_5X7 { buf = qtn_print_paper_size_5x7; }
+RESOURCE TBUF R_QTN_STR_SIZE_STICKER { buf = qtn_print_paper_size_sticker; }
+
+// Print quality
+RESOURCE TBUF R_QTN_STR_QUALITY { buf = qtn_print_settings_print_quality; }
+RESOURCE TBUF R_QTN_STR_QUAL_AUTO { buf = qtn_print_quality_auto; }
+RESOURCE TBUF R_QTN_STR_QUAL_NORMAL { buf = qtn_print_quality_normal; }
+RESOURCE TBUF R_QTN_STR_QUAL_DRAFT { buf = qtn_print_quality_draft; }
+RESOURCE TBUF R_QTN_STR_QUAL_FINE { buf = qtn_print_quality_fine; }
+
+// Template
+RESOURCE TBUF R_QTN_STR_TEMPLATE { buf = qtn_print_settings_template; }
+RESOURCE TBUF R_QTN_STR_TEMPLATE_BLESS { buf = qtn_print_settings_bless; }
+RESOURCE TBUF R_QTN_STR_TEMPLATE_ONE { buf = "1"; }
+RESOURCE TBUF R_QTN_STR_TEMPLATE_TWO { buf = "2"; }
+RESOURCE TBUF R_QTN_STR_TEMPLATE_FOUR { buf = "4"; }
+RESOURCE TBUF R_QTN_STR_TEMPLATE_SIX { buf = "6"; }
+RESOURCE TBUF R_QTN_STR_TEMPLATE_NINE { buf = "9"; }
+RESOURCE TBUF R_QTN_STR_TEMPLATE_TWELVE { buf = "12"; }
+RESOURCE TBUF R_QTN_STR_TEMPLATE_SIXTEEN { buf = "16"; }
+
+// 
+RESOURCE TBUF r_qtn_print_no_printers { buf = qtn_print_no_printers; }	
+RESOURCE TBUF r_qtn_print_settings_default_usb { buf = qtn_print_settings_default_usb; }	
+RESOURCE TBUF r_qtn_print_settings_default_bt { buf = qtn_print_settings_default_bt; }	
+RESOURCE TBUF r_qtn_print_settings_default_wlan { buf = qtn_print_settings_default_wlan; }	
+RESOURCE TBUF r_qtn_print_settings_default_lpr { buf = qtn_print_settings_default_lpr; }	
+RESOURCE TBUF r_qtn_print_memory_card { buf = qtn_print_memory_card; }
+
+// DirectPrint
+RESOURCE TBUF R_QTN_STR_ACCESS_POINT { buf = qtn_print_settings_accesspoint; }
+RESOURCE TBUF R_QTN_STR_HOST { buf = qtn_print_settings_host; }
+RESOURCE TBUF R_QTN_STR_PORT { buf = qtn_print_settings_port; }
+RESOURCE TBUF R_QTN_STR_USER { buf = qtn_print_settings_user; }
+RESOURCE TBUF R_QTN_STR_QUE { buf = qtn_print_settings_que; }
+
+// Extent
+RESOURCE TBUF R_QTN_STR_EXTENT { buf = qtn_print_settings_extent; }
+RESOURCE TBUF R_QTN_STR_EXTENT2 { buf = qtn_print_settings_extent2; }
+RESOURCE TBUF R_QTN_STR_EXTENT_SELECT1 { buf = qtn_print_settings_extent_select1; }
+RESOURCE TBUF R_QTN_STR_EXTENT_SELECT2 { buf = qtn_print_settings_extent_select2; }
+RESOURCE TBUF R_QTN_STR_EXTENT_SELECT3 { buf = qtn_print_settings_extent_select3; }
+RESOURCE TBUF R_QTN_STR_EXTENT_SELECT4 { buf = qtn_print_settings_extent_select4; }
+
+
+// End of File

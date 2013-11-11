@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE SystemDefinition SYSTEM "sysdef_1_5_1.dtd" [
+  <!ENTITY layer_real_source_path "sf/app/videotelephony" >
+]>
+
+<SystemDefinition name="videotelephony" schema="1.5.1">
+  <systemModel>
+    <layer name="app_layer">
+      <module name="videotelephony">
+        <unit name="videotelephony_plat" unitID="tedo.videotelephony_plat" bldFile="&layer_real_source_path;/videotelephony_plat/group" mrp="" />
+        <unit name="PacketVideoEngine" unitID="tedo.PacketVideoEngine" bldFile="&layer_real_source_path;/packetvideoengine/group" mrp="" filter="!sf_build" /> 
+        <unit name="vtprotocolsstub" unitID="tedo.vtprotocolsstub" bldFile="&layer_real_source_path;/vtprotocolsstub/group" mrp="" filter="sf_build" />  
+        <unit name="vtprotocols" unitID="tedo.vtprotocols" bldFile="&layer_real_source_path;/vtprotocols/group" mrp="" filter="!sf_build" />
+        <unit name="vtprotocolplugins" unitID="tedo.vtprotocolplugins" bldFile="&layer_real_source_path;/vtprotocolplugins/group" mrp="" /> 
+        <unit name="vtengines" unitID="tedo.vtengines" bldFile="&layer_real_source_path;/vtengines/Group" mrp="" />  
+        <unit name="lcvtplugin" unitID="tedo.lcvtplugin" bldFile="&layer_real_source_path;/vtuis/lcvtplugin/group" mrp="" /> 
+				<unit name="lcvtapp" unitID="tedo.lcvtapp" bldFile="&layer_real_source_path;/vtuis/lcvtapp" mrp="" proFile="lcvtapp.pro" />
+				<unit name="lcvtindicatorplugin" unitID="tedo.lcvtindicatorplugin" bldFile="&layer_real_source_path;/vtuis/lcvtindicatorplugin" mrp="" proFile="lcvtindicatorplugin.pro" />
+        <unit name="lcvtindicatorcontroller" unitID="tedo.lcvtindicatorcontroller" bldFile="&layer_real_source_path;/vtuis/lcvtindicatorcontroller" mrp="" proFile="lcvtindicatorcontroller.pro" />
+      </module>
+    </layer>
+  </systemModel>
+</SystemDefinition>

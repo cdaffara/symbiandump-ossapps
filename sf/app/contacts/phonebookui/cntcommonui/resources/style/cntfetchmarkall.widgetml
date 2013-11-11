@@ -1,0 +1,21 @@
+<hbwidget version="0.1" type="CntFetchMarkAll">
+
+  <layout name="default" type="mesh">
+    
+    <meshitem src="checkbox" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="checkbox" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+    <meshitem src="checkbox" srcEdge="RIGHT" dst="counter" dstEdge="LEFT" />
+    <meshitem src="checkbox" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+
+    <meshitem src="counter" srcEdge="CENTERV" dst="checkbox" dstEdge="CENTERV" />
+    <meshitem src="counter" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+
+    <meshitem src="background" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="background" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+    <meshitem src="background" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+    <meshitem src="background" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+
+  </layout>
+
+</hbwidget>
+

@@ -1,0 +1,369 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//
+PRINT Run all TestCalInterimApi recurrence entry tests
+//
+//RUN_UTILS DeleteFile c:\private\101f5027\AlarmServer.ini
+
+
+LOAD_SUITE TestCalInterimApiSuite
+//
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-Sec_4.4-0001
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-Sec_4.4-0001
+//! @SYMTestCaseDesc 		Create entries that are required for section 4.4 (Delete_Entries_Data)
+//! @SYMFssID			<App-Engines>/<CalInterimApi> 
+//! @SYMREQ			REQ5770: Calendar Non-functional maintainability, REQ5771: Calendar Non-functional 
+//!				architecture		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Creates entries based on the data read from the text file 
+//!				TestCalInterimApiDeleteEntry.txt
+//! @SYMTestExpectedResults 	All the entries are created successfully
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiReadData	\CITCalInterimApi\TestCalInterimApiDeleteEntry.ini EntryData
+
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-Sec_4.4-0001
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0030-Sec_4.4.3-0001
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0030-Sec_4.4.3-0001
+//! @SYMTestCaseDesc 		Delete the entries by specifying the filter type and time range with start date time as
+//!				exceptioned date time and end time as valid instance time (Delete_Entries_4.4.1)
+//! @SYMFssID			<App-Engines>/<CalInterimApi>
+//! @SYMREQ			REQ5770: Calendar Non-functional maintainability, REQ5771: Calendar Non-functional 
+//!				architecture			
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Create a repeating entry and set the exception date for the entry.
+//!				2.	Delete the entry by specifying the filter type and time range with start date time as
+//!					exceptioned date and end date as valid instance date time.
+//!				3.	Verify that the entries are deleted by finding the instances of that entry
+//! @SYMTestExpectedResults 	The entries within the time range and the filter type are deleted successfully.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiDeleteEntryByTimeRange \CITCalInterimApi\TestCalInterimApiDeleteEntry.ini DeleteEntry_4.4.1
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFilter \CITCalInterimApi\TestCalInterimApiDeleteEntry.ini	FindInstances_4.4.1
+
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0030-Sec_4.4.3-0001
+
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0030-Sec_4.4.3-0002
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0030-Sec_4.4.3-0002
+//! @SYMTestCaseDesc 		Delete the entries by passing the array of UID’s (Delete_Entries_4.4.3)
+//! @SYMFssID			<App-Engines>/<CalInterimApi>
+//! @SYMREQ			REQ5770: Calendar Non-functional maintainability, REQ5771: Calendar Non-functional 
+//!				architecture			
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Create entries and store them.
+//!				2.	Delete the entries by passing the array of both valid and invalid uid’s of entries. 
+//!				3.	Verify that the entries with the valid uid are deleted by fetching the entry from the calendar file
+//! @SYMTestExpectedResults 	The entries with valid UID’s are deleted 
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiDeleteData \CITCalInterimApi\TestCalInterimApiDeleteEntry.ini DeleteEntry_4.4.3
+
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0030-Sec_4.4.3-0002
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0031
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0031
+//! @SYMTestCaseDesc 		Deleting entries by passing the array of UID's which has invalid data (Delete_Entries_4.4.4)
+//! @SYMFssID			<App-Engines>/<CalInterimApi>
+//! @SYMREQ			REQ5770: Calendar Non-functional maintainability, REQ5771: Calendar Non-functional 
+//!				architecture			
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Get the Uid of the entries and store them in an array.
+//!				2.	Delete the entries by passing the array of Uid of entries.
+//!				3.	Verify that the entries are deleted by fetching the entries again and check that the 
+//!					count of the array in fetchL() function is zero.
+//! @SYMTestExpectedResults 	The DeleteL() function leaves with error code KErrNotFound if the entries are invalid.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP !Result=Fail 100 TestCalInterimApiSuite TestCalInterimApiDeleteData \CITCalInterimApi\TestCalInterimApiDeleteEntry.ini DeleteEntry_4.4.4
+
+
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0031
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-Delete_ParentEntry-0001
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-Delete_ParentEntry-0001
+//! @SYMTestCaseDesc 		Deleting entries by passing the array of UID's of entries (Delete_Entries_ParentEntry)
+//! @SYMFssID			<App-Engines>/<CalInterimApi>
+//! @SYMREQ			REQ5770: Calendar Non-functional maintainability, REQ5771: Calendar Non-functional 
+//!				architecture			
+//! @SYMPREQ			1090
+//! @SYMDEF			DEF080618
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Get the Uid of the entries and store them in an array.
+//!				2. 	Fetch the entry by passing the UID of the entry.
+//!				3.	Delete the Parent or child entry based on the recurrence Id given.
+//!				4. 	If the recurrence Id is present, then it will delete the child entry otherwise it 
+//!					will delete the parent entry.
+//!				5.	Verify that the entries are deleted by fetching the entries again and check that the
+//!					count of the array in fetchL() function is zero.
+//! @SYMTestExpectedResults 	All the valid entries within that array are deleted.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiDeleteData \CITCalInterimApi\TestCalInterimApiDeleteEntry.ini DeleteEntry_PARENT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFetchEntryAndCheckData \CITCalInterimApi\TestCalInterimApiDeleteEntry.ini FetchEntry_Parent
+
+
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-Delete_ParentEntry-0001
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0032
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0032
+//! @SYMTestCaseDesc 		Delete the child entry (Delete_Entries_4.4.5.)
+//! @SYMFssID			<App-Engines>/<CalInterimApi>
+//! @SYMREQ			REQ5770: Calendar Non-functional maintainability, REQ5771: Calendar Non-functional 
+//!				architecture			
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Create an entry and store it.
+//!				2.	Create one or two child entries for the existing entry.
+//!				3.	Fetch the entries by passing the UID of the entry.
+//!				4.	Delete one of the child entry.
+//!				5.	Verify that the child entry is deleted by fetching the entry by UID and checking the 	
+//!					array count in the fetch function.
+//! @SYMTestExpectedResults 	The specified child entry is deleted 
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiDeleteData \CITCalInterimApi\TestCalInterimApiDeleteEntry.ini DeleteEntry_4.4.5
+
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0032
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0033
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0033
+//! @SYMTestCaseDesc 		Deleting entries by passing the array of UID's of entries (Delete_Entries_4.4.6)
+//! @SYMFssID			<App-Engines>/<CalInterimApi>
+//! @SYMREQ			REQ5770: Calendar Non-functional maintainability, REQ5771: Calendar Non-functional 
+//!				architecture			
+//! @SYMPREQ			1090
+//! @SYMDEF			DEF080618
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Fetch the entry from the calendar file.
+//!				2.	Delete the parent entry which has child entries.
+//!				3.	Verify that parent and the child entries are deleted by fetching the entry from the 	
+//!					calendar file.
+//! @SYMTestExpectedResults 	The parent entry and the child entries are deleted.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiDeleteData \CITCalInterimApi\TestCalInterimApiDeleteEntry.ini DeleteEntry_4.4.6
+
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0033
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0034
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0034
+//! @SYMTestCaseDesc 		Delete the entry which has repeating child entries (Delete_Entries_4.4.7)
+//! @SYMFssID			<App-Engines>/<CalInterimApi>
+//! @SYMREQ			REQ5770: Calendar Non-functional maintainability, REQ5771: Calendar Non-functional 
+//!				architecture			
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Create a parent entry with repeat rule. Create a repeating child entry.
+//!				2.	Find the instances of the parent entry.
+//!				3.	Delete the child entry and check the instances of the parent entry.
+//!				4.	Verify that the instances of parent entry are deleted by finding the number of 		
+//!					instances in the parent entry.
+//! @SYMTestExpectedResults 	The instances of parent entry are deleted.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiDeleteData \CITCalInterimApi\TestCalInterimApiDeleteEntry.ini DeleteEntry_4.4.7
+
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0034
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0036
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0036
+//! @SYMTestCaseDesc 		Deleting the repeating child entry (Delete_Entries_4.4.9.)
+//! @SYMFssID			<App-Engines>/<CalInterimApi>
+//! @SYMREQ			REQ5770: Calendar Non-functional maintainability, REQ5771: Calendar Non-functional 
+//!				architecture			
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Create a parent entry with repeat rule (Say, daily repeat for 5 days). Set the 
+//!					exception date for the entry say for first two days.
+//!				2.	Create a child entry with new repeat rule and change the other instances of the 	
+//!					parent.
+//!				3.	Fetch and delete the child entry.
+//!				4.	Verify that the child and parent entry are deleted by fetching the entry by uid.
+//! @SYMTestExpectedResults 	The parent and child entry are deleted successfully. The parent entry should also be deleted 
+//!				as all the instances of that entry are deleted.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiDeleteData \CITCalInterimApi\TestCalInterimApiDeleteEntry.ini DeleteEntry_4.4.9
+
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0036
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0037
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0037
+//! @SYMTestCaseDesc 		Add a parent and repeating child entry. Delete the entry by specifying the child entries 
+//!				Instances time range
+//! @SYMFssID			<App-Engines>/<CalInterimApi>
+//! @SYMREQ			REQ5770: Calendar Non-functional maintainability, REQ5771: Calendar Non-functional 
+//!						architecture			
+//! @SYMPREQ			1090
+//! @SYMDEF			DEF080435
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Create a parent entry and a repeating child entry.
+//!				2.	Delete the entry by specifying the child entries instances time range.
+//!				3.	Verify that the child entry is deleted by fetching the entry by UID and check the 	
+//!				count of the array in the fetch function.
+//!				4.	Verify whether the parent entry’s instances are deleted by finding the number of 	
+//!				instances of the entry.
+//! @SYMTestExpectedResults 	The child and some of the instances which were modified by the child entry are deleted 
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiDeleteInstances \CITCalInterimApi\TestCalInterimApiDeleteEntry.ini DeleteInstances_4.4.2
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFetchEntryAndCheckData \CITCalInterimApi\TestCalInterimApiDeleteEntry.ini FetchEntryAndCheck_4.4.2
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFilter \CITCalInterimApi\TestCalInterimApiDeleteEntry.ini	FindInstances_4.4.2
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiDeleteInstances \CITCalInterimApi\TestCalInterimApiDeleteEntry.ini DeleteInstances2
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFetchEntryAndCheckData \CITCalInterimApi\TestCalInterimApiDeleteEntry.ini FetchEntryAndCheck2
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFilter \CITCalInterimApi\TestCalInterimApiDeleteEntry.ini	FindInstances2
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiDeleteInstances \CITCalInterimApi\TestCalInterimApiDeleteEntry.ini DeleteInstances3
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFetchEntryAndCheckData \CITCalInterimApi\TestCalInterimApiDeleteEntry.ini FetchEntryAndCheck3
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFilter \CITCalInterimApi\TestCalInterimApiDeleteEntry.ini	FindInstances3
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiDeleteInstances \CITCalInterimApi\TestCalInterimApiDeleteEntry.ini DeleteInstances4
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFetchEntryAndCheckData \CITCalInterimApi\TestCalInterimApiDeleteEntry.ini FetchEntryAndCheck4
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFilter \CITCalInterimApi\TestCalInterimApiDeleteEntry.ini	FindInstances4
+
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0037
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0038
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0038
+//! @SYMTestCaseDesc 		Copy and Delete the entries by passing local id’s of the entries (Delete_Entries_4.4.8.)
+//! @SYMFssID			<App-Engines>/<CalInterimApi>
+//! @SYMREQ			REQ5770: Calendar Non-functional maintainability, REQ5771: Calendar Non-functional 
+//!				architecture			
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Copy the entry based on the copy type of the entry
+//!				2.	Delete the entry by passing the local id of the entry.
+//!				3.	Verify that the entry is deleted or not by fetching the entry. Check that the other
+//!					entry is not deleted
+//! @SYMTestExpectedResults 	The entry with the corresponding local id is deleted successfully.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCopyEntry \CITCalInterimApi\TestCalInterimApiDeleteEntry.ini CopyAndDeleteEntryByLocalId1
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiDeleteEntryByLocalId \CITCalInterimApi\TestCalInterimApiDeleteEntry.ini DeleteEntryByLocalIdAfterDontCopyId
+
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCopyEntry \CITCalInterimApi\TestCalInterimApiDeleteEntry.ini CopyAndDeleteEntryByLocalId2
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiDeleteEntryByLocalId \CITCalInterimApi\TestCalInterimApiDeleteEntry.ini DeleteEntryByLocalIdAfterCopyAll
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiDeleteEntryByLocalId \CITCalInterimApi\TestCalInterimApiDeleteEntry.ini DeleteEntryByLocalIdAfterCopyAll1
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiDeleteEntryByLocalId \CITCalInterimApi\TestCalInterimApiDeleteEntry.ini DeleteChildEntryByLocalId
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFetchEntryAndCheckData \CITCalInterimApi\TestCalInterimApiDeleteEntry.ini FetchEntryAndVerify1
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiDeleteEntryByLocalId \CITCalInterimApi\TestCalInterimApiDeleteEntry.ini DeleteParentEntryByLocalId
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFetchEntryAndCheckData \CITCalInterimApi\TestCalInterimApiDeleteEntry.ini FetchEntryAndVerify2
+
+
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0038
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0039
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0039
+//! @SYMTestCaseDesc 		Delete the entries by specifying the time range (Delete_Entries_4.4.10)
+//! @SYMFssID			<App-Engines>/<CalInterimApi>
+//! @SYMREQ			REQ5770: Calendar Non-functional maintainability, REQ5771: Calendar Non-functional 
+//!				architecture			
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Create repeating entry that spans in the midnight.
+//!				2.	Delete the entries by specifying the time range and filter type.
+//!				3.	Verify that the instances are deleted by finding the number of instances of the entry
+//! @SYMTestExpectedResults 	The instances that are deleted are the ones which fall only in that time range
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiDeleteEntryByTimeRange \CITCalInterimApi\TestCalInterimApiDeleteEntry.ini DeleteEntry_4.4.10
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFilter \CITCalInterimApi\TestCalInterimApiDeleteEntry.ini	FindInstances_4.4.10
+
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0039  
+
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0040
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0040
+//! @SYMTestCaseDesc 		Change the time zone and delete the entries by specifying the time range (Delete_Entries_4.4.13)
+//! @SYMFssID			<App-Engines>/<CalInterimApi>
+//! @SYMREQ			REQ5770: Calendar Non-functional maintainability, REQ5771: Calendar Non-functional
+//!				architecture			
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Set the initial time zone to London.
+//!				2.	Create a monthly repeating entry and set the start and end date time in UTC using SetTimeUTCL, set the count as 12 and interval as 1. Store the entry.
+//!				3.	Now, Change the time zone to Chicago.
+//!				4.	Verify the number of instances are same and start and end time of the instances are not changed with respect to UTC.
+//!				5.	Delete the entries by specifying the time range and the filter type.
+//!				6.	Verify that the instances spanning in that particular time range are deleted by finding the number of instances
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\TestCalInterimApiDeleteEntry.ini SetTimeZone1
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiDeleteEntryByTimeRange \CITCalInterimApi\TestCalInterimApiDeleteEntry.ini DeleteEntry_4.4.13
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\TestCalInterimApiDeleteEntry.ini SetTimeZone2
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFilter \CITCalInterimApi\TestCalInterimApiDeleteEntry.ini	FindInstances_4.4.13
+
+
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0040
+
+
+PRINT Completed TestCalInterimApi_Tests

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.s60.com/xml/confml/2" xsi:schemaLocation="http://www.s60.com/xml/confml/2 http://www.s60.com/xml/confml/1#//confml2" name="HomeScreen database settings">
+  <feature ref="HomeScreenDbSettings" name="HomeScreen database settings">
+    <setting ref="Pages" mapKey="id" mapValue="id" name="Pages" type="sequence">
+      <setting ref="id" name="ID" type="int"/>
+      <setting ref="indexPosition" name="Index Position" type="int"/>
+    </setting>
+    <setting ref="Widgets" mapKey="id" mapValue="id" name="Widgets" type="sequence">
+      <setting ref="id" name="ID" type="int"/>
+      <setting ref="uri" name="URI" type="string"/>
+      <setting ref="pageId" name="Page ID" type="selection">
+        <option map="HomeScreenDbSettings/Pages"/>
+      </setting>
+    </setting>
+    <setting ref="WidgetPresentations" name="Widget presentations" type="sequence">
+      <setting ref="key" name="Key" type="string"/>
+      <setting ref="x" name="X position" type="real"/>
+      <setting ref="y" name="Y position" type="real"/>
+      <setting ref="zValue" name="Z value" type="real"/>
+      <setting ref="widgetId" name="Widget ID" type="selection">
+        <option map="HomeScreenDbSettings/Widgets"/>
+      </setting>
+    </setting>
+    <setting ref="WidgetPreferences" name="Widget preferences" type="sequence">
+      <setting ref="key" name="Key" type="string"/>
+      <setting ref="value" name="Value" type="string"/>
+      <setting ref="widgetId" name="Widget ID" type="selection">
+        <option map="HomeScreenDbSettings/Widgets"/>
+      </setting>
+    </setting>
+    <setting ref="Configuration" name="Configuration" type="sequence">
+      <setting ref="key" name="Key" type="string"/>
+      <setting ref="value" name="Value" type="string"/>
+    </setting>
+  </feature>
+  <data>
+    <HomeScreenDbSettings>
+      <Widgets><id>1</id><uri>hsclockwidgetplugin</uri><pageId  map="HomeScreenDbSettings/Pages[@key='1']"></pageId></Widgets>
+      <Widgets><id>2</id><uri>dialerwidgetplugin</uri><pageId map="HomeScreenDbSettings/Pages[@key='1']"></pageId></Widgets>
+      <Widgets><id>3</id><uri>ftuhswidget</uri><pageId map="HomeScreenDbSettings/Pages[@key='1']"></pageId></Widgets>
+      <Widgets><id>4</id><uri>hsshortcutwidgetplugin</uri><pageId map="HomeScreenDbSettings/Pages[@key='2']"></pageId></Widgets>
+      <Widgets><id>5</id><uri>hsshortcutwidgetplugin</uri><pageId map="HomeScreenDbSettings/Pages[@key='2']"></pageId></Widgets>
+      <Widgets><id>6</id><uri>hsshortcutwidgetplugin</uri><pageId map="HomeScreenDbSettings/Pages[@key='2']"></pageId></Widgets>
+      <Widgets><id>7</id><uri>hsshortcutwidgetplugin</uri><pageId map="HomeScreenDbSettings/Pages[@key='2']"></pageId></Widgets>
+      <Widgets><id>8</id><uri>hsshortcutwidgetplugin</uri><pageId map="HomeScreenDbSettings/Pages[@key='2']"></pageId></Widgets>
+      <Widgets><id>9</id><uri>hsshortcutwidgetplugin</uri><pageId map="HomeScreenDbSettings/Pages[@key='2']"></pageId></Widgets>
+      <Widgets><id>10</id><uri>hsshortcutwidgetplugin</uri><pageId map="HomeScreenDbSettings/Pages[@key='2']"></pageId></Widgets>
+      <Widgets><id>11</id><uri>hsshortcutwidgetplugin</uri><pageId map="HomeScreenDbSettings/Pages[@key='3']"></pageId></Widgets>
+      <Widgets><id>12</id><uri>hsshortcutwidgetplugin</uri><pageId map="HomeScreenDbSettings/Pages[@key='3']"></pageId></Widgets>
+      <Widgets><id>13</id><uri>hsshortcutwidgetplugin</uri><pageId map="HomeScreenDbSettings/Pages[@key='3']"></pageId></Widgets>
+      <WidgetPresentations><key>portrait</key><x>15</x><y>80</y><zValue>0.0</zValue><widgetId map="HomeScreenDbSettings/Widgets[@key='1']"></widgetId></WidgetPresentations>
+      <WidgetPresentations><key>landscape</key><x>15</x><y>80</y><zValue>0.0</zValue><widgetId map="HomeScreenDbSettings/Widgets[@key='1']"></widgetId></WidgetPresentations>
+      <WidgetPresentations><key>portrait</key><x>136</x><y>276</y><zValue>0.0</zValue><widgetId map="HomeScreenDbSettings/Widgets[@key='2']"></widgetId></WidgetPresentations>
+      <WidgetPresentations><key>landscape</key><x>136</x><y>176</y><zValue>0.0</zValue><widgetId map="HomeScreenDbSettings/Widgets[@key='2']"></widgetId></WidgetPresentations>
+      <WidgetPresentations><key>portrait</key><x>15</x><y>400</y><zValue>0.0</zValue><widgetId map="HomeScreenDbSettings/Widgets[@key='3']"></widgetId></WidgetPresentations>
+      <WidgetPresentations><key>landscape</key><x>300</x><y>150</y><zValue>0.0</zValue><widgetId map="HomeScreenDbSettings/Widgets[@key='3']"></widgetId></WidgetPresentations>
+      <WidgetPresentations><key>portrait</key><x>15</x><y>80</y><zValue>0.0</zValue><widgetId map="HomeScreenDbSettings/Widgets[@key='4']"></widgetId></WidgetPresentations>
+      <WidgetPresentations><key>portrait</key><x>100</x><y>80</y><zValue>0.0</zValue><widgetId map="HomeScreenDbSettings/Widgets[@key='5']"></widgetId></WidgetPresentations>
+      <WidgetPresentations><key>portrait</key><x>185</x><y>80</y><zValue>0.0</zValue><widgetId map="HomeScreenDbSettings/Widgets[@key='6']"></widgetId></WidgetPresentations>
+      <WidgetPresentations><key>portrait</key><x>270</x><y>80</y><zValue>0.0</zValue><widgetId map="HomeScreenDbSettings/Widgets[@key='7']"></widgetId></WidgetPresentations>
+      <WidgetPresentations><key>portrait</key><x>15</x><y>185</y><zValue>0.0</zValue><widgetId map="HomeScreenDbSettings/Widgets[@key='8']"></widgetId></WidgetPresentations>
+      <WidgetPresentations><key>portrait</key><x>100</x><y>185</y><zValue>0.0</zValue><widgetId map="HomeScreenDbSettings/Widgets[@key='9']"></widgetId></WidgetPresentations>
+      <WidgetPresentations><key>portrait</key><x>185</x><y>185</y><zValue>0.0</zValue><widgetId map="HomeScreenDbSettings/Widgets[@key='10']"></widgetId></WidgetPresentations>
+      <WidgetPresentations><key>portrait</key><x>15</x><y>80</y><zValue>0.0</zValue><widgetId map="HomeScreenDbSettings/Widgets[@key='11']"></widgetId></WidgetPresentations>
+      <WidgetPresentations><key>portrait</key><x>100</x><y>80</y><zValue>0.0</zValue><widgetId map="HomeScreenDbSettings/Widgets[@key='12']"></widgetId></WidgetPresentations>
+      <WidgetPresentations><key>portrait</key><x>185</x><y>80</y><zValue>0.0</zValue><widgetId map="HomeScreenDbSettings/Widgets[@key='13']"></widgetId></WidgetPresentations>
+      <WidgetPreferences><key>clockType</key><value>Analog</value><widgetId map="HomeScreenDbSettings/Widgets[@key='1']"></widgetId></WidgetPreferences>
+      <WidgetPreferences><key>uid</key><value>0x20022EF9</value><widgetId map="HomeScreenDbSettings/Widgets[@key='4']"></widgetId></WidgetPreferences>
+      <WidgetPreferences><key>uid</key><value>0x10005901</value><widgetId map="HomeScreenDbSettings/Widgets[@key='5']"></widgetId></WidgetPreferences>
+      <WidgetPreferences><key>uid</key><value>0x20029F80</value><widgetId map="HomeScreenDbSettings/Widgets[@key='6']"></widgetId></WidgetPreferences>
+      <WidgetPreferences><key>uid</key><value>0x2001FE79</value><widgetId map="HomeScreenDbSettings/Widgets[@key='7']"></widgetId></WidgetPreferences>
+      <WidgetPreferences><key>uid</key><value>0x10207C62</value><widgetId map="HomeScreenDbSettings/Widgets[@key='8']"></widgetId></WidgetPreferences>
+      <WidgetPreferences><key>uid</key><value>0x10005951</value><widgetId map="HomeScreenDbSettings/Widgets[@key='9']"></widgetId></WidgetPreferences>
+      <WidgetPreferences><key>uid</key><value>0x20025FD9</value><widgetId map="HomeScreenDbSettings/Widgets[@key='10']"></widgetId></WidgetPreferences>
+      <WidgetPreferences><key>uid</key><value>0x102828D6</value><widgetId map="HomeScreenDbSettings/Widgets[@key='11']"></widgetId></WidgetPreferences>
+      <WidgetPreferences><key>uid</key><value>0x101FB751</value><widgetId map="HomeScreenDbSettings/Widgets[@key='12']"></widgetId></WidgetPreferences>
+      <WidgetPreferences><key>uid</key><value>0x100059EE</value><widgetId map="HomeScreenDbSettings/Widgets[@key='13']"></widgetId></WidgetPreferences>
+      <Pages><id>1</id><indexPosition>0</indexPosition></Pages>
+      <Pages><id>2</id><indexPosition>1</indexPosition></Pages>
+      <Pages><id>3</id><indexPosition>2</indexPosition></Pages>
+      <Configuration><key>bounceEffect</key><value>20</value></Configuration>
+      <Configuration><key>pageChangeAnimationDuration</key><value>300</value></Configuration>
+      <Configuration><key>pageChangeZoneAnimationDuration</key><value>600</value></Configuration>
+      <Configuration><key>pageChangeZoneReverseAnimationDuration</key><value>200</value></Configuration>
+      <Configuration><key>pageRemovedAnimationDuration</key><value>1000</value></Configuration>
+      <Configuration><key>newPageAddedAnimationDuration</key><value>1000</value></Configuration>
+      <Configuration><key>widgetDragEffectDuration</key><value>250</value></Configuration>
+      <Configuration><key>widgetDropEffectDuration</key><value>200</value></Configuration>
+      <Configuration><key>defaultPageId</key><value>1</value></Configuration>
+      <Configuration><key>maximumPageCount</key><value>8</value></Configuration>
+      <Configuration><key>isShortcutLabelVisible</key><value>true</value></Configuration>
+      <Configuration><key>bounceFeedbackEffectDistance</key><value>30</value></Configuration>
+      <Configuration><key>pageChangeZoneWidth</key><value>30</value></Configuration>
+      <Configuration><key>pageIndicatorSpacing</key><value>8</value></Configuration>
+      <Configuration><key>maximumWidgetHeight</key><value>39</value></Configuration>
+      <Configuration><key>maximumWidgetWidth</key><value>48</value></Configuration>
+      <Configuration><key>minimumWidgetHeight</key><value>8.75</value></Configuration>
+      <Configuration><key>minimumWidgetWidth</key><value>8.75</value></Configuration>
+      <Configuration><key>pageChangePanDistance</key><value>120</value></Configuration>
+      <Configuration><key>pageChangeFeedbackEffect</key><value>Sensitive</value></Configuration>
+      <Configuration><key>widgetPickFeedbackEffect</key><value>ItemPick</value></Configuration>
+      <Configuration><key>widgetDropFeedbackEffect</key><value>ItemDrop</value></Configuration>
+      <Configuration><key>widgetRepositionFeedbackEffect</key><value>BounceEffect</value></Configuration>
+      <Configuration><key>widgetOverTrashbinFeedbackEffect</key><value>ItemMoveOver</value></Configuration>
+      <Configuration><key>widgetDropToTrashbinFeedbackEffect</key><value>ItemDrop</value></Configuration>
+      <Configuration><key>shortcutWidgetTapFeedbackEffect</key><value>BasicItem</value></Configuration>
+      <Configuration><key>widgetMoveBlockedFeedbackEffect</key><value>Basic</value></Configuration>
+      <Configuration><key>clockWidgetTapFeedbackEffect</key><value>BasicItem</value></Configuration>
+      <Configuration><key>widgetSnappingFeedbackEffect</key><value>ItemMoveOver</value></Configuration>
+      <Configuration><key>isSnapEnabled</key><value>true</value></Configuration>
+      <Configuration><key>snapTimeout</key><value>300</value></Configuration>
+      <Configuration><key>snapForce</key><value>30</value></Configuration>
+      <Configuration><key>snapGap</key><value>6</value></Configuration>
+      <Configuration><key>pageMargin</key><value>10</value></Configuration>
+      <Configuration><key>snapLineFadeInDuration</key><value>100</value></Configuration>
+      <Configuration><key>snapLineFadeOutDuration</key><value>100</value></Configuration>
+      <Configuration><key>isSnapEffectsEnabled</key><value>true</value></Configuration>
+      <Configuration><key>sceneType</key><value>PageWallpapers</value></Configuration>
+      <Configuration><key>bounceAnimationEasingCurve</key><value>Linear</value></Configuration>
+      <Configuration><key>pageChangeAnimationEasingCurve</key><value>Linear</value></Configuration>
+      <Configuration><key>widgetOrganizerAnchorDistance</key><value>5</value></Configuration>       
+      <Configuration><key>widgetOrganizerSearchSequence</key><value>SearchRowByRow</value></Configuration> 
+    </HomeScreenDbSettings>
+  </data>
+</configuration>

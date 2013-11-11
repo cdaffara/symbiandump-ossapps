@@ -1,0 +1,14 @@
+EXPORTS
+	??1RadioPresetStorage@@QAE@XZ @ 1 NONAME ; RadioPresetStorage::~RadioPresetStorage(void)
+	?savePreset@RadioPresetStorage@@QAE_NABVRadioStationIf@@@Z @ 2 NONAME ; bool RadioPresetStorage::savePreset(class RadioStationIf const &)
+	?maxNumberOfPresets@RadioPresetStorage@@QBEHXZ @ 3 NONAME ; int RadioPresetStorage::maxNumberOfPresets(void) const
+	??0RadioPresetStorage@@QAE@XZ @ 4 NONAME ; RadioPresetStorage::RadioPresetStorage(void)
+	?nextPreset@RadioPresetStorage@@QBEHH@Z @ 5 NONAME ; int RadioPresetStorage::nextPreset(int) const
+	?deletePreset@RadioPresetStorage@@QAE_NH@Z @ 6 NONAME ; bool RadioPresetStorage::deletePreset(int)
+	?firstPreset@RadioPresetStorage@@QBEHXZ @ 7 NONAME ; int RadioPresetStorage::firstPreset(void) const
+	?readPreset@RadioPresetStorage@@QAE_NHAAVRadioStationIf@@@Z @ 8 NONAME ; bool RadioPresetStorage::readPreset(int, class RadioStationIf &)
+	?presetCount@RadioPresetStorage@@QBEHXZ @ 9 NONAME ; int RadioPresetStorage::presetCount(void) const
+	?d_func@RadioPresetStorage@@AAEPAVRadioPresetStoragePrivate@@XZ @ 10 NONAME ; class RadioPresetStoragePrivate * RadioPresetStorage::d_func(void)
+	?d_func@RadioPresetStorage@@ABEPBVRadioPresetStoragePrivate@@XZ @ 11 NONAME ; class RadioPresetStoragePrivate const * RadioPresetStorage::d_func(void) const
+	?readFrequencies@RadioPresetStorage@@QAEXAAV?$QList@I@@@Z @ 12 NONAME ; void RadioPresetStorage::readFrequencies(class QList<unsigned int> &)
+

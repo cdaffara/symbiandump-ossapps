@@ -1,0 +1,62 @@
+/*
+* Copyright (c) 2004-2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*     This is project specification file for the mmsserversettings.dll.
+*
+*/
+
+
+#include <data_caging_paths.hrh>
+#include <platform_paths.hrh>
+
+TARGET          mmsserversettings.dll
+TARGETTYPE      DLL
+UID             0x1000008d 0x101FB0DB
+CAPABILITY      CAP_GENERAL_DLL
+VENDORID        VID_DEFAULT
+VERSION 	10.0
+PAGED
+
+SOURCEPATH      ../src
+
+SOURCE          mmsaccount.cpp mmssettings.cpp mmsschedulesettingsutils.cpp mmsmessagestoreutils.cpp mmsregisteredapplications.cpp
+
+
+USERINCLUDE     ../inc
+USERINCLUDE     ../../inc
+USERINCLUDE     ../../mmsconninit/inc
+
+SYSTEMINCLUDE   ../../../inc
+APP_LAYER_SYSTEMINCLUDE
+
+DEBUGLIBRARY    flogger.lib
+LIBRARY         euser.lib
+LIBRARY         schsend.lib
+LIBRARY         msgs.lib
+LIBRARY         estor.lib
+LIBRARY         centralrepository.lib
+LIBRARY         efsrv.lib 
+LIBRARY         mmsconninit.lib
+LIBRARY			bafl.lib 
+
+#if defined( ARMCC )
+deffile         ../eabi/mmsserversettings.def
+#elif defined( WINSCW )
+deffile         ../bwinscw/mmsserversettings.def
+#endif
+
+
+SMPSAFE
+
+//  End of File

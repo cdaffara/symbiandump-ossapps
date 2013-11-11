@@ -1,0 +1,143 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+// DC tests common for 9.1 and 9.2
+
+PRINT Run Data Compatibility Tests common for v9.1 and v9.2 calendar files
+
+LOAD_SUITE TestCalInterimApiSuite
+
+START_TESTCASE PIM-APPENG-CalInterimAPI-DC-I-015-016-Async-I-001-HP-0001
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CalInterimAPI-DC-I-015-016-Async-I-001-HP-0001
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - REQ5770: Calendar Non-functional maintainability, REQ5771: Calendar Non-functional architecture
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Test Data Compatibility against entries with repeat rule, alarms and data, such as description and attachment
+//! @SYMTestActions 
+//!1.	Create an entry/instance view on a 9.1/9.2 Calendar file, that contains entries with repeat rule, alarms (some of them with attachments and sound-names) and data. 
+//!2.	Open some entries and query their properties, data, repeat rule and alarms.
+//!3.	Query for the alarm sound-names and attachments of the entries.
+//!4.	Add and modify some entries, their alarms and data  and verify.
+//!5.	Close the view and open again and repeat step 2 and 3
+//! @SYMTestExpectedResults The view is built without any error. The new converted calendar file is properly accessed and updated by the API.
+//! @SYMTestCaseDesc Accessing, creating, renaming and deleting user defined categories
+//! @SYMTestActions 
+//!1.	Create a session and open a v9.1 Calendar file, that contains user-defined categories
+//!2.	Access the user-defined categories
+//!3.	Add user-defined categories.
+//!4.	Rename / Delete some of the existing user-defined categories
+//!5.	Close the file, re-open and perform the above tests again.
+//!6.	Create an entry view.
+//!7.	Access the category of entries that have user-defined categories.
+//!8.	Add/Update/Delete entries with user-defined categories
+//!9.	Close the view and open again and repeat steps 6 and 7.
+//!10.	Repeat the tests with a v9.2 Calendar file.
+//! @SYMTestExpectedResults The Categories are accessed without any error. The view is built without any error. The new converted calendar file is properly accessed and updated by the API.
+
+RUN_TEST_STEP				100	TestCalInterimApiSuite	TestCalInterimApiDeleteAgendaServers
+
+RUN_TEST_STEP				100	TestCalInterimApiSuite	TestCalInterimApiSetTz		\CITCalInterimApi\TestCalInterimApiDataCompatibility.ini	calcutta
+
+RUN_TEST_STEP				100	TestCalInterimApiSuite	TestCalInterimApiSetSysTime	\CITCalInterimApi\TestCalInterimApiDataCompatibility.ini	jan011998_12am
+
+// Update categories
+RUN_TEST_STEP				100	TestCalInterimApiSuite	TestCalInterimApiUpdateEntry	\CITCalInterimApi\TestCalInterimApiDataCompatibility.ini	categories
+
+// Find Instance tests
+RUN_TEST_STEP				300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiDataCompatibility.ini	completedtodos
+
+RUN_TEST_STEP				300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiDataCompatibility.ini	incompletedtodos
+
+RUN_TEST_STEP				300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiDataCompatibility.ini	completedandincompletedtodos
+
+// Test adding some child/new entries to the 9.1 file
+RUN_TEST_STEP				100	TestCalInterimApiSuite	TestCalInterimApiReadData		\CITCalInterimApi\TestCalInterimApiDataCompatibility.ini	addnewentries
+
+// Instances falling just outside the range must not be returned
+RUN_TEST_STEP	!Result=Fail 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiDataCompatibility.ini	beforerange1
+RUN_TEST_STEP	!Result=Fail 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiDataCompatibility.ini	beforerange2
+RUN_TEST_STEP	!Result=Fail 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiDataCompatibility.ini	afterrange1
+
+// ensuring if exact time is given, search matches
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiDataCompatibility.ini	afterrange2
+
+// Instances not modified by child entry
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiDataCompatibility.ini	textsearchmatch
+
+// Instances modified by child entry (only summary modified)
+// Text search with old summary, must fail
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiDataCompatibility.ini	textsearchnomatch
+
+// Text search with new summary, must pass
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiDataCompatibility.ini	textsearchmodifiedinstances
+
+// Search involving improper case
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiDataCompatibility.ini	exacttextsearch_nomatch1
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiDataCompatibility.ini	exacttextsearch_nomatch2
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiDataCompatibility.ini	exacttextsearch_nomatch3
+
+// Just a space missing in between
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiDataCompatibility.ini	exacttextsearch_nomatch4
+
+// Search involving proper case, should pass
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiDataCompatibility.ini	exacttextsearchmatch1
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiDataCompatibility.ini	exacttextsearchmatch2
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiDataCompatibility.ini	exacttextsearchmatch3
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiDataCompatibility.ini	exacttextsearchmatch4
+
+// Search text more than 32 chars, leave with -6
+RUN_TEST_STEP	!Error=-6 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiDataCompatibility.ini	hugetext
+
+
+
+// Time zone change before the search
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiDataCompatibility.ini	tzchange
+RUN_TEST_STEP				100	TestCalInterimApiSuite	TestCalInterimApiSetTz		\CITCalInterimApi\TestCalInterimApiDataCompatibility.ini	london
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiFilter		\CITCalInterimApi\TestCalInterimApiDataCompatibility.ini	tzchange
+
+
+
+// Alarm Tests
+
+RUN_TEST_STEP				100	TestCalInterimApiSuite	TestCalInterimApiDeleteAlarms
+
+RUN_TEST_STEP				100	TestCalInterimApiSuite	TestCalInterimApiSetTz		\CITCalInterimApi\TestCalInterimApiDataCompatibility.ini	london
+
+RUN_TEST_STEP				100	TestCalInterimApiSuite	TestCalInterimApiSetSysTime	\CITCalInterimApi\TestCalInterimApiDataCompatibility.ini	nov162003_1159pm
+
+RUN_TEST_STEP				100	TestCalInterimApiSuite	TestCalInterimApiCheckAlarm	\CITCalInterimApi\TestCalInterimApiDataCompatibility.ini	nov172003_1200am_1
+
+RUN_TEST_STEP				100	TestCalInterimApiSuite	TestCalInterimApiCheckAlarm	\CITCalInterimApi\TestCalInterimApiDataCompatibility.ini	nov172003_1200am_2
+
+
+RUN_TEST_STEP				100	TestCalInterimApiSuite	TestCalInterimApiDeleteAlarms
+
+// DST threshold alarms
+RUN_TEST_STEP				100	TestCalInterimApiSuite	TestCalInterimApiSetSysTime	\CITCalInterimApi\TestCalInterimApiDataCompatibility.ini	mar282004_1259am
+RUN_TEST_STEP				100	TestCalInterimApiSuite	TestCalInterimApiCheckAlarm	\CITCalInterimApi\TestCalInterimApiDataCompatibility.ini	mar282004_0200am_1
+RUN_TEST_STEP				100	TestCalInterimApiSuite	TestCalInterimApiCheckAlarm	\CITCalInterimApi\TestCalInterimApiDataCompatibility.ini	mar282004_0200am_2
+RUN_TEST_STEP				100	TestCalInterimApiSuite	TestCalInterimApiCheckAlarm	\CITCalInterimApi\TestCalInterimApiDataCompatibility.ini	mar282004_0200am_3
+
+// This will not notify as a child entry has been added to postpone the start time of this and future instances
+RUN_TEST_STEP	!Result=Fail		100	TestCalInterimApiSuite	TestCalInterimApiCheckAlarm	C:\CITCalInterimApi\TestCalInterimApiDataCompatibility.ini	mar282004_0200am_4
+
+RUN_TEST_STEP				100	TestCalInterimApiSuite	TestCalInterimApiCheckAlarm	\CITCalInterimApi\TestCalInterimApiDataCompatibility.ini	mar282004_0200am_5
+
+// This is a new entry added when we ran now. And must notify
+RUN_TEST_STEP				100	TestCalInterimApiSuite	TestCalInterimApiCheckAlarm	\CITCalInterimApi\TestCalInterimApiDataCompatibility.ini	mar282004_0200am_7
+END_TESTCASE PIM-APPENG-CalInterimAPI-DC-I-015-016-Async-I-001-HP-0001

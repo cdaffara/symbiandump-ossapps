@@ -1,0 +1,27 @@
+CalenGridItemPrototype[layoutName="calendarCustomGridItem"] {
+	layout:calendarCustomGridItem;
+}
+
+CalenGridItemPrototype::eventIconItem[layoutName="calendarCustomGridItem"] {
+	fixed-height: 1.5un;
+	fixed-width: 1.5un;
+}
+
+CalenGridItemPrototype::focusIconItem[layoutName="calendarCustomGridItem"] {
+	top: -0.5un;
+	left: -0.5un;
+	right: 0.5un;
+	bottom: 0.5un;
+}
+
+CalenGridItemPrototype::monthDayInfoTextItem[layoutName="calendarCustomGridItem"] {
+	pref-height: var(hb-param-text-height-secondary);
+	font-variant: secondary;
+	text-align: center;
+}
+
+CalenGridItemPrototype::todayIndicatorItem[layoutName="calendarCustomGridItem"] {
+	left: -0.75un;
+	right: 0.75un;
+	fixed-height: 0.75un;
+}

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ad:metadata xmlns="http://nokia.com/arrow/repository/ia_component"
+  xmlns:ad="http://nokia.com/arrow/application_metadata">
+    <!--
+    The appResources element contains all the language metadata of one IAC.
+    IAC may have one or more language-specific component names
+    and descriptions inside appResource element.
+
+    Language ID 1 should be always defined as this is the default language
+    in case other languages supported by the client cannot be found.
+    -->
+    <appResources>
+        <appResource>
+            <!-- Language ID -->
+            <language>1</language>
+            <!-- Name in given language -->
+            <iacName>Camera application</iacName>
+            <!-- Description in given language -->
+            <iacDescription>Camera application update</iacDescription>
+        </appResource>
+    </appResources>
+    <!-- Specifies for what versions of what platform this component is for. -->
+    <swPlatformDep>
+    <!-- platform code -->
+        <platform>S60</platform>
+        <versionFrom>
+            <!--
+            platform version number separated in major and minor number (i.e.
+            3.0 has 3 as major and 0 as minor)
+            -->
+            <major>6</major>
+            <minor>1</minor>
+            <!--
+            date-element can be used to pinpoint platform version number to even
+            more specific one. It is not currently used in the system.
+            -->
+            <date>
+                <year>2010</year>
+                <week>34</week>
+            </date>
+        </versionFrom>
+    </swPlatformDep>
+    <!-- specifies dependencies to other IACs -->
+    <interDeps>
+    </interDeps>
+    <firmwareDependencies>
+    </firmwareDependencies>
+    <rebootAfterInstall>false</rebootAfterInstall>
+</ad:metadata>

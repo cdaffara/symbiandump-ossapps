@@ -1,0 +1,133 @@
+/*
+* Copyright (c) 2004-2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*
+*/
+
+
+#include <platform_paths.hrh>
+#include <bldvariant.hrh>
+#include <data_caging_paths.hrh>
+
+#include "../../inc/logdef.h"
+
+TARGET     imageprintapp.exe
+TARGETTYPE exe
+
+UID  0x100039CE 0x101FFA84 
+CAPABILITY CAP_APPLICATION
+VENDORID VID_DEFAULT
+
+EPOCSTACKSIZE 0x5000  // 20 kB, more stack size needed to handle avkon resorces
+
+SOURCEPATH ../src
+SOURCE  cimageprintapp.cpp 
+SOURCE  cimageprintdoc.cpp
+SOURCE  cimageprintappui.cpp
+SOURCE  cimageprintblankcontainer.cpp
+SOURCE  cimageprintsettingscontainer.cpp
+SOURCE  cimageprintsettingsview.cpp
+SOURCE  cpropertiesboxmodel.cpp
+SOURCE  printapputil.cpp
+SOURCE  cimgpviewemptyview.cpp
+SOURCE  uimodefactory.cpp
+SOURCE  caiwmode.cpp
+SOURCE  cidlemode.cpp
+
+USERINCLUDE . ../inc ../../inc ../../../inc
+USERINCLUDE ../../imageprintprovider/inc
+USERINCLUDE ../../imgpprintdll/inc
+USERINCLUDE ../../imageprinteng/inc
+USERINCLUDE ../../../ImagePrintEngine/ImagePrintLibrary/inc
+USERINCLUDE ../../../ImagePrintEngine/ImagePrintServer/inc
+USERINCLUDE ../../../clog/inc
+
+APP_LAYER_SYSTEMINCLUDE
+
+SOURCEPATH .
+DOCUMENT    ip_icons_dc.mk
+DOCUMENT    ip_icons_aif_scalable_dc.mk
+DOCUMENT    ip_icons_aif_bitmaps_dc.mk
+
+STATICLIBRARY    clog.lib
+DEBUGLIBRARY    flogger.lib
+
+LIBRARY 	euser.lib 
+LIBRARY		avkon.lib 
+LIBRARY		eikcore.lib 
+LIBRARY		apparc.lib 
+LIBRARY		cone.lib
+LIBRARY 	imageprintengine.lib 
+LIBRARY		eikcoctl.lib
+LIBRARY 	bafl.lib 
+LIBRARY		commonengine.lib 
+LIBRARY		fbscli.lib 
+LIBRARY		aknskins.lib
+LIBRARY 	efsrv.lib 
+LIBRARY		commonui.lib 
+LIBRARY		hlplch.lib
+LIBRARY 	etext.lib
+LIBRARY 	gdi.lib 
+LIBRARY		bitgdi.lib
+LIBRARY 	usbman.lib 
+LIBRARY 	servicehandler.lib 
+LIBRARY 	estor.lib
+LIBRARY 	ws32.lib
+LIBRARY 	aknicon.lib
+LIBRARY 	egul.lib
+LIBRARY 	imageprintclient.lib
+LIBRARY 	featmgr.lib
+LIBRARY 	imgpprintdll.lib
+LIBRARY 	apgrfx.lib
+LIBRARY 	platformenv.lib
+LIBRARY 	caf.lib
+LIBRARY 	eikctl.lib 
+LIBRARY 	eikcdlg.lib
+
+START RESOURCE	../data/imageprintapp.rss
+#ifdef __S60_50__
+	LANGUAGE_IDS
+#else	
+	LANG SC	
+#endif
+HEADER
+TARGETPATH APP_RESOURCE_DIR
+END
+
+#ifdef RD_SCALABLE_UI
+
+SOURCEPATH      .
+  START RESOURCE  imageprintapp_reg.rss
+DEPENDS imageprintapp.rsg
+  // Do not change the UID
+  TARGETPATH      /private/10003a3f/apps
+  END // RESOURCE 
+
+#else
+SOURCEPATH      ../data
+  START RESOURCE  imageprintapp_caption.rss
+  #ifdef __S60_50__
+	LANGUAGE_IDS
+#else	
+	LANG SC	
+#endif
+  HEADER
+  TARGETPATH      APP_RESOURCE_DIR
+  END // RESOURCE
+
+AIF imageprintapp.aif ../aif imageprintappaif.rss c12 context_pane_icon_44x44.bmp context_pane_icon_44x44_mask_soft.bmp list_icon_42x29.bmp list_icon_42x29_mask_soft.bmp
+
+#endif // RD_SCALABLE_UI
+
+// End of File

@@ -1,0 +1,47 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Resource file for ExtMemCtrl Interface Implementation.
+*
+*/
+
+#include "registryinfo.rh"
+
+// Declares info for two implementations
+RESOURCE REGISTRY_INFO theInfo
+	{
+	// UID for the DLL
+	dll_uid = 0x2002132B;
+	// Declare array of interface info
+	interfaces = 
+		{
+		INTERFACE_INFO
+			{
+			// UID of interface that is implemented
+			interface_uid = 0x2001FD40;
+			implementations = 
+				{
+				// Info for ExtMemCtrlDCMOAdapter
+				IMPLEMENTATION_INFO
+					{
+					implementation_uid = 0x2002132C;
+					version_no = 1;
+					display_name = "ExtMemCtrlDCMOAdapter";
+					default_data = "text/wml||This is the type of data that this implementation understands. (Can be anything which will allow the resolver to identify this implementation as the correct one at run time. In this case it is a mime type).";
+					opaque_data = "ExternalMemory";
+					}
+				};
+			}
+		};
+	}
+

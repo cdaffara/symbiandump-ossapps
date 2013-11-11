@@ -1,0 +1,30 @@
+CalenDayHourElement {
+	layout: customCalendarLayout;
+	pref-height: expr(2*var(hb-param-text-height-secondary) + 2*var(hb-param-margin-gene-middle-vertical) + 4.1un);
+	size-policy-vertical: fixed;
+}
+
+CalenDayHourElement::time {
+	color: var(qtc_cal_view_text);
+
+	fixed-width: 8.04un;
+	font-variant: secondary;
+	text-height: var(hb-param-text-height-secondary);
+	
+	text-align: right;	
+}
+
+CalenDayHourElement::ampm {
+	color: var(qtc_cal_view_text);
+
+	fixed-width: 8.04un;
+	font-variant: secondary;
+	text-height: var(hb-param-text-height-secondary);
+	
+	text-align: right;	
+}
+
+CalenDayHourElement::bottomSpacer{ 
+	pref-height: 4.1un;
+	size-policy-vertical: expanding; 
+} 

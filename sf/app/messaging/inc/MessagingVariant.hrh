@@ -1,0 +1,740 @@
+/*
+* Copyright (c) 2003 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: MessagingVariant  declaration
+*
+*/
+
+
+
+
+#ifndef MESSAGINGVARIANT_HRH
+#define MESSAGINGVARIANT_HRH
+
+
+/**
+* User's guide to Local Messaging variation:
+* Shared data file: KSDUidMuiu (100058CD.ini)
+* Keyword KMuiuXXXFeatures:
+* How to use: 
+*     TInt featureBitmask = 0;
+*     CRepository* repository = CRepository::NewL(KCRUidMuiuVariation);
+*     repository->Get(KMuiuXXXFeatures, featureBitmask);
+* 
+*     //
+*     // Get the value once and save it for later use.
+*     // No need always to access central repository every time when a value is needed
+*     if  ( featureBitmask & KXxxFeatureIdYyy )
+*         {
+*         // This feature is ON, so act accordingly
+*         }
+*/
+
+
+// -----------------------------------------------------------------------------
+// Email
+// -----------------------------------------------------------------------------
+
+/**
+* Central repository KCRUidMuiuVariation (0x101F87ED)
+* Field KMuiuEmailConfigFlags
+* If KEmailFeatureIdSecureSettings flag is on, Email settings dialog 
+* includes SMTP secure settings.
+* Default values:
+* 2.0: 0
+* 2.1: 1
+* 2.6: 1
+* 2.7: 1
+* 2.8: 1
+* 3.0: 1
+*/
+#define KEmailFeatureIdSecureSettings   0x01
+
+
+/**
+* Central repository KCRUidMuiuVariation (0x101F87ED)
+* Field KMuiuEmailConfigFlags
+* If KEmailFeatureIdAlwaysOnline flag is on, Email settings dialog 
+* includes Always online settings.
+* Default values:
+* 2.0: 0
+* 2.1: 0
+* 2.6: 1
+* 2.7: 1
+* 2.8: 1
+* 3.0: 1
+*/
+#define KEmailFeatureIdAlwaysOnline     0x02
+
+/**
+* Central repository KCRUidMuiuVariation (0x101F87ED)
+* Field KMuiuEmailConfigFlags
+* If KEmailFeatureIdAlwaysOnlineCSD flag is on, Email always online can be
+* activated for also CSD access point. If this is off, then only GPRS
+* access points are supported.
+* Default values:
+* 2.0: 0
+* 2.1: 0
+* 2.6: 1
+* 2.7: 1
+* 2.8: 1
+* 3.0: 1
+*/
+#define KEmailFeatureIdAlwaysOnlineCSD  0x04
+
+/**
+* Central repository KCRUidMuiuVariation (0x101F87ED)
+* Field KMuiuEmailConfigFlags
+* If KEmailFeatureIdMailFilters flag is on, email filters are visible in
+* email settings. If 0, they are not shown.
+* Default values:
+* 2.6: 1
+* 2.7: 1
+* 2.8: 1
+* 3.0: 1
+*/
+#define KEmailFeatureIdMailFilters      0x08
+
+/**
+* Central repository KCRUidMuiuVariation (0x101F87ED)
+* Field KMuiuEmailConfigFlags
+* If KEmailFeatureIdAlwaysonlineHeaders flag is on, fetch headers setting 
+* if forced for ALL. If 0, it can be user defined.
+* Default values:
+* 2.6: 1
+* 2.7: 1
+* 2.8: 1
+* 3.0: 1
+*/
+#define KEmailFeatureIdAlwaysonlineHeaders  0x10
+
+/**
+* Central repository KCRUidMuiuVariation (0x101F87ED)
+* Field KMuiuEmailConfigFlags
+* If KEmailFeatureIdAlwaysonlineImapIdle flag is on, imap gprs connection
+* is active all the time with connection times of 30 minutes or less. 
+* If 0, only polling is supported.
+* Default values:
+* 2.6: 1
+* 2.7: 1
+* 2.8: 1
+* 3.0: 1
+*/
+#define KEmailFeatureIdAlwaysonlineImapIdle 0x20
+
+/**
+* Central repository KCRUidMuiuVariation (0x101F87ED)
+* Field KMuiuEmailConfigFlags
+* If KEmailFeatureIdEmailSendTypeStrings flag is on, New string "when 
+* connection available" is used. If 0, "on next connection" string is used.
+* Default values:
+* 2.6: 1
+* 2.7: 1
+* 2.8: 1
+* 3.0: 1
+*/
+#define KEmailFeatureIdEmailSendTypeStrings  0x40
+
+/**
+* Central repository KCRUidMuiuVariation (0x101F87ED)
+* Field KMuiuEmailConfigFlags
+* If KEmailFeatureIdEmailVPNAllowed flag is on, VPN accesspoints are
+* allowed for automatically updated email
+* If 0, they are not allowed
+* Default values:
+* 2.6: 1
+* 2.7: 1
+* 2.8: 1
+* 3.0: 1
+*/
+#define KEmailFeatureIdEmailVPNAllowed  0x80
+
+/**
+* Central repository KCRUidMuiuVariation (0x101F87ED)
+* Field KMuiuEmailConfigFlags
+* If KEmailFeatureIdEmailReplyWithAnyType flag is on, replying via MMS 
+* is possible from Email viewer.
+* Default values:
+* 2.6: 0
+* 2.7: 1
+* 2.8: 1
+* 3.0: 1
+*/
+#define KEmailFeatureIdEmailReplyWithAnyType  0x100
+
+/**
+* Central repository KCRUidMuiuVariation (0x101F87ED)
+* Field KMuiuEmailConfigFlags
+* If the flag is on, the function for marking mail messages unread
+* is enabled.
+* Default values:
+* 2.6: 0
+* 2.7: 0
+* 2.8: 0
+* 3.0: 1
+*/
+#define KEmailFeatureIdEmailUnreadFunction  0x200
+
+/**
+* Central repository KCRUidMuiuVariation (0x101F87ED)
+* Field KMuiuEmailConfigFlags
+* The flag controls whether the Always online server make any checks
+* when loading the AO plugins. If the flag is on, the checks are done.
+* Default values:
+* 2.6: 0
+* 2.7: 0
+* 2.8: 0
+* 3.0: 0
+*/
+#define KEmailFeatureIdAlwaysOnlinePluginCheck  0x400
+
+/**
+* Central repository KCRUidMuiuVariation (0x101F87ED)
+* Field KMuiuEmailConfigFlags
+* The flag controls whether the Copy / Move operations are allowed
+* for email messages. If the flag is on, Copy / Move is supported.
+* Default values:
+* 3.1: 0
+* 3.2: 0
+*/
+#define KEmailFeatureIdCopyMoveSupported  0x800
+
+/**
+* Central repository KCRUidMuiuVariation (0x101F87ED)
+* Field KMuiuEmailConfigFlags
+* The flag controls whether the user is warned about the increased
+* expenses when the always online connection is activated for 
+* the mailbox
+* Default value: 0 (in all releases)
+*/
+#define KEmailFeatureIdSuppressBillingNote  0x1000
+
+// -----------------------------------------------------------------------------
+// Messaging Centre
+// -----------------------------------------------------------------------------
+
+/**
+* Central repository KCRUidMuiuVariation (0x101F87ED)
+* Field KMuiuMceFeatures
+* If KMceFeatureIdHotswap flag is on, 'Memory in use' option is enabled in 
+* MCE settings in hotswap phones
+* Default values:
+* 2.0: 1
+* 2.1: 0
+* 2.6: 1
+* 2.7: 1
+* 2.8: 1
+* 3.0: 1
+*/
+#define KMceFeatureIdHotswap            0x01
+
+
+/**
+* Central repository KCRUidMuiuVariation (0x101F87ED)
+* Field KMuiuMceFeatures
+* If KMceFeatureIdNewMailIndicator flag is on, 'New mail indicator' option 
+* is enabled in MCE settings
+* Default values:
+* 2.0: 0
+* 2.1: 0
+* 2.6: 1
+* 2.7: 1
+* 2.8: 1
+* 3.0: 1
+*/
+#define KMceFeatureIdNewMailIndicator   0x02
+
+/**
+* Central repository KCRUidMuiuVariation (0x101F87ED)
+* Field KMuiuMceFeatures
+* If the flag is on, next features can be disabled by using
+* Customer Service Profile (CSP) bits in SIM:
+*     - Cell Brodacast Service (CBS)
+*     - SMS Reply Path ("Reply via same centre" in Series 60)
+*     - SMS delivery reports
+*     - SMS Protocol ID ("Message Conversion" in Series 60)
+*     - SMS validity period
+* Default values:
+* 2.6: 0
+* 2.7: 0
+* 2.8: 0
+* 3.0: 0
+*/
+#define KMceFeatureIdCSPSupport         0x04
+
+/**
+* Central repository KCRUidMuiuVariation (0x101F87ED)
+* Field KMuiuMceFeatures
+* The flag controls whether the time stamps of the message entries should
+* be set to the local time (0) or to the UTC time (1)
+* Default values:
+* 2.7: 0
+* 2.8: 0
+* 3.0: 1
+* 3.1: 1
+*/
+#define KMceFeatureIdUseUtcTime         0x08
+
+// -----------------------------------------------------------------------------
+// MsgEditor
+// -----------------------------------------------------------------------------
+
+/**
+* Central repository KCRUidMuiuVariation (0x101F87ED)
+* Field KMuiuMsgEditorFeatures
+* The flag controls whether a message viewer should exit after
+* reply/forward or keep the viewer open. If the flag is on
+* viewer should stay open, if the flag is off it should exit.
+* Default values:
+* 3.2: 0
+*/
+#define KMsgEditorFeatureIdStayInViewerAfterReply     0x00000001
+
+// -----------------------------------------------------------------------------
+// Mms
+// -----------------------------------------------------------------------------
+
+/**
+* Central repository KCRUidMuiuVariation (0x101F87ED)
+* Field KMuiuMmsFeatures
+* If KMmsFeatureIdTwoInsertMenus flag is on, then in MMS Editor there is 
+* two 'Insert menus'
+* Default values:
+* 2.0: 0
+* 2.1: 1
+* 2.6: 1
+* 2.7: 1
+* 2.8: 1
+* 3.0: 1
+*/
+#define KMmsFeatureIdTwoInsertMenus     0x00000001
+
+/**
+* Central repository KCRUidMuiuVariation (0x101F87ED)
+* Field KMuiuMmsFeatures
+* If KMmsFeatureIdEditorSubjectField flag is on the subject field is 
+* visible in the MMS Editor.
+* Default values:
+* 2.6: 0
+* 2.7: 0
+* 2.8: 0
+* 3.0: 1
+*/
+#define KMmsFeatureIdEditorSubjectField 0x00000002
+
+/**
+* Central repository KCRUidMuiuVariation (0x101F87ED)
+* Field KMuiuMmsFeatures
+* If KMmsFeatureIdUserCreationMode flag is on, the MMS creation mode is 
+* user selectable in the MMS settings.
+* Default values:
+* 2.6: 1
+* 2.7: 1
+* 2.8: 1
+* 3.0: 1
+*/
+#define KMmsFeatureIdUserCreationMode   0x00000004
+
+/**
+* Central repository KCRUidMuiuVariation (0x101F87ED)
+* Field KMuiuMmsFeatures
+* If KMmsFeatureIdNotificationForward flag is on, the forward function is
+* enabled in the MMS notification Viewer. Otherwise, forwarding is not
+* supported for the notifications.
+* Default values:
+* 2.6: 1
+* 2.7: 1
+* 2.8: 1
+* 3.0: 1
+*/
+#define KMmsFeatureIdNotificationForward 0x00000008
+
+/**
+* Central repository KCRUidMuiuVariation (0x101F87ED)
+* Field KMuiuMmsFeatures
+* If KMmsFeatureIdDeleteOptions flag is on, there are separate options for
+* deleting the message from server, locally (after 2.6) or both in 
+* the MMS UI when deleting the MMS notification. If the flag is off, there 
+* is only one deletion function that deletes messages both from the 
+* terminal and the MMS center.
+* Default values:
+* 2.6: 0
+* 2.7: 0
+* 2.8: 0
+* 3.0: 0
+*/
+#define KMmsFeatureIdDeleteOptions 0x00000010
+
+/**
+* Central repository KCRUidMuiuVariation (0x101F87ED)
+* Field KMuiuMmsFeatures
+* Local variable flag for MMS Usability enhancements which
+* include change object order, stable layout and To-field input mode 
+* saving. When KMmsFeatureIdUsabilityCorrections is on, the enhancements 
+* are enabled.
+* Default values:
+* 2.6: 0
+* 2.7: 0
+* 2.8: 1
+* 3.0: 1
+*/
+#define KMmsFeatureIdUsabilityCorrections 0x00000020
+
+/**
+* Central repository KCRUidMuiuVariation (0x101F87ED)
+* Field KMuiuMmsFeatures
+* When the feature is enabled, the MMS UI provides an option
+* to send images in the original size without scaling to any of 
+* the standard sizes defined in the MMS specification.
+* Default values:
+* 2.6: 1
+* 2.7: 1
+* 2.8: 1
+* 3.0: 1
+*/
+#define KMmsFeatureIdOriginalImageSize 0x00000040
+
+/**
+* Central repository KCRUidMuiuVariation (0x101F87ED)
+* Field KMuiuMmsFeatures
+* The feature enables hiding of the 'off' option from MMS receiving settings.
+* When the feature is disabled, the 'off' option is visible in the settings.
+* Default values:
+* 2.6: 0
+* 2.7: 0
+* 2.8: 0
+* 3.0: 0
+*/
+#define KMmsFeatureIdHideReceivingOff 0x00000080
+
+/**
+* Central repository KCRUidMuiuVariation (0x101F87ED)
+* Field KMuiuMmsFeatures
+* The feature enables hiding of the 'always manual' option from MMS receiving 
+* settings. When the feature is disabled, the option is visible in the settings.
+* Default values:
+* 2.7: 0
+* 2.8: 0
+* 3.0: 0
+*/
+#define KMmsFeatureIdHideManualFetchMode 0x00000100
+
+/**
+* Central repository KCRUidMuiuVariation (0x101F87ED)
+* Field KMuiuMmsFeatures
+* The flag controls, when a disconnect query is shown to the user
+* in the situation where fetching of the MMS message fails most probably
+* because it is not possible to open new PDP contexts. If the flag is on,
+* fetching is retried a few times before showing the dialog. Otherwise, it
+* is shown immediately after the first failure.
+* Default values:
+* 2.6: 0
+* 2.7: 0
+* 2.8: 0
+* 3.0: 0
+*/
+#define KMmsFeatureIdDelayDisconnectDialog 0x00000200
+
+/**
+* Central repository KCRUidMuiuVariation (0x101F87ED)
+* Field KMuiuMmsFeatures
+* If the flag is on the CC field is visible in the MMS Editor.
+* Default values:
+* 3.0: 1
+*/
+#define KMmsFeatureIdEditorCcField 0x00000400
+
+/**
+* Central repository KCRUidMuiuVariation (0x101F87ED)
+* Field KMuiuMmsFeatures
+* If the flag is on the BCC field is visible in the MMS Editor.
+* Default values:
+* 3.0: 0
+*/
+#define KMmsFeatureIdEditorBccField 0x00000800
+
+/**
+* Central repository KCRUidMuiuVariation (0x101F87ED)
+* Field KMuiuMmsFeatures
+* If the flag is on 3gpp2 media is supported for message sending.
+* Default values:
+* 3.0: 0
+* 4.3: 1
+*/
+#define KMmsFeatureId3gpp2MediaSupport 0x00001000
+
+/**
+* Central repository KCRUidMuiuVariation (0x101F87ED)
+* Field KMuiuMmsFeatures
+* If the flag is on, the delivery status of MMS messages is available 
+* in the separate dialog that can be opened from the message centre.
+* Default values:
+* 3.0: 1
+*/
+#define KMmsFeatureIdDeliveryStatusDialog 0x00002000
+
+/**
+* Central repository KCRUidMuiuVariation (0x101F87ED)
+* Field KMuiuMmsFeatures
+* If the flag is on, MMS UI supports the message priority attribute
+* Default values:
+* 3.0: 0
+*/
+#define KMmsFeatureIdPrioritySupport 0x00004000
+
+/**
+* Central repository KCRUidMuiuVariation (0x101F87ED)
+* Field KMuiuMmsFeatures
+* The feature enables hiding of the 'automatic at home' option from MMS receiving 
+* settings. When the feature is disabled, the option is visible in the settings.
+* Default values:
+* 3.0: 0
+*/
+#define KMmsFeatureIdHideAutomaticAtHome 0x00008000
+
+/**
+* Central repository KCRUidMuiuVariation (0x101F87ED)
+* Field KMuiuMmsFeatures
+* If KMmsFeatureIdEditorSubjectConfigurable flag is on "Subject is available
+* in "Additional headers" in the Editor.
+* If KMmsFeatureIdEditorSubjectField is disabled this field has no effect.
+* Default values:
+* 3.1: 0
+* 3.2: 1
+*/
+#define KMmsFeatureIdEditorSubjectConfigurable 0x00010000
+
+/**
+* Central repository KCRUidMuiuVariation (0x101F87ED)
+* Field KMuiuMmsFeatures
+* If this flag is on the Editor will always scale images down
+* to exact target size (retaining aspect ratio however).
+* If this flag is off the Editor will scale images down in 
+* powers of two when "Image size" settings is set to "Large".
+* Default values:
+* 3.1: 1
+* 3.2: 1
+*/
+#define KMmsFeatureIdExactImageScaling 0x00020000
+
+/**
+* Central repository KCRUidMuiuVariation (0x101F87ED)
+* Field KMuiuMmsFeatures
+* If this flag is on the "Deny Reports Sending" option locked
+* and the item will not be visible to the user in the MMS settings.
+* Default values:
+* 3.2: 0
+*/
+#define KMmsFeatureIdLockDenyReportsSending 0x00040000
+
+
+// -----------------------------------------------------------------------------
+// Smil
+// -----------------------------------------------------------------------------
+
+/**
+* Central repository KCRUidMuiuVariation (0x101F87ED)
+* Field KMuiuSmilFeatures
+* If KSmilFeatureIdLinksInPlayer flag is on, the link support enabled.
+* Default values:
+* 2.0: 0
+* 2.1: 0
+* 2.6: 1
+* 2.7: 1
+* 2.8: 1
+* 3.0: 1
+*/
+#define KSmilFeatureIdLinksInPlayer       0x01
+
+/**
+* Central repository KCRUidMuiuVariation (0x101F87ED)
+* Field KMuiuSmilFeatures
+* Local variable flag for SMIL Editor/MMS Usability enhancements which
+* include text activation, page moving and better focus visibility
+* When KSMILEditorUsabilityCorrections is on, the enhancements are 
+* enabled.
+* Default values:
+* 2.6: 0
+* 2.7: 0
+* 2.8: 1
+* 3.0: 1
+*/
+#define KSmilFeatureIdUsabilityCorrections 0x02
+
+// -----------------------------------------------------------------------------
+// Sms
+// -----------------------------------------------------------------------------
+/**
+* Central repository KCRUidMuiuVariation (0x101F87ED)
+* Field KMuiuSmsFeatures
+* KSmsUiCfgShowMessageSegments is an on/off setting for displaying the
+* number of segments a SMS message takes.
+* Default values:
+* 2.0: 0
+* 2.1: 0
+* 2.6: 0
+* 2.7: 1
+* 2.8: 0
+* 3.0: 0
+*/
+#define KSmsFeatureIdShowMessageSegments 0x00000001
+
+/**
+* Central repository KCRUidMuiuVariation (0x101F87ED)
+* Field KMuiuSmsFeatures
+* KSmsUiCfgInsertOriginalText is an on/off setting to allow the insertion 
+* of the original message text when replying to a SMS message.
+* Default values:
+* 2.0: 0
+* 2.1: 0
+* 2.6: 0
+* 2.7: 1
+* 2.8: 0
+* 3.0: 0
+*/
+#define KSmsFeatureIdInsertOriginalText 0x00000002
+
+/**
+* Central repository KCRUidMuiuVariation (0x101F87ED)
+* Field KMuiuSmsFeatures
+* KSmsUiCfgMessagePrivacyIndicator is an on/off setting to allow the 
+* indication of the current message privacy.
+* Default values:
+* 2.0: 0
+* 2.1: 0
+* 2.6: 0
+* 2.7: 1
+* 2.8: 0
+* 3.0: 0
+*/
+#define KSmsFeatureIdMessagePrivacyIndicator 0x00000004
+
+/**
+* Central repository KCRUidMuiuVariation (0x101F87ED)
+* Field KMuiuSmsFeatures
+* KSmsFeatureIdEmailOverSms is an on/off setting to allow using
+* of email addresses in SMS sending and receiving 
+* Default values:
+* 2.0: 0
+* 2.1: 0
+* 2.6: 0
+* 2.7: 0
+* 2.8: 0
+* 3.0: 0
+*/
+#define KSmsFeatureIdEmailOverSms 0x00000008
+
+/**
+* Central repository KCRUidMuiuVariation (0x101F87ED)
+* Field KMuiuSmsFeatures
+* When the flag is on, only service centres of the SIM can be used.
+* Default values:
+* 3.0: 0
+*/
+#define KSmsFeatureIdSimServiceCentresOnly 0x00000010
+
+/**
+* Central repository KCRUidMuiuVariation (0x101F87ED)
+* Field KMuiuSmsFeatures
+* When the flag is on, the SMS UI uses the time stamp of TMsvEntry
+* in the message info dialog instead of the time stamp sent by the SMSC
+* Default values:
+* O in all releases
+*/
+#define KSmsFeatureIdUseLocalTimeStamp 0x00000020
+
+/**
+* Central repository KCRUidMuiuVariation (0x101F87ED)
+* Field KMuiuSmsFeatures
+* When the flag is on, the SMS Editor will show a confirmation query
+* when it's sending a concatenated message.
+* Default values:
+* O in all releases
+*/
+#define KSmsFeatureIdShowConcatenatedQuery 0x00000040
+
+/**
+* Central repository KCRUidMuiuVariation (0x101F87ED)
+* Field KMuiuSmsFeatures
+* When the flag is on, the SMSC number is checked from SIM in 
+* every boot.
+* Default values:
+* O in all releases
+*/
+#define KSmsFeatureIdCheckSimAlways 0x00000080
+
+/**
+* Central repository KCRUidMuiuVariation (0x101F87ED)
+* Field KMuiuSmsFeatures
+* When the flag is on, the SMS UI uses the time stamp sent by the SMSC
+* but it overrides the time zone information of Chinese messages with
+* a hard-coded timezone value (UTC +8 hours).
+* Default values:
+* O in all releases
+*/
+#define KSmsFeatureIdOverrideChineseTimeZone 0x00000100
+
+
+// -----------------------------------------------------------------------------
+// MMS Postcard
+// -----------------------------------------------------------------------------
+/**
+* Central repository KCRUidMuiuVariation (0x101F87ED)
+* Field KMuiuPostcardFeatures
+* When the flag is on, an "extra charge" notification is shown
+* to the user before the message is sent.
+* Default values:
+* 3.2: 0
+*/
+#define KPostcardFeatureIdExtraChargeNotification 0x0001
+
+// -----------------------------------------------------------------------------
+// Unified SMS and MMS Editor
+// -----------------------------------------------------------------------------
+/**
+* Central repository KCRUidMuiuVariation (0x101F87ED)
+* Field KMuiuUniEditorFeatures
+* When the flag is on, UniEditor won't show message size counter in navi pane.
+* Default values:
+* 3.2: 0
+*/
+#define KUniEditorFeatureIdHideSizeCounter 0x0001
+
+/**
+* Central repository KCRUidMuiuVariation (0x101F87ED)
+* Field KMuiuUniEditorFeatures
+* When the flag is on, UniEditor won't show "message type changed" info popups.
+* Default values:
+* 3.2: 0
+*/
+#define KUniEditorFeatureIdHideMsgTypeChangedPopup 0x0002
+
+/**
+* Central repository KCRUidMuiuVariation (0x101F87ED)
+* Field KMuiuUniEditorFeatures
+* When the flag is on, replying to an SMS forces Unified Editor to "locked SMS" mode.
+* Default values:
+* 3.2: 0
+*/
+#define KUniEditorFeatureIdRestrictedReplySms 0x0004
+
+/**
+* Central repository KCRUidMuiuVariation (0x101F87ED)
+* Field KMuiuUniEditorFeatures
+* When the flag is on, replying to an MMS forces Unified Editor to "locked MMS" mode.
+* Default values:
+* 3.2: 0
+*/
+#define KUniEditorFeatureIdRestrictedReplyMms 0x0008
+
+#endif

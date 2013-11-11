@@ -1,0 +1,42 @@
+/*
+* Copyright (c) 2008 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Presence Cache API interface IDs.
+*
+*/
+
+#ifndef PRESENCECACHEIDS_HRH
+#define PRESENCECACHEIDS_HRH
+
+
+
+
+
+
+
+
+
+
+// Interface UID for PresenceCacheReader interface
+#define PRESENCECACHE_ECOM_IF_UID_READER         0xEF007001 // todo: official number
+
+// Interface UID for PresenceCacheWriter interface
+#define PRESENCECACHE_ECOM_IF_UID_WRITER         0xEF007002 // todo: official number
+
+// Default implementation resulution data
+#define PRESENCECACHE_ECOM_DEFAULT_DATA_PRESENCE_INTERFACE         "default"
+
+
+
+#endif // PRESENCECACHEIDS_HRH
+

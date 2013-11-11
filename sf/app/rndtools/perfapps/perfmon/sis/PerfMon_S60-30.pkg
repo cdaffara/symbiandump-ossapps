@@ -1,0 +1,38 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:
+;
+
+
+; Language - standard language definitions
+&EN
+
+; Standard SIS file header
+#{"PerfMon"},(0x20011385),1,0,0,TYPE=SA
+
+; Supports S60 v 3.0
+[0x101F7961], 0, 0, 0, {"S60ProductID"}
+
+; Non-localised vendor name
+:"Nokia Corporation"
+
+; Localised vendor names
+%{"Nokia Corporation"}
+
+; normal stuff:
+"\epoc32\RELEASE\armv5\UREL\PerfMon.exe"-"!:\sys\bin\PerfMon.exe"
+"\epoc32\data\z\Resource\apps\PerfMon_aif.mif"-"!:\Resource\Apps\PerfMon_aif.mif"
+"\epoc32\data\z\Resource\apps\PerfMon.rsc"-"!:\Resource\Apps\PerfMon.rsc"
+"\epoc32\data\z\PRIVATE\10003A3F\APPS\PerfMon_reg.rsc"-"!:\private\10003a3f\import\apps\PerfMon_reg.rsc"
+"..\group\backup_registration.xml"-"!:\private\20011385\backup_registration.xml"

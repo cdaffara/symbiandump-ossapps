@@ -1,0 +1,54 @@
+// Copyright (c) 2005-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// t_popsecuresockets.mmp
+//
+
+TARGET        t_popsecuresockets.exe
+TARGETTYPE    exe
+UID			0x1000008c 0x1000484B
+
+CAPABILITY  NetworkServices LocalServices ReadUserData ReadDeviceData WriteDeviceData NetworkControl ProtServ
+
+SOURCEPATH		../src
+SOURCE        T_POPSECURESOCKETS.cpp
+SOURCE		  CTestPOPSecureSocketTest.cpp
+SOURCE		  cactivewaiter.cpp
+
+STATICLIBRARY	tefunit.lib
+
+USERINCLUDE   ../inc 
+USERINCLUDE   ../../../../pop3andsmtpmtm/servermtmutils/inc ../../../../pop3andsmtpmtm/clientmtms/inc
+
+
+USERINCLUDE   ../../inc
+USERINCLUDE		../../../../../../../mw/messagingmw/messagingfw/msgsrvnstore/server/inc
+USERINCLUDE		../../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/base/inc
+USERINCLUDE		../../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/email/inc
+USERINCLUDE		../../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/server/inc
+USERINCLUDE		../../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/sms/inc
+USERINCLUDE		../../../../../../../mw/messagingmw/messagingfw/msgtest/tools/spoofserver/inc
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+OS_LAYER_ESTLIB_SYSTEMINCLUDE  
+LIBRARY     euser.lib msgs.lib efsrv.lib emailtestutils.lib msvtestutils.lib imcm.lib
+
+LIBRARY		testexecuteutils.lib 
+LIBRARY		testexecutelogclient.lib
+LIBRARY		estor.lib
+LIBRARY		rfileloggerclient.lib 
+LIBRARY     bafl.lib etext.lib charconv.lib centralrepository.lib 
+LIBRARY     flogger.lib
+
+VENDORID 0x70000001
+
+SMPSAFE

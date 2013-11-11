@@ -1,0 +1,199 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+REM
+REM T_POPS.IBY
+REM
+
+REM data
+
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\connect.out				 	System\MsgTest\msgtest\pops\connect.out
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\connect.scr				 	System\MsgTest\msgtest\pops\connect.scr
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\connect_and_quit.out			System\MsgTest\msgtest\pops\connect_and_quit.out
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\connect_and_quit1.out			System\MsgTest\msgtest\pops\connect_and_quit1.out
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\delete_all.out			 	System\MsgTest\msgtest\pops\delete_all.out
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\download_all1.out				System\MsgTest\msgtest\pops\download_all1.out
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\download_all1.scr				System\MsgTest\msgtest\pops\download_all1.scr
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\download_all10.out		 	System\MsgTest\msgtest\pops\download_all10.out
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\download_all10.scr		 	System\MsgTest\msgtest\pops\download_all10.scr
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\download_all2.out				System\MsgTest\msgtest\pops\download_all2.out
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\download_all2.scr				System\MsgTest\msgtest\pops\download_all2.scr
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\download_all3.out				System\MsgTest\msgtest\pops\download_all3.out
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\download_all3.scr				System\MsgTest\msgtest\pops\download_all3.scr
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\download_all4.out				System\MsgTest\msgtest\pops\download_all4.out
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\download_all4.scr				System\MsgTest\msgtest\pops\download_all4.scr
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\download_all5.out				System\MsgTest\msgtest\pops\download_all5.out
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\download_all5.scr				System\MsgTest\msgtest\pops\download_all5.scr
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\download_all6.out				System\MsgTest\msgtest\pops\download_all6.out
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\download_all6.scr				System\MsgTest\msgtest\pops\download_all6.scr
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\download_all7.out				System\MsgTest\msgtest\pops\download_all7.out
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\download_all7.scr				System\MsgTest\msgtest\pops\download_all7.scr
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\download_all8.out				System\MsgTest\msgtest\pops\download_all8.out
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\download_all8.scr				System\MsgTest\msgtest\pops\download_all8.scr
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\download_all9.out				System\MsgTest\msgtest\pops\download_all9.out
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\download_all9.scr				System\MsgTest\msgtest\pops\download_all9.scr
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\missing_fields_download.out	System\MsgTest\msgtest\pops\missing_fields_download.out
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\missing_fields_download.scr	System\MsgTest\msgtest\pops\missing_fields_download.scr
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\missing_fields_sync.scr	 	System\MsgTest\msgtest\pops\missing_fields_sync.scr
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\online_local_copy.dmp			System\MsgTest\msgtest\pops\online_local_copy.dmp
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\online_local_move.dmp			System\MsgTest\msgtest\pops\online_local_move.dmp
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\online_populate.dmp		 	System\MsgTest\msgtest\pops\online_populate.dmp
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\poplog.scr				 	System\MsgTest\msgtest\pops\poplog.scr
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\popprog.scr				 	System\MsgTest\msgtest\pops\popprog.scr
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\populate_twice.scr		 	System\MsgTest\msgtest\pops\populate_twice.scr
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\second_connect.dmp		 	System\MsgTest\msgtest\pops\second_connect.dmp
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\tpops5_connect_copy.out	 	System\MsgTest\msgtest\pops\tpops5_connect_copy.out
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\tpops5_connect_copy.scr	 	System\MsgTest\msgtest\pops\tpops5_connect_copy.scr
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\tpops5_connect_quit.out	 	System\MsgTest\msgtest\pops\tpops5_connect_quit.out
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\tpops5_connect_quit.scr	 	System\MsgTest\msgtest\pops\tpops5_connect_quit.scr
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\tpops5_connect_quit1.out		System\MsgTest\msgtest\pops\tpops5_connect_quit1.out
+
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_02_18.out		System\MsgTest\msgtest\pops\t_pops_synchronise_02_18.out			
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_02_18.scr		System\MsgTest\msgtest\pops\t_pops_synchronise_02_18.scr        
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_04.out			System\MsgTest\msgtest\pops\t_pops_synchronise_04.out           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_04.scr			System\MsgTest\msgtest\pops\t_pops_synchronise_04.scr           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_05.out			System\MsgTest\msgtest\pops\t_pops_synchronise_05.out           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_05.scr			System\MsgTest\msgtest\pops\t_pops_synchronise_05.scr           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_06.out			System\MsgTest\msgtest\pops\t_pops_synchronise_06.out           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_06.scr			System\MsgTest\msgtest\pops\t_pops_synchronise_06.scr           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_07.out			System\MsgTest\msgtest\pops\t_pops_synchronise_07.out           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_07.scr			System\MsgTest\msgtest\pops\t_pops_synchronise_07.scr           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_08.out			System\MsgTest\msgtest\pops\t_pops_synchronise_08.out           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_08.scr			System\MsgTest\msgtest\pops\t_pops_synchronise_08.scr           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_09.out			System\MsgTest\msgtest\pops\t_pops_synchronise_09.out           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_09.scr			System\MsgTest\msgtest\pops\t_pops_synchronise_09.scr           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_10.out			System\MsgTest\msgtest\pops\t_pops_synchronise_10.out           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_10.scr			System\MsgTest\msgtest\pops\t_pops_synchronise_10.scr           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_11.out			System\MsgTest\msgtest\pops\t_pops_synchronise_11.out           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_11.scr			System\MsgTest\msgtest\pops\t_pops_synchronise_11.scr           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_12.out			System\MsgTest\msgtest\pops\t_pops_synchronise_12.out           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_12.scr			System\MsgTest\msgtest\pops\t_pops_synchronise_12.scr           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_13.out			System\MsgTest\msgtest\pops\t_pops_synchronise_13.out           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_13.scr			System\MsgTest\msgtest\pops\t_pops_synchronise_13.scr           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_14.out			System\MsgTest\msgtest\pops\t_pops_synchronise_14.out           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_14.scr			System\MsgTest\msgtest\pops\t_pops_synchronise_14.scr           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_15.out			System\MsgTest\msgtest\pops\t_pops_synchronise_15.out           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_15.scr			System\MsgTest\msgtest\pops\t_pops_synchronise_15.scr           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_19.out			System\MsgTest\msgtest\pops\t_pops_synchronise_19.out           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_19.scr			System\MsgTest\msgtest\pops\t_pops_synchronise_19.scr           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_21.out			System\MsgTest\msgtest\pops\t_pops_synchronise_21.out           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_21.scr			System\MsgTest\msgtest\pops\t_pops_synchronise_21.scr           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_22.out			System\MsgTest\msgtest\pops\t_pops_synchronise_22.out           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_22.scr			System\MsgTest\msgtest\pops\t_pops_synchronise_22.scr           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_23.out			System\MsgTest\msgtest\pops\t_pops_synchronise_23.out           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_23.scr			System\MsgTest\msgtest\pops\t_pops_synchronise_23.scr           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_24.out			System\MsgTest\msgtest\pops\t_pops_synchronise_24.out           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_24.scr			System\MsgTest\msgtest\pops\t_pops_synchronise_24.scr           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_25.out			System\MsgTest\msgtest\pops\t_pops_synchronise_25.out           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_25.scr			System\MsgTest\msgtest\pops\t_pops_synchronise_25.scr           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_27.out			System\MsgTest\msgtest\pops\t_pops_synchronise_27.out           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_27.scr			System\MsgTest\msgtest\pops\t_pops_synchronise_27.scr           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_28.out			System\MsgTest\msgtest\pops\t_pops_synchronise_28.out           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_28.scr			System\MsgTest\msgtest\pops\t_pops_synchronise_28.scr           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_30.out			System\MsgTest\msgtest\pops\t_pops_synchronise_30.out           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_30.scr			System\MsgTest\msgtest\pops\t_pops_synchronise_30.scr           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_31.out			System\MsgTest\msgtest\pops\t_pops_synchronise_31.out           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_31.scr			System\MsgTest\msgtest\pops\t_pops_synchronise_31.scr           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_32.out			System\MsgTest\msgtest\pops\t_pops_synchronise_32.out           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_32.scr			System\MsgTest\msgtest\pops\t_pops_synchronise_32.scr           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_33.out			System\MsgTest\msgtest\pops\t_pops_synchronise_33.out           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_33.scr			System\MsgTest\msgtest\pops\t_pops_synchronise_33.scr           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_34.out			System\MsgTest\msgtest\pops\t_pops_synchronise_34.out           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_34.scr			System\MsgTest\msgtest\pops\t_pops_synchronise_34.scr           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_35.out			System\MsgTest\msgtest\pops\t_pops_synchronise_35.out           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_35.scr			System\MsgTest\msgtest\pops\t_pops_synchronise_35.scr           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_36.out			System\MsgTest\msgtest\pops\t_pops_synchronise_36.out           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_36.scr			System\MsgTest\msgtest\pops\t_pops_synchronise_36.scr           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_37.out			System\MsgTest\msgtest\pops\t_pops_synchronise_37.out           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_37.scr			System\MsgTest\msgtest\pops\t_pops_synchronise_37.scr           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_38.out			System\MsgTest\msgtest\pops\t_pops_synchronise_38.out           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_38.scr			System\MsgTest\msgtest\pops\t_pops_synchronise_38.scr           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_39.out			System\MsgTest\msgtest\pops\t_pops_synchronise_39.out           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_39.scr			System\MsgTest\msgtest\pops\t_pops_synchronise_39.scr           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_40.out			System\MsgTest\msgtest\pops\t_pops_synchronise_40.out           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_40.scr			System\MsgTest\msgtest\pops\t_pops_synchronise_40.scr           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_41.out			System\MsgTest\msgtest\pops\t_pops_synchronise_41.out           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_41.scr			System\MsgTest\msgtest\pops\t_pops_synchronise_41.scr           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_42.out			System\MsgTest\msgtest\pops\t_pops_synchronise_42.out           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_42.scr			System\MsgTest\msgtest\pops\t_pops_synchronise_42.scr           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_45_61_62.out 	System\MsgTest\msgtest\pops\t_pops_synchronise_45_61_62.out     
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_45_61_62.scr 	System\MsgTest\msgtest\pops\t_pops_synchronise_45_61_62.scr     
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_47_48.out		System\MsgTest\msgtest\pops\t_pops_synchronise_47_48.out        
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_47_48.scr		System\MsgTest\msgtest\pops\t_pops_synchronise_47_48.scr        
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_49_50.out		System\MsgTest\msgtest\pops\t_pops_synchronise_49_50.out        
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_49_50.scr		System\MsgTest\msgtest\pops\t_pops_synchronise_49_50.scr        
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_51.out			System\MsgTest\msgtest\pops\t_pops_synchronise_51.out           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_51.scr			System\MsgTest\msgtest\pops\t_pops_synchronise_51.scr           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_52.out			System\MsgTest\msgtest\pops\t_pops_synchronise_52.out           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_52.scr			System\MsgTest\msgtest\pops\t_pops_synchronise_52.scr           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_54.out			System\MsgTest\msgtest\pops\t_pops_synchronise_54.out           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_54.scr			System\MsgTest\msgtest\pops\t_pops_synchronise_54.scr           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_55.out			System\MsgTest\msgtest\pops\t_pops_synchronise_55.out           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_55.scr			System\MsgTest\msgtest\pops\t_pops_synchronise_55.scr           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_56.out			System\MsgTest\msgtest\pops\t_pops_synchronise_56.out           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_56.scr			System\MsgTest\msgtest\pops\t_pops_synchronise_56.scr           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_57.out			System\MsgTest\msgtest\pops\t_pops_synchronise_57.out           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_57.scr			System\MsgTest\msgtest\pops\t_pops_synchronise_57.scr           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_58.out			System\MsgTest\msgtest\pops\t_pops_synchronise_58.out           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_58.scr			System\MsgTest\msgtest\pops\t_pops_synchronise_58.scr           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_64.out			System\MsgTest\msgtest\pops\t_pops_synchronise_64.out           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_64.scr			System\MsgTest\msgtest\pops\t_pops_synchronise_64.scr           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_65_66.out		System\MsgTest\msgtest\pops\t_pops_synchronise_65_66.out        
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_65_66.scr		System\MsgTest\msgtest\pops\t_pops_synchronise_65_66.scr        
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_67_68.out		System\MsgTest\msgtest\pops\t_pops_synchronise_67_68.out        
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_67_68.scr		System\MsgTest\msgtest\pops\t_pops_synchronise_67_68.scr        
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_70.out			System\MsgTest\msgtest\pops\t_pops_synchronise_70.out           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_70.scr			System\MsgTest\msgtest\pops\t_pops_synchronise_70.scr           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_71.out			System\MsgTest\msgtest\pops\t_pops_synchronise_71.out           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_71.scr			System\MsgTest\msgtest\pops\t_pops_synchronise_71.scr           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_73to75.out		System\MsgTest\msgtest\pops\t_pops_synchronise_73to75.out       
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_73to75.scr		System\MsgTest\msgtest\pops\t_pops_synchronise_73to75.scr       
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_76.out			System\MsgTest\msgtest\pops\t_pops_synchronise_76.out           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_76.scr			System\MsgTest\msgtest\pops\t_pops_synchronise_76.scr           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_77.out			System\MsgTest\msgtest\pops\t_pops_synchronise_77.out           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_77.scr			System\MsgTest\msgtest\pops\t_pops_synchronise_77.scr           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_78.out			System\MsgTest\msgtest\pops\t_pops_synchronise_78.out           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_78.scr			System\MsgTest\msgtest\pops\t_pops_synchronise_78.scr           
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_79_80.out		System\MsgTest\msgtest\pops\t_pops_synchronise_79_80.out        
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_79_80.scr		System\MsgTest\msgtest\pops\t_pops_synchronise_79_80.scr        
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_empty.out		System\MsgTest\msgtest\pops\t_pops_synchronise_empty.out        
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_empty.scr		System\MsgTest\msgtest\pops\t_pops_synchronise_empty.scr        
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_no_synch.out 	System\MsgTest\msgtest\pops\t_pops_synchronise_no_synch.out     
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_no_synch.scr 	System\MsgTest\msgtest\pops\t_pops_synchronise_no_synch.scr     
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\t_pops_synchronise_uid_refresh.out System\MsgTest\msgtest\pops\t_pops_synchronise_uid_refresh.out  
+
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\scripts\t_popTlsCannotConnect.scr		System\MsgTest\msgtest\pops\scripts\t_popTlsCannotConnect.scr
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\scripts\t_popTlsCantLogin.scr			System\MsgTest\msgtest\pops\scripts\t_popTlsCantLogin.scr
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\scripts\t_popTlsInvalidPassword.scr 	System\MsgTest\msgtest\pops\scripts\t_popTlsInvalidPassword.scr
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\scripts\t_popTlsInvalidUser.scr	  	System\MsgTest\msgtest\pops\scripts\t_popTlsInvalidUser.scr
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\scripts\t_popTlsNotSupported.scr		System\MsgTest\msgtest\pops\scripts\t_popTlsNotSupported.scr
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\scripts\t_popTlsOk.scr			  	System\MsgTest\msgtest\pops\scripts\t_popTlsOk.scr
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\scripts\t_popTlsStopResponding1.scr 	System\MsgTest\msgtest\pops\scripts\t_popTlsStopResponding1.scr
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\scripts\t_popTlsStopResponding2.scr 	System\MsgTest\msgtest\pops\scripts\t_popTlsStopResponding2.scr
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\scripts\t_popTlsStopResponding3.scr 	System\MsgTest\msgtest\pops\scripts\t_popTlsStopResponding3.scr
+data=EPOCROOT##epoc32\winscw\C\msgtest\pops\scripts\t_popApopTlsOk.scr		  	System\MsgTest\msgtest\pops\scripts\t_popApopTlsOk.scr
+
+REM harnesses
+file=ABI_DIR\BUILD_DIR\T_POPSECURESOCKETS.exe	System\MsgTest\T_POPSECURESOCKETS.exe
+file=ABI_DIR\BUILD_DIR\T_POPS5.exe				System\MsgTest\T_POPS5.exe
+file=ABI_DIR\BUILD_DIR\T_POPS6.exe				System\MsgTest\T_POPS6.exe
+file=ABI_DIR\BUILD_DIR\T_POPS_SYNCHRONISE.exe  	System\MsgTest\T_POPS_SYNCHRONISE.exe
+
+file=ABI_DIR\BUILD_DIR\msvtestutils.dll					SYSTEM_BINDIR\msvtestutils.dll
+file=ABI_DIR\BUILD_DIR\emailtestutils.dll				SYSTEM_BINDIR\emailtestutils.dll
+
+

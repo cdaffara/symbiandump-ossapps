@@ -1,0 +1,25 @@
+DigitalClockWidget {
+  layout: digital_clock_layout;
+}
+
+DigitalClockWidget::clockLabel {
+  size-policy: expanding expanding;
+  text-align: center center;
+  font-variant:primary; 
+  text-height: 14.7un;
+}
+
+DigitalClockWidget::clockLabel:landscape {
+  text-height: 9.8un;
+}
+
+DigitalClockWidget::amPmLabel {
+  size-policy: expanding expanding;
+  text-align: left;
+  font-variant:primary;  
+  bottom: -var(hb-param-margin-gene-middle-vertical);
+  text-height: var(hb-param-text-height-primary);
+}
+DigitalClockWidget::amPmLabel:landscape {
+	font-variant:secondary;
+}

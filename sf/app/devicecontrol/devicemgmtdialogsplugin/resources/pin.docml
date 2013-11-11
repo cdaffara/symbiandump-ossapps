@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="1.0">
+    <object name="okSoftKey" type="HbAction">
+        <string name="role" value="HbDialog:primaryAction"/>
+        <string name="role" value="HbDialog:primaryAction"/>
+        <string name="text" value="OK"/>
+    </object>
+    <object name="cancelSoftKey" type="HbAction">
+        <string name="role" value="HbDialog:secondaryAction"/>
+        <string name="role" value="HbDialog:secondaryAction"/>
+        <string name="text" value="Cancel"/>
+    </object>
+    <widget name="dialog" type="HbDialog">
+        <widget name="label" role="HbDialog:headingWidget" type="HbLabel">
+            <enums name="alignment" value="AlignLeft|AlignLeading"/>
+            <contentsmargins bottom="var(hb-param-margin-gene-popup)" left="var(hb-param-margin-gene-popup)" right="var(hb-param-margin-gene-popup)" top="var(hb-param-margin-gene-popup)"/>
+            <string name="plainText" value="Enter the configuration PIN"/>
+            <fontspec name="fontSpec" role="Primary" textheight="var(hb-param-text-height-primary)"/>
+        </widget>
+        <widget name="qtl_dialog_sec" role="HbDialog:contentWidget" type="HbWidget">
+            <widget name="lineEdit" type="HbLineEdit">
+                <contentsmargins bottom="var(hb-param-margin-gene-popup)" left="0un" right="0un" top="0un"/>
+                <string name="text" value=""/>
+                <enums name="echoMode" value="PasswordEchoOnEdit"/>
+                <bool name="visible" value="TRUE"/>
+                <fontspec name="fontSpec" role="Secondary" textheight="var(hb-param-text-height-secondary)"/>
+            </widget>
+            <real name="z" value="0"/>
+            <layout spacing="0un" type="grid">
+                <contentsmargins bottom="var(hb-param-margin-gene-popup)" left="var(hb-param-margin-gene-popup)" right="var(hb-param-margin-gene-popup)" top="var(hb-param-margin-gene-popup)"/>
+                <griditem column="0" itemname="lineEdit" row="0"/>
+            </layout>
+        </widget>
+        <ref object="okSoftKey" role="HbDialog:primaryAction"/>
+        <ref object="cancelSoftKey" role="HbDialog:secondaryAction"/>
+    </widget>
+    <metadata activeUIState="Portrait" display="NHD portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+        <uistate name="Landscape" sections="#common"/>
+        <uistate name="Portrait" sections="#common"/>
+    </metadata>
+</hbdocument>

@@ -1,0 +1,116 @@
+/*Albums TBone*/
+HgMediawall#albumWall
+{
+  layout:mptbonemediawall;
+  front-cover-elevation-factor:0.378;
+}
+
+HgMediawall#albumWall::content
+{
+  size-policy: ignored ignored;
+  left:0un;
+  right:0un;
+  top:0un;
+  bottom:0un;
+  zvalue: 0;
+}
+
+HgMediawall#albumWall::title
+{
+  text-height: var(hb-param-text-height-primary);
+  font-variant:primary;
+  text-align: center center;
+  text-line-count-min:1;
+  text-line-count-max:1;
+  text-wrap-mode:no-wrap;
+  left:-var(hb-param-margin-gene-screen);
+  right:var(hb-param-margin-gene-screen);
+  top:-var(hb-param-margin-gene-screen);
+  bottom:var(hb-param-margin-gene-middle-vertical);
+  zvalue: 2;
+}
+
+HgMediawall#albumWall::description
+{
+  text-height: var(hb-param-text-height-secondary);
+  font-variant:secondary;
+  text-align: center center;
+  text-line-count-min:1;
+  text-line-count-max:1;
+  text-wrap-mode:no-wrap;
+  left:-var(hb-param-margin-gene-screen);
+  right:var(hb-param-margin-gene-screen);
+  top:-var(hb-param-margin-gene-middle-vertical);
+  bottom:var(hb-param-margin-gene-middle-vertical);
+  zvalue: 2;
+}
+
+HgMediawall#albumWall::centeritem
+{
+  size-policy: fixed fixed;
+  fixed-height: 24.5un;
+  fixed-width: 24.5un;
+  left:0un;
+  right:0un;
+  top:-var(hb-param-margin-gene-middle-vertical);
+  bottom:1.5un;
+  zvalue: 2;
+}
+
+/*Artist Albums TBone*/
+HgMediawall#artistAlbumWall
+{
+  layout:mptbonemediawall;
+  front-cover-elevation-factor:0.378;
+}
+
+HgMediawall#artistAlbumWall::content
+{
+  size-policy: ignored ignored;
+  left:0un;
+  right:0un;
+  top:0un;
+  bottom:0un;
+  zvalue: 0;
+}
+
+HgMediawall#artistAlbumWall::title
+{
+  text-height: var(hb-param-text-height-primary);
+  font-variant:primary;
+  text-align: center center;
+  text-line-count-min:1;
+  text-line-count-max:1;
+  text-wrap-mode:no-wrap;
+  left:-var(hb-param-margin-gene-screen);
+  right:var(hb-param-margin-gene-screen);
+  top:-var(hb-param-margin-gene-screen);
+  bottom:var(hb-param-margin-gene-middle-vertical);
+  zvalue: 2;
+}
+
+HgMediawall#artistAlbumWall::description
+{
+  text-height: var(hb-param-text-height-secondary);
+  font-variant:secondary;
+  text-align: center center;
+  text-line-count-min:1;
+  text-line-count-max:1;
+  text-wrap-mode:no-wrap;
+  left:-var(hb-param-margin-gene-screen);
+  right:var(hb-param-margin-gene-screen);
+  top:-var(hb-param-margin-gene-middle-vertical);
+  bottom:var(hb-param-margin-gene-middle-vertical);
+  zvalue: 2;
+}
+HgMediawall#artistAlbumWall::centeritem
+{
+  size-policy: fixed fixed;
+  fixed-height: 24.5un;
+  fixed-width: 24.5un;
+  left:0un;
+  right:0un;
+  top:-var(hb-param-margin-gene-middle-vertical);
+  bottom:1.5un;
+  zvalue: 2;
+}

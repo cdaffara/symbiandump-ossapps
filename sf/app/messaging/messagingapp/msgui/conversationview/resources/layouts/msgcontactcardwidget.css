@@ -1,0 +1,37 @@
+
+MsgContactCardWidget
+{
+  layout:layout-msg-mycard;
+  zvalue:3;
+}
+
+MsgContactCardWidget::avatar
+{
+  left:-var(hb-param-margin-gene-left);
+  top:-1.0un;
+  bottom:1.0un;
+  aspect-ratio:ignore;
+  size-policy:fixed fixed;
+  pref-width:var(hb-param-graphic-size-primary-large);
+  pref-height:var(hb-param-graphic-size-primary-large);
+}
+
+MsgContactCardWidget::presence
+{
+  right:var(hb-param-margin-gene-right);
+  center-vertical:0un;
+  size-policy:fixed fixed;
+  pref-width:var(hb-param-graphic-size-secondary);
+  pref-hieght:var(hb-param-graphic-size-secondary);
+}
+
+MsgContactCardWidget::addressText
+{
+  left:-var(hb-param-margin-gene-middle-horizontal);
+  right:var(hb-param-margin-gene-middle-horizontal);
+  center-vertical:0un;
+  text-height:var(hb-param-text-height-primary);
+  font-variant:primary;
+  text-line-count-min:1;
+  text-line-count-max:1;
+}

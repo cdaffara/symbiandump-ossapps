@@ -1,0 +1,317 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Resource definitions for HtiAdmin
+*
+*/
+
+NAME HTIA
+
+// INCLUDES
+#include <eikon.rh>
+#include <eikon.rsg>
+#include <avkon.rh>
+#include <avkon.rsg>
+#include <appinfo.rh>
+#include <data_caging_paths_strings.hrh>
+#include "HtiAdmin.hrh"
+
+
+// RESOURCE DEFINITIONS
+
+// ---------------------------------------------------------
+//
+//    Define the resource file signature
+//    This resource should be empty.
+//
+// ---------------------------------------------------------
+//
+RESOURCE RSS_SIGNATURE { }
+
+// ---------------------------------------------------------
+//
+//    Default Document Name
+//
+// ---------------------------------------------------------
+//
+RESOURCE TBUF r_default_document_name { buf=""; }
+
+// ---------------------------------------------------------
+//
+//    Define default menu and CBA key.
+//
+// ---------------------------------------------------------
+//
+RESOURCE EIK_APP_INFO
+    {
+    menubar = r_htiadmin_menubar;
+    cba = R_AVKON_SOFTKEYS_OPTIONS_EXIT;
+    }
+
+
+// ---------------------------------------------------------
+//
+//   r_htiadmin_menubar
+//   Menubar for HtiAdmin example
+//
+// ---------------------------------------------------------
+//
+RESOURCE MENU_BAR r_htiadmin_menubar
+    {
+    titles =
+        {
+        MENU_TITLE {menu_pane = r_htiadmin_menu;}
+        };
+    }
+
+
+// ---------------------------------------------------------
+//
+//   Options menu items
+//
+//
+// ---------------------------------------------------------
+
+RESOURCE MENU_PANE r_htiadmin_submenu_logs
+    {
+    items =
+        {
+        MENU_ITEM {command = EHtiAdminCreateLogFolder; txt = "Create c:\\logs\\hti";},
+        MENU_ITEM {command = EHtiAdminRemoveLogFolder; txt = "Remove c:\\logs\\hti";},
+        MENU_ITEM {command = EHtiAdminClearLogs;       txt = "Clear";}
+        };
+    }
+
+RESOURCE MENU_PANE r_htiadmin_submenu_priority
+    {
+    items =
+        {
+        MENU_ITEM {command = EHtiAdminPriorityBackground;   flags = EEikMenuItemCheckBox; txt="Background"; },
+        MENU_ITEM {command = EHtiAdminPriorityForeground;   flags = EEikMenuItemCheckBox; txt="Foreground"; },
+        MENU_ITEM {command = EHtiAdminPriorityHigh;         flags = EEikMenuItemCheckBox; txt="High"; },
+        MENU_ITEM {command = EHtiAdminPriorityAbsoluteHigh; flags = EEikMenuItemCheckBox; txt="AbsoluteHigh"; }
+        };
+    }
+
+RESOURCE MENU_PANE r_htiadmin_submenu_watchdog
+    {
+    items =
+        {
+        MENU_ITEM {command = EHtiAdminWatchDogEnable;  flags = EEikMenuItemCheckBox; txt="Enable"; },
+        MENU_ITEM {command = EHtiAdminWatchDogDisable; flags = EEikMenuItemCheckBox; txt="Disable"; }
+        };
+    }
+
+RESOURCE MENU_PANE r_htiadmin_submenu_console
+    {
+    items =
+        {
+        MENU_ITEM {command = EHtiAdminConsoleEnable;  flags = EEikMenuItemCheckBox; txt="Enable"; },
+        MENU_ITEM {command = EHtiAdminConsoleDisable; flags = EEikMenuItemCheckBox; txt="Disable"; }
+        };
+    }
+
+RESOURCE MENU_PANE r_htiadmin_submenu_error_dialogs
+    {
+    items =
+        {
+        MENU_ITEM {command = EHtiAdminErrorDialogsEnable;  flags = EEikMenuItemCheckBox; txt="Enable"; },
+        MENU_ITEM {command = EHtiAdminErrorDialogsDisable; flags = EEikMenuItemCheckBox; txt="Disable"; }
+        };
+    }
+
+RESOURCE MENU_PANE r_htiadmin_submenu_autostart
+    {
+    items =
+        {
+        MENU_ITEM {command = EHtiAdminAutoStartEnable;  flags = EEikMenuItemCheckBox; txt="Enable"; },
+        MENU_ITEM {command = EHtiAdminAutoStartDisable; flags = EEikMenuItemCheckBox; txt="Disable"; }
+        };
+    }
+
+RESOURCE MENU_PANE r_htiadmin_submenu_set_param
+    {
+    items =
+        {
+        MENU_ITEM {command = EHtiAdminHtiCfg;           txt = "Hti.cfg";},
+        MENU_ITEM {command = EHtiAdminHtiBtCommCfg;     txt = "HtiBtComm.cfg";},
+        MENU_ITEM {command = EHtiAdminHtiSerialCommCfg; txt = "HtiSerialComm.cfg";},
+        MENU_ITEM {command = EHtiAdminHtiIPCommCfg;     txt = "HtiIPComm.cfg";}
+        };
+    }
+
+RESOURCE MENU_PANE r_htiadmin_submenu_options
+    {
+    items =
+        {
+        MENU_ITEM {command = EHtiAdminSubComms;        txt = "Comms";},
+        MENU_ITEM {command = EHtiAdminSubAutoStart;    cascade = r_htiadmin_submenu_autostart;     txt = "AutoStart";},
+        MENU_ITEM {command = EHtiAdminSubLogs;         cascade = r_htiadmin_submenu_logs;          txt = "Logs";},
+        MENU_ITEM {command = EHtiAdminSubPriority;     cascade = r_htiadmin_submenu_priority;      txt = "Priority";},
+        MENU_ITEM {command = EHtiAdminSubWatchDog;     cascade = r_htiadmin_submenu_watchdog;      txt = "Watchdog";},
+        MENU_ITEM {command = EHtiAdminSubConsole;      cascade = r_htiadmin_submenu_console;       txt = "Console";},
+        MENU_ITEM {command = EHtiAdminSubErrorDialogs; cascade = r_htiadmin_submenu_error_dialogs; txt = "Error dialogs";},
+        MENU_ITEM {command = EHtiAdminSubSetParam;     cascade = r_htiadmin_submenu_set_param;     txt = "Set parameter";}
+        };
+    }
+
+// ---------------------------------------------------------
+//
+//   r_htiadmin_menu
+//   Menu for "Options"
+//
+// ---------------------------------------------------------
+//
+RESOURCE MENU_PANE r_htiadmin_menu
+    {
+    items =
+        {
+        MENU_ITEM {command = EHtiAdminStart;   txt = "Start";},
+        MENU_ITEM {command = EHtiAdminStop;    txt = "Stop";},
+        MENU_ITEM {command = EHtiAdminSubOptions; cascade = r_htiadmin_submenu_options;   txt = "Options";},
+        MENU_ITEM {command = EHtiAdminAbout;   txt = "About";},
+        MENU_ITEM {command = EAknSoftkeyExit;  txt = "Exit";}
+        };
+    }
+
+
+RESOURCE DIALOG r_numeric_query
+  {
+  flags = EGeneralQueryFlags;
+  buttons = R_AVKON_SOFTKEYS_OK_CANCEL;
+  items =
+    {
+    DLG_LINE
+      {
+      type = EAknCtQuery;
+      id = EGeneralQuery;
+      control = AVKON_DATA_QUERY
+        {
+        layout = EDataLayout;
+        control = EDWIN
+          {
+          flags = EEikEdwinNoHorizScrolling | EEikEdwinResizable;
+          default_input_mode = EAknEditorNumericInputMode;
+          };
+        };
+      }
+    };
+  }
+
+RESOURCE DIALOG r_text_query
+  {
+  flags = EGeneralQueryFlags;
+  buttons = R_AVKON_SOFTKEYS_OK_CANCEL;
+  items =
+    {
+    DLG_LINE
+      {
+      type = EAknCtQuery;
+      id = EGeneralQuery;
+      control = AVKON_DATA_QUERY
+        {
+        layout = EDataLayout;
+        control = EDWIN
+          {
+          flags = EEikEdwinNoHorizScrolling | EEikEdwinResizable;
+          default_input_mode = EAknEditorTextInputMode;
+          };
+        };
+      }
+    };
+  }
+
+RESOURCE AVKON_LIST_QUERY r_query_dialog
+{
+   flags = EGeneralQueryFlags;
+   softkeys = R_AVKON_SOFTKEYS_OK_CANCEL;
+   items =
+   {
+      AVKON_LIST_QUERY_DLG_LINE
+      {
+         control = AVKON_LIST_QUERY_CONTROL
+         {
+            listtype = EAknCtSinglePopupMenuListBox;
+            listbox = AVKON_LIST_QUERY_LIST
+            {
+            };
+            heading = "Select Option";
+         };
+      }
+   };
+}
+
+RESOURCE AVKON_LIST_QUERY r_select_iap_dialog
+{
+   flags = EGeneralQueryFlags;
+   softkeys = R_AVKON_SOFTKEYS_OK_CANCEL;
+   items =
+   {
+      AVKON_LIST_QUERY_DLG_LINE
+      {
+         control = AVKON_LIST_QUERY_CONTROL
+         {
+            listtype = EAknCtSinglePopupMenuListBox;
+            listbox = AVKON_LIST_QUERY_LIST
+            {
+            };
+            heading = "Select IAP";
+         };
+      }
+   };
+}
+
+// ---------------------------------------------------------
+//
+//   r_htiadmin_about_dialog
+//   About dialog
+//
+// ---------------------------------------------------------
+//
+RESOURCE DIALOG r_htiadmin_about_dialog
+   {
+   flags = EGeneralQueryFlags | EEikDialogFlagNoBorder | EEikDialogFlagNoShadow;
+   buttons = R_AVKON_SOFTKEYS_OK_EMPTY;
+   items=
+       {
+       DLG_LINE
+           {
+           type = EAknCtPopupHeadingPane;
+           id = EAknMessageQueryHeaderId;
+           control = AVKON_HEADING
+               {
+               label = "About HTI Admin";
+               headinglayout = R_AVKON_WML_SIGN_QUERY_HEADING_PANE;
+               };
+           },
+       DLG_LINE
+           {
+           type = EAknCtMessageQuery;
+           id = EAknMessageQueryContentId;
+           control = AVKON_MESSAGE_QUERY
+               {             
+               };
+           }
+       };
+   }
+
+// ---------------------------------------------------------
+//
+//   r_htiadmin_about_text
+//   Text for the About dialog
+//
+// ---------------------------------------------------------
+//
+RESOURCE TBUF r_htiadmin_about_text { buf="Copyright © 2009 Nokia Corporation and/or its subsidiary(-ies). All rights reserved."; }
+
+// End of File

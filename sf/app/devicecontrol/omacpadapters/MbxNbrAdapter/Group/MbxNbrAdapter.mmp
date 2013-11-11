@@ -1,0 +1,64 @@
+/*
+* Copyright (c) 2002-2006 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project definition file for mailbox number settings adapter.
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+#include <data_caging_paths.hrh>
+
+TARGET          wpmbxnbradapter.dll
+TARGETTYPE      PLUGIN
+UID             0x10009D8D 0x10207281
+VENDORID        VID_DEFAULT
+
+CAPABILITY      CAP_ECOM_PLUGIN
+
+SOURCEPATH      ../Src
+SOURCE          MbxNbrAdapter.cpp
+SOURCE          MbxNbrAdapterGroupProxy.cpp
+
+SOURCEPATH      ../Data
+
+START RESOURCE 10207281.rss
+TARGET wpmbxnbradapter.rsc
+END
+
+START RESOURCE WPMbxNbrAdapterResource.rss
+HEADER
+TARGET wpmbxnbradapterresource.rsc
+TARGETPATH RESOURCE_FILES_DIR
+LANGUAGE_IDS
+END
+
+USERINCLUDE     .
+USERINCLUDE     ../Inc
+USERINCLUDE     ../../bld
+
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE 	/epoc32/include/ecom
+
+LIBRARY         euser.lib
+LIBRARY         provisioningengine.lib
+LIBRARY         CommonEngine.lib
+LIBRARY       	vmbxengine.lib
+LIBRARY 				centralrepository.lib
+DEBUGLIBRARY    flogger.lib
+
+
+SMPSAFE
+//end of file
+

@@ -1,0 +1,38 @@
+/*
+* Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Monitors file creations, modifications and deletions.
+ *
+*/
+
+#include        <platform_paths.hrh>
+ 
+CAPABILITY TCB ProtServ DiskAdmin AllFiles PowerMgmt CommDD
+
+TARGET        cpixfileserverplugin.pxt
+TARGETTYPE    fsy
+
+// Plugin File System (0x100039DF)
+UID           0x100039DF 0x2001F6FA 
+VENDORID	  0x70000001
+
+APP_LAYER_SYSTEMINCLUDE
+USERINCLUDE   ../inc
+USERINCLUDE   ../../inc/monitorplugin ../traces
+
+SOURCEPATH    ../src
+SOURCE        fastfindfileserverplugin.cpp 
+
+LIBRARY       euser.lib
+LIBRARY       efile.lib
+LIBRARY       efsrv.lib

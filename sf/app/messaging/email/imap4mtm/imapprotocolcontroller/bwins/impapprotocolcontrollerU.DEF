@@ -1,0 +1,36 @@
+EXPORTS
+	?BackgroundSyncComplete@CImapProtocolController@@UAEXH@Z @ 1 NONAME ; void CImapProtocolController::BackgroundSyncComplete(int)
+	?BackgroundSyncInProgress@CImapProtocolController@@QBEHXZ @ 2 NONAME ; int CImapProtocolController::BackgroundSyncInProgress(void) const
+	?Busy@CImapProtocolController@@QBEHXZ @ 3 NONAME ; int CImapProtocolController::Busy(void) const
+	?CancelAndCleanup@CImapProtocolController@@QAEXXZ @ 4 NONAME ; void CImapProtocolController::CancelAndCleanup(void)
+	?CancelBackgroundSync@CImapProtocolController@@QAEXAAVTRequestStatus@@@Z @ 5 NONAME ; void CImapProtocolController::CancelBackgroundSync(class TRequestStatus &)
+	?ConnectAndSynchroniseL@CImapProtocolController@@QAEXAAVTRequestStatus@@AAVCMsvEntrySelection@@@Z @ 6 NONAME ; void CImapProtocolController::ConnectAndSynchroniseL(class TRequestStatus &, class CMsvEntrySelection &)
+	?ConnectL@CImapProtocolController@@QAEXAAVTRequestStatus@@AAVCMsvEntrySelection@@@Z @ 7 NONAME ; void CImapProtocolController::ConnectL(class TRequestStatus &, class CMsvEntrySelection &)
+	?Connected@CImapProtocolController@@QBEHXZ @ 8 NONAME ; int CImapProtocolController::Connected(void) const
+	?CopyFromLocalL@CImapProtocolController@@QAEXAAVTRequestStatus@@ABVCMsvEntrySelection@@J@Z @ 9 NONAME ; void CImapProtocolController::CopyFromLocalL(class TRequestStatus &, class CMsvEntrySelection const &, long)
+	?CopyToLocalL@CImapProtocolController@@QAEXAAVTRequestStatus@@ABVCMsvEntrySelection@@J@Z @ 10 NONAME ; void CImapProtocolController::CopyToLocalL(class TRequestStatus &, class CMsvEntrySelection const &, long)
+	?CopyWithinServiceL@CImapProtocolController@@QAEXAAVTRequestStatus@@ABVCMsvEntrySelection@@J@Z @ 11 NONAME ; void CImapProtocolController::CopyWithinServiceL(class TRequestStatus &, class CMsvEntrySelection const &, long)
+	?CreateL@CImapProtocolController@@QAEXAAVTRequestStatus@@JABVTDesC16@@H@Z @ 12 NONAME ; void CImapProtocolController::CreateL(class TRequestStatus &, long, class TDesC16 const &, int)
+	?DeleteFolderL@CImapProtocolController@@QAEXAAVTRequestStatus@@ABVCMsvEntrySelection@@@Z @ 13 NONAME ; void CImapProtocolController::DeleteFolderL(class TRequestStatus &, class CMsvEntrySelection const &)
+	?DeleteL@CImapProtocolController@@QAEXAAVTRequestStatus@@ABVCMsvEntrySelection@@@Z @ 14 NONAME ; void CImapProtocolController::DeleteL(class TRequestStatus &, class CMsvEntrySelection const &)
+	?DisconnectL@CImapProtocolController@@QAEXAAVTRequestStatus@@@Z @ 15 NONAME ; void CImapProtocolController::DisconnectL(class TRequestStatus &)
+	?DoRunL@CImapProtocolController@@EAEXXZ @ 16 NONAME ; void CImapProtocolController::DoRunL(void)
+	?FullSyncFolderL@CImapProtocolController@@QAEXAAVTRequestStatus@@J@Z @ 17 NONAME ; void CImapProtocolController::FullSyncFolderL(class TRequestStatus &, long)
+	?FullSyncSelectedFolderL@CImapProtocolController@@QAEXAAVTRequestStatus@@@Z @ 18 NONAME ; void CImapProtocolController::FullSyncSelectedFolderL(class TRequestStatus &)
+	?MoveFromLocalL@CImapProtocolController@@QAEXAAVTRequestStatus@@ABVCMsvEntrySelection@@J@Z @ 19 NONAME ; void CImapProtocolController::MoveFromLocalL(class TRequestStatus &, class CMsvEntrySelection const &, long)
+	?MoveToLocalL@CImapProtocolController@@QAEXAAVTRequestStatus@@ABVCMsvEntrySelection@@J@Z @ 20 NONAME ; void CImapProtocolController::MoveToLocalL(class TRequestStatus &, class CMsvEntrySelection const &, long)
+	?MoveWithinServiceL@CImapProtocolController@@QAEXAAVTRequestStatus@@ABVCMsvEntrySelection@@J@Z @ 21 NONAME ; void CImapProtocolController::MoveWithinServiceL(class TRequestStatus &, class CMsvEntrySelection const &, long)
+	?NewL@CImapProtocolController@@SAPAV1@AAVCMsvServerEntry@@AAVCImapOfflineControl@@@Z @ 22 NONAME ; class CImapProtocolController * CImapProtocolController::NewL(class CMsvServerEntry &, class CImapOfflineControl &)
+	?NewOnlySyncFolderL@CImapProtocolController@@QAEXAAVTRequestStatus@@@Z @ 23 NONAME ; void CImapProtocolController::NewOnlySyncFolderL(class TRequestStatus &)
+	?PopulateL@CImapProtocolController@@QAEXAAVTRequestStatus@@ABVCMsvEntrySelection@@VTImImap4GetPartialMailInfo@@@Z @ 24 NONAME ; void CImapProtocolController::PopulateL(class TRequestStatus &, class CMsvEntrySelection const &, class TImImap4GetPartialMailInfo)
+	?Progress@CImapProtocolController@@QAE?AVTImap4CompoundProgress@@XZ @ 25 NONAME ; class TImap4CompoundProgress CImapProtocolController::Progress(void)
+	?RenameL@CImapProtocolController@@QAEXAAVTRequestStatus@@JABVTDesC16@@@Z @ 26 NONAME ; void CImapProtocolController::RenameL(class TRequestStatus &, long, class TDesC16 const &)
+	?SelectL@CImapProtocolController@@QAEXAAVTRequestStatus@@J@Z @ 27 NONAME ; void CImapProtocolController::SelectL(class TRequestStatus &, long)
+	?SetLocalSubscription@CImapProtocolController@@QAEHJH@Z @ 28 NONAME ; int CImapProtocolController::SetLocalSubscription(long, int)
+	?SynchroniseAllL@CImapProtocolController@@QAEXAAVTRequestStatus@@@Z @ 29 NONAME ; void CImapProtocolController::SynchroniseAllL(class TRequestStatus &)
+	?SynchroniseTreeL@CImapProtocolController@@QAEXAAVTRequestStatus@@@Z @ 30 NONAME ; void CImapProtocolController::SynchroniseTreeL(class TRequestStatus &)
+	?WaitForBackground@CImapProtocolController@@QAEXAAVTRequestStatus@@@Z @ 31 NONAME ; void CImapProtocolController::WaitForBackground(class TRequestStatus &)
+	?GetAccessPointIdForConnection@CImapProtocolController@@QBEHAAK@Z @ 32 NONAME ; int CImapProtocolController::GetAccessPointIdForConnection(unsigned long &) const
+	?UpdateFlagL@CImapProtocolController@@QAEXAAVTRequestStatus@@@Z @ 33 NONAME ; void CImapProtocolController::UpdateFlagL(class TRequestStatus &)
+	?UpdateEntriesFlagL@CImapProtocolController@@QAEXAAVTRequestStatus@@ABVCMsvEntrySelection@@H@Z @ 34 NONAME ; void CImapProtocolController::UpdateEntriesFlagL(class TRequestStatus &, class CMsvEntrySelection const &, int)
+

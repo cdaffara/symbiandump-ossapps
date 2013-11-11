@@ -1,0 +1,164 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+// Resource identifier
+NAME    QRST
+
+// System includes
+#include <uikon.rh>
+
+#include "radioengine.hrh"
+
+// Resource definitions
+
+// ---------------------------------------------------------
+//    Resource signature
+// ---------------------------------------------------------
+//
+
+RESOURCE RSS_SIGNATURE { }
+
+// ---------------------------------------------------------
+//
+// ---------------------------------------------------------
+//
+STRUCT RADIO_REGION
+    {
+    WORD id;
+    LONG stepsize;
+    LONG minfrequency;
+    LONG maxfrequency;
+    WORD decimalcount;
+    LTEXT countrycodes[] = {""};
+    }
+
+// ---------------------------------------------------------
+//
+// ---------------------------------------------------------
+//
+STRUCT RADIO_REGION_ARRAY
+    {
+    LLINK regions[];
+    }
+
+// ---------------------------------------------------------
+//    r_qrad_regions
+//    Array of the supported regions
+// ---------------------------------------------------------
+//
+RESOURCE RADIO_REGION_ARRAY r_qrad_regions
+    {
+    regions =
+        {
+        r_qrad_region_japan,
+        r_qrad_region_america,
+        r_qrad_region_default
+        };
+    }
+
+// ---------------------------------------------------------
+//    r_qrad_region_japan
+//    Region settings for Japan
+//    Check country codes from:
+//    "COMPLEMENT TO ITU-T RECOMMENDATION E.212, LIST OF MOBILE COUNTRY OR GEOGRAPHICAL AREA CODES"
+// ---------------------------------------------------------
+//
+RESOURCE RADIO_REGION r_qrad_region_japan
+    {
+    id = ERadioRegionJapan;
+    stepsize = 100;
+    minfrequency = 76000;
+    maxfrequency = 90000;
+    decimalcount = 1;
+    countrycodes =
+        {
+        "440",
+        "441"
+        };
+    }
+
+// ---------------------------------------------------------
+//    r_qrad_region_america
+//    Region settings for America
+//    "COMPLEMENT TO ITU-T RECOMMENDATION E.212, LIST OF MOBILE COUNTRY OR GEOGRAPHICAL AREA CODES"
+// ---------------------------------------------------------
+//
+RESOURCE RADIO_REGION r_qrad_region_america
+    {
+    id = ERadioRegionAmerica;
+    stepsize = 200;
+    minfrequency = 88100;
+    maxfrequency = 107900;
+    decimalcount = 1;
+    countrycodes =
+        {
+        "302",  // Canada
+        "310",  // USA
+        "311",  // USA
+        "312",  // USA
+        "313",  // USA
+        "314",  // USA
+        "315",  // USA
+        "316",  // USA
+        "332",  // United States Virgin Islands
+        "334",  // Mexico
+        "338",  // Jamaica
+        "342",  // Barbados
+        "344",  // Antigua and Barbuda
+        "352",  // Grenada
+        "360",  // Saint Vincent and the Grenadines
+        "364",  // Bahamas
+        "366",  // Common Wealth of Dominica
+        "370",  // Dominican Republic
+        "372",  // Haiti
+        "374",  // Trinidad and Tobago
+        "368",  // Cuba
+        "702",  // Belize
+        "704",  // Guatemala
+        "706",  // El Salvador
+        "708",  // Honduras
+        "710",  // Nicaragua
+        "712",  // Costa Rica
+        "714",  // Panama
+        "716",  // Peru
+        "722",  // Argentina
+        "724",  // Brazil
+        "730",  // Chile
+        "732",  // Colombia
+        "734",  // Venezuela
+        "736",  // Bolivia
+        "738",  // Guyana
+        "740",  // Ecuador
+        "744",  // Paraguay
+        "746",  // Suriname
+        "748"   // Uruguay
+        };
+    }
+
+// ---------------------------------------------------------
+//    r_qrad_region_default
+//    Region settings for default region
+// ---------------------------------------------------------
+//
+RESOURCE RADIO_REGION r_qrad_region_default
+    {
+    id = ERadioRegionDefault;
+    stepsize = 100;
+    minfrequency = 87500;
+    maxfrequency = 108000;
+    decimalcount = 2;
+    }

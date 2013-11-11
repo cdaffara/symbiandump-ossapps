@@ -1,0 +1,34 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+// This file is not exported
+// Copy to appropriate path and run this script to create Calendar files for DC
+
+LOAD_SUITE TestCalInterimApiSuite
+
+START_TESTCASE   PIM-TESTCALINTERIMAPICREATEDCFILES-0001
+//! @SYMTestCaseID   PIM-TESTCALINTERIMAPICREATEDCFILES-0001
+RUN_TEST_STEP				100	TestCalInterimApiSuite	TestCalInterimApiSetTz		\CITCalInterimApi\TestCalInterimApiCreateDCFiles.ini	calcutta
+END_TESTCASE   PIM-TESTCALINTERIMAPICREATEDCFILES-0001
+
+START_TESTCASE   PIM-TESTCALINTERIMAPICREATEDCFILES-0002
+//! @SYMTestCaseID   PIM-TESTCALINTERIMAPICREATEDCFILES-0002
+RUN_TEST_STEP				100	TestCalInterimApiSuite	TestCalInterimApiSetSysTime	\CITCalInterimApi\TestCalInterimApiCreateDCFiles.ini	jan011998_12am
+END_TESTCASE   PIM-TESTCALINTERIMAPICREATEDCFILES-0002
+
+START_TESTCASE   PIM-TESTCALINTERIMAPICREATEDCFILES-0003
+//! @SYMTestCaseID   PIM-TESTCALINTERIMAPICREATEDCFILES-0003
+RUN_TEST_STEP				100	TestCalInterimApiSuite	TestCalInterimReadData		\CITCalInterimApi\TestCalInterimApiCreateDCFiles.ini	addentries
+END_TESTCASE   PIM-TESTCALINTERIMAPICREATEDCFILES-0003

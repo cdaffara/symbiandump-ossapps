@@ -1,0 +1,37 @@
+; Installation file for DirectPrintApp application
+;
+; This is an auto-generated PKG file by Carbide.
+; This file uses variables specific to Carbide builds that will not work
+; on command-line builds. If you want to use this generated PKG file from the
+; command-line tools you will need to modify the variables with the appropriate
+; values: $(EPOCROOT), $(PLATFORM), $(TARGET)
+;
+;Language - standard language definitions
+&EN
+
+; standard SIS file header
+#{"DirectPrintApp"},(0x2002BB28),1,0,0
+
+;Localised Vendor name
+%{"Vendor-EN"}
+
+;Unique Vendor name
+:"Vendor"
+
+;Supports Series 60 v 3.0
+[0x101F7961], 0, 0, 0, {"Series60ProductID"}
+
+;Files to install
+;You should change the source paths to match that of your environment
+;<source> <destination>
+"$(EPOCROOT)Epoc32\release\$(PLATFORM)\$(TARGET)\DirectPrintApp.exe"		-"!:\sys\bin\DirectPrintApp.exe"
+"$(EPOCROOT)Epoc32\data\z\resource\apps\DirectPrintApp.rsc"		-"!:\resource\apps\DirectPrintApp.rsc"
+"$(EPOCROOT)Epoc32\data\z\private\10003a3f\apps\DirectPrintApp_reg.rsc"	-"!:\private\10003a3f\import\apps\DirectPrintApp_reg.rsc"
+"$(EPOCROOT)Epoc32\data\z\resource\apps\DirectPrintApp.mif" -"!:\resource\apps\DirectPrintApp.mif"
+"..\help\DirectPrintApp.hlp"							 -"!:\resource\help\DirectPrintApp.hlp"
+
+; Add any installation notes if applicable
+;"DirectPrintApp.txt"		-"!:\private\2002BB28\DirectPrintApp.txt"
+
+;required for application to be covered by backup/restore facility 
+"..\sis\backup_registration.xml"		-"!:\private\2002BB28\backup_registration.xml"

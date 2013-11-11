@@ -1,0 +1,68 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   Resource definitions 
+*
+*/
+
+
+
+// INCLUDES
+
+#include <Ecom/RegistryInfo.rh>
+#include "glxmedialiststestcollectionplugin.hrh"
+#include <glxcollectionplugintype.hrh>
+
+/**
+ * The opaque_data syntax is made up of three parts: 
+ * a list of Uids for resolving the view plugin, feature flags, priority.
+ * 
+ * <p>uid1;uid2;uid3</p>
+ *  uid*: Supported plugin types.
+ *  E.g. if podcast plugin may support music plugin as well, KMPXColPluginMusic
+ *
+ * <t>uid</t>
+ *  uid: plugin type uid.
+ *  E.g. for music plugin will be: 0x101FFCDA
+ *
+ * <f>flags</f> [optional]
+ *  flags: sum of the required feature flags, not used now
+ *
+ * <i>priority</i> [optional]
+ *  priority: a value of type TMPXCollectionPluginPriorities. This value determines
+ *  the returning order when several plugins can support the same set of Uids. 
+ *  Default value of this field is EMPXCollectionPluginPriorityNormal.
+ */
+RESOURCE REGISTRY_INFO theInfo
+    {
+    dll_uid = KGlxMediaListsTestCollectionPluginDllUid;
+
+    interfaces =
+        {
+        INTERFACE_INFO
+            {
+            interface_uid = 0x101FFC36; // KMPXCollectionInterfaceUid
+            implementations =
+                {
+                IMPLEMENTATION_INFO
+                    {
+                    implementation_uid = KGlxMediaListsTestCollectionImplementationUid;
+                    version_no = 1;
+                    display_name = "Media Lists Test Plugin";
+                    default_data = "";
+                    opaque_data = "<t>"EGlxCollectionPluginShowInMainListView"</t>";
+                    }
+                };
+            }
+        };
+    }

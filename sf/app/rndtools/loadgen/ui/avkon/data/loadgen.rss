@@ -1,0 +1,1421 @@
+/*
+* Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: 
+*
+*/
+
+
+
+NAME MATT
+
+#include <eikon.rh>
+#include <eikon.rsg>
+#include <eikon.hrh>
+#include <avkon.rh>
+#include <avkon.rsg>
+#include <avkon.mbg>
+#include <CommonDialogs.hrh>
+#include <CommonDialogs.rh>
+#include <pathconfiguration.hrh>
+#include <data_caging_paths_strings.hrh>
+#include <appinfo.rh>
+
+#include "loadgen.hrh"
+#include "loadgen_std.h"
+
+
+// ---------------------------------------------------------
+//   
+//    Define the resource file signature 
+//    This resource should be empty.
+//
+// ---------------------------------------------------------
+//
+RESOURCE RSS_SIGNATURE { }
+
+// ---------------------------------------------------------
+//   
+//    Default Document Name
+//
+// ---------------------------------------------------------
+//
+RESOURCE TBUF r_default_document_name { buf=""; }
+
+// ---------------------------------------------------------
+//   
+//    Define default menu and CBA key.
+//
+// ---------------------------------------------------------
+//
+RESOURCE EIK_APP_INFO
+    {
+    //status_pane = r_loadgen_status_pane;
+    //menubar = r_loadgen_menubar;
+    //cba = R_AVKON_SOFTKEYS_OPTIONS_EXIT;
+    }
+
+    
+//----------------------------------------------------
+//   
+//    r_loadgen_hotkeys
+//
+//----------------------------------------------------
+//
+RESOURCE HOTKEYS r_loadgen_hotkeys
+    {
+    control=
+        {
+        HOTKEY { command=EAknCmdExit; key='e'; }
+        };
+    }
+
+
+//----------------------------------------------------
+//    r_loadgen_view_main
+//----------------------------------------------------
+//
+RESOURCE AVKON_VIEW r_loadgen_view_main
+    {
+    hotkeys=r_loadgen_hotkeys;
+    menubar=r_loadgen_menubar_view_main;  
+    cba=R_AVKON_SOFTKEYS_OPTIONS_EXIT;    
+    }
+
+//----------------------------------------------------
+//    r_loadgen_menubar_view_main
+//----------------------------------------------------
+//
+RESOURCE MENU_BAR r_loadgen_menubar_view_main
+    {
+    titles=
+        {
+        MENU_TITLE { menu_pane=r_loadgen_app_menu; txt="App"; },
+        MENU_TITLE { menu_pane=r_loadgen_view_main_menu; txt="Main"; }
+        };
+    }
+
+//----------------------------------------------------
+//    r_loadgen_view_main_menu
+//----------------------------------------------------
+//
+
+RESOURCE MENU_PANE r_loadgen_view_main_menu
+    {
+    items=
+        {
+        };
+    }
+
+           
+        
+//----------------------------------------------------
+//    r_loadgen_app_menu
+//----------------------------------------------------
+//
+RESOURCE MENU_PANE r_loadgen_app_menu
+    {
+    items=
+        {
+        MENU_ITEM { command=ELoadGenCmdNewLoad; txt="New load"; cascade=r_loadgen_newload_submenu; },
+        MENU_ITEM { command=ELoadGenStopAll; txt="Stop all"; },
+        MENU_ITEM { command=ELoadGenSuspendAll; txt="Suspend all"; },
+        MENU_ITEM { command=ELoadGenResumeAll; txt="Resume all"; },
+        MENU_ITEM { command=ELoadGenCmdLaunchPerfMon; txt="Launch PerfMon"; },
+        MENU_ITEM { command=ELoadGenCmdAbout; txt="About"; },
+        MENU_ITEM { command=EAknCmdExit; txt="Exit"; }
+        };
+    }
+
+RESOURCE MENU_PANE r_loadgen_newload_submenu
+    {
+    items = 
+        {
+        MENU_ITEM { command=ELoadGenCmdNewLoadCPULoad; txt="CPU load"; },
+        MENU_ITEM { command=ELoadGenCmdNewLoadEatMemory; txt="Eat memory"; },
+        MENU_ITEM { command=ELoadGenCmdNewLoadPhoneCall; txt="Phone calls"; },
+        MENU_ITEM { command=ELoadGenCmdNewLoadMessages; txt="Messages"; },
+        MENU_ITEM { command=ELoadGenCmdNewLoadNetConn; txt="Network conn."; },
+        MENU_ITEM { command=ELoadGenCmdNewLoadKeyPress; txt="Key presses"; },        
+        MENU_ITEM { command=ELoadGenCmdNewLoadApplications; txt="Applications"; },
+        MENU_ITEM { command=ELoadGenCmdNewLoadPhotoCaptures; txt="Photo captures"; },
+        MENU_ITEM { command=ELoadGenCmdNewLoadBluetooth; txt="Bluetooth actions"; },
+        MENU_ITEM { command=ELoadGenCmdNewLoadPointerEvent; txt="Pointer events"; }
+        };
+    }
+    
+//----------------------------------------------------
+//    r_loadgen_settings_dialog
+//    Dialog for setting list
+//----------------------------------------------------
+//
+RESOURCE DIALOG r_loadgen_settings_dialog
+    {
+    flags =
+        EEikDialogFlagNoDrag | EEikDialogFlagFillAppClientRect |
+        EEikDialogFlagButtonsRight | EEikDialogFlagCbaButtons |
+        EEikDialogFlagWait | EEikDialogFlagNoTitleBar;
+    buttons = R_AVKON_SOFTKEYS_OPTIONS_BACK;
+    items =
+        {
+        DLG_LINE
+            {
+            type = EAknCtSettingListBox;
+            id = ELoadGenSettingItemList;
+            itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+            control = LISTBOX
+                {
+                flags = EAknListBoxSelectionList;
+                };
+            }
+        };
+    }
+
+//----------------------------------------------------
+//    r_loadgen_settings_menubar
+//----------------------------------------------------
+//
+
+RESOURCE MENU_BAR r_loadgen_settings_menubar
+    {
+    titles =
+        {
+        MENU_TITLE
+            {
+            menu_pane = r_loadgen_settings_menupane;
+            txt = " ";   // dummy
+            }
+        };
+    }
+
+RESOURCE MENU_PANE r_loadgen_settings_menupane
+    {
+    items =
+        {
+        MENU_ITEM
+            {
+            command = ELoadGenCmdSettingsChange;
+            txt = "Change";
+            },
+        MENU_ITEM
+            {
+            command = ELoadGenCmdSettingsExit;
+            txt = "Exit";
+            }
+        };
+    }
+
+
+
+  
+// ---------------------------------------------------------
+//   
+//   r_loadgen_about_dialog
+//   About dialog - show version and copyright info etc.
+//
+// ---------------------------------------------------------
+//
+RESOURCE DIALOG r_loadgen_about_dialog
+    {
+    flags = EGeneralQueryFlags | EEikDialogFlagNoBorder | EEikDialogFlagNoShadow;
+    buttons = R_AVKON_SOFTKEYS_OK_EMPTY;
+    items=
+        {
+        DLG_LINE
+            {
+            type = EAknCtPopupHeadingPane;
+            id = EAknMessageQueryHeaderId;
+            control = AVKON_HEADING
+                {
+                label = "About LoadGen";
+                headinglayout = R_AVKON_WML_SIGN_QUERY_HEADING_PANE;
+                };
+            },
+        DLG_LINE
+            {
+            type = EAknCtMessageQuery;
+            id = EAknMessageQueryContentId;
+            control = AVKON_MESSAGE_QUERY
+                {
+                message = "Version 1.5.1 - 9th September 2010. Copyright © 2010 Nokia Corporation and/or its subsidiary(-ies). All rights reserved. Licensed under Eclipse Public License v1.0.";
+                };
+            }
+        };
+    }
+
+// ---------------------------------------------------------
+//   r_general_confirmation_query
+// ---------------------------------------------------------
+//
+
+RESOURCE DIALOG r_general_confirmation_query
+    {
+    flags = EGeneralQueryFlags;
+    buttons = R_AVKON_SOFTKEYS_YES_NO;
+    items =
+        {
+        DLG_LINE
+            {
+            type = EAknCtQuery;
+            id = EGeneralQuery;
+            control = AVKON_CONFIRMATION_QUERY
+                {
+                layout = EConfirmationQueryLayout;
+                };
+            }
+        };
+    }
+
+// ---------------------------------------------------------
+//   r_general_text_query
+// ---------------------------------------------------------
+//
+RESOURCE DIALOG r_general_text_query
+    {
+    flags = EGeneralQueryFlags;
+    buttons = R_AVKON_SOFTKEYS_OK_CANCEL;
+    items=
+        {
+        DLG_LINE
+            {
+            type = EAknCtQuery;
+            id = EGeneralQuery;
+            control = AVKON_DATA_QUERY
+                {
+                layout = EDataLayout;
+                control = EDWIN
+                    {
+                    width = 256;
+                    lines = 3;
+                    maxlength = 256;
+                    };
+                };
+            }
+        };
+    }
+
+// ---------------------------------------------------------
+//   r_general_text_query
+// ---------------------------------------------------------
+//
+RESOURCE DIALOG r_general_numeric_query
+    {
+    flags = EGeneralQueryFlags;
+    buttons = R_AVKON_SOFTKEYS_OK_CANCEL;
+    items =
+        {
+        DLG_LINE
+            {
+            type = EAknCtQuery;
+            id = EGeneralQuery;
+            control= AVKON_DATA_QUERY
+                {
+                layout = ENumberLayout;
+                control = AVKON_INTEGER_EDWIN
+                    {
+                    min = -999999;
+                    max = 999999;
+                    };
+                };
+            }
+        };
+    }
+
+
+// ---------------------------------------------------------
+//   r_item_action_query
+// ---------------------------------------------------------
+//
+RESOURCE DIALOG r_item_action_query
+    {
+    flags = EGeneralQueryFlags;
+    buttons = R_AVKON_SOFTKEYS_OK_CANCEL;
+    items =
+        {
+        AVKON_LIST_QUERY_DLG_LINE
+            {
+            control= AVKON_LIST_QUERY_CONTROL
+                {
+                listtype = EAknCtSinglePopupMenuListBox;
+                listbox = AVKON_LIST_QUERY_LIST
+                    {
+                    array_id = r_item_action_query_array;
+                    };
+                heading = "";
+                };
+            }
+        };
+    }
+
+RESOURCE ARRAY r_item_action_query_array
+    {
+    items =
+        {
+        LBUF {txt = "Stop"; },
+        LBUF {txt = "Resume/suspend"; },
+        LBUF {txt = "Edit"; }
+        };
+    }     
+
+
+// ---------------------------------------------------------
+//   r_cpuload_form_dialog
+// ---------------------------------------------------------
+//
+RESOURCE DIALOG r_cpuload_form_dialog
+    {
+    flags = EAknDialogGenericFullScreen;
+    buttons = R_AVKON_SOFTKEYS_OK_CANCEL;
+    form = r_cpuload_form;
+    }
+
+RESOURCE FORM r_cpuload_form
+    {
+    flags = EEikFormEditModeOnly | EEikFormUseDoubleSpacedFormat;
+    items = 
+        {
+        DLG_LINE
+            {
+            type = EAknCtPopupFieldText;
+            prompt = "Priority";
+            id = ELoadGenCPULoadQueryPriority;
+            itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+            control = POPUP_FIELD_TEXT
+                {
+                popupfield = POPUP_FIELD
+                    {
+                    width = 100;
+                    };
+                textarray = r_thread_priority_textarray;
+                active = 0;    
+                };
+            },
+        DLG_LINE
+            {
+            type = EAknCtPopupFieldText;
+            prompt = "Load mode";
+            id = ELoadGenCPULoadQueryMode;
+            itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+            control = POPUP_FIELD_TEXT
+                {
+                popupfield = POPUP_FIELD
+                    {
+                    width = 100;
+                    };
+                textarray = r_cpuloadmode_textarray;
+                active = 0;    
+                };
+            },
+        DLG_LINE
+            {
+            type = EAknCtPopupFieldText;
+            prompt = "Type";
+            id = ELoadGenCPULoadQueryType;
+            itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+            control = POPUP_FIELD_TEXT
+                {
+                popupfield = POPUP_FIELD
+                    {
+                    width = 100;
+                    };
+                textarray = r_cpuloadtype_textarray;
+                active = 0;    
+                };
+            }
+        };
+    }
+
+RESOURCE DLG_LINE r_cpuload_dlg_line_periodic_length
+    {
+    type = EEikCtNumberEditor;
+    prompt = "Length (ms)";
+    id = ELoadGenCPULoadQueryLength;
+    itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+    control = NUMBER_EDITOR
+        {
+        min = 0;    
+        max = 999999999;    
+        };
+    }
+
+RESOURCE DLG_LINE r_cpuload_dlg_line_periodic_idle
+    {
+    type = EEikCtNumberEditor;
+    prompt = "Idle (ms)";
+    id = ELoadGenCPULoadQueryIdle;
+    itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+    control = NUMBER_EDITOR
+        {
+        min = 0;    
+        max = 999999999;    
+        };
+    }
+
+RESOURCE DLG_LINE r_cpuload_dlg_line_periodic_variance
+    {
+    type = EEikCtNumberEditor;
+    prompt = "Random variance (%)";
+    id = ELoadGenCPULoadQueryVariance;
+    itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+    control = NUMBER_EDITOR
+        {
+        min = 0;    
+        max = 100;    
+        };
+    }
+
+RESOURCE DLG_LINE r_cpuload_dlg_line_cpu
+    {
+    type = EAknCtPopupFieldText;
+    prompt = "CPU";
+    id = ELoadGenCPULoadQueryCpu;
+    itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+    control = POPUP_FIELD_TEXT
+        {
+        popupfield = POPUP_FIELD
+            {
+            width = 100;
+            };
+        textarray = r_cpuloadcpu_textarray;
+        active = 0;    
+        };
+    }
+
+                
+// ---------------------------------------------------------
+//   r_memoryeat_form_dialog
+// ---------------------------------------------------------
+//
+RESOURCE DIALOG r_memoryeat_form_dialog
+    {
+    flags = EAknDialogGenericFullScreen;
+    buttons = R_AVKON_SOFTKEYS_OK_CANCEL;
+    form = r_memoryeat_form;
+    }
+
+RESOURCE FORM r_memoryeat_form
+    {
+    flags = EEikFormEditModeOnly | EEikFormUseDoubleSpacedFormat;
+    items = 
+        {
+        DLG_LINE
+            {
+            type = EAknCtPopupFieldText;
+            prompt = "Priority";
+            id = ELoadGenMemoryEatQueryPriority;
+            itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+            control = POPUP_FIELD_TEXT
+                {
+                popupfield = POPUP_FIELD
+                    {
+                    width = 100;
+                    };
+                textarray = r_thread_priority_textarray;
+                active = 0;    
+                };
+            },
+        DLG_LINE
+            {
+            type = EAknCtPopupFieldText;
+            prompt = "Source";
+            id = ELoadGenMemoryEatQuerySource;
+            itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+            control = POPUP_FIELD_TEXT
+                {
+                popupfield = POPUP_FIELD
+                    {
+                    width = 100;
+                    };
+                textarray = r_memoryeatsource_textarray;
+                active = 0;    
+                };
+            },
+        DLG_LINE
+            {
+            type = EAknCtPopupFieldText;
+            prompt = "Type";
+            id = ELoadGenMemoryEatQueryType;
+            itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+            control = POPUP_FIELD_TEXT
+                {
+                popupfield = POPUP_FIELD
+                    {
+                    width = 100;
+                    };
+                textarray = r_memoryeattype_textarray;
+                active = 0;    
+                };
+            },
+        DLG_LINE
+            {
+            type = EEikCtNumberEditor;
+            prompt = "Buffer (B)";
+            id = ELoadGenMemoryEatQueryBuffer;
+            itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+            control = NUMBER_EDITOR
+                {
+                min = 0;    
+                max = 999999999;    
+                };
+            },
+        DLG_LINE
+            {
+            type = EEikCtNumberEditor;
+            prompt = "Idle after buffer (ms)";
+            id = ELoadGenMemoryEatQueryIdle;
+            itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+            control = NUMBER_EDITOR
+                {
+                min = 0;    
+                max = 999999999;    
+                };
+            },
+        DLG_LINE
+            {
+            type = EEikCtNumberEditor;
+            prompt = "Random variance (%)";
+            id = ELoadGenMemoryEatQueryVariance;
+            itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+            control = NUMBER_EDITOR
+                {
+                min = 0;    
+                max = 100;    
+                };
+            }
+        };
+    }
+
+RESOURCE DLG_LINE r_memoryeat_dlg_line_amount
+    {
+    type = EEikCtEdwin;
+    prompt = "Amount (B)";
+    id = ELoadGenMemoryEatQueryAmount;
+    itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+    control = EDWIN
+        {
+        flags = KMultiLineExpandingEditorFlags | EEikEdwinNoLineOrParaBreaks;
+        maxlength = 14;    
+        width = 6;
+        default_input_mode = EAknEditorNumericInputMode;
+        allowed_input_modes = EAknEditorNumericInputMode;    
+        };
+    }
+    
+RESOURCE DLG_LINE r_memoryeat_dlg_line_random_min
+    {
+    type = EEikCtEdwin;
+    prompt = "Min to be left (B)";
+    id = ELoadGenMemoryEatQueryRandomMin;
+    itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+    control = EDWIN
+        {
+        flags = KMultiLineExpandingEditorFlags | EEikEdwinNoLineOrParaBreaks;
+        maxlength = 14;    
+        width = 6;
+        default_input_mode = EAknEditorNumericInputMode;
+        allowed_input_modes = EAknEditorNumericInputMode;    
+        };
+    }
+
+RESOURCE DLG_LINE r_memoryeat_dlg_line_random_max
+    {
+    type = EEikCtEdwin;
+    prompt = "Max to be left (B)";
+    id = ELoadGenMemoryEatQueryRandomMax;
+    itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+    control = EDWIN
+        {
+        flags = KMultiLineExpandingEditorFlags | EEikEdwinNoLineOrParaBreaks;
+        maxlength = 14;    
+        width = 6;
+        default_input_mode = EAknEditorNumericInputMode;
+        allowed_input_modes = EAknEditorNumericInputMode;    
+        };
+    }
+
+
+
+// ---------------------------------------------------------
+//   r_phonecall_form_dialog
+// ---------------------------------------------------------
+//
+RESOURCE DIALOG r_phonecall_form_dialog
+    {
+    flags = EAknDialogGenericFullScreen;
+    buttons = R_AVKON_SOFTKEYS_OK_CANCEL;
+    form = r_phonecall_form;
+    }
+
+RESOURCE FORM r_phonecall_form
+    {
+    flags = EEikFormEditModeOnly | EEikFormUseDoubleSpacedFormat;
+    items = 
+        {
+        DLG_LINE
+            {
+            type = EAknCtPopupFieldText;
+            prompt = "Priority";
+            id = ELoadGenPhoneCallQueryPriority;
+            itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+            control = POPUP_FIELD_TEXT
+                {
+                popupfield = POPUP_FIELD
+                    {
+                    width = 100;
+                    };
+                textarray = r_thread_priority_textarray;
+                active = 0;    
+                };
+            },
+        DLG_LINE
+            {
+            type = EEikCtEdwin;
+            prompt = "Phone number";
+            id = ELoadGenPhoneCallQueryDestination;
+            itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+            control = EDWIN
+                {
+                width = 255;    
+                maxlength = 255;    
+                };
+            },
+        DLG_LINE
+            {
+            type = EEikCtNumberEditor;
+            prompt = "Length (ms)";
+            id = ELoadGenPhoneCallQueryLength;
+            itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+            control = NUMBER_EDITOR
+                {
+                min = 0;    
+                max = 999999999;    
+                };
+            },
+        DLG_LINE
+            {
+            type = EEikCtNumberEditor;
+            prompt = "Idle (ms)";
+            id = ELoadGenPhoneCallQueryIdle;
+            itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+            control = NUMBER_EDITOR
+                {
+                min = 0;    
+                max = 999999999;    
+                };
+            },
+        DLG_LINE
+            {
+            type = EEikCtNumberEditor;
+            prompt = "Random variance (%)";
+            id = ELoadGenPhoneCallQueryVariance;
+            itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+            control = NUMBER_EDITOR
+                {
+                min = 0;    
+                max = 100;    
+                };
+            }
+        };
+    }
+
+
+// ---------------------------------------------------------
+//   r_netconn_form_dialog
+// ---------------------------------------------------------
+//
+RESOURCE DIALOG r_netconn_form_dialog
+    {
+    flags = EAknDialogGenericFullScreen;
+    buttons = R_AVKON_SOFTKEYS_OK_CANCEL;
+    form = r_netconn_form;
+    }
+
+RESOURCE FORM r_netconn_form
+    {
+    flags = EEikFormEditModeOnly | EEikFormUseDoubleSpacedFormat;
+    items = 
+        {
+        DLG_LINE
+            {
+            type = EAknCtPopupFieldText;
+            prompt = "Priority";
+            id = ELoadGenNetConnQueryPriority;
+            itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+            control = POPUP_FIELD_TEXT
+                {
+                popupfield = POPUP_FIELD
+                    {
+                    width = 100;
+                    };
+                textarray = r_thread_priority_textarray;
+                active = 0;    
+                };
+            },
+        DLG_LINE
+            {
+            type = EEikCtEdwin;
+            prompt = "Destination URL";
+            id = ELoadGenNetConnQueryDestination;
+            itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+            control = EDWIN
+                {
+                width = 255;    
+                maxlength = 255;    
+                };
+            },
+        DLG_LINE
+            {
+            type = EEikCtNumberEditor;
+            prompt = "Idle (ms)";
+            id = ELoadGenNetConnQueryIdle;
+            itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+            control = NUMBER_EDITOR
+                {
+                min = 0;    
+                max = 999999999;    
+                };
+            },
+        DLG_LINE
+            {
+            type = EEikCtNumberEditor;
+            prompt = "Random variance (%)";
+            id = ELoadGenNetConnQueryVariance;
+            itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+            control = NUMBER_EDITOR
+                {
+                min = 0;    
+                max = 100;    
+                };
+            }
+        };
+    }
+
+
+// ---------------------------------------------------------
+//   r_keypress_form_dialog
+// ---------------------------------------------------------
+//
+RESOURCE DIALOG r_keypress_form_dialog
+    {
+    flags = EAknDialogGenericFullScreen;
+    buttons = R_AVKON_SOFTKEYS_OK_CANCEL;
+    form = r_keypress_form;
+    }
+
+RESOURCE FORM r_keypress_form
+    {
+    flags = EEikFormEditModeOnly | EEikFormUseDoubleSpacedFormat;
+    items = 
+        {
+        DLG_LINE
+            {
+            type = EAknCtPopupFieldText;
+            prompt = "Priority";
+            id = ELoadGenKeyPressQueryPriority;
+            itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+            control = POPUP_FIELD_TEXT
+                {
+                popupfield = POPUP_FIELD
+                    {
+                    width = 100;
+                    };
+                textarray = r_thread_priority_textarray;
+                active = 0;    
+                };
+            },
+        DLG_LINE
+            {
+            type = EEikCtNumberEditor;
+            prompt = "Heartbeat (ms)";
+            id = ELoadGenKeyPressQueryHeartBeat;
+            itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+            control = NUMBER_EDITOR
+                {
+                min = 0;    
+                max = 999999999;    
+                };
+            },
+        DLG_LINE
+            {
+            type = EEikCtNumberEditor;
+            prompt = "Random variance (%)";
+            id = ELoadGenKeyPressQueryVariance;
+            itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+            control = NUMBER_EDITOR
+                {
+                min = 0;    
+                max = 100;    
+                };
+            }
+        };
+    }    
+
+// ---------------------------------------------------------
+//   r_pointerevent_form_dialog
+// ---------------------------------------------------------
+//
+RESOURCE DIALOG r_pointerevent_form_dialog
+    {
+    flags = EAknDialogGenericFullScreen;
+    buttons = R_AVKON_SOFTKEYS_OK_CANCEL;
+    form = r_pointerevent_form;
+    }
+
+RESOURCE FORM r_pointerevent_form
+    {
+    flags = EEikFormEditModeOnly | EEikFormUseDoubleSpacedFormat;
+    items = 
+        {
+        DLG_LINE
+            {
+            type = EAknCtPopupFieldText;
+            prompt = "Priority";
+            id = ELoadGenPointerEventQueryPriority;
+            itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+            control = POPUP_FIELD_TEXT
+                {
+                popupfield = POPUP_FIELD
+                    {
+                    width = 100;
+                    };
+                textarray = r_thread_priority_textarray;
+                active = 0;    
+                };
+            },
+        DLG_LINE
+            {
+            type = EEikCtNumberEditor;
+            prompt = "Heartbeat (ms)";
+            id = ELoadGenPointerEventQueryHeartBeat;
+            itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+            control = NUMBER_EDITOR
+                {
+                min = 0;    
+                max = 999999999;    
+                };
+            },
+        DLG_LINE
+            {
+            type = EEikCtNumberEditor;
+            prompt = "Random variance (%)";
+            id = ELoadGenPointerEventQueryVariance;
+            itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+            control = NUMBER_EDITOR
+                {
+                min = 0;    
+                max = 100;    
+                };
+            }
+        };
+    }
+
+// ---------------------------------------------------------
+//   r_messages_form_dialog
+// ---------------------------------------------------------
+//
+RESOURCE DIALOG r_messages_form_dialog
+    {
+    flags = EAknDialogGenericFullScreen;
+    buttons = R_AVKON_SOFTKEYS_OK_CANCEL;
+    form = r_messages_form;
+    }
+
+RESOURCE FORM r_messages_form
+    {
+    flags = EEikFormEditModeOnly | EEikFormUseDoubleSpacedFormat;
+    items = 
+        {
+        DLG_LINE
+            {
+            type = EAknCtPopupFieldText;
+            prompt = "Priority";
+            id = ELoadGenMessagesQueryPriority;
+            itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+            control = POPUP_FIELD_TEXT
+                {
+                popupfield = POPUP_FIELD
+                    {
+                    width = 100;
+                    };
+                textarray = r_thread_priority_textarray;
+                active = 0;    
+                };
+            },
+            DLG_LINE
+                {
+                type = EAknCtPopupFieldText;
+                prompt = "Type";
+                id = ELoadGenMessagesQueryType;
+                itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+                control = POPUP_FIELD_TEXT
+                    {
+                    popupfield = POPUP_FIELD
+                        {
+                        width = 100;
+                        };
+                    textarray = r_message_type_textarray;
+                    active = 0;    
+                    };
+                },            
+        DLG_LINE
+            {
+            type = EEikCtEdwin;
+            prompt = "Phone number";
+            id = ELoadGenMessagesQueryDestination;
+            itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+            control = EDWIN
+                {
+                width = 255;    
+                maxlength = 255;    
+                };
+            },
+        DLG_LINE
+            {
+            type = EEikCtNumberEditor;
+            prompt = "Maximum amount of messages";
+            id = ELoadGenMessagesQueryAmount;
+            itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+            control = NUMBER_EDITOR
+                {
+                min = 0;    
+                max = 1000;    
+                };
+            },            
+        DLG_LINE
+            {
+            type = EEikCtNumberEditor;
+            prompt = "Message length";
+            id = ELoadGenMessagesQueryLength;
+            itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+            control = NUMBER_EDITOR
+                {
+                min = 0;    
+                max = 512;    
+                };
+            },
+        DLG_LINE
+            {
+            type = EEikCtNumberEditor;
+            prompt = "Idle (ms)";
+            id = ELoadGenMessagesQueryIdle;
+            itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+            control = NUMBER_EDITOR
+                {
+                min = 0;    
+                max = 999999999;    
+                };
+            },
+        DLG_LINE
+            {
+            type = EEikCtNumberEditor;
+            prompt = "Random variance (%)";
+            id = ELoadGenMessagesQueryVariance;
+            itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+            control = NUMBER_EDITOR
+                {
+                min = 0;    
+                max = 100;    
+                };
+            }
+        };
+    }
+
+// ---------------------------------------------------------
+//   r_applicatios_form_dialog
+// ---------------------------------------------------------
+//
+RESOURCE DIALOG r_applications_form_dialog
+    {
+    flags = EAknDialogGenericFullScreen;
+    buttons = R_AVKON_SOFTKEYS_OK_CANCEL;
+    form = r_applications_form;
+    }
+
+RESOURCE FORM r_applications_form
+    {
+    flags = EEikFormEditModeOnly | EEikFormUseDoubleSpacedFormat;
+    items = 
+        {
+        DLG_LINE
+            {
+            type = EAknCtPopupFieldText;
+            prompt = "Priority";
+            id = ELoadGenApplicationsQueryPriority;
+            itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+            control = POPUP_FIELD_TEXT
+                {
+                popupfield = POPUP_FIELD
+                    {
+                    width = 100;
+                    };
+                textarray = r_thread_priority_textarray;
+                active = 0;    
+                };
+            },            
+        DLG_LINE
+            {
+            type = EEikCtNumberEditor;
+            prompt = "Max parallel applications";
+            id = ELoadGenApplicationsMaxOpen;
+            itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+            control = NUMBER_EDITOR
+                {
+                min = 0;    
+                max = 100;    
+                };
+            },
+        DLG_LINE
+            {
+            type = EEikCtNumberEditor;
+            prompt = "Launching interval (ms)";
+            id = ELoadGenApplicationsLaunchingInterval;
+            itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+            control = NUMBER_EDITOR
+                {
+                min = 0;    
+                max = 999999999;    
+                };
+            },
+            
+        DLG_LINE
+            {
+            type = EAknCtPopupFieldText;
+            prompt = "Key press type";
+            id = ELoadGenApplicationsKeyPressType;
+            itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+            control = POPUP_FIELD_TEXT
+                {
+                popupfield = POPUP_FIELD
+                    {
+                    width = 100;
+                    };
+                textarray = r_applications_keypress_type_textarray;
+                active = 0;    
+                };
+            },            
+        DLG_LINE
+            {
+            type = EEikCtNumberEditor;
+            prompt = "Key press interval (ms)";
+            id = ELoadGenApplicationsKeyPressQueryHeartBeat;
+            itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+            control = NUMBER_EDITOR
+                {
+                min = 0;    
+                max = 999999999;    
+                };
+            },
+        DLG_LINE
+            {
+            type = EEikCtNumberEditor;
+            prompt = "Random variance (%)";
+            id = ELoadGenApplicationsQueryVariance;
+            itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+            control = NUMBER_EDITOR
+                {
+                min = 0;    
+                max = 100;    
+                };
+            }
+        };
+    }    
+
+// ---------------------------------------------------------
+//   r_photocapture_form_dialog
+// ---------------------------------------------------------
+//
+RESOURCE DIALOG r_photocapture_form_dialog
+    {
+    flags = EAknDialogGenericFullScreen;
+    buttons = R_AVKON_SOFTKEYS_OK_CANCEL;
+    form = r_photocapture_form;
+    }
+
+RESOURCE FORM r_photocapture_form
+    {
+    flags = EEikFormEditModeOnly | EEikFormUseDoubleSpacedFormat;
+    items = 
+        {
+                DLG_LINE
+                    {
+                    type = EAknCtPopupFieldText;
+                    prompt = "Priority";
+                    id = ELoadGenPhotoCaptureQueryPriority;
+                    itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+                    control = POPUP_FIELD_TEXT
+                        {
+                        popupfield = POPUP_FIELD
+                            {
+                            width = 100;
+                            };
+                        textarray = r_thread_priority_textarray;
+                        active = 0;    
+                        };
+                    },
+                DLG_LINE
+                    {
+                    type = EEikCtNumberEditor;
+                    prompt = "Idle (ms)";
+                    id = ELoadGenPhotoCaptureQueryIdle;
+                    itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+                    control = NUMBER_EDITOR
+                        {
+                        min = 0;    
+                        max = 999999999;    
+                        };
+                    },
+                DLG_LINE
+                    {
+                    type = EEikCtNumberEditor;
+                    prompt = "Random variance (%)";
+                    id = ELoadGenPhotoCaptureQueryVariance;
+                    itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+                    control = NUMBER_EDITOR
+                        {
+                        min = 0;    
+                        max = 100;    
+                        };
+                    }
+        };
+    }
+
+/*RESOURCE DLG_LINE r_photocapture_dlg_line_periodic_idle
+    {
+    type = EEikCtNumberEditor;
+    prompt = "Idle (ms)";
+    id = ELoadGenPhotoCaptureQueryIdle;
+    itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+    control = NUMBER_EDITOR
+        {
+        min = 0;    
+        max = 999999999;    
+        };
+    }
+
+RESOURCE DLG_LINE r_photocapture_dlg_line_periodic_variance
+    {
+    type = EEikCtNumberEditor;
+    prompt = "Random variance (%)";
+    id = ELoadGenPhotoCaptureQueryVariance;
+    itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+    control = NUMBER_EDITOR
+        {
+        min = 0;    
+        max = 100;    
+        };
+    }*/
+
+RESOURCE DLG_LINE r_photocapture_dlg_line_device
+    {
+    type = EAknCtPopupFieldText;
+    prompt = "Device";
+    id = ELoadGenPhotoCaptureQueryDevice;
+    itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+    control = POPUP_FIELD_TEXT
+        {
+        popupfield = POPUP_FIELD
+            {
+            width = 100;
+            };
+        textarray = r_photocapturedevice_textarray;
+        active = 0;    
+        };
+    }
+
+// ---------------------------------------------------------
+//   r_photocapture_form_dialog
+// ---------------------------------------------------------
+//
+RESOURCE DIALOG r_bluetooth_form_dialog
+    {
+    flags = EAknDialogGenericFullScreen;
+    buttons = R_AVKON_SOFTKEYS_OK_CANCEL;
+    form = r_bluetooth_form;
+    }
+
+RESOURCE FORM r_bluetooth_form
+    {
+    flags = EEikFormEditModeOnly | EEikFormUseDoubleSpacedFormat;
+    items = 
+        {
+                DLG_LINE
+                    {
+                    type = EAknCtPopupFieldText;
+                    prompt = "Priority";
+                    id = ELoadGenBluetoothQueryPriority;
+                    itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+                    control = POPUP_FIELD_TEXT
+                        {
+                        popupfield = POPUP_FIELD
+                            {
+                            width = 100;
+                            };
+                        textarray = r_thread_priority_textarray;
+                        active = 0;    
+                        };
+                    },
+                DLG_LINE
+                    {
+                    type = EEikCtNumberEditor;
+                    prompt = "Idle (ms)";
+                    id = ELoadGenBluetoothQueryIdle;
+                    itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+                    control = NUMBER_EDITOR
+                        {
+                        min = 0;    
+                        max = 999999999;    
+                        };
+                    },
+                DLG_LINE
+                    {
+                    type = EEikCtNumberEditor;
+                    prompt = "Random variance (%)";
+                    id = ELoadGenBluetoothQueryVariance;
+                    itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+                    control = NUMBER_EDITOR
+                        {
+                        min = 0;    
+                        max = 100;    
+                        };
+                    }
+        };
+    }
+
+// ---------------------------------------------------------
+// Arrays for forms:    
+    
+RESOURCE ARRAY r_thread_priority_textarray
+    {
+    items =
+        {
+        LBUF { txt = "Much less (-20)"; },
+        LBUF { txt = "Less (-10)"; },
+        LBUF { txt = "Normal (0)"; },
+        LBUF { txt = "More (10)"; },
+        LBUF { txt = "Much more (20)"; },
+        LBUF { txt = "Real time (30)"; },
+        LBUF { txt = "Abs. very low (100)"; },
+        LBUF { txt = "Abs. low (200)"; },
+        LBUF { txt = "Abs. backgr. (300)"; },
+        LBUF { txt = "Abs. foregr. (400)"; },
+        LBUF { txt = "Abs. high (500)"; }
+        };
+    } 
+
+RESOURCE ARRAY r_cpuloadmode_textarray
+    {
+    items =
+        {
+        LBUF { txt = "Yielding"; },
+        LBUF { txt = "Blocking"; }
+        };
+    } 
+    
+RESOURCE ARRAY r_cpuloadtype_textarray
+    {
+    items =
+        {
+        LBUF { txt = "Continuous"; },
+        LBUF { txt = "Periodic"; }
+        };
+    }       
+
+RESOURCE ARRAY r_cpuloadcpu_textarray
+    {
+    items =
+        {
+        LBUF { txt = "CPU0"; }
+        };
+    }       
+
+RESOURCE ARRAY r_memoryeatsource_textarray
+    {
+    items =
+        {
+        LBUF { txt = "RAM"; },
+        LBUF { txt = "C:"; },
+        LBUF { txt = "D:"; },
+        LBUF { txt = "E:"; },
+        LBUF { txt = "F:"; },
+        LBUF { txt = "G:"; },
+        LBUF { txt = "H:"; },
+        LBUF { txt = "I:"; },
+        LBUF { txt = "J:"; },
+        LBUF { txt = "K:"; },
+        LBUF { txt = "L:"; },
+        LBUF { txt = "M:"; },
+        LBUF { txt = "N:"; }
+        };
+    }
+    
+RESOURCE ARRAY r_memoryeattype_textarray
+    {
+    items =
+        {
+        LBUF { txt = "Memory to eat"; },
+        LBUF { txt = "Memory to be left"; },
+        LBUF { txt = "Alternate min/max"; }
+        };
+    }
+    
+RESOURCE ARRAY r_message_type_textarray
+    {
+    items =
+        {
+        LBUF { txt = "SMS"; },
+        LBUF { txt = "MMS"; }
+        };
+    } 
+
+RESOURCE ARRAY r_applications_keypress_type_textarray
+    {
+    items =
+        {
+        LBUF { txt = "None"; },
+        LBUF { txt = "Arrow keys"; }
+        };
+    } 
+
+RESOURCE ARRAY r_photocapturedevice_textarray
+    {
+    items =
+        {
+        LBUF { txt = "Camera 1"; }
+        };
+    } 
+
+
+RESOURCE LOCALISABLE_APP_INFO r_loadgen_localisable_app_info
+    {
+    short_caption = "LoadGen";
+    caption_and_icon = 
+    CAPTION_AND_ICON_INFO
+        {
+        caption = "Load Gener.";
+
+        number_of_icons = 1;
+
+        // Note for ROM-based apps it is recommended to add the drive letter
+        // icon_file = "z:"APP_BITMAP_DIR"\\myapp_aif.mif";
+        icon_file = APP_BITMAP_DIR"\\loadgen_aif.mif";
+        };
+    }
+
+
+
+// ---------------------------------------------------------
+//   
+//    RESOURCE LOCALISABLE_APP_INFO
+//
+// ---------------------------------------------------------
+//

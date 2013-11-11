@@ -1,0 +1,46 @@
+EXPORTS
+	??1CHlpItem@@UAE@XZ @ 1 NONAME ; public: virtual __thiscall CHlpItem::~CHlpItem(void)
+	??1CHlpList@@UAE@XZ @ 2 NONAME ; public: virtual __thiscall CHlpList::~CHlpList(void)
+	??1CHlpModel@@UAE@XZ @ 3 NONAME ; public: virtual __thiscall CHlpModel::~CHlpModel(void)
+	??1CHlpTopic@@UAE@XZ @ 4 NONAME ; public: virtual __thiscall CHlpTopic::~CHlpTopic(void)
+	?AppendL@CHlpList@@QAEXPAVCHlpItem@@@Z @ 5 NONAME ; public: void __thiscall CHlpList::AppendL(class CHlpItem *)
+	?At@CHlpList@@UBEKH@Z @ 6 NONAME ; public: virtual unsigned long __thiscall CHlpList::At(int)const 
+	?Category@CHlpTopic@@QAEAAVTDesC16@@XZ @ 7 NONAME ; public: class TDesC16 & __thiscall CHlpTopic::Category(void)
+	?CategoryListL@CHlpModel@@QAEXPAVCDesC16Array@@@Z @ 8 NONAME ; public: void __thiscall CHlpModel::CategoryListL(class CDesC16Array *)
+	?CloseL@CHlpModel@@QAEXXZ @ 9 NONAME ; public: void __thiscall CHlpModel::CloseL(void)
+	?ContextSearchL@CHlpModel@@QAEXAAVTCoeHelpContext@@@Z @ 10 NONAME ; public: void __thiscall CHlpModel::ContextSearchL(class TCoeHelpContext &)
+	?Find@CHlpList@@QAEHK@Z @ 11 NONAME ; public: int __thiscall CHlpList::Find(unsigned long)
+	?Item@CHlpList@@QBEPAVCHlpItem@@H@Z @ 12 NONAME ; public: class CHlpItem * __thiscall CHlpList::Item(int)const 
+	?LoadListL@CHlpModel@@QAEXPAVCHlpList@@@Z @ 13 NONAME ; public: void __thiscall CHlpModel::LoadListL(class CHlpList *)
+	?LoadTopicL@CHlpModel@@QAEXAAVCRichText@@AAVTDes16@@@Z @ 14 NONAME ; public: void __thiscall CHlpModel::LoadTopicL(class CRichText &,class TDes16 &)
+	?LoadTopicL@CHlpModel@@QAEXPAVCHlpTopic@@@Z @ 15 NONAME ; public: void __thiscall CHlpModel::LoadTopicL(class CHlpTopic *)
+	?MatchUidL@CHlpModel@@QAEHVTUid@@@Z @ 16 NONAME ; public: int __thiscall CHlpModel::MatchUidL(class TUid)
+	?MdcaCount@CHlpList@@UBEHXZ @ 17 NONAME ; public: virtual int __thiscall CHlpList::MdcaCount(void)const 
+	?MdcaPoint@CHlpList@@UBE?AVTPtrC16@@H@Z @ 18 NONAME ; public: virtual class TPtrC16  __thiscall CHlpList::MdcaPoint(int)const 
+	?NewL@CHlpList@@SAPAV1@XZ @ 19 NONAME ; public: static class CHlpList * __cdecl CHlpList::NewL(void)
+	?NewL@CHlpModel@@SAPAV1@AAVRFs@@PAVMHlpModelObserver@@@Z @ 20 NONAME ; public: static class CHlpModel * __cdecl CHlpModel::NewL(class RFs &,class MHlpModelObserver *)
+	?NewL@CHlpTopic@@SAPAV1@XZ @ 21 NONAME ; public: static class CHlpTopic * __cdecl CHlpTopic::NewL(void)
+	?NewLC@CHlpList@@SAPAV1@XZ @ 22 NONAME ; public: static class CHlpList * __cdecl CHlpList::NewLC(void)
+	?NewLC@CHlpModel@@SAPAV1@AAVRFs@@PAVMHlpModelObserver@@@Z @ 23 NONAME ; public: static class CHlpModel * __cdecl CHlpModel::NewLC(class RFs &,class MHlpModelObserver *)
+	?NewLC@CHlpTopic@@SAPAV1@XZ @ 24 NONAME ; public: static class CHlpTopic * __cdecl CHlpTopic::NewLC(void)
+	?OpenL@CHlpModel@@QAEXXZ @ 25 NONAME ; public: void __thiscall CHlpModel::OpenL(void)
+	?Reset@CHlpList@@QAEXXZ @ 26 NONAME ; public: void __thiscall CHlpList::Reset(void)
+	?RestoreL@CHlpTopic@@QAEXPAVRDbView@@@Z @ 27 NONAME ; public: void __thiscall CHlpTopic::RestoreL(class RDbView *)
+	?SearchL@CHlpModel@@QAEXHK@Z @ 28 NONAME ; public: void __thiscall CHlpModel::SearchL(int,unsigned long)
+	?SearchL@CHlpModel@@QAEXHPAVHBufC16@@@Z @ 29 NONAME ; public: void __thiscall CHlpModel::SearchL(int,class HBufC16 *)
+	?StreamStoreL@CHlpModel@@UBEABVCStreamStore@@H@Z @ 30 NONAME ; public: virtual class CStreamStore const & __thiscall CHlpModel::StreamStoreL(int)const 
+	?TopicText@CHlpTopic@@QAEPAVCRichText@@XZ @ 31 NONAME ; public: class CRichText * __thiscall CHlpTopic::TopicText(void)
+	?TopicTitle@CHlpTopic@@QAEAAVTDesC16@@XZ @ 32 NONAME ; public: class TDesC16 & __thiscall CHlpTopic::TopicTitle(void)
+	?CloseFileL@CHlpModel@@QAEXABVTDesC16@@@Z @ 33 NONAME ; public: void __thiscall CHlpModel::CloseFileL(class TDesC16 const &)
+	?OpenFileL@CHlpModel@@QAEXABVTDesC16@@@Z @ 34 NONAME ; public: void __thiscall CHlpModel::OpenFileL(class TDesC16 const &)
+	?SearchL@CHlpModel@@QAEXHABVTDesC16@@@Z @ 35 NONAME ; public: void __thiscall CHlpModel::SearchL(int,class TDesC16 const &)
+	?CategoryUIDSearchL@CHlpModel@@QAEXVTUid@@@Z @ 36 NONAME ; public: void __thiscall CHlpModel::CategoryUIDSearchL(class TUid)
+	?SetObserver@CHlpModel@@QAEXPAVMHlpModelObserver@@@Z @ 37 NONAME ; public: void __thiscall CHlpModel::SetObserver(class MHlpModelObserver *)
+	?LoadTopicL@CHlpModel@@QAEXAAVCRichText@@@Z @ 38 NONAME ; public: void __thiscall CHlpModel::LoadTopicL(class CRichText &)
+	?TopicSearchL@CHlpModel@@QAEXABVCHlpItem@@@Z @ 39 NONAME ; public: void __thiscall CHlpModel::TopicSearchL(class CHlpItem const &)
+	?CancelSearch@CHlpModel@@QAEHXZ @ 40 NONAME ; public: int __thiscall CHlpModel::CancelSearch(void)
+	?IndexSearchL@CHlpModel@@QAEXABVCHlpItem@@@Z @ 41 NONAME ; public: void __thiscall CHlpModel::IndexSearchL(class CHlpItem const &)
+	?SetZoomSizeL@CHlpModel@@QAEXW4THlpZoomState@@@Z @ 42 NONAME ; public: void __thiscall CHlpModel::SetZoomSizeL(enum THlpZoomState)
+	?ZoomSize@CHlpModel@@QBE?AW4THlpZoomState@@XZ @ 43 NONAME ; public: enum THlpZoomState  __thiscall CHlpModel::ZoomSize(void)const 
+	?SetZoomFactors@CHlpModel@@QAEXW4THlpZoomState@@H@Z @ 44 NONAME ; public: void __thiscall CHlpModel::SetZoomFactors(enum THlpZoomState,int)
+

@@ -1,0 +1,29 @@
+From:  <ibrahim@symbian.com> =?utf-7?Q?+A5oDyQO9A8MDxAOxA70DxAOvA70DvwPC-+A6MDtw-+ALU-+A68DxAO3A8I-?=
+Reply-to: =?utf-8?Q?=CE=9A=CF=89=CE=BD=CF=83=CF=84=CE=B1=CE=BD=CF=84=CE=AF=CE=BD=CE=BF=CF=82=CE=A3=CE=B7=C2=B5=CE=AF=CF=84=CE=B7=CF=82?=<dd@dd.com>
+To: =?UTF-7?Q?+ADw-html+AD4?=    =?UTF-8?Q?=CE=9A=CF=89?= <dd@dd.com> =?ISO-8859-1?Q?R=E9union_=AB=E9cologie_sonore=BB_Montr=E9al?=
+Cc:  bob@Other-Host,
+Bcc:	=?MOD-UTF-7?B?"Just some plain old Mod-Utf-7 text?=   abe@Other-Host,
+	=?BGFBBFFFBFBsdfsdf?B?"Just some plain old Mod-Utf-7 text?=   abe@Other-Host,
+	=?GB-2312-80?Q?=C4=E3=C5=C4=D2=BB=CE=D2=C5=C4?= abe@Other-Host,
+	=?GB2312?Q?=D2=BB=D2=BB=B8=F6=D0=A1=BA=A2?=   abe@Other-Host,
+Subject: =?Big-5?Q?=A1H=A1H=A1H=A1H=A1H=A1H=A1=D3=A1H=A1H=A1H?=  =?Big-5?Q?=A1H=A1H=A1H=A1H=A1H=A1H=A1H=A1H=A1H=A1H?= .BETA.ZZ118
+Date: Mon,  2 Dec 1996 23:59:59 +0000 =?
+MIME-Version: 1.0
+
+ENCODED HEADER : testing different charsets
+
+From: UTF7
+ReplyTo : UTF8
+To: UTF7 followed by UTF8 followed by ISO-8859-1
+Subject decoded is Ä_®p¶³±g¯u²bÁI®v»y¿ý.BETA.ZZ118
+RESOURCE LBUF charset_name_list
+	{
+	buffer= "10003C80\tUTF-7\n"
+               	"10003C91\tUTF-8\n"
+		"10003C95\tMOD-UTF-7\n"
+		"10003b10\tISO-8859-1\tus-ascii\n"
+               	"10000fbe\tGB-2312-80\tGB2312\n"
+		"10000fbf\tBig-5\tBig5\n"
+		"10000fbd\tShift-JIS\tShift_JIS\n"
+		"1000401a\tGB/T 12345-90\n"
+		"10003ecb\tGBK\n";

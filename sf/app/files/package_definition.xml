@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SystemDefinition schema="3.0.0" xmlns:qt="http://www.nokia.com/qt">
+ <package id="files" name="File Manager Apps" levels="support apps">
+  <collection id="files_plat" name="File Manager" level="apps">
+   <component id="filemanager_api" name="File Manager Platform Interfaces" class="api" filter="bldfirst,s60" introduced="^4">
+       <unit bldFile="files_plat/filemanager_api" qt:qmakeArgs="-r -config rom" qt:proFile="filemanager_api.pro"/>
+   </component>
+   <component id="fmbkupengine" filter="s60,bldfirst" name="File Manager Backup Engine" introduced="^4">
+       <unit bldFile="filemanager/src/fmbkupengine/group"/>
+   </component>
+   <component id="fmfiledialog" filter="s60,bldfirst" name="File Manager File Dialog" introduced="^4">
+       <unit bldFile="filemanager/src/fmfiledialog" qt:proFile="fmfiledialog.pro" qt:qmakeArgs="-r -config rom"/>
+   </component>
+   <component id="filemanager_rom" filter="s60" name="File Manager ROM" class="config"  introduced="^4">
+    <unit bldFile="filemanager/rom"/>
+   </component>
+   <component id="fmbkupenginewrapper" filter="s60" name="File Manager Build"  introduced="^4">
+    <unit bldFile="filemanager/src/fmbkupenginewrapper" qt:proFile="fmbkupenginewrapper.pro"/>
+   </component>
+   <component id="filemanager_src" filter="s60" name="File Manager Build"  introduced="^4">
+    <unit bldFile="filemanager/src/filemanager" qt:proFile="filemanager.pro"/>
+   </component>
+   <component id="filemanager_tests" name="File Manager Tests" filter="s60,test,qt_unit_test">
+     <meta rel="testbuild">
+     <group name="filemanager_tests_group"/>
+     </meta>
+     <unit bldFile="filemanager/tsrc" qt:proFile="tsrc.pro"/>
+   </component>
+  </collection>
+ </package>
+</SystemDefinition>
+        

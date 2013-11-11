@@ -1,0 +1,26 @@
+<?XML version="1.0" ?>
+<!DOCTYPE smil SYSTEM "mms_smil.dtd">
+
+<!-- Focus of this test: par element, structure variations -->
+<!-- Focus of this test: par element, structure variations -->
+<!-- 'par' contains ILLEGAL child element -->
+<smil>
+   <head>
+      <layout>
+         <!-- This is a "landscape" screen -->
+         <root-layout width="352" height="144"/>
+         <region id="Image" width="176" height="144" left="0" top="0"/>
+         <region id="Text" width="176" height="144" left="176" top="0"/>
+      </layout>
+   </head>
+   <body>
+      <par dur="20s">
+         <img src="FirstImage.jpg" region="Image"/>
+         <text src="FirstText.txt" region="Text" alt="First text" begin="0s" end="10s"/>
+         <text src="SecondText.txt" region="Text" alt="Second text" begin="10s" end="20s"/>
+         <audio src="FirstSound.amr"/>
+         <region id="SomeMedia" width="176" height="144" left="0" top="0"/>
+         <ref src="SomeMedia.abc" region="SomeMedia" alt="Some media" begin="1s" end="6s"/>
+      </par>
+   </body>
+</smil>

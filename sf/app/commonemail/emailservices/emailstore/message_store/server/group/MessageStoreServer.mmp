@@ -1,0 +1,99 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Message store server project file.
+*
+*/
+
+
+#include <platform_paths.hrh>
+//<qmail>
+//#include "../../../../../inc/emailversionnumbers.hrh" // KEmailBinaryVersionNumber
+//</qmail>
+#include "../../../inc/EmailStoreUids.hrh"
+
+TARGET        MessageStoreServer.dll
+TARGETTYPE    dll
+UID           KUidSharedLibrary KUidMessageStoreServer
+SECUREID      KUidMessageStoreServer
+VENDORID      VID_DEFAULT
+CAPABILITY    CAP_CLIENT_DLL
+//<qmail>
+//VERSION       KEmailBinaryVersionNumber
+//KEmailBinaryDemandPaging
+//</qmail>
+
+MACRO DEBUG_USE_PROJECT_LOGGING_OPTIONS
+MACRO DEBUG_LOG_OPTION_ENTER
+MACRO DEBUG_LOG_OPTION_EXIT
+MACRO DEBUG_LOG_OPTION_ERRORS
+//MACRO DEBUG_LOG_OPTION_INFO
+
+// COMMENT OUT THESE 4 LINES TO BYPASS THE CRYPTO API
+//SYSTEMINCLUDE /epoc32/include/libc
+//USERINCLUDE   /epoc32/include/certicom
+//USERINCLUDE   /epoc32/include/CryptoApi
+//LIBRARY       cryptoapi.lib
+
+USERINCLUDE   ../inc
+USERINCLUDE   ../../client/api
+USERINCLUDE   ../../common/inc
+USERINCLUDE   ../../../inc
+USERINCLUDE   ../../../../../inc
+
+APP_LAYER_SYSTEMINCLUDE
+
+SOURCEPATH    ../src
+SOURCE        MessageStoreServer.cpp
+SOURCE        MessageStoreSession.cpp
+SOURCE        BackupRestoreObserver.cpp
+SOURCE        ShutdownServer.cpp
+
+SOURCE        ContainerStore.cpp
+SOURCE        ContainerStoreContainersTable.cpp
+SOURCE        ContainerStoreContentManager.cpp
+SOURCE        ContainerStoreDeleteHandler.cpp
+SOURCE        ContainerStoreEncryption.cpp
+SOURCE        ContainerStoreAccountTable.cpp
+SOURCE        ContainerStoreGeneralTable.cpp
+SOURCE        ContainerStoreSearchHandler.cpp
+SOURCE        ContainerStoreTable.cpp
+SOURCE        ContainerStoreUtils.cpp
+SOURCE        MsgStoreSortResultRowSet.cpp
+SOURCE        MsgStoreStringSortResultRowSet.cpp
+SOURCE        ContainerStoreSortingTable.cpp
+SOURCE        ContainerStoreSearchResultTable.cpp
+SOURCE        MessageStoreEncryptHandler.cpp
+SOURCE        ContainerStoreMRUAddressTable.cpp
+SOURCE        MsgStoreInMemorySortRowSet.cpp
+SOURCE        bufferedmessagecreator.cpp
+SOURCE        messagestoreutils.cpp
+
+SOURCEPATH    ../../common/src
+SOURCE        PropertiesSerializer.cpp
+SOURCE        AccountsSerializer.cpp
+SOURCE        psintpropertyobserver.cpp
+
+
+LIBRARY euser.lib 
+LIBRARY estor.lib
+LIBRARY efsrv.lib
+LIBRARY	bafl.lib
+LIBRARY edbms.lib
+LIBRARY sysutil.lib
+LIBRARY charconv.lib
+LIBRARY DebugLog.lib
+LIBRARY ImsPointSecMonitor.lib
+LIBRARY platformenv.lib
+
+SMPSAFE

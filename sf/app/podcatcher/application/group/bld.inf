@@ -1,0 +1,57 @@
+/*
+ * Copyright (c) 2007-2010 Sebastian Brannstrom, Lars Persson, EmbedDev AB
+ *
+ * All rights reserved.
+ * This component and the accompanying materials are made available
+ * under the terms of the License "Eclipse Public License v1.0"
+ * which accompanies this distribution, and is available
+ * at the URL "http://www.eclipse.org/legal/epl-v10.html".
+ *
+ * Initial Contributors:
+ * EmbedDev AB - initial contribution.
+ *
+ * Contributors:
+ *
+ * Description:
+ *
+ */
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_MMPFILES
+
+Podcast.mmp
+
+PRJ_EXPORTS
+..\help\podcatcher.hlp z:\resource\help\podcatcher.hlp
+
+PRJ_EXTENSIONS
+
+START EXTENSION s60/mifconv
+OPTION TARGETFILE Podcast.mif
+OPTION HEADERFILE Podcast.mbg
+OPTION SOURCEDIR ../data/images
+OPTION SOURCES \
+    -c16,1 podcatcher_64px\
+    -c16,1 Audio\
+    -c16,1 Audio_new\
+    -c16,1 Audio_queued\
+    -c16,1 Audio_downloading\
+    -c16,1 Audio_downloaded\
+    -c16,1 Audio_downloaded_new\
+    -c16,1 Audio_failed\
+    -c16,1 Audio_suspended\
+    -c16,1 Video.svg\
+	-c16,1 Video_new.svg\
+	-c16,1 Video_queued.svg\
+	-c16,1 Video_downloading.svg\
+	-c16,1 Video_downloaded.svg\
+	-c16,1 Video_downloaded_new.svg\
+	-c16,1 Video_failed.svg\
+	-c16,1 Video_suspended.svg\
+    -c16,1 Feed
+END
+
+PRJ_EXPORTS
+podcatcher.iby CORE_APP_LAYER_IBY_EXPORT_PATH(podcatcher.iby)

@@ -1,0 +1,41 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:
+;
+
+; Language
+&EN
+
+; SIS header: name, uid, version
+#{"t_hswidgetuninstaller"},(0x20022F42),1,0,0
+
+; Localised Vendor name
+%{"Nokia"}
+
+; Unique Vendor name
+:"Nokia"
+
+; Supports S60 5th Edition
+[0x1028315F], 0, 0, 0, {"S60ProductID"}
+
+; HS Utils unittest
+"/epoc32/release/armv5/urel/t_hswidgetuninstaller.exe"                      - "c:/sys/bin/t_hswidgetuninstaller.exe"
+"/epoc32/data/z/private/10003a3f/import/apps/t_hswidgetuninstaller_reg.rsc" - "c:/private/10003a3f/import/apps/t_hswidgetuninstaller_reg.rsc"
+"/epoc32/data/z/resource/apps/t_hswidgetuninstaller.rsc"                    - "c:/resource/apps/t_hswidgetuninstaller.rsc"
+"../empty.manifest"                                                         - "c:/private/20022F42/empty.manifest"
+"../fail_new.manifest"                                                      - "c:/private/20022F42/fail_new.manifest"
+"../ok_new.manifest"                                                        - "c:/private/20022F42/ok_new.manifest"
+"../ok_old.manifest"                                                        - "c:/private/20022F42/ok_old.manifest"
+"../version10.manifest"                                                     - "c:/private/20022F42/version10.manifest"
+"../version12.manifest"                                                     - "c:/private/20022F42/version12.manifest"

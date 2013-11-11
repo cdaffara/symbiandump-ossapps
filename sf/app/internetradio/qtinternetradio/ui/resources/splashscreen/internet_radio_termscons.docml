@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="1.1">
+    <widget name="internet_radio_termsconsview" type="HbView">
+        <widget name="container" role="HbView:widget" type="HbWidget">
+            <widget name="heading_text" type="HbGroupBox">
+                <sizepolicy horizontalPolicy="Expanding" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+                <sizehint height="expr((var(hb-param-text-height-secondary)+2*var(hb-param-margin-gene-middle-vertical)))" type="PREFERRED"/>
+                <bool name="collapsable" value="FALSE"/>
+                <string locid="txt_irad_terms_and_conditions" name="heading"/>
+                <fontspec name="fontSpec" role="Secondary" textheight="var(hb-param-text-height-secondary)"/>
+            </widget>
+            <widget name="text_edit" type="HbTextEdit">
+                <enums name="cursorVisibility" value="TextCursorHidden"/>
+                <string locid="txt_irad_terms_content" name="plainText"/>
+                <bool name="readOnly" value="TRUE"/>
+                <enums name="contextMenuFlags" value="ShowTextContextMenuOnSelectionClicked"/>
+                <fontspec name="fontSpec" role="Secondary" textheight="expr(var(hb-param-text-height-secondary) )"/>
+            </widget>
+            <widget name="accept_btn" type="HbPushButton">
+                <string locid="txt_irad_accept" name="text"/>
+            </widget>
+            <widget name="decline_btn" type="HbPushButton">
+                <string locid="txt_irad_decline" name="text"/>
+            </widget>
+            <layout orientation="Vertical" spacing="0un" type="linear">
+                <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+                <linearitem itemname="heading_text"/>
+                <linearitem itemname="text_edit"/>
+                <linearitem itemname="accept_btn"/>
+                <linearitem itemname="decline_btn"/>
+            </layout>
+        </widget>
+        <string locid="txt_irad_title_internet_radio" name="title"/>
+    </widget>
+    <section name="prt_section">
+        <widget name="container" role="HbView:widget" type="HbWidget">
+            <widget name="prt_content_container" type="HbWidget">
+                <widget name="text_edit" type="HbTextEdit"/>
+                <widget name="accept_btn" type="HbPushButton"/>
+                <widget name="decline_btn" type="HbPushButton"/>
+                <contentsmargins bottom="expr(var(hb-param-margin-gene-screen) )" left="expr(var(hb-param-margin-gene-screen) )" right="expr(var(hb-param-margin-gene-screen) )" top="expr(var(hb-param-margin-gene-screen) )"/>
+                <layout type="anchor">
+                    <anchoritem dst="accept_btn" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                    <anchoritem dst="accept_btn" dstEdge="TOP" spacing="expr(var(hb-param-margin-gene-top) )" src="text_edit" srcEdge="BOTTOM"/>
+                    <anchoritem dst="accept_btn" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                    <anchoritem dst="text_edit" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                    <anchoritem dst="text_edit" dstEdge="TOP" spacing="expr(var(hb-param-margin-gene-top) )" src="" srcEdge="TOP"/>
+                    <anchoritem dst="text_edit" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                    <anchoritem dst="decline_btn" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                    <anchoritem dst="decline_btn" dstEdge="TOP" spacing="expr(var(hb-param-margin-gene-top) )" src="accept_btn" srcEdge="BOTTOM"/>
+                    <anchoritem dst="decline_btn" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                    <anchoritem dst="decline_btn" dstEdge="BOTTOM" spacing="0un" src="" srcEdge="BOTTOM"/>
+                </layout>
+            </widget>
+            <layout orientation="Vertical" spacing="0un" type="linear">
+                <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+                <linearitem itemname="heading_text"/>
+                <linearitem itemname="prt_content_container"/>
+            </layout>
+        </widget>
+    </section>
+    <section name="lsc_section">
+        <widget name="container" role="HbView:widget" type="HbWidget">
+            <widget name="lsc_content_container" type="HbWidget">
+                <widget name="text_edit" type="HbTextEdit"/>
+                <widget name="lsc_btn_container" type="HbWidget">
+                    <widget name="accept_btn" type="HbPushButton"/>
+                    <widget name="decline_btn" type="HbPushButton"/>
+                    <layout orientation="Horizontal" spacing="expr(var(hb-param-margin-gene-screen) )" type="linear">
+                        <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+                        <linearitem itemname="accept_btn"/>
+                        <linearitem itemname="decline_btn"/>
+                    </layout>
+                </widget>
+                <contentsmargins bottom="expr(var(hb-param-margin-gene-screen) )" left="expr(var(hb-param-margin-gene-screen) )" right="expr(var(hb-param-margin-gene-screen) )" top="expr(var(hb-param-margin-gene-screen) )"/>
+                <layout type="anchor">
+                    <anchoritem dst="text_edit" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                    <anchoritem dst="text_edit" dstEdge="TOP" spacing="expr(var(hb-param-margin-gene-top) )" src="" srcEdge="TOP"/>
+                    <anchoritem dst="text_edit" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                    <anchoritem dst="lsc_btn_container" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                    <anchoritem dst="lsc_btn_container" dstEdge="TOP" spacing="expr(var(hb-param-margin-gene-top) )" src="text_edit" srcEdge="BOTTOM"/>
+                    <anchoritem dst="lsc_btn_container" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                    <anchoritem dst="lsc_btn_container" dstEdge="BOTTOM" spacing="0un" src="" srcEdge="BOTTOM"/>
+                </layout>
+            </widget>
+            <layout orientation="Vertical" spacing="0un" type="linear">
+                <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+                <linearitem itemname="heading_text"/>
+                <linearitem itemname="lsc_content_container"/>
+            </layout>
+        </widget>
+    </section>
+    <metadata activeUIState="lsc_state" display="NHD-3.2-inch_portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+        <uistate name="prt_state" sections="#common prt_section"/>
+        <uistate name="lsc_state" sections="#common lsc_section"/>
+    </metadata>
+</hbdocument>

@@ -1,0 +1,144 @@
+===============================================================================
+
+RELEASE NOTES - SCREENGRABBER v5.0.0
+RELEASED 10th March 2010 
+
+SUPPORTS S60 3.0+
+
+===============================================================================
+
+Product Description:
+====================
+ScreenGrabber tool is used to capture images and video of the visible screen
+area in S60 platform. Captures can be handled with the Media Gallery
+application or with PC when the device is connected via PC suite.
+
+Main Features:
+==============
+- Image capture in single or in sequential mode supporting PNG, JPEG and BMP
+  formats
+- Video capture in animated GIF format
+- Configurable saving format, hotkey, time delta in sequential mode, target
+  memory and default filename
+- Ability to change the screen mode to one of the supported more by the device
+
+===============================================================================
+
+What's New in v5.0.0
+====================
+- Orbit UI
+
+===============================================================================
+
+Installation Notes:
+===================
+ScreenGrabber is typically preinstalled on ROM. If not, it can be added to the
+ROM with the .iby file. Alternatively, the .sis file can be found under the sis-
+directory, but the user need to sign it with their own developer certificate.
+In Nokia R&D environment, you can use directly the R&D-signed .sis file under the
+internal\sis directory.
+
+When signing with own developer certificate, the following capabilities are
+needed:
+  WriteDeviceData
+  SwEvent
+
+When builing ScreenGrabber against S60 3.0 or 3.1, you may need to patch your
+SDK environment first with some fixes. For more information, please refer to
+the instructions under the "envpatcher" directory.
+
+===============================================================================
+
+System Requirements:
+====================
+Basic Requirements:
+- Any S60 3.x device or emulator environment
+
+===============================================================================
+
+Compatibility Issues:
+=====================
+N/A
+
+===============================================================================
+
+Known Issues:
+=============
+
+Sluggish UI when capturing video
+--------------------------------
+- Video capturing requires huge amount of processing power and thus may cause
+  the UI to become sluggish. If supported by the device, try to decrease the
+  screen resolution.
+
+===============================================================================
+
+Version History:
+================
+Version 4.2.0 - 14th May 2009
+------------------------------
+- Feature: Added a new SIS file for S60 3.2 devices and newer to support the
+  features in newer platforms
+- Feature: Added multidrive support in the settings dialog
+
+Version 4.1.3 - 8th March 2009
+------------------------------
+- Fix: ScreenGrabber does not work in devices which do not have Media Gallery
+  (Media Gallery File Manager API dependency changed from static to dynamic)
+    
+Version 4.1.2 - 8th February 2008
+---------------------------------
+- Fix: Transparency errors in GIF animations (hopefully) finally fixed
+  
+Version 4.1.1 - 28th January 2008
+---------------------------------
+- Feature: Added hash+* and alternative camera key into selection of capture
+  keys
+- Change: Reimplemented settings handling so that AllFiles and WriteUserData
+  capabilities are no longer needed
+    
+Version 4.1.0 - 14th January 2008
+---------------------------------
+- Feature: Added support for GIF and MBM formats although it is always
+  recommended to capture screens in PNG format
+- Feature: JPEG format can now be selected as high quality (97%) or low quality
+  (60%) 
+- Feature: Added POC key under capturing key options
+- Change: Dimensions of a video will be grown if the screen resolution of the
+  device will grow during capturing
+- Change: Capturing is now done always from current focus screen which allows to
+  support secondary displays
+- Change: Send key is now the default key
+- Fix: Black color didn't always work correctly in GIF animation optimization
+  with transparency  
+- Fix: Capturing to JPEG format leaked memory
+
+Version 4.0.3 - 16th November 2007
+----------------------------------
+- Fix: Scroll bar in the main view can be scrolled on a touch UI
+- Fix: Application closes automatically when closed via open applications menu
+
+Version 4.0.2 - 9th October 2007
+--------------------------------
+- Fix: Main screen layout in mirrored mode
+  
+Version 4.0.1 - 14th February 2007
+----------------------------------
+- Fix: Help screen on larger displays
+  
+Version 4.0.0 - 25th October 2006
+---------------------------------
+- Feature: Support for sequential capture mode
+- Feature: Support for capturing video in animated GIF format
+- Feature: Ability to change screen mode to one of the supported more by the
+  device
+
+===============================================================================
+
+Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+All rights reserved.
+
+This component and the accompanying materials are made available
+under the terms of "Eclipse Public License v1.0"
+which accompanies this distribution, and is available
+at the URL "http://www.eclipse.org/legal/epl-v10.html".

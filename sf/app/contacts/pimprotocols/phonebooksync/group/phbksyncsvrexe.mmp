@@ -1,0 +1,56 @@
+// Copyright (c) 2004-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// MMP file for the Phonebook Synchroniser Server executable.
+// phbksyncsvrexe.exe Phonebook synchroniser server
+// 
+//
+
+TARGET          phbksyncsvrexe.exe
+CAPABILITY      ProtServ ReadUserData WriteUserData ReadDeviceData WriteDeviceData
+TARGETTYPE      EXE
+UID             0x1000007A 0x102030A1
+VENDORID        0x70000001
+
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+
+USERINCLUDE     ../inc
+
+SOURCEPATH	../Server
+SOURCE          phbksyncsvr.cpp
+SOURCE          SyncContactICCEntry.cpp
+SOURCE          PhonebookManager.cpp
+SOURCE          PhonebookIniFile.cpp
+SOURCE          Phonebook.cpp
+SOURCE          phbksyncsess.cpp
+SOURCE          ActiveNotifications.cpp
+SOURCE          SyncEngineRequest.cpp
+SOURCE          SyncEngineClient.cpp
+SOURCE          SyncEngineSession.cpp
+SOURCE          SyncEngineServer.cpp
+SOURCE          SyncContactsWithICC.cpp
+SOURCE          WriteContactToICC.cpp
+SOURCE          DeleteContactFromICC.cpp
+
+LIBRARY         euser.lib
+LIBRARY         efsrv.lib
+LIBRARY         etel.lib
+LIBRARY         etelmm.lib
+LIBRARY         cntmodel.lib
+LIBRARY         etelsat.lib
+LIBRARY         estor.lib
+LIBRARY         commsdat.lib
+DEBUGLIBRARY    comsdbgutil.lib
+
+SMPSAFE
+

@@ -1,0 +1,25 @@
+EXPORTS
+	?CreateMediaInfoL@CMsgMediaResolver@@QAEPAVCMsgMediaInfo@@AAVRFile@@@Z @ 1 NONAME ; class CMsgMediaInfo * CMsgMediaResolver::CreateMediaInfoL(class RFile &)
+	?CreateMediaInfoL@CMsgMediaResolver@@QAEPAVCMsgMediaInfo@@AAVRFile@@AAVTDataType@@@Z @ 2 NONAME ; class CMsgMediaInfo * CMsgMediaResolver::CreateMediaInfoL(class RFile &, class TDataType &)
+	?FileHandleL@CMsgMediaResolver@@QAE?AVRFile@@ABVTDesC16@@@Z @ 3 NONAME ; class RFile CMsgMediaResolver::FileHandleL(class TDesC16 const &)
+	?IsConformantMime@CMmsConformance@@QAEHABVTPtrC8@@@Z @ 4 NONAME ; int CMmsConformance::IsConformantMime(class TPtrC8 const &)
+	?MediaConformance@CMmsConformance@@QAE?AVTMmsConformance@@AAVCMsgMediaInfo@@@Z @ 5 NONAME ; class TMmsConformance CMmsConformance::MediaConformance(class CMsgMediaInfo &)
+	?MediaType@CMsgMediaResolver@@QBE?AW4TMsgMediaType@@ABVTDesC8@@@Z @ 6 NONAME ; enum TMsgMediaType CMsgMediaResolver::MediaType(class TDesC8 const &) const
+	?NewL@CMmsConformance@@SAPAV1@XZ @ 7 NONAME ; class CMmsConformance * CMmsConformance::NewL(void)
+	?NewL@CMsgAudioInfo@@SAPAV1@AAVRFile@@AAVTDataType@@@Z @ 8 NONAME ; class CMsgAudioInfo * CMsgAudioInfo::NewL(class RFile &, class TDataType &)
+	?NewL@CMsgImageInfo@@SAPAV1@AAVRFile@@AAVTDataType@@@Z @ 9 NONAME ; class CMsgImageInfo * CMsgImageInfo::NewL(class RFile &, class TDataType &)
+	?NewL@CMsgMediaInfo@@SAPAV1@AAVRFile@@AAVTDataType@@W4TMsgMediaType@@@Z @ 10 NONAME ; class CMsgMediaInfo * CMsgMediaInfo::NewL(class RFile &, class TDataType &, enum TMsgMediaType)
+	?NewL@CMsgMediaResolver@@SAPAV1@XZ @ 11 NONAME ; class CMsgMediaResolver * CMsgMediaResolver::NewL(void)
+	?NewL@CMsgTextInfo@@SAPAV1@AAVRFile@@AAVTDataType@@AAVRFs@@@Z @ 12 NONAME ; class CMsgTextInfo * CMsgTextInfo::NewL(class RFile &, class TDataType &, class RFs &)
+	?NewL@CMsgVideoInfo@@SAPAV1@AAVRFile@@AAVTDataType@@@Z @ 13 NONAME ; class CMsgVideoInfo * CMsgVideoInfo::NewL(class RFile &, class TDataType &)
+	?NewLC@CMmsConformance@@SAPAV1@XZ @ 14 NONAME ; class CMmsConformance * CMmsConformance::NewLC(void)
+	?NewLC@CMsgMediaResolver@@SAPAV1@XZ @ 15 NONAME ; class CMsgMediaResolver * CMsgMediaResolver::NewLC(void)
+	?ParseInfoDetailsL@CMsgMediaInfo@@QAEXAAVRFile@@AAVCDRMHelper@@AAVMMediaInfoObserver@@@Z @ 16 NONAME ; void CMsgMediaInfo::ParseInfoDetailsL(class RFile &, class CDRMHelper &, class MMediaInfoObserver &)
+	?ParseInfoDetailsL@CMsgMediaResolver@@QAEXPAVCMsgMediaInfo@@AAVRFile@@@Z @ 17 NONAME ; void CMsgMediaResolver::ParseInfoDetailsL(class CMsgMediaInfo *, class RFile &)
+	?ParseInfoDetailsL@CMsgMediaResolver@@QAEXPAVCMsgMediaInfo@@AAVRFile@@AAVMMediaInfoObserver@@@Z @ 18 NONAME ABSENT ; void CMsgMediaResolver::ParseInfoDetailsL(class CMsgMediaInfo *, class RFile &, class MMediaInfoObserver &)
+	?RecognizeL@CMsgMediaResolver@@QAEXAAVRFile@@AAVTDataType@@@Z @ 19 NONAME ; void CMsgMediaResolver::RecognizeL(class RFile &, class TDataType &)
+	?SetFileL@CMsgMediaInfo@@QAEXAAVRFile@@@Z @ 20 NONAME ; void CMsgMediaInfo::SetFileL(class RFile &)
+	?Corrupt@CMsgMediaInfo@@QBEHXZ @ 21 NONAME ; int CMsgMediaInfo::Corrupt(void) const
+	?ParseInfoDetails@CMsgMediaInfo@@QAEXAAVRFile@@AAVCDRMHelper@@AAVMMediaInfoObserver@@@Z @ 22 NONAME ; void CMsgMediaInfo::ParseInfoDetails(class RFile &, class CDRMHelper &, class MMediaInfoObserver &)
+	?ConformanceVersionL@CMmsConformance@@SAEXZ @ 23 NONAME ; unsigned char CMmsConformance::ConformanceVersionL(void)
+

@@ -1,0 +1,55 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+* 
+* Description: Specifies HTI UI layer components for ROM image
+*
+*/
+
+#ifndef __HTIUI_IBY__
+#define __HTIUI_IBY__
+
+
+// HtiAdmin application
+S60_APP_EXE(HtiAdmin)
+data=DATAZ_\Resource\apps\HtiAdmin.rsc                      Resource\Apps\HtiAdmin.rsc
+data=ZPRIVATE\10003a3f\import\apps\HtiAdmin_reg.rsc         private\10003a3f\import\apps\HtiAdmin_reg.rsc
+
+
+// Test service plug-ins
+ECOM_PLUGIN(HtiAudioServicePlugin.dll,HtiAudioServicePlugin.rsc)
+ECOM_PLUGIN(HtiCameraServicePlugin.dll,HtiCameraServicePlugin.rsc)
+ECOM_PLUGIN(HtiKeyEventServicePlugin.dll,HtiKeyEventServicePlugin.rsc)
+ECOM_PLUGIN(HtiMessagesServicePlugin.dll,HtiMessagesServicePlugin.rsc)
+ECOM_PLUGIN(HtiPIMServicePlugin.dll,HtiPIMServicePlugin.rsc)
+ECOM_PLUGIN(HtiScreenshotServicePlugin.dll,HtiScreenshotServicePlugin.rsc)
+ECOM_PLUGIN(HtiSysInfoServicePlugin.dll,HtiSysInfoServicePlugin.rsc)
+
+// Test service plug-in extension
+file=ABI_DIR\BUILD_DIR\HtiAppControl.dll            SHARED_LIB_DIR\HtiAppControl.dll
+
+// Backup fake DLL used by HtiFtpServicePlugin
+file=ABI_DIR\BUILD_DIR\HtiFtpBackupFake.dll         SHARED_LIB_DIR\HtiFtpBackupFake.dll
+
+// Device rebooter
+file=ABI_DIR\BUILD_DIR\HtiDeviceRebootUI.exe       SHARED_LIB_DIR\HtiDeviceRebootUI.exe
+
+// Startup wait DLL
+file=ABI_DIR\BUILD_DIR\HtiStartupWait.dll           SHARED_LIB_DIR\HtiStartupWait.dll
+
+// Tcb helper
+file=ABI_DIR\BUILD_DIR\HtiTcbHlp.exe                SHARED_LIB_DIR\HtiTcbHlp.exe
+
+// Stub SIS
+data=ZSYSTEM\Install\HTI_stub.sis                   system\install\HTI_stub.sis
+
+#endif // __HTIUI_IBY__

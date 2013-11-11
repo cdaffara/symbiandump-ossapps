@@ -1,0 +1,48 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+#ifndef FILEBROWSER_LITE
+  #include "../fileopserver/group/bld.inf"
+  #include "../fileopclient/group/bld.inf"
+#endif
+
+PRJ_EXPORTS
+../group/backup_registration.xml    Z:/private/102828D6/backup_registration.xml
+../rom/filebrowser.iby CORE_IBY_EXPORT_PATH(tools,filebrowser.iby)
+
+
+PRJ_MMPFILES
+#if defined(__SERIES60_30__) || defined(__SERIES60_31__) || defined(__S60_32__)
+
+  #ifdef MARM
+  gnumakefile filebrowser_stub_sis.mk
+  #endif
+#endif
+
+#if(!defined __SERIES60_30__ && !defined __SERIES60_31__ && !defined __S60_32__)
+  PRJ_EXTENSIONS
+
+  #ifdef MARM
+  START EXTENSION app-services/buildstubsis
+  OPTION SRCDIR ../sis
+  OPTION SISNAME FileBrowser_stub
+  END
+  #endif  
+#endif

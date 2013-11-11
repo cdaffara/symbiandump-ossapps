@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE SystemDefinition SYSTEM "sysdef_1_5_1.dtd" [
+  <!ENTITY layer_real_source_path "sf/app/settingsuis/controlpanelplugins/aboutplugin" >
+]>
+
+<SystemDefinition name="aboutplugin" schema="1.5.1">
+  <systemModel>
+    <layer name="app_layer">
+      <module name="aboutplugin">
+        <unit unitID="aboutplugin" mrp="" bldFile="&layer_real_source_path;" proFile="aboutplugin.pro" name="aboutplugin" qmakeArgs="-r"/>
+      </module>
+    </layer>
+  </systemModel>
+</SystemDefinition>

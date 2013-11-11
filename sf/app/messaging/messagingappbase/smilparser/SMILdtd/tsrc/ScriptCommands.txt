@@ -1,0 +1,106 @@
+Note that the log file is best viewed by pasting its contents into Word,
+so that the 'newlines' are properly formatted.
+
+The script file is looked for in directory c:\MsgTest\SMIL_DOM and is expected to be called script.txt
+
+
+Script Commands
+---------------
+
+Create a new DOM tree (document + smil) & make the smil the current element.
+Command: createdomtree
+
+Delete the DOM tree
+Command: deletedomtree
+
+Create an element of a specified type, and add it to the end of the current
+element’s child list.
+Command: create <element type> append
+
+Create an element of a specified type, and insert it at a numerically defined
+position in the current element’s child list.
+Command: create <element type> insert n
+Use n = -3 for start of list (specified with NULL parameter), and no element to insert.
+Use n = -2 for start of list (specified with pointer to first child), and no element to insert.
+Use n = -1 for invalid pointer specifying place to insert.
+Use n = 0 for start of list (specified with NULL parameter)
+Use n = 1 for start of list (specified with pointer to first child)
+Then n = 2 for second child etc.
+
+Create an element of a specified type and use it to replace a numerically defined
+child element in the current element’s child list. Delete the old child.
+Command: create <element type> replace n
+Use n = -2 for start of list, and no element to insert.
+Use n = -1 for invalid pointer specifying child to replace.
+Use n = 0 for NULL, in place of pointer to child to replace.
+Use n = 1 for start of list
+Then n = 2 for second child etc.
+
+Remove a child element, defined by a numeric position, in the current element’s
+list of children. Then delete it.
+Command: deletechild n
+Use n = -1 for invalid pointer specifying child to remove.
+Use n = 0 for NULL, in place of pointer to child to remove.
+Use n = 1 for start of list
+Then n = 2 for second child etc.
+
+Navigate up the object tree to the current element’s parent.
+Command: parent
+
+Navigate to the element at the root of the DOM tree (smil).
+Command: rootsmil
+
+Navigate to the first child of the current element.
+Command: firstchild
+
+Navigate to the last child of the current element.
+Command: lastchild
+
+Navigate to the next sibling of the current element.
+Command: nextsibling
+
+Navigate to the previous sibling of the current element.
+Command: prevsibling
+
+Navigate to the first child, of specified element type, belonging to the current element.
+Command: first <element type>
+
+Navigate to the last child, of specified element type, belonging to the current element.
+Command: last <element type>
+
+Navigate to the next sibling, of specified element type, from a current
+element of the same type.
+Command: next <element type>
+
+Navigate to the previous sibling, of specified element type, from a current
+element of the same type.
+Command: prev <element type>
+
+Set an attribute value of the current element (referring to the attribute by name).
+Command: setatt <attribute name> "<attribute value>"
+
+Get an attribute value of the current element if it is set (referring to the attribute
+by name).
+Command: getatt <attribute name>
+
+Unset an attribute for the current element (referring to the attribute by name).
+Command: unsetatt <attribute name>
+
+Check the child elements of the current element.
+Command: legalchildren
+
+There are commands to set, display and unset the id attributes of elements using the explicit id attribute
+access functions.  These commands are provided because they use a different set of routines to the GetAttribute
+route using a named attribute (they should give the same result as using a named 'id' attribute of course).
+These commands only use the id attribute because it is commn to all elements (except for meta).  Other atributes are
+not provided because the test code is slightly cumbersome.
+
+Get the current value of the id attribute (or state if it is unset) for the current element.
+Command: getid
+
+Set the current value of the id attribute for the current element.
+Command: setid<value>
+
+Unset the id attribute for the current element.
+Command: removeid
+

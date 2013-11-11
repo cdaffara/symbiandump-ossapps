@@ -1,0 +1,43 @@
+<hbwidget version="0.1" type="ClockHomeCityItem">
+    <layout name="homecity-portrait" type="mesh">
+        <meshitem src="dayNightIcon" srcEdge="TOP" dst="" dstEdge="TOP" />
+        <meshitem src="dayNightIcon" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+        
+        <meshitem src="dateText" srcEdge="TOP" dst="" dstEdge="TOP" />
+        <meshitem src="dateText" srcEdge="LEFT" dst="dayNightIcon" dstEdge="RIGHT" />
+        <meshitem src="dateText" srcEdge="RIGHT" dst="dstIcon" dstEdge="LEFT" />
+        
+        <meshitem src="dstIcon" srcEdge="TOP" dst="dateText" dstEdge="TOP" />
+        <meshitem src="dstIcon" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+        
+        <meshitem src="cityText" srcEdge="TOP" dst="dateText" dstEdge="BOTTOM" />
+        <meshitem src="cityText" srcEdge="LEFT" dst="dateText" dstEdge="LEFT" />
+        <meshitem src="cityText" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+        <meshitem src="cityText" srcEdge="RIGHT" dst="timeText" dstEdge="LEFT" />
+        
+        <meshitem src="timeText" srcEdge="TOP" dst="cityText" dstEdge="TOP" />
+        <meshitem src="timeText" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+
+    </layout>
+
+    <layout name="homecity-landscape" type="mesh">
+        <meshitem src="dayNightIcon" srcEdge="TOP" dst="" dstEdge="TOP" />
+        <meshitem src="dayNightIcon" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+
+		<meshitem src="dateText" srcEdge="TOP" dst="" dstEdge="TOP" />
+        <meshitem src="dateText" srcEdge="LEFT" dst="dayNightIcon" dstEdge="RIGHT" />
+        <meshitem src="dateText" srcEdge="RIGHT" dst="timeText" dstEdge="LEFT" />
+        
+        <meshitem src="timeText" srcEdge="TOP" dst="dateText" dstEdge="TOP" />
+        <meshitem src="timeText" srcEdge="RIGHT" dst="dstIcon" dstEdge="LEFT" spacing="0.0un"/>
+        
+        <meshitem src="dstIcon" srcEdge="TOP" dst="dateText" dstEdge="TOP" />
+        <meshitem src="dstIcon" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+        
+        <meshitem src="cityText" srcEdge="TOP" dst="dateText" dstEdge="BOTTOM" />
+        <meshitem src="cityText" srcEdge="LEFT" dst="dateText" dstEdge="LEFT" />
+        <meshitem src="cityText" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+        <meshitem src="cityText" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)"/>
+    </layout>
+
+</hbwidget>

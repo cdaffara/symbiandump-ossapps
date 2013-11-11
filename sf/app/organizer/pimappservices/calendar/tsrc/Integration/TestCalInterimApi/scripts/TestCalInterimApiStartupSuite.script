@@ -1,0 +1,66 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+LOAD_SUITE TestCalInterimApiSuite
+
+START_TESTCASE PIM-APPENG-AGN-CNTS-1192-0001
+//! @file
+//! @SYMTestCaseID PIM-APPENG-AGN-CNTS-1192-0001
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1192
+//! @SYMFssID <App-Engines>/<AgnModel>/ AP.1
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Launch Cal/Agenda with valid calendar file
+//! @SYMTestActions Create a valid calendar file, launch the server, delete and re-create the cal file
+//! @SYMTestExpectedResults Server launches ok, calendar file can be deleted and re-created while server running
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite  TestCalInterimApiFileAccess	\CITCalInterimApi\TestCalInterimApiStartupSuite.ini create_cal_file
+DELAY 5000
+RUN_TEST_STEP 100 TestCalInterimApiSuite  TestStartUpExeStep            \CITCalInterimApi\TestCalInterimApiStartupSuite.ini launch_agn_server
+DELAY 5000
+RUN_TEST_STEP 100 TestCalInterimApiSuite  TestStartUpExeStep            \CITCalInterimApi\TestCalInterimApiStartupSuite.ini check_agn_server_is_ok
+RUN_TEST_STEP 100 TestCalInterimApiSuite  TestCalInterimApiFileAccess	\CITCalInterimApi\TestCalInterimApiStartupSuite.ini delete_cal_file
+RUN_TEST_STEP 100 TestCalInterimApiSuite  TestCalInterimApiFileAccess	\CITCalInterimApi\TestCalInterimApiStartupSuite.ini create_cal_file
+RUN_TEST_STEP 100 TestCalInterimApiSuite  TestStartUpExeStep            \CITCalInterimApi\TestCalInterimApiStartupSuite.ini terminate_agn_server
+RUN_TEST_STEP 100 TestCalInterimApiSuite  TestStartUpExeStep            \CITCalInterimApi\TestCalInterimApiStartupSuite.ini check_agn_server_has_terminated_ok
+RUN_TEST_STEP 100 TestCalInterimApiSuite  TestCalInterimApiFileAccess	\CITCalInterimApi\TestCalInterimApiStartupSuite.ini create_cal_file
+END_TESTCASE PIM-APPENG-AGN-CNTS-1192-0001
+
+
+
+START_TESTCASE PIM-APPENG-AGN-CNTS-1192-0002
+//! @file
+//! @SYMTestCaseID PIM-APPENG-AGN-CNTS-1192-0002
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1192
+//! @SYMFssID <App-Engines>/<AgnModel>/ AP.1
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Start the agenda server with no default calendar file
+//! @SYMTestActions Delete the default cal file, lauch the agenda server in non-transientm, attemp to create agenda file
+//! @SYMTestExpectedResults Agenda server starts ok, creating a new default cal file is allowed
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite  TestCalInterimApiFileAccess	\CITCalInterimApi\TestCalInterimApiStartupSuite.ini delete_cal_file
+DELAY 5000
+RUN_TEST_STEP 100 TestCalInterimApiSuite  TestStartUpExeStep            \CITCalInterimApi\TestCalInterimApiStartupSuite.ini launch_agn_server
+DELAY 5000
+RUN_TEST_STEP 100 TestCalInterimApiSuite  TestStartUpExeStep            \CITCalInterimApi\TestCalInterimApiStartupSuite.ini check_agn_server_is_ok
+RUN_TEST_STEP 100 TestCalInterimApiSuite  TestCalInterimApiFileAccess	\CITCalInterimApi\TestCalInterimApiStartupSuite.ini create_cal_file
+RUN_TEST_STEP 100 TestCalInterimApiSuite  TestStartUpExeStep            \CITCalInterimApi\TestCalInterimApiStartupSuite.ini terminate_agn_server
+RUN_TEST_STEP 100 TestCalInterimApiSuite  TestStartUpExeStep            \CITCalInterimApi\TestCalInterimApiStartupSuite.ini check_agn_server_has_terminated_ok
+RUN_TEST_STEP 100 TestCalInterimApiSuite  TestCalInterimApiFileAccess	\CITCalInterimApi\TestCalInterimApiStartupSuite.ini create_cal_file
+END_TESTCASE PIM-APPENG-AGN-CNTS-1192-0002

@@ -1,0 +1,60 @@
+/*
+* Copyright (c) 2008 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Bit flag definitions for VT local variation.
+*
+*/
+
+
+#ifndef VIDEOTELEPHONYVARIANT_HRH
+#define VIDEOTELEPHONYVARIANT_HRH
+
+
+/**
+* KVTLVFlagScalingMethodENearest defines whether the video image is
+* scaled using Nearest algorithm, which is fast, but quality is low.
+* When the flag is set ENearest is used.
+* @since S60 v2.8
+*/
+#define KVTLVFlagScalingMethodENearest 0x00000001
+
+/**
+* KVTLVFlagScalingMethodEBilinear defines whether the video image is
+* scaled using Bilinear algorithm, which offers the best quality, but in a
+* slow way. When the flag is set Bilinear is used.
+* @since S60 v2.8
+*/
+#define KVTLVFlagScalingMethodEBilinear 0x00000002
+
+/**
+* KVTLVFlagEnableBitReversal defines if bit order should be
+* reversed in PV.
+* When the flag is set bit order is reversed.
+*/
+#define KVTLVFlagEnableBitReversal 0x00000004
+
+/**
+* KVTLVFlagEnableAMR_WB defines if AMR wideband is supported in video calls.
+* @since S60 v5.0
+*/
+#define KVTLVFlagEnableAMR_WB 0x00000008
+
+/**
+* KVTLVFlagSupportMpeg4 defines whether the PV should support Mepg4.
+* @since S60 v5.0
+*/
+#define KVTLVFlagDisableMpeg4 0x00000010
+
+#endif // VIDEOTELEPHONYVARIANT_HRH
+
+// End of File

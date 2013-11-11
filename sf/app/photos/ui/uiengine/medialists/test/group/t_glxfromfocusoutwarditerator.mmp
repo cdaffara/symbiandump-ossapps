@@ -1,0 +1,48 @@
+/*
+* Copyright (c) 2006-2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   TGlxFromFocusOutwardItemOrder unit test project file
+*
+*/
+
+
+
+#include "../../../../../group/glxbuildcommon.mmh"
+
+TARGET          t_glxfromfocusoutwarditerator.dll
+TARGETTYPE      dll
+TARGETPATH      /DigiaEUnit/Tests
+UID             0x1000af5a 0x01700000
+
+CAPABILITY              ALL -TCB
+
+SOURCEPATH              ../t_glxfromfocusoutwarditerator
+SOURCE                  t_glxfromfocusoutwarditeratordllmain.cpp
+SOURCE                  t_glxfromfocusoutwarditerator.cpp
+
+USERINCLUDE             ../t_glxfromfocusoutwarditerator 
+USERINCLUDE             ../inc
+
+SYSTEMINCLUDE           ../../inc
+SYSTEMINCLUDE           ../../../../inc
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE           /epoc32/include/Digia/EUnit
+
+LIBRARY                 EUnit.lib
+LIBRARY                 euser.lib
+LIBRARY                 glxmedialists.lib
+LIBRARY                 lbs.lib // TCoordinate
+
+EXPORTUNFROZEN
+SMPSAFE
+// End of file

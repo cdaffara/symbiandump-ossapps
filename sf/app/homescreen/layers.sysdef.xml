@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE SystemDefinition SYSTEM "sysdef_1_5_1.dtd" [
+  <!ENTITY layer_real_source_path "sf/app/homescreen" >
+]>
+
+<SystemDefinition name="homescreen" schema="1.5.1">
+  <systemModel>
+        <layer name="app_layer">
+            <module name="homescreen">
+                <unit name="homescreen" unitID="homescreen" bldFile="&layer_real_source_path;" mrp="" proFile="homescreen.pro" qmakeArgs="-r -config rom"/>
+            </module>
+        </layer>
+        
+        <layer name="unit_test_layer">
+          <module name="hs_app_unit_test">
+            <unit unitID="hsdo.hs_app_unit_test" name="hs_app_unit_test" bldFile="&layer_real_source_path;/tsrc" mrp="" proFile="tsrc.pro" qmakeArgs="-r MMP_RULES+=EXPORTUNFROZEN"/>
+          </module>
+        </layer>
+    </systemModel>
+</SystemDefinition>

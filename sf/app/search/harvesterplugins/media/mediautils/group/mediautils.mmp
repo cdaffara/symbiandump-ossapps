@@ -1,0 +1,37 @@
+/*
+* Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: 
+*
+*/
+
+
+TARGET            cpixmediautils.lib
+TARGETTYPE        lib
+
+USERINCLUDE   ../inc
+APP_LAYER_SYSTEMINCLUDE
+#include "../../../../harvesterplugins/inc/s60performance.h"
+
+SOURCEPATH ../src
+SOURCE mdsmediamonitor.cpp 
+SOURCE mdssessionobjectutils.cpp 
+SOURCE mdeobjectqueuemanager.cpp 
+SOURCE mdeharvester.cpp 
+SOURCE cpixdocfetcher.cpp 
+SOURCE cpixindexerutils.cpp 
+SOURCE mmcmonitor.cpp cpixmdedbmanager.cpp mdsitementity.cpp
+
+EXPORTUNFROZEN
+
+

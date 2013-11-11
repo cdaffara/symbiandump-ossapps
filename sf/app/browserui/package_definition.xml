@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SystemDefinition schema="3.0.0" xmlns:qt="http://www.nokia.com/qt">
+ <package id="browserui" name="Browser UI" levels="utils support ui">
+  <collection id="browserui_info" name="Browser UI Info" level="ui">
+    <component id="browserui_build" name="Bookmarks Engine Build" introduced="^4" filter="s60">
+      <unit bldFile="." qt:proFile="browserui.pro"/>
+    </component>
+  </collection>
+ </package>
+</SystemDefinition>

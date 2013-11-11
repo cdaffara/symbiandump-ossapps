@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="1.1">
+    <widget name="settings_scenes_view" type="HbView">
+        <widget name="scene_view_content" role="HbView:widget" type="HbWidget">
+            <widget name="scene_view_bg_icon" type="HbLabel">
+                <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+                <real name="z" value="-1"/>
+                <real name="opacity" value="1"/>
+            </widget>
+            <widget name="scene_view_bg_icon2" type="HbLabel">
+                <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+                <real name="z" value="0"/>
+                <real name="opacity" value="0"/>
+            </widget>
+            <widget name="scene_view_container" type="HbWidget">
+                <widget name="scene_view_radioButtonList" type="HbRadioButtonList">
+                    <real name="z" value="4"/>
+                </widget>
+                <widget name="button_container" type="HbWidget">
+                    <widget name="scene_ok_button" type="HbPushButton">
+                        <sizehint height="7un" type="PREFERRED" width="21.875un"/>
+                        <string locid="txt_common_button_ok" name="text" value="Ok"/>
+                        <string name="state" value="normal"/>
+                    </widget>
+                    <widget name="scene_cancel_button" type="HbPushButton">
+                        <sizehint height="7un" type="PREFERRED" width="21.875un"/>
+                        <string locid="txt_common_button_cancel" name="text" value="Cancel"/>
+                        <string name="state" value="normal"/>
+                    </widget>
+                    <real name="z" value="0"/>
+                    <sizehint height="7un" type="PREFERRED" width="23.8806un"/>
+                    <layout orientation="Horizontal" spacing="var(hb-param-margin-gene-left)" type="linear">
+                        <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+                        <linearitem itemname="scene_ok_button"/>
+                        <linearitem itemname="scene_cancel_button"/>
+                    </layout>
+                </widget>
+                <widget name="scene_title" type="HbLabel">
+                    <real name="z" value="4"/>
+                    <string name="plainText" value="Scene settings dialog"/>
+                    <fontspec name="fontSpec" role="Title" textheight="var(hb-param-text-height-primary)"/>
+                </widget>
+                <real name="z" value="2"/>
+                <sizepolicy horizontalPolicy="Preferred" horizontalStretch="0" verticalPolicy="Preferred" verticalStretch="0"/>
+                <sizehint height="41.49254un" type="PREFERRED" width="expr(var(hb-param-widget-dialog-width) )"/>
+                <layout orientation="Vertical" spacing="1un" type="linear">
+                    <contentsmargins bottom="var(hb-param-margin-gene-bottom)" left="var(hb-param-margin-gene-left)" right="var(hb-param-margin-gene-right)" top="var(hb-param-margin-gene-top)"/>
+                    <linearitem itemname="scene_title"/>
+                    <linearitem itemname="scene_view_radioButtonList"/>
+                    <linearitem itemname="button_container"/>
+                </layout>
+            </widget>
+            <layout type="anchor">
+                <anchoritem dst="scene_view_bg_icon" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="scene_view_bg_icon" dstEdge="TOP" spacing="0un" src="" srcEdge="TOP"/>
+                <anchoritem dst="scene_view_bg_icon" dstEdge="BOTTOM" spacing="0un" src="" srcEdge="BOTTOM"/>
+                <anchoritem dst="scene_view_bg_icon" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="scene_view_bg_icon2" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="scene_view_bg_icon2" dstEdge="TOP" spacing="0un" src="" srcEdge="TOP"/>
+                <anchoritem dst="scene_view_bg_icon2" dstEdge="BOTTOM" spacing="0un" src="" srcEdge="BOTTOM"/>
+                <anchoritem dst="scene_view_bg_icon2" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="scene_view_container" dstEdge="TOP" spacing="expr(var(hb-param-margin-gene-top) )" src="" srcEdge="TOP"/>
+                <anchoritem dst="scene_view_container" dstEdge="RIGHT" spacing="-var(hb-param-margin-gene-right)" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="scene_view_container" dstEdge="BOTTOM" spacing="-var(hb-param-margin-gene-bottom)" src="" srcEdge="BOTTOM"/>
+            </layout>
+        </widget>
+        <string name="title" value="Scene modes"/>
+        <bool name="contentFullScreen" value="TRUE"/>
+        <enums name="focusDelegation" value="FocusDelegationNone"/>
+        <enums name="viewFlags" value="ViewTitleBarTransparent|ViewTitleBarFloating|ViewTitleBarHidden|ViewStatusBarTransparent|ViewStatusBarFloating|ViewStatusBarHidden"/>
+    </widget>
+    <connect receiver="settings_scenes_view" sender="scene_ok_button" signal="released()" slot="handleOkButtonPress()"/>
+    <connect receiver="settings_scenes_view" sender="scene_cancel_button" signal="released()" slot="handleCancelButtonPress()"/>
+    <metadata activeUIState="Common ui state" display="NHD-3.2-inch_landscape" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+    </metadata>
+</hbdocument>

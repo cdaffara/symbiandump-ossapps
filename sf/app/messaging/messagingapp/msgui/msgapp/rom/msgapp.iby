@@ -1,0 +1,30 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+#ifndef __MSGAPP_IBY__
+#define __MSGAPP_IBY__
+
+file=ABI_DIR\UREL\messaging101.exe                              SHARED_LIB_DIR\messaging101.exe
+data=DATAZ_\private\10003a3f\import\apps\messaging101_reg.rsc   private\10003a3f\import\apps\messaging101_reg.rsc
+
+data=DATAZ_\system\install\msgapp_stub.sis					           system\install\msgapp_stub.sis
+
+data=ZRESOURCE\hb\splashml\messaging101.splashml  RESOURCE_FILES_DIR\hb\splashml\messaging101.splashml
+data=ZRESOURCE\hb\splashml\messaging101.docml  RESOURCE_FILES_DIR\hb\splashml\messaging101.docml
+data=ZRESOURCE\hb\splashml\messaging101_dummy.splashml  RESOURCE_FILES_DIR\hb\splashml\messaging101_dummy.splashml
+data=ZRESOURCE\hb\splashml\messaging101_dummy.docml  RESOURCE_FILES_DIR\hb\splashml\messaging101_dummy.docml
+
+#endif // __MSGAPP_IBY__

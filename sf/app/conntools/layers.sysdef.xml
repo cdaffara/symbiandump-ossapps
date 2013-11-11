@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE SystemDefinition SYSTEM "sysdef_1_4_0.dtd" [
+  <!ENTITY layer_real_source_path "sf/app/conntools" >
+]>
+
+<SystemDefinition name="conntools" schema="1.4.0">
+  <systemModel>
+    <layer name="app_layer">
+      <module name="conntools">
+        <unit unitID="netdo.conntools" mrp="" bldFile="&layer_real_source_path;/group" name="conntools" />
+      </module>
+    </layer>
+  </systemModel>
+</SystemDefinition>

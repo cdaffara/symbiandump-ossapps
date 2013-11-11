@@ -1,0 +1,30 @@
+EXPORTS
+	?ActivateL@RApplicationManagement@NApplicationManagement@@QBEXK@Z @ 1 NONAME ; void NApplicationManagement::RApplicationManagement::ActivateL(unsigned long) const
+	?CheckStatusNodesL@RApplicationManagement@NApplicationManagement@@QBEXXZ @ 2 NONAME ; void NApplicationManagement::RApplicationManagement::CheckStatusNodesL(void) const
+	?Close@RAppMgmtRfs@@QAEXXZ @ 3 NONAME ; void RAppMgmtRfs::Close(void)
+	?Close@RApplicationManagement@NApplicationManagement@@QAEXXZ @ 4 NONAME ; void NApplicationManagement::RApplicationManagement::Close(void)
+	?Connect@RAppMgmtRfs@@QAEHXZ @ 5 NONAME ; int RAppMgmtRfs::Connect(void)
+	?Connect@RApplicationManagement@NApplicationManagement@@QAEHABVTCertInfo@@@Z @ 6 NONAME ; int NApplicationManagement::RApplicationManagement::Connect(class TCertInfo const &)
+	?Connect@RApplicationManagement@NApplicationManagement@@QAEHXZ @ 7 NONAME ; int NApplicationManagement::RApplicationManagement::Connect(void)
+	?DeactivateL@RApplicationManagement@NApplicationManagement@@QBEXK@Z @ 8 NONAME ; void NApplicationManagement::RApplicationManagement::DeactivateL(unsigned long) const
+	?DeliverL@RApplicationManagement@NApplicationManagement@@QBEKABV?$TBuf8@$0BAA@@@@Z @ 9 NONAME ; unsigned long NApplicationManagement::RApplicationManagement::DeliverL(class TBuf8<256> const &) const
+	?DeploymentComponent@RApplicationManagement@NApplicationManagement@@QBEHKAAUTDeploymentComponent@2@@Z @ 10 NONAME ; int NApplicationManagement::RApplicationManagement::DeploymentComponent(unsigned long, struct NApplicationManagement::TDeploymentComponent &) const
+	?DeploymentComponentDataL@RApplicationManagement@NApplicationManagement@@QBEXKW4TDeplCompAttrType@2@AAVCBufBase@@@Z @ 11 NONAME ; void NApplicationManagement::RApplicationManagement::DeploymentComponentDataL(unsigned long, enum NApplicationManagement::TDeplCompAttrType, class CBufBase &) const
+	?DeploymentComponentDataSizeL@RApplicationManagement@NApplicationManagement@@QBEHKABW4TDeplCompAttrType@2@@Z @ 12 NONAME ; int NApplicationManagement::RApplicationManagement::DeploymentComponentDataSizeL(unsigned long, enum NApplicationManagement::TDeplCompAttrType const &) const
+	?DeploymentComponentIdsL@RApplicationManagement@NApplicationManagement@@QBEHAAV?$RArray@K@@W4TDeploymentComponentState@2@@Z @ 13 NONAME ; int NApplicationManagement::RApplicationManagement::DeploymentComponentIdsL(class RArray<unsigned long> &, enum NApplicationManagement::TDeploymentComponentState) const
+	?DeploymentComponentTempInstFileL@RApplicationManagement@NApplicationManagement@@QBEXKAAVRFile@@ABW4TDeplCompAttrType@2@@Z @ 14 NONAME ; void NApplicationManagement::RApplicationManagement::DeploymentComponentTempInstFileL(unsigned long, class RFile &, enum NApplicationManagement::TDeplCompAttrType const &) const
+	?DeploymentComponentUserIdL@RApplicationManagement@NApplicationManagement@@QBEXKAAV?$TBuf8@$0BAA@@@@Z @ 15 NONAME ; void NApplicationManagement::RApplicationManagement::DeploymentComponentUserIdL(unsigned long, class TBuf8<256> &) const
+	?DownloadL@RApplicationManagement@NApplicationManagement@@QBEKABV?$TBuf8@$0BAA@@@@Z @ 16 NONAME ; unsigned long NApplicationManagement::RApplicationManagement::DownloadL(class TBuf8<256> const &) const
+	?GenericAlertSentL@RApplicationManagement@NApplicationManagement@@QBEXK@Z @ 17 NONAME ; void NApplicationManagement::RApplicationManagement::GenericAlertSentL(unsigned long) const
+	?GetFinalResultsForGAL@RApplicationManagement@NApplicationManagement@@QBEXKAAHAAVTDes8@@@Z @ 18 NONAME ; void NApplicationManagement::RApplicationManagement::GetFinalResultsForGAL(unsigned long, int &, class TDes8 &) const
+	?InstallL@RApplicationManagement@NApplicationManagement@@QBEXKW4TDeploymentComponentState@2@@Z @ 19 NONAME ; void NApplicationManagement::RApplicationManagement::InstallL(unsigned long, enum NApplicationManagement::TDeploymentComponentState) const
+	?PerformRfsL@RAppMgmtRfs@@QBEXXZ @ 20 NONAME ; void RAppMgmtRfs::PerformRfsL(void) const
+	?RemoveL@RApplicationManagement@NApplicationManagement@@QBEXK@Z @ 21 NONAME ; void NApplicationManagement::RApplicationManagement::RemoveL(unsigned long) const
+	?StartDownloadL@RApplicationManagement@NApplicationManagement@@QBEXKW4TDownloadTarget@2@@Z @ 22 NONAME ; void NApplicationManagement::RApplicationManagement::StartDownloadL(unsigned long, enum NApplicationManagement::TDownloadTarget) const
+	?StateChangeComplete@RApplicationManagement@NApplicationManagement@@QBEHK@Z @ 23 NONAME ; int NApplicationManagement::RApplicationManagement::StateChangeComplete(unsigned long) const
+	?StateChangingDCIdsL@RApplicationManagement@NApplicationManagement@@QBEHAAV?$RArray@K@@@Z @ 24 NONAME ; int NApplicationManagement::RApplicationManagement::StateChangingDCIdsL(class RArray<unsigned long> &) const
+	?UpdateDeploymentComponentDataL@RApplicationManagement@NApplicationManagement@@QBEXKW4TDeplCompAttrType@2@ABVTDesC8@@1@Z @ 25 NONAME ; void NApplicationManagement::RApplicationManagement::UpdateDeploymentComponentDataL(unsigned long, enum NApplicationManagement::TDeplCompAttrType, class TDesC8 const &, class TDesC8 const &) const
+	?UpdateDeploymentComponentL@RApplicationManagement@NApplicationManagement@@QBEXKW4TDeplCompAttrType@2@ABVTDesC8@@@Z @ 26 NONAME ; void NApplicationManagement::RApplicationManagement::UpdateDeploymentComponentL(unsigned long, enum NApplicationManagement::TDeplCompAttrType, class TDesC8 const &) const
+	?UpdateDeploymentComponentStreamedDataL@RApplicationManagement@NApplicationManagement@@QBEXKW4TDeplCompAttrType@2@ABVTDesC8@@@Z @ 27 NONAME ; void NApplicationManagement::RApplicationManagement::UpdateDeploymentComponentStreamedDataL(unsigned long, enum NApplicationManagement::TDeplCompAttrType, class TDesC8 const &) const
+	?UpdateL@RApplicationManagement@NApplicationManagement@@QBEXKK@Z @ 28 NONAME ; void NApplicationManagement::RApplicationManagement::UpdateL(unsigned long, unsigned long) const
+

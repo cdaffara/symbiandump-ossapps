@@ -1,0 +1,57 @@
+/*
+* Copyright (c) 2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project definition file for Presence Cache Server
+*
+*/
+
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+#include "../../group/presencecacheuids.hrh"
+
+
+TARGET                  presencecacheserver2.exe
+TARGETTYPE              exe
+UID                     PRESENCECACHE_DLL_UID_STATIC PRESENCECACHE_DLL_UID_SERVER
+
+CAPABILITY              CAP_SERVER
+VENDORID                VID_DEFAULT
+
+
+SOURCEPATH              ../src
+SOURCE                  presencecacheserver.cpp
+SOURCE                  presencecachesession.cpp
+SOURCE                  presencecachebuddystore.cpp
+SOURCE                  presencecacheservicestore.cpp presencecacheevent.cpp 
+SOURCE                  presencecacheexpiry.cpp
+
+USERINCLUDE             ../inc
+USERINCLUDE             ../../inc
+USERINCLUDE             ../../../inc
+USERINCLUDE             ../../presencecacheutils/inc
+USERINCLUDE ../../presence_cache_api/inc 
+
+SYSTEMINCLUDE           /epoc32/include/ecom
+APP_LAYER_SYSTEMINCLUDE
+// SYSTEMINCLUDE ../../presence_cache_api/inc  
+
+
+LIBRARY             	euser.lib
+LIBRARY                 flogger.lib
+LIBRARY                 estor.lib   // streams
+LIBRARY                 ecom.lib
+
+LIBRARY                 presencecacheutils.lib
+
+// End of file
+

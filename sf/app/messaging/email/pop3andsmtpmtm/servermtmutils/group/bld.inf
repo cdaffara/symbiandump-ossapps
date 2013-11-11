@@ -1,0 +1,47 @@
+// Copyright (c) 1999-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+PRJ_PLATFORMS
+
+
+PRJ_EXPORTS
+
+../inc/IMSK.H SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(imsk.h)
+../inc/IMCVSEND.INL SYMBIAN_APP_LAYER_PLATFORM_EXPORT_PATH(imcvsend.inl)
+../inc/IMCVSEND.H SYMBIAN_APP_LAYER_PLATFORM_EXPORT_PATH(imcvsend.h)
+../inc/IMCVRECV.INL SYMBIAN_APP_LAYER_PLATFORM_EXPORT_PATH(imcvrecv.inl)
+../inc/IMCVRECV.H SYMBIAN_APP_LAYER_PLATFORM_EXPORT_PATH(imcvrecv.h)
+../inc/IMCVTEXT.H SYMBIAN_APP_LAYER_PLATFORM_EXPORT_PATH(imcvtext.h)
+../inc/IMCVCODC.H SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(imcvcodc.h)
+../inc/IMCVCODC.INL SYMBIAN_APP_LAYER_PLATFORM_EXPORT_PATH(imcvcodc.inl)
+../inc/IMCVDATA.H SYMBIAN_APP_LAYER_PLATFORM_EXPORT_PATH(imcvdata.h)
+../inc/IMUTDLL.H SYMBIAN_APP_LAYER_PLATFORM_EXPORT_PATH(imutdll.h)
+../inc/IMCVUTIL.H SYMBIAN_APP_LAYER_PLATFORM_EXPORT_PATH(imcvutil.h)
+../inc/cimcaf.h	SYMBIAN_APP_LAYER_PLATFORM_EXPORT_PATH(cimcaf.h)
+../inc/imutcon.h SYMBIAN_APP_LAYER_PLATFORM_EXPORT_PATH(imutcon.h)
+../inc/cimmobilitypolicyplugin.h SYMBIAN_APP_LAYER_PLATFORM_EXPORT_PATH(cimmobilitypolicyplugin.h)
+../inc/cimmobilitypolicyplugin.inl SYMBIAN_APP_LAYER_PLATFORM_EXPORT_PATH(cimmobilitypolicyplugin.inl)
+../inc/cimconvertheader.h SYMBIAN_APP_LAYER_PLATFORM_EXPORT_PATH(cimconvertheader.h)
+
+PRJ_MMPFILES
+
+IMUT.mmp
+
+#include "../mobilitypolicyprovider/group/bld.inf"
+#include "../mobilitypolicydefault/group/bld.inf"
+
+#include "../mobilitytestframework/group/bld.inf"
+#include "../mobilitypolicynetteststub/group/bld.inf"
+#include "../test/group/bld.inf"

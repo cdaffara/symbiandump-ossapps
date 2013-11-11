@@ -1,0 +1,59 @@
+/* ClearHistory dialog */
+
+#ClearHistoryDialogId
+{
+  width: 275px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#556c90), to(#3c4d6a));
+  border: 3px solid #002447;
+  padding: 20px;
+  -webkit-border-top-left-radius: 10px;
+  -webkit-border-top-right-radius: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+}
+
+#ClearHistoryDialogId div.textLabel{
+  text-align: center;
+  font-size: 22px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+#ClearHistoryDialogId div.controls{
+  height: 50px;
+  text-align: center;
+}
+
+#ClearHistoryDialogId div.historyDialogButton { 
+  width: 100px;
+  height: 54px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-repeat: center center;
+ }
+
+#ClearHistoryDialogId div.clearDoneButton {
+  background-image: url(icons/button_dialog_history_clear_ok_wait.png);
+}
+
+#ClearHistoryDialogId  div.clearDoneButton:active {
+  background-image: url(icons/button_dialog_history_clear_ok_press.png);
+}
+
+
+#ClearHistoryDialogId  div.clearCancelButton {
+  background-image: url(icons/button_dialog_history_clear_cancel_wait.png);
+}
+
+#ClearHistoryDialogId  div.clearCancelButton:active {
+  background-image: url(icons/button_dialog_history_clear_cancel_press.png);
+}
+
+#hiddenDialogOK {
+  visibility: hidden;
+  background-image: url(icons/button_dialog_history_clear_ok_press.png);
+}
+#hiddenDialogCancel {
+  visibility: hidden;
+  background-image: url(icons/button_dialog_history_clear_cancel_press.png);	
+}

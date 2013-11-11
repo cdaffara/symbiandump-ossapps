@@ -1,0 +1,51 @@
+/*
+* Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Media Image harvester plugin implementation
+*
+*/
+// Created by TraceCompiler 2.3.0
+// DO NOT EDIT, CHANGES WILL BE LOST
+
+#ifndef __IMAGEPLUGINTRACES_H__
+#define __IMAGEPLUGINTRACES_H__
+
+#define KOstTraceComponentID 0x20029abb
+
+#define CIMAGEPLUGIN_STARTPLUGINL_ENTRY 0x8a0003
+#define CIMAGEPLUGIN_STARTPLUGINL_EXIT 0x8a0004
+#define CIMAGEPLUGIN_STARTHARVESTINGL_ENTRY 0x8a0005
+#define CIMAGEPLUGIN_STARTHARVESTINGL_EXIT 0x8a0006
+#define CIMAGEPLUGIN_PAUSEPLUGINL_ENTRY 0x8a0007
+#define CIMAGEPLUGIN_PAUSEPLUGINL_EXIT 0x8a0008
+#define CIMAGEPLUGIN_RESUMEPLUGINL_ENTRY 0x8a0009
+#define CIMAGEPLUGIN_RESUMEPLUGINL_EXIT 0x8a000a
+#define CIMAGEPLUGIN_HANDLEMDEITEML 0x860001
+#define DUP1_CIMAGEPLUGIN_HANDLEMDEITEML 0x860002
+#define DUP2_CIMAGEPLUGIN_HANDLEMDEITEML 0x860003
+#define DUP3_CIMAGEPLUGIN_HANDLEMDEITEML 0x860004
+#define DUP4_CIMAGEPLUGIN_HANDLEMDEITEML 0x860005
+#define DUP5_CIMAGEPLUGIN_HANDLEMDEITEML 0x860006
+#define DUP6_CIMAGEPLUGIN_HANDLEMDEITEML 0x860007
+#define DUP7_CIMAGEPLUGIN_HANDLEMDEITEML 0x860008
+#define DUP8_CIMAGEPLUGIN_HANDLEMDEITEML 0x860009
+#define DUP9_CIMAGEPLUGIN_HANDLEMDEITEML 0x86000a
+#define DUP10_CIMAGEPLUGIN_HANDLEMDEITEML 0x86000b
+#define DUP11_CIMAGEPLUGIN_HANDLEMDEITEML 0x86000c
+#define DUP12_CIMAGEPLUGIN_HANDLEMDEITEML 0x86000d
+
+
+#endif
+
+// End of file
+

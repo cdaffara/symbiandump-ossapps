@@ -1,0 +1,14 @@
+<hbwidget version="0.1" type="listviewitem">
+        <layout name="custom" type="mesh">
+ 		<!-- For the alarm time item -->
+		<meshitem src="text-1" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+		<meshitem src="text-1" srcEdge="TOP" dst="" dstEdge="TOP" />
+        <meshitem src="text-1" srcEdge="RIGHT" dst="text-2" dstEdge="LEFT" />
+        <meshitem src="text-1" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+ 
+		<!-- For the alarm remiainting time item -->
+        <meshitem src="text-2" srcEdge="CENTERV" dst="text-1" dstEdge="CENTERV" />
+        <meshitem src="text-2" srcEdge="RIGHT" dst="" dstEdge="RIGHT"/>
+		
+	</layout>
+</hbwidget>

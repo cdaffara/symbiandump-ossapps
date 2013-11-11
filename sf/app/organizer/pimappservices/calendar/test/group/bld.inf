@@ -1,0 +1,125 @@
+// Copyright (c) 2006-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+PRJ_TESTMMPFILES
+// specify the .mmp files required for building any test programs here
+//
+// you can specify "manual" to denote that a test should be listed in a generated
+// batch file for running a group of tests which require user input during testing.
+// you can specify "support" to denote that a file is a test support file and shouldn't
+// be listed in a batch file for running a group of tests
+// By default, each test will be listed in a batch file for running a group of tests
+// which can be left to run without requiring watching over by the person running the tests,
+// i.e. tests where no user input is required.  The default will apply if neither "manual"
+// or "support" is specified.
+
+../../tsrc/caltestlib.mmp support
+
+../../tsrc/tcal_attendee.mmp
+../../tsrc/tcal_alarm.mmp
+../../tsrc/tcal_category.mmp
+../../tsrc/tcal_delete.mmp
+../../tsrc/tcal_entryattributes.mmp
+../../tsrc/tcal_fileaccess.mmp
+../../tsrc/tcal_gsentry.mmp
+../../tsrc/tcal_instance.mmp
+../../tsrc/tcal_iterator.mmp
+../../tsrc/tcal_notification.mmp
+../../tsrc/tcal_QueueAlarmOnStartup.mmp
+../../tsrc/tcal_rptrules.mmp
+../../tsrc/tcal_tz.mmp
+../../tsrc/tCal_UndatedToDo.mmp
+../../tsrc/tcal_startup_performance.mmp
+../../tsrc/tcal_datasync.mmp
+../../tsrc/tcal_pubsubnotification.mmp
+../../tsrc/tcal_observer.mmp
+../../tsrc/tcal_recur.mmp
+../../tsrc/tcal_dc.mmp
+../../tsrc/tcal_removable_media.mmp
+../../tsrc/tcal_alarmattach.mmp
+../../tsrc/tcal_tz_instance.mmp
+../../tsrc/tcal_multi_threads_access.mmp
+../../tsrc/tcal_attach.mmp
+../../tsrc/tcal_compact.mmp
+../../tsrc/t_recurrence.MMP
+../../tsrc/T_TestCopy.MMP
+../../tsrc/t_utc_conversions.mmp
+../../tsrc/t_vcal_tz_rules.mmp
+../../tsrc/T_VCAL2.MMP
+../../tsrc/T_VCAL3.MMP
+../../tsrc/T_VCAL4.MMP
+../../tsrc/t_vcal5OOM.MMP
+../../tsrc/TFAILADD.MMP
+../../tsrc/TFAILDEL.MMP
+../../tsrc/TOOMADD.MMP
+../../tsrc/TOOMDEL.MMP
+../../tsrc/TOOMFET.MMP
+../../tsrc/TOOMUPD.MMP
+../../tsrc/TCal_OOMFIND.mmp
+../../tsrc/tcal_finddaywithinstance.mmp
+../../tsrc/tcal_servershutdown.mmp
+../../tsrc/instance_iterator/tcal_instanceiterator.mmp
+../../tsrc/instance_iterator/tcal_instanceiterator_all.mmp
+../../tsrc/instance_iterator/tcal_instanceiterator_uid.mmp
+../../tsrc/instance_iterator/tcal_sortedinstanceiterator.mmp
+../../tsrc/instance_iterator/tcal_instanceiterator_performance.mmp
+../../tsrc/instance_iterator/tcal_fetchinstance.mmp
+../../tsrc/tcal_filesize.mmp
+../../tsrc/tcal_tz_basic.mmp
+../../tsrc/tcal_tzdbchange.mmp
+../../tsrc/tcal_multiplefiles.mmp
+../../tsrc/tcal_backuprestore.mmp
+../../tsrc/tcal_calendarinfo.mmp
+../../tsrc/tcal_filechangenotification.mmp
+../../tsrc/tcal_dataexchange.mmp
+PRJ_TESTEXPORTS
+../../tsrc/tcal_dc_81			z:/private/10003a5b/tcal_dc_81
+../../tsrc/tcal_dc_91			z:/private/10003a5b/tcal_dc_91
+../../tsrc/tcal_dc_92			z:/private/10003a5b/tcal_dc_92
+../../tsrc/tcal_dc_94			z:/private/10003a5b/tcal_dc_94
+../../tsrc/tcal_dc_95			z:/private/10003a5b/tcal_dc_95
+../../tsrc/tcal_dc_91_1200			z:/private/10003a5b/tcal_dc_91_1200
+../../tsrc/tcal_dc_92_corrupt		z:/private/10003a5b/tcal_dc_92_corrupt
+../../tsrc/tcal_dc_92_CalFile_Clean	z:/private/10003a5b/tcal_dc_92_calfile_clean
+../../tsrc/tcal_dc_92_CalFile_EntriesAdded z:/private/10003a5b/tcal_dc_92_calfile_entriesadded
+../../tsrc/tcal_dc_91_CalFile_Clean	z:/private/10003a5b/tcal_dc_91_calfile_clean
+../../tsrc/tcal_dc_91_CalFile_EntriesAdded	z:/private/10003a5b/tcal_dc_91_calfile_entriesadded
+
+../../tsrc/tcal_servershutdown_calfile	z:/private/10003a5b/tcal_servershutdown_calfile
+../../tsrc/tcal_servershutdown_calfile_multi_file	z:/private/10003a5b/tcal_servershutdown_calfile_multi_file
+../../tsrc/tcal_servershutdown_calfile_v91	z:/private/10003a5b/tcal_servershutdown_calfile_v91
+
+../../tsrc/tcal_attach.jpg			z:/calendar_attachments/tcal_attach.jpg
+../../tsrc/tcal_attach2.jpg		z:/calendar_attachments/tcal_attach2.jpg
+../../tsrc/tcal_attach3.txt		z:/calendar_attachments/tcal_attach3.txt
+../../tsrc/tcal_attach4.doc		z:/calendar_attachments/tcal_attach4.doc
+../../tsrc/tcal_attach5.bmp		z:/calendar_attachments/tcal_attach5.bmp
+../../tsrc/tcal_attach6.gif		z:/calendar_attachments/tcal_attach6.gif
+../../tsrc/tcal_attach7.xls		z:/calendar_attachments/tcal_attach7.xls
+../../tsrc/tcal_delete_calendar	z:/private/10003a5b/tcal_delete_calendar
+../../tsrc/10003a5b.txt 			z:/private/10202be9/10003a5b.txt
+
+../../tsrc/LongUTFuid.vcs			c:/longutfuid.vcs
+../../tsrc/NewExportLongUID.vcs	c:/newexportlonguid.vcs
+../../tsrc/tzdb.dbz				z:/tzdb.dbz
+
+calinterimapitest.iby	/epoc32/rom/include/calinterimapitest.iby
+calinterimapiteftest.iby	/epoc32/rom/include/calinterimapiteftest.iby
+
+#include "../../tsrc/Integration/TestCalInterimApi/group/bld.inf"
+#include "../../tsrc/Integration/TestInstance/group/bld.inf"
+#include "../../tsrc/CR-6BLC8W/group/bld.inf"
+#include "../../tsrc/unit/group/bld.inf"
+#include "../../tsrc/TestCalIndexFile/group/bld.inf"

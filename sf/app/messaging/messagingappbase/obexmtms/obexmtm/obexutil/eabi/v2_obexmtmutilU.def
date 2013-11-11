@@ -1,0 +1,99 @@
+EXPORTS
+	_ZN13CObexSdpUtils18RemoteBtObexQueryLE10TBTDevAddr @ 1 NONAME
+	_ZN13CObexSdpUtils4NewLER21MObexSdpUtilsObserver @ 2 NONAME
+	_ZN13CObexSdpUtils5NewLCER21MObexSdpUtilsObserver @ 3 NONAME
+	_ZN14CObexMtmHeader10SetTargetLERK6TDesC8 @ 4 NONAME
+	_ZN14CObexMtmHeader11SetSubjectLERK7TDesC16 @ 5 NONAME
+	_ZN14CObexMtmHeader14BaseConstructLEv @ 6 NONAME
+	_ZN14CObexMtmHeader16BaseInternalizeLER14RMsvReadStream @ 7 NONAME
+	_ZN14CObexMtmHeader16SetConnectionIDLERK6TDesC8 @ 8 NONAME
+	_ZN14CObexMtmHeader7SetTimeERK5TTime @ 9 NONAME
+	_ZN14CObexMtmHeader8RestoreLERK9CMsvStore @ 10 NONAME
+	_ZN14CObexMtmHeader8SetNameLERK7TDesC16 @ 11 NONAME
+	_ZN14CObexMtmHeader8SetTypeLERK6TDesC8 @ 12 NONAME
+	_ZN14CObexMtmHeader9SetLengthEi @ 13 NONAME
+	_ZNK18CObexFileContainer19DummyObexBaseObjectEv @ 14 NONAME
+	_ZN14CObexMtmHeaderC2E4TUidl @ 15 NONAME
+	_ZN14CObexMtmHeaderD0Ev @ 16 NONAME
+	_ZN14CObexMtmHeaderD1Ev @ 17 NONAME
+	_ZN14CObexMtmHeaderD2Ev @ 18 NONAME
+	_ZN15CObexHeaderList11ObexHeaderLEi @ 19 NONAME
+	_ZN15CObexHeaderList12InternalizeLER14RMsvReadStream @ 20 NONAME ABSENT
+	_ZN15CObexHeaderList23AddHeadersToBaseObjectLER15CObexBaseObject @ 21 NONAME
+	_ZN15CObexHeaderList4NewLEv @ 22 NONAME
+	_ZN15CObexHeaderList5NewLCEv @ 23 NONAME
+	_ZN15CObexHeaderList9AddHeaderEPK11CObexHeader @ 24 NONAME
+	_ZN15CObexHeaderListD0Ev @ 25 NONAME
+	_ZN15CObexHeaderListD1Ev @ 26 NONAME
+	_ZN15CObexHeaderListD2Ev @ 27 NONAME
+	_ZN17ObexInternalUtils12ExternalizeLEPK6HBufC8R12RWriteStream @ 28 NONAME
+	_ZN17ObexInternalUtils12ExternalizeLEPK7HBufC16R12RWriteStream @ 29 NONAME
+	_ZN17ObexInternalUtils12ExternalizeLERK5TDes8R12RWriteStream @ 30 NONAME
+	_ZN17ObexInternalUtils12ExternalizeLERK6TDes16R12RWriteStream @ 31 NONAME
+	_ZN17ObexInternalUtils12InternalizeLER5TDes8R11RReadStream @ 32 NONAME
+	_ZN17ObexInternalUtils12InternalizeLER6TDes16R11RReadStream @ 33 NONAME
+	_ZN17ObexInternalUtils12InternalizeLERP6HBufC8R11RReadStream @ 34 NONAME
+	_ZN17ObexInternalUtils12InternalizeLERP7HBufC16R11RReadStream @ 35 NONAME
+	_ZN17ObexInternalUtils5PanicENS_23TObexInternalUtilsPanicE @ 36 NONAME
+	_ZN24ObexPasswordExternaliser12SetPasswordLER11CMsvSessionRK4TUidRK7TDesC16 @ 37 NONAME ABSENT
+	_ZN24ObexPasswordExternaliser12SetPasswordLER9CMsvEntryRK7TDesC16 @ 38 NONAME ABSENT
+	_ZN24ObexPasswordExternaliser13GetPasswordLCER11CMsvSessionRK4TUid @ 39 NONAME ABSENT
+	_ZN24ObexPasswordExternaliser13GetPasswordLCER9CMsvEntry @ 40 NONAME ABSENT
+	_ZN24ObexPasswordExternaliser14ResetPasswordLER11CMsvSessionRK4TUid @ 41 NONAME ABSENT
+	_ZN24ObexPasswordExternaliser14ResetPasswordLER9CMsvEntry @ 42 NONAME ABSENT
+	_ZN27CObexMtmFileNameWithHeaders4NewLEv @ 43 NONAME ABSENT
+	_ZN28CObexMtmFileNameExternaliser12CommitStoreLEv @ 44 NONAME ABSENT
+	_ZN28CObexMtmFileNameExternaliser20ExternaliseFileNameLEPK7TDesC16 @ 45 NONAME ABSENT
+	_ZN28CObexMtmFileNameExternaliser21Internalise1FileNameLEP9CMsvEntryP6TDes16 @ 46 NONAME ABSENT
+	_ZN28CObexMtmFileNameExternaliser22InternaliseFileNamesLCER9CMsvStore @ 47 NONAME ABSENT
+	_ZN28CObexMtmFileNameExternaliser30ExternaliseAndCommit1FileNameLEP9CMsvEntryPK7TDesC16 @ 48 NONAME ABSENT
+	_ZN28CObexMtmFileNameExternaliser30ExternaliseFileNameAndHeadersLEPK7TDesC16PK15CObexHeaderList @ 49 NONAME ABSENT
+	_ZN28CObexMtmFileNameExternaliser4NewLEP11CMsvSessionl @ 50 NONAME ABSENT
+	_ZNK14CObexMtmHeader12ConnectionIDEv @ 51 NONAME
+	_ZNK14CObexMtmHeader16BaseExternalizeLER15RMsvWriteStream @ 52 NONAME
+	_ZNK14CObexMtmHeader4NameEv @ 53 NONAME
+	_ZNK14CObexMtmHeader4TimeEv @ 54 NONAME
+	_ZNK14CObexMtmHeader4TypeEv @ 55 NONAME
+	_ZNK14CObexMtmHeader6LengthEv @ 56 NONAME
+	_ZNK14CObexMtmHeader6StoreLER9CMsvStore @ 57 NONAME
+	_ZNK14CObexMtmHeader6TargetEv @ 58 NONAME
+	_ZNK14CObexMtmHeader7SubjectEv @ 59 NONAME
+	_ZNK15CObexHeaderList12ExternalizeLER15RMsvWriteStream @ 60 NONAME ABSENT
+	_ZNK15CObexHeaderList5CountEv @ 61 NONAME
+	_ZTI14CObexMtmHeader @ 62 NONAME ; #<TI>#
+	_ZTV14CObexMtmHeader @ 63 NONAME ; #<VT>#
+	_ZN10CContainer15DummyMoveToFileER3RFsRK7TDesC16 @ 64 NONAME
+	_ZN10CContainer17DummyCopyOfDataLCEi @ 65 NONAME
+	_ZN10CContainer17DummyCopyOfDataLCEv @ 66 NONAME
+	_ZN10CContainer19DummyDtorCContainerEv @ 67 NONAME
+	_ZN10CContainer26DummyCopyToFileContainerLCER3RFsRK7TDesC16 @ 68 NONAME
+	_ZN10CContainer9DummyNewLEP8CBufBase @ 69 NONAME
+	_ZN10CContainer9DummyNewLEv @ 70 NONAME
+	_ZN10CObexUtils20DummySaveObjToInboxLER11CMsvSessionR14CBaseContainer4TUidRlR7TDesC16 @ 71 NONAME
+	_ZN10CObexUtils21DummyRemoveFromInboxLER11CMsvSessionl @ 72 NONAME
+	_ZN10CObexUtils25DummyFinaliseObexMessageLER11CMsvSessionl @ 73 NONAME
+	_ZN14CBaseContainer22DummySetHeaderDetailsLER15CObexBaseObject @ 74 NONAME
+	_ZN18CObexFileContainer15DummyMoveToFileER3RFsRK7TDesC16 @ 75 NONAME
+	_ZN18CObexFileContainer17DummyCopyOfDataLCEi @ 76 NONAME
+	_ZN18CObexFileContainer17DummyCopyOfDataLCEv @ 77 NONAME
+	_ZN18CObexFileContainer27DummyDtorCObexFileContainerEv @ 78 NONAME
+	_ZN18CObexFileContainer9DummyNewLERK7TDesC16 @ 79 NONAME
+	_ZNK10CContainer19DummyObexBaseObjectEv @ 80 NONAME
+	_ZNK14CBaseContainer22DummyGetHeaderDetailsLER15CObexBaseObject @ 81 NONAME
+	_ZTI13CObexSdpUtils @ 82 NONAME ; #<TI>#
+	_ZTI15CObexHeaderList @ 83 NONAME ; #<TI>#
+	_ZTI27CObexMtmFileNameWithHeaders @ 84 NONAME ABSENT ; #<TI>#
+	_ZTI28CObexMtmFileNameExternaliser @ 85 NONAME ABSENT ; #<TI>#
+	_ZTV13CObexSdpUtils @ 86 NONAME ; #<VT>#
+	_ZTV15CObexHeaderList @ 87 NONAME ; #<VT>#
+	_ZTV27CObexMtmFileNameWithHeaders @ 88 NONAME ABSENT ; #<VT>#
+	_ZTV28CObexMtmFileNameExternaliser @ 89 NONAME ABSENT ; #<VT>#
+	_ZN15CObexHeaderList12InternalizeLER11RReadStream @ 90 NONAME
+	_ZN15CObexHeaderList21ImportFromAttachmentLER14CMsvAttachment @ 91 NONAME
+	_ZNK15CObexHeaderList12ExternalizeLER12RWriteStream @ 92 NONAME
+	_ZNK15CObexHeaderList19ExportToAttachmentLER14CMsvAttachment @ 93 NONAME
+	_ZN18CObexSendOperation17TranslateProgressERK6TDesC8 @ 94 NONAME
+	_ZN18CObexSendOperationC1ER11CMsvSessionR14TRequestStatus @ 95 NONAME
+	_ZN18CObexSendOperationC2ER11CMsvSessionR14TRequestStatus @ 96 NONAME
+	_ZTI18CObexSendOperation @ 97 NONAME ; #<TI>#
+	_ZTV18CObexSendOperation @ 98 NONAME ; #<VT>#

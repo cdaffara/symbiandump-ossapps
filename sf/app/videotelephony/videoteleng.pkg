@@ -1,0 +1,17 @@
+; Languages
+;
+&EN
+
+; Header
+#{"videoteleng patch"}, (0x101F867F), 1, 0, 0, TYPE=PU
+
+; Localised Vendor name
+%{"Nokia"}
+
+; Unique Vendor name
+:"Nokia"
+
+;Files
+"\epoc32\release\armv5\udeb\videoteleng.dll"    - "!:\sys\bin\videoteleng.dll"
+"\epoc32\release\armv5\urel\cscallctrl.dll"    - "!:\sys\bin\cscallctrl.dll"
+"\epoc32\release\armv5\urel\vtlogger.dll"    - "!:\sys\bin\vtlogger.dll"

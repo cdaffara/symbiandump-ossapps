@@ -1,0 +1,165 @@
+// Copyright (c) 2005-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+#include "smss.rls"
+#include <schsend.rh>
+#include <badef.rh>
+#include "smss.hrh"
+
+RESOURCE LBUF r_addressee_telephone_open	{txt = STRING_r_addressee_telephone_open1;}	//max 1 char
+RESOURCE LBUF r_addressee_telephone_close	{txt = STRING_r_addressee_telephone_close1;}	//max 1 char
+RESOURCE LBUF r_sender_name_format			{txt = SMS_GIVEN_NAME" "SMS_FAMILY_NAME;}
+RESOURCE LBUF r_type_status_report			{txt = STRING_r_type_status_report1;}
+
+//Special Message Indication
+
+RESOURCE LBUF r_message_indication_voicemail_one	{txt = STRING_r_message_indication_voicemail_one1;}		//max 32 chars
+RESOURCE LBUF r_message_indication_voicemail_many	{txt = STRING_r_message_indication_voicemail_many1;}	//max 32 chars
+
+RESOURCE LBUF r_message_indication_email_one		{txt = STRING_r_message_indication_email_one1;}			//max 32 chars
+RESOURCE LBUF r_message_indication_email_many		{txt = STRING_r_message_indication_email_many1;}		//max 32 chars
+
+RESOURCE LBUF r_message_indication_fax_one			{txt = STRING_r_message_indication_fax_one1;}				//max 32 chars
+RESOURCE LBUF r_message_indication_fax_many			{txt = STRING_r_message_indication_fax_many1;}			//max 32 chars
+
+RESOURCE LBUF r_message_indication_other_one		{txt = STRING_r_message_indication_other_one1;}			//max 32 chars
+RESOURCE LBUF r_message_indication_other_many		{txt = STRING_r_message_indication_other_many1;}		//max 32 chars
+
+RESOURCE SEND_ERROR_ACTIONS error_actions
+	{
+	default =
+		{
+		SEND_ERROR_ACTION
+			{
+			flags = KActionRetryLater + KRetriesFixed + KRetrySpacingStatic;
+			max_retries = 3;
+			errors =
+				{
+				SEND_ERROR {error = 0;}
+				};
+			}
+		};
+	actions =
+		{
+		SEND_ERROR_ACTION
+			{
+			flags = KActionFail;
+			errors =
+				{
+				//General Errors
+				SEND_ERROR { error = -5; },		// KErrNotSupported
+				SEND_ERROR { error = -3; },		// KErrCancel
+				
+				//SMS Errors
+				SEND_ERROR { error = -4814; },	// KErrGsmSMSOperationNotAllowed
+				SEND_ERROR { error = -5252; },	// KPKIErrKeyStoreEmpty
+				SEND_ERROR { error = -4533; },  // KErrGsmSMSShortMessageTransferRejected
+				SEND_ERROR { error = -4540; },  // KErrGsmSMSUnidentifiedSubscriber
+				SEND_ERROR { error = -4542; },  // KErrGsmSMSUnknownSubscriber
+				SEND_ERROR { error = -4550; },  // KErrGsmSMSNetworkOutOfOrder
+				SEND_ERROR { error = -4608; }   // KErrGsmSMSInvalidMandatoryInformation
+				};
+			},
+		SEND_ERROR_ACTION
+			{
+			flags = KActionRetryLater + KRetriesInfinite + KRetrySpacingStatic;
+			errors =
+				{
+				//General Errors
+				SEND_ERROR { error = -4; },		// KErrNoMemory
+				SEND_ERROR { error = -26; },	// KErrDiskFull
+				SEND_ERROR { error = -42; },	// KErrBadPower
+
+				//SMS Errors
+				SEND_ERROR { error = -4529; },	// KErrGsmSMSNetworkFailure
+				SEND_ERROR { error = -4553; },	// KerrGsmSMSTemporaryFailure
+				SEND_ERROR { error = -4554; },	// KerrGsmSMSCongestion
+				SEND_ERROR { error = -4559; }	// KerrGsmSMSResourcesUnavailable
+				};
+			},
+		
+		// As per GSM 03.40 specs, its temporary Congestion error, so its better to retry later 
+		// because retry immediatly will seldom brings success.
+		SEND_ERROR_ACTION
+			{
+			flags = KActionRetryLater + KRetriesFixed + KRetrySpacingStatic;
+			max_retries = 3;
+			errors =
+				{
+				//General Errors
+				SEND_ERROR { error = -14; },	// KErrInUse
+				SEND_ERROR { error = -18; },	// KErrNotReady
+
+				//Messaging Errors
+				SEND_ERROR { error = -7000; },	// KMsvMediaUnavailable
+
+				//Socket Errors
+				SEND_ERROR { error = -190; },	// KErrNetUnreach
+
+				//SMS Errors
+				SEND_ERROR { error = -4534; },	// KerrGsmSMSMemoryCapacityExceeded
+				SEND_ERROR { error = -4539; },	// KerrGsmSMSDestinationOutOfOrder
+				SEND_ERROR { error = -4607; },	// KErrGsmSMSUnspecifiedInvalidMessage
+				SEND_ERROR { error = -4623; },	// KErrGsmSMSUnspecifiedProtocolError
+				SEND_ERROR { error = -4642; },	// KerrGsmSMSCannotReplaceShortMessage
+				SEND_ERROR { error = -4655; },	// KerrGsmSMSUnspecifiedPIDError
+				SEND_ERROR { error = -4671; },	// KerrGsmSMSUnspecifiedDCSError
+				SEND_ERROR { error = -4687; },	// KerrGsmSMSUnspecifiedCommandError
+				SEND_ERROR { error = -4704; },	// KerrGsmSMSServiceCentreBusy
+				SEND_ERROR { error = -4706; },	// KerrGsmSMSSCSystemFailure
+				SEND_ERROR { error = -4707; },	// KerrGsmSMSInvalidSMEAddress
+				SEND_ERROR { error = -4767; },	// KerrGsmSMSUnspecifiedErrorCause
+				SEND_ERROR { error = -4813; },	// KerrGsmSMSServiceOfMSReserved
+				SEND_ERROR { error = -4832; },	// KErrGsmSMSMemoryFailure
+				SEND_ERROR { error = -4833; },	// KErrGsmSMSInvalidMemoryIndex
+				SEND_ERROR { error = -4834; },	// KErrGsmSMSMemoryFull
+				SEND_ERROR { error = -4844; },	// KErrGsmSMSNetworkTimeout
+				SEND_ERROR { error = -4852; },	// KErrGsmSMSCnmaAckNotExpected
+				SEND_ERROR { error = -5012; }	// KerrGsmSMSUnknownError
+				};
+			},
+		SEND_ERROR_ACTION
+			{
+			flags = KActionRetryImmediately + KRetriesFixed + KRetrySpacingStatic;
+			max_retries = 3;
+			errors =
+				{
+				//General Errors
+				SEND_ERROR { error = -15; },	// KErrServerTerminated
+				SEND_ERROR { error = -29; },	// KErrCommsLineFail
+				SEND_ERROR { error = -30; },	// KErrCommsFrame
+				SEND_ERROR { error = -31; },	// KErrCommsOverrun 
+				SEND_ERROR { error = -32; },	// KErrCommsParity 
+				SEND_ERROR { error = -33; },	// KErrTimedOut
+
+				//ETel Errors
+				SEND_ERROR { error = -2017; },	// KErrEtelModemNotDetected
+
+				//SMS Errors
+				SEND_ERROR { error = -4533; }	// KerrGsmSMSShortMessageTransferRejected
+				};
+			}
+		};
+	}
+
+//Email SMS reply/forward format
+RESOURCE LBUF r_sms_email_forward_subject_format		{txt = STRING_r_sms_email_forward_subject_format;}	
+RESOURCE LBUF r_sms_email_reply_subject_format			{txt = STRING_r_sms_email_reply_subject_format;}
+
+RESOURCE LBUF r_message_indication_videomessage_one	        {txt = STRING_r_message_indication_videomessage_one1;}	//max 32 chars
+RESOURCE LBUF r_message_indication_videomessage_many		{txt = STRING_r_message_indication_videomessage_many1;}	//max 32 chars
+
+RESOURCE LBUF r_message_indication_enhanced_voicemail_one	{txt = STRING_r_message_indication_enhanced_voice_one1;}//max 32 chars
+RESOURCE LBUF r_message_indication_enhanced_voicemail_many	{txt = STRING_r_message_indication_enhanced_voice_many1;}//max 32 chars

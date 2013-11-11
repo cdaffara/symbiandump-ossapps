@@ -1,0 +1,54 @@
+/*
+* Copyright (c) 2005 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  PhoneUI iby file
+*
+*/
+
+
+#ifndef __PHONEUI_IBY__
+#define __PHONEUI_IBY__
+
+#include <data_caging_paths_for_iby.hrh>
+
+#define UPGRADABLE_APP_REG_RSC(NAME) data=DATAZ_\PRIVATE\10003A3F\IMPORT\APPS\ ## NAME ## _reg.rsc        Private\10003a3f\import\apps\ ## NAME ## _reg.rsc
+
+REM PhoneUI
+S60_APP_EXE(phoneui)
+UPGRADABLE_APP_REG_RSC(phoneui)
+
+file=ABI_DIR\BUILD_DIR\phoneuicontrol.dll           SHARED_LIB_DIR\phoneuicontrol.dll
+file=ABI_DIR\BUILD_DIR\phoneuiutils.dll             SHARED_LIB_DIR\phoneuiutils.dll
+file=ABI_DIR\BUILD_DIR\phoneuistates.dll            SHARED_LIB_DIR\phoneuistates.dll
+file=ABI_DIR\BUILD_DIR\phoneuiqtviewadapter.dll     SHARED_LIB_DIR\phoneuiqtviewadapter.dll
+file=ABI_DIR\BUILD_DIR\phoneuiqtview.dll            SHARED_LIB_DIR\phoneuiqtview.dll
+file=ABI_DIR\BUILD_DIR\phoneringingtoneplayer.dll   SHARED_LIB_DIR\phoneringingtoneplayer.dll
+file=ABI_DIR\BUILD_DIR\phonestringloader.dll        SHARED_LIB_DIR\phonestringloader.dll
+file=ABI_DIR\BUILD_DIR\phonemediatorcenter.dll      SHARED_LIB_DIR\phonemediatorcenter.dll
+file=ABI_DIR\BUILD_DIR\phoneuivoipextension.dll     SHARED_LIB_DIR\phoneuivoipextension.dll
+
+data=\epoc32\data\c\resource\qt\crml\carmode.qcrml  resource\qt\crml\carmode.qcrml
+
+data=ZSYSTEM\install\phoneuivoipextension_stub.sis  System\Install\phoneuivoipextension_stub.sis
+data=ZSYSTEM\install\phoneui_stub.sis               System\Install\phoneui_stub.sis
+data=ZSYSTEM\install\phoneuicontrol_stub.sis        System\Install\phoneuicontrol_stub.sis
+data=ZSYSTEM\install\phoneuistates_stub.sis         System\Install\phoneuistates_stub.sis
+data=ZSYSTEM\install\phoneuiutils_stub.sis          System\Install\phoneuiutils_stub.sis
+data=ZSYSTEM\install\phonemediatorcenter_stub.sis   System\Install\phonemediatorcenter_stub.sis
+data=ZSYSTEM\install\phoneringingtoneplayer_stub.sis System\Install\phoneringingtoneplayer_stub.sis
+data=ZSYSTEM\install\phoneuiqtviewadapter_stub.sis  System\Install\phoneuiqtviewadapter_stub.sis
+data=ZSYSTEM\install\phoneuiqtview_stub.sis         System\Install\phoneuiqtview_stub.sis
+data=ZSYSTEM\install\phonestringloader_stub.sis     System\Install\phonestringloader_stub.sis
+
+#endif
+

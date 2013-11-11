@@ -1,0 +1,990 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//! @file
+//! @SYMTestSuiteName	TestCalInterimApiSuite 
+//! @SYMScriptTestEnvironment
+
+PRINT Run Import/Export Operations Test
+
+LOAD_SUITE TestCalInterimApiSuite
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0001AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0001AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Imports vCals with specifiying a valid sound name 
+//! @SYMTestActions Imports vCals with a valid sound name and a valid sound name path that exists, store entry and then export and verify that the vcals //! match
+//! @SYMTestExpectedResults The 2 vcals should match
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCalSoundName
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini exportSoundName
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0001AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0002AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0002AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Imports vCals with specifiying a invalid valid sound name 
+//! @SYMTestActions Imports vCals with a invalid sound name and a valid sound name path that exists, store entry and then export and verify that the vcals //! match
+//! @SYMTestExpectedResults The 2 vcals should match
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini london
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetSysTime \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini systemTime
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCalInvalidSoundName
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCheckAlarm \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini checkalarm
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini exportInvalidSoundName
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0002AP-MOAPHP
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0003AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0003AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Import vCal with AALARM and AALARM;TYPE=X-EPOCSOUND
+//! @SYMTestActions Import vCal with AALARM and AALARM;TYPE=X-EPOCSOUND, store and check alarm time
+//! @SYMTestExpectedResults Alarm time should be of the first ALARM popretry
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal106
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export106SoundName
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0003AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0004AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0004AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Imports vCal with Alarm sound name on z drive
+//! @SYMTestActions Imports vCal with alarm sound name on z drive, store and then export 
+//! @SYMTestExpectedResults The 2 vcals should match, should be able to store sound name on z drive
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal107
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export107SoundName
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0004AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0005AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0005AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Import vCal specifiying X-EPOCALARM and AALARM
+//! @SYMTestActions Import vCal specifiying X-EPOCALARM and AALARM, store and check alarm time and then export
+//! @SYMTestExpectedResults The alarm time should be of AALARM and X-EPOCALARM
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal108
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export108SoundName
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0005AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0006AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0006AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Imports vCal with extended alarm property (X-EPOCALARM), and then export, and then import the exported file
+//! @SYMTestActions Imports vCal with extended alarm property, and then export, and then import exported file
+//! @SYMTestExpectedResults Importing of the exported file should be done successfully
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal109
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export109extendedalarm
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal110
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0006AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0007AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0007AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Imports vCal with invalid method name
+//! @SYMTestActions Imports vCal with invalid method name and verify that the return code is KErrArgument
+//! @SYMTestExpectedResults Return code returned should be KErrArgument
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal111
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export111
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0007AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0008AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0008AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Imports vcal with TZ property, verify if TZ property exported
+//! @SYMTestActions Imports fixed utc vCal (i.e. TZ property present), and then export, and verify that the TZ rule has been exported
+//! @SYMTestExpectedResults The TZ should have been exported
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal112
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export112
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0008AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0009AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0009AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Imports vcal with TZ property (System TZ set to stanley), verify if TZ property exportey
+//! @SYMTestActions Imports fixed utc vCal (with System TZ set to stanley), store and then export, and verify that the TZ property is exported
+//! @SYMTestExpectedResults The TZ should have been exported 
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini stanley
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal113
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export113
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0009AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0010AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0010AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Imports vcal with UID in ENCODING QUOTED PRINTABLE
+//! @SYMTestActions Imports vcal with UID in ENCODING QUOTED PRINTABLE, store entry and then export, and verify if the UID has been exported correctly
+//! @SYMTestExpectedResults The UID should match botth in the import and exported file
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal114
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export114
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0010AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0011AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0011AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Imports vcal with long description
+//! @SYMTestActions Imports vcal with long description, store entry and then export, and verify if the long description has been exported correctly
+//! @SYMTestExpectedResults The description should match both the import and exported file
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal115
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export115
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0011AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0012AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0012AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Imports vcal with summary containing space characters
+//! @SYMTestActions Imports vcal with summary containing space characters, store, and then export
+//! @SYMTestExpectedResults The summary should match in both the import and exported file
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal116
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export116
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0012AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0013AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0013AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Imports vcal with summary containing upper and lower characters
+//! @SYMTestActions Imports vcal with summary containing upper and lower characters, store in database, and then export
+//! @SYMTestExpectedResults The summary should match in both the import and exported file
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal117
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export117
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0013AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0014AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0014AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Imports vcal with an empty summary field
+//! @SYMTestActions Imports vcal with an empty summary field, store and then export, and verify that the summary has not been exported
+//! @SYMTestExpectedResults The summary shoud have not been exported
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal118
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export118
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0014AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0015AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0015AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Imports vcal with description containing space characters
+//! @SYMTestActions Imports vcal with description containing space characters, store, and then export
+//! @SYMTestExpectedResults The description should match in both the import and exported file
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal119
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export119
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0015AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0016AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0016AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Imports vcal with description, summary and location with a space at the beginning of the property
+//! @SYMTestActions Imports vcal with description, summary and location with a space at the beginning of the property, store and then export
+//! @SYMTestExpectedResults the description, summary an location should be part of the previous property
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal120
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export120
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0016AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0017AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0017AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Imports fixed utc vcal with daylight property and monthly by position repeat rule
+//! @SYMTestActions Imports fixed utc vcal with daylight property and monthly by position repeat rule, store and verify until repeat time
+//! @SYMTestExpectedResults The until repeat time should not be effected by TZ or daylight property, as this is always stored in local time
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal121
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiBadRptUntil \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini RepeatUntil
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export121
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0017AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0018AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0018AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Imports fixed utc vcal with daylight property the same as TZ property
+//! @SYMTestActions Imports fixed utc vcal with daylight property the same as TZ property, store in database, and then export, and verify that the daylight 
+// has not been exported
+//! @SYMTestExpectedResults The daylight property should not be exported
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal122
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export122
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0018AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0019AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0019AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Imports vcal with yearly by rule, not specifying the yearly by month occurrence list
+//! @SYMTestActions Imports vcal with yearly by rule, not specifying the yearly by month occurrence list, store and then export
+//! @SYMTestExpectedResults The occurrence list should be established from the start date, and exported
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal123
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export123
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0019AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0020AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0020AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Imports vcal with yearly by rule, specifiying more than 1 month ocuurence list
+//! @SYMTestActions Imports vcal with yearly by rule, specifying more than 1 month occurrence list, store and then export
+//! @SYMTestExpectedResults The occurrence list should only export 1 month (same month as the start month)
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal124
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export124
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0020AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0021AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0021AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Imports vcal with yearly by rule, specifiying an invalid month i.e. 14
+//! @SYMTestActions Imports vcal with yearly by rule, specifying an invalid month, store and then export
+//! @SYMTestExpectedResults The occurrence list should only export 1 month (same month as the start month)
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal125
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export125
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0021AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0022AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0022AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Imports fixed utc vcal with daylight property and monthly by position repeat rule, and not specifying the occurence list
+//! @SYMTestActions Imports fixed utc vcal with daylight property and monthly by position repeat rule, store and verify until repeat time
+//! @SYMTestExpectedResults The until repeat time should not be effected by TZ or daylight property, as this is always stored in local time
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal126
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export126
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0022AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0023AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0023AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Imports vcal with monthly by position repeat rule, and specifying the occurrence list that is not
+//  synchronized with one of the repeating events
+//! @SYMTestActions Imports vcal with monthly by position rpeat rule, and specifying the occurrence list that is not synchronized with one of the repeating //  events
+//! @SYMTestExpectedResults Should not panic and be able to import and export successfully
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal127
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export127
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0023AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0024AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0024AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Imports vcal with monthly by date repeat rule
+//! @SYMTestActions Imports vcal with monthly by date repeat rule, and store, then export, and verify that the repeat rule has been exported correctly
+//! @SYMTestExpectedResults The repeat rule should match the repeat rule in the import file
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal128
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export128
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0024AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0025AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0025AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Imports vcal with not specifying monthly by date repeat rule
+//! @SYMTestActions Imports vcal with not specifying monthly by date repeat rule, and store, then export, and verify that the repeat rule has been exported //  correctly
+//! @SYMTestExpectedResults The repeat rule should be established from the start date and exported correctly
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal129
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export129
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0025AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0026AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0026AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Imports vcal with specifying monthly by date repeat rule that is not synchornized with one of the repeating events
+//! @SYMTestActions Imports vcal with specifying monthly by date repeat rule that is not synchornized with one of the repeating events, and store, then //  //! export, and verify that the repeat rule has been exported correctly
+//! @SYMTestExpectedResults Should not panic and be able to import and export successfully
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal130
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export130
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0026AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0027AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0027AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Imports vcal with an invalid monthly by position repeat rule
+//! @SYMTestActions Imports vcal with an invalid monthly by position repeat rule, store and then export
+//! @SYMTestExpectedResults Should not panic and be able to import and export successfully
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal131
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export131
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0027AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0028AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0028AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Imports vcal with an invalid and valid monthly by date repeat rule
+//! @SYMTestActions Imports vcal with an invalid and valid monthly by date repeat rule, store and then export
+//! @SYMTestExpectedResults The invalid dates should be ignored
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal132
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export132
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0028AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0029AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0029AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Imports vcal with an invalid monthly by date repeat rule
+//! @SYMTestActions Imports vcal with an invalid monthly by date repeat rule, store and then export
+//! @SYMTestExpectedResults Should not panic and be able to import and export successfully
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal133
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export133
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0029AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0030AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0030AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Imports vcal with an invalid and valid monthly by position repeat rule
+//! @SYMTestActions Imports vcal with an invalid and valid monthly by position repeat rule, store and then export
+//! @SYMTestExpectedResults Only the valid monthly by position repeat rule should be exported
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal134
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export134
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0030AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0031AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0031AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Imports vcal with monthly by position repeat rule, that is not syncronized with one of the repeating events
+//! @SYMTestActions Imports vcal with monthly by position repeat rule, that is not syncronized with one of the repeating events, store and then export
+//! @SYMTestExpectedResults Should not panic and be able to import and export successfully
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal135
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export135
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0031AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0032AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0032AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Imports vcal with daily repeat rule (no end date or duration)
+//! @SYMTestActions Imports vcal with daily repeat rule (no end date or duration), store and then export
+//! @SYMTestExpectedResults Duration should be set to 2 by default
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal136
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export136
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0032AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0033AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0033AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Imports vcal with weekly repeat rule (no end date or duration)
+//! @SYMTestActions Imports vcal with weekly repeat rule (no end date or duration), store and then export
+//! @SYMTestExpectedResults Duration should be set to 2 by default
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal137
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export137
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0033AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0034AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0034AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Imports vcal with monthly by position repeat rule (no end date or duration)
+//! @SYMTestActions Imports vcal with monthly by position repeat rule (no end date or duration), store and then export
+//! @SYMTestExpectedResults Duration should be set to 2 by default
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal138
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export138
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0034AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0035AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0035AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Imports vcal with monthly by date repeat rule (no end date or duration)
+//! @SYMTestActions Imports vcal with monthly by date repeat rule (no end date or duration), store and then export
+//! @SYMTestExpectedResults Duration should be set to 2 by default
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal139
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export139
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0035AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0036AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0036AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Imports vcal with yearly by month repeat rule (no end date or duration)
+//! @SYMTestActions Imports vcal with yearly by month repeat rule (no end date or duration), store and then export
+//! @SYMTestExpectedResults Duration should be set to 2 by default
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal140
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export140
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0036AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0037AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0037AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Imports vcal with weekly rule not specifying occurrence list
+//! @SYMTestActions Imports vcal with weekly rule not specifing occurrence list, store and then export
+//! @SYMTestExpectedResults 
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal141
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export141
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0037AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0038AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0038AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Imports vcal with weekly rule having a occurrence that is not syncronized by one of the repeating events
+//! @SYMTestActions Imports vcal with weekly rule having a occurrence that is not syncronized by one of the repeating events
+//! @SYMTestExpectedResults Should not panic and be able to import and export successfully
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal142
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export142
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0038AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0039AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0039AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Imports vcal with weekly rule having a valid occurrence list
+//! @SYMTestActions Imports vcal with weekly rule having a valid occurrence list, store and then export
+//! @SYMTestExpectedResults The occurrence list should match the vCal with the imported file
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal143
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export143
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0039AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0040AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0040AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Imports vcal with weekly rule having an invalid day i.e. SUN
+//! @SYMTestActions Imports vcal with weekly rule having a invalid day i.e. SUN
+//! @SYMTestExpectedResults The occurrence list should be established from the start date
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal144
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export144
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0040AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0041AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0041AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Imports repeat undated vcal 
+//! @SYMTestActions Imports repeat undated vcal, and verify that the repat is not set
+//! @SYMTestExpectedResults Repeat rule should not be set
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal145
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0041AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0042AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0042AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Imports vCal with X-EPOCALARM and without AALARM
+//! @SYMTestActions Imports vCal with X-EPOCALARM and without AALARM, and store and export
+//! @SYMTestExpectedResults X-EPOCALARM should not be exported
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal146
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export146
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0042AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0043AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0043AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Imports vCal with repeating information with duration and until date, so that the duration ends before the until date
+//! @SYMTestActions Imports vCal with repeating information with duration and until date, so that the duration ends before the until date, store and then //! //! export, and verify that the until date is exported in regards to the duration
+//! @SYMTestExpectedResults The until date should be exported in regards to the duration
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal147
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export147
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0043AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0044AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0044AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Imports vCal with repeating information with duration and until date, so that the duration occurs before the until date
+//! @SYMTestActions Imports vCal with repeating information with duration and until date, so that the duration occurs before the until date, store and then //! export, and verify that the until date is exported and not the duration until date
+//! @SYMTestExpectedResults The until date should be exported and not the duration until date 
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal148
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export148
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0044AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0045AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0045AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Imports vCal with parent entry and 2 child entry (reccurrence id without time)
+//! @SYMTestActions Imports vCal with parent entry and 2 child entry (reccurrence id without time), store and export, and verify that there are 2 exceptions
+//! exported
+//! @SYMTestExpectedResults There should be 2 exceptions exported
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal149
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiRDateExDate \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini verifyRDateExDate
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export149
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0045AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0046AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0046AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Imports fixed utc vCal with parent entry and child entry (both having different TZ property)
+//! @SYMTestActions Imports fixed utc vCal with parent and child entry (both having different TZ property)
+//! @SYMTestExpectedResults Both Parent and Child should be exported
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal150
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export150
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0046AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0047AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0047AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Imports vCal with parent entry and child entry to replace all occurrences
+//! @SYMTestActions Imports vCal with parent entry and child entry to replace all occurrences, store and then export, and verify that parent and child 
+//! have been exported
+//! @SYMTestExpectedResults Parent and child entry should be exported 
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal151
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export151
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0047AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0048AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0048AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Imports vCal with parent entry (together with RDate and Exdate) and repeating child entry to replace the last occurrence
+//! @SYMTestActions Imports vCal with parent entry and repeating child entry (together with RDate and Exdate) to replace the last occurrence
+//! @SYMTestExpectedResults Parent and child entry should be exported 
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal152
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export152
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal153
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0048AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0049AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0049AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Imports vCal with parent entry  and repeating child entry to replace the last occurrence
+//! @SYMTestActions Imports vCal with parent entry and repeating child entry to replace the last occurrence
+//! @SYMTestExpectedResults Parent and child entry should be exported 
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal154
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export154
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0049AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0050AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0050AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc OOM Importing fixed and floating vCal 
+//! @SYMTestActions Imports vCal with parent entry and repeating child entry to replace the last occurrence
+//! @SYMTestExpectedResults Should not panic
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal155
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0050AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0051AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0051AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc OOM Exporting entries
+//! @SYMTestActions Imports fixed and floating vCals, store in database, and then export into a vcf file in low memory
+//! @SYMTestExpectedResults Should not panic
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal156
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export156
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0051AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0052AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0052AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Import vCal with Resources, Attach, RNum and URL
+//! @SYMTestActions Import vCal with Resources, Attach, RNum and URL store in database, and then export into a vcf file 
+//! @SYMTestExpectedResults Verify that Resources, Attach, RNum and URL has not been exported
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal157
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export157
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0052AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0053AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0053AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Import vCal with PALARM and DALARM
+//! @SYMTestActions Import vCal with PALARM and DALARM, and verify that it has been imported successfully, and then export
+//! @SYMTestExpectedResults vCal should have been imported correctly, and PALARM and DALARM should have not been exported
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal158
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export158
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0053AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0054AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0054AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Import vCal with mulit-line description, location and summary 
+//! @SYMTestActions Import vCal with mulit-line description, location and summary, store and then export
+//! @SYMTestExpectedResults The description, location and summary should have been exported correctly
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal159
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export159
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0054AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0055AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0055AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Import vCal with yearly by date rule
+//! @SYMTestActions Import vCal with yearly by date rule, store and then export, and verify that the RRule has not been exported, as not supported
+//! @SYMTestExpectedResults Yearly by date rule should have not been exported
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal160
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export160
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0055AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0056AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0056AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Import vCal with an invalid property 
+//! @SYMTestActions Import vCal with an invalid property i.e. SYMBIAN:OS, store and then export
+//! @SYMTestExpectedResults The importing should be done successfully without storing the invalid property
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal161
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export161
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0056AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0057AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0057AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Import vCal with an invalid repeat rule 
+//! @SYMTestActions Import vCal with an invalid repeat rule i.e. A1 MO 20050301T100000, store and then export
+//! @SYMTestExpectedResults The importing should be done successfully without storing the repeat rule
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal162
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export162
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0057AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0058AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0058AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Import fixed utc vCal with multiple TZ property
+//! @SYMTestActions Import fixed utc vCal with multiple TZ property, store and verify that the times have been adjusted by the 1st TZ property
+//! @SYMTestExpectedResults The times should have been adjusted by the 1st TZ property
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal163
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export163
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0058AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0059AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0059AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Import vCal with multiple repeat rules
+//! @SYMTestActions Import vCal with multiple repeat rules, import and export and verify that the 1st repeat rule has been exported
+//! @SYMTestExpectedResults The 1st repeat rule should have been exported
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal164
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini export164
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0059AP-MOAPHP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0060AP-MOAPHP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0060AP-MOAPHP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Import corrupt vCal 
+//! @SYMTestActions Import corrupt, and verify that 0 entries are imported
+//! @SYMTestExpectedResults 0 entries should be imported
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExportBQP.ini vCal165
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0060AP-MOAPHP
+

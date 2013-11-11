@@ -1,0 +1,65 @@
+// Copyright (c) 2006-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// t_unit_imapmailstore_server.mmp
+//
+
+TARGET       t_unit_imapmailstore_server.exe
+TARGETTYPE  exe
+UID             0x1000007A 0x1000484b
+VENDORID 0x70000001
+
+CAPABILITY		ReadDeviceData WriteDeviceData ProtServ NetworkControl NetworkServices LocalServices ReaduserData WriteUserData  
+
+SOURCEPATH  ../src
+SOURCE		t_unit_imapmailstore_server.cpp
+SOURCE		t_imapmailstore.cpp
+SOURCE		t_imapmailstoreheaders.cpp
+SOURCE		t_imapmailstorebodydata8.cpp
+SOURCE		t_imapmailstorebodydata16.cpp
+SOURCE		t_imapmailstoreattachments.cpp
+SOURCE		t_imapmailstorecancelingrequests.cpp
+SOURCE		t_testobserver.cpp
+SOURCE		t_imapmailstoreattachmentinfo.cpp
+SOURCE		t_imapmailcancelstoreattachments.cpp
+SOURCE	        t_imapmailstoreplainbodydata.cpp
+USERINCLUDE   ../inc ../../../../pop3andsmtpmtm/clientmtms/inc
+USERINCLUDE   ../../inc
+USERINCLUDE ../../../imaputils/inc
+USERINCLUDE ../../../imapsettings/inc
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+OS_LAYER_ESTLIB_SYSTEMINCLUDE  
+USERINCLUDE ../../../../../../../mw/messagingmw/messagingfw/msgsrvnstore/server/inc
+USERINCLUDE ../../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/base/inc
+USERINCLUDE ../../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/email/inc
+USERINCLUDE ../../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/server/inc
+USERINCLUDE ../../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/sms/inc
+
+USERINCLUDE ../../../../pop3andsmtpmtm/servermtmutils/inc
+
+STATICLIBRARY	tefunit.lib
+LIBRARY		rfileloggerclient.lib
+LIBRARY     euser.lib
+LIBRARY		testexecuteutils.lib
+LIBRARY		testexecutelogclient.lib
+LIBRARY     efsrv.lib 
+LIBRARY		msgs.lib 
+LIBRARY		imcm.lib 
+LIBRARY		imapmailstore.lib
+LIBRARY		imaputils.lib
+LIBRARY		emailtestutils.lib 
+LIBRARY		msvtestutils.lib 
+LIBRARY		etext.lib 
+LIBRARY		bafl.lib imapsettings.lib
+
+SMPSAFE

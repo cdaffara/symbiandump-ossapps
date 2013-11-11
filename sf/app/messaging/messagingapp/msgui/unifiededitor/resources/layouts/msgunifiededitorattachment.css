@@ -1,0 +1,39 @@
+HbWidget {
+    margin-left: 0un;
+    margin-top: 0un;
+}
+
+MsgUnifiedEditorAttachment {
+    layout:layout-default;
+}
+
+MsgUnifiedEditorAttachment::attachmentIcon
+{
+  top:-var(hb-param-margin-gene-top);
+  left:-var(hb-param-margin-gene-left);
+  bottom:var(hb-param-margin-gene-bottom);
+  aspect-ratio:ignore;
+  size-policy:fixed fixed;
+  pref-width:var(hb-param-graphic-size-primary-small);
+  pref-height:var(hb-param-graphic-size-primary-small);
+}
+
+MsgUnifiedEditorAttachment::attachmentName
+{
+  left:-var(hb-param-margin-gene-middle-horizontal);
+  right:var(hb-param-margin-gene-middle-horizontal);
+  text-height:var(hb-param-text-height-secondary);
+  text-line-count-min:1;
+  text-line-count-max:1;
+}
+
+MsgUnifiedEditorAttachment::attachmentDetails
+{
+  right:var(hb-param-margin-gene-right);
+  text-height:var(hb-param-text-height-tiny);
+  text-line-count-min:1;
+  text-line-count-max:1;
+  size-policy:fixed fixed;
+  text-align:right;
+}
+

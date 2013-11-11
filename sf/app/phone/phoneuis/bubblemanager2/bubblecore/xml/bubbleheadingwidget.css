@@ -1,0 +1,115 @@
+
+
+BubbleHeadingWidget[layoutOption="three_lines"]
+{
+    layout: three_lines_layout;
+}
+
+BubbleHeadingWidget[layoutOption="three_lines_1"]
+{
+    layout: three_lines_layout_1;
+}
+
+BubbleHeadingWidget[layoutOption="three_lines_2"]
+{
+    layout: three_lines_layout_2;
+}
+
+BubbleHeadingWidget[layoutOption="two_lines"]
+{
+    layout: two_lines_layout;
+}
+
+BubbleHeadingWidget[layoutOption="two_lines_1"]
+{
+    layout: two_lines_layout_1;
+}
+
+BubbleHeadingWidget[layoutOption="two_lines_2"]
+{
+    layout: two_lines_layout_2;
+}
+
+
+BubbleHeadingWidget[layoutOption="one_line"]
+{
+    layout: one_line_layout;
+}
+
+BubbleHeadingWidget[layoutOption="one_line_1"]
+{
+    layout: one_line_layout_1;
+}
+
+BubbleHeadingWidget[layoutOption="one_line_2"]
+{
+    layout: one_line_layout_2;
+}
+
+BubbleHeadingWidget:text_line_1
+{
+    text-height: var(hb-param-text-height-primary);
+    color: var(qtc_list_item_title_normal);
+    text-line-count-min:1;
+    text-line-count-max:1;    
+}
+
+BubbleHeadingWidget:text_line_2
+{
+    text-height: var(hb-param-text-height-primary);
+    text-align: left;
+    color: var(qtc_list_item_title_normal);
+    text-line-count-min:1;
+    text-line-count-max:1;
+    pref-width: -1;
+    top: -var(hb-param-margin-gene-middle-vertical);
+    text-align: left;
+    size-policy-horizontal: expanding;    
+}
+
+BubbleHeadingWidget:text_line_2[layoutOption="one_line"]
+{
+    pref-width: 35un; /* not in spec yet, fixed value needed for localisation */
+    left: -var(hb-param-margin-gene-middle-horizontal);
+    text-align: right;
+    size-policy-horizontal: fixed;    
+}
+
+BubbleHeadingWidget:text_line_2[layoutOption="one_line_1"]
+{
+    pref-width: 35un;
+    left: -var(hb-param-margin-gene-middle-horizontal);
+    text-align: right;
+    size-policy-horizontal: fixed;    
+}
+
+BubbleHeadingWidget:text_line_2[layoutOption="one_line_2"]
+{
+    pref-width: 35un;
+    left: -var(hb-param-margin-gene-middle-horizontal);
+    text-align: right;
+    size-policy-horizontal: fixed;    
+}
+
+BubbleHeadingWidget:text_line_3
+{
+    text-height: var(hb-param-text-height-primary);
+    top: -var(hb-param-margin-gene-middle-vertical);
+    color: var(qtc_list_item_title_normal);
+    text-line-count-min:1;
+    text-line-count-max:1;
+}
+
+BubbleHeadingWidget:indicator_icon_1
+{
+    fixed-height: var(hb-param-graphic-size-secondary);
+    fixed-width:  var(hb-param-graphic-size-secondary);
+    color: var(qtc_list_item_title_normal);
+}
+
+BubbleHeadingWidget:indicator_icon_2
+{
+    fixed-height: var(hb-param-graphic-size-secondary);
+    fixed-width:  var(hb-param-graphic-size-secondary);
+    color: var(qtc_list_item_title_normal);
+}

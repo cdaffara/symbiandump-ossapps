@@ -1,0 +1,19 @@
+EXPORTS
+	??0TArithmeticalDate@@QAE@XZ @ 1 NONAME ; public: __thiscall TArithmeticalDate::TArithmeticalDate(void)
+	??0TChineseCalendar@@QAE@XZ @ 2 NONAME ; public: __thiscall TChineseCalendar::TChineseCalendar(void)
+	??0TChineseDate@@QAE@XZ @ 3 NONAME ; public: __thiscall TChineseDate::TChineseDate(void)
+	??0TGregorianCalendar@@QAE@N@Z @ 4 NONAME ; public: __thiscall TGregorianCalendar::TGregorianCalendar(double)
+	??0TGregorianCalendar@@QAE@XZ @ 5 NONAME ; public: __thiscall TGregorianCalendar::TGregorianCalendar(void)
+	??4TCalendar@@QAEAAV0@ABV0@@Z @ 6 NONAME ; public: class TCalendar & __thiscall TCalendar::operator=(class TCalendar const &)
+	??8TArithmeticalDate@@QBEHABV0@@Z @ 7 NONAME ; public: int __thiscall TArithmeticalDate::operator==(class TArithmeticalDate const &)const 
+	??8TChineseDate@@QBEHABV0@@Z @ 8 NONAME ; public: int __thiscall TChineseDate::operator==(class TChineseDate const &)const 
+	?ChineseToDateTime@TChineseCalendar@@QAEXAAVTDateTime@@@Z @ 9 NONAME ; public: void __thiscall TChineseCalendar::ChineseToDateTime(class TDateTime &)
+	?DateTimeToChinese@TChineseCalendar@@QAEXABVTDateTime@@@Z @ 10 NONAME ; public: void __thiscall TChineseCalendar::DateTimeToChinese(class TDateTime const &)
+	?DateTimeToGregorian@TGregorianCalendar@@QAEXAAVTDateTime@@@Z @ 11 NONAME ; public: void __thiscall TGregorianCalendar::DateTimeToGregorian(class TDateTime &)
+	?GetDate@TChineseCalendar@@QAEXAAVTChineseDate@@@Z @ 12 NONAME ; public: void __thiscall TChineseCalendar::GetDate(class TChineseDate &)
+	?GetDate@TGregorianCalendar@@QAEXAAVTArithmeticalDate@@@Z @ 13 NONAME ; public: void __thiscall TGregorianCalendar::GetDate(class TArithmeticalDate &)
+	?GregorianToDateTime@TGregorianCalendar@@QAEXAAVTDateTime@@@Z @ 14 NONAME ; public: void __thiscall TGregorianCalendar::GregorianToDateTime(class TDateTime &)
+	?JulianDay@TCalendar@@QAENXZ @ 15 NONAME ; public: double __thiscall TCalendar::JulianDay(void)
+	?SetDate@TChineseCalendar@@QAEHABVTChineseDate@@@Z @ 16 NONAME ; public: int __thiscall TChineseCalendar::SetDate(class TChineseDate const &)
+	?SetDate@TGregorianCalendar@@QAEHAAVTArithmeticalDate@@@Z @ 17 NONAME ; public: int __thiscall TGregorianCalendar::SetDate(class TArithmeticalDate &)
+

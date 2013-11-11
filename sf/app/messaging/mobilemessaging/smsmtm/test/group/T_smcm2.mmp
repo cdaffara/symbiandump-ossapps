@@ -1,0 +1,43 @@
+// Copyright (c) 2000-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// t_smcm2.mmp
+//
+
+target          t_smcm2.exe
+targettype      exe
+
+CAPABILITY All -TCB
+SOURCEPATH		../src
+SOURCE          T_smut.cpp
+
+SOURCEPATH		../../clientmtm/src
+SOURCE			csmsemailfields.cpp SMUTHDR.CPP
+
+USERINCLUDE		../inc 
+USERINCLUDE		../../clientmtm/inc 
+USERINCLUDE		../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/base/inc
+USERINCLUDE		../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/sms/inc
+USERINCLUDE		../../../../../../mw/messagingmw/messagingfw/msgsrvnstore/server/inc
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+LIBRARY         euser.lib smcm.lib msgs.lib etext.lib gsmu.lib
+LIBRARY			smstestutils.lib msvtestutils.lib estor.lib
+library			commsdat.lib bafl.lib efsrv.lib ecom.lib
+
+EPOCSTACKSIZE 0x8000
+
+
+UID    0x1000007a 0x10274039
+VENDORID 0x70000001
+
+SMPSAFE

@@ -1,0 +1,154 @@
+/*
+ * Copyright (c) 2007-2010 Sebastian Brannstrom, Lars Persson, EmbedDev AB
+ *
+ * All rights reserved.
+ * This component and the accompanying materials are made available
+ * under the terms of the License "Eclipse Public License v1.0"
+ * which accompanies this distribution, and is available
+ * at the URL "http://www.eclipse.org/legal/epl-v10.html".
+ *
+ * Initial Contributors:
+ * EmbedDev AB - initial contribution.
+ *
+ * Contributors:
+ *
+ * Description:
+ *
+ */
+
+// Menu items
+
+rls_string STRING_r_settings_cmd "Settings"
+rls_string STRING_r_view_mark_all_played_cmd "Mark all old"
+rls_string STRING_r_exit_cmd "Exit"
+rls_string STRING_r_view_help "Help"
+rls_string STRING_r_view_about_cmd "About"
+rls_string STRING_r_view_import_export_feeds_cmd "Import/export feeds"
+rls_string STRING_r_view_import_feeds_cmd "Import feeds"
+rls_string STRING_r_view_export_feeds_cmd "Export feeds"
+
+// CBA buttons
+rls_string STRING_r_cba_options "Options"
+rls_string STRING_r_cba_hide "Hide"
+rls_string STRING_r_cba_cancel "Cancel"
+
+// Tab titles
+rls_string STRING_r_tabgroup_feeds "Feeds"
+rls_string STRING_r_tabgroup_queue "Queue"
+rls_string STRING_r_tabgroup_queue_counter "Queue (%d)"
+
+// Question dialogs
+rls_string STRING_r_add_feed_prompt "Enter search terms or feed address"
+rls_string STRING_r_edit_feed_prompt "Feed address"
+rls_string STRING_r_add_feed_title_prompt "Feed title"
+rls_string STRING_r_remove_feed_prompt "Remove feed '%S'?"
+rls_string STRING_r_enable_downloads_prompt "There are shows in the download queue. Do you want to download now?"
+rls_string STRING_r_update_new_feed_prompt "Do you want to update the feed now?"
+rls_string STRING_r_delete_show_prompt "Delete show '%S'?"
+rls_string STRING_r_podcast_connection_error "Connection failed. Check connection settings."
+rls_string STRING_r_exit_shows_downloading "Shows are being downloaded. Exit anyway?"
+
+// Settings view
+rls_string STRING_r_podcast_settings_title "Settings"
+rls_string STRING_r_podcast_setting_showdir "Podcast folder"
+rls_string STRING_r_podcast_setting_autoupdate "Automatic update"
+rls_string STRING_r_podcast_setting_autodownload "Automatic download"
+rls_string STRING_r_podcast_setting_connection "Connection"
+rls_string STRING_r_podcast_setting_default "Use default"
+rls_string STRING_r_podcast_setting_alwaysask "Always ask"
+rls_string STRING_r_podcast_setting_useiap "Select access point"
+rls_string STRING_r_podcast_setting_iaplist "Access points"
+rls_string STRING_r_podcast_select_folder "Select folder"
+rls_string STRING_r_on "On"
+rls_string STRING_r_off "Off"
+rls_string STRING_r_podcast_setting_reset_db "Reset database"
+rls_string STRING_r_podcast_setting_reset_db_query "Reset database? All data will be lost!"
+
+
+
+// Choicelist for autodownload
+rls_string STRING_podcast_autoupdate_option1 "Off"
+rls_string STRING_podcast_autoupdate_option2 "Every hour"
+rls_string STRING_podcast_autoupdate_option3 "Four times a day"
+rls_string STRING_podcast_autoupdate_option4 "Twice a day"
+rls_string STRING_podcast_autoupdate_option5 "Daily"
+
+// Feed import/export
+rls_string STRING_r_view_import_feeds_title "Select OPML file"
+rls_string STRING_r_enter_filename "Enter file name"
+rls_string STRING_r_view_export_feeds_title "Select folder"
+rls_string STRING_r_view_export_feeds_softkey "Select"
+rls_string STRING_import_feed_success "%d feeds imported. Update all feeds now?"
+rls_string STRING_import_feed_failure "Feed import failed"
+rls_string STRING_export_feed_success "%d feeds exported"
+rls_string STRING_export_feed_failure "Feed export failed"
+rls_string STRING_r_importing "Importing..."
+rls_string STRING_r_exporting "Exporting..."
+
+// Listbox empty strings
+rls_string STRING_r_podcast_empty_queue "(queue empty)"
+rls_string STRING_r_podcast_empty_list "(no shows)"
+rls_string STRING_r_podcast_no_feeds "(no feeds)"
+rls_string STRING_r_podcast_empty_search "(no search results)"
+rls_string STRING_r_podcast_empty_list_updating "(updating...)"
+
+// Feed view
+
+rls_string STRING_r_add_feed_title "Add feed"
+rls_string STRING_r_edit_feed_title "Edit feed"
+rls_string STRING_r_cancel_update_all_feeds_cmd "Cancel update"
+rls_string STRING_r_cancel_update_all_feeds_short_cmd "Cancel"
+rls_string STRING_r_podcast_feeds_status_format "%d new"
+rls_string STRING_r_podcast_shows_never_updated "Never updated"
+rls_string STRING_r_view_add_feed_cmd "Add feed"
+rls_string STRING_r_view_add_feed_cmd_short "Add"
+rls_string STRING_r_view_edit_feed_cmd "Edit feed"
+rls_string STRING_r_view_edit_feed_cmd_short "Edit"
+rls_string STRING_r_view_delete_feed_cmd "Remove feed"
+rls_string STRING_r_view_delete_feed_cmd_short "Remove"
+rls_string STRING_r_update_feed_cmd "Update feed"
+rls_string STRING_r_update_feed_short_cmd "Update"
+rls_string STRING_r_update_all_feeds_cmd "Update all"
+rls_string STRING_r_update_all_feeds_short_cmd "Update"
+rls_string STRING_r_podcast_feeds_is_updating "Updating..."
+
+// Add/edit feed
+rls_string STRING_add_feed_query "Add feed '%S'?"
+rls_string STRING_add_feed_success "Feed added. Update now?"
+rls_string STRING_add_feed_error "Could not add feed"
+rls_string STRING_r_add_feed_replace "All existing shows in this feed will be deleted! Continue?" // shown when changing an existing feed URL
+rls_string STRING_r_add_feed_exists "A feed with this address already exists" // shown when adding or changing a feed to a URL that already exists
+
+// Feed searching
+
+rls_string STRING_r_search_noresults "No search results"
+rls_string STRING_r_searching "Searching..."
+rls_string STRING_r_search_results "Search results"
+
+// Show view
+
+rls_string STRING_r_view_mark_as_played_cmd_short "Mark old"
+rls_string STRING_r_view_mark_as_unplayed_cmd_short "Mark new"
+rls_string STRING_r_view_download_show_cmd "Get"
+rls_string STRING_r_view_delete_show_cmd "Delete"
+rls_string STRING_r_view_show_info_cmd "Info"
+rls_string STRING_r_error_playback_failed "Could not play show"
+
+// Download queue operations
+rls_string STRING_r_suspend_download_cmd "Suspend"
+rls_string STRING_r_view_resume_short_dls_cmd "Resume"
+rls_string STRING_r_view_stop_downloads_cmd "Suspend downloading"
+rls_string STRING_r_view_resume_downloads_cmd "Resume downloading"
+rls_string STRING_r_view_remove_all_downloads_cmd_short "Clear"
+rls_string STRING_r_view_remove_all_downloads_cmd "Clear download queue"
+rls_string STRING_r_clear_query "Clear download queue?"
+rls_string STRING_r_view_remove_download_short_cmd "Remove"
+rls_string STRING_r_view_move_up_short_cmd "Move up"
+rls_string STRING_r_view_move_down_short_cmd "Move down"
+rls_string STRING_r_view_remove_download_cmd "Remove download"
+
+rls_string STRING_r_error_notfound "Error: Not found on server"
+rls_string STRING_r_error_invalid_address "Error: Connection failed"
+rls_string STRING_r_error_general "Error: General error %d"
+rls_string STRING_r_error_http "Error: HTTP error %d"
+rls_string STRING_r_error_disk_full "Error: Disk full"

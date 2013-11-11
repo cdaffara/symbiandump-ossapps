@@ -1,0 +1,47 @@
+EXPORTS
+	?skipPrevious@RadioEngineWrapperObserver@@UAEXXZ @ 1 NONAME ; void RadioEngineWrapperObserver::skipPrevious(void)
+	?volumeChanged@RadioEngineWrapperObserver@@UAEXH@Z @ 2 NONAME ; void RadioEngineWrapperObserver::volumeChanged(int)
+	?init@RadioEngineWrapper@@QAE_NXZ @ 3 NONAME ; bool RadioEngineWrapper::init(void)
+	?settings@RadioEngineWrapper@@QAEAAVRadioSettingsIf@@XZ @ 4 NONAME ; class RadioSettingsIf & RadioEngineWrapper::settings(void)
+	?region@RadioEngineWrapper@@QBE?AW4Region@RadioRegion@@XZ @ 5 NONAME ; enum RadioRegion::Region RadioEngineWrapper::region(void) const
+	?initCombinedLogger@RadioLogger@@SAXXZ @ 6 NONAME ; void RadioLogger::initCombinedLogger(void)
+	?removeObserver@RadioEngineWrapper@@QAEXPAVRadioEngineWrapperObserver@@@Z @ 7 NONAME ; void RadioEngineWrapper::removeObserver(class RadioEngineWrapperObserver *)
+	?decreaseVolume@RadioEngineWrapper@@QAEXXZ @ 8 NONAME ; void RadioEngineWrapper::decreaseVolume(void)
+	?isRadioOn@RadioEngineWrapper@@QBE_NXZ @ 9 NONAME ; bool RadioEngineWrapper::isRadioOn(void) const
+	?addObserver@RadioEngineWrapper@@QAEXPAVRadioEngineWrapperObserver@@@Z @ 10 NONAME ; void RadioEngineWrapper::addObserver(class RadioEngineWrapperObserver *)
+	?isAntennaAttached@RadioEngineWrapper@@QBE_NXZ @ 11 NONAME ; bool RadioEngineWrapper::isAntennaAttached(void) const
+	?toggleAudioRoute@RadioEngineWrapper@@QAEXXZ @ 12 NONAME ; void RadioEngineWrapper::toggleAudioRoute(void)
+	?setVolume@RadioEngineWrapper@@QAEXH@Z @ 13 NONAME ; void RadioEngineWrapper::setVolume(int)
+	?setMute@RadioEngineWrapper@@QAEX_N0@Z @ 14 NONAME ; void RadioEngineWrapper::setMute(bool, bool)
+	??0RadioEngineWrapper@@QAE@AAVRadioStationHandlerIf@@@Z @ 15 NONAME ; RadioEngineWrapper::RadioEngineWrapper(class RadioStationHandlerIf &)
+	?cancelSeeking@RadioEngineWrapper@@QAEXXZ @ 16 NONAME ; void RadioEngineWrapper::cancelSeeking(void)
+	?d_func@RadioEngineWrapper@@AAEPAVRadioEngineWrapperPrivate@@XZ @ 17 NONAME ; class RadioEngineWrapperPrivate * RadioEngineWrapper::d_func(void)
+	?d_func@RadioEngineWrapper@@ABEPBVRadioEngineWrapperPrivate@@XZ @ 18 NONAME ; class RadioEngineWrapperPrivate const * RadioEngineWrapper::d_func(void) const
+	?releaseCombinedLogger@RadioLogger@@SAXXZ @ 19 NONAME ; void RadioLogger::releaseCombinedLogger(void)
+	??1RadioEngineWrapper@@QAE@XZ @ 20 NONAME ; RadioEngineWrapper::~RadioEngineWrapper(void)
+	?radioStatusChanged@RadioEngineWrapperObserver@@UAEX_N@Z @ 21 NONAME ; void RadioEngineWrapperObserver::radioStatusChanged(bool)
+	?increaseVolume@RadioEngineWrapperObserver@@UAEXXZ @ 22 NONAME ; void RadioEngineWrapperObserver::increaseVolume(void)
+	?frequencyStepSize@RadioEngineWrapper@@QBEIXZ @ 23 NONAME ; unsigned int RadioEngineWrapper::frequencyStepSize(void) const
+	??0MethodLogger@@QAE@PBD0@Z @ 24 NONAME ; MethodLogger::MethodLogger(char const *, char const *)
+	?isFrequencyValid@RadioEngineWrapper@@QBE_NI@Z @ 25 NONAME ; bool RadioEngineWrapper::isFrequencyValid(unsigned int) const
+	?setFrequency@RadioEngineWrapper@@QAEXIH@Z @ 26 NONAME ; void RadioEngineWrapper::setFrequency(unsigned int, int)
+	?setRdsEnabled@RadioEngineWrapper@@QAEX_N@Z @ 27 NONAME ; void RadioEngineWrapper::setRdsEnabled(bool)
+	?logMsg@RadioLogger@@SAXPBDW4Mode@1@@Z @ 28 NONAME ; void RadioLogger::logMsg(char const *, enum RadioLogger::Mode)
+	?audioRouteChanged@RadioEngineWrapperObserver@@UAEX_N@Z @ 29 NONAME ; void RadioEngineWrapperObserver::audioRouteChanged(bool)
+	?isMuted@RadioEngineWrapper@@QBE_NXZ @ 30 NONAME ; bool RadioEngineWrapper::isMuted(void) const
+	?isUsingLoudspeaker@RadioEngineWrapper@@QBE_NXZ @ 31 NONAME ; bool RadioEngineWrapper::isUsingLoudspeaker(void) const
+	?currentFrequency@RadioEngineWrapper@@QBEIXZ @ 32 NONAME ; unsigned int RadioEngineWrapper::currentFrequency(void) const
+	?skipNext@RadioEngineWrapperObserver@@UAEXXZ @ 33 NONAME ; void RadioEngineWrapperObserver::skipNext(void)
+	?isInManualSeekMode@RadioEngineWrapper@@QBE_NXZ @ 34 NONAME ; bool RadioEngineWrapper::isInManualSeekMode(void) const
+	?muteChanged@RadioEngineWrapperObserver@@UAEX_N@Z @ 35 NONAME ; void RadioEngineWrapperObserver::muteChanged(bool)
+	?startSeeking@RadioEngineWrapper@@QAEXW4Direction@Seek@@H@Z @ 36 NONAME ; void RadioEngineWrapper::startSeeking(enum Seek::Direction, int)
+	?decreaseVolume@RadioEngineWrapperObserver@@UAEXXZ @ 37 NONAME ; void RadioEngineWrapperObserver::decreaseVolume(void)
+	?minFrequency@RadioEngineWrapper@@QBEIXZ @ 38 NONAME ; unsigned int RadioEngineWrapper::minFrequency(void) const
+	?rdsAvailabilityChanged@RadioEngineWrapperObserver@@UAEX_N@Z @ 39 NONAME ; void RadioEngineWrapperObserver::rdsAvailabilityChanged(bool)
+	?tunedToFrequency@RadioEngineWrapperObserver@@UAEXIH@Z @ 40 NONAME ; void RadioEngineWrapperObserver::tunedToFrequency(unsigned int, int)
+	??1MethodLogger@@QAE@XZ @ 41 NONAME ; MethodLogger::~MethodLogger(void)
+	?antennaStatusChanged@RadioEngineWrapperObserver@@UAEX_N@Z @ 42 NONAME ; void RadioEngineWrapperObserver::antennaStatusChanged(bool)
+	?setManualSeekMode@RadioEngineWrapper@@QAEX_N@Z @ 43 NONAME ; void RadioEngineWrapper::setManualSeekMode(bool)
+	?increaseVolume@RadioEngineWrapper@@QAEXXZ @ 44 NONAME ; void RadioEngineWrapper::increaseVolume(void)
+	?maxFrequency@RadioEngineWrapper@@QBEIXZ @ 45 NONAME ; unsigned int RadioEngineWrapper::maxFrequency(void) const
+

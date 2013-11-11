@@ -1,0 +1,34 @@
+<layers>
+<visual>
+
+<param name="scale_x" type="anim">
+    <duration>0.3</duration>
+    <style>linear</style>
+    <keyframe at="0.0">0.0</keyframe>
+    <keyframe at="1.0">1.0</keyframe>
+    <start ref="visual.width">1</start>
+    <end ref="screen.width">1</end>
+</param>
+    
+<param name="scale_y" type="anim">
+    <duration>0.3</duration>
+    <style>linear</style>
+    <keyframe at="0.0">0.0</keyframe>
+    <keyframe at="1.0">1.0</keyframe>
+    <start ref="visual.height">1</start>
+    <end ref="screen.height">1</end>
+</param>
+
+<param name="scale_origin_x" ref="screen.width">0.5</param>
+<param name="scale_origin_y" ref="screen.height">0.5</param>
+
+<param name="opacity" type="anim">
+<duration>0.3</duration>
+<style>linear</style>
+<keyframe at="0.0">1.0</keyframe>
+<keyframe at="0.5">1.0</keyframe>
+<keyframe at="1.0">0.5</keyframe>
+</param>
+
+</visual>
+</layers>

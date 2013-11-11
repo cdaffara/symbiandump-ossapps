@@ -1,0 +1,30 @@
+[test0]
+DiallingPauseDuration= 3
+ConnectingPauseDuration= 1
+DisconnectingPauseDuration= 5
+AnswerIncomingPauseDuration= 5
+
+
+SmsParamEntry= 1, Vodaphone, 00, 00, 24, 447747747747, 447785016005
+SmsParamEntry= 2, BT, 00, 00, 12, 447747747747, 447802000332
+SmsParamBatchReqPause= 1
+SmsParamMaxNumSlots= 10
+
+# SmsParam = <maxnumslots>, <TelNumMaxLen>, <AlphaTagMaxLen>
+# SmsParamEntry = <Index>, <Name>, <PID>, <DCS>, <Validity Period(hour)> <DA> <SCA>
+
+
+[test1]
+DiallingPauseDuration= 3
+ConnectingPauseDuration= 1
+DisconnectingPauseDuration= 5
+AnswerIncomingPauseDuration= 5
+
+
+SmsParamEntry= 0, Vodaphone, 00, 00, 24, 447747747747, 447785016005
+#SmsParamEntry= 2, BT, 00, 00, 12, 447747747747, 447802000332
+SmsParamBatchReqPause= 0
+SmsParamMaxNumSlots= 1
+
+# SmsParam = <maxnumslots>, <TelNumMaxLen>, <AlphaTagMaxLen>
+# SmsParamEntry = <Index>, <Name>, <PID>, <DCS>, <Validity Period(hour)> <DA> <SCA>

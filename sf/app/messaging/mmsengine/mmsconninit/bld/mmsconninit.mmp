@@ -1,0 +1,63 @@
+/*
+* Copyright (c) 2002-2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*     This is project specification file for the mmsconninit.dll.
+*
+*/
+
+
+
+#include <platform_paths.hrh>
+
+TARGET          mmsconninit.dll
+TARGETTYPE      DLL
+UID             0x1000008d 0x101F4694
+CAPABILITY      CAP_GENERAL_DLL
+VENDORID        VID_DEFAULT
+VERSION 	10.0
+PAGED
+
+SOURCEPATH      ../src 
+
+// Comment out the following two lines if logging not needed anymore
+// Debug wersion will log in any case (overrides the flag setting)
+//MACRO _MMSCONNINIT_LOGGING_
+//#define _MMSCONNINIT_LOGGING_
+
+SOURCE          mmsconninit.cpp
+SOURCE          MmsPhoneClient.CPP
+
+USERINCLUDE     ../inc
+USERINCLUDE     ../../mmsserver/inc
+SYSTEMINCLUDE   ../../../inc
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE   /epoc32/include/libc 
+
+LIBRARY         euser.lib
+LIBRARY         commdb.lib
+LIBRARY         esock.lib
+LIBRARY         etelmm.lib
+LIBRARY         etel.lib
+
+#ifdef _MMSCONNINIT_LOGGING_
+LIBRARY         flogger.lib
+#else
+DEBUGLIBRARY    flogger.lib
+#endif
+
+
+
+SMPSAFE
+
+//  End of File

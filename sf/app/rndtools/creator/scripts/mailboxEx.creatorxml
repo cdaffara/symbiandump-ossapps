@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<creatorscript schemaVersion="1.0" scriptVersion="1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="creator.xsd">
+
+<mailbox type="POP3">
+   <fields>
+      <name>cr_pop mail</name>
+      <ownemail/>
+      <copytoself/>
+      <useapopsecurelogin>yes</useapopsecurelogin>
+      <incomingsslwrapper>no</incomingsslwrapper>
+      <incomingsecuresockets>no</incomingsecuresockets>
+      <incomingloginname/>
+      <incomingpassword/>
+      <incomingservername/>
+   </fields>
+</mailbox>
+<mailbox type="IMAP4">
+   <fields>
+      <name>cr_imap4 mail</name>
+      <ownemail>creator@example.net</ownemail>
+      <copytoself>cc</copytoself>
+      <incomingsslwrapper>yes</incomingsslwrapper>
+      <incomingsecuresockets>yes</incomingsecuresockets>
+      <incomingloginname>creator</incomingloginname>
+      <incomingpassword>creator</incomingpassword>
+      <incomingservername>cr_mail.example.net</incomingservername>
+      <acknowledgereceipts>no</acknowledgereceipts>
+      <autosendonconnect>no</autosendonconnect>
+      <deletemailsatdisconnect>no</deletemailsatdisconnect>
+      <getemailoptions>getbodytextandattachments</getemailoptions>
+   </fields>
+</mailbox>
+</creatorscript>

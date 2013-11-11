@@ -1,0 +1,158 @@
+/*
+* Copyright (c) 2002-2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*
+*/
+
+
+//  RESOURCE IDENTIFIER
+NAME    IGPE    // 4 letter ID
+
+#include <avkon.rsg>
+#include <avkon.rh>
+#include <eikon.rh>
+#include <imageprintapp.loc>
+
+// d:List box format string - do not localize this!
+#define qtn_lbox_format "\t%0U\t\t%1U"
+
+//  Maximum and minimum number
+#define MIN_TINT_NAME -2147483646
+#define MAX_TINT_NAME 2147483647
+
+//  RESOURCE DEFINITIONS 
+
+RESOURCE RSS_SIGNATURE { }
+RESOURCE TBUF { buf="ImagePrintEngine"; }
+
+/**
+ *  Generic popup setting item
+ */
+RESOURCE AVKON_SETTING_PAGE r_setting_generic_page
+    {    
+    //softkey_resource = R_AVKON_SOFTKEYS_OK_CANCEL; // Removed due to single click
+    softkey_resource = R_AVKON_SOFTKEYS_CANCEL ;
+    type = EAknCtPopupSettingList;
+    editor_resource_id = r_empty_setting_list;
+    }
+
+RESOURCE POPUP_SETTING_LIST r_empty_setting_list
+    {
+    }
+
+RESOURCE AVKON_POPUP_SETTING_TEXTS r_setting_generic_popup_page
+    {
+    flags = 0;
+    setting_texts_resource = r_setting_generic_popup_array;
+    popped_up_texts_resource = r_setting_generic_popup_array_texts;
+    }
+
+RESOURCE ARRAY r_setting_generic_popup_array
+    {
+    items = 
+        {
+		AVKON_ENUMERATED_TEXT 
+            { 
+            value = 0; 
+            text = " "; 
+            }
+        };
+    }
+
+RESOURCE ARRAY r_setting_generic_popup_array_texts
+    {
+    items =
+        {
+        LBUF 
+            { 
+            txt = " "; 
+            }
+        };
+    }
+
+/**
+ *  Generic TInt setting page
+ */
+
+RESOURCE AVKON_SETTING_PAGE r_def_integer_page
+    {    
+    softkey_resource = R_AVKON_SOFTKEYS_OK_CANCEL;
+    type = EAknCtIntegerEdwin;
+    editor_resource_id = r_def_integer_editor;
+    }
+
+RESOURCE AVKON_INTEGER_EDWIN r_def_integer_editor
+    {
+    min = MIN_TINT_NAME;
+    max = MAX_TINT_NAME;
+    }
+
+/**
+ *  Generic float query
+ */
+RESOURCE DIALOG r_generic_float_query_dlg
+    {
+    flags = EGeneralQueryFlags;
+    buttons = R_AVKON_SOFTKEYS_OK_CANCEL;
+    items =
+        {
+        DLG_LINE
+            {
+            type = EAknCtQuery;
+            id = 10000;
+            control = AVKON_DATA_QUERY
+                {
+                layout = EFloatingPointLayout;
+                label = " ";
+                control = FLPTED
+                    {
+                    };
+                };
+            }
+        };
+    }
+
+// Resource strings
+RESOURCE TBUF R_QTN_LBOX_FORMAT { buf = qtn_lbox_format; }
+RESOURCE TBUF R_EMPTY { buf = ""; }
+
+// Paper sizes
+RESOURCE TBUF R_QTN_STR_PAPER_SIZE { buf = qtn_print_settings_paper_size; }
+RESOURCE TBUF R_QTN_STR_SIZE_AUTO { buf = qtn_print_paper_size_auto; }
+RESOURCE TBUF R_QTN_STR_SIZE_LETTER { buf = qtn_print_paper_size_letter; }
+RESOURCE TBUF R_QTN_STR_SIZE_A4 { buf = qtn_print_paper_size_a4; }
+RESOURCE TBUF R_QTN_STR_SIZE_A6 { buf = qtn_print_paper_size_a6; }
+RESOURCE TBUF R_QTN_STR_SIZE_4X6 { buf = qtn_print_paper_size_4x6; }
+RESOURCE TBUF R_QTN_STR_SIZE_5X7 { buf = qtn_print_paper_size_5x7; }
+RESOURCE TBUF R_QTN_STR_SIZE_STICKER { buf = qtn_print_paper_size_sticker; }
+
+// Print quality
+RESOURCE TBUF R_QTN_STR_QUALITY { buf = qtn_print_settings_print_quality; }
+RESOURCE TBUF R_QTN_STR_QUAL_AUTO { buf = qtn_print_quality_auto; }
+RESOURCE TBUF R_QTN_STR_QUAL_NORMAL { buf = qtn_print_quality_normal; }
+RESOURCE TBUF R_QTN_STR_QUAL_DRAFT { buf = qtn_print_quality_draft; }
+RESOURCE TBUF R_QTN_STR_QUAL_FINE { buf = qtn_print_quality_fine; }
+
+// Template
+RESOURCE TBUF R_QTN_STR_TEMPLATE { buf = qtn_print_settings_template; }
+RESOURCE TBUF R_QTN_STR_TEMPLATE_BLESS { buf = qtn_print_settings_bless; }
+RESOURCE TBUF R_QTN_STR_TEMPLATE_ONE { buf = "1"; }
+RESOURCE TBUF R_QTN_STR_TEMPLATE_TWO { buf = "2"; }
+RESOURCE TBUF R_QTN_STR_TEMPLATE_FOUR { buf = "4"; }
+RESOURCE TBUF R_QTN_STR_TEMPLATE_SIX { buf = "6"; }
+RESOURCE TBUF R_QTN_STR_TEMPLATE_NINE { buf = "9"; }
+RESOURCE TBUF R_QTN_STR_TEMPLATE_TWELVE { buf = "12"; }
+RESOURCE TBUF R_QTN_STR_TEMPLATE_SIXTEEN { buf = "16"; }
+    
+    

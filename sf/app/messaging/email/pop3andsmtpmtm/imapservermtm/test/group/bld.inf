@@ -1,0 +1,134 @@
+// Copyright (c) 2005-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+
+PRJ_TESTMMPFILES
+
+t_imps01.mmp	manual
+t_dump.mmp	manual
+t_impssecuresocket.mmp  manual
+t_imapio.mmp  manual
+T_PARSE_UTC_IMAP.mmp manual
+t_decodeserver.mmp manual
+T_DEF062024_IMAP_ATTACHMENTCANNOTBEOPENED.mmp manual
+T_PartialDownloadSpoofServer.mmp manual
+T_DEF059571_IMAP_MISSINGOFFSET.mmp manual
+T_ImapNewMsgDuringSyncIdleCancel.mmp manual
+T_ImapBadlyFormedAddress.mmp manual
+T_DEF079867_OfflineDelete.mmp manual
+T_DEF075510_Offline_Populate.mmp  manual 
+T_INC083099_Enquire_Email_Structure.mmp
+T_ConnectAndSyncAfterDisconnect.mmp manual
+
+PRJ_TESTEXPORTS
+
+..\scripts\T_PARSE_UTC_IMAP.script				\epoc32\wins\c\msgtest\imap\T_PARSE_UTC_IMAP.script
+..\scripts\T_PARSE_UTC_IMAP.script				\epoc32\winscw\c\msgtest\imap\T_PARSE_UTC_IMAP.script
+
+..\scripts\T_IMAP_DECODE.script				\epoc32\wins\c\msgtest\imap\T_IMAP_DECODE.script
+..\scripts\T_IMAP_DECODE.script				\epoc32\winscw\c\msgtest\imap\T_IMAP_DECODE.script
+
+..\data\multipleReceived.txt					\epoc32\wins\c\msgtest\imap\multipleReceived.txt
+..\data\multipleReceived.txt					\epoc32\winscw\c\msgtest\imap\multipleReceived.txt
+
+..\data\NoReceived.txt						\epoc32\wins\c\msgtest\imap\NoReceived.txt
+..\data\NoReceived.txt						\epoc32\winscw\c\msgtest\imap\NoReceived.txt
+
+..\data\noReceivednoDate.txt					\epoc32\wins\c\msgtest\imap\noReceivednoDate.txt
+..\data\noReceivednoDate.txt					\epoc32\winscw\c\msgtest\imap\noReceivednoDate.txt
+
+..\data\EmbeddedMsg.txt						\epoc32\wins\c\msgtest\imap\EmbeddedMsg.txt
+..\data\EmbeddedMsg.txt						\epoc32\winscw\c\msgtest\imap\EmbeddedMsg.txt
+
+..\data\EmbeddedMsgNoReceived.txt				\epoc32\wins\c\msgtest\imap\EmbeddedMsgNoReceived.txt
+..\data\EmbeddedMsgNoReceived.txt				\epoc32\winscw\c\msgtest\imap\EmbeddedMsgNoReceived.txt
+
+..\data\EmbeddedMsgNoReceivedNoDate.txt				\epoc32\wins\c\msgtest\imap\EmbeddedMsgNoReceivedNoDate.txt
+..\data\EmbeddedMsgNoReceivedNoDate.txt				\epoc32\winscw\c\msgtest\imap\EmbeddedMsgNoReceivedNoDate.txt
+
+..\data\mail1_Base64.txt					\epoc32\wins\c\msgtest\imap\mail1_Base64.txt
+..\data\mail1_Base64.txt					\epoc32\winscw\c\msgtest\imap\mail1_Base64.txt
+
+..\data\mail1_Base64_body.txt					\epoc32\wins\c\msgtest\imap\mail1_Base64_body.txt
+..\data\mail1_Base64_body.txt					\epoc32\winscw\c\msgtest\imap\mail1_Base64_body.txt
+
+..\data\mail2_Base64.txt					\epoc32\wins\c\msgtest\imap\mail2_Base64.txt
+..\data\mail2_Base64.txt					\epoc32\winscw\c\msgtest\imap\mail2_Base64.txt
+
+..\data\mail2_Base64_body.txt					\epoc32\wins\c\msgtest\imap\mail2_Base64_body.txt
+..\data\mail2_Base64_body.txt					\epoc32\winscw\c\msgtest\imap\mail2_Base64_body.txt
+
+..\data\mail1_UUEncoded.txt					\epoc32\wins\c\msgtest\imap\mail1_UUEncoded.txt
+..\data\mail1_UUEncoded.txt					\epoc32\winscw\c\msgtest\imap\mail1_UUEncoded.txt
+
+..\data\mail1_UUEncoded_body.txt				\epoc32\wins\c\msgtest\imap\mail1_UUEncoded_body.txt
+..\data\mail1_UUEncoded_body.txt				\epoc32\winscw\c\msgtest\imap\mail1_UUEncoded_body.txt
+
+..\data\mail1_UUEncoded_attachment.jpg				\epoc32\wins\c\msgtest\imap\mail1_UUEncoded_attachment.jpg
+..\data\mail1_UUEncoded_attachment.jpg				\epoc32\winscw\c\msgtest\imap\mail1_UUEncoded_attachment.jpg
+
+..\data\ImapUTCTest.ini						\epoc32\wins\c\msgtest\imap\ImapUTCTest.ini
+..\data\ImapUTCTest.ini						\epoc32\winscw\c\msgtest\imap\ImapUTCTest.ini
+
+..\data\ImapDecode.ini						\epoc32\wins\c\msgtest\imap\ImapDecode.ini
+..\data\ImapDecode.ini						\epoc32\winscw\c\msgtest\imap\ImapDecode.ini
+
+
+..\Group\T_PARSE_UTC_IMAP.iby   				\epoc32\rom\include\T_PARSE_UTC_IMAP.iby
+..\Group\T_DecodeServer.iby   					\epoc32\rom\include\T_DecodeServer.iby
+
+//Test harness for defect DEF062024
+..\scripts\T_DEF062024_IMAP_ATTACHMENTCANNOTBEOPENED.script	\epoc32\winscw\c\msgtest\imap\T_DEF062024_IMAP_ATTACHMENTCANNOTBEOPENED.script
+..\data\ImapGetMailAndAttachment.txt				\epoc32\winscw\c\msgtest\imap\ImapGetMailAndAttachment.txt
+..\data\ImapAttachmentTest.ini					\epoc32\winscw\c\msgtest\imap\ImapAttachmentTest.ini
+..\Group\T_DEF062024_IMAP_ATTACHMENTCANNOTBEOPENED.iby   	\epoc32\rom\include\T_DEF062024_IMAP_ATTACHMENTCANNOTBEOPENED.iby
+
+..\scripts\T_PartialDownload.script				\epoc32\wins\c\msgtest\imap\T_PartialDownload.script
+..\scripts\T_PartialDownload.script				\epoc32\winscw\c\msgtest\imap\T_PartialDownload.script
+
+..\data\partialDownload.txt					\epoc32\wins\c\msgtest\imap\partialDownload.txt
+..\data\partialDownload.txt					\epoc32\winscw\c\msgtest\imap\partialDownload.txt
+
+// test harness exports for DEF059571
+..\scripts\T_DEF059571_IMAP_MISSINGOFFSET.script		\epoc32\wins\c\msgtest\imap\T_DEF059571_IMAP_MISSINGOFFSET.script
+..\scripts\T_DEF059571_IMAP_MISSINGOFFSET.script		\epoc32\winscw\c\msgtest\imap\T_DEF059571_IMAP_MISSINGOFFSET.script
+
+..\data\ImapMissingOffset.txt					\epoc32\wins\c\msgtest\imap\ImapMissingOffset.txt
+..\data\ImapMissingOffset.txt					\epoc32\winscw\c\msgtest\imap\ImapMissingOffset.txt
+
+..\data\ImapMissingOffsetTest.ini				\epoc32\wins\c\msgtest\imap\ImapMissingOffsetTest.ini
+..\data\ImapMissingOffsetTest.ini				\epoc32\winscw\c\msgtest\imap\ImapMissingOffsetTest.ini
+
+// Test harness exports for test of receiving new messages indications while synchronise command is cancelling IMAP idle
+
+..\scripts\T_ImapNewMsgDuringSyncIdleCancel.script		\epoc32\wins\c\msgtest\imap\T_ImapNewMsgDuringSyncIdleCancel.script
+..\scripts\T_ImapNewMsgDuringSyncIdleCancel.script		\epoc32\winscw\c\msgtest\imap\T_ImapNewMsgDuringSyncIdleCancel.script
+
+..\data\ImapNewMsgDuringSyncIdleCancel.txt			\epoc32\wins\c\msgtest\imap\ImapNewMsgDuringSyncIdleCancel.txt
+..\data\ImapNewMsgDuringSyncIdleCancel.txt			\epoc32\winscw\c\msgtest\imap\ImapNewMsgDuringSyncIdleCancel.txt
+
+..\data\ImapNewMsgDuringSyncIdleCancelTest.ini		\epoc32\wins\c\msgtest\imap\ImapNewMsgDuringSyncIdleCancelTest.ini
+..\data\ImapNewMsgDuringSyncIdleCancelTest.ini		\epoc32\winscw\c\msgtest\imap\ImapNewMsgDuringSyncIdleCancelTest.ini
+
+// Test harness exports for test of receiving mail with badly formed email address
+
+..\scripts\T_ImapBadlyFormedAddress.script	\epoc32\wins\c\msgtest\imap\T_ImapBadlyFormedAddress.script
+..\scripts\T_ImapBadlyFormedAddress.script	\epoc32\winscw\c\msgtest\imap\T_ImapBadlyFormedAddress.script
+
+..\data\ImapBadlyFormedAddress.txt	\epoc32\wins\c\msgtest\imap\ImapBadlyFormedAddress.txt
+..\data\ImapBadlyFormedAddress.txt	\epoc32\winscw\c\msgtest\imap\ImapBadlyFormedAddress.txt
+
+..\data\ImapBadlyFormedAddressTest.ini	\epoc32\wins\c\msgtest\imap\ImapBadlyFormedAddressTest.ini
+..\data\ImapBadlyFormedAddressTest.ini	\epoc32\winscw\c\msgtest\imap\ImapBadlyFormedAddressTest.ini

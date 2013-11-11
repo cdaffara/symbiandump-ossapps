@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SystemDefinition schema="3.0.0" xmlns:qt="http://www.nokia.com/qt">
+ <package id="settingsuis" name="Settings UIs" levels="plugin ui">
+  <collection id="controlpanelplugins" name="Control Panel Plugins" level="plugin">
+   <component id="themeplugin" filter="s60" name="Theme Plugin" introduced="^4">
+    <unit bldFile="controlpanelplugins/themeplugin" qt:proFile="themeplugin.pro" qt:qmakeArgs="-r -config rom"/>
+   </component>	
+   <component id="aboutplugin" filter="s60" name="About Plugin" introduced="^4">
+    <unit bldFile="controlpanelplugins/aboutplugin" qt:proFile="aboutplugin.pro" qt:qmakeArgs="-r -config rom"/>
+   </component>	
+   <component id="langandregplugin" filter="s60" name="Language Region Plugin" introduced="^4">
+    <unit bldFile="controlpanelplugins/langandregplugin" qt:proFile="languageplugin.pro" qt:qmakeArgs="-r -config rom"/>
+   </component>	
+  </collection>
+  <collection id="controlpanelui" name="Control Panel UI" level="ui">
+	<!-- collection is really a component, move down a dir -->
+   <component id="controlpanelui_build" filter="s60" name="Control Panel UI Build" introduced="^4">
+    <unit bldFile="controlpanelui" qt:proFile="controlpanelui.pro" qt:qmakeArgs="-r -config rom"/>
+   </component>
+   <component id="controlpanelui_test" name="Control Panel application Test" filter="s60,test,qt_unit_test">
+     <meta rel="testbuild">
+     <group name="controlpanelui_tests"/>
+     </meta>
+     <unit bldFile="controlpanelui/tsrc" qt:proFile="tsrc.pro"/> 
+   </component> 
+  </collection>
+ </package>
+</SystemDefinition>

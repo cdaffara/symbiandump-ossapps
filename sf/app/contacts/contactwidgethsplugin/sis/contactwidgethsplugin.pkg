@@ -1,0 +1,50 @@
+;
+; Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+
+
+; Language
+&EN
+
+
+; SIS header: name, uid, version
+#{"contactwidgethsplugin"},(0x2002C353),1,0,0,TYPE=PU
+
+; Localised Vendor name
+%{"Vendor"}
+
+; Unique Vendor name
+:"Vendor"
+
+
+; Manual PKG pre-rules from PRO files
+; Default dependency to Qt libraries
+(0x2001E61C), 4, 7, 0, {"Qt"}
+; Default HW/platform dependencies
+;[0x101F7961],0,0,0,{"S60ProductID"}
+;[0x102032BE],0,0,0,{"S60ProductID"}
+;[0x102752AE],0,0,0,{"S60ProductID"}
+;[0x1028315F],0,0,0,{"S60ProductID"}
+;[0x20022e6d],0,0,0,{"S60ProductID"}
+ 
+; Default dependency to QtMobility libraries
+;(0x2002AC89), 1, 0, 2, {"QtMobility"}
+
+; DEPLOYMENT
+"/epoc32/release/armv5/urel/contactwidgethsplugin.dll" - "!:\sys\bin\contactwidgethsplugin.dll"
+"/epoc32/data/z/private/20022F35/import/widgetregistry/2002C353/contactwidgethsplugin.qtplugin" - "!:\private\20022F35\import\widgetregistry\2002C353\contactwidgethsplugin.qtplugin"
+"/epoc32/data/z/private/20022F35/import/widgetregistry/2002C353/contactwidgethsplugin.xml" - "!:\private\20022F35\import\widgetregistry\2002C353\contactwidgethsplugin.xml"
+"/epoc32/data/z/private/20022F35/import/widgetregistry/2002C353/contactwidgethsplugin.manifest" - "!:\private\20022F35\import\widgetregistry\2002C353\contactwidgethsplugin.manifest"
+"/epoc32/data/z/private/20022F35/import/widgetregistry/2002C353/qtg_large_friend.svg" - "!:\private\20022F35\import\widgetregistry\2002C353\qtg_large_friend.svg"
+
+; Manual PKG post-rules from PRO files

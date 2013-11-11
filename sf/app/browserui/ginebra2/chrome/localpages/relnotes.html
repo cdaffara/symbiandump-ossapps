@@ -1,0 +1,110 @@
+<html>
+  <head>
+      <title>Nokia Browser 8.0 Release Notes</title>
+      <meta name = "viewport" content = "width = device-width, height = device-height, initial-scale = 1.0, user-scalable = no">
+      <link rel="stylesheet" type="text/css" href="startpage.css"/>
+  </head>
+  <script type="text/javascript">
+    function pressed (num) {
+        butt1 = document.getElementById('back_button');
+
+        switch (num)
+        {
+            case 1: // user pressed back button
+                butt1.setAttribute('class', 'button_p');
+                break;
+            case 9: // reset
+                butt1.setAttribute('class', 'button');
+                break;
+        }
+    }
+  </script>
+  <body onFocus="pressed(9)" >
+  <img id="bgimage" src="grad_tall.jpg" />
+  <div id="rel_note_body">
+    <center>
+    <a href="startpage.html" onMouseDown="pressed(1)"><img id="back_button" class="button" src="button_back.png" /></a><br/><br/>
+    <b>Release Notes for<br/>
+    Nokia Browser 8.0 TRUNK VERSION</b>
+    <br/><br/>
+    Updated: 2-Jun-2010<br/>
+    </center>
+    <br/>NOTE: These release notes are for TRUNK version releases ONLY. When branched for final release, a final set of release notes will be replace this file.<br/>
+    <br/>NOTE: These release notes were current as of the time the software was packaged for release. For up-to-date release notes, visit the Browser Team's Wiki pages.
+    <br/>
+    <h4>Overview of the Release:</h4>
+    <p>The Nokia Browser is Nokia's latest web browser based on the latest open-source WebKit
+    engine and built using the Qt application framework.</p>
+    <p>The Nokia ASF Browser project's mission is to provide a fast, easy to use, web-standards based browser
+      that can compete alongside the best of the mobile browsers. </p>
+    <p>This is the Alpha 4 release of the Nokia Browser. While the functionality has certainly has been enhanced
+    since the Alpha 1 and 2 releases (which were released to a very limited audience) and the performance has also been improved significantly,
+    the performance is still behind where we want and need it to be.</p>
+    <p>Please review the rest of the Release Notes and provide feedback on this release via the feedback mechanisms on the Backstage site. </p>
+    <h4>Target Platforms/Devices:</h4>
+    <ul>
+    <li>The Nokia Browser is released as a signed SIS package that can be installed on N97 devices. We recommend using a CE device with the latest
+    firmware patches as opposed to an R&D / prototype devices.</li>
+    </ul>
+    <h4>Prerequisites:</h4>
+    <ul>
+    <li>Nokia N97 device, consumer version (CE) recommended. Use this release on an R&D / prototype device at your own risk.</li>
+    <li>Latest platform software loaded/updated onto the device. This release has been tested with: N97 Software Version 12.0.024 dated 04/08/09</li>
+    <li>Sufficient free space (11-12 MB minimum) on C: drive. HINT: Open the platform browser and clear your browser cache - you'll free up a few MB that way.</li>
+    <li>NOTE: It is required for this release that you install ALL of the provided software packages on the C: drive.</li>
+    <li>NOTE: If you had previously installed the Alpha 1 release OR any version of the Qt framework, please review the installation notes carefully and remove older components from your device as directed..</li>
+    <li>Default network setup on the device. The N97 connection settings must contain a default Destination Network of "Internet" that contains the proper access points (APs). The browser will connect to the network via this "Internet" Destination Network. </li>
+    <li>IMPORTANT: Ensure that the default access point (as defined in the connection settings for the Destination Network) is available when running the browser. There have been cases where an unavailable WLAN AP prevented loading of pages. </li>
+    </ul>
+    <h4>Functionality to Evaluate:</h4>
+    The following features are a few we encourage you to try out!
+    <ul>
+    <li>Bookmarking - add a bookmark by visiting the Bookmarks view and pressing the + button. This will add the current page to your bookmark list.</li>
+    <li>Most Visited</li>
+    <li>History</li>
+    <li>Searching from URL / Entry bar - no scheme</li>
+    <li></li>
+    <li>Zooming: Basic incremental zoom-in/zoom-out is available via the two zoom buttons on the lower toolbar.</li>
+    <li>Zooming: Double-tap "fit-to-block" zooming will zoom/focus in on a block of text or an image. Please also try and give us feedback on Zooming back out using a double-tap gesture.</li>
+    <li>Viewport scaling: The browser now supports the meta tag options for setting the viewport (display area) for the web page. See below for limitations/impacts. Google "meta viewport" for details on this feature. If you know of sites that use this feature, please try them with the browser.</li>
+    <li>Windows View: Tap the "Windows" button on the toolbar to open the windows manager and add a new window. Then return to switch between windows.</li>
+    <li>GoToAnywhere View: Now includes Bookmarks, History, and Visual History. Try adding a bookmark (it will add a bookmark to the current page in the content view).</li>
+    <li>Session Restore: The browser will restore the previous session including session history in each of any open windows. Try opening multiple windows and browse multiple pages in each. Then exit the browser (red "end" key) and then launch the browser again. All your windows and history should be restored!</li>
+    <li>Standards Tests: The WebKit engine in this release has been updated and is now doing a much better job on standards tests (like ACID3).</li>
+    <li>Navi-key scrolling: The 4-way navi-key and middle "Select" key can now be used to scroll the page and select items.</li>
+    </ul>
+    <h4>Known Limitations:</h4>
+    <ul>
+    <li>WebKit Performance: Although improved, there are a number of known issues with the Qt WebKit used in the release of the Browser. Some have a major impact on performance of the engine. For example, rendering after a zoom-level change is known to be slow. See our wiki page for more details.</li>
+    <li>Out of Memory Handling: Handling of low memory conditions is not yet optimized for browsing large web pages. In some case, loading large or image-intensive pages can cause the browser to lock-up or crash. Please report the sites/pages to us if you experience this.</li>
+    <li>UI Performance: We are still evaluating and responding to performance issues. When using this Alpha release, please be patient when performing actions. Avoid repeating the same actions quickly in response to a lack of response. Once a button or link is pressed or a touch gesture is applied, it may take some time for the resulting action to be reflected in the UI. Also, sometimes touch gestures are "lost" and you may need to repeat them to activate the control.</li>
+    <li></li>
+    <li>New for Alpha 3</li>
+    <li>cursor disappears from URL / Entry bar when editing</li>
+    <li>Battery, Signal strength are not &quot;live&quot;</li>
+    </ul>
+    <p>&nbsp;</p>
+    <ul>
+      <li>OLDER ISSUES - RETEST</li>
+      <li>Adding a new window: When adding a new "blank" window from the Windows View, the browser may (incorrectly) restore a previously open window instead of creating a new, blank window.</li>
+      <li>Restoring Session: When launching the browser the previously open windows and pages will be restored. If the pages that were previously open were large or somehow otherwise problematic for the browser, restoring the session might restore those problems as well. If any strange behavior is seen when restoring the last session, try closing as many windows as possible and ensure that each window contains a "simple" page (like Google's search page).</li>
+      <li>Changing the browser orientation from landscape to portrait and vice-versa is better supported now, but there are some known issues. For example, in any view that shows a page thumbnail, that thumbnail is not updated to reflect the orientation change. Also, entering text in portrait mode is "undefined" at this time - any virtual keyboard that might come up has not been fully tested in that mode. We recommend using the hardware keyboard for text entry.</li>
+      <li>Form input password fields: Character hiding IS supported when entering a password into a form field, but this is actually problematic. Because no "preview" of the typed character is provided, it is not possible to verify the character typed. Be sure you have the proper text entry mode (lower case, all caps, mixed) set before entering a password.</li>
+      <li>Secure page indication is now supported, but the indicator may not refresh properly when switching between windows or moving back through history.</li>
+      <li>HTTP authentication is supported but the masking of the characters as the password is entered is not yet enabled. Also, the HTTP authentication dialog has no "OK" button. Press the hardware Enter key to submit the authentication.</li>
+      <li>Form field input masking is not yet supported. This can cause some form entry use cases to fail if the data entered is not formatted correctly.</li>
+      <li>Text Prediction / T9 Issues: Please be sure that when entering any text into any edit field (especially the URL entry box!) that text prediction is turned OFF.</li>
+      <li>Viewport scaling is supported but in some cases will result in pages that are "clipped" vertically on the page. If pages are not rendered properly (you can sometimes "see" the previous page "under" the offending page) try changing the zoom level.</li>
+      <li>File downloading is NOT yet supported. If you attempt to load content that isn't rendered in the browser itself, it will NOT be downloaded. So, for example, clicking a link to another HTML page will load/render that page. Clicking a link to a JPG image will load that image into a page in the browser. But clicking a link to a PDF, MP3, ZIP or other type of content file will not result in a download. Nothing will happen.</li>
+      <li>File uploading via the HTML form &lt;input type="file"... mechanism is NOT supported.</li>
+      <li>The URL entry bar is now designed to "scroll off" the top of the view when the page is scrolled up. It has been noticed that sometimes the bar will not re-display after scrolling back up.   </li>
+    </ul>
+    <h4>END OF RELEASE NOTES</h4>
+	<h4>&nbsp;</h4>
+	<h4>&nbsp;</h4>
+	<h4>&nbsp;</h4>
+	<h4>&nbsp;</h4>
+  </div>
+</body>
+</html>
+

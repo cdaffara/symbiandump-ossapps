@@ -1,0 +1,84 @@
+/*
+* Copyright (c) 2002-2008 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: 
+*     This file contains declarations for voip commands of PhoneAppS60.
+*     Defined commands are used in menu options and soft keys.
+*     
+*
+*/
+
+
+#ifndef PHONEAPPVOIPCOMMANDS_HRH
+#define PHONEAPPVOIPCOMMANDS_HRH
+
+
+#include    <bldvariant.hrh>
+#include    <phoneappcommands.hrh>
+
+//  CONSTANTS
+/**
+ * Enumeration for VoIP specific menu and soft key
+ * commands.
+ */
+enum 
+    {
+    // First VoIP command.
+    // Not used in menu nor soft key.
+    EPhoneCmdVoipStart = EPhoneCmdLast, 
+    
+    // Command id for Internet call option.
+    EPhoneNumberAcqCmdInternetCall,
+    
+    // Command id for toggling alpha mode in number entry.
+    EPhoneNumberAcqCmdToggleNeAlphaMode,
+    
+    // Command id for toggling numeric mode in number entry.
+    EPhoneNumberAcqCmdToggleNeNumericMode,
+    
+    // Command id for Unattended trasfer option. 
+    EPhoneInCallCmdUnattendedTransfer,
+
+    /** Command id for unattended transfer acceptance. */
+    EPhoneCmdAcceptUnattendedTransfer,
+    /** Command id for unattended transfer rejectance. */
+    EPhoneCmdRejectUnattendedTransfer,
+
+    /** Command id for ok in transfer to address query */
+    EPhoneCmdTransferDialerOk,
+    /** Command id for cancel in transfer to address query */
+    EPhoneCmdTransferDialerExit,
+    /** Command id for find from contacts in transfer dialer */
+    EPhoneCmdTransferDialerSearch,
+    /** Command id for succesfull contact fetch in transfer dialer */
+    EPhoneCmdTransferDialerContactFetch,
+    /** Command id for new Internet call option */
+    EPhoneInCallCmdNewInternetCall,
+    /** Command id for ok in new call query */
+    EPhoneCmdNewInternetCallOk,
+    /** Command id for find from contacts in new call query */
+    EPhoneCmdNewInternetCallSearch,
+    /** Command id for succesfull contact fetch in new call query */
+    EPhoneCmdNewInternetCallContactFetch,
+    EPhoneCmdCancelServiceEnabling,
+    EPhoneCmdServiceEnablingTimedOut,
+    EPhoneCmdHandoverToWlan,
+    EPhoneCmdHandoverToGsm,
+    // Last VoIP command, not used in menu nor soft key.
+    // Add new VoIP commands before this.  
+    EPhoneCmdVoIPLast
+    };
+
+#endif
+
+// End of File

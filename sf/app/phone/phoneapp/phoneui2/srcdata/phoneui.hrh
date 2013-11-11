@@ -1,0 +1,86 @@
+/*
+* Copyright (c) 2002 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: 
+*     This file contains declarations for resources of PhoneAppS60.
+*     The file can be included in C++ or resource file.
+*     
+*
+*/
+
+#ifndef PHONEUI_HRH
+#define PHONEUI_HRH
+
+#include    <bldvariant.hrh>
+#include    <phoneappcommands.hrh>
+
+//  CONSTANTS
+
+#define PHONEUI_SCALABLE_AIF_ICON_FILE  "Z:\\resource\\apps\\phoneui_aif.mif"
+#define PHONEUI_AIF_ICON_FILE       "Z:\\resource\\apps\\phoneui_aif.mbm"
+
+#define LOCALISABLE_RESOURCE_FILE_EXE   "\\resource\\apps\\phoneui"
+#define LOCALISABLE_RESOURCE_FILE_APP   "\\System\\Apps\\phoneui"
+
+enum 
+    { 
+    EPhoneGeneralNote = 1,
+    EPhoneWaitNote
+    };
+
+// CALLING LINE IDENTITY
+
+// It enumerates different states for a call.
+enum 
+    {
+    // DO NOT MODIFY THESE
+    EPhoneStAny = 0x100,          // any state.
+    EPhoneStIncoming = 0x200,     // arriving, waiting
+    EPhoneStOutgoing = 0x400,     // initializing, alerting
+    EPhoneStConnected = 0x800,    // alerting, active, on hold
+    EPhoneStOngoing = 0x1000,     // alerting, active, on hold, disconnected
+
+    EPhoneStIdle = 0x100 + 0x7,
+    EPhoneStArriving = 0x200 + 0x100 + 0,
+    EPhoneStWaiting = 0x200 + 0x100 + 1,
+    EPhoneStInitializing = 0x400 + 0x100 + 2,
+    EPhoneStAlerting = 0x1000 + 0x400 + 0x800 + 0x100 + 3,
+    EPhoneStActive = 0x1000 + 0x800 + 0x100 + 4,
+    EPhoneStOnHold = 0x1000 + 0x800 + 0x100 + 5,
+    EPhoneStDisconnected = 0x1000 + 0x100 + 6
+    };
+
+enum TPhoneUIGSMStatesConferenceStates
+    {
+    ENoActiveCalls = 0,
+    EOneActiveCall,
+    ETwoActiveCalls
+    };
+
+enum //enums for SWIS Sharing 
+    {
+    EPhoneVideoSharing =  10000,
+    EPhoneVideoSharingOpt2,
+    EPhoneVideoSharingOpt3 
+    };
+
+// Configurable buttons
+enum TPhoneUIConfigurableButtons
+    {
+    EPhoneConfigIncomingCallButtons = 0,
+    EPhoneButtonConfigCount
+    };
+
+#endif
+
+// End of File

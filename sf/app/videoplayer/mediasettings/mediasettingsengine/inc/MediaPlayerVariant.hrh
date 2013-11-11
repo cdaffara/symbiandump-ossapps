@@ -1,0 +1,69 @@
+/*
+* Copyright (c) 2004 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the License "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: 
+*
+*/
+
+
+#ifndef MEDIAPLAYERVARIANT_HRH
+#define MEDIAPLAYERVARIANT_HRH
+
+// KMediaPlayerMixerSupport and KMediaPlayerChangeRTForAll 
+// moved to the MusicPlayer
+//
+
+// Feature to enable Video contrast setting in Media Settings.
+#define KMediaPlayerVideoContrast       0x01
+
+// Feature to enable IPv6 access point support in Media Settings
+// (Default access point).
+#define KMediaPlayerIPv6Support         0x02
+
+// Feature to hide various streaming functionalities for CR 409-372
+#define KMediaPlayerHideStreamingFunctionality   0x04
+
+// Feature to disable Save Prompt when Back softkey is pressed
+#define KMediaPlayerDisableSavePrompt   0x08
+
+// Feature to disable data transmission totally, 
+// when the streaming is in stopped state. 
+#define KMediaPlayerCloseData           0x10        
+     
+// Feature to immediately return to calling application after streaming clip ends
+#define KMediaPlayerReturnFocusBackToCallingApp   0x20
+
+// Feature to enable marquee (scrolling) text in media player details dialog.
+// If enabled, the item in dialog can be selected and the selected item starts
+// scrolling if the item text cannot be displayed as whole on the screen.
+#define KMediaPlayerMarqueeDetails      0x40
+
+// Feature to enable marquee (scrolling) text for artist name label in 
+// Music Player. When enabled and if the artist name is too long to fit into 
+// space reserved for it, the label starts scrolling. Scrolling is associated 
+// to player state, when playing is started the label starts scrolling and if 
+// the playing is stopped the scrolling stops, too.
+#define KMediaPlayerMarqueeArtistName   0x80
+
+// Feature to enable Rocker Keys
+#define KMediaPlayerRockerKeys	0x100
+
+//Allow to add, edit url
+#define MEDIAPLAYER_UI_Enhancements_P2
+
+// Feature to use MP volume control instead of avkon volume control
+#define KMEDIAPLAYERVOLUMECONTROL
+
+#define _THUMBNAIL_SUPPORT
+
+#endif // MEDIAPLAYERVARIANT_HRH

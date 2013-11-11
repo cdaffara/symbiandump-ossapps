@@ -1,0 +1,32 @@
+/*
+* Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+#ifndef __CONTACTWIDGETHSPLUGIN_IBY__
+#define __CONTACTWIDGETHSPLUGIN_IBY__
+
+#include <data_caging_paths_for_iby.hrh>
+
+// -------- contactwidgethsplugin
+file=ABI_DIR\BUILD_DIR\contactwidgethsplugin.dll                                        SHARED_LIB_DIR\contactwidgethsplugin.dll
+data=ZPRIVATE\20022f35\import\widgetregistry\2002C353\contactwidgethsplugin.qtplugin	private\20022f35\import\widgetregistry\2002C353\contactwidgethsplugin.qtplugin
+data=ZPRIVATE\20022f35\import\widgetregistry\2002C353\contactwidgethsplugin.manifest    private\20022f35\import\widgetregistry\2002C353\contactwidgethsplugin.manifest
+data=ZPRIVATE\20022f35\import\widgetregistry\2002C353\contactwidgethsplugin.xml         private\20022f35\import\widgetregistry\2002C353\contactwidgethsplugin.xml
+
+data=ZPRIVATE\20022f35\import\widgetregistry\2002C353\qtg_large_friend.svg              private\20022f35\import\widgetregistry\2002C353\qtg_large_friend.svg
+data=ZPRIVATE\20022f35\import\widgetregistry\2002C353\qtg_graf_hswidget_preview_contact.svg private\20022f35\import\widgetregistry\2002C353\qtg_graf_hswidget_preview_contact.svg 
+
+data=ZSYSTEM\Install\contactwidgethsplugin_stub.sis \system\install\contactwidgethsplugin_stub.sis
+#endif //__CONTACTWIDGETHSPLUGIN_IBY__

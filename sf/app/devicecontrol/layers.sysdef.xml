@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE SystemDefinition SYSTEM "sysdef_1_5_1.dtd" [
+  <!ENTITY layer_real_source_path "sf/app/devicecontrol" >
+]>
+
+<SystemDefinition name="devicecontrol" schema="1.5.1">
+  <systemModel>
+    <layer name="app_layer">
+      <module name="devicecontrol">
+        <unit unitID="spdo.devicecontrol" mrp="" bldFile="&layer_real_source_path;/group" name="devicecontrol" />
+        <unit unitID="spdo.devicecontrol.pro" mrp="" bldFile="&layer_real_source_path;" name="devicecontrol_pro" proFile="devicecontrol.pro"/>
+      </module>
+    </layer>
+  </systemModel>
+</SystemDefinition>
+
+

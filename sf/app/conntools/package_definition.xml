@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SystemDefinition schema="3.0.0">
+  <package id="conntools" name="Connectivity Tools" levels="config app">
+    <collection id="nettools" name="Net Tools" level="app">
+      <component id="conntest" filter="s60" name="Connection Test" purpose="development">
+        <unit bldFile="nettools/conntest/group"/>
+      </component>
+    </collection>
+    <collection id="emulatorlan" name="Emulator LAN" level="config">
+    	<!-- component is actually a colleciton, should be moved down a directory -->
+      <component id="emulatorlan_build" filter="s60" name="Emulator LAN Build" class="config" purpose="development">
+        <unit bldFile="emulatorlan/group"/>
+      </component>
+    </collection>
+  </package>
+</SystemDefinition>

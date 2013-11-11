@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="1.0">
+    <widget name="tocView" type="HbView">
+        <widget name="content" role="HbView:widget" type="HbWidget">
+            <widget name="searchPanel" type="HbSearchPanel">
+                <sizepolicy horizontalPolicy="Preferred" horizontalStretch="0" verticalPolicy="Preferred" verticalStretch="0"/>
+            </widget>
+            <widget name="listView" type="HbListWidget"/>
+            <layout orientation="Vertical" type="linear">
+                <linearitem itemname="listView"/>
+                <linearitem itemname="searchPanel"/>
+            </layout>
+        </widget>
+        <string name="title" value="Search"/>
+    </widget>
+    <metadata activeUIState="Common ui state" display="NHD portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+    </metadata>
+</hbdocument>

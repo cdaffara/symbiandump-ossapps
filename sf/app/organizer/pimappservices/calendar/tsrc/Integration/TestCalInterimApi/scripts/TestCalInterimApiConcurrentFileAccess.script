@@ -1,0 +1,347 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//
+PRINT Run all TestCalInterimApi CONCURRENT File Access tests
+//
+
+LOAD_SUITE TestCalInterimApiSuite
+//
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-PREQ1090-CONCURRENT-0001
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-CONCURRENT-0001
+//! @SYMTestCaseDesc 		CONCURRENT Access of single Calendar file	
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Run Multiple test steps
+//!				2.	One of them will add entries to calendar
+//!				3.	One of them will import & export Calendar information
+//!				4.	One of them will delete entries
+//! @SYMTestExpectedResults 	It should be possible for multiple applications to access the same Calendar File Concurrently
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiReadData	\CITCalInterimApi\TestCalInterimApiConcurrentFileAccess.ini ReadData1
+DELAY 1
+CONCURRENT
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiReadData	\CITCalInterimApi\TestCalInterimApiConcurrentFileAccess.ini ReadData
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\TestCalInterimApiConcurrentFileAccess.ini vCal1
+CONSECUTIVE
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiDeleteEntryByTimeRange \CITCalInterimApi\TestCalInterimApiConcurrentFileAccess.ini DeleteEntry
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-PREQ1090-CONCURRENT-0001
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-PREQ1090-CONCURRENT-0002
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-CONCURRENT-0002
+//! @SYMTestCaseDesc 		CONCURRENT Access of multiple Calendar files	
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Run Multiple test steps
+//!				2.	One of them will add entries to a calendar file
+//!				3.	Other will import & export Calendar information to a different File
+//!				4.	One of them will delete entries
+//! @SYMTestExpectedResults 	It should be possible for multiple applications to access the same Calendar File Concurrently
+//! @SYMTestType 		CIT
+
+CONCURRENT
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiReadData	\CITCalInterimApi\TestCalInterimApiConcurrentFileAccess.ini ReadData
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\TestCalInterimApiConcurrentFileAccess.ini vCal2
+CONSECUTIVE
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiDeleteEntryByTimeRange \CITCalInterimApi\TestCalInterimApiConcurrentFileAccess.ini DeleteEntry
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiDeleteEntryByTimeRange \CITCalInterimApi\TestCalInterimApiConcurrentFileAccess.ini DeleteEntry1
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-PREQ1090-CONCURRENT-0002
+
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-PREQ1090-CONCURRENT-0003
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-CONCURRENT-0003
+//! @SYMTestCaseDesc 		Concurrent Access of single calendar file by multiple clients for large number of times
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Run Multiple test steps
+//!				2.	One of them will add entries to a calendar file
+//!				3.	Other will import & export Calendar information to a different File
+//!				5.	Then delete entries in calendar file
+//!                             6.      Repeat the above steps in a Infinite loop
+//! @SYMTestExpectedResults 	These kind of extensive operations should be allowed
+
+//! @SYMTestType 		CIT
+
+
+START_REPEAT \CITCalInterimApi\TestCalInterimApiConcurrentFileAccess.ini ReadData1 repeatParam
+
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiReadData	\CITCalInterimApi\TestCalInterimApiConcurrentFileAccess.ini ReadData1
+DELAY 1
+CONCURRENT
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiReadData	\CITCalInterimApi\TestCalInterimApiConcurrentFileAccess.ini ReadData
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\TestCalInterimApiConcurrentFileAccess.ini vCal1
+CONSECUTIVE
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiDeleteEntryByTimeRange \CITCalInterimApi\TestCalInterimApiConcurrentFileAccess.ini DeleteEntry
+
+END_REPEAT
+
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-PREQ1090-CONCURRENT-0003
+
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-PREQ1090-CONCURRENT-0004
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-CONCURRENT-0004
+//! @SYMTestCaseDesc 		Concurrent Access of Multiple calendar files by multiple clients for large number of times
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Run Multiple test steps
+//!				2.	One of them will add entries to a calendar file
+//!				3.	Other will import & export Calendar information to a different File
+//!				4.	Then entries in both these file
+//!                             5.      Repeat the above steps large number of times 
+//! @SYMTestExpectedResults 	These kind of extensive operations should be allowed
+
+//! @SYMTestType 		CIT
+
+START_REPEAT \CITCalInterimApi\TestCalInterimApiConcurrentFileAccess.ini ReadData1 repeatParam
+
+CONCURRENT
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiReadData	\CITCalInterimApi\TestCalInterimApiConcurrentFileAccess.ini ReadData
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\TestCalInterimApiConcurrentFileAccess.ini vCal2
+CONSECUTIVE
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiDeleteEntryByTimeRange \CITCalInterimApi\TestCalInterimApiConcurrentFileAccess.ini DeleteEntry
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiDeleteEntryByTimeRange \CITCalInterimApi\TestCalInterimApiConcurrentFileAccess.ini DeleteEntry1
+
+END_REPEAT
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-PREQ1090-CONCURRENT-0004
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-PREQ1090-CONCURRENT-0005
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-CONCURRENT-0005
+//! @SYMTestCaseDesc 		Delete Entries by specifying the uid list, while other operations are performed concurrently
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Run Multiple test steps
+//!				2.	One of them will add entries to calendar
+//!				3.	One of them will import & export Calendar information
+//!				4.	One of them will delete entries. While deleting entries specify the uidlist
+//! @SYMTestExpectedResults 	It should be possible for multiple applications to access the same Calendar File Concurrently
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiReadData	\CITCalInterimApi\TestCalInterimApiConcurrentFileAccess.ini AddEntries_1
+DELAY 1
+CONCURRENT
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\TestCalInterimApiConcurrentFileAccess.ini vCal1
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiConcurrentFileAccess \CITCalInterimApi\TestCalInterimApiConcurrentFileAccess.ini DeleteEntries_1
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-PREQ1090-CONCURRENT-0005
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-PREQ1090-CONCURRENT-0006
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-CONCURRENT-0006
+//! @SYMTestCaseDesc 		Delete Entries by specifying the array of local uids, while other operations are performed concurrently	
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Run Multiple test steps
+//!				2.	One of them will add entries to calendar
+//!				3.	One of them will import & export Calendar information
+//!				4.	One of them will delete entries. While deleting entries specify the local uids list.
+//! @SYMTestExpectedResults 	It should be possible for multiple applications to access the same Calendar File Concurrently
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiReadData	\CITCalInterimApi\TestCalInterimApiConcurrentFileAccess.ini AddEntries_1
+DELAY 1
+CONCURRENT
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\TestCalInterimApiConcurrentFileAccess.ini vCal1
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiConcurrentFileAccess \CITCalInterimApi\TestCalInterimApiConcurrentFileAccess.ini DeleteEntries_2
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-PREQ1090-CONCURRENT-0006
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-PREQ1090-CONCURRENT-0007
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-CONCURRENT-0007
+//! @SYMTestCaseDesc 		Delete Entries by specifying the reference to calendar entries, while other operations are performed concurrently
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Run Multiple test steps
+//!				2.	One of them will add entries to calendar
+//!				3.	One of them will import & export Calendar information
+//!				4.	One of them will delete entries. While deleting entries specify calendar entries by reference.
+//! @SYMTestExpectedResults 	It should be possible for multiple applications to access the same Calendar File Concurrently
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiReadData	\CITCalInterimApi\TestCalInterimApiConcurrentFileAccess.ini AddEntries_1
+DELAY 1
+CONCURRENT
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\TestCalInterimApiConcurrentFileAccess.ini vCal1
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiConcurrentFileAccess \CITCalInterimApi\TestCalInterimApiConcurrentFileAccess.ini DeleteEntries_3
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-PREQ1090-CONCURRENT-0007
+
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-PREQ1090-CONCURRENT-0008
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-CONCURRENT-0008
+//! @SYMTestCaseDesc 		Delete all Calendar Instances while other operations are performed concurrently
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Run Multiple test steps
+//!				2.	One of them will add entries to calendar
+//!				3.	One of them will import & export Calendar information
+//!				4.	One of them will delete Calendar Instances.
+//! @SYMTestExpectedResults 	It should be possible for multiple applications to access the same Calendar File Concurrently
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiReadData	\CITCalInterimApi\TestCalInterimApiConcurrentFileAccess.ini AddEntries_1
+DELAY 1
+CONCURRENT
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\TestCalInterimApiConcurrentFileAccess.ini vCal1
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiConcurrentFileAccess \CITCalInterimApi\TestCalInterimApiConcurrentFileAccess.ini DeleteEntries_4
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-PREQ1090-CONCURRENT-0008
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-PREQ1090-CONCURRENT-0009
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-CONCURRENT-0009
+//! @SYMTestCaseDesc 		Delete all Calendar entries by specifying a valid date & range while other calendar operations are performed concurrently
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Run Multiple test steps
+//!				2.	One of them will add entries to calendar
+//!				3.	One of them will import & export Calendar information
+//!				4.	One of them will delete entries. While deleting entries specify a valid date & time range.
+//! @SYMTestExpectedResults 	It should be possible for multiple applications to access the same Calendar File Concurrently
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiReadData	\CITCalInterimApi\TestCalInterimApiConcurrentFileAccess.ini AddEntries_1
+DELAY 1
+CONCURRENT
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\TestCalInterimApiConcurrentFileAccess.ini vCal1
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiConcurrentFileAccess \CITCalInterimApi\TestCalInterimApiConcurrentFileAccess.ini DeleteEntries_5
+CONSECUTIVE
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-PREQ1090-CONCURRENT-0009
+
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-PREQ1090-CONCURRENT-0010
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-CONCURRENT-0010
+//! @SYMTestCaseDesc 		Add & delete by Uid List 	
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Add large number of entries
+//!				2.	Delete all the entries in the calendar file
+//!				3.	While deleting the entries, specify a guid list of calendar entries
+//!				4.	Check that all the entries in the file is removed
+//! @SYMTestExpectedResults 	All the entries in the file are deleted
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiReadData	\CITCalInterimApi\TestCalInterimApiConcurrentFileAccess.ini AddEntries_1
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiConcurrentFileAccess \CITCalInterimApi\TestCalInterimApiConcurrentFileAccess.ini DeleteEntries_11
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-PREQ1090-CONCURRENT-0010
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-PREQ1090-CONCURRENT-0011
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-CONCURRENT-0011
+//! @SYMTestCaseDesc 		Add & delete by local Uids
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Add large number of entries
+//!				2.	Delete all the entries in the calendar file
+//!				3.	While deleting the entries, specify an array of localuids of calendar entries
+//!				4.	Check that all the entries in the file is removed
+//! @SYMTestExpectedResults 	All the entries in the file are deleted
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiReadData	\CITCalInterimApi\TestCalInterimApiConcurrentFileAccess.ini AddEntries_1
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiConcurrentFileAccess \CITCalInterimApi\TestCalInterimApiConcurrentFileAccess.ini DeleteEntries_12
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-PREQ1090-CONCURRENT-0011
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-PREQ1090-CONCURRENT-0012
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-CONCURRENT-0012
+//! @SYMTestCaseDesc 		Add & delete by reference 	
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Add large number of entries
+//!				2.	Delete all the entries in the calendar file
+//!				3.	While deleting the entries, specify reference to calendar entries
+//!				4.	Check that all the entries in the file is removed
+//! @SYMTestExpectedResults 	All the entries in the file are deleted 
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiReadData	\CITCalInterimApi\TestCalInterimApiConcurrentFileAccess.ini AddEntries_1
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiConcurrentFileAccess \CITCalInterimApi\TestCalInterimApiConcurrentFileAccess.ini DeleteEntries_13
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-PREQ1090-CONCURRENT-0012
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-PREQ1090-CONCURRENT-0013
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-CONCURRENT-0013
+//! @SYMTestCaseDesc 		Add & delete by calendar instances
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Add large number of entries
+//!				2.	Delete all the entries in the calendar file
+//!				3.	While deleting the entries, specify all calendar instances
+//!				4.	Check that all the entries in the file is removed
+//! @SYMTestExpectedResults 	All the entries in the file are deleted
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiReadData	\CITCalInterimApi\TestCalInterimApiConcurrentFileAccess.ini AddEntries_1
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiConcurrentFileAccess \CITCalInterimApi\TestCalInterimApiConcurrentFileAccess.ini DeleteEntries_14
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-PREQ1090-CONCURRENT-0013
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-PREQ1090-CONCURRENT-0014
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-CONCURRENT-0014
+//! @SYMTestCaseDesc 		Add & delete specifying date & time range
+//! @SYMFssID			<App-Engines>/<CalInterimApi>-REQ5771
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Add large number of entries
+//!				2.	Delete all the entries in the calendar file
+//!				3.	While deleting the entries specify a valid date & time range
+//!				4.	Check that all the entries in the file is removed
+//! @SYMTestExpectedResults 	All the entries in the file are deleted
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiReadData	\CITCalInterimApi\TestCalInterimApiConcurrentFileAccess.ini AddEntries_1
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiConcurrentFileAccess \CITCalInterimApi\TestCalInterimApiConcurrentFileAccess.ini DeleteEntries_15
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-PREQ1090-CONCURRENT-0014
+
+PRINT Completed TestCalInterimApi_Tests
+
+PREFIX RUN_UTILS 
+MakeReadWrite 	c:\private\10003a5b\CITCalConcurrent.dat
+DeleteFile		c:\private\10003a5b\CITCalConcurrent.dat
+MakeReadWrite 	c:\private\10003a5b\citcalconcurrent.datIdx
+DeleteFile		c:\private\10003a5b\citcalconcurrent.datIdx
+MakeReadWrite	c:\private\10003a5b\citcalconcurrent1.datIdx
+DeleteFile		c:\private\10003a5b\citcalconcurrent1.datIdx
+MakeReadWrite   c:\private\10003a5b\CITCalConcurrent1.dat
+DeleteFile		c:\private\10003a5b\CITCalConcurrent1.dat
+REMOVE_PREFIX
+

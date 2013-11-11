@@ -1,0 +1,45 @@
+
+UniViewerAttachmentWidget
+{
+  layout: layout-default;
+}
+
+UniViewerAttachmentWidget::mediaIcon
+{
+  left:-var(hb-param-margin-gene-left);
+  top:-var(hb-param-margin-gene-top);
+  bottom:var(hb-param-margin-gene-bottom) ;
+  aspect-ratio:ignore;
+  size-policy:fixed fixed;
+  pref-width:var(hb-param-graphic-size-primary-small);
+  pref-height:var(hb-param-graphic-size-primary-small);
+}
+
+UniViewerAttachmentWidget::text-1
+{
+  left:-var(hb-param-margin-gene-middle-horizontal);
+  right:var(hb-param-margin-gene-middle-horizontal);
+  center-vertical:0un;
+  text-height:var(hb-param-text-height-secondary);
+  font-variant:secondary;
+  text-line-count-min:1;
+  text-line-count-max:1;
+}
+
+UniViewerAttachmentWidget::text-2
+{
+  left:-var(hb-param-margin-gene-middle-horizontal);
+  right:var(hb-param-margin-gene-right);
+  center-vertical:0un;
+  size-policy-horizontal:fixed;
+  font-variant:secondary;
+  text-height:var(hb-param-text-height-tiny);
+  text-line-count-min:1;
+  text-line-count-max:1;
+}
+
+UniViewerAttachmentWidget::bgFrame
+{
+  zvalue:-1;
+}
+

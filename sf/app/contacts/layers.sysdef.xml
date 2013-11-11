@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE SystemDefinition SYSTEM "sysdef_1_5_0.dtd" [
+  <!ENTITY layer_real_source_path "sf/app/contacts" >
+]>
+
+<SystemDefinition name="contacts" schema="1.5.0">
+  <systemModel>
+    <layer name="app_layer">
+    
+      <module name="contacts">
+        <unit unitID="contacts" bldFile="&layer_real_source_path;" name="contacts" mrp="" proFile="contacts.pro"/>
+        <unit unitID="phonebooksync" bldFile="&layer_real_source_path;/pimprotocols/phonebooksync/group" name="phonebooksync" mrp=""/>
+        <unit unitID="pbap" bldFile="&layer_real_source_path;/pimprotocols/pbap/group" name="pbap" mrp=""/>
+        <unit unitID="contactwidgethsplugin" bldFile="&layer_real_source_path;/contactwidgethsplugin" name="contactwidgethsplugin" mrp="" proFile="contactwidgethsplugin.pro"/>
+      </module>
+      
+    </layer>
+      
+          
+  </systemModel>
+</SystemDefinition>

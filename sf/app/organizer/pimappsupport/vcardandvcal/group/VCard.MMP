@@ -1,0 +1,45 @@
+// Copyright (c) 2001-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// vcard.dll VCard parser
+// 
+//
+
+target      vcard.dll
+targettype  DLL
+CAPABILITY   All -TCB
+UID         0x1000008D 0x101F4FC6
+VENDORID 0x70000001
+
+SOURCEPATH	../group
+
+SOURCEPATH	../src
+userinclude     ../inc
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+
+source      VCARD.CPP
+ 
+library		versit.lib  euser.lib  estor.lib bafl.lib
+//library     EUSER.LIB  EFSRV.LIB  ESTOR.LIB  BAFL.LIB  CONARC.LIB  CHARCONV.LIB
+
+#ifdef WINS
+deffile     VCard.DEF
+#else
+deffile    VCARD.DEF
+#endif
+
+START WINS
+BASEADDRESS     0x70010000
+END
+
+SMPSAFE

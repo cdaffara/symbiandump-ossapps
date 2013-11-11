@@ -1,0 +1,31 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+* Constant definitions for Cmail shutdown
+*
+*/
+
+#ifndef EMAILSHUTDOWNCONST_HRH
+#define EMAILSHUTDOWNCONST_HRH
+
+
+// Publish & Subscribe category for Cmail shutdown events, needs to be the
+// same as UID of the process that implements the shutdown functionality
+#define KEmailShutdownUidAsTInt 0x20025FAD
+
+// Executable name of the process that implements the shutdown functionality
+#define KEmailShutdownProcessExeName emailservermonitor.exe
+
+
+#endif // EMAILSHUTDOWNCONST_HRH

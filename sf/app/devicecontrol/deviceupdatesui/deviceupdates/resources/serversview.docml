@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="1.1">
+    <widget name="view" type="HbView">
+        <widget name="content" role="HbView:widget" type="HbWidget">
+            <widget name="label" type="HbLabel">
+                <real name="z" value="1"/>
+                <sizehint type="PREFERRED" width="52.68657un"/>
+                <string name="plainText" value="Label"/>
+            </widget>
+            <widget name="container" type="HbWidget">
+                <widget name="groupBox" type="HbGroupBox">
+                    <widget name="container_1" role="HbGroupBox:contentWidget" type="HbWidget">
+                        <widget name="listView" type="HbListView">
+                            <widget name="listItemPrototype" role="HbAbstractView:prototype" type="HbListViewItem">
+                                <string name="state" value="normal"/>
+                            </widget>
+                            <real name="z" value="2"/>
+                        </widget>
+                        <real name="z" value="3"/>
+                        <layout orientation="Vertical" type="linear">
+                            <linearitem itemname="listView"/>
+                        </layout>
+                    </widget>
+                    <bool name="collapsable" value="FALSE"/>
+                    <string name="heading" value="Group Box"/>
+                </widget>
+                <widget name="groupBox_1" type="HbGroupBox">
+                    <widget name="listView_1" role="HbGroupBox:contentWidget" type="HbListView">
+                        <widget name="listItemPrototype_1" role="HbAbstractView:prototype" type="HbListViewItem">
+                            <string name="state" value="normal"/>
+                        </widget>
+                        <real name="z" value="1"/>
+                    </widget>
+                    <real name="z" value="1"/>
+                    <bool name="collapsable" value="FALSE"/>
+                    <string name="heading" value="Group Box"/>
+                </widget>
+                <real name="z" value="2"/>
+                <sizehint height="81.9403un" type="PREFERRED" width="53.28358un"/>
+                <layout orientation="Vertical" type="linear">
+                    <linearitem itemname="groupBox"/>
+                    <linearitem itemname="groupBox_1"/>
+                </layout>
+            </widget>
+            <layout type="anchor">
+                <anchoritem dst="label" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="label" dstEdge="TOP" spacing="0un" src="" srcEdge="TOP"/>
+                <anchoritem dst="container" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="container" dstEdge="BOTTOM" spacing="0un" src="" srcEdge="BOTTOM"/>
+                <anchoritem dst="container" dstEdge="TOP" spacing="0un" src="label" srcEdge="BOTTOM"/>
+            </layout>
+        </widget>
+        <string name="title" value="View"/>
+    </widget>
+    <section name="landscape">
+        <widget name="container_1" role="HbGroupBox:contentWidget" type="HbWidget">
+            <layout orientation="Vertical" type="linear">
+                <linearitem itemname="listView"/>
+            </layout>
+        </widget>
+        <widget name="content" role="HbView:widget" type="HbWidget">
+            <layout type="anchor">
+                <anchoritem dst="label" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="label" dstEdge="TOP" spacing="0un" src="" srcEdge="TOP"/>
+                <anchoritem dst="container" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="container" dstEdge="BOTTOM" spacing="0un" src="" srcEdge="BOTTOM"/>
+                <anchoritem dst="container" dstEdge="TOP" spacing="0un" src="label" srcEdge="BOTTOM"/>
+                <anchoritem dst="container" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+            </layout>
+        </widget>
+    </section>
+    <section name="portrait">
+        <widget name="container_1" role="HbGroupBox:contentWidget" type="HbWidget">
+            <layout orientation="Vertical" type="linear">
+                <linearitem itemname="listView"/>
+            </layout>
+        </widget>
+    </section>
+    <metadata activeUIState="portrait" display="NHD-3.2-inch_portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+        <uistate name="landscape" sections="#common landscape"/>
+        <uistate name="portrait" sections="#common portrait"/>
+        <dummydata objectName="listView" section="#common" value="0"/>
+        <dummydata objectName="listView_1" section="#common" value="0"/>
+    </metadata>
+</hbdocument>

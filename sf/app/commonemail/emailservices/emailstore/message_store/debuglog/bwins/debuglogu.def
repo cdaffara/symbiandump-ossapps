@@ -1,0 +1,16 @@
+EXPORTS
+	?LogLeakedObjects@RDebugLog@@SAXXZ @ 1 NONAME ; void RDebugLog::LogLeakedObjects(void)
+	?WriteFormat@RDebugLog@@QBEXABVTDesC8@@V?$TRefByValue@$$CBVTDesC16@@@@AAY00PAC@Z @ 2 NONAME ; void RDebugLog::WriteFormat(class TDesC8 const &, class TRefByValue<class TDesC16 const >, signed char * [1] &) const
+	?Write@RDebugLog@@QBEXABVTDesC8@@ABVTDesC16@@@Z @ 3 NONAME ; void RDebugLog::Write(class TDesC8 const &, class TDesC16 const &) const
+	?Close@RDebugLog@@QAEXXZ @ 4 NONAME ; void RDebugLog::Close(void)
+	?WriteFormat@RDebugLog@@QBEXABVTDesC8@@V?$TRefByValue@$$CBVTDesC8@@@@AAY00PAC@Z @ 5 NONAME ; void RDebugLog::WriteFormat(class TDesC8 const &, class TRefByValue<class TDesC8 const >, signed char * [1] &) const
+	?Write@RDebugLog@@QBEXABVTDesC8@@0@Z @ 6 NONAME ; void RDebugLog::Write(class TDesC8 const &, class TDesC8 const &) const
+	??1RDebugLog@@UAE@XZ @ 7 NONAME ; RDebugLog::~RDebugLog(void)
+	?SetCloseBetweenWrites@RDebugLog@@QAEXH@Z @ 8 NONAME ; void RDebugLog::SetCloseBetweenWrites(int)
+	??0RDebugLog@@QAE@XZ @ 9 NONAME ; RDebugLog::RDebugLog(void)
+	?CleanupClosePushL@RDebugLog@@QAEXXZ @ 10 NONAME ; void RDebugLog::CleanupClosePushL(void)
+	?HexDump@RDebugLog@@QBEXABVTDesC8@@0@Z @ 11 NONAME ; void RDebugLog::HexDump(class TDesC8 const &, class TDesC8 const &) const
+	?WriteFormat@RDebugLog@@QBAXABVTDesC8@@V?$TRefByValue@$$CBVTDesC8@@@@ZZ @ 12 NONAME ; void RDebugLog::WriteFormat(class TDesC8 const &, class TRefByValue<class TDesC8 const >, ...) const
+	?WriteFormat@RDebugLog@@QBAXABVTDesC8@@V?$TRefByValue@$$CBVTDesC16@@@@ZZ @ 13 NONAME ; void RDebugLog::WriteFormat(class TDesC8 const &, class TRefByValue<class TDesC16 const >, ...) const
+	?Open@RDebugLog@@QAEXABVTDesC16@@ABVTDesC8@@PAX@Z @ 14 NONAME ; void RDebugLog::Open(class TDesC16 const &, class TDesC8 const &, void *)
+

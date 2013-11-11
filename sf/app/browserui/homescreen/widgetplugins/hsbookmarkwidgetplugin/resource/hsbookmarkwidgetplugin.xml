@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service>
+    <name>hsbookmarkwidgetplugin</name>
+    <filepath>hsbookmarkwidgetplugin</filepath>
+    <description>homescreen bookmarkwidget</description>
+    <interface>
+        <name>com.nokia.symbian.IHomeScreenWidget</name>
+        <version>1.0</version>
+        <description>homescreen bookmark widget</description>
+        <capabilities></capabilities>
+        <customproperty key="iconuri">nokiabrowser-bm-icon_50x50.png</customproperty>
+        <customproperty key="title">Bookmark</customproperty>
+    </interface>
+</service>

@@ -1,0 +1,46 @@
+/*
+* Copyright (c) 2004-2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*
+*/
+
+
+#ifndef DEVICEPROTOCOLS_IBY
+#define DEVICEPROTOCOLS_IBY
+
+#include <imageprintdef.iby>
+
+#ifdef FF_IMAGEPRINT_BT_PROTOCOL
+IP_PLUGIN(btprotocol.dll,btprotocol.rsc)
+data=DATAZ_\resource\imageprintdata\protocols\btprotocol.rsc		resource\imageprintdata\protocols\btprotocol.rsc
+DATA=DATAZ_\resource\imageprintdata\protocols\btxmltemplate.txt 	\resource\imageprintdata\protocols\btxmltemplate.txt
+#endif
+
+#ifdef FF_IMAGEPRINT_MEMORYCARD_PROTOCOL
+IP_PLUGIN(dpofprotdll.dll,dpofprotdll.rsc)
+#endif
+
+#ifdef FF_IMAGEPRINT_PICTBRIDGE_PROTOCOL
+IP_PLUGIN(pdphotolib.dll,pdphotolib.rsc)
+#endif
+
+#ifdef FF_IMAGEPRINT_UPNP_PROTOCOL
+//IP_PLUGIN(upnpprotocol.dll, upnpprotocol.rsc)
+#endif
+
+file=ABI_DIR\IP_DIR\xhtmlfilecomposer.dll	SHARED_LIB_DIR\xhtmlfilecomposer.dll
+DATA=DATAZ_\resource\imageprintdata\protocols\xhtmltempl\xhtmlfiletemplate.txt	\resource\imageprintdata\protocols\xhtmltempl\xhtmlfiletemplate.txt
+
+#endif // DEVICEPROTOCOLS_IBY
+

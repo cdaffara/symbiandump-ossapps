@@ -1,0 +1,68 @@
+CONTENT-LENGTH: [BytesInBody]
+CONTENT-TYPE: text/xml; charset="utf-8"
+CONTENT-LANGUAGE: en-US
+SOAPACTION: "urn:schemas-bluetooth-org:service:Printer:1#[Action]"
+
+<s:Envelope
+	xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"
+	s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+
+<s:Body>
+	<u:[Action] xmlns:u="urn:schemas-bluetooth-org:service:Printer:1">
+	[ActionData]
+	</u:[Action]>
+</s:Body>
+</s:Envelope>
+
+<!--
+[CreateJobStart]
+	<JobName>[JobName]</JobName>
+	<JobOriginatingUserName>[JobOriginatingUserName]</JobOriginatingUserName>
+	<DocumentFormat></DocumentFormat>
+	<Copies></Copies>
+	<Sides></Sides>
+	<NumberUp></NumberUp>
+	<OrientationRequest></OrientationRequest>
+	<MediaSize></MediaSize>
+	<MediaType></MediaType>
+	<PrintQuality></PrintQuality>
+	<CancelOnLostLink>true</CancelOnLostLink>
+[CreateJobEnd]
+
+[GetPrinterAttributesAllStart]
+[GetPrinterAttributesAllEnd]
+
+[GetPrinterCapabilitiesStart]
+	<RequestedPrinterAttributes>
+	<PrinterAttribute>PrinterState</PrinterAttribute>
+	<PrinterAttribute>PrinterStateReasons</PrinterAttribute>
+	</RequestedPrinterAttributes>
+[GetPrinterCapabilitiesEnd]
+
+[GetPrinterStateStart]
+	<RequestedPrinterAttributes>
+	<PrinterAttribute>PrinterState</PrinterAttribute>
+	<PrinterAttribute>PrinterStateReasons</PrinterAttribute>
+	</RequestedPrinterAttributes>
+[GetPrinterStateEnd]
+
+[JobIdStart]
+	<JobId>[JobId]</JobId>
+[JobIdEnd]
+
+[GetJobAttributesStart]
+	<JobId>[JobId]</JobId>
+	<RequestedJobAttributes>
+	<JobAttribute>JobState</JobAttribute>
+	<JobAttribute>JobName</JobAttribute>
+	<JobAttribute>JobOriginatingUserName</JobAttribute>
+	<JobAttribute>JobMediaSheetsCompleted</JobAttribute>
+	</RequestedJobAttributes>
+[GetJobAttributesEnd]
+
+[GetMarginsStart]
+	<MediaSize>[MediaSizeData]</MediaSize>
+	<MediaType>[MediaTypeData]</MediaType>
+[GetMarginsEnd]
+
+-->

@@ -1,0 +1,13 @@
+EXPORTS
+	?AddObserverL@CIRCacheMgmt@@QAEXPAVMIRCacheObserver@@@Z @ 1 NONAME ; void CIRCacheMgmt::AddObserverL(class MIRCacheObserver *)
+	?CacheCategoryItemsL@CIRCacheMgmt@@QAEXAAV?$CArrayPtrFlat@VCIRBrowseCatagoryItems@@@@ABVTDesC16@@ABVCIRHttpResponseData@@@Z @ 2 NONAME ; void CIRCacheMgmt::CacheCategoryItemsL(class CArrayPtrFlat<class CIRBrowseCatagoryItems> &, class TDesC16 const &, class CIRHttpResponseData const &)
+	?CacheChannelItemsL@CIRCacheMgmt@@QAEXAAV?$CArrayPtrFlat@VCIRBrowseChannelItems@@@@ABVTDesC16@@ABVCIRHttpResponseData@@@Z @ 3 NONAME ; void CIRCacheMgmt::CacheChannelItemsL(class CArrayPtrFlat<class CIRBrowseChannelItems> &, class TDesC16 const &, class CIRHttpResponseData const &)
+	?CacheLogoL@CIRCacheMgmt@@QAEXABVTDesC8@@ABVTDesC16@@ABVCIRHttpResponseData@@@Z @ 4 NONAME ; void CIRCacheMgmt::CacheLogoL(class TDesC8 const &, class TDesC16 const &, class CIRHttpResponseData const &)
+	?CacheOtaInfoL@CIRCacheMgmt@@QAEXABVCIROTAUpdate@@ABVTDesC16@@ABVCIRHttpResponseData@@@Z @ 5 NONAME ; void CIRCacheMgmt::CacheOtaInfoL(class CIROTAUpdate const &, class TDesC16 const &, class CIRHttpResponseData const &)
+	?CachePresetItemL@CIRCacheMgmt@@QAEXAAV?$CArrayPtrFlat@VCIRIsdsPreset@@@@ABVTDesC16@@ABVCIRHttpResponseData@@@Z @ 6 NONAME ; void CIRCacheMgmt::CachePresetItemL(class CArrayPtrFlat<class CIRIsdsPreset> &, class TDesC16 const &, class CIRHttpResponseData const &)
+	?CheckCacheL@CIRCacheMgmt@@QAEXHABVTDesC16@@HAAH@Z @ 7 NONAME ; void CIRCacheMgmt::CheckCacheL(int, class TDesC16 const &, int, int &)
+	?OpenL@CIRCacheMgmt@@SAPAV1@AAVMIRCacheObserver@@@Z @ 8 NONAME ; class CIRCacheMgmt * CIRCacheMgmt::OpenL(class MIRCacheObserver &)
+	?RemoveObserver@CIRCacheMgmt@@QAEXPAVMIRCacheObserver@@@Z @ 9 NONAME ; void CIRCacheMgmt::RemoveObserver(class MIRCacheObserver *)
+	?RemoveOtaInfoL@CIRCacheMgmt@@QAEXXZ @ 10 NONAME ; void CIRCacheMgmt::RemoveOtaInfoL(void)
+	?UpdateTrustPeriodL@CIRCacheMgmt@@QAEXHABVTDesC16@@AAVCIRHttpResponseData@@@Z @ 11 NONAME ; void CIRCacheMgmt::UpdateTrustPeriodL(int, class TDesC16 const &, class CIRHttpResponseData &)
+

@@ -1,0 +1,272 @@
+/*
+* Copyright (c) 2006-2010 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  This module contains default beep sequences.
+*
+*/
+
+
+#include "defaultbeep.rh"
+#include <uikon.rh>
+
+RESOURCE SEQ_LOOP ringtone
+{
+    repeats = 3;
+    tones = 
+    {
+        SEQ_2TONES
+        {
+            duration    = 1000 ;
+            freq1       = SEQ_FREQ_C1;
+            vol1        = SEQ_VOL_MP;
+            freq2       = SEQ_FREQ_C2;
+            vol2        = SEQ_VOL_MP;
+        },  
+        SEQ_2TONES
+        {
+            duration    = 1000 ;
+            freq1       = SEQ_FREQ_D1;
+            vol1        = SEQ_VOL_MP;
+            freq2       = SEQ_FREQ_B2;
+            vol2        = SEQ_VOL_MP;
+        },  
+        SEQ_2TONES
+        {
+            duration    = 1000 ;
+            freq1       = SEQ_FREQ_E1;
+            vol1        = SEQ_VOL_MP;
+            freq2       = SEQ_FREQ_C2;
+            vol2        = SEQ_VOL_MP;
+        },  
+        SEQ_2TONES
+        {
+            duration    = 1000 ;
+            freq1       = SEQ_FREQ_F1;
+            vol1        = SEQ_VOL_MP;
+            freq2       = SEQ_FREQ_C2;
+            vol2        = SEQ_VOL_MP;
+        },  
+        SEQ_2TONES
+        {
+            duration    = 1000 ;
+            freq1       = SEQ_FREQ_G1;
+            vol1        = SEQ_VOL_MP;
+            freq2       = SEQ_FREQ_C2;
+            vol2        = SEQ_VOL_MP;
+        },
+        SEQ_2TONES
+        {
+            duration    = 1000 ;
+            freq1       = SEQ_FREQ_A2;
+            vol1        = SEQ_VOL_MP;
+            freq2       = SEQ_FREQ_C2;
+            vol2        = SEQ_VOL_MP;
+        },  
+        SEQ_2TONES
+        {
+            duration    = 1000 ;
+            freq1       = SEQ_FREQ_B2;
+            vol1        = SEQ_VOL_MP;
+            freq2       = SEQ_FREQ_C2;
+            vol2        = SEQ_VOL_MP;
+        }       
+
+    };
+
+}
+
+STRUCT VAR_ARRAY
+    {
+    WORD sequence [];
+    }
+
+RESOURCE VAR_ARRAY r_net_busy
+    {
+    // ETSI spec says 425Hz on 500ms, off 500ms.
+    // Seems to be close but on/off time is 480ms. 
+    sequence={0,17,10,5,6,78,50,64,50,6,11};
+    // 0  = OPCODE_SEQUENCE_START
+    // 17 = OPCODE_DURATION_UNIT
+    // 10 = duration unit => tone duration is 10ms * tone_tick
+    // 5  = OPCODE_REPEAT
+    // 6  = repeat 6 times sequence between OPCODE_REPEAT and OPCODE_REPEATEND  
+    // 78-64=14=AUD_TONE_NETWORK_FREQ_1  = 425Hz
+    // 50 = tone_tick = 500ms
+    // 64-64=0=AUD_TONE_FREQ_OFF         = 0Hz
+    // 50 = tone_tick = 50ms
+    // 6  = OPCODE_REPEATEND
+    // 11 = OPCODE_END
+    }
+ 
+RESOURCE VAR_ARRAY r_net_reorder
+    {
+    // Don't know if this is defined in ETSI spec at all
+    sequence={0,17,10,5,3,93,25,64,25,6,11};
+    // 0  = OPCODE_SEQUENCE_START
+    // 17 = OPCODE_DURATION_UNIT
+    // 10 = duration unit => tone duration is 10ms * tone_tick
+    // 5  = OPCODE_REPEAT
+    // 3  = repeat 3 times sequence between OPCODE_REPEAT and OPCODE_REPEATEND  
+    // 93-64=29=AUD_TONE_RING_FREQ_E0    = 330Hz
+    // 25 = tone_tick = 250ms
+    // 64-64 = 0 = AUD_TONE_FREQ_OFF     = 0Hz
+    // 25 = tone_tick = 250ms
+    // 6  = OPCODE_REPEATEND
+    // 11 = OPCODE_END
+    }
+
+RESOURCE VAR_ARRAY r_net_congestion
+    {
+    // ETSI spec says 425Hz on 200ms, off 200ms
+    // Seems to be so (but repeated only 15 times):
+    sequence={0,17,10,5,15,78,20,64,20,6,11};
+    // 0  = OPCODE_SEQUENCE_START
+    // 17 = OPCODE_DURATION_UNIT
+    // 10 = duration unit => tone duration is 10ms * tone_tick
+    // 5  = OPCODE_REPEAT
+    // 15  = repeat 15 times sequence between OPCODE_REPEAT and OPCODE_REPEATEND  
+    // 78-64=14=AUD_TONE_NETWORK_FREQ_1  = 425Hz
+    // 20 = tone_tick = 200ms
+    // 64-64 = 0 = AUD_TONE_FREQ_OFF     = 0Hz
+    // 20 = tone_tick = 200ms
+    // 6  = OPCODE_REPEATEND
+    // 11 = OPCODE_END
+    }
+
+RESOURCE VAR_ARRAY r_net_special_information
+    {
+    sequence={0,17,10,5,3,79,33,80,33,81,33,64,50,64,50,6,11};
+    // 0  = OPCODE_SEQUENCE_START
+    // 17 = OPCODE_DURATION_UNIT
+    // 10 = duration unit => tone duration is 10ms * tone_tick
+    // 5  = OPCODE_REPEAT
+    // 3  = repeat 3 times sequence between OPCODE_REPEAT and OPCODE_REPEATEND  
+    // 79-64=15=AUD_TONE_NETWORK_FREQ_2  = 950Hz
+    // 33 = tone_tick = 330ms
+    // 80-64=16=AUD_TONE_NETWORK_FREQ_3  = 1400Hz
+    // 33 = tone_tick = 330ms
+    // 81-64=17=AUD_TONE_NETWORK_FREQ_4  = 1800Hz
+    // 33 = tone_tick = 330ms
+    // 64-64 = 0 = AUD_TONE_FREQ_OFF     = 0Hz
+    // 50 = tone_tick = 500ms
+    // 64-64 = 0 = AUD_TONE_FREQ_OFF     = 0Hz
+    // 50 = tone_tick = 500ms  
+    // 6  = OPCODE_REPEATEND
+    // 11 = OPCODE_END
+    }
+
+RESOURCE VAR_ARRAY r_net_radio_not_available
+    {
+    // ETSI spec says: 425Mhz on 200ms, off 200ms, 3 bursts
+    // Seems to be so:
+    sequence={0,17,10,5,3,78,20,64,20,6,11};
+    // 0  = OPCODE_SEQUENCE_START
+    // 17 = OPCODE_DURATION_UNIT
+    // 10 = duration unit => tone duration is 10ms * tone_tick
+    // 5  = OPCODE_REPEAT
+    // 3  = repeat 3 times sequence between OPCODE_REPEAT and OPCODE_REPEATEND  
+    // 78-64=14=AUD_TONE_NETWORK_FREQ_1 = 425Hz
+    // 20 = tone_tick = 200ms
+    // 64-64=0=AUD_TONE_FREQ_OFF
+    // 20 = tone_tick = 200ms
+    // 6  = OPCODE_REPEATEND
+    // 11 = OPCODE_END
+    }
+
+RESOURCE VAR_ARRAY r_net_ring_going
+    {
+    // ETSI spec says 425Hz Tone on 1s, silence 4s
+    // Seems to be so:
+    sequence={0,17,10,2,252,78,100,5,4,64,100,6,7,11};
+    // 0  = OPCODE_SEQUENCE_START
+    // 17 = OPCODE_DURATION_UNIT
+    // 10 = duration unit => tone duration is 10ms * tone_tick
+    // 2  = OPCODE_CONTINUE_MASK (obsolete from DCT4 onwards)
+    // 252 = continue mask value
+    // 78-64=14=AUD_TONE_NETWORK_FREQ_1  = 425Hz
+    // 100 = tone_tick = 1000ms
+    // 5 = OPCODE_REPEAT
+    // 4 = repeat 4 times sequence between OPCODE_REPEAT and OPCODE_REPEATEND
+    // 64-64=0=AUD_TONE_FREQ_OFF
+    // 100 = tone_tick = 1000ms
+    // 7 = OPCODE_RESTART
+    // 11 = OPCODE_END
+    }
+
+RESOURCE VAR_ARRAY r_net_call_waiting
+    {
+    // Seems to be so:
+    sequence={0,17,10,78,20,64,60,78,20,64,100,64,100,64,100,78,20,64,60,78,20,11};
+    // 0  = OPCODE_SEQUENCE_START
+    // 17 = OPCODE_DURATION_UNIT
+    // 10 = duration unit => tone duration is 10ms * tone_tick
+    // 78-64=14=AUD_TONE_NETWORK_FREQ_1  = 425Hz
+    // 20 = tone_tick = 200ms
+    // 64-64 = 0 = AUD_TONE_FREQ_OFF     = 0Hz
+    // 60 = tone_tick = 600ms
+    // 78-64=14=AUD_TONE_NETWORK_FREQ_1  = 425Hz
+    // 20 = tone_tick = 200ms
+    // 64-64 = 0 = AUD_TONE_FREQ_OFF     = 0Hz
+    // 100 = tone_tick = 1000ms
+    // 64-64 = 0 = AUD_TONE_FREQ_OFF     = 0Hz
+    // 100 = tone_tick = 1000ms
+    // 64-64 = 0 = AUD_TONE_FREQ_OFF     = 0Hz
+    // 100 = tone_tick = 1000ms
+    // 78-64=14=AUD_TONE_NETWORK_FREQ_1  = 425Hz
+    // 20 = tone_tick = 200ms
+    // 64-64 = 0 = AUD_TONE_FREQ_OFF     = 0Hz
+    // 60 = tone_tick = 600ms
+    // 78-64=14=AUD_TONE_NETWORK_FREQ_1  = 425Hz
+    // 20 = tone_tick = 200ms
+    // 11 = OPCODE_END
+    }
+
+RESOURCE VAR_ARRAY r_net_call_waiting_alternative_tone
+    {
+    sequence={0,17,10,83,20,64,10,83,20,64,125,64,125,64,100,83,20,64,10,83,20,11};
+    // 0  = OPCODE_SEQUENCE_START
+    // 17 = OPCODE_DURATION_UNIT
+    // 10 = duration unit => tone duration is 10ms * tone_tick
+    // 83-64=19=AUD_TONE_NETWORK_DUAL_FREQ_2 = 440Hz
+    // 20 = tone_tick = 200ms
+    // 64-64 = 0 = AUD_TONE_FREQ_OFF         = 0Hz
+    // 10 = tone_tick = 100ms
+    // 83-64=19=AUD_TONE_NETWORK_DUAL_FREQ_2 = 440Hz
+    // 20 = tone_tick = 200ms
+    // 64-64 = 0 = AUD_TONE_FREQ_OFF         = 0Hz
+    // 125 = tone_tick = 1250ms
+    // 64-64 = 0 = AUD_TONE_FREQ_OFF         = 0Hz
+    // 125 = tone_tick = 1250ms
+    // 64-64 = 0 = AUD_TONE_FREQ_OFF         = 0Hz
+    // 100 = tone_tick = 1000ms
+    // 83-64=19=AUD_TONE_NETWORK_DUAL_FREQ_2 = 440Hz
+    // 20 = tone_tick = 200ms
+    // 64-64 = 0 = AUD_TONE_FREQ_OFF         = 0Hz
+    // 10 = tone_tick = 100ms
+    // 83-64=19=AUD_TONE_NETWORK_DUAL_FREQ_2 = 440Hz
+    // 20 = tone_tick = 200ms
+    // 11 = OPCODE_END
+    }
+
+RESOURCE VAR_ARRAY r_data_call_tone
+    {
+    sequence={0,17,6,2,252,10,8,5,8,84,3,89,3,6,10,247,64,50,7,11};
+    }
+RESOURCE VAR_ARRAY r_no_sound_sequence
+    {
+    sequence={0,17,6,5,252,10,8,64,50,10,247,64,100,06,11};
+    }
+RESOURCE VAR_ARRAY r_beep_sequence
+    {
+    sequence={0,17,6,10,8,115,10,64,40,10,247,5,252,64,100,10,8,64,50,10,247,6,11};
+    }

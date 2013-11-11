@@ -1,0 +1,11 @@
+EXPORTS
+	?StartPrintingL@CIMGPPrintUtils@@QAEXPAVCDesC16ArrayFlat@@@Z @ 1 NONAME ; void CIMGPPrintUtils::StartPrintingL(class CDesC16ArrayFlat *)
+	?SearchDefaultPrinterL@CUIProtocolController@@QAEHXZ @ 2 NONAME ; int CUIProtocolController::SearchDefaultPrinterL(void)
+	?CheckMIMEType@CIMGPPrintUtils@@SAHABVTDesC8@@ABV?$TBuf@$0BAA@@@@Z @ 3 NONAME ; int CIMGPPrintUtils::CheckMIMEType(class TDesC8 const &, class TBuf<256> const &)
+	?NewL@CUIProtocolController@@SAPAV1@PAVMProtocolObserver@@AAVCIFFactory@@@Z @ 4 NONAME ; class CUIProtocolController * CUIProtocolController::NewL(class MProtocolObserver *, class CIFFactory &)
+	?NewL@CIMGPPrintUtils@@SAPAV1@PAVMAiwObserver@@@Z @ 5 NONAME ; class CIMGPPrintUtils * CIMGPPrintUtils::NewL(class MAiwObserver *)
+	?ChangeDefaultPrinterL@CUIProtocolController@@QAEHH@Z @ 6 NONAME ; int CUIProtocolController::ChangeDefaultPrinterL(int)
+	?StartPrintingL@CIMGPPrintDlgManager@@QAEXXZ @ 7 NONAME ; void CIMGPPrintDlgManager::StartPrintingL(void)
+	?NewL@CIMGPPrintDlgManager@@SAPAV1@HPAVMPrintJob@@IHIPAVCIMGPPrintUtils@@PAVMPrintingObserver@@@Z @ 8 NONAME ; class CIMGPPrintDlgManager * CIMGPPrintDlgManager::NewL(int, class MPrintJob *, unsigned int, int, unsigned int, class CIMGPPrintUtils *, class MPrintingObserver *)
+	?GetDataFilePathL@CIMGPPrintUtils@@SAXAAV?$TBuf@$0BAA@@@@Z @ 9 NONAME ; void CIMGPPrintUtils::GetDataFilePathL(class TBuf<256> &)
+

@@ -1,0 +1,57 @@
+/*
+* Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+
+#ifndef	__IRUID3_H__
+#define	__IRUID3_H__
+
+//Duplicate with : 
+//irquid3.hrh	/qtinternetradio/irqcommon/inc
+#define UID3_INTERNET_RADIO_10_1_EXE        0x2002FFAC
+
+#define UID3_IRSETTINGS_DLL                 0x2002FFAE
+#define UID3_IRRFSPLUGIN_DLL                0x2002FFAF
+#define UID3_IRNETWORKCONTROLLER_DLL        0x2002FFB0
+#define UID3_IRDATASTRUCTURES_DLL           0x2002FFB1
+#define UID3_IRCACHEMGMT_DLL                0x2002FFB2
+#define UID3_IRXMLPARSER_DLL                0x2002FFB3
+#define UID3_IRFAVORITESDB_DLL              0x2002FFB4
+#define UID3_IRDATAPROVIDER_DLL             0x2002FFB5
+#define UID3_IRSESSIONLOG_DLL               0x2002FFB6
+#define UID3_ISDSCLIENTINTERFACE_DLL        0x2002FFB7
+#define UID3_IRFILERECOGNIZER_DLL           0x2002FFB8
+#define UID3_IRPRESETPLUGIN_DLL             0x2002FFC7
+
+#define STR_UID3_IRSETTINGS_DLL                 "2002FFAE"
+#define STR_UID3_IRRFSPLUGIN_DLL                "2002FFAF"
+#define STR_UID3_IRNETWORKCONTROLLER_DLL        "2002FFB0"
+#define STR_UID3_IRDATASTRUCTURES_DLL           "2002FFB1"
+#define STR_UID3_IRCACHEMGMT_DLL                "2002FFB2"
+#define STR_UID3_IRXMLPARSER_DLL                "2002FFB3"
+#define STR_UID3_IRFAVORITESDB_DLL              "2002FFB4"
+#define STR_UID3_IRDATAPROVIDER_DLL             "2002FFB5"
+#define STR_UID3_IRSESSIONLOG_DLL               "2002FFB6"
+#define STR_UID3_ISDSCLIENTINTERFACE_DLL        "2002FFB7"
+#define STR_UID3_IRFILERECOGNIZER_DLL           "2002FFB8"
+#define STR_UID3_IRPRESETPLUGIN_DLL             "2002FFC7"
+
+#define UID3_IRRFSPLUGIN_DLL_IMPLEMENTATION_UID 0x2002FFE1
+#define UID3_IRFILERECOGNIZER_DLL_IMPLEMENTATION_UID 0x2002FFE2
+#define UID3_IRPRESETPLUGIN_DLL_IMPLEMENTATION_UID 0x2002FFE3
+
+#endif	//__IRUID3_H__
+

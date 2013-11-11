@@ -1,0 +1,35 @@
+/*
+* Copyright (c) 2007 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Image description file for project FreestyleIpsServices
+*
+*/
+#ifndef FREESTYLEIPSSERVICES_IBY
+#define FREESTYLEIPSSERVICES_IBY
+
+#include <data_caging_paths_for_iby.hrh>
+#include <bldvariant.hrh>
+
+#ifdef FF_EMAIL_FRAMEWORK
+
+ECOM_PLUGIN( ipssosplugin.dll, ipssosplugin.rsc )
+ECOM_PLUGIN( IPSSosAOPlugin.dll, IPSSosAOPlugin.rsc )
+
+file=ABI_DIR\BUILD_DIR\nmipsmtms.dll		SHARED_LIB_DIR\nmipsmtms.dll        PAGED
+data=DATAZ_\MTM_INFO_FILE_DIR\smtp.rsc           MTM_INFO_FILE_DIR\smtp.rsc
+data=DATAZ_\MTM_INFO_FILE_DIR\pop3.rsc           MTM_INFO_FILE_DIR\pop3.rsc
+data=DATAZ_\MTM_INFO_FILE_DIR\imap4.rsc          MTM_INFO_FILE_DIR\imap4.rsc
+
+#endif //FF_EMAIL_FRAMEWORK
+
+#endif // FREESTYLEIPSSERVICES_IBY

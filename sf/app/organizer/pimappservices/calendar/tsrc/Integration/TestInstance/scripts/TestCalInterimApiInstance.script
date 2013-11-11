@@ -1,0 +1,56 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//Script file for running calInterim Api instance tests
+
+PRINT Running_CalInterimApiInstance_Test
+
+//Load the test
+LOAD_SUITE 	TestCalInterimApiInstanceSuite
+
+START_TESTCASE  PIM-APP-ENGINES-CALINTERIMAPI-CIT-0001-0019
+
+//! @file TestCalInterimApiInstance.script
+//! @SYMTestCaseID PIM-APP-ENGINES-CALINTERIMAPI-CIT-0001-0019
+//! APP-ENGINES-CALINTERIMAPI -CIT-0001,0003,0007,0008,0010,0011,0014,0016,0017,0018,0019
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID Sec 3.2.4
+//! @SYMTestCaseDesc Creates and open the calendar file.add the entry in the calendar file.Fetch the entry with the
+//!  specified uid and update it.Find the instances of the entry and Delete some of the specified instances.
+//! @SYMTestActions Creates a calendar file and open it.
+//!  Add the entries in the calendar file and store it.
+//!  Fetch the entry with the specified UID and Update the entry.
+//!  Find the Instances of the entry for the specified criteria.
+//!  Delete the instances for the specified criteria.
+//! @SYMTestExpectedResults CCalsession should have created the calendar file and opened it.CCalEntryView should have
+//!  created the entry.CCalInstanceView should have created the instances of the entry.It should have found the instances
+//!  with the specified criteria.delted the specified instances.
+
+
+RUN_TEST_STEP 500 TestCalInterimApiInstanceSuite TestCalInterimApiInstance C:\CITCalInterimApi\TestCalInterimApiInstance.ini
+
+END_TESTCASE  PIM-APP-ENGINES-CALINTERIMAPI-CIT-0001-0019
+
+PRINT Completed_CalInterimApiInstance_Test
+
+
+
+
+
+
+
+
+

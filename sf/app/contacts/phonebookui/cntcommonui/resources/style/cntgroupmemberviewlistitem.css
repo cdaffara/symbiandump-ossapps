@@ -1,0 +1,16 @@
+HbListViewItem[layoutName="groupmemberlist"][icon-1]{
+    layout:layout-2;
+}
+
+HbListViewItem[layoutName="groupmemberlist"][icon-1][!text-2]{
+    layout:layout-6;
+}
+
+HbListViewItem[layoutName="groupmemberlist"][icon-1][!text-2][text-3]{
+    layout:layout-5;
+}
+
+HbListViewItem::icon-1[layoutName="groupmemberlist"]{
+    fixed-height: var(hb-param-graphic-size-image-portrait);
+    fixed-width: var(hb-param-graphic-size-image-portrait);
+}

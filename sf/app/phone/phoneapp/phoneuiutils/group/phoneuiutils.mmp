@@ -1,0 +1,108 @@
+/*
+* Copyright (c) 2007 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*     PhoneUIUtils module project specification file.
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+// Capability assignment.
+CAPABILITY CAP_GENERAL_DLL
+
+// Assign Vendor ID.
+VENDORID VID_DEFAULT
+
+VERSION 10.0
+
+TARGET          phoneuiutils.dll
+TARGETTYPE      dll
+UID             0x1000008d 0x101F4D0F
+
+SOURCEPATH      ../src
+
+SOURCE          cphonecallthememonitor.cpp
+SOURCE          cphonecenrepeventhandler.cpp
+SOURCE          cphonecenrepproxy.cpp
+SOURCE          cphoneclearblacklist.cpp
+SOURCE          cphonekeys.cpp
+SOURCE          cphonelibrarycontainer.cpp
+SOURCE          cphonelogger.cpp
+SOURCE          cphonemainresourceresolver.cpp
+SOURCE          cphonemainerrormessageshandler.cpp
+SOURCE          cphonepublishsubscriberao.cpp
+SOURCE          cphonepubsubproxy.cpp
+SOURCE          cphonerecoverysystem.cpp
+SOURCE          cphoneresourceresolverbase.cpp
+SOURCE          cphonetimer.cpp
+SOURCE          ctelerecoverysystem.cpp
+SOURCE          ctelewaitingidle.cpp
+SOURCE          phoneloggerviewcommands.cpp
+SOURCE          phonestatestrings.cpp
+SOURCE          phonestatestringsgsm.cpp
+SOURCE          cphonestorage.cpp
+SOURCE          rphoneanimclearblacklist.cpp
+SOURCE          tphonecmdparamappinfo.cpp
+SOURCE          tphonecmdparamaudiooutput.cpp
+SOURCE          tphonecmdparamaudioavailability.cpp
+SOURCE          tphonecmdparambitmap.cpp
+SOURCE          tphonecmdparamboolean.cpp
+SOURCE          tphonecmdparamcallheaderdata.cpp
+SOURCE          tphonecmdparamcallstatedata.cpp
+SOURCE          tphonecmdparamdynmenu.cpp
+SOURCE          tphonecmdparamemergencycallheaderdata.cpp
+SOURCE          tphonecmdparamglobalnote.cpp
+SOURCE          tphonecmdparamincallindicatordata.cpp
+SOURCE          tphonecmdparaminteger.cpp
+SOURCE          tphonecmdparamkeycapture.cpp
+SOURCE          tphonecmdparamkeyevent.cpp
+SOURCE          tphonecmdparamnote.cpp
+SOURCE          tphonecmdparamprogressnote.cpp
+SOURCE          tphonecmdparamquery.cpp
+SOURCE          tphonecmdparamringtone.cpp
+SOURCE          tphonecmdparamsfidata.cpp
+SOURCE          tphonecmdparamstring.cpp
+SOURCE          tphonecommandparam.cpp
+SOURCE          tphonecmdparamtranseffect.cpp
+SOURCE          tcbacommandmapping.cpp
+SOURCE          tphonecmdparamcustomdialer.cpp
+SOURCE          tphonecmdparamnumberentryobserver.cpp
+SOURCE          tphonecmdparampointer.cpp
+SOURCE          tphonetouchbuttonconfig.cpp
+
+USERINCLUDE     ../../phoneuiutils/inc
+USERINCLUDE     ../../phoneui2/srcdata
+
+APP_LAYER_SYSTEMINCLUDE         // Application layer domain APIs
+SYSTEMINCLUDE   ../../../inc    // Telephony internal headers
+
+LIBRARY         euser.lib
+LIBRARY         cone.lib
+LIBRARY         bafl.lib
+LIBRARY         flogger.lib
+LIBRARY         featmgr.lib         // FeatureManager
+LIBRARY         cenrepnotifhandler.lib
+LIBRARY         centralrepository.lib
+LIBRARY         ptiengine.lib
+LIBRARY         avkon.lib
+LIBRARY         ws32.lib
+
+#ifndef __WINS__
+LIBRARY         efsrv.lib
+#endif
+LIBRARY         charconv.lib
+
+
+SMPSAFE

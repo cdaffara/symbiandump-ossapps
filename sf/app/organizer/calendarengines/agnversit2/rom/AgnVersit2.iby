@@ -1,0 +1,41 @@
+/*
+* Copyright (c) 2005 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   This file specifies rom file inclusion AgnVersit2
+*                resource file.The source and target locations.
+*
+*/
+
+
+
+#ifndef AGNVERSIT2_IBY
+#define AGNVERSIT2_IBY
+
+REM AgnVersit2
+
+
+#ifdef __I_CAL_SUPPORT
+
+// ECom plugin DLLs and their resources
+ 
+ECOM_PLUGIN(agnversit2.dll,10206C82.rsc)
+
+#ifdef RD_SECURE_BIN_RES
+ data=DATAZ_\RESOURCE_FILES_DIR\AgnVersit2Strings.rsc    RESOURCE_FILES_DIR\AgnVersit2Strings.rsc
+#else
+ data=ZSYSTEM\Data\AgnVersit2Strings.rsc                 RESOURCE_FILES_DIR\AgnVersit2Strings.rsc
+#endif // RD_SECURE_BIN_RES
+
+#endif // __I_CAL_SUPPORT
+
+#endif //AGNVERSIT2_IBY

@@ -1,0 +1,139 @@
+/*
+* Copyright (c) 2010 Kanrikogaku Kenkyusho, Ltd.
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the License "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Kanrikogaku Kenkyusho, Ltd. - Initial contribution
+*
+* Contributors:
+*
+* Description:
+* {Description of the file}
+*
+*/
+
+// Use standard macros
+#include <platform_paths.hrh>
+
+// Build target
+TARGET          DirectPrintApp.exe
+TARGETTYPE      exe
+UID             0x100039CE 0x2002BB28
+
+EPOCSTACKSIZE   0x10000           // Min 64kb
+EPOCHEAPSIZE    0x20000 0x1000000 // Min 128kb, max 16Mb
+
+sourcepath      ../src
+source          directprintapp.cpp
+source          directprintappapplication.cpp
+source          directprintappappui.cpp
+source          directprintappdocument.cpp
+source          directprintmodel.cpp
+source          directprintbearermgr.cpp
+source			directprintprinterdata.cpp
+source			directprintbearerdata.cpp
+source			directprintproperty.cpp
+source			directprintmsgutil.cpp
+source			directprintuipluginmgr.cpp
+source          directprintprinterinforeader.cpp
+
+sourcepath      ../ui/src
+source          directprintlistbox.cpp
+source          directprintsettinglistbox.cpp
+source          directprintlistview.cpp
+source          directprintmainview.cpp
+source          directprintpreviewview.cpp
+source          directprintpropertyview.cpp
+source          directprintsearchresultview.cpp
+source          directprintsettingview.cpp
+source          directprintviewbase.cpp
+source          directprintpreviewcontrol.cpp
+
+sourcepath      ../engine/src
+source          directprintengine.cpp
+source          directprintfloatcapability.cpp
+source          directprintlistcapability.cpp
+source          directprinttintcapability.cpp
+source          directprinttextcapability.cpp
+source          directprintprintsettings.cpp
+source          directprintsettingsconverter.cpp
+
+
+SOURCEPATH      ../data
+
+START RESOURCE  DirectPrintApp.rss
+HEADER
+TARGET DirectPrintApp
+TARGETPATH resource/apps
+END //RESOURCE
+
+START RESOURCE  DirectPrintApp_reg.rss
+TARGET DirectPrintApp_reg
+TARGETPATH    /private/10003a3f/apps
+END //RESOURCE
+
+
+
+USERINCLUDE     ../inc
+USERINCLUDE     ../ui/inc
+USERINCLUDE     ../engine/inc
+USERINCLUDE     ../../inc
+USERINCLUDE     ../../ImagePrintLibrary/inc
+
+SYSTEMINCLUDE   /epoc32/include/ecom
+
+APP_LAYER_SYSTEMINCLUDE 
+
+LIBRARY         euser.lib
+LIBRARY         apparc.lib
+LIBRARY         cone.lib
+LIBRARY         eikcore.lib
+LIBRARY         avkon.lib
+LIBRARY         ecom.lib		// REComSession
+LIBRARY         commonengine.lib
+LIBRARY         efsrv.lib 
+LIBRARY         estor.lib
+LIBRARY         aknnotify.lib
+LIBRARY         eikdlg.lib
+LIBRARY         bafl.lib
+LIBRARY         insock.lib
+LIBRARY         eikctl.lib
+LIBRARY         servicehandler.lib
+LIBRARY         ws32.lib
+LIBRARY         gdi.lib 
+LIBRARY         print.lib       // CPrintSetup
+LIBRARY         prev.lib        // CPrintPreviewImage
+LIBRARY         fbscli.lib		// CFbsBitmap
+LIBRARY         etext.lib       // CRichText
+LIBRARY         pdrprt.lib      // CFilePrinterPort
+LIBRARY         field.lib       // CPageNumField
+LIBRARY         eikcoctl.lib    // CEikBorderedControl
+LIBRARY         egul.lib        // TGulBorder
+
+LIBRARY         centralrepository.lib // CRepository
+
+LIBRARY         directprintclient.lib // CDirectPrintClient
+
+LIBRARY         XmlEngineDom.lib
+
+STATICLIBRARY   clog.lib
+LIBRARY			flogger.lib
+
+LIBRARY         platformenv.lib
+
+//not use LIBRARY   featmgr.lib
+
+LANG SC
+
+VENDORID          0
+SECUREID          0x2002BB28
+CAPABILITY        ALL -TCB
+
+#ifdef ENABLE_ABIV2_MODE
+DEBUGGABLE_UDEBONLY
+#endif
+// End of File

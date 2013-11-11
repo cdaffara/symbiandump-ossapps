@@ -1,0 +1,60 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+#include <platform_paths.hrh>
+
+TARGET        clearlisttest.exe
+TARGETTYPE    exe
+UID           0x100039CE 0x20026F63
+SECUREID			0x20026F63
+
+SOURCEPATH    ..\src
+SOURCE	      clearlisttest.cpp
+
+EPOCSTACKSIZE 0x5000
+
+USERINCLUDE   ..\inc
+
+APP_LAYER_SYSTEMINCLUDE         // Application layer domain APIs
+
+SYSTEMINCLUDE   \epoc32\include\ecom
+
+LIBRARY		apparc.lib
+LIBRARY		avkon.lib
+LIBRARY         bafl.lib
+LIBRARY         cone.lib
+LIBRARY         ecom.lib
+LIBRARY         eikcoctl.lib
+LIBRARY         eikcore.lib 
+LIBRARY         euser.lib
+LIBRARY         fbscli.lib
+LIBRARY         efsrv.lib    
+LIBRARY         aknskins.lib            // for skin background
+LIBRARY         CdlEngine.lib           // for scalable ui
+LIBRARY         flogger.lib
+LIBRARY         charconv.lib 
+LIBRARY         customapi.lib
+LIBRARY         logcli.lib 
+LIBRARY         logwrap.lib 
+LIBRARY         estor.lib
+
+VENDORID 0x101FB657
+
+CAPABILITY    ALL -TCB
+
+
+SMPSAFE

@@ -1,0 +1,57 @@
+HbListViewItem[layoutName="mpmwtracklist"][icon-2]{
+    layout:mpmwtracklist-1;
+}
+
+HbListViewItem[layoutName="mpmwtracklist"][!icon-2]{
+    layout:mpmwtracklist-2;
+}
+
+HbListViewItem::text-1[layoutName="mpmwtracklist"]{
+  text-height: var(hb-param-text-height-secondary);
+  font-variant: secondary;
+  pref-width:-1;
+  text-align: Left;
+  size-policy-horizontal: ignored;
+  text-line-count-min:1;
+  text-line-count-max:1;
+  text-wrap-mode:no-wrap;
+}
+
+HbListViewItem::icon-2[layoutName="mpmwtracklist"]{
+  fixed-height: var(hb-param-graphic-size-secondary);
+  fixed-width: var(hb-param-graphic-size-secondary);
+}
+
+HbListViewItem::text-2[layoutName="mpmwtracklist"]{
+  minimum-height: 0.0un;
+  minimum-width: 0.0un;
+  fixed-height: 0.0un;
+  fixed-width: 0.0un;
+        text-line-count-min: 1;
+        text-line-count-max: 1;
+        text-wrap-mode: no-wrap;
+}
+
+HbListViewItem::text-3[layoutName="mpmwtracklist"]{
+  minimum-height: 0.0un;
+  minimum-width: 0.0un;
+  fixed-height: 0.0un;
+  fixed-width: 0.0un;
+        text-line-count-min: 1;
+        text-line-count-max: 1;
+        text-wrap-mode: no-wrap;
+}
+
+HbListViewItem::icon-1[layoutName="mpmwtracklist"]{
+  minimum-height: 0.0un;
+  minimum-width: 0.0un;
+  fixed-height: 0.0un;
+  fixed-width: 0.0un;
+}
+
+HbListViewItem::multiselection-toucharea[layoutName="mpmwtracklist"]{
+  minimum-height: 0.0un;
+  minimum-width: 0.0un;
+  fixed-height: 0.0un;
+  fixed-width: 0.0un;
+}

@@ -1,0 +1,145 @@
+;
+; Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description: 
+;
+;Language - standard language definitions
+&EN
+
+; Package header
+#{"NmHsWidget Installation package"}, (0x2002DD15), 1, 0, 0
+
+;Localised Vendor name
+%{"Nokia"}
+
+;Unique Vendor name
+:"Nokia"
+
+;notify HS about new provider - keep this always as a first item
+"..\resources\nmhswidget.manifest"               						- "!:\private\20022F35\import\widgetregistry\2002DD15\nmhswidget.manifest",FM,"application\hs-widget-uninstall+xml",RR,RW
+
+;nmhswidget
+"\epoc32\release\armv5\urel\nmhswidget.dll"									- "!:\sys\bin\nmhswidget.dll"
+"\epoc32\data\z\resource\qt\plugins\nmhswidget.qtplugin"		- "!:\private\20022F35\import\widgetregistry\2002DD15\nmhswidget.qtplugin"
+"\epoc32\data\z\private\2002DD15\nmhswidget.xml"						- "!:\private\20022F35\import\widgetregistry\2002DD15\nmhswidget.xml"
+"..\resources\nmhswidget.manifest"               						- "!:\private\20022F35\import\widgetregistry\2002DD15\nmhswidget.manifest"
+"\epoc32\data\z\resource\qt\translations\mailwidget_ar.qm"	- "!:\resource\qt\translations\mailwidget_ar.qm"
+"\epoc32\data\z\resource\qt\translations\mailwidget_bg.qm"	- "!:\resource\qt\translations\mailwidget_bg.qm"
+"\epoc32\data\z\resource\qt\translations\mailwidget_ca.qm"	- "!:\resource\qt\translations\mailwidget_ca.qm"
+"\epoc32\data\z\resource\qt\translations\mailwidget_cs.qm"	- "!:\resource\qt\translations\mailwidget_cs.qm"
+"\epoc32\data\z\resource\qt\translations\mailwidget_da.qm"	- "!:\resource\qt\translations\mailwidget_da.qm"
+"\epoc32\data\z\resource\qt\translations\mailwidget_de.qm"	- "!:\resource\qt\translations\mailwidget_de.qm"
+"\epoc32\data\z\resource\qt\translations\mailwidget_el.qm"	- "!:\resource\qt\translations\mailwidget_el.qm"
+"\epoc32\data\z\resource\qt\translations\mailwidget_en.qm"	- "!:\resource\qt\translations\mailwidget_en.qm"
+"\epoc32\data\z\resource\qt\translations\mailwidget_en_US.qm"	- "!:\resource\qt\translations\mailwidget_en_US.qm"
+"\epoc32\data\z\resource\qt\translations\mailwidget_es.qm"	- "!:\resource\qt\translations\mailwidget_es.qm"
+"\epoc32\data\z\resource\qt\translations\mailwidget_es_419.qm"	- "!:\resource\qt\translations\mailwidget_es_419.qm"
+"\epoc32\data\z\resource\qt\translations\mailwidget_et.qm"	- "!:\resource\qt\translations\mailwidget_et.qm"
+"\epoc32\data\z\resource\qt\translations\mailwidget_eu.qm"	- "!:\resource\qt\translations\mailwidget_eu.qm"
+"\epoc32\data\z\resource\qt\translations\mailwidget_fa.qm"	- "!:\resource\qt\translations\mailwidget_fa.qm"
+"\epoc32\data\z\resource\qt\translations\mailwidget_fi.qm"	- "!:\resource\qt\translations\mailwidget_fi.qm"
+"\epoc32\data\z\resource\qt\translations\mailwidget_fr.qm"	- "!:\resource\qt\translations\mailwidget_fr.qm"
+"\epoc32\data\z\resource\qt\translations\mailwidget_fr_CA.qm"	- "!:\resource\qt\translations\mailwidget_fr_CA.qm"
+"\epoc32\data\z\resource\qt\translations\mailwidget_gl.qm"	- "!:\resource\qt\translations\mailwidget_gl.qm"
+"\epoc32\data\z\resource\qt\translations\mailwidget_he.qm"	- "!:\resource\qt\translations\mailwidget_he.qm"
+"\epoc32\data\z\resource\qt\translations\mailwidget_hi.qm"	- "!:\resource\qt\translations\mailwidget_hi.qm"
+"\epoc32\data\z\resource\qt\translations\mailwidget_hr.qm"	- "!:\resource\qt\translations\mailwidget_hr.qm"
+"\epoc32\data\z\resource\qt\translations\mailwidget_hu.qm"	- "!:\resource\qt\translations\mailwidget_hu.qm"
+"\epoc32\data\z\resource\qt\translations\mailwidget_id.qm"	- "!:\resource\qt\translations\mailwidget_id.qm"
+"\epoc32\data\z\resource\qt\translations\mailwidget_is.qm"	- "!:\resource\qt\translations\mailwidget_is.qm"
+"\epoc32\data\z\resource\qt\translations\mailwidget_it.qm"	- "!:\resource\qt\translations\mailwidget_it.qm"
+"\epoc32\data\z\resource\qt\translations\mailwidget_ja.qm"	- "!:\resource\qt\translations\mailwidget_ja.qm"
+"\epoc32\data\z\resource\qt\translations\mailwidget_ko.qm"	- "!:\resource\qt\translations\mailwidget_ko.qm"
+"\epoc32\data\z\resource\qt\translations\mailwidget_lt.qm"	- "!:\resource\qt\translations\mailwidget_lt.qm"
+"\epoc32\data\z\resource\qt\translations\mailwidget_lv.qm"	- "!:\resource\qt\translations\mailwidget_lv.qm"
+"\epoc32\data\z\resource\qt\translations\mailwidget_ms.qm"	- "!:\resource\qt\translations\mailwidget_ms.qm"
+"\epoc32\data\z\resource\qt\translations\mailwidget_nb.qm"	- "!:\resource\qt\translations\mailwidget_nb.qm"
+"\epoc32\data\z\resource\qt\translations\mailwidget_nl.qm"	- "!:\resource\qt\translations\mailwidget_nl.qm"
+"\epoc32\data\z\resource\qt\translations\mailwidget_pl.qm"	- "!:\resource\qt\translations\mailwidget_pl.qm"
+"\epoc32\data\z\resource\qt\translations\mailwidget_pt.qm"	- "!:\resource\qt\translations\mailwidget_pt.qm"
+"\epoc32\data\z\resource\qt\translations\mailwidget_pt_BR.qm"	- "!:\resource\qt\translations\mailwidget_pt_BR.qm"
+"\epoc32\data\z\resource\qt\translations\mailwidget_ro.qm"	- "!:\resource\qt\translations\mailwidget_ro.qm"
+"\epoc32\data\z\resource\qt\translations\mailwidget_ru.qm"	- "!:\resource\qt\translations\mailwidget_ru.qm"
+"\epoc32\data\z\resource\qt\translations\mailwidget_sk.qm"	- "!:\resource\qt\translations\mailwidget_sk.qm"
+"\epoc32\data\z\resource\qt\translations\mailwidget_sl.qm"	- "!:\resource\qt\translations\mailwidget_sl.qm"
+"\epoc32\data\z\resource\qt\translations\mailwidget_sr.qm"	- "!:\resource\qt\translations\mailwidget_sr.qm"
+"\epoc32\data\z\resource\qt\translations\mailwidget_sv.qm"	- "!:\resource\qt\translations\mailwidget_sv.qm"
+"\epoc32\data\z\resource\qt\translations\mailwidget_th.qm"	- "!:\resource\qt\translations\mailwidget_th.qm"
+"\epoc32\data\z\resource\qt\translations\mailwidget_tl.qm"	- "!:\resource\qt\translations\mailwidget_tl.qm"
+"\epoc32\data\z\resource\qt\translations\mailwidget_tr.qm"	- "!:\resource\qt\translations\mailwidget_tr.qm"
+"\epoc32\data\z\resource\qt\translations\mailwidget_uk.qm"	- "!:\resource\qt\translations\mailwidget_uk.qm"
+"\epoc32\data\z\resource\qt\translations\mailwidget_ur.qm"	- "!:\resource\qt\translations\mailwidget_ur.qm"
+"\epoc32\data\z\resource\qt\translations\mailwidget_vi.qm"	- "!:\resource\qt\translations\mailwidget_vi.qm"
+"\epoc32\data\z\resource\qt\translations\mailwidget_zh.qm"	- "!:\resource\qt\translations\mailwidget_zh.qm"
+"\epoc32\data\z\resource\qt\translations\mailwidget_zh_HK.qm"	- "!:\resource\qt\translations\mailwidget_zh_HK.qm"
+"\epoc32\data\z\resource\qt\translations\mailwidget_zh_TW.qm"	- "!:\resource\qt\translations\mailwidget_zh_TW.qm"
+
+
+;nmregister
+"\epoc32\release\armv5\urel\nmregister.dll"									- "!:\sys\bin\nmregister.dll"
+"\epoc32\data\z\private\2002DD16\nmregister.xml"						- "!:\private\2002DD16\import\nmregister.xml"
+"\epoc32\data\z\resource\qt\plugins\nmregister.qtplugin"		- "!:\resource\qt\plugins\nmregister.qtplugin"
+"\epoc32\data\z\resource\qt\translations\nmregister_ar.qm"	- "!:\resource\qt\translations\nmregister_ar.qm"
+"\epoc32\data\z\resource\qt\translations\nmregister_bg.qm"	- "!:\resource\qt\translations\nmregister_bg.qm"
+"\epoc32\data\z\resource\qt\translations\nmregister_ca.qm"	- "!:\resource\qt\translations\nmregister_ca.qm"
+"\epoc32\data\z\resource\qt\translations\nmregister_cs.qm"	- "!:\resource\qt\translations\nmregister_cs.qm"
+"\epoc32\data\z\resource\qt\translations\nmregister_da.qm"	- "!:\resource\qt\translations\nmregister_da.qm"
+"\epoc32\data\z\resource\qt\translations\nmregister_de.qm"	- "!:\resource\qt\translations\nmregister_de.qm"
+"\epoc32\data\z\resource\qt\translations\nmregister_el.qm"	- "!:\resource\qt\translations\nmregister_el.qm"
+"\epoc32\data\z\resource\qt\translations\nmregister_en.qm"	- "!:\resource\qt\translations\nmregister_en.qm"
+"\epoc32\data\z\resource\qt\translations\nmregister_en_US.qm"	- "!:\resource\qt\translations\nmregister_en_US.qm"
+"\epoc32\data\z\resource\qt\translations\nmregister_es.qm"	- "!:\resource\qt\translations\nmregister_es.qm"
+"\epoc32\data\z\resource\qt\translations\nmregister_es_419.qm"	- "!:\resource\qt\translations\nmregister_es_419.qm"
+"\epoc32\data\z\resource\qt\translations\nmregister_et.qm"	- "!:\resource\qt\translations\nmregister_et.qm"
+"\epoc32\data\z\resource\qt\translations\nmregister_eu.qm"	- "!:\resource\qt\translations\nmregister_eu.qm"
+"\epoc32\data\z\resource\qt\translations\nmregister_fa.qm"	- "!:\resource\qt\translations\nmregister_fa.qm"
+"\epoc32\data\z\resource\qt\translations\nmregister_fi.qm"	- "!:\resource\qt\translations\nmregister_fi.qm"
+"\epoc32\data\z\resource\qt\translations\nmregister_fr.qm"	- "!:\resource\qt\translations\nmregister_fr.qm"
+"\epoc32\data\z\resource\qt\translations\nmregister_fr_CA.qm"	- "!:\resource\qt\translations\nmregister_fr_CA.qm"
+"\epoc32\data\z\resource\qt\translations\nmregister_gl.qm"	- "!:\resource\qt\translations\nmregister_gl.qm"
+"\epoc32\data\z\resource\qt\translations\nmregister_he.qm"	- "!:\resource\qt\translations\nmregister_he.qm"
+"\epoc32\data\z\resource\qt\translations\nmregister_hi.qm"	- "!:\resource\qt\translations\nmregister_hi.qm"
+"\epoc32\data\z\resource\qt\translations\nmregister_hr.qm"	- "!:\resource\qt\translations\nmregister_hr.qm"
+"\epoc32\data\z\resource\qt\translations\nmregister_hu.qm"	- "!:\resource\qt\translations\nmregister_hu.qm"
+"\epoc32\data\z\resource\qt\translations\nmregister_id.qm"	- "!:\resource\qt\translations\nmregister_id.qm"
+"\epoc32\data\z\resource\qt\translations\nmregister_is.qm"	- "!:\resource\qt\translations\nmregister_is.qm"
+"\epoc32\data\z\resource\qt\translations\nmregister_it.qm"	- "!:\resource\qt\translations\nmregister_it.qm"
+"\epoc32\data\z\resource\qt\translations\nmregister_ja.qm"	- "!:\resource\qt\translations\nmregister_ja.qm"
+"\epoc32\data\z\resource\qt\translations\nmregister_ko.qm"	- "!:\resource\qt\translations\nmregister_ko.qm"
+"\epoc32\data\z\resource\qt\translations\nmregister_lt.qm"	- "!:\resource\qt\translations\nmregister_lt.qm"
+"\epoc32\data\z\resource\qt\translations\nmregister_lv.qm"	- "!:\resource\qt\translations\nmregister_lv.qm"
+"\epoc32\data\z\resource\qt\translations\nmregister_ms.qm"	- "!:\resource\qt\translations\nmregister_ms.qm"
+"\epoc32\data\z\resource\qt\translations\nmregister_nb.qm"	- "!:\resource\qt\translations\nmregister_nb.qm"
+"\epoc32\data\z\resource\qt\translations\nmregister_nl.qm"	- "!:\resource\qt\translations\nmregister_nl.qm"
+"\epoc32\data\z\resource\qt\translations\nmregister_pl.qm"	- "!:\resource\qt\translations\nmregister_pl.qm"
+"\epoc32\data\z\resource\qt\translations\nmregister_pt.qm"	- "!:\resource\qt\translations\nmregister_pt.qm"
+"\epoc32\data\z\resource\qt\translations\nmregister_pt_BR.qm"	- "!:\resource\qt\translations\nmregister_pt_BR.qm"
+"\epoc32\data\z\resource\qt\translations\nmregister_ro.qm"	- "!:\resource\qt\translations\nmregister_ro.qm"
+"\epoc32\data\z\resource\qt\translations\nmregister_ru.qm"	- "!:\resource\qt\translations\nmregister_ru.qm"
+"\epoc32\data\z\resource\qt\translations\nmregister_sk.qm"	- "!:\resource\qt\translations\nmregister_sk.qm"
+"\epoc32\data\z\resource\qt\translations\nmregister_sl.qm"	- "!:\resource\qt\translations\nmregister_sl.qm"
+"\epoc32\data\z\resource\qt\translations\nmregister_sr.qm"	- "!:\resource\qt\translations\nmregister_sr.qm"
+"\epoc32\data\z\resource\qt\translations\nmregister_sv.qm"	- "!:\resource\qt\translations\nmregister_sv.qm"
+"\epoc32\data\z\resource\qt\translations\nmregister_th.qm"	- "!:\resource\qt\translations\nmregister_th.qm"
+"\epoc32\data\z\resource\qt\translations\nmregister_tl.qm"	- "!:\resource\qt\translations\nmregister_tl.qm"
+"\epoc32\data\z\resource\qt\translations\nmregister_tr.qm"	- "!:\resource\qt\translations\nmregister_tr.qm"
+"\epoc32\data\z\resource\qt\translations\nmregister_uk.qm"	- "!:\resource\qt\translations\nmregister_uk.qm"
+"\epoc32\data\z\resource\qt\translations\nmregister_ur.qm"	- "!:\resource\qt\translations\nmregister_ur.qm"
+"\epoc32\data\z\resource\qt\translations\nmregister_vi.qm"	- "!:\resource\qt\translations\nmregister_vi.qm"
+"\epoc32\data\z\resource\qt\translations\nmregister_zh.qm"	- "!:\resource\qt\translations\nmregister_zh.qm"
+"\epoc32\data\z\resource\qt\translations\nmregister_zh_HK.qm"	- "!:\resource\qt\translations\nmregister_zh_HK.qm"
+"\epoc32\data\z\resource\qt\translations\nmregister_zh_TW.qm"	- "!:\resource\qt\translations\nmregister_zh_TW.qm"
+
+
+;installer
+"\epoc32\release\armv5\urel\nmregisterinstaller.exe"				- "!:\sys\bin\nmregisterinstaller.exe", FR, RB, RW

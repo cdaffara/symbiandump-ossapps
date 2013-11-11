@@ -1,0 +1,43 @@
+EXPORTS
+	?StartDiscovery@RImagePrintClient@@QAEHAAVTDiscoveryGuardData@@IAAVTRequestStatus@@@Z @ 1 NONAME ; int RImagePrintClient::StartDiscovery(class TDiscoveryGuardData &, unsigned int, class TRequestStatus &)
+	?Guard@CJobGuard@@QAEHHAAV?$RPointerArray@VTDesC16@@@@AAVMPrintEventObserver@@@Z @ 2 NONAME ; int CJobGuard::Guard(int, class RPointerArray<class TDesC16> &, class MPrintEventObserver &)
+	?CancelStartDiscovery@RImagePrintClient@@QBEHXZ @ 3 NONAME ; int RImagePrintClient::CancelStartDiscovery(void) const
+	?GetJobStatus@RImagePrintClient@@QBEHXZ @ 4 NONAME ; int RImagePrintClient::GetJobStatus(void) const
+	?ContinueDiscovery@RImagePrintClient@@QAEHAAVTDiscoveryGuardData@@AAVTRequestStatus@@@Z @ 5 NONAME ; int RImagePrintClient::ContinueDiscovery(class TDiscoveryGuardData &, class TRequestStatus &)
+	?ReleaseEngine@RImagePrintClient@@QBEHXZ @ 6 NONAME ; int RImagePrintClient::ReleaseEngine(void) const
+	??1CIdleGuard@@UAE@XZ @ 7 NONAME ; CIdleGuard::~CIdleGuard(void)
+	?Guard@CDiscoveryGuard@@QAEHAAVMPrinterDiscoveryObserver@@I@Z @ 8 NONAME ; int CDiscoveryGuard::Guard(class MPrinterDiscoveryObserver &, unsigned int)
+	?ContinuePrintJob@RImagePrintClient@@QBEHXZ @ 9 NONAME ; int RImagePrintClient::ContinuePrintJob(void) const
+	?SetNumberOfCopies@RImagePrintClient@@QBEHABV?$RArray@H@@@Z @ 10 NONAME ; int RImagePrintClient::SetNumberOfCopies(class RArray<int> const &) const
+	?GetNumPreviewPages@RImagePrintClient@@QBEHXZ @ 11 NONAME ; int RImagePrintClient::GetNumPreviewPages(void) const
+	?ContinueCreateJob@RImagePrintClient@@QAEHAAVTJobGuardData@@AAVTRequestStatus@@@Z @ 12 NONAME ; int RImagePrintClient::ContinueCreateJob(class TJobGuardData &, class TRequestStatus &)
+	?CancelDiscovery@RImagePrintClient@@QBEHXZ @ 13 NONAME ; int RImagePrintClient::CancelDiscovery(void) const
+	?ConnectL@RImagePrintClient@@QAEHXZ @ 14 NONAME ; int RImagePrintClient::ConnectL(void)
+	?GetJobTemplateIcon@RImagePrintClient@@QBEHHAAH@Z @ 15 NONAME ; int RImagePrintClient::GetJobTemplateIcon(int, int &) const
+	?RemoveCachedPrinter@RImagePrintClient@@QBEHH@Z @ 16 NONAME ; int RImagePrintClient::RemoveCachedPrinter(int) const
+	?ReserveEngine@RImagePrintClient@@QBEHXZ @ 17 NONAME ; int RImagePrintClient::ReserveEngine(void) const
+	?SetForeground@RImagePrintClient@@QBEHH@Z @ 18 NONAME ; int RImagePrintClient::SetForeground(int) const
+	??1CDiscoveryGuard@@UAE@XZ @ 19 NONAME ; CDiscoveryGuard::~CDiscoveryGuard(void)
+	?Guard@CIdleGuard@@QAEXPAVMIdleObserver@@@Z @ 20 NONAME ; void CIdleGuard::Guard(class MIdleObserver *)
+	??1CJobGuard@@UAE@XZ @ 21 NONAME ; CJobGuard::~CJobGuard(void)
+	?IsPictBridgeMode@RImagePrintClient@@QBEHXZ @ 22 NONAME ; int RImagePrintClient::IsPictBridgeMode(void) const
+	?RegisterIdleObserver@RImagePrintClient@@QAEHAAVTIdleGuardData@@AAVTRequestStatus@@@Z @ 23 NONAME ; int RImagePrintClient::RegisterIdleObserver(class TIdleGuardData &, class TRequestStatus &)
+	??0RImagePrintClient@@QAE@XZ @ 24 NONAME ; RImagePrintClient::RImagePrintClient(void)
+	?CountConnections@RImagePrintClient@@QBEHAAH@Z @ 25 NONAME ; int RImagePrintClient::CountConnections(int &) const
+	?GetPrinterStatus@RImagePrintClient@@QBEHH@Z @ 26 NONAME ; int RImagePrintClient::GetPrinterStatus(int) const
+	?CancelRegisterIdleObserver@RImagePrintClient@@QBEHXZ @ 27 NONAME ; int RImagePrintClient::CancelRegisterIdleObserver(void) const
+	?GetJobSetting@RImagePrintClient@@QBEHHAAH@Z @ 28 NONAME ; int RImagePrintClient::GetJobSetting(int, int &) const
+	?CreateJob@RImagePrintClient@@QAEHHAAVTJobGuardData@@AAV?$RPointerArray@VTDesC16@@@@AAVTRequestStatus@@@Z @ 29 NONAME ; int RImagePrintClient::CreateJob(int, class TJobGuardData &, class RPointerArray<class TDesC16> &, class TRequestStatus &)
+	?NewL@CIdleGuard@@SAPAV1@AAVRImagePrintClient@@@Z @ 30 NONAME ; class CIdleGuard * CIdleGuard::NewL(class RImagePrintClient &)
+	?SupportedProtocols@RImagePrintClient@@QBEHXZ @ 31 NONAME ; int RImagePrintClient::SupportedProtocols(void) const
+	?Close@RImagePrintClient@@QAEXXZ @ 32 NONAME ; void RImagePrintClient::Close(void)
+	?CancelCreateJob@RImagePrintClient@@QBEHXZ @ 33 NONAME ; int RImagePrintClient::CancelCreateJob(void) const
+	?SubmitPrintJob@RImagePrintClient@@QBEHXZ @ 34 NONAME ; int RImagePrintClient::SubmitPrintJob(void) const
+	?GetNumPrintPages@RImagePrintClient@@QBEHXZ @ 35 NONAME ; int RImagePrintClient::GetNumPrintPages(void) const
+	?SetJobSetting@RImagePrintClient@@QBEHHHAAH@Z @ 36 NONAME ; int RImagePrintClient::SetJobSetting(int, int, int &) const
+	?GetPrinterCapability@RImagePrintClient@@QBEHHHAAVTPrintCapability@@@Z @ 37 NONAME ; int RImagePrintClient::GetPrinterCapability(int, int, class TPrintCapability &) const
+	?NewL@CJobGuard@@SAPAV1@AAVRImagePrintClient@@@Z @ 38 NONAME ; class CJobGuard * CJobGuard::NewL(class RImagePrintClient &)
+	?CancelPrintJob@RImagePrintClient@@QBEHXZ @ 39 NONAME ; int RImagePrintClient::CancelPrintJob(void) const
+	?GetPrinterCapabilityIDs@RImagePrintClient@@QBEHHAAV?$RArray@H@@@Z @ 40 NONAME ; int RImagePrintClient::GetPrinterCapabilityIDs(int, class RArray<int> &) const
+	?NewL@CDiscoveryGuard@@SAPAV1@AAVRImagePrintClient@@@Z @ 41 NONAME ; class CDiscoveryGuard * CDiscoveryGuard::NewL(class RImagePrintClient &)
+

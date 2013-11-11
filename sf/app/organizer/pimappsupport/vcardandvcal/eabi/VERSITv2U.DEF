@@ -1,0 +1,299 @@
+EXPORTS
+	_Z5Panic18TVersitParserPanic @ 1 NONAME
+	_ZN11CLineReader10ConstructLEv @ 2 NONAME
+	_ZN11CLineReader12AppendSpaceLEv @ 3 NONAME
+	_ZN11CLineReader12IsSpaceNextLEv @ 4 NONAME
+	_ZN11CLineReader13ExpandBufferLEi @ 5 NONAME
+	_ZN11CLineReader22AppendLineIfSpaceNextLEv @ 6 NONAME
+	_ZN11CLineReader4NewLER11RReadStream @ 7 NONAME
+	_ZN11CLineReader8ReadCharERi @ 8 NONAME
+	_ZN11CLineReader8ReservedEv @ 9 NONAME
+	_ZN11CLineReader9ReadLineLEiRi @ 10 NONAME
+	_ZN11CLineReaderD0Ev @ 11 NONAME
+	_ZN11CLineReaderD1Ev @ 12 NONAME
+	_ZN11CLineReaderD2Ev @ 13 NONAME
+	_ZN11VersitUtils10WrapLinesLER8CBufBasei @ 14 NONAME
+	_ZN11VersitUtils13ConArcEncodeLER11RReadStreamR8CBufBase4TUid @ 15 NONAME
+	_ZN11VersitUtils15StripWhiteSpaceER5TPtr8 @ 16 NONAME
+	_ZN11VersitUtils15StripWhiteSpaceER6TPtr16 @ 17 NONAME
+	_ZN11VersitUtils15UncodeToNarrowLERK7TDesC16R5TDes8RKN6Versit19TEncodingAndCharsetE @ 18 NONAME
+	_ZN11VersitUtils16AddEscapedStringER6TDes16RK7TDesC16N6Versit14TVersitCharSetE @ 19 NONAME
+	_ZN11VersitUtils16AddEscapedStringER6TDes16RK7TDesC16j @ 20 NONAME
+	_ZN11VersitUtils16EightBitEncodingEN6Versit14TVersitCharSetE @ 21 NONAME
+	_ZN11VersitUtils16EightBitEncodingEj @ 22 NONAME
+	_ZN11VersitUtils16IANAEncodingNameEN6Versit15TVersitEncodingE @ 23 NONAME
+	_ZN11VersitUtils16RequiresEncodingERK7TDesC16 @ 24 NONAME
+	_ZN11VersitUtils17ConArcEncodingUidEN6Versit15TVersitEncodingE @ 25 NONAME
+	_ZN11VersitUtils17RemoveEscapeCharsER5TPtr8 @ 26 NONAME
+	_ZN11VersitUtils17RemoveEscapeCharsER6TPtr16j @ 27 NONAME
+	_ZN11VersitUtils17RemoveEscapeCharsER7HBufC16 @ 28 NONAME
+	_ZN11VersitUtils17RemoveEscapeCharsER7HBufC16j @ 29 NONAME
+	_ZN11VersitUtils18CharConvCharSetUidEN6Versit14TVersitCharSetE @ 30 NONAME
+	_ZN11VersitUtils20IANACharacterSetNameEN6Versit14TVersitCharSetE @ 31 NONAME
+	_ZN11VersitUtils20IsNoneWhiteSpaceCharERK6TDesC8 @ 32 NONAME
+	_ZN11VersitUtils24IsNoneWhiteSpaceWideCharERK7TDesC16 @ 33 NONAME
+	_ZN11VersitUtils24ParseForArrayPropertiesLE6TPtr16j @ 34 NONAME
+	_ZN11VersitUtils26CheckAndIgnoreCustomErrorLEi @ 35 NONAME
+	_ZN11VersitUtils30FreeAdditionalPropertyStorageLERK15CParserProperty @ 36 NONAME
+	_ZN11VersitUtils34AllocateAdditionalPropertyStorageLER14CVersitTlsDataR15CParserPropertyR6TPtr16j @ 37 NONAME
+	_ZN11VersitUtils35AdditionalPropertyValueFromStorageLERK15CParserProperty @ 38 NONAME
+	_ZN11VersitUtils40DescriptorContainsOnlySevenBitCharactersERK7TDesC16 @ 39 NONAME
+	_ZN12CParserParam4NewLERK6TDesC8RK7TDesC16 @ 40 NONAME
+	_ZN12CParserParam4NewLERK6TDesC8S2_ @ 41 NONAME
+	_ZN12CParserParam9SetValueLEP6HBufC8 @ 42 NONAME
+	_ZN12CParserParam9SetValueLERK6TDesC8 @ 43 NONAME
+	_ZN12CParserParamD0Ev @ 44 NONAME
+	_ZN12CParserParamD1Ev @ 45 NONAME
+	_ZN12CParserParamD2Ev @ 46 NONAME
+	_ZN13CVersitParser10AddEntityLEPS_ @ 47 NONAME
+	_ZN13CVersitParser10AppendEndLEv @ 48 NONAME
+	_ZN13CVersitParser10ConstructLEv @ 49 NONAME
+	_ZN13CVersitParser11MakeEntityLEiP7HBufC16 @ 50 NONAME
+	_ZN13CVersitParser11ParseBeginLEv @ 51 NONAME
+	_ZN13CVersitParser11ParseParamLEP9CArrayPtrI12CParserParamE5TPtr8 @ 52 NONAME
+	_ZN13CVersitParser12AddPropertyLEP15CParserPropertyi @ 53 NONAME
+	_ZN13CVersitParser12AppendBeginLEv @ 54 NONAME
+	_ZN13CVersitParser12ExternalizeLER12RWriteStream @ 55 NONAME
+	_ZN13CVersitParser12ExternalizeLER5RFile @ 56 NONAME
+	_ZN13CVersitParser12InternalizeLEP7HBufC16P11CLineReader @ 57 NONAME
+	_ZN13CVersitParser12InternalizeLER11RReadStream @ 58 NONAME
+	_ZN13CVersitParser12InternalizeLER5RFileRi @ 59 NONAME
+	_ZN13CVersitParser12IsValidLabelERK7TDesC16Ri @ 60 NONAME
+	_ZN13CVersitParser12ParseEntityLEv @ 61 NONAME
+	_ZN13CVersitParser13MakePropertyLER5TPtr8i @ 62 NONAME
+	_ZN13CVersitParser13SetAutoDetectEiPK9CArrayFixIN25CCnvCharacterSetConverter13SCharacterSetEE @ 63 NONAME
+	_ZN13CVersitParser13SetLineCodingEN6Versit14TVersitCharSetENS0_15TVersitEncodingE @ 64 NONAME
+	_ZN13CVersitParser14DoAddPropertyLEP15CParserProperty @ 65 NONAME
+	_ZN13CVersitParser14FindFirstFieldER6TPtr16S1_i @ 66 NONAME
+	_ZN13CVersitParser14ParsePropertyLEv @ 67 NONAME
+	_ZN13CVersitParser14SetEntityNameLERK7TDesC16 @ 68 NONAME
+	_ZN13CVersitParser15ArrayOfEntitiesEi @ 69 NONAME
+	_ZN13CVersitParser15SetLineEncodingEN6Versit15TVersitEncodingE @ 70 NONAME
+	_ZN13CVersitParser15SetLineEncodingEj @ 71 NONAME
+	_ZN13CVersitParser16ParsePropertiesLEv @ 72 NONAME
+	_ZN13CVersitParser17ArrayOfPropertiesEi @ 73 NONAME
+	_ZN13CVersitParser17SetDefaultCharSetEN6Versit14TVersitCharSetE @ 74 NONAME
+	_ZN13CVersitParser18MakePropertyValueLERK4TUidRP7HBufC16 @ 75 NONAME
+	_ZN13CVersitParser18SetDefaultEncodingEN6Versit15TVersitEncodingE @ 76 NONAME
+	_ZN13CVersitParser19GetPropertyParamsLCE5TPtr8 @ 77 NONAME
+	_ZN13CVersitParser19ReadMultiLineValueLER5TPtr8ii @ 78 NONAME
+	_ZN13CVersitParser19SetDefaultCharSetIdEj @ 79 NONAME
+	_ZN13CVersitParser19SetLineCharacterSetEN6Versit14TVersitCharSetE @ 80 NONAME
+	_ZN13CVersitParser20DecodePropertyValueLERK6TDesC8 @ 81 NONAME
+	_ZN13CVersitParser20DecodePropertyValueLERK6TDesC8RK4TUid @ 82 NONAME
+	_ZN13CVersitParser21IsValidParameterValueERiRK7TDesC16 @ 83 NONAME
+	_ZN13CVersitParser21SetCharacterConverterERN6Versit19TEncodingAndCharsetE @ 84 NONAME
+	_ZN13CVersitParser21SetLineCharacterSetIdEj @ 85 NONAME
+	_ZN13CVersitParser23AnalysesEncodingCharsetEP9CArrayPtrI12CParserParamE @ 86 NONAME
+	_ZN13CVersitParser24ConvertFromUnicodeToISOLER5TDes8RK7TDesC16P25CCnvCharacterSetConverter @ 87 NONAME
+	_ZN13CVersitParser24ConvertToUnicodeFromISOLER6TDes16RK6TDesC8j @ 88 NONAME
+	_ZN13CVersitParser24SaveBinaryValuesToFilesLEiRK7TDesC16 @ 89 NONAME
+	_ZN13CVersitParser24SaveBinaryValuesToFilesLEiRK7TDesC16R3RFs @ 90 NONAME
+	_ZN13CVersitParser25ReadLineAndDecodeParamsLCERiS0_ @ 91 NONAME
+	_ZN13CVersitParser26LoadBinaryValuesFromFilesLER3RFs @ 92 NONAME
+	_ZN13CVersitParser26LoadBinaryValuesFromFilesLEv @ 93 NONAME
+	_ZN13CVersitParser26MakePropertyValueDaylightLE6TPtr16 @ 94 NONAME
+	_ZN13CVersitParser28MakePropertyValueCDesCArrayLE6TPtr16 @ 95 NONAME
+	_ZN13CVersitParser28ResetAndDestroyArrayOfParamsEPv @ 96 NONAME
+	_ZN13CVersitParser30ResetAndDestroyArrayOfEntitiesEPv @ 97 NONAME
+	_ZN13CVersitParser31MakePropertyValueMultiDateTimeLE6TPtr16 @ 98 NONAME
+	_ZN13CVersitParser31ResetAndDestroyArrayOfDateTimesEPv @ 99 NONAME
+	_ZN13CVersitParser32ResetAndDestroyArrayOfPropertiesEPv @ 100 NONAME
+	_ZN13CVersitParser33RestoreLineCodingDetailsToDefaultEv @ 101 NONAME
+	_ZN13CVersitParser3ValERK7TDesC16Ri @ 102 NONAME
+	_ZN13CVersitParser41AdjustAllPropertyDateTimesToMachineLocalLEv @ 103 NONAME
+	_ZN13CVersitParser42ConvertAllPropertyDateTimesToMachineLocalLERK20TTimeIntervalSecondsPK15CVersitDaylight @ 104 NONAME
+	_ZN13CVersitParser7EntityLERK7TDesC16i @ 105 NONAME
+	_ZN13CVersitParser9ParseEndLEv @ 106 NONAME
+	_ZN13CVersitParser9Reserved1Ev @ 107 NONAME
+	_ZN13CVersitParser9Reserved2Ev @ 108 NONAME
+	_ZN13CVersitParserC1Ej @ 109 NONAME
+	_ZN13CVersitParserC2Ej @ 110 NONAME
+	_ZN13CVersitParserD0Ev @ 111 NONAME
+	_ZN13CVersitParserD1Ev @ 112 NONAME
+	_ZN13CVersitParserD2Ev @ 113 NONAME
+	_ZN13MVersitPlugIn12GetInterfaceE4TUidRPv @ 114 NONAME
+	_ZN13MVersitPlugIn9Reserved2Ev @ 115 NONAME
+	_ZN14CVersitTlsData14VersitTlsDataLEv @ 116 NONAME
+	_ZN14CVersitTlsData18CloseVersitTlsDataEv @ 117 NONAME
+	_ZN14CVersitTlsData18VersitTlsDataCloseEv @ 118 NONAME
+	_ZN15CParserProperty11DeleteParamER6TDesC8 @ 119 NONAME
+	_ZN15CParserProperty12ExternalizeLER12RWriteStreamP13CVersitParser @ 120 NONAME
+	_ZN15CParserProperty14ConstructSelfLERS_RK6TDesC8 @ 121 NONAME
+	_ZN15CParserProperty24SaveBinaryValuesToFilesLEiRK7TDesC16R3RFs @ 122 NONAME
+	_ZN15CParserProperty26LoadBinaryValuesFromFilesLER3RFs @ 123 NONAME
+	_ZN15CParserProperty4NewLER20CParserPropertyValueRK6TDesC8P9CArrayPtrI12CParserParamE @ 124 NONAME
+	_ZN15CParserProperty8ReservedEv @ 125 NONAME
+	_ZN15CParserProperty8SetNameLERK6TDesC8 @ 126 NONAME
+	_ZN15CParserProperty9AddParamLEP12CParserParam @ 127 NONAME
+	_ZN15CParserPropertyC1EP9CArrayPtrI12CParserParamE @ 128 NONAME
+	_ZN15CParserPropertyC1ER20CParserPropertyValueP9CArrayPtrI12CParserParamE @ 129 NONAME
+	_ZN15CParserPropertyC2EP9CArrayPtrI12CParserParamE @ 130 NONAME
+	_ZN15CParserPropertyC2ER20CParserPropertyValueP9CArrayPtrI12CParserParamE @ 131 NONAME
+	_ZN15CParserPropertyD0Ev @ 132 NONAME
+	_ZN15CParserPropertyD1Ev @ 133 NONAME
+	_ZN15CParserPropertyD2Ev @ 134 NONAME
+	_ZN15CVersitDaylight4NewLEi20TTimeIntervalSecondsP15TVersitDateTimeS2_RK7TDesC16S5_ @ 135 NONAME
+	_ZN15CVersitDaylightD0Ev @ 136 NONAME
+	_ZN15CVersitDaylightD1Ev @ 137 NONAME
+	_ZN15CVersitDaylightD2Ev @ 138 NONAME
+	_ZN15MVersitObserver9Reserved1Ev @ 139 NONAME
+	_ZN15MVersitObserver9Reserved2Ev @ 140 NONAME
+	_ZN15TVersitDateTimeC1ERK9TDateTimeNS_13TRelativeTimeE @ 141 NONAME
+	_ZN15TVersitDateTimeC2ERK9TDateTimeNS_13TRelativeTimeE @ 142 NONAME
+	_ZN19CVersitUnicodeUtils16CreateConverterLEv @ 143 NONAME
+	_ZN19CVersitUnicodeUtils6WidenLERK6TDesC8 @ 144 NONAME
+	_ZN19CVersitUnicodeUtils7NarrowLERK7TDesC16 @ 145 NONAME
+	_ZN19CVersitUnicodeUtils7WidenLCERK6TDesC8 @ 146 NONAME
+	_ZN19CVersitUnicodeUtils8NarrowLCERK7TDesC16 @ 147 NONAME
+	_ZN19CVersitUnicodeUtilsD0Ev @ 148 NONAME
+	_ZN19CVersitUnicodeUtilsD1Ev @ 149 NONAME
+	_ZN19CVersitUnicodeUtilsD2Ev @ 150 NONAME
+	_ZN20CParserPropertyValue29IsAsciiCharacterSetSufficientEv @ 151 NONAME
+	_ZN20CParserPropertyValue6AppendER6TDes16R6TDesC8 @ 152 NONAME
+	_ZN20CParserPropertyValueC2ERK4TUid @ 153 NONAME
+	_ZN23CParserPropertyValueInt12ExternalizeLER12RWriteStreamRKN6Versit19TEncodingAndCharsetEi @ 154 NONAME
+	_ZN23CParserPropertyValueIntC1Ei @ 155 NONAME
+	_ZN23CParserPropertyValueIntC2Ei @ 156 NONAME
+	_ZN24CParserPropertyValueDate12ExternalizeLER12RWriteStreamRKN6Versit19TEncodingAndCharsetEi @ 157 NONAME
+	_ZN24CParserPropertyValueDate25ConvertAllDateTimesToUTCLERK20TTimeIntervalSecondsPK15CVersitDaylight @ 158 NONAME
+	_ZN24CParserPropertyValueDate37ConvertAllUTCDateTimesToMachineLocalLERK20TTimeIntervalSeconds @ 159 NONAME
+	_ZN24CParserPropertyValueDateC1EP15TVersitDateTime @ 160 NONAME
+	_ZN24CParserPropertyValueDateC2EP15TVersitDateTime @ 161 NONAME
+	_ZN24CParserPropertyValueDateD0Ev @ 162 NONAME
+	_ZN24CParserPropertyValueDateD1Ev @ 163 NONAME
+	_ZN24CParserPropertyValueDateD2Ev @ 164 NONAME
+	_ZN24CParserTimePropertyValue15ConvertDateTimeEP9TDateTimeRK20TTimeIntervalSecondsPK15CVersitDaylight @ 165 NONAME
+	_ZN24CParserTimePropertyValueC2ERK4TUid @ 166 NONAME
+	_ZN25CParserPropertyValueHBufC12ExternalizeLER12RWriteStreamRKN6Versit19TEncodingAndCharsetEi @ 167 NONAME
+	_ZN25CParserPropertyValueHBufC18TakeValueOwnershipEv @ 168 NONAME
+	_ZN25CParserPropertyValueHBufC29IsAsciiCharacterSetSufficientEv @ 169 NONAME
+	_ZN25CParserPropertyValueHBufC4NewLERK7TDesC16 @ 170 NONAME
+	_ZN25CParserPropertyValueHBufCC1EP7HBufC16 @ 171 NONAME
+	_ZN25CParserPropertyValueHBufCC2EP7HBufC16 @ 172 NONAME
+	_ZN25CParserPropertyValueHBufCD0Ev @ 173 NONAME
+	_ZN25CParserPropertyValueHBufCD1Ev @ 174 NONAME
+	_ZN25CParserPropertyValueHBufCD2Ev @ 175 NONAME
+	_ZN26CParserPropertyValueBinary12ExternalizeLER12RWriteStreamRKN6Versit19TEncodingAndCharsetEi @ 176 NONAME
+	_ZN26CParserPropertyValueBinary4NewLERK6TDesC8 @ 177 NONAME
+	_ZN26CParserPropertyValueBinary5NewLCERK6TDesC8 @ 178 NONAME
+	_ZN26CParserPropertyValueBinaryD0Ev @ 179 NONAME
+	_ZN26CParserPropertyValueBinaryD1Ev @ 180 NONAME
+	_ZN26CParserPropertyValueBinaryD2Ev @ 181 NONAME
+	_ZN28CParserPropertyValueDateTime12ExternalizeLER12RWriteStreamRKN6Versit19TEncodingAndCharsetEi @ 182 NONAME
+	_ZN28CParserPropertyValueDateTime25ConvertAllDateTimesToUTCLERK20TTimeIntervalSecondsPK15CVersitDaylight @ 183 NONAME
+	_ZN28CParserPropertyValueDateTime37ConvertAllUTCDateTimesToMachineLocalLERK20TTimeIntervalSeconds @ 184 NONAME
+	_ZN28CParserPropertyValueDateTimeC1EP15TVersitDateTime @ 185 NONAME
+	_ZN28CParserPropertyValueDateTimeC2EP15TVersitDateTime @ 186 NONAME
+	_ZN28CParserPropertyValueDateTimeD0Ev @ 187 NONAME
+	_ZN28CParserPropertyValueDateTimeD1Ev @ 188 NONAME
+	_ZN28CParserPropertyValueDateTimeD2Ev @ 189 NONAME
+	_ZN28CParserPropertyValueDaylight12ExternalizeLER12RWriteStreamRKN6Versit19TEncodingAndCharsetEi @ 190 NONAME
+	_ZN28CParserPropertyValueDaylight25ConvertAllDateTimesToUTCLERK20TTimeIntervalSecondsPK15CVersitDaylight @ 191 NONAME
+	_ZN28CParserPropertyValueDaylight37ConvertAllUTCDateTimesToMachineLocalLERK20TTimeIntervalSeconds @ 192 NONAME
+	_ZN28CParserPropertyValueDaylightC1EP15CVersitDaylight @ 193 NONAME
+	_ZN28CParserPropertyValueDaylightC2EP15CVersitDaylight @ 194 NONAME
+	_ZN28CParserPropertyValueDaylightD0Ev @ 195 NONAME
+	_ZN28CParserPropertyValueDaylightD1Ev @ 196 NONAME
+	_ZN28CParserPropertyValueDaylightD2Ev @ 197 NONAME
+	_ZN28CParserPropertyValueTimeZone12ExternalizeLER12RWriteStreamRKN6Versit19TEncodingAndCharsetEi @ 198 NONAME
+	_ZN28CParserPropertyValueTimeZoneC1E20TTimeIntervalSeconds @ 199 NONAME
+	_ZN28CParserPropertyValueTimeZoneC2E20TTimeIntervalSeconds @ 200 NONAME
+	_ZN30CParserPropertyValueCDesCArray12ExternalizeLER12RWriteStreamRKN6Versit19TEncodingAndCharsetEi @ 201 NONAME
+	_ZN30CParserPropertyValueCDesCArray29IsAsciiCharacterSetSufficientEv @ 202 NONAME
+	_ZN30CParserPropertyValueCDesCArrayC1EP12CDesC16Array @ 203 NONAME
+	_ZN30CParserPropertyValueCDesCArrayC2EP12CDesC16Array @ 204 NONAME
+	_ZN30CParserPropertyValueCDesCArrayD0Ev @ 205 NONAME
+	_ZN30CParserPropertyValueCDesCArrayD1Ev @ 206 NONAME
+	_ZN30CParserPropertyValueCDesCArrayD2Ev @ 207 NONAME
+	_ZN33CParserPropertyValueMultiDateTime12ExternalizeLER12RWriteStreamRKN6Versit19TEncodingAndCharsetEi @ 208 NONAME
+	_ZN33CParserPropertyValueMultiDateTime25ConvertAllDateTimesToUTCLERK20TTimeIntervalSecondsPK15CVersitDaylight @ 209 NONAME
+	_ZN33CParserPropertyValueMultiDateTime37ConvertAllUTCDateTimesToMachineLocalLERK20TTimeIntervalSeconds @ 210 NONAME
+	_ZN33CParserPropertyValueMultiDateTimeC1EP9CArrayPtrI15TVersitDateTimeE @ 211 NONAME
+	_ZN33CParserPropertyValueMultiDateTimeC2EP9CArrayPtrI15TVersitDateTimeE @ 212 NONAME
+	_ZN33CParserPropertyValueMultiDateTimeD0Ev @ 213 NONAME
+	_ZN33CParserPropertyValueMultiDateTimeD1Ev @ 214 NONAME
+	_ZN33CParserPropertyValueMultiDateTimeD2Ev @ 215 NONAME
+	_ZNK12CParserParam12ExternalizeLER12RWriteStream @ 216 NONAME
+	_ZNK12CParserParam4NameEv @ 217 NONAME
+	_ZNK12CParserParam5ValueEv @ 218 NONAME
+	_ZNK12CParserParam6ValueLEv @ 219 NONAME
+	_ZNK13CVersitParser10EntityNameEv @ 220 NONAME
+	_ZNK13CVersitParser10GetNumberLERK7TDesC16Ri @ 221 NONAME
+	_ZNK13CVersitParser11LineCharSetEv @ 222 NONAME
+	_ZNK13CVersitParser12LineEncodingEv @ 223 NONAME
+	_ZNK13CVersitParser13LineCharSetIdEv @ 224 NONAME
+	_ZNK13CVersitParser14DefaultCharSetEv @ 225 NONAME
+	_ZNK13CVersitParser14LineEncodingIdEv @ 226 NONAME
+	_ZNK13CVersitParser14RecognizeTokenERK6TDesC8 @ 227 NONAME
+	_ZNK13CVersitParser15DecodeDateTimeLER6TDes16 @ 228 NONAME
+	_ZNK13CVersitParser15DecodeTimeZoneLERK7TDesC16 @ 229 NONAME
+	_ZNK13CVersitParser15DefaultEncodingEv @ 230 NONAME
+	_ZNK13CVersitParser16DefaultCharSetIdEv @ 231 NONAME
+	_ZNK13CVersitParser17DecodeTimePeriodLERK7TDesC16 @ 232 NONAME
+	_ZNK13CVersitParser19RecognizeEntityNameEv @ 233 NONAME
+	_ZNK13CVersitParser9PropertyLERK6TDesC8RK4TUidi @ 234 NONAME
+	_ZNK15CParserProperty17SupportsInterfaceERK4TUid @ 235 NONAME
+	_ZNK15CParserProperty4NameEv @ 236 NONAME
+	_ZNK15CParserProperty5ParamERK6TDesC8 @ 237 NONAME
+	_ZNK20CParserPropertyValue17SupportsInterfaceERK4TUid @ 238 NONAME
+	_ZNK20CParserPropertyValue26FoldAndWriteValueToStreamLER12RWriteStreamRK7TDesC16RKN6Versit19TEncodingAndCharsetERi @ 239 NONAME
+	_ZNK20CParserPropertyValue32FoldEncodeAndWriteValueToStreamLER12RWriteStreamPK12CDesC16ArrayRKN6Versit19TEncodingAndCharsetERi @ 240 NONAME
+	_ZNK20CParserPropertyValue32FoldEncodeAndWriteValueToStreamLER12RWriteStreamRK7TDesC16RKN6Versit19TEncodingAndCharsetERi @ 241 NONAME
+	_ZNK20CParserPropertyValue7EncodeLEP8CBufBaseRK6TDesC8RK4TUid @ 242 NONAME
+	_ZNK24CParserTimePropertyValue17EncodeTimePeriodLER5TDes8RK5TTime @ 243 NONAME
+	_ZNK24CParserTimePropertyValue17SupportsInterfaceERK4TUid @ 244 NONAME
+	_ZNK24CParserTimePropertyValue21EncodeVersitDateTimeLER5TDes8RK15TVersitDateTimei @ 245 NONAME
+	_ZNK25CParserPropertyValueHBufC22TreatAsArrayPropertyLCERK15CParserProperty @ 246 NONAME
+	_ZNK25CParserPropertyValueHBufC5ValueEv @ 247 NONAME
+	_ZNK26CParserPropertyValueBinary5ValueEv @ 248 NONAME
+	_ZNK30CParserPropertyValueCDesCArray9IsPresentERK7TDesC16 @ 249 NONAME
+	_ZTI11CLineReader @ 250 NONAME ; #<TI>#
+	_ZTI13CVersitParser @ 251 NONAME ; #<TI>#
+	_ZTI13MVersitPlugIn @ 252 NONAME ; #<TI>#
+	_ZTI15CParserProperty @ 253 NONAME ; #<TI>#
+	_ZTI15MVersitObserver @ 254 NONAME ; #<TI>#
+	_ZTI20CParserPropertyValue @ 255 NONAME ; #<TI>#
+	_ZTI23CParserPropertyValueInt @ 256 NONAME ; #<TI>#
+	_ZTI24CParserPropertyValueDate @ 257 NONAME ; #<TI>#
+	_ZTI24CParserTimePropertyValue @ 258 NONAME ; #<TI>#
+	_ZTI25CParserPropertyValueHBufC @ 259 NONAME ; #<TI>#
+	_ZTI28CParserPropertyValueDateTime @ 260 NONAME ; #<TI>#
+	_ZTI28CParserPropertyValueDaylight @ 261 NONAME ; #<TI>#
+	_ZTI28CParserPropertyValueTimeZone @ 262 NONAME ; #<TI>#
+	_ZTI30CParserPropertyValueCDesCArray @ 263 NONAME ; #<TI>#
+	_ZTI33CParserPropertyValueMultiDateTime @ 264 NONAME ; #<TI>#
+	_ZTV11CLineReader @ 265 NONAME ; #<VT>#
+	_ZTV13CVersitParser @ 266 NONAME ; #<VT>#
+	_ZTV13MVersitPlugIn @ 267 NONAME ; #<VT>#
+	_ZTV15CParserProperty @ 268 NONAME ; #<VT>#
+	_ZTV15MVersitObserver @ 269 NONAME ; #<VT>#
+	_ZTV20CParserPropertyValue @ 270 NONAME ; #<VT>#
+	_ZTV23CParserPropertyValueInt @ 271 NONAME ; #<VT>#
+	_ZTV24CParserPropertyValueDate @ 272 NONAME ; #<VT>#
+	_ZTV24CParserTimePropertyValue @ 273 NONAME ; #<VT>#
+	_ZTV25CParserPropertyValueHBufC @ 274 NONAME ; #<VT>#
+	_ZTV28CParserPropertyValueDateTime @ 275 NONAME ; #<VT>#
+	_ZTV28CParserPropertyValueDaylight @ 276 NONAME ; #<VT>#
+	_ZTV28CParserPropertyValueTimeZone @ 277 NONAME ; #<VT>#
+	_ZTV30CParserPropertyValueCDesCArray @ 278 NONAME ; #<VT>#
+	_ZTV33CParserPropertyValueMultiDateTime @ 279 NONAME ; #<VT>#
+	_ZTI12CParserParam @ 280 NONAME ; #<TI>#
+	_ZTI14CVersitTlsData @ 281 NONAME ; #<TI>#
+	_ZTI15CVersitDaylight @ 282 NONAME ; #<TI>#
+	_ZTI19CVersitUnicodeUtils @ 283 NONAME ; #<TI>#
+	_ZTI24CVersitAdditionalStorage @ 284 NONAME ; #<TI>#
+	_ZTI26CParserPropertyValueBinary @ 285 NONAME ; #<TI>#
+	_ZTV12CParserParam @ 286 NONAME ; #<VT>#
+	_ZTV14CVersitTlsData @ 287 NONAME ; #<VT>#
+	_ZTV15CVersitDaylight @ 288 NONAME ; #<VT>#
+	_ZTV19CVersitUnicodeUtils @ 289 NONAME ; #<VT>#
+	_ZTV24CVersitAdditionalStorage @ 290 NONAME ; #<VT>#
+	_ZTV26CParserPropertyValueBinary @ 291 NONAME ; #<VT>#
+	_ZN13CVersitParser18FindRemainingFieldER6TPtr16S1_ @ 292 NONAME
+	_ZNK12CParserParam12ExternalizeLER12RWriteStreamRiP13CVersitParser @ 293 NONAME
+	_ZNK15CParserProperty10ParamArrayEv @ 294 NONAME
+	_ZN30CParserPropertyValueBinaryFile4NewLERK5RFile @ 295 NONAME
+	_ZN30CParserPropertyValueBinaryFileD0Ev @ 296 NONAME
+	_ZN30CParserPropertyValueBinaryFileD1Ev @ 297 NONAME
+	_ZN30CParserPropertyValueBinaryFileD2Ev @ 298 NONAME

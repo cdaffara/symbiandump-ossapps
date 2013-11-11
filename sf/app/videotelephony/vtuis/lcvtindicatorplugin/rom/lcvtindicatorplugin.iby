@@ -1,0 +1,29 @@
+/*
+* Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*
+*/
+
+#ifndef __LCVTINDICATORPLUGIN_IBY__
+#define __LCVTINDICATORPLUGIN_IBY__
+ 
+#include <data_caging_paths_for_iby.hrh>
+
+file=ABI_DIR\UREL\lcvtindicatorplugin.dll               SHARED_LIB_DIR\lcvtindicatorplugin.dll 
+data=\epoc32\data\z\resource\plugins\indicators\lcvtindicatorplugin.qtplugin   RESOURCE_FILES_DIR\plugins\indicators\lcvtindicatorplugin.qtplugin
+
+// Enabler for eclipsing ROM binaries
+data=ZSYSTEM\install\lcvtindicatorplugin_stub.sis           system\install\lcvtindicatorplugin_stub.sis
+
+#endif

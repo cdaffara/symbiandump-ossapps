@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="0.9">
+    <object name="qtl_dialog_softkey_2_left" type="HbAction">
+        <string name="role" value="HbDialog:primaryAction"/>
+        <string name="role" value="HbDialog:primaryAction"/>
+        <string name="text" value="OK"/>
+    </object>
+    <object name="qtl_dialog_softkey_2_right" type="HbAction">
+        <string name="role" value="HbDialog:secondaryAction"/>
+        <string name="role" value="HbDialog:secondaryAction"/>
+        <string name="text" value="Cancel"/>
+    </object>
+    <widget name="dialog" type="HbDialog">
+        <widget name="qtl_dialog_pri5_large_graphic" role="HbDialog:contentWidget" type="HbWidget">
+            <widget name="icon" type="HbLabel">
+                <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+                <icon iconName="note_warning" name="icon"/>
+                <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+                <sizehint height="var(hb-param-graphic-size-primary-large)" type="FIXED" width="var(hb-param-graphic-size-primary-large)"/>
+                <bool name="visible" value="TRUE"/>
+            </widget>
+            <widget name="qtl_dialog_pri5" type="HbLabel">
+                <enums name="textWrapping" value="TextWordWrap"/>
+                <bool name="visible" value="TRUE"/>
+                <string name="plainText" value=""/>
+                <fontspec name="fontSpec" role="Primary" textheight="var(hb-param-text-height-primary)"/>
+            </widget>
+            <real name="z" value="0"/>
+            <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+            <layout orientation="Horizontal" spacing="var(hb-param-margin-gene-popup)" type="linear">
+                <contentsmargins bottom="var(hb-param-margin-gene-popup)" left="var(hb-param-margin-gene-popup)" right="var(hb-param-margin-gene-popup)" top="var(hb-param-margin-gene-popup)"/>
+                <linearitem itemname="icon"/>
+                <linearitem itemname="qtl_dialog_pri5"/>
+            </layout>
+        </widget>
+        <sizehint height="23.28358un" type="PREFERRED" width="50.5un"/>
+    </widget>
+    <metadata activeUIState="Common ui state" display="NHD portrait" unit="un">
+        <resource location="TemplateIcons.qrc"/>
+        <uistate name="Common ui state" sections="#common"/>
+    </metadata>
+</hbdocument>

@@ -1,0 +1,62 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: 
+*
+*/
+
+
+CAPABILITY   CAP_GENERAL_DLL -AllFiles -DRM
+#include "../../../../harvesterplugins/inc/s60performance.h"
+TARGET        cpiximageplugin.dll
+TARGETTYPE    PLUGIN
+
+// ECom Dll recognition UID followed by the unique UID for this dll
+UID 0x10009D8D 0x20029ABB
+EPOCSTACKSIZE     0x5000
+EPOCHEAPSIZE      0x50000 0x2000000 // From about 65KB to about 32 MB
+
+SOURCEPATH    ../src
+SOURCE        cpixmediaimagedoc.cpp
+SOURCE        imageplugin.cpp
+SOURCE        tproxy.cpp
+
+USERINCLUDE   ../inc
+USERINCLUDE   ../../mediautils/inc ../traces
+SYSTEMINCLUDE /epoc32/include/ecom
+APP_LAYER_SYSTEMINCLUDE
+
+SOURCEPATH    ../data
+start RESOURCE 20029abb.rss
+target  cpiximageplugin.rsc
+end
+
+LIBRARY       euser.lib
+LIBRARY       ecom.lib
+LIBRARY       efsrv.lib
+STATICLIBRARY cpixmediautils.lib //Media utility library
+LIBRARY       platformenv.lib // Path info
+LIBRARY       cpixharvesterplugininterface.lib
+LIBRARY       cpixsearchclient.lib
+LIBRARY       mdccommon.lib           // mds
+LIBRARY       mdeclient.lib           // mds
+LIBRARY       edbms.lib
+LIBRARY       estor.lib
+LIBRARY       bafl.lib
+
+// For logging
+LIBRARY 	  flogger.lib 
+
+//Enable this macro to get harvester performance data
+//MACRO __PERFORMANCE_DATA
+EXPORTUNFROZEN

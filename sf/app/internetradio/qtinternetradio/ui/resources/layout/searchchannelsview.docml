@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="1.0">     
+    <object name="exit_act" type="HbAction">
+        <string locid="txt_common_opt_exit" name="text"/>
+    </object>
+    <widget name="ext-IRSearchChannelsView" type="HbView">
+        <widget name="content" role="HbView:widget" type="HbWidget">
+            <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+            <widget name="headingText" type="HbGroupBox">
+                <sizepolicy horizontalPolicy="Expanding" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+                <sizehint height="expr(var(hb-param-text-height-secondary)+2*var(hb-param-margin-gene-middle-vertical))" type="PREFERRED"/>
+                <fontspec name="fontSpec" role="Secondary" textheight="var(hb-param-text-height-secondary)"/>
+            </widget>
+            <widget name="search_listview" type="HbListView">                 
+            </widget>
+            <widget name="search_panel" type="HbSearchPanel">
+                <bool name="progressive" value="FALSE"/>
+            </widget>
+            <layout orientation="Vertical" type="linear">
+                <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+                <linearitem itemname="headingText" spacing="0un"/>
+                <linearitem itemname="search_listview" spacing="0un"/>                
+                <linearitem itemname="search_panel" spacing="0un"/>
+            </layout>
+        </widget> 
+        <widget name="view_menu" role="HbView:menu" type="HbMenu">            
+            <ref object="exit_act" role="HbMenu:addAction"/>
+        </widget>
+        <string locid="txt_irad_title_internet_radio" name="title"/>
+    </widget>
+    
+    <metadata activeUIState="ui_state_listview" display="NHD portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>       
+    </metadata>
+</hbdocument>

@@ -1,0 +1,58 @@
+The NPObject contains following important methods: 
+--------------------------------------------------
+
+/**
+ * Creates object for NP plugin npp of NPClass aClass. 
+ */
+NPObject* NPN_CreateObject(NPP npp, NPClass* class);
+
+/**
+ * Increases reference count for object
+ */
+NPObject* NPN_RetainObject(NPObject* object);
+
+/**
+ * Decreases reference count for object
+ */
+NPObject* NPN_RetainObject(NPObject* object);
+
+/**
+ * Calls object method
+ */
+... NPN_Invoke(...);
+ 
+ 
+NOTE:
+-----
+
+ - In the plugin architecture, objects have two forms 
+   - The NP 'wrapped' form of NPObject or e.g. CCPixNPSearcherObject
+   - And the nonwrapped form e.g. CCPixNPSearcher or MCPixNPSearcher
+ - Only the former form can be memory managed (Reference count set up and down) 
+   - This means that if object wishes to maintain references to an NP object, 
+     it needs to have access to the wrapped form. 
+ - Wrapped form vs. Nonwrapped form
+   - Wrapped form is more powerful, holding pointer also to the NP side handle
+   - Nonwrapped form is easier for the programmer
+   -> Still - to avoid refactoring - wrapped form should always be used 
+ 
+Open questions: 
+---------------
+
+ - How to handle const safety with wrapper objects?
+
+Nontrivial things: 
+------------------
+ 
+ - Should the /inc/idc/* interfaces contain refernces to NPVariants 
+    - At least the example code contains
+    - More difficult for the programmer 
+ - Who should create NP wrapping around objects? Interface or implementation class?
+   E.g. Should CCPixNPPlugin or CCPixNPPluginInterface wrap searcher into 
+   CPixNPSearcherObject form
+    - In CCPixNPPlugin case - it doesn't really matter. Ownership is given away in any 
+      case and the reference counting functionality is not needed in either side. 
+    - Generally the implementing class should hold responsibility
+    - E.g. If CNPSearchDocument wishes to hold ownership to its fields it needs
+      to be able to add references to the fields it creates. 
+ - Observers

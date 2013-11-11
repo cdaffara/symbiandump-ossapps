@@ -1,0 +1,246 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+#ifndef MEMSPY_HRH
+#define MEMSPY_HRH
+
+#define KMemSpyMenuCommandBase 50000
+#define KMemSpyMenuCommandViewSpecific (KMemSpyMenuCommandBase + 10000)
+
+enum TMemSpyCommandIds
+    {
+	////////////////////////////////
+	// GENERIC MENU COMMANDS
+	////////////////////////////////
+	EMemSpyCmdOpen = KMemSpyMenuCommandBase,
+    //
+    EMemSpyCmdView,
+	EMemSpyCmdViewRefresh,
+	EMemSpyCmdViewOutputToSink,
+    //
+    EMemSpyCmdTools,
+    EMemSpyCmdToolsListOpenFiles,
+	EMemSpyCmdToolsAbout,
+    //
+    EMemSpyCmdPhoneInfo,
+	EMemSpyCmdPhoneInfoGeneral,
+    EMemSpyCmdPhoneInfoGeneralSummary,
+	EMemSpyCmdPhoneInfoGeneralDetailed,
+	EMemSpyCmdPhoneInfoGeneralHandles,
+	EMemSpyCmdPhoneInfoGeneralKernelContainers,
+	EMemSpyCmdPhoneInfoHeap,
+	EMemSpyCmdPhoneInfoHeapInfoSummary,
+    EMemSpyCmdPhoneInfoHeapInfoCompact,
+	EMemSpyCmdPhoneInfoHeapCellListing,
+	EMemSpyCmdPhoneInfoHeapDump,
+    EMemSpyCmdPhoneInfoStack,
+	EMemSpyCmdPhoneInfoStackInfo,
+    EMemSpyCmdPhoneInfoStackInfoCompact,
+	EMemSpyCmdPhoneInfoStackDumpUser,
+	EMemSpyCmdPhoneInfoStackDumpKernel,
+    //
+    EMemSpyCmdAutoCapture,
+    EMemSpyCmdAutoCaptureToggle,
+    EMemSpyCmdAutoCaptureRetryTime,
+    EMemSpyCmdAutoCaptureOperationType,
+	
+	////////////////////////////////
+	// VIEW SPECIFIC MENU COMMANDS
+	////////////////////////////////
+    EMemSpyCmdProcess = KMemSpyMenuCommandViewSpecific,
+	EMemSpyCmdProcessInfo,
+	EMemSpyCmdProcessInfoSummary,
+	EMemSpyCmdProcessInfoHandles,
+    EMemSpyCmdProcessSort,
+    EMemSpyCmdProcessSortById,
+    EMemSpyCmdProcessSortByName,
+    EMemSpyCmdProcessSortByThreadCount,
+    EMemSpyCmdProcessSortByCodeSegs,
+    EMemSpyCmdProcessSortByHeapUsage,
+    EMemSpyCmdProcessSortByStackUsage,
+    EMemSpyCmdProcessEnd,
+    EMemSpyCmdProcessEndKill,
+    EMemSpyCmdProcessEndPanic,
+    EMemSpyCmdProcessEndTerminate,
+    //
+    EMemSpyCmdThread,
+    EMemSpyCmdThreadEnd,
+    EMemSpyCmdThreadEndKill,
+    EMemSpyCmdThreadEndPanic,
+    EMemSpyCmdThreadEndTerminate,
+    EMemSpyCmdThreadSetPriority,
+	EMemSpyCmdThreadSetPriorityAbsoluteVeryLow,
+	EMemSpyCmdThreadSetPriorityAbsoluteLowNormal,
+	EMemSpyCmdThreadSetPriorityAbsoluteLow,
+	EMemSpyCmdThreadSetPriorityAbsoluteBackgroundNormal,
+	EMemSpyCmdThreadSetPriorityAbsoluteBackground,
+	EMemSpyCmdThreadSetPriorityAbsoluteForegroundNormal,
+	EMemSpyCmdThreadSetPriorityAbsoluteForeground,
+	EMemSpyCmdThreadSetPriorityAbsoluteHighNormal,
+	EMemSpyCmdThreadSetPriorityAbsoluteHigh,
+	EMemSpyCmdThreadSetPriorityAbsoluteRealTime1,
+	EMemSpyCmdThreadSetPriorityAbsoluteRealTime2,
+	EMemSpyCmdThreadSetPriorityAbsoluteRealTime3,
+	EMemSpyCmdThreadSetPriorityAbsoluteRealTime4,
+	EMemSpyCmdThreadSetPriorityAbsoluteRealTime5,
+	EMemSpyCmdThreadSetPriorityAbsoluteRealTime6,
+	EMemSpyCmdThreadSetPriorityAbsoluteRealTime7, 
+	EMemSpyCmdThreadSetPriorityAbsoluteRealTime8,
+	EMemSpyCmdThreadInfo,
+	EMemSpyCmdThreadInfoHandles,
+    //
+    EMemSpyCmdOutput,
+    EMemSpyCmdOutputToDebug,
+    EMemSpyCmdOutputToFile,
+    //
+    EMemSpyCmdHeap,
+    EMemSpyCmdHeapInfoThread,
+    EMemSpyCmdHeapData,
+    EMemSpyCmdHeapCellListing,
+    EMemSpyCmdHeapDataDump,
+    //
+    EMemSpyCmdStack,
+    EMemSpyCmdStackInfoThread,
+    EMemSpyCmdStackData,
+    EMemSpyCmdStackDataUser,
+    EMemSpyCmdStackDataKernel,
+    //
+    EMemSpyCmdChunk,
+    EMemSpyCmdChunkSort,
+    EMemSpyCmdChunkSortByName,
+    EMemSpyCmdChunkSortBySize,
+    EMemSpyCmdChunkListing,
+    //
+    EMemSpyCmdCodeSeg,
+    EMemSpyCmdCodeSegShow,
+    EMemSpyCmdCodeSegShowItemsAll,
+    EMemSpyCmdCodeSegShowItemsGlobalData,
+    EMemSpyCmdCodeSegShowCaps,
+    EMemSpyCmdCodeSegShowCapsWithTCBProcess,              
+    EMemSpyCmdCodeSegShowCapsWithTCBAll,                  
+    EMemSpyCmdCodeSegShowCapsWithCommDDProcess,           
+    EMemSpyCmdCodeSegShowCapsWithCommDDAll,               
+    EMemSpyCmdCodeSegShowCapsWithPowerMgmtProcess,        
+    EMemSpyCmdCodeSegShowCapsWithPowerMgmtAll,            
+    EMemSpyCmdCodeSegShowCapsWithMultimediaDDProcess,     
+    EMemSpyCmdCodeSegShowCapsWithMultimediaDDAll,         
+    EMemSpyCmdCodeSegShowCapsWithReadDeviceDataProcess,   
+    EMemSpyCmdCodeSegShowCapsWithReadDeviceDataAll,       
+    EMemSpyCmdCodeSegShowCapsWithWriteDeviceDataProcess,  
+    EMemSpyCmdCodeSegShowCapsWithWriteDeviceDataAll,      
+    EMemSpyCmdCodeSegShowCapsWithDRMProcess,              
+    EMemSpyCmdCodeSegShowCapsWithDRMAll,                  
+    EMemSpyCmdCodeSegShowCapsWithTrustedUIProcess,        
+    EMemSpyCmdCodeSegShowCapsWithTrustedUIAll,            
+    EMemSpyCmdCodeSegShowCapsWithProtServProcess,         
+    EMemSpyCmdCodeSegShowCapsWithProtServAll,             
+    EMemSpyCmdCodeSegShowCapsWithDiskAdminProcess,        
+    EMemSpyCmdCodeSegShowCapsWithDiskAdminAll,            
+    EMemSpyCmdCodeSegShowCapsWithNetworkControlProcess,   
+    EMemSpyCmdCodeSegShowCapsWithNetworkControlAll,       
+    EMemSpyCmdCodeSegShowCapsWithAllFilesProcess,         
+    EMemSpyCmdCodeSegShowCapsWithAllFilesAll,             
+    EMemSpyCmdCodeSegShowCapsWithSwEventProcess,          
+    EMemSpyCmdCodeSegShowCapsWithSwEventAll,              
+    EMemSpyCmdCodeSegShowCapsWithNetworkServicesProcess,  
+    EMemSpyCmdCodeSegShowCapsWithNetworkServicesAll,      
+    EMemSpyCmdCodeSegShowCapsWithLocalServicesProcess,    
+    EMemSpyCmdCodeSegShowCapsWithLocalServicesAll,        
+    EMemSpyCmdCodeSegShowCapsWithReadUserDataProcess,     
+    EMemSpyCmdCodeSegShowCapsWithReadUserDataAll,         
+    EMemSpyCmdCodeSegShowCapsWithWriteUserDataProcess,    
+    EMemSpyCmdCodeSegShowCapsWithWriteUserDataAll,        
+    EMemSpyCmdCodeSegShowCapsWithLocationProcess,         
+    EMemSpyCmdCodeSegShowCapsWithLocationAll,             
+    EMemSpyCmdCodeSegShowCapsWithSurroundingsDDProcess,   
+    EMemSpyCmdCodeSegShowCapsWithSurroundingsDDAll,       
+    EMemSpyCmdCodeSegShowCapsWithUserEnvProcess,          
+    EMemSpyCmdCodeSegShowCapsWithUserEnvAll,              
+    EMemSpyCmdCodeSegSort,
+    EMemSpyCmdCodeSegSortByName,
+    EMemSpyCmdCodeSegSortByCodeSize,
+    EMemSpyCmdCodeSegSortByDataSize,
+    EMemSpyCmdCodeSegSortByUid,
+    EMemSpyCmdCodeSegListing,
+    //
+    EMemSpyCmdImages,
+    EMemSpyCmdImagesSlideshow,
+    EMemSpyCmdImagesSaveAllToMemoryCard,
+    EMemSpyCmdImagesListing,
+    //
+    EMemSpyCmdActiveObject,
+    EMemSpyCmdActiveObjectListing,
+    //
+    EMemSpyCmdServerList,
+    EMemSpyCmdServerListOutput,
+    EMemSpyCmdServerListOutputListCSV,
+    EMemSpyCmdServerListOutputListDetailed,
+    EMemSpyCmdServerListSort,
+    EMemSpyCmdServerListSortByName,
+    EMemSpyCmdServerListSortBySessionCount,
+    //
+    EMemSpyCmdKernelContainers,
+    EMemSpyCmdKernelContainersOutput,
+    EMemSpyCmdKernelObjects,
+    EMemSpyCmdKernelObjectTerminate,
+    EMemSpyCmdKernelObjectSwitchTo,
+    EMemSpyCmdKernelObjectEnd,
+    EMemSpyCmdKernelObjectPanic,
+    
+    //
+    EMemSpyCmdKernelHeap,
+    EMemSpyCmdKernelHeapDump,
+    //
+    EMemSpyCmdRAM,
+    EMemSpyCmdRAMAvkonIconCacheDisabled,
+    EMemSpyCmdRAMAvkonIconCacheEnabled,
+    //
+    EMemSpyCmdBTrace,
+    EMemSpyCmdBTraceCaptureToggle,
+    //
+    EMemSpyCmdMemoryTracking,
+    EMemSpyCmdMemoryTrackingStart,
+    EMemSpyCmdMemoryTrackingStop,
+    EMemSpyCmdMemoryTrackingAutoStart,
+    EMemSpyCmdMemoryTrackingAutoStartItemAdd,
+    EMemSpyCmdMemoryTrackingAutoStartItemEdit,
+    EMemSpyCmdMemoryTrackingAutoStartItemDelete,
+    EMemSpyCmdMemoryTrackingAutoStartItemDeleteAll,
+    EMemSpyCmdMemoryTrackingAutoStartItemImport,
+    EMemSpyCmdMemoryTrackingHWM,
+    EMemSpyCmdMemoryTrackingHWMReset,
+    EMemSpyCmdMemoryTrackingTotalWithSharedMem,
+    EMemSpyCmdMemoryTrackingTotalWithoutSharedMem,
+
+    //
+    EMemSpyCmdWindowGroups,
+    EMemSpyCmdWindowGroupTerminate,
+    EMemSpyCmdWindowGroupSwitchTo,
+    EMemSpyCmdWindowGroupEnd,
+    EMemSpyCmdWindowGroupPanic
+    };
+
+enum TMemSpyControlIds
+    {
+    EMemSpyCtrlIdProgressNote = 1000,
+    EMemSpyCtrlIdSlideShowImage,
+    EMemSpyCtrlIdWaitNote
+    };
+
+
+
+#endif

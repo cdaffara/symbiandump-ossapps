@@ -1,0 +1,348 @@
+EXPORTS
+	??0TCalRRule@@QAE@W4TType@0@@Z @ 1 NONAME ; TCalRRule::TCalRRule(enum TCalRRule::TType)
+	??0TCalRRule@@QAE@XZ @ 2 NONAME ; TCalRRule::TCalRRule(void)
+	??0TCalSearchParams@CCalInstanceView@@QAE@ABVTDesC16@@W4TCalSearchBehaviour@CalCommon@@@Z @ 3 NONAME ; CCalInstanceView::TCalSearchParams::TCalSearchParams(class TDesC16 const &, enum CalCommon::TCalSearchBehaviour)
+	??0TCalTime@@QAE@XZ @ 4 NONAME ; TCalTime::TCalTime(void)
+	??0TCalTimeRange@CalCommon@@QAE@VTCalTime@@0@Z @ 5 NONAME ; CalCommon::TCalTimeRange::TCalTimeRange(class TCalTime, class TCalTime)
+	??0TDayOfMonth@TCalRRule@@QAE@W4TDay@@C@Z @ 6 NONAME ; TCalRRule::TDayOfMonth::TDayOfMonth(enum TDay, signed char)
+	??1CCalAlarm@@UAE@XZ @ 7 NONAME ; CCalAlarm::~CCalAlarm(void)
+	??1CCalCategory@@UAE@XZ @ 8 NONAME ; CCalCategory::~CCalCategory(void)
+	??1CCalCategoryManager@@UAE@XZ @ 9 NONAME ; CCalCategoryManager::~CCalCategoryManager(void)
+	??1CCalDataExchange@@UAE@XZ @ 10 NONAME ; CCalDataExchange::~CCalDataExchange(void)
+	??1CCalEntry@@UAE@XZ @ 11 NONAME ; CCalEntry::~CCalEntry(void)
+	??1CCalEntryView@@UAE@XZ @ 12 NONAME ; CCalEntryView::~CCalEntryView(void)
+	??1CCalInstance@@UAE@XZ @ 13 NONAME ; CCalInstance::~CCalInstance(void)
+	??1CCalInstanceView@@UAE@XZ @ 14 NONAME ; CCalInstanceView::~CCalInstanceView(void)
+	??1CCalIter@@UAE@XZ @ 15 NONAME ; CCalIter::~CCalIter(void)
+	??1CCalSession@@UAE@XZ @ 16 NONAME ; CCalSession::~CCalSession(void)
+	??1CCalUser@@UAE@XZ @ 17 NONAME ; CCalUser::~CCalUser(void)
+	?AddAttendeeL@CCalEntry@@QAEXPAVCCalAttendee@@@Z @ 18 NONAME ; void CCalEntry::AddAttendeeL(class CCalAttendee *)
+	?AddCategoryL@CCalCategoryManager@@QAEXABVCCalCategory@@@Z @ 19 NONAME ; void CCalCategoryManager::AddCategoryL(class CCalCategory const &)
+	?AddCategoryL@CCalEntry@@QAEXPAVCCalCategory@@@Z @ 20 NONAME ; void CCalEntry::AddCategoryL(class CCalCategory *)
+	?Address@CCalUser@@QBEABVTDesC16@@XZ @ 21 NONAME ; class TDesC16 const & CCalUser::Address(void) const
+	?AlarmL@CCalEntry@@QBEPAVCCalAlarm@@XZ @ 22 NONAME ; class CCalAlarm * CCalEntry::AlarmL(void) const
+	?AlarmSoundNameL@CCalAlarm@@QBEABVTDesC16@@XZ @ 23 NONAME ; class TDesC16 const & CCalAlarm::AlarmSoundNameL(void) const
+	?AttendeesL@CCalEntry@@QBEAAV?$RPointerArray@VCCalAttendee@@@@XZ @ 24 NONAME ; class RPointerArray<class CCalAttendee> & CCalEntry::AttendeesL(void) const
+	?Behaviour@TCalSearchParams@CCalInstanceView@@QBE?AW4TCalSearchBehaviour@CalCommon@@XZ @ 25 NONAME ; enum CalCommon::TCalSearchBehaviour CCalInstanceView::TCalSearchParams::Behaviour(void) const
+	?Category@CCalCategory@@QBE?AW4TCalCategoryType@1@XZ @ 26 NONAME ; enum CCalCategory::TCalCategoryType CCalCategory::Category(void) const
+	?CategoryCountL@CCalCategoryManager@@QBEHXZ @ 27 NONAME ; int CCalCategoryManager::CategoryCountL(void) const
+	?CategoryL@CCalCategoryManager@@QBEPAVCCalCategory@@H@Z @ 28 NONAME ; class CCalCategory * CCalCategoryManager::CategoryL(int) const
+	?CategoryListL@CCalEntry@@QAEABV?$RPointerArray@VCCalCategory@@@@XZ @ 29 NONAME ; class RPointerArray<class CCalCategory> const & CCalEntry::CategoryListL(void)
+	?ClearRepeatingPropertiesL@CCalEntry@@QAEXXZ @ 30 NONAME ; void CCalEntry::ClearRepeatingPropertiesL(void)
+	?CommonName@CCalUser@@QBEABVTDesC16@@XZ @ 31 NONAME ; class TDesC16 const & CCalUser::CommonName(void) const
+	?CompareL@CCalEntry@@QBEHABV1@@Z @ 32 NONAME ; int CCalEntry::CompareL(class CCalEntry const &) const
+	?CompletedTimeL@CCalEntry@@QBE?AVTCalTime@@XZ @ 33 NONAME ; class TCalTime CCalEntry::CompletedTimeL(void) const
+	?Count@TCalRRule@@QBEIXZ @ 34 NONAME ; unsigned int TCalRRule::Count(void) const
+	?CreateCalFileL@CCalSession@@QBEXABVTDesC16@@@Z @ 35 NONAME ; void CCalSession::CreateCalFileL(class TDesC16 const &) const
+	?Day@TDayOfMonth@TCalRRule@@QBE?AW4TDay@@XZ @ 36 NONAME ; enum TDay TCalRRule::TDayOfMonth::Day(void) const
+	?DefaultFileNameL@CCalSession@@QBEABVTDesC16@@XZ @ 37 NONAME ; class TDesC16 const & CCalSession::DefaultFileNameL(void) const
+	?DeleteAttendeeL@CCalEntry@@QAEXH@Z @ 38 NONAME ; void CCalEntry::DeleteAttendeeL(int)
+	?DeleteCalFileL@CCalSession@@QBEXABVTDesC16@@@Z @ 39 NONAME ; void CCalSession::DeleteCalFileL(class TDesC16 const &) const
+	?DeleteCategoryL@CCalCategoryManager@@QAEXABVCCalCategory@@AAVMCalProgressCallBack@@@Z @ 40 NONAME ; void CCalCategoryManager::DeleteCategoryL(class CCalCategory const &, class MCalProgressCallBack &)
+	?DeleteCategoryL@CCalEntry@@QAEXH@Z @ 41 NONAME ; void CCalEntry::DeleteCategoryL(int)
+	?DeleteL@CCalEntryView@@QAEXABVCCalEntry@@@Z @ 42 NONAME ; void CCalEntryView::DeleteL(class CCalEntry const &)
+	?DeleteL@CCalEntryView@@QAEXABVCDesC8Array@@@Z @ 43 NONAME ; void CCalEntryView::DeleteL(class CDesC8Array const &)
+	?DeleteL@CCalEntryView@@QAEXABVTCalTimeRange@CalCommon@@IAAVMCalProgressCallBack@@@Z @ 44 NONAME ; void CCalEntryView::DeleteL(class CalCommon::TCalTimeRange const &, unsigned int, class MCalProgressCallBack &)
+	?DeleteL@CCalInstanceView@@QAEXPAVCCalInstance@@W4TRecurrenceRange@CalCommon@@@Z @ 45 NONAME ; void CCalInstanceView::DeleteL(class CCalInstance *, enum CalCommon::TRecurrenceRange)
+	?DescriptionL@CCalEntry@@QBEABVTDesC16@@XZ @ 46 NONAME ; class TDesC16 const & CCalEntry::DescriptionL(void) const
+	?DisableChangeBroadcast@CCalSession@@QAEXXZ @ 47 NONAME ; void CCalSession::DisableChangeBroadcast(void)
+	?DtStart@TCalRRule@@QBE?AVTCalTime@@XZ @ 48 NONAME ; class TCalTime TCalRRule::DtStart(void) const
+	?EnableChangeBroadcast@CCalSession@@QAEXXZ @ 49 NONAME ; void CCalSession::EnableChangeBroadcast(void)
+	?EndTime@TCalTimeRange@CalCommon@@QBE?AVTCalTime@@XZ @ 50 NONAME ; class TCalTime CalCommon::TCalTimeRange::EndTime(void) const
+	?EndTimeL@CCalEntry@@QBE?AVTCalTime@@XZ @ 51 NONAME ; class TCalTime CCalEntry::EndTimeL(void) const
+	?Entry@CCalInstance@@QBEAAVCCalEntry@@XZ @ 52 NONAME ; class CCalEntry & CCalInstance::Entry(void) const
+	?EntryTypeL@CCalEntry@@QBE?AW4TType@1@XZ @ 53 NONAME ; enum CCalEntry::TType CCalEntry::EntryTypeL(void) const
+	?ExportL@CCalDataExchange@@QAEXVTUid@@AAVRWriteStream@@AAV?$RPointerArray@VCCalEntry@@@@@Z @ 54 NONAME ; void CCalDataExchange::ExportL(class TUid, class RWriteStream &, class RPointerArray<class CCalEntry> &)
+	?ExtendedCategoryName@CCalCategory@@QBEABVTDesC16@@XZ @ 55 NONAME ; class TDesC16 const & CCalCategory::ExtendedCategoryName(void) const
+	?FetchL@CCalEntryView@@QBEXABVTDesC8@@AAV?$RPointerArray@VCCalEntry@@@@@Z @ 56 NONAME ; void CCalEntryView::FetchL(class TDesC8 const &, class RPointerArray<class CCalEntry> &) const
+	?FilterCategoryL@CCalCategoryManager@@QAEXABVCCalCategory@@AAV?$RPointerArray@VCCalEntry@@@@AAVMCalProgressCallBack@@@Z @ 57 NONAME ; void CCalCategoryManager::FilterCategoryL(class CCalCategory const &, class RPointerArray<class CCalEntry> &, class MCalProgressCallBack &)
+	?FindInstanceL@CCalInstanceView@@QBEXAAV?$RPointerArray@VCCalInstance@@@@IABVTCalTimeRange@CalCommon@@@Z @ 58 NONAME ; void CCalInstanceView::FindInstanceL(class RPointerArray<class CCalInstance> &, unsigned int, class CalCommon::TCalTimeRange const &) const
+	?FindInstanceL@CCalInstanceView@@QBEXAAV?$RPointerArray@VCCalInstance@@@@IABVTCalTimeRange@CalCommon@@ABVTCalSearchParams@1@@Z @ 59 NONAME ; void CCalInstanceView::FindInstanceL(class RPointerArray<class CCalInstance> &, unsigned int, class CalCommon::TCalTimeRange const &, class CCalInstanceView::TCalSearchParams const &) const
+	?FirstL@CCalIter@@QAEABVTDesC8@@XZ @ 60 NONAME ; class TDesC8 const & CCalIter::FirstL(void)
+	?GetByDayL@TCalRRule@@QBEXAAV?$RArray@VTDayOfMonth@TCalRRule@@@@@Z @ 61 NONAME ; void TCalRRule::GetByDayL(class RArray<class TCalRRule::TDayOfMonth> &) const
+	?GetByDayL@TCalRRule@@QBEXAAV?$RArray@W4TDay@@@@@Z @ 62 NONAME ; void TCalRRule::GetByDayL(class RArray<enum TDay> &) const
+	?GetByMonthDayL@TCalRRule@@QBEXAAV?$RArray@H@@@Z @ 63 NONAME ; void TCalRRule::GetByMonthDayL(class RArray<int> &) const
+	?GetByMonthL@TCalRRule@@QBEXAAV?$RArray@W4TMonth@@@@@Z @ 64 NONAME ; void TCalRRule::GetByMonthL(class RArray<enum TMonth> &) const
+	?GetExceptionDatesL@CCalEntry@@QBEXAAV?$RArray@VTCalTime@@@@@Z @ 65 NONAME ; void CCalEntry::GetExceptionDatesL(class RArray<class TCalTime> &) const
+	?GetRDatesL@CCalEntry@@QBEXAAV?$RArray@VTCalTime@@@@@Z @ 66 NONAME ; void CCalEntry::GetRDatesL(class RArray<class TCalTime> &) const
+	?GetRRuleL@CCalEntry@@QBEHAAVTCalRRule@@@Z @ 67 NONAME ; int CCalEntry::GetRRuleL(class TCalRRule &) const
+	?ImportL@CCalDataExchange@@QAEXVTUid@@AAVRReadStream@@AAV?$RPointerArray@VCCalEntry@@@@@Z @ 68 NONAME ; void CCalDataExchange::ImportL(class TUid, class RReadStream &, class RPointerArray<class CCalEntry> &)
+	?Interval@TCalRRule@@QBEHXZ @ 69 NONAME ; int TCalRRule::Interval(void) const
+	?LastModifiedDateL@CCalEntry@@QBE?AVTCalTime@@XZ @ 70 NONAME ; class TCalTime CCalEntry::LastModifiedDateL(void) const
+	?ListCalFilesL@CCalSession@@QBEPAVCDesC16Array@@XZ @ 71 NONAME ; class CDesC16Array * CCalSession::ListCalFilesL(void) const
+	?LocationL@CCalEntry@@QBEABVTDesC16@@XZ @ 72 NONAME ; class TDesC16 const & CCalEntry::LocationL(void) const
+	?MaxTime@TCalTime@@SA?AVTTime@@XZ @ 73 NONAME ; class TTime TCalTime::MaxTime(void)
+	?MethodL@CCalEntry@@QBE?AW4TMethod@1@XZ @ 74 NONAME ; enum CCalEntry::TMethod CCalEntry::MethodL(void) const
+	?MinTime@TCalTime@@SA?AVTTime@@XZ @ 75 NONAME ; class TTime TCalTime::MinTime(void)
+	?NewL@CCalAlarm@@SAPAV1@XZ @ 76 NONAME ; class CCalAlarm * CCalAlarm::NewL(void)
+	?NewL@CCalAttendee@@SAPAV1@ABVTDesC16@@0@Z @ 77 NONAME ; class CCalAttendee * CCalAttendee::NewL(class TDesC16 const &, class TDesC16 const &)
+	?NewL@CCalAttendee@@SAPAV1@ABVTDesC16@@@Z @ 78 NONAME ; class CCalAttendee * CCalAttendee::NewL(class TDesC16 const &)
+	?NewL@CCalCategory@@SAPAV1@ABVTDesC16@@@Z @ 79 NONAME ; class CCalCategory * CCalCategory::NewL(class TDesC16 const &)
+	?NewL@CCalCategory@@SAPAV1@W4TCalCategoryType@1@@Z @ 80 NONAME ; class CCalCategory * CCalCategory::NewL(enum CCalCategory::TCalCategoryType)
+	?NewL@CCalCategoryManager@@SAPAV1@AAVCCalSession@@@Z @ 81 NONAME ; class CCalCategoryManager * CCalCategoryManager::NewL(class CCalSession &)
+	?NewL@CCalDataExchange@@SAPAV1@AAVCCalSession@@@Z @ 82 NONAME ; class CCalDataExchange * CCalDataExchange::NewL(class CCalSession &)
+	?NewL@CCalEntry@@SAPAV1@W4TType@1@PAVHBufC8@@W4TMethod@1@I@Z @ 83 NONAME ; class CCalEntry * CCalEntry::NewL(enum CCalEntry::TType, class HBufC8 *, enum CCalEntry::TMethod, unsigned int)
+	?NewL@CCalEntry@@SAPAV1@W4TType@1@PAVHBufC8@@W4TMethod@1@IABVTCalTime@@W4TRecurrenceRange@CalCommon@@@Z @ 84 NONAME ; class CCalEntry * CCalEntry::NewL(enum CCalEntry::TType, class HBufC8 *, enum CCalEntry::TMethod, unsigned int, class TCalTime const &, enum CalCommon::TRecurrenceRange)
+	?NewL@CCalEntryView@@SAPAV1@AAVCCalSession@@AAVMCalProgressCallBack@@@Z @ 85 NONAME ; class CCalEntryView * CCalEntryView::NewL(class CCalSession &, class MCalProgressCallBack &)
+	?NewL@CCalInstanceView@@SAPAV1@AAVCCalSession@@AAVMCalProgressCallBack@@@Z @ 86 NONAME ; class CCalInstanceView * CCalInstanceView::NewL(class CCalSession &, class MCalProgressCallBack &)
+	?NewL@CCalIter@@SAPAV1@AAVCCalSession@@@Z @ 87 NONAME ; class CCalIter * CCalIter::NewL(class CCalSession &)
+	?NewL@CCalSession@@SAPAV1@XZ @ 88 NONAME ; class CCalSession * CCalSession::NewL(void)
+	?NewL@CCalUser@@SAPAV1@ABVTDesC16@@0@Z @ 89 NONAME ; class CCalUser * CCalUser::NewL(class TDesC16 const &, class TDesC16 const &)
+	?NewL@CCalUser@@SAPAV1@ABVTDesC16@@@Z @ 90 NONAME ; class CCalUser * CCalUser::NewL(class TDesC16 const &)
+	?NextInstanceL@CCalInstanceView@@QBE?AVTCalTime@@IABV2@@Z @ 91 NONAME ; class TCalTime CCalInstanceView::NextInstanceL(unsigned int, class TCalTime const &) const
+	?NextL@CCalIter@@QAEABVTDesC8@@XZ @ 92 NONAME ; class TDesC8 const & CCalIter::NextL(void)
+	?OpenL@CCalSession@@QBEXABVTDesC16@@@Z @ 93 NONAME ; void CCalSession::OpenL(class TDesC16 const &) const
+	?OrganizerL@CCalEntry@@QBEPAVCCalUser@@XZ @ 94 NONAME ; class CCalUser * CCalEntry::OrganizerL(void) const
+	?PhoneOwnerL@CCalEntry@@QBEPAVCCalUser@@XZ @ 95 NONAME ; class CCalUser * CCalEntry::PhoneOwnerL(void) const
+	?PreviousInstanceL@CCalInstanceView@@QBE?AVTCalTime@@IABV2@@Z @ 96 NONAME ; class TCalTime CCalInstanceView::PreviousInstanceL(unsigned int, class TCalTime const &) const
+	?PriorityL@CCalEntry@@QBEIXZ @ 97 NONAME ; unsigned int CCalEntry::PriorityL(void) const
+	?RecurrenceIdL@CCalEntry@@QBE?AVTCalTime@@XZ @ 98 NONAME ; class TCalTime CCalEntry::RecurrenceIdL(void) const
+	?ReplicationStatusL@CCalEntry@@QBE?AW4TReplicationStatus@1@XZ @ 99 NONAME ; enum CCalEntry::TReplicationStatus CCalEntry::ReplicationStatusL(void) const
+	?ResponseRequested@CCalAttendee@@QBEHXZ @ 100 NONAME ; int CCalAttendee::ResponseRequested(void) const
+	?RoleL@CCalAttendee@@QBE?AW4TCalRole@1@XZ @ 101 NONAME ; enum CCalAttendee::TCalRole CCalAttendee::RoleL(void) const
+	?SentBy@CCalUser@@QBEABVTDesC16@@XZ @ 102 NONAME ; class TDesC16 const & CCalUser::SentBy(void) const
+	?SequenceNumberL@CCalEntry@@QBEHXZ @ 103 NONAME ; int CCalEntry::SequenceNumberL(void) const
+	?SetAlarmL@CCalEntry@@QAEXPAVCCalAlarm@@@Z @ 104 NONAME ; void CCalEntry::SetAlarmL(class CCalAlarm *)
+	?SetAlarmSoundNameL@CCalAlarm@@QAEXABVTDesC16@@@Z @ 105 NONAME ; void CCalAlarm::SetAlarmSoundNameL(class TDesC16 const &)
+	?SetByDay@TCalRRule@@QAEXABV?$RArray@VTDayOfMonth@TCalRRule@@@@@Z @ 106 NONAME ; void TCalRRule::SetByDay(class RArray<class TCalRRule::TDayOfMonth> const &)
+	?SetByDay@TCalRRule@@QAEXABV?$RArray@W4TDay@@@@@Z @ 107 NONAME ; void TCalRRule::SetByDay(class RArray<enum TDay> const &)
+	?SetByMonth@TCalRRule@@QAEXV?$RArray@W4TMonth@@@@@Z @ 108 NONAME ; void TCalRRule::SetByMonth(class RArray<enum TMonth>)
+	?SetByMonthDay@TCalRRule@@QAEXABV?$RArray@H@@@Z @ 109 NONAME ; void TCalRRule::SetByMonthDay(class RArray<int> const &)
+	?SetCommonNameL@CCalUser@@QAEXABVTDesC16@@@Z @ 110 NONAME ; void CCalUser::SetCommonNameL(class TDesC16 const &)
+	?SetCompletedL@CCalEntry@@QAEXHABVTCalTime@@@Z @ 111 NONAME ; void CCalEntry::SetCompletedL(int, class TCalTime const &)
+	?SetCount@TCalRRule@@QAEXI@Z @ 112 NONAME ; void TCalRRule::SetCount(unsigned int)
+	?SetDescriptionL@CCalEntry@@QAEXABVTDesC16@@@Z @ 113 NONAME ; void CCalEntry::SetDescriptionL(class TDesC16 const &)
+	?SetDtStart@TCalRRule@@QAEXABVTCalTime@@@Z @ 114 NONAME ; void TCalRRule::SetDtStart(class TCalTime const &)
+	?SetExceptionDatesL@CCalEntry@@QAEXABV?$RArray@VTCalTime@@@@@Z @ 115 NONAME ; void CCalEntry::SetExceptionDatesL(class RArray<class TCalTime> const &)
+	?SetInterval@TCalRRule@@QAEXH@Z @ 116 NONAME ; void TCalRRule::SetInterval(int)
+	?SetLastModifiedDateL@CCalEntry@@QAEXXZ @ 117 NONAME ; void CCalEntry::SetLastModifiedDateL(void)
+	?SetLocationL@CCalEntry@@QAEXABVTDesC16@@@Z @ 118 NONAME ; void CCalEntry::SetLocationL(class TDesC16 const &)
+	?SetMethodL@CCalEntry@@QAEXW4TMethod@1@@Z @ 119 NONAME ; void CCalEntry::SetMethodL(enum CCalEntry::TMethod)
+	?SetOrganizerL@CCalEntry@@QAEXPAVCCalUser@@@Z @ 120 NONAME ; void CCalEntry::SetOrganizerL(class CCalUser *)
+	?SetPhoneOwnerL@CCalEntry@@QAEXPBVCCalUser@@@Z @ 121 NONAME ; void CCalEntry::SetPhoneOwnerL(class CCalUser const *)
+	?SetPriorityL@CCalEntry@@QAEXI@Z @ 122 NONAME ; void CCalEntry::SetPriorityL(unsigned int)
+	?SetRDatesL@CCalEntry@@QAEXABV?$RArray@VTCalTime@@@@@Z @ 123 NONAME ; void CCalEntry::SetRDatesL(class RArray<class TCalTime> const &)
+	?SetRRuleL@CCalEntry@@QAEXABVTCalRRule@@@Z @ 124 NONAME ; void CCalEntry::SetRRuleL(class TCalRRule const &)
+	?SetReplicationStatusL@CCalEntry@@QAEXW4TReplicationStatus@1@@Z @ 125 NONAME ; void CCalEntry::SetReplicationStatusL(enum CCalEntry::TReplicationStatus)
+	?SetResponseRequested@CCalAttendee@@QAEXH@Z @ 126 NONAME ; void CCalAttendee::SetResponseRequested(int)
+	?SetRoleL@CCalAttendee@@QAEXW4TCalRole@1@@Z @ 127 NONAME ; void CCalAttendee::SetRoleL(enum CCalAttendee::TCalRole)
+	?SetSequenceNumberL@CCalEntry@@QAEXH@Z @ 128 NONAME ; void CCalEntry::SetSequenceNumberL(int)
+	?SetStartAndEndTimeL@CCalEntry@@QAEXABVTCalTime@@0@Z @ 129 NONAME ; void CCalEntry::SetStartAndEndTimeL(class TCalTime const &, class TCalTime const &)
+	?SetStatusL@CCalAttendee@@QAEXW4TCalStatus@1@@Z @ 130 NONAME ; void CCalAttendee::SetStatusL(enum CCalAttendee::TCalStatus)
+	?SetStatusL@CCalEntry@@QAEXW4TStatus@1@@Z @ 131 NONAME ; void CCalEntry::SetStatusL(enum CCalEntry::TStatus)
+	?SetSummaryL@CCalEntry@@QAEXABVTDesC16@@@Z @ 132 NONAME ; void CCalEntry::SetSummaryL(class TDesC16 const &)
+	?SetTimeLocalL@TCalTime@@QAEXABVTTime@@@Z @ 133 NONAME ; void TCalTime::SetTimeLocalL(class TTime const &)
+	?SetTimeOffset@CCalAlarm@@QAEXVTTimeIntervalMinutes@@@Z @ 134 NONAME ; void CCalAlarm::SetTimeOffset(class TTimeIntervalMinutes)
+	?SetTimeUtcL@TCalTime@@QAEXABVTTime@@@Z @ 135 NONAME ; void TCalTime::SetTimeUtcL(class TTime const &)
+	?SetType@TCalRRule@@QAEXW4TType@1@@Z @ 136 NONAME ; void TCalRRule::SetType(enum TCalRRule::TType)
+	?SetTzRulesL@CCalEntry@@QAEXABVCTzRules@@@Z @ 137 NONAME ; void CCalEntry::SetTzRulesL(class CTzRules const &)
+	?SetTzRulesL@CCalEntry@@QAEXXZ @ 138 NONAME ; void CCalEntry::SetTzRulesL(void)
+	?SetUntil@TCalRRule@@QAEXABVTCalTime@@@Z @ 139 NONAME ; void TCalRRule::SetUntil(class TCalTime const &)
+	?SetWkSt@TCalRRule@@QAEXW4TDay@@@Z @ 140 NONAME ; void TCalRRule::SetWkSt(enum TDay)
+	?StartChangeNotification@CCalSession@@QAEXPAVMCalChangeCallBack@@W4TChangeEntryType@2@HVTTime@@2@Z @ 141 NONAME ; void CCalSession::StartChangeNotification(class MCalChangeCallBack *, enum MCalChangeCallBack::TChangeEntryType, int, class TTime, class TTime)
+	?StartTime@TCalTimeRange@CalCommon@@QBE?AVTCalTime@@XZ @ 142 NONAME ; class TCalTime CalCommon::TCalTimeRange::StartTime(void) const
+	?StartTimeL@CCalEntry@@QBE?AVTCalTime@@XZ @ 143 NONAME ; class TCalTime CCalEntry::StartTimeL(void) const
+	?StatusL@CCalAttendee@@QBE?AW4TCalStatus@1@XZ @ 144 NONAME ; enum CCalAttendee::TCalStatus CCalAttendee::StatusL(void) const
+	?StatusL@CCalEntry@@QBE?AW4TStatus@1@XZ @ 145 NONAME ; enum CCalEntry::TStatus CCalEntry::StatusL(void) const
+	?StopChangeNotification@CCalSession@@QAEXXZ @ 146 NONAME ; void CCalSession::StopChangeNotification(void)
+	?StoreL@CCalEntryView@@QAEXABV?$RPointerArray@VCCalEntry@@@@AAH@Z @ 147 NONAME ; void CCalEntryView::StoreL(class RPointerArray<class CCalEntry> const &, int &)
+	?SummaryL@CCalEntry@@QBEABVTDesC16@@XZ @ 148 NONAME ; class TDesC16 const & CCalEntry::SummaryL(void) const
+	?Text@TCalSearchParams@CCalInstanceView@@QBEABVTDesC16@@XZ @ 149 NONAME ; class TDesC16 const & CCalInstanceView::TCalSearchParams::Text(void) const
+	?Time@CCalInstance@@QBE?AVTCalTime@@XZ @ 150 NONAME ; class TCalTime CCalInstance::Time(void) const
+	?TimeLocalL@TCalTime@@QBE?AVTTime@@XZ @ 151 NONAME ; class TTime TCalTime::TimeLocalL(void) const
+	?TimeOffset@CCalAlarm@@QBE?AVTTimeIntervalMinutes@@XZ @ 152 NONAME ; class TTimeIntervalMinutes CCalAlarm::TimeOffset(void) const
+	?TimeUtcL@TCalTime@@QBE?AVTTime@@XZ @ 153 NONAME ; class TTime TCalTime::TimeUtcL(void) const
+	?Type@TCalRRule@@QBE?AW4TType@1@XZ @ 154 NONAME ; enum TCalRRule::TType TCalRRule::Type(void) const
+	?TzRulesL@CCalEntry@@QBEPAVCTzRules@@XZ @ 155 NONAME ; class CTzRules * CCalEntry::TzRulesL(void) const
+	?UidL@CCalEntry@@QBEABVTDesC8@@XZ @ 156 NONAME ; class TDesC8 const & CCalEntry::UidL(void) const
+	?Until@TCalRRule@@QBE?AVTCalTime@@XZ @ 157 NONAME ; class TCalTime TCalRRule::Until(void) const
+	?UpdateL@CCalEntryView@@QAEXABV?$RPointerArray@VCCalEntry@@@@AAH@Z @ 158 NONAME ; void CCalEntryView::UpdateL(class RPointerArray<class CCalEntry> const &, int &)
+	?WeekInMonth@TDayOfMonth@TCalRRule@@QBECXZ @ 159 NONAME ; signed char TCalRRule::TDayOfMonth::WeekInMonth(void) const
+	?WkSt@TCalRRule@@QBE?AW4TDay@@XZ @ 160 NONAME ; enum TDay TCalRRule::WkSt(void) const
+	?RecurrenceRangeL@CCalEntry@@QBE?AW4TRecurrenceRange@CalCommon@@XZ @ 161 NONAME ; enum CalCommon::TRecurrenceRange CCalEntry::RecurrenceRangeL(void) const
+	?CopyFromL@CCalEntry@@QAEXABV1@@Z @ 162 NONAME ; void CCalEntry::CopyFromL(class CCalEntry const &)
+	?ImportL@CCalDataExchange@@QAEXVTUid@@AAVRReadStream@@AAV?$RPointerArray@VCCalEntry@@@@H@Z @ 163 NONAME ; void CCalDataExchange::ImportL(class TUid, class RReadStream &, class RPointerArray<class CCalEntry> &, int)
+	??1CCalEntryId@@UAE@XZ @ 164 NONAME ; CCalEntryId::~CCalEntryId(void)
+	?IdL@CCalEntryId@@QAE?AVTPtrC8@@XZ @ 165 NONAME ; class TPtrC8 CCalEntryId::IdL(void)
+	?NewL@CCalEntryId@@SAPAV1@PAVTDesC8@@@Z @ 166 NONAME ; class CCalEntryId * CCalEntryId::NewL(class TDesC8 *)
+	?RecurrenceIdL@CCalEntryId@@QAE?AVTCalTime@@XZ @ 167 NONAME ; class TCalTime CCalEntryId::RecurrenceIdL(void)
+	?StoreFileNameL@CCalEntryId@@QAE?AVTPtrC16@@XZ @ 168 NONAME ; class TPtrC16 CCalEntryId::StoreFileNameL(void)
+	?AlarmAction@CCalAlarm@@QBEPAVCCalContent@@XZ @ 169 NONAME ; class CCalContent * CCalAlarm::AlarmAction(void) const
+	?SetAlarmAction@CCalAlarm@@QAEXPAVCCalContent@@@Z @ 170 NONAME ; void CCalAlarm::SetAlarmAction(class CCalContent *)
+	??1CCalContent@@UAE@XZ @ 171 NONAME ; CCalContent::~CCalContent(void)
+	?Content@CCalContent@@QBEABVTDesC8@@XZ @ 172 NONAME ; class TDesC8 const & CCalContent::Content(void) const
+	?Disposition@CCalContent@@QBE?AW4TDisposition@1@XZ @ 173 NONAME ; enum CCalContent::TDisposition CCalContent::Disposition(void) const
+	?MimeType@CCalContent@@QBEABVTDesC8@@XZ @ 174 NONAME ; class TDesC8 const & CCalContent::MimeType(void) const
+	?NewL@CCalContent@@SAPAV1@XZ @ 175 NONAME ; class CCalContent * CCalContent::NewL(void)
+	?SetContentL@CCalContent@@QAEXPAVTDesC8@@0W4TDisposition@1@@Z @ 176 NONAME ; void CCalContent::SetContentL(class TDesC8 *, class TDesC8 *, enum CCalContent::TDisposition)
+	?DeleteL@CCalEntryView@@QAEXABV?$RArray@K@@AAH@Z @ 177 NONAME ; void CCalEntryView::DeleteL(class RArray<unsigned long> const &, int &)
+	?FetchL@CCalEntryView@@QBEPAVCCalEntry@@K@Z @ 178 NONAME ; class CCalEntry * CCalEntryView::FetchL(unsigned long) const
+	?FileIdL@CCalSession@@QBEXAA_J@Z @ 179 NONAME ; void CCalSession::FileIdL(long long &) const
+	?GetIdsModifiedSinceDateL@CCalEntryView@@QBEXABVTCalTime@@AAV?$RArray@K@@@Z @ 180 NONAME ; void CCalEntryView::GetIdsModifiedSinceDateL(class TCalTime const &, class RArray<unsigned long> &) const
+	?ImportL@CCalDataExchange@@QAEXVTUid@@AAVRReadStream@@AAV?$RPointerArray@VCCalEntry@@@@HH@Z @ 181 NONAME ; void CCalDataExchange::ImportL(class TUid, class RReadStream &, class RPointerArray<class CCalEntry> &, int, int)
+	?InstanceTimeL@CCalEntryId@@QBE?AVTCalTime@@XZ @ 182 NONAME ; class TCalTime CCalEntryId::InstanceTimeL(void) const
+	?LocalUidL@CCalEntry@@QBEKXZ @ 183 NONAME ; unsigned long CCalEntry::LocalUidL(void) const
+	?SetLocalUidL@CCalEntry@@QAEXK@Z @ 184 NONAME ; void CCalEntry::SetLocalUidL(unsigned long)
+	?DTStampL@CCalEntry@@QBE?AVTCalTime@@XZ @ 185 NONAME ; class TCalTime CCalEntry::DTStampL(void) const
+	?SetDTStampL@CCalEntry@@QAEXABVTCalTime@@@Z @ 186 NONAME ; void CCalEntry::SetDTStampL(class TCalTime const &)
+	?ExportAsyncL@CCalDataExchange@@QAEXVTUid@@AAVRWriteStream@@AAV?$RPointerArray@VCCalEntry@@@@AAVMCalDataExchangeCallBack@@@Z @ 187 NONAME ; void CCalDataExchange::ExportAsyncL(class TUid, class RWriteStream &, class RPointerArray<class CCalEntry> &, class MCalDataExchangeCallBack &)
+	?ImportAsyncL@CCalDataExchange@@QAEXVTUid@@AAVRReadStream@@AAV?$RPointerArray@VCCalEntry@@@@AAVMCalDataExchangeCallBack@@H@Z @ 188 NONAME ; void CCalDataExchange::ImportAsyncL(class TUid, class RReadStream &, class RPointerArray<class CCalEntry> &, class MCalDataExchangeCallBack &, int)
+	?EndTimeL@CCalInstance@@QBE?AVTCalTime@@XZ @ 189 NONAME ; class TCalTime CCalInstance::EndTimeL(void) const
+	?StartTimeL@CCalInstance@@QBE?AVTCalTime@@XZ @ 190 NONAME ; class TCalTime CCalInstance::StartTimeL(void) const
+	?LocalUidL@CCalEntryId@@QBEKXZ @ 191 NONAME ; unsigned long CCalEntryId::LocalUidL(void) const
+	?DisablePubSubNotificationsL@CCalSession@@QAEXXZ @ 192 NONAME ; void CCalSession::DisablePubSubNotificationsL(void)
+	?EnablePubSubNotificationsL@CCalSession@@QAEXXZ @ 193 NONAME ; void CCalSession::EnablePubSubNotificationsL(void)
+	?GetFileNameL@CCalSession@@QBEXUTCalPubSubData@@AAVTDes16@@@Z @ 194 NONAME ; void CCalSession::GetFileNameL(struct TCalPubSubData, class TDes16 &) const
+	?IsFileNameL@CCalSession@@QBEHUTCalPubSubData@@ABVTDesC16@@@Z @ 195 NONAME ; int CCalSession::IsFileNameL(struct TCalPubSubData, class TDesC16 const &) const
+	?IsOpenedFileL@CCalSession@@QBEHUTCalPubSubData@@@Z @ 196 NONAME ; int CCalSession::IsOpenedFileL(struct TCalPubSubData) const
+	??1CCalChangeNotificationFilter@@QAE@XZ @ 197 NONAME ; CCalChangeNotificationFilter::~CCalChangeNotificationFilter(void)
+	?NewL@CCalChangeNotificationFilter@@SAPAV1@W4TChangeEntryType@MCalChangeCallBack2@@HABVTCalTimeRange@CalCommon@@@Z @ 198 NONAME ; class CCalChangeNotificationFilter * CCalChangeNotificationFilter::NewL(enum MCalChangeCallBack2::TChangeEntryType, int, class CalCommon::TCalTimeRange const &)
+	?StartChangeNotification@CCalSession@@QAEXAAVMCalChangeCallBack2@@ABVCCalChangeNotificationFilter@@@Z @ 199 NONAME ; void CCalSession::StartChangeNotification(class MCalChangeCallBack2 &, class CCalChangeNotificationFilter const &)
+	?CopyFromL@CCalEntry@@QAEXABV1@W4TCopyType@1@@Z @ 200 NONAME ; void CCalEntry::CopyFromL(class CCalEntry const &, enum CCalEntry::TCopyType)
+	?SetTimeLocalFloatingL@TCalTime@@QAEXABVTTime@@@Z @ 201 NONAME ; void TCalTime::SetTimeLocalFloatingL(class TTime const &)
+	?TimeMode@TCalTime@@QBE?AW4TTimeMode@1@XZ @ 202 NONAME ; enum TCalTime::TTimeMode TCalTime::TimeMode(void) const
+	??1CAgnVersit@@UAE@XZ @ 203 NONAME ; CAgnVersit::~CAgnVersit(void)
+	??1CCalAttachment@@UAE@XZ @ 204 NONAME ; CCalAttachment::~CCalAttachment(void)
+	??1CCalAttachmentIterator@@UAE@XZ @ 205 NONAME ; CCalAttachmentIterator::~CCalAttachmentIterator(void)
+	??1CCalAttachmentManager@@UAE@XZ @ 206 NONAME ; CCalAttachmentManager::~CCalAttachmentManager(void)
+	??1CCalFindInstanceSettings@@UAE@XZ @ 207 NONAME ; CCalFindInstanceSettings::~CCalFindInstanceSettings(void)
+	??1CCalGeoValue@@UAE@XZ @ 208 NONAME ; CCalGeoValue::~CCalGeoValue(void)
+	??1CCalInstanceIterator@@UAE@XZ @ 209 NONAME ; CCalInstanceIterator::~CCalInstanceIterator(void)
+	?AddAttachmentL@CCalEntry@@QAEXAAVCCalAttachment@@@Z @ 210 NONAME ; void CCalEntry::AddAttachmentL(class CCalAttachment &)
+	?AttachmentCountL@CCalEntry@@QBEHXZ @ 211 NONAME ; int CCalEntry::AttachmentCountL(void) const
+	?AttachmentL@CCalEntry@@QBEPAVCCalAttachment@@H@Z @ 212 NONAME ; class CCalAttachment * CCalEntry::AttachmentL(int) const
+	?ClearAttribute@CCalAttachment@@QAEXG@Z @ 213 NONAME ; void CCalAttachment::ClearAttribute(unsigned short)
+	?ClearGeoValueL@CCalEntry@@QAEXXZ @ 214 NONAME ; void CCalEntry::ClearGeoValueL(void)
+	?ContentId@CCalAttachmentFile@@QBEABVTDesC8@@XZ @ 215 NONAME ; class TDesC8 const & CCalAttachmentFile::ContentId(void) const
+	?Count@CCalAttachmentIterator@@QBEHXZ @ 216 NONAME ; int CCalAttachmentIterator::Count(void) const
+	?Count@CCalInstanceIterator@@QBEHXZ @ 217 NONAME ABSENT ; int CCalInstanceIterator::Count(void) const
+	?DeleteAttachmentL@CCalEntry@@QAEXABVCCalAttachment@@@Z @ 218 NONAME ; void CCalEntry::DeleteAttachmentL(class CCalAttachment const &)
+	?Drive@CCalAttachmentFile@@QBE?AV?$TBuf@$01@@XZ @ 219 NONAME ; class TBuf<2> CCalAttachmentFile::Drive(void) const
+	?EntriesReferencingFileAttachmentL@CCalAttachmentManager@@QBEXAAV?$RArray@K@@ABVCCalAttachment@@@Z @ 220 NONAME ; void CCalAttachmentManager::EntriesReferencingFileAttachmentL(class RArray<unsigned long> &, class CCalAttachment const &) const
+	?FetchAttachmentsL@CCalAttachmentManager@@QBEPAVCCalAttachmentIterator@@W4TSortOrder@1@@Z @ 221 NONAME ; class CCalAttachmentIterator * CCalAttachmentManager::FetchAttachmentsL(enum CCalAttachmentManager::TSortOrder) const
+	?FetchFileHandleL@CCalAttachmentFile@@QBEXAAVRFile@@@Z @ 222 NONAME ; void CCalAttachmentFile::FetchFileHandleL(class RFile &) const
+	?FileAttachment@CCalAttachment@@QBEPAVCCalAttachmentFile@@XZ @ 223 NONAME ; class CCalAttachmentFile * CCalAttachment::FileAttachment(void) const
+	?FindInstanceL@CCalInstanceView@@QBEPAVCCalInstanceIterator@@ABVCCalFindInstanceSettings@@@Z @ 224 NONAME ; class CCalInstanceIterator * CCalInstanceView::FindInstanceL(class CCalFindInstanceSettings const &) const
+	?GeoValueL@CCalEntry@@QBEPAVCCalGeoValue@@XZ @ 225 NONAME ; class CCalGeoValue * CCalEntry::GeoValueL(void) const
+	?GetLatLong@CCalGeoValue@@QBEHAAN0@Z @ 226 NONAME ; int CCalGeoValue::GetLatLong(double &, double &) const
+	?HasMore@CCalAttachmentIterator@@QBEHXZ @ 227 NONAME ; int CCalAttachmentIterator::HasMore(void) const
+	?HasMore@CCalInstanceIterator@@QBEHXZ @ 228 NONAME ABSENT ; int CCalInstanceIterator::HasMore(void) const
+	?IsAttributeSet@CCalAttachment@@QBEHG@Z @ 229 NONAME ; int CCalAttachment::IsAttributeSet(unsigned short) const
+	?Label@CCalAttachment@@QBEABVTDesC16@@XZ @ 230 NONAME ; class TDesC16 const & CCalAttachment::Label(void) const
+	?LastModifiedTimeUtc@CCalAttachmentFile@@QBEABVTTime@@XZ @ 231 NONAME ; class TTime const & CCalAttachmentFile::LastModifiedTimeUtc(void) const
+	?LoadBinaryDataL@CCalAttachmentFile@@QAEXXZ @ 232 NONAME ; void CCalAttachmentFile::LoadBinaryDataL(void)
+	?MimeType@CCalAttachment@@QBEABVTDesC8@@XZ @ 233 NONAME ; class TDesC8 const & CCalAttachment::MimeType(void) const
+	?NewFileByContentIdL@CCalAttachment@@SAPAV1@ABVTDesC8@@@Z @ 234 NONAME ; class CCalAttachment * CCalAttachment::NewFileByContentIdL(class TDesC8 const &)
+	?NewFileL@CCalAttachment@@SAPAV1@AAVRFile@@@Z @ 235 NONAME ; class CCalAttachment * CCalAttachment::NewFileL(class RFile &)
+	?NewFileL@CCalAttachment@@SAPAV1@PAVTDesC8@@@Z @ 236 NONAME ; class CCalAttachment * CCalAttachment::NewFileL(class TDesC8 *)
+	?NewL@CCalAttachmentManager@@SAPAV1@AAVCCalSession@@AAVMCalProgressCallBack@@@Z @ 237 NONAME ; class CCalAttachmentManager * CCalAttachmentManager::NewL(class CCalSession &, class MCalProgressCallBack &)
+	?NewL@CCalFindInstanceSettings@@SAPAV1@IABVTCalTimeRange@CalCommon@@@Z @ 238 NONAME ; class CCalFindInstanceSettings * CCalFindInstanceSettings::NewL(unsigned int, class CalCommon::TCalTimeRange const &)
+	?NewL@CCalGeoValue@@SAPAV1@XZ @ 239 NONAME ; class CCalGeoValue * CCalGeoValue::NewL(void)
+	?NewUriL@CCalAttachment@@SAPAV1@ABVTDesC8@@@Z @ 240 NONAME ; class CCalAttachment * CCalAttachment::NewUriL(class TDesC8 const &)
+	?NextInstanceForLocalUIDL@CCalEntry@@QBE?AVTCalTime@@ABV2@@Z @ 241 NONAME ; class TCalTime CCalEntry::NextInstanceForLocalUIDL(class TCalTime const &) const
+	?NextL@CCalAttachmentIterator@@QAEPAVCCalAttachment@@XZ @ 242 NONAME ; class CCalAttachment * CCalAttachmentIterator::NextL(void)
+	?NextL@CCalInstanceIterator@@QAEPAVCCalInstance@@XZ @ 243 NONAME ABSENT ; class CCalInstance * CCalInstanceIterator::NextL(void)
+	?OpenL@CCalSession@@QBEXABVTDesC16@@AAW4TCalFileVersionSupport@CalCommon@@@Z @ 244 NONAME ; void CCalSession::OpenL(class TDesC16 const &, enum CalCommon::TCalFileVersionSupport &) const
+	?PreviousInstanceForLocalUIDL@CCalEntry@@QBE?AVTCalTime@@ABV2@@Z @ 245 NONAME ; class TCalTime CCalEntry::PreviousInstanceForLocalUIDL(class TCalTime const &) const
+	?PreviousL@CCalInstanceIterator@@QAEPAVCCalInstance@@XZ @ 246 NONAME ABSENT ; class CCalInstance * CCalInstanceIterator::PreviousL(void)
+	?SetAttribute@CCalAttachment@@QAEXG@Z @ 247 NONAME ; void CCalAttachment::SetAttribute(unsigned short)
+	?SetContentIdL@CCalAttachmentFile@@QAEXABVTDesC8@@@Z @ 248 NONAME ; void CCalAttachmentFile::SetContentIdL(class TDesC8 const &)
+	?SetDriveL@CCalAttachmentFile@@QAEXABVTDesC16@@@Z @ 249 NONAME ; void CCalAttachmentFile::SetDriveL(class TDesC16 const &)
+	?SetFilter@CCalFindInstanceSettings@@QAEXI@Z @ 250 NONAME ; void CCalFindInstanceSettings::SetFilter(unsigned int)
+	?SetGeoValueL@CCalEntry@@QAEXABVCCalGeoValue@@@Z @ 251 NONAME ; void CCalEntry::SetGeoValueL(class CCalGeoValue const &)
+	?SetLabelL@CCalAttachment@@QAEXABVTDesC16@@@Z @ 252 NONAME ; void CCalAttachment::SetLabelL(class TDesC16 const &)
+	?SetLastModifiedDateL@CCalEntry@@QAEXABVTCalTime@@@Z @ 253 NONAME ; void CCalEntry::SetLastModifiedDateL(class TCalTime const &)
+	?SetLastModifiedTimeUtc@CCalAttachmentFile@@QAEXABVTTime@@@Z @ 254 NONAME ; void CCalAttachmentFile::SetLastModifiedTimeUtc(class TTime const &)
+	?SetLatLongL@CCalGeoValue@@QAEXABN0@Z @ 255 NONAME ; void CCalGeoValue::SetLatLongL(double const &, double const &)
+	?SetMimeTypeL@CCalAttachment@@QAEXABVTDesC8@@@Z @ 256 NONAME ; void CCalAttachment::SetMimeTypeL(class TDesC8 const &)
+	?SetResourceL@CCalAttachmentFile@@QAEXAAVRFile@@@Z @ 257 NONAME ; void CCalAttachmentFile::SetResourceL(class RFile &)
+	?SetTextSearchL@CCalFindInstanceSettings@@QAEXABVTCalSearchParams@CCalInstanceView@@@Z @ 258 NONAME ; void CCalFindInstanceSettings::SetTextSearchL(class CCalInstanceView::TCalSearchParams const &)
+	?SetTimeRange@CCalFindInstanceSettings@@QAEXABVTCalTimeRange@CalCommon@@@Z @ 259 NONAME ; void CCalFindInstanceSettings::SetTimeRange(class CalCommon::TCalTimeRange const &)
+	?SetTimeTransparencyL@CCalEntry@@QAEXW4TTransp@1@@Z @ 260 NONAME ; void CCalEntry::SetTimeTransparencyL(enum CCalEntry::TTransp)
+	?Size@CCalAttachmentFile@@QBEHXZ @ 261 NONAME ; int CCalAttachmentFile::Size(void) const
+	?TimeTransparencyL@CCalEntry@@QBE?AW4TTransp@1@XZ @ 262 NONAME ; enum CCalEntry::TTransp CCalEntry::TimeTransparencyL(void) const
+	?Type@CCalAttachment@@QBE?AW4TType@1@XZ @ 263 NONAME ; enum CCalAttachment::TType CCalAttachment::Type(void) const
+	?Value@CCalAttachment@@QBEABVTDesC8@@XZ @ 264 NONAME ; class TDesC8 const & CCalAttachment::Value(void) const
+	?_DebugRequestAllocatedCellsL@CCalSession@@QAEHXZ @ 265 NONAME ; int CCalSession::_DebugRequestAllocatedCellsL(void)
+	?_DebugSetHeapFailL@CCalSession@@QAEXW4TAllocFail@RAllocator@@H@Z @ 266 NONAME ; void CCalSession::_DebugSetHeapFailL(enum RAllocator::TAllocFail, int)
+	?SetVCalExpect@CCalAttendee@@QAEXW4TVCalExpect@1@@Z @ 267 NONAME ; void CCalAttendee::SetVCalExpect(enum CCalAttendee::TVCalExpect)
+	?VCalExpect@CCalAttendee@@QBE?AW4TVCalExpect@1@XZ @ 268 NONAME ; enum CCalAttendee::TVCalExpect CCalAttendee::VCalExpect(void) const
+	?NewL@CCalEntryView@@SAPAV1@AAVCCalSession@@@Z @ 269 NONAME ; class CCalEntryView * CCalEntryView::NewL(class CCalSession &)
+	?FilterCategoryL@CCalCategoryManager@@QAEXABVCCalCategory@@AAV?$RPointerArray@VCCalEntry@@@@@Z @ 270 NONAME ; void CCalCategoryManager::FilterCategoryL(class CCalCategory const &, class RPointerArray<class CCalEntry> &)
+	?NewL@CCalInstanceView@@SAPAV1@AAVCCalSession@@@Z @ 271 NONAME ; class CCalInstanceView * CCalInstanceView::NewL(class CCalSession &)
+	?SetUserIntL@CCalEntry@@QAEXK@Z @ 272 NONAME ABSENT ; void CCalEntry::SetUserIntL(unsigned long)
+	?UserIntL@CCalEntry@@QBEKXZ @ 273 NONAME ABSENT ; unsigned long CCalEntry::UserIntL(void) const
+	?__dbgClearTzClientCacheL@CCalSession@@QAEXH@Z @ 274 NONAME ; void CCalSession::__dbgClearTzClientCacheL(int)
+	?FindInstanceByUidL@CCalInstanceView@@QBEPAVCCalInstanceIterator@@ABVTDesC8@@ABVTCalTime@@@Z @ 275 NONAME ; class CCalInstanceIterator * CCalInstanceView::FindInstanceByUidL(class TDesC8 const &, class TCalTime const &) const
+	?FindInstanceL@CCalInstanceView@@QBEPAVCCalInstance@@KABVTCalTime@@@Z @ 276 NONAME ; class CCalInstance * CCalInstanceView::FindInstanceL(unsigned long, class TCalTime const &) const
+	?FindInstanceL@CCalInstanceView@@QBEPAVCCalInstanceIterator@@ABVCCalFindInstanceSettings@@KABVTCalTime@@@Z @ 277 NONAME ; class CCalInstanceIterator * CCalInstanceView::FindInstanceL(class CCalFindInstanceSettings const &, unsigned long, class TCalTime const &) const
+	?_DebugRequestAllocatedHeapSizeL@CCalSession@@QAEHXZ @ 278 NONAME ; int CCalSession::_DebugRequestAllocatedHeapSizeL(void)
+	?SetUserIntFilter@CCalFindInstanceSettings@@QAEXABVTCalUserIntFilter@CalCommon@@@Z @ 279 NONAME ABSENT ; void CCalFindInstanceSettings::SetUserIntFilter(class CalCommon::TCalUserIntFilter const &)
+	?AppendCriterionL@CCalSortCriteria@@QAEXW4TCalSortAttribute@CalCommon@@W4TCalSortDirection@3@@Z @ 280 NONAME ABSENT ; void CCalSortCriteria::AppendCriterionL(enum CalCommon::TCalSortAttribute, enum CalCommon::TCalSortDirection)
+	?SortDirection@CCalSortCriterion@@QBE?AW4TCalSortDirection@CalCommon@@XZ @ 281 NONAME ABSENT ; enum CalCommon::TCalSortDirection CCalSortCriterion::SortDirection(void) const
+	?SortAttribute@CCalSortCriterion@@QBE?AW4TCalSortAttribute@CalCommon@@XZ @ 282 NONAME ABSENT ; enum CalCommon::TCalSortAttribute CCalSortCriterion::SortAttribute(void) const
+	?Count@CCalSortCriteria@@QBEHXZ @ 283 NONAME ABSENT ; int CCalSortCriteria::Count(void) const
+	?NewL@CCalSortCriteria@@SAPAV1@XZ @ 284 NONAME ABSENT ; class CCalSortCriteria * CCalSortCriteria::NewL(void)
+	??0TCalPriorityRange@CalCommon@@QAE@II@Z @ 285 NONAME ; CalCommon::TCalPriorityRange::TCalPriorityRange(unsigned int, unsigned int)
+	??1CCalSortCriteria@@UAE@XZ @ 286 NONAME ABSENT ; CCalSortCriteria::~CCalSortCriteria(void)
+	?LowestPriority@TCalPriorityRange@CalCommon@@QBEIXZ @ 287 NONAME ; unsigned int CalCommon::TCalPriorityRange::LowestPriority(void) const
+	?EntryTypeOrder@CCalSortCriteria@@QBEABV?$RArray@W4TType@CCalEntry@@@@XZ @ 288 NONAME ABSENT ; class RArray<enum CCalEntry::TType> const & CCalSortCriteria::EntryTypeOrder(void) const
+	?SetEntryTypeOrderL@CCalSortCriteria@@QAEXABV?$RArray@W4TType@CCalEntry@@@@@Z @ 289 NONAME ABSENT ; void CCalSortCriteria::SetEntryTypeOrderL(class RArray<enum CCalEntry::TType> const &)
+	?HighestPriority@TCalPriorityRange@CalCommon@@QBEIXZ @ 290 NONAME ; unsigned int CalCommon::TCalPriorityRange::HighestPriority(void) const
+	?SortCriteria@CCalFindInstanceSettings@@QBEAAVCCalSortCriteria@@XZ @ 291 NONAME ABSENT ; class CCalSortCriteria & CCalFindInstanceSettings::SortCriteria(void) const
+	?SetPriorityRange@CCalFindInstanceSettings@@QAEXABVTCalPriorityRange@CalCommon@@@Z @ 292 NONAME ABSENT ; void CCalFindInstanceSettings::SetPriorityRange(class CalCommon::TCalPriorityRange const &)
+	?AtL@CCalSortCriteria@@QBEABVCCalSortCriterion@@H@Z @ 293 NONAME ABSENT ; class CCalSortCriterion const & CCalSortCriteria::AtL(int) const
+	?SortCriteria@CCalFindInstanceSettings@@QAEAAVCCalSortCriteria@@XZ @ 294 NONAME ABSENT ; class CCalSortCriteria & CCalFindInstanceSettings::SortCriteria(void)
+	?SortCriteria@CCalFindInstanceSettings@@QBEABVCCalSortCriteria@@XZ @ 295 NONAME ABSENT ; class CCalSortCriteria const & CCalFindInstanceSettings::SortCriteria(void) const
+	??0TCalUserIntFilter@CalCommon@@QAE@XZ @ 296 NONAME ABSENT ; CalCommon::TCalUserIntFilter::TCalUserIntFilter(void)
+	?Value@TCalUserIntFilter@CalCommon@@QBEKXZ @ 297 NONAME ABSENT ; unsigned long CalCommon::TCalUserIntFilter::Value(void) const
+	??0TCalPriorityRange@CalCommon@@QAE@XZ @ 298 NONAME ; CalCommon::TCalPriorityRange::TCalPriorityRange(void)
+	??0TCalUserIntFilter@CalCommon@@QAE@KK@Z @ 299 NONAME ABSENT ; CalCommon::TCalUserIntFilter::TCalUserIntFilter(unsigned long, unsigned long)
+	?Mask@TCalUserIntFilter@CalCommon@@QBEKXZ @ 300 NONAME ABSENT ; unsigned long CalCommon::TCalUserIntFilter::Mask(void) const
+	?FindAlarmedInstanceL@CCalInstanceView@@QBEXAAV?$RPointerArray@VCCalInstance@@@@UTASShdAlarmedInstanceParams@@@Z @ 301 NONAME ; void CCalInstanceView::FindAlarmedInstanceL(class RPointerArray<class CCalInstance> &, struct TASShdAlarmedInstanceParams) const
+	?FindRptUntilTimeL@CCalEntry@@QAE?AVTCalTime@@H@Z @ 302 NONAME ; class TCalTime CCalEntry::FindRptUntilTimeL(int)
+	?NewL@CCalSession@@SAPAV1@AAV1@@Z @ 303 NONAME ; class CCalSession * CCalSession::NewL(class CCalSession &)
+	?NewL@CCalInstanceView@@SAPAV1@AAV?$RPointerArray@VCCalSession@@@@@Z @ 304 NONAME ; class CCalInstanceView * CCalInstanceView::NewL(class RPointerArray<class CCalSession> &)
+	?NewL@CCalInstanceView@@SAPAV1@AAV?$RPointerArray@VCCalSession@@@@AAVMCalProgressCallBack@@@Z @ 305 NONAME ; class CCalInstanceView * CCalInstanceView::NewL(class RPointerArray<class CCalSession> &, class MCalProgressCallBack &)
+	?CollectionIdL@CCalSession@@QBEEXZ @ 306 NONAME ; unsigned char CCalSession::CollectionIdL(void) const
+	?FindInstanceL@CCalInstanceView@@QBEPAVCCalInstance@@AAUTCalInstanceId@@@Z @ 307 NONAME ; class CCalInstance * CCalInstanceView::FindInstanceL(struct TCalInstanceId &) const
+	?FindInstanceL@CCalInstanceView@@QBEPAVCCalInstanceIterator@@ABVCCalFindInstanceSettings@@AAUTCalInstanceId@@@Z @ 308 NONAME ; class CCalInstanceIterator * CCalInstanceView::FindInstanceL(class CCalFindInstanceSettings const &, struct TCalInstanceId &) const
+	?InstanceIdL@CCalInstance@@QBE?AUTCalInstanceId@@XZ @ 309 NONAME ; struct TCalInstanceId CCalInstance::InstanceIdL(void) const
+	?FindInstanceByUidL@CCalInstanceView@@QBEPAVCCalInstanceIterator@@EABVTDesC8@@ABVTCalTime@@@Z @ 310 NONAME ; class CCalInstanceIterator * CCalInstanceView::FindInstanceByUidL(unsigned char, class TDesC8 const &, class TCalTime const &) const
+	?NewL@CCalCalendarIterator@@SAPAV1@AAVCCalSession@@@Z @ 311 NONAME ; class CCalCalendarIterator * CCalCalendarIterator::NewL(class CCalSession &)
+	?IsValid@CCalCalendarInfo@@QBEHXZ @ 312 NONAME ; int CCalCalendarInfo::IsValid(void) const
+	?CurrentL@CCalCalendarIterator@@QAEPAVCCalCalendarInfo@@XZ @ 313 NONAME ; class CCalCalendarInfo * CCalCalendarIterator::CurrentL(void)
+	?SetDescriptionL@CCalCalendarInfo@@QAEXABVTDesC16@@@Z @ 314 NONAME ; void CCalCalendarInfo::SetDescriptionL(class TDesC16 const &)
+	?FileNameL@CCalCalendarInfo@@QBEABVTDesC16@@XZ @ 315 NONAME ; class TDesC16 const & CCalCalendarInfo::FileNameL(void) const
+	?NameL@CCalCalendarInfo@@QBEABVTDesC16@@XZ @ 316 NONAME ; class TDesC16 const & CCalCalendarInfo::NameL(void) const
+	?Enabled@CCalCalendarInfo@@QBEHXZ @ 317 NONAME ; int CCalCalendarInfo::Enabled(void) const
+	??1CCalCalendarInfo@@UAE@XZ @ 318 NONAME ; CCalCalendarInfo::~CCalCalendarInfo(void)
+	?SetNameL@CCalCalendarInfo@@QAEXABVTDesC16@@@Z @ 319 NONAME ; void CCalCalendarInfo::SetNameL(class TDesC16 const &)
+	?Color@CCalCalendarInfo@@QBE?AVTRgb@@XZ @ 320 NONAME ; class TRgb CCalCalendarInfo::Color(void) const
+	?CreateCalFileL@CCalSession@@QBEXABVTDesC16@@ABVCCalCalendarInfo@@@Z @ 321 NONAME ; void CCalSession::CreateCalFileL(class TDesC16 const &, class CCalCalendarInfo const &) const
+	?SetCalendarInfoL@CCalSession@@QBEXABVCCalCalendarInfo@@@Z @ 322 NONAME ; void CCalSession::SetCalendarInfoL(class CCalCalendarInfo const &) const
+	?SetEnabled@CCalCalendarInfo@@QAEXH@Z @ 323 NONAME ; void CCalCalendarInfo::SetEnabled(int)
+	?FirstL@CCalCalendarIterator@@QAEPAVCCalCalendarInfo@@XZ @ 324 NONAME ; class CCalCalendarInfo * CCalCalendarIterator::FirstL(void)
+	?NewL@CCalCalendarInfo@@SAPAV1@XZ @ 325 NONAME ; class CCalCalendarInfo * CCalCalendarInfo::NewL(void)
+	?SetColor@CCalCalendarInfo@@QAEXVTRgb@@@Z @ 326 NONAME ; void CCalCalendarInfo::SetColor(class TRgb)
+	?Count@CCalCalendarIterator@@QBEHXZ @ 327 NONAME ; int CCalCalendarIterator::Count(void) const
+	?DescriptionL@CCalCalendarInfo@@QBEABVTDesC16@@XZ @ 328 NONAME ; class TDesC16 const & CCalCalendarInfo::DescriptionL(void) const
+	?NextL@CCalCalendarIterator@@QAEPAVCCalCalendarInfo@@XZ @ 329 NONAME ; class CCalCalendarInfo * CCalCalendarIterator::NextL(void)
+	??1CCalCalendarIterator@@UAE@XZ @ 330 NONAME ; CCalCalendarIterator::~CCalCalendarIterator(void)
+	?CalendarInfoL@CCalSession@@QBEPAVCCalCalendarInfo@@XZ @ 331 NONAME ; class CCalCalendarInfo * CCalSession::CalendarInfoL(void) const
+	?StartFileChangeNotificationL@CCalSession@@QAEXAAVMCalFileChangeObserver@@@Z @ 332 NONAME ; void CCalSession::StartFileChangeNotificationL(class MCalFileChangeObserver &)
+	?FileNameL@CCalFileChangeInfo@@QBEABVTDesC16@@XZ @ 333 NONAME ; class TDesC16 const & CCalFileChangeInfo::FileNameL(void) const
+	?ChangeType@CCalFileChangeInfo@@QBE?AW4TChangeType@MCalFileChangeObserver@@XZ @ 334 NONAME ; enum MCalFileChangeObserver::TChangeType CCalFileChangeInfo::ChangeType(void) const
+	?StopFileChangeNotification@CCalSession@@QAEXXZ @ 335 NONAME ; void CCalSession::StopFileChangeNotification(void)
+	?SetPropertyL@CCalCalendarInfo@@QAEXABVTDesC8@@0@Z @ 336 NONAME ; void CCalCalendarInfo::SetPropertyL(class TDesC8 const &, class TDesC8 const &)
+	?PropertyKeysL@CCalCalendarInfo@@QBEPAVCDesC8Array@@XZ @ 337 NONAME ; class CDesC8Array * CCalCalendarInfo::PropertyKeysL(void) const
+	?RemovePropertyL@CCalCalendarInfo@@QAEXABVTDesC8@@@Z @ 338 NONAME ; void CCalCalendarInfo::RemovePropertyL(class TDesC8 const &)
+	?PropertyValueL@CCalCalendarInfo@@QBEABVTDesC8@@ABV2@@Z @ 339 NONAME ; class TDesC8 const & CCalCalendarInfo::PropertyValueL(class TDesC8 const &) const
+	?FavouriteL@CCalEntry@@QAEKXZ @ 340 NONAME ; unsigned long CCalEntry::FavouriteL(void)
+	??0TCalFavouriteFilter@CalCommon@@QAE@KK@Z @ 341 NONAME ; CalCommon::TCalFavouriteFilter::TCalFavouriteFilter(unsigned long, unsigned long)
+	?Mask@TCalFavouriteFilter@CalCommon@@QBEKXZ @ 342 NONAME ; unsigned long CalCommon::TCalFavouriteFilter::Mask(void) const
+	?SetFavouriteFilter@CCalFindInstanceSettings@@QAEXABVTCalFavouriteFilter@CalCommon@@@Z @ 343 NONAME ; void CCalFindInstanceSettings::SetFavouriteFilter(class CalCommon::TCalFavouriteFilter const &)
+	??0TCalFavouriteFilter@CalCommon@@QAE@XZ @ 344 NONAME ; CalCommon::TCalFavouriteFilter::TCalFavouriteFilter(void)
+	?Value@TCalFavouriteFilter@CalCommon@@QBEKXZ @ 345 NONAME ; unsigned long CalCommon::TCalFavouriteFilter::Value(void) const
+	?SetFavouriteL@CCalEntry@@QAEXK@Z @ 346 NONAME ; void CCalEntry::SetFavouriteL(unsigned long)
+

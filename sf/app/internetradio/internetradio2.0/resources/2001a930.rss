@@ -1,0 +1,58 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+#include <registryinfo.rh>
+#include "irgeneralsettings.hrh"
+
+/**
+* How to use the resource definition:
+*
+* IMPLEMENTATION_INFO
+*	{
+*	implementation_uid  = <Your implementation UID here>;
+*	version_no          = 1;
+*	display_name        = "<Your plugin name here (just for debugging)>";
+*	default_data        = "<One of the below UIDs your plugin will be part of>";
+*	opaque_data         = "<Position of your plugin in the parent listbox>";
+*	}
+*
+* Plugin position must follow the postition defined in UI specification.
+* Position starts from 0. Use -1 if position is not to be used in sorting.
+*
+*/
+RESOURCE REGISTRY_INFO theInfo
+	{
+	dll_uid     = IRGENERAL_SETTINGS_PLUGIN_DLL_UID; // Plugin dll UID 
+	interfaces  = 
+		{
+		INTERFACE_INFO 
+			{
+			interface_uid   = 0x10207236; // UID for CGSPluginInterface - do not change. 0x10207236
+			implementations = 
+				{
+				IMPLEMENTATION_INFO
+					{
+					implementation_uid =  IRGENERAL_SETTINGS_PLUGIN_DLL_UID; // Plugin UID 
+					version_no          = 1;
+					display_name        = "Internet Radio"; // Plugin debug name
+					default_data        = "0x10207239"; // Parent UID ie App Settings
+					opaque_data         = "-1"; // Order number 
+					}
+				};
+			}
+		};
+	}
+

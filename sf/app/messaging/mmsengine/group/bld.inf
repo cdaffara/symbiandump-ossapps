@@ -1,0 +1,42 @@
+/*
+* Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Build information file
+*
+*/
+
+#include <platform_paths.hrh>
+
+PRJ_PLATFORMS
+WINSCW ARMV5
+
+
+
+PRJ_EXPORTS
+
+../rom/MmsEngine.iby CORE_APP_LAYER_IBY_EXPORT_PATH(MmsEngine.iby)
+../inc/mmsgenutils.h |../../inc/mmsgenutils.h
+../inc/mmsmsventry.h |../../inc/mmsmsventry.h
+../inc/mmsmsventry.inl |../../inc/mmsmsventry.inl
+../inc/mmsattachmentwaiter.h |../../inc/mmsattachmentwaiter.h
+../inc/mmsattachmenthandler.h |../../inc/mmsattachmenthandler.h
+../inc/mmscmds.h |../../inc/mmscmds.h
+backup_registration.xml /epoc32/data/z/private/100058DB/backup_registration.xml
+../loc/MmsUi.loc APP_LAYER_LOC_EXPORT_PATH(mmsui.loc)
+
+
+../conf/mmsengine.confml APP_LAYER_CONFML(mmsengine.confml)
+../conf/CI_mmsengine.confml APP_LAYER_CONFML(CI_mmsengine.confml)
+../conf/mmsengine_100058DB.crml APP_LAYER_CRML(mmsengine_100058db.crml)
+../conf/mmsengine_101FB0D5.crml APP_LAYER_CRML(mmsengine_101fb0d5.crml)
+../conf/mmsengine_101FB0D5.crml APP_LAYER_CRML(mmsengine_101fb0d9.crml)

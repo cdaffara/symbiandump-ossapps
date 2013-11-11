@@ -1,0 +1,1119 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: The resource for ConnTest
+*
+*/
+
+//  RESOURCE IDENTIFIER
+NAME    AWIZ // 4 letter ID
+
+//  INCLUDES
+#include <eikon.rh>
+#include "ConnTest.rh"
+#include "conntest.hrh"
+#include "conntest.loc"
+#include <avkon.rsg>
+#include <avkon.rh>
+#include <avkon.mbg>
+#include <appinfo.rh>
+
+#include <data_caging_paths_strings.hrh>
+
+//  CONSTANTS  
+
+// for Text Setting Page
+#define TEXT_SETTING_PAGE_NUMBER 1
+#define TEXT_SETTING_PAGE_WIDTH 9
+#define TEXT_SETTING_PAGE_LINES 5
+#define TEXT_SETTING_PAGE_MAXLENGTH   50
+
+
+//  MACROS  
+//#define ?macro
+
+
+//  RESOURCE DEFINITIONS 
+
+RESOURCE RSS_SIGNATURE { }
+
+RESOURCE TBUF { buf="\\private\\101F6D2B\\ConnTest"; }
+
+RESOURCE EIK_APP_INFO
+    {
+    status_pane = r_conntest_status_pane;
+    }
+
+//----------------------------------------------------
+//   
+//    r_conntest_hotkeys
+//    ?description
+//
+//----------------------------------------------------
+//
+RESOURCE HOTKEYS r_conntest_hotkeys
+    {
+    control=
+        {
+        HOTKEY { command=EAknCmdExit; key='e'; }
+        };
+    }
+
+//----------------------------------------------------
+//   
+//    r_conntest_view1
+//    ?description
+//
+//----------------------------------------------------
+//
+RESOURCE AVKON_VIEW r_conntest_view1
+    {
+    hotkeys=r_conntest_hotkeys;
+    menubar=r_conntest_menubar_view1;  
+    //cba=R_AVKON_SOFTKEYS_SELECTION_LIST;    
+    cba=R_AVKON_SOFTKEYS_OPTIONS_EXIT;    
+    }
+    
+
+//----------------------------------------------------
+//   
+//    r_conntest_menubar_view1
+//    ?description
+//
+//----------------------------------------------------
+//
+RESOURCE MENU_BAR r_conntest_menubar_view1
+    {
+    titles=
+        {
+        MENU_TITLE { menu_pane=r_conntest_app_menu; txt="App"; },
+        MENU_TITLE { menu_pane=r_conntest_view1_menu; txt="View"; }
+        };
+    }
+
+//----------------------------------------------------
+//   
+//    r_conntest_view1_menu
+//    ?description
+//
+//----------------------------------------------------
+//
+RESOURCE MENU_PANE r_conntest_view1_menu
+    {
+    items=
+        {
+        MENU_ITEM { command=EConnTestCmdMigrate; txt = "Migrate"; },
+        
+        MENU_ITEM { command=EConnTestCmdIgnore; txt = "Ignore"; },
+        
+        MENU_ITEM { command=EConnTestCmdAccept; txt = "Accept"; },
+        
+        MENU_ITEM { command=EConnTestCmdReject; txt = "Reject"; },
+
+        MENU_ITEM { command=EConnTestCmdCancel; txt = "Cancel"; },
+
+        MENU_ITEM { command=EConnTestCmdStartInterface; txt = "Start interface";},
+        
+        MENU_ITEM { command=EConnTestCmdStopInterface; txt = "Stop interface"; },
+
+        MENU_ITEM { command=EConnTestCmdStartInternet; txt = "Start Internet";},        
+
+        MENU_ITEM { command=EConnTestCmdConnect; txt = "Connect"; },
+
+		MENU_ITEM { command=EConnTestCmdListen; txt = "Listen"; },
+
+		MENU_ITEM { command=EConnTestCmdDisconnect; txt = "Disconnect"; },
+
+        MENU_ITEM { command=EConnTestCmdOutputWindow; txt = "Output"; cascade=r_conntest_sub_menu_output;},
+
+		MENU_ITEM { command=EConnTestCmdSendRawData; txt = "Send";
+		            cascade=r_conntest_sub_menu_send; },
+		            
+        MENU_ITEM { command=EConnTestWlanDir; txt = "WLAN"; cascade=r_conntest_sub_menu_wlan;},
+        
+		MENU_ITEM { command=EConnTestCmdConnectionInfo; txt = "Info"; 
+		            cascade=r_conntest_sub_menu_info;},
+
+		MENU_ITEM { command=EConnTestCmdHttpFrameworkGet; txt = "HTTP framework";
+                    cascade=r_conntest_sub_menu_http_fw; },
+
+		MENU_ITEM { command=EConnTestCmdAdvanced; txt = "Advanced"; 
+		            cascade=r_conntest_sub_menu_advanced;},
+
+		MENU_ITEM {	command = EConnTestCmdIpLog; txt = "IP packet logging";
+			        cascade=r_conntest_sub_menu_ipdump;},
+		            
+        MENU_ITEM { command=EConnTestCmdSettings; txt = "Settings"; }
+        };
+    }
+
+RESOURCE MENU_PANE r_conntest_sub_menu_output
+    {
+    items=
+        {
+        MENU_ITEM { command=EConnTestCmdClearOutputWindow; txt = "Clear"; },
+        MENU_ITEM { command=EConnTestCmdSaveOutputWindow; txt = "Save"; }
+        };
+    }
+
+    
+RESOURCE MENU_PANE r_conntest_sub_menu_wlan
+    {
+    items=
+        {
+        MENU_ITEM { command=EConnTestWlanAvailableIaps; txt = "Available IAPs"; },
+        
+        MENU_ITEM { command=EConnTestWlanScan; txt = "Scan"; },
+        
+        MENU_ITEM { command=EConnTestWlanGetSsid; txt = "Get SSID"; },
+        
+        MENU_ITEM { command=EConnTestWlanGetBssid; txt = "Get BSSID"; },
+        
+        MENU_ITEM { command=EConnTestWlanGetRssi; txt = "Get RSSI"; },
+        
+        MENU_ITEM { command=EConnTestWlanGetConnMode; txt = "Get Mode"; },
+        
+		MENU_ITEM { command=EConnTestWlanGetSecurityMode; txt = "Get Security"; }
+        };
+    }
+
+
+
+RESOURCE MENU_PANE r_conntest_sub_menu_info
+    {
+    items=
+        {
+        MENU_ITEM 
+            {
+            command = EConnTestCmdConnectionInfo;
+            txt = "Connection info";
+            },
+        MENU_ITEM 
+            {
+            command = EConnTestCmdInterfaceInfo;
+            txt = "Interface info";
+            }
+        };
+    }
+
+RESOURCE MENU_PANE r_conntest_sub_menu_advanced
+    {
+    items=
+        {
+        MENU_ITEM
+            {
+            command=EConnTestCmdStartSnap;
+            txt = "Start Snap";
+            },
+        MENU_ITEM 
+            {
+            command = EConnTestCmdStartInterfaceNoPrefs;
+            txt = "Start, no prefs";
+            },
+        MENU_ITEM 
+            {
+            command = EConnTestCmdSetCustomPrefs;
+            txt = "Set custom prefs";
+            },
+        MENU_ITEM 
+            {
+            command = EConnTestCmdStartInterfaceExtConnPrefs;
+            txt = "Start, custom prefs";
+            },
+        MENU_ITEM 
+            {
+            command = EConnTestCmdStartForClose;
+            txt = "Start, test Close";
+            },
+        MENU_ITEM 
+            {
+            command = EConnTestCmdCloseInterface;
+            txt = "RConnection::Close";
+            },
+        MENU_ITEM 
+            {
+            command = EConnTestCmdConnectionPrefsIap;
+            txt = "ConnPrefs IapId";
+            },
+        MENU_ITEM 
+            {
+            command = EConnTestCmdClearOutputWindow;
+            txt = "Timeouts";
+			cascade=r_conntest_sub_menu_timeout;
+			flags = EEikMenuItemSeparatorAfter;
+            },
+        MENU_ITEM 
+            {
+            command = EConnTestCmdWLANQoSVoice;
+            txt = "WLAN QoS";
+			cascade=r_conntest_sub_menu_wlanqos;
+			flags = EEikMenuItemSeparatorAfter;
+            },
+		MENU_ITEM
+			{
+			command = EConnTestCmdParallelGet;
+			txt = "Parallel GET";
+			}
+        };
+    }
+
+RESOURCE MENU_PANE r_conntest_sub_menu_ipdump
+    {
+    items=
+        {
+        MENU_ITEM 
+            {
+            command = EConnTestCmdStartIpLog;
+            txt = "Start logging";
+            },
+        MENU_ITEM 
+            {
+            command = EConnTestCmdStopIpLog;
+            txt = "Stop logging";
+            },
+        MENU_ITEM 
+            {
+            command = EConnTestCmdSendIpLog;
+            txt = "Send log";
+            }
+        };
+    }
+
+
+RESOURCE MENU_PANE r_conntest_sub_menu_send
+    {
+    items=
+        {
+        MENU_ITEM 
+            {
+            command = EConnTestCmdSendHttpGet;
+            txt = "HTTP GET";
+            },
+        MENU_ITEM 
+            {
+            command = EConnTestCmdSendPerformanceHttpGet;
+            txt = "Performance GET";
+            },
+        MENU_ITEM 
+            {
+            command = EConnTestCmdSendHttpPost;
+            txt = "Performance POST";
+            },
+        MENU_ITEM 
+            {
+            command = EConnTestCmdSendRawData;
+            txt = "Raw data";
+            }
+        };
+    }
+
+RESOURCE MENU_PANE r_conntest_sub_menu_http_fw
+    {
+    items=
+        {
+        MENU_ITEM 
+            {
+            command = EConnTestCmdHttpFrameworkGet;
+            txt = "HTTP Get";
+            },
+        //MENU_ITEM 
+        //    {
+        //    command = EConnTestCmdHttpFrameworkPost;
+        //    txt = "Post";
+        //    },
+        MENU_ITEM 
+            {
+            command = EConnTestCmdHttpFrameworkSecureGet;
+            txt = "HTTPS Get";
+            },
+        MENU_ITEM 
+            {
+            command = EConnTestCmdHttpFrameworkPerformanceGet;
+            txt = "Performance GET";
+            },
+        MENU_ITEM 
+            {
+            command = EConnTestCmdHttpFrameworkPerformancePost;
+            txt = "Performance POST";
+            }
+        };
+    }
+
+RESOURCE MENU_PANE r_conntest_sub_menu_timeout
+    {
+    items=
+        {
+        MENU_ITEM 
+            {
+            command = EConnTestCmdTimeoutLastSocketActivity;
+            txt = "LastSocketActivity";
+            },
+        MENU_ITEM 
+            {
+            command = EConnTestCmdTimeoutLastSocketClosed;
+            txt = "LastSocketclosed";
+            },
+        MENU_ITEM 
+            {
+            command = EConnTestCmdTimeoutLastSessionClosed;
+            txt = "LastSessionClosed";
+            }
+        };
+    }
+
+RESOURCE MENU_PANE r_conntest_sub_menu_wlanqos
+    {
+    items=
+        {
+        MENU_ITEM 
+            {
+            command = EConnTestCmdWLANQoSVoice;
+            txt = "Voice";
+            },
+        MENU_ITEM 
+            {
+            command = EConnTestCmdWLANQoSVideo;
+            txt = "Video";
+            },
+        MENU_ITEM 
+            {
+            command = EConnTestCmdWLANQoSBestEffort;
+            txt = "Best Effort";
+            },
+        MENU_ITEM 
+            {
+            command = EConnTestCmdWLANQoSBackground;
+            txt = "Background";
+            },
+        MENU_ITEM 
+            {
+            command = EConnTestCmdWLANQoSNone;
+            txt = "None";
+            }
+        };
+    }
+
+
+
+RESOURCE MENU_PANE r_conntest_sub_menu_qos
+    {
+    items=
+        {
+        MENU_ITEM 
+            {
+            command = EConnTestCmdQoS1;
+            txt = "Join";
+            }
+        };
+    }
+
+
+//----------------------------------------------------
+//   
+//    r_conntest_app_menu
+//    ?description
+//
+//----------------------------------------------------
+//
+RESOURCE MENU_PANE r_conntest_app_menu
+    {
+    items=
+        {
+        //MENU_ITEM { command=EAknCmdExit; txt = qtn_appl_option_item; },
+        MENU_ITEM { command=EAknCmdExit; txt="Exit"; }
+        };
+    }
+
+RESOURCE STATUS_PANE_APP_MODEL r_conntest_status_pane
+    {
+	panes=
+		{
+		SPANE_PANE
+			{
+			id = EEikStatusPaneUidNavi;
+			type = EAknCtNaviPane;
+			resource = r_conntest_navi_decorator;
+			}
+		};
+    }
+
+//----------------------------------------------------
+//   
+//    r_conntest_navi_decorator
+//    ?description
+//
+//----------------------------------------------------
+//
+RESOURCE NAVI_DECORATOR r_conntest_navi_decorator
+    {
+    type = ENaviDecoratorControlTabGroup;
+    control = TAB_GROUP
+		{
+		tab_width = EAknTabWidthWithFourTabs;  // four tabs
+		active = 0;
+		tabs = {
+			TAB
+				{
+                id = EConnTestView1Tab; // from application hrh
+                txt = "1";
+                },
+			TAB
+				{
+                id = EConnTestView2Tab; // from application hrh
+                txt = "2";
+                },
+			TAB
+				{
+                id = EConnTestView3Tab;
+                txt = "3";
+				},
+			TAB
+				{
+                id = EConnTestView4Tab;
+                txt = "4";
+				}
+			};
+		};
+	}
+
+//----------------------------------------------------
+//   
+//    r_conntest_custom_prefs_list
+//    Custom Preferences list
+//
+//----------------------------------------------------
+//
+RESOURCE AVKON_SETTING_ITEM_LIST r_conntest_custom_prefs_list
+  {
+  flags= EAknSettingItemNumberedStyle;
+  title = "custom_prefs";
+  initial_number = 1;
+  items =
+    {
+    AVKON_SETTING_ITEM
+      {
+      identifier = EConnTestExtConnPrefsItemSnapPurpose;
+      setting_page_resource = r_conntest_enumtext_setting_page;
+      associated_resource = r_conntest_snap_purpose_list;
+      name = "SnapPurpose";
+      },
+    AVKON_SETTING_ITEM
+      {
+      identifier = EConnTestExtConnPrefsItemSnapId;
+      setting_page_resource = r_conntest_integer_setting_page;
+      name = "SnapId";
+      },
+    AVKON_SETTING_ITEM
+      {
+      identifier = EConnTestExtConnPrefsItemIapId;
+      setting_page_resource = r_conntest_integer_setting_page;
+      name = "IapId";
+      },
+    AVKON_SETTING_ITEM
+      {
+      identifier = EConnTestExtConnPrefsItemBearerSet;
+      setting_page_resource = r_conntest_enumtext_setting_page;
+      associated_resource = r_conntest_bearer_set_list;
+      name = "BearerSet";
+      },
+    AVKON_SETTING_ITEM
+      {
+      identifier = EConnTestExtConnPrefsItemNoteBehaviour;
+      setting_page_resource = r_conntest_enumtext_setting_page;
+      associated_resource = r_conntest_note_behaviour_list;
+      name = "NoteBehaviour";
+      },
+    AVKON_SETTING_ITEM
+      {
+      identifier = EConnTestExtConnPrefsItemConnSelectionDialog;
+      setting_page_resource = r_conntest_binary_switch_setting_page;
+      associated_resource = r_conntest_conn_selection_dialog_list;
+      name = "SelectionDialog";
+      },
+    AVKON_SETTING_ITEM
+      {
+      identifier = EConnTestExtConnPrefsItemDisconnectDialog;
+      setting_page_resource = r_conntest_binary_switch_setting_page;
+      associated_resource = r_conntest_disconnect_dialog_list;
+      name = "DisconnectDialog";
+      },
+    AVKON_SETTING_ITEM
+      {
+      identifier = EConnTestExtConnPrefsItemForcedRoaming;
+      setting_page_resource = r_conntest_binary_switch_setting_page;
+      associated_resource = r_conntest_forced_roaming_list;
+      name = "ForcedRoaming";
+      }
+    };
+  } 
+
+//----------------------------------------------------
+//   
+//    r_conntest_setting_list
+//    Setting list
+//
+//----------------------------------------------------
+//
+RESOURCE AVKON_SETTING_ITEM_LIST r_conntest_setting_list
+  {
+  flags= EAknSettingItemNumberedStyle;
+  title = "not_shown";
+  initial_number = 1;
+  items =
+    {
+    AVKON_SETTING_ITEM
+      {
+      identifier = EConnTestRoaming;
+      setting_page_resource = r_conntest_enumtext_setting_page;
+      associated_resource = r_conntest_roaming_setting_list;
+      name = "Roaming";
+      },
+    AVKON_SETTING_ITEM
+      {
+      identifier = EConnTestIpAddress;
+      setting_page_resource = r_conntest_text_setting_page;
+      name = "IP address";
+      },
+	AVKON_SETTING_ITEM
+      {
+      identifier = EConnTestPort;
+      setting_page_resource = r_conntest_integer_setting_page;
+      name = "Port";
+      },
+    AVKON_SETTING_ITEM
+      {
+      identifier = EConnTestHttpPage;
+      setting_page_resource = r_conntest_text_setting_page;
+      name = "HTTP page";
+      },
+    AVKON_SETTING_ITEM
+      {
+      identifier = EConnTestProtocol;
+      setting_page_resource = r_conntest_enumtext_setting_page;
+      associated_resource = r_conntest_protocol_setting_list;
+      name = "Protocol";
+      },
+	AVKON_SETTING_ITEM
+      {
+      identifier = EConnTestPacketSize;
+      setting_page_resource = r_conntest_integer_setting_page;
+      name = "Packet size (<16384)";
+      },
+	AVKON_SETTING_ITEM
+      {
+      identifier = EConnTestPackets;
+      setting_page_resource = r_conntest_integer_setting_page;
+      name = "Number of packets";
+      },
+	AVKON_SETTING_ITEM
+      {
+      identifier = EConnTestDelay;
+      setting_page_resource = r_conntest_integer_setting_page;
+      name = "Delay (ms)";
+      }
+    };
+  } 
+
+//----------------------------------------------------------------
+
+RESOURCE AVKON_POPUP_SETTING_TEXTS r_conntest_snap_purpose_list
+    {
+    setting_texts_resource = r_conntest_snap_purpose_page_list;
+    popped_up_texts_resource = r_conntest_snap_purpose_list_item_array;
+    }
+
+RESOURCE ARRAY r_conntest_snap_purpose_page_list
+    {
+    items =
+        {
+        AVKON_ENUMERATED_TEXT
+            {
+            value = 0;
+            text = "Unknown";
+            },
+        AVKON_ENUMERATED_TEXT
+            {
+            value = 1;
+            text = "Internet";
+            },
+        AVKON_ENUMERATED_TEXT
+            {
+            value = 2;
+            text = "Operator";
+            },
+        AVKON_ENUMERATED_TEXT
+            {
+            value = 3;
+            text = "MMS";
+            },
+        AVKON_ENUMERATED_TEXT
+            {
+            value = 4;
+            text = "Intranet";
+            }
+        };
+    }
+
+RESOURCE ARRAY r_conntest_snap_purpose_list_item_array
+    {
+    items =
+        {
+        LBUF
+            {
+            txt = "Unknown";
+            },
+        LBUF
+            {
+            txt = "Internet";
+            },
+        LBUF
+            {
+            txt = "Operator";
+            },
+        LBUF
+            {
+            txt = "MMS";
+            },
+        LBUF
+            {
+            txt = "Intranet";
+            }
+        };
+    }
+
+//----------------------------------------------------------------
+
+RESOURCE AVKON_POPUP_SETTING_TEXTS r_conntest_bearer_set_list
+    {
+    setting_texts_resource = r_conntest_bearer_set_page_list;
+    popped_up_texts_resource = r_conntest_bearer_set_list_item_array;
+    }
+
+RESOURCE ARRAY r_conntest_bearer_set_page_list
+    {
+    items =
+        {
+        AVKON_ENUMERATED_TEXT
+            {
+            value = 0;
+            text = "Unknown";
+            },
+        AVKON_ENUMERATED_TEXT
+            {
+            value = 1;
+            text = "Cellular";
+            },
+        AVKON_ENUMERATED_TEXT
+            {
+            value = 2;
+            text = "WLAN";
+            }
+        };
+    }
+
+RESOURCE ARRAY r_conntest_bearer_set_list_item_array
+    {
+    items =
+        {
+        LBUF
+            {
+            txt = "Unknown";
+            },
+        LBUF
+            {
+            txt = "Cellular";
+            },
+        LBUF
+            {
+            txt = "WLAN";
+            }
+        };
+    }
+
+//----------------------------------------------------------------
+
+RESOURCE AVKON_POPUP_SETTING_TEXTS r_conntest_note_behaviour_list
+    {
+    setting_texts_resource = r_conntest_note_behaviour_page_list;
+    popped_up_texts_resource = r_conntest_note_behaviour_list_item_array;
+    }
+
+RESOURCE ARRAY r_conntest_note_behaviour_page_list
+    {
+    items =
+        {
+        AVKON_ENUMERATED_TEXT
+            {
+            value = 0;
+            text = "Default";
+            },
+        AVKON_ENUMERATED_TEXT
+            {
+            value = 1;
+            text = "Disable notes";
+            },
+        AVKON_ENUMERATED_TEXT
+            {
+            value = 2;
+            text = "Disable Queries";
+            },
+        AVKON_ENUMERATED_TEXT
+            {
+            value = 3;
+            text = "Silent";
+            }
+        };
+    }
+
+RESOURCE ARRAY r_conntest_note_behaviour_list_item_array
+    {
+    items =
+        {
+        LBUF
+            {
+            txt = "Default";
+            },
+        LBUF
+            {
+            txt = "Disable notes";
+            },
+        LBUF
+            {
+            txt = "Disable queries";
+            },
+        LBUF
+            {
+            txt = "Silent";
+            }
+        };
+    }
+
+//----------------------------------------------------------------
+
+RESOURCE AVKON_POPUP_SETTING_TEXTS r_conntest_disconnect_dialog_list
+    {
+    setting_texts_resource = r_conntest_disconnect_dialog_page_list;
+    }
+
+RESOURCE ARRAY r_conntest_disconnect_dialog_page_list
+    {
+    items =
+        {
+        AVKON_ENUMERATED_TEXT
+            {
+            value = 0;
+            text = "Disabled";
+            },
+        AVKON_ENUMERATED_TEXT
+            {
+            value = 1;
+            text = "Enabled";
+            }
+        };
+    }
+
+
+//----------------------------------------------------------------
+
+RESOURCE AVKON_POPUP_SETTING_TEXTS r_conntest_conn_selection_dialog_list
+    {
+    setting_texts_resource = r_conntest_conn_selection_dialog_page_list;
+    }
+
+RESOURCE ARRAY r_conntest_conn_selection_dialog_page_list
+    {
+    items =
+        {
+        AVKON_ENUMERATED_TEXT
+            {
+            value = 0;
+            text = "Disabled";
+            },
+        AVKON_ENUMERATED_TEXT
+            {
+            value = 1;
+            text = "Enabled";
+            }
+        };
+    }
+
+
+//----------------------------------------------------------------
+
+RESOURCE AVKON_POPUP_SETTING_TEXTS r_conntest_forced_roaming_list
+    {
+    setting_texts_resource = r_conntest_forced_roaming_page_list;
+    }
+
+RESOURCE ARRAY r_conntest_forced_roaming_page_list
+    {
+    items =
+        {
+        AVKON_ENUMERATED_TEXT
+            {
+            value = 0;
+            text = "Disabled";
+            },
+        AVKON_ENUMERATED_TEXT
+            {
+            value = 1;
+            text = "Enabled";
+            }
+        };
+    }
+
+//----------------------------------------------------------------
+
+RESOURCE AVKON_POPUP_SETTING_TEXTS r_conntest_roaming_setting_list
+    {
+    setting_texts_resource = r_conntest_roaming_page_list;
+    popped_up_texts_resource = r_conntest_roaming_list_item_array;
+    }
+
+RESOURCE ARRAY r_conntest_roaming_page_list
+    {
+    items =
+        {
+        AVKON_ENUMERATED_TEXT
+            {
+            value = 0;
+            text = "Off";
+            },
+        AVKON_ENUMERATED_TEXT
+            {
+            value = 1;
+            text = "Automatic";
+            },
+        AVKON_ENUMERATED_TEXT
+            {
+            value = 2;
+            text = "Manual";
+            }
+        };
+    }
+
+RESOURCE ARRAY r_conntest_roaming_list_item_array
+    {
+    items =
+        {
+        LBUF
+            {
+            txt = "Off";
+            },
+        LBUF
+            {
+            txt = "Automatic";
+            },
+        LBUF
+            {
+            txt = "Manual";
+            }
+        };
+    }
+
+//----------------------------------------------------------------------------
+
+RESOURCE AVKON_POPUP_SETTING_TEXTS r_conntest_protocol_setting_list
+    {
+    setting_texts_resource = r_conntest_protocol_page_list;
+    popped_up_texts_resource = r_conntest_protocol_list_item_array;
+    }
+
+RESOURCE ARRAY r_conntest_protocol_page_list
+    {
+    items =
+        {
+        AVKON_ENUMERATED_TEXT
+            {
+            value = 0;
+            text = "TCP";
+            },
+        AVKON_ENUMERATED_TEXT
+            {
+            value = 1;
+            text = "UDP";
+            }
+        };
+    }
+
+RESOURCE ARRAY r_conntest_protocol_list_item_array
+    {
+    items =
+        {
+        LBUF
+            {
+            txt = "TCP/IP";
+            },
+        LBUF
+            {
+            txt = "UDP/IP";
+            }
+        };
+    }
+
+
+//----------------------------------------------------------------------------
+//
+//    r_conntest_enumtext_setting_page
+//    Setting page for enumerations
+//
+//----------------------------------------------------------------------------
+//
+RESOURCE AVKON_SETTING_PAGE r_conntest_enumtext_setting_page
+    {   
+    number= 1;
+    label= qtn_conntest_enumtext_title;
+    type = EAknCtPopupSettingList;
+    editor_resource_id = r_conntest_popup_setting_list_new_entry;
+    }
+
+RESOURCE POPUP_SETTING_LIST r_conntest_popup_setting_list_new_entry
+    {
+    //flags = EAknPopupSettingListFlagAllowsUserDefinedEntry;
+    }
+
+//----------------------------------------------------------------------------
+//
+//    r_conntest_integer_setting_page
+//    Setting page for integers
+//
+//----------------------------------------------------------------------------
+//
+RESOURCE AVKON_SETTING_PAGE r_conntest_integer_setting_page
+  {
+  number = 1;
+  //label = "Port";
+  type = EAknCtIntegerEdwin;
+  editor_resource_id = r_conntest_integer;
+  }
+
+RESOURCE AVKON_INTEGER_EDWIN r_conntest_integer
+  {
+   min=0;
+  } 
+  
+
+//----------------------------------------------------------------------------
+//
+//    r_conntest_binary_switch_setting_page
+//    Setting page for binary values
+//
+//----------------------------------------------------------------------------
+//
+RESOURCE AVKON_SETTING_PAGE r_conntest_binary_switch_setting_page
+    {   
+    number= 1;
+    label= "Binary switch";
+    type = EAknCtPopupSettingList;
+    editor_resource_id = r_conntest_popup_setting_list_new_entry;
+    }
+
+//-----------------------------------------------------------------------------
+//
+//    r_conntest_text_setting_page
+//    Setting page for text
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE AVKON_SETTING_PAGE r_conntest_text_setting_page
+    {
+    number = 1;
+    type = EEikCtEdwin;
+    editor_resource_id = r_conntest_edwin;
+    }
+
+
+RESOURCE EDWIN r_conntest_edwin
+    {
+    width = TEXT_SETTING_PAGE_WIDTH ;
+    lines = TEXT_SETTING_PAGE_LINES;
+    maxlength = TEXT_SETTING_PAGE_MAXLENGTH;
+    }
+
+//-----------------------------------------------------------------------------
+//
+//    r_aknatquery_number_layout
+//    Resource of Number Query.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE DIALOG r_conntest_number_layout
+    {
+    flags = EGeneralQueryFlags;
+    buttons = R_AVKON_SOFTKEYS_OK_CANCEL;
+    items =
+        {
+        DLG_LINE
+            {
+            type = EAknCtQuery;
+            id = EGeneralQuery;
+            control= AVKON_DATA_QUERY
+                {
+                layout = ENumberLayout;
+                label = qtn_aknatquery_num_label_text;
+                control = AVKON_INTEGER_EDWIN
+                    {
+                    min = -1;
+                    max = 1000000;
+                    };
+                };
+            }
+        };
+    }
+
+//-----------------------------------------------------------------------------
+//
+//    r_aknatquery_number_layout
+//    Resource of Number Query.
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE DIALOG r_conntest_parallel_number_layout
+    {
+    flags = EGeneralQueryFlags;
+    buttons = R_AVKON_SOFTKEYS_OK_CANCEL;
+    items =
+        {
+        DLG_LINE
+            {
+            type = EAknCtQuery;
+            id = EGeneralQuery;
+            control= AVKON_DATA_QUERY
+                {
+                layout = ENumberLayout;
+                label = qtn_aknatquery_num_label_text;
+                control = AVKON_INTEGER_EDWIN
+                    {
+                    min = 0;
+                    max = 4; // Max 4 parallel HTTP gets
+                    };
+                };
+            }
+        };
+    }
+
+// Add a new resource definition
+RESOURCE LOCALISABLE_APP_INFO r_conntest_localisable_app_info
+    {
+    short_caption = "ConnTest";
+    caption_and_icon = 
+    CAPTION_AND_ICON_INFO
+        {
+        caption = "ConnTest";
+        number_of_icons = 2;
+        icon_file = APP_BITMAP_DIR"\\ConnTest_aif.mbm";
+        };
+    }
+    
+        //icon_file = "Z:\\resource\\apps\\localisablefiles\\ConnTest_aif.mbm";
+// End of File

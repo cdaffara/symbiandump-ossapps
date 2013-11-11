@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument context="RadioMainView" version="0.9">
+    <widget name="view" type="HbView">
+        <widget name="mv:container" role="HbView:widget" type="HbWidget">
+
+            <!-- Information area that holds the station carousel -->
+            <widget name="mv:info_area" type="HbWidget">
+                <widget name="mv:carousel_background" type="HbLabel">
+                    <icon name="icon" iconName="qtg_fr_lcd" />
+                </widget>
+                <widget name="mv:info_text" type="HbLabel" >
+                    <contentsmargins top="16un" bottom="var(hb-param-margin-gene-bottom)"
+                                     left="var(hb-param-margin-gene-left)" right="var(hb-param-margin-gene-right)" />
+                    <enums name="alignment" value="AlignTop|AlignHCenter"/>
+                    <string name="plainText" locid="txt_rad_info_fm_radio" />
+                    <fontspec name="fontSpec" role="Title" textheight="8un" />
+                </widget>
+                <layout type="stacked">
+                    <stackitem itemname="mv:carousel_background"/>
+                    <stackitem itemname="mv:info_text"/>
+                </layout>
+            </widget>
+
+            <!-- Frequency area that holds the frequency strip -->
+            <widget name="mv:frequency_area" type="HbWidget">
+                <sizehint height="10un" type="FIXED"/>            
+                <widget name="mv:frequency_background" type="HbLabel">
+                    <icon name="icon" iconName="qtg_fr_lcd"/>
+                </widget>
+                <layout type="stacked">
+                    <stackitem itemname="mv:frequency_background"/>
+                </layout>
+            </widget>
+
+            <!-- Control area that holds the three buttons -->
+            <widget name="mv:control_area" type="HbWidget" >
+                <widget name="mv:stations_button" type="HbPushButton" />
+                <widget name="mv:favorite_button" type="HbPushButton" />
+                <widget name="mv:loudspeaker_button" type="HbPushButton" />
+                <layout orientation="Vertical" spacing="var(hb-param-margin-gene-middle-vertical)" type="linear">
+                    <contentsmargins bottom="0un" left="0un" right="0un" top="0un" />
+                    <stretchitem stretchfactor="1"/>
+                    <linearitem itemname="mv:stations_button"/>
+                    <stretchitem stretchfactor="1"/>
+                    <linearitem itemname="mv:favorite_button"/>
+                    <stretchitem stretchfactor="1"/>
+                    <linearitem itemname="mv:loudspeaker_button"/>
+                    <stretchitem stretchfactor="1"/>
+                </layout>
+            </widget>
+
+        </widget>
+        <string name="title" locid="txt_rad_title_fm_radio"/>
+    </widget>
+
+    <!-- Section to do lazy initialization of the view -->
+    <section name="lazy_load">
+        <object name="mv:historyview_action" type="HbAction">
+            <string name="text" locid="txt_rad_opt_play_history" />
+        </object>
+        <object name="mv:scan_action" type="HbAction">
+            <string name="text" locid="txt_rad_opt_search_all_stations" />
+        </object>
+        <object name="exit_action" type="HbAction">
+            <string name="text" locid="txt_common_opt_exit" />
+        </object>
+        <widget name="view">
+            <widget name="menu" role="HbView:menu" type="HbMenu">
+                <ref object="mv:historyview_action" role="HbMenu:addAction"/>
+                <ref object="mv:scan_action" role="HbMenu:addAction"/>
+                <ref object="exit_action" role="HbMenu:addAction"/>
+            </widget>
+            <string name="title" locid="txt_rad_title_fm_radio"/>
+        </widget>
+        <widget name="mv:info_area">
+            <widget name="mv:carousel_overlay" type="HbLabel">
+                <icon name="icon" iconName="qtg_fr_lcd_overlay" />
+            </widget>
+            <widget name="mv:station_carousel" plugin="fmradiowidgetsplugin" type="RadioStationCarousel">
+                <icon name="favoriteIcon" iconName="qtg_small_favorite" />
+                <icon name="nonFavoriteIcon" iconName="qtg_small_star_non_favourited" />
+                <integer name="autoScrollTime" value="1000"/>
+            </widget>
+            <widget name="mv:info_text">
+                <bool name="visible" value="FALSE" />
+                <string name="plainText" locid="txt_rad_info_fm_radio" />
+                <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+                <fontspec name="fontSpec" role="Secondary" textheight="var(hb-param-text-height-secondary)" />
+            </widget>
+            <layout type="stacked">
+                <stackitem itemname="mv:carousel_background"/>
+                <stackitem itemname="mv:carousel_overlay"/>
+                <stackitem itemname="mv:station_carousel"/>
+                <stackitem itemname="mv:info_text"/>
+            </layout>
+        </widget>
+        <widget name="mv:frequency_area">
+            <widget name="mv:frequency_strip" plugin="fmradiowidgetsplugin" type="RadioFrequencyStrip">
+                <contentsmargins left="var(hb-param-margin-gene-middle-horizontal)" right="var(hb-param-margin-gene-middle-horizontal)" />
+                <widget name="mv:prev_button" type="HbPushButton">
+                    <icon name="icon" iconName="qtg_mono_previous" />
+                </widget>
+                <widget name="mv:next_button" type="HbPushButton">
+                    <icon name="icon" iconName="qtg_mono_next" />
+                </widget>
+                <integer name="autoScrollTime" value="1000"/>
+                <integer name="itemHeight" value="9"/>
+            </widget>
+            <layout type="stacked">
+                <stackitem itemname="mv:frequency_background"/>
+                <stackitem itemname="mv:frequency_strip"/>
+            </layout>
+        </widget>
+
+        <widget name="mv:stations_button">
+            <bool name="stretched" value="TRUE" />
+            <string name="text" locid="txt_rad_button_stations" />
+            <icon name="icon" iconName="qtg_mono_radio_stations" />
+        </widget>
+        <widget name="mv:favorite_button">
+            <bool name="stretched" value="TRUE" />
+            <string name="text" locid="txt_rad_button_add_to_favourites" />
+            <icon name="icon" iconName="qtg_mono_add_to_favourites" />
+        </widget>
+        <widget name="mv:loudspeaker_button">
+            <bool name="stretched" value="TRUE" />
+            <string name="text" locid="txt_rad_button_activate_loudspeaker" />
+            <icon name="icon" iconName="qtg_mono_speaker" />
+        </widget>        
+    </section>
+
+    <!-- Section to orient the view in portrait mode -->
+    <section name="portrait">
+        <widget name="mv:container">
+            <layout type="anchor">
+                <anchoritem src="mv:info_area" srcEdge="TOP" dst="" dstEdge="TOP" spacing="-var(hb-param-margin-gene-middle-vertical)" />
+                <anchoritem src="mv:info_area" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="-var(hb-param-margin-gene-middle-horizontal)" />
+                <anchoritem src="mv:info_area" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-middle-horizontal)" />
+
+                <anchoritem src="mv:frequency_area" srcEdge="CENTERV" dst="" dstEdge="CENTERV" spacing="0" />
+                <anchoritem src="mv:frequency_area" srcEdge="TOP" dst="mv:info_area" dstEdge="BOTTOM" spacing="-var(hb-param-margin-gene-middle-vertical)" />
+                <anchoritem src="mv:frequency_area" srcEdge="BOTTOM" dst="mv:control_area" dstEdge="TOP" spacing="var(hb-param-margin-gene-middle-vertical)" />
+                <anchoritem src="mv:frequency_area" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="-var(hb-param-margin-gene-middle-horizontal)" />
+                <anchoritem src="mv:frequency_area" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-middle-horizontal)" />
+
+                <anchoritem src="mv:control_area" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacing="var(hb-param-margin-gene-middle-vertical)" />
+                <anchoritem src="mv:control_area" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="-var(hb-param-margin-gene-middle-horizontal)" />
+                <anchoritem src="mv:control_area" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-middle-horizontal)" />
+            </layout>
+        </widget>
+    </section>
+
+    <!-- Section to orient the view in landscape mode -->
+    <section name="landscape">
+        <widget name="mv:container">
+            <layout type="anchor">
+                <anchoritem src="mv:info_area" srcEdge="TOP" dst="" dstEdge="TOP" spacing="-var(hb-param-margin-gene-middle-vertical)" />
+                <anchoritem src="mv:info_area" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="-var(hb-param-margin-gene-middle-horizontal)" />
+                <anchoritem src="mv:info_area" srcEdge="RIGHT" dst="" dstEdge="CENTERH" spacing="expr(var(hb-param-margin-gene-middle-horizontal)/2)" />
+
+                <anchoritem src="mv:control_area" srcEdge="TOP" dst="" dstEdge="TOP" spacing="-var(hb-param-margin-gene-middle-vertical)" />
+                <anchoritem src="mv:control_area" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-middle-horizontal)" />
+                <anchoritem src="mv:control_area" srcEdge="LEFT" dst="" dstEdge="CENTERH" spacing="-expr(var(hb-param-margin-gene-middle-horizontal)/2)" />
+
+                <anchoritem src="mv:frequency_area" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacing="var(hb-param-margin-gene-middle-vertical)" />
+                <anchoritem src="mv:frequency_area" srcEdge="TOP" dst="mv:info_area" dstEdge="BOTTOM" spacing="-var(hb-param-margin-gene-middle-vertical)" />
+                <anchoritem src="mv:frequency_area" srcEdge="TOP" dst="mv:control_area" dstEdge="BOTTOM" spacing="-var(hb-param-margin-gene-middle-vertical)" />
+                <anchoritem src="mv:frequency_area" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-middle-vertical)" />
+                <anchoritem src="mv:frequency_area" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="-var(hb-param-margin-gene-middle-vertical)" />
+            </layout>
+        </widget>
+    </section>
+
+    <!-- Scanning layout -->
+    <section name="mv:scanning">
+        <object name="mv:historyview_action">
+            <bool name="enabled" value="FALSE"/>
+        </object>
+        <widget name="mv:stations_button">
+            <bool name="visible" value="FALSE"/>
+        </widget>
+        <widget name="mv:favorite_button">
+            <string name="text" locid="txt_rad_button_cancel" />
+            <icon name="icon" iconName=" " />
+        </widget>
+        <widget name="mv:loudspeaker_button">
+            <bool name="visible" value="FALSE"/>
+        </widget>
+        <object name="mv:scan_action">
+            <bool name="enabled" value="FALSE" />
+        </object>
+    </section>
+
+    <!-- Normal layout (not scanning) -->
+    <section name="mv:normal">
+        <object name="mv:historyview_action">
+            <bool name="enabled" value="TRUE"/>
+        </object>
+        <widget name="mv:stations_button">
+            <bool name="visible" value="TRUE"/>
+        </widget>
+        <widget name="mv:favorite_button">
+            <string name="text" locid="txt_rad_button_add_to_favourites" />
+            <icon name="icon" iconName="qtg_mono_add_to_favourites" />
+        </widget>
+        <widget name="mv:loudspeaker_button">
+            <bool name="visible" value="TRUE"/>
+        </widget>
+        <object name="mv:scan_action">
+            <bool name="enabled" value="TRUE" />
+        </object>
+    </section>
+
+    <metadata activeUIState="portrait" display="NHD portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+        <uistate name="portrait" sections="#common portrait"/>
+        <uistate name="landscape" sections="#common landscape"/>
+    </metadata>
+</hbdocument>

@@ -1,0 +1,40 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:  MmsApplicationTest_ARMV5_UREL.pkg;
+
+
+;*Languages
+&EN
+;
+
+;application UID, and version/build numbers. Add the package TYPE here if needed.
+#{"MmsApplicationTest"},(0x101FB3E7),1,0,1;
+;
+
+
+;This is used in combination with signing to prevent the unauthroized
+;upgrade ofa a package by someone other than the rightful vendor.
+:"Nokia"
+
+;This specifies the localised vendor name(s) correspodning to language(s).
+%{"Nokia Test EN"}
+
+
+
+;Files to install
+;
+"\epoc32\release\armv5\urel\MmsApplicationTest.dll"-"C:\sys\bin\MmsApplicationTest.dll"
+"..\Conf\MmsApplicationTest.cfg"-"C:\TestFramework\MmsApplicationTest.cfg"
+"..\Init\TestFramework.ini"-"C:\TestFramework\TestFramework.ini"
+;--------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,45 @@
+/*
+* Copyright (c) 2005 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: Implementation of applicationmanagement components
+*
+*/
+  
+
+// To get the APP_LAYER_SYSTEMINCLUDE-definition
+#include <platform_paths.hrh>
+#include "defaultcaps.hrh"
+
+TARGET        aminstalloptions.dll
+TARGETTYPE    dll
+UID           0x10207835
+CAPABILITY    CAP_GENERAL_DLL
+
+SOURCEPATH    ../src
+SOURCE        AMInstallOptions.cpp
+
+USERINCLUDE   ../inc 
+USERINCLUDE   ../../inc
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE /epoc32/include/xml
+#ifdef SYMBIAN_ENABLE_SPLIT_HEADERS
+SYSTEMINCLUDE 	/epoc32/include/platform/xml
+#endif
+
+LIBRARY		    xmlframework.lib 
+LIBRARY		    euser.lib 
+LIBRARY		    bafl.lib
+LIBRARY 	    flogger.lib
+
+
+SMPSAFE

@@ -1,0 +1,49 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+/**
+@file
+
+@SYMPurpose obexclientmtm.dll Base classes for bluetooth and IR client MTMs
+*/
+
+TARGET			obexclientmtm.dll
+TARGETTYPE		dll
+
+CAPABILITY All -TCB
+UID				0x1000008d 0x10009ED0 //KObexClientMtmV1DllUid
+VENDORID 0x70000001
+
+SOURCEPATH		../source
+SOURCE			obexClientMtm.cpp obexClientMtmMain.cpp
+
+USERINCLUDE		../include 
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+
+LIBRARY			euser.lib bafl.lib msgs.lib
+LIBRARY			efsrv.lib
+LIBRARY			obexmtmutil.lib
+
+#ifdef WINSCW
+DEFFILE		v2_obexclientmtm.DEF
+#else
+DEFFILE		v2_obexclientmtm.def
+#endif
+
+
+
+SMPSAFE

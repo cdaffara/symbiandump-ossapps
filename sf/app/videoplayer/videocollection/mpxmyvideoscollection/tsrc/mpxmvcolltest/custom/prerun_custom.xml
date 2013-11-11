@@ -1,0 +1,30 @@
+<step name="Create log directory for testmodule" harness="STIF" enabled="true" passrate="100" significant="false">
+    	<command>makedir</command>
+    	<params>
+        <param dir="c:\logs\testframework"/>
+    	</params>
+</step>
+<step name="Create log directory for fusion" harness="STIF" enabled="true" passrate="100" significant="false">
+    	<command>makedir</command>
+    	<params>
+        <param dir="c:\logs\Fusion"/>
+    	</params>
+</step>
+<step name="Create directory for TestScripter logs" harness="STIF" enabled="true" passrate="100" significant="false">
+    	<command>makedir</command>
+    	<params>
+        <param dir="c:\logs\testframework\TestScripter"/>
+    	</params>
+</step>
+<step name="Create directory for Testengine logs" harness="STIF" enabled="true" passrate="100" significant="false">
+    	<command>makedir</command>
+    	<params>
+        <param dir="c:\logs\testframework\Testengine"/>
+    	</params>
+</step>
+<step name="Create directory for Testserver logs" harness="STIF" enabled="true" passrate="100" significant="false">
+    	<command>makedir</command>
+    	<params>
+        <param dir="c:\logs\testframework\Testserver"/>
+    	</params>
+</step>

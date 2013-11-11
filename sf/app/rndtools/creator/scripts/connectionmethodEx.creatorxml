@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<creatorscript schemaVersion="1.0" scriptVersion="1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="creator.xsd">
+
+<connectionmethod>
+  <fields>
+    <connectionname>CR_Example</connectionname>
+    <bearertype>GPRS</bearertype>
+    <startpage>http://wap.example.net</startpage>
+    <wapwspoption>connectionoriented</wapwspoption>
+    <protocoltype>ipv4</protocoltype>
+    <loginname>john</loginname>
+    <secureauthentication>no</secureauthentication>
+    <loginpass>doe</loginpass>
+    <promptpassword>no</promptpassword>
+    <gatewayaddress>10.10.10.101</gatewayaddress>
+    <subnetmask>255.255.255.0</subnetmask>
+    <deviceipaddr>10.10.10.102</deviceipaddr>
+    <useproxy>no</useproxy>
+  </fields>
+</connectionmethod>
+  <connectionmethod amount="2">
+    <fields>
+      <connectionname randomlength="max" />
+      <bearertype randomlength="max" />
+      <startpage randomlength="max" />
+      <wapwspoption randomlength="max" />
+      <protocoltype randomlength="max" />
+      <loginname randomlength="max" />
+      <secureauthentication randomlength="max" />
+      <loginpass randomlength="max" />
+      <promptpassword randomlength="max" />
+      <gatewayaddress randomlength="max" />
+      <subnetmask randomlength="max" />
+      <deviceipaddr randomlength="max" />
+      <ip4nameserver1 randomlength="max" />
+      <ip4nameserver2 randomlength="max" />
+      <datacalltelnumber randomlength="max" />
+      <datacalltypeisdn randomlength="max" />
+      <datacalllinespeed randomlength="max" />
+      <useproxy randomlength="max" />
+      <proxyserveraddress randomlength="max" />
+      <proxyportnumber randomlength="max" />
+      <ip6nameserver1 randomlength="max" />
+      <ip6nameserver2 randomlength="max" />
+      <disabletextauth randomlength="max" />
+      <wlanname randomlength="max" />
+      <wlanipaddr randomlength="max" />
+      <wlansecmode randomlength="max" />
+      <wlannetmode randomlength="max" />
+    </fields>
+  </connectionmethod>
+</creatorscript>

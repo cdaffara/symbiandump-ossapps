@@ -1,0 +1,35 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Build information file for videohelixtest class.
+*
+*/
+
+// Version : %version: 3 %
+
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_TESTEXPORTS
+../data/mmc/vhpp_test.3gp           /epoc32/winscw/c/data/videos/vhpp_test.3gp
+../data/mmc/sdp_test.sdp            /epoc32/winscw/c/data/videos/sdp_test.sdp
+../data/mmc/dcf.odf                 /epoc32/winscw/c/data/videos/dcf.odf
+
+../conf/videohelixtest.cfg          /epoc32/winscw/c/testframework/videohelixtest.cfg
+../init/testframework.ini           /epoc32/winscw/c/testframework/testframework.ini
+
+PRJ_TESTMMPFILES
+videohelixtest.mmp
+
+// EOF

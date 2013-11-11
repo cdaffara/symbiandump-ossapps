@@ -1,0 +1,52 @@
+/*
+* Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   Project definition file for project testcaleninterimutils2
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+TARGET          testcaleninterimutils2.dll
+TARGETTYPE      dll
+TARGETPATH      /DigiaEUnit/Tests
+UID             0x1000af5a 0x01700000
+
+CAPABILITY              CAP_GENERAL_DLL
+VENDORID                VID_DEFAULT
+
+SOURCEPATH              ../src
+SOURCE                  testcaleninterimutils2dllmain.cpp
+SOURCE                  testcaleninterimutils2.cpp
+
+
+USERINCLUDE             ../inc
+
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE           /epoc32/include/Digia/EUnit
+SYSTEMINCLUDE           /epoc32/include/ecom
+
+LIBRARY                 CalInterimAPI.lib
+LIBRARY                 CalenInterimUtils2.lib
+LIBRARY                 charconv.lib
+LIBRARY                 ecom.lib
+LIBRARY                 etel.lib
+LIBRARY                 etelmm.lib
+LIBRARY                 EUnit.lib
+LIBRARY                 euser.lib
+LIBRARY                 featmgr.lib
+LIBRARY                 flogger.lib
+LIBRARY                 estor.lib
+
+// End of file

@@ -1,0 +1,39 @@
+
+#WindowCountBarId {
+    width:100%;
+    background: transparent;
+}
+
+/* Table */
+#wcrow {
+    table-layout:fixed;
+    width:100%;
+    border: 0;
+    border-spacing: 0;
+    padding: 0;
+
+}
+
+/* Cell image */
+.wcicon {
+    height:10;
+    width:10;
+    margin-right:10px;
+    margin-left:10px;
+    margin-top:8px;
+    margin-bottom:6px;
+}
+
+/* Table cells */
+#wcfirst {
+    overflow:hidden;
+}
+
+#wclast {
+    overflow:hidden;
+}
+
+#wccontent {
+    text-align:center;
+    overflow:hidden;
+}

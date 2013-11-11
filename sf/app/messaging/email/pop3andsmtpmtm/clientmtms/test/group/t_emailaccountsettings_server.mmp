@@ -1,0 +1,52 @@
+// Copyright (c) 2007-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// t_emailaccountsettings_server.mmp
+//
+
+
+TARGET t_emailaccountsettings_server.exe
+TARGETTYPE exe
+UID 0x1000007A 0x102857C9
+VENDORID 0x70000001
+
+
+CAPABILITY		ReadDeviceData WriteDeviceData ProtServ NetworkControl NetworkServices LocalServices ReadUserData WriteUserData
+
+SOURCEPATH ../src
+SOURCE t_emailaccountsettings_server.cpp
+SOURCE ctestimapsyncdownloadrules.cpp
+SOURCE ctestimapsyncdownloadrulessettings.cpp
+SOURCE ctestimaptransportbuffersizes.cpp
+SOURCE ctestsmtpmobilitysettings.cpp
+SOURCE ctestsmtpmobilityaccounts.cpp
+SOURCE ctesttlsssldomainsetting.cpp
+SOURCE ../../src/cimsmtpmobilitysettings.cpp
+
+USERINCLUDE ../inc
+USERINCLUDE ../../inc 
+USERINCLUDE		../../../../../../../mw/messagingmw/messagingfw/msgsrvnstore/server/inc
+USERINCLUDE		../../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/base/inc
+USERINCLUDE		../../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/email/inc
+USERINCLUDE		../../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/server/inc
+USERINCLUDE		../../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/sms/inc
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+
+STATICLIBRARY	tefunit.lib
+LIBRARY			rfileloggerclient.lib
+LIBRARY     euser.lib
+LIBRARY		testexecuteutils.lib
+LIBRARY		testexecutelogclient.lib
+LIBRARY		imcm.lib 
+
+SMPSAFE

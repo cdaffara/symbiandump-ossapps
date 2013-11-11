@@ -1,0 +1,330 @@
+// Copyright (c) 2005-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_TESTEXPORTS
+../scripts/TestCalInterimApiMainTopLevelSuite.script		c:/citcalinterimapi/scripts/testcalinterimapimaintoplevelsuite.script
+../scripts/TestCalInterimApiSuite.script			c:/citcalinterimapi/scripts/testcalinterimapisuite.script
+../scripts/TestCalInterimApiAlarmSuite.script			c:/citcalinterimapi/scripts/testcalinterimapialarmsuite.script
+../scripts/TestCalInterimApiStartupSuite.script	        	c:/citcalinterimapi/scripts/testcalinterimapistartupsuite.script
+
+../scripts/TestCalInterimApiAlarm.script			c:/citcalinterimapi/scripts/testcalinterimapialarm.script
+../scripts/TestCalInterimApiFind.script	        		c:/citcalinterimapi/scripts/testcalinterimapifind.script
+../scripts/TestCalInterimApiEnhancedFind.script			c:/citcalinterimapi/scripts/testcalinterimapienhancedfind.script
+../scripts/TestCalInterimApiFindInstancesIterator.script	c:/citcalinterimapi/scripts/testcalinterimapifindinstancesiterator.script
+../scripts/TestCalInterimApiAsync.script			c:/citcalinterimapi/scripts/testcalinterimapiasync.script
+
+../scripts/TestCalInterimApiDataCompatibility.script		c:/citcalinterimapi/scripts/testcalinterimapidatacompatibility.script
+../scripts/TestCalInterimApiDataCompatibility_v9.1.script 	c:/citcalinterimapi/scripts/testcalinterimapidatacompatibility_v9.1.script
+../scripts/TestCalInterimApiDataCompatibility_v9.2.script 	c:/citcalinterimapi/scripts/testcalinterimapidatacompatibility_v9.2.script
+../scripts/TestCalInterimApiEntryData.script			c:/citcalinterimapi/scripts/testcalinterimapientrydata.script
+../scripts/TestCalInterimApiDeleteEntry.script			c:/citcalinterimapi/scripts/testcalinterimapideleteentry.script
+../scripts/TestCalInterimApiCategory.script			c:/citcalinterimapi/scripts/testcalinterimapicategory.script
+../scripts/TestCalInterimApiObserver.script			c:/citcalinterimapi/scripts/testcalinterimapiobserver.script
+../scripts/TestCalInterimApiParentChild.script			c:/citcalinterimapi/scripts/testcalinterimapiparentchild.script
+../scripts/TestCalInterimApiCopyEntries.script			c:/citcalinterimapi/scripts/testcalinterimapicopyentries.script
+../scripts/TestCalInterimApiConcurrentFileAccess.script		c:/citcalinterimapi/scripts/testcalinterimapiconcurrentfileaccess.script
+../scripts/TestCalInterimApiImportExport.script			c:/citcalinterimapi/scripts/testcalinterimapiimportexport.script
+../scripts/TestCalInterimApiImportExportSoakStress.script	c:/citcalinterimapi/scripts/testcalinterimapiimportexportsoakstress.script
+../scripts/TestCalInterimApiImportExportAsync.script		c:/citcalinterimapi/scripts/testcalinterimapiimportexportasync.script
+../scripts/TestCalInterimApiImportExportBQP.script		c:/citcalinterimapi/scripts/testcalinterimapiimportexportbqp.script
+../scripts/TestCalInterimApiLastModified.script			c:/citcalinterimapi/scripts/testcalinterimapilastmodified.script	
+../scripts/TestCalInterimApiModifiedLocalIds.script		c:/citcalinterimapi/scripts/testcalinterimapimodifiedlocalids.script	
+../scripts/TestCalInterimApiTZChanges.script			c:/citcalinterimapi/scripts/testcalinterimapitzchanges.script	
+../scripts/TestCalInterimApiTZRules.script			c:/citcalinterimapi/scripts/testcalinterimapitzrules.script	
+../scripts/TestCalInterimApiNotesOutlookIntero.script		c:/citcalinterimapi/scripts/testcalinterimapinotesoutlookintero.script
+../scripts/TestCalInterimApiEntryData1.script			c:/citcalinterimapi/scripts/testcalinterimapientrydata1.script
+../scripts/TestCalInterimApiAttachment.script			c:/citcalinterimapi/scripts/testcalinterimapiattachment.script
+../scripts/TestCalInterimApiAttachment_H4.script		c:/citcalinterimapi/scripts/testcalinterimapiattachment_h4.script
+../scripts/TestCalInterimApiAttachment1.script			c:/citcalinterimapi/scripts/testcalinterimapiattachment1.script
+../scripts/TestCalInterimApiAttachmentImportExport.script			c:/citcalinterimapi/scripts/testcalinterimapiattachmentimportexport.script
+../scripts/TestCalInterimApiRemoveMedia.script			c:/citcalinterimapi/scripts/testcalinterimapiremovemedia.script
+../scripts/TestCalInterimApiBackupAndRestore.script		c:/citcalinterimapi/scripts/testcalinterimapibackupandrestore.script
+../scripts/TestCalInterimApiBackupRestore2.script	c:/citcalinterimapi/scripts/testcalinterimapibackuprestore2.script
+
+../testdata/burtest.ini						c:/citcalinterimapi/burtest.ini
+../testdata/TestCalInterimApiAgendaData.txt			c:/citcalinterimapi/testcalinterimapiagendadata.txt
+../testdata/TestCalInterimApiRptData.txt			c:/citcalinterimapi/testcalinterimapirptdata.txt
+../testdata/TestCalInterimApiEntryData.txt			c:/citcalinterimapi/testcalinterimapientrydata.txt
+../testdata/TestCalInterimApiDeleteEntry.txt			c:/citcalinterimapi/testcalinterimapideleteentry.txt
+../testdata/TestCalInterimApiCategoryData.txt			c:/citcalinterimapi/testcalinterimapicategorydata.txt
+../testdata/TestCalInterimApiObserverData1.txt			c:/citcalinterimapi/testcalinterimapiobserverdata1.txt
+../testdata/TestCalInterimApiObserverData2.txt			c:/citcalinterimapi/testcalinterimapiobserverdata2.txt
+../testdata/TestCalInterimApiObserverData3.txt			c:/citcalinterimapi/testcalinterimapiobserverdata3.txt
+../testdata/TestCalInterimApiObserverData4.txt			c:/citcalinterimapi/testcalinterimapiobserverdata4.txt
+../testdata/TestCalInterimApiConcurrentFileAccessReadData.txt	c:/citcalinterimapi/testcalinterimapiconcurrentfileaccessreaddata.txt
+../testdata/TestCalInterimApiEntryData1.txt			c:/citcalinterimapi/testcalinterimapientrydata1.txt
+../testdata/TestCalInterimApiEntryData2.txt			c:/citcalinterimapi/testcalinterimapientrydata2.txt
+../testdata/TestCalInterimApiEntryData3.txt			c:/citcalinterimapi/testcalinterimapientrydata3.txt
+../testdata/TestCalInterimApiChildDataLastModified.txt		c:/citcalinterimapi/testdata/testcalinterimapichilddatalastmodified.txt	
+../testdata/TestCalInterimApiChildDataLocalIds.txt		c:/citcalinterimapi/testdata/testcalinterimapichilddatalocalids.txt	
+../testdata/TestCalInterimApiChildDataLocalIds1.txt		c:/citcalinterimapi/testdata/testcalinterimapichilddatalocalids1.txt
+../testdata/TestCalInterimApiInvalidRecurrence.txt		c:/citcalinterimapi/testdata/testcalinterimapiinvalidrecurrence.txt
+../testdata/TestCalInterimApiChildParentSetH.txt		c:/citcalinterimapi/testdata/testcalinterimapichildparentseth.txt	
+../testdata/TestCalInterimApiEntries1LocalIds.txt		c:/citcalinterimapi/testdata/testcalinterimapientries1localids.txt	
+../testdata/TestCalInterimApiEntriesLocalIds.txt		c:/citcalinterimapi/testdata/testcalinterimapientrieslocalids.txt
+../testdata/TestCalInterimApiImportChildData.txt		c:/citcalinterimapi/testdata/testcalinterimapiimportchilddata.txt	
+../testdata/TestCalInterimApiImportExportAsync.txt		c:/citcalinterimapi/testdata/testcalinterimapiimportexportasync.txt	
+../testdata/TestCalInterimApiLastModified.txt			c:/citcalinterimapi/testdata/testcalinterimapilastmodified.txt	
+../testdata/TestCalInterimApiUpdateSetH.txt			c:/citcalinterimapi/testdata/testcalinterimapiupdateseth.txt
+../testdata/TestCalInterimApiNotesOutlookIntero.txt		c:/citcalinterimapi/testdata/testcalinterimapinotesoutlookintero.txt
+../testdata/TestCalInterimApiCopyEntriesData1.txt		c:/citcalinterimapi/testcalinterimapicopyentriesdata1.txt
+../testdata/TestCalInterimApiDeleteChild.txt			c:/citcalinterimapi/testdata/testcalinterimapideletechild.txt
+../testdata/TestCalInterimApiNegative.txt			c:/citcalinterimapi/testdata/testcalinterimapinegative.txt
+../testdata/TestCalInterimApiAttachmentData.txt			c:/citcalinterimapi/testcalinterimapiattachmentdata.txt
+../testdata/TestCalInterimApiAttachmentData1.txt		c:/citcalinterimapi/testcalinterimapiattachmentdata1.txt
+../testdata/TestCalInterimApiAttachmentData2.txt		c:/citcalinterimapi/testcalinterimapiattachmentdata2.txt
+../testdata/TestCalInterimApiAttachPerformanceData.txt		c:/citcalinterimapi/testcalinterimapiattachperformancedata.txt
+../testdata/TestCalInterimApiBackupAndRestore.txt		c:/citcalinterimapi/testcalinterimapibackupandrestore.txt
+../testdata/TestCalInterimApiBackupAndRestoreDummy.txt		c:/citcalinterimapi/testcalinterimapibackupandrestoredummy.txt
+../testdata/TestCalInterimApiEntryData4.txt			c:/citcalinterimapi/testcalinterimapientrydata4.txt
+../testdata/TestCalInterimApiRemoveMedia.txt			c:/citcalinterimapi/testcalinterimapiremovemedia.txt
+../testdata/TestCalInterimApiFindInstancesIterator1.txt		c:/citcalinterimapi/testcalinterimapifindinstancesiterator1.txt
+../testdata/TestCalInterimApiFindInstancesIterator2.txt		c:/citcalinterimapi/testcalinterimapifindinstancesiterator2.txt
+../testdata/TestCalInterimApiFindInstancesIterator3.txt		c:/citcalinterimapi/testcalinterimapifindinstancesiterator3.txt
+../testdata/TestCalInterimApiSuite.ini				c:/citcalinterimapi/testcalinterimapisuite.ini
+../testdata/TestCalInterimApiEntryData.ini			c:/citcalinterimapi/testcalinterimapientrydata.ini
+../testdata/TestCalInterimApiDeleteEntry.ini			c:/citcalinterimapi/testcalinterimapideleteentry.ini
+../testdata/TestCalInterimApiCategory.ini			c:/citcalinterimapi/testcalinterimapicategory.ini
+../testdata/TestCalInterimApiObserver.ini			c:/citcalinterimapi/testcalinterimapiobserver.ini
+../testdata/TestCalInterimApiParentChild.ini			c:/citcalinterimapi/testcalinterimapiparentchild.ini
+../testdata/TestCalInterimApiCopyEntries.ini			c:/citcalinterimapi/testcalinterimapicopyentries.ini
+../testdata/TestCalInterimApiConcurrentFileAccess.ini		c:/citcalinterimapi/testcalinterimapiconcurrentfileaccess.ini
+../testdata/TestCalInterimApiEntryData1.ini			c:/citcalinterimapi/testcalinterimapientrydata1.ini
+../testdata/TestCalInterimApiImportExport.ini			c:/citcalinterimapi/testdata/testcalinterimapiimportexport.ini	
+../testdata/TestCalInterimApiImportExportAsync.ini		c:/citcalinterimapi/testdata/testcalinterimapiimportexportasync.ini		
+../testdata/TestCalInterimApiImportExportSoakStress.ini		c:/citcalinterimapi/testdata/testcalinterimapiimportexportsoakstress.ini
+../testdata/TestCalInterimApiImportExportBQP.ini		c:/citcalinterimapi/testdata/testcalinterimapiimportexportbqp.ini
+../testdata/TestCalInterimApiLastModified.ini			c:/citcalinterimapi/testdata/testcalinterimapilastmodified.ini	
+../testdata/TestCalInterimApiModifiedLocalIds.ini		c:/citcalinterimapi/testdata/testcalinterimapimodifiedlocalids.ini
+../testdata/TestCalInterimApiTZChanges.ini			c:/citcalinterimapi/testdata/testcalinterimapitzchanges.ini
+../testdata/TestCalInterimApiTZRules.ini			c:/citcalinterimapi/testdata/testcalinterimapitzrules.ini
+../testdata/TestCalInterimApiNotesOutlookIntero.ini		c:/citcalinterimapi/testdata/testcalinterimapinotesoutlookintero.ini
+../testdata/TestCalInterimApiRemoveMedia.ini			c:/citcalinterimapi/testcalinterimapiremovemedia.ini
+../testdata/TestCalInterimApiAttachmentData.ini			c:/citcalinterimapi/testcalinterimapiattachmentdata.ini
+../testdata/TestCalInterimApiBackupAndRestore.ini		c:/citcalinterimapi/testcalinterimapibackupandrestore.ini
+../testdata/TestCalInterimApiFindInstancesIterator.ini		c:/citcalinterimapi/testcalinterimapifindinstancesiterator.ini
+../testdata/longtail.jpg					c:/longtail.jpg
+../testdata/longtail2.jpg					c:/longtail2.jpg
+../testdata/longtail1.jpg					z:/testcalattachments/longtail1.jpg
+../testdata/attach1.jpg						z:/testcalattachments/attach1.jpg
+../testdata/attachBR.jpg					z:/testcalattachments/attachbr.jpg
+../testdata/tcal_attach6.gif					z:/testcalattachments/tcal_attach6.gif
+../testdata/tcal_attach4.doc					z:/testcalattachments/tcal_attach4.doc
+../testdata/tcal_attach7.xls					z:/testcalattachments/tcal_attach7.xls
+../testdata/attachment_test1.txt				z:/testcalattachments/attachment_test1.txt
+../testdata/attachment_test2.txt				z:/testcalattachments/attachment_test2.txt
+../testdata/attachment_test3.txt				z:/testcalattachments/attachment_test3.txt
+../testdata/tcal_attach5.bmp					z:/testcalattachments/tcal_attach5.bmp
+../testdata/tail.jpg						z:/testcalattachments/tail.jpg
+../testdata/doll.jpg						z:/testcalattachments/doll.jpg
+../testdata/tcal_attachment7.gif				z:/testcalattachments/tcal_attachment7.gif
+../testdata/tcal_dataexch_format.vcs        			c:/tcal_dataexch_format.vcs
+../testdata/tcal_dataexch_Badformat.vcs        	 		c:/tcal_dataexch_badformat.vcs
+../testdata/vCals/ImportvCals/vCal0.vcs        			c:/citcalinterimapi/testdata/vcals/importvcals/vcal0.vcs  	
+../testdata/vCals/ImportvCals/vCal1.vcs        			c:/citcalinterimapi/testdata/vcals/importvcals/vcal1.vcs
+../testdata/vCals/ImportvCals/vCal2.vcs        			c:/citcalinterimapi/testdata/vcals/importvcals/vcal2.vcs
+../testdata/vCals/ImportvCals/vCal3.vcs        			c:/citcalinterimapi/testdata/vcals/importvcals/vcal3.vcs
+../testdata/vCals/ImportvCals/vCal4.vcs        			c:/citcalinterimapi/testdata/vcals/importvcals/vcal4.vcs
+../testdata/vCals/ImportvCals/vCal5.vcs        			c:/citcalinterimapi/testdata/vcals/importvcals/vcal5.vcs
+../testdata/vCals/ImportvCals/vCal6.vcs        			c:/citcalinterimapi/testdata/vcals/importvcals/vcal6.vcs
+../testdata/vCals/ImportvCals/vCal7.vcs        			c:/citcalinterimapi/testdata/vcals/importvcals/vcal7.vcs
+../testdata/vCals/ImportvCals/vCal8.vcs        			c:/citcalinterimapi/testdata/vcals/importvcals/vcal8.vcs
+../testdata/vCals/ImportvCals/vCal9.vcs        			c:/citcalinterimapi/testdata/vcals/importvcals/vcal9.vcs
+../testdata/vCals/ImportvCals/vCal10.vcs        		c:/citcalinterimapi/testdata/vcals/importvcals/vcal10.vcs
+../testdata/vCals/ImportvCals/vCal11.vcs        		c:/citcalinterimapi/testdata/vcals/importvcals/vcal11.vcs
+../testdata/vCals/ImportvCals/vCal12.vcs        		c:/citcalinterimapi/testdata/vcals/importvcals/vcal12.vcs
+../testdata/vCals/ImportvCals/vCal13.vcs        		c:/citcalinterimapi/testdata/vcals/importvcals/vcal13.vcs
+../testdata/vCals/ImportvCals/vCal14.vcs        		c:/citcalinterimapi/testdata/vcals/importvcals/vcal14.vcs
+../testdata/vCals/ImportvCals/vCal15.vcs        		c:/citcalinterimapi/testdata/vcals/importvcals/vcal15.vcs
+../testdata/vCals/ImportvCals/vCal16.vcs        		c:/citcalinterimapi/testdata/vcals/importvcals/vcal16.vcs
+../testdata/vCals/ImportvCals/vCal17.vcs        		c:/citcalinterimapi/testdata/vcals/importvcals/vcal17.vcs
+../testdata/vCals/ImportvCals/vCal18.vcs        		c:/citcalinterimapi/testdata/vcals/importvcals/vcal18.vcs
+../testdata/vCals/ImportvCals/vCal19.vcs        		c:/citcalinterimapi/testdata/vcals/importvcals/vcal19.vcs
+../testdata/vCals/ImportvCals/vCal20.vcs        		c:/citcalinterimapi/testdata/vcals/importvcals/vcal20.vcs
+../testdata/vCals/ImportvCals/vCal21.vcs        		c:/citcalinterimapi/testdata/vcals/importvcals/vcal21.vcs
+../testdata/vCals/ImportvCals/vCal22.vcs        		c:/citcalinterimapi/testdata/vcals/importvcals/vcal22.vcs
+../testdata/vCals/ImportvCals/vCal23.vcs        		c:/citcalinterimapi/testdata/vcals/importvcals/vcal23.vcs
+../testdata/vCals/ImportvCals/vCal24.vcs        		c:/citcalinterimapi/testdata/vcals/importvcals/vcal24.vcs
+../testdata/vCals/ImportvCals/vCal26.vcs        		c:/citcalinterimapi/testdata/vcals/importvcals/vcal26.vcs
+../testdata/vCals/ImportvCals/vCal27.vcs        		c:/citcalinterimapi/testdata/vcals/importvcals/vcal27.vcs
+../testdata/vCals/ImportvCals/vCal28.vcs        		c:/citcalinterimapi/testdata/vcals/importvcals/vcal28.vcs
+../testdata/vCals/ImportvCals/vCal36.vcs        		c:/citcalinterimapi/testdata/vcals/importvcals/vcal36.vcs
+../testdata/vCals/ImportvCals/vCal37.vcs        		c:/citcalinterimapi/testdata/vcals/importvcals/vcal37.vcs
+../testdata/vCals/ImportvCals/vCal38.vcs        		c:/citcalinterimapi/testdata/vcals/importvcals/vcal38.vcs
+../testdata/vCals/ImportvCals/vCal39.vcs        		c:/citcalinterimapi/testdata/vcals/importvcals/vcal39.vcs
+../testdata/vCals/ImportvCals/vCal40.vcs        		c:/citcalinterimapi/testdata/vcals/importvcals/vcal40.vcs
+../testdata/vCals/ImportvCals/vCal41.vcs        		c:/citcalinterimapi/testdata/vcals/importvcals/vcal41.vcs
+../testdata/vCals/ImportvCals/vCal42.vcs        		c:/citcalinterimapi/testdata/vcals/importvcals/vcal42.vcs
+../testdata/vCals/ImportvCals/vCal43.vcs        		c:/citcalinterimapi/testdata/vcals/importvcals/vcal43.vcs
+../testdata/vCals/ImportvCals/vCal44.vcs        		c:/citcalinterimapi/testdata/vcals/importvcals/vcal44.vcs
+../testdata/vCals/ImportvCals/vCal45.vcs        		c:/citcalinterimapi/testdata/vcals/importvcals/vcal45.vcs
+../testdata/vCals/ImportvCals/vCal46.vcs        		c:/citcalinterimapi/testdata/vcals/importvcals/vcal46.vcs
+../testdata/vCals/ImportvCals/vCal47.vcs        		c:/citcalinterimapi/testdata/vcals/importvcals/vcal47.vcs
+../testdata/vCals/ImportvCals/vCal48.vcs       			c:/citcalinterimapi/testdata/vcals/importvcals/vcal48.vcs
+../testdata/vCals/ImportvCals/vCal50.vcs       			c:/citcalinterimapi/testdata/vcals/importvcals/vcal50.vcs
+../testdata/vCals/ImportvCals/vCal51.vcs       			c:/citcalinterimapi/testdata/vcals/importvcals/vcal51.vcs
+../testdata/vCals/ImportvCals/vCal52.vcs       			c:/citcalinterimapi/testdata/vcals/importvcals/vcal52.vcs
+../testdata/vCals/ImportvCals/vCal53.vcs       			c:/citcalinterimapi/testdata/vcals/importvcals/vcal53.vcs
+../testdata/vCals/ImportvCals/vCal54.vcs       			c:/citcalinterimapi/testdata/vcals/importvcals/vcal54.vcs
+../testdata/vCals/ImportvCals/vCal55.vcs       			c:/citcalinterimapi/testdata/vcals/importvcals/vcal55.vcs
+../testdata/vCals/ImportvCals/vCal56.vcs       			c:/citcalinterimapi/testdata/vcals/importvcals/vcal56.vcs
+../testdata/vCals/ImportvCals/vCal58.vcs       			c:/citcalinterimapi/testdata/vcals/importvcals/vcal58.vcs
+../testdata/vCals/ImportvCals/vCal59.vcs       			c:/citcalinterimapi/testdata/vcals/importvcals/vcal59.vcs
+../testdata/vCals/ImportvCals/vCal60.vcs       			c:/citcalinterimapi/testdata/vcals/importvcals/vcal60.vcs
+../testdata/vCals/ImportvCals/vCal61.vcs       			c:/citcalinterimapi/testdata/vcals/importvcals/vcal61.vcs
+../testdata/vCals/ImportvCals/vCal62.vcs       			c:/citcalinterimapi/testdata/vcals/importvcals/vcal62.vcs
+../testdata/vCals/ImportvCals/vCal63.vcs       			c:/citcalinterimapi/testdata/vcals/importvcals/vcal63.vcs
+../testdata/vCals/ImportvCals/vCal64.vcs       			c:/citcalinterimapi/testdata/vcals/importvcals/vcal64.vcs
+../testdata/vCals/ImportvCals/vCal65.vcs       			c:/citcalinterimapi/testdata/vcals/importvcals/vcal65.vcs
+../testdata/vCals/ImportvCals/vCal66.vcs       			c:/citcalinterimapi/testdata/vcals/importvcals/vcal66.vcs
+../testdata/vCals/ImportvCals/vCal67.vcs       			c:/citcalinterimapi/testdata/vcals/importvcals/vcal67.vcs
+../testdata/vCals/ImportvCals/vCal68.vcs       			c:/citcalinterimapi/testdata/vcals/importvcals/vcal68.vcs
+../testdata/vCals/ImportvCals/vCal69.vcs       			c:/citcalinterimapi/testdata/vcals/importvcals/vcal69.vcs
+../testdata/vCals/ImportvCals/vCal70.vcs       			c:/citcalinterimapi/testdata/vcals/importvcals/vcal70.vcs
+../testdata/vCals/ImportvCals/vCal71.vcs       			c:/citcalinterimapi/testdata/vcals/importvcals/vcal71.vcs
+../testdata/vCals/ImportvCals/vCal72.vcs       			c:/citcalinterimapi/testdata/vcals/importvcals/vcal72.vcs
+../testdata/vCals/ImportvCals/vCal73.vcs       			c:/citcalinterimapi/testdata/vcals/importvcals/vcal73.vcs
+../testdata/vCals/ImportvCals/vCal74.vcs       			c:/citcalinterimapi/testdata/vcals/importvcals/vcal74.vcs
+../testdata/vCals/ImportvCals/vCal75.vcs       			c:/citcalinterimapi/testdata/vcals/importvcals/vcal75.vcs
+../testdata/vCals/ImportvCals/vCal76.vcs       			c:/citcalinterimapi/testdata/vcals/importvcals/vcal76.vcs
+../testdata/vCals/ImportvCals/vCal77.vcs       			c:/citcalinterimapi/testdata/vcals/importvcals/vcal77.vcs
+../testdata/vCals/ImportvCals/vCal78.vcs       			c:/citcalinterimapi/testdata/vcals/importvcals/vcal78.vcs
+../testdata/vCals/ImportvCals/vCal79.vcs       			c:/citcalinterimapi/testdata/vcals/importvcals/vcal79.vcs
+../testdata/vCals/ImportvCals/vCal80.vcs       			c:/citcalinterimapi/testdata/vcals/importvcals/vcal80.vcs
+../testdata/vCals/ImportvCals/vCal81.vcs       			c:/citcalinterimapi/testdata/vcals/importvcals/vcal81.vcs
+../testdata/vCals/ImportvCals/vCal82.vcs       			c:/citcalinterimapi/testdata/vcals/importvcals/vcal82.vcs
+../testdata/vCals/ImportvCals/vCal83.vcs       			c:/citcalinterimapi/testdata/vcals/importvcals/vcal83.vcs
+../testdata/vCals/ImportvCals/vCal84.vcs       			c:/citcalinterimapi/testdata/vcals/importvcals/vcal84.vcs
+../testdata/vCals/ImportvCals/vCal86.vcs       			c:/citcalinterimapi/testdata/vcals/importvcals/vcal86.vcs
+../testdata/vCals/ImportvCals/vCal87.vcs       			c:/citcalinterimapi/testdata/vcals/importvcals/vcal87.vcs
+../testdata/vCals/ImportvCals/vCal88.vcs       			c:/citcalinterimapi/testdata/vcals/importvcals/vcal88.vcs
+../testdata/vCals/ImportvCals/vCal89.vcs       			c:/citcalinterimapi/testdata/vcals/importvcals/vcal89.vcs
+../testdata/vCals/ImportvCals/vCal90.vcs       			c:/citcalinterimapi/testdata/vcals/importvcals/vcal90.vcs
+../testdata/vCals/ImportvCals/vCal91.vcs       			c:/citcalinterimapi/testdata/vcals/importvcals/vcal91.vcs
+../testdata/vCals/ImportvCals/vCal92.vcs       			c:/citcalinterimapi/testdata/vcals/importvcals/vcal92.vcs
+../testdata/vCals/ImportvCals/vCal93.vcs       			c:/citcalinterimapi/testdata/vcals/importvcals/vcal93.vcs
+../testdata/vCals/ImportvCals/vCal94.vcs       			c:/citcalinterimapi/testdata/vcals/importvcals/vcal94.vcs
+../testdata/vCals/ImportvCals/vCal95.vcs       			c:/citcalinterimapi/testdata/vcals/importvcals/vcal95.vcs
+../testdata/vCals/ImportvCals/vCal96.vcs       			c:/citcalinterimapi/testdata/vcals/importvcals/vcal96.vcs
+../testdata/vCals/ImportvCals/vCal97.vcs       			c:/citcalinterimapi/testdata/vcals/importvcals/vcal97.vcs
+../testdata/vCals/ImportvCals/vCal98.vcs       			c:/citcalinterimapi/testdata/vcals/importvcals/vcal98.vcs
+../testdata/vCals/ImportvCals/vCal101.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal101.vcs
+../testdata/vCals/ImportvCals/vCal102.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal102.vcs
+../testdata/vCals/ImportvCals/vCal104.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal104.vcs
+
+../testdata/vCals/ImportvCals/vCal105.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal105.vcs
+../testdata/vCals/ImportvCals/vCal106.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal106.vcs
+../testdata/vCals/ImportvCals/vCal107.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal107.vcs
+../testdata/vCals/ImportvCals/vCal108.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal108.vcs
+../testdata/vCals/ImportvCals/vCal109.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal109.vcs
+
+../testdata/vCals/ImportvCals/vCal111.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal111.vcs
+../testdata/vCals/ImportvCals/vCal112.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal112.vcs
+../testdata/vCals/ImportvCals/vCal113.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal113.vcs
+../testdata/vCals/ImportvCals/vCal114.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal114.vcs
+../testdata/vCals/ImportvCals/vCal115.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal115.vcs
+../testdata/vCals/ImportvCals/vCal116.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal116.vcs
+../testdata/vCals/ImportvCals/vCal117.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal117.vcs
+../testdata/vCals/ImportvCals/vCal118.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal118.vcs
+../testdata/vCals/ImportvCals/vCal119.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal119.vcs
+
+../testdata/vCals/ImportvCals/vCal120.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal120.vcs
+../testdata/vCals/ImportvCals/vCal121.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal121.vcs
+../testdata/vCals/ImportvCals/vCal122.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal122.vcs
+../testdata/vCals/ImportvCals/vCal123.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal123.vcs
+../testdata/vCals/ImportvCals/vCal124.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal124.vcs
+../testdata/vCals/ImportvCals/vCal125.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal125.vcs
+../testdata/vCals/ImportvCals/vCal126.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal126.vcs
+../testdata/vCals/ImportvCals/vCal127.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal127.vcs
+../testdata/vCals/ImportvCals/vCal128.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal128.vcs
+../testdata/vCals/ImportvCals/vCal129.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal129.vcs
+
+../testdata/vCals/ImportvCals/vCal130.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal130.vcs
+../testdata/vCals/ImportvCals/vCal131.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal131.vcs
+../testdata/vCals/ImportvCals/vCal132.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal132.vcs
+../testdata/vCals/ImportvCals/vCal133.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal133.vcs
+../testdata/vCals/ImportvCals/vCal134.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal134.vcs
+../testdata/vCals/ImportvCals/vCal135.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal135.vcs
+../testdata/vCals/ImportvCals/vCal136.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal136.vcs
+../testdata/vCals/ImportvCals/vCal137.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal137.vcs
+../testdata/vCals/ImportvCals/vCal138.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal138.vcs
+../testdata/vCals/ImportvCals/vCal139.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal139.vcs
+
+../testdata/vCals/ImportvCals/vCal140.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal140.vcs
+../testdata/vCals/ImportvCals/vCal141.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal141.vcs
+../testdata/vCals/ImportvCals/vCal142.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal142.vcs
+../testdata/vCals/ImportvCals/vCal143.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal143.vcs
+../testdata/vCals/ImportvCals/vCal144.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal144.vcs
+../testdata/vCals/ImportvCals/vCal145.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal145.vcs
+../testdata/vCals/ImportvCals/vCal146.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal146.vcs
+../testdata/vCals/ImportvCals/vCal147.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal147.vcs
+../testdata/vCals/ImportvCals/vCal148.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal148.vcs
+../testdata/vCals/ImportvCals/vCal149.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal149.vcs
+
+../testdata/vCals/ImportvCals/vCal150.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal150.vcs
+../testdata/vCals/ImportvCals/vCal151.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal151.vcs
+../testdata/vCals/ImportvCals/vCal152.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal152.vcs
+../testdata/vCals/ImportvCals/vCal154.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal154.vcs
+../testdata/vCals/ImportvCals/vCal155.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal155.vcs
+../testdata/vCals/ImportvCals/vCal156.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal156.vcs
+../testdata/vCals/ImportvCals/vCal157.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal157.vcs
+../testdata/vCals/ImportvCals/vCal158.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal158.vcs
+../testdata/vCals/ImportvCals/vCal159.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal159.vcs
+
+../testdata/vCals/ImportvCals/vCal160.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal160.vcs
+../testdata/vCals/ImportvCals/vCal161.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal161.vcs
+../testdata/vCals/ImportvCals/vCal162.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal162.vcs	
+../testdata/vCals/ImportvCals/vCal163.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal163.vcs
+../testdata/vCals/ImportvCals/vCal164.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal164.vcs
+../testdata/vCals/ImportvCals/vCal165.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal165.vcs
+
+../testdata/vCals/ImportvCals/vCal201.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal201.vcs
+../testdata/vCals/ImportvCals/vCal202.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal202.vcs
+../testdata/vCals/ImportvCals/vCal203.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal203.vcs
+../testdata/vCals/ImportvCals/vCal204.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal204.vcs
+../testdata/vCals/ImportvCals/vCal205.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal205.vcs
+../testdata/vCals/ImportvCals/vCal206.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal206.vcs
+../testdata/vCals/ImportvCals/vCal207.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal207.vcs
+../testdata/vCals/ImportvCals/vCal208.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal208.vcs
+../testdata/vCals/ImportvCals/vCal209.vcs       		c:/citcalinterimapi/testdata/vcals/importvcals/vcal209.vcs
+../testdata/TestCalInterimApiStartupSuite.ini             	c:/citcalinterimapi/testcalinterimapistartupsuite.ini
+../testdata/TestCalInterimApiFind.ini	        		c:/citcalinterimapi/testcalinterimapifind.ini
+../testdata/TestCalInterimApiAlarm.ini				c:/citcalinterimapi/testcalinterimapialarm.ini
+../testdata/TestCalInterimApiDataCompatibility.ini		c:/citcalinterimapi/testcalinterimapidatacompatibility.ini
+../testdata/TestCalInterimApiAlarmData.txt 			c:/citcalinterimapi/testcalinterimapialarmdata.txt
+../testdata/TestCalInterimApiFindData.txt			c:/citcalinterimapi/testcalinterimapifinddata.txt
+../testdata/TestCalInterimApiNewEntriesForDC.txt		c:/citcalinterimapi/testcalinterimapinewentriesfordc.txt
+../testdata/TestCalInterimApiParentChildData.txt		c:/citcalinterimapi/testcalinterimapiparentchilddata.txt
+../testdata/TestCalInterimApiCopyEntriesData.txt		c:/citcalinterimapi/testcalinterimapicopyentriesdata.txt
+../testdata/CITVCal_v9.1.dat					c:/citcalinterimapi/citvcal_v9.1.dat
+../testdata/CITVCal_v9.2.dat					c:/citcalinterimapi/citvcal_v9.2.dat
+../testdata/CITVCal_v9.1_perf.dat                               c:/citcalinterimapi/citvcal_v9.1_perf.dat
+../testdata/CITVCal_v9.2_perf.dat                               c:/citcalinterimapi/citvcal_v9.2_perf.dat
+../scripts/calendarindexingperformancetests.script			c:/calendarindexingtests/scripts/calendarindexingperformancetests.script
+../scripts/calendarindexstresstests.script					c:/calendarindexingtests/scripts/calendarindexstresstests.script
+../scripts/calendarindexstresstests1.script					c:/calendarindexingtests/scripts/calendarindexstresstests1.script
+../scripts/calendarindexmodificationtests.script			c:/calendarindexingtests/scripts/calendarindexmodificationtests.script
+../scripts/calendarindexmodificationtests1.script			c:/calendarindexingtests/scripts/calendarindexmodificationtests1.script
+../testdata/CalendarIndexTests.ini							c:/calendarindexingtests/testdata/calendarindextests.ini
+../testdata/IndexingCalendar.dat                           	c:/calendarindexingtests/testdata/indexingcalendar.dat
+
+testcalinterimapi.iby	/epoc32/rom/include/testcalinterimapi.iby
+
+PRJ_TESTMMPFILES
+TestCalInterimApisuite.mmp
+

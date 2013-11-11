@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="0.9">
+    <widget name="LocationPickerSearchView" type="HbView">
+        <widget name="locationPickerSearchView" role="HbView:widget" type="HbWidget">
+            <widget name="container" type="HbWidget">
+                <widget name="SearchListView" type="HbListView">
+                    <widget name="listItemPrototype" role="HbListView:prototype" type="HbListViewItem">
+                        <string name="state" value="normal"/>
+                    </widget>
+                    <sizehint height="47.7612un" type="PREFERRED" width="35.8209un"/>
+                </widget>
+                <widget name="searchPanel" type="HbSearchPanel"/>
+                <real name="z" value="1"/>
+                <sizehint height="23.8806un" type="PREFERRED" width="11.9403un"/>
+                <layout orientation="Vertical" type="linear">
+                    <linearitem itemname="SearchListView"/>
+                    <linearitem itemname="searchPanel"/>
+                </layout>
+            </widget>
+            <layout type="anchor">
+                <anchoritem dst="container" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="container" dstEdge="TOP" spacing="0un" src="" srcEdge="TOP"/>
+                <anchoritem dst="container" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="container" dstEdge="BOTTOM" spacing="0un" src="" srcEdge="BOTTOM"/>
+            </layout>
+        </widget>
+        <string locid="txt_lint_title_select_location" name="title"/>
+    </widget>
+    <metadata activeUIState="Common ui state" display="NHD portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+        <dummydata objectName="SearchListView" section="#common" value="0"/>
+    </metadata>
+</hbdocument>

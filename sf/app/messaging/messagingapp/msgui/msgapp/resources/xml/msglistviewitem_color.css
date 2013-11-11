@@ -1,0 +1,53 @@
+
+MsgListViewItem[unReadMsg="true"]::addressLabel {
+  color: var(qtc_list_item_title_normal);
+}
+
+MsgListViewItem[unReadMsg="false"]::addressLabel {
+  color: var(qtc_list_item_content_normal);
+}
+
+MsgListViewItem[state="pressed"]::addressLabel {
+  color: var(qtc_list_item_pressed);
+}
+
+MsgListViewItem[unReadMsg="true"]::previewLabel {
+  color: var(qtc_list_item_title_normal);
+}
+
+MsgListViewItem[unReadMsg="false"]::previewLabel {
+  color: var(qtc_list_item_content_normal);
+}
+
+MsgListViewItem[state="pressed"]::previewLabel {
+  color: var(qtc_list_item_pressed);
+}
+
+MsgListViewItem[unReadMsg="true"]::unreadCount {
+  color: var(qtc_list_item_title_normal);
+}
+
+MsgListViewItem[unReadMsg="false"]::unreadCount {
+  color: var(qtc_list_item_content_normal);
+}
+
+MsgListViewItem[state="pressed"]::unreadCount {
+  color: var(qtc_list_item_pressed);
+}
+
+MsgListViewItem[unReadMsg="true"]::timeLabel {
+  color: var(qtc_list_item_title_normal);
+}
+
+MsgListViewItem[unReadMsg="false"]::timeLabel {
+  color: var(qtc_list_item_content_normal);
+}
+
+MsgListViewItem[state="pressed"]::timeLabel {
+  color: var(qtc_list_item_pressed);
+}
+
+MsgListViewItem::msgCommonIndicator {
+  color: var(qtc_list_item_title_normal);
+}
+

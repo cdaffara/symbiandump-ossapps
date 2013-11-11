@@ -1,0 +1,61 @@
+/*
+* Copyright (c) 2002-2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*
+*/
+
+
+#include <ecom/registryinfov2.rh>
+#include <AiwCommon.hrh>
+
+#include "aiwprintingprovideruid.h"
+
+RESOURCE REGISTRY_INFO theInfo
+    {
+    resource_format_version = RESOURCE_FORMAT_VERSION_2; 
+    dll_uid = KAiwPrintingProviderDllUid;
+    interfaces =
+        {
+        INTERFACE_INFO
+            {
+            interface_uid = KAiwClassMenu;
+            implementations = 
+                {
+                IMPLEMENTATION_INFO
+                    {
+                    implementation_uid = KAiwPrintingProviderImplUid;
+                    version_no = 1;
+                    display_name = "Image Print";
+                    default_data = "image/jpeg";
+                    opaque_data = KAiwCmdPrintStr;
+                    }
+                };
+            },
+        INTERFACE_INFO
+            {             
+            interface_uid = KAiwClassBase;
+            implementations =
+                {
+                IMPLEMENTATION_INFO
+                    {             
+                    implementation_uid = KAiwPrintingProviderImplUid;
+                    version_no = 1;
+                    display_name = "Image Print";
+                    default_data = "image/jpeg";
+                    opaque_data = KAiwCmdPrintStr;
+                    }                  
+                };
+            }
+        };
+    }

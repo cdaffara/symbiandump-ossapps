@@ -1,0 +1,33 @@
+EXPORTS
+	?isWlanSupported@IRQNetworkController@@QBE_NXZ @ 1  NONAME ; bool IRQNetworkController::isWlanSupported(void) const
+	?getIAPId@IRQNetworkController@@QBE?AW4IRQError@@AAK@Z @ 2  NONAME ; enum IRQError IRQNetworkController::getIAPId(unsigned long &) const
+	?cancelConnecting@IRQNetworkController@@QAEXXZ @ 3  NONAME ; void IRQNetworkController::cancelConnecting(void)
+	?isHandlingOverConnection@IRQNetworkController@@QAE_NXZ @ 4  NONAME ; bool IRQNetworkController::isHandlingOverConnection(void)
+	?identifyConnectionType@IRQNetworkController@@QBE?AW4IRQConnectionType@@XZ @ 5  NONAME ; enum IRQConnectionType IRQNetworkController::identifyConnectionType(void) const
+	?openInstance@IRQNetworkController@@SAPAV1@XZ @ 6  NONAME ; class IRQNetworkController * IRQNetworkController::openInstance(void)
+	?closeInstance@IRQNetworkController@@QAEXXZ @ 7  NONAME ; void IRQNetworkController::closeInstance(void)
+	?notifyActiveNetworkObservers@IRQNetworkController@@QAEXW4IRQNetworkEvent@@@Z @ 8  NONAME ; void IRQNetworkController::notifyActiveNetworkObservers(enum IRQNetworkEvent)
+	?getNetworkStatus@IRQNetworkController@@QBE_NXZ @ 9  NONAME ; bool IRQNetworkController::getNetworkStatus(void) const
+	?resetConnectionStatus@IRQNetworkController@@QAEXXZ @ 10  NONAME ; void IRQNetworkController::resetConnectionStatus(void)
+	?isOfflineMode@IRQNetworkController@@QAE_NXZ @ 11  NONAME ; bool IRQNetworkController::isOfflineMode(void)
+	?isConnectRequestIssued@IRQNetworkController@@QBE_NXZ @ 12  NONAME ; bool IRQNetworkController::isConnectRequestIssued(void) const
+	?chooseAccessPoint@IRQNetworkController@@QAEXXZ @ 13  NONAME ; void IRQNetworkController::chooseAccessPoint(void)
+	?tr@IRQNetworkController@@SA?AVQString@@PBD0H@Z @ 14  NONAME ; class QString IRQNetworkController::tr(char const *, char const *, int)
+	?mInstance@IRQNetworkController@@0PAV1@A @ 15  NONAME ; class IRQNetworkController * IRQNetworkController::mInstance
+	?staticMetaObject@IRQNetworkController@@2UQMetaObject@@B @ 16  NONAME ; struct QMetaObject const IRQNetworkController::staticMetaObject
+	??_EIRQNetworkController@@UAE@I@Z @ 17  NONAME ; IRQNetworkController::~IRQNetworkController(unsigned int)
+	??0IRQNetworkController@@AAE@XZ @ 18  NONAME ; IRQNetworkController::IRQNetworkController(void)
+	?qt_metacall@IRQNetworkController@@UAEHW4Call@QMetaObject@@HPAPAX@Z @ 19  NONAME ; int IRQNetworkController::qt_metacall(enum QMetaObject::Call, int, void * *)
+	?trUtf8@IRQNetworkController@@SA?AVQString@@PBD0H@Z @ 20  NONAME ; class QString IRQNetworkController::trUtf8(char const *, char const *, int)
+	?networkRequestNotified@IRQNetworkController@@IAEXW4IRQNetworkEvent@@@Z @ 21  NONAME ; void IRQNetworkController::networkRequestNotified(enum IRQNetworkEvent)
+	?networkEventNotified@IRQNetworkController@@IAEXW4IRQNetworkEvent@@@Z @ 22  NONAME ; void IRQNetworkController::networkEventNotified(enum IRQNetworkEvent)
+	?pendingRequestsReset@IRQNetworkController@@IAEX_N@Z @ 23  NONAME ; void IRQNetworkController::pendingRequestsReset(bool)
+	?trUtf8@IRQNetworkController@@SA?AVQString@@PBD0@Z @ 24  NONAME ; class QString IRQNetworkController::trUtf8(char const *, char const *)
+	?tr@IRQNetworkController@@SA?AVQString@@PBD0@Z @ 25  NONAME ; class QString IRQNetworkController::tr(char const *, char const *)
+	?metaObject@IRQNetworkController@@UBEPBUQMetaObject@@XZ @ 26  NONAME ; struct QMetaObject const * IRQNetworkController::metaObject(void) const
+	?getStaticMetaObject@IRQNetworkController@@SAABUQMetaObject@@XZ @ 27  NONAME ; struct QMetaObject const & IRQNetworkController::getStaticMetaObject(void)
+	?qt_metacast@IRQNetworkController@@UAEPAXPBD@Z @ 28  NONAME ; void * IRQNetworkController::qt_metacast(char const *)
+	?mMutex@IRQNetworkController@@0VQMutex@@A @ 29  NONAME ; class QMutex IRQNetworkController::mMutex
+	??1IRQNetworkController@@EAE@XZ @ 30  NONAME ; IRQNetworkController::~IRQNetworkController(void)
+	?errorOccured@IRQNetworkController@@IAEXW4IRQError@@@Z @ 31  NONAME ; void IRQNetworkController::errorOccured(enum IRQError)
+	

@@ -1,0 +1,172 @@
+MIME Email, plain text.--------------------------------------------				  Email rfc_001.txt
+						  Email rfc_001.txt
+lots of addresses in To: field.		  	  Email rfc_002.txt
+with QP encoded chars.				  Email rfc_003.txt
+paragraph, testing soft line wrapping.		  Email rfc_004.txt
+paragraph, including spaces.			  Email rfc_005.txt
+Text exceeds 80 char limit			  Email rfc_006.txt
+Invalid Date					  Email rfc_007.txt
+-------------------------------------------------------------------
+
+Non MIME Message. -------------------------------------------------
+Plain text and three UU encoded texts.		  Email rfc_008.txt
+Text. No Subject				  Email rfc_009.txt
+Containing BinHex stuff.			  Email rfc_010.txt
+UU encoded.					  Email rfc_011.txt
+-------------------------------------------------------------------
+
+MIME Message, contains text/plain. ---------------------------------
+7 bit text.					  Email rfc_012.txt
+8 bit text.		 			  Email rfc_013.txt
+Contains UU encoded text.			  Email rfc_014.txt
+Contains B64 encoded text.			  Email rfc_015.txt
+-------------------------------------------------------------------
+
+MIME Message, contains text/html. ---------------------------------
+						  Email rfc_016.txt
+7bit						  Email rfc_017.txt
+8bit						  Email rfc_018.txt
+QP						  Email rfc_019.txt
+UU						  Email rfc_020.txt
+B64						  Email rfc_021.txt
+BinHex						  Email rfc_022.txt
+-------------------------------------------------------------------
+
+MIME Message, multipart/related. contains image/audio/video.-------
+						  Email rfc_023.txt
+7bit						  Email rfc_024.txt
+8bit						  Email rfc_025.txt
+QP						  Email rfc_026.txt
+UU						  Email rfc_027.txt
+B64						  Email rfc_028.txt
+BinHex						  Email rfc_029.txt
+-------------------------------------------------------------------
+
+MIME Message, Application/exe. ------------------------------------
+						  Email rfc_030.txt
+7Bit						  Email rfc_031.txt
+8Bit						  Email rfc_032.txt
+QP						  Email rfc_033.txt
+UU						  Email rfc_034.txt
+Base64						  Email rfc_035.txt
+BinHex						  Email rfc_036.txt
+-------------------------------------------------------------------
+
+MIME Message, multipart/mixed. 
+contains text(plain/html), image/audio/video, application(exe)
+-------------------------------------------------------------------
+						  Email rfc_037.txt
+7bit						  Email rfc_038.txt
+8bit						  Email rfc_039.txt
+QP						  Email rfc_040.txt
+UU						  Email rfc_041.txt
+B64						  Email rfc_042.txt
+BinHex						  Email rfc_043.txt
+-------------------------------------------------------------------
+
+MIME Message, text/plain. Inline ----------------------------------
+						  Email rfc_044.txt
+7bit						  Email rfc_045.txt
+8bit						  Email rfc_046.txt
+Binary						  Email rfc_047.txt
+QP						  Email rfc_048.txt
+UU						  Email rfc_049.txt
+B64						  Email rfc_050.txt
+BinHex						  Email rfc_051.txt
+-------------------------------------------------------------------
+
+MIME Message, multipart/mixed. INLINE
+contains text(plain/html), image/audio/video, application(exe)
+-------------------------------------------------------------------
+						  Email rfc_052.txt
+7bit						  Email rfc_053.txt
+8bit						  Email rfc_054.txt
+Binary						  Email rfc_055.txt
+QP						  Email rfc_056.txt
+UU						  Email rfc_057.txt
+B64						  Email rfc_058.txt
+BinHex						  Email rfc_059.txt
+-------------------------------------------------------------------
+
+MIME Message. Image/Bmp, XX-UUENCODE		  Email rfc_060.txt
+
+
+MIME multipart/related. -------------------------------------------
+multipart/mixed. 3 parts, 1 attachment.		  Email rfc_062.txt
+1 part.						  Email rfc_063.txt
+7 parts, 1 level.	  			  Email rfc_064.txt
+2 levels.		  			  Email rfc_065.txt
+12 levels					  Email rfc_066.txt
+2 levels.					  Email rfc_067.txt
+Multipart/mixed. Two levels, 			  Email rfc_068.txt
+contains message/rfc822 parts.
+-------------------------------------------------------------------
+
+Badly formed email. -----------------------------------------------
+multipart/report. No end boundary.		  Email rfc_069.txt
+Non-MIME. UU encoded text with no end'.		  Email rfc_070.txt
+multipart/mixed. 1 part containing no body or     Email rfc_071.txt
+	end boundary.						
+Non MIME. No Body.				  Email rfc_072.txt
+-------------------------------------------------------------------
+
+Encoded Header fields. --------------------------------------------
+						  Email rfc_073.txt
+						  Email rfc_074.txt
+Invalid.					  Email rfc_075.txt
+						  Email rfc_076.txt
+-------------------------------------------------------------------
+
+Testing fixes in ER5. ---------------------------------------------
+Code Page 1252 sent as ISO-8859-1.  		  Email rfc_077.txt
+Multipart/Mixed, with UTF7/8 text parts.  	  Email rfc_078.txt
+Email header folding, From: & To: fields 	  Email rfc_079.txt
+					          Email rfc_080.txt
+-------------------------------------------------------------------
+
+FORWARDED EMAILS. ------------------------------------------------
+Forwarded Emails, using "Forward As Attachment" option in Netscape 
+Messanger. INNER refers to the embedded email being forwarded. 
+OUTER referes to the container email.
+						  
+Outer, text & text attachment; 			  Email rfc_081.txt
+Inner, text & Bin Attachment.
+Outer, text; Inner, HTML text.			  Email rfc_082.txt
+Outer, plain text; Inner, plain text.		  Email rfc_083.txt	  
+Outer, text & Bin Attachment; 			  Email tfc_084.txt
+Inner, text & Bin Attachment.
+-------------------------------------------------------------------
+
+Header Encoding					  Email rfc_085.txt
+Testing Sending Side
+1. 1 encoded letter
+2. question mark appearing betweeen characters which need encdoing.
+
+MESSAGE STRUCTURE. ------------------------------------------------
+Multipart mixed with Alternative and Attachment   Email rfc_086.txt
+Embedded message(86) and Alternative		  Email rfc_087.txt
+
+Invalid Charset.Shoud be no conversion		  Email rfc_088.txt
+VCard and VCal MIME message			  Email rfc_089.txt	
+Embedded Message Digest				  Email rfc_090.txt
+
+MISCE. ------------------------------------------------------------
+Real World HTML message.			  Email rfc_091.txt
+
+Used for testing formatting of HTML text on receiving and sending.
+Storage of Content-Base and Content-Location MIME headers.
+
+Unknown Charsets				  Email rfc_092.txt
+
+Testing how recieving/sending code deals with header fields and
+body parts containing unknown character sets. The contents should 
+not be converted (only decoded). Charset info (the string name)
+should be preserved. 
+
+
+Filename parameter test, including encoding/decoding
+						  Email rfc_095.txt
+
+-------------------------------------------------------------------
+No Valid Header Fields, should not be saved	  Email rfc_500.txt
+

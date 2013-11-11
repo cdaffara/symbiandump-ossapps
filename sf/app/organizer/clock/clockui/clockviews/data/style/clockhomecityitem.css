@@ -1,0 +1,50 @@
+ClockHomeCityItem{
+    layout: homecity-portrait;
+}
+ClockHomeCityItem:landscape{
+    layout: homecity-landscape;
+}
+ClockHomeCityItem::dayNightIcon{
+    top: -var(hb-param-margin-gene-top);
+    left: -var(hb-param-margin-gene-left);
+
+    fixed-height: var(hb-param-graphic-size-primary-large);
+    fixed-width: var(hb-param-graphic-size-primary-large);
+}
+
+ClockHomeCityItem::dateText{
+    top: -var(hb-param-margin-gene-top);
+    left: -var(hb-param-margin-gene-middle-horizontal);
+    
+    text-height: var(hb-param-text-height-tiny);
+    font-variant: secondary;
+    text-align: left;
+}
+
+ClockHomeCityItem::dstIcon{
+    left: -var(hb-param-margin-gene-middle-horizontal);
+    right: var(hb-param-margin-gene-right);
+
+    fixed-height: var(hb-param-graphic-size-secondary);
+    fixed-width: var(hb-param-graphic-size-secondary);
+}
+
+ClockHomeCityItem::cityText{
+    top: -var(hb-param-margin-gene-middle-vertical);
+    bottom: var(hb-param-margin-gene-bottom);
+    
+    text-height: var(hb-param-text-height-primary);
+    font-variant: primary;
+    text-align: left;
+    size-policy: expanding;
+}
+
+ClockHomeCityItem::timeText{
+    left = -var(hb-param-margin-gene-middle-horizontal);
+    right: var(hb-param-margin-gene-right);
+    
+    text-height: var(hb-param-text-height-tiny);
+    font-variant: secondary;
+    text-align: right;
+    size-policy: minimum-expanding;
+}

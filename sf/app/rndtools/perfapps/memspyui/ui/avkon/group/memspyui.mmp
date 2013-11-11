@@ -1,0 +1,112 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+
+#include <bldvariant.hrh>
+#include <data_caging_paths.hrh>
+#include <platform_paths.hrh>
+
+TARGET          memspyui.exe
+TARGETTYPE      exe
+UID             0x100039CE 0x2002129F
+VENDORID		VID_DEFAULT
+SMPSAFE
+
+EPOCSTACKSIZE	0x4000
+EPOCHEAPSIZE	0x100000 0x4000000
+
+#include		"MemSpyCapabilities.mmh"
+
+SOURCEPATH      ../src
+source          MemSpyApp.cpp 
+source          MemSpyAppUi.cpp
+source          MemSpyDocument.cpp
+source          MemSpyContainer.cpp
+source          MemSpyDeviceWideOperationDialog.cpp
+source          MemSpyExportBitmapsToMemoryCardDialog.cpp
+source          MemSpyUiUtils.cpp
+source          MemSpySettings.cpp
+source			MemSpyAsyncTracker.cpp
+//
+source          MemSpyViewBase.cpp
+source          MemSpyViewMainMenu.cpp
+source          MemSpyViewType.cpp
+source          MemSpyViewProcesses.cpp
+source          MemSpyViewServerList.cpp
+/*
+source          MemSpyViewOpenFiles.cpp
+source          MemSpyViewRAMInfo.cpp
+source          MemSpyViewROMInfo.cpp
+source          MemSpyViewFBServBitmaps.cpp
+source          MemSpyViewSystemConfig.cpp
+source          MemSpyViewCodeSegList.cpp
+source          MemSpyViewChunkList.cpp
+*/
+source          MemSpyViewKernel.cpp
+source          MemSpyViewKernelContainers.cpp
+source          MemSpyViewKernelHeap.cpp
+source          MemSpyViewKernelObjects.cpp
+/*
+source			MemSpyViewDriveInfo.cpp
+source			MemSpyViewECom.cpp
+*/
+source          MemSpyViewThreads.cpp
+source          MemSpyViewThreadInfoItemList.cpp
+source          MemSpyViewThreadInfoItemGeneric.cpp
+source          MemSpyViewThreadInfoItemHeap.cpp
+source          MemSpyViewThreadInfoItemStack.cpp
+source          MemSpyViewThreadInfoItemCodeSeg.cpp
+source          MemSpyViewThreadInfoItemChunk.cpp
+source          MemSpyViewThreadInfoItemServer.cpp
+source          MemSpyViewThreadInfoItemActiveObject.cpp
+source          MemSpyViewThreadInfoItemGeneralInfo.cpp
+
+source          MemSpyViewHeapTracking.cpp
+source          MemSpyViewHeapTrackingSettings.cpp 
+/*
+source          MemSpyViewHeapTrackingResults.cpp //removed 
+source			MemSpyViewThreadInfoItemMemoryTracking.cpp
+source			MemSpyViewMemoryTrackingAutoStartConfig.cpp
+source			MemSpyViewWindowGroups.cpp
+source          MemSpyViewKernelObjects.cpp
+*/
+
+USERINCLUDE		../inc
+
+APP_LAYER_SYSTEMINCLUDE
+
+
+START RESOURCE    ../../../data/memspyui.rss
+HEADER
+TARGETPATH        APP_RESOURCE_DIR
+END
+
+START RESOURCE    ../../../data/memspyui_reg.rss
+DEPENDS           memspyui.rsg
+TARGETPATH        /private/10003a3f/import/apps
+END
+
+LIBRARY			fbscli.lib				imageconversion.lib		estor.lib		apgrfx.lib
+LIBRARY			euser.lib				apparc.lib				cone.lib		eikcore.lib 
+LIBRARY			eikcoctl.lib			avkon.lib				etext.lib		eikctl.lib		
+LIBRARY			efsrv.lib				bafl.lib				egul.lib		hal.lib
+LIBRARY			cdlengine.lib			xmlframework.lib		charconv.lib	viewcli.lib
+LIBRARY			eikdlg.lib				ws32.lib				bitgdi.lib
+
+LIBRARY         MemSpyClient.lib
+LIBRARY			memspydriverclient.lib
+LIBRARY			memspyengine.lib 

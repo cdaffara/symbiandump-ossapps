@@ -1,0 +1,31 @@
+/*
+* Copyright (c) 2008-2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   Build information file for tagcollectionplugin.
+*
+*/
+
+
+
+#include <platform_paths.hrh>    //APP_LAYER_DOMAIN_EXPORT_PATH
+
+PRJ_EXPORTS
+//../rom/tagcollectionplugin.iby         CORE_APP_LAYER_IBY_EXPORT_PATH(tagcollectionplugin.iby)   
+../inc/glxcollectionplugintags.hrh	   /epoc32/include/platform/app/glxcollectionplugintags.hrh
+
+
+PRJ_MMPFILES
+glxcollectionplugintags.mmp
+
+PRJ_TESTMMPFILES
+../test/ut_cglxcollectionplugintags.mmp

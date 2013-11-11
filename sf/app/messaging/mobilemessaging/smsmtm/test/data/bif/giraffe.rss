@@ -1,0 +1,75 @@
+// Copyright (c) 1999-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// 'BIO Messaging Information File (bif)' Resource file
+// 
+//
+
+
+#include <biftool2.rh>
+
+
+RESOURCE BIO_INFO_FILE
+	{
+	message_type_uid=0x10022000;
+	message_parser_name="wapp.dll";
+	message_app_uid=KUidUseDefaultApp;
+	message_appctrl_name = "iacbiocontrol.dll";
+
+	description="Giraffe Test BIF";
+
+	general_data1=0x0108;		// Flags specific to this BIO message type.
+
+	icons_filename="smcm.mbm";
+	icon_zoom_levels={1};
+
+	ids=
+		{
+		ID	
+			{
+			type=EWap;
+			confidence=ECertain;
+			character_set=KCharSetDefault;		
+			port=22000;
+			general_id_data=0;
+			},
+		ID	
+			{
+			type=EWapSecure;
+			confidence=ECertain;
+			character_set=KCharSetDefault;		
+			port=22001;
+			general_id_data=0;
+			},
+		ID	
+			{
+			type=ENbs;
+			confidence=ECertain;
+			text="Giraffe";
+			},
+		ID	
+			{
+			type=ENbs;
+			confidence=ECertain;
+			port=22003;
+			},
+		ID
+			{
+			type=EIana;
+			confidence=ECertain;
+			character_set=KCharSetDefault;	// default is ISO-8859-1, could have missed this line out
+			text="application/x-nokia.settings";
+			}
+		};
+	}
+

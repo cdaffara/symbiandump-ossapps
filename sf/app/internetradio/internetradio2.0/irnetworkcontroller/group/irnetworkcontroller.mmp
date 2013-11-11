@@ -1,0 +1,71 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*
+*/
+
+#include 		<platform_paths.hrh>
+
+TARGET        irnetworkcontroller.dll
+TARGETTYPE    dll
+UID           0x1000008d 0x2002FFB0
+
+PAGED
+
+SOURCEPATH    ../src
+
+SOURCE        	irnetworkcontroller.cpp
+SOURCE		    irnetworkobserver.cpp
+SOURCE		    irdatatransfertracker.cpp
+SOURCE          irfilteredapreader.cpp
+
+USERINCLUDE     ../inc
+USERINCLUDE     ../../inc
+USERINCLUDE     ../../irsettings/inc
+
+
+// Default system include paths for application layer modules.
+APP_LAYER_SYSTEMINCLUDE
+// TODO will be removed after the changes of /epoc32/include
+SYSTEMINCLUDE   OS_LAYER_PUBLIC_EXPORT_PATH(http)
+SYSTEMINCLUDE   MW_LAYER_PUBLIC_EXPORT_PATH(http)
+
+SMPSAFE
+
+LIBRARY             bafl.lib
+LIBRARY             centralrepository.lib
+LIBRARY             commdb.lib
+LIBRARY             commsdat.lib
+LIBRARY             connmon.lib
+LIBRARY             esock.lib
+LIBRARY             euser.lib
+LIBRARY             featdiscovery.lib
+LIBRARY             irsettings.lib
+LIBRARY             http.lib
+LIBRARY 	        inetprotutil.lib
+LIBRARY 	        cmmanager.lib
+LIBRARY             extendedconnpref.lib
+LIBRARY             netmeta.lib
+LIBRARY             flogger.lib
+
+//CAPABILITY NetworkServices ProtServ ReadDeviceData ReadUserData SwEvent UserEnvironment WriteDeviceData WriteUserData TrustedUI
+CAPABILITY				CAP_GENERAL_DLL
+
+#if defined( WINSCW )
+DEFFILE         ../bwinscw/ 
+#else
+DEFFILE         ../bmarm/ 
+#endif
+
+

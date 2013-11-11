@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="0.9">
+    <widget name="view" type="HbView">
+        <widget name="mainContainer" role="HbView:widget" type="HbWidget">
+            <sizehint height="var(hb-param-screen-height)" type="PREFERRED" width="var(hb-param-screen-width)"/>
+            <contentsmargins bottom="var(hb-param-margin-gene-bottom)" left="var(hb-param-margin-gene-left)" right="var(hb-param-margin-gene-right)" top="var(hb-param-margin-gene-top)"/>
+            <widget name="analogClockWidget" type="SnsrAnalogClockWidget">
+                <real name="z" value="1"/>
+                <sizehint height="32.8un" type="PREFERRED" width="32.8un"/>
+            </widget>
+            <widget name="indicatorWidget" type="SnsrIndicatorWidget">
+                <sizehint height="2.4un" type="PREFERRED"/>
+                <sizehint width="2.4un" type="MINIMUM"/>
+                <sizepolicy horizontalPolicy="Expanding" verticalPolicy="Preferred"/>
+                <real name="z" value="2"/>
+            </widget>
+            <widget name="dateLabel" type="SnsrLabel">
+                <real name="z" value="3"/>
+                <sizepolicy horizontalPolicy="Expanding" verticalPolicy="Preferred"/>
+                <sizehint height="var(hb-param-text-height-tiny)" type="PREFERRED"/>
+                <sizehint width="1.0un" type="MINIMUM"/>
+                <fontspec name="fontSpec" role="Secondary" textheight="var(hb-param-text-height-tiny)"/>
+                <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+            </widget>
+            <layout type="anchor">
+                <anchoritem dst="analogClockWidget" dstEdge="CENTERH" spacing="0" src="" srcEdge="CENTERH"/>
+                <anchoritem dst="analogClockWidget" dstEdge="TOP" spacing="22un" src="" srcEdge="TOP"/>
+                <anchoritem dst="indicatorWidget" dstEdge="CENTERH" spacing="0" src="analogClockWidget" srcEdge="CENTERH"/>
+                <anchoritem dst="indicatorWidget" dstEdge="TOP" spacing="var(hb-param-margin-gene-top)" src="analogClockWidget" srcEdge="BOTTOM"/>
+                <anchoritem dst="dateLabel" dstEdge="CENTERH" spacing="0" src="analogClockWidget" srcEdge="CENTERH"/>
+                <anchoritem dst="dateLabel" dstEdge="TOP" spacing="var(hb-param-margin-gene-bottom)" src="indicatorWidget" srcEdge="BOTTOM"/>
+            </layout>
+        </widget>
+        <string name="title" value="View"/>
+    </widget>
+    <section name="landscape">
+        <widget name="mainContainer" role="HbView:widget" type="HbWidget">
+            <sizehint height="var(hb-param-screen-height)" type="PREFERRED" width="var(hb-param-screen-width)"/>
+            <contentsmargins bottom="var(hb-param-margin-gene-bottom)" left="var(hb-param-margin-gene-left)" right="var(hb-param-margin-gene-right)" top="var(hb-param-margin-gene-top)"/>
+            <layout type="anchor">
+                <anchoritem dst="analogClockWidget" dstEdge="CENTERH" spacing="0" src="" srcEdge="CENTERH"/>
+                <anchoritem dst="analogClockWidget" dstEdge="TOP" spacing="3.3un" src="" srcEdge="TOP"/>
+                <anchoritem dst="indicatorWidget" dstEdge="CENTERH" spacing="0" src="analogClockWidget" srcEdge="CENTERH"/>
+                <anchoritem dst="indicatorWidget" dstEdge="TOP" spacing="var(hb-param-margin-gene-top)" src="analogClockWidget" srcEdge="BOTTOM"/>
+                <anchoritem dst="dateLabel" dstEdge="CENTERH" spacing="0" src="analogClockWidget" srcEdge="CENTERH"/>
+                <anchoritem dst="dateLabel" dstEdge="TOP" spacing="var(hb-param-margin-gene-bottom)" src="indicatorWidget" srcEdge="BOTTOM"/>
+            </layout>
+        </widget>
+    </section>
+    <metadata activeUIState="Common ui state" display="NHD portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+        <uistate name="landscape" sections="#common landscape"/>
+    </metadata>
+</hbdocument>

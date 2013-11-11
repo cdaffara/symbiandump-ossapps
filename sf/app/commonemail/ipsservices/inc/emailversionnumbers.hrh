@@ -1,0 +1,41 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description : Common email version number definitions
+*
+*/
+
+
+#ifndef EMAILVERSIONNUMBERS_HRH
+#define EMAILVERSIONNUMBERS_HRH
+
+
+/** Binary version number to be used in Cmail related mmp-files. In binary
+ *  version number both major and minor version are stored in separate 32 bit
+ *  location.
+ */
+#define KEmailBinaryVersionNumber 10.2
+
+/** ECom version number to be used in Cmail related ECom registeration
+ *  resource files.
+ *  NOTE: Version number in ECom registeration resource file is saved as one
+ *  byte, so 255 is the maximum version number.
+ */
+#define KEmailEcomVersionNumber 3
+
+/** Binary paging setting (paged/non-paged)
+ */
+#define KEmailBinaryDemandPaging PAGED
+
+
+#endif // EMAILVERSIONNUMBERS_HRH

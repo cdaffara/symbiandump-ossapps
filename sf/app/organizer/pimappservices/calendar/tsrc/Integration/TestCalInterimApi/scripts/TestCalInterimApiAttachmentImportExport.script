@@ -1,0 +1,252 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//! @file
+//! @SYMTestSuiteName	TestCalInterimApiSuite 
+//! @SYMScriptTestEnvironment
+
+PRINT Run all TestCalInterimApi 
+
+LOAD_SUITE TestCalInterimApiSuite
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-IE-0027
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-IE-0027
+//! @SYMTestCaseDesc 		Import the entry with content id attachment
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.011,Attachment.010
+//! @SYMREQ			REQ5747		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Create and open the calendar file.
+//!				2. Import the entry with CID attachments. Set the file handle for the CID attachment.
+//!				3. Store the imported entries in the calendar file.Export the same entries to the vcs file.
+//!				4. Verify that the entries with attachment are imported by fetching the entries and checking
+//!				the attachments.
+//! @SYMTestExpectedResults 	Entry with CID attachment is imported and exported successfully.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCalAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini Import_CID
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\TestCalInterimApiAttachmentData.ini Export_203
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCheckAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini Verify_203
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-IE-0027
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-IE-0029
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-IE-0029
+//! @SYMTestCaseDesc 		Import and export the CID attachment with attribute set to EExportInline
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.011,Attachment.010,Attachment.012
+//! @SYMREQ			REQ5747		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Create and open the calendar file.
+//!				2. Import the entry with CID attachments. Set the file handle for the CID attachment and the attribute
+//!				of the attachment as EExportInline.
+//!				3. Store the imported entry in the calendar file.Export the same to the vcs file.
+//!				4. Verify that the entry with attachment is imported and exported by fetching the entries and checking
+//!				the attachments.
+//! @SYMTestExpectedResults 	Entry with attachment is imported and exported successfully and the binary data is imported.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCalAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini Import_CIDAttach
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\TestCalInterimApiAttachmentData.ini Export_204
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-IE-0029
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-IE-0030
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-IE-0030
+//! @SYMTestCaseDesc 		Import parent and child entry with attachments and export the file
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.011
+//! @SYMREQ			REQ5747		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Create and open the calendar file.
+//!				2. Import the parent and child entry with attachments
+//!				3. Store the imported entries in the calendar file.
+//!				4. Verify that the entries with attachment are imported by fetching the entries and checking
+//!				the attachments.
+//!				5. Export the calendar file and check the exported entries with attachment
+//! @SYMTestExpectedResults 	Parent and child entry with attachments are imported and exported successfully
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCalAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini Import_205
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCheckAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini verifyattach_205
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\TestCalInterimApiAttachmentData.ini Export_205
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-IE-0030
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-IE-0031
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-IE-0031
+//! @SYMTestCaseDesc 		Import the entries with empty attachment ie. attachment without value
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.011,Attachment.012
+//! @SYMREQ			REQ5747		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Create and open the calendar file.
+//!				2. Import the entries with empty attachment i.e attachment without any value
+//!				3. Store the imported entries in the calendar file.
+//!				4. Verify that the entries with attachment are imported by fetching the entries and checking
+//!				the attachments.
+//!				5. Export the calendar file and check the exported entries with attachment
+//! @SYMTestExpectedResults 	Entries are imported and exported successfully and the attachments are not imported and exported
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCalAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini Import_206
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\TestCalInterimApiAttachmentData.ini Export_206
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-IE-0031
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-IE-0032
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-IE-0032
+//! @SYMTestCaseDesc 		Import the entries with empty attach value
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.011,Attachment.012
+//! @SYMREQ			REQ5747		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Create and open the calendar file.
+//!				2. Import the entries with empty attach value
+//!				3. Store the imported entries in the calendar file.
+//!				4. Verify that the entries with attachment are imported by fetching the entries and checking
+//!				the attachments.
+//!				5. Export the calendar file and check the exported entries with attachment
+//! @SYMTestExpectedResults 	Entries are imported and exported successfully and the attachments are not imported and exported
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCalAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini Import_207
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\TestCalInterimApiAttachmentData.ini Export_207
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-IE-0032
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-IE-0033
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-IE-0033
+//! @SYMTestCaseDesc 		Import the entries with same guid but with different attachments 
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.011,Attachment.012
+//! @SYMREQ			REQ5745		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Create and open the calendar file.
+//!				2. Import the entries with same uid but with differnt attachments
+//!				3. Store the imported entries in the calendar file.
+//!				4. Verify that only one entry is added and the first entry is updated with the last entry and its attachment
+//!				by fetching it and checking
+//!				5. Export the calendar file and check the exported entries with attachment
+//! @SYMTestExpectedResults 	Entries are imported and exported successfully and the entry is updated successfully
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCalAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini Import_208
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\TestCalInterimApiAttachmentData.ini Export_208
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-IE-0033
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-IE-0034
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-IE-0034
+//! @SYMTestCaseDesc 		Update the child entry by importing many entries with same guid and recurr id but with different attachment
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.011,Attachment.012
+//! @SYMREQ			REQ5745		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Create and open the calendar file.
+//!				2. Import the entries with same uid but with different attachments
+//!				3. Store the imported entries in the calendar file.
+//!				4. Verify that only one child entry is added and the first entry is updated with the last entry and its attachment
+//!				by fetching it and checking
+//!				5. Export the calendar file and check the exported entries with attachment
+//! @SYMTestExpectedResults 	Entries are imported and exported successfully and the entry is updated successfully
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCalAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini Import_209
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\TestCalInterimApiAttachmentData.ini Export_209
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-IE-0034
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-IE-0049
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-IE-0049
+//! @SYMTestCaseDesc 		Import the entry with CID attachment. Store the entry without setting the file handle for CID attachment
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.0011  
+//! @SYMREQ			REQ5747		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Create and open the calendar file.
+//!				2. Import the entry with CID attachment 
+//!				3. Store the imported entries in the calendar file.
+//! @SYMTestExpectedResults 	StoreL() API leaves with error code KErrArgument when the file handle is not set for CID attachment
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP !Error=-6 100 TestCalInterimApiSuite TestCalInterimApiImportvCalAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini Import_CIDWithoutFileHandle
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-IE-0049
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-IE-0052
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-IE-0052
+//! @SYMTestCaseDesc 		Import the CID attachment with attribute EExportInline. Set the CID, Store it and Export the same.
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.011,Attachment.010,Attachment.012
+//! @SYMREQ			REQ5747		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Open the calendar file.
+//!				2. Import the entry with file attachment. Set the attribute to EExportInline.
+//!				3. Store the entry in the calendar file. Fetch the entry and clear the attribute of the attachment. 
+//!				4. Store the entry again.
+//!				5. Export the same entry and check that the binary data of the attachment is not exported.
+//! @SYMTestExpectedResults 	The CID of the attachment is exportedThe binary data of the attachment is not exported to the file.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCalAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini ImportCID1
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-IE-0052
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-IE-0053
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-IE-0053
+//! @SYMTestCaseDesc 		update the name,mimetype, last modified date of the attachment and export the file
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.001,Attachment.0011,Attachment.0012
+//! @SYMREQ			REQ5747		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Open the calendar file.
+//!				2. Fetch the entry and update the attachment properties like mimetype, name, lastmodified date of the attachment.
+//!				3. Store the entry in the calendar file. 
+//!				4. Export the calendar file to the vcs file and check that the attachment with the properties like name, mimetype, last modified date are exported.
+//!				5. Import and export the same and compare the entries with attachment.
+//! @SYMTestExpectedResults 	Attachment properties like name, mimetype, lastmodified date are exported and imported successfully
+//! @SYMTestType 		CIT
+
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiUpdateEntry \CITCalInterimApi\TestCalInterimApiAttachmentData.ini updateCID
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\TestCalInterimApiAttachmentData.ini ExportCID1
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCalAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini ImportCID1again
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\TestCalInterimApiAttachmentData.ini ExportCID1again
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-IE-0053
+

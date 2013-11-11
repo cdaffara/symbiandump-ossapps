@@ -1,0 +1,19 @@
+<!-- Capability Object Service -->
+<Service>
+	<Name>Bookmarks</Name>
+	<UUID>SYNCML-SYNC</UUID>
+	<Version>2.0</Version>
+	<Object>	
+		<Type>text/x-vbookmark</Type>
+		<Name-Ext>bookmarks</Name-Ext>
+	</Object>
+	<Ext>
+		<XNam>SyncProfile</XNam>
+		<XVal>HostAddress=PC Suite Data Sync</XVal>
+		<XVal>Database=bookmarks</XVal>
+	</Ext>
+	<Ext>
+		<XNam>Databases</XNam>
+		<XVal>Web Feeds=50000</XVal>
+	</Ext>
+</Service>

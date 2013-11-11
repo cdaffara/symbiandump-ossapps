@@ -1,0 +1,63 @@
+// Copyright (c) 1999-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// Help application engine
+// 
+//
+
+PRJ_PLATFORMS
+DEFAULT WINC
+
+
+PRJ_EXPORTS
+// specify the source file followed by its destination here
+// copy will be used to copy the source file to its destination
+// If there's no destination then the source file will be copied
+// to the same name in \epoc32\include
+../dbwriter/DBWRITER.H SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(dbwriter.h)
+//
+../inc/HLPMODEL.H SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(hlpmodel.h)
+../inc/HLPLCH.H SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(hlplch.h)
+../inc/hlpconstants.h SYMBIAN_APP_LAYER_PLATFORM_EXPORT_PATH(hlpconstants.h)
+../inc/HlpZoom.h SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(hlpzoom.h)
+
+../group/hlpmodel.iby		/epoc32/rom/include/hlpmodel.iby
+
+
+PRJ_MMPFILES
+../dbwriter/DBWRITER.MMP
+#ifndef WINC
+../group/HLPMODEL.MMP
+../lch/HLPLCH.MMP
+#endif
+
+PRJ_TESTMMPFILES
+../tsrc/tlch.mmp manual
+../tsrc/TSearch.mmp
+../tsrc/tstore.mmp
+../tsrc/THelpView.mmp manual
+../tsrc/tdumper.mmp manual
+../tsrc/TLoader.mmp
+
+PRJ_TESTEXPORTS
+../group/hlpmodelTest.iby				/epoc32/rom/include/hlpmodeltest.iby
+
+../TestData/Boss-1.hlp					/epoc32/winscw/c/resource/help/boss-1.hlp
+../TestData/Boss-2.hlp					/epoc32/winscw/c/resource/help/boss-2.hlp
+../TestData/ER5Help_Part1.hlp				/epoc32/winscw/c/resource/help/er5help_part1.hlp
+../TestData/newfile.hlp					/epoc32/winscw/c/resource/help/newfile.hlp
+../TestData/french.hlp					/epoc32/winscw/c/resource/help/french.hlp
+../TestData/PlatSecSearchTestZ.hlp			z:/resource/help/platsecsearchtest.hlp
+../TestData/PlatSecSearchTestC.hlp			z:/system/data/thlpmodel/platsecsearchtestc.hlp
+../TestData/PlatSecSearchTestF.hlp			z:/system/data/thlpmodel/platsecsearchtestf.hlp
+

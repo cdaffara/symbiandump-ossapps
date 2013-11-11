@@ -1,0 +1,56 @@
+/*
+* Copyright (c) 2004-2007 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   InternetAdapter 
+*
+*/
+
+
+
+#include "defaultcaps.hrh"
+#include  <platform_paths.hrh>
+
+CAPABILITY      CAP_ECOM_PLUGIN
+TARGET	      	nsmlinternetadapter.dll
+TARGETTYPE      PLUGIN
+UID             0x10009D8D 0x101F6DEA
+VENDORID        VID_DEFAULT
+
+
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE 	/epoc32/include/ecom 
+
+SOURCEPATH      ../src
+USERINCLUDE     ../inc
+
+SOURCE          NSmlInternetAdapter.cpp
+
+SOURCE		NSmlWLanAdapter.cpp
+SOURCE		NSmlWlanSettings.cpp
+
+START RESOURCE	NSmlInternetAdapter.rss
+END
+
+LANG	sc
+
+LIBRARY		charconv.lib commdb.lib efsrv.lib ecom.lib euser.lib nsmldmclientserverutils.lib
+LIBRARY		nsmldebug.lib sysutil.lib
+LIBRARY		inetprotutil.lib
+LIBRARY 	commsdat.lib
+LIBRARY 	cmmanager.lib
+LIBRARY 	cmmanagerdatabase.lib
+LIBRARY 	centralrepository.lib featmgr.lib
+LIBRARY		policyengine.lib
+LIBRARY		nsmldmtreedbclient.lib
+LIBRARY		eaptools.lib
+

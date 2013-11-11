@@ -1,0 +1,48 @@
+/*
+* Copyright (c) 2000 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Resource definitions for project Internet Radio RFS plugin
+*
+*/
+
+
+#include <registryinfo.rh>
+#include "iruid3.hrh"
+
+// ---------------------------------------------------------------------------
+// r_ps_rfs_plugin_registry_info
+// Registry info for the Internet Radio RFS ECOM plugin.
+// ---------------------------------------------------------------------------
+//
+RESOURCE REGISTRY_INFO r_ps_rfs_plugin_registry_info
+    {
+    dll_uid = UID3_IRRFSPLUGIN_DLL;
+    interfaces =
+        {
+        INTERFACE_INFO
+            {
+            interface_uid = 0x102073BB;
+            implementations =
+                {
+                IMPLEMENTATION_INFO
+                    {
+                    implementation_uid = UID3_IRRFSPLUGIN_DLL_IMPLEMENTATION_UID;
+                    version_no = 1;
+                    display_name = "Internet Radio RFS Plugin";
+                    default_data = "N"; // Normal RFS.
+                    opaque_data = "";
+                    }
+                };
+            }
+        };
+    }

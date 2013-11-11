@@ -1,0 +1,24 @@
+NmAttachmentListItem {
+    layout:customitem;
+}
+
+NmAttachmentListItem::filename {
+  fixed-height: var(hb-param-text-height-secondary);
+  font-variant: secondary;
+  text-align: left center; 
+  size-policy-horizontal: expanding;
+  size-policy-vertical: minimum;
+}
+
+NmAttachmentListItem::filesize {
+  fixed-height: var(hb-param-text-height-secondary);
+  /* Hardcoded file size length. Maximum (999.9 Mb) fits into size field. */
+  fixed-width: 17.91045un;
+  font-variant: secondary;
+  text-align: right center; 
+  size-policy-vertical: minimum;
+}
+
+NmAttachmentListItem::progressbar {
+
+}

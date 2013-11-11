@@ -1,0 +1,72 @@
+CntContactCardHeadingItem[primary_text]{
+    layout:layout_one_row;
+}
+
+CntContactCardHeadingItem[secondary_text][!marquee_item]{
+    layout:layout_two_rows_secondary;
+}
+
+CntContactCardHeadingItem[!secondary_text][marquee_item]{
+    layout:layout_two_rows_marquee;
+}
+
+CntContactCardHeadingItem[first_line_text][secondary_text][marquee_item]{
+    layout:layout_three_rows;
+}
+
+CntContactCardHeadingItem[primary_text]:landscape{
+    layout:layout_one_row-landscape;
+}
+
+CntContactCardHeadingItem[secondary_text][!marquee_item]:landscape{
+    layout:layout_two_rows_secondary-landscape;
+}
+
+CntContactCardHeadingItem[!secondary_text][marquee_item]:landscape{
+    layout:layout_two_rows_marquee-landscape;
+}
+
+CntContactCardHeadingItem[first_line_text][secondary_text][marquee_item]:landscape{
+    layout:layout_three_rows-landscape;
+}
+
+CntContactCardHeadingItem::icon{
+    fixed-width:var(hb-param-graphic-size-primary-large);
+    fixed-height:var(hb-param-graphic-size-primary-large);
+}
+
+CntContactCardHeadingItem::first_line_text{
+    text-height:var(hb-param-text-height-primary);
+    font-variant:primary;
+    text-align:left;
+}
+
+CntContactCardHeadingItem::primary_text{
+    text-height:var(hb-param-text-height-primary);
+    font-variant:primary;
+    text-align:left;
+}
+
+CntContactCardHeadingItem::secondary_text{
+    text-height:var(hb-param-text-height-secondary);
+    font-variant:secondary;
+    text-align:left;
+}
+
+CntContactCardHeadingItem::marquee_item{
+    text-height:var(hb-param-text-height-tiny);
+    font-variant:primary-small;
+    text-align:left;
+}
+
+CntContactCardHeadingItem::secondary_icon{
+  fixed-height: var(hb-param-graphic-size-secondary);
+  fixed-width: var(hb-param-graphic-size-secondary);
+}
+
+CntContactCardHeadingItem::background{
+    left:0.0un;
+    right:0.0un;
+    top:0.0un;
+    bottom:0.0un;
+}

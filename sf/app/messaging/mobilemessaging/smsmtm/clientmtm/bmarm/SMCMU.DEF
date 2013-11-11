@@ -1,0 +1,75 @@
+EXPORTS
+	NewL__13CSmsClientMtmR17CRegisteredMtmDllR11CMsvSession @ 1 NONAME R3UNUSED ; CSmsClientMtm::NewL(CRegisteredMtmDll &, CMsvSession &)
+	Dummy_Export_1__13TSmsUtilities @ 2 NONAME R3UNUSED ; TSmsUtilities::Dummy_Export_1(void)
+	BioTypeChangedL__13CSmsClientMtmG4TUid @ 3 NONAME R3UNUSED ; CSmsClientMtm::BioTypeChangedL(TUid)
+	CopyL__10CSmsNumberRC10CSmsNumber @ 4 NONAME R3UNUSED ; CSmsNumber::CopyL(CSmsNumber const &)
+	CopyL__12CSmsSettingsRC12CSmsSettings @ 5 NONAME R3UNUSED ; CSmsSettings::CopyL(CSmsSettings const &)
+	CopyL__19CSmsMessageSettingsRC19CSmsMessageSettings @ 6 NONAME R3UNUSED ; CSmsMessageSettings::CopyL(CSmsMessageSettings const &)
+	ExternalizeL__C10CSmsHeaderR15RMsvWriteStream @ 7 NONAME R3UNUSED ; CSmsHeader::ExternalizeL(RMsvWriteStream &) const
+	ExternalizeL__C10CSmsNumberR12RWriteStream @ 8 NONAME R3UNUSED ; CSmsNumber::ExternalizeL(RWriteStream &) const
+	ExternalizeL__C12CSmsSettingsR12RWriteStream @ 9 NONAME R3UNUSED ; CSmsSettings::ExternalizeL(RWriteStream &) const
+	ExternalizeL__C19CSmsMessageSettingsR12RWriteStream @ 10 NONAME R3UNUSED ; CSmsMessageSettings::ExternalizeL(RWriteStream &) const
+	GetDescription__13TSmsUtilitiesRC11CSmsMessageR6TDes16i @ 11 NONAME R3UNUSED ; TSmsUtilities::GetDescription(CSmsMessage const &, TDes16 &, int)
+	GetDetails__13TSmsUtilitiesR3RFsRC11CSmsMessageR6TDes16i @ 12 NONAME ; TSmsUtilities::GetDetails(RFs &, CSmsMessage const &, TDes16 &, int)
+	GetDetails__13TSmsUtilitiesR3RFsRC7TDesC16R6TDes16i @ 13 NONAME ; TSmsUtilities::GetDetails(RFs &, TDesC16 const &, TDes16 &, int)
+	GetSmsSettingsL__C10CSmsHeaderR19CSmsMessageSettings @ 14 NONAME R3UNUSED ; CSmsHeader::GetSmsSettingsL(CSmsMessageSettings &) const
+	InternalizeL__10CSmsHeaderR14RMsvReadStream @ 15 NONAME R3UNUSED ; CSmsHeader::InternalizeL(RMsvReadStream &)
+	InternalizeL__10CSmsNumberR11RReadStream @ 16 NONAME R3UNUSED ; CSmsNumber::InternalizeL(RReadStream &)
+	InternalizeL__12CSmsSettingsR11RReadStream @ 17 NONAME R3UNUSED ; CSmsSettings::InternalizeL(RMsvReadStream &)
+	InternalizeL__19CSmsMessageSettingsR11RReadStream @ 18 NONAME R3UNUSED ; CSmsMessageSettings::InternalizeL(RMsvReadStream &)
+	NewL__10CSmsHeaderP11CSmsMessage @ 19 NONAME R3UNUSED ; CSmsHeader::NewL(CSmsMessage *)
+	NewL__10CSmsHeaderQ27CSmsPDU11TSmsPDUTypeR13CEditableText @ 20 NONAME R3UNUSED ; CSmsHeader::NewL(CSmsPDU::TSmsPDUType, CEditableText &)
+	NewL__10CSmsNumber @ 21 NONAME R3UNUSED ; CSmsNumber::NewL(void)
+	NewL__10CSmsNumberRC10CSmsNumber @ 22 NONAME R3UNUSED ; CSmsNumber::NewL(CSmsNumber const &)
+	NewL__12CSmsSettings @ 23 NONAME R3UNUSED ; CSmsSettings::NewL(void)
+	PopulateMsgEntry__13TSmsUtilitiesR9TMsvEntryRC11CSmsMessagelG4TUid @ 24 NONAME ; TSmsUtilities::PopulateMsgEntry(TMsvEntry &, CSmsMessage const &, long, TUid)
+	RemoveSCAddress__12CSmsSettingsi @ 25 NONAME R3UNUSED ; CSmsSettings::RemoveSCAddress(int)
+	RestoreL__10CSmsHeaderR9CMsvStore @ 26 NONAME R3UNUSED ; CSmsHeader::RestoreL(CMsvStore &)
+	RestoreL__12CSmsSettingsR9CMsvStore @ 27 NONAME R3UNUSED ; CSmsSettings::RestoreL(CMsvStore &)
+	RestoreServiceAndSettingsL__13CSmsClientMtm @ 28 NONAME R3UNUSED ; CSmsClientMtm::RestoreServiceAndSettingsL(void)
+	ServiceIdL__13TSmsUtilitiesR15CMsvServerEntryRlG4TUidP18CMsvEntrySelection @ 29 NONAME ; TSmsUtilities::ServiceIdL(CMsvServerEntry &, long &, TUid, CMsvEntrySelection *)
+	ServiceIdL__13TSmsUtilitiesR9CMsvEntryRlG4TUidP18CMsvEntrySelection @ 30 NONAME ; TSmsUtilities::ServiceIdL(CMsvEntry &, long &, TUid, CMsvEntrySelection *)
+	SetSmsSettingsL__10CSmsHeaderRC19CSmsMessageSettings @ 31 NONAME R3UNUSED ; CSmsHeader::SetSmsSettingsL(CSmsMessageSettings const &)
+	StoreL__C10CSmsHeaderR9CMsvStore @ 32 NONAME R3UNUSED ; CSmsHeader::StoreL(CMsvStore &) const
+	StoreL__C12CSmsSettingsR9CMsvStore @ 33 NONAME R3UNUSED ; CSmsSettings::StoreL(CMsvStore &) const
+	"_._10CSmsHeader" @ 34 NONAME R3UNUSED ; CSmsHeader::~CSmsHeader(void)
+	"_._10CSmsNumber" @ 35 NONAME R3UNUSED ; CSmsNumber::~CSmsNumber(void)
+	"_._12CSmsSettings" @ 36 NONAME R3UNUSED ; CSmsSettings::~CSmsSettings(void)
+	Dummy_Export_2__13TSmsUtilities @ 37 NONAME R3UNUSED ; TSmsUtilities::Dummy_Export_2(void)
+	AddSCAddressL__12CSmsSettingsRC7TDesC16T1 @ 38 NONAME R3UNUSED ; CSmsSettings::AddSCAddressL(TDesC16 const &, TDesC16 const &)
+	ProgressL__21CSmsSimParamOperation @ 39 NONAME R3UNUSED ; CSmsSimParamOperation::ProgressL(void)
+	ReadSimParamsL__13CSmsClientMtmR14TRequestStatus @ 40 NONAME R3UNUSED ; CSmsClientMtm::ReadSimParamsL(TRequestStatus &)
+	ServiceCentersLC__C21CSmsSimParamOperation @ 41 NONAME R3UNUSED ; CSmsSimParamOperation::ServiceCentersLC(void) const
+	Address__C10CSmsNumber @ 42 NONAME R3UNUSED ; CSmsNumber::Address(void) const
+	Name__C10CSmsNumber @ 43 NONAME R3UNUSED ; CSmsNumber::Name(void) const
+	SetAddressL__10CSmsNumberRC7TDesC16 @ 44 NONAME R3UNUSED ; CSmsNumber::SetAddressL(TDesC16 const &)
+	SetNameL__10CSmsNumberRC7TDesC16 @ 45 NONAME R3UNUSED ; CSmsNumber::SetNameL(TDesC16 const &)
+	CreateMessageL__13CSmsClientMtml @ 46 NONAME R3UNUSED ; CSmsClientMtm::CreateMessageL(long)
+	ServiceIdL__13TSmsUtilitiesR11CMsvSessionRlG4TUidP18CMsvEntrySelection @ 47 NONAME ; TSmsUtilities::ServiceIdL(CMsvSession &, long &, TUid, CMsvEntrySelection *)
+	RestoreSimParamsL__21CSmsSimParamOperationR9CMsvStoreR20CMobilePhoneSmspList @ 48 NONAME R3UNUSED ; CSmsSimParamOperation::RestoreSimParamsL(CMsvStore &, CMobilePhoneSmspList &)
+	StoreSimParamsL__21CSmsSimParamOperationR9CMsvStoreRC20CMobilePhoneSmspList @ 49 NONAME R3UNUSED ; CSmsSimParamOperation::StoreSimParamsL(CMsvStore &, CMobilePhoneSmspList const &)
+	WriteSimParamsL__13CSmsClientMtmRC20CMobilePhoneSmspListR14TRequestStatus @ 50 NONAME R3UNUSED ; CSmsClientMtm::WriteSimParamsL(CMobilePhoneSmspList const &, TRequestStatus &)
+	SaveExternalL__12CSmsSettingsR9CMsvStore @ 51 NONAME R3UNUSED ; CSmsSettings::SaveExternalL(CMsvStore &)
+	OpenResourceFileL__13TSmsUtilitiesR3RFs @ 52 NONAME R3UNUSED ; TSmsUtilities::OpenResourceFileL(RFs &)
+	ReadResourceStringL__13TSmsUtilitiesG13RResourceFileiR6TDes16 @ 53 NONAME ; TSmsUtilities::ReadResourceStringL(RResourceFile, int, TDes16 &)
+	AckSummary__C12TMsvSmsEntry11TSmsAckType @ 54 NONAME R3UNUSED ; TMsvSmsEntry::AckSummary(TSmsAckType) const
+	MessageId__C12TMsvSmsEntryRl @ 55 NONAME R3UNUSED ; TMsvSmsEntry::MessageId(long &) const
+	SetAckStatus__10CSmsNumber11TSmsAckTypeQ210CSmsNumber13TSmsAckStatus @ 56 NONAME R3UNUSED ; CSmsNumber::SetAckStatus(TSmsAckType, CSmsNumber::TSmsAckStatus)
+	SetAckSummary__12TMsvSmsEntry11TSmsAckTypeQ212TMsvSmsEntry22TMsvSmsEntryAckSummary @ 57 NONAME R3UNUSED ; TMsvSmsEntry::SetAckSummary(TSmsAckType, TMsvSmsEntry::TMsvSmsEntryAckSummary)
+	SetMessageId__12TMsvSmsEntryli @ 58 NONAME R3UNUSED ; TMsvSmsEntry::SetMessageId(long, int)
+	AckStatus__C10CSmsNumber11TSmsAckType @ 59 NONAME R3UNUSED ; CSmsNumber::AckStatus(TSmsAckType) const
+	"_._15CSmsEmailFields" @ 60 NONAME R3UNUSED ; CSmsEmailFields::~CSmsEmailFields(void)
+	AddAddressL__15CSmsEmailFieldsRC7TDesC16 @ 61 NONAME R3UNUSED ; CSmsEmailFields::AddAddressL(TDesC16 const &)
+	Addresses__C15CSmsEmailFields @ 62 NONAME R3UNUSED ; CSmsEmailFields::Addresses(void) const
+	ComposeLC__C15CSmsEmailFields @ 63 NONAME R3UNUSED ; CSmsEmailFields::ComposeLC(void) const
+	EmailFields__C10CSmsHeader @ 64 NONAME R3UNUSED ; CSmsHeader::EmailFields(void) const
+	HasAddress__C15CSmsEmailFields @ 65 NONAME R3UNUSED ; CSmsEmailFields::HasAddress(void) const
+	Length__C15CSmsEmailFields @ 66 NONAME R3UNUSED ; CSmsEmailFields::Length(void) const
+	NewL__15CSmsEmailFields @ 67 NONAME R3UNUSED ; CSmsEmailFields::NewL(void)
+	NewL__15CSmsEmailFieldsRC15CSmsEmailFields @ 68 NONAME R3UNUSED ; CSmsEmailFields::NewL(CSmsEmailFields const &)
+	RemoveAddress__15CSmsEmailFieldsi @ 69 NONAME R3UNUSED ; CSmsEmailFields::RemoveAddress(int)
+	Reset__15CSmsEmailFields @ 70 NONAME R3UNUSED ; CSmsEmailFields::Reset(void)
+	SetEmailFieldsL__10CSmsHeaderRC15CSmsEmailFields @ 71 NONAME R3UNUSED ; CSmsHeader::SetEmailFieldsL(CSmsEmailFields const &)
+	SetSubjectL__15CSmsEmailFieldsRC7TDesC16 @ 72 NONAME R3UNUSED ; CSmsEmailFields::SetSubjectL(TDesC16 const &)
+	Subject__C15CSmsEmailFields @ 73 NONAME R3UNUSED ; CSmsEmailFields::Subject(void) const
+

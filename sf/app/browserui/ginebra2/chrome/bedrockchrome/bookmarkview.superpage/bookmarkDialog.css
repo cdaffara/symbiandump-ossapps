@@ -1,0 +1,112 @@
+/*TBD: This should be cleaned up to use a set of common dialog classes */
+
+#BookmarkDialogId
+{
+   width: 302px;
+}
+
+#BookmarkDialogTitleId 
+{
+    width: 256;
+    height:32px;
+    background-color:white;
+    padding:2px;
+    border-radius: 3px;
+    border-color:#c8c8c8
+}
+
+#BookmarkDialogUrlId 
+{
+    width:256px;
+    height:32px;
+    background-color:white;
+    border-color:#c8c8c8;
+    border-radius: 3px;
+    padding:2px;
+    margin-top: 15px;
+}
+
+div.bookmarkTextLabel{
+    background-image: url(icons/menu_icon_bookmarks.png);
+    background-repeat: no-repeat;
+    font-size: 22px;
+    height: 21px;
+    padding-left: 40px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+#BookmarkDialogId div.top{
+    background-image: url(icons/dialog_top.png);
+    background-repeat: no-repeat;
+    height:11px;
+}
+
+#BookmarkDialogId div.body{
+    background-image: url(icons/dialog_center.png);
+    padding-left:20px;
+    padding-top: 5px;
+    padding-bottom:7px;
+    background-repeat: repeat-y;
+}
+
+#BookmarkDialogId div.bottom{
+    background-image: url(icons/dialog_bottom.png);
+    background-repeat: no-repeat;
+    height:10px;
+    background-position:left bottom;
+}
+
+div.controls{
+  height: 54px;
+  margin: auto;
+  width: 230px;
+}
+
+div.bookmarkDoneButton{
+    width: 100px;
+    height: 54px;
+    background-image: url(icons/dialog_buttons_tick.png);
+    background-repeat: no-repeat;
+    background-repeat: center center;
+    border: none;
+    margin-right:10px;
+    float: left;
+    
+}
+
+div.bookmarkDoneButton:active{
+    background-image: url(icons/dialog_buttons_tick_pressed.png);
+}
+
+
+div.bookmarkCancelButton{
+    width: 100px;
+    height: 54px;
+    background-image: url(icons/dialog_buttons_cross.png);
+    background-repeat: no-repeat;
+    background-repeat: center center;
+    border: none;
+    margin:none;
+    float: left;
+}
+
+div.bookmarkCancelButton:active{
+    background-image: url(icons/dialog_buttons_cross_pressed.png);
+}
+
+div.bookmarkCheckboxTextLabel {
+    font-size:20px;
+    height:20px;
+    color:#fff;
+    display: none;
+}
+
+#bookmarkCheckboxId {
+    width:20px;
+    height:20px;
+    background-color:white;
+    border-color:#c8c8c8;
+    border-radius:3px;
+    margin-top:15px;
+}

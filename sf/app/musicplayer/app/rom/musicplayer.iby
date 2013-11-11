@@ -1,0 +1,30 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: 
+*
+*/
+
+#ifndef MUSICPLAYER_IBY
+#define MUSICPLAYER_IBY
+
+#include <data_caging_paths_for_iby.hrh>
+
+S60_APP_EXE(musicplayer)
+data = ZPRIVATE\10003A3F\import\APPS\musicplayer_reg.rsc   PRIVATE\10003a3f\import\apps\musicplayer_reg.rsc
+
+data = ZSYSTEM\install\musicplayer_stub.sis          system\install\musicplayer_stub.sis
+data = ZRESOURCE\hb\splashml\musicplayer.splashml    RESOURCE_FILES_DIR\hb\splashml\musicplayer.splashml
+data = ZRESOURCE\hb\splashml\musicplayer.docml       RESOURCE_FILES_DIR\hb\splashml\musicplayer.docml
+
+#endif	// MUSICPLAYER_IBY

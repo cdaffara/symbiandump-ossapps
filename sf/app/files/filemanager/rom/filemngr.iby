@@ -1,0 +1,38 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: 
+*
+*/
+
+#ifndef __FILEMNGR_IBY__
+#define __FILEMNGR_IBY__
+
+#include <bldprivate.hrh>
+
+#define HB_UPGRADABLE_APP_REG_RSC(NAME) data=DATAZ_\PRIVATE\10003A3F\IMPORT\APPS\ ## NAME ## _reg.rsc        Private\10003a3f\import\apps\ ## NAME ## _reg.rsc
+
+file=ABI_DIR\BUILD_DIR\filemngr.exe                   SHARED_LIB_DIR\filemngr.exe
+data = ZRESOURCE\apps\filemngr.mif                    APP_RESOURCE_DIR\filemngr.mif
+HB_UPGRADABLE_APP_REG_RSC(filemngr)
+
+
+file=ABI_DIR\BUILD_DIR\fmbkupengine.dll               SHARED_LIB_DIR\fmbkupengine.dll
+file=ABI_DIR\BUILD_DIR\fmfiledialog.dll               SHARED_LIB_DIR\fmfiledialog.dll
+file=ABI_DIR\BUILD_DIR\fmbkupenginewrapper.dll        SHARED_LIB_DIR\fmbkupenginewrapper.dll
+
+data=DATAZ_\private\2002BCC0\backup_registration.xml  private\2002BCC0\backup_registration.xml
+data=DATAZ_\private\2002BCC0\burconfig.xml            private\2002BCC0\burconfig.xml
+
+#endif
+

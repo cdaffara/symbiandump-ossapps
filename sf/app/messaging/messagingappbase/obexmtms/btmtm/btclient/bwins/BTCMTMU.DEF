@@ -1,0 +1,11 @@
+EXPORTS
+	?NewL@CBtClientMtm@@SAPAV1@AAVCRegisteredMtmDll@@AAVCMsvSession@@@Z @ 1 NONAME ; public: static class CBtClientMtm * __cdecl CBtClientMtm::NewL(class CRegisteredMtmDll &,class CMsvSession &)
+	??1CBtHeader@@UAE@XZ @ 2 NONAME ; public: virtual __thiscall CBtHeader::~CBtHeader(void)
+	?Addr@CBtHeader@@UBE?AVTPtrC8@@XZ @ 3 NONAME ; public: virtual class TPtrC8  __thiscall CBtHeader::Addr(void)const 
+	?BtProtocolInfo@CBtHeader@@UBEABVTObexBluetoothProtocolInfo@@XZ @ 4 NONAME ; public: virtual class TObexBluetoothProtocolInfo const & __thiscall CBtHeader::BtProtocolInfo(void)const 
+	?ConstructL@CBtHeader@@QAEXXZ @ 5 NONAME ; public: void __thiscall CBtHeader::ConstructL(void)
+	?ExternalizeL@CBtHeader@@UBEXAAVRMsvWriteStream@@@Z @ 6 NONAME ; public: virtual void __thiscall CBtHeader::ExternalizeL(class RMsvWriteStream &)const 
+	?InternalizeL@CBtHeader@@UAEXAAVRMsvReadStream@@@Z @ 7 NONAME ; public: virtual void __thiscall CBtHeader::InternalizeL(class RMsvReadStream &)
+	?NewL@CBtHeader@@SAPAV1@XZ @ 8 NONAME ; public: static class CBtHeader * __cdecl CBtHeader::NewL(void)
+	?SetAddrL@CBtHeader@@UAEXABVTDesC8@@@Z @ 9 NONAME ; public: virtual void __thiscall CBtHeader::SetAddrL(class TDesC8 const &)
+

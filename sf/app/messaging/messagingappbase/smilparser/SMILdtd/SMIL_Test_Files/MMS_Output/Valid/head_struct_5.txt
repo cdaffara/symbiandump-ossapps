@@ -1,0 +1,28 @@
+<?XML version="1.0" ?>
+<!DOCTYPE smil SYSTEM "mms_smil.dtd">
+
+<!-- Focus of this test: meta element, attribute variations -->
+<!-- Focus of this test: meta element, attribute variations -->
+<!-- name, content, skip-content SPECIFIED -->
+<smil>
+   <head>
+      <transition id="myfire" type="superCool" subtype="fire"/>
+   </head>
+   <body>
+      <par dur="8s">
+         <img src="FirstImage.jpg" region="Image"/>
+         <text src="FirstText.txt" region="Text"/>
+         <audio src="FirstSound.amr"/>
+      </par>
+      <par dur="7s">
+         <img src="SecondImage.jpg" region="Image"/>
+         <text src="SecondText.txt" region="Text"/>
+         <audio src="SecondSound.amr"/>
+      </par>
+      <par dur="4s">
+         <img src="ThirdImage.jpg" region="Image"/>
+         <text src="ThirdText.txt" region="Text"/>
+         <audio src="ThirdSound.amr"/>
+      </par>
+   </body>
+</smil>

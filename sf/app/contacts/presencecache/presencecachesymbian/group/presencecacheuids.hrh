@@ -1,0 +1,37 @@
+/*
+* Copyright (c) 2008 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Presence Framework DLL uids
+*
+*/
+
+#ifndef PRESENCECACHEUIDS_HRH
+#define PRESENCECACHEUIDS_HRH
+
+// -----------------------------------------------------------------------------
+// System wide UID 2:s for different dll types.
+// -----------------------------------------------------------------------------
+//
+#define PRESENCECACHE_DLL_UID_STATIC              0x1000008d
+#define PRESENCECACHE_DLL_UID_ECOM_PLUGIN         0x10009D8D
+
+// -----------------------------------------------------------------------------
+// Other dll uids
+// -----------------------------------------------------------------------------
+//
+#define PRESENCECACHE_DLL_UID_CLIENT              0x2001B31A  
+#define PRESENCECACHE_DLL_UID_SERVER              0x2001B31B
+#define PRESENCECACHE_DLL_UID_UTILS               0x2001B31C
+
+
+#endif // PRESENCECACHEUIDS_HRH

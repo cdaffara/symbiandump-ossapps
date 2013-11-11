@@ -1,0 +1,97 @@
+/*
+* ==============================================================================
+*  Name        : lcvt.mmp
+*  Part of     : 
+*  Description : 
+*  Version     :
+*
+*  Copyright © 2006 Nokia Corporation.
+*  This material, including documentation and any related
+*  computer programs, is protected by copyright controlled by
+*  Nokia Corporation. All rights are reserved. Copying,
+*  including reproducing, storing, adapting or translating, any
+*  or all of this material requires the prior written consent of
+*  Nokia Corporation. This material also contains confidential
+*  information which may not be disclosed to others without the
+*  prior written consent of Nokia Corporation.
+* ==============================================================================
+*/
+
+#include <platform_paths.hrh>
+
+// Capability assignment.
+CAPABILITY 	CAP_GENERAL_DLL
+
+// Vendor ID assignment.
+VENDORID	VID_DEFAULT
+
+TARGET		lcvtengineplugin.dll
+TARGETTYPE	PLUGIN
+
+EPOCALLOWDLLDATA
+
+UID		0x10009D8D 0xF0112235
+
+USERINCLUDE  ../inc/base
+USERINCLUDE  ../inc/common
+USERINCLUDE  ../inc/control
+USERINCLUDE  ../inc/states
+USERINCLUDE  ../../lcvtindicatorcontroller/inc
+
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE 	/epoc32/include/ecom
+SYSTEMINCLUDE   ../../../inc
+
+
+SOURCEPATH ../src/base
+SOURCE dllmain.cpp clcvtengine.cpp clcvtsession.cpp clcvtcmdexecutor.cpp clcvtactiveexec.cpp clcvtappshutter.cpp
+
+SOURCEPATH ../src/common
+SOURCE lcvtutility.cpp tlcvtstates.cpp tlcvtaudiostate.cpp tlcvtmediastate.cpp
+
+SOURCEPATH ../src/control
+SOURCE tlcvtcamerahandler.cpp clcvtlocalvideoplayer.cpp clcvtremotevideoplayer.cpp clcvtvideoplayerbase.cpp
+
+SOURCEPATH ../src/states
+SOURCE tlcvtstatebase.cpp tlcvtstatestarting.cpp tlcvtstaterunning.cpp tlcvtstateresetting.cpp
+
+
+SOURCEPATH	../data
+START RESOURCE F0112235.rss 
+TARGET lcvtengineplugin.rsc                                          
+END
+
+
+LIBRARY			euser.lib
+LIBRARY			ecom.lib
+LIBRARY   		flogger.lib
+LIBRARY   		centralrepository.lib
+LIBRARY         featmgr.lib
+LIBRARY 		ws32.lib
+LIBRARY         efsrv.lib
+LIBRARY         estor.lib
+LIBRARY		    fbscli.lib
+LIBRARY			gdi.lib
+
+LIBRARY			eikcore.lib
+LIBRARY         apparc.lib
+LIBRARY         cone.lib
+LIBRARY         eikcoctl.lib
+LIBRARY         apgrfx.lib
+LIBRARY         eikdlg.lib
+LIBRARY         bitgdi.lib
+LIBRARY         egul.lib
+
+LIBRARY         aknlayout.lib
+LIBRARY         aknlayout2.lib
+LIBRARY         avkon.lib
+LIBRARY         aknskins.lib
+LIBRARY         aknnotify.lib
+ 
+
+LIBRARY         videoteleng.lib
+DEBUGLIBRARY    vtlogger.lib
+
+LIBRARY         phoneclient.lib
+
+LIBRARY         lcvtindicatorcontroller.lib

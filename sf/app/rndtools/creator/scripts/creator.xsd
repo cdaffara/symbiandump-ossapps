@@ -1,0 +1,1187 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="0.1">
+
+<!-- Version 0.1 February 13th 2009: First version of the schema-->
+
+<xs:complexType name="entityfield">
+  <xs:simpleContent>
+    <xs:extension base="xs:string">
+      <!-- If not given, amount="1" is assumed -->
+      <xs:attribute name="amount" type="xs:positiveInteger" use="optional" />
+      <!-- This can be a numeric length (in bytes) "default" or "max", valid with random data only -->
+      <xs:attribute name="randomlength" type="xs:string" use="optional" />
+    </xs:extension>
+  </xs:simpleContent>
+</xs:complexType>
+
+<xs:element name="contact-set-reference">
+  <xs:complexType>
+    <xs:attribute name="id" type="xs:integer" use="required" />
+    <xs:attribute name="maxamount" type="xs:integer" use="optional" />
+  </xs:complexType>
+</xs:element>
+                  
+<xs:complexType name="contactfield" mixed="true">
+  <xs:sequence>
+    <xs:element ref="contact-set-reference" minOccurs="0" maxOccurs="unbounded" />
+  </xs:sequence>
+  <!-- If not given, amount="1" is assumed -->
+  <xs:attribute name="amount" type="xs:positiveInteger" use="optional" />
+  <xs:attribute name="incvalueforeachcopy" type="xs:boolean" use="optional" />
+</xs:complexType>
+
+<xs:complexType name="simplefield">
+  <xs:simpleContent>
+    <xs:extension base="xs:string">
+    </xs:extension>
+  </xs:simpleContent>
+</xs:complexType>
+
+<xs:group name="randomElements">
+  <xs:sequence>
+  </xs:sequence>
+</xs:group>
+
+<xs:simpleType name="fileidfield">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="3GPP-70kB" />
+    <xs:enumeration value="AAC-100kB" />
+    <xs:enumeration value="AMR-20kB" />
+    <xs:enumeration value="XLS-15kB" />
+    <xs:enumeration value="GIF-2kB" />
+    <xs:enumeration value="JPEG-200kB" />
+    <xs:enumeration value="JPEG-25kB" />
+    <xs:enumeration value="JPEG-500kB" />
+    <xs:enumeration value="MIDI-10kB" />
+    <xs:enumeration value="MP3-250kB" />
+    <xs:enumeration value="PNG-15kB" />
+    <xs:enumeration value="PPT-40kB" />
+    <xs:enumeration value="RM-95kB" />
+    <xs:enumeration value="RNG-1kB" />
+    <xs:enumeration value="TXT-10kB" />
+    <xs:enumeration value="TXT-70kB" />
+    <xs:enumeration value="WAV-20kB" />
+    <xs:enumeration value="DOC-20kB" />
+    <xs:enumeration value="SWF-15kB" />
+    <xs:enumeration value="JAD-1kB" />
+    <xs:enumeration value="JAR-10kB" />
+    <xs:enumeration value="TIF-25kB" />
+    <xs:enumeration value="MXMF-40kB" />
+    <xs:enumeration value="BMP-25kB" />
+    <xs:enumeration value="JP2-65kB" />
+    <xs:enumeration value="SVG-15kB" />
+    <xs:enumeration value="HTML-20kB" />
+    <xs:enumeration value="VCF-1kB" />
+    <xs:enumeration value="VCS-1kB" />
+    <xs:enumeration value="MP4-200kB" />
+    <xs:enumeration value="SISX-10kB" />
+    <xs:enumeration value="RAM-1kB" />
+    <xs:enumeration value="WMV-200kB" />
+    <xs:enumeration value="WMA-50kB" />
+    <xs:enumeration value="" /> <!-- allow empty content to enable random content to be generated -->
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="syncfield">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="public" />
+    <xs:enumeration value="private" />
+    <xs:enumeration value="none" />
+    <xs:enumeration value="" /> <!-- allow empty content to enable random content to be generated -->
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="datetimeemptyfield">
+  <xs:union>
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="0" />
+        <xs:maxLength value="0" />
+      </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType>
+      <xs:restriction base="xs:dateTime" />
+    </xs:simpleType>
+    <xs:simpleType>
+      <xs:restriction base="xs:date" />
+    </xs:simpleType>
+  </xs:union>
+</xs:simpleType>
+
+<xs:simpleType name="integerEmptyType">
+  <xs:union>
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="0" />
+        <xs:maxLength value="0" />
+      </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType>
+      <xs:restriction base="xs:integer" />
+    </xs:simpleType>
+  </xs:union>
+</xs:simpleType>
+
+<xs:simpleType name="positiveIntegerEmptyType">
+  <xs:union>
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="0" />
+        <xs:maxLength value="0" />
+      </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType>
+      <xs:restriction base="xs:positiveInteger" />
+    </xs:simpleType>
+  </xs:union>
+</xs:simpleType>
+
+<xs:simpleType name="datetimefield">
+  <xs:union>
+    <xs:simpleType>
+      <xs:restriction base="xs:dateTime" />
+    </xs:simpleType>
+    <xs:simpleType>
+      <xs:restriction base="xs:date" />
+    </xs:simpleType>
+  </xs:union>
+</xs:simpleType>
+
+<xs:group name="contactElements">
+  <xs:sequence>
+    <xs:element name="firstname" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="lastname" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="company" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="jobtitle" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="prefix" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="suffix" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="secondname" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="addrlabelgen" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="addrpogen" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="addrextgen" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="addrstreetgen" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="addrlocalgen" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="addrregiongen" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="addrpostcodegen" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="addrcountrygen" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="addrlabelhome" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="addrpohome" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="addrexthome" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="addrstreethome" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="addrlocalhome" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="addrregionhome" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="addrpostcodehome" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="addrcountryhome" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="addrlabelwork" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="addrpowork" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="addrextwork" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="addrstreetwork" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="addrlocalwork" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="addrregionwork" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="addrpostcodework" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="addrcountrywork" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="poc" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="swis" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="sip" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="dtmfstring" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="note" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="middlename" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="department" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="asstname" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="spouse" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="children" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="locprivacy" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="genlabel" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="wvaddress" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="thumbnailpath" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="thumbnailid" minOccurs="0" maxOccurs="unbounded" type="fileidfield" />
+    <xs:element name="callerobjtext" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="landphonegen" minOccurs="0" maxOccurs="unbounded" type="contactfield" />
+    <xs:element name="landphonehome" minOccurs="0" maxOccurs="unbounded" type="contactfield" />
+    <xs:element name="landphonework" minOccurs="0" maxOccurs="unbounded" type="contactfield" />
+    <xs:element name="mobilephonegen" minOccurs="0" maxOccurs="unbounded" type="contactfield" />
+    <xs:element name="mobilephonehome" minOccurs="0" maxOccurs="unbounded" type="contactfield" />
+    <xs:element name="mobilephonework" minOccurs="0" maxOccurs="unbounded" type="contactfield" />
+    <xs:element name="faxnumbergen" minOccurs="0" maxOccurs="unbounded" type="contactfield" />
+    <xs:element name="faxnumberhome" minOccurs="0" maxOccurs="unbounded" type="contactfield" />
+    <xs:element name="faxnumberwork" minOccurs="0" maxOccurs="unbounded" type="contactfield" />
+    <xs:element name="pagernumber" minOccurs="0" maxOccurs="unbounded" type="contactfield" />
+    <xs:element name="videonumbergen" minOccurs="0" maxOccurs="unbounded" type="contactfield" />
+    <xs:element name="videonumberhome" minOccurs="0" maxOccurs="unbounded" type="contactfield" />
+    <xs:element name="videonumberwork" minOccurs="0" maxOccurs="unbounded" type="contactfield" />
+    <xs:element name="voipgen" minOccurs="0" maxOccurs="unbounded" type="contactfield" />
+    <xs:element name="voiphome" minOccurs="0" maxOccurs="unbounded" type="contactfield" />
+    <xs:element name="voipwork" minOccurs="0" maxOccurs="unbounded" type="contactfield" />
+    <xs:element name="asstphone" minOccurs="0" maxOccurs="unbounded" type="contactfield" />
+    <xs:element name="carphone" minOccurs="0" maxOccurs="unbounded" type="contactfield" />
+    <xs:element name="urlgen" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="urlhome" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="urlwork" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="emailgen" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="emailhome" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="emailwork" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="ringtonepath" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="ringtoneid" minOccurs="0" maxOccurs="unbounded" type="fileidfield" />
+    <xs:element name="callerobjimg" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+    <xs:element name="birthday" minOccurs="0" maxOccurs="unbounded" type="datetimeemptyfield" />
+    <xs:element name="anniversary" minOccurs="0" maxOccurs="unbounded" type="datetimeemptyfield" />
+    <xs:element name="synchronization" minOccurs="0" maxOccurs="unbounded" type="syncfield" />
+  </xs:sequence>
+</xs:group>
+  
+<xs:element name="contact">
+  <xs:annotation>
+    <xs:documentation>
+      There are three different contact related elements: contact, contact-set and contactgroup. The contact element describes one
+      contact in a database. The contact can be defined explicitly by giving the contact fields and their data, or it can just define the fields to be
+      used and let the Creator fill the fields with random data. There can also be several same type of fields, for example multiple emailwork fields.
+
+      When contact is defined without fields sub-element, a contact with all fields containing default length random data is created.
+    </xs:documentation>
+  </xs:annotation>
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="fields" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:group ref="contactElements" minOccurs="0" maxOccurs="unbounded" />
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <!-- If not given, amount="1" is assumed -->
+    <xs:attribute name="amount" use="optional" type="xs:positiveInteger" />
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="contact-set">
+  <xs:annotation>
+    <xs:documentation>
+      The contact-set element can be used to bind multiple contacts together and linking them to contactgroups, messages and
+      calendars. When contact-set is used as a link target it must have a unique id attribute. See example usage of contact-set in
+      contactEx.creatorxml.
+    </xs:documentation>
+  </xs:annotation>
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element ref="contact" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+    <xs:attribute name="id" use="required" type="xs:integer" />
+    <xs:attribute name="numberofexistingcontacts" type="xs:integer" use="optional">
+      <xs:annotation>
+        <xs:documentation>
+          Amount of members in the group. Indicates how many existing contacts should be taken to the set. 
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="contactgroup">
+  <xs:annotation>
+    <xs:documentation>
+      The contactgroup element describes one contact group that should be created to the device's database. 
+    </xs:documentation>
+  </xs:annotation>
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="members" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="contact-set-reference" maxOccurs="unbounded" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string" use="optional" />
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="calendar">
+  <xs:annotation>
+    <xs:documentation>
+      Note: If alarmtime element is not set, alarm is set as not active and if alarmtime is set, alarm is set to active.
+      Note: If recurrentfrequency is not set, or set to not-repeated recurrentinterval will be skipped, even if set.
+    </xs:documentation>
+  </xs:annotation>
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="fields">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="summary" minOccurs="0" maxOccurs="1" type="entityfield" />
+            <xs:element name="description" minOccurs="0" maxOccurs="1" type="entityfield" />
+            <xs:element name="location" minOccurs="0" maxOccurs="1" type="entityfield" />
+            <xs:element name="starttime" minOccurs="0" maxOccurs="1" type="datetimeemptyfield" />
+            <xs:element name="endtime" minOccurs="0" maxOccurs="1" type="datetimeemptyfield" />
+            <xs:element name="creationperiodstartdate" minOccurs="0" maxOccurs="1" type="datetimeemptyfield" />
+            <xs:element name="creationperiodenddate" minOccurs="0" maxOccurs="1" type="datetimeemptyfield" />
+            <xs:element name="recurrentfrequency" minOccurs="0" maxOccurs="1" type="eventRecurrentfrequencyType" />
+            <xs:element name="recurrentinterval" minOccurs="0" maxOccurs="1" type="xs:positiveInteger" />
+            <xs:element name="recurrentfrom" minOccurs="0" maxOccurs="1" type="datetimeemptyfield" />
+            <xs:element name="recurrentto" minOccurs="0" maxOccurs="1" type="datetimeemptyfield" />
+            <xs:element name="alarmtime" minOccurs="0" maxOccurs="1" type="datetimeemptyfield" />
+            <xs:element name="synchronization" minOccurs="0" maxOccurs="1" type="syncfield" />
+            <xs:element name="organizername" minOccurs="0" maxOccurs="1" type="entityfield" />
+            <xs:element name="organizeremail" minOccurs="0" maxOccurs="1" type="entityfield" />
+            <xs:element name="status" minOccurs="0" maxOccurs="1" type="eventStatusType" />
+            <xs:element name="priority" minOccurs="0" maxOccurs="1" type="eventPriorityType" />
+            <xs:element ref="attendees" minOccurs="0" maxOccurs="1" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <!-- If not given, amount="1" is assumed -->
+    <xs:attribute name="type" use="required" type="eventType" />
+    <xs:attribute name="amount" use="optional" type="xs:positiveInteger" />
+  </xs:complexType>
+</xs:element>
+
+<xs:simpleType name="eventType">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="appointment" />
+    <xs:enumeration value="event" />
+    <xs:enumeration value="reminder" />
+    <xs:enumeration value="todo" />
+    <xs:enumeration value="anniversary" />
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="eventRecurrentfrequencyType">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="not-repeated" />
+    <xs:enumeration value="daily" />
+    <xs:enumeration value="weekly" />
+    <xs:enumeration value="monthly" />
+    <xs:enumeration value="yearly" />
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="eventStatusType">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="tentative" />
+    <xs:enumeration value="confirmed" />
+    <xs:enumeration value="cancelled" />
+    <xs:enumeration value="todoneedsaction" />
+    <xs:enumeration value="todocompleted" />
+    <xs:enumeration value="todoinprocess" />
+    <xs:enumeration value="" /> <!-- allow empty content to enable random content to be generated -->
+  </xs:restriction>
+</xs:simpleType>
+    
+<xs:simpleType name="eventPriorityType">
+  <xs:union>
+    <xs:simpleType>
+      <xs:restriction base="xs:integer">
+        <xs:minInclusive value="0" />
+        <xs:maxInclusive value="255" />
+      </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="high" />
+        <xs:enumeration value="medium" />
+        <xs:enumeration value="low" />
+        <xs:enumeration value="" /> <!-- allow empty content to enable random content to be generated -->
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:union>
+</xs:simpleType>
+
+<xs:element name="attendees">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element ref="contact-set-reference" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="attendee" minOccurs="0" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="commonname" minOccurs="0" maxOccurs="1" type="entityfield" />
+            <xs:element name="email" minOccurs="0" maxOccurs="1" type="entityfield" />
+            <xs:element name="role" minOccurs="0" maxOccurs="1" type="attendeeRoleType" />
+            <xs:element name="status" minOccurs="0" maxOccurs="1" type="attendeeStatusType" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+<xs:simpleType name="attendeeRoleType">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="required" />
+    <xs:enumeration value="optional" />
+    <xs:enumeration value="non-participant" />
+    <xs:enumeration value="chair" />
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="attendeeStatusType">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="needsaction" />
+    <xs:enumeration value="accepted" />
+    <xs:enumeration value="tentative" />
+    <xs:enumeration value="confirmed" />
+    <xs:enumeration value="declined" />
+    <xs:enumeration value="completed" />
+    <xs:enumeration value="delegated" />
+    <xs:enumeration value="inprocess" />
+  </xs:restriction>
+</xs:simpleType>
+    
+<xs:group name="bookmarkElements">
+  <xs:sequence> <!-- Element order is fixed. This enables using both minOccurs="1" and maxOccurs="1". -->
+    <xs:element name="name" minOccurs="1" maxOccurs="1" type="entityfield" />
+    <xs:element name="url" minOccurs="1" maxOccurs="1" type="entityfield" />
+    <xs:element name="username" minOccurs="1" maxOccurs="1" type="entityfield" />
+    <xs:element name="password" minOccurs="1" maxOccurs="1" type="entityfield" />
+  </xs:sequence>
+</xs:group>
+
+<xs:element name="bookmark">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="fields">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="1">
+            <xs:group ref="randomElements" minOccurs="0" maxOccurs="1" />
+            <xs:group ref="bookmarkElements" minOccurs="0" maxOccurs="1" />
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <!-- If not given, amount="1" is assumed -->
+    <xs:attribute name="amount" use="optional" type="xs:positiveInteger" />
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="bookmarkfolder">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="fields" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="name" minOccurs="1" maxOccurs="1" type="entityfield"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="amount" use="optional" type="xs:positiveInteger"/>
+  </xs:complexType>
+</xs:element>
+
+<xs:group name="savedpageElements">
+  <xs:sequence>
+    <xs:element name="name" minOccurs="1" maxOccurs="1" type="entityfield" />
+    <xs:element name="path" minOccurs="1" maxOccurs="1" type="entityfield" />
+  </xs:sequence>
+</xs:group>
+
+<xs:group name="savedpageElementsReverse">
+  <xs:sequence>
+    <xs:element name="path" minOccurs="1" maxOccurs="1" type="entityfield" />
+    <xs:element name="name" minOccurs="1" maxOccurs="1" type="entityfield" />
+  </xs:sequence>
+</xs:group>
+
+<xs:element name="savedpage">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="fields" maxOccurs="1">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="1">
+            <xs:group ref="randomElements" minOccurs="0" maxOccurs="1" />
+            <xs:group ref="savedpageElements" minOccurs="0" maxOccurs="1" />
+            <xs:group ref="savedpageElementsReverse" minOccurs="0" maxOccurs="1" />
+          </xs:choice>
+          <!-- If not given, amount="1" is assumed -->
+          <xs:attribute name="amount" use="optional" type="xs:positiveInteger" />
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="savedpagefolder">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="fields" maxOccurs="1">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="name" minOccurs="0" maxOccurs="1" type="entityfield" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <!-- If not given, amount="1" is assumed -->
+    <xs:attribute name="amount" use="optional" type="xs:positiveInteger" />
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="note">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="fields" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="text" minOccurs="0" maxOccurs="1" type="entityfield" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <!-- If not given, amount="1" is assumed -->
+    <xs:attribute name="amount" use="optional" type="xs:positiveInteger" />
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="log">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="fields" maxOccurs="1">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="direction" minOccurs="1" maxOccurs="1" type="logDirectionType" />
+            <xs:element name="datetime" minOccurs="1" maxOccurs="1" type="entityfield" />
+            <xs:element name="phonenumber" minOccurs="1" maxOccurs="1" type="entityfield" />
+            <xs:element name="duration" minOccurs="0" maxOccurs="1" type="entityfield" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <!-- If not given, amount="1" is assumed -->
+    <xs:attribute name="amount" use="optional" type="xs:positiveInteger" />
+  </xs:complexType>
+</xs:element>
+
+<xs:simpleType name="logDirectionType">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="missed" />
+    <xs:enumeration value="in" />
+    <xs:enumeration value="out" />
+    <xs:enumeration value="" /> <!-- allow empty content to enable random content to be generated -->
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:element name="connectionmethod">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="fields" maxOccurs="1">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="connectionname" minOccurs="0" maxOccurs="1" type="entityfield" />
+            <xs:element name="bearertype" minOccurs="0" maxOccurs="1" type="connBearerType" />
+            <xs:element name="startpage" minOccurs="0" maxOccurs="1" type="entityfield" />
+            <xs:element name="wapwspoption" minOccurs="0" maxOccurs="1" type="wapwspoptionType" />
+            <xs:element name="protocoltype" minOccurs="0" maxOccurs="1" type="connProtocolType" />
+            <xs:element name="loginname" minOccurs="0" maxOccurs="1" type="entityfield" />
+            <xs:element name="secureauthentication" minOccurs="0" maxOccurs="1" type="yesNoType" />
+            <xs:element name="loginpass" minOccurs="0" maxOccurs="1" type="entityfield" />
+            <xs:element name="promptpassword" minOccurs="0" maxOccurs="1" type="yesNoType" />
+            <xs:element name="gatewayaddress" minOccurs="0" maxOccurs="1" type="entityfield" />
+            <xs:element name="subnetmask" minOccurs="0" maxOccurs="1" type="entityfield" />
+            <xs:element name="deviceipaddr" minOccurs="0" maxOccurs="1" type="entityfield" />
+            <xs:element name="ip4nameserver1" minOccurs="0" maxOccurs="1" type="entityfield" />
+            <xs:element name="ip4nameserver2" minOccurs="0" maxOccurs="1" type="entityfield" />
+            <xs:element name="datacalltelnumber" minOccurs="0" maxOccurs="1" type="entityfield" />
+            <xs:element name="datacalltypeisdn" minOccurs="0" maxOccurs="1" type="datacalltypeisdnType" />
+            <xs:element name="datacalllinespeed" minOccurs="0" maxOccurs="1" type="datacalllinespeedType" />
+            <xs:element name="useproxy" minOccurs="0" maxOccurs="1" type="yesNoType" />
+            <xs:element name="proxyserveraddress" minOccurs="0" maxOccurs="1" type="entityfield" />
+            <xs:element name="proxyportnumber" minOccurs="0" maxOccurs="1" type="entityfield" />
+            <xs:element name="ip6nameserver1" minOccurs="0" maxOccurs="1" type="entityfield" />
+            <xs:element name="ip6nameserver2" minOccurs="0" maxOccurs="1" type="entityfield" />
+            <xs:element name="disabletextauth" minOccurs="0" maxOccurs="1" type="yesNoType" />
+            <xs:element name="wlanname" minOccurs="0" maxOccurs="1" type="entityfield" />
+            <xs:element name="wlanipaddr" minOccurs="0" maxOccurs="1" type="entityfield" />
+            <xs:element name="wlansecmode" minOccurs="0" maxOccurs="1" type="entityfield" />
+            <xs:element name="wlannetmode" minOccurs="0" maxOccurs="1" type="entityfield" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <!-- If not given, amount="1" is assumed -->
+    <xs:attribute name="amount" use="optional" type="xs:positiveInteger" />
+  </xs:complexType>
+</xs:element>
+
+<xs:simpleType name="connBearerEnumType"> 
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="WLAN" />
+    <xs:enumeration value="GPRS" />
+    <xs:enumeration value="datacall" />
+    <xs:enumeration value="HSGSM" />
+    <xs:enumeration value="embedded" />
+    <xs:enumeration value="VPN" />
+    <xs:enumeration value="LAN" />
+    <xs:enumeration value="" /> <!-- allow empty content to enable random content to be generated -->
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:complexType name="connBearerType"> <!-- type with both enum value restriction and randomlength attribute  -->
+  <xs:simpleContent>
+    <xs:extension base="connBearerEnumType">
+      <xs:attribute name="randomlength" type="xs:string" use="optional" />
+    </xs:extension>
+  </xs:simpleContent>
+</xs:complexType>
+
+<xs:simpleType name="connProtocolEnumType"> 
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="IPV4" />
+    <xs:enumeration value="ipv4" />
+    <xs:enumeration value="Ipv4" />
+    <xs:enumeration value="iPv4" />
+    <xs:enumeration value="ipV4" />
+    <xs:enumeration value="IPv4" />
+    <xs:enumeration value="IpV4" />
+    <xs:enumeration value="iPV4" />
+    <xs:enumeration value="IPV6" />
+    <xs:enumeration value="ipv6" />
+    <xs:enumeration value="Ipv6" />
+    <xs:enumeration value="iPv6" />
+    <xs:enumeration value="ipV6" />
+    <xs:enumeration value="IPv6" />
+    <xs:enumeration value="IpV6" />
+    <xs:enumeration value="iPV6" />
+    <xs:enumeration value="" /> <!-- allow empty content to enable random content to be generated -->
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:complexType name="connProtocolType"> <!-- type with both enum value restriction and randomlength attribute  -->
+  <xs:simpleContent>
+    <xs:extension base="connProtocolEnumType">
+      <xs:attribute name="randomlength" type="xs:string" use="optional" />
+    </xs:extension>
+  </xs:simpleContent>
+</xs:complexType>
+
+<xs:simpleType name="datacalltypeisdnEnumType"> 
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="analogue" />
+    <xs:enumeration value="isdnv110" />
+    <xs:enumeration value="isdnv120" />
+    <xs:enumeration value="" /> <!-- allow empty content to enable random content to be generated -->
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:complexType name="datacalltypeisdnType"> <!-- type with both enum value restriction and randomlength attribute  -->
+  <xs:simpleContent>
+    <xs:extension base="datacalltypeisdnEnumType">
+      <xs:attribute name="randomlength" type="xs:string" use="optional" />
+    </xs:extension>
+  </xs:simpleContent>
+</xs:complexType>
+
+<xs:simpleType name="datacalllinespeedEnumType">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="automatic" />
+    <xs:enumeration value="9600" />
+    <xs:enumeration value="14400" />
+    <xs:enumeration value="19200" />
+    <xs:enumeration value="28800" />
+    <xs:enumeration value="38400" />
+    <xs:enumeration value="43200" />
+    <xs:enumeration value="56000" />
+    <xs:enumeration value="" /> <!-- allow empty content to enable random content to be generated -->
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:complexType name="datacalllinespeedType"> <!-- type with both enum value restriction and randomlength attribute  -->
+  <xs:simpleContent>
+    <xs:extension base="datacalllinespeedEnumType">
+      <xs:attribute name="randomlength" type="xs:string" use="optional" />
+    </xs:extension>
+  </xs:simpleContent>
+</xs:complexType>
+
+<xs:simpleType name="wapwspoptionEnumType">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="connectionless" />
+    <xs:enumeration value="connectionoriented" />
+    <xs:enumeration value="" /> <!-- allow empty content to enable random content to be generated -->
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:complexType name="wapwspoptionType"> <!-- type with both enum value restriction and randomlength attribute  -->
+  <xs:simpleContent>
+    <xs:extension base="wapwspoptionEnumType">
+      <xs:attribute name="randomlength" type="xs:string" use="optional" />
+    </xs:extension>
+  </xs:simpleContent>
+</xs:complexType>
+
+<xs:element name="mailbox">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="fields" maxOccurs="1">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="name" minOccurs="0" maxOccurs="1" type="entityfield" />
+            <!-- Incoming mail (POP3/IMAP4) settings -->
+            <xs:element name="incomingport" minOccurs="0" maxOccurs="1" type="positiveIntegerEmptyType" />
+
+            <!-- Specifies whether a secure TLS connection will be established directly over a TLS socket when connecting to the email server -->
+            <xs:element name="incomingsslwrapper" minOccurs="0" maxOccurs="1" type="yesNoType" />
+            <!-- Specifies whether a secure socket session will be negotiated after establishing a non-secure TCP connection with the email server -->
+            <xs:element name="incomingsecuresockets" minOccurs="0" maxOccurs="1" type="yesNoType" />
+            <xs:element name="incomingloginname" minOccurs="0" maxOccurs="1" type="entityfield" />
+            <xs:element name="incomingpassword" minOccurs="0" maxOccurs="1" type="entityfield" />
+            <xs:element name="incomingservername" minOccurs="0" maxOccurs="1" type="entityfield" />
+            <xs:element name="incomingconnectionmethod" minOccurs="0" maxOccurs="1" type="entityfield" />
+            <!-- Send return receipts to senders -->
+            <xs:element name="acknowledgereceipts" minOccurs="0" maxOccurs="1" type="yesNoType" />
+            <!-- maximum attachment size limit for the partial fetch of attachments in a message -->
+            <xs:element name="attachmentsizelimit" minOccurs="0" maxOccurs="1" type="integerEmptyType" />
+            <xs:element name="autosendonconnect" minOccurs="0" maxOccurs="1" type="yesNoType" />
+            <xs:element name="bodytextsizelimit" minOccurs="0" maxOccurs="1" type="integerEmptyType" />
+            <xs:element name="deletemailsatdisconnect" minOccurs="0" maxOccurs="1" type="yesNoType" />
+            <!-- Specifies the IMAP fetch size in bytes -->
+            <xs:element name="attachmentfetchsize" minOccurs="0" maxOccurs="1" type="positiveIntegerEmptyType" />
+            <xs:element name="incomingfolderpath" minOccurs="0" maxOccurs="1" type="entityfield" />
+            <xs:element name="pathseparator" minOccurs="0" maxOccurs="1" type="entityfield" />
+            <xs:element name="getemailoptions" minOccurs="0" maxOccurs="1" type="getEmailOptionsType" />
+            <!-- Specifies whether the IMAP IDLE command should be used as defined in RFC2177 -->
+            <xs:element name="imapidlecommand" minOccurs="0" maxOccurs="1" type="yesNoType" />
+            <xs:element name="imapidletimeout" minOccurs="0" maxOccurs="1" type="xs:positiveInteger" />
+            <!-- Sets the maximum message size in bytes to be downloaded -->
+            <xs:element name="maxemailsize" minOccurs="0" maxOccurs="1" type="xs:positiveInteger" />
+            <!-- Sets the method for synchronising IMAP4 subscription information with a server -->
+            <xs:element name="subscribetype" minOccurs="0" maxOccurs="1" type="mailboxSubscribeType" />
+            <!-- Specifies the rate in seconds at which the Inbox will be refreshed when connected -->
+            <xs:element name="syncrate" minOccurs="0" maxOccurs="1" type="xs:positiveInteger" />
+            <!-- Sets the method for synchronising folder information with the server -->
+            <xs:element name="foldersynctype" minOccurs="0" maxOccurs="1" type="mailboxFolderSyncType" />
+            <!-- Specifies whether the seen flag is to be set on the IMAP4 server during synchronisation only when the message has been marked as read -->
+            <xs:element name="markseeninsync" minOccurs="0" maxOccurs="1" type="yesNoType" />
+            <xs:element name="enableexpungemode" minOccurs="0" maxOccurs="1" type="yesNoType" />
+            <xs:element name="useapopsecurelogin" minOccurs="0" maxOccurs="1" type="yesNoType" />
+            <xs:element name="inboxsynclimit" minOccurs="0" maxOccurs="1" type="syncLimitType" />
+            <xs:element name="mailboxsynclimit" minOccurs="0" maxOccurs="1" type="syncLimitType" />
+            <xs:element name="disconnectedusermode" minOccurs="0" maxOccurs="1" type="yesNoType" />
+
+            <!-- Outgoing mail (SMTP) settings -->
+            <xs:element name="outgoingport" minOccurs="0" maxOccurs="1" type="xs:positiveInteger" />
+            <xs:element name="outgoingsslwrapper" minOccurs="0" maxOccurs="1" type="yesNoType" />
+            <xs:element name="outgoingsecuresockets" minOccurs="0" maxOccurs="1" type="yesNoType" />
+            <xs:element name="outgoingloginname" minOccurs="0" maxOccurs="1" type="entityfield" />
+            <xs:element name="outgoingpassword" minOccurs="0" maxOccurs="1" type="entityfield" />
+            <xs:element name="outgoingservername" minOccurs="0" maxOccurs="1" type="entityfield" />
+            <xs:element name="outgoingconnectionmethod" minOccurs="0" maxOccurs="1" type="entityfield" />
+            <xs:element name="includesignature" minOccurs="0" maxOccurs="1" type="yesNoType" />
+            <xs:element name="addvcard" minOccurs="0" maxOccurs="1" type="yesNoType" />
+            <xs:element name="ownemail" minOccurs="0" maxOccurs="1" type="entityfield" />
+            <xs:element name="emailalias" minOccurs="0" maxOccurs="1" type="entityfield" />
+            <xs:element name="receiptaddress" minOccurs="0" maxOccurs="1" type="entityfield" />
+            <xs:element name="replytoaddress" minOccurs="0" maxOccurs="1" type="entityfield" />
+            <xs:element name="requestreceipts" minOccurs="0" maxOccurs="1" type="yesNoType" />
+            <xs:element name="smtpauth" minOccurs="0" maxOccurs="1" type="yesNoType" />
+            <xs:element name="copytoself" minOccurs="0" maxOccurs="1" type="copyToSelfType" />
+            <xs:element name="sendoption" minOccurs="0" maxOccurs="1" type="sendOptionType" />
+            <xs:element name="toccincludelimit" minOccurs="0" maxOccurs="1" type="integerEmptyType" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <!-- If not given, amount="1" is assumed -->
+    <xs:attribute name="amount" use="optional" type="xs:positiveInteger" />
+    <xs:attribute name="type" use="required" type="mailboxType" />
+  </xs:complexType>
+</xs:element>
+
+<xs:simpleType name="mailboxType">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="POP3" />
+    <xs:enumeration value="IMAP4" />
+    <xs:enumeration value="syncml" />
+    <xs:enumeration value="" /> <!-- allow empty content to enable random content to be generated -->
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="yesNoEnumType">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="yes" />
+    <xs:enumeration value="no" />
+    <xs:enumeration value="" /> <!-- allow empty content to enable random content to be generated -->
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:complexType name="yesNoType"> <!-- type with both enum value restriction and randomlength attribute  -->
+  <xs:simpleContent>
+    <xs:extension base="yesNoEnumType">
+      <xs:attribute name="randomlength" type="xs:string" use="optional" />
+    </xs:extension>
+  </xs:simpleContent>
+</xs:complexType>
+
+<xs:simpleType name="getEmailOptionsEnumType">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="getheaders" />
+    <xs:enumeration value="getbodytext" />
+    <xs:enumeration value="getbodytextandattachments" />
+    <xs:enumeration value="getattachments" />
+    <xs:enumeration value="getbodyalternativetext" />
+    <xs:enumeration value="" /> <!-- allow empty content to enable random content to be generated -->
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:complexType name="getEmailOptionsType"> <!-- type with both enum value restriction and randomlength attribute  -->
+  <xs:simpleContent>
+    <xs:extension base="getEmailOptionsEnumType">
+      <xs:attribute name="randomlength" type="xs:string" use="optional" />
+    </xs:extension>
+  </xs:simpleContent>
+</xs:complexType>
+
+<xs:simpleType name="syncLimitEnumType">
+  <xs:union>
+    <xs:simpleType>
+      <xs:restriction base="xs:integer">
+        <xs:minInclusive value="1" />
+        <xs:maxInclusive value="999" />
+      </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="all" />
+        <xs:enumeration value="" /> <!-- allow empty content to enable random content to be generated -->
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:union>
+</xs:simpleType>
+
+<xs:complexType name="syncLimitType"> <!-- type with both enum value restriction and randomlength attribute  -->
+  <xs:simpleContent>
+    <xs:extension base="syncLimitEnumType">
+      <xs:attribute name="randomlength" type="xs:string" use="optional" />
+    </xs:extension>
+  </xs:simpleContent>
+</xs:complexType>
+
+<xs:simpleType name="mailboxSubscribeEnumType">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="updateneither" />
+    <xs:enumeration value="updatelocal" />
+    <xs:enumeration value="updateremote" />
+    <xs:enumeration value="updateboth" />
+    <xs:enumeration value="" /> <!-- allow empty content to enable random content to be generated -->
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:complexType name="mailboxSubscribeType"> <!-- type with both enum value restriction and randomlength attribute  -->
+  <xs:simpleContent>
+    <xs:extension base="mailboxSubscribeEnumType">
+      <xs:attribute name="randomlength" type="xs:string" use="optional" />
+    </xs:extension>
+  </xs:simpleContent>
+</xs:complexType>
+
+<xs:simpleType name="mailboxFolderSyncEnumType">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="usecombination" />
+    <xs:enumeration value="uselocal" />
+    <xs:enumeration value="useremote" />
+    <xs:enumeration value="" /> <!-- allow empty content to enable random content to be generated -->
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:complexType name="mailboxFolderSyncType"> <!-- type with both enum value restriction and randomlength attribute  -->
+  <xs:simpleContent>
+    <xs:extension base="mailboxFolderSyncEnumType">
+      <xs:attribute name="randomlength" type="xs:string" use="optional" />
+    </xs:extension>
+  </xs:simpleContent>
+</xs:complexType>
+
+<xs:simpleType name="copyToSelfEnumType">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="no" />
+    <xs:enumeration value="to" />
+    <xs:enumeration value="cc" />
+    <xs:enumeration value="bcc" />
+    <xs:enumeration value="" /> <!-- allow empty content to enable random content to be generated -->
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:complexType name="copyToSelfType"> <!-- type with both enum value restriction and randomlength attribute  -->
+  <xs:simpleContent>
+    <xs:extension base="copyToSelfEnumType">
+      <xs:attribute name="randomlength" type="xs:string" use="optional" />
+    </xs:extension>
+  </xs:simpleContent>
+</xs:complexType>
+
+<xs:simpleType name="sendOptionEnumType">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="immediately" />
+    <xs:enumeration value="onnextconnection" />
+    <xs:enumeration value="onrequest" />
+    <xs:enumeration value="" /> <!-- allow empty content to enable random content to be generated -->
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:complexType name="sendOptionType"> <!-- type with both enum value restriction and randomlength attribute  -->
+  <xs:simpleContent>
+    <xs:extension base="sendOptionEnumType">
+      <xs:attribute name="randomlength" type="xs:string" use="optional" />
+    </xs:extension>
+  </xs:simpleContent>
+</xs:complexType>
+
+<xs:element name="message">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="fields" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence> <!-- Element order is fixed. This enables using both maxOccurs="unbounded" and maxOccurs="1". -->
+            <xs:element name="to" minOccurs="0" maxOccurs="unbounded" type="contactfield"/>
+            <xs:element name="from" minOccurs="0" maxOccurs="1" type="contactfield"/>
+            <xs:element name="folder" minOccurs="0" maxOccurs="1" type="messageFolderType" />
+            <xs:element name="subject" minOccurs="0" maxOccurs="1" type="entityfield" />
+            <xs:element name="text" minOccurs="0" maxOccurs="1" type="entityfield" />
+            <xs:element name="status" minOccurs="0" maxOccurs="1" type="messageStatusType" />
+            <xs:element name="smartmessagetype" minOccurs="0" maxOccurs="1" type="smartMessageType" />
+            <xs:element name="attachmentpath" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+            <xs:element name="attachmentid" minOccurs="0" maxOccurs="unbounded" type="fileidfield" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <!-- If not given, amount="1" is assumed -->
+    <xs:attribute name="amount" use="optional" type="xs:positiveInteger" />
+    <xs:attribute name="type" use="required" type="messageType" />
+  </xs:complexType>
+</xs:element>
+
+<xs:simpleType name="messageType">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="sms" />
+    <xs:enumeration value="mms" />
+    <xs:enumeration value="ams" />
+    <xs:enumeration value="email" />
+    <xs:enumeration value="smart" />
+    <xs:enumeration value="ir" />
+    <xs:enumeration value="bt" />
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="messageFolderType">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="sent" />
+    <xs:enumeration value="inbox" />
+    <xs:enumeration value="draft" />
+    <xs:enumeration value="outbox" />
+    <xs:enumeration value="" /> <!-- allow empty content to enable random content to be generated -->
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="messageStatusType">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="read" />
+    <xs:enumeration value="new" />
+    <xs:enumeration value="" /> <!-- allow empty content to enable random content to be generated -->
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="smartMessageType"> <!-- Currently not supported by S60 Creator -->
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="internetsettings" />
+    <xs:enumeration value="emailnotification" />
+    <xs:enumeration value="businesscard" />
+    <xs:enumeration value="wapsettings" />
+    <xs:enumeration value="vcalendar" />
+    <xs:enumeration value="vcard" />
+    <xs:enumeration value="ringtone" />
+    <xs:enumeration value="operatorlogo" />
+    <xs:enumeration value="wapprovisioning" />
+    <xs:enumeration value="clilogo" />
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:group name="impsserverElements">
+  <xs:sequence> <!-- Element order is fixed. This enables using both minOccurs="1" and maxOccurs="1". -->
+    <xs:element name="name" minOccurs="1" maxOccurs="1" type="entityfield" />
+    <xs:element name="url" minOccurs="1" maxOccurs="1" type="entityfield" />
+    <xs:element name="username" minOccurs="1" maxOccurs="1" type="entityfield" />
+    <xs:element name="password" minOccurs="1" maxOccurs="1" type="entityfield" />
+    <xs:element name="connectionmethodname" minOccurs="1" maxOccurs="1" type="entityfield" />
+  </xs:sequence>
+</xs:group>
+ 
+<xs:element name="impsserver">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="fields" maxOccurs="1">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="1">
+            <xs:group ref="randomElements" minOccurs="0" maxOccurs="1" />
+            <xs:group ref="impsserverElements" minOccurs="0" maxOccurs="1" />
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <!-- If not given, amount="1" is assumed -->
+    <xs:attribute name="amount" use="optional" type="xs:positiveInteger" />
+  </xs:complexType>
+</xs:element>
+ 
+<xs:element name="file">
+  <xs:annotation>
+    <xs:documentation>
+      Note: If type is not set, a directory will be created. 
+    </xs:documentation>
+  </xs:annotation>
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="fields" maxOccurs="1">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="type" minOccurs="1" maxOccurs="1" type="fileidfield" />
+            <xs:element name="directory" minOccurs="1" maxOccurs="1" type="entityfield" />
+            <xs:element ref="encryption" minOccurs="0" maxOccurs="1" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <!-- If not given, amount="1" is assumed -->
+    <xs:attribute name="amount" use="optional" type="xs:positiveInteger" />
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="encryption"> <!-- Random values not supported inside encryption element -->
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element ref="right" minOccurs="0" maxOccurs="4" />
+    </xs:sequence>
+    <xs:attribute name="type" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="DRM-FL" />
+          <xs:enumeration value="DRM-CD" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="right">
+  <xs:complexType>
+    <xs:all>
+      <xs:element name="count" minOccurs="0" maxOccurs="1" type="xs:nonNegativeInteger" />
+      <xs:element name="starttime" minOccurs="0" maxOccurs="1" type="datetimefield" />
+      <xs:element name="endtime" minOccurs="0" maxOccurs="1" type="datetimefield" />
+      <xs:element name="interval" minOccurs="0" maxOccurs="1" type="xs:duration" />
+      <xs:element name="accumulated" minOccurs="0" maxOccurs="1" type="xs:duration" />
+    </xs:all>
+    <xs:attribute name="type" default="display">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="play" />
+          <xs:enumeration value="display" />
+          <xs:enumeration value="execute" />
+          <xs:enumeration value="print" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="landmark">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="fields" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence> <!-- Element order is fixed. This enables using both maxOccurs="unbounded" and maxOccurs="1". -->
+            <xs:element name="name" minOccurs="0" maxOccurs="1" type="entityfield" />
+            <xs:element name="category" minOccurs="0" maxOccurs="unbounded" type="entityfield" />
+            <xs:element name="description" minOccurs="0" maxOccurs="1" type="entityfield" />
+            <xs:element name="street" minOccurs="0" maxOccurs="1" type="entityfield" />
+            <xs:element name="postalcode" minOccurs="0" maxOccurs="1" type="entityfield" />
+            <xs:element name="city" minOccurs="0" maxOccurs="1" type="entityfield" />
+            <xs:element name="state" minOccurs="0" maxOccurs="1" type="entityfield" />
+            <xs:element name="country" minOccurs="0" maxOccurs="1" type="entityfield" />
+            <xs:element name="phonenbr" minOccurs="0" maxOccurs="1" type="entityfield" />
+            <xs:element name="url" minOccurs="0" maxOccurs="1" type="entityfield" />
+            <xs:element name="latitude" minOccurs="0" maxOccurs="1" type="entityfield">
+              <xs:annotation>
+                <xs:documentation>
+                  Data can have following format: -nn.nnnn - nn.nnnn, where positive latitude means north and negative south, zero
+                  point is Equator.
+                </xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="longitude" minOccurs="0" maxOccurs="1" type="entityfield">
+              <xs:annotation>
+                <xs:documentation>
+                  Data can have following format: -nn.nnnn - nn.nnnn, where positive longitude means east and negative west, zero
+                  point is Prime Meridian.
+                </xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="positionaccuracy" minOccurs="0" maxOccurs="1" type="entityfield" />
+            <xs:element name="altitude" minOccurs="0" maxOccurs="1" type="entityfield">
+              <xs:annotation>
+                <xs:documentation>
+                  Data can have following format: -nn.nnnn - nn.nnnn, where zero point is sea level.
+                </xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="altitudeaccuracy" minOccurs="0" maxOccurs="1" type="entityfield" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <!-- If not given, amount="1" is assumed -->
+    <xs:attribute name="amount" use="optional" type="xs:positiveInteger" />
+  </xs:complexType>
+</xs:element>
+
+<xs:group name="creatorscriptElements">
+  <xs:sequence>
+    <xs:element ref="contact" minOccurs="0" maxOccurs="unbounded" />
+    <xs:element ref="contact-set" minOccurs="0" maxOccurs="unbounded" />
+    <xs:element ref="contactgroup" minOccurs="0" maxOccurs="unbounded" />
+    <xs:element ref="calendar" minOccurs="0" maxOccurs="unbounded" />
+    <xs:element ref="bookmark" minOccurs="0" maxOccurs="unbounded" />
+    <xs:element ref="bookmarkfolder" minOccurs="0" maxOccurs="unbounded" />
+    <xs:element ref="savedpage" minOccurs="0" maxOccurs="unbounded" />
+    <xs:element ref="savedpagefolder" minOccurs="0" maxOccurs="unbounded" />
+    <xs:element ref="note" minOccurs="0" maxOccurs="unbounded" />
+    <xs:element ref="log" minOccurs="0" maxOccurs="unbounded" />
+    <xs:element ref="connectionmethod" minOccurs="0" maxOccurs="unbounded" />
+    <xs:element ref="mailbox" minOccurs="0" maxOccurs="unbounded" />
+    <xs:element ref="message" minOccurs="0" maxOccurs="unbounded" />
+    <xs:element ref="impsserver" minOccurs="0" maxOccurs="unbounded" />
+    <xs:element ref="file" minOccurs="0" maxOccurs="unbounded" />
+    <xs:element ref="landmark" minOccurs="0" maxOccurs="unbounded" />
+  </xs:sequence>
+</xs:group>
+
+<xs:element name="creatorscript">
+  <xs:annotation>
+    <xs:documentation>
+      Root element of a Creator script. The sub-elements can be thought as 'commands', e.g. one contact element with explicitly
+      defined fields create one contact to the database of the device. 
+    </xs:documentation>
+  </xs:annotation>
+  <xs:complexType>
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:group ref="creatorscriptElements" minOccurs="0" maxOccurs="unbounded" />
+    </xs:choice>
+    <xs:attribute name="scriptVersion" use="optional" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>
+          Declares the script version. Can be used to indicate the evolution of each script. 
+    </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="schemaVersion" use="required" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>
+          Declares the schema version used when designing a script file. This version information must be in sync with the schema used. Schema version is defined
+          at the beginning of the creator.xsd file in comment block.
+    </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+</xs:element>
+
+</xs:schema>

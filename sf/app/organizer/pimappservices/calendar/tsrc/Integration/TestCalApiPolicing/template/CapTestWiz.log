@@ -1,0 +1,191 @@
+Generating capability tests for TestCalApiPolicing ...
+Remove, and create new directory ..\generated
+Generating TestCalApiPolicing.script once
+Generating CSuite.h once
+Generating BLD.INF once
+Generating TestCalApiPolicing.IBY once
+
+Generating TestCalApiPolicingSub.script for each capability
+	Cap_00000004_TestCalApiPolicingSub.script
+	Cap_00008004_TestCalApiPolicingSub.script
+	Cap_00010004_TestCalApiPolicingSub.script
+	Cap_80000004_TestCalApiPolicingSub.script
+Generating CSuite.cpp once
+Generating TestCalApiPolicing.MMP once
+
+Generating CStep.h for each message
+	EOpenAgenda1_CStep.h
+	ECloseAgenda1_CStep.h
+	ETransmitBuffer1_CStep.h
+	EGetInstanceExtractor1_CStep.h
+	EPreviousDayWithInstance1_CStep.h
+	ENextDayWithInstance1_CStep.h
+	ECreateEntryIterator1_CStep.h
+	EEntryIteratorNext1_CStep.h
+	EEntryIteratorPosition1_CStep.h
+	ECreateDateIterator1_CStep.h
+	EDateIteratorPrevious1_CStep.h
+	EDateIteratorNext1_CStep.h
+	EDateIteratorAtStart1_CStep.h
+	EDateIteratorAtEnd1_CStep.h
+	EDateIteratorCurrentKey1_CStep.h
+	EDateIteratorGoto1_CStep.h
+	EDateIteratorGotoLessOrEqual1_CStep.h
+	ECompactFile1_CStep.h
+	ECompactionStatus1_CStep.h
+	EGetEntryUidsSinceDate1_CStep.h
+	EGetFileId1_CStep.h
+	EGetCategoryListCount1_CStep.h
+	ECategoryFilter1_CStep.h
+	EStartBuildIndex1_CStep.h
+	EGetListFileNames1_CStep.h
+	ECancelTask1_CStep.h
+	EAgnResourceCount1_CStep.h
+	EAgnSetHeapFailure1_CStep.h
+	EAgendaFileExists1_CStep.h
+	EDisableChangeBroadcast1_CStep.h
+	EEnableChangeBroadcast1_CStep.h
+	ERequestChangeNotificationParameters21_CStep.h
+	ERequestChangeNotification21_CStep.h
+	ECancelChangeNotification21_CStep.h
+	ERequestProgress1_CStep.h
+	ESetUpdateAlarm1_CStep.h
+	ESetEnablePubSubNotification1_CStep.h
+	ERestoreAlarmAction1_CStep.h
+	EFetchEntry1_CStep.h
+	EFetchSimpleEntry1_CStep.h
+	EDateIteratorCurrentElement1_CStep.h
+	EFetchEntryByUID1_CStep.h
+	ERestoreText1_CStep.h
+	EGetCategoryListItem1_CStep.h
+	EGetRelatedGuid1_CStep.h
+	EGetChangesSinceLastNotification1_CStep.h
+	EFindInstances1_CStep.h
+	EUpdateEntry1_CStep.h
+	EAddEntry1_CStep.h
+	EDeleteEntry1_CStep.h
+	EAddEntrySizes1_CStep.h
+	EAddCategoryToList1_CStep.h
+	EDeleteAgendaFile1_CStep.h
+	ETidyByDateReadParams1_CStep.h
+	ETidyByDateStart1_CStep.h
+	ECategoryStart1_CStep.h
+	ECategoryStartAsyn1_CStep.h
+	ECreateAgendaFile1_CStep.h
+	EFetchEntryByGuid1_CStep.h
+	EDeleteEntriesByLocalUid1_CStep.h
+	EDeleteEntryByGuid1_CStep.h
+	ECommit1_CStep.h
+	ERollback1_CStep.h
+
+Generating CStep.cpp for each message
+	EOpenAgenda1_CStep.cpp
+	ECloseAgenda1_CStep.cpp
+	ETransmitBuffer1_CStep.cpp
+	EGetInstanceExtractor1_CStep.cpp
+	EPreviousDayWithInstance1_CStep.cpp
+	ENextDayWithInstance1_CStep.cpp
+	ECreateEntryIterator1_CStep.cpp
+	EEntryIteratorNext1_CStep.cpp
+	EEntryIteratorPosition1_CStep.cpp
+	ECreateDateIterator1_CStep.cpp
+	EDateIteratorPrevious1_CStep.cpp
+	EDateIteratorNext1_CStep.cpp
+	EDateIteratorAtStart1_CStep.cpp
+	EDateIteratorAtEnd1_CStep.cpp
+	EDateIteratorCurrentKey1_CStep.cpp
+	EDateIteratorGoto1_CStep.cpp
+	EDateIteratorGotoLessOrEqual1_CStep.cpp
+	ECompactFile1_CStep.cpp
+	ECompactionStatus1_CStep.cpp
+	EGetEntryUidsSinceDate1_CStep.cpp
+	EGetFileId1_CStep.cpp
+	EGetCategoryListCount1_CStep.cpp
+	ECategoryFilter1_CStep.cpp
+	EStartBuildIndex1_CStep.cpp
+	EGetListFileNames1_CStep.cpp
+	ECancelTask1_CStep.cpp
+	EAgnResourceCount1_CStep.cpp
+	EAgnSetHeapFailure1_CStep.cpp
+	EAgendaFileExists1_CStep.cpp
+	EDisableChangeBroadcast1_CStep.cpp
+	EEnableChangeBroadcast1_CStep.cpp
+	ERequestChangeNotificationParameters21_CStep.cpp
+	ERequestChangeNotification21_CStep.cpp
+	ECancelChangeNotification21_CStep.cpp
+	ERequestProgress1_CStep.cpp
+	ESetUpdateAlarm1_CStep.cpp
+	ESetEnablePubSubNotification1_CStep.cpp
+	ERestoreAlarmAction1_CStep.cpp
+	EFetchEntry1_CStep.cpp
+	EFetchSimpleEntry1_CStep.cpp
+	EDateIteratorCurrentElement1_CStep.cpp
+	EFetchEntryByUID1_CStep.cpp
+	ERestoreText1_CStep.cpp
+	EGetCategoryListItem1_CStep.cpp
+	EGetRelatedGuid1_CStep.cpp
+	EGetChangesSinceLastNotification1_CStep.cpp
+	EFindInstances1_CStep.cpp
+	EUpdateEntry1_CStep.cpp
+	EAddEntry1_CStep.cpp
+	EDeleteEntry1_CStep.cpp
+	EAddEntrySizes1_CStep.cpp
+	EAddCategoryToList1_CStep.cpp
+	EDeleteAgendaFile1_CStep.cpp
+	ETidyByDateReadParams1_CStep.cpp
+	ETidyByDateStart1_CStep.cpp
+	ECategoryStart1_CStep.cpp
+	ECategoryStartAsyn1_CStep.cpp
+	ECreateAgendaFile1_CStep.cpp
+	EFetchEntryByGuid1_CStep.cpp
+	EDeleteEntriesByLocalUid1_CStep.cpp
+	EDeleteEntryByGuid1_CStep.cpp
+	ECommit1_CStep.cpp
+	ERollback1_CStep.cpp
+Generating distribution.policy once
+Generating TestCalApiPolicing.bat once
+
+Available Parameters
+
+PARAM_FOREACH_COUNT
+PARAM_FOREACH_HEX_CAPABILITY
+PARAM_FOREACH_LIST_BEGIN
+PARAM_FOREACH_LIST_END
+PARAM_FOREACH_MESS_BEGIN
+PARAM_FOREACH_MESS_CAP_BEGIN
+PARAM_FOREACH_MESS_CAP_END
+PARAM_FOREACH_MESS_END
+PARAM_FOREACH_STRING_CAPABILITY
+PARAM_MESS_CAPABILITY
+PARAM_MESS_CAPMASK
+PARAM_MESS_DYNAMICBASENAME
+PARAM_MESS_HEX_CAPMASK
+PARAM_MESS_IGNORE
+PARAM_MESS_NAME
+PARAM_MESS_NAMECAP
+PARAM_MESS_SERVER
+PARAM_MESS_VALUE
+PARAM_SVR_ALLNEGATIVE
+PARAM_SVR_BUILDNAME
+PARAM_SVR_BUILDOK
+PARAM_SVR_CAPEXCEPT
+PARAM_SVR_CONNECTCAPABILITY
+PARAM_SVR_LIBRARIES
+PARAM_SVR_LISTHEADERFILE
+PARAM_SVR_MAJORNAME
+PARAM_SVR_MESSAGEFILE
+PARAM_SVR_MINORNAME
+PARAM_SVR_NAME
+PARAM_SVR_PANIC
+PARAM_SVR_SCHED_TEST_DEST
+PARAM_SVR_SCHED_TEST_SRC
+PARAM_SVR_SETCAP
+PARAM_SVR_SOURCEDIRECTORY
+PARAM_SVR_SUITENAME
+PARAM_SVR_SYSTEMINCLUDE
+PARAM_SVR_TEMPLATEDIRECTORY
+PARAM_SVR_TEMPLATEFILE
+PARAM_SVR_USERINCLUDE
+PARAM_TMPL_NAME
+PARAM_TMPL_RELOCATIONDIR
+PARAM_TMPL_REPETITION

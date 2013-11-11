@@ -1,0 +1,88 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:
+;
+; InternetRadio stub.pkg
+
+; Languages
+&EN 
+
+; Header
+#{"InternetRadio"},(0x2002ffac),1,0,0, TYPE=SA,RU
+
+; Localised Vendor name
+%{"Nokia"}
+
+; Unique Vendor name
+:"Nokia"
+
+; EXE/DLL
+""-"z:\sys\bin\InternetRadio.exe"
+""-"z:\sys\bin\IRDataStructures.dll"
+""-"z:\sys\bin\IRDataProvider.dll"
+""-"z:\sys\bin\IRXMLParser.dll"
+""-"z:\sys\bin\isdsclientinterface.dll"
+""-"z:\sys\bin\IRStreamSource.dll"
+""-"z:\sys\bin\IRMediaEngine.dll"
+""-"z:\sys\bin\IRFileRecognizer.dll"
+""-"z:\sys\bin\irpresetplugin.dll"
+""-"z:\sys\bin\irrfsplugin.dll"
+""-"z:\sys\bin\IRFavoritesDb.dll"
+""-"z:\sys\bin\IRCommandChannel.dll"
+""-"z:\sys\bin\IRCacheMgmt.dll"
+""-"z:\sys\bin\IRNetworkController.dll"
+""-"z:\sys\bin\irsettings.dll"
+""-"z:\sys\bin\IRSessionLog.dll" 
+""-"z:\sys\bin\IRSettingsView.dll"
+""-"z:\sys\bin\irgeneralsettings200.dll"
+;""-"z:\sys\bin\mpxequalizerview.dll"	
+;""-"z:\sys\bin\IRActiveIdleEngine.dll"
+;""-"z:\sys\bin\IRActiveIdle.dll"
+
+
+; Resources
+""-"z:\resource\apps\InternetRadio.r*"
+""-"z:\private\10003a3f\import\apps\InternetRadio_reg.rsc"
+""-"z:\resource\plugins\IRMediaEngine.rsc"
+""-"z:\resource\plugins\irpresetplugin.rsc"
+""-"z:\resource\plugins\irrfsplugin.rsc"
+""-"z:\resource\plugins\IRFileRecognizer.rsc"
+;""-"z:\resource\irsettings.rsc"
+""-"z:\resource\plugins\IRActiveIdle.rsc"
+""-"z:\resource\irgeneralsettings.rsc"
+
+
+; Graphics
+""-"z:\resource\apps\InternetRadio.mif"
+""-"z:\resource\apps\InternetRadioEdwinSkin.mif"
+""-"z:\resource\apps\InternetRadio_aif.mif"
+
+
+; Backup & Restore
+""-"z:\private\2002ffac\backup_registration.xml"
+
+
+; Animation script files
+""-"z:\resource\apps\qgn_ir_loading.svg"
+""-"z:\resource\apps\qgn_ir_buffering_anim.svg"
+;""-"z:\private\2002ffac\IRFontDef.txt"
+
+
+; Help
+""-"z:\resource\help\iraap.hlp"
+
+
+; Terms of service
+""-"z:\private\2002ffac\terms_*.html"
+

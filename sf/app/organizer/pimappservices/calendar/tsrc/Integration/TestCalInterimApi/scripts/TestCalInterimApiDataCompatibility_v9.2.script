@@ -1,0 +1,49 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+// 9.2 specific DC Tests
+
+PRINT Run Data Compatibility Tests specific to v9.2 calendar file
+
+LOAD_SUITE TestCalInterimApiSuite
+
+START_TESTCASE PIM-APPENG-CalInterimAPI-DC-I-015-HP-0001
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CalInterimAPI-DC-I-015-HP-0001
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - REQ5770: Calendar Non-functional maintainability, REQ5771: Calendar Non-functional architecture
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Test Data Compatibility against entries with repeat rule, alarms and data, such as description and attachment
+//! @SYMTestActions 
+//!1.	Create an entry/instance view on a 9.1/9.2 Calendar file, that contains entries with repeat rule, alarms (some of them with attachments and sound-names) and data. 
+//!2.	Open some entries and query their properties, data, repeat rule and alarms.
+//!3.	Query for the alarm sound-names and attachments of the entries.
+//!4.	Add and modify some entries, their alarms and data  and verify.
+//!5.	Close the view and open again and repeat step 2 and 3
+//! @SYMTestExpectedResults The view is built without any error. The new converted calendar file is properly accessed and updated by the API.
+
+RUN_TEST_STEP				100	TestCalInterimApiSuite		TestCalInterimApiDeleteAgendaServers
+
+// Find Instance
+RUN_TEST_STEP				100	TestCalInterimApiSuite	TestCalInterimApiSetTz		\CITCalInterimApi\TestCalInterimApiDataCompatibility.ini	calcutta
+
+RUN_TEST_STEP				100	TestCalInterimApiSuite	TestCalInterimApiSetSysTime	\CITCalInterimApi\TestCalInterimApiDataCompatibility.ini	jan011998_12am
+
+// Alarm properties
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiAlarmProperties	\CITCalInterimApi\TestCalInterimApiDataCompatibility.ini	alarmproperties1
+RUN_TEST_STEP		 		300	TestCalInterimApiSuite	TestCalInterimApiAlarmProperties	\CITCalInterimApi\TestCalInterimApiDataCompatibility.ini	alarmproperties2
+END_TESTCASE PIM-APPENG-CalInterimAPI-DC-I-015-HP-0001

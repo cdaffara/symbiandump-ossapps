@@ -1,0 +1,736 @@
+EXPORTS
+	?NewL@CPop3ClientMtm@@SAPAV1@AAVCRegisteredMtmDll@@AAVCMsvSession@@@Z @ 1 NONAME ; public: static class CPop3ClientMtm * __cdecl CPop3ClientMtm::NewL(class CRegisteredMtmDll &,class CMsvSession &)
+	?NewL@CSmtpClientMtm@@SAPAV1@AAVCRegisteredMtmDll@@AAVCMsvSession@@@Z @ 2 NONAME ; public: static class CSmtpClientMtm * __cdecl CSmtpClientMtm::NewL(class CRegisteredMtmDll &,class CMsvSession &)
+	?NewL@CImap4ClientMtm@@SAPAV1@AAVCRegisteredMtmDll@@AAVCMsvSession@@@Z @ 3 NONAME ; public: static class CImap4ClientMtm * __cdecl CImap4ClientMtm::NewL(class CRegisteredMtmDll &,class CMsvSession &)
+	??0CImBaseEmailSettings@@QAE@XZ @ 4 NONAME ; public: __thiscall CImBaseEmailSettings::CImBaseEmailSettings(void)
+	??0CImCacheManager@@IAE@AAVCMsvSession@@AAVTRequestStatus@@@Z @ 5 NONAME ; protected: __thiscall CImCacheManager::CImCacheManager(class CMsvSession &,class TRequestStatus &)
+	??0CImImap4Settings@@QAE@XZ @ 6 NONAME ; public: __thiscall CImImap4Settings::CImImap4Settings(void)
+	??0CImOffLineOperation@@QAE@XZ @ 7 NONAME ; public: __thiscall CImOffLineOperation::CImOffLineOperation(void)
+	??0CImPop3Settings@@QAE@XZ @ 8 NONAME ; public: __thiscall CImPop3Settings::CImPop3Settings(void)
+	??0CImSSmtpSettings@@QAE@XZ @ 9 NONAME ABSENT ; public: __thiscall CImSSmtpSettings::CImSSmtpSettings(void)
+	??0CImSmtpSettings@@QAE@XZ @ 10 NONAME ; public: __thiscall CImSmtpSettings::CImSmtpSettings(void)
+	??0TImAttachmentFile@@QAE@AAVRFs@@@Z @ 11 NONAME ; public: __thiscall TImAttachmentFile::TImAttachmentFile(class RFs &)
+	??0TImHeaderEncodingInfo@@QAE@ABV0@@Z @ 12 NONAME ; public: __thiscall TImHeaderEncodingInfo::TImHeaderEncodingInfo(class TImHeaderEncodingInfo const &)
+	??0TImHeaderEncodingInfo@@QAE@XZ @ 13 NONAME ; public: __thiscall TImHeaderEncodingInfo::TImHeaderEncodingInfo(void)
+	??0TMsvEmailEntry@@QAE@ABVTMsvEntry@@@Z @ 14 NONAME ; public: __thiscall TMsvEmailEntry::TMsvEmailEntry(class TMsvEntry const &)
+	??0TMsvEmailEntry@@QAE@XZ @ 15 NONAME ; public: __thiscall TMsvEmailEntry::TMsvEmailEntry(void)
+	??0TQueuedOperation@@QAE@XZ @ 16 NONAME ; public: __thiscall TQueuedOperation::TQueuedOperation(void)
+	??0TQueuedOperationKey@@QAE@AAVCImQueuedList@@@Z @ 17 NONAME ; public: __thiscall TQueuedOperationKey::TQueuedOperationKey(class CImQueuedList &)
+	??0TQueuedOperationSwap@@QAE@AAVCImQueuedList@@@Z @ 18 NONAME ; public: __thiscall TQueuedOperationSwap::TQueuedOperationSwap(class CImQueuedList &)
+	??1CImBaseEmailSettings@@UAE@XZ @ 19 NONAME ; public: virtual __thiscall CImBaseEmailSettings::~CImBaseEmailSettings(void)
+	??1CImCacheManager@@UAE@XZ @ 20 NONAME ; public: virtual __thiscall CImCacheManager::~CImCacheManager(void)
+	??1CImClientMTMUtils@@UAE@XZ @ 21 NONAME ; public: virtual __thiscall CImClientMTMUtils::~CImClientMTMUtils(void)
+	??1CImEmailMessage@@UAE@XZ @ 22 NONAME ; public: virtual __thiscall CImEmailMessage::~CImEmailMessage(void)
+	??1CImEmailOperation@@UAE@XZ @ 23 NONAME ; public: virtual __thiscall CImEmailOperation::~CImEmailOperation(void)
+	??1CImFinder@@UAE@XZ @ 24 NONAME ; public: virtual __thiscall CImFinder::~CImFinder(void)
+	??1CImHeader@@UAE@XZ @ 25 NONAME ; public: virtual __thiscall CImHeader::~CImHeader(void)
+	??1CImImap4Settings@@UAE@XZ @ 26 NONAME ; public: virtual __thiscall CImImap4Settings::~CImImap4Settings(void)
+	??1CImLog@@UAE@XZ @ 27 NONAME ; public: virtual __thiscall CImLog::~CImLog(void)
+	??1CImMimeHeader@@UAE@XZ @ 28 NONAME ; public: virtual __thiscall CImMimeHeader::~CImMimeHeader(void)
+	??1CImOffLineOperation@@UAE@XZ @ 29 NONAME ; public: virtual __thiscall CImOffLineOperation::~CImOffLineOperation(void)
+	??1CImOffLineOperationArray@@UAE@XZ @ 30 NONAME ; public: virtual __thiscall CImOffLineOperationArray::~CImOffLineOperationArray(void)
+	??1CImOperationQueueList@@UAE@XZ @ 31 NONAME ; public: virtual __thiscall CImOperationQueueList::~CImOperationQueueList(void)
+	??1CImPOP3GetMail@@UAE@XZ @ 32 NONAME ; public: virtual __thiscall CImPOP3GetMail::~CImPOP3GetMail(void)
+	??1CImPop3Settings@@UAE@XZ @ 33 NONAME ; public: virtual __thiscall CImPop3Settings::~CImPop3Settings(void)
+	??1CImQueuedList@@UAE@XZ @ 34 NONAME ; public: virtual __thiscall CImQueuedList::~CImQueuedList(void)
+	??1CImSSmtpSettings@@UAE@XZ @ 35 NONAME ABSENT ; public: virtual __thiscall CImSSmtpSettings::~CImSSmtpSettings(void)
+	??1CImSmtpSettings@@UAE@XZ @ 36 NONAME ; public: virtual __thiscall CImSmtpSettings::~CImSmtpSettings(void)
+	??1TImAttachmentFile@@QAE@XZ @ 37 NONAME ; public: __thiscall TImAttachmentFile::~TImAttachmentFile(void)
+	??8CImBaseEmailSettings@@QBEHABV0@@Z @ 38 NONAME ; public: int __thiscall CImBaseEmailSettings::operator==(class CImBaseEmailSettings const &)const 
+	??8CImImap4Settings@@QBEHABV0@@Z @ 39 NONAME ; public: int __thiscall CImImap4Settings::operator==(class CImImap4Settings const &)const 
+	??8CImOffLineOperation@@QBEHABV0@@Z @ 40 NONAME ; public: int __thiscall CImOffLineOperation::operator==(class CImOffLineOperation const &)const 
+	??8CImPop3Settings@@QBEHABV0@@Z @ 41 NONAME ; public: int __thiscall CImPop3Settings::operator==(class CImPop3Settings const &)const 
+	??8CImSSmtpSettings@@QBEHABV0@@Z @ 42 NONAME ABSENT ; public: int __thiscall CImSSmtpSettings::operator==(class CImSSmtpSettings const &)const 
+	??8CImSmtpSettings@@QBEHABV0@@Z @ 43 NONAME ; public: int __thiscall CImSmtpSettings::operator==(class CImSmtpSettings const &)const 
+	??8TMsvEmailEntry@@QBEHABV0@@Z @ 44 NONAME ; public: int __thiscall TMsvEmailEntry::operator==(class TMsvEmailEntry const &)const 
+	??8TMsvEmailEntry@@QBEHABVTMsvEntry@@@Z @ 45 NONAME ; public: int __thiscall TMsvEmailEntry::operator==(class TMsvEntry const &)const 
+	??9TQueuedOperation@@QAEHABV0@@Z @ 46 NONAME ; public: int __thiscall TQueuedOperation::operator!=(class TQueuedOperation const &)
+	??ACImQueuedList@@QAEAAVTQueuedOperation@@H@Z @ 47 NONAME ; public: class TQueuedOperation & __thiscall CImQueuedList::operator[](int)
+	?AcknowledgeReceipts@CImImap4Settings@@QBEHXZ @ 48 NONAME ; int CImImap4Settings::AcknowledgeReceipts(void) const
+	?AcknowledgeReceipts@CImPop3Settings@@QBEHXZ @ 49 NONAME ; int CImPop3Settings::AcknowledgeReceipts(void) const
+	?AddAttachmentL@CImEmailMessage@@QAEXJABVTDesC16@@AAVTRequestStatus@@@Z @ 50 NONAME ABSENT ; public: void __thiscall CImEmailMessage::AddAttachmentL(long,class TDesC16 const &,class TRequestStatus &)
+	?AddEncodingInfoL@CImHeader@@QAEXAAVTImHeaderEncodingInfo@@@Z @ 51 NONAME ; public: void __thiscall CImHeader::AddEncodingInfoL(class TImHeaderEncodingInfo &)
+	?AddMessageAsAttachmentL@CImEmailMessage@@QAEXJJAAVTRequestStatus@@@Z @ 52 NONAME ABSENT ; public: void __thiscall CImEmailMessage::AddMessageAsAttachmentL(long,long,class TRequestStatus &)
+	?AddRelatedPartL@CImEmailMessage@@QAEXJABVTDesC16@@AAVTRequestStatus@@JABVTDesC8@@@Z @ 53 NONAME ; public: void __thiscall CImEmailMessage::AddRelatedPartL(long,class TDesC16 const &,class TRequestStatus &,long,class TDesC8 const &)
+	?AddSignatureToEmail@CImSmtpSettings@@QBEHXZ @ 54 NONAME ; int CImSmtpSettings::AddSignatureToEmail(void) const
+	?AddVCardToEmail@CImSmtpSettings@@QBEHXZ @ 55 NONAME ; int CImSmtpSettings::AddVCardToEmail(void) const
+	?Apop@CImPop3Settings@@QBEHXZ @ 56 NONAME ; int CImPop3Settings::Apop(void) const
+	?AppendComment@CImLog@@QAEXABVTDesC8@@@Z @ 57 NONAME ; public: void __thiscall CImLog::AppendComment(class TDesC8 const &)
+	?AppendError@CImLog@@QAEXABVTDesC8@@H@Z @ 58 NONAME ; public: void __thiscall CImLog::AppendError(class TDesC8 const &,int)
+	?AppendL@CImQueuedList@@QAEXAAVTQueuedOperation@@@Z @ 59 NONAME ; public: void __thiscall CImQueuedList::AppendL(class TQueuedOperation &)
+	?AppendOperationL@CImQueuedList@@UAEXABVCImOffLineOperation@@@Z @ 60 NONAME ; public: virtual void __thiscall CImQueuedList::AppendOperationL(class CImOffLineOperation const &)
+	?AppendOut@CImLog@@QAEXABVTDesC8@@@Z @ 61 NONAME ; public: void __thiscall CImLog::AppendOut(class TDesC8 const &)
+	?AppendResponse@CImLog@@QAEXABVTDesC8@@@Z @ 62 NONAME ; public: void __thiscall CImLog::AppendResponse(class TDesC8 const &)
+	?AttachmentSelection@CImEmailMessage@@QBEABV?$CArrayFixFlat@VTImAttachmentInfo@@@@XZ @ 63 NONAME ABSENT ; public: class CArrayFixFlat<class TImAttachmentInfo> const & __thiscall CImEmailMessage::AttachmentSelection(void)const 
+	?AutoSendOnConnect@CImImap4Settings@@QBEHXZ @ 64 NONAME ; int CImImap4Settings::AutoSendOnConnect(void) const
+	?AutoSendOnConnect@CImPop3Settings@@QBEHXZ @ 65 NONAME ; int CImPop3Settings::AutoSendOnConnect(void) const
+	?BodyEncoding@CImHeader@@QBE?AW4TMsgOutboxBodyEncoding@@XZ @ 66 NONAME ; enum TMsgOutboxBodyEncoding CImHeader::BodyEncoding(void) const
+	?BodyEncoding@CImSmtpSettings@@QBE?AW4TMsgOutboxBodyEncoding@@XZ @ 67 NONAME ; enum TMsgOutboxBodyEncoding CImSmtpSettings::BodyEncoding(void) const
+	?Charset@CImHeader@@QBEIXZ @ 68 NONAME ; unsigned int CImHeader::Charset(void) const
+	?CloseFile@TImAttachmentFile@@QAEHXZ @ 69 NONAME ; public: int __thiscall TImAttachmentFile::CloseFile(void)
+	?ConstructL@CImCacheManager@@IAEXXZ @ 70 NONAME ; protected: void __thiscall CImCacheManager::ConstructL(void)
+	?ConstructL@CImOffLineOperationArray@@IAEXXZ @ 71 NONAME ; protected: void __thiscall CImOffLineOperationArray::ConstructL(void)
+	?ContentBase@CImMimeHeader@@QBE?BVTPtrC8@@XZ @ 72 NONAME ; public: class TPtrC8 const  __thiscall CImMimeHeader::ContentBase(void)const 
+	?ContentDescription@CImMimeHeader@@QBE?BVTPtrC8@@XZ @ 73 NONAME ; public: class TPtrC8 const  __thiscall CImMimeHeader::ContentDescription(void)const 
+	?ContentDisposition@CImMimeHeader@@QBE?BVTPtrC8@@XZ @ 74 NONAME ; public: class TPtrC8 const  __thiscall CImMimeHeader::ContentDisposition(void)const 
+	?ContentID@CImMimeHeader@@QBE?BVTPtrC8@@XZ @ 75 NONAME ; public: class TPtrC8 const  __thiscall CImMimeHeader::ContentID(void)const 
+	?ContentLocation@CImMimeHeader@@QBE?BVTPtrC16@@XZ @ 76 NONAME ; public: class TPtrC16 const  __thiscall CImMimeHeader::ContentLocation(void)const 
+	?ContentSubType@CImMimeHeader@@QBE?BVTPtrC8@@XZ @ 77 NONAME ; public: class TPtrC8 const  __thiscall CImMimeHeader::ContentSubType(void)const 
+	?ContentTransferEncoding@CImMimeHeader@@QBE?AW4TImEncodingType@@AAVTDes8@@@Z @ 78 NONAME ; enum TImEncodingType CImMimeHeader::ContentTransferEncoding(class TDes8 &) const
+	?ContentTransferEncoding@CImMimeHeader@@QBE?AW4TImEncodingType@@XZ @ 79 NONAME ; enum TImEncodingType CImMimeHeader::ContentTransferEncoding(void) const
+	?ContentType@CImMimeHeader@@QBE?BVTPtrC8@@XZ @ 80 NONAME ; public: class TPtrC8 const  __thiscall CImMimeHeader::ContentType(void)const 
+	?ConvertFromOurCharsetL@CImConvertCharconv@@QAEHABVTDesC16@@AAVTDes8@@AAH2@Z @ 81 NONAME ; public: int __thiscall CImConvertCharconv::ConvertFromOurCharsetL(class TDesC16 const &,class TDes8 &,int &,int &)
+	?ConvertToOurCharsetL@CImConvertCharconv@@QAEHABVTDesC8@@AAVTDes16@@AAH2@Z @ 82 NONAME ; public: int __thiscall CImConvertCharconv::ConvertToOurCharsetL(class TDesC8 const &,class TDes16 &,int &,int &)
+	?CopyL@CImBaseEmailSettings@@QAEAAV1@ABV1@@Z @ 83 NONAME ; public: class CImBaseEmailSettings & __thiscall CImBaseEmailSettings::CopyL(class CImBaseEmailSettings const &)
+	?CopyL@CImImap4Settings@@QAEAAV1@ABV1@@Z @ 84 NONAME ; public: class CImImap4Settings & __thiscall CImImap4Settings::CopyL(class CImImap4Settings const &)
+	?CopyL@CImOffLineOperation@@QAEXABV1@@Z @ 85 NONAME ; public: void __thiscall CImOffLineOperation::CopyL(class CImOffLineOperation const &)
+	?CopyL@CImPop3Settings@@QAEAAV1@ABV1@@Z @ 86 NONAME ; public: class CImPop3Settings & __thiscall CImPop3Settings::CopyL(class CImPop3Settings const &)
+	?CopyL@CImSSmtpSettings@@QAEAAV1@ABV1@@Z @ 87 NONAME ABSENT ; public: class CImSSmtpSettings & __thiscall CImSSmtpSettings::CopyL(class CImSSmtpSettings const &)
+	?CopyL@CImSmtpSettings@@QAEAAV1@ABV1@@Z @ 88 NONAME ; public: class CImSmtpSettings & __thiscall CImSmtpSettings::CopyL(class CImSmtpSettings const &)
+	?CopyL@TQueuedOperation@@QAEXABV1@@Z @ 89 NONAME ; public: void __thiscall TQueuedOperation::CopyL(class TQueuedOperation const &)
+	?Count@CImMessageCounter@@QAEHXZ @ 90 NONAME ; public: int __thiscall CImMessageCounter::Count(void)
+	?CountOperations@CImQueuedList@@UBEHXZ @ 91 NONAME ; public: virtual int __thiscall CImQueuedList::CountOperations(void)const 
+	?CreateAttachmentL@CImap4ClientMtm@@UAEXAAJAAV?$TBuf@$0BAA@@@@Z @ 92 NONAME ABSENT ; public: virtual void __thiscall CImap4ClientMtm::CreateAttachmentL(long &,class TBuf<256> &)
+	?CreateAttachmentL@CPop3ClientMtm@@UAEXAAJAAV?$TBuf@$0BAA@@@@Z @ 93 NONAME ABSENT ; public: virtual void __thiscall CPop3ClientMtm::CreateAttachmentL(long &,class TBuf<256> &)
+	?CreateAttachmentL@CSmtpClientMtm@@UAEXAAJAAV?$TBuf@$0BAA@@@@Z @ 94 NONAME ABSENT ; public: virtual void __thiscall CSmtpClientMtm::CreateAttachmentL(long &,class TBuf<256> &)
+	?CreateFile@TImAttachmentFile@@QAEHABVTDesC16@@0@Z @ 95 NONAME ; public: int __thiscall TImAttachmentFile::CreateFile(class TDesC16 const &,class TDesC16 const &)
+	?CreateForwardAsAttachmentL@CImEmailOperation@@SAPAV1@AAVTRequestStatus@@AAVCMsvSession@@JJIABIVTUid@@@Z @ 96 NONAME ; public: static class CImEmailOperation * __cdecl CImEmailOperation::CreateForwardAsAttachmentL(class TRequestStatus &,class CMsvSession &,long,long,unsigned int,unsigned int const &,class TUid)
+	?CreateForwardL@CImEmailOperation@@SAPAV1@AAVTRequestStatus@@AAVCMsvSession@@JJIABIVTUid@@@Z @ 97 NONAME ; public: static class CImEmailOperation * __cdecl CImEmailOperation::CreateForwardL(class TRequestStatus &,class CMsvSession &,long,long,unsigned int,unsigned int const &,class TUid)
+	?CreateForwardL@CImEmailOperation@@SAPAV1@AAVTRequestStatus@@AAVCMsvSession@@JJIABVTDesC16@@ABIVTUid@@@Z @ 98 NONAME ; public: static class CImEmailOperation * __cdecl CImEmailOperation::CreateForwardL(class TRequestStatus &,class CMsvSession &,long,long,unsigned int,class TDesC16 const &,unsigned int const &,class TUid)
+	?CreateForwardL@CImHeader@@QAEHAAV1@AAVTDesC16@@@Z @ 99 NONAME ; public: int __thiscall CImHeader::CreateForwardL(class CImHeader &,class TDesC16 &)
+	?CreateMessageL@CImap4ClientMtm@@UAEXJ@Z @ 100 NONAME ; public: virtual void __thiscall CImap4ClientMtm::CreateMessageL(long)
+	?CreateMessageL@CPop3ClientMtm@@UAEXJ@Z @ 101 NONAME ; public: virtual void __thiscall CPop3ClientMtm::CreateMessageL(long)
+	?CreateMessageL@CSmtpClientMtm@@UAEXJ@Z @ 102 NONAME ; public: virtual void __thiscall CSmtpClientMtm::CreateMessageL(long)
+	?CreateNewL@CImEmailOperation@@SAPAV1@AAVTRequestStatus@@AAVCMsvSession@@JIABIVTUid@@@Z @ 103 NONAME ; public: static class CImEmailOperation * __cdecl CImEmailOperation::CreateNewL(class TRequestStatus &,class CMsvSession &,long,unsigned int,unsigned int const &,class TUid)
+	?CreateReceiptL@CImEmailOperation@@SAPAV1@AAVTRequestStatus@@AAVCMsvSession@@JJIABIVTUid@@@Z @ 104 NONAME ; public: static class CImEmailOperation * __cdecl CImEmailOperation::CreateReceiptL(class TRequestStatus &,class CMsvSession &,long,long,unsigned int,unsigned int const &,class TUid)
+	?CreateReceiptL@CImEmailOperation@@SAPAV1@AAVTRequestStatus@@AAVCMsvSession@@JJIABVTDesC16@@ABIVTUid@@@Z @ 105 NONAME ; public: static class CImEmailOperation * __cdecl CImEmailOperation::CreateReceiptL(class TRequestStatus &,class CMsvSession &,long,long,unsigned int,class TDesC16 const &,unsigned int const &,class TUid)
+	?CreateReceiptL@CImHeader@@QAEXAAV1@AAVTDesC16@@@Z @ 106 NONAME ; public: void __thiscall CImHeader::CreateReceiptL(class CImHeader &,class TDesC16 &)
+	?CreateReplyL@CImEmailOperation@@SAPAV1@AAVTRequestStatus@@AAVCMsvSession@@JJIABIVTUid@@@Z @ 107 NONAME ; public: static class CImEmailOperation * __cdecl CImEmailOperation::CreateReplyL(class TRequestStatus &,class CMsvSession &,long,long,unsigned int,unsigned int const &,class TUid)
+	?CreateReplyL@CImEmailOperation@@SAPAV1@AAVTRequestStatus@@AAVCMsvSession@@JJIABVTDesC16@@ABIVTUid@@@Z @ 108 NONAME ; public: static class CImEmailOperation * __cdecl CImEmailOperation::CreateReplyL(class TRequestStatus &,class CMsvSession &,long,long,unsigned int,class TDesC16 const &,unsigned int const &,class TUid)
+	?CreateReplyL@CImHeader@@QAEHAAV1@W4TReplyTo@1@AAVTDesC16@@@Z @ 109 NONAME ; public: int __thiscall CImHeader::CreateReplyL(class CImHeader &,enum CImHeader::TReplyTo,class TDesC16 &)
+	?DataSize@CImHeader@@QAEHXZ @ 110 NONAME ; public: int __thiscall CImHeader::DataSize(void)
+	?DecrementSendTotal@TImSmtpProgress@@QAEXXZ @ 111 NONAME ; public: void __thiscall TImSmtpProgress::DecrementSendTotal(void)
+	?DefaultMsgCharSet@CImSmtpSettings@@QBE?BVTUid@@XZ @ 112 NONAME ; public: class TUid const  __thiscall CImSmtpSettings::DefaultMsgCharSet(void)const 
+	?Delete@CImQueuedList@@UAEXH@Z @ 113 NONAME ; public: virtual void __thiscall CImQueuedList::Delete(int)
+	?DeleteAttachedMessageL@CImEmailMessage@@QAEXJJAAVTRequestStatus@@@Z @ 114 NONAME ABSENT ; public: void __thiscall CImEmailMessage::DeleteAttachedMessageL(long,long,class TRequestStatus &)
+	?DeleteAttachment@TImAttachmentFile@@QAEHABVTDesC16@@0@Z @ 115 NONAME ; public: int __thiscall TImAttachmentFile::DeleteAttachment(class TDesC16 const &,class TDesC16 const &)
+	?DeleteAttachmentL@CImEmailMessage@@QAEXJJAAVTRequestStatus@@@Z @ 116 NONAME ABSENT ; public: void __thiscall CImEmailMessage::DeleteAttachmentL(long,long,class TRequestStatus &)
+	?DeleteAttachmentL@CImap4ClientMtm@@UAEXJJ@Z @ 117 NONAME ABSENT ; public: virtual void __thiscall CImap4ClientMtm::DeleteAttachmentL(long,long)
+	?DeleteAttachmentL@CPop3ClientMtm@@UAEXJJ@Z @ 118 NONAME ABSENT ; public: virtual void __thiscall CPop3ClientMtm::DeleteAttachmentL(long,long)
+	?DeleteAttachmentL@CSmtpClientMtm@@UAEXJJ@Z @ 119 NONAME ABSENT ; public: virtual void __thiscall CSmtpClientMtm::DeleteAttachmentL(long,long)
+	?DeleteBuffer@CImOffLineOperation@@QAEXXZ @ 120 NONAME ; public: void __thiscall CImOffLineOperation::DeleteBuffer(void)
+	?DeleteEmailsWhenDisconnecting@CImImap4Settings@@QBEHXZ @ 121 NONAME ; int CImImap4Settings::DeleteEmailsWhenDisconnecting(void) const
+	?DeleteEmailsWhenDisconnecting@CImPop3Settings@@QBEHXZ @ 122 NONAME ; int CImPop3Settings::DeleteEmailsWhenDisconnecting(void) const
+	?DeleteL@CImOperationQueueList@@QAEXH@Z @ 123 NONAME ; public: void __thiscall CImOperationQueueList::DeleteL(int)
+	?DetachMtmParameters@CImOffLineOperation@@QAEXXZ @ 124 NONAME ; public: void __thiscall CImOffLineOperation::DetachMtmParameters(void)
+	?DisconnectedOperation@TMsvEmailEntry@@QBE?AW4TImDisconnectedOperationType@@XZ @ 125 NONAME ; public: enum TImDisconnectedOperationType  __thiscall TMsvEmailEntry::DisconnectedOperation(void)const 
+	?DisconnectedUserMode@CImImap4Settings@@QBEHXZ @ 126 NONAME ; int CImImap4Settings::DisconnectedUserMode(void) const
+	?DisconnectedUserMode@CImPop3Settings@@QBEHXZ @ 127 NONAME ; int CImPop3Settings::DisconnectedUserMode(void) const
+	?DoCancel@CImCacheManager@@UAEXXZ @ 128 NONAME ; public: virtual void __thiscall CImCacheManager::DoCancel(void)
+	?EmailAddress@CImSSmtpSettings@@QBE?BVTPtrC16@@XZ @ 129 NONAME ABSENT ; public: class TPtrC16 const  __thiscall CImSSmtpSettings::EmailAddress(void)const 
+	?EmailAddress@CImSmtpSettings@@QBE?BVTPtrC16@@XZ @ 130 NONAME ; public: class TPtrC16 const  __thiscall CImSmtpSettings::EmailAddress(void)const 
+	?EmailAlias@CImSmtpSettings@@QBE?BVTPtrC16@@XZ @ 131 NONAME ; public: class TPtrC16 const  __thiscall CImSmtpSettings::EmailAlias(void)const 
+	?Equals@CImOffLineOperation@@QBEHABV1@@Z @ 132 NONAME ; public: int __thiscall CImOffLineOperation::Equals(class CImOffLineOperation const &)const 
+	?Error@TImSmtpProgress@@QBEHXZ @ 133 NONAME ; public: int __thiscall TImSmtpProgress::Error(void)const 
+	?ExpungeDeletedOperationsL@CImOperationQueueList@@QAEXXZ @ 134 NONAME ; public: void __thiscall CImOperationQueueList::ExpungeDeletedOperationsL(void)
+	?ExternalizeL@CImBaseEmailSettings@@QBEXAAVRMsvWriteStream@@@Z @ 135 NONAME ABSENT ; public: void __thiscall CImBaseEmailSettings::ExternalizeL(class RMsvWriteStream &)const 
+	?ExternalizeL@CImHeader@@QBEXAAVRMsvWriteStream@@@Z @ 136 NONAME ; public: void __thiscall CImHeader::ExternalizeL(class RMsvWriteStream &)const 
+	?ExternalizeL@CImImap4Settings@@QBEXAAVRMsvWriteStream@@@Z @ 137 NONAME ABSENT ; public: void __thiscall CImImap4Settings::ExternalizeL(class RMsvWriteStream &)const 
+	?ExternalizeL@CImMimeHeader@@QBEXAAVRMsvWriteStream@@@Z @ 138 NONAME ; public: void __thiscall CImMimeHeader::ExternalizeL(class RMsvWriteStream &)const 
+	?ExternalizeL@CImOffLineArrayStore@@QBEXAAVRMsvWriteStream@@@Z @ 139 NONAME ; public: void __thiscall CImOffLineArrayStore::ExternalizeL(class RMsvWriteStream &)const 
+	?ExternalizeL@CImOffLineOperation@@QBEXAAVRMsvWriteStream@@@Z @ 140 NONAME ; public: void __thiscall CImOffLineOperation::ExternalizeL(class RMsvWriteStream &)const 
+	?ExternalizeL@CImPop3Settings@@QBEXAAVRMsvWriteStream@@@Z @ 141 NONAME ABSENT ; public: void __thiscall CImPop3Settings::ExternalizeL(class RMsvWriteStream &)const 
+	?ExternalizeL@CImSSmtpSettings@@QBEXAAVRMsvWriteStream@@@Z @ 142 NONAME ABSENT ; public: void __thiscall CImSSmtpSettings::ExternalizeL(class RMsvWriteStream &)const 
+	?ExternalizeL@CImSmtpSettings@@QBEXAAVRMsvWriteStream@@@Z @ 143 NONAME ABSENT ; public: void __thiscall CImSmtpSettings::ExternalizeL(class RMsvWriteStream &)const 
+	?ExternalizeL@TImHeaderEncodingInfo@@QBEXAAVRWriteStream@@@Z @ 144 NONAME ; public: void __thiscall TImHeaderEncodingInfo::ExternalizeL(class RWriteStream &)const 
+	?FailedToSend@TImSmtpProgress@@QBEHXZ @ 145 NONAME ; public: int __thiscall TImSmtpProgress::FailedToSend(void)const 
+	?FinalProgress@CImEmailOperation@@UAEABVTDesC8@@XZ @ 146 NONAME ; public: virtual class TDesC8 const & __thiscall CImEmailOperation::FinalProgress(void)
+	?FinalProgress@CImPOP3GetMail@@UAEABVTDesC8@@XZ @ 147 NONAME ; public: virtual class TDesC8 const & __thiscall CImPOP3GetMail::FinalProgress(void)
+	?FindFirstHTMLPageL@CImEmailMessage@@QAEXJAAVTRequestStatus@@@Z @ 148 NONAME ; public: void __thiscall CImEmailMessage::FindFirstHTMLPageL(long,class TRequestStatus &)
+	?FindFirstL@CImFinder@@QAEXJAAVTRequestStatus@@@Z @ 149 NONAME ; public: void __thiscall CImFinder::FindFirstL(long,class TRequestStatus &)
+	?FindInBodyL@CImClientMTMUtils@@QAEIABVTDesC16@@AAVCRichText@@I@Z @ 150 NONAME ; public: unsigned int __thiscall CImClientMTMUtils::FindInBodyL(class TDesC16 const &,class CRichText &,unsigned int)
+	?FindInHeaderL@CImClientMTMUtils@@QAEIABVTDesC16@@AAVCImHeader@@I@Z @ 151 NONAME ; public: unsigned int __thiscall CImClientMTMUtils::FindInHeaderL(class TDesC16 const &,class CImHeader &,unsigned int)
+	?FindL@CImClientMTMUtils@@QAEXABVTDesC16@@AAVCRichText@@AAVCImHeader@@IAAI@Z @ 152 NONAME ; public: void __thiscall CImClientMTMUtils::FindL(class TDesC16 const &,class CRichText &,class CImHeader &,unsigned int,unsigned int &)
+	?FindNextL@CImFinder@@UAEXAAVTRequestStatus@@@Z @ 153 NONAME ; public: virtual void __thiscall CImFinder::FindNextL(class TRequestStatus &)
+	?FindUniversalResourceIdentifierL@CImEmailMessage@@UAEXJABVTDesC16@@0AAVTRequestStatus@@@Z @ 154 NONAME ; public: virtual void __thiscall CImEmailMessage::FindUniversalResourceIdentifierL(long,class TDesC16 const &,class TDesC16 const &,class TRequestStatus &)
+	?FolderPath@CImImap4Settings@@QBE?BVTPtrC8@@XZ @ 155 NONAME ; public: class TPtrC8 const  __thiscall CImImap4Settings::FolderPath(void)const 
+	?From@CImHeader@@QBE?BVTPtrC16@@XZ @ 156 NONAME ; public: class TPtrC16 const  __thiscall CImHeader::From(void)const 
+	?GetAttachmentsListL@CImEmailMessage@@QAEXAAVTRequestStatus@@JW4TImAttachmentType@1@W4TImEmailEntryType@1@@Z @ 157 NONAME ; public: void __thiscall CImEmailMessage::GetAttachmentsListL(class TRequestStatus &,long,enum CImEmailMessage::TImAttachmentType,enum CImEmailMessage::TImEmailEntryType)
+	?GetBodyTextL@CImEmailMessage@@QAEXAAVTRequestStatus@@JW4TImEmailEntryType@1@AAVCRichText@@AAVCParaFormatLayer@@AAVCCharFormatLayer@@@Z @ 158 NONAME ; public: void __thiscall CImEmailMessage::GetBodyTextL(class TRequestStatus &,long,enum CImEmailMessage::TImEmailEntryType,class CRichText &,class CParaFormatLayer &,class CCharFormatLayer &)
+	?GetContentTypeValue@CImMimeHeader@@QBE?BVTPtrC8@@ABVTDesC8@@@Z @ 159 NONAME ; public: class TPtrC8 const  __thiscall CImMimeHeader::GetContentTypeValue(class TDesC8 const &)const 
+	?GetIMAP4Flags@TMsvEmailEntry@@QAEXAAH000000@Z @ 160 NONAME ; public: void __thiscall TMsvEmailEntry::GetIMAP4Flags(int &,int &,int &,int &,int &,int &,int &)
+	?GetMailL@CImImap4GetMail@@QAEPAVCMsvOperation@@HAAVCImap4ClientMtm@@ABVCMsvEntrySelection@@AAVTDes8@@AAVTRequestStatus@@@Z @ 161 NONAME ; public: class CMsvOperation * __thiscall CImImap4GetMail::GetMailL(int,class CImap4ClientMtm &,class CMsvEntrySelection const &,class TDes8 &,class TRequestStatus &)
+	?GetMailL@CImPOP3GetMail@@QAEPAVCMsvOperation@@AAVCPop3ClientMtm@@AAVTRequestStatus@@ABVCMsvEntrySelection@@AAVTDes8@@W4TImPOP3GetMailType@1@@Z @ 162 NONAME ; public: class CMsvOperation * __thiscall CImPOP3GetMail::GetMailL(class CPop3ClientMtm &,class TRequestStatus &,class CMsvEntrySelection const &,class TDes8 &,enum CImPOP3GetMail::TImPOP3GetMailType)
+	?GetMailOptions@CImImap4Settings@@QBE?AW4TImap4GetMailOptions@@XZ @ 163 NONAME ; enum TImap4GetMailOptions CImImap4Settings::GetMailOptions(void) const
+	?GetMailOptions@CImPop3Settings@@QBE?AW4TPop3GetMailOptions@@XZ @ 164 NONAME ; enum TPop3GetMailOptions CImPop3Settings::GetMailOptions(void) const
+	?GetMessageDigestEntriesL@CImEmailMessage@@QAEXAAVTRequestStatus@@J@Z @ 165 NONAME ; public: void __thiscall CImEmailMessage::GetMessageDigestEntriesL(class TRequestStatus &,long)
+	?GetMimeCharsetTextStringL@CImConvertCharconv@@QBEPAVHBufC8@@ABI@Z @ 166 NONAME ; public: class HBufC8 * __thiscall CImConvertCharconv::GetMimeCharsetTextStringL(unsigned int const &)const 
+	?GetMimeCharsetUidL@CImConvertCharconv@@QBEIABVTDesC8@@@Z @ 167 NONAME ; public: unsigned int __thiscall CImConvertCharconv::GetMimeCharsetUidL(class TDesC8 const &)const 
+	?GetUniversalResourceIdentifierL@CImEmailMessage@@UBEPAVHBufC16@@AAJAAH@Z @ 168 NONAME ; public: virtual class HBufC16 * __thiscall CImEmailMessage::GetUniversalResourceIdentifierL(long &,int &)const 
+	?GetValidAlias@TImMessageField@@QAE?AVTPtrC16@@ABVTDesC16@@@Z @ 169 NONAME ; public: class TPtrC16  __thiscall TImMessageField::GetValidAlias(class TDesC16 const &)
+	?GetValidAlias@TImMessageField@@QAE?AVTPtrC16@@ABVTDesC16@@AAH@Z @ 170 NONAME ; public: class TPtrC16  __thiscall TImMessageField::GetValidAlias(class TDesC16 const &,int &)
+	?GetValidComment@TImMessageField@@QAE?AVTPtrC16@@ABVTDesC16@@@Z @ 171 NONAME ; public: class TPtrC16  __thiscall TImMessageField::GetValidComment(class TDesC16 const &)
+	?GetValidComment@TImMessageField@@QAE?AVTPtrC16@@ABVTDesC16@@AAH@Z @ 172 NONAME ; public: class TPtrC16  __thiscall TImMessageField::GetValidComment(class TDesC16 const &,int &)
+	?GetValidInternetEmailAddressFromString@TImMessageField@@QAE?AVTPtrC16@@ABVTDesC16@@@Z @ 173 NONAME ; public: class TPtrC16  __thiscall TImMessageField::GetValidInternetEmailAddressFromString(class TDesC16 const &)
+	?GetValidInternetEmailAddressFromString@TImMessageField@@QAE?AVTPtrC16@@ABVTDesC16@@AAH11@Z @ 174 NONAME ; public: class TPtrC16  __thiscall TImMessageField::GetValidInternetEmailAddressFromString(class TDesC16 const &,int &,int &,int &)
+	?GetValidInternetEmailAddressFromString@TImMessageField@@QAE?AVTPtrC16@@ABVTDesC16@@AAH1@Z @ 175 NONAME ; public: class TPtrC16  __thiscall TImMessageField::GetValidInternetEmailAddressFromString(class TDesC16 const &,int &,int &)
+	?GetValidInternetEmailAddressFromString@TImMessageField@@QAE?AVTPtrC16@@ABVTDesC16@@AAH@Z @ 176 NONAME ; public: class TPtrC16  __thiscall TImMessageField::GetValidInternetEmailAddressFromString(class TDesC16 const &,int &)
+	?ImMsgId@CImHeader@@QBE?BVTPtrC8@@XZ @ 177 NONAME ; public: class TPtrC8 const  __thiscall CImHeader::ImMsgId(void)const 
+	?Imap4Settings@CImap4ClientMtm@@QBEABVCImImap4Settings@@XZ @ 178 NONAME ; public: class CImImap4Settings const & __thiscall CImap4ClientMtm::Imap4Settings(void)const 
+	?InReplyTo@CImHeader@@QBE?BVTPtrC8@@XZ @ 179 NONAME ; public: class TPtrC8 const  __thiscall CImHeader::InReplyTo(void)const 
+	?InitialiseTotal@TImSmtpProgress@@QAEXABH@Z @ 180 NONAME ; public: void __thiscall TImSmtpProgress::InitialiseTotal(int const &)
+	?InsertOperationL@CImOffLineOperationArray@@QAEXAAVCImOffLineOperation@@H@Z @ 181 NONAME ; public: void __thiscall CImOffLineOperationArray::InsertOperationL(class CImOffLineOperation &,int)
+	?InternalizeL@CImBaseEmailSettings@@QAEXAAVRMsvReadStream@@@Z @ 182 NONAME ABSENT ; public: void __thiscall CImBaseEmailSettings::InternalizeL(class RMsvReadStream &)
+	?InternalizeL@CImHeader@@QAEXAAVRMsvReadStream@@@Z @ 183 NONAME ; public: void __thiscall CImHeader::InternalizeL(class RMsvReadStream &)
+	?InternalizeL@CImImap4Settings@@QAEXAAVRMsvReadStream@@@Z @ 184 NONAME ABSENT ; public: void __thiscall CImImap4Settings::InternalizeL(class RMsvReadStream &)
+	?InternalizeL@CImMimeHeader@@QAEXAAVRMsvReadStream@@@Z @ 185 NONAME ; public: void __thiscall CImMimeHeader::InternalizeL(class RMsvReadStream &)
+	?InternalizeL@CImOffLineArrayStore@@QAEXAAVRMsvReadStream@@@Z @ 186 NONAME ; public: void __thiscall CImOffLineArrayStore::InternalizeL(class RMsvReadStream &)
+	?InternalizeL@CImOffLineOperation@@QAEXAAVRMsvReadStream@@@Z @ 187 NONAME ; public: void __thiscall CImOffLineOperation::InternalizeL(class RMsvReadStream &)
+	?InternalizeL@CImPop3Settings@@QAEXAAVRMsvReadStream@@@Z @ 188 NONAME ABSENT ; public: void __thiscall CImPop3Settings::InternalizeL(class RMsvReadStream &)
+	?InternalizeL@CImSSmtpSettings@@QAEXAAVRMsvReadStream@@@Z @ 189 NONAME ABSENT ; public: void __thiscall CImSSmtpSettings::InternalizeL(class RMsvReadStream &)
+	?InternalizeL@CImSmtpSettings@@QAEXAAVRMsvReadStream@@@Z @ 190 NONAME ABSENT ; public: void __thiscall CImSmtpSettings::InternalizeL(class RMsvReadStream &)
+	?InternalizeL@TImHeaderEncodingInfo@@QAEXAAVRReadStream@@@Z @ 191 NONAME ; public: void __thiscall TImHeaderEncodingInfo::InternalizeL(class RReadStream &)
+	?LoginName@CImImap4Settings@@QBE?BVTPtrC8@@XZ @ 192 NONAME ; public: class TPtrC8 const  __thiscall CImImap4Settings::LoginName(void)const 
+	?LoginName@CImPop3Settings@@QBE?BVTPtrC8@@XZ @ 193 NONAME ; public: class TPtrC8 const  __thiscall CImPop3Settings::LoginName(void)const 
+	?MakeDir@TImAttachmentFile@@QAEHABVTDesC16@@@Z @ 194 NONAME ; public: int __thiscall TImAttachmentFile::MakeDir(class TDesC16 const &)
+	?MaxEmailSize@CImImap4Settings@@QBEIXZ @ 195 NONAME ; unsigned int CImImap4Settings::MaxEmailSize(void) const
+	?MaxEmailSize@CImPop3Settings@@QBEHXZ @ 196 NONAME ; int CImPop3Settings::MaxEmailSize(void) const
+	?MessageFolderType@TMsvEmailEntry@@QBE?AW4TImEmailFolderType@@XZ @ 197 NONAME ; public: enum TImEmailFolderType  __thiscall TMsvEmailEntry::MessageFolderType(void)const 
+	?MimeCharset@CImMimeHeader@@QBEIXZ @ 198 NONAME ; unsigned int CImMimeHeader::MimeCharset(void) const
+	?MsgNo@TImSmtpProgress@@QBEHXZ @ 199 NONAME ; public: int __thiscall TImSmtpProgress::MsgNo(void)const 
+	?NewL@CImClientMTMUtils@@SAPAV1@XZ @ 200 NONAME ; public: static class CImClientMTMUtils * __cdecl CImClientMTMUtils::NewL(void)
+	?NewL@CImConvertCharconv@@SAPAV1@AAVCCnvCharacterSetConverter@@AAVRFs@@@Z @ 201 NONAME ; public: static class CImConvertCharconv * __cdecl CImConvertCharconv::NewL(class CCnvCharacterSetConverter &,class RFs &)
+	?NewL@CImEmailMessage@@SAPAV1@AAVCMsvEntry@@@Z @ 202 NONAME ; public: static class CImEmailMessage * __cdecl CImEmailMessage::NewL(class CMsvEntry &)
+	?NewL@CImEntryFinder@@SAPAV1@AAVCMsvEntry@@@Z @ 203 NONAME ; public: static class CImEntryFinder * __cdecl CImEntryFinder::NewL(class CMsvEntry &)
+	?NewL@CImLog@@SAPAV1@ABVTDesC16@@W4TImLogOpenMode@@@Z @ 204 NONAME ; public: static class CImLog * __cdecl CImLog::NewL(class TDesC16 const &,enum TImLogOpenMode)
+	?NewL@CImLog@@SAPAV1@H@Z @ 205 NONAME ; public: static class CImLog * __cdecl CImLog::NewL(int)
+	?NewL@CImMessageCounter@@SAPAV1@AAVCMsvEntry@@@Z @ 206 NONAME ; public: static class CImMessageCounter * __cdecl CImMessageCounter::NewL(class CMsvEntry &)
+	?NewL@CImMessageFinder@@SAPAV1@AAVCMsvEntry@@@Z @ 207 NONAME ; public: static class CImMessageFinder * __cdecl CImMessageFinder::NewL(class CMsvEntry &)
+	?NewL@CImMimeHeader@@SAPAV1@XZ @ 208 NONAME ; public: static class CImMimeHeader * __cdecl CImMimeHeader::NewL(void)
+	?NewL@CImOffLineOperationArray@@SAPAV1@XZ @ 209 NONAME ; public: static class CImOffLineOperationArray * __cdecl CImOffLineOperationArray::NewL(void)
+	?NewL@CImOperationQueueList@@SAPAV1@AAVCMsvEntry@@PAVMImUndoOffLineOperation@@@Z @ 210 NONAME ; public: static class CImOperationQueueList * __cdecl CImOperationQueueList::NewL(class CMsvEntry &,class MImUndoOffLineOperation *)
+	?NewL@CImPruneMessage@@SAPAV1@AAVCMsvEntry@@AAVRFs@@@Z @ 211 NONAME ; public: static class CImPruneMessage * __cdecl CImPruneMessage::NewL(class CMsvEntry &,class RFs &)
+	?NewL@CImQueuedList@@SAPAV1@XZ @ 212 NONAME ; public: static class CImQueuedList * __cdecl CImQueuedList::NewL(void)
+	?NewL@TQueuedOperation@@SAPAV1@JHABVCImOffLineOperation@@@Z @ 213 NONAME ; public: static class TQueuedOperation * __cdecl TQueuedOperation::NewL(long,int,class CImOffLineOperation const &)
+	?NewLC@CImEmailMessage@@SAPAV1@AAVCMsvEntry@@@Z @ 214 NONAME ; public: static class CImEmailMessage * __cdecl CImEmailMessage::NewLC(class CMsvEntry &)
+	?NewLC@CImEntryFinder@@SAPAV1@AAVCMsvEntry@@@Z @ 215 NONAME ; public: static class CImEntryFinder * __cdecl CImEntryFinder::NewLC(class CMsvEntry &)
+	?NewLC@CImHeader@@SAPAV1@XZ @ 216 NONAME ; public: static class CImHeader * __cdecl CImHeader::NewLC(void)
+	?NewLC@CImMessageCounter@@SAPAV1@AAVCMsvEntry@@@Z @ 217 NONAME ; public: static class CImMessageCounter * __cdecl CImMessageCounter::NewLC(class CMsvEntry &)
+	?NewLC@CImMessageFinder@@SAPAV1@AAVCMsvEntry@@@Z @ 218 NONAME ; public: static class CImMessageFinder * __cdecl CImMessageFinder::NewLC(class CMsvEntry &)
+	?NewLC@CImMimeHeader@@SAPAV1@XZ @ 219 NONAME ; public: static class CImMimeHeader * __cdecl CImMimeHeader::NewLC(void)
+	?NewLC@CImPruneMessage@@SAPAV1@AAVCMsvEntry@@AAVRFs@@@Z @ 220 NONAME ; public: static class CImPruneMessage * __cdecl CImPruneMessage::NewLC(class CMsvEntry &,class RFs &)
+	?NotSent@TImSmtpProgress@@QBEHXZ @ 221 NONAME ; public: int __thiscall TImSmtpProgress::NotSent(void)const 
+	?OpenFile@TImAttachmentFile@@QAEHABVTDesC16@@0@Z @ 222 NONAME ; public: int __thiscall TImAttachmentFile::OpenFile(class TDesC16 const &,class TDesC16 const &)
+	?Operation@CImQueuedList@@UBEABVCImOffLineOperation@@H@Z @ 223 NONAME ; public: virtual class CImOffLineOperation const & __thiscall CImQueuedList::Operation(int)const 
+	?ParseDateField@TImRfc822DateField@@QAEHABVTDesC8@@AAVTTime@@@Z @ 224 NONAME ; public: int __thiscall TImRfc822DateField::ParseDateField(class TDesC8 const &,class TTime &)
+	?Password@CImImap4Settings@@QBE?BVTPtrC8@@XZ @ 225 NONAME ; public: class TPtrC8 const  __thiscall CImImap4Settings::Password(void)const 
+	?Password@CImPop3Settings@@QBE?BVTPtrC8@@XZ @ 226 NONAME ; public: class TPtrC8 const  __thiscall CImPop3Settings::Password(void)const 
+	?PathSeparator@CImImap4Settings@@QBEEXZ @ 227 NONAME ; unsigned char CImImap4Settings::PathSeparator(void) const
+	?PhoneNumber@CImSSmtpSettings@@QBE?BVTPtrC16@@XZ @ 228 NONAME ABSENT ; public: class TPtrC16 const  __thiscall CImSSmtpSettings::PhoneNumber(void)const 
+	?Port@CImBaseEmailSettings@@QBEIXZ @ 229 NONAME ; unsigned int CImBaseEmailSettings::Port(void) const
+	?PrepareToConvertToFromOurCharsetL@CImConvertCharconv@@QAEHI@Z @ 230 NONAME ; public: int __thiscall CImConvertCharconv::PrepareToConvertToFromOurCharsetL(unsigned int)
+	?ProgressL@CImCacheManager@@UAEABVTDesC8@@XZ @ 231 NONAME ; public: virtual class TDesC8 const & __thiscall CImCacheManager::ProgressL(void)
+	?ProgressL@CImEmailMessage@@QBEABVTDesC8@@XZ @ 232 NONAME ; public: class TDesC8 const & __thiscall CImEmailMessage::ProgressL(void)const 
+	?QueueListL@CImap4ClientMtm@@QAEPAVCImOperationQueueList@@AAVCMsvEntry@@@Z @ 233 NONAME ; public: class CImOperationQueueList * __thiscall CImap4ClientMtm::QueueListL(class CMsvEntry &)
+	?ReadFile@TImAttachmentFile@@QAEHAAVTDes8@@H@Z @ 234 NONAME ; public: int __thiscall TImAttachmentFile::ReadFile(class TDes8 &,int)
+	?ReceiptAddress@CImHeader@@QBE?BVTPtrC16@@XZ @ 235 NONAME ; public: class TPtrC16 const  __thiscall CImHeader::ReceiptAddress(void)const 
+	?ReceiptAddress@CImSmtpSettings@@QBE?BVTPtrC16@@XZ @ 236 NONAME ; public: class TPtrC16 const  __thiscall CImSmtpSettings::ReceiptAddress(void)const 
+	?RelativePath@CImMimeHeader@@QBE?BVTPtrC8@@XZ @ 237 NONAME ; public: class TPtrC8 const  __thiscall CImMimeHeader::RelativePath(void)const 
+	?ReplyTo@CImHeader@@QBE?BVTPtrC16@@XZ @ 238 NONAME ; public: class TPtrC16 const  __thiscall CImHeader::ReplyTo(void)const 
+	?ReplyToAddress@CImSmtpSettings@@QBE?BVTPtrC16@@XZ @ 239 NONAME ; public: class TPtrC16 const  __thiscall CImSmtpSettings::ReplyToAddress(void)const 
+	?RequestReceipts@CImSmtpSettings@@QBEHXZ @ 240 NONAME ; int CImSmtpSettings::RequestReceipts(void) const
+	?ResentFrom@CImHeader@@QBE?BVTPtrC16@@XZ @ 241 NONAME ; public: class TPtrC16 const  __thiscall CImHeader::ResentFrom(void)const 
+	?ResentMsgId@CImHeader@@QBE?BVTPtrC8@@XZ @ 242 NONAME ; public: class TPtrC8 const  __thiscall CImHeader::ResentMsgId(void)const 
+	?Reset@CImBaseEmailSettings@@QAEXXZ @ 243 NONAME ; public: void __thiscall CImBaseEmailSettings::Reset(void)
+	?Reset@CImHeader@@QAEXXZ @ 244 NONAME ; public: void __thiscall CImHeader::Reset(void)
+	?Reset@CImImap4Settings@@QAEXXZ @ 245 NONAME ; public: void __thiscall CImImap4Settings::Reset(void)
+	?Reset@CImMimeHeader@@QAEXXZ @ 246 NONAME ; public: void __thiscall CImMimeHeader::Reset(void)
+	?Reset@CImPop3Settings@@QAEXXZ @ 247 NONAME ; public: void __thiscall CImPop3Settings::Reset(void)
+	?Reset@CImQueuedList@@QAEXXZ @ 248 NONAME ; public: void __thiscall CImQueuedList::Reset(void)
+	?Reset@CImSSmtpSettings@@QAEXXZ @ 249 NONAME ABSENT ; public: void __thiscall CImSSmtpSettings::Reset(void)
+	?Reset@CImSmtpSettings@@QAEXXZ @ 250 NONAME ; public: void __thiscall CImSmtpSettings::Reset(void)
+	?ResetLineCounter@CImQueuedList@@QAEXXZ @ 251 NONAME ; public: void __thiscall CImQueuedList::ResetLineCounter(void)
+	?RestoreL@CImBaseEmailSettings@@UAEXAAVCMsvStore@@@Z @ 252 NONAME ABSENT ; public: virtual void __thiscall CImBaseEmailSettings::RestoreL(class CMsvStore &)
+	?RestoreL@CImHeader@@QAEXAAVCMsvStore@@@Z @ 253 NONAME ; public: void __thiscall CImHeader::RestoreL(class CMsvStore &)
+	?RestoreL@CImImap4Settings@@UAEXAAVCMsvStore@@@Z @ 254 NONAME ABSENT ; public: virtual void __thiscall CImImap4Settings::RestoreL(class CMsvStore &)
+	?RestoreL@CImMimeHeader@@QAEXAAVCMsvStore@@@Z @ 255 NONAME ; public: void __thiscall CImMimeHeader::RestoreL(class CMsvStore &)
+	?RestoreL@CImOffLineArrayStore@@QAEXABVCMsvStore@@@Z @ 256 NONAME ; public: void __thiscall CImOffLineArrayStore::RestoreL(class CMsvStore const &)
+	?RestoreL@CImPop3Settings@@UAEXAAVCMsvStore@@@Z @ 257 NONAME ABSENT ; public: virtual void __thiscall CImPop3Settings::RestoreL(class CMsvStore &)
+	?RestoreL@CImSSmtpSettings@@UAEXAAVCMsvStore@@@Z @ 258 NONAME ABSENT ; public: virtual void __thiscall CImSSmtpSettings::RestoreL(class CMsvStore &)
+	?RestoreL@CImSmtpSettings@@UAEXAAVCMsvStore@@@Z @ 259 NONAME ABSENT ; public: virtual void __thiscall CImSmtpSettings::RestoreL(class CMsvStore &)
+	?RestoreSettingsL@CImap4ClientMtm@@QAEXXZ @ 260 NONAME ; public: void __thiscall CImap4ClientMtm::RestoreSettingsL(void)
+	?RestoreSettingsL@CPop3ClientMtm@@QAEXXZ @ 261 NONAME ; public: void __thiscall CPop3ClientMtm::RestoreSettingsL(void)
+	?RestoreSettingsL@CSmtpClientMtm@@QAEXXZ @ 262 NONAME ; public: void __thiscall CSmtpClientMtm::RestoreSettingsL(void)
+	?RunL@CImCacheManager@@MAEXXZ @ 263 NONAME ; protected: virtual void __thiscall CImCacheManager::RunL(void)
+	?SecureSockets@CImBaseEmailSettings@@QBEHXZ @ 264 NONAME ; int CImBaseEmailSettings::SecureSockets(void) const
+	?Selection@CImEmailMessage@@QBEABVCMsvEntrySelection@@XZ @ 265 NONAME ; public: class CMsvEntrySelection const & __thiscall CImEmailMessage::Selection(void)const 
+	?SendCopyToSelf@CImSmtpSettings@@QBE?AW4TImSMTPSendCopyToSelf@@XZ @ 266 NONAME ; enum TImSMTPSendCopyToSelf CImSmtpSettings::SendCopyToSelf(void) const
+	?SendMessageOption@CImSmtpSettings@@QBE?AW4TImSMTPSendMessageOption@@XZ @ 267 NONAME ; enum TImSMTPSendMessageOption CImSmtpSettings::SendMessageOption(void) const
+	?SendTotal@TImSmtpProgress@@QBEHXZ @ 268 NONAME ; public: int __thiscall TImSmtpProgress::SendTotal(void)const 
+	?Sent@TImSmtpProgress@@QBEHXZ @ 269 NONAME ; public: int __thiscall TImSmtpProgress::Sent(void)const 
+	?ServerAddress@CImBaseEmailSettings@@QBE?BVTPtrC16@@XZ @ 270 NONAME ; public: class TPtrC16 const  __thiscall CImBaseEmailSettings::ServerAddress(void)const 
+	?SetAcknowledgeReceipts@CImImap4Settings@@QAEXH@Z @ 271 NONAME ; public: void __thiscall CImImap4Settings::SetAcknowledgeReceipts(int)
+	?SetAcknowledgeReceipts@CImPop3Settings@@QAEXH@Z @ 272 NONAME ; public: void __thiscall CImPop3Settings::SetAcknowledgeReceipts(int)
+	?SetAddSignatureToEmail@CImSmtpSettings@@QAEXH@Z @ 273 NONAME ; public: void __thiscall CImSmtpSettings::SetAddSignatureToEmail(int)
+	?SetAddVCardToEmail@CImSmtpSettings@@QAEXH@Z @ 274 NONAME ; public: void __thiscall CImSmtpSettings::SetAddVCardToEmail(int)
+	?SetApop@CImPop3Settings@@QAEXH@Z @ 275 NONAME ; public: void __thiscall CImPop3Settings::SetApop(int)
+	?SetAutoSendOnConnect@CImImap4Settings@@QAEXH@Z @ 276 NONAME ; public: void __thiscall CImImap4Settings::SetAutoSendOnConnect(int)
+	?SetAutoSendOnConnect@CImPop3Settings@@QAEXH@Z @ 277 NONAME ; public: void __thiscall CImPop3Settings::SetAutoSendOnConnect(int)
+	?SetBodyEncoding@CImHeader@@QAEXW4TMsgOutboxBodyEncoding@@@Z @ 278 NONAME ; public: void __thiscall CImHeader::SetBodyEncoding(enum TMsgOutboxBodyEncoding)
+	?SetBodyEncoding@CImSmtpSettings@@QAEXW4TMsgOutboxBodyEncoding@@@Z @ 279 NONAME ; public: void __thiscall CImSmtpSettings::SetBodyEncoding(enum TMsgOutboxBodyEncoding)
+	?SetCharset@CImHeader@@QAEXI@Z @ 280 NONAME ; public: void __thiscall CImHeader::SetCharset(unsigned int)
+	?SetContentBaseL@CImMimeHeader@@QAEXABVTDesC8@@@Z @ 281 NONAME ; public: void __thiscall CImMimeHeader::SetContentBaseL(class TDesC8 const &)
+	?SetContentDescriptionL@CImMimeHeader@@QAEXABVTDesC8@@@Z @ 282 NONAME ; public: void __thiscall CImMimeHeader::SetContentDescriptionL(class TDesC8 const &)
+	?SetContentDispositionL@CImMimeHeader@@QAEXABVTDesC8@@@Z @ 283 NONAME ; public: void __thiscall CImMimeHeader::SetContentDispositionL(class TDesC8 const &)
+	?SetContentIDL@CImMimeHeader@@QAEXABVTDesC8@@@Z @ 284 NONAME ; public: void __thiscall CImMimeHeader::SetContentIDL(class TDesC8 const &)
+	?SetContentLocationL@CImMimeHeader@@QAEXABVTDesC16@@@Z @ 285 NONAME ; public: void __thiscall CImMimeHeader::SetContentLocationL(class TDesC16 const &)
+	?SetContentSubTypeL@CImMimeHeader@@QAEXABVTDesC8@@@Z @ 286 NONAME ; public: void __thiscall CImMimeHeader::SetContentSubTypeL(class TDesC8 const &)
+	?SetContentTransferEncodingL@CImMimeHeader@@QAEXABVTDesC8@@@Z @ 287 NONAME ; public: void __thiscall CImMimeHeader::SetContentTransferEncodingL(class TDesC8 const &)
+	?SetContentTypeL@CImMimeHeader@@QAEXABVTDesC8@@@Z @ 288 NONAME ; public: void __thiscall CImMimeHeader::SetContentTypeL(class TDesC8 const &)
+	?SetDate@TImRfc822DateField@@QAEXABVTTime@@AAVTDes8@@@Z @ 289 NONAME ; public: void __thiscall TImRfc822DateField::SetDate(class TTime const &,class TDes8 &)
+	?SetDefaultMsgCharSet@CImSmtpSettings@@QAEXVTUid@@@Z @ 290 NONAME ; public: void __thiscall CImSmtpSettings::SetDefaultMsgCharSet(class TUid)
+	?SetDeleteEmailsWhenDisconnecting@CImImap4Settings@@QAEXH@Z @ 291 NONAME ; public: void __thiscall CImImap4Settings::SetDeleteEmailsWhenDisconnecting(int)
+	?SetDeleteEmailsWhenDisconnecting@CImPop3Settings@@QAEXH@Z @ 292 NONAME ; public: void __thiscall CImPop3Settings::SetDeleteEmailsWhenDisconnecting(int)
+	?SetDisconnectedOperation@TMsvEmailEntry@@QAEXW4TImDisconnectedOperationType@@@Z @ 293 NONAME ; public: void __thiscall TMsvEmailEntry::SetDisconnectedOperation(enum TImDisconnectedOperationType)
+	?SetDisconnectedUserMode@CImImap4Settings@@QAEXH@Z @ 294 NONAME ; public: void __thiscall CImImap4Settings::SetDisconnectedUserMode(int)
+	?SetDisconnectedUserMode@CImPop3Settings@@QAEXH@Z @ 295 NONAME ; public: void __thiscall CImPop3Settings::SetDisconnectedUserMode(int)
+	?SetEmailAddressL@CImSSmtpSettings@@QAEXABVTDesC16@@@Z @ 296 NONAME ABSENT ; public: void __thiscall CImSSmtpSettings::SetEmailAddressL(class TDesC16 const &)
+	?SetEmailAddressL@CImSmtpSettings@@QAEXABVTDesC16@@@Z @ 297 NONAME ; public: void __thiscall CImSmtpSettings::SetEmailAddressL(class TDesC16 const &)
+	?SetEmailAliasL@CImSmtpSettings@@QAEXABVTDesC16@@@Z @ 298 NONAME ; public: void __thiscall CImSmtpSettings::SetEmailAliasL(class TDesC16 const &)
+	?SetError@TImSmtpProgress@@QAEXH@Z @ 299 NONAME ; public: void __thiscall TImSmtpProgress::SetError(int)
+	?SetFolder@CImQueuedList@@QAEXJ@Z @ 300 NONAME ; public: void __thiscall CImQueuedList::SetFolder(long)
+	?SetFolderPathL@CImImap4Settings@@QAEXABVTDesC8@@@Z @ 301 NONAME ; public: void __thiscall CImImap4Settings::SetFolderPathL(class TDesC8 const &)
+	?SetFromL@CImHeader@@QAEXABVTDesC16@@@Z @ 302 NONAME ; public: void __thiscall CImHeader::SetFromL(class TDesC16 const &)
+	?SetFromL@CImHeader@@QAEXABVTDesC8@@@Z @ 303 NONAME ; public: void __thiscall CImHeader::SetFromL(class TDesC8 const &)
+	?SetGetMailOptions@CImImap4Settings@@QAEXW4TImap4GetMailOptions@@@Z @ 304 NONAME ; public: void __thiscall CImImap4Settings::SetGetMailOptions(enum TImap4GetMailOptions)
+	?SetGetMailOptions@CImPop3Settings@@QAEXW4TPop3GetMailOptions@@@Z @ 305 NONAME ; public: void __thiscall CImPop3Settings::SetGetMailOptions(enum TPop3GetMailOptions)
+	?SetIMAP4Flags@TMsvEmailEntry@@QAEXHHHHHHH@Z @ 306 NONAME ; public: void __thiscall TMsvEmailEntry::SetIMAP4Flags(int,int,int,int,int,int,int)
+	?SetImMsgIdL@CImHeader@@QAEXABVTDesC8@@@Z @ 307 NONAME ; public: void __thiscall CImHeader::SetImMsgIdL(class TDesC8 const &)
+	?SetImap4SettingsL@CImap4ClientMtm@@QAEXABVCImImap4Settings@@@Z @ 308 NONAME ; public: void __thiscall CImap4ClientMtm::SetImap4SettingsL(class CImImap4Settings const &)
+	?SetInReplyToL@CImHeader@@QAEXABVTDesC8@@@Z @ 309 NONAME ; public: void __thiscall CImHeader::SetInReplyToL(class TDesC8 const &)
+	?SetLoginNameL@CImImap4Settings@@QAEXABVTDesC8@@@Z @ 310 NONAME ; public: void __thiscall CImImap4Settings::SetLoginNameL(class TDesC8 const &)
+	?SetLoginNameL@CImPop3Settings@@QAEXABVTDesC8@@@Z @ 311 NONAME ; public: void __thiscall CImPop3Settings::SetLoginNameL(class TDesC8 const &)
+	?SetMaxEmailSize@CImImap4Settings@@QAEXI@Z @ 312 NONAME ; public: void __thiscall CImImap4Settings::SetMaxEmailSize(unsigned int)
+	?SetMaxEmailSize@CImPop3Settings@@QAEXH@Z @ 313 NONAME ; public: void __thiscall CImPop3Settings::SetMaxEmailSize(int)
+	?SetMessageFolderType@TMsvEmailEntry@@QAEXW4TImEmailFolderType@@@Z @ 314 NONAME ; public: void __thiscall TMsvEmailEntry::SetMessageFolderType(enum TImEmailFolderType)
+	?SetMimeCharset@CImMimeHeader@@QAEXI@Z @ 315 NONAME ; public: void __thiscall CImMimeHeader::SetMimeCharset(unsigned int)
+	?SetMsgNo@TImSmtpProgress@@QAEXH@Z @ 316 NONAME ; public: void __thiscall TImSmtpProgress::SetMsgNo(int)
+	?SetMtmSpecificCommandL@CImOffLineOperation@@QAEXJJHABVTDesC8@@@Z @ 317 NONAME ; public: void __thiscall CImOffLineOperation::SetMtmSpecificCommandL(long,long,int,class TDesC8 const &)
+	?SetOperation@CImOffLineOperation@@AAEXW4TOffLineOpType@1@JJ@Z @ 318 NONAME ; private: void __thiscall CImOffLineOperation::SetOperation(enum CImOffLineOperation::TOffLineOpType,long,long)
+	?SetOperation@CImOffLineOperation@@AAEXW4TOffLineOpType@1@JJHPAVHBufC8@@@Z @ 319 NONAME ; private: void __thiscall CImOffLineOperation::SetOperation(enum CImOffLineOperation::TOffLineOpType,long,long,int,class HBufC8 *)
+	?SetPasswordL@CImImap4Settings@@QAEXABVTDesC8@@@Z @ 320 NONAME ; public: void __thiscall CImImap4Settings::SetPasswordL(class TDesC8 const &)
+	?SetPasswordL@CImPop3Settings@@QAEXABVTDesC8@@@Z @ 321 NONAME ; public: void __thiscall CImPop3Settings::SetPasswordL(class TDesC8 const &)
+	?SetPathSeparator@CImImap4Settings@@QAEXE@Z @ 322 NONAME ; public: void __thiscall CImImap4Settings::SetPathSeparator(unsigned char)
+	?SetPhoneNumberL@CImSSmtpSettings@@QAEXABVTDesC16@@@Z @ 323 NONAME ABSENT ; public: void __thiscall CImSSmtpSettings::SetPhoneNumberL(class TDesC16 const &)
+	?SetPort@CImBaseEmailSettings@@QAEXI@Z @ 324 NONAME ; public: void __thiscall CImBaseEmailSettings::SetPort(unsigned int)
+	?SetReceiptAddressL@CImHeader@@QAEXABVTDesC16@@@Z @ 325 NONAME ; public: void __thiscall CImHeader::SetReceiptAddressL(class TDesC16 const &)
+	?SetReceiptAddressL@CImHeader@@QAEXABVTDesC8@@@Z @ 326 NONAME ; public: void __thiscall CImHeader::SetReceiptAddressL(class TDesC8 const &)
+	?SetReceiptAddressL@CImSmtpSettings@@QAEXABVTDesC16@@@Z @ 327 NONAME ; public: void __thiscall CImSmtpSettings::SetReceiptAddressL(class TDesC16 const &)
+	?SetRelativePathL@CImMimeHeader@@QAEXABVTDesC8@@@Z @ 328 NONAME ; public: void __thiscall CImMimeHeader::SetRelativePathL(class TDesC8 const &)
+	?SetReplyToAddressL@CImSmtpSettings@@QAEXABVTDesC16@@@Z @ 329 NONAME ; public: void __thiscall CImSmtpSettings::SetReplyToAddressL(class TDesC16 const &)
+	?SetReplyToL@CImHeader@@QAEXABVTDesC16@@@Z @ 330 NONAME ; public: void __thiscall CImHeader::SetReplyToL(class TDesC16 const &)
+	?SetReplyToL@CImHeader@@QAEXABVTDesC8@@@Z @ 331 NONAME ; public: void __thiscall CImHeader::SetReplyToL(class TDesC8 const &)
+	?SetRequestReceipts@CImSmtpSettings@@QAEXH@Z @ 332 NONAME ; public: void __thiscall CImSmtpSettings::SetRequestReceipts(int)
+	?SetResentFromL@CImHeader@@QAEXABVTDesC16@@@Z @ 333 NONAME ; public: void __thiscall CImHeader::SetResentFromL(class TDesC16 const &)
+	?SetResentMsgIdL@CImHeader@@QAEXABVTDesC8@@@Z @ 334 NONAME ; public: void __thiscall CImHeader::SetResentMsgIdL(class TDesC8 const &)
+	?SetSecureSockets@CImBaseEmailSettings@@QAEXH@Z @ 335 NONAME ; public: void __thiscall CImBaseEmailSettings::SetSecureSockets(int)
+	?SetSendCopyToSelf@CImSmtpSettings@@QAEXW4TImSMTPSendCopyToSelf@@@Z @ 336 NONAME ; public: void __thiscall CImSmtpSettings::SetSendCopyToSelf(enum TImSMTPSendCopyToSelf)
+	?SetSendMessageOption@CImSmtpSettings@@QAEXW4TImSMTPSendMessageOption@@@Z @ 337 NONAME ; public: void __thiscall CImSmtpSettings::SetSendMessageOption(enum TImSMTPSendMessageOption)
+	?SetServerAddressL@CImBaseEmailSettings@@QAEXABVTDesC16@@@Z @ 338 NONAME ; public: void __thiscall CImBaseEmailSettings::SetServerAddressL(class TDesC16 const &)
+	?SetSettingsL@CPop3ClientMtm@@QAEXABVCImPop3Settings@@@Z @ 339 NONAME ; public: void __thiscall CPop3ClientMtm::SetSettingsL(class CImPop3Settings const &)
+	?SetSettingsL@CSmtpClientMtm@@QAEXABVCImSmtpSettings@@@Z @ 340 NONAME ; public: void __thiscall CSmtpClientMtm::SetSettingsL(class CImSmtpSettings const &)
+	?SetStatus@TImSmtpProgress@@QAEXW4TMsgImOutboxSendState@@@Z @ 341 NONAME ; public: void __thiscall TImSmtpProgress::SetStatus(enum TMsgImOutboxSendState)
+	?SetSubjectL@CImHeader@@QAEXABVTDesC16@@@Z @ 342 NONAME ; public: void __thiscall CImHeader::SetSubjectL(class TDesC16 const &)
+	?SetSubjectL@CImHeader@@QAEXABVTDesC8@@@Z @ 343 NONAME ; public: void __thiscall CImHeader::SetSubjectL(class TDesC8 const &)
+	?SetSubjectL@CSmtpClientMtm@@UAEXABVTDesC16@@@Z @ 344 NONAME ; public: virtual void __thiscall CSmtpClientMtm::SetSubjectL(class TDesC16 const &)
+	?SetSubscribe@CImImap4Settings@@QAEXW4TFolderSubscribeType@@@Z @ 345 NONAME ; public: void __thiscall CImImap4Settings::SetSubscribe(enum TFolderSubscribeType)
+	?SetSynchronise@CImImap4Settings@@QAEXW4TFolderSyncType@@@Z @ 346 NONAME ; public: void __thiscall CImImap4Settings::SetSynchronise(enum TFolderSyncType)
+	?SetUserAddressL@CImBaseEmailSettings@@QAEXABVTDesC16@@@Z @ 347 NONAME ABSENT ; public: void __thiscall CImBaseEmailSettings::SetUserAddressL(class TDesC16 const &)
+	?DummyExport01@@YAXXZ @ 348 NONAME ; void DummyExport01(void)
+	?Settings@CPop3ClientMtm@@QBEABVCImPop3Settings@@XZ @ 349 NONAME ; public: class CImPop3Settings const & __thiscall CPop3ClientMtm::Settings(void)const 
+	?Settings@CSmtpClientMtm@@QBEABVCImSmtpSettings@@XZ @ 350 NONAME ; public: class CImSmtpSettings const & __thiscall CSmtpClientMtm::Settings(void)const 
+	?Size@CImMimeHeader@@QAEHXZ @ 351 NONAME ; public: int __thiscall CImMimeHeader::Size(void)
+	?StartL@CImCacheManager@@QAEXJAAVTRequestStatus@@@Z @ 352 NONAME ; public: void __thiscall CImCacheManager::StartL(long,class TRequestStatus &)
+	?StartL@CImPruneMessage@@QAEXJAAVTRequestStatus@@@Z @ 353 NONAME ; public: void __thiscall CImPruneMessage::StartL(long,class TRequestStatus &)
+	?Status@TImSmtpProgress@@QBE?AW4TMsgImOutboxSendState@@XZ @ 354 NONAME ; public: enum TMsgImOutboxSendState  __thiscall TImSmtpProgress::Status(void)const 
+	?StoreBodyTextL@CImEmailMessage@@QAEXJAAVCRichText@@AAVTRequestStatus@@@Z @ 355 NONAME ; public: void __thiscall CImEmailMessage::StoreBodyTextL(long,class CRichText &,class TRequestStatus &)
+	?StoreL@CImBaseEmailSettings@@UBEXAAVCMsvStore@@@Z @ 356 NONAME ABSENT ; public: virtual void __thiscall CImBaseEmailSettings::StoreL(class CMsvStore &)const 
+	?StoreL@CImHeader@@QBEXAAVCMsvStore@@@Z @ 357 NONAME ; public: void __thiscall CImHeader::StoreL(class CMsvStore &)const 
+	?StoreL@CImImap4Settings@@UBEXAAVCMsvStore@@@Z @ 358 NONAME ABSENT ; public: virtual void __thiscall CImImap4Settings::StoreL(class CMsvStore &)const 
+	?StoreL@CImMimeHeader@@QBEXAAVCMsvStore@@@Z @ 359 NONAME ; public: void __thiscall CImMimeHeader::StoreL(class CMsvStore &)const 
+	?StoreL@CImOffLineArrayStore@@QBEXAAVCMsvStore@@@Z @ 360 NONAME ; public: void __thiscall CImOffLineArrayStore::StoreL(class CMsvStore &)const 
+	?StoreL@CImPop3Settings@@UBEXAAVCMsvStore@@@Z @ 361 NONAME ABSENT ; public: virtual void __thiscall CImPop3Settings::StoreL(class CMsvStore &)const 
+	?StoreL@CImSSmtpSettings@@UBEXAAVCMsvStore@@@Z @ 362 NONAME ABSENT ; public: virtual void __thiscall CImSSmtpSettings::StoreL(class CMsvStore &)const 
+	?StoreL@CImSmtpSettings@@UBEXAAVCMsvStore@@@Z @ 363 NONAME ABSENT ; public: virtual void __thiscall CImSmtpSettings::StoreL(class CMsvStore &)const 
+	?StoreSettingsL@CImap4ClientMtm@@QAEXXZ @ 364 NONAME ; public: void __thiscall CImap4ClientMtm::StoreSettingsL(void)
+	?StoreSettingsL@CPop3ClientMtm@@QAEXXZ @ 365 NONAME ; public: void __thiscall CPop3ClientMtm::StoreSettingsL(void)
+	?StoreSettingsL@CSmtpClientMtm@@QAEXXZ @ 366 NONAME ; public: void __thiscall CSmtpClientMtm::StoreSettingsL(void)
+	?Subject@CImHeader@@QBE?BVTPtrC16@@XZ @ 367 NONAME ; public: class TPtrC16 const  __thiscall CImHeader::Subject(void)const 
+	?SubjectL@CSmtpClientMtm@@UBE?BVTPtrC16@@XZ @ 368 NONAME ; public: virtual class TPtrC16 const  __thiscall CSmtpClientMtm::SubjectL(void)const 
+	?Subscribe@CImImap4Settings@@QBE?AW4TFolderSubscribeType@@XZ @ 369 NONAME ; enum TFolderSubscribeType CImImap4Settings::Subscribe(void) const
+	?Synchronise@CImImap4Settings@@QBE?AW4TFolderSyncType@@XZ @ 370 NONAME ; enum TFolderSyncType CImImap4Settings::Synchronise(void) const
+	?UpdateFailedToSend@TImSmtpProgress@@QAEXXZ @ 371 NONAME ; public: void __thiscall TImSmtpProgress::UpdateFailedToSend(void)
+	?UpdateSent@TImSmtpProgress@@QAEXXZ @ 372 NONAME ; public: void __thiscall TImSmtpProgress::UpdateSent(void)
+	?UserAddress@CImBaseEmailSettings@@QBE?BVTPtrC16@@XZ @ 373 NONAME ABSENT ; public: class TPtrC16 const  __thiscall CImBaseEmailSettings::UserAddress(void)const 
+	?ValidAliasName@TImMessageField@@QAEHABVTDesC16@@@Z @ 374 NONAME ; public: int __thiscall TImMessageField::ValidAliasName(class TDesC16 const &)
+	?ValidAliasName@TImMessageField@@QAEHABVTDesC16@@AAH@Z @ 375 NONAME ; public: int __thiscall TImMessageField::ValidAliasName(class TDesC16 const &,int &)
+	?ValidInternetEmailAddress@TImMessageField@@QAEHABVTDesC16@@@Z @ 376 NONAME ; public: int __thiscall TImMessageField::ValidInternetEmailAddress(class TDesC16 const &)
+	?ValidInternetEmailAddress@TImMessageField@@QAEHABVTDesC16@@AAH11@Z @ 377 NONAME ; public: int __thiscall TImMessageField::ValidInternetEmailAddress(class TDesC16 const &,int &,int &,int &)
+	?ValidInternetEmailAddress@TImMessageField@@QAEHABVTDesC16@@AAH1@Z @ 378 NONAME ; public: int __thiscall TImMessageField::ValidInternetEmailAddress(class TDesC16 const &,int &,int &)
+	?ValidInternetEmailAddress@TImMessageField@@QAEHABVTDesC16@@AAH@Z @ 379 NONAME ; public: int __thiscall TImMessageField::ValidInternetEmailAddress(class TDesC16 const &,int &)
+	?ValidInternetEmailAddressChar@TImMessageField@@QAEHABVTChar@@@Z @ 380 NONAME ; public: int __thiscall TImMessageField::ValidInternetEmailAddressChar(class TChar const &)
+	?ValidSubjectLine@TImMessageField@@QAEHABVTDesC16@@@Z @ 381 NONAME ; public: int __thiscall TImMessageField::ValidSubjectLine(class TDesC16 const &)
+	?ValidSubjectLine@TImMessageField@@QAEHABVTDesC16@@AAH@Z @ 382 NONAME ; public: int __thiscall TImMessageField::ValidSubjectLine(class TDesC16 const &,int &)
+	?ValidSubjectLineChar@TImMessageField@@QAEHABVTChar@@@Z @ 383 NONAME ; public: int __thiscall TImMessageField::ValidSubjectLineChar(class TChar const &)
+	?Version@CImBaseEmailSettings@@QBEGXZ @ 384 NONAME ABSENT ; unsigned short CImBaseEmailSettings::Version(void) const
+	?WriteFile@TImAttachmentFile@@QAEHABVTDesC16@@@Z @ 385 NONAME ; public: int __thiscall TImAttachmentFile::WriteFile(class TDesC16 const &)
+	?WriteFile@TImAttachmentFile@@QAEHABVTDesC8@@@Z @ 386 NONAME ; public: int __thiscall TImAttachmentFile::WriteFile(class TDesC8 const &)
+	?CreateForwardAsAttachmentL@CImEmailOperation@@SAPAV1@AAVTRequestStatus@@AAVCMsvSession@@JJJIABIVTUid@@H@Z @ 387 NONAME ; public: static class CImEmailOperation * __cdecl CImEmailOperation::CreateForwardAsAttachmentL(class TRequestStatus &,class CMsvSession &,long,long,long,unsigned int,unsigned int const &,class TUid,int)
+	?CreateForwardL@CImEmailOperation@@SAPAV1@AAVTRequestStatus@@AAVCMsvSession@@JJJIABIVTUid@@H@Z @ 388 NONAME ; public: static class CImEmailOperation * __cdecl CImEmailOperation::CreateForwardL(class TRequestStatus &,class CMsvSession &,long,long,long,unsigned int,unsigned int const &,class TUid,int)
+	?CreateNewL@CImEmailOperation@@SAPAV1@AAVTRequestStatus@@AAVCMsvSession@@JJIABIVTUid@@H@Z @ 389 NONAME ; public: static class CImEmailOperation * __cdecl CImEmailOperation::CreateNewL(class TRequestStatus &,class CMsvSession &,long,long,unsigned int,unsigned int const &,class TUid,int)
+	?CreateReceiptL@CImEmailOperation@@SAPAV1@AAVTRequestStatus@@AAVCMsvSession@@JJIABIVTUid@@H@Z @ 390 NONAME ; public: static class CImEmailOperation * __cdecl CImEmailOperation::CreateReceiptL(class TRequestStatus &,class CMsvSession &,long,long,unsigned int,unsigned int const &,class TUid,int)
+	?CreateReplyL@CImEmailOperation@@SAPAV1@AAVTRequestStatus@@AAVCMsvSession@@JJIABIVTUid@@H@Z @ 391 NONAME ; public: static class CImEmailOperation * __cdecl CImEmailOperation::CreateReplyL(class TRequestStatus &,class CMsvSession &,long,long,unsigned int,unsigned int const &,class TUid,int)
+	?StoreWithoutCommitL@CImHeader@@QBEXAAVCMsvStore@@@Z @ 392 NONAME ; public: void __thiscall CImHeader::StoreWithoutCommitL(class CMsvStore &)const 
+	?StoreWithoutCommitL@CImMimeHeader@@QBEXAAVCMsvStore@@@Z @ 393 NONAME ; public: void __thiscall CImMimeHeader::StoreWithoutCommitL(class CMsvStore &)const 
+	??1CImIAPPreferences@@UAE@XZ @ 394 NONAME ; public: virtual __thiscall CImIAPPreferences::~CImIAPPreferences(void)
+	??4TImEmailTransformingInfo@@QAEAAV0@ABV0@@Z @ 395 NONAME ; public: class TImEmailTransformingInfo & __thiscall TImEmailTransformingInfo::operator=(class TImEmailTransformingInfo const &)
+	??8TImEmailTransformingInfo@@QAEHABV0@@Z @ 396 NONAME ; public: int __thiscall TImEmailTransformingInfo::operator==(class TImEmailTransformingInfo const &)
+	?AddIAPL@CImIAPPreferences@@QAEXVTImIAPChoice@@H@Z @ 397 NONAME ; public: void __thiscall CImIAPPreferences::AddIAPL(class TImIAPChoice,int)
+	?AttachmentEncoding@TImEmailTransformingInfo@@QBE?AW4TImEncodingType@@XZ @ 398 NONAME ; public: enum TImEncodingType  __thiscall TImEmailTransformingInfo::AttachmentEncoding(void)const 
+	?BodyTextCharset@TImEmailTransformingInfo@@QBEIXZ @ 399 NONAME ; public: unsigned int __thiscall TImEmailTransformingInfo::BodyTextCharset(void)const 
+	?BodyTextEncoding@TImEmailTransformingInfo@@QBE?AW4TImEncodingType@@XZ @ 400 NONAME ; public: enum TImEncodingType  __thiscall TImEmailTransformingInfo::BodyTextEncoding(void)const 
+	?DefaultCharset@CImConvertCharconv@@QBEIXZ @ 401 NONAME ; public: unsigned int __thiscall CImConvertCharconv::DefaultCharset(void)const 
+	?ExternalizeL@TImEmailTransformingInfo@@QBEXAAVRWriteStream@@@Z @ 402 NONAME ; public: void __thiscall TImEmailTransformingInfo::ExternalizeL(class RWriteStream &)const 
+	?FindIAPL@CImIAPPreferences@@QBEHKAAH@Z @ 403 NONAME ; public: int __thiscall CImIAPPreferences::FindIAPL(unsigned long,int &)const 
+	?HTMLCharset@TImEmailTransformingInfo@@QBEIXZ @ 404 NONAME ; public: unsigned int __thiscall TImEmailTransformingInfo::HTMLCharset(void)const 
+	?HTMLEncoding@TImEmailTransformingInfo@@QBE?AW4TImEncodingType@@XZ @ 405 NONAME ; public: enum TImEncodingType  __thiscall TImEmailTransformingInfo::HTMLEncoding(void)const 
+	?HeaderCharset@TImEmailTransformingInfo@@QBEIXZ @ 406 NONAME ; public: unsigned int __thiscall TImEmailTransformingInfo::HeaderCharset(void)const 
+	?HeaderEncoding@TImEmailTransformingInfo@@QBE?AW4TImEncodingType@@XZ @ 407 NONAME ; public: enum TImEncodingType  __thiscall TImEmailTransformingInfo::HeaderEncoding(void)const 
+	?IAPPreference@CImIAPPreferences@@QBE?AVTImIAPChoice@@H@Z @ 408 NONAME ; public: class TImIAPChoice  __thiscall CImIAPPreferences::IAPPreference(int)const 
+	?InternalizeL@TImEmailTransformingInfo@@QAEXAAVRReadStream@@@Z @ 409 NONAME ; public: void __thiscall TImEmailTransformingInfo::InternalizeL(class RReadStream &)
+	?NewLC@CImIAPPreferences@@SAPAV1@XZ @ 410 NONAME ; public: static class CImIAPPreferences * __cdecl CImIAPPreferences::NewLC(void)
+	?NumberOfIAPs@CImIAPPreferences@@QBEHXZ @ 411 NONAME ; public: int __thiscall CImIAPPreferences::NumberOfIAPs(void)const 
+	?RemoveIAPL@CImIAPPreferences@@QAEXH@Z @ 412 NONAME ; public: void __thiscall CImIAPPreferences::RemoveIAPL(int)
+	?ReplaceIAPL@CImIAPPreferences@@QAEXHVTImIAPChoice@@@Z @ 413 NONAME ; public: void __thiscall CImIAPPreferences::ReplaceIAPL(int,class TImIAPChoice)
+	?RestoreL@CImIAPPreferences@@QAEXAAVCMsvStore@@@Z @ 414 NONAME ABSENT ; public: void __thiscall CImIAPPreferences::RestoreL(class CMsvStore &)
+	?RestoreL@TImEmailTransformingInfo@@QAEXAAVCMsvStore@@@Z @ 415 NONAME ; public: void __thiscall TImEmailTransformingInfo::RestoreL(class CMsvStore &)
+	?SendMethod@TImEmailTransformingInfo@@QBE?AW4TImSendMethod@@XZ @ 416 NONAME ; public: enum TImSendMethod  __thiscall TImEmailTransformingInfo::SendMethod(void)const 
+	?SetAttachmentEncoding@TImEmailTransformingInfo@@QAEXW4TImEncodingType@@@Z @ 417 NONAME ; public: void __thiscall TImEmailTransformingInfo::SetAttachmentEncoding(enum TImEncodingType)
+	?SetBodyTextCharset@TImEmailTransformingInfo@@QAEXI@Z @ 418 NONAME ; public: void __thiscall TImEmailTransformingInfo::SetBodyTextCharset(unsigned int)
+	?SetBodyTextEncoding@TImEmailTransformingInfo@@QAEXW4TImEncodingType@@@Z @ 419 NONAME ; public: void __thiscall TImEmailTransformingInfo::SetBodyTextEncoding(enum TImEncodingType)
+	?SetHTMLCharset@TImEmailTransformingInfo@@QAEXI@Z @ 420 NONAME ; public: void __thiscall TImEmailTransformingInfo::SetHTMLCharset(unsigned int)
+	?SetHTMLEncoding@TImEmailTransformingInfo@@QAEXW4TImEncodingType@@@Z @ 421 NONAME ; public: void __thiscall TImEmailTransformingInfo::SetHTMLEncoding(enum TImEncodingType)
+	?SetHeaderAndBodyCharset@TImEmailTransformingInfo@@QAEXI@Z @ 422 NONAME ; public: void __thiscall TImEmailTransformingInfo::SetHeaderAndBodyCharset(unsigned int)
+	?SetHeaderCharset@TImEmailTransformingInfo@@QAEXI@Z @ 423 NONAME ; public: void __thiscall TImEmailTransformingInfo::SetHeaderCharset(unsigned int)
+	?SetHeaderEncodingB@TImEmailTransformingInfo@@QAEXXZ @ 424 NONAME ; public: void __thiscall TImEmailTransformingInfo::SetHeaderEncodingB(void)
+	?SetHeaderEncodingQ@TImEmailTransformingInfo@@QAEXXZ @ 425 NONAME ; public: void __thiscall TImEmailTransformingInfo::SetHeaderEncodingQ(void)
+	?SetSendMethod@TImEmailTransformingInfo@@QAEXW4TImSendMethod@@@Z @ 426 NONAME ; public: void __thiscall TImEmailTransformingInfo::SetSendMethod(enum TImSendMethod)
+	?SetToDefault@TImEmailTransformingInfo@@QAEXW4TImSendMethod@@@Z @ 427 NONAME ; public: void __thiscall TImEmailTransformingInfo::SetToDefault(enum TImSendMethod)
+	?StoreL@CImIAPPreferences@@QBEXAAVCMsvStore@@@Z @ 428 NONAME ABSENT ; public: void __thiscall CImIAPPreferences::StoreL(class CMsvStore &)const 
+	?StoreL@TImEmailTransformingInfo@@QBEXAAVCMsvStore@@@Z @ 429 NONAME ; public: void __thiscall TImEmailTransformingInfo::StoreL(class CMsvStore &)const 
+	?SystemDefaultCharset@CImConvertCharconv@@QBEIXZ @ 430 NONAME ; public: unsigned int __thiscall CImConvertCharconv::SystemDefaultCharset(void)const 
+	?Version@CImIAPPreferences@@QBEHXZ @ 431 NONAME ; public: int __thiscall CImIAPPreferences::Version(void)const 
+	?StartL@CImCacheManager@@QAEXABVCMsvEntrySelection@@AAVTRequestStatus@@@Z @ 432 NONAME ; public: void __thiscall CImCacheManager::StartL(class CMsvEntrySelection const &,class TRequestStatus &)
+	?InboxSynchronisationLimit@CImImap4Settings@@QBEJXZ @ 433 NONAME ; long CImImap4Settings::InboxSynchronisationLimit(void) const
+	?MailboxSynchronisationLimit@CImImap4Settings@@QBEJXZ @ 434 NONAME ; long CImImap4Settings::MailboxSynchronisationLimit(void) const
+	?SetInboxSynchronisationLimit@CImImap4Settings@@QAEXJ@Z @ 435 NONAME ; public: void __thiscall CImImap4Settings::SetInboxSynchronisationLimit(long)
+	?SetMailboxSynchronisationLimit@CImImap4Settings@@QAEXJ@Z @ 436 NONAME ; public: void __thiscall CImImap4Settings::SetMailboxSynchronisationLimit(long)
+	?LoginName@CImSmtpSettings@@QBE?BVTPtrC8@@XZ @ 437 NONAME ; public: class TPtrC8 const  __thiscall CImSmtpSettings::LoginName(void)const 
+	?Password@CImSmtpSettings@@QBE?BVTPtrC8@@XZ @ 438 NONAME ; public: class TPtrC8 const  __thiscall CImSmtpSettings::Password(void)const 
+	?SetLoginNameL@CImSmtpSettings@@QAEXABVTDesC8@@@Z @ 439 NONAME ; public: void __thiscall CImSmtpSettings::SetLoginNameL(class TDesC8 const &)
+	?SetPasswordL@CImSmtpSettings@@QAEXABVTDesC8@@@Z @ 440 NONAME ; public: void __thiscall CImSmtpSettings::SetPasswordL(class TDesC8 const &)
+	?InboxSynchronisationLimit@CImPop3Settings@@QBEJXZ @ 441 NONAME ; long CImPop3Settings::InboxSynchronisationLimit(void) const
+	?SetInboxSynchronisationLimit@CImPop3Settings@@QAEXJ@Z @ 442 NONAME ; public: void __thiscall CImPop3Settings::SetInboxSynchronisationLimit(long)
+	?ServiceId@TImSmtpProgress@@QBEJXZ @ 443 NONAME ; public: long __thiscall TImSmtpProgress::ServiceId(void)const 
+	?SetServiceId@TImSmtpProgress@@QAEXJ@Z @ 444 NONAME ; public: void __thiscall TImSmtpProgress::SetServiceId(long)
+	?InboxLoginDetails@CImSmtpSettings@@QBEHXZ @ 445 NONAME ; int CImSmtpSettings::InboxLoginDetails(void) const
+	?SMTPAuth@CImSmtpSettings@@QBEHXZ @ 446 NONAME ; int CImSmtpSettings::SMTPAuth(void) const
+	?SetInboxLoginDetails@CImSmtpSettings@@QAEXH@Z @ 447 NONAME ; public: void __thiscall CImSmtpSettings::SetInboxLoginDetails(int)
+	?SetSMTPAuth@CImSmtpSettings@@QAEXH@Z @ 448 NONAME ; public: void __thiscall CImSmtpSettings::SetSMTPAuth(int)
+	?SetUpdatingSeenFlags@CImImap4Settings@@QAEXH@Z @ 449 NONAME ; public: void __thiscall CImImap4Settings::SetUpdatingSeenFlags(int)
+	?UpdatingSeenFlags@CImImap4Settings@@QBEHXZ @ 450 NONAME ; int CImImap4Settings::UpdatingSeenFlags(void) const
+	?SSLWrapper@CImBaseEmailSettings@@QBEHXZ @ 451 NONAME ; public: int __thiscall CImBaseEmailSettings::SSLWrapper(void)const 
+	?SetSSLWrapper@CImBaseEmailSettings@@QAEXH@Z @ 452 NONAME ; public: void __thiscall CImBaseEmailSettings::SetSSLWrapper(int)
+	?ConnectionIAP@TImSmtpProgress@@QBEHXZ @ 453 NONAME ; public: int __thiscall TImSmtpProgress::ConnectionIAP(void)const 
+	?ConnectionIAP@TImap4GenericProgress@@QBEHXZ @ 454 NONAME ; public: int __thiscall TImap4GenericProgress::ConnectionIAP(void)const 
+	?ConnectionIAP@TPop3Progress@@QBEHXZ @ 455 NONAME ; public: int __thiscall TPop3Progress::ConnectionIAP(void)const 
+	?ConnectionState@TImSmtpProgress@@QBEHXZ @ 456 NONAME ; public: int __thiscall TImSmtpProgress::ConnectionState(void)const 
+	?ConnectionState@TImap4GenericProgress@@QBEHXZ @ 457 NONAME ; public: int __thiscall TImap4GenericProgress::ConnectionState(void)const 
+	?ConnectionState@TPop3Progress@@QBEHXZ @ 458 NONAME ; public: int __thiscall TPop3Progress::ConnectionState(void)const 
+	?SetConnectionIAP@TImSmtpProgress@@QAEXH@Z @ 459 NONAME ; public: void __thiscall TImSmtpProgress::SetConnectionIAP(int)
+	?GetAttachmentsListL@CImEmailMessage@@QAEXJW4TImAttachmentType@1@W4TImEmailEntryType@1@@Z @ 460 NONAME ; public: void __thiscall CImEmailMessage::GetAttachmentsListL(long,enum CImEmailMessage::TImAttachmentType,enum CImEmailMessage::TImEmailEntryType)
+	?GetBodyTextL@CImEmailMessage@@QAEXJW4TImEmailEntryType@1@AAVCRichText@@AAVCParaFormatLayer@@AAVCCharFormatLayer@@@Z @ 461 NONAME ; public: void __thiscall CImEmailMessage::GetBodyTextL(long,enum CImEmailMessage::TImEmailEntryType,class CRichText &,class CParaFormatLayer &,class CCharFormatLayer &)
+	?SetSyncRateL@CImImap4Settings@@QAEXH@Z @ 462 NONAME ; void CImImap4Settings::SetSyncRateL(int)
+	?SyncRate@CImImap4Settings@@QBEHXZ @ 463 NONAME ; int CImImap4Settings::SyncRate(void) const
+	?GetCharacterSetL@CImEmailMessage@@QAEXJAAIAAH@Z @ 464 NONAME ; void CImEmailMessage::GetCharacterSetL(long, unsigned int &, int &)
+	?SetCharacterSetL@CImEmailMessage@@QAEXJI@Z @ 465 NONAME ; void CImEmailMessage::SetCharacterSetL(long, unsigned int)
+	?GetAttachmentName@CImEmailMessage@@QBE?AVTPtrC16@@H@Z @ 466 NONAME ABSENT ; public: class TPtrC16  __thiscall CImEmailMessage::GetAttachmentName(int)const 
+	?OverrideCharset@CImHeader@@QBEIXZ @ 467 NONAME ; unsigned int CImHeader::OverrideCharset(void) const
+	?ReDecodeL@CImHeader@@QAEXAAVRFs@@@Z @ 468 NONAME ; public: void __thiscall CImHeader::ReDecodeL(class RFs &)
+	?SaveEncodedHeadersL@CImHeader@@QAEXXZ @ 469 NONAME ; public: void __thiscall CImHeader::SaveEncodedHeadersL(void)
+	?SetOverrideCharset@CImHeader@@QAEXI@Z @ 470 NONAME ; public: void __thiscall CImHeader::SetOverrideCharset(unsigned int)
+	?FetchSize@CImImap4Settings@@QBEIXZ @ 471 NONAME ; unsigned int CImImap4Settings::FetchSize(void) const
+	?SetFetchSizeL@CImImap4Settings@@QAEXI@Z @ 472 NONAME ; void CImImap4Settings::SetFetchSizeL(unsigned int)
+	?ImapIdle@CImImap4Settings@@QBEHXZ @ 473 NONAME ; int CImImap4Settings::ImapIdle(void) const
+	?ImapIdleTimeout@CImImap4Settings@@QBEHXZ @ 474 NONAME ; int CImImap4Settings::ImapIdleTimeout(void) const
+	?SetImapIdle@CImImap4Settings@@QAEXH@Z @ 475 NONAME ; public: void __thiscall CImImap4Settings::SetImapIdle(int)
+	?SetImapIdleTimeoutL@CImImap4Settings@@QAEXH@Z @ 476 NONAME ; public: void __thiscall CImImap4Settings::SetImapIdleTimeoutL(int)
+	?AttachmentSizeLimit@CImImap4Settings@@QBEJXZ @ 477 NONAME ; long CImImap4Settings::AttachmentSizeLimit(void) const
+	?BodyTextSizeLimit@CImImap4Settings@@QBEJXZ @ 478 NONAME ; long CImImap4Settings::BodyTextSizeLimit(void) const	
+	?PartialDownloaded@TMsvEmailEntry@@QBEHXZ @ 479 NONAME ; public: int __thiscall TMsvEmailEntry::PartialDownloaded(void)const 
+	?PartialMailOptions@CImImap4Settings@@QBE?AW4TImImap4PartialMailOptions@@XZ @ 480 NONAME ; enum TImImap4PartialMailOptions CImImap4Settings::PartialMailOptions(void) const
+	?SetAttachmentSizeLimitL@CImImap4Settings@@QAEXJ@Z @ 481 NONAME ; public: void __thiscall CImImap4Settings::SetAttachmentSizeLimitL(long)
+	?SetBodyTextSizeLimitL@CImImap4Settings@@QAEXJ@Z @ 482 NONAME ; public: void __thiscall CImImap4Settings::SetBodyTextSizeLimitL(long)
+	?SetPartialDownloaded@TMsvEmailEntry@@QAEXH@Z @ 483 NONAME ; public: void __thiscall TMsvEmailEntry::SetPartialDownloaded(int)
+	?SetPartialMailOptionsL@CImImap4Settings@@QAEXW4TImImap4PartialMailOptions@@@Z @ 484 NONAME ; public: void __thiscall CImImap4Settings::SetPartialMailOptionsL(enum TImImap4PartialMailOptions)
+	??0TImPop3PopulateOptions@@QAE@XZ @ 485 NONAME ; public: __thiscall TImPop3PopulateOptions::TImPop3PopulateOptions(void)
+	?MaxEmailSize@TImPop3PopulateOptions@@QAEHXZ @ 486 NONAME ; public: int __thiscall TImPop3PopulateOptions::MaxEmailSize(void)
+	?PopulationLimit@CImPop3Settings@@QBEJXZ @ 487 NONAME ; public: long __thiscall CImPop3Settings::PopulationLimit(void)const 
+	?PopulationLimit@TImPop3PopulateOptions@@QAEHXZ @ 488 NONAME ; public: int __thiscall TImPop3PopulateOptions::PopulationLimit(void)
+	?SetMaxEmailSize@TImPop3PopulateOptions@@QAEXH@Z @ 489 NONAME ; public: void __thiscall TImPop3PopulateOptions::SetMaxEmailSize(int)
+	?SetPopulationLimit@TImPop3PopulateOptions@@QAEXH@Z @ 490 NONAME ; public: void __thiscall TImPop3PopulateOptions::SetPopulationLimit(int)
+	?SetPopulationLimitL@CImPop3Settings@@QAEXJ@Z @ 491 NONAME ; public: void __thiscall CImPop3Settings::SetPopulationLimitL(long)
+	?UnpackL@TImPop3PopulateOptions@@SAXABVTDesC8@@AAV1@@Z @ 492 NONAME ; public: static void __cdecl TImPop3PopulateOptions::UnpackL(class TDesC8 const &,class TImPop3PopulateOptions &)
+	?AttachmentManager@CImEmailMessage@@QBEAAVMMsvAttachmentManager@@XZ @ 493 NONAME ; class MMsvAttachmentManager & CImEmailMessage::AttachmentManager(void) const
+	?AddAttachmentL@CImap4ClientMtm@@UAEXAAVRFile@@ABVTDesC8@@AAVTRequestStatus@@@Z @ 494 NONAME ABSENT ; void CImap4ClientMtm::AddAttachmentL(class RFile &, class TDesC8 const &, class TRequestStatus &)
+	?AddAttachmentL@CImap4ClientMtm@@UAEXABVTDesC16@@ABVTDesC8@@AAVTRequestStatus@@@Z @ 495 NONAME ABSENT ; void CImap4ClientMtm::AddAttachmentL(class TDesC16 const &, class TDesC8 const &, class TRequestStatus &)
+	?AddAttachmentL@CPop3ClientMtm@@UAEXAAVRFile@@ABVTDesC8@@AAVTRequestStatus@@@Z @ 496 NONAME ABSENT ; void CPop3ClientMtm::AddAttachmentL(class RFile &, class TDesC8 const &, class TRequestStatus &)
+	?AddAttachmentL@CPop3ClientMtm@@UAEXABVTDesC16@@ABVTDesC8@@AAVTRequestStatus@@@Z @ 497 NONAME ABSENT ; void CPop3ClientMtm::AddAttachmentL(class TDesC16 const &, class TDesC8 const &, class TRequestStatus &)
+	?AddAttachmentL@CSmtpClientMtm@@UAEXAAVRFile@@ABVTDesC8@@AAVTRequestStatus@@@Z @ 498 NONAME ABSENT ; void CSmtpClientMtm::AddAttachmentL(class RFile &, class TDesC8 const &, class TRequestStatus &)
+	?AddAttachmentL@CSmtpClientMtm@@UAEXABVTDesC16@@ABVTDesC8@@AAVTRequestStatus@@@Z @ 499 NONAME ABSENT ; void CSmtpClientMtm::AddAttachmentL(class TDesC16 const &, class TDesC8 const &, class TRequestStatus &)
+	?AddLinkedAttachmentL@CImap4ClientMtm@@UAEXABVTDesC16@@ABVTDesC8@@AAVTRequestStatus@@@Z @ 500 NONAME ABSENT ; void CImap4ClientMtm::AddLinkedAttachmentL(class TDesC16 const &, class TDesC8 const &, class TRequestStatus &)
+	?AddLinkedAttachmentL@CPop3ClientMtm@@UAEXABVTDesC16@@ABVTDesC8@@AAVTRequestStatus@@@Z @ 501 NONAME ABSENT ; void CPop3ClientMtm::AddLinkedAttachmentL(class TDesC16 const &, class TDesC8 const &, class TRequestStatus &)
+	?AddLinkedAttachmentL@CSmtpClientMtm@@UAEXABVTDesC16@@ABVTDesC8@@AAVTRequestStatus@@@Z @ 502 NONAME ABSENT ; void CSmtpClientMtm::AddLinkedAttachmentL(class TDesC16 const &, class TDesC8 const &, class TRequestStatus &)
+	?AddEntryAsAttachmentL@CImap4ClientMtm@@UAEXJAAVTRequestStatus@@@Z @ 503 NONAME ; void CImap4ClientMtm::AddEntryAsAttachmentL(long, class TRequestStatus &)
+	?AddEntryAsAttachmentL@CPop3ClientMtm@@UAEXJAAVTRequestStatus@@@Z @ 504 NONAME ; void CPop3ClientMtm::AddEntryAsAttachmentL(long, class TRequestStatus &)
+	?AddEntryAsAttachmentL@CSmtpClientMtm@@UAEXJAAVTRequestStatus@@@Z @ 505 NONAME ; void CSmtpClientMtm::AddEntryAsAttachmentL(long, class TRequestStatus &)
+	?GetUniversalResourceIdentifierFileHandle@CImEmailMessage@@UBEHAAJAAVRFile@@@Z @ 506 NONAME ; int CImEmailMessage::GetUniversalResourceIdentifierFileHandle(long &, class RFile &) const
+	?SetFileHandle@TImAttachmentFile@@QAEXAAVRFile@@W4TImFileOpenMode@1@@Z @ 507 NONAME ; void TImAttachmentFile::SetFileHandle(class RFile &, enum TImAttachmentFile::TImFileOpenMode)
+	??1CEmailAccounts@@UAE@XZ @ 508 NONAME ; CEmailAccounts::~CEmailAccounts(void)
+	?ChangeDefaultIMAPServiceL@CEmailAccounts@@QAEXABJ@Z @ 509 NONAME ABSENT ; void CEmailAccounts::ChangeDefaultIMAPServiceL(long const &)
+	?ChangeDefaultPOPServiceL@CEmailAccounts@@QAEXABJ@Z @ 510 NONAME ABSENT ; void CEmailAccounts::ChangeDefaultPOPServiceL(long const &)
+	?ChangeDefaultSMTPServiceL@CEmailAccounts@@QAEXABJ@Z @ 511 NONAME ABSENT ; void CEmailAccounts::ChangeDefaultSMTPServiceL(long const &)
+	?ChangeDefaultServiceL@CImap4ClientMtm@@UAEXABJ@Z @ 512 NONAME ; void CImap4ClientMtm::ChangeDefaultServiceL(long const &)
+	?ChangeDefaultServiceL@CPop3ClientMtm@@UAEXABJ@Z @ 513 NONAME ; void CPop3ClientMtm::ChangeDefaultServiceL(long const &)
+	?ChangeDefaultServiceL@CSmtpClientMtm@@UAEXABJ@Z @ 514 NONAME ; void CSmtpClientMtm::ChangeDefaultServiceL(long const &)
+	?CreateIMAPAccountL@CEmailAccounts@@QAE?AVTIMAP4AccountId@@ABVTDesC16@@AAVCImImap4Settings@@AAVCImIAPPreferences@@AAVCImSmtpSettings@@2@Z @ 515 NONAME ABSENT ; class TIMAP4AccountId CEmailAccounts::CreateIMAPAccountL(class TDesC16 const &, class CImImap4Settings &, class CImIAPPreferences &, class CImSmtpSettings &, class CImIAPPreferences &)
+	?CreatePOPAccountL@CEmailAccounts@@QAE?AVTPOP3AccountId@@ABVTDesC16@@ABVCImPop3Settings@@ABVCImIAPPreferences@@ABVCImSmtpSettings@@2@Z @ 516 NONAME ABSENT ; class TPOP3AccountId CEmailAccounts::CreatePOPAccountL(class TDesC16 const &, class CImPop3Settings const &, class CImIAPPreferences const &, class CImSmtpSettings const &, class CImIAPPreferences const &)
+	?DefaultIMAPAccountL@CEmailAccounts@@QBE?AVTIMAP4AccountId@@XZ @ 517 NONAME ABSENT ; class TIMAP4AccountId CEmailAccounts::DefaultIMAPAccountL(void) const
+	?DefaultIMAPServiceL@CEmailAccounts@@QBEJXZ @ 518 NONAME ABSENT ; long CEmailAccounts::DefaultIMAPServiceL(void) const
+	?DefaultPOPAccountL@CEmailAccounts@@QBE?AVTPOP3AccountId@@XZ @ 519 NONAME ABSENT ; class TPOP3AccountId CEmailAccounts::DefaultPOPAccountL(void) const
+	?DefaultPOPServiceL@CEmailAccounts@@QBEJXZ @ 520 NONAME ABSENT ; long CEmailAccounts::DefaultPOPServiceL(void) const
+	?DefaultSMTPServiceL@CEmailAccounts@@QBEJXZ @ 521 NONAME ABSENT ; long CEmailAccounts::DefaultSMTPServiceL(void) const
+	?DefaultServiceL@CImap4ClientMtm@@UBEJXZ @ 522 NONAME ; long CImap4ClientMtm::DefaultServiceL(void) const
+	?DefaultServiceL@CPop3ClientMtm@@UBEJXZ @ 523 NONAME ; long CPop3ClientMtm::DefaultServiceL(void) const
+	?DefaultServiceL@CSmtpClientMtm@@UBEJXZ @ 524 NONAME ; long CSmtpClientMtm::DefaultServiceL(void) const
+	?DeleteIMAPAccountL@CEmailAccounts@@QAEXABVTIMAP4AccountId@@@Z @ 525 NONAME ABSENT ; void CEmailAccounts::DeleteIMAPAccountL(class TIMAP4AccountId const &)
+	?DeletePOPAccountL@CEmailAccounts@@QAEXABVTPOP3AccountId@@@Z @ 526 NONAME ABSENT ; void CEmailAccounts::DeletePOPAccountL(class TPOP3AccountId const &)
+	?GetIMAPAccountsL@CEmailAccounts@@QBEXAAV?$RArray@VTIMAP4AccountId@@@@@Z @ 527 NONAME ABSENT ; void CEmailAccounts::GetIMAPAccountsL(class RArray<class TIMAP4AccountId> &) const
+	?GetPOPAccountsL@CEmailAccounts@@QBEXAAV?$RArray@VTPOP3AccountId@@@@@Z @ 528 NONAME ABSENT ; void CEmailAccounts::GetPOPAccountsL(class RArray<class TPOP3AccountId> &) const
+	?LoadIMAPServiceSettingsL@CEmailAccounts@@QAEXJAAVCImImap4Settings@@@Z @ 529 NONAME ABSENT ; void CEmailAccounts::LoadIMAPServiceSettingsL(long, class CImImap4Settings &)
+	?LoadIMAPServiceSettingsL@CEmailAccounts@@QAEXJAAVCImImap4Settings@@AAVCImIAPPreferences@@@Z @ 530 NONAME ABSENT ; void CEmailAccounts::LoadIMAPServiceSettingsL(long, class CImImap4Settings &, class CImIAPPreferences &)
+	?LoadIMAPSettingsL@CEmailAccounts@@QAEXABVTIMAP4AccountId@@AAVCImImap4Settings@@AAVCImIAPPreferences@@AAVCImSmtpSettings@@2@Z @ 531 NONAME ABSENT ; void CEmailAccounts::LoadIMAPSettingsL(class TIMAP4AccountId const &, class CImImap4Settings &, class CImIAPPreferences &, class CImSmtpSettings &, class CImIAPPreferences &)
+	?LoadPOPServiceSettingsL@CEmailAccounts@@QAEXJAAVCImPop3Settings@@@Z @ 532 NONAME ABSENT ; void CEmailAccounts::LoadPOPServiceSettingsL(long, class CImPop3Settings &)
+	?LoadPOPServiceSettingsL@CEmailAccounts@@QAEXJAAVCImPop3Settings@@AAVCImIAPPreferences@@@Z @ 533 NONAME ABSENT ; void CEmailAccounts::LoadPOPServiceSettingsL(long, class CImPop3Settings &, class CImIAPPreferences &)
+	?LoadPOPSettingsL@CEmailAccounts@@QAEXABVTPOP3AccountId@@AAVCImPop3Settings@@AAVCImIAPPreferences@@AAVCImSmtpSettings@@2@Z @ 534 NONAME ABSENT ; void CEmailAccounts::LoadPOPSettingsL(class TPOP3AccountId const &, class CImPop3Settings &, class CImIAPPreferences &, class CImSmtpSettings &, class CImIAPPreferences &)
+	?LoadSMTPServiceSettingsL@CEmailAccounts@@QAEXJAAVCImSmtpSettings@@@Z @ 535 NONAME ABSENT ; void CEmailAccounts::LoadSMTPServiceSettingsL(long, class CImSmtpSettings &)
+	?LoadSMTPServiceSettingsL@CEmailAccounts@@QAEXJAAVCImSmtpSettings@@AAVCImIAPPreferences@@@Z @ 536 NONAME ABSENT ; void CEmailAccounts::LoadSMTPServiceSettingsL(long, class CImSmtpSettings &, class CImIAPPreferences &)
+	?NewL@CEmailAccounts@@SAPAV1@XZ @ 537 NONAME ; class CEmailAccounts * CEmailAccounts::NewL(void)
+	?NewLC@CEmailAccounts@@SAPAV1@XZ @ 538 NONAME ; class CEmailAccounts * CEmailAccounts::NewLC(void)
+	?PopulateDefaultIMAPSettingsL@CEmailAccounts@@QAEXAAVCImImap4Settings@@AAVCImIAPPreferences@@AAVCImSmtpSettings@@1@Z @ 539 NONAME ABSENT ; void CEmailAccounts::PopulateDefaultIMAPSettingsL(class CImImap4Settings &, class CImIAPPreferences &, class CImSmtpSettings &, class CImIAPPreferences &)
+	?PopulateDefaultPOPSettingsL@CEmailAccounts@@QAEXAAVCImPop3Settings@@AAVCImIAPPreferences@@AAVCImSmtpSettings@@1@Z @ 540 NONAME ABSENT ; void CEmailAccounts::PopulateDefaultPOPSettingsL(class CImPop3Settings &, class CImIAPPreferences &, class CImSmtpSettings &, class CImIAPPreferences &)
+	?RemoveDefaultIMAPServiceL@CEmailAccounts@@QAEXXZ @ 541 NONAME ABSENT ; void CEmailAccounts::RemoveDefaultIMAPServiceL(void)
+	?RemoveDefaultPOPServiceL@CEmailAccounts@@QAEXXZ @ 542 NONAME ABSENT ; void CEmailAccounts::RemoveDefaultPOPServiceL(void)
+	?RemoveDefaultSMTPServiceL@CEmailAccounts@@QAEXXZ @ 543 NONAME ABSENT ; void CEmailAccounts::RemoveDefaultSMTPServiceL(void)
+	?RemoveDefaultServiceL@CImap4ClientMtm@@UAEXXZ @ 544 NONAME ; void CImap4ClientMtm::RemoveDefaultServiceL(void)
+	?RemoveDefaultServiceL@CPop3ClientMtm@@UAEXXZ @ 545 NONAME ; void CPop3ClientMtm::RemoveDefaultServiceL(void)
+	?RemoveDefaultServiceL@CSmtpClientMtm@@UAEXXZ @ 546 NONAME ; void CSmtpClientMtm::RemoveDefaultServiceL(void)
+	?SaveIMAPServiceSettingsL@CEmailAccounts@@QBEXJABVCImImap4Settings@@@Z @ 547 NONAME ABSENT ; void CEmailAccounts::SaveIMAPServiceSettingsL(long, class CImImap4Settings const &) const
+	?SaveIMAPServiceSettingsL@CEmailAccounts@@QBEXJABVCImImap4Settings@@ABVCImIAPPreferences@@@Z @ 548 NONAME ABSENT ; void CEmailAccounts::SaveIMAPServiceSettingsL(long, class CImImap4Settings const &, class CImIAPPreferences const &) const
+	?SaveIMAPSettingsL@CEmailAccounts@@QBEXABVTIMAP4AccountId@@ABVCImImap4Settings@@ABVCImIAPPreferences@@ABVCImSmtpSettings@@2@Z @ 549 NONAME ABSENT ; void CEmailAccounts::SaveIMAPSettingsL(class TIMAP4AccountId const &, class CImImap4Settings const &, class CImIAPPreferences const &, class CImSmtpSettings const &, class CImIAPPreferences const &) const
+	?SavePOPServiceSettingsL@CEmailAccounts@@QBEXJABVCImPop3Settings@@@Z @ 550 NONAME ABSENT ; void CEmailAccounts::SavePOPServiceSettingsL(long, class CImPop3Settings const &) const
+	?SavePOPServiceSettingsL@CEmailAccounts@@QBEXJABVCImPop3Settings@@ABVCImIAPPreferences@@@Z @ 551 NONAME ABSENT ; void CEmailAccounts::SavePOPServiceSettingsL(long, class CImPop3Settings const &, class CImIAPPreferences const &) const
+	?SavePOPSettingsL@CEmailAccounts@@QBEXABVTPOP3AccountId@@ABVCImPop3Settings@@ABVCImIAPPreferences@@ABVCImSmtpSettings@@2@Z @ 552 NONAME ABSENT ; void CEmailAccounts::SavePOPSettingsL(class TPOP3AccountId const &, class CImPop3Settings const &, class CImIAPPreferences const &, class CImSmtpSettings const &, class CImIAPPreferences const &) const
+	?SaveSMTPServiceSettingsL@CEmailAccounts@@QBEXJABVCImSmtpSettings@@@Z @ 553 NONAME ABSENT ; void CEmailAccounts::SaveSMTPServiceSettingsL(long, class CImSmtpSettings const &) const
+	?SaveSMTPServiceSettingsL@CEmailAccounts@@QBEXJABVCImSmtpSettings@@ABVCImIAPPreferences@@@Z @ 554 NONAME ABSENT ; void CEmailAccounts::SaveSMTPServiceSettingsL(long, class CImSmtpSettings const &, class CImIAPPreferences const &) const
+	?SetDefaultIMAPAccountL@CEmailAccounts@@QAEXABVTIMAP4AccountId@@@Z @ 555 NONAME ABSENT ; void CEmailAccounts::SetDefaultIMAPAccountL(class TIMAP4AccountId const &)
+	?SetDefaultPOPAccountL@CEmailAccounts@@QAEXABVTPOP3AccountId@@@Z @ 556 NONAME ABSENT ; void CEmailAccounts::SetDefaultPOPAccountL(class TPOP3AccountId const &)
+	?FindFirstHTMLPageFileHandleL@CImEmailMessage@@QAEXJAAVTRequestStatus@@@Z @ 557 NONAME ; void CImEmailMessage::FindFirstHTMLPageFileHandleL(long, class TRequestStatus &)
+	?FindUniversalResourceIdentifierFileHandleL@CImEmailMessage@@UAEXJABVTDesC16@@0AAVTRequestStatus@@@Z @ 558 NONAME ; void CImEmailMessage::FindUniversalResourceIdentifierFileHandleL(long, class TDesC16 const &, class TDesC16 const &, class TRequestStatus &)
+	?CreateAttachmentL@CImap4ClientMtm@@UAEXABVTDesC16@@AAVRFile@@ABVTDesC8@@AAVTRequestStatus@@@Z @ 559 NONAME ABSENT ; void CImap4ClientMtm::CreateAttachmentL(class TDesC16 const &, class RFile &, class TDesC8 const &, class TRequestStatus &)
+	?CreateAttachmentL@CPop3ClientMtm@@UAEXABVTDesC16@@AAVRFile@@ABVTDesC8@@AAVTRequestStatus@@@Z @ 560 NONAME ABSENT ; void CPop3ClientMtm::CreateAttachmentL(class TDesC16 const &, class RFile &, class TDesC8 const &, class TRequestStatus &)
+	?CreateAttachmentL@CSmtpClientMtm@@UAEXABVTDesC16@@AAVRFile@@ABVTDesC8@@AAVTRequestStatus@@@Z @ 561 NONAME ABSENT ; void CSmtpClientMtm::CreateAttachmentL(class TDesC16 const &, class RFile &, class TDesC8 const &, class TRequestStatus &)
+	?SearchString@CImImap4Settings@@QBE?BVTPtrC8@@XZ @ 562 NONAME ; class TPtrC8 const CImImap4Settings::SearchString(void) const
+	?SetSearchStringL@CImImap4Settings@@QAEXABVTDesC8@@@Z @ 563 NONAME ; void CImImap4Settings::SetSearchStringL(class TDesC8 const &)
+	?StoreBodyTextWithMimeHeaderL@CImEmailMessage@@QAEXJAAVCRichText@@ABVCImMimeHeader@@AAVTRequestStatus@@@Z @ 564 NONAME ; void CImEmailMessage::StoreBodyTextWithMimeHeaderL(long, class CRichText &, class CImMimeHeader const &, class TRequestStatus &)
+	?AddAttachmentL@CImap4ClientMtm@@UAEXAAVRFile@@ABVTDesC8@@IAAVTRequestStatus@@@Z @ 565 NONAME ; void CImap4ClientMtm::AddAttachmentL(class RFile &, class TDesC8 const &, unsigned int, class TRequestStatus &)
+	?AddAttachmentL@CImap4ClientMtm@@UAEXABVTDesC16@@ABVTDesC8@@IAAVTRequestStatus@@@Z @ 566 NONAME ; void CImap4ClientMtm::AddAttachmentL(class TDesC16 const &, class TDesC8 const &, unsigned int, class TRequestStatus &)
+	?AddAttachmentL@CPop3ClientMtm@@UAEXAAVRFile@@ABVTDesC8@@IAAVTRequestStatus@@@Z @ 567 NONAME ; void CPop3ClientMtm::AddAttachmentL(class RFile &, class TDesC8 const &, unsigned int, class TRequestStatus &)
+	?AddAttachmentL@CPop3ClientMtm@@UAEXABVTDesC16@@ABVTDesC8@@IAAVTRequestStatus@@@Z @ 568 NONAME ; void CPop3ClientMtm::AddAttachmentL(class TDesC16 const &, class TDesC8 const &, unsigned int, class TRequestStatus &)
+	?AddAttachmentL@CSmtpClientMtm@@UAEXAAVRFile@@ABVTDesC8@@IAAVTRequestStatus@@@Z @ 569 NONAME ; void CSmtpClientMtm::AddAttachmentL(class RFile &, class TDesC8 const &, unsigned int, class TRequestStatus &)
+	?AddAttachmentL@CSmtpClientMtm@@UAEXABVTDesC16@@ABVTDesC8@@IAAVTRequestStatus@@@Z @ 570 NONAME ; void CSmtpClientMtm::AddAttachmentL(class TDesC16 const &, class TDesC8 const &, unsigned int, class TRequestStatus &)
+	?AddLinkedAttachmentL@CImap4ClientMtm@@UAEXABVTDesC16@@ABVTDesC8@@IAAVTRequestStatus@@@Z @ 571 NONAME ; void CImap4ClientMtm::AddLinkedAttachmentL(class TDesC16 const &, class TDesC8 const &, unsigned int, class TRequestStatus &)
+	?AddLinkedAttachmentL@CPop3ClientMtm@@UAEXABVTDesC16@@ABVTDesC8@@IAAVTRequestStatus@@@Z @ 572 NONAME ; void CPop3ClientMtm::AddLinkedAttachmentL(class TDesC16 const &, class TDesC8 const &, unsigned int, class TRequestStatus &)
+	?AddLinkedAttachmentL@CSmtpClientMtm@@UAEXABVTDesC16@@ABVTDesC8@@IAAVTRequestStatus@@@Z @ 573 NONAME ; void CSmtpClientMtm::AddLinkedAttachmentL(class TDesC16 const &, class TDesC8 const &, unsigned int, class TRequestStatus &)
+	?CreateAttachmentL@CImap4ClientMtm@@UAEXABVTDesC16@@AAVRFile@@ABVTDesC8@@IAAVTRequestStatus@@@Z @ 574 NONAME ; void CImap4ClientMtm::CreateAttachmentL(class TDesC16 const &, class RFile &, class TDesC8 const &, unsigned int, class TRequestStatus &)
+	?CreateAttachmentL@CPop3ClientMtm@@UAEXABVTDesC16@@AAVRFile@@ABVTDesC8@@IAAVTRequestStatus@@@Z @ 575 NONAME ; void CPop3ClientMtm::CreateAttachmentL(class TDesC16 const &, class RFile &, class TDesC8 const &, unsigned int, class TRequestStatus &)
+	?CreateAttachmentL@CSmtpClientMtm@@UAEXABVTDesC16@@AAVRFile@@ABVTDesC8@@IAAVTRequestStatus@@@Z @ 576 NONAME ; void CSmtpClientMtm::CreateAttachmentL(class TDesC16 const &, class RFile &, class TDesC8 const &, unsigned int, class TRequestStatus &)	
+	?CreateImapAccountL@CEmailAccounts@@QAE?AVTImapAccount@@ABVTDesC16@@ABVCImImap4Settings@@ABVCImIAPPreferences@@H@Z @ 577 NONAME ; class TImapAccount CEmailAccounts::CreateImapAccountL(class TDesC16 const &, class CImImap4Settings const &, class CImIAPPreferences const &, int)
+	?CreatePopAccountL@CEmailAccounts@@QAE?AVTPopAccount@@ABVTDesC16@@ABVCImPop3Settings@@ABVCImIAPPreferences@@H@Z @ 578 NONAME ; class TPopAccount CEmailAccounts::CreatePopAccountL(class TDesC16 const &, class CImPop3Settings const &, class CImIAPPreferences const &, int)
+	?CreateSmtpAccountL@CEmailAccounts@@QAE?AVTSmtpAccount@@AAVTImapAccount@@ABVCImSmtpSettings@@ABVCImIAPPreferences@@H@Z @ 579 NONAME ; class TSmtpAccount CEmailAccounts::CreateSmtpAccountL(class TImapAccount &, class CImSmtpSettings const &, class CImIAPPreferences const &, int)
+	?CreateSmtpAccountL@CEmailAccounts@@QAE?AVTSmtpAccount@@AAVTPopAccount@@ABVCImSmtpSettings@@ABVCImIAPPreferences@@H@Z @ 580 NONAME ; class TSmtpAccount CEmailAccounts::CreateSmtpAccountL(class TPopAccount &, class CImSmtpSettings const &, class CImIAPPreferences const &, int)
+	?CreateSmtpAccountL@CEmailAccounts@@QAE?AVTSmtpAccount@@ABVTDesC16@@ABVCImSmtpSettings@@ABVCImIAPPreferences@@H@Z @ 581 NONAME ; class TSmtpAccount CEmailAccounts::CreateSmtpAccountL(class TDesC16 const &, class CImSmtpSettings const &, class CImIAPPreferences const &, int)
+	?DefaultSmtpAccountL@CEmailAccounts@@QAEHAAVTSmtpAccount@@@Z @ 582 NONAME ; int CEmailAccounts::DefaultSmtpAccountL(class TSmtpAccount &)
+	?DeleteImapAccountL@CEmailAccounts@@QAEXABVTImapAccount@@@Z @ 583 NONAME ; void CEmailAccounts::DeleteImapAccountL(class TImapAccount const &)
+	?DeletePopAccountL@CEmailAccounts@@QAEXABVTPopAccount@@@Z @ 584 NONAME ; void CEmailAccounts::DeletePopAccountL(class TPopAccount const &)
+	?DeleteSmtpAccountL@CEmailAccounts@@QAEXABVTSmtpAccount@@@Z @ 585 NONAME ; void CEmailAccounts::DeleteSmtpAccountL(class TSmtpAccount const &)
+	?GetImapAccountL@CEmailAccounts@@QAEXJAAVTImapAccount@@@Z @ 586 NONAME ; void CEmailAccounts::GetImapAccountL(long, class TImapAccount &)
+	?GetImapAccountsL@CEmailAccounts@@QAEXAAV?$RArray@VTImapAccount@@@@@Z @ 587 NONAME ; void CEmailAccounts::GetImapAccountsL(class RArray<class TImapAccount> &)
+	?GetPopAccountL@CEmailAccounts@@QAEXJAAVTPopAccount@@@Z @ 588 NONAME ; void CEmailAccounts::GetPopAccountL(long, class TPopAccount &)
+	?GetPopAccountsL@CEmailAccounts@@QAEXAAV?$RArray@VTPopAccount@@@@@Z @ 589 NONAME ; void CEmailAccounts::GetPopAccountsL(class RArray<class TPopAccount> &)
+	?GetSmtpAccountL@CEmailAccounts@@QAEXJAAVTSmtpAccount@@@Z @ 590 NONAME ; void CEmailAccounts::GetSmtpAccountL(long, class TSmtpAccount &)
+	?GetSmtpAccountsL@CEmailAccounts@@QAEXAAV?$RArray@VTSmtpAccount@@@@@Z @ 591 NONAME ; void CEmailAccounts::GetSmtpAccountsL(class RArray<class TSmtpAccount> &)
+	?LoadImapIapSettingsL@CEmailAccounts@@QAEXABVTImapAccount@@AAVCImIAPPreferences@@@Z @ 592 NONAME ; void CEmailAccounts::LoadImapIapSettingsL(class TImapAccount const &, class CImIAPPreferences &)
+	?LoadImapSettingsL@CEmailAccounts@@QAEXABVTImapAccount@@AAVCImImap4Settings@@@Z @ 593 NONAME ; void CEmailAccounts::LoadImapSettingsL(class TImapAccount const &, class CImImap4Settings &)
+	?LoadPopIapSettingsL@CEmailAccounts@@QAEXABVTPopAccount@@AAVCImIAPPreferences@@@Z @ 594 NONAME ; void CEmailAccounts::LoadPopIapSettingsL(class TPopAccount const &, class CImIAPPreferences &)
+	?LoadPopSettingsL@CEmailAccounts@@QAEXABVTPopAccount@@AAVCImPop3Settings@@@Z @ 595 NONAME ; void CEmailAccounts::LoadPopSettingsL(class TPopAccount const &, class CImPop3Settings &)
+	?LoadSmtpIapSettingsL@CEmailAccounts@@QAEXABVTSmtpAccount@@AAVCImIAPPreferences@@@Z @ 596 NONAME ; void CEmailAccounts::LoadSmtpIapSettingsL(class TSmtpAccount const &, class CImIAPPreferences &)
+	?LoadSmtpSettingsL@CEmailAccounts@@QAEXABVTSmtpAccount@@AAVCImSmtpSettings@@@Z @ 597 NONAME ; void CEmailAccounts::LoadSmtpSettingsL(class TSmtpAccount const &, class CImSmtpSettings &)
+	?PopulateDefaultImapSettingsL@CEmailAccounts@@QAEXAAVCImImap4Settings@@AAVCImIAPPreferences@@@Z @ 598 NONAME ; void CEmailAccounts::PopulateDefaultImapSettingsL(class CImImap4Settings &, class CImIAPPreferences &)
+	?PopulateDefaultPopSettingsL@CEmailAccounts@@QAEXAAVCImPop3Settings@@AAVCImIAPPreferences@@@Z @ 599 NONAME ; void CEmailAccounts::PopulateDefaultPopSettingsL(class CImPop3Settings &, class CImIAPPreferences &)
+	?PopulateDefaultSmtpSettingsL@CEmailAccounts@@QAEXAAVCImSmtpSettings@@AAVCImIAPPreferences@@@Z @ 600 NONAME ; void CEmailAccounts::PopulateDefaultSmtpSettingsL(class CImSmtpSettings &, class CImIAPPreferences &)
+	?SaveImapIapSettingsL@CEmailAccounts@@QAEXABVTImapAccount@@ABVCImIAPPreferences@@@Z @ 601 NONAME ; void CEmailAccounts::SaveImapIapSettingsL(class TImapAccount const &, class CImIAPPreferences const &)
+	?SaveImapSettingsL@CEmailAccounts@@QAEXABVTImapAccount@@ABVCImImap4Settings@@@Z @ 602 NONAME ; void CEmailAccounts::SaveImapSettingsL(class TImapAccount const &, class CImImap4Settings const &)
+	?SavePopIapSettingsL@CEmailAccounts@@QAEXABVTPopAccount@@ABVCImIAPPreferences@@@Z @ 603 NONAME ; void CEmailAccounts::SavePopIapSettingsL(class TPopAccount const &, class CImIAPPreferences const &)
+	?SavePopSettingsL@CEmailAccounts@@QAEXABVTPopAccount@@ABVCImPop3Settings@@@Z @ 604 NONAME ; void CEmailAccounts::SavePopSettingsL(class TPopAccount const &, class CImPop3Settings const &)
+	?SaveSmtpIapSettingsL@CEmailAccounts@@QAEXABVTSmtpAccount@@ABVCImIAPPreferences@@@Z @ 605 NONAME ; void CEmailAccounts::SaveSmtpIapSettingsL(class TSmtpAccount const &, class CImIAPPreferences const &)
+	?SaveSmtpSettingsL@CEmailAccounts@@QAEXABVTSmtpAccount@@ABVCImSmtpSettings@@@Z @ 606 NONAME ; void CEmailAccounts::SaveSmtpSettingsL(class TSmtpAccount const &, class CImSmtpSettings const &)
+	?SetDefaultSmtpAccountL@CEmailAccounts@@QAEXABVTSmtpAccount@@@Z @ 607 NONAME ; void CEmailAccounts::SetDefaultSmtpAccountL(class TSmtpAccount const &)
+	?SetToCcIncludeLimitL@CImSmtpSettings@@QAEXH@Z @ 608 NONAME ; void CImSmtpSettings::SetToCcIncludeLimitL(int)
+	?ToCcIncludeLimit@CImSmtpSettings@@QBEHXZ @ 609 NONAME ; int CImSmtpSettings::ToCcIncludeLimit(void) const
+	?DeleteDefaultSmtpAccountL@CEmailAccounts@@QAEXXZ @ 610 NONAME ; void CEmailAccounts::DeleteDefaultSmtpAccountL(void)
+	?GetBodyTextEntryIdL@CImEmailMessage@@QAEXAAVTRequestStatus@@JW4TImEmailEntryType@1@@Z @ 611 NONAME ; void CImEmailMessage::GetBodyTextEntryIdL(class TRequestStatus &, long, enum CImEmailMessage::TImEmailEntryType)
+	?GetBodyTextEntryIdL@CImEmailMessage@@QAEXJW4TImEmailEntryType@1@@Z @ 612 NONAME ; void CImEmailMessage::GetBodyTextEntryIdL(long, enum CImEmailMessage::TImEmailEntryType)
+	?IsAccountReadOnlyL@CEmailAccounts@@QAEHABVTImapAccount@@@Z @ 613 NONAME ; int CEmailAccounts::IsAccountReadOnlyL(class TImapAccount const &)
+	?IsAccountReadOnlyL@CEmailAccounts@@QAEHABVTPopAccount@@@Z @ 614 NONAME ; int CEmailAccounts::IsAccountReadOnlyL(class TPopAccount const &)
+	?IsAccountReadOnlyL@CEmailAccounts@@QAEHABVTSmtpAccount@@@Z @ 615 NONAME ; int CEmailAccounts::IsAccountReadOnlyL(class TSmtpAccount const &)
+	?CancelAttachmentOperation@CSmtpClientMtm@@UAEXXZ @ 616 NONAME ; void CSmtpClientMtm::CancelAttachmentOperation(void)
+	?SetUseExpunge@CImImap4Settings@@QAEXH@Z @ 617 NONAME ; void CImImap4Settings::SetUseExpunge(int)
+	?UseExpunge@CImImap4Settings@@QBEHXZ @ 618 NONAME ; int CImImap4Settings::UseExpunge(void) const
+	??1CImPlainBodyText@@UAE@XZ @ 619 NONAME ; CImPlainBodyText::~CImPlainBodyText(void)
+	?CommitL@CImPlainBodyText@@QAEXAAVTRequestStatus@@@Z @ 620 NONAME ; void CImPlainBodyText::CommitL(class TRequestStatus &)
+	?CommitL@CImPlainBodyText@@QAEXAAVTRequestStatus@@AAVCImMimeHeader@@@Z @ 621 NONAME ; void CImPlainBodyText::CommitL(class TRequestStatus &, class CImMimeHeader &)
+	?CreateNewL@CImEmailOperation@@SAPAV1@AAVTRequestStatus@@AAVCMsvSession@@JJIABIVTUid@@HH@Z @ 622 NONAME ; class CImEmailOperation * CImEmailOperation::CreateNewL(class TRequestStatus &, class CMsvSession &, long, long, unsigned int, unsigned int const &, class TUid, int, int)
+	?NextChunkL@CImPlainBodyText@@QAEXAAVTDes16@@@Z @ 623 NONAME ; void CImPlainBodyText::NextChunkL(class TDes16 &)
+	?NextChunkL@CImPlainBodyText@@QAEXAAVTDes16@@AAVTRequestStatus@@@Z @ 624 NONAME ; void CImPlainBodyText::NextChunkL(class TDes16 &, class TRequestStatus &)
+	?NextChunkL@CImPlainBodyText@@QAEXAAVTDes8@@@Z @ 625 NONAME ; void CImPlainBodyText::NextChunkL(class TDes8 &)
+	?NextChunkL@CImPlainBodyText@@QAEXAAVTDes8@@AAVTRequestStatus@@@Z @ 626 NONAME ; void CImPlainBodyText::NextChunkL(class TDes8 &, class TRequestStatus &)
+	?OpenPlainBodyTextForReadL@CImEmailMessage@@QAEPAVCImPlainBodyText@@W4TImEmailEntryType@1@H@Z @ 627 NONAME ; class CImPlainBodyText * CImEmailMessage::OpenPlainBodyTextForReadL(enum CImEmailMessage::TImEmailEntryType, int)
+	?OpenPlainBodyTextForWriteL@CImEmailMessage@@QAEPAVCImPlainBodyText@@XZ @ 628 NONAME ; class CImPlainBodyText * CImEmailMessage::OpenPlainBodyTextForWriteL(void)
+	?PreviousChunkL@CImPlainBodyText@@QAEXAAVTDes16@@@Z @ 629 NONAME ; void CImPlainBodyText::PreviousChunkL(class TDes16 &)
+	?PreviousChunkL@CImPlainBodyText@@QAEXAAVTDes16@@AAVTRequestStatus@@@Z @ 630 NONAME ; void CImPlainBodyText::PreviousChunkL(class TDes16 &, class TRequestStatus &)
+	?PreviousChunkL@CImPlainBodyText@@QAEXAAVTDes8@@@Z @ 631 NONAME ; void CImPlainBodyText::PreviousChunkL(class TDes8 &)
+	?PreviousChunkL@CImPlainBodyText@@QAEXAAVTDes8@@AAVTRequestStatus@@@Z @ 632 NONAME ; void CImPlainBodyText::PreviousChunkL(class TDes8 &, class TRequestStatus &)
+	?StoreChunkL@CImPlainBodyText@@QAEXABVTDesC16@@@Z @ 633 NONAME ; void CImPlainBodyText::StoreChunkL(class TDesC16 const &)
+	?StoreChunkL@CImPlainBodyText@@QAEXABVTDesC16@@AAVTRequestStatus@@@Z @ 634 NONAME ; void CImPlainBodyText::StoreChunkL(class TDesC16 const &, class TRequestStatus &)
+	?StoreChunkL@CImPlainBodyText@@QAEXABVTDesC8@@@Z @ 635 NONAME ; void CImPlainBodyText::StoreChunkL(class TDesC8 const &)
+	?StoreChunkL@CImPlainBodyText@@QAEXABVTDesC8@@AAVTRequestStatus@@@Z @ 636 NONAME ; void CImPlainBodyText::StoreChunkL(class TDesC8 const &, class TRequestStatus &)
+	?StoreRichTextAsPlainTextL@CImPlainBodyText@@QAEXAAVCRichText@@@Z @ 637 NONAME ; void CImPlainBodyText::StoreRichTextAsPlainTextL(class CRichText &)
+	?FolderSyncDisabled@CImImap4Settings@@QAEHXZ @ 638 NONAME ; int CImImap4Settings::FolderSyncDisabled(void)
+	?SetFolderSyncDisabled@CImImap4Settings@@QAEXH@Z @ 639 NONAME ; void CImImap4Settings::SetFolderSyncDisabled(int)
+	?AddRuleL@CImapSyncDownloadRules@@QAEHW4TRulesType@1@HKABVTImImap4GetPartialMailInfo@@@Z @ 640 NONAME ; int CImapSyncDownloadRules::AddRuleL(enum CImapSyncDownloadRules::TRulesType, int, unsigned long, class TImImap4GetPartialMailInfo const &)
+	?AddSizesL@CImapTransportBufferSizes@@QAEHHKHH@Z @ 641 NONAME ; int CImapTransportBufferSizes::AddSizesL(int, unsigned long, int, int)
+	?BearerMobility@CImBaseEmailSettings@@QBEHXZ @ 642 NONAME ; int CImBaseEmailSettings::BearerMobility(void) const
+	?CopyL@CImSmtpMobilitySettings@@QAEPAV1@XZ @ 643 NONAME ; class CImSmtpMobilitySettings * CImSmtpMobilitySettings::CopyL(void)
+	?CopyL@CImapSyncDownloadRules@@QAEPAV1@XZ @ 644 NONAME ; class CImapSyncDownloadRules * CImapSyncDownloadRules::CopyL(void)
+	?CopyL@CImapTransportBufferSizes@@QAEPAV1@XZ @ 645 NONAME ; class CImapTransportBufferSizes * CImapTransportBufferSizes::CopyL(void)
+	?CopyLC@CImSmtpMobilitySettings@@QAEPAV1@XZ @ 646 NONAME ; class CImSmtpMobilitySettings * CImSmtpMobilitySettings::CopyLC(void)
+	?CopyLC@CImapSyncDownloadRules@@QAEPAV1@XZ @ 647 NONAME ; class CImapSyncDownloadRules * CImapSyncDownloadRules::CopyLC(void)
+	?CopyLC@CImapTransportBufferSizes@@QAEPAV1@XZ @ 648 NONAME ; class CImapTransportBufferSizes * CImapTransportBufferSizes::CopyLC(void)
+	?CreateImapAccountL@CEmailAccounts@@QAE?AVTImapAccount@@ABVTDesC16@@ABVCImImap4Settings@@ABVCImIAPPreferences@@ABVCImapSyncDownloadRules@@H@Z @ 649 NONAME ; class TImapAccount CEmailAccounts::CreateImapAccountL(class TDesC16 const &, class CImImap4Settings const &, class CImIAPPreferences const &, class CImapSyncDownloadRules const &, int)
+	?CreateSmtpMobilityAccountL@CEmailAccounts@@QAE?AVTSmtpMobilityAccount@@ABVTDesC16@@ABV?$RArray@K@@ABVTSmtpAccount@@2H@Z @ 650 NONAME ; class TSmtpMobilityAccount CEmailAccounts::CreateSmtpMobilityAccountL(class TDesC16 const &, class RArray<unsigned long> const &, class TSmtpAccount const &, class TSmtpAccount const &, int)
+	?CreateSmtpMobilityAccountL@CEmailAccounts@@QAE?AVTSmtpMobilityAccount@@ABVTDesC16@@ABV?$RArray@K@@ABVTSmtpAccount@@ABVCImSmtpMobilitySettings@@H@Z @ 651 NONAME ; class TSmtpMobilityAccount CEmailAccounts::CreateSmtpMobilityAccountL(class TDesC16 const &, class RArray<unsigned long> const &, class TSmtpAccount const &, class CImSmtpMobilitySettings const &, int)
+	?DefaultMsgCharSet@CImSmtpMobilitySettings@@QBE?BVTUid@@XZ @ 652 NONAME ; class TUid const CImSmtpMobilitySettings::DefaultMsgCharSet(void) const
+	?DeleteBearerTypesL@CImapSyncDownloadRules@@QAEHW4TRulesType@1@KAAH@Z @ 653 NONAME ; int CImapSyncDownloadRules::DeleteBearerTypesL(enum CImapSyncDownloadRules::TRulesType, unsigned long, int &)
+	?DeleteBearerTypesL@CImapTransportBufferSizes@@QAEHKAAH@Z @ 654 NONAME ; int CImapTransportBufferSizes::DeleteBearerTypesL(unsigned long, int &)
+	?DeleteImapTransportBufferSizesL@CEmailAccounts@@QAEXXZ @ 655 NONAME ; void CEmailAccounts::DeleteImapTransportBufferSizesL(void)
+	?DeleteRuleL@CImapSyncDownloadRules@@QAEHW4TRulesType@1@H@Z @ 656 NONAME ; int CImapSyncDownloadRules::DeleteRuleL(enum CImapSyncDownloadRules::TRulesType, int)
+	?DeleteSizesL@CImapTransportBufferSizes@@QAEHH@Z @ 657 NONAME ; int CImapTransportBufferSizes::DeleteSizesL(int)
+	?DeleteSmtpMobilityAccountL@CEmailAccounts@@QAEXABVTSmtpMobilityAccount@@@Z @ 658 NONAME ; void CEmailAccounts::DeleteSmtpMobilityAccountL(class TSmtpMobilityAccount const &)
+	?EmailAddress@CImSmtpMobilitySettings@@QBE?BVTPtrC16@@XZ @ 659 NONAME ; class TPtrC16 const CImSmtpMobilitySettings::EmailAddress(void) const
+	?EmailAlias@CImSmtpMobilitySettings@@QBE?BVTPtrC16@@XZ @ 660 NONAME ; class TPtrC16 const CImSmtpMobilitySettings::EmailAlias(void) const
+	?GetMailInfoL@CImapSyncDownloadRules@@QBEHW4TRulesType@1@KAAVTImImap4GetPartialMailInfo@@@Z @ 661 NONAME ; int CImapSyncDownloadRules::GetMailInfoL(enum CImapSyncDownloadRules::TRulesType, unsigned long, class TImImap4GetPartialMailInfo &) const
+	?GetRuleL@CImapSyncDownloadRules@@QBEHW4TRulesType@1@HAAKAAVTImImap4GetPartialMailInfo@@@Z @ 662 NONAME ; int CImapSyncDownloadRules::GetRuleL(enum CImapSyncDownloadRules::TRulesType, int, unsigned long &, class TImImap4GetPartialMailInfo &) const
+	?GetSizesL@CImapTransportBufferSizes@@QBEHHAAKAAH1@Z @ 663 NONAME ; int CImapTransportBufferSizes::GetSizesL(int, unsigned long &, int &, int &) const
+	?GetSizesL@CImapTransportBufferSizes@@QBEHKAAH0@Z @ 664 NONAME ; int CImapTransportBufferSizes::GetSizesL(unsigned long, int &, int &) const
+	?GetSmtpAccountL@CEmailAccounts@@QAEXHAAVTSmtpAccount@@@Z @ 665 NONAME ; void CEmailAccounts::GetSmtpAccountL(int, class TSmtpAccount &)
+	?GetSmtpMobilityAccountsL@CEmailAccounts@@QAEXABVTSmtpAccount@@AAV?$RArray@VTSmtpMobilityAccount@@@@@Z @ 666 NONAME ; void CEmailAccounts::GetSmtpMobilityAccountsL(class TSmtpAccount const &, class RArray<class TSmtpMobilityAccount> &)
+	?IsAccountReadOnlyL@CEmailAccounts@@QAEHABVTSmtpMobilityAccount@@@Z @ 667 NONAME ; int CEmailAccounts::IsAccountReadOnlyL(class TSmtpMobilityAccount const &)
+	?LoadImapSyncDownloadRulesL@CEmailAccounts@@QAEXABVTImapAccount@@AAVCImapSyncDownloadRules@@@Z @ 668 NONAME ; void CEmailAccounts::LoadImapSyncDownloadRulesL(class TImapAccount const &, class CImapSyncDownloadRules &)
+	?LoadImapTransportBufferSizesL@CEmailAccounts@@QAEXAAVCImapTransportBufferSizes@@@Z @ 669 NONAME ; void CEmailAccounts::LoadImapTransportBufferSizesL(class CImapTransportBufferSizes &)
+	?LoadSmtpMobilityAccountIapListL@CEmailAccounts@@QAEXABVTSmtpMobilityAccount@@AAV?$RArray@K@@@Z @ 670 NONAME ; void CEmailAccounts::LoadSmtpMobilityAccountIapListL(class TSmtpMobilityAccount const &, class RArray<unsigned long> &)
+	?LoadSmtpMobilitySettingsL@CEmailAccounts@@QAEHAAHKAAVCImSmtpMobilitySettings@@@Z @ 671 NONAME ; int CEmailAccounts::LoadSmtpMobilitySettingsL(int &, unsigned long, class CImSmtpMobilitySettings &)
+	?LoadSmtpMobilitySettingsL@CEmailAccounts@@QAEXABVTSmtpMobilityAccount@@AAVCImSmtpMobilitySettings@@@Z @ 672 NONAME ; void CEmailAccounts::LoadSmtpMobilitySettingsL(class TSmtpMobilityAccount const &, class CImSmtpMobilitySettings &)
+	?LoginName@CImSmtpMobilitySettings@@QBE?BVTPtrC8@@XZ @ 673 NONAME ; class TPtrC8 const CImSmtpMobilitySettings::LoginName(void) const
+	?NewL@CImSmtpMobilitySettings@@SAPAV1@XZ @ 674 NONAME ; class CImSmtpMobilitySettings * CImSmtpMobilitySettings::NewL(void)
+	?NewL@CImapSyncDownloadRules@@SAPAV1@XZ @ 675 NONAME ; class CImapSyncDownloadRules * CImapSyncDownloadRules::NewL(void)
+	?NewL@CImapTransportBufferSizes@@SAPAV1@XZ @ 676 NONAME ; class CImapTransportBufferSizes * CImapTransportBufferSizes::NewL(void)
+	?NewLC@CImSmtpMobilitySettings@@SAPAV1@XZ @ 677 NONAME ; class CImSmtpMobilitySettings * CImSmtpMobilitySettings::NewLC(void)
+	?NewLC@CImapSyncDownloadRules@@SAPAV1@XZ @ 678 NONAME ; class CImapSyncDownloadRules * CImapSyncDownloadRules::NewLC(void)
+	?NewLC@CImapTransportBufferSizes@@SAPAV1@XZ @ 679 NONAME ; class CImapTransportBufferSizes * CImapTransportBufferSizes::NewLC(void)
+	?Password@CImSmtpMobilitySettings@@QBE?BVTPtrC8@@XZ @ 680 NONAME ; class TPtrC8 const CImSmtpMobilitySettings::Password(void) const
+	?PopulateDefaultSmtpMobilitySettingsL@CEmailAccounts@@QAEXAAVCImSmtpMobilitySettings@@@Z @ 681 NONAME ; void CEmailAccounts::PopulateDefaultSmtpMobilitySettingsL(class CImSmtpMobilitySettings &)
+	?Port@CImSmtpMobilitySettings@@QBEIXZ @ 682 NONAME ; unsigned int CImSmtpMobilitySettings::Port(void) const
+	?RemoveSNAP@CImIAPPreferences@@QAEXXZ @ 683 NONAME ; void CImIAPPreferences::RemoveSNAP(void)
+	?Reset@CImSmtpMobilitySettings@@QAEXXZ @ 684 NONAME ; void CImSmtpMobilitySettings::Reset(void)
+	?Reset@CImapSyncDownloadRules@@QAEXXZ @ 685 NONAME ; void CImapSyncDownloadRules::Reset(void)
+	?Reset@CImapTransportBufferSizes@@QAEXXZ @ 686 NONAME ; void CImapTransportBufferSizes::Reset(void)
+	?SMTPAuth@CImSmtpMobilitySettings@@QBEHXZ @ 687 NONAME ; int CImSmtpMobilitySettings::SMTPAuth(void) const
+	?SNAPDefined@CImIAPPreferences@@QBEHXZ @ 688 NONAME ; int CImIAPPreferences::SNAPDefined(void) const
+	?SNAPPreference@CImIAPPreferences@@QBEKXZ @ 689 NONAME ; unsigned long CImIAPPreferences::SNAPPreference(void) const
+	?SSLWrapper@CImSmtpMobilitySettings@@QBEHXZ @ 690 NONAME ; int CImSmtpMobilitySettings::SSLWrapper(void) const
+	?SaveImapSyncDownloadRulesL@CEmailAccounts@@QAEXABVTImapAccount@@ABVCImapSyncDownloadRules@@@Z @ 691 NONAME ; void CEmailAccounts::SaveImapSyncDownloadRulesL(class TImapAccount const &, class CImapSyncDownloadRules const &)
+	?SaveImapTransportBufferSizesL@CEmailAccounts@@QAEXABVCImapTransportBufferSizes@@@Z @ 692 NONAME ; void CEmailAccounts::SaveImapTransportBufferSizesL(class CImapTransportBufferSizes const &)
+	?SaveSmtpMobilityAccountIapListL@CEmailAccounts@@QAEXABVTSmtpMobilityAccount@@ABV?$RArray@K@@@Z @ 693 NONAME ; void CEmailAccounts::SaveSmtpMobilityAccountIapListL(class TSmtpMobilityAccount const &, class RArray<unsigned long> const &)
+	?SaveSmtpMobilitySettingsL@CEmailAccounts@@QAEXABVTSmtpMobilityAccount@@ABVCImSmtpMobilitySettings@@@Z @ 694 NONAME ; void CEmailAccounts::SaveSmtpMobilitySettingsL(class TSmtpMobilityAccount const &, class CImSmtpMobilitySettings const &)
+	?SecureSockets@CImSmtpMobilitySettings@@QBEHXZ @ 695 NONAME ; int CImSmtpMobilitySettings::SecureSockets(void) const
+	?ServerAddress@CImSmtpMobilitySettings@@QBE?BVTPtrC16@@XZ @ 696 NONAME ; class TPtrC16 const CImSmtpMobilitySettings::ServerAddress(void) const
+	?SetBearerMobility@CImBaseEmailSettings@@QAEXH@Z @ 697 NONAME ; void CImBaseEmailSettings::SetBearerMobility(int)
+	?SetDefaultMsgCharSet@CImSmtpMobilitySettings@@QAEXVTUid@@@Z @ 698 NONAME ; void CImSmtpMobilitySettings::SetDefaultMsgCharSet(class TUid)
+	?SetEmailAddressL@CImSmtpMobilitySettings@@QAEXABVTDesC16@@@Z @ 699 NONAME ; void CImSmtpMobilitySettings::SetEmailAddressL(class TDesC16 const &)
+	?SetEmailAliasL@CImSmtpMobilitySettings@@QAEXABVTDesC16@@@Z @ 700 NONAME ; void CImSmtpMobilitySettings::SetEmailAliasL(class TDesC16 const &)
+	?SetLoginNameL@CImSmtpMobilitySettings@@QAEXABVTDesC8@@@Z @ 701 NONAME ; void CImSmtpMobilitySettings::SetLoginNameL(class TDesC8 const &)
+	?SetPasswordL@CImSmtpMobilitySettings@@QAEXABVTDesC8@@@Z @ 702 NONAME ; void CImSmtpMobilitySettings::SetPasswordL(class TDesC8 const &)
+	?SetPort@CImSmtpMobilitySettings@@QAEXI@Z @ 703 NONAME ; void CImSmtpMobilitySettings::SetPort(unsigned int)
+	?SetSMTPAuth@CImSmtpMobilitySettings@@QAEXH@Z @ 704 NONAME ; void CImSmtpMobilitySettings::SetSMTPAuth(int)
+	?GetSmtpMobilityAccountsL@CEmailAccounts@@QAEXAAV?$RArray@VTSmtpMobilityAccount@@@@@Z @ 705 NONAME ; void CEmailAccounts::GetSmtpMobilityAccountsL(class RArray<class TSmtpMobilityAccount> &)
+	?SetSNAPL@CImIAPPreferences@@QAEXK@Z @ 706 NONAME ; void CImIAPPreferences::SetSNAPL(unsigned long)
+	?SetSSLWrapper@CImSmtpMobilitySettings@@QAEXH@Z @ 707 NONAME ; void CImSmtpMobilitySettings::SetSSLWrapper(int)
+	?SetSecureSockets@CImSmtpMobilitySettings@@QAEXH@Z @ 708 NONAME ; void CImSmtpMobilitySettings::SetSecureSockets(int)
+	?SetServerAddressL@CImSmtpMobilitySettings@@QAEXABVTDesC16@@@Z @ 709 NONAME ; void CImSmtpMobilitySettings::SetServerAddressL(class TDesC16 const &)
+	?SetTlsSslDomainL@CImImap4Settings@@QAEXABVTDesC8@@@Z @ 710 NONAME ; void CImImap4Settings::SetTlsSslDomainL(class TDesC8 const &)
+	?SetTlsSslDomainL@CImPop3Settings@@QAEXABVTDesC8@@@Z @ 711 NONAME ; void CImPop3Settings::SetTlsSslDomainL(class TDesC8 const &)
+	?SetTlsSslDomainL@CImSmtpMobilitySettings@@QAEXABVTDesC8@@@Z @ 712 NONAME ; void CImSmtpMobilitySettings::SetTlsSslDomainL(class TDesC8 const &)
+	?SetTlsSslDomainL@CImSmtpSettings@@QAEXABVTDesC8@@@Z @ 713 NONAME ; void CImSmtpSettings::SetTlsSslDomainL(class TDesC8 const &)
+	?SetUseSyncDownloadRules@CImImap4Settings@@QAEXH@Z @ 714 NONAME ; void CImImap4Settings::SetUseSyncDownloadRules(int)
+	?TlsSslDomain@CImImap4Settings@@QBE?AVTPtrC8@@XZ @ 715 NONAME ; class TPtrC8 CImImap4Settings::TlsSslDomain(void) const
+	?TlsSslDomain@CImPop3Settings@@QBE?AVTPtrC8@@XZ @ 716 NONAME ; class TPtrC8 CImPop3Settings::TlsSslDomain(void) const
+	?TlsSslDomain@CImSmtpMobilitySettings@@QBE?AVTPtrC8@@XZ @ 717 NONAME ; class TPtrC8 CImSmtpMobilitySettings::TlsSslDomain(void) const
+	?TlsSslDomain@CImSmtpSettings@@QBE?AVTPtrC8@@XZ @ 718 NONAME ; class TPtrC8 CImSmtpSettings::TlsSslDomain(void) const
+	?UseSyncDownloadRules@CImImap4Settings@@QAEHXZ @ 719 NONAME ; int CImImap4Settings::UseSyncDownloadRules(void)
+	?NewL@CImAttachmentWaiter@@SAPAV1@XZ @ 720 NONAME ; class CImAttachmentWaiter * CImAttachmentWaiter::NewL(void)
+	?StartWaitingL@CImAttachmentWaiter@@QAEXAAVTRequestStatus@@PAVCImEmailMessage@@H@Z @ 721 NONAME ; void CImAttachmentWaiter::StartWaitingL(class TRequestStatus &, class CImEmailMessage *, int)
+	??1CImAttachmentWaiter@@UAE@XZ @ 722 NONAME ; CImAttachmentWaiter::~CImAttachmentWaiter(void)
+	?CreateForwardL@CImEmailOperation@@SAPAV1@AAVTRequestStatus@@AAVCMsvSession@@JJJIABIVTUid@@HH@Z @ 723 NONAME ; class CImEmailOperation * CImEmailOperation::CreateForwardL(class TRequestStatus &, class CMsvSession &, long, long, long, unsigned int, unsigned int const &, class TUid, int, int)
+	?CreateReceiptL@CImEmailOperation@@SAPAV1@AAVTRequestStatus@@AAVCMsvSession@@JJIABIVTUid@@HH@Z @ 724 NONAME ; class CImEmailOperation * CImEmailOperation::CreateReceiptL(class TRequestStatus &, class CMsvSession &, long, long, unsigned int, unsigned int const &, class TUid, int, int)
+	?CreateReplyL@CImEmailOperation@@SAPAV1@AAVTRequestStatus@@AAVCMsvSession@@JJIABIVTUid@@HH@Z @ 725 NONAME ; class CImEmailOperation * CImEmailOperation::CreateReplyL(class TRequestStatus &, class CMsvSession &, long, long, unsigned int, unsigned int const &, class TUid, int, int)
+	?StoreBodyTextL@CImEmailMessage@@QAEXJAAVCRichText@@AAVTRequestStatus@@H@Z @ 726 NONAME ; void CImEmailMessage::StoreBodyTextL(long, class CRichText &, class TRequestStatus &, int)
+	?POP3Auth@CImPop3Settings@@QBEHXZ @ 727 NONAME ; int CImPop3Settings::POP3Auth(void) const
+	?FallBack@CImPop3Settings@@QBEHXZ @ 728 NONAME ; int CImPop3Settings::FallBack(void) const
+	?SetPOP3Auth@CImPop3Settings@@QAEXH@Z @ 729 NONAME ; void CImPop3Settings::SetPOP3Auth(int)
+	?SetFallBack@CImPop3Settings@@QAEXH@Z @ 730 NONAME ; void CImPop3Settings::SetFallBack(int)
+	?FallBack@CImImap4Settings@@QBEHXZ @ 731 NONAME ; int CImImap4Settings::FallBack(void) const
+	?SetIMAP4Auth@CImImap4Settings@@QAEXH@Z @ 732 NONAME ; void CImImap4Settings::SetIMAP4Auth(int)
+	?IMAP4Auth@CImImap4Settings@@QBEHXZ @ 733 NONAME ; int CImImap4Settings::IMAP4Auth(void) const
+	?SetFallBack@CImImap4Settings@@QAEXH@Z @ 734 NONAME ; void CImImap4Settings::SetFallBack(int)
+

@@ -1,0 +1,43 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:  Package file for project Advance Device Management, Application Management component.
+;File: amtest.pkg;
+;File: amtest.pkg;
+;
+
+
+;*Languages
+&EN
+;
+;*Standard SIS file header. This section specifies the package name,
+;application UID, and version/build numbers. Add the package TYPE here if needed.
+#{"amtest"},(0x101FB3E3),1,0,1;
+;
+
+;*Unique (Non-Localised) Vendor name
+;This is used in combination with signing to prevent the unauthroized
+;upgrade ofa a package by someone other than the rightful vendor.
+:"Nokia"
+
+;*Localized Vendor Name
+;This specifies the localised vendor name(s) correspodning to language(s).
+%{"Nokia Test EN"}
+
+;*Files To Copy...<src> <destination>
+"\epoc32\release\armv5\urel\amtest.dll" -"C:\sys\bin\amtest.dll"
+"..\conf\amtest.cfg" -"C:\TestFramework\amtest.cfg"
+"..\init\amtest.ini" -"C:\TestFramework\amtest.ini"
+"..\data\dmtestmappings.txt" -"E:\Testing\Data\dmtestmappings.txt"
+"..\data\testhbuf_S60_3_X_v_1_0_0.SISx" -"E:\Testing\Data\testhbuf_S60_3_X_v_1_0_0.SISx"
+"..\data\verysilent_c_en.xml" -"E:\Testing\Data\verysilent_c_en.xml"

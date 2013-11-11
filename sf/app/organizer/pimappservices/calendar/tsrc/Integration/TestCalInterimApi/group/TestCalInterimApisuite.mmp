@@ -1,0 +1,107 @@
+// Copyright (c) 2005-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+TARGET      	testcalinterimapisuite.exe
+TARGETTYPE  	exe
+UID		0x1000007A 0x10208315
+VENDORID 	0x70000001
+CAPABILITY   	All -TCB
+
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+USERINCLUDE		../inc
+
+SOURCEPATH		../src
+
+SOURCE			TestCalInterimApiSuiteServer.cpp
+SOURCE			TestCalInterimApiSuiteStepBase.cpp
+SOURCE			TestCalInterimApiReadData.cpp
+SOURCE			TestCalInterimApiFileAccess.cpp
+SOURCE			TestCalInterimApiIterator.cpp
+SOURCE		    TestCalInterimApiRichAlarmStep.cpp
+SOURCE		   	TestCalInterimApiRichAlarmFormatStep.cpp
+SOURCE			TestCalInterimApiFilter.cpp
+SOURCE			TestCalInterimApiParserBase.cpp
+SOURCE			TestCalInterimApiParserMain.cpp
+SOURCE			TestCalInterimApiParserEntry.cpp
+SOURCE			TestCalInterimApiParserAttendee.cpp
+SOURCE			TestCalInterimApiParserRRule.cpp
+SOURCE		   	TestCalInterimApiExceptionStep.cpp
+SOURCE			TestCalInterimApiDeleteData.cpp
+SOURCE			TestCalInterimApiUpdateEntry.cpp
+SOURCE			TestCalInterimApiDeleteCategory.cpp
+SOURCE			TestCalInterimApiCopyEntry.cpp
+SOURCE		    TestCalInterimApiParserAlarm.cpp
+SOURCE			TestCalInterimApiDeleteInstances.cpp
+SOURCE			TestCalInterimApiDeleteEntryByTimeRange.cpp
+SOURCE	 	    TestCalInterimApiStartupStep.cpp
+SOURCE			TestCalInterimApiGetCategoryList.cpp
+SOURCE			TestCalInterimApiDeleteEntryByLocalId.cpp
+SOURCE		   	TestCalInterimApiSetSysTime.cpp
+source			TestCalInterimApiDeleteAlarms.cpp
+source			TestCalInterimApiSetTz.cpp
+source			TestCalInterimApiCheckAlarm.cpp
+source			TestCalInterimApiAlarmProperties.cpp
+SOURCE			TestCalInterimApiImportExport.cpp
+SOURCE			TestCalInterimApiImportExportSoakStress.cpp
+SOURCE			TestCalInterimApiTZChanges.cpp
+SOURCE			TestCalInterimApiModifiedLocalIds.cpp
+SOURCE			TestCalInterimApiTZRules.cpp
+SOURCE			TestCalInterimApiLastModified.cpp
+SOURCE		   	TestCalInterimApiModifierThread.cpp
+SOURCE          TestCalInterimApiObserverThread.cpp
+SOURCE			TestCalInterimApiFetchEntryAndCheckData.cpp
+SOURCE			TestCalInterimApiImportExportAsync.cpp
+SOURCE			TestCalInterimApiConcurrentFileAccess.cpp
+SOURCE			TestCalInterimApiCompare.cpp
+SOURCE		  	TestCalInterimApiMainThread.cpp
+SOURCE		  	TestCalInterimApiNotifier.cpp
+SOURCE		  	TestCalInterimApiModifier.cpp
+SOURCE			TestCalInterimApiDeleteEntryByTimeRangeAsync.cpp
+SOURCE			TestCalInterimApiCheckAttendee.cpp
+SOURCE			TestCalInterimApiDeleteAttendee.cpp
+SOURCE			TestCalInterimApiFetchEntryByLocalId.cpp
+SOURCE			TestCalInterimApiParserAttachment.cpp
+SOURCE			TestCalInterimApiCheckAttachment.cpp
+SOURCE			TestCalInterimApiDeleteAttachment.cpp
+SOURCE			TestCalInterimApiAttachmentManager.cpp
+SOURCE			TestCalInterimApiRemoveMedia.cpp
+SOURCE			TestCalInterimApiCalPerformance.cpp
+SOURCE			TestCalInterimApiFindInstancesIterator.cpp
+SOURCE		  	CalendarTestUtility.cpp
+SOURCE		  	CalendarIndexingTestBase.cpp
+SOURCE		  	CalendarIndexModificationTests.cpp
+SOURCE		  	CalendarIndexingPerformanceTests.cpp
+SOURCE		  	CalendarIndexStressTests.cpp
+SOURCE			entryparser.cpp
+SOURCE			testcalinterimapibackuprestore.cpp 
+SOURCE			TestCalInterimApiDeleteAgendaServers.cpp
+
+LIBRARY			euser.lib
+LIBRARY			etext.lib
+LIBRARY			efsrv.lib
+LIBRARY			bafl.lib
+LIBRARY			charconv.lib 
+LIBRARY			testexecuteutils.lib 
+LIBRARY			testexecutelogclient.lib 
+LIBRARY			calinterimapi.lib
+LIBRARY			tzclient.lib
+LIBRARY			sbeclient.lib
+LIBRARY 		estor.lib
+LIBRARY 		pimtestclient.lib 
+LIBRARY 		alarmclient.lib 
+LIBRARY 		alarmshared.lib
+
+SMPSAFE
+

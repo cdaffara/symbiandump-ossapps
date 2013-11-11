@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<api id="34f4e3392651fbc1f807587cf5d94e91" dataversion="2.0">
+  <name>MMS Client MTM API</name>
+  <description>Client Mtm for multimedia messaging.</description>
+  <type>c++</type>
+  <collection>mmsengine</collection>
+  <libs>
+    <lib name="mmscli.lib" />
+  </libs>
+  <release category="public" sinceversion="0"/>
+  <attributes>
+     <!-- This indicates wether the api provedes separate html documentation -->
+     <!-- or is the additional documentation generated from headers. -->
+     <!-- If you are unsuere then the value is "no" -->
+     <htmldocprovided>no</htmldocprovided>
+     <adaptation>no</adaptation>
+  </attributes>
+</api>

@@ -1,0 +1,85 @@
+#StatusBarChromeId {
+   /* background: black;*/
+   /*background: -webkit-gradient(linear, left top, left bottom,color-stop(0%,#111122),color-stop(100%,#111144));*/
+   background: #44587d;
+
+   overflow: hidden;
+   padding-right: 3px;
+   padding-left: 3px;
+}
+
+#StatusBarChromeId table {
+   table-layout:fixed;
+   width: 100%;
+   border: 0;
+   border-spacing: 0;
+   padding: 0;
+ }
+
+#StatusBarChromeId tr {
+   font-size:16px;
+   color: white;
+   font-weight: bold;
+   overflow: hidden;
+}
+
+#StatusBarChromeId td {
+   vertical-align: middle;
+   overflow: hidden;
+   border-spacing: 0;
+   padding: 0;
+   white-space: nowrap;
+}
+
+#StatusBarChromeId td.leftalign {
+   text-align: left;
+}
+
+#StatusBarChromeId td.rightalign {
+   text-align: right;
+}
+
+#StatusBarChromeId td.centeralign {
+   text-align: center;
+}
+
+#strength, #battery, #download {
+   width: 24px;
+}
+
+#lock {
+   width: 20px;
+}
+
+#provider {
+   /* white to match signal strength icon */
+   color: #FFFFFF;
+   font-size:12px;
+}
+
+#clock {
+   /* approximate white with 75% alpha */
+   color: #d2d4de;
+   width: 70;
+   white-space: nowrap;
+}
+
+#title {
+   vertical-align: middle;
+   overflow: hidden;
+   height: 30px;
+   display: table-cell;
+   white-space: nowrap;
+}
+
+#StatusBarChromeId td img {
+   width: 23px;
+   padding: 1;
+}
+
+#sbruler {
+   font-size:12px;
+   font-weight: bold;
+   visibility: hidden;
+}
+

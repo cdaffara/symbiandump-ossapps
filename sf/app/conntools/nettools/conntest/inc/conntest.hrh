@@ -1,0 +1,135 @@
+/*
+ * Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies). 
+ * All rights reserved.
+ * This component and the accompanying materials are made available
+ * under the terms of "Eclipse Public License v1.0"
+ * which accompanies this distribution, and is available
+ * at the URL "http://www.eclipse.org/legal/epl-v10.html".
+ *
+ * Initial Contributors:
+ * Nokia Corporation - initial contribution.
+ *
+ * Contributors:
+ *
+ * Description: ConnTest resource header
+ *
+ */
+
+#ifndef CONNTEST_HRH
+#define CONNTEST_HRH
+
+// Constants
+
+// KMaxSendBuffer must be atleast 1 byte larger than KSendDataSize
+// since the socketswrite will add a null termination
+#define KSendDataSize 16384
+#define KReadDataSize 16384
+#define KMaxSendBuffer 32772
+#define KConnTestViews 4
+#define KMaxServerNameLength 128
+
+// Enumerations
+
+enum TConnTestContainer
+    {
+    ESettingsContainer,
+    EOutputContainer,
+    ECustomPrefsContainer
+    };
+
+enum TConnTestCommandIds
+    {
+    EConnTestCmdSettings = 1,
+    EConnTestCmdStoreSettings, // not used at the moment
+    EConnTestCmdStartInterface,
+    EConnTestCmdStartSnap,
+    EConnTestCmdStartInterfaceNoPrefs,
+    EConnTestCmdSetCustomPrefs,
+    EConnTestCmdStartInterfaceExtConnPrefs,
+    EConnTestCmdStartByNetworkId,
+    EConnTestCmdStopInterface,
+    EConnTestCmdStartInternet,
+    EConnTestCmdStartForClose, // not used at the moment
+    EConnTestCmdCloseInterface, // not used at the moment
+    EConnTestCmdMigrate,
+    EConnTestCmdIgnore,
+    EConnTestCmdAccept,
+    EConnTestCmdReject,
+    EConnTestCmdConnect,
+    EConnTestCmdDisconnect,
+    EConnTestCmdListen,
+    EConnTestCmdSendHttpGet,
+    EConnTestCmdSendPerformanceHttpGet,
+    EConnTestCmdSendHttpPost,
+    EConnTestCmdSendRawData,
+    EConnTestCmdAdvanced,
+    EConnTestCmdConnectionInfo,
+    EConnTestCmdInterfaceInfo,
+    EConnTestCmdOutputWindow,
+    EConnTestCmdClearOutputWindow,
+    EConnTestCmdSaveOutputWindow,
+    EConnTestCmdHttpFrameworkGet,
+    EConnTestCmdHttpFrameworkPost,
+    EConnTestCmdHttpFrameworkSecureGet,
+    EConnTestCmdHttpFrameworkPerformanceGet,
+    EConnTestCmdHttpFrameworkPerformancePost,
+    EConnTestCmdCancel,
+    EConnTestCmdTimeoutLastSocketActivity,
+    EConnTestCmdTimeoutLastSocketClosed,
+    EConnTestCmdTimeoutLastSessionClosed,
+    EConnTestCmdConnectionPrefsIap,
+    EConnTestCmdWLANQoSVoice,
+    EConnTestCmdWLANQoSVideo,
+    EConnTestCmdWLANQoSBestEffort,
+    EConnTestCmdWLANQoSBackground,
+    EConnTestCmdWLANQoSNone,
+    EConnTestCmdQoS1,
+    EConnTestCmdParallelGet,
+    EConnTestCmdIpLog,
+    EConnTestCmdStartIpLog,
+    EConnTestCmdStopIpLog,
+    EConnTestCmdSendIpLog,
+    EConnTestWlanAvailableIaps,
+    EConnTestWlanScan,
+    EConnTestWlanDir,
+    EConnTestWlanGetSsid,
+    EConnTestWlanGetBssid,
+    EConnTestWlanGetRssi,
+    EConnTestWlanGetConnMode,
+    EConnTestWlanGetSecurityMode
+    };
+
+enum TConnTestTabViewId
+    {
+    EConnTestView1Tab = 1,
+    EConnTestView2Tab,
+    EConnTestView3Tab,
+    EConnTestView4Tab
+    };
+
+enum TConnTestSettingItems
+    {
+    EConnTestIpAddress = 1,
+    EConnTestPort,
+    EConnTestProtocol,
+    EConnTestPacketSize,
+    EConnTestPackets,
+    EConnTestDelay,
+    EConnTestRoaming,
+    EConnTestHttpPage
+    };
+
+// Must be in correct orded, these are checked against the menu index
+enum TConnTestExtConnPrefsItems
+    {
+    EConnTestExtConnPrefsItemSnapPurpose = 0,
+    EConnTestExtConnPrefsItemSnapId,
+    EConnTestExtConnPrefsItemIapId,
+    EConnTestExtConnPrefsItemBearerSet,
+    EConnTestExtConnPrefsItemNoteBehaviour,
+    EConnTestExtConnPrefsItemDisconnectDialog,
+    EConnTestExtConnPrefsItemConnSelectionDialog,
+    EConnTestExtConnPrefsItemForcedRoaming
+    };
+
+#endif      // CONNTEST_HRH

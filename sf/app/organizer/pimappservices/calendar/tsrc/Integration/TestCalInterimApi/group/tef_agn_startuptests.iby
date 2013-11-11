@@ -1,0 +1,48 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+#ifndef __TEFAGNSTARTUPTESTS_IBY__
+#define __TEFAGNSTARTUPTESTS_IBY__
+
+#include <testexecute.iby>
+#include <agnmodel.iby>
+#include <calinterimapi.iby>
+
+file=ABI_DIR\BUILD_DIR\TestCalInterimApiSuite.exe		                 Sys\Bin\TestCalInterimApiSuite.exe
+
+data=EPOCROOT##Epoc32\data\c\CITCalInterimApi\TestCalInterimApiStartUpSuite.ini               CITCalInterimApi\TestCalInterimApiStartUpSuite.ini
+data=EPOCROOT##Epoc32\data\c\CITCalInterimApi\scripts\TestCalInterimApiStartUpSuite.script    CITCalInterimApi\scripts\TestCalInterimApiStartUpSuite.script  
+data=EPOCROOT##Epoc32\data\c\CITCalInterimApi\scripts\TestCalInterimApiBackupRestore2.script	CITCalInterimApi\scripts\TestCalInterimApiBackupRestore2.script
+
+data=EPOCROOT##Epoc32\data\Z\TestCalAttachments\attach1.jpg		 attach1.jpg 
+data=EPOCROOT##Epoc32\data\Z\TestCalAttachments\attachment_test1.txt	 attachment_test1.txt
+data=EPOCROOT##Epoc32\data\Z\TestCalAttachments\attachment_test2.txt	 attachment_test2.txt
+data=EPOCROOT##Epoc32\data\Z\TestCalAttachments\attachment_test3.txt	 attachment_test3.txt  
+data=EPOCROOT##Epoc32\data\Z\TestCalAttachments\doll.jpg			 doll.jpg  
+data=EPOCROOT##Epoc32\data\Z\TestCalAttachments\longtail1.jpg		 longtail1.jpg
+data=EPOCROOT##Epoc32\data\Z\TestCalAttachments\tail.jpg			 tail.jpg 
+data=EPOCROOT##Epoc32\data\Z\TestCalAttachments\tcal_attach4.doc		 tcal_attach4.doc
+data=EPOCROOT##Epoc32\data\Z\TestCalAttachments\tcal_attach5.bmp		 tcal_attach5.bmp
+data=EPOCROOT##Epoc32\data\Z\TestCalAttachments\tcal_attach6.gif		 tcal_attach6.gif  
+data=EPOCROOT##Epoc32\data\Z\TestCalAttachments\tcal_attach7.xls		 tcal_attach7.xls
+data=EPOCROOT##Epoc32\data\Z\TestCalAttachments\tcal_attachment7.gif		 tcal_attachment7.gif
+data=EPOCROOT##Epoc32\data\c\longtail.jpg		 longtail.jpg
+
+
+
+
+#endif

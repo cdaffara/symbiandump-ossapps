@@ -1,0 +1,35 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//! @file
+//! @SYMTestCaseID DEF079017
+//! @SYMTestType UT
+//! @SYMTestPriority High
+//! @SYMDEF DEF079017
+//! @SYMTestCaseDesc IMAP spoof server test. Checks that a response containing a text atom which itself contains
+//! end of atom characters is handled correctly.
+//! The server connects and syncs. During the sync phase, the server returns an OK [PARSE] response to indicate
+//! that an email address is invalid. The text field after this then contains the end of atome characters ')', ']'. '>'
+//! @SYMTestActions 1. The Server is started and listens on port 143.
+//! 2. The client connects to the server, and performs a sync.
+//! 3. During the sync, a OK [PARSE] response is returned containing end of atom characters.
+//! 4. Two email headers are fetched during the sync
+//! 5. The client disconnects
+//! @SYMTestExpectedResults Client should have fetched two message headers
+
+PRINT Run T_ImapBadlyFormedAddress Test 
+LOAD_SUITE T_ImapBadlyFormedAddress -SharedData
+
+RUN_TEST_STEP 1000 T_ImapBadlyFormedAddress TestImapBadlyFormedAddress c:\msgtest\imap\ImapBadlyFormedAddressTest.ini Section1

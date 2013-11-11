@@ -1,0 +1,34 @@
+<step name="Create log directory for testmodule" harness="STIF" enabled="true" passrate="100" significant="false">
+    	<command>makedir</command>
+    	<params>
+        <param dir="c:\logs\testframework"/>
+    	</params>
+</step>
+<step name="Create directory for TestScripter logs" harness="STIF" enabled="true" passrate="100" significant="false">
+    	<command>makedir</command>
+    	<params>
+        <param dir="c:\logs\testframework\TestScripter"/>
+    	</params>
+</step>
+<step name="Create directory for Testengine logs" harness="STIF" enabled="true" passrate="100" significant="false">
+    	<command>makedir</command>
+    	<params>
+        <param dir="c:\logs\testframework\Testengine"/>
+    	</params>
+</step>
+<step name="Create directory for Testserver logs" harness="STIF" enabled="true" passrate="100" significant="false">
+    	<command>makedir</command>
+    	<params>
+        <param dir="c:\logs\testframework\Testserver"/>
+    	</params>
+</step>
+<!---
+<step name="Install IAP file" harness="STIF" enabled="true" passrate="100" significant="false">
+       <command>install</command>
+       <reboot target-alias="*" when="after" />
+       <params>
+       <param src="cccccc00.cre"/>
+       <param dst="c:\private\10202be9\persists\cccccc00.cre"/>
+       </params>
+</step>
+-->

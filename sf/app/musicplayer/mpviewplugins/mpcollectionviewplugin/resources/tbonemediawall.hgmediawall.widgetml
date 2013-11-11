@@ -1,0 +1,41 @@
+<hbwidget version="0.1" type="HgMediawall">
+
+  <!-- 
+
+    TOP content
+        ^
+        |
+      title
+        ^
+        |
+    description
+        ^
+        |
+    centeritem
+    
+  BOTTOM content
+
+
+  
+  -->
+  <layout name="mptbonemediawall" type="mesh">
+    
+    <meshitem src="content" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM"/>
+    <meshitem src="content" srcEdge="TOP" dst="" dstEdge="TOP"/>
+    <meshitem src="content" srcEdge="RIGHT" dst="" dstEdge="RIGHT"/>
+    <meshitem src="content" srcEdge="LEFT" dst="" dstEdge="LEFT"/> 
+         
+    <meshitem src="title" srcEdge="TOP" dst="content" dstEdge="TOP"/>
+    <meshitem src="title" srcEdge="LEFT" dst="content" dstEdge="LEFT"/>
+    <meshitem src="title" srcEdge="RIGHT" dst="content" dstEdge="RIGHT"/>
+       
+    <meshitem src="description" srcEdge="TOP" dst="title" dstEdge="BOTTOM"/>
+    <meshitem src="description" srcEdge="LEFT" dst="content" dstEdge="LEFT"/>
+    <meshitem src="description" srcEdge="RIGHT" dst="content" dstEdge="RIGHT"/>   
+    
+    <meshitem src="centeritem" srcEdge="TOP" dst="description" dstEdge="BOTTOM"/>
+    <meshitem src="centeritem" srcEdge="CENTERH" dst="content" dstEdge="CENTERH"/>
+    
+  </layout>
+
+</hbwidget>

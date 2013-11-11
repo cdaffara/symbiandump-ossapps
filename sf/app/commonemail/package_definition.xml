@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SystemDefinition schema="3.0.0" xmlns:qt="http://www.nokia.com/qt">
+ <package id="commonemail" name="Email Apps" levels="service support ui app">
+   <!-- need to resolve the qt parts into proper components, then uncomment the units -->
+  <collection id="email_plat" name="Email Apps Platform Interfaces" level="app">
+   <component id="nmail_client_api" name="NMail Client API" class="api" filter="s60" introduced="^4">
+    <!--<unit bldFile="email_plat/nmail_client_api" qt:proFile="nmail_client_api.pro"/> -->
+   </component>
+   <component id="email_services_api" name="Email Services API" class="api" filter="s60" introduced="^4">
+    <!--<unit bldFile="email_plat/email_services_api" qt:proFile="email_services_api.pro"/> -->
+   </component>
+   <component id="nmail_settings_api" name="NMail Settings API" class="api" filter="s60" introduced="^4">
+    <!--<unit bldFile="email_plat/nmail_settings_api" qt:proFile="nmail_settings_api.pro"/> -->
+   </component>
+   <component id="email_client_api" name="EMail Client API" class="api" filter="s60" introduced="^4">
+    <!--<unit bldFile="email_plat/email_client_api" qt:proFile="email_client_api.pro"/> -->
+   </component>
+  </collection>
+    <collection id="emailservices" name="Email Services" level="service">
+      <component id="nmailbase" filter="s60" name="NMail Base" introduced="^4">
+        <!-- <unit bldFile="emailservices/nmailbase" qt:proFile="nmailbase.pro"/> -->
+      </component>
+      <component id="emailcommon" filter="s60" name="Email Common" introduced="^4">
+       <!-- <unit bldFile="emailservices/emailcommon" qt:proFile="emailcommon.pro"/>-->
+      </component>
+      <component id="emailframework" filter="s60" name="Email Framework" introduced="^2">
+       <!-- <unit bldFile="emailservices/emailframework" qt:proFile="emailframework.pro"/>-->
+      </component>
+      <component id="emailstore" filter="s60" name="Email Store" introduced="^2">
+       <!-- <unit bldFile="emailservices/emailstore" qt:proFile="emailstore.pro"/>-->
+      </component>
+      <component id="nmclientapi" filter="s60" name="Nmail Client API" introduced="^4">
+       <!-- <unit bldFile="emailservices/nmclientapi" qt:proFile="nmclientapi.pro"/>-->
+      </component>
+      <component id="nmailagent" filter="s60" name="Nmail Agent" introduced="^4">
+       <!-- <unit bldFile="emailservices/nmailagent" qt:proFile="nmailagent.pro"/>-->
+      </component>
+     <component id="nmutilities" filter="s60" name="Nmail Utilities" introduced="^4">
+        <!-- <unit bldFile="emailservices/nmutilities" qt:proFile="nmutilities.pro"/> -->
+      </component>
+    </collection>
+    <collection id="ipsservices" name="IMAP/POP/SMTP Services" level="service">
+      <component id="ipssosplugin" filter="s60" name="IPS SOS Plugin" class="plugin" introduced="^2">
+		<!-- SOS? Consider spelling it out since the abbreviation is ambiguous -->
+        <!--<unit bldFile="ipsservices/ipssosplugin" qt:proFile="ipssosplugin.pro" />-->
+      </component>
+      <component id="nmimapclientplugin" filter="s60" name="NM IMAP Client Plugin" introduced="^4" class="plugin">
+        <!--<unit bldFile="ipsservices/nmimapclientplugin" qt:proFile="nmimapclientplugin.pro"/>-->
+      </component>
+      <component id="nmipsmtms" filter="s60" name="NM IPS Client Plugin" introduced="^4" class="plugin">
+       <!-- <unit bldFile="ipsservices/nmipsmtms" qt:proFile="nmipsmtms.pro"/>-->
+      </component>
+      <component id="nmipssettings" filter="s60" name="NM IPS Settings" introduced="^4">
+       <!-- <unit bldFile="ipsservices/nmipssettings" qt:proFile="nmipssettings.pro"/>-->
+        <unit bldFile="ipsservices/nmipssettings/tsrc/tools/extendedkeygen" qt:proFile="extendedkeygenerator.pro"/>
+      </component>
+      <component id="ipsservices_build" filter="s60" name="IPS Services Build" introduced="^2">
+        <!--<unit bldFile="ipsservices" qt:proFile="ipsservices.pro"/> -->
+		<!-- can the exports be broken up into the other components or made a config component?-->
+      </component>
+    </collection>
+    <collection id="emailuis" name="Email UIs" level="app">
+      <component id="nmailuiengine" filter="s60" name="Nmail UI Engine" introduced="^4">
+        <!-- <unit bldFile="emailuis/nmailuiengine" qt:proFile="nmailuiengine.pro"/> -->
+      </component>
+      <component id="nmailuiwidgets" filter="s60" name="Nmail UI Widgets" introduced="^4">
+        <!-- <unit bldFile="emailuis/nmailuiwidgets" qt:proFile="nmailuiwidgets.pro"/> -->
+      </component>
+      <component id="nmailuiwidgetsplugin" filter="s60" name="Nmail UI Widgets Plugin" introduced="^4" class="plugin">
+        <!-- <unit bldFile="emailuis/nmailuiwidgetsplugin" qt:proFile="nmailuiwidgetsplugin.pro"/> -->
+      </component>
+      <component id="nmsettingui" filter="s60" name="Nmail Setting UI" introduced="^4" class="plugin">
+        <!-- <unit bldFile="emailuis/nmsettingui" qt:proFile="nmsettingui.pro"/> -->
+      </component>
+      <component id="nmailcpplugin" filter="s60" name="Nmail CP Plugin" introduced="^4" class="plugin">
+        <!-- <unit bldFile="emailuis/nmailcpplugin" qt:proFile="nmailcpplugin.pro"/> -->
+      </component>
+      <component id="nmailui" filter="s60" name="Nmail UI" introduced="^4">
+        <!-- <unit bldFile="emailuis/nmailui" qt:proFile="nmailui.pro"/> -->
+      </component>
+      <component id="nmindicatorplugin" filter="s60" name="Nmail Indicator Plugin" class="plugin" introduced="^4">
+        <!-- <unit bldFile="emailuis/nmindicatorplugin" qt:proFile="nmindicatorplugin.pro"/> -->
+      </component>
+      <component id="nmframeworkadapter" filter="s60" name="Nmail Framework Adapter" introduced="^4" class="plugin">
+        <!-- <unit bldFile="emailuis/nmframeworkadapter" qt:proFile="nmframeworkadapter.pro"/> -->
+      </component>
+    </collection>
+    <collection id="commonemail_info" name="Email Apps Info" level="app">
+    <component id="commonemail_build" name="Email Apps Build" introduced="^4" filter="s60">
+		<!-- split into actual components -->
+      <unit bldFile="." qt:proFile="nmail.pro"/>
+    </component>
+    </collection>
+
+
+  </package>
+</SystemDefinition>

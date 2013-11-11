@@ -1,0 +1,42 @@
+#
+# Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+# All rights reserved.
+# This component and the accompanying materials are made available
+# under the terms of "Eclipse Public License v1.0"
+# which accompanies this distribution, and is available
+# at the URL "http://www.eclipse.org/legal/epl-v10.html".
+#
+# Initial Contributors:
+# Nokia Corporation - initial contribution.
+#
+# Contributors:
+# 
+# Description: Project file for building testfiledetailswidget
+#
+#
+# Version : %version:  3 %
+
+TEMPLATE = app
+TARGET = testfiledetailswidget
+CONFIG += qtestlib qt hb
+
+INCLUDEPATH += stub/inc \
+               ../../../../inc \
+               ../../../inc
+
+DEPENDPATH += inc src stub/inc stub/src
+                
+# Input
+HEADERS += testfiledetailswidget.h \
+           videoplaybackcontrolscontroller.h \
+           videoplaybackdocumentloader.h \
+           videoplaybackviewfiledetails.h \
+           hbglobal.h \
+           ../../controlinc/videoplaybackfiledetailswidget.h
+  
+SOURCES += testfiledetailswidget.cpp \
+           videoplaybackcontrolscontroller.cpp \
+           videoplaybackdocumentloader.cpp \
+           videoplaybackviewfiledetails.cpp \
+           hbglobal.cpp \
+           ../../controlsrc/videoplaybackfiledetailswidget.cpp

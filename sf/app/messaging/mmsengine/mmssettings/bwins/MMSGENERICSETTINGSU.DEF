@@ -1,0 +1,72 @@
+EXPORTS
+	??1CMmsAccounts@@UAE@XZ @ 1 NONAME ; CMmsAccounts::~CMmsAccounts(void)
+	??1CMmsSettings@@UAE@XZ @ 2 NONAME ; CMmsSettings::~CMmsSettings(void)
+	?AddNapIdL@CMmsSettings@@QAEXVTUid@@@Z @ 3 NONAME ; void CMmsSettings::AddNapIdL(class TUid)
+	?AddObserverL@CMmsAccounts@@QAEXAAVMMmsSettingsObserver@@@Z @ 4 NONAME ; void CMmsAccounts::AddObserverL(class MMmsSettingsObserver &)
+	?AddProxyL@CMmsSettings@@QAEXVTUid@@@Z @ 5 NONAME ; void CMmsSettings::AddProxyL(class TUid)
+	?Address@CMmsSettings@@QBE?AVTPtrC16@@XZ @ 6 NONAME ; class TPtrC16 CMmsSettings::Address(void) const
+	?AllowDeliveryNotification@CMmsSettings@@QBEHXZ @ 7 NONAME ; int CMmsSettings::AllowDeliveryNotification(void) const
+	?ApplicationID@CMmsSettings@@QBEHXZ @ 8 NONAME ; int CMmsSettings::ApplicationID(void) const
+	?AutomaticDownload@CMmsSettings@@QBE?AW4TAutomaticDownloadOptions@@XZ @ 9 NONAME ; enum TAutomaticDownloadOptions CMmsSettings::AutomaticDownload(void) const
+	?CopyL@CMmsSettings@@QAEXABV1@@Z @ 10 NONAME ; void CMmsSettings::CopyL(class CMmsSettings const &)
+	?CreateMMSAccountL@CMmsAccounts@@QAE?AVTMmsAccountId@@ABVTDesC16@@ABVCMmsSettings@@@Z @ 11 NONAME ; class TMmsAccountId CMmsAccounts::CreateMMSAccountL(class TDesC16 const &, class CMmsSettings const &)
+	?CreationMode@CMmsSettings@@QBE?AW4TCreationMode@@XZ @ 12 NONAME ; enum TCreationMode CMmsSettings::CreationMode(void) const
+	?CreationModeReadOnly@CMmsSettings@@QBEHXZ @ 13 NONAME ; int CMmsSettings::CreationModeReadOnly(void) const
+	?DefaultMMSAccountL@CMmsAccounts@@QBE?AVTMmsAccountId@@XZ @ 14 NONAME ; class TMmsAccountId CMmsAccounts::DefaultMMSAccountL(void) const
+	?DeleteMMSAccountL@CMmsAccounts@@QAEXABVTMmsAccountId@@@Z @ 15 NONAME ; void CMmsAccounts::DeleteMMSAccountL(class TMmsAccountId const &)
+	?DeliveryReport@CMmsSettings@@QBEHXZ @ 16 NONAME ; int CMmsSettings::DeliveryReport(void) const
+	?DeviceContentClass@CMmsSettings@@QBEHXZ @ 17 NONAME ; int CMmsSettings::DeviceContentClass(void) const
+	?DisplayNotification@CMmsSettings@@QBEHXZ @ 18 NONAME ; int CMmsSettings::DisplayNotification(void) const
+	?DownloadRetryInterval@CMmsSettings@@QBEHXZ @ 19 NONAME ; int CMmsSettings::DownloadRetryInterval(void) const
+	?FilterAdvertisements@CMmsSettings@@QBEHXZ @ 20 NONAME ; int CMmsSettings::FilterAdvertisements(void) const
+	?FullScreenPreview@CMmsSettings@@QBEHXZ @ 21 NONAME ; int CMmsSettings::FullScreenPreview(void) const
+	?GetMMSAccountsL@CMmsAccounts@@QBEXAAV?$RArray@VTMmsAccountId@@@@@Z @ 22 NONAME ; void CMmsAccounts::GetMMSAccountsL(class RArray<class TMmsAccountId> &) const
+	?GetNapId@CMmsSettings@@QBE?AVTUid@@H@Z @ 23 NONAME ; class TUid CMmsSettings::GetNapId(int) const
+	?GetProxy@CMmsSettings@@QBE?AVTUid@@H@Z @ 24 NONAME ; class TUid CMmsSettings::GetProxy(int) const
+	?HideNumber@CMmsSettings@@QBEHXZ @ 25 NONAME ; int CMmsSettings::HideNumber(void) const
+	?LoadSettingsL@CMmsAccounts@@QAEXABVTMmsAccountId@@AAVCMmsSettings@@@Z @ 26 NONAME ; void CMmsAccounts::LoadSettingsL(class TMmsAccountId const &, class CMmsSettings &)
+	?MaxDownloadRetries@CMmsSettings@@QBEHXZ @ 27 NONAME ; int CMmsSettings::MaxDownloadRetries(void) const
+	?MaxDownloadSize@CMmsSettings@@QBEHXZ @ 28 NONAME ; int CMmsSettings::MaxDownloadSize(void) const
+	?MaxImageHeight@CMmsSettings@@QBEHXZ @ 29 NONAME ; int CMmsSettings::MaxImageHeight(void) const
+	?MaxImageWidth@CMmsSettings@@QBEHXZ @ 30 NONAME ; int CMmsSettings::MaxImageWidth(void) const
+	?MaxMMSAccounts@CMmsAccounts@@QAEHXZ @ 31 NONAME ; int CMmsAccounts::MaxMMSAccounts(void)
+	?MaxSendMsgSize@CMmsSettings@@QBEHXZ @ 32 NONAME ; int CMmsSettings::MaxSendMsgSize(void) const
+	?NapIdCount@CMmsSettings@@QBEHXZ @ 33 NONAME ; int CMmsSettings::NapIdCount(void) const
+	?NewL@CMmsAccounts@@SAPAV1@XZ @ 34 NONAME ; class CMmsAccounts * CMmsAccounts::NewL(void)
+	?NewL@CMmsSettings@@SAPAV1@XZ @ 35 NONAME ; class CMmsSettings * CMmsSettings::NewL(void)
+	?NewLC@CMmsAccounts@@SAPAV1@XZ @ 36 NONAME ; class CMmsAccounts * CMmsAccounts::NewLC(void)
+	?NewLC@CMmsSettings@@SAPAV1@XZ @ 37 NONAME ; class CMmsSettings * CMmsSettings::NewLC(void)
+	?PopulateDefaultSettingsL@CMmsAccounts@@QAEXAAVCMmsSettings@@@Z @ 38 NONAME ; void CMmsAccounts::PopulateDefaultSettingsL(class CMmsSettings &)
+	?Priority@CMmsSettings@@QBEHXZ @ 39 NONAME ; int CMmsSettings::Priority(void) const
+	?ProxyCount@CMmsSettings@@QBEHXZ @ 40 NONAME ; int CMmsSettings::ProxyCount(void) const
+	?ReadReport@CMmsSettings@@QBEHXZ @ 41 NONAME ; int CMmsSettings::ReadReport(void) const		
+	?RemoveNapId@CMmsSettings@@QAEXH@Z @ 42 NONAME ; void CMmsSettings::RemoveNapId(int)
+	?RemoveObserver@CMmsAccounts@@QAEXAAVMMmsSettingsObserver@@@Z @ 43 NONAME ; void CMmsAccounts::RemoveObserver(class MMmsSettingsObserver &)
+	?RemoveProxy@CMmsSettings@@QAEXH@Z @ 44 NONAME ; void CMmsSettings::RemoveProxy(int)
+	?ReplyWithHistory@CMmsSettings@@QBEHXZ @ 45 NONAME ; int CMmsSettings::ReplyWithHistory(void) const
+	?SaveSettingsL@CMmsAccounts@@QBEXABVTMmsAccountId@@ABVCMmsSettings@@@Z @ 46 NONAME ; void CMmsAccounts::SaveSettingsL(class TMmsAccountId const &, class CMmsSettings const &) const
+	?SetAddressL@CMmsSettings@@QAEXABVTDesC16@@@Z @ 47 NONAME ; void CMmsSettings::SetAddressL(class TDesC16 const &)
+	?SetAllowDeliveryNotification@CMmsSettings@@QAEXH@Z @ 48 NONAME ; void CMmsSettings::SetAllowDeliveryNotification(int)
+	?SetApplicationID@CMmsSettings@@QAEXH@Z @ 49 NONAME ; void CMmsSettings::SetApplicationID(int)
+	?SetAutomaticDownload@CMmsSettings@@QAEXW4TAutomaticDownloadOptions@@@Z @ 50 NONAME ; void CMmsSettings::SetAutomaticDownload(enum TAutomaticDownloadOptions)
+	?SetCreationModeL@CMmsSettings@@QAEXW4TCreationMode@@@Z @ 51 NONAME ; void CMmsSettings::SetCreationModeL(enum TCreationMode)
+	?SetCreationModeReadOnly@CMmsSettings@@QAEXH@Z @ 52 NONAME ; void CMmsSettings::SetCreationModeReadOnly(int)
+	?SetDefaultMMSAccountL@CMmsAccounts@@QAEXABVTMmsAccountId@@@Z @ 53 NONAME ; void CMmsAccounts::SetDefaultMMSAccountL(class TMmsAccountId const &)
+	?SetDeliveryReport@CMmsSettings@@QAEXH@Z @ 54 NONAME ; void CMmsSettings::SetDeliveryReport(int)
+	?SetDeviceContentClass@CMmsSettings@@QAEXH@Z @ 55 NONAME ; void CMmsSettings::SetDeviceContentClass(int)
+	?SetDisplayNotification@CMmsSettings@@QAEXH@Z @ 56 NONAME ; void CMmsSettings::SetDisplayNotification(int)
+	?SetDownloadRetryInterval@CMmsSettings@@QAEXH@Z @ 57 NONAME ; void CMmsSettings::SetDownloadRetryInterval(int)
+	?SetFilterAdvertisements@CMmsSettings@@QAEXH@Z @ 58 NONAME ; void CMmsSettings::SetFilterAdvertisements(int)
+	?SetFullScreenPreview@CMmsSettings@@QAEXH@Z @ 59 NONAME ; void CMmsSettings::SetFullScreenPreview(int)
+	?SetHideNumber@CMmsSettings@@QAEXH@Z @ 60 NONAME ; void CMmsSettings::SetHideNumber(int)
+	?SetMaxDownloadRetries@CMmsSettings@@QAEXH@Z @ 61 NONAME ; void CMmsSettings::SetMaxDownloadRetries(int)
+	?SetMaxDownloadSize@CMmsSettings@@QAEXH@Z @ 62 NONAME ; void CMmsSettings::SetMaxDownloadSize(int)
+	?SetMaxImageHeight@CMmsSettings@@QAEXH@Z @ 63 NONAME ; void CMmsSettings::SetMaxImageHeight(int)
+	?SetMaxImageWidth@CMmsSettings@@QAEXH@Z @ 64 NONAME ; void CMmsSettings::SetMaxImageWidth(int)
+	?SetMaxSendMsgSize@CMmsSettings@@QAEXH@Z @ 65 NONAME ; void CMmsSettings::SetMaxSendMsgSize(int)
+	?SetPriority@CMmsSettings@@QAEXH@Z @ 66 NONAME ; void CMmsSettings::SetPriority(int)
+	?SetReadReport@CMmsSettings@@QAEXH@Z @ 67 NONAME ; void CMmsSettings::SetReadReport(int)
+	?SetReplyWithHistory@CMmsSettings@@QAEXH@Z @ 68 NONAME ; void CMmsSettings::SetReplyWithHistory(int)
+	?SetValidityPeriod@CMmsSettings@@QAEXH@Z @ 69 NONAME ; void CMmsSettings::SetValidityPeriod(int)
+	?ValidityPeriod@CMmsSettings@@QBEHXZ @ 70 NONAME ; int CMmsSettings::ValidityPeriod(void) const
+

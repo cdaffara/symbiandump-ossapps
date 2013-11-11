@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>  
+<service>
+  <name>com.nokia.services.hbserviceprovider</name>
+  <filepath>No path</filepath>
+  <description>Conversation View</description>
+  <interface>
+     <name>imessage.send</name>
+     <version>1.0</version>
+     <description>Send interface</description>
+     <customproperty key="aiw_action_text_file">messaging</customproperty>
+     <customproperty key="aiw_action_text">txt_messaging_list_attach_to_new_message</customproperty>
+     <customproperty key="aiw_action_icon">qtg_large_message</customproperty>
+  </interface>
+  <interface>
+      <name>conversationview</name>
+     <version>1.0</version>
+     <description>ConversationView</description>
+  </interface> 
+</service>

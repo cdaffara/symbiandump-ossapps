@@ -1,0 +1,75 @@
+/*
+* Copyright (c) 2002-2006 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   Project definition file for accesspoint adapter.
+*
+*/
+
+
+
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+#include <bldvariant.hrh>
+
+TARGET          WPAPAdapter.dll
+TARGETTYPE      PLUGIN
+UID             0x10009D8D 0x101F84D8
+
+
+VENDORID        VID_DEFAULT
+CAPABILITY      CAP_ECOM_PLUGIN
+
+SOURCEPATH      ../Src
+SOURCE          CWPAPAdapter.cpp 
+SOURCE          CWPAPItemBase.cpp
+SOURCE          CWPAPAccesspointItem.cpp
+SOURCE          CWPAPNapdef.cpp
+SOURCE          CWPAPLogicalProxy.cpp
+SOURCE          CWPAPPhysicalProxy.cpp
+SOURCE          CWPAPPort.cpp
+SOURCE          WPAPUtil.cpp
+SOURCE          WPAPAdapterPanics.cpp
+SOURCE          WPAPAdapterGroupProxy.cpp
+SOURCE          CWPLog.cpp
+
+SOURCEPATH      ../group
+
+START RESOURCE 101F84D8.rss
+TARGET WPAPAdapter.rsc
+END
+
+START RESOURCE WPAPAdapterResource.rss
+HEADER
+TARGET WPAPAdapterResource.rsc
+TARGETPATH RESOURCE_FILES_DIR
+LANGUAGE_IDS
+END  
+
+
+USERINCLUDE     ../Inc
+USERINCLUDE     ../../bld
+MW_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE 	/epoc32/include/ecom
+
+LIBRARY         euser.lib
+LIBRARY         ProvisioningEngine.lib
+LIBRARY         commdb.lib
+LIBRARY         featmgr.lib
+LIBRARY         ecom.lib
+LIBRARY 	centralrepository.lib
+LIBRARY		cmmanager.lib
+LIBRARY		eaptools.lib
+
+DEBUGLIBRARY    flogger.lib     // Only in debug builds
+
+// End of File

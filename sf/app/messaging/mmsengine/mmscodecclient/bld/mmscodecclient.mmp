@@ -1,0 +1,67 @@
+/*
+* Copyright (c) 2003 - 2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   This is project specification file for the mmscodecclient.dll.
+*
+*/
+
+
+
+#include <platform_paths.hrh>
+
+TARGET          mmscodecclient.dll
+TARGETTYPE      dll
+UID             0x1000008d 0x101FB0BB 
+CAPABILITY      CAP_GENERAL_DLL
+VENDORID        VID_DEFAULT
+VERSION 	10.0
+PAGED
+
+SOURCEPATH      ../src
+SOURCE          mmscodecclient.cpp
+
+USERINCLUDE     ../inc
+USERINCLUDE     ../../inc
+USERINCLUDE     ../../mmscodec/inc
+USERINCLUDE     ../../mmsserver/inc
+USERINCLUDE     ../../mmsmessage/inc
+
+SYSTEMINCLUDE   ../../../inc
+APP_LAYER_SYSTEMINCLUDE
+
+
+LIBRARY         mmscodec.lib
+LIBRARY	        euser.lib   // CActive      
+LIBRARY	        msgs.lib // Message server
+LIBRARY         mmsmessage.lib
+LIBRARY         mmsgenutils.lib
+LIBRARY         mmsserversettings.lib
+DEBUGLIBRARY    flogger.lib // for logging
+
+LANG            SC
+ 
+#if defined(ARMCC)
+deffile ../eabi/mmscodecclient.def
+//#elif defined( WINSCW )
+//deffile ../bwinscw/mmscodecclient.def
+#elif defined( WINS )
+deffile ../bwins/mmscodecclient.def
+#elif defined( MARM )
+deffile ../bmarm/mmscodecclient.def
+#endif
+
+
+
+
+
+SMPSAFE

@@ -1,0 +1,41 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description: 50_Messaging_MMSClientMTM.pkg;
+
+
+; Languages
+&EN
+
+
+; Package header
+#{"MMSClientMTMBCTester"}, (0x10282C89), 1, 0, 0
+
+
+;Localised Vendor name
+%{"Nokia Testing"}
+
+;Unique Vendor name
+:"Nokia"
+
+;Supports Series 60 v 3.0
+[0x101F7961], 3, *, *, {"Series60ProductID"}
+
+; Files
+"\epoc32\release\armv5\urel\MMSClientMTMBCTester.dll"-"!:\sys\bin\MMSClientMTMBCTester.dll"
+"..\data\TestFramework_MMSClientMTMBCTester.ini"-"!:\TestFramework\TestFramework_MMSClientMTMBCTester.ini"
+"..\data\MMSClientMTMBCTester.ini"-"!:\TestFramework\MMSClientMTMBCTester.ini"
+"..\data\MMSClientMTMBCTester_TestImage.jpg"-"!:\TestFramework\MMSClientMTMBCTester_TestImage.jpg"
+".\mms_c.bat"-"!:\mms.bat"
+
+; End of file: MMSClientMTMBCTester.pkg

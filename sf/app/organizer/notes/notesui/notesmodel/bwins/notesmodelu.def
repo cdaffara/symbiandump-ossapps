@@ -1,0 +1,45 @@
+EXPORTS
+	?sourceModel@NotesModel@@QAEPAVQAbstractItemModel@@XZ @ 1 NONAME ; class QAbstractItemModel * NotesModel::sourceModel(void)
+	?filterAcceptsRow@NotesSortFilterProxyModel@@MBE_NHABVQModelIndex@@@Z @ 2 NONAME ; bool NotesSortFilterProxyModel::filterAcceptsRow(int, class QModelIndex const &) const
+	?modifyEntryInModel@NotesModel@@AAEXKH@Z @ 3 NONAME ; void NotesModel::modifyEntryInModel(unsigned long, int)
+	?getStaticMetaObject@NotesSortFilterProxyModel@@SAABUQMetaObject@@XZ @ 4 NONAME ; struct QMetaObject const & NotesSortFilterProxyModel::getStaticMetaObject(void)
+	?appendCompTodosToModel@NotesModel@@AAEXAAV?$QList@VAgendaEntry@@@@@Z @ 5 NONAME ; void NotesModel::appendCompTodosToModel(class QList<class AgendaEntry> &)
+	?tr@NotesSortFilterProxyModel@@SA?AVQString@@PBD0H@Z @ 6 NONAME ; class QString NotesSortFilterProxyModel::tr(char const *, char const *, int)
+	?rowAdded@NotesModel@@IAEXVQModelIndex@@@Z @ 7 NONAME ; void NotesModel::rowAdded(class QModelIndex)
+	?qt_metacast@NotesModel@@UAEPAXPBD@Z @ 8 NONAME ; void * NotesModel::qt_metacast(char const *)
+	?trUtf8@NotesSortFilterProxyModel@@SA?AVQString@@PBD0@Z @ 9 NONAME ; class QString NotesSortFilterProxyModel::trUtf8(char const *, char const *)
+	?lessThan@NotesSortFilterProxyModel@@MBE_NABVQModelIndex@@0@Z @ 10 NONAME ; bool NotesSortFilterProxyModel::lessThan(class QModelIndex const &, class QModelIndex const &) const
+	?metaObject@NotesSortFilterProxyModel@@UBEPBUQMetaObject@@XZ @ 11 NONAME ; struct QMetaObject const * NotesSortFilterProxyModel::metaObject(void) const
+	?dateFormatString@NotesModel@@AAE?AVQString@@XZ @ 12 NONAME ; class QString NotesModel::dateFormatString(void)
+	?trUtf8@NotesSortFilterProxyModel@@SA?AVQString@@PBD0H@Z @ 13 NONAME ; class QString NotesSortFilterProxyModel::trUtf8(char const *, char const *, int)
+	?metaObject@NotesModel@@UBEPBUQMetaObject@@XZ @ 14 NONAME ; struct QMetaObject const * NotesModel::metaObject(void) const
+	?tr@NotesModel@@SA?AVQString@@PBD0H@Z @ 15 NONAME ; class QString NotesModel::tr(char const *, char const *, int)
+	?staticMetaObject@NotesModel@@2UQMetaObject@@B @ 16 NONAME ; struct QMetaObject const NotesModel::staticMetaObject
+	?staticMetaObject@NotesSortFilterProxyModel@@2UQMetaObject@@B @ 17 NONAME ; struct QMetaObject const NotesSortFilterProxyModel::staticMetaObject
+	??0NotesModel@@QAE@PAVAgendaUtil@@PAVQObject@@@Z @ 18 NONAME ; NotesModel::NotesModel(class AgendaUtil *, class QObject *)
+	??_ENotesSortFilterProxyModel@@UAE@I@Z @ 19 NONAME ; NotesSortFilterProxyModel::~NotesSortFilterProxyModel(unsigned int)
+	??1NotesSortFilterProxyModel@@UAE@XZ @ 20 NONAME ; NotesSortFilterProxyModel::~NotesSortFilterProxyModel(void)
+	?qt_metacall@NotesSortFilterProxyModel@@UAEHW4Call@QMetaObject@@HPAPAX@Z @ 21 NONAME ; int NotesSortFilterProxyModel::qt_metacall(enum QMetaObject::Call, int, void * *)
+	?timeFormatString@NotesModel@@AAE?AVQString@@XZ @ 22 NONAME ; class QString NotesModel::timeFormatString(void)
+	?tr@NotesModel@@SA?AVQString@@PBD0@Z @ 23 NONAME ; class QString NotesModel::tr(char const *, char const *)
+	?getStaticMetaObject@NotesModel@@SAABUQMetaObject@@XZ @ 24 NONAME ; struct QMetaObject const & NotesModel::getStaticMetaObject(void)
+	?tr@NotesSortFilterProxyModel@@SA?AVQString@@PBD0@Z @ 25 NONAME ; class QString NotesSortFilterProxyModel::tr(char const *, char const *)
+	?addEntryToModel@NotesModel@@AAEXK@Z @ 26 NONAME ; void NotesModel::addEntryToModel(unsigned long)
+	??1NotesModel@@UAE@XZ @ 27 NONAME ; NotesModel::~NotesModel(void)
+	?handleInstanceViewCreationCompleted@NotesModel@@AAEXH@Z @ 28 NONAME ; void NotesModel::handleInstanceViewCreationCompleted(int)
+	?removeEntryFromModel@NotesModel@@AAEXK@Z @ 29 NONAME ; void NotesModel::removeEntryFromModel(unsigned long)
+	?qt_metacast@NotesSortFilterProxyModel@@UAEPAXPBD@Z @ 30 NONAME ; void * NotesSortFilterProxyModel::qt_metacast(char const *)
+	?appendInCompTodosToModel@NotesModel@@AAEXAAV?$QList@VAgendaEntry@@@@@Z @ 31 NONAME ; void NotesModel::appendInCompTodosToModel(class QList<class AgendaEntry> &)
+	?insertNoteToModel@NotesModel@@AAE_NAAVQModelIndex@@K@Z @ 32 NONAME ; bool NotesModel::insertNoteToModel(class QModelIndex &, unsigned long)
+	?qt_metacall@NotesModel@@UAEHW4Call@QMetaObject@@HPAPAX@Z @ 33 NONAME ; int NotesModel::qt_metacall(enum QMetaObject::Call, int, void * *)
+	?populateSourceModel@NotesModel@@AAEXV?$QList@K@@@Z @ 34 NONAME ; void NotesModel::populateSourceModel(class QList<unsigned long>)
+	?appendNotesToModel@NotesModel@@AAEXAAV?$QList@VAgendaEntry@@@@@Z @ 35 NONAME ; void NotesModel::appendNotesToModel(class QList<class AgendaEntry> &)
+	?updateSourceModel@NotesModel@@AAEXK@Z @ 36 NONAME ; void NotesModel::updateSourceModel(unsigned long)
+	??_ENotesModel@@UAE@I@Z @ 37 NONAME ; NotesModel::~NotesModel(unsigned int)
+	?trUtf8@NotesModel@@SA?AVQString@@PBD0H@Z @ 38 NONAME ; class QString NotesModel::trUtf8(char const *, char const *, int)
+	?insertInCompTodoToModel@NotesModel@@AAE_NAAVQModelIndex@@K@Z @ 39 NONAME ; bool NotesModel::insertInCompTodoToModel(class QModelIndex &, unsigned long)
+	?trUtf8@NotesModel@@SA?AVQString@@PBD0@Z @ 40 NONAME ; class QString NotesModel::trUtf8(char const *, char const *)
+	?insertCompTodoToModel@NotesModel@@AAE_NAAVQModelIndex@@K@Z @ 41 NONAME ; bool NotesModel::insertCompTodoToModel(class QModelIndex &, unsigned long)
+	??0NotesSortFilterProxyModel@@QAE@AAVAgendaUtil@@PAVQObject@@@Z @ 42 NONAME ; NotesSortFilterProxyModel::NotesSortFilterProxyModel(class AgendaUtil &, class QObject *)
+	?populateSourceModel@NotesModel@@AAEXXZ @ 43 NONAME ; void NotesModel::populateSourceModel(void)
+

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE SystemDefinition SYSTEM "sysdef_1_5_1.dtd" [<!ENTITY layer_real_source_path "sf/app/camera" >]>
+
+<SystemDefinition name="camera" schema="1.5.1">
+  <systemModel>
+
+    <layer name="app_layer">
+      <module name="camera">
+        <unit unitID="imm.camera" mrp="" bldFile="&layer_real_source_path;/camerauis/cameraxui/" name="camera" proFile="camerax.pro" qmakeArgs="" />
+      </module>
+    </layer>
+
+    <layer name="api_test_layer">
+      <module name="camera_api_tests">
+      </module>
+    </layer>
+
+    <layer name="unit_test_layer">
+      <module name="camera_unit_tests">
+        <unit unitID="imm.camera.cxengine_unit_tests" mrp="" bldFile="&layer_real_source_path;/camerauis/cameraxui/cxengine/tsrc/unit/" name="cxengine_unit_tests" proFile="unit.pro" qmakeArgs="" />
+      </module>
+    </layer>
+
+  </systemModel>
+</SystemDefinition>

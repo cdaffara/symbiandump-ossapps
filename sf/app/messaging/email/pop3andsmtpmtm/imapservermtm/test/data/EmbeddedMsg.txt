@@ -1,0 +1,134 @@
+<< * OK Microsoft Exchange 2000 IMAP4rev1 server version 6.0.6249.0 (lon-cn-exchng2k.msexchange2k.closedtest.intra) ready.
+>> 1 CAPABILITY
+<< * CAPABILITY IMAP4 IMAP4rev1 IDLE LOGIN-REFERRALS MAILBOX-REFERRALS NAMESPACE LITERAL+ UIDPLUS CHILDREN AUTH=NTLM
+<< 1 OK CAPABILITY completed.
+>> 2 LOGIN davids davids
+<< 2 OK LOGIN completed.
+>> 3 SELECT "INBOX"
+<< * 1 EXISTS
+<< * 0 RECENT
+<< * FLAGS (\Seen \Answered \Flagged \Deleted \Draft $MDNSent)
+<< * OK [PERMANENTFLAGS (\Seen \Answered \Flagged \Deleted \Draft $MDNSent)] Permanent flags
+<< * OK [UIDVALIDITY 1378] UIDVALIDITY value
+<< 3 OK [READ-WRITE] SELECT completed.
+>> 4 UID FETCH 1:* (UID FLAGS BODYSTRUCTURE BODY.PEEK[HEADER.FIELDS (Received Date Subject From Priority X-Priority X-MSMail-Priority Importance)])
+<< * 1 FETCH (UID 201 FLAGS (\Seen) BODYSTRUCTURE ((("TEXT" "PLAIN" ("charset" "iso-8859-1") NIL NIL "QUOTED-PRINTABLE" 0 1 NIL NIL NIL)("TEXT" "HTML" ("charset" "iso-8859-1") NIL NIL "QUOTED-PRINTABLE" 338 6 NIL NIL NIL) "alternative" ("boundary" "----=_NextPart_001_002C_01C53C44.A6DB26B0") NIL NIL)("MESSAGE" "RFC822" ("name" "an embedded message.eml") NIL NIL "7BIT" 1593 ("Fri, 8 Apr 2005 14:08:36 +0100" "an embedded message" (("IMAP" NIL "davids" "msexchange2k.closedtest.intra")) (("IMAP" NIL "davids" "msexchange2k.closedtest.intra")) (("IMAP" NIL "davids" "msexchange2k.closedtest.intra")) (("David Test Account" NIL "davids" "msexchange2k.closedtest.intra")) NIL NIL NIL "<001701c53c3c$12daf150$0100a8c0@intra>") (("TEXT" "PLAIN" ("charset" "iso-8859-1") NIL NIL "QUOTED-PRINTABLE" 21 1 NIL NIL NIL)("TEXT" "HTML" ("charset" "iso-8859-1") NIL NIL "QUOTED-PRINTABLE" 382 7 NIL NIL NIL) "alternative" ("boundary" "----=_NextPart_000_0014_01C53C44.74982D60") NIL NIL) 27 NIL ("attachment" ("filename" "an embedded message.eml")) NIL) "mixed" ("boundary" "----=_NextPart_000_002B_01C53C44.A6DB26B0") NIL NIL) BODY[HEADER.FIELDS (Received Date Subject From)] {313}
+<< Received: from LONDAVIDS02 ([10.23.163.107]) by lon-cn-exchng2k.msexchange2k.closedtest.intra with Microsoft SMTPSVC(5.0.2195.5329);
+<< 	 Fri, 8 Apr 2005 14:06:49 +0100
+<< Date: Fri, 8 Apr 2005 14:10:00 +0100
+<< Subject: this message contains an embedded message
+<< From: "IMAP" <davids@msexchange2k.closedtest.intra>
+<< 
+<< )
+<< 4 OK FETCH completed.
+>> 5 LIST "" "%"
+<< * LIST (\Marked \HasNoChildren) "/" "Big Test inbox"
+<< * LIST (\HasNoChildren) "/" Calendar
+<< * LIST (\HasNoChildren) "/" Contacts
+<< * LIST (\HasNoChildren) "/" "Deleted Items"
+<< * LIST (\HasNoChildren) "/" Drafts
+<< * LIST (\Marked \HasNoChildren) "/" INBOX
+<< * LIST (\HasNoChildren) "/" Journal
+<< * LIST (\HasNoChildren) "/" Notes
+<< * LIST (\HasNoChildren) "/" Outbox
+<< * LIST (\Marked \HasNoChildren) "/" "Sent Items"
+<< * LIST (\HasNoChildren) "/" Tasks
+<< * LIST (\Noselect) "/" "Public Folders/"
+<< 5 OK LIST completed.
+>> 6 LIST "" "Big Test inbox/%"
+<< 6 OK LIST completed.
+>> 7 LIST "" "Calendar/%"
+<< 7 OK LIST completed.
+>> 8 LIST "" "Contacts/%"
+<< 8 OK LIST completed.
+>> 9 LIST "" "Deleted Items/%"
+<< 9 OK LIST completed.
+>> 10 LIST "" "Drafts/%"
+<< 10 OK LIST completed.
+>> 11 LIST "" "INBOX/%"
+<< 11 OK LIST completed.
+>> 12 LIST "" "Journal/%"
+<< 12 OK LIST completed.
+>> 13 LIST "" "Notes/%"
+<< 13 OK LIST completed.
+>> 14 LIST "" "Outbox/%"
+<< 14 OK LIST completed.
+>> 15 LIST "" "Sent Items/%"
+<< 15 OK LIST completed.
+>> 16 LIST "" "Tasks/%"
+<< 16 OK LIST completed.
+>> 17 LIST "" "Public Folders//%"
+<< 17 NO This a special mailbox and can not be selected or used as the destination for mailbox operations.
+>> 18 IDLE
+<< + IDLE accepted, awaiting DONE command.
+>> DONE
+<< 18 OK IDLE completed.
+>> 19 UID FETCH 201 (UID FLAGS BODYSTRUCTURE BODY.PEEK[HEADER.FIELDS (Received Date Subject From Reply-to To Cc Bcc Message-ID Return-Receipt-To X-Return-Receipt-To Disposition-Notification-To Disposition-Notification-Options Priority X-Priority X-MSMail-Priority Importance)])
+<< * 1 FETCH (UID 201 FLAGS (\Seen) BODYSTRUCTURE ((("TEXT" "PLAIN" ("charset" "iso-8859-1") NIL NIL "QUOTED-PRINTABLE" 0 1 NIL NIL NIL)("TEXT" "HTML" ("charset" "iso-8859-1") NIL NIL "QUOTED-PRINTABLE" 338 6 NIL NIL NIL) "alternative" ("boundary" "----=_NextPart_001_002C_01C53C44.A6DB26B0") NIL NIL)("MESSAGE" "RFC822" ("name" "an embedded message.eml") NIL NIL "7BIT" 1593 ("Fri, 8 Apr 2005 14:08:36 +0100" "an embedded message" (("IMAP" NIL "davids" "msexchange2k.closedtest.intra")) (("IMAP" NIL "davids" "msexchange2k.closedtest.intra")) (("IMAP" NIL "davids" "msexchange2k.closedtest.intra")) (("David Test Account" NIL "davids" "msexchange2k.closedtest.intra")) NIL NIL NIL "<001701c53c3c$12daf150$0100a8c0@intra>") (("TEXT" "PLAIN" ("charset" "iso-8859-1") NIL NIL "QUOTED-PRINTABLE" 21 1 NIL NIL NIL)("TEXT" "HTML" ("charset" "iso-8859-1") NIL NIL "QUOTED-PRINTABLE" 382 7 NIL NIL NIL) "alternative" ("boundary" "----=_NextPart_000_0014_01C53C44.74982D60") NIL NIL) 27 NIL ("attachment" ("filename" "an embedded message.eml")) NIL) "mixed" ("boundary" "----=_NextPart_000_002B_01C53C44.A6DB26B0") NIL NIL) BODY[HEADER.FIELDS (Received Date Subject From Reply-to To Cc Bcc Message-ID Return-Receipt-To X-Return-Receipt-To Disposition-Notification-To Disposition-Notification-Options Priority X-Priority X-MSMail-Priority Importance)] {472}
+<< Received: from LONDAVIDS02 ([10.23.163.107]) by lon-cn-exchng2k.msexchange2k.closedtest.intra with Microsoft SMTPSVC(5.0.2195.5329);
+<< 	 Fri, 8 Apr 2005 14:06:49 +0100
+<< Date: 
+<< Fri, 8 Apr 2005 14:10:00 +0100
+<< Subject: this message contains an embedded message
+<< From: "IMAP" <davids@msexchange2k.closedtest.intra>
+<< To: "David Test Account" <davids@msexchange2k.closedtest.intra>
+<< Message-ID: <002f01c53c3c$45276080$0100a8c0@intra>
+<< X-Priority: 3
+<< X-MSMail-Priority: Normal
+<< 
+<< )
+<< 19 OK FETCH completed.
+>> 20 UID FETCH 201 (BODY[1.2]<0.20480> BODY[1.2.MIME])
+<< * 1 FETCH (BODY[1.2]<0> {338}
+<< <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<< <HTML><HEAD>
+<< <META http-equiv=3DContent-Type content=3D"text/html; =
+<< charset=3Diso-8859-1">
+<< <META content=3D"MSHTML 6.00.2800.1458" name=3DGENERATOR>
+<< <STYLE></STYLE>
+<< </HEAD>
+<< <BODY bgColor=3D#ffffff>
+<< <DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV></BODY></HTML>
+<<  BODY[1.2.MIME] {96}
+<< Content-Type: text/html;
+<< 	charset="iso-8859-1"
+<< Content-Transfer-Encoding: quoted-printable
+<< 
+<<  UID 201)
+<< 20 OK FETCH completed.
+>> 21 UID FETCH 201 (BODY[2.1]<0.20480> BODY[2.1.MIME])
+<< * 1 FETCH (BODY[2.1]<0> {21}
+<< an embedded message
+<<  BODY[2.1.MIME] {97}
+<< Content-Type: text/plain;
+<< 	charset="iso-8859-1"
+<< Content-Transfer-Encoding: quoted-printable
+<< 
+<<  UID 201)
+<< 21 OK FETCH completed.
+>> 22 UID FETCH 201 (BODY[2.2]<0.20480> BODY[2.2.MIME])
+<< * 1 FETCH (BODY[2.2]<0> {382}
+<< <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<< <HTML><HEAD>
+<< <META http-equiv=3DContent-Type content=3D"text/html; =
+<< charset=3Diso-8859-1">
+<< <META content=3D"MSHTML 6.00.2800.1458" name=3DGENERATOR>
+<< <STYLE></STYLE>
+<< </HEAD>
+<< <BODY bgColor=3D#ffffff>
+<< <DIV><FONT face=3DArial size=3D2><FONT size=3D1>
+<< <P>an embedded message</P></FONT></FONT></DIV></BODY></HTML>
+<<  BODY[2.2.MIME] {96}
+<< Content-Type: text/html;
+<< 	charset="iso-8859-1"
+<< Content-Transfer-Encoding: quoted-printable
+<< 
+<<  UID 201)
+<< 22 OK FETCH completed.
+>> 23 IDLE
+<< + IDLE accepted, awaiting DONE command.
+>> DONE
+<< 23 OK IDLE completed.
+>> 24 LOGOUT
+<< * BYE Microsoft Exchange 2000 IMAP4rev1 server version 6.0.6249.0 signing off.
+<< 24 OK LOGOUT completed.

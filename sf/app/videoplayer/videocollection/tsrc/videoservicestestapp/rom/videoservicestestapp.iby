@@ -1,0 +1,30 @@
+/*
+* Copyright (c) 2006-2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: videoservicetestapp.iby
+*
+*/
+
+
+#ifndef __VIDEOSERVICESTESTAPP_IBY__
+#define __VIDEOSERVICESTESTAPP_IBY__
+
+#include <bldvariant.hrh>
+#include <data_caging_paths_for_iby.hrh>
+
+S60_APP_EXE(videoservicestestapp)
+data=/epoc32/data/z/private/10003a3f/import/apps/videoservicestestapp_reg.rsc         private/10003a3f/import/apps/videoservicestestapp_reg.rsc
+data=DATAZ_/APP_RESOURCE_DIR/videoservicestestapp.rsc                                 APP_RESOURCE_DIR/videoservicestestapp.rsc
+
+
+#endif  // __VIDEOSERVICESTESTAPP_IBY__

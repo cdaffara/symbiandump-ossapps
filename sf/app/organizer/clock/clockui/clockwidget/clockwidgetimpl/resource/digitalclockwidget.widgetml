@@ -1,0 +1,11 @@
+<hbwidget version="0.1" type="DigitalClockWidget">
+    <layout name="digital_clock_layout" type="mesh">       
+
+        <meshitem src="clockLabel" srcEdge="CENTERV" dst="" dstEdge="CENTERV" />
+        <meshitem src="clockLabel" srcEdge="CENTERH" dst="" dstEdge="CENTERH" />
+ 
+ 				<meshitem src="amPmLabel" srcEdge="BOTTOM" dst="clockLabel" dstEdge="TOP" />
+        <meshitem src="amPmLabel" srcEdge="LEFT" dst="clockLabel" dstEdge="LEFT" />
+       
+    </layout>    
+</hbwidget>

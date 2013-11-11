@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE SystemDefinition SYSTEM "sysdef_1_5_1.dtd" [
+  <!ENTITY layer_real_source_path "sf/app/testtools" >
+]>
+
+<SystemDefinition name="testtools" schema="1.5.1">
+  <systemModel>
+    <layer name="app_layer">
+			<module name="htiui">
+				<unit unitID="testtools.htiuiqt" mrp="" bldFile="&layer_real_source_path;/testconnuis/htiui" proFile="htiui.pro" name="htiui" />
+			</module>
+      <module name="stifui">
+        <unit unitID="testtools.stifui" mrp="" bldFile="&layer_real_source_path;/testfwuis/stifui/avkon/group" name="stifui" />
+      </module>
+      <module name="sutui">
+        <unit unitID="testtools.sutui" mrp="" bldFile="&layer_real_source_path;/testfwuis/symbianunittestui/qt" proFile="symbianunittestqt.pro" name="sutui" />
+      </module>
+    </layer>
+  </systemModel>
+</SystemDefinition>

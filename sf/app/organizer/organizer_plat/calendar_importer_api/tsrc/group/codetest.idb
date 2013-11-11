@@ -1,0 +1,223 @@
+%%HEADER
+%FORMAT 20030808
+CodeTEST Instrumentation Database
+%TIMESTAMP 45A4D6C9 135C
+%INSTRUMENTER CodeTEST C++ Instrumenter 1.9.08
+%CS 
+
+%%RANGES
+%FI 1
+1 2
+%FU 1
+1 12
+%CO 1
+FFFBC 44
+%ME 1
+1 2
+
+%%INCLUDE_RANGES 0
+
+%%EXPRESSIONS 1
+1
+
+%%FILES 2
+%1* 458B8CEF 6AFCBD9D 0 0 C++ LevelB ctcixx-1.9.08-a 1 
+U:/synergy_edit/calendarengines/CalenImp/Src/
+CalenImporter.cpp
+
+952CDA7 4 0 0
+C++ LevelB Memory
+%2* 45A34AC8 B580A7A4 0 0 C++ LevelB ctcixx-1.9.08-a 1 
+U:/synergy_edit/calendarengines/CalenImp/Src/
+CalenExporter.cpp
+
+505F2D77 4 0 0
+C++ LevelB Memory
+
+%%FUNCTIONS 12
+%1 1 1 9
+CCalenImporter::NewL
+CCalenImporter* CCalenImporter::NewL( CCalSession& aSession )
+1 585 31 120 30 30 3B
+%2 1 1 8
+CCalenImporter::~CCalenImporter
+CCalenImporter::~CCalenImporter()
+1 6CC 15 B7 3E 3E 47
+%3 1 1 4
+CCalenImporter::CCalenImporter
+CCalenImporter::CCalenImporter( CCalSession& aSession )
+1 7A1 37 142 4A 4A 57
+%4 1 1 B
+CCalenImporter::ConstructL
+void CCalenImporter::ConstructL()
+1 916 21 8B 5A 5A 61
+%5 1 1 1
+CCalenImporter::SetImportMode
+void CCalenImporter::SetImportMode(TCalenImportMode aImportMode)
+1 A0A 34 93 64 64 6B
+%6 1 1 B
+CCalenImporter::ImportVCalendarL
+void CCalenImporter::ImportVCalendarL( RReadStream& aReadStream, RPointerArray<CCalEntry>& aArray )
+1 BBD 60 3B2 74 76 92
+%7 1 1 9
+CCalenImporter::ImportICalendarL
+void CCalenImporter::ImportICalendarL( RReadStream& aReadStream, RPointerArray<CCalEntry>& aArray )
+1 108E 60 1DA 9A 9C AC
+%8 1 1 B
+CCalenImporter::AgnImportErrorL
+MAgnImportObserver::TImpResponse CCalenImporter::AgnImportErrorL( TImpError , const TDesC8& , const TDesC& )
+1 126A 89 F0 AE B1 B6
+%9 2 2 F
+CCalenExporter::NewL
+CCalenExporter* CCalenExporter::NewL( CCalSession& aSession )
+1 295D 31 111 17E 17E 189
+%A 2 2 D
+CCalenExporter::ConstructL
+void CCalenExporter::ConstructL()
+1 2A70 21 4E 18B 18B 18F
+%B 2 2 E
+CCalenExporter::~CCalenExporter
+CCalenExporter::~CCalenExporter()
+1 2AD6 15 5D 191 191 198
+%C 2 2 6
+CCalenExporter::CCalenExporter
+CCalenExporter::CCalenExporter( CCalSession& aSession )
+1 2C44 37 130 1A0 1A0 1AC
+%D 2 2 9
+CCalenExporter::ExportVCalL
+void CCalenExporter::ExportVCalL( const CCalEntry& aEntry, RWriteStream& aWriteStream )
+1 2E77 4B 220 1B3 1B3 1C6
+%E 2 2 A
+CCalenExporter::ExportICalL
+void CCalenExporter::ExportICalL( const CCalEntry& aEntry, RWriteStream& aWriteStream )
+1 319A 4C 1DA 1CD 1CD 1DE
+%F 2 2 6
+CCalenExporter::ExportVCalL
+void CCalenExporter::ExportVCalL( const RPointerArray<CCalEntry>& aArray, RWriteStream& aWriteStream )
+1 347E 61 1B7 1E5 1E7 1F9
+%10 2 2 6
+CCalenExporter::ExportICalL
+void CCalenExporter::ExportICalL( const RPointerArray<CCalEntry>& aArray, RWriteStream& aWriteStream )
+1 373F 61 1AE 200 202 213
+%11 2 2 3
+CCalenExporter::GetExportFlagsL
+TInt CCalenExporter::GetExportFlagsL(const CCalEntry& aEntry)
+1 38EF 3D 75E 215 215 262
+%12 2 2 5
+CCalenExporter::AgnExportErrorL
+MAgnExportObserver::TExpResponse CCalenExporter::AgnExportErrorL( TExpError , const TDesC8& , const TDesC& )
+1 404F 89 EF 264 267 26C
+
+%%ENTRIES 12
+1 1 1 21 31 31 5BA 1 0 0 0 0 0
+2 1 2 21 3F 3F 6E5 1 0 0 0 0 0
+3 1 3 21 4C 4C 7F9 1 0 0 0 0 0
+4 1 4 21 5B 5B 93C 1 0 0 0 0 0
+5 1 5 21 65 65 A42 1 0 0 0 0 0
+6 1 6 21 77 77 C22 1 0 0 0 0 0
+7 1 7 21 9D 9D 10F3 1 0 0 0 0 0
+8 1 8 21 B2 B2 1305 1 0 0 0 0 0
+9 2 9 21 17F 17F 298F 1 0 0 0 0 0
+A 2 A 21 18C 18C 2A93 1 0 0 0 0 0
+B 2 B 21 192 192 2AEC 1 0 0 0 0 0
+C 2 C 21 1A2 1A2 2C9B 1 0 0 0 0 0
+D 2 D 21 1B4 1B4 2EC6 1 0 0 0 0 0
+E 2 E 21 1CE 1CE 31EA 1 0 0 0 0 0
+F 2 F 21 1E8 1E8 34E4 1 0 0 0 0 0
+10 2 10 21 203 203 37A5 1 0 0 0 0 0
+11 2 11 21 216 216 392E 1 0 0 0 0 0
+12 2 12 21 268 268 40E9 1 0 0 0 0 0
+
+%%COVERAGE 24
+FFFFF 1 1 23 3A 3A 693 C 0 0 0 0 0
+FFFFE 1 2 22 47 47 782 1 0 0 0 0 0
+FFFFD 1 3 22 57 57 8E2 1 0 0 0 0 0
+FFFFC 1 4 22 61 61 9A0 1 0 0 0 0 0
+FFFFB 1 5 22 6B 6B A9C 1 0 0 0 0 0
+FFFF6 1 6 22 92 92 F6E 1 0 0 0 0 0
+FFFF3 1 7 22 AC AC 1267 1 0 0 0 0 0
+FFFF2 1 8 23 B5 B5 1338 1C 0 0 0 0 0
+FFFF1 2 9 23 188 188 2A5F C 0 0 0 0 0
+FFFF0 2 A 22 18F 18F 2ABD 1 0 0 0 0 0
+FFFEF 2 B 22 198 198 2B32 1 0 0 0 0 0
+FFFEE 2 C 22 1AC 1AC 2D73 1 0 0 0 0 0
+FFFED 2 D 22 1C6 1C6 3096 1 0 0 0 0 0
+FFFEA 2 E 22 1DE 1DE 3373 1 0 0 0 0 0
+FFFE7 2 F 22 1F9 1F9 3634 1 0 0 0 0 0
+FFFE4 2 10 22 213 213 38EC 1 0 0 0 0 0
+FFFD1 2 11 23 261 261 4038 12 0 0 0 0 0
+FFFD2 2 11 23 25B 25B 3FF6 1C 0 0 0 0 0
+FFFD3 2 11 23 258 258 3F96 15 0 0 0 0 0
+FFFD4 2 11 23 255 255 3F40 15 0 0 0 0 0
+FFFD5 2 11 23 252 252 3EEB 14 0 0 0 0 0
+FFFD6 2 11 23 24F 24F 3E97 11 0 0 0 0 0
+FFFD7 2 11 23 24C 24C 3E47 13 0 0 0 0 0
+FFFD8 2 11 23 249 249 3DF3 15 0 0 0 0 0
+FFFD9 2 11 23 246 246 3D9D 15 0 0 0 0 0
+FFFDA 2 11 23 243 243 3D4A 12 0 0 0 0 0
+FFFDB 2 11 23 239 239 3C9A 1D 0 0 0 0 0
+FFFDC 2 11 23 236 236 3C39 16 0 0 0 0 0
+FFFDD 2 11 23 233 233 3BE2 16 0 0 0 0 0
+FFFDE 2 11 23 230 230 3B8C 15 0 0 0 0 0
+FFFDF 2 11 23 22D 22D 3B3A 12 0 0 0 0 0
+FFFE0 2 11 23 22A 22A 3AE9 14 0 0 0 0 0
+FFFE1 2 11 23 227 227 3A94 16 0 0 0 0 0
+FFFE2 2 11 23 224 224 3A3D 16 0 0 0 0 0
+FFFE3 2 11 23 221 221 39EA 12 0 0 0 0 0
+FFFBC 2 12 23 26B 26B 411C 1C 0 0 0 0 0
+
+%%MCDC 9
+FFFF7 1 6 35 85 85 D7C 59 85 85 D77 5F 0
+FFFF9 1 6 35 7F 7F CCC 13 7F 7F CC8 19 0
+FFFF4 1 7 35 A5 A5 1199 10 A5 A5 1195 16 0
+FFFEB 2 E 35 1D2 1D2 3236 F 1D2 1D2 3232 15 0
+FFFE8 2 F 35 1EB 1EB 350A 12 1EB 1EB 3506 18 0
+FFFE5 2 10 35 206 206 37C7 12 206 206 37C3 18 0
+FFFBD 2 11 20 23F 23F 3CF5 10 23F 23F 3CED 19 9
+FFFC6 2 11 20 21D 21D 3995 10 21D 21D 398D 19 9
+FFFCF 2 11 20 219 219 3952 13 219 219 394A 1C 2
+
+%%CONDITIONS 14
+241 241 3D11 1C
+244 244 3D61 1F
+247 247 3DB7 1F
+24A 24A 3E0D 1D
+24D 24D 3E5F 1B
+250 250 3EAD 1E
+253 253 3F04 1F
+256 256 3F5A 1F
+259 259 3FB0 26
+21F 21F 39B1 1C
+222 222 3A01 1F
+225 225 3A58 1F
+228 228 3AAF 1D
+22B 22B 3B02 1B
+22E 22E 3B51 1E
+231 231 3BA6 1F
+234 234 3BFD 1F
+237 237 3C54 26
+21B 21B 396D 17
+23D 23D 3CCE 16
+
+%%TOOBIG 0
+
+%%MEMORY 2
+1 1 1 C 34 34 5F3 27
+2 2 9 C 182 182 29BF 27
+
+%%DEPENDENCY 2
+%1 0
+%2 0
+
+%%T-FUNCTIONS 0
+
+%%T-ENTRIES 0
+
+%%T-COVERAGE 0
+
+%%T-MCDC 0
+
+%%T-CONDITIONS 0
+
+%%T-MEMORY 0
+

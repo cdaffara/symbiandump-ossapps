@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="1.1">
+    <object name="viewextn" type="HbAction">
+        <icon iconName="qtg_mono_sort" name="icon"/>
+    </object>
+    <object name="newmsg" type="HbAction">
+        <icon iconName="qtg_mono_create_message" name="icon"/>
+    </object>
+    <object name="settings" type="HbAction">
+        <string locid="txt_messaging_opt_settings" name="text" value="Settings"/>
+    </object>
+    <widget name="view" type="HbView">
+        <widget name="content" role="HbView:widget" type="HbWidget">
+            <layout type="anchor"/>
+        </widget>
+        <widget name="viewToolbar" role="HbView:toolBar" type="HbToolBar"/>
+        <string locid="txt_messaging_title_messaging" name="title" value="Messaging"/>
+    </widget>
+    <metadata activeUIState="Common ui state" display="NHD-3.2-inch_portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+    </metadata>
+</hbdocument>

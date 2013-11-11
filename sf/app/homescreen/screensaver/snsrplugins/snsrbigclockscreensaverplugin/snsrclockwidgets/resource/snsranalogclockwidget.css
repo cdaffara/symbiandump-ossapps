@@ -1,0 +1,37 @@
+HbWidget {
+    margin-left: 0un;
+    margin-top: 0un;
+}
+
+SnsrAnalogClockWidget {
+    layout: layout_1;
+}
+
+SnsrAnalogClockWidget::analog_clock_background {
+    pref-height: 32.8un;
+    pref-width: 32.8un;
+    zvalue: 0;
+}
+
+SnsrAnalogClockWidget::analog_clock_hour_hand {
+    pref-height: 32.8un;
+    pref-width: 32.8un;
+    zvalue: 4;
+}
+
+SnsrAnalogClockWidget::analog_clock_minute_hand {
+    pref-height: 32.8un;
+    pref-width: 32.8un;
+    zvalue: 3;
+}
+
+SnsrAnalogClockWidget::analog_clock_second_hand {
+    pref-height: 32.8un;
+    pref-width: 32.8un;
+    zvalue: 2;
+}
+
+SnsrAnalogClockWidget::analog_clock_am_pm_label {
+    /* font spec etc are set in code as setting them here didn't seem to work properly */
+    zvalue: 1;
+}

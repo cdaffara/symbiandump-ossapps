@@ -1,0 +1,33 @@
+/*
+* Copyright (c) 2005-2010 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Capability Object Module bld.inf file
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+PRJ_PLATFORMS  
+DEFAULT
+
+PRJ_EXPORTS
+../rom/sconcsc.iby  CORE_APP_LAYER_IBY_EXPORT_PATH(sconcsc.iby)
+./101f9698.xml      Z:/private/101F99F6/capability/101f9698.xml
+./fwdcomp.xml       Z:/private/101F99F6/capability/fwdcomp.xml
+./101f99f6.xml      Z:/private/101F99F6/capability/101f99f6.xml
+
+
+PRJ_MMPFILES
+sconcsc.mmp
+

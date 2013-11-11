@@ -1,0 +1,66 @@
+EXPORTS
+	?connectSignals@BubbleManager@@AAEXPAVQGraphicsWidget@@@Z @ 1 NONAME ; void BubbleManager::connectSignals(class QGraphicsWidget *)
+	?createConference@BubbleManager@@UAEHHH@Z @ 2 NONAME ; int BubbleManager::createConference(int, int)
+	?tr@BubbleManager@@SA?AVQString@@PBD0H@Z @ 3 NONAME ; class QString BubbleManager::tr(char const *, char const *, int)
+	?staticMetaObject@BubbleManager@@2UQMetaObject@@B @ 4 NONAME ; struct QMetaObject const BubbleManager::staticMetaObject
+	?setState@BubbleManager@@UAEXHW4PhoneCallState@BubbleManagerIF@@@Z @ 5 NONAME ; void BubbleManager::setState(int, enum BubbleManagerIF::PhoneCallState)
+	?tr@BubbleManager@@SA?AVQString@@PBD0@Z @ 6 NONAME ; class QString BubbleManager::tr(char const *, char const *)
+	?selectionInConference@BubbleManager@@UBEHXZ @ 7 NONAME ; int BubbleManager::selectionInConference(void) const
+	??_EBubbleManager@@UAE@I@Z @ 8 NONAME ; BubbleManager::~BubbleManager(unsigned int)
+	?addToLayout@BubbleManager@@AAE_NPAVQGraphicsWidget@@@Z @ 9 NONAME ; bool BubbleManager::addToLayout(class QGraphicsWidget *)
+	?updateCallTime@BubbleManager@@UAEXHABVQString@@@Z @ 10 NONAME ; void BubbleManager::updateCallTime(int, class QString const &)
+	?removeFromLayout@BubbleManager@@AAEXPAVQGraphicsWidget@@@Z @ 11 NONAME ; void BubbleManager::removeFromLayout(class QGraphicsWidget *)
+	?polishEvent@BubbleManager@@EAEXXZ @ 12 NONAME ; void BubbleManager::polishEvent(void)
+	?graphicsWidgetForAction@BubbleManager@@UBEPAVQGraphicsWidget@@PAVHbAction@@@Z @ 13 NONAME ; class QGraphicsWidget * BubbleManager::graphicsWidgetForAction(class HbAction *) const
+	?setCallObjectImage@BubbleManager@@UAEXHABVQString@@@Z @ 14 NONAME ; void BubbleManager::setCallObjectImage(int, class QString const &)
+	?isConferenceExpanded@BubbleManager@@UBE_NXZ @ 15 NONAME ; bool BubbleManager::isConferenceExpanded(void) const
+	?setNumberType@BubbleManager@@UAEXHW4PhoneNumberType@BubbleManagerIF@@@Z @ 16 NONAME ; void BubbleManager::setNumberType(int, enum BubbleManagerIF::PhoneNumberType)
+	?selectView@BubbleManager@@AAEPAVQGraphicsWidget@@XZ @ 17 NONAME ; class QGraphicsWidget * BubbleManager::selectView(void)
+	?startChanges@BubbleManager@@UAEXXZ @ 18 NONAME ; void BubbleManager::startChanges(void)
+	?removeRowFromConference@BubbleManager@@UAEXH@Z @ 19 NONAME ; void BubbleManager::removeRowFromConference(int)
+	?clearActions@BubbleManager@@UAEXH@Z @ 20 NONAME ; void BubbleManager::clearActions(int)
+	?qt_metacall@BubbleManager@@UAEHW4Call@QMetaObject@@HPAPAX@Z @ 21 NONAME ; int BubbleManager::qt_metacall(enum QMetaObject::Call, int, void * *)
+	?findActiveHeader@BubbleManager@@AAE_NHAAPAVBubbleHeader@@@Z @ 22 NONAME ; bool BubbleManager::findActiveHeader(int, class BubbleHeader * &)
+	?shownHeaderCount@BubbleManager@@UBEHXZ @ 23 NONAME ; int BubbleManager::shownHeaderCount(void) const
+	?setBubbleSelectionDisabled@BubbleManager@@UAEX_N@Z @ 24 NONAME ; void BubbleManager::setBubbleSelectionDisabled(bool)
+	??1BubbleManager@@UAE@XZ @ 25 NONAME ; BubbleManager::~BubbleManager(void)
+	?findNextDrawableHeader@BubbleManager@@ABEXAAH@Z @ 26 NONAME ; void BubbleManager::findNextDrawableHeader(int &) const
+	?trUtf8@BubbleManager@@SA?AVQString@@PBD0@Z @ 27 NONAME ; class QString BubbleManager::trUtf8(char const *, char const *)
+	??0BubbleManager@@QAE@PAVQGraphicsItem@@@Z @ 28 NONAME ; BubbleManager::BubbleManager(class QGraphicsItem *)
+	?expandedBubble@BubbleManager@@UBEHXZ @ 29 NONAME ; int BubbleManager::expandedBubble(void) const
+	?setSelectionIdInConference@BubbleManager@@UAEXH@Z @ 30 NONAME ; void BubbleManager::setSelectionIdInConference(int)
+	?moveHighlightOneUpInConference@BubbleManager@@UAEXXZ @ 31 NONAME ; void BubbleManager::moveHighlightOneUpInConference(void)
+	?createCallHeader@BubbleManager@@UAEHXZ @ 32 NONAME ; int BubbleManager::createCallHeader(void)
+	?setCallObjectFromTheme@BubbleManager@@UAEXH@Z @ 33 NONAME ; void BubbleManager::setCallObjectFromTheme(int)
+	?handleOrientationChange@BubbleManager@@QAEXW4Orientation@Qt@@@Z @ 34 NONAME ; void BubbleManager::handleOrientationChange(enum Qt::Orientation)
+	?setSecondaryCli@BubbleManager@@UAEXHABVQString@@W4TextElideMode@Qt@@@Z @ 35 NONAME ; void BubbleManager::setSecondaryCli(int, class QString const &, enum Qt::TextElideMode)
+	?selectionIdInConference@BubbleManager@@UBEHXZ @ 36 NONAME ; int BubbleManager::selectionIdInConference(void) const
+	?addAction@BubbleManager@@UAEXHPAVHbAction@@@Z @ 37 NONAME ; void BubbleManager::addAction(int, class HbAction *)
+	?qt_metacast@BubbleManager@@UAEPAXPBD@Z @ 38 NONAME ; void * BubbleManager::qt_metacast(char const *)
+	?getStaticMetaObject@BubbleManager@@SAABUQMetaObject@@XZ @ 39 NONAME ; struct QMetaObject const & BubbleManager::getStaticMetaObject(void)
+	?moveHighlightOneDownInConference@BubbleManager@@UAEXXZ @ 40 NONAME ; void BubbleManager::moveHighlightOneDownInConference(void)
+	?removeConference@BubbleManager@@UAEXXZ @ 41 NONAME ; void BubbleManager::removeConference(void)
+	?removeCallHeader@BubbleManager@@UAEXH@Z @ 42 NONAME ; void BubbleManager::removeCallHeader(int)
+	?setViewData@BubbleManager@@AAEXPAVQGraphicsWidget@@@Z @ 43 NONAME ; void BubbleManager::setViewData(class QGraphicsWidget *)
+	?setPhoneMuted@BubbleManager@@UAEX_N@Z @ 44 NONAME ; void BubbleManager::setPhoneMuted(bool)
+	?metaObject@BubbleManager@@UBEPBUQMetaObject@@XZ @ 45 NONAME ; struct QMetaObject const * BubbleManager::metaObject(void) const
+	?updateCLI@BubbleManager@@UAEXHABVQString@@W4TextElideMode@Qt@@@Z @ 46 NONAME ; void BubbleManager::updateCLI(int, class QString const &, enum Qt::TextElideMode)
+	?addParticipantListAction@BubbleManager@@UAEXPAVHbAction@@@Z @ 47 NONAME ; void BubbleManager::addParticipantListAction(class HbAction *)
+	?setCallTime@BubbleManager@@UAEXHABVQString@@@Z @ 48 NONAME ; void BubbleManager::setCallTime(int, class QString const &)
+	?endChanges@BubbleManager@@UAEXXZ @ 49 NONAME ; void BubbleManager::endChanges(void)
+	?setSelectionInConference@BubbleManager@@UAEXH@Z @ 50 NONAME ; void BubbleManager::setSelectionInConference(int)
+	?setParticipantListCli@BubbleManager@@UAEXHW4ParticipantListCli@BubbleManagerIF@@@Z @ 51 NONAME ; void BubbleManager::setParticipantListCli(int, enum BubbleManagerIF::ParticipantListCli)
+	?setCallFlag@BubbleManager@@UAEXHV?$QFlags@W4PhoneCallFlag@BubbleManagerIF@@@@_N@Z @ 52 NONAME ; void BubbleManager::setCallFlag(int, class QFlags<enum BubbleManagerIF::PhoneCallFlag>, bool)
+	?setExpandAction@BubbleManager@@UAEXHPAVHbAction@@@Z @ 53 NONAME ; void BubbleManager::setExpandAction(int, class HbAction *)
+	?trUtf8@BubbleManager@@SA?AVQString@@PBD0H@Z @ 54 NONAME ; class QString BubbleManager::trUtf8(char const *, char const *, int)
+	?showExpanded@BubbleManager@@AAEXH@Z @ 55 NONAME ; void BubbleManager::showExpanded(int)
+	?setCli@BubbleManager@@UAEXHABVQString@@W4TextElideMode@Qt@@@Z @ 56 NONAME ; void BubbleManager::setCli(int, class QString const &, enum Qt::TextElideMode)
+	?conferenceRowCount@BubbleManager@@UBEHXZ @ 57 NONAME ; int BubbleManager::conferenceRowCount(void) const
+	?setExpandedConferenceCallHeader@BubbleManager@@UAEX_N@Z @ 58 NONAME ; void BubbleManager::setExpandedConferenceCallHeader(bool)
+	?clearParticipantListActions@BubbleManager@@UAEXXZ @ 59 NONAME ; void BubbleManager::clearParticipantListActions(void)
+	?setCallFlags@BubbleManager@@UAEXHH@Z @ 60 NONAME ; void BubbleManager::setCallFlags(int, int)
+	?addRowToConference@BubbleManager@@UAEXH@Z @ 61 NONAME ; void BubbleManager::addRowToConference(int)
+	?setLabel@BubbleManager@@UAEXHABVQString@@W4TextElideMode@Qt@@@Z @ 62 NONAME ; void BubbleManager::setLabel(int, class QString const &, enum Qt::TextElideMode)
+	?releaseImageIfNotUsed@BubbleManager@@AAEXABVQString@@@Z @ 63 NONAME ; void BubbleManager::releaseImageIfNotUsed(class QString const &)
+	?releaseNonCachedViews@BubbleManager@@AAEXXZ @ 64 NONAME ; void BubbleManager::releaseNonCachedViews(void)
+

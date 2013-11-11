@@ -1,0 +1,43 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:  MmsCodecClientTest_ARMV5_UREL.pkg;
+
+
+;*Languages
+&EN
+;
+
+;application UID, and version/build numbers. Add the package TYPE here if needed.
+#{"MmsCodecClientApiTest"},(0x101FB3ED),1,0,1;
+;
+
+
+;This is used in combination with signing to prevent the unauthroized
+;upgrade ofa a package by someone other than the rightful vendor.
+:"Nokia"
+
+;This specifies the localised vendor name(s) correspodning to language(s).
+%{"Nokia Test EN"}
+
+;Files to install
+;
+"\epoc32\release\armv5\urel\MmsCodecClientApiTest.dll"-"C:\sys\bin\MmsCodecClientApiTest.dll"
+"..\Init\TestFramework.ini"-"C:\TestFramework\TestFramework.ini"
+"..\Conf\MmsCodecClientTest.cfg"-"C:\TestFramework\MmsCodecClientTest.cfg"
+"..\data\mmc\mmsmessagebinaries\m.mms"-"e:\Testing\data\mmsmessagebinaries\m.mms"
+"..\data\mmc\mmsmessagebinaries\multipartrelated.mms"-"e:\Testing\data\mmsmessagebinaries\multipartrelated.mms"
+"..\data\mmc\mmsmessagebinaries\no_multipart.mms"-"e:\Testing\data\mmsmessagebinaries\no_multipart.mms"
+"..\data\mmc\mmsmessagebinaries\nodata.mms"-"e:\Testing\data\mmsmessagebinaries\nodata.mms"
+
+

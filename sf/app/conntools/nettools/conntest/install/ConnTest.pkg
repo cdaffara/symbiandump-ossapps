@@ -1,0 +1,46 @@
+;
+; Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description: This is the package file for ConnTest SIS creation
+;
+
+;
+; Installation file for ConnTest application
+;
+;Languages
+&EN
+; 
+; UID is the app's UID
+;
+#{"ConnTest"},(0x101F6D2B),1,6,0,TYPE=SA
+;
+; Supports Series 60 v 3.0
+[0x101F7961], 0, 0, 0, {"Series60ProductID"}
+
+; Localised Vendor name
+%{"Nokia Test EN"}
+
+; Unique Vendor name
+:"Nokia"
+
+;Files to install
+"\epoc32\data\Z\private\10003a3f\apps\ConnTest_reg.rsc"-"!:\private\10003a3f\import\apps\ConnTest_reg.rsc"
+"\epoc32\release\armv5\urel\ConnTest.exe"-"!:\sys\bin\ConnTest.exe"
+"\epoc32\data\Z\Resource\apps\ConnTest_AIF.mbm"-"!:\resource\apps\ConnTest_AIF.mbm"
+"\epoc32\data\Z\Resource\apps\ConnTest_AIF.mif"-"!:\resource\apps\ConnTest_AIF.mif"
+"\epoc32\data\Z\Resource\apps\ConnTest.rsc"         -"!:\resource\apps\ConnTest.rsc"
+"\epoc32\winscw\c\private\101f7989\Esock\ip.probe.esk"	-"!:\private\101f7989\import\esock\ip.probe.esk"
+"\epoc32\release\armv5\urel\probe.prt"     		-"!:\sys\bin\probe.prt"
+
+;@"..\probe\install\probe-x.sis",(0x101F6D2C)
+

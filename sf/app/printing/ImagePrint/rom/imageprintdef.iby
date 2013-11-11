@@ -1,0 +1,36 @@
+/*
+* Copyright (c) 2004-2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Image Print rom build definition header
+*
+*/
+
+#ifndef IMAGEPRINTDEF_IBY
+#define IMAGEPRINTDEF_IBY
+
+// If __IP_DEBUG__ is defined pull in debug versions of the
+// ImagePrint and PrintingDevice DLLs and Plugins regardless of the ROM type
+
+//#define __IP_DEBUG__
+
+#ifdef __IP_DEBUG__
+define IP_DIR UDEB
+#define IP_PLUGIN ECOM_PLUGIN_UDEB
+#define IP_APP S60_APP_EXE_UDEB
+#else
+define IP_DIR BUILD_DIR
+#define IP_PLUGIN ECOM_PLUGIN
+#define IP_APP S60_APP_EXE
+#endif
+
+#endif// IMAGEPRINTDEF_IBY

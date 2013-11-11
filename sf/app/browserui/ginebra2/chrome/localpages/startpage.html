@@ -1,0 +1,84 @@
+<html>
+  <head>
+	  <title>Welcome Page</title>
+	  <meta name = "viewport" content = "width = device-width, height = device-height, initial-scale = 1.0, user-scalable = no">
+	  <link rel="stylesheet" type="text/css" href="startpage.css"/>
+  </head>
+  <script type="text/javascript">
+  	function pressed (num) {
+		butt1 = document.getElementById('relnote_button');
+		butt2 = document.getElementById('survey_button');
+
+		switch (num)
+		{
+			case 1: 
+				butt1.setAttribute('class', 'button_p');
+				break;
+			case 2: 
+				butt2.setAttribute('class', 'button_p');
+				alert ("No Survey Link");
+				break;
+			case 9: // reset on refocus
+				butt1.setAttribute('class', 'button');
+				butt2.setAttribute('class', 'button');
+				break;
+		}
+	}
+  
+  </script>
+  <body onFocus="pressed(9)" >
+  <img id="bgimage" src="grad_tall.jpg" />
+  <div id="content">
+    <div id="row1_logos">
+	    <img id="nokia_logo" src="nokia_logo.png" />
+	    <img id="browser_logo" src="bedrock.png" />
+        <div id="browser_version">
+            <div id="release_version">
+	            <script type="text/javascript">
+	                var UAString = navigator.userAgent;
+	                var brNameVer = "unknown";
+	                var UALen = 1;
+	                var nameStart = 1;
+	        
+					// options for Welcome Page browser version information
+		            //document.write("ALPHA <span id='roman_num'>III</span>");
+		            //document.write("BETA");
+		            document.write("TRUNK BUILD");
+
+					// Get, parse, display UA String
+	                UALen = UAString.length;
+	                // NOTE: if UA String changes browser name to 
+	                // something else we'll need to change the following line!
+	                nameStart = UAString.indexOf("NokiaBrowser");
+	                // test to see if "NokiaBrowser" is in the UA String at all
+	                if (nameStart < 0)
+						brNameVer = "UA = <br/>" + UAString;
+	                else
+	                {
+	                    // crop string starting at "NokiaBrowser"
+	                    brNameVer = UAString.substring(nameStart, UALen);
+	                    // limit substring to "NokiaBrowser" and version only
+	                    brNameVer = brNameVer.substr(0, brNameVer.indexOf(" "));
+	                    // clean up string for presentation
+	                    brNameVer = brNameVer.replace("/", " v");
+	                }
+					// comment OUT next two lines to remove build info...
+					document.write(" - ");
+	                document.write(brNameVer);
+					document.write("<br/>");
+	            </script>
+            </div>
+        </div>
+		<div id="jerry_sez">
+			<img src="button4.png" onMouseDown="pressed(25)"></img>
+		</div>
+		<div id="buttons">
+        	<a href="relnotes.html" onMouseDown="pressed(1)"><img id="relnote_button" class="button" src="button_rel_notes.png" /></a>
+        	<a href="startpage.html" onMouseDown="pressed(2)"><img id="survey_button" class="button" src="button_survey.png" /></a>
+        </div>
+		<div id="bottom_pad">
+		</div>
+    </div>
+</body>
+</html>
+

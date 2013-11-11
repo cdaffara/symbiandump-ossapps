@@ -1,0 +1,226 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:2.0
+X-MadeUp:Some Valid Data
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+X-MadeUp:Some Valid Data
+BEGIN:VTIMEZONE
+TZID:US-Eastern
+LAST-MODIFIED:19870101T000000Z
+TZURL:http://zones.stds_r_us.net/tz/US-Eastern
+X-MadeUp:Some Valid Data
+X-MadeUp:Some Valid Data
+BEGIN:DAYLIGHT
+tzoffsetto:-0500
+tzoffsetfrom:-0400
+TZNAME:EST
+X-MadeUp:Some Valid Data
+DTSTART:19971026T020000
+COMMENT:The meeting really needs to include both ourselvesand the customer.
+  We can't hold this  meeting without them.As a matter of fact\, the venue 
+ for the meeting ought to be attheir site. - - John
+RDATE:19971026T020000
+RRULE:FREQ=YEARLY;BYDAY=1SU;BYMONTH=4
+X-MadeUp:Some Valid Data
+END:DAYLIGHT
+BEGIN:STANDARD
+tzoffsetto:-0500
+tzoffsetfrom:-0400
+TZNAME:EST
+X-MadeUp:Some Valid Data
+DTSTART:19971026T020000
+COMMENT:The meeting really needs to include both ourselvesand the customer.
+  We can't hold this  meeting without them.As a matter of fact\, the venue 
+ for the meeting ought to be attheir site. - - John
+RDATE:19971026T020000
+RRULE:FREQ=YEARLY;BYDAY=1SU;BYMONTH=4
+X-MadeUp:Some Valid Data
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VJOURNAL
+LAST-MODIFIED:19870101T000000Z
+X-MadeUp:Some Valid Data
+DTSTART:19971026T020000
+DTSTAMP:19971210T080000Z
+ORGANIZER:MAILTO:jsmith@host.com
+RECURRENCE-ID;RANGE=THISANDPRIOR:19980401T133000Z
+SEQUENCE:0
+STATUS:NEEDS-ACTION
+SUMMARY:This is the summary property
+UID:040000008200E00074C5B7101A82E0080000000010283F6BFA2EC501000000000000000
+ 010000000978C16EBD9A54843B5BB29BA6CDF8BC1
+URL:http://www.host.com/calendar/busytime/jsmith.ifb
+DESCRIPTION:The description property
+CLASS:PUBLIC
+CREATED:19960401T235959Z
+ATTACH;FMTTYPE=application/postscript:ftp://xyzCorp.com/pub/reports/r-96081
+ 2.ps
+ATTENDEE:MAILTO:john_doe@host.com
+CATEGORIES:FAMILY,FINANCE
+COMMENT:The meeting really needs to include both ourselvesand the customer.
+  We can't hold this  meeting without them.As a matter of fact\, the venue 
+ for the meeting ought to be attheir site. - - John
+CONTACT:Jim Dolittle\, ABC Industries\, +1-919-555-1234
+EXDATE:19960402T010000Z,19960403T010000Z,19960404T010000Z
+EXRULE:FREQ=WEEKLY;COUNT=4;INTERVAL=2;BYDAY=TU,TH
+RELATED-TO:<jsmith.part7.19960817T083000.xyzMail@host3.com>
+RDATE:19971026T020000
+RRULE:FREQ=YEARLY;BYDAY=1SU;BYMONTH=4
+REQUEST-STATUS:3.1;Invalid property value;DTSTART:96-Apr-01
+X-MadeUp:Some Valid Data
+ATTACH;FMTTYPE=application/postscript:ftp://xyzCorp.com/pub/reports/r-96081
+ 2.ps
+ATTENDEE:MAILTO:john_doe@host.com
+CATEGORIES:FAMILY,FINANCE
+COMMENT:The meeting really needs to include both ourselvesand the customer.
+  We can't hold this  meeting without them.As a matter of fact\, the venue 
+ for the meeting ought to be attheir site. - - John
+CONTACT:Jim Dolittle\, ABC Industries\, +1-919-555-1234
+EXDATE:19960402T010000Z,19960403T010000Z,19960404T010000Z
+EXRULE:FREQ=WEEKLY;COUNT=4;INTERVAL=2;BYDAY=TU,TH
+RELATED-TO:<jsmith.part7.19960817T083000.xyzMail@host3.com>
+RDATE:19971026T020000
+RRULE:FREQ=YEARLY;BYDAY=1SU;BYMONTH=4
+REQUEST-STATUS:3.1;Invalid property value;DTSTART:96-Apr-01
+END:VJOURNAL
+BEGIN:VFREEBUSY
+X-MadeUp:Some Valid Data
+DTSTART:19971026T020000
+DTSTAMP:19971210T080000Z
+ORGANIZER:MAILTO:jsmith@host.com
+UID:040000008200E00074C5B7101A82E0080000000010283F6BFA2EC501000000000000000
+ 010000000978C16EBD9A54843B5BB29BA6CDF8BC1
+DTEND:19971026T020300
+ATTENDEE:MAILTO:john_doe@host.com
+COMMENT:The meeting really needs to include both ourselvesand the customer.
+  We can't hold this  meeting without them.As a matter of fact\, the venue 
+ for the meeting ought to be attheir site. - - John
+CONTACT:Jim Dolittle\, ABC Industries\, +1-919-555-1234
+X-MadeUp:Some Valid Data
+ATTENDEE:MAILTO:john_doe@host.com
+COMMENT:The meeting really needs to include both ourselvesand the customer.
+  We can't hold this  meeting without them.As a matter of fact\, the venue 
+ for the meeting ought to be attheir site. - - John
+END:VFREEBUSY
+BEGIN:VTODO
+LAST-MODIFIED:19870101T000000Z
+X-MadeUp:Some Valid Data
+DTSTART:19971026T020000
+DTSTAMP:19971210T080000Z
+ORGANIZER:MAILTO:jsmith@host.com
+RECURRENCE-ID;RANGE=THISANDPRIOR:19980401T133000Z
+SEQUENCE:0
+STATUS:NEEDS-ACTION
+SUMMARY:This is the summary property
+UID:040000008200E00074C5B7101A82E0080000000010283F6BFA2EC501000000000000000
+ 010000000978C16EBD9A54843B5BB29BA6CDF8BC1
+URL:http://www.host.com/calendar/busytime/jsmith.ifb
+DURATION:-P15M
+DESCRIPTION:The description property
+CLASS:PUBLIC
+CREATED:19960401T235959Z
+GEO:37.386013;-122.082932
+LOCATION:Meeting Room 4
+PERCENT-COMPLETE:12
+PRIORITY:1
+ATTACH;FMTTYPE=application/postscript:ftp://xyzCorp.com/pub/reports/r-96081
+ 2.ps
+ATTENDEE:MAILTO:john_doe@host.com
+CATEGORIES:FAMILY,FINANCE
+COMMENT:The meeting really needs to include both ourselvesand the customer.
+  We can't hold this  meeting without them.As a matter of fact\, the venue 
+ for the meeting ought to be attheir site. - - John
+CONTACT:Jim Dolittle\, ABC Industries\, +1-919-555-1234
+EXDATE:19960402T010000Z,19960403T010000Z,19960404T010000Z
+EXRULE:FREQ=WEEKLY;COUNT=4;INTERVAL=2;BYDAY=TU,TH
+RELATED-TO:<jsmith.part7.19960817T083000.xyzMail@host3.com>
+RDATE:19971026T020000
+RRULE:FREQ=YEARLY;BYDAY=1SU;BYMONTH=4
+RESOURCES:EASEL,PROJECTOR,VCR
+X-MadeUp:Some Valid Data
+ATTACH;FMTTYPE=application/postscript:ftp://xyzCorp.com/pub/reports/r-96081
+ 2.ps
+ATTENDEE:MAILTO:john_doe@host.com
+CATEGORIES:FAMILY,FINANCE
+COMMENT:The meeting really needs to include both ourselvesand the customer.
+  We can't hold this  meeting without them.As a matter of fact\, the venue 
+ for the meeting ought to be attheir site. - - John
+CONTACT:Jim Dolittle\, ABC Industries\, +1-919-555-1234
+EXDATE:19960402T010000Z,19960403T010000Z,19960404T010000Z
+EXRULE:FREQ=WEEKLY;COUNT=4;INTERVAL=2;BYDAY=TU,TH
+RELATED-TO:<jsmith.part7.19960817T083000.xyzMail@host3.com>
+RDATE:19971026T020000
+RRULE:FREQ=YEARLY;BYDAY=1SU;BYMONTH=4
+RESOURCES:EASEL,PROJECTOR,VCR
+END:VTODO
+BEGIN:VEVENT
+LAST-MODIFIED:19870101T000000Z
+X-MadeUp:Some Valid Data
+DTSTART:19971026T020000
+DTSTAMP:19971210T080000Z
+ORGANIZER:MAILTO:jsmith@host.com
+RECURRENCE-ID;RANGE=THISANDPRIOR:19980401T133000Z
+SEQUENCE:0
+STATUS:NEEDS-ACTION
+SUMMARY:This is the summary property
+UID:040000008200E00074C5B7101A82E0080000000010283F6BFA2EC501000000000000000
+ 010000000978C16EBD9A54843B5BB29BA6CDF8BC1
+URL:http://www.host.com/calendar/busytime/jsmith.ifb
+DTEND:19971026T020300
+DESCRIPTION:The description property
+CLASS:PUBLIC
+CREATED:19960401T235959Z
+GEO:37.386013;-122.082932
+LOCATION:Meeting Room 4
+PRIORITY:1
+TRANSP:TRANSPARENT
+ATTACH;FMTTYPE=application/postscript:ftp://xyzCorp.com/pub/reports/r-96081
+ 2.ps
+ATTENDEE:MAILTO:john_doe@host.com
+CATEGORIES:FAMILY,FINANCE
+COMMENT:The meeting really needs to include both ourselvesand the customer.
+  We can't hold this  meeting without them.As a matter of fact\, the venue 
+ for the meeting ought to be attheir site. - - John
+CONTACT:Jim Dolittle\, ABC Industries\, +1-919-555-1234
+EXDATE:19960402T010000Z,19960403T010000Z,19960404T010000Z
+EXRULE:FREQ=WEEKLY;COUNT=4;INTERVAL=2;BYDAY=TU,TH
+RELATED-TO:<jsmith.part7.19960817T083000.xyzMail@host3.com>
+RDATE:19971026T020000
+RRULE:FREQ=YEARLY;BYDAY=1SU;BYMONTH=4
+REQUEST-STATUS:3.1;Invalid property value;DTSTART:96-Apr-01
+RESOURCES:EASEL,PROJECTOR,VCR
+X-MadeUp:Some Valid Data
+ATTACH;FMTTYPE=application/postscript:ftp://xyzCorp.com/pub/reports/r-96081
+ 2.ps
+ATTENDEE:MAILTO:john_doe@host.com
+CATEGORIES:FAMILY,FINANCE
+COMMENT:The meeting really needs to include both ourselvesand the customer.
+  We can't hold this  meeting without them.As a matter of fact\, the venue 
+ for the meeting ought to be attheir site. - - John
+CONTACT:Jim Dolittle\, ABC Industries\, +1-919-555-1234
+EXDATE:19960402T010000Z,19960403T010000Z,19960404T010000Z
+EXRULE:FREQ=WEEKLY;COUNT=4;INTERVAL=2;BYDAY=TU,TH
+RELATED-TO:<jsmith.part7.19960817T083000.xyzMail@host3.com>
+RDATE:19971026T020000
+RRULE:FREQ=YEARLY;BYDAY=1SU;BYMONTH=4
+REQUEST-STATUS:3.1;Invalid property value;DTSTART:96-Apr-01
+RESOURCES:EASEL,PROJECTOR,VCR
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P15M
+X-MadeUp:Some Valid Data
+SUMMARY:This is the summary property
+DURATION:-P15M
+REPEAT:4
+DESCRIPTION:The description property
+ATTACH;FMTTYPE=application/postscript:ftp://xyzCorp.com/pub/reports/r-96081
+ 2.ps
+ATTENDEE:MAILTO:john_doe@host.com
+X-MadeUp:Some Valid Data
+ATTACH;FMTTYPE=application/postscript:ftp://xyzCorp.com/pub/reports/r-96081
+ 2.ps
+ATTENDEE:MAILTO:john_doe@host.com
+END:VALARM
+END:VEVENT
+END:VCALENDAR

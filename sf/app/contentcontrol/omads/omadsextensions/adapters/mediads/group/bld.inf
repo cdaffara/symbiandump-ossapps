@@ -1,0 +1,28 @@
+/*
+* Copyright (c) 2009-2010 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  bld file for Media DS adapter
+*
+*/
+
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+./2001a9a1.xml          Z:/private/101f99f6/capability/2001a9a1.xml
+./mediads_stub.sis      /epoc32/data/z/system/install/mediads_stub.sis
+../rom/mediads.iby     CORE_APP_LAYER_IBY_EXPORT_PATH(mediads.iby)
+
+PRJ_MMPFILES
+./mediads.mmp

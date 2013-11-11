@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<api id="cc72354170c1c516b0ee2944ab5fb262" dataversion="1.0">
+  <name>Telephony Device Mode API</name>
+  <description>An interface for creating Telephony Device Mode component. With this API a client may implement own version of TelephonyDeviceMode.dll compoment and replace the default implementation.</description>
+  <type>c++</type>
+  <subsystem>phoneuis</subsystem>
+  <libs>
+    <lib name="telephonydevicemode.lib" />
+  </libs>
+  <release category="domain"/>
+  <attributes>
+     <!-- This indicates wether the api provedes separate html documentation -->
+     <!-- or is the additional documentation generated from headers. -->
+     <!-- If you are unsuere then the value is "no" -->
+     <htmldocprovided>yes</htmldocprovided>
+     <adaptation>no</adaptation>
+  </attributes>
+</api>

@@ -1,0 +1,41 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:
+;
+; A package file for creating an installation file for Logs 
+; which updates Logs binaries from ROM (eclipsing)
+
+; Supported languages
+&EN
+
+; Header
+#{"LogsApp"},(0x101F4CD5),1,0,0,TYPE=SA,RU
+
+; Localised Vendor name
+%{"Symbian"}
+
+; Unique Vendor name
+:"Symbian"
+
+
+; -----------------------------------------------------------------------------------
+
+; Backup registration and restore
+"\epoc32\data\z\private\101F4CD5\backup_registration.xml"-"!:\private\101F4CD5\backup_registration.xml"
+
+"\epoc32\release\armv5\udeb\logs.exe"-"!:\sys\bin\logs.exe"
+"\epoc32\release\armv5\udeb\logsengine.dll"-"!:\sys\bin\logsengine.dll"
+"\epoc32\release\armv5\udeb\logsservices.dll"-"!:\sys\bin\logsservices.dll"
+"\epoc32\data\z\resource\apps\logs.rsc"-"!:\resource\apps\logs.rsc"
+"\epoc32\data\z\private\10003a3f\import\apps\logs_reg.rsc"-"!:\private\10003a3f\import\apps\logs_reg.rsc"

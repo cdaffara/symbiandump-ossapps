@@ -1,0 +1,44 @@
+/*
+* Copyright (c) 2005 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*       Messaging Media definitions.
+*
+*/
+
+
+
+#ifndef __MSGMEDIA_HRH
+#define __MSGMEDIA_HRH
+
+// DATA TYPES
+
+enum TMsgMediaType
+    {
+    EMsgMediaUnknown,
+    EMsgMediaText,
+    EMsgMediaImage,
+    EMsgMediaVideo,
+    EMsgMediaAnimation,
+    EMsgMediaAudio,
+    EMsgMediaTextStream,
+    EMsgMediaRef,
+    EMsgMediaSmil,
+    EMsgMediaLink,
+    EMsgMediaSvg,
+    EMsgMediaXhtml
+    };
+
+#endif // __MSGMEDIA_HRH
+
+// End of file

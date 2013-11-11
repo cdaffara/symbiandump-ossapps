@@ -1,0 +1,131 @@
+/*
+ * Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+ * All rights reserved.
+ * This component and the accompanying materials are made available
+ * under the terms of "Eclipse Public License v1.0"
+ * which accompanies this distribution, and is available
+ * at the URL "http://www.eclipse.org/legal/epl-v10.html".
+ *
+ * Initial Contributors:
+ * Nokia Corporation - initial contribution.
+ *
+ * Contributors:
+ *
+ * Description:
+ */
+
+#include <bldvariant.hrh>
+
+
+#ifndef MMSTESTBED_HRH
+#define MMSTESTBED_HRH
+
+enum
+{
+    EAppMainOk = 1,
+    EAppMainCancel,
+    //
+    EMenufrmCmdCascadeTest,
+    ECleanup,
+    ECleanOutbox,
+    ESaveSettings,
+    ELoadSettings,
+    ECleanInbox,
+    EShowIn,
+    EShowOut,
+    EOutToMMSC,
+    EMMSCToIn,
+    ESendScheduled,
+    EReceiveScheduled,
+    EShowSent,
+    ECleanSent,
+    EStartMyNotifier,
+    EGetEventType,
+    EAddEventType,
+    EDeleteEventType,
+    EViewLog,
+    ECleanLog,
+    EShowWapAccessPoints,
+    ESelectWapAccessPoint,
+    EShowConnectionMode,
+    EShowIAP,
+    EConnectToIAP,
+    EDeleteSendSchedule,
+    EDeleteReceiveSchedule,
+    EDeleteNotifications,
+    ERestoreFactorySettings,
+    ECreateFromFile,
+    EShowNotifications,
+    ESendDeliveryReport,
+    EShowDrafts,
+    ECleanDrafts,
+    ECleanAll,
+    EFetchingDeferred,
+    EFetchingOn,
+    ESendFromFile,
+    ESwitchToLocal,
+    ESwitchToGlobal,
+    EDecodeLoggingOn,
+    EDecodeLoggingOff,
+    EBinaryDumpOn,
+    EBinaryDumpOff,
+    ESendNotification,
+    ECreateToInbox,
+    ECreateToSentItems,
+    ESendFromDrafts,
+    EFindMMSFolder,
+    ESendOneByOne,
+    ECreateToDrafts,
+    ESendViaClient,
+    ESendMemFail,
+    EFetchMemFail,
+    EReceiveForced,
+    ECreateHeadersFromFile,
+    ESwitchToOffline,
+    ESwitchToOnline,
+    ECopyDrafts,
+    ECreateNotification,
+    EReply,
+    EReplyToAll,
+    EForward,
+    EFetchingManual,
+    EFirstBoot,
+    ENoFirstBoot,
+    EFindNetworkStatus,
+    ESendReadReport,
+    ECreateMMBoxViewConf,
+    EGetMMBoxView,
+    ECleanMMBox,
+    EShowMMBox
+};
+
+#define 	ETestLabel1 1
+#define 	ETestLabel2 2
+#define 	ETestLabel3 3
+#define 	ETestLabel4 4
+
+#define     EServiceList 2
+
+
+enum TTestBedDlgCtrlIds
+	{
+	ETestEditField = 1
+	};
+
+enum TEditServiceControls
+	{
+	EFolderLabel = 1,
+    EEditUri
+//	EEditServiceFolder,
+//	ENameLabel,
+//	EEditServiceName,
+//	ENumberLabel,
+//	EEditServiceNumber
+	};
+
+enum
+	{
+	EFsViewDialogId = 1
+	};
+
+#endif

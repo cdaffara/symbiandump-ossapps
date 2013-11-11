@@ -1,0 +1,31 @@
+/*
+* Copyright (c) 2005 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Car mode changer iby file
+*
+*/
+
+
+#ifndef __CARMODECHANGER_IBY__
+#define __CARMODECHANGER_IBY__
+
+#include <data_caging_paths_for_iby.hrh>
+
+#define UPGRADABLE_APP_REG_RSC(NAME) data=DATAZ_\PRIVATE\10003A3F\IMPORT\APPS\ ## NAME ## _reg.rsc        Private\10003a3f\import\apps\ ## NAME ## _reg.rsc
+
+S60_APP_EXE(carmodechanger)
+UPGRADABLE_APP_REG_RSC(carmodechanger)
+S60_APP_AIF_RSC(carmodechanger)
+
+
+#endif

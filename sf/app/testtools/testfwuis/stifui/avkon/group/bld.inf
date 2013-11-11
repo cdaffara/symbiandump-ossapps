@@ -1,0 +1,46 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+* 
+* Description: bld.inf Toplevel build information for STIF UI
+*
+*/
+
+#include <platform_paths.hrh>
+
+PRJ_PLATFORMS
+// Specify the platforms your component needs to be built for here.
+// If not specified all platforms can be built.
+
+// Note that if you want to build STIF to GCCE platform, GCCE must be
+// specified separately - it is not part of default platforms.
+// DEFAULT GCCE
+
+	DEFAULT
+
+
+PRJ_EXPORTS
+// This is added in order to export iby files automaticly in 5.0 env
+	../rom/Stifui.iby     CORE_IBY_EXPORT_PATH(tools,Stifui.iby)
+
+PRJ_TESTEXPORTS
+
+PRJ_MMPFILES
+	// StifUI
+	#include "../stifui/group/bld.inf"
+
+	// UiTestServerStarter
+	#include "../uitestserverstarter/group/bld.inf"
+
+
+// End of File
+

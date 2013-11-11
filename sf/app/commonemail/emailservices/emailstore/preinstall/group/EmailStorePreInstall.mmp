@@ -1,0 +1,63 @@
+/*
+* Copyright (c) 2008 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: EmailStore PreInstall Helper project file.
+*
+*/
+
+#include <data_caging_paths.hrh>
+#include <platform_paths.hrh> //needed for APP_LAYER_SYSTEMINCLUDE
+//<qmail>
+//#include "../../../../inc/emailversionnumbers.hrh" // KEmailBinaryVersionNumber
+//</qmail>
+#include "../../inc/EmailStoreUids.hrh"
+
+TARGET          EmailStorePreInstall.exe
+TARGETTYPE      exe
+UID             0x00000000 KUidEmailStorePreInstallExe
+
+CAPABILITY      WriteUserData ReadDeviceData WriteDeviceData PowerMgmt
+
+VENDORID        VID_DEFAULT
+//<qmail>
+//VERSION         KEmailBinaryVersionNumber
+//</qmail>
+KEmailBinaryDemandPaging
+
+EPOCPROCESSPRIORITY background
+
+// Logging
+MACRO DEBUG_USE_PROJECT_LOGGING_OPTIONS
+MACRO DEBUG_LOG_OPTION_ENTER
+MACRO DEBUG_LOG_OPTION_EXIT
+MACRO DEBUG_LOG_OPTION_ERRORS
+MACRO DEBUG_LOG_OPTION_INFO
+
+SOURCEPATH		../src
+SOURCE          EmailStorePreInstall.cpp ProcessTimer.cpp
+
+USERINCLUDE     ../inc
+USERINCLUDE     ../../inc
+
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE   ../../../../inc   
+
+LIBRARY   		euser.lib 
+LIBRARY         efsrv.lib
+LIBRARY         ws32.lib
+LIBRARY         apparc.lib      //TApaAppInfo
+LIBRARY         apgrfx.lib      //RApaLsSession
+LIBRARY         bafl.lib
+LIBRARY         DebugLog.lib
+
+SMPSAFE

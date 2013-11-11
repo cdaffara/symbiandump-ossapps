@@ -1,0 +1,50 @@
+EXPORTS
+	?HandleItemSelectedL@GlxMpxCommandHandler@@MAEXHHPAVMGlxMediaList@@@Z @ 1 NONAME ; void GlxMpxCommandHandler::HandleItemSelectedL(int, int, class MGlxMediaList *)
+	?CreateMediaListAlbumItemL@GlxMpxCommandHandler@@AAEXHHW4TGlxFilterItemType@@@Z @ 2 NONAME ; void GlxMpxCommandHandler::CreateMediaListAlbumItemL(int, int, enum TGlxFilterItemType)
+	?ConfirmationNoteL@GlxMpxCommandHandler@@AAEXAAVMGlxMediaList@@@Z @ 3 NONAME ; void GlxMpxCommandHandler::ConfirmationNoteL(class MGlxMediaList &)
+	??_EGlxCommandHandler@@UAE@I@Z @ 4 NONAME ; GlxCommandHandler::~GlxCommandHandler(unsigned int)
+	??1GlxCommandHandler@@UAE@XZ @ 5 NONAME ; GlxCommandHandler::~GlxCommandHandler(void)
+	?executeCommand@GlxModelCommandHandler@@UAEXHHV?$QList@VQModelIndex@@@@@Z @ 6 NONAME ; void GlxModelCommandHandler::executeCommand(int, int, class QList<class QModelIndex>)
+	?ConfirmationNoteMultipleL@GlxMpxCommandHandler@@AAEXAAVMGlxMediaList@@@Z @ 7 NONAME ; void GlxMpxCommandHandler::ConfirmationNoteMultipleL(class MGlxMediaList &)
+	?CompletionNoteL@GlxMpxCommandHandler@@ABEXXZ @ 8 NONAME ; void GlxMpxCommandHandler::CompletionNoteL(void) const
+	?trUtf8@GlxMpxCommandHandler@@SA?AVQString@@PBD0@Z @ 9 NONAME ; class QString GlxMpxCommandHandler::trUtf8(char const *, char const *)
+	?tr@GlxMpxCommandHandler@@SA?AVQString@@PBD0@Z @ 10 NONAME ; class QString GlxMpxCommandHandler::tr(char const *, char const *)
+	?getStaticMetaObject@GlxMpxCommandHandler@@SAABUQMetaObject@@XZ @ 11 NONAME ; struct QMetaObject const & GlxMpxCommandHandler::getStaticMetaObject(void)
+	?ProgressTextL@GlxMpxCommandHandler@@MBE?AVQString@@XZ @ 12 NONAME ; class QString GlxMpxCommandHandler::ProgressTextL(void) const
+	?HandleCommandCompleteL@GlxMpxCommandHandler@@MAEXPAXPAVCMPXMedia@@HPAVMGlxMediaList@@@Z @ 13 NONAME ; void GlxMpxCommandHandler::HandleCommandCompleteL(void *, class CMPXMedia *, int, class MGlxMediaList *)
+	?metaObject@GlxMpxCommandHandler@@UBEPBUQMetaObject@@XZ @ 14 NONAME ; struct QMetaObject const * GlxMpxCommandHandler::metaObject(void) const
+	?commandCancelled@GlxMpxCommandHandler@@QAEXXZ @ 15 NONAME ; void GlxMpxCommandHandler::commandCancelled(void)
+	?TryExitL@GlxMpxCommandHandler@@AAEXH@Z @ 16 NONAME ; void GlxMpxCommandHandler::TryExitL(int)
+	?HandleMediaL@GlxMpxCommandHandler@@MAEXHPAVMGlxMediaList@@@Z @ 17 NONAME ; void GlxMpxCommandHandler::HandleMediaL(int, class MGlxMediaList *)
+	??0GlxModelCommandHandler@@QAE@XZ @ 18 NONAME ; GlxModelCommandHandler::GlxModelCommandHandler(void)
+	?CreateMediaListL@GlxMpxCommandHandler@@AAEXHHW4TGlxFilterItemType@@@Z @ 19 NONAME ; void GlxMpxCommandHandler::CreateMediaListL(int, int, enum TGlxFilterItemType)
+	?executeMpxCommand@GlxMpxCommandHandler@@AAEX_N@Z @ 20 NONAME ; void GlxMpxCommandHandler::executeMpxCommand(bool)
+	?ConfirmationNoteSingleL@GlxMpxCommandHandler@@AAEXAAVMGlxMediaList@@@Z @ 21 NONAME ; void GlxMpxCommandHandler::ConfirmationNoteSingleL(class MGlxMediaList &)
+	?CompletionTextL@GlxMpxCommandHandler@@MBE?AVQString@@XZ @ 22 NONAME ; class QString GlxMpxCommandHandler::CompletionTextL(void) const
+	?HandleFocusChangedL@GlxMpxCommandHandler@@MAEXW4TFocusChangeType@NGlxListDefs@@HHPAVMGlxMediaList@@@Z @ 23 NONAME ; void GlxMpxCommandHandler::HandleFocusChangedL(enum NGlxListDefs::TFocusChangeType, int, int, class MGlxMediaList *)
+	?tr@GlxMpxCommandHandler@@SA?AVQString@@PBD0H@Z @ 24 NONAME ; class QString GlxMpxCommandHandler::tr(char const *, char const *, int)
+	?HandleAttributesAvailableL@GlxMpxCommandHandler@@MAEXHABV?$RArray@VTMPXAttribute@@@@PAVMGlxMediaList@@@Z @ 25 NONAME ; void GlxMpxCommandHandler::HandleAttributesAvailableL(int, class RArray<class TMPXAttribute> const &, class MGlxMediaList *)
+	?messageDialogClose@GlxMpxCommandHandler@@QAEXPAVHbAction@@@Z @ 26 NONAME ; void GlxMpxCommandHandler::messageDialogClose(class HbAction *)
+	?HandleItemRemovedL@GlxMpxCommandHandler@@MAEXHHPAVMGlxMediaList@@@Z @ 27 NONAME ; void GlxMpxCommandHandler::HandleItemRemovedL(int, int, class MGlxMediaList *)
+	?HandleMessageL@GlxMpxCommandHandler@@MAEXABVCMPXMedia@@PAVMGlxMediaList@@@Z @ 28 NONAME ; void GlxMpxCommandHandler::HandleMessageL(class CMPXMedia const &, class MGlxMediaList *)
+	?qt_metacall@GlxMpxCommandHandler@@UAEHW4Call@QMetaObject@@HPAPAX@Z @ 29 NONAME ; int GlxMpxCommandHandler::qt_metacall(enum QMetaObject::Call, int, void * *)
+	?ProgressNoteL@GlxMpxCommandHandler@@AAEXH@Z @ 30 NONAME ; void GlxMpxCommandHandler::ProgressNoteL(int)
+	?trUtf8@GlxMpxCommandHandler@@SA?AVQString@@PBD0H@Z @ 31 NONAME ; class QString GlxMpxCommandHandler::trUtf8(char const *, char const *, int)
+	?HandleError@GlxMpxCommandHandler@@MAEXH@Z @ 32 NONAME ; void GlxMpxCommandHandler::HandleError(int)
+	??1GlxMpxCommandHandler@@UAE@XZ @ 33 NONAME ; GlxMpxCommandHandler::~GlxMpxCommandHandler(void)
+	??1GlxModelCommandHandler@@UAE@XZ @ 34 NONAME ; GlxModelCommandHandler::~GlxModelCommandHandler(void)
+	?DismissProgressNoteL@GlxMpxCommandHandler@@AAEXXZ @ 35 NONAME ; void GlxMpxCommandHandler::DismissProgressNoteL(void)
+	?HandleItemAddedL@GlxMpxCommandHandler@@MAEXHHPAVMGlxMediaList@@@Z @ 36 NONAME ; void GlxMpxCommandHandler::HandleItemAddedL(int, int, class MGlxMediaList *)
+	?executeCommand@GlxMpxCommandHandler@@UAEXHHV?$QList@VQModelIndex@@@@@Z @ 37 NONAME ; void GlxMpxCommandHandler::executeCommand(int, int, class QList<class QModelIndex>)
+	?staticMetaObject@GlxMpxCommandHandler@@2UQMetaObject@@B @ 38 NONAME ; struct QMetaObject const GlxMpxCommandHandler::staticMetaObject
+	?DoExecuteCommandL@GlxMpxCommandHandler@@MAEXHAAVMGlxMediaList@@AAH@Z @ 39 NONAME ; void GlxMpxCommandHandler::DoExecuteCommandL(int, class MGlxMediaList &, int &)
+	??0GlxCommandHandler@@QAE@XZ @ 40 NONAME ; GlxCommandHandler::GlxCommandHandler(void)
+	?qt_metacast@GlxMpxCommandHandler@@UAEPAXPBD@Z @ 41 NONAME ; void * GlxMpxCommandHandler::qt_metacast(char const *)
+	?ConfirmationTextL@GlxMpxCommandHandler@@MBE?AVQString@@_N@Z @ 42 NONAME ; class QString GlxMpxCommandHandler::ConfirmationTextL(bool) const
+	??0GlxMpxCommandHandler@@QAE@XZ @ 43 NONAME ; GlxMpxCommandHandler::GlxMpxCommandHandler(void)
+	??_EGlxMpxCommandHandler@@UAE@I@Z @ 44 NONAME ; GlxMpxCommandHandler::~GlxMpxCommandHandler(unsigned int)
+	?HandleItemModifiedL@GlxMpxCommandHandler@@MAEXABV?$RArray@H@@PAVMGlxMediaList@@@Z @ 45 NONAME ; void GlxMpxCommandHandler::HandleItemModifiedL(class RArray<int> const &, class MGlxMediaList *)
+	?HandleErrorL@GlxMpxCommandHandler@@MBEXH@Z @ 46 NONAME ; void GlxMpxCommandHandler::HandleErrorL(int) const
+	??_EGlxModelCommandHandler@@UAE@I@Z @ 47 NONAME ; GlxModelCommandHandler::~GlxModelCommandHandler(unsigned int)
+	?DoHandleCommandCompleteL@GlxMpxCommandHandler@@MAEXPAXPAVCMPXMedia@@HPAVMGlxMediaList@@@Z @ 48 NONAME ; void GlxMpxCommandHandler::DoHandleCommandCompleteL(void *, class CMPXMedia *, int, class MGlxMediaList *)
+

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="0.9">
+    <widget name="view" type="HbView">
+        <widget name="mainContainer" role="HbView:widget" type="HbWidget">
+            <sizehint height="var(hb-param-screen-height)" type="PREFERRED" width="var(hb-param-screen-width)"/>
+            <contentsmargins bottom="var(hb-param-margin-gene-bottom)" left="var(hb-param-margin-gene-left)" right="var(hb-param-margin-gene-right)" top="var(hb-param-margin-gene-top)"/>
+            <widget name="amPmLabel" type="SnsrLabel">
+                <sizehint type="MINIMUM" width="1.0un"/>
+                <sizehint height="var(hb-param-text-height-tiny)" type="PREFERRED"/>
+                <sizepolicy horizontalPolicy="Expanding" horizontalStretch="0" verticalPolicy="Preferred" verticalStretch="0"/>
+                <real name="z" value="1"/>
+                <fontspec name="fontSpec" role="Primary" textheight="var(hb-param-text-height-tiny)"/>
+                <string name="alignment" value="AlignVCenter|AlignLeft"/>
+             </widget>
+            <widget name="timeLabel" type="SnsrLabel">
+                <sizehint type="MINIMUM" width="1.0un"/>
+                <sizehint height="12.7un" type="PREFERRED"/>
+                <sizepolicy horizontalPolicy="Expanding" horizontalStretch="0" verticalPolicy="Preferred" verticalStretch="0"/>
+                <real name="z" value="2"/>
+                <fontspec name="fontSpec" role="Primary" textheight="12.7un"/>
+                <string name="alignment" value="AlignVCenter|AlignHCenter"/>
+             </widget>
+             <widget name="indicatorWidget" type="SnsrIndicatorWidget">
+                <sizehint type="MINIMUM" width="2.4un"/>
+                <sizehint height="2.4un" type="PREFERRED"/>
+                <sizepolicy horizontalPolicy="Expanding" horizontalStretch="0" verticalPolicy="Preferred" verticalStretch="0"/>
+                <real name="z" value="3"/>
+              </widget>
+              <widget name="dateLabel" type="SnsrLabel">
+                <sizehint type="MINIMUM" width="1.0un"/>
+                <sizehint height="var(hb-param-text-height-tiny)" type="PREFERRED"/>
+                <sizepolicy horizontalPolicy="Expanding" horizontalStretch="0" verticalPolicy="Preferred" verticalStretch="0"/>
+                <real name="z" value="4"/>
+                <fontspec name="fontSpec" role="Secondary" textheight="var(hb-param-text-height-tiny)"/>
+                <string name="alignment" value="AlignVCenter|AlignHCenter"/>
+             </widget>
+             <widget name="swipeWidget" type="SnsrSwipeWidget">
+                <real name="z" value="5"/>
+                <sizehint height="expr(var(hb-param-text-height-tiny)+var(hb-param-margin-gene-top)+10.6un)" type="PREFERRED" width="35un"/>
+            </widget>
+             <layout type="anchor">
+                <anchoritem dst="amPmLabel" dstEdge="BOTTOM" spacing="-0.5un" src="timeLabel" srcEdge="TOP"/>
+                <anchoritem dst="amPmLabel" dstEdge="LEFT" spacing="0" src="timeLabel" srcEdge="LEFT"/>
+                <anchoritem dst="timeLabel" dstEdge="TOP" spacing="26.5un" src="" srcEdge="TOP"/>
+                <anchoritem dst="timeLabel" dstEdge="CENTERH" spacing="0" src="" srcEdge="CENTERH"/>
+                <anchoritem dst="indicatorWidget" dstEdge="TOP" spacing="expr(var(hb-param-margin-gene-top)+var(hb-param-margin-gene-bottom))" src="timeLabel" srcEdge="BOTTOM"/>
+                <anchoritem dst="indicatorWidget" dstEdge="CENTERH" spacing="0" src="timeLabel" srcEdge="CENTERH"/>
+                <anchoritem dst="dateLabel" dstEdge="TOP" spacing="var(hb-param-margin-gene-bottom)" src="indicatorWidget" srcEdge="BOTTOM"/>
+                <anchoritem dst="dateLabel" dstEdge="CENTERH" spacing="0" src="timeLabel" srcEdge="CENTERH"/>
+                <anchoritem dst="swipeWidget" dstEdge="CENTERH" spacing="0" src="timeLabel" srcEdge="CENTERH"/>
+                <anchoritem dst="swipeWidget" dstEdge="TOP" spacing="22.0un" src="dateLabel" srcEdge="BOTTOM"/>
+            </layout>
+        </widget>
+        <string name="title" value="View"/>
+    </widget>
+    <section name="landscape">
+        <widget name="mainContainer" role="HbView:widget" type="HbWidget">
+            <sizehint height="var(hb-param-screen-height)" type="PREFERRED" width="var(hb-param-screen-width)"/>
+            <contentsmargins bottom="var(hb-param-margin-gene-bottom)" left="var(hb-param-margin-gene-left)" right="var(hb-param-margin-gene-right)" top="var(hb-param-margin-gene-top)"/>
+            <layout type="anchor">
+                <anchoritem dst="amPmLabel" dstEdge="BOTTOM" spacing="-0.5un" src="timeLabel" srcEdge="TOP"/>
+                <anchoritem dst="amPmLabel" dstEdge="LEFT" spacing="0" src="timeLabel" srcEdge="LEFT"/>
+                <anchoritem dst="timeLabel" dstEdge="TOP" spacing="17.4un" src="" srcEdge="TOP"/>
+                <anchoritem dst="timeLabel" dstEdge="LEFT" spacing="expr(4*var(hb-param-margin-gene-left))" src="" srcEdge="LEFT"/>
+                <anchoritem dst="indicatorWidget" dstEdge="TOP" spacing="expr(var(hb-param-margin-gene-top)+var(hb-param-margin-gene-bottom))" src="timeLabel" srcEdge="BOTTOM"/>
+                <anchoritem dst="indicatorWidget" dstEdge="CENTERH" spacing="0" src="timeLabel" srcEdge="CENTERH"/>
+                <anchoritem dst="dateLabel" dstEdge="TOP" spacing="var(hb-param-margin-gene-bottom)" src="indicatorWidget" srcEdge="BOTTOM"/>
+                <anchoritem dst="dateLabel" dstEdge="CENTERH" spacing="0" src="timeLabel" srcEdge="CENTERH"/>
+                <anchoritem dst="swipeWidget" dstEdge="LEFT" spacing="16.5un" src="timeLabel" srcEdge="RIGHT"/>
+                <anchoritem dst="swipeWidget" dstEdge="TOP" spacing="expr(17.4un+var(hb-param-margin-gene-top))" src="" srcEdge="TOP"/>
+            </layout>
+        </widget>
+    </section>
+    <metadata activeUIState="Common ui state" display="NHD portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+        <uistate name="landscape" sections="#common landscape"/>
+    </metadata>
+</hbdocument>

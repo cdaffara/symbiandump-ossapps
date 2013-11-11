@@ -1,0 +1,26 @@
+// This file contains additional documentation for classes defined 
+// in common code.  It can be used to describe how those classes 
+// are used by Ginebra.
+
+  /*! \ingroup JavascriptAPI
+   * \class WebPageController
+   *
+   * Javascript object name: "pageController"
+   * Example javascript code to connect to the page controller's pageLoadStarted signal and print
+   * the current URL to debug output.
+   * \code
+   * window.pageController.pageLoadStarted.connect(
+   *   function() {
+   *        app.debug("Load start" + window.pageController.currentRequestedUrl);
+   *   }
+   * );
+   * \endcode
+   */
+
+  /*! \ingroup JavascriptAPI
+   * \class ViewEventContext
+   */
+
+/*! \ingroup JavascriptAPI
+ * \brief Javascript wrapper for QActions.
+ */   

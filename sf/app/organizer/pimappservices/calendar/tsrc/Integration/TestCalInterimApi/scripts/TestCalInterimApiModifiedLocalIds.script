@@ -1,0 +1,258 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+PRINT Run All Modified Calendar Local Ids Test
+
+LOAD_SUITE TestCalInterimApiSuite
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-LocalIds-0043AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-LocalIds-0043AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - Non Functional Requirements Calendar Design R1 R2
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Child and Parent Entry Locals Ids Test 1
+//! @SYMTestActions Creates 7 sets of parent and child entries.  Then performs updating and deleting on these parent and child entries
+//! @SYMTestExpectedResults The correct number of calendar locals Ids should be returned in all cases
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini london
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetSysTime \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini initalsystemTime
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiReadData \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini childparent
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetSysTime \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini systemTime
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiDeleteData \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini deleteChild1
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiDeleteData \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini deleteChild2
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiUpdateEntry \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini UpdateParent
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiUpdateEntry \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini UpdateParent1
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiModifiedLocalIds \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini localIds
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-LocalIds-0043AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-LocalIds-0044AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-LocalIds-0044AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - Non Functional Requirements Calendar Design R1 R2
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Child and Parent Entry Locals Ids Test 2
+//! @SYMTestActions Creates six sets of parent and child entries.  Then performs updating and deleting on these parent and child entries.  change system time.
+//		    Perform some updating and deleting
+//! @SYMTestExpectedResults The correct number of calendar locals Ids should be returned in all cases when using the initial time and the changed time
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini london
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetSysTime \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini initalsystemTime
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiReadData \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini childparent
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetSysTime \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini systemTime1
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiDeleteData \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini deleteChild1
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiDeleteData \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini deleteChild2
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiUpdateEntry \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini UpdateParent
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiUpdateEntry \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini UpdateParent1
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetSysTime \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini systemTime2
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiDeleteData \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini deleteSet
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetSysTime \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini systemTime3
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiReadData \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini setH
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetSysTime \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini systemTime4
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiReadData \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini updateSetH
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetSysTime \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini systemTime5
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiModifiedLocalIds \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini localIdsInitial
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiModifiedLocalIds \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini localIds1
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiModifiedLocalIds \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini localIds2
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiModifiedLocalIds \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini localIds3
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiModifiedLocalIds \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini localIds4
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiModifiedLocalIds \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini localIds5
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-LocalIds-0044AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-LocalIds-0045AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-LocalIds-0045AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - Non Functional Requirements Calendar Design R1 R2
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Child and Parent Entry Locals Ids Test 3
+//! @SYMTestActions Creates six sets of parent and child entries.  Then performs updating and deleting on these parent and child entries
+//! @SYMTestExpectedResults The correct number of calendar locals Ids should be returned in all cases
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini london
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetSysTime \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini initalsystemTime
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiReadData \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini childparent
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetSysTime \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini systemTime1
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiDeleteData \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini deleteChild1
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiDeleteData \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini deleteSetC
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiDeleteData \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini deleteChild2
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiUpdateEntry \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini UpdateParent2
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiUpdateEntry \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini UpdateParent3
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiModifiedLocalIds \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini localIds6
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-LocalIds-0045AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-LocalIds-0046AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-LocalIds-0046AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - Non Functional Requirements Calendar Design R1 R2
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Entry Locals Ids Test 1
+//! @SYMTestActions Creates 5 entries, store in database.  Change system time.  Create 2 new entries.
+//! @SYMTestExpectedResults The correct number of calendar locals Ids should be returned in all cases
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini london
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetSysTime \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini initalsystemTime
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiReadData \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini entries
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetSysTime \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini systemTime1
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiReadData \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini entries1
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiModifiedLocalIds \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini localIds6
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetSysTime \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini systemTime2
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiUpdateEntry \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini UpdateEntry
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiModifiedLocalIds \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini localIds2Entry
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-LocalIds-0046AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-LocalIds-0047AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-LocalIds-0047AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - Non Functional Requirements Calendar Design R1 R2
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Entry locals Ids Test 2
+//! @SYMTestActions Creates 5 entries, store in database.  Change system time.
+//! @SYMTestExpectedResults The correct number of calendar locals Ids should be returned in all cases
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini london
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetSysTime \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini initalsystemTime
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiReadData \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini entries
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetSysTime \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini systemTime1
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiModifiedLocalIds \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini localIdsInitial1
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiModifiedLocalIds \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini localIds1Entry
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-LocalIds-0047AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-LocalIds-0048AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-LocalIds-0048AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - Non Functional Requirements Calendar Design R1 R2
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Repeating Entry Local Ids
+//! @SYMTestActions Creates repeating entry, store entry in database.  Change system time.  Change summary of entry.
+//! @SYMTestExpectedResults The correct number of calendar locals Ids should be returned in all cases
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini london
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetSysTime \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini initalsystemTime
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini vCalRpt
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetSysTime \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini systemTime1
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiUpdateEntry \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini updateRepeatingEntry
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiModifiedLocalIds \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini localIdsRepeatInitial
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiModifiedLocalIds \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini localIdsRepeatInitial1
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-LocalIds-0048AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-LocalIds-0049AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-LocalIds-0049AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - Non Functional Requirements Calendar Design R1 R2
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Retrieving Local Ids since min date/time
+//! @SYMTestActions Create 5 entries, store in database, and get local ids since min date/time
+//! @SYMTestExpectedResults 5 local ids should be returned
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini london
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetSysTime \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini initalsystemTime
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiReadData \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini entries
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiModifiedLocalIds \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini localIdsMin
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-LocalIds-0049AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-LocalIds-0050AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-LocalIds-0050AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - Non Functional Requirements Calendar Design R1 R2
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc  Retrieving Local Ids since max date/time
+//! @SYMTestActions Create 5 entries, store in database, and get local ids since max date/time
+//! @SYMTestExpectedResults 0 local ids should be returned
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini london
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetSysTime \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini initalsystemTime
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiReadData \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini entries
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiModifiedLocalIds \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini localIdsMax
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-LocalIds-0050AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-LocalIds-0051AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-LocalIds-0051AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - Non Functional Requirements Calendar Design R1 R2
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Retrieving Local Ids since null date/time.
+//! @SYMTestActions Creates 5 entries, and get local ids since Null date/time
+//! @SYMTestExpectedResults 5 local ids should be returned
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini london
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetSysTime \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini initalsystemTime
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiReadData \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini entries
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiModifiedLocalIds \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini localIdsNull
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-LocalIds-0051AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-LocalIds-0052AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-LocalIds-0052AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - Non Functional Requirements Calendar Design R1 R2
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Entry Local Ids (soak/stress)
+//! @SYMTestActions Create 400 entries and store in database.  Call GetModifiedLocalId.
+//! @SYMTestExpectedResults The correct number of calendar locals Ids should be returned in all cases, and calling GetModifiedLocalId should have no effect.
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini london
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetSysTime \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini initalsystemTime
+RUN_TEST_STEP 190 TestCalInterimApiSuite TestCalInterimApiImportExportCreateStressData \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini stress
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiModifiedLocalIds \CITCalInterimApi\testdata\TestCalInterimApiModifiedLocalIds.ini localIdsSoak
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-LocalIds-0052AP-1090HP
+
+PREFIX RUN_UTILS 
+MakeReadWrite 	c:\private\10003a5b\CITCalInterimLocalIds.dat
+DeleteFile		c:\private\10003a5b\CITCalInterimLocalIds.dat
+MakeReadWrite	c:\private\10003a5b\citcalinterimlocalidsstresssoak.datIdx
+DeleteFile		c:\private\10003a5b\citcalinterimlocalidsstresssoak.datIdx
+MakeReadWrite	c:\private\10003a5b\CITCalInterimLocalIdsStressSoak.dat
+DeleteFile		c:\private\10003a5b\CITCalInterimLocalIdsStressSoak.dat
+MakeReadWrite	c:\private\10003a5b\citcalinterimlocalids.datIdx
+DeleteFile		c:\private\10003a5b\citcalinterimlocalids.datIdx
+REMOVE_PREFIX

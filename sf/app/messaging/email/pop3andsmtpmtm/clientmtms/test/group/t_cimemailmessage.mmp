@@ -1,0 +1,33 @@
+// Copyright (c) 2003-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// t_cimemailmessage.mmp
+//
+
+TARGET                  t_cimemailmessage.exe
+TARGETTYPE              exe
+
+CAPABILITY All -TCB
+USERINCLUDE   	../../inc ../inc 
+USERINCLUDE		../../../../pop3andsmtpmtm/servermtmutils/inc
+SOURCEPATH				../src
+SOURCE                  t_cimemailmessage.cpp 
+USERINCLUDE	../../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/email/inc
+USERINCLUDE	../../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/base/inc
+USERINCLUDE	../../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/server/inc
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+USERINCLUDE ../../../../../../../mw/messagingmw/messagingfw/msgsrvnstore/server/inc 
+LIBRARY                 euser.lib efsrv.lib etext.lib msgs.lib imcm.lib msvtestutils.lib emailtestutils.lib 
+VENDORID 0x70000001
+
+SMPSAFE

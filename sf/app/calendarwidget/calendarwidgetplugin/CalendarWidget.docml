@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="1.1">
+    <widget name="CalendarWidget" type="HbWidget">
+        <widget name="widgetBackground" type="HbLabel">
+            <real name="z" value="0"/>
+            <sizehint height="10un" type="PREFERRED" width="46un"/>
+            <sizehint height="10un" type="MINIMUM" width="46un"/>
+            <sizehint height="10un" type="MAXIMUM" width="46un"/>
+            <string name="plainText"/>
+        </widget>
+        <widget name="iconContainer" type="HbWidget">
+            <widget name="month" type="HbLabel">
+                <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+                <enums name="aspectRatioMode" value="IgnoreAspectRatio"/>
+                <real name="z" value="5"/>
+                <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+                <sizehint height="3un" type="FIXED" width="9.5un"/>
+                <sizehint height="3un" type="MINIMUM" width="9.5un"/>
+                <sizehint height="3un" type="MAXIMUM" width="9.5un"/>
+                <string name="plainText" value="Feb"/>
+                <fontspec name="fontSpec" role="Secondary" textheight="expr(var(hb-param-text-height-tiny) )"/>
+            </widget>
+            <widget name="dayNumber" type="HbLabel">
+                <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+                <enums name="aspectRatioMode" value="IgnoreAspectRatio"/>
+                <real name="z" value="4"/>
+                <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+                <sizehint type="FIXED" width="9.5un"/>
+                <sizehint height="5un" type="MINIMUM" width="9.5un"/>
+                <sizehint height="5un" type="MAXIMUM" width="9.5un"/>
+                <string name="plainText" value="15"/>
+                <fontspec name="fontSpec" role="Primary" textheight="4.5un"/>
+            </widget>
+            <widget name="iconLabel" type="HbLabel">
+                <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+                <real name="z" value="3"/>
+                <sizehint type="PREFERRED" width="10.5un"/>
+                <sizehint height="10.5un" type="MINIMUM" width="10.5un"/>
+                <sizehint height="10.5un" type="MAXIMUM" width="10.5un"/>
+                <string name="plainText" value="I"/>
+            </widget>
+            <widget name="iconHighlight" type="HbLabel">
+                <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+                <real name="z" value="0"/>
+                <sizehint height="10un" type="PREFERRED" width="12.2un"/>
+                <sizehint height="10un" type="MINIMUM" width="12.2un"/>
+                <sizehint height="10un" type="MAXIMUM" width="12.2un"/>
+                <string name="plainText" value="I"/>
+            </widget>
+            <real name="z" value="4"/>
+            <sizehint height="15un" type="PREFERRED" width="12un"/>
+            <sizehint height="15un" type="MINIMUM" width="12un"/>
+            <sizehint height="15un" type="MAXIMUM" width="12un"/>
+            <layout type="anchor">
+                <anchoritem dst="iconLabel" dstEdge="LEFT" spacing="0.9un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="iconLabel" dstEdge="TOP" spacing="0un" src="" srcEdge="TOP"/>
+                <anchoritem dst="dayNumber" dstEdge="LEFT" spacing="1.4un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="dayNumber" dstEdge="BOTTOM" spacing="-1.8un" src="iconLabel" srcEdge="BOTTOM"/>
+                <anchoritem dst="month" dstEdge="LEFT" spacing="1.4un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="month" dstEdge="TOP" spacing="0.2un" src="iconLabel" srcEdge="BOTTOM"/>
+                <anchoritem dst="iconHighlight" dstEdge="LEFT" spacing="0" src="" srcEdge="LEFT"/>
+                <anchoritem dst="iconHighlight" dstEdge="BOTTOM" spacing="0un" src="" srcEdge="BOTTOM"/>
+            </layout>
+        </widget>
+        <widget name="separatorLabel" type="HbLabel">
+            <real name="z" value="5"/>
+            <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+            <sizehint height="9.5un" type="FIXED" width="2"/>
+            <sizehint height="9.5un" type="MINIMUM" width="2"/>
+            <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+            <sizehint height="9.5un" type="MAXIMUM" width="2"/>
+            <string name="plainText" value="Label"/>
+        </widget>
+        <widget name="contentContainer" type="HbWidget">
+            <widget name="upperLabelLong" type="HbLabel">
+                <real name="z" value="1"/>
+                <sizehint height="3.7un" type="PREFERRED" width="31.6un"/>
+                <sizehint height="3.7un" type="MINIMUM" width="31.6un"/>
+                <sizehint height="3.7un" type="MAXIMUM" width="31.6un"/>
+                <string name="plainText" value="Upper"/>
+                <fontspec name="fontSpec" role="Secondary" textheight="expr(var(hb-param-text-height-secondary) )"/>
+            </widget>
+            <widget name="lowerLabel" type="HbLabel">
+                <real name="z" value="2"/>
+                <sizehint height="3.7un" type="PREFERRED" width="31.6un"/>
+                <sizehint height="3.7un" type="MINIMUM" width="31.6un"/>
+                <sizehint height="3.7un" type="MAXIMUM" width="31.6un"/>
+                <string name="plainText" value="Lower"/>
+                <fontspec name="fontSpec" role="Secondary" textheight="var(hb-param-text-height-secondary)"/>
+            </widget>
+            <widget name="reminderLabel" type="HbLabel">
+                <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+                <real name="z" value="4"/>
+                <sizehint height="3.88un" type="PREFERRED" width="3.88un"/>
+                <sizehint height="3.88un" type="MINIMUM" width="3.88un"/>
+                <sizehint height="3.88un" type="MAXIMUM" width="3.88un"/>
+                <string name="plainText" value="R"/>
+            </widget>
+            <widget name="upperLabelShort" type="HbLabel">
+                <real name="z" value="5"/>
+                <sizehint height="3.7un" type="PREFERRED" width="27.15un"/>
+                <sizehint height="3.7un" type="MINIMUM" width="27.15un"/>
+                <sizehint height="3.7un" type="MAXIMUM" width="27.15un"/>
+                <string name="plainText" value="Upper"/>
+                <fontspec name="fontSpec" role="Secondary" textheight="expr(var(hb-param-text-height-secondary) )"/>
+            </widget>
+            <widget name="middleLabel" type="HbLabel">
+                <enums name="textWrapping" value="TextWordWrap"/>
+                <real name="z" value="4"/>
+                <sizehint height="8.0597un" type="PREFERRED"/>
+                <sizehint height="5un" type="MINIMUM" width="31.6un"/>
+                <sizehint height="10un" type="MAXIMUM" width="31.6un"/>
+                <string name="plainText" value="Middle"/>
+                <fontspec name="fontSpec" role="Secondary" textheight="var(hb-param-text-height-secondary)"/>
+            </widget>
+            <real name="z" value="6"/>
+            <sizehint height="10un" type="PREFERRED" width="33.7un"/>
+            <sizehint height="10un" type="MINIMUM" width="33.4un"/>
+            <sizehint height="10un" type="MAXIMUM" width="33.7un"/>
+            <layout type="anchor">
+                <anchoritem dst="lowerLabel" dstEdge="LEFT" spacing="expr(var(hb-param-margin-gene-middle-horizontal) )" src="" srcEdge="LEFT"/>
+                <anchoritem dst="lowerLabel" dstEdge="TOP" spacing="expr(var(hb-param-margin-gene-middle-vertical) )" src="upperLabelLong" srcEdge="BOTTOM"/>
+                <anchoritem dst="reminderLabel" dstEdge="TOP" spacing="0.9un" src="" srcEdge="TOP"/>
+                <anchoritem dst="reminderLabel" dstEdge="RIGHT" spacing="-0.9un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="upperLabelLong" dstEdge="LEFT" spacing="expr(var(hb-param-margin-gene-middle-horizontal) )" src="" srcEdge="LEFT"/>
+                <anchoritem dst="upperLabelLong" dstEdge="TOP" spacing="1un" src="" srcEdge="TOP"/>
+                <anchoritem dst="upperLabelShort" dstEdge="LEFT" spacing="expr(var(hb-param-margin-gene-middle-horizontal) )" src="" srcEdge="LEFT"/>
+                <anchoritem dst="upperLabelShort" dstEdge="TOP" spacing="1un" src="" srcEdge="TOP"/>
+                <anchoritem dst="middleLabel" dstEdge="LEFT" spacing="0un" src="upperLabelLong" srcEdge="LEFT"/>
+                <anchoritem dst="middleLabel" dstEdge="TOP" spacing="0un" src="upperLabelLong" srcEdge="TOP"/>
+            </layout>
+        </widget>
+        <size height="15.22388un" name="size" width="46un"/>
+        <rect height="102" name="geometry" width="308.19999" x="0" y="0"/>
+        <sizepolicy horizontalPolicy="Maximum" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+        <sizehint height="102" type="PREFERRED" width="46un"/>
+        <sizehint height="102" type="MINIMUM" width="46un"/>
+        <sizehint height="102" type="MAXIMUM" width="46un"/>
+        <layout type="anchor">
+            <anchoritem dst="widgetBackground" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+            <anchoritem dst="widgetBackground" dstEdge="BOTTOM" spacing="0un" src="" srcEdge="BOTTOM"/>
+            <anchoritem dst="iconContainer" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+            <anchoritem dst="iconContainer" dstEdge="BOTTOM" spacing="0un" src="" srcEdge="BOTTOM"/>
+            <anchoritem dst="separatorLabel" dstEdge="LEFT" spacing="0un" src="iconContainer" srcEdge="RIGHT"/>
+            <anchoritem dst="separatorLabel" dstEdge="BOTTOM" spacing="-2" src="widgetBackground" srcEdge="BOTTOM"/>
+            <anchoritem dst="contentContainer" dstEdge="TOP" spacing="0un" src="widgetBackground" srcEdge="TOP"/>
+            <anchoritem dst="contentContainer" dstEdge="RIGHT" spacing="0un" src="widgetBackground" srcEdge="RIGHT"/>
+        </layout>
+    </widget>
+    <metadata activeUIState="Common ui state" display="NHD-3.2-inch_portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+    </metadata>
+</hbdocument>

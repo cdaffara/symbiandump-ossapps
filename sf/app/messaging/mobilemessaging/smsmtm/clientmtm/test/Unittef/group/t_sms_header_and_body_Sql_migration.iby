@@ -1,0 +1,26 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: 
+*
+*/
+
+#ifndef __T_SMS_HEADER_AND_BODY_SQL_MIGRATION_IBY__
+#define __T_SMS_HEADER_AND_BODY_SQL_MIGRATION_IBY__
+
+#include <testexecute.iby>
+
+file=ABI_DIR\BUILD_DIR\t_sms_header_and_body_Sql_migration.exe		sys\bin\t_sms_header_and_body_Sql_migration.exe
+data=EPOCROOT##Epoc32\winscw\c\msgtest\sms\t_sms_header_and_body_Sql_migration.script TestData\Scripts\t_sms_header_and_body_Sql_migration.script
+
+#endif

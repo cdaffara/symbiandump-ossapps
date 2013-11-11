@@ -1,0 +1,294 @@
+/*
+* Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+#ifndef FILEBROWSER_HRH
+#define FILEBROWSER_HRH
+
+enum TFileBrowserCommandIds
+    {
+    EFileBrowserCmdFile = 1,
+    EFileBrowserCmdFileBack,
+    EFileBrowserCmdFileOpen,
+    EFileBrowserCmdFileOpenApparc,
+    EFileBrowserCmdFileOpenDocHandlerEmbed,
+    EFileBrowserCmdFileOpenDocHandlerStandAlone,
+    EFileBrowserCmdFileOpenFileService,
+    EFileBrowserCmdFileOpenDrive,
+    EFileBrowserCmdFileOpenDirectory,
+    EFileBrowserCmdFileView,
+    EFileBrowserCmdFileViewText,
+    EFileBrowserCmdFileViewHex,
+    EFileBrowserCmdFileEdit,
+    EFileBrowserCmdFileEditText,
+    EFileBrowserCmdFileEditHex,
+    EFileBrowserCmdFileSearch,
+    EFileBrowserCmdFileSendTo,
+    EFileBrowserCmdFileNew,
+    EFileBrowserCmdFileNewFile,
+    EFileBrowserCmdFileNewDirectory,
+    EFileBrowserCmdFileDelete,
+    EFileBrowserCmdFileRename,
+    EFileBrowserCmdFileTouch,
+    EFileBrowserCmdFileProperties,
+    EFileBrowserCmdFileChecksums,
+    EFileBrowserCmdFileChecksumsMD5,
+    EFileBrowserCmdFileChecksumsMD2,
+    EFileBrowserCmdFileChecksumsSHA1,
+    EFileBrowserCmdFileSetAttributes,
+    EFileBrowserCmdFileCompress,
+    EFileBrowserCmdFileDecompress,
+    EFileBrowserCmdEdit,
+    EFileBrowserCmdSnapShot,
+    EFileBrowserCmdEditCut,
+    EFileBrowserCmdEditCopy,    
+    EFileBrowserCmdEditPaste,
+    EFileBrowserCmdEditCopyToFolder,    
+    EFileBrowserCmdEditMoveToFolder,
+    EFileBrowserCmdEditSelect,    
+    EFileBrowserCmdEditUnselect,
+    EFileBrowserCmdEditSelectAll,    
+    EFileBrowserCmdEditUnselectAll,
+    EFileBrowserCmdView,
+    EFileBrowserCmdViewSort,
+    EFileBrowserCmdViewSortByName,
+    EFileBrowserCmdViewSortByExtension,
+    EFileBrowserCmdViewSortByDate,
+    EFileBrowserCmdViewSortBySize,
+    EFileBrowserCmdViewOrder,
+    EFileBrowserCmdViewOrderAscending,
+    EFileBrowserCmdViewOrderDescending,
+    EFileBrowserCmdViewFilterEntries,
+    EFileBrowserCmdViewRefresh,
+    EFileBrowserCmdDiskAdmin,    
+    EFileBrowserCmdDiskAdminSetDrivePassword,    
+    EFileBrowserCmdDiskAdminUnlockDrive,    
+    EFileBrowserCmdDiskAdminClearDrivePassword,    
+    EFileBrowserCmdDiskAdminEraseDrivePassword,    
+    EFileBrowserCmdDiskAdminFormatDrive,    
+    EFileBrowserCmdDiskAdminQuickFormatDrive,    
+    EFileBrowserCmdDiskAdminCheckDisk,    
+    EFileBrowserCmdDiskAdminScanDrive,    
+    EFileBrowserCmdDiskAdminSetDriveName,    
+    EFileBrowserCmdDiskAdminSetDriveVolumeLabel,    
+    EFileBrowserCmdDiskAdminEraseMBR,
+    EFileBrowserCmdDiskAdminDrivePartition,    
+    EFileBrowserCmdDiskAdminEjectDrive,    
+    EFileBrowserCmdDiskAdminDismountFileSystem,    
+    EFileBrowserCmdTools,    
+    EFileBrowserCmdToolsAllFiles,
+    EFileBrowserCmdToolsAvkonIconCache,
+    EFileBrowserCmdToolsAvkonIconCacheEnable,
+    EFileBrowserCmdToolsAvkonIconCacheDisable,    
+    EFileBrowserCmdToolsDisableExtErrors,    
+    EFileBrowserCmdToolsEditDataTypes,
+    EFileBrowserCmdToolsEnableExtErrors,
+    EFileBrowserCmdToolsErrorSimulate,
+    EFileBrowserCmdToolsErrorSimulateLeave,
+    EFileBrowserCmdToolsErrorSimulatePanic,
+    EFileBrowserCmdToolsErrorSimulateException,    
+    EFileBrowserCmdToolsLocalConnectivity,    
+    EFileBrowserCmdToolsLocalConnectivityActivateInfrared,    
+    EFileBrowserCmdToolsLocalConnectivityLaunchBTUI,    
+    EFileBrowserCmdToolsLocalConnectivityLaunchUSBUI,    
+    EFileBrowserCmdToolsInstalledApps,    
+    EFileBrowserCmdToolsOpenFiles,    
+    EFileBrowserCmdToolsMsgAttachments,    
+    EFileBrowserCmdToolsMsgAttachmentsInbox,    
+    EFileBrowserCmdToolsMsgAttachmentsDrafts,    
+    EFileBrowserCmdToolsMsgAttachmentsSentItems,    
+    EFileBrowserCmdToolsMsgAttachmentsOutbox,    
+    EFileBrowserCmdToolsMsgStoreWalk,
+    EFileBrowserCmdToolsSecureBackup,    
+    EFileBrowserCmdToolsSecureBackupStartBackup,    
+    EFileBrowserCmdToolsSecureBackupStartRestore,    
+    EFileBrowserCmdToolsSecureBackupStop,    
+    EFileBrowserCmdToolsSetDebugMask,    
+    EFileBrowserCmdToolsMemoryInfo,    
+    EFileBrowserCmdSettings,
+    EFileBrowserCmdAbout,
+    EFileBrowserCmdSettingsChange,
+    EFileBrowserCmdSettingsExit,
+    EFileBrowserCmdSettingsBack,
+    EFileBrowserSettingItemList,
+    EFileBrowserCmdDataTypesChangeMapping,
+    EFileBrowserCmdDataTypesSetDefaultMapping,
+    EFileBrowserCmdDataTypesRefresh,
+    EFileBrowserCmdDataTypesExit,
+    EFileBrowserCmdDataTypesBack,
+    EFileBrowserDataTypesList,
+    EFileBrowserProgressNote,
+    EFileBrowserWaitNote,
+    EFileBrowserAttributeEditorSetArchive,
+    EFileBrowserAttributeEditorSetHidden,
+    EFileBrowserAttributeEditorSetReadOnly,
+    EFileBrowserAttributeEditorSetSystem,
+    EFileBrowserAttributeEditorSetRecurse,
+    EFileBrowserSearchQuerySearchDir,
+    EFileBrowserSearchQueryWildCards,
+    EFileBrowserSearchQueryTextInFile,
+    EFileBrowserSearchQueryMinSize,
+    EFileBrowserSearchQueryMaxSize,
+    EFileBrowserSearchQueryMinDate,
+    EFileBrowserSearchQueryMaxDate,
+    EFileBrowserSearchQueryRecurse,
+    EFileBrowserCmdFileEditorViewAsText,
+    EFileBrowserCmdFileEditorViewAsHex,
+    EFileBrowserCmdFileEditorSave,
+    EFileBrowserCmdFileEditorSaveAs,
+    EFileBrowserCmdFileEditorSaveFormat,
+    EFileBrowserCmdFileEditorSaveFormatANSIASCII,
+    EFileBrowserCmdFileEditorSaveFormatUTF8,
+    EFileBrowserCmdFileEditorSaveFormatUTF16LE,
+    EFileBrowserCmdFileEditorSaveFormatUTF16BE,
+    EFileBrowserCmdFileEditorEditAsText,
+    EFileBrowserCmdFileEditorEditAsHex,
+    EFileBrowserCmdFileEditorExit,
+    EFileBrowserFileOpCommandAttribs,
+    EFileBrowserFileOpCommandCopy,
+    EFileBrowserFileOpCommandMove,
+    EFileBrowserFileOpCommandRename,
+    EFileBrowserFileOpCommandDelete,
+    EFileBrowserFileOpCommandDriveSnapShot
+    };
+
+enum TFileBrowserFixedIconIds
+    {
+    EFixedIconMarking = 0,
+    EFixedIconEmpty,    
+    EFixedIconPhoneMemory,    
+    EFixedIconMemoryCard,    
+    EFixedIconMemoryCardDisabled,    
+    EFixedIconFolder,    
+    EFixedIconFolderSub,    
+    EFixedIconFolderCurrent,
+    EFixedIconListLength // this should be last   
+    };
+
+enum TFileBrowserEntryOverwriteActions
+    {
+    EFileActionOverwriteAll = 0,
+    EFileActionSkipAllExisting,    
+    EFileActionGenerateUniqueFilenames,
+    EFileActionQueryPostFix   
+    };
+
+enum TFileBrowserSecureBackupState
+    {
+    ESecureBackupStateFull = 0,
+    ESecureBackupStatePartial    
+    };
+
+enum TFileBrowserSecureBackupType
+    {
+    ESecureBackupTypeBase = 0,
+    ESecureBackupTypeIncremental    
+    };
+    
+enum TFileBrowserDataTypePriorities
+    {
+    EDataTypePriorityMaximum = 0,
+    EDataTypePriorityHigh,    
+    EDataTypePriorityNormal,
+    EDataTypePriorityLow,
+    EDataTypePriorityLastResort   
+    };
+
+enum TFileBrowserCommonFileActions
+    {
+    ECommonFileActionViewAsTextHex = 0,
+    ECommonFileActionOpenWithApparc,    
+    ECommonFileActionOpenWithDocHandlerEmbed   
+    };
+                     
+enum TFileBrowserSettingListTabs
+    {
+    ETabGeneral = 0,
+    ETabFileOps    
+    };
+    
+enum TFileBrowserSettingListIds
+    {
+    ESettingListDisplayModeSelection = 0,
+    ESettingListFileViewModeSelection,
+    ESettingListShowSubdirectoryInfoSelection,
+    ESettingListShowAssociatedIconsSelection,
+    ESettingListRememberLastPathSelection,
+    ESettingListRememberFolderSelection,
+    ESettingListEnableToolbar,
+
+    ESettingListSupportNetworkDrivesSelection,
+    ESettingListBypassPlatformSecuritySelection,
+    ESettingListRemoveFileLocksSelection,
+    ESettingListIgnoreProtectionsAttsSelection,
+    ESettingListRemoveROMWriteProtectionSelection
+    };
+
+enum TFileBrowserSettingDisplayModes
+    {
+    EDisplayModeFullScreen = 0,
+    EDisplayModeNormal
+    };
+
+enum TFileBrowserSettingFileViewModes
+    {
+    EFileViewModeSimple = 0,
+    EFileViewModeExtended
+    };
+
+enum TFileBrowserFileEditorModes
+    {
+    EFileEditorViewAsText = 0,
+    EFileEditorViewAsHex,
+    EFileEditorEditAsText,
+    EFileEditorEditAsHex
+    };
+
+enum
+    {
+    EFileViewerDialogControl = 0x5FEC
+    };
+
+enum
+    {
+    EFileEditorDialogId = 1
+    };
+
+enum TFileBrowserCmdFileChecksums
+    {
+    EFileChecksumsMD5 = 0,
+    EFileChecksumsMD2,
+    EFileChecksumsSHA1
+    };
+
+enum TListingMode
+    {
+    ENormalEntries = 0,
+    ESearchResults,
+    EOpenFiles,
+    EMsgAttachmentsInbox,
+    EMsgAttachmentsDrafts,
+    EMsgAttachmentsSentItems,
+    EMsgAttachmentsOutbox
+    };
+
+enum TClipBoardMode
+    {
+    EClipBoardModeCut = 0,
+    EClipBoardModeCopy
+    };
+
+#endif      // FILEBROWSER_HRH

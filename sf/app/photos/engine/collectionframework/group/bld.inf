@@ -1,0 +1,89 @@
+/*
+* Copyright (c) 2008-2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   Build information file for project glxcollectionpluginbase.
+*
+*/
+
+
+
+#include <platform_paths.hrh>    //APP_LAYER_DOMAIN_EXPORT_PATH
+
+PRJ_TESTEXPORTS
+../../../gallery/data/abstract5.jpg                   /epoc32/winscw/c/abstract5.jpg
+../../../gallery/data/Battle.jpg                      /epoc32/winscw/c/Battle.jpg
+../../../gallery/data/text_element_left_cap.png       /epoc32/winscw/c/text_element_left_cap.png
+../../../gallery/data/text_element_mid.png            /epoc32/winscw/c/text_element_mid.png
+../../../gallery/data/text_element_right_cap.png      /epoc32/winscw/c/text_element_right_cap.png
+../../../gallery/data/qgn_prop_image_notcreated.png   /epoc32/winscw/c/qgn_prop_image_notcreated.png
+
+../../../gallery/data/Image1.jpg   					/epoc32/winscw/c/Image1.jpg
+../../../gallery/data/Image2.jpg   					/epoc32/winscw/c/Image2.jpg
+../../../gallery/data/Image3.jpg   					/epoc32/winscw/c/Image3.jpg
+../../../gallery/data/Image4.jpg   					/epoc32/winscw/c/Image4.jpg
+../../../gallery/data/Image5.jpg   					/epoc32/winscw/c/Image5.jpg
+../../../gallery/data/Image6.jpg   					/epoc32/winscw/c/Image6.jpg
+../../../gallery/data/Image7.jpg   					/epoc32/winscw/c/Image7.jpg
+../../../gallery/data/Image8.jpg   					/epoc32/winscw/c/Image8.jpg
+../../../gallery/data/Image9.jpg   					/epoc32/winscw/c/Image9.jpg
+../../../gallery/data/Image10.jpg   					/epoc32/winscw/c/Image10.jpg
+../../../gallery/data/Image11.jpg   					/epoc32/winscw/c/Image11.jpg
+../../../gallery/data/Image12.jpg   					/epoc32/winscw/c/Image12.jpg
+../../../gallery/data/Image13.jpg   					/epoc32/winscw/c/Image13.jpg
+../../../gallery/data/Image14.jpg   					/epoc32/winscw/c/Image14.jpg
+../../../gallery/data/Image15.jpg   					/epoc32/winscw/c/Image15.jpg
+../../../gallery/data/Image16.jpg   					/epoc32/winscw/c/Image16.jpg
+../../../gallery/data/Image17.jpg   					/epoc32/winscw/c/Image17.jpg
+../../../gallery/data/Image18.jpg   					/epoc32/winscw/c/Image18.jpg
+../../../gallery/data/Image19.jpg   					/epoc32/winscw/c/Image19.jpg
+../../../gallery/data/Image20.jpg   					/epoc32/winscw/c/Image20.jpg
+../../../gallery/data/Image21.jpg   					/epoc32/winscw/c/Image21.jpg
+../../../gallery/data/Image22.jpg   					/epoc32/winscw/c/Image22.jpg
+
+../../../gallery/data/newitem1.jpg   				/epoc32/winscw/c/newitem1.jpg
+../../../gallery/data/newitem2.jpg   				/epoc32/winscw/c/newitem2.jpg
+../../../gallery/data/newitem3.jpg   				/epoc32/winscw/c/newitem3.jpg
+../../../gallery/data/newitem4.jpg   				/epoc32/winscw/c/newitem4.jpg
+../../../gallery/data/newitem5.jpg   				/epoc32/winscw/c/newitem5.jpg
+../../../gallery/data/newitem6.jpg   				/epoc32/winscw/c/newitem6.jpg
+../../../gallery/data/newitem7.jpg   				/epoc32/winscw/c/newitem7.jpg
+../../../gallery/data/newitem8.jpg   				/epoc32/winscw/c/newitem8.jpg
+../../../gallery/data/newitem9.jpg   				/epoc32/winscw/c/newitem9.jpg
+../../../gallery/data/newitem10.jpg   				/epoc32/winscw/c/newitem10.jpg
+../../../gallery/data/newitem11.jpg   				/epoc32/winscw/c/newitem11.jpg
+../../../gallery/data/newitem12.jpg   				/epoc32/winscw/c/newitem12.jpg
+../../../gallery/data/newitem13.jpg   				/epoc32/winscw/c/newitem13.jpg
+../../../gallery/data/newitem14.jpg   				/epoc32/winscw/c/newitem14.jpg
+
+
+PRJ_EXPORTS
+../plugins/glxcollectionpluginall/inc/glxcollectionpluginall.hrh 	     		/epoc32/include/platform/app/glxcollectionpluginall.hrh
+../plugins/glxcollectionpluginalbums/inc/glxcollectionpluginalbums.hrh 			/epoc32/include/platform/app/glxcollectionpluginalbums.hrh
+../plugins/glxcollectionplugincamera/inc/glxcollectionplugincamera.hrh 			/epoc32/include/platform/app/glxcollectionplugincamera.hrh
+../plugins/glxcollectionplugindownloads/inc/glxcollectionplugindownloads.hrh 	/epoc32/include/platform/app/glxcollectionplugindownloads.hrh
+../plugins/glxcollectionpluginmonths/inc/glxcollectionpluginmonths.hrh 			/epoc32/include/platform/app/glxcollectionpluginmonths.hrh
+../plugins/glxcollectionpluginimageviewer/inc/glxcollectionpluginimageviewer.hrh 			/epoc32/include/platform/app/glxcollectionpluginimageviewer.hrh
+
+
+PRJ_MMPFILES
+../datasource/manager/group/glxdatasourcemanager.mmp
+../plugins/glxcollectionpluginall/group/glxcollectionpluginall.mmp
+../plugins/glxcollectionpluginalbums/group/glxcollectionpluginalbums.mmp
+../plugins/glxcollectionplugincamera/group/glxcollectionplugincamera.mmp
+../plugins/glxcollectionplugindownloads/group/glxcollectionplugindownloads.mmp
+../plugins/glxcollectionpluginmonths/group/glxcollectionpluginmonths.mmp
+../plugins/glxcollectionpluginimageviewer/group/glxcollectionpluginimageviewer.mmp
+
+#include "../plugins/group/bld.inf"
+#include "../datasource/plugins/group/bld.inf"
+

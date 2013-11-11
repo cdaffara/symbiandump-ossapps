@@ -1,0 +1,99 @@
+/*
+* Copyright (c) 2007-2008 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*   This mmp file defines the PhoneUIVoIPExtension polymorphic interface
+*   DLL module, which contains all the VoIP specific implementations 
+*   of variant classes.
+*
+*/
+
+
+#include <data_caging_paths.hrh>
+#include <platform_paths.hrh>
+
+// Capability assignment.
+CAPABILITY CAP_GENERAL_DLL
+
+// Assign Vendor ID.
+VENDORID VID_DEFAULT
+
+VERSION 10.0
+
+TARGET          phoneuivoipextension.dll
+TARGETTYPE      dll
+
+UID             0x101F7CA9  0x10207905
+
+SOURCEPATH      ../src
+
+SOURCE          cphoneresourceresolvervoip.cpp
+SOURCE          cphonestatealertingvoip.cpp
+SOURCE          cphonestatecallsetupvoip.cpp
+SOURCE          cphonestateidlevoip.cpp
+SOURCE          cphonestateincomingvoip.cpp
+SOURCE          cphonestatemachinevoip.cpp
+SOURCE          cphonestatesinglevoip.cpp
+SOURCE          cphoneuistatemachinefactoryvoip.cpp
+SOURCE          cphonecustomizationvoip.cpp
+SOURCE          cphonevoiperrormessageshandler.cpp
+SOURCE          cphonemenuextensionwrapper.cpp
+SOURCE          cphoneextensionhandler.cpp
+SOURCE          tphonecmdparamselector.cpp
+SOURCE          cphonetransferdialercontroller.cpp
+SOURCE          cphoneviewcustomizationvoip.cpp
+SOURCE          cphonestateutilsvoip.cpp
+SOURCE          cphoneunattendedtransfercmdhandler.cpp
+// <-- QT PHONE START -->
+//SOURCE          cphonevcchandler.cpp
+// <-- QT PHONE END -->
+SOURCE          cphonenewcallcmdhandler.cpp
+SOURCE          cphonecallforwardqueryhandler.cpp
+
+USERINCLUDE     ../inc
+USERINCLUDE     ../../phoneuicontrol/inc
+USERINCLUDE     ../../phoneuistates/inc
+USERINCLUDE     ../../phoneuiqtviewadapter/inc
+USERINCLUDE     ../../phoneui/inc
+USERINCLUDE     ../../phoneuiutils/inc
+USERINCLUDE     ../../phoneui2/srcdata
+USERINCLUDE     ../../phoneui2/loc
+
+APP_LAYER_SYSTEMINCLUDE         // Application layer domain APIs
+SYSTEMINCLUDE   ../../../inc    // Telephony internal headers
+
+LIBRARY         bafl.lib
+// <-- QT PHONE START -->
+//LIBRARY         cch.lib 
+// <-- QT PHONE END -->
+LIBRARY         phonestringloader.lib
+LIBRARY         cone.lib
+LIBRARY         ecom.lib
+LIBRARY         eikcoctl.lib // CEikMenuPane
+LIBRARY         engineinfo.lib
+LIBRARY         euser.lib
+LIBRARY         featmgr.lib // FeatureManager
+LIBRARY         phoneclient.lib 
+LIBRARY         phoneengine.lib
+LIBRARY         phoneuicontrol.lib
+LIBRARY         phoneuistates.lib
+LIBRARY         phoneuiutils.lib
+LIBRARY         serviceprovidersettings.lib
+// <-- QT PHONE START -->
+//LIBRARY         vccuipropertyhandler.lib //For VCC Usage
+// <-- QT PHONE END -->
+LIBRARY         ws32.lib
+
+
+
+SMPSAFE

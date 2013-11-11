@@ -1,0 +1,902 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+PRINT Run Import/Export Operations Test
+
+LOAD_SUITE TestCalInterimApiSuite
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0001AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0001AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Import vCal with DTSTART, DTEND, AALARM and COMPLETED in local time format, with no TZ property
+//! @SYMTestActions Import vcs file, store resulting entries in database, fecth all entries and compare times
+//! @SYMTestExpectedResults The times should be stored as floating and match the times in the vCal
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal0
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal1
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal2
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal8
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal53
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0001AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0002AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0002AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Import vCal with DTSTART, DTEND, AALARM and COMPLETED in local time format, with TZ property
+//! @SYMTestActions Import vcs file, store resulting entries in database, fecth all entries and compare times
+//! @SYMTestExpectedResults The times should be stored as fixed utc and the times should be adjusted by the TZ property
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal3
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal4
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal5
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal7
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal54
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0002AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0003AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0003AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Import vCal with no DTSTART present
+//! @SYMTestActions Import vCal file with no DTSTART, store entry in database, fetch entry and compare times
+//! @SYMTestExpectedResults For Event and Appt vCal's when you import without start time, the start time should become the end time
+//			    For Reminder start would become end, and end null For Anniv start becomes same as end
+//			    For Todo, its ok to have a vcal without a start time
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal9
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal36
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0003AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0004AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0004AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Import vCal with no DTEND present
+//! @SYMTestActions Import vCal file with no DTEND, store entry in database, fetch entry and compare times
+//! @SYMTestExpectedResults For Reminder End Time should be NULL, and for Event and Appoitment End time 
+//			    should become the start time
+//			    For Anniv end becomes start
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal10
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal37
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0004AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0005AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0005AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Import vCal with no DTEND and no DTSTART present, store entry and fetch and check times
+//! @SYMTestActions Import vCal with no DTEND and no DTSTART present
+//! @SYMTestExpectedResults Should not be able to import Anniv, Reminder, Appointment and Event without both start and end
+//			    For Todo, should be ok to import, end time and start time should be NULL
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal11
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal38
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0005AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0009AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0009AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Import vCal's with same Uid
+//! @SYMTestActions Import vCal's with same Uid simultaneously
+//! @SYMTestExpectedResults 1 entry should only be imported
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCalSameUid \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal12
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCalSameUid \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal39
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0009AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0011AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0011AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Import invalid vCal - date and no time present
+//! @SYMTestActions Import vcal with DTSTART, DTEND, AALARM just having the date and no time present
+//! @SYMTestExpectedResults The time should be set to 000000 by default
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal13
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal15
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal16
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal40
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal41
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal42
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal43
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal44
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal45
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0011AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0015AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0015AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Import a vCal - year being outside range (negative)
+//! @SYMTestActions Imports vCal with year being outside range, verifies if entry has not been imported
+//! @SYMTestExpectedResults The vCal should have not been imported
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal6
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0015AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0016AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0016AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Import a vCal in local time (with invalid TZ) - negative
+//! @SYMTestActions Import vcal in local time with invalid TZ
+//! @SYMTestExpectedResults the vCal should be imported as a floating entry, and not fixedUtc
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal17
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0016AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0017AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0017AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Import a vCal with DTEND earlier than DTSTART
+//! @SYMTestActions Imports vCals's with DTEND earlier than DTSTART
+//! @SYMTestExpectedResults vCal's that have DTEND earlier than DTSTART should not be imported
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal18
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0017AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0018AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0018AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Import a vCal - AALARM beyond DTEND and AALARM prior to DTEND and beyond DTSTART
+//! @SYMTestActions Import a vCal - AALARM beyond DTEND and AALARM prior to DTEND and beyond DTSTART
+//! @SYMTestExpectedResults The alarm of entry should not be set
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCalAlarm \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal19
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0018AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0020AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0020AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Export a vCal with no DTSTART (for TODO), as for Appt and Event (start will be set regardless)
+//! @SYMTestActions Export a vCal with no DTSTART present
+//! @SYMTestExpectedResults DTSTART should not be present in the exported file, except for appt and event
+
+RUN_TEST_STEP	100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal22
+RUN_TEST_STEP	100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini export1
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0020AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0021AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0021AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Export a vCal with no DTEND (for ToDo)
+//! @SYMTestActions Export a vCal with no DTEND present
+//! @SYMTestExpectedResults DTEND should not be present in the exported file
+
+RUN_TEST_STEP	100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal23
+RUN_TEST_STEP	100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini export2
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0021AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0023AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0023AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Export 2 entries one after another, with same uid
+//! @SYMTestActions Export 2 entries with same uid
+//! @SYMTestExpectedResults The vcf should not contain 2 vcals
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal26
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini export3
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini export4
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0023AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0026AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0026AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Imports vCal (with repeating information), and then exports it, and verifies the 2 vcals
+//! @SYMTestActions Imports vCal (with repeating information, and then exports, and verifies the 2 vcals
+//! @SYMTestExpectedResults The 2 vcals should match
+
+RUN_TEST_STEP	100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCalRpt
+RUN_TEST_STEP	100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini export
+RUN_TEST_STEP	100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal71
+RUN_TEST_STEP	100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini exportProp
+RUN_TEST_STEP	100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal72
+RUN_TEST_STEP	100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini exportProp1
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0026AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0028AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0028AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Imports vCal and then exports it, and verifies the 2 vcals
+//! @SYMTestActions Imports vCal and then exports, and verifies the 2 vcals
+//! @SYMTestExpectedResults The 2 vcals should match.  The properties should have been imported and exported correctly.
+
+RUN_TEST_STEP	100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal73
+RUN_TEST_STEP	100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini exportProp2
+RUN_TEST_STEP	100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal74
+RUN_TEST_STEP	100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini exportProp3
+RUN_TEST_STEP	100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal75
+RUN_TEST_STEP	100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini exportProp4
+RUN_TEST_STEP	100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal76
+RUN_TEST_STEP	100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini exportProp5
+RUN_TEST_STEP	100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal77
+RUN_TEST_STEP	100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini exportProp6
+RUN_TEST_STEP	100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal78
+RUN_TEST_STEP	100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini exportProp7
+RUN_TEST_STEP	100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal79
+RUN_TEST_STEP	100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini exportProp8
+RUN_TEST_STEP	100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal80
+RUN_TEST_STEP	100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini exportProp9
+RUN_TEST_STEP	100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal81
+RUN_TEST_STEP	100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini exportProp10
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0028AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0029AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0029AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Export and then import 1 parent and 2 child entries
+//! @SYMTestActions Export and then import 1 parent and 2 child entries and store these entries, then fetch entries from database
+//! @SYMTestExpectedResults Altogether 1 parent and 2 child entry should be returned.
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal27
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini exportParentChild
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiVerifyChildParent \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini verifyChildParent
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal46
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiVerifyChildParent \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini verifyChildParent1
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal47
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiVerifyChildParent \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini verifyChildParent2
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal48
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiVerifyChildParent \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini verifyChildParent3
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal51
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiVerifyChildParent \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini verifyChildParent4
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal52
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiVerifyChildParent \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini verifyChildParent5
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0029AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0064AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0064AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Import Repeat vCal with RDates and Exception dates
+//! @SYMTestActions Import Repeat vCal with RDates and Exception, and verify the times
+//! @SYMTestExpectedResults The Exception and RDates should be stored as fixed UTC and the times should be adjusted by the TZ property (if fixed utc mode)
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal55
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiRDateExDate \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini verifyRDateExDate
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal56
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiRDateExDate \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini verifyRDateExDate1
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0064AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0065AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0065AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Import vCal with DTStamp
+//! @SYMTestActions Import VCal with DTStamp, store entry, and then fetch, and verify the times of the DTStamp
+//! @SYMTestExpectedResults If vCal is floating, then DTStamp date/time should match the time in vCal, otherwise DTStamp should be adjusted by the TZ Property
+
+// Floating vCals
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal0
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal1
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal2
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal8
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal53
+
+// Fixed vCals
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal3
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal4
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal5
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal7
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal54
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0065AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0066AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0066AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export IO.001 
+//! @SYMREQ REQs - Non-Functional Requirements Calendar Design R1 R2
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Import vCal with invalid DTStamp
+//! @SYMTestActions Import VCal with invalid DTStamp, store entry, and then fetch, and that the DTStamp equals NULL
+//! @SYMTestExpectedResults The DTStamp should be equal to NULL
+
+// Floating vCals
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal0
+
+// Fixed vCals
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal3
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0066AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0067AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0067AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export IO.001 
+//! @SYMREQ REQs - Non-Functional Requirements Calendar Design R1 R2
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Import Appointment / Event / Anniv / Reminder vCal with Completed time
+//! @SYMTestActions Import Appt / Event / Anniv / Reminder vcal wit completed time, store entry and then fetch, and verify completed is equal to NULL
+//! @SYMTestExpectedResults The Completed property should be equal to NULL
+
+// Floating vCals
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal0
+
+// Fixed vCals
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal3
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0067AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0068AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0068AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export IO.001 
+//! @SYMREQ REQs - Non-Functional Requirements Calendar Design R1 R2
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Import Bad Exception Test
+//! @SYMTestActions Import a recurring vCal with bad exception dates, store entry and then fetch, and verify that no exception dates have been set
+//! @SYMTestExpectedResults No exception dates should be set
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal59
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiBadRDateEx \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini BadRDateExDate
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal60
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiBadRDateEx \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini BadRDateExDate
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0068AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0069AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0069AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export IO.001 
+//! @SYMREQ REQs - Non-Functional Requirements Calendar Design R1 R2
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Import Bad RDates Test
+//! @SYMTestActions Import a recurring vCal with bad  RDates, store entry and then fetch, and verify that no RDates have been set
+//! @SYMTestExpectedResults No RDates should be set
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal59
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiBadRDateEx \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini BadRDateExDate
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal60
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiBadRDateEx \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini BadRDateExDate
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0069AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0070AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0070AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export IO.001 
+//! @SYMREQ REQs - Non-Functional Requirements Calendar Design R1 R2
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Import Until, and Completed Time (outside year range) Test
+//! @SYMTestActions A recurring vCal with until and completed time being outside the range is imported, store entry and then fetch entry
+//! @SYMTestActions and verify that the until and completed time is equal to NULL
+//! @SYMTestExpectedResults Until and completed time should be equal to NULL
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal53
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal61
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiBadRptUntil \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini BadRepeatUntil
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal64
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiBadRptUntil \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini BadRepeatUntil
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0070AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0071AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0071AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Import invalid recurrence range Test (negative)
+//! @SYMTestActions Import 1 parent and 1 child entry (with invalid recurrence id)
+//! @SYMTestExpectedResults Only the parent entry should be stored
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal65
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiBadReccurence \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini badreccurence
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0071AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0072AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0072AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Import child vCal with DTSTART, DTEND, AALARM, COMPLETED, UNTIL, EXCEP, RDATE and DTSTAMP in local time format, with no TZ property
+//! @SYMTestActions Import child with date/time parameters, store entry, and then fetch, and verify date/time parameters
+//! @SYMTestExpectedResults The times should be stored as floating and match the times in the vCal
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal47
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiVerifyChildParent \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini verifyChildParent2
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal52
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiVerifyChildParent \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini verifyChildParent5
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal66
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiRDateExDate \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini verifyChildRDateExDate
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal69
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiBadRptUntil \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini RepeatUntil2
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0072AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0073AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0073AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Import child vCal with DTSTART, DTEND, AALARM, COMPLETED, UNTIL, EXCEP, RDATE and DTSTAMP in local time format, with TZ property
+//! @SYMTestActions Import child with date/time parameters, store entry, and then fetch, and verify date/time parameters
+//! @SYMTestExpectedResults The times should be stored as fixed utc and adjusted by the time zone property
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal27
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiVerifyChildParent \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini verifyChildParent
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal46
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiVerifyChildParent \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini verifyChildParent1
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal48
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiVerifyChildParent \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini verifyChildParent3
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal51
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiVerifyChildParent \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini verifyChildParent4
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal67
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiRDateExDate \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini verifyChildRDateExDate1
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal68
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiRDateExDate \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini verifyChildRDateExDate2
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal70
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiBadRptUntil \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini RepeatUntil3
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0073AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0074AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0074AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export IO.001 
+//! @SYMREQ REQs - Non-Functional Requirements Calendar Design R1 R2
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Import recurring vCal with Repeat Until
+//! @SYMTestActions A recurring vCal (fixed and floating) with Repeat Until is imported, then stored and fecthed, and verify the repeat until time
+//! @SYMTestExpectedResults If fixed, the until should have been adjuested by the time zone property (stored as fixedutc), otherwise match the until
+//! @SYMTestExpectedResults date/time parameters in the import vcal, and be stored as floating
+
+// fixed utc vcals
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal62
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiBadRptUntil \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini RepeatUntil
+
+//floating vcals
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal63
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiBadRptUntil \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini RepeatUntil1
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0074AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0075AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0075AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export IO.001 IO.002
+//! @SYMREQ REQs - Non-Functional Requirements Calendar Design R1 R2
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Import child/parent vCal with TZ property and summer rule
+//! @SYMTestActions Import child/parent vCal with TZ property and summer rule, store entry in database,and fetch and retrieve date/time parameters and verify
+//! @SYMTestExpectedResults The date/time parameters should have been adjusted by the time zone property and summer rule (stored as fixedutc)
+
+// fixed utc vcals
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal82
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal83
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiVerifyChildParent \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini verifyChildParent83
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal84
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini export84
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal85
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal86
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal87
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal88
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal89
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0075AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0076AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0076AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8 IO.001
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Import repeat vCal with RDates that differ by time
+//! @SYMTestActions Import repeat vCal with RDates that differ by time, store entry, and then fetch, and verify RDates parameters
+//! @SYMTestExpectedResults The RDates should be stored as fixed utc and adjusted by the time zone property
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal90
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiRDateExDate \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini verifyRDateExDatevcal90
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0076AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0077AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0077AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090 
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8 IO.001
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Import repeat vCal with RDates and Exception
+//! @SYMTestActions Import repeat vcals (the 1st daily count 1, with exception on that day, the 2nd the same but with an extra RDate is imported then stored
+//! @SYMTestExpectedResults The 1st vcal should not be stored and the 2nd vCal should be stored
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal91
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini london
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiReadData \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini negativeoffset
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini exportnegative
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal103
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0077AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0078AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0078AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8 IO.001
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Import repeat vCal with RDates and Exception on RDate
+//! @SYMTestActions Import repeat vcals, with RDate and exception on that Rdate, together with another 2 exceptions on 2 occurences, and verify that there are 3 exceptions
+//! @SYMTestExpectedResults Verify that there are 3 exception dates present
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal92
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiRDateExDate \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini verifyRDateExDatevcal92
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0078AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0079AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0079AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8 IO.001
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Import Child Entry on RDate
+//! @SYMTestActions Import repeat vcal with RDate and child entry on that RDate, and verify that 1 exception and RDate is present
+//! @SYMTestExpectedResults Verify that there are 1 exception and 1 RDate
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal93
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiRDateExDate \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini verifyRDateExDatevcal93
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal94
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiRDateExDate \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini verifyRDateExDatevcal94
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0079AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0080AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0080AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8 IO.001
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Import Child Entry on Exception date
+//! @SYMTestActions Import repeat vcal with exception date and child entry on that exception date
+//! @SYMTestExpectedResults Verify that there is 1 exception date present
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal95
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiRDateExDate \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini verifyRDateExDatevcal95
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal96
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiRDateExDate \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini verifyRDateExDatevcal96
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0080AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0081AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0081AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8 IO.001
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Import vcal with invalid uid for child entry
+//! @SYMTestActions Import vcal with invalid uid for child entry and then store and verify that only 1 parent entry is stored
+//! @SYMTestExpectedResults Verify that only 1 parent entry is stored in database
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal97
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0081AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0082AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0082AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8 IO.001
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Import recurring vCal with exception date without time
+//! @SYMTestActions Import recurring vCal with exception date without time to an array of entries, store in database, and then fetch entry, and verify exception dates
+//! @SYMTestExpectedResults The exception time for todo entry, should be the due time and for non-todo should be the start time
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal98
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiRDateExDate \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini verifyRDateExDate98
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0082AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0083AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0083AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8 IO.001 IO.002
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Process Agenda Entries/Instance 3.3.4 Entry.001 Entry.005
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Parent/Child Entry with invalid recurrence range
+//! @SYMTestActions Import recurring vCal (parent/child) with invalid recurrence range, is imported and the times are verified
+//! @SYMTestExpectedResults The times should match the times in the imported vcs file
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiReadData \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini invalidrecurrence
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini exportinvalidrecurrence
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal99
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiBadRptUntil \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini RepeatUntilRecurrence
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini stanley
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiReadData \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini childparent
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini export5
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal100
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiBadRptUntil \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini UntilRepeat
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0083AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0084AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0084AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8 IO.001
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Set System Time Zone, and then Import
+//! @SYMTestActions Import a fixedUtc (say with TZ property), store entries in database, fetch the entries, verify that the times are correct
+//! @SYMTestExpectedResults The times should be adjusted by the TZ property, and stored as utc
+
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini stanley
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal101
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiBadRptUntil \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini UntilRepeat1
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini stanley
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal102
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiBadRptUntil \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini UntilRepeat2
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0084AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0085AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0085AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Process Agenda Entries/Instance 3.3.4 Entry.001 Entry.005
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Delete Child Entry, and then verify exception
+//! @SYMTestActions Create a recurring entry, create 3 child entries, store in database, delete one of the child entry, and verify that only 3 exceptions are present
+//! @SYMTestExpectedResults 3 exceptions should be present
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiReadData \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini childparent2
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiDeleteData \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini deleteChild1
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiRDateExDate \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini verifyafterdeletechild
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0085AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0086AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0086AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8 IO.001
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Set System Time Zone, and then Import floating vCal
+//! @SYMTestActions Set System Time Zone to Stanley, Import floating vCal, and verify the times
+//! @SYMTestExpectedResults The times should have not been adjusted by the TZ property, and stored as floating, except for DTStamp, completed and last modified which should be stored as utc
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini stanley
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal53
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal0
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal1
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal2
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal8
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0086AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0087AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0087AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8 /IO.001
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Import a vCal where exception date is on last occurence
+//! @SYMTestActions Import recurring vCal with 3 exception dates, with exception date on last occurence, store in database, fetch entry and verify
+//! @SYMTestExpectedResults There should be 3 exception dates present
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini stanley
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal55
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0087AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0088AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0088AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8 /IO.001
+//! @SYMREQ SGL.GT0323.205 v1.0 PREQ1090 Derived Requirements.doc REQ5756
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Import a vCal with Category X-Prefix
+//! @SYMTestActions Import a vCal with Category X-Prefix, store, fetch entry and then export, verify that the X-prefix is not exported
+//! @SYMTestExpectedResults X-Prefix should not be exported
+
+RUN_TEST_STEP	100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini vCal104
+RUN_TEST_STEP	100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiImportExport.ini exportvCal104
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0088AP-1090HP
+
+PREFIX RUN_UTILS 
+MakeReadWrite 	c:\citcalinterimapi\testdata\vcals\importvcals\vCal99.vcs
+DeleteFile		c:\citcalinterimapi\testdata\vcals\importvcals\vCal99.vcs
+MakeReadWrite 	c:\citcalinterimapi\testdata\vcals\importvcals\vCal100.vcs
+DeleteFile		c:\citcalinterimapi\testdata\vcals\importvcals\vCal100.vcs
+MakeReadWrite 	c:\citcalinterimapi\testdata\vcals\importvcals\vCal85.vcs
+DeleteFile		c:\citcalinterimapi\testdata\vcals\importvcals\vCal85.vcs
+MakeReadWrite 	c:\private\10003a5b\CITCalInterimLocalIds.dat
+DeleteFile		c:\private\10003a5b\CITCalInterimLocalIds.dat
+MakeReadWrite 	c:\private\10003a5b\CITCalInterim.dat
+DeleteFile		c:\private\10003a5b\CITCalInterim.dat
+MakeReadWrite 	c:\private\10003a5b\CITCalInterimRecurrence.dat
+DeleteFile		c:\private\10003a5b\CITCalInterimRecurrence.dat
+MakeReadWrite 	c:\citcalinterimapi\testdata\vcals\importvcals\vCal49.vcs
+DeleteFile		c:\citcalinterimapi\testdata\vcals\importvcals\vCal49.vcs
+MakeReadWrite 	c:\citcalinterimapi\testdata\vcals\importvcals\vCal103.vcs
+DeleteFile		c:\citcalinterimapi\testdata\vcals\importvcals\vCal103.vcs
+MakeReadWrite 	c:\citcalinterimapi\testdata\vcals\ExportedvCals\ExportFile3.vcs
+DeleteFile		c:\citcalinterimapi\testdata\vcals\ExportedvCals\ExportFile3.vcs
+MakeReadWrite 	c:\citcalinterimapi\testdata\vcals\ExportedvCals\ExportFile.vcs
+DeleteFile		c:\citcalinterimapi\testdata\vcals\ExportedvCals\ExportFile.vcs
+MakeReadWrite 	c:\private\10003a5b\CITCalInterimChildParent1.dat
+DeleteFile		c:\private\10003a5b\CITCalInterimChildParent1.dat
+REMOVE_PREFIX

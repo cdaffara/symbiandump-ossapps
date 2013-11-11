@@ -1,0 +1,38 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+
+prj_platforms
+ARMV5 WINSCW
+
+PRJ_EXPORTS
+// Cenrep
+../../cenrep/2002ffac.txt                          /epoc32/data/z/private/10202be9/2002ffac.txt
+../../cenrep/2002ffac.txt                          /epoc32/release/winscw/udeb/z/private/10202be9/2002ffac.txt
+../../cenrep/2002ffac.txt                          /epoc32/release/winscw/urel/z/private/10202be9/2002ffac.txt
+#ifdef __WINS__
+../../cenrep/2002ffac.txt  		        /epoc32/winscw/c/private/10202be9/2002ffac.txt
+#endif
+
+prj_mmpfiles
+irsettings.mmp
+
+PRJ_TESTMMPFILES
+// None
+
+PRJ_TESTEXPORTS
+// None

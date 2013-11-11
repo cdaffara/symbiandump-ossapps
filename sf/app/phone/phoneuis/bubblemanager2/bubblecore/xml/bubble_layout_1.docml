@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="0.1">
+    <widget name="content" type="HbWidget">
+        <widget name="expandedBubble" type="BubbleContainerWidget">
+            <widget name="eb:bubbleHeading" type="BubbleHeadingWidget">
+                <integer name="lineCount" value="3"/>
+            </widget>
+            <widget name="eb:callImage" type="BubbleImageWidget">
+                <bool name="keepSquareShape" value="TRUE"/>
+            </widget>
+            <widget name="eb:centerButton" type="BubbleButton">
+                <sizehint height="9.0un" type="FIXED"/>
+                <sizehint width="24.5un" type="PREFERRED"/>
+            </widget>
+            <widget name="eb:leftButton" type="BubbleButton">
+                <sizehint height="9.0un" type="FIXED"/>
+                <sizehint width="24.5un" type="PREFERRED"/>                
+            </widget>
+            <widget name="eb:rightButton" type="BubbleButton">
+                <sizehint height="9.0un" type="FIXED"/>
+                <sizehint width="24.5un" type="PREFERRED"/>                
+            </widget>
+        </widget>
+    </widget>
+
+<section name="portrait">
+    <layout type="anchor" widget="content">
+        <anchoritem src="expandedBubble" srcEdge="LEFT" dst="" dstEdge="LEFT"/>
+        <anchoritem src="expandedBubble" srcEdge="RIGHT" dst="" dstEdge="RIGHT"/>
+        <anchoritem src="expandedBubble" srcEdge="TOP" dst="" dstEdge="TOP"/>
+        <anchoritem src="expandedBubble" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM"/>
+    </layout>
+
+    <layout type="anchor" widget="expandedBubble">
+        <anchoritem src="eb:bubbleHeading" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="-var(hb-param-margin-gene-left)"/>
+        <anchoritem src="eb:bubbleHeading" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)"/>
+        <anchoritem src="eb:bubbleHeading" srcEdge="TOP" dst="" dstEdge="TOP" spacing="-1.5un"/>
+        <anchoritem src="eb:bubbleHeading" srcEdge="BOTTOM" dst="eb:callImage" dstEdge="TOP" spacing="1.5un"/>
+        
+        <anchoritem src="eb:callImage" srcEdge="CENTERH" dst="" dstEdge="CENTERH"/>
+        <anchoritem src="eb:callImage" srcEdge="BOTTOM" dst="eb:centerButton" dstEdge="TOP"  spacing="1.5un"/>
+        
+        <anchoritem src="eb:leftButton" srcEdge="RIGHT" dst="" dstEdge="CENTERH" spacing="expr(var(hb-param-margin-gene-middle-horizontal)/2)"/>
+        <anchoritem src="eb:leftButton" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="-var(hb-param-margin-gene-left)"/>
+        <anchoritem src="eb:leftButton" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacing="3.0un"/>
+        
+        <anchoritem src="eb:rightButton" srcEdge="LEFT" dst="" dstEdge="CENTERH" spacing="-expr(var(hb-param-margin-gene-middle-horizontal)/2)"/>
+        <anchoritem src="eb:rightButton" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)"/>
+        <anchoritem src="eb:rightButton" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacing="3.0un"/>
+        
+        <anchoritem src="eb:centerButton" srcEdge="CENTERH" dst="" dstEdge="CENTERH"/>
+        <anchoritem src="eb:centerButton" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacing="3.0un"/>
+    </layout>
+</section>
+
+<section name="landscape">
+
+    <layout type="anchor" widget="content">
+        <anchoritem src="expandedBubble" srcEdge="LEFT" dst="" dstEdge="LEFT"/>
+        <anchoritem src="expandedBubble" srcEdge="RIGHT" dst="" dstEdge="RIGHT"/>
+        <anchoritem src="expandedBubble" srcEdge="TOP" dst="" dstEdge="TOP"/>
+        <anchoritem src="expandedBubble" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM"/>
+    </layout>
+
+    <layout type="anchor" widget="expandedBubble">                        
+        <anchoritem src="eb:callImage" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="-var(hb-param-margin-gene-left)"/>
+        <anchoritem src="eb:callImage" srcEdge="TOP" dst="" dstEdge="TOP" spacing="-var(hb-param-margin-gene-top)"/>
+        <anchoritem src="eb:callImage" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacing="var(hb-param-margin-gene-bottom)"/>
+        
+        <anchoritem src="eb:bubbleHeading" srcEdge="LEFT" dst="eb:callImage" dstEdge="RIGHT" spacing="-var(hb-param-margin-gene-left)"/>
+        <anchoritem src="eb:bubbleHeading" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)"/>
+        <anchoritem src="eb:bubbleHeading" srcEdge="TOP" dst="" dstEdge="TOP" spacing="-var(hb-param-margin-gene-top)"/>
+        
+        <anchoritem src="eb:centerButton" srcEdge="CENTERH" dst="eb:bubbleHeading" dstEdge="CENTERH"/>
+        <anchoritem src="eb:centerButton" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacing="var(hb-param-margin-gene-bottom)"/>
+        
+        <anchoritem src="eb:leftButton" srcEdge="LEFT" dst="eb:bubbleHeading" dstEdge="LEFT"/>
+        <anchoritem src="eb:leftButton" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacing="var(hb-param-margin-gene-bottom)"/>
+        
+        <anchoritem src="eb:rightButton" srcEdge="LEFT" dst="eb:leftButton" dstEdge="RIGHT" spacing="-var(hb-param-margin-gene-middle-horizontal)"/>
+        <anchoritem src="eb:rightButton" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)"/>
+        <anchoritem src="eb:rightButton" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacing="var(hb-param-margin-gene-bottom)"/>        
+    </layout>
+</section>
+
+</hbdocument>

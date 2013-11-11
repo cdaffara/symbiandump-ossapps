@@ -1,0 +1,119 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+; 
+; Description: Installation file for HTI
+
+
+; Languages
+&EN
+
+; Using UID of HtiFramework project
+#{"HTI"},(0x1020DEB6),2,28,0,TYPE=SA,RU
+
+; Series60 product id for S60 5.2
+[0x20022E6D], 0, 0, 0, {"Series60ProductID"}
+
+; Localised Vendor name
+%{"Nokia"}
+
+; Unique Vendor name
+:"Nokia"
+
+; Install files
+
+; HtiCfg library
+"\epoc32\release\armv5\urel\HtiCfg.dll"                          - "!:\sys\bin\HtiCfg.dll"
+
+; HtiAdmin
+"\epoc32\release\armv5\urel\HtiAdmin.exe"                        - "!:\sys\bin\HtiAdmin.exe"
+"\epoc32\data\Z\Resource\apps\HtiAdmin.rsc"                      - "!:\Resource\Apps\HtiAdmin.rsc"
+"\epoc32\data\Z\private\10003a3f\import\apps\HtiAdmin_reg.rsc"          - "!:\private\10003a3f\import\apps\HtiAdmin_reg.rsc"
+
+; Serial comm module
+"\epoc32\data\Z\Resource\Plugins\HtiSerialCommEcomPlugin.rsc"    - "!:\Resource\Plugins\HtiSerialCommEcomPlugin.rsc"
+"\epoc32\release\armv5\urel\HtiSerialCommEcomPlugin.dll"         - "!:\sys\bin\HtiSerialCommEcomPlugin.dll"
+
+; BtSerial comm module
+"\epoc32\release\armv5\urel\HtiBtSerialComHelper.dll"            - "!:\sys\bin\HtiBtSerialComHelper.dll"
+"\epoc32\release\armv5\urel\HtiBtCommServer.dll"                 - "!:\sys\bin\HtiBtCommServer.dll"
+"\epoc32\release\armv5\urel\HtiBtCommInterface.dll"              - "!:\sys\bin\HtiBtCommInterface.dll"
+"\epoc32\data\Z\Resource\Plugins\HtiBtCommEcomPlugin.rsc"        - "!:\Resource\Plugins\HtiBtCommEcomPlugin.rsc"
+"\epoc32\release\armv5\urel\HtiBtCommEcomPlugin.dll"             - "!:\sys\bin\HtiBtCommEcomPlugin.dll"
+
+; IPComm module
+"\epoc32\release\armv5\urel\HtiIPCommServer.exe"                 - "!:\sys\bin\HtiIPCommServer.exe"
+"\epoc32\release\armv5\urel\HtiIPCommServerClient.dll"           - "!:\sys\bin\HtiIPCommServerClient.dll"
+"\epoc32\data\Z\Resource\Plugins\HtiIPCommEcomPlugin.rsc"        - "!:\Resource\Plugins\HtiIPCommEcomPlugin.rsc"
+"\epoc32\release\armv5\urel\HtiIPCommEcomPlugin.dll"             - "!:\sys\bin\HtiIPCommEcomPlugin.dll"
+
+; USB serial comm module
+"\epoc32\data\Z\Resource\Plugins\HtiUsbSerialCommEcomPlugin.rsc" - "!:\Resource\Plugins\HtiUsbSerialCommEcomPlugin.rsc"
+"\epoc32\release\armv5\urel\HtiUsbSerialCommEcomPlugin.dll"      - "!:\sys\bin\HtiUsbSerialCommEcomPlugin.dll"
+
+; Test service plug-ins
+"\epoc32\release\armv5\urel\HtiEchoServicePlugin.dll"            - "!:\sys\bin\HtiEchoServicePlugin.dll"
+"\epoc32\data\Z\Resource\Plugins\HtiEchoServicePlugin.rsc"       - "!:\Resource\Plugins\HtiEchoServicePlugin.rsc"
+"\epoc32\release\armv5\urel\HtiKeyEventServicePlugin.dll"        - "!:\sys\bin\HtiKeyEventServicePlugin.dll"
+"\epoc32\data\Z\Resource\Plugins\HtiKeyEventServicePlugin.rsc"   - "!:\Resource\Plugins\HtiKeyEventServicePlugin.rsc"
+"\epoc32\release\armv5\urel\HtiScreenshotServicePlugin.dll"      - "!:\sys\bin\HtiScreenshotServicePlugin.dll"
+"\epoc32\data\Z\Resource\Plugins\HtiScreenshotServicePlugin.rsc" - "!:\Resource\Plugins\HtiScreenshotServicePlugin.rsc"
+"\epoc32\release\armv5\urel\HtiFtpServicePlugin.dll"             - "!:\sys\bin\HtiFtpServicePlugin.dll"
+"\epoc32\data\Z\Resource\Plugins\HtiFtpServicePlugin.rsc"        - "!:\Resource\Plugins\HtiFtpServicePlugin.rsc"
+"\epoc32\release\armv5\urel\HtiAppServicePlugin.dll"             - "!:\sys\bin\HtiAppServicePlugin.dll"
+"\epoc32\data\Z\Resource\Plugins\HtiAppServicePlugin.rsc"        - "!:\Resource\Plugins\HtiAppServicePlugin.rsc"
+"\epoc32\release\armv5\urel\HtiAppControl.dll"                   - "!:\sys\bin\HtiAppControl.dll"
+"\epoc32\release\armv5\urel\HtiStifTfServicePlugin.dll"          - "!:\sys\bin\HtiStifTfServicePlugin.dll"
+"\epoc32\data\Z\Resource\Plugins\HtiStifTfServicePlugin.rsc"     - "!:\Resource\Plugins\HtiStifTfServicePlugin.rsc"
+"\epoc32\release\armv5\urel\HtiSysInfoServicePlugin.dll"         - "!:\sys\bin\HtiSysInfoServicePlugin.dll"
+"\epoc32\data\Z\Resource\Plugins\HtiSysInfoServicePlugin.rsc"    - "!:\Resource\Plugins\HtiSysInfoServicePlugin.rsc"
+"\epoc32\release\armv5\urel\HtiAudioServicePlugin.dll"           - "!:\sys\bin\HtiAudioServicePlugin.dll"
+"\epoc32\data\Z\Resource\Plugins\HtiAudioServicePlugin.rsc"      - "!:\Resource\Plugins\HtiAudioServicePlugin.rsc"
+"\epoc32\release\armv5\urel\HtiMessagesServicePlugin.dll"        - "!:\sys\bin\HtiMessagesServicePlugin.dll"
+"\epoc32\data\Z\Resource\Plugins\HtiMessagesServicePlugin.rsc"   - "!:\Resource\Plugins\HtiMessagesServicePlugin.rsc"
+"\epoc32\release\armv5\urel\HtiPIMServicePlugin.dll"             - "!:\sys\bin\HtiPIMServicePlugin.dll"
+"\epoc32\data\Z\Resource\Plugins\HtiPIMServicePlugin.rsc"        - "!:\Resource\Plugins\HtiPIMServicePlugin.rsc"
+"\epoc32\release\armv5\urel\HtiIpProxyServicePlugin.dll"         - "!:\sys\bin\HtiIpProxyServicePlugin.dll"
+"\epoc32\data\Z\Resource\Plugins\HtiIpProxyServicePlugin.rsc"    - "!:\Resource\Plugins\HtiIpProxyServicePlugin.rsc"
+"\epoc32\release\armv5\urel\HtiCameraServicePlugin.dll"          - "!:\sys\bin\HtiCameraServicePlugin.dll"
+"\epoc32\data\Z\Resource\Plugins\HtiCameraServicePlugin.rsc"     - "!:\Resource\Plugins\HtiCameraServicePlugin.rsc"
+
+; File helper with capability ALL - for file operations to TCB folders
+"\epoc32\release\armv5\urel\HtiFileHlp.exe"                      - "!:\sys\bin\HtiFileHlp.exe"
+
+; Tcb helper with capability ALL - for operations which need TCB capability
+"\epoc32\release\armv5\urel\HtiTcbHlp.exe"                       - "!:\sys\bin\HtiTcbHlp.exe"
+
+; Backup fake DLL used by HtiFtpServicePlugin
+"\epoc32\release\armv5\urel\HtiFtpBackupFake.dll"                - "!:\sys\bin\HtiFtpBackupFake.dll"
+
+; HTI watchdog
+"\epoc32\release\armv5\urel\HtiWatchDog.exe"                     - "!:\sys\bin\HtiWatchDog.exe"
+
+; HTI Restart
+"\epoc32\release\armv5\urel\HtiRestart.exe"                      - "!:\sys\bin\HtiRestart.exe"
+
+; HTI device reboot
+"\epoc32\release\armv5\urel\HtiDeviceRebootUI.exe"               - "!:\sys\bin\HtiDeviceRebootUI.exe"
+
+; HTI Framework
+"\epoc32\release\armv5\urel\HTIFramework.exe"                    - "!:\sys\bin\HTIFramework.exe"
+
+; AutoStart recogniser plug-in
+"\epoc32\release\armv5\urel\HtiAutoStart.dll"                    - "!:\sys\bin\HtiAutoStart.dll"
+"\epoc32\data\Z\Resource\Plugins\HtiAutoStart.rsc"               - "!:\Resource\Plugins\HtiAutoStart.rsc"
+
+; HTI startup wait
+"\epoc32\release\armv5\urel\HtiStartupWait.dll"                  - "!:\sys\bin\HtiStartupWait.dll"
+
+; Startup list resource file for starting HTIFramework.exe in device boot
+;"\epoc32\data\Z\private\101f875a\import\1020deb6.rsc"            - "c:\private\101f875a\import\[1020deb6].rsc"

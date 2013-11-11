@@ -1,0 +1,152 @@
+;
+; Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description: Package file for Agnvesit2.
+;
+&EN
+;
+; UID is the app's UID
+;
+#{"Agnversit2"},(0x01700008),1,0,0,TYPE=SA
+
+; Localised Vendor name
+%{"Nokia-EN"}
+
+; Unique Vendor name
+:"Nokia"
+;Supports Series 60 v 3.0
+;This line indicates that this installation is for the Series 60 platform v0.9
+;This line must appear _exactly_ as shown below in the sis file
+;If this line is missing or incorrect, the sis file will not be able
+;to be installed on Series 60 v3.0 platforms
+[0x101F7961], 0, 0, 0, {"Series60ProductID"}
+;
+
+; Agnversit2 data input files
+"..\data\mmc\unittest\agnversit2\input\AddAnniversaryCheck.ics"               - "E:\testing\data\unittest\agnversit2\input\AddAnniversaryCheck.ics"
+"..\data\mmc\unittest\agnversit2\input\AddAnniversaryIn.ics"               		- "E:\testing\data\unittest\agnversit2\input\AddAnniversaryIn.ics"
+"..\data\mmc\unittest\agnversit2\input\AgnVersit2Test.ini"               			- "E:\testing\data\unittest\agnversit2\input\AgnVersit2Test.ini"
+"..\data\mmc\unittest\agnversit2\input\AgnVersit2Test.script"               	- "E:\testing\data\unittest\agnversit2\input\AgnVersit2Test.script"
+"..\data\mmc\unittest\agnversit2\input\AllCategoriesCheck.ics"               	- "E:\testing\data\unittest\agnversit2\input\AllCategoriesCheck.ics"
+"..\data\mmc\unittest\agnversit2\input\AllCategoriesIn.ics"               		- "E:\testing\data\unittest\agnversit2\input\AllCategoriesIn.ics"
+"..\data\mmc\unittest\agnversit2\input\AttendeeRoleStatusCheck.ics"           - "E:\testing\data\unittest\agnversit2\input\AttendeeRoleStatusCheck.ics"
+"..\data\mmc\unittest\agnversit2\input\AttendeeRoleStatusIn.ics"              - "E:\testing\data\unittest\agnversit2\input\AttendeeRoleStatusIn.ics"
+"..\data\mmc\unittest\agnversit2\input\Corrupt1In.ics"               					- "E:\testing\data\unittest\agnversit2\input\Corrupt1In.ics"
+"..\data\mmc\unittest\agnversit2\input\Corrupt2In.ics"               					- "E:\testing\data\unittest\agnversit2\input\Corrupt2In.ics"
+"..\data\mmc\unittest\agnversit2\input\Corrupt3In.ics"               					- "E:\testing\data\unittest\agnversit2\input\Corrupt3In.ics"
+"..\data\mmc\unittest\agnversit2\input\Empty.ics"               							- "E:\testing\data\unittest\agnversit2\input\Empty.ics"
+"..\data\mmc\unittest\agnversit2\input\FloatingTimeCheck.ics"               	- "E:\testing\data\unittest\agnversit2\input\FloatingTimeCheck.ics"
+"..\data\mmc\unittest\agnversit2\input\FloatingTimeIn.ics"               			- "E:\testing\data\unittest\agnversit2\input\FloatingTimeIn.ics"
+"..\data\mmc\unittest\agnversit2\input\GreatBigICalIn.ics"               			- "E:\testing\data\unittest\agnversit2\input\GreatBigICalIn.ics"
+"..\data\mmc\unittest\agnversit2\input\GreatBigICalOut.ics"               		- "E:\testing\data\unittest\agnversit2\input\GreatBigICalOut.ics"
+"..\data\mmc\unittest\agnversit2\input\MinimalVFreeBusyCheck.ics"             - "E:\testing\data\unittest\agnversit2\input\MinimalVFreeBusyCheck.ics"
+"..\data\mmc\unittest\agnversit2\input\MinimalVFreeBusyIn.ics"               	- "E:\testing\data\unittest\agnversit2\input\MinimalVFreeBusyIn.ics"
+"..\data\mmc\unittest\agnversit2\input\MinimalVJournalCheck.ics"              - "E:\testing\data\unittest\agnversit2\input\MinimalVJournalCheck.ics"
+"..\data\mmc\unittest\agnversit2\input\MinimalVJournalIn.ics"               	- "E:\testing\data\unittest\agnversit2\input\MinimalVJournalIn.ics"
+"..\data\mmc\unittest\agnversit2\input\myownIn.ics"               						- "E:\testing\data\unittest\agnversit2\input\myownIn.ics"
+"..\data\mmc\unittest\agnversit2\input\NotAniCal.bmp"               					- "E:\testing\data\unittest\agnversit2\input\NotAniCal.bmp"
+"..\data\mmc\unittest\agnversit2\input\NotCorruptCheck.ics"               		- "E:\testing\data\unittest\agnversit2\input\NotCorruptCheck.ics"
+"..\data\mmc\unittest\agnversit2\input\NotCorruptIn.ics"               				- "E:\testing\data\unittest\agnversit2\input\NotCorruptIn.ics"
+"..\data\mmc\unittest\agnversit2\input\NotSupportedContinueCheck.ics"         - "E:\testing\data\unittest\agnversit2\input\NotSupportedContinueCheck.ics"
+"..\data\mmc\unittest\agnversit2\input\NotSupportedIn.ics"               			- "E:\testing\data\unittest\agnversit2\input\NotSupportedIn.ics"
+"..\data\mmc\unittest\agnversit2\input\NotSupportedSkipCheck.ics"             - "E:\testing\data\unittest\agnversit2\input\NotSupportedSkipCheck.ics"
+"..\data\mmc\unittest\agnversit2\input\NotSupportedStopCheck.ics"             - "E:\testing\data\unittest\agnversit2\input\NotSupportedStopCheck.ics"
+"..\data\mmc\unittest\agnversit2\input\oomin.ics"               							- "E:\testing\data\unittest\agnversit2\input\oomin.ics"
+"..\data\mmc\unittest\agnversit2\input\oomout.ics"               							- "E:\testing\data\unittest\agnversit2\input\oomout.ics"
+"..\data\mmc\unittest\agnversit2\input\OutlookAllDayRepeatWeeklyCheck.ics"    - "E:\testing\data\unittest\agnversit2\input\OutlookAllDayRepeatWeeklyCheck.ics"
+"..\data\mmc\unittest\agnversit2\input\OutlookAllDayRepeatWeeklyIn.ics"       - "E:\testing\data\unittest\agnversit2\input\OutlookAllDayRepeatWeeklyIn.ics"
+"..\data\mmc\unittest\agnversit2\input\RRuleNumberingMonthlyCheck.ics"        - "E:\testing\data\unittest\agnversit2\input\RRuleNumberingMonthlyCheck.ics"
+"..\data\mmc\unittest\agnversit2\input\RRuleNumberingMonthlyIn.ics"           - "E:\testing\data\unittest\agnversit2\input\RRuleNumberingMonthlyIn.ics"
+"..\data\mmc\unittest\agnversit2\input\RRuleNumberingWeeklyCheck.ics"         - "E:\testing\data\unittest\agnversit2\input\RRuleNumberingWeeklyCheck.ics"
+"..\data\mmc\unittest\agnversit2\input\RRuleNumberingWeeklyIn.ics"            - "E:\testing\data\unittest\agnversit2\input\RRuleNumberingWeeklyIn.ics"
+"..\data\mmc\unittest\agnversit2\input\RRuleNumberingYearlyCheck.ics"         - "E:\testing\data\unittest\agnversit2\input\RRuleNumberingYearlyCheck.ics"
+"..\data\mmc\unittest\agnversit2\input\RRuleNumberingYearlyIn.ics"            - "E:\testing\data\unittest\agnversit2\input\RRuleNumberingYearlyIn.ics"
+"..\data\mmc\unittest\agnversit2\input\RRuleTzAllDaysFromIntCheck.ics"        - "E:\testing\data\unittest\agnversit2\input\RRuleTzAllDaysFromIntCheck.ics"
+"..\data\mmc\unittest\agnversit2\input\RRuleTzAllDaysFromIntIn.ics"           - "E:\testing\data\unittest\agnversit2\input\RRuleTzAllDaysFromIntIn.ics"
+"..\data\mmc\unittest\agnversit2\input\RRuleTzAllDaysFromIntIn1.ics"          - "E:\testing\data\unittest\agnversit2\input\RRuleTzAllDaysFromIntIn1.ics"
+"..\data\mmc\unittest\agnversit2\input\SimpleVeventAttendeeCheck.ics"         - "E:\testing\data\unittest\agnversit2\input\SimpleVeventAttendeeCheck.ics"
+"..\data\mmc\unittest\agnversit2\input\SimpleVeventAttendeeIn.ics"            - "E:\testing\data\unittest\agnversit2\input\SimpleVeventAttendeeIn.ics"
+"..\data\mmc\unittest\agnversit2\input\SimpleVEventCategoriesCheck.ics"       - "E:\testing\data\unittest\agnversit2\input\SimpleVEventCategoriesCheck.ics"
+"..\data\mmc\unittest\agnversit2\input\SimpleVEventCategoriesIn.ics"          - "E:\testing\data\unittest\agnversit2\input\SimpleVEventCategoriesIn.ics"
+"..\data\mmc\unittest\agnversit2\input\SimpleVeventCheck.ics"                 - "E:\testing\data\unittest\agnversit2\input\SimpleVeventCheck.ics"
+"..\data\mmc\unittest\agnversit2\input\SimpleVEventCommentsCheck.ics"         - "E:\testing\data\unittest\agnversit2\input\SimpleVEventCommentsCheck.ics"
+"..\data\mmc\unittest\agnversit2\input\SimpleVEventCommentsIn.ics"            - "E:\testing\data\unittest\agnversit2\input\SimpleVEventCommentsIn.ics"
+"..\data\mmc\unittest\agnversit2\input\SimpleVeventDescriptionCheck.ics"      - "E:\testing\data\unittest\agnversit2\input\SimpleVeventDescriptionCheck.ics"
+"..\data\mmc\unittest\agnversit2\input\SimpleVeventDescriptionIn.ics"         - "E:\testing\data\unittest\agnversit2\input\SimpleVeventDescriptionIn.ics"
+"..\data\mmc\unittest\agnversit2\input\SimpleVEventDurationCheck.ics"         - "E:\testing\data\unittest\agnversit2\input\SimpleVEventDurationCheck.ics"
+"..\data\mmc\unittest\agnversit2\input\SimpleVEventDurationIn.ics"            - "E:\testing\data\unittest\agnversit2\input\SimpleVEventDurationIn.ics"
+"..\data\mmc\unittest\agnversit2\input\SimpleVEventExdateCheck.ics"           - "E:\testing\data\unittest\agnversit2\input\SimpleVEventExdateCheck.ics"
+"..\data\mmc\unittest\agnversit2\input\SimpleVEventExdateIn.ics"              - "E:\testing\data\unittest\agnversit2\input\SimpleVEventExdateIn.ics"
+"..\data\mmc\unittest\agnversit2\input\SimpleVeventIn.ics"               			- "E:\testing\data\unittest\agnversit2\input\SimpleVeventIn.ics"
+"..\data\mmc\unittest\agnversit2\input\SimpleVEventLastModCheck.ics"          - "E:\testing\data\unittest\agnversit2\input\SimpleVEventLastModCheck.ics"
+"..\data\mmc\unittest\agnversit2\input\SimpleVEventLastModIn.ics"             - "E:\testing\data\unittest\agnversit2\input\SimpleVEventLastModIn.ics"
+"..\data\mmc\unittest\agnversit2\input\SimpleVEventLocationCheck.ics"         - "E:\testing\data\unittest\agnversit2\input\SimpleVEventLocationCheck.ics"
+"..\data\mmc\unittest\agnversit2\input\SimpleVEventLocationIn.ics"            - "E:\testing\data\unittest\agnversit2\input\SimpleVEventLocationIn.ics"
+"..\data\mmc\unittest\agnversit2\input\SimpleVEventOrganizerCheck.ics"        - "E:\testing\data\unittest\agnversit2\input\SimpleVEventOrganizerCheck.ics"
+"..\data\mmc\unittest\agnversit2\input\SimpleVEventOrganizerIn.ics"           - "E:\testing\data\unittest\agnversit2\input\SimpleVEventOrganizerIn.ics"
+"..\data\mmc\unittest\agnversit2\input\SimpleVEventRdateCheck.ics"            - "E:\testing\data\unittest\agnversit2\input\SimpleVEventRdateCheck.ics"
+"..\data\mmc\unittest\agnversit2\input\SimpleVEventRdateIn.ics"               - "E:\testing\data\unittest\agnversit2\input\SimpleVEventRdateIn.ics"
+"..\data\mmc\unittest\agnversit2\input\SimpleVEventRecurIdCheck.ics"          - "E:\testing\data\unittest\agnversit2\input\SimpleVEventRecurIdCheck.ics"
+"..\data\mmc\unittest\agnversit2\input\SimpleVEventRecurIdIn.ics"             - "E:\testing\data\unittest\agnversit2\input\SimpleVEventRecurIdIn.ics"
+"..\data\mmc\unittest\agnversit2\input\SimpleVEventRruleCheck.ics"            - "E:\testing\data\unittest\agnversit2\input\SimpleVEventRruleCheck.ics"
+"..\data\mmc\unittest\agnversit2\input\SimpleVEventRruleIn.ics"               - "E:\testing\data\unittest\agnversit2\input\SimpleVEventRruleIn.ics"
+"..\data\mmc\unittest\agnversit2\input\SimpleVEventSequenceCheck.ics"         - "E:\testing\data\unittest\agnversit2\input\SimpleVEventSequenceCheck.ics"
+"..\data\mmc\unittest\agnversit2\input\SimpleVEventSequenceIn.ics"            - "E:\testing\data\unittest\agnversit2\input\SimpleVEventSequenceIn.ics"
+"..\data\mmc\unittest\agnversit2\input\SimpleVEventStatusCheck.ics"           - "E:\testing\data\unittest\agnversit2\input\SimpleVEventStatusCheck.ics"
+"..\data\mmc\unittest\agnversit2\input\SimpleVEventStatusIn.ics"              - "E:\testing\data\unittest\agnversit2\input\SimpleVEventStatusIn.ics"
+"..\data\mmc\unittest\agnversit2\input\SimpleVEventSummaryCheck.ics"          - "E:\testing\data\unittest\agnversit2\input\SimpleVEventSummaryCheck.ics"
+"..\data\mmc\unittest\agnversit2\input\SimpleVEventSummaryIn.ics"             - "E:\testing\data\unittest\agnversit2\input\SimpleVEventSummaryIn.ics"
+"..\data\mmc\unittest\agnversit2\input\Versit2EscapeSeqCheck.ics"             - "E:\testing\data\unittest\agnversit2\input\Versit2EscapeSeqCheck.ics"
+"..\data\mmc\unittest\agnversit2\input\Versit2EscapeSeqIn.ics"                - "E:\testing\data\unittest\agnversit2\input\Versit2EscapeSeqIn.ics"
+"..\data\mmc\unittest\agnversit2\input\Versit2FilterCompsCheck.ics"           - "E:\testing\data\unittest\agnversit2\input\Versit2FilterCompsCheck.ics"
+"..\data\mmc\unittest\agnversit2\input\Versit2FilterCompsIn.ics"              - "E:\testing\data\unittest\agnversit2\input\Versit2FilterCompsIn.ics"
+"..\data\mmc\unittest\agnversit2\input\Versit2FilterPropsCheck.ics"           - "E:\testing\data\unittest\agnversit2\input\Versit2FilterPropsCheck.ics"
+"..\data\mmc\unittest\agnversit2\input\Versit2FilterPropsIn.ics"              - "E:\testing\data\unittest\agnversit2\input\Versit2FilterPropsIn.ics"
+"..\data\mmc\unittest\agnversit2\input\VEventAddCheck.ics"                    - "E:\testing\data\unittest\agnversit2\input\VEventAddCheck.ics"
+"..\data\mmc\unittest\agnversit2\input\VEventAddIn.ics"               				- "E:\testing\data\unittest\agnversit2\input\VEventAddIn.ics"
+"..\data\mmc\unittest\agnversit2\input\VEventCancelCheck.ics"               	- "E:\testing\data\unittest\agnversit2\input\VEventCancelCheck.ics"
+"..\data\mmc\unittest\agnversit2\input\VEventCancelIn.ics"               			- "E:\testing\data\unittest\agnversit2\input\VEventCancelIn.ics"
+"..\data\mmc\unittest\agnversit2\input\VEventCounterCheck.ics"               	- "E:\testing\data\unittest\agnversit2\input\VEventCounterCheck.ics"
+"..\data\mmc\unittest\agnversit2\input\VEventCounterIn.ics"               		- "E:\testing\data\unittest\agnversit2\input\VEventCounterIn.ics"
+"..\data\mmc\unittest\agnversit2\input\VEventDeclineCounterCheck.ics"         - "E:\testing\data\unittest\agnversit2\input\VEventDeclineCounterCheck.ics"
+"..\data\mmc\unittest\agnversit2\input\VEventDeclineCounterIn.ics"            - "E:\testing\data\unittest\agnversit2\input\VEventDeclineCounterIn.ics"
+"..\data\mmc\unittest\agnversit2\input\VEventPublishCheck.ics"                - "E:\testing\data\unittest\agnversit2\input\VEventPublishCheck.ics"
+"..\data\mmc\unittest\agnversit2\input\VEventPublishIn.ics"                   - "E:\testing\data\unittest\agnversit2\input\VEventPublishIn.ics"
+"..\data\mmc\unittest\agnversit2\input\VEventRefreshCheck.ics"                - "E:\testing\data\unittest\agnversit2\input\VEventRefreshCheck.ics"
+"..\data\mmc\unittest\agnversit2\input\VEventRefreshIn.ics"               		- "E:\testing\data\unittest\agnversit2\input\VEventRefreshIn.ics"
+"..\data\mmc\unittest\agnversit2\input\VEventReplyCheck.ics"               		- "E:\testing\data\unittest\agnversit2\input\VEventReplyCheck.ics"
+"..\data\mmc\unittest\agnversit2\input\VEventReplyIn.ics"               			- "E:\testing\data\unittest\agnversit2\input\VEventReplyIn.ics"
+"..\data\mmc\unittest\agnversit2\input\VEventRequestCheck.ics"               	- "E:\testing\data\unittest\agnversit2\input\VEventRequestCheck.ics"
+"..\data\mmc\unittest\agnversit2\input\VEventRequestIn.ics"               		- "E:\testing\data\unittest\agnversit2\input\VEventRequestIn.ics"
+"..\data\mmc\unittest\agnversit2\input\VEventRRuleCheck.ics"               		- "E:\testing\data\unittest\agnversit2\input\VEventRRuleCheck.ics"
+"..\data\mmc\unittest\agnversit2\input\VEventRRuleIn.ics"               			- "E:\testing\data\unittest\agnversit2\input\VEventRRuleIn.ics"
+"..\data\mmc\unittest\agnversit2\input\VEventStatusCheck.ics"               	- "E:\testing\data\unittest\agnversit2\input\VEventStatusCheck.ics"
+"..\data\mmc\unittest\agnversit2\input\VEventStatusIn.ics"               			- "E:\testing\data\unittest\agnversit2\input\VEventStatusIn.ics"
+"..\data\mmc\unittest\agnversit2\input\VTodoAddCheck.ics"               			- "E:\testing\data\unittest\agnversit2\input\VTodoAddCheck.ics"
+"..\data\mmc\unittest\agnversit2\input\VTodoAddIn.ics"               					- "E:\testing\data\unittest\agnversit2\input\VTodoAddIn.ics"
+"..\data\mmc\unittest\agnversit2\input\VTodoCancelCheck.ics"               		- "E:\testing\data\unittest\agnversit2\input\VTodoCancelCheck.ics"
+"..\data\mmc\unittest\agnversit2\input\VTodoCancelIn.ics"               			- "E:\testing\data\unittest\agnversit2\input\VTodoCancelIn.ics"
+"..\data\mmc\unittest\agnversit2\input\VTodoCounterCheck.ics"               	- "E:\testing\data\unittest\agnversit2\input\VTodoCounterCheck.ics"
+"..\data\mmc\unittest\agnversit2\input\VTodoCounterIn.ics"               			- "E:\testing\data\unittest\agnversit2\input\VTodoCounterIn.ics"
+"..\data\mmc\unittest\agnversit2\input\VTodoDeclineCounterCheck.ics"          - "E:\testing\data\unittest\agnversit2\input\VTodoDeclineCounterCheck.ics"
+"..\data\mmc\unittest\agnversit2\input\VTodoDeclineCounterIn.ics"             - "E:\testing\data\unittest\agnversit2\input\VTodoDeclineCounterIn.ics"
+"..\data\mmc\unittest\agnversit2\input\VTodoPublishCheck.ics"               	- "E:\testing\data\unittest\agnversit2\input\VTodoPublishCheck.ics"
+"..\data\mmc\unittest\agnversit2\input\VTodoPublishIn.ics"               			- "E:\testing\data\unittest\agnversit2\input\VTodoPublishIn.ics"
+"..\data\mmc\unittest\agnversit2\input\VTodoRefreshCheck.ics"               	- "E:\testing\data\unittest\agnversit2\input\VTodoRefreshCheck.ics"
+"..\data\mmc\unittest\agnversit2\input\VTodoRefreshIn.ics"               			- "E:\testing\data\unittest\agnversit2\input\VTodoRefreshIn.ics"
+"..\data\mmc\unittest\agnversit2\input\VTodoReplyCheck.ics"               		- "E:\testing\data\unittest\agnversit2\input\VTodoReplyCheck.ics"
+"..\data\mmc\unittest\agnversit2\input\VTodoReplyIn.ics"               				- "E:\testing\data\unittest\agnversit2\input\VTodoReplyIn.ics"
+"..\data\mmc\unittest\agnversit2\input\VTodoRequestCheck.ics"               	- "E:\testing\data\unittest\agnversit2\input\VTodoRequestCheck.ics"
+"..\data\mmc\unittest\agnversit2\input\VTodoRequestIn.ics"               			- "E:\testing\data\unittest\agnversit2\input\VTodoRequestIn.ics"
+"..\data\mmc\unittest\agnversit2\input\VTodoStatusCheck.ics"               		- "E:\testing\data\unittest\agnversit2\input\VTodoStatusCheck.ics"
+"..\data\mmc\unittest\agnversit2\input\VTodoStatusIn.ics"               			- "E:\testing\data\unittest\agnversit2\input\VTodoStatusIn.ics"

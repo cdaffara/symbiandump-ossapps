@@ -1,0 +1,73 @@
+/*
+* Copyright (c) 2002-2006 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project definition file for the WPWAPAdapter.
+*
+*/
+
+
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+#include "../../bld/ProvisioningUIDs.h"
+#include "../Inc/WPWAPDebug.h"
+
+TARGET          wpwapadapter.dll
+TARGETTYPE      PLUGIN
+UID             KProvisioningWAPAdapterDllUid2 KProvisioningWAPAdapterDllUid3
+
+
+VENDORID        VID_DEFAULT
+CAPABILITY      CAP_ECOM_PLUGIN
+
+SOURCEPATH      ../Src
+SOURCE          CWPWAPAdapterBase.cpp
+SOURCE          CWPWAPMMSAdapter.cpp 
+SOURCE          CWPWAPMMSItem.cpp 
+SOURCE          CWPWAPBookmarkItem.cpp
+SOURCE          CWPWAPItemBAse.cpp
+SOURCE          WPWAPUtil.cpp
+SOURCE          WPWAPItemFactory.cpp
+SOURCE          WPWAPAdapterGroupProxy.cpp
+SOURCE          WPWAPAdapterMain.cpp
+
+SOURCEPATH      ../Data
+START RESOURCE 101F84DC.rss
+TARGET wpwapadapter.rsc
+END
+
+START RESOURCE WPWAPAdapterResource.rss
+HEADER
+TARGET wpwapadapterresource.rsc
+TARGETPATH RESOURCE_FILES_DIR
+LANGUAGE_IDS
+END
+
+USERINCLUDE     ../Inc ../Group ../../bld
+
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE 	/epoc32/include/ecom
+
+LIBRARY         euser.lib 
+LIBRARY         provisioningengine.lib
+LIBRARY         msgs.lib
+LIBRARY         cmmanager.lib
+LIBRARY         commdb.lib
+LIBRARY         CommonEngine.lib
+LIBRARY         centralrepository.lib
+
+DEBUGLIBRARY    flogger.lib
+
+#ifdef __MESSAGING_API_V2__
+LIBRARY         mmsserversettings.lib
+#endif
+SMPSAFE

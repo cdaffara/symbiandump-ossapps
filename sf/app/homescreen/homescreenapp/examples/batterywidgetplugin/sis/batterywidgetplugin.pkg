@@ -1,0 +1,42 @@
+;
+; Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:
+;
+
+; Language
+&EN
+
+; SIS header: name, uid, version
+#{"batterywidgetplugin"},(0x20022F7A),1,0,0
+
+; Localised Vendor name
+%{"Vendor"}
+
+; Unique Vendor name
+:"Vendor"
+
+; Manual PKG pre-rules from PRO files
+; Default HW/platform dependencies
+[0x101F7961],0,0,0,{"S60ProductID"}
+[0x102032BE],0,0,0,{"S60ProductID"}
+[0x102752AE],0,0,0,{"S60ProductID"}
+[0x1028315F],0,0,0,{"S60ProductID"}
+ 
+"/epoc32/data/z/private/20022F35/import/widgetregistry/20022F7A/batterywidgetplugin.manifest" - "!:/private/20022F35/import/widgetregistry/20022F7A/batterywidgetplugin.manifest",FM,"application/hs-widget-uninstall+xml",RR,RW
+
+"/epoc32/release/armv5/urel/batterywidgetplugin.dll"                                          - "!:/sys/bin/batterywidgetplugin.dll"
+"/epoc32/data/z/resource/qt/plugins/homescreen/batterywidgetplugin.qtplugin"                  - "!:/resource/qt/plugins/homescreen/batterywidgetplugin.qtplugin"
+"/epoc32/data/z/private/20022F35/import/widgetregistry/20022F7A/batterywidgetplugin.xml"      - "!:/private/20022F35/import/widgetregistry/20022F7A/batterywidgetplugin.xml"
+"/epoc32/data/z/private/20022F35/import/widgetregistry/20022F7A/batterywidgetplugin.png"      - "!:/private/20022F35/import/widgetregistry/20022F7A/batterywidgetplugin.png"
+"/epoc32/data/z/private/20022F35/import/widgetregistry/20022F7A/batterywidget_bg.png"         - "!:/private/20022F35/import/widgetregistry/20022F7A/batterywidget_bg.png"

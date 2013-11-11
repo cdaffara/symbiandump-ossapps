@@ -1,0 +1,54 @@
+/*
+* Copyright (c) 2008 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Definition file for the structure.
+*
+*/
+
+#ifndef __TIMEZONE_LOCALIZATION_RH__
+#define __TIMEZONE_LOCALIZATION_RH__
+
+STRUCT TIMEZONE_CITY
+	{
+	BYTE city_group_id = 0;
+	LTEXT city_name;
+	}
+
+STRUCT LOCALIZED_TIMEZONE
+	{
+	WORD time_zone_id;
+	LTEXT standard_name = "";
+	LTEXT daylight_name = "";
+	LTEXT short_standard_name = "";
+	LTEXT short_daylight_name = "";
+	STRUCT cities[];
+	}
+
+STRUCT TIMEZONE_CITY_GROUP
+	{
+	BYTE city_group_id;
+	LTEXT city_group_name;
+	}
+	
+STRUCT DEFAULT_CACHED_TIMEZONES
+	{
+	WORD default_home_zone_id;
+	WORD default_zone_of_interest_id;
+	WORD default_recent_zone1;
+	WORD default_recent_zone2;
+	}
+
+#endif 			// __TIMEZONE_LOCALIZATION_RH__
+
+// End of file
+

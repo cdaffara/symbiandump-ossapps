@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="0.9">
+
+    <widget name="container" type="HbWidget">
+        
+        <widget name="mediawalContainer" type="HbWidget"/>
+               
+        <layout type="anchor" >
+            <anchoritem dst="mediawalContainer" dstEdge="LEFT" spacing="0.0" src="" srcEdge="LEFT"/>
+            <anchoritem dst="mediawalContainer" dstEdge="TOP" spacing="0.0" src="" srcEdge="TOP"/>
+            <anchoritem dst="mediawalContainer" dstEdge="RIGHT" spacing="0.0" src="" srcEdge="RIGHT"/>
+            <anchoritem dst="mediawalContainer" dstEdge="BOTTOM" spacing="0.0" src="" srcEdge="BOTTOM"/>
+        </layout>
+        
+    </widget>
+
+    <section name="empty">
+        <widget name="mediawalContainer">
+            <widget name="noMusic" type="HbLabel">
+                <string name="plainText" locid="txt_mus_info_no_music"/>
+                <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+                <fontspec name="fontSpec" role="Primary"/>
+            </widget>
+
+            <layout type="linear" orientation="Vertical" >
+                <contentsmargins bottom="var(hb-param-margin-view-bottom)" left="var(hb-param-margin-view-left)" right="var(hb-param-margin-view-right)" top="var(hb-param-margin-view-top)"/>
+                <stretchitem stretchfactor="1"/>
+                <linearitem itemname="noMusic" spacing="0.0"/>
+                <stretchitem stretchfactor="1"/>
+            </layout>
+        </widget>
+    </section>
+
+    <section name="mediaWall">
+        <widget name="mediawalContainer">
+            <!-- dont change the media wall widget name it is used on custom css-->
+            <widget name="MPmediaWallWidget" type="HgMediawall">
+                <sizepolicy horizontalPolicy="Ignored" verticalPolicy="Ignored"/>
+            </widget>
+            <layout type="linear" orientation="Vertical" >
+                <contentsmargins bottom="0" left="0" right="0" top="0"/>
+                <linearitem itemname="MPmediaWallWidget" spacing="0.0"/>
+            </layout>
+        </widget>
+    </section>
+    
+</hbdocument>

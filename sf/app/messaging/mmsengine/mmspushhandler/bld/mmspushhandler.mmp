@@ -1,0 +1,59 @@
+/*
+* Copyright (c) 2002-2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   This is project specification file for the mmspushhandler.dll
+*
+*/
+
+
+
+#include <platform_paths.hrh>
+
+TARGET          MmsPushHandler.dll
+TARGETTYPE      PLUGIN
+
+// uid2 specifies an ECOM dll, uid3 specifies a unique identifier for dll
+UID             0x10009D8D 0x101F4693
+CAPABILITY      CAP_ECOM_PLUGIN
+VENDORID        VID_DEFAULT
+VERSION 	10.0
+PAGED
+
+SOURCEPATH      ../src
+SOURCE          CMmsPushHandler.cpp
+
+START RESOURCE 101F4693.rss
+TARGET         MmsPushHandler.rsc
+END
+
+
+// INCLUDES
+SYSTEMINCLUDE   ../../../inc
+APP_LAYER_SYSTEMINCLUDE
+
+
+// Nokia CF specifc non-public
+USERINCLUDE     ../inc
+USERINCLUDE     ../../inc
+
+LIBRARY         euser.lib
+LIBRARY         ecom.lib
+LIBRARY         msgs.lib
+LIBRARY         WapPushUtils.lib
+LIBRARY         mmsgenutils.lib			
+LIBRARY         efsrv.lib
+LIBRARY		estor.lib
+DEBUGLIBRARY    flogger.lib
+
+
+SMPSAFE

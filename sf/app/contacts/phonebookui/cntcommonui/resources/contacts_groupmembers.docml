@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="0.9">
+    <object name="cnt:managemembers" type="HbAction">
+        <icon iconName="qtg_mono_edit" name="icon"/>
+    </object>
+    <object name="cnt:deletegroup" type="HbAction">
+        <icon iconName="qtg_mono_delete" name="icon"/>
+    </object>
+    <object name="cnt:groupactions" type="HbAction">
+        <icon iconName="qtg_mono_communication" name="icon"/>
+    </object>
+    <object name="cnt:editgroupdetails" type="HbAction">
+        <string name="text" locid="txt_phob_opt_edit_group_details"/>
+    </object>
+    
+    <widget name="view" type="HbView">
+        <widget name="content" role="HbView:widget" type="HbWidget">
+            <widget name="listView" type="HbListView">
+            </widget>
+            <widget name="imageLabel" type="CntImageLabel">
+                <bool name="visible" value="FALSE"/>
+                <sizehint height="30.5un" type="FIXED" width="30.5un"/>
+                <icon iconName="qtg_large_add_group_picture" name="icon"/>
+                <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+            </widget>
+            <widget name="groupHeading" type="CntContactCardHeadingItem"/>
+        </widget>
+        
+       <widget name="viewMenu" role="HbView:menu" type="HbMenu">
+            <ref object="cnt:editgroupdetails" role="HbMenu:addAction"/>
+       </widget>
+       <widget name="viewToolbar" role="HbView:toolBar" type="HbToolBar">
+            <ref object="cnt:managemembers" role="HbToolBar:addAction"/>
+            <ref object="cnt:deletegroup" role="HbToolBar:addAction"/>
+            <ref object="cnt:groupactions" role="HbToolBar:addAction"/>
+       </widget>
+       <string locid="txt_phob_title_contacts" name="title" value="Contacts"/>
+    </widget>
+        <section name="portrait">
+        <widget name="content" role="HbView:widget" type="HbWidget">
+            <widget name="imageLabel" type="CntImageLabel">
+                <bool name="visible" value="FALSE"/>
+            </widget>
+            <layout orientation="Vertical" spacing="0un" type="linear">
+                <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+                <linearitem itemname="groupHeading"/>
+                <linearitem itemname="listView"/>
+            </layout>
+        </widget>
+    </section>
+    <section name="landscape">
+        <widget name="content" role="HbView:widget" type="HbWidget">
+            <widget name="imageLabel" type="CntImageLabel">
+                <bool name="visible" value="TRUE"/>
+            </widget>
+            <layout type="anchor">
+                <anchoritem src="imageLabel" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="-var(hb-param-margin-gene-left)" />
+                <anchoritem src="imageLabel" srcEdge="TOP" dst="" dstEdge="TOP" spacing="-var(hb-param-margin-gene-top)" />
+                <anchoritem src="imageLabel" srcEdge="RIGHT" dst="groupHeading" dstEdge="LEFT" spacing="var(hb-param-margin-gene-right)" />
+                <anchoritem src="groupHeading" srcEdge="TOP" dst="" dstEdge="TOP" spacing="0un" />
+                <anchoritem src="groupHeading" srcEdge="BOTTOM" dst="listView" dstEdge="TOP" spacing="0un" />
+                <anchoritem src="groupHeading" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="0un" />
+                <anchoritem src="listView" srcEdge="LEFT" dst="groupHeading" dstEdge="LEFT" spacing="0un" />
+                <anchoritem src="listView" srcEdge="RIGHT" dst="groupHeading" dstEdge="RIGHT" spacing="0un" />
+                <anchoritem src="listView" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacing="0un" />
+            </layout>
+        </widget>
+    </section>
+    <metadata activeUIState="portrait" display="QHD portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+        <uistate name="portrait" sections="#common portrait"/>
+        <uistate name="landscape" sections="#common landscape"/>
+    </metadata>
+</hbdocument>

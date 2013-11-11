@@ -1,0 +1,74 @@
+/*
+* Copyright (c) 2008-2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:    Project definition file 
+*
+*/
+
+#include <data_caging_paths.hrh>
+#include <platform_paths.hrh>
+
+TARGET          glxtvout.dll
+TARGETTYPE      dll
+UID             0x1000008d 0x2000A7BC
+
+CAPABILITY      CAP_GENERAL_DLL
+
+// System includes from epoc32/include
+APP_LAYER_SYSTEMINCLUDE
+
+// Class descriptions
+SOURCEPATH      ../src
+SOURCE          glxwindowvisibilitymonitor.cpp
+SOURCE          glxtvconnectionmonitor.cpp
+SOURCE          glxtv.cpp
+SOURCE 		glxhdmicontainer.cpp
+SOURCE 		glxhdmicontroller.cpp
+SOURCE 		glxhdmisurfaceupdater.cpp 
+SOURCE 		glxactivedecoder.cpp 
+
+// Component class definitions
+USERINCLUDE     ../inc
+
+
+// System includes from the source tree
+SYSTEMINCLUDE   ../../../inc            // for tv out constants
+SYSTEMINCLUDE   /epoc32/include
+SYSTEMINCLUDE   /epoc32/include/icl
+
+// Common Libraries
+LIBRARY         euser.lib                       
+LIBRARY         ws32.lib                        // for RWsSession
+LIBRARY         avkon.lib                       // for AppUi
+LIBRARY         cone.lib                        // for CCoeEnv
+LIBRARY         centralrepository.lib           // for Central Repository
+LIBRARY         accclient.lib                   // for RAccessoryServer 
+LIBRARY			fbscli.lib 
+LIBRARY         gdi.lib  			
+LIBRARY         surfaceupdateclient.lib 		// surface update client
+LIBRARY         surfacemanager.lib				// surface manager
+LIBRARY         imageconversion.lib				// ICL 
+LIBRARY 		efsrv.lib
+LIBRARY         bitgdi.lib 
+LIBRARY         apgrfx.lib // 
+LIBRARY			apmime.lib // For ImageViewer mime type extraction
+LIBRARY 		glxlogging.lib
+LIBRARY			AccPolicy.lib //For RAccessoryConnection status ID's	
+
+// Other Dependency Libraries
+#ifdef __MARM
+LIBRARY 		GSServerEngine.lib  // FOr AspectRatio
+#endif
+
+SMPSAFE
+// End of File

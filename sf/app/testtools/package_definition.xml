@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SystemDefinition xmlns:qt="http://www.nokia.com/qt" schema="3.0.1">
+  <package id="testtools" name="Test Tools" levels="fw mw trace">
+		<collection id="testconnuis" name="Test Connectivity UIs" level="trace">
+			<component id="htiui" name="Harmonized Test Interface UI" filter="s60" purpose="development" target="device">
+				<unit bldFile="testconnuis/htiui/group"/>
+			</component>
+			<component id="htiadminqt" filter="s60" name="HTI Admin Qt UI" purpose="development" target="device">
+				<unit bldFile="testconnuis/htiui/htiadminqt" qt:proFile="HtiAdmin.pro"/>
+			</component>
+		</collection>
+		<collection id="testfwuis" name="Test Framework UIs" level="fw">
+			<component id="stifui_avkon" name="STIF UI for Avkon" filter="s60" purpose="development" target="device">
+				<unit bldFile="testfwuis/stifui/avkon/group"/>
+			</component>
+			<component id="stifui_qt" name="STIF UI for Qt" filter="s60" purpose="development" target="device" introduced="^4">
+				<!-- <unit bldFile="testfwuis/stifui/qt" qt:proFile="stifqtui.pro"/> -->
+			</component>
+			<component id="symbianunittestui" name="Symbian Unit Test UI" filter="s60,test" purpose="development" target="device" introduced="^4">
+				<unit bldFile="testfws/symbianunittestui/qt" qt:proFile="symbianunittestqt.pro"/>
+			</component>
+		</collection>
+  </package>
+</SystemDefinition>

@@ -1,0 +1,100 @@
+// Copyright (c) 2006-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// t_unit_imapsession_server.h
+//
+
+TARGET       t_unit_imapsession_server.exe
+TARGETTYPE  exe
+UID             0x1000007A 0x1000484B
+VENDORID 0x70000001
+
+CAPABILITY		ReadDeviceData WriteDeviceData ProtServ NetworkControl NetworkServices LocalServices ReadUserData WriteUserData
+
+SOURCEPATH  ../src
+SOURCE		t_unit_imapsession_server.cpp
+SOURCE		cactivewaiter.cpp
+SOURCE		cfakeinputstream.cpp cfakeoutputstream.cpp
+SOURCE		ctestimapcommandbase.cpp
+SOURCE		ctestimapcommand.cpp
+SOURCE		ctestimapsession.cpp
+SOURCE		ctestimapcancelandflush.cpp
+SOURCE		ctestimapidle.cpp
+SOURCE		ctestimapservereventwait.cpp
+SOURCE		ctestimaplogout.cpp
+SOURCE		ctestimapselect.cpp
+SOURCE		ctestimapexpunge.cpp
+SOURCE	 	ctestimapcreate.cpp
+SOURCE	 	ctestimapdelete.cpp
+SOURCE	 	ctestimaprename.cpp
+SOURCE	 	ctestimapsearch.cpp
+SOURCE		ctestimapstore.cpp
+SOURCE		ctestimapcopy.cpp
+SOURCE		ctestimapnoop.cpp
+SOURCE		ctestimaplist.cpp ctestimapfetchflags.cpp
+SOURCE		ctestimaplsub.cpp ctestimapsessioncreatesequenceset.cpp
+SOURCE		ctestimapatombuilder.cpp
+SOURCE		ctestimapbodystructurebuilder.cpp
+SOURCE		ctestimapfetchbody.cpp
+SOURCE		ctestimapfetchsinglebodystructure.cpp
+#if (defined SYMBIAN_EMAIL_CAPABILITY_SUPPORT)
+SOURCE		ctestimapauthenticate.cpp
+#endif
+// build classes that we want to test, but which don't have exported methods
+SOURCEPATH	../../src
+SOURCE		cimapatomparser.cpp
+SOURCE		cimapatom.cpp
+SOURCE		cimapatomwalker.cpp
+SOURCE		cimapbodystructurebuilder.cpp
+SOURCE		cimapbodystructure.cpp
+SOURCE		cimapenvelope.cpp
+SOURCE		cimapfetchresponse.cpp
+SOURCE		cimapcommand.cpp
+SOURCE		cimapfolderinfo.cpp
+SOURCE		tmessageflaginfo.cpp
+
+
+USERINCLUDE   ../inc ../../../../pop3andsmtpmtm/clientmtms/inc
+USERINCLUDE   ../../inc ../../../../pop3andsmtpmtm/servermtmutils/inc
+USERINCLUDE	  ../../../imaptransporthandler/inc
+USERINCLUDE	  ../../../imapmailstore/inc
+USERINCLUDE	  ../../../imaputils/inc
+USERINCLUDE       ../../../imapsettings/inc
+USERINCLUDE	  ../../../../../../../mw/messagingmw/messagingfw/msgsrvnstore/server/inc
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+OS_LAYER_ESTLIB_SYSTEMINCLUDE  
+USERINCLUDE ../../../../../../../mw/messagingmw/messagingfw/msgsrvnstore/server/inc
+USERINCLUDE ../../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/base/inc
+USERINCLUDE ../../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/email/inc
+USERINCLUDE ../../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/server/inc
+USERINCLUDE ../../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/sms/inc
+
+STATICLIBRARY	tefunit.lib
+LIBRARY			rfileloggerclient.lib
+LIBRARY     euser.lib
+LIBRARY		charconv.lib 
+LIBRARY		testexecuteutils.lib
+LIBRARY		testexecutelogclient.lib
+LIBRARY		imapsession.lib
+LIBRARY		imcm.lib 
+LIBRARY		msgs.lib 
+LIBRARY		bafl.lib 
+LIBRARY     efsrv.lib
+LIBRARY     imapsettings.lib
+LIBRARY     imapmailstore.lib
+LIBRARY		imaputils.lib
+LIBRARY		emailtestutils.lib 
+LIBRARY		msvtestutils.lib
+LIBRARY		esock.lib
+
+SMPSAFE

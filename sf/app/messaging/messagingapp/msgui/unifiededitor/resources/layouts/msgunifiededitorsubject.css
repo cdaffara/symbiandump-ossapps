@@ -1,0 +1,21 @@
+HbWidget {
+    margin-left: 0un;
+    margin-top: 0un;
+}
+
+MsgUnifiedEditorSubject {
+    layout:layout-default;
+}
+
+MsgUnifiedEditorSubject::priorityIcon {
+    fixed-height: var(hb-param-graphic-size-secondary);
+    fixed-width: var(hb-param-graphic-size-secondary);
+    right: var(hb-param-margin-gene-right);
+    left: -0.5un;
+}
+
+MsgUnifiedEditorSubject::subjectEdit {
+    left: -var(hb-param-margin-gene-left);
+    min-height:7.46un;
+    }
+

@@ -1,0 +1,49 @@
+/*
+* Copyright (c) 2009-2010 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  sconoviaccounthandler mmp file
+*
+*/
+
+
+#include <platform_paths.hrh>
+#include <non_foundation_paths.hrh>
+#include <data_caging_paths.hrh>
+
+VENDORID        VID_DEFAULT
+
+CAPABILITY      CAP_GENERAL_DLL
+
+TARGETPATH      sys/bin
+
+TARGET          sconoviaccounthandler.dll
+TARGETTYPE      DLL
+DEFFILE         sconoviaccounthandler.def
+UID             0x10009D8D 0x2001A97A
+
+SOURCEPATH      ../src
+SOURCE          sconoviaccounthandler.cpp
+
+USERINCLUDE     ../inc
+USERINCLUDE     ../../../inc
+
+// System include paths
+APP_LAYER_SYSTEMINCLUDE
+NON_FOUNDATION_MW_LAYER_SYSTEMINCLUDE
+
+DEBUGLIBRARY	flogger.lib
+LIBRARY         euser.lib
+LIBRARY         wsaccountmanager.lib
+LIBRARY         estor.lib // For RWriteStream
+
+

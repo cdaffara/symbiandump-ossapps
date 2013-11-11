@@ -1,0 +1,46 @@
+// Copyright (c) 2005-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_TESTEXPORTS
+// put scripts, ini, calendar files, and index files in appropriate dir
+../scripts/TestCalIndexFileSuite.script		c:/calindexfiletestdata/testcalindexfilesuite.script
+../scripts/TestCalIndexFileBandR.script		c:/calindexfiletestdata/testcalindexfilebandr.script
+../testdata/opentest.ini			c:/calindexfiletestdata/opentest.ini
+../testdata/openindextest.ini			c:/calindexfiletestdata/openindextest.ini
+../testdata/Calendar1				c:/calindexfiletestdata/calendar1
+../testdata/calendar1Idx			c:/calindexfiletestdata/calendar1idx
+../testdata/Calendar2				c:/calindexfiletestdata/calendar2
+../testdata/calendar2Idx			c:/calindexfiletestdata/calendar2idx
+../testdata/burtest.ini				c:/calindexfiletestdata/burtest.ini
+../testdata/Calendar0				c:/calindexfiletestdata/calendar0
+../testdata/Calendar0Crpt			c:/calindexfiletestdata/calendar0crpt
+../testdata/calendar0CrptIdx			c:/calindexfiletestdata/calendar0crptidx
+../testdata/calendar0Idx			c:/calindexfiletestdata/calendar0idx
+../testdata/Calendar1Crpt			c:/calindexfiletestdata/calendar1crpt
+../testdata/calendar1CrptIdx		c:/calindexfiletestdata/calendar1crptidx
+../testdata/Calendar2Crpt			c:/calindexfiletestdata/calendar2crpt
+../testdata/calendar2CrptIdx			c:/calindexfiletestdata/calendar2crptidx
+../testdata/corruptindex.ini			c:/calindexfiletestdata/corruptindex.ini
+../testdata/crudentries.ini			c:/calindexfiletestdata/crudentries.ini
+../testdata/Calendar3				c:/calindexfiletestdata/calendar3
+../testdata/calendar3Idx			c:/calindexfiletestdata/calendar3idx
+
+TestCalIndexFile.iby	/epoc32/rom/include/testcalindexfile.iby
+
+PRJ_TESTMMPFILES
+TestCalIndexFileSuite.mmp

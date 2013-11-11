@@ -1,0 +1,53 @@
+<hbwidget version="0.1" type="NmMessageListViewItem">
+
+  <layout name="portrait" type="mesh">   
+      <meshitem src="sender" srcEdge="TOP" dst="" dstEdge="TOP" spacing="-var(hb-param-margin-gene-top)"/>
+      <meshitem src="sender" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="-var(hb-param-margin-gene-left)"/>
+      <meshitem src="sender" srcEdge="BOTTOM" dst="subject" dstEdge="TOP" spacing="var(hb-param-margin-gene-bottom)"/> 
+             
+      <meshitem src="time" srcEdge="LEFT" dst="sender" dstEdge="RIGHT" spacing="-var(hb-param-margin-gene-middle-horizontal)"/>
+      <meshitem src="time" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)"/>
+      <meshitem src="time" srcEdge="BOTTOM" dst="sender" dstEdge="BOTTOM" spacing="0"/> 
+             
+      <meshitem src="subject" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="-var(hb-param-margin-gene-left)"/>
+      <meshitem src="subject" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacing="var(hb-param-margin-gene-bottom)"/>
+      
+      <meshitem src="icon1" srcEdge="CENTERV" dst="subject" dstEdge="CENTERV"/> 
+      <meshitem src="icon1" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)"/>    
+   
+      <meshitem src="icon2" srcEdge="CENTERV" dst="subject" dstEdge="CENTERV"/> 
+      <meshitem src="icon2" srcEdge="RIGHT" dst="icon1" dstEdge="LEFT" spacing="var(hb-param-margin-gene-middle-horizontal)"/>
+      <meshitem src="icon2" srcEdge="LEFT" dst="subject" dstEdge="RIGHT" spacing="-var(hb-param-margin-gene-middle-horizontal)"/>       
+      
+      <meshitem src="msgicon" srcEdge="TOP" dst="" dstEdge="TOP"/>
+      <meshitem src="msgicon" srcEdge="LEFT" dst="" dstEdge="LEFT"/>
+      <meshitem src="msgicon" srcEdge="RIGHT" dst="sender" dstEdge="LEFT" spacing="var(hb-param-margin-gene-middle-horizontal)"/>
+      <meshitem src="msgicon" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM"/>
+  </layout>
+  
+  <layout name="landscape" type="mesh">
+      <meshitem src="subject" srcEdge="LEFT" dst="" dstEdge="RIGHT" spacing="expr((var(hb-param-screen-width))/2)"/>
+      <meshitem src="subject" srcEdge="TOP" dst="" dstEdge="TOP" spacing="-var(hb-param-margin-gene-top)"/>  
+      <meshitem src="subject" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" spacing="var(hb-param-margin-gene-bottom)"/>       
+        
+      <meshitem src="sender" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="-var(hb-param-margin-gene-left)"/>
+      <meshitem src="sender" srcEdge="RIGHT" dst="icon2" dstEdge="LEFT" spacing="var(hb-param-margin-gene-middle-horizontal)"/> 
+      <meshitem src="sender" srcEdge="CENTERV" dst="subject" dstEdge="CENTERV"/>      
+                 
+      <meshitem src="time" srcEdge="CENTERV" dst="subject" dstEdge="CENTERV"/>
+      <meshitem src="time" srcEdge="LEFT" dst="subject" dstEdge="RIGHT" spacing="-var(hb-param-margin-gene-middle-horizontal)"/>
+      <meshitem src="time" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)"/>
+             
+      <meshitem src="icon1" srcEdge="CENTERV" dst="subject" dstEdge="CENTERV"/> 
+      <meshitem src="icon1" srcEdge="RIGHT" dst="subject" dstEdge="LEFT" spacing="var(hb-param-margin-gene-middle-horizontal)"/>    
+   
+      <meshitem src="icon2" srcEdge="CENTERV" dst="subject" dstEdge="CENTERV"/> 
+      <meshitem src="icon2" srcEdge="RIGHT" dst="icon1" dstEdge="LEFT" spacing="0.5un"/> 
+      
+      <meshitem src="msgicon" srcEdge="TOP" dst="" dstEdge="TOP"/>
+      <meshitem src="msgicon" srcEdge="LEFT" dst="" dstEdge="LEFT"/>
+      <meshitem src="msgicon" srcEdge="RIGHT" dst="sender" dstEdge="LEFT" spacing="var(hb-param-margin-gene-middle-horizontal)"/>
+      <meshitem src="msgicon" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM"/>
+  </layout> 
+     
+</hbwidget>

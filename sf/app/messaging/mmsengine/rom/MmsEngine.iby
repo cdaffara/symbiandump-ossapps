@@ -1,0 +1,57 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  MmsEngine.iby*
+*/
+
+#ifndef __Mmsengine_IBY__
+#define __Mmsengine_IBY__
+
+#ifdef __MMS
+
+// backup registration for cen rep
+data=DATAZ_\private\100058DB\backup_registration.xml private\100058DB\backup_registration.xml
+
+
+// Message connection initiator needed by MMS Engine
+file=ABI_DIR\BUILD_DIR\mmsconninit.dll           SHARED_LIB_DIR\mmsconninit.dll
+
+//
+// Mms Engine
+//
+file=ABI_DIR\BUILD_DIR\mmscli.dll            SHARED_LIB_DIR\mmscli.dll
+file=ABI_DIR\BUILD_DIR\mmssrv.dll            SHARED_LIB_DIR\mmssrv.dll
+file=ABI_DIR\BUILD_DIR\mmstransport.dll      SHARED_LIB_DIR\mmstransport.dll
+file=ABI_DIR\BUILD_DIR\mmscodec.dll          SHARED_LIB_DIR\mmscodec.dll
+file=ABI_DIR\BUILD_DIR\mmsmessage.dll        SHARED_LIB_DIR\mmsmessage.dll
+file=ABI_DIR\BUILD_DIR\mmsserversettings.dll SHARED_LIB_DIR\mmsserversettings.dll
+file=ABI_DIR\BUILD_DIR\mmscodecclient.dll    SHARED_LIB_DIR\mmscodecclient.dll
+file=ABI_DIR\BUILD_DIR\mmsappadapter.dll     SHARED_LIB_DIR\mmsappadapter.dll
+
+//
+// MMS Engine Resources defined in MmsEngine_rsc.iby
+//
+
+//
+// Mms Watcher
+//
+ECOM_PLUGIN(mmswatcher.dll,10005948.rsc)
+
+//
+// MmsPushHandler
+//
+ECOM_PLUGIN(MmsPushHandler.dll,101F4693.rsc)
+
+#endif // __MMS //
+file=ABI_DIR\BUILD_DIR\mmsgenutils.dll       SHARED_LIB_DIR\mmsgenutils.dll
+#endif

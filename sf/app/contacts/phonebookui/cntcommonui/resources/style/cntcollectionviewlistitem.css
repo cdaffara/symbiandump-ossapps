@@ -1,0 +1,25 @@
+HbListViewItem[layoutName="collectionviewlist"]:landscape{
+    layout:layout-4;
+}
+
+HbListViewItem::text-2[layoutName="collectionviewlist"]{
+    text-height: var(hb-param-text-height-secondary);
+    font-variant: secondary;
+    pref-width:-1;
+    text-align: left top;
+    size-policy-horizontal: ignored;
+    text-line-count-min:1;
+    text-line-count-max:1;
+    text-wrap-mode:no-wrap;
+}
+
+HbListViewItem::text-3[layoutName="collectionviewlist"]{
+    text-height: var(hb-param-text-height-secondary);
+    font-variant: secondary;
+    pref-width:-1;
+    text-align: right;
+    size-policy-horizontal: preferred;
+    text-line-count-min:1;
+    text-line-count-max:1;
+    text-wrap-mode:no-wrap;
+}

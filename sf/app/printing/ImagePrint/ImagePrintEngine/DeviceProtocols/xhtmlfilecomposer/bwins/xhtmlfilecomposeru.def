@@ -1,0 +1,47 @@
+EXPORTS
+	??0CImageInfo@@QAE@XZ @ 1 NONAME ; CImageInfo::CImageInfo(void)
+	?UnitToPixel@CXhtmlFileComposer@@AAENN@Z @ 2 NONAME ; double CXhtmlFileComposer::UnitToPixel(double)
+	?CreateXhtmlFileL@CXhtmlFileComposer@@QAEXABV?$RArray@VCImageInfo@@@@HHHABVTDesC16@@AAHH@Z @ 3 NONAME ; void CXhtmlFileComposer::CreateXhtmlFileL(class RArray<class CImageInfo> const &, int, int, int, class TDesC16 const &, int &, int)
+	?UriLog@CImageInfo@@SAXABVTDesC16@@AAVTDes16@@@Z @ 4 NONAME ; void CImageInfo::UriLog(class TDesC16 const &, class TDes16 &)
+	??1CXhtmlFileComposer@@UAE@XZ @ 5 NONAME ; CXhtmlFileComposer::~CXhtmlFileComposer(void)
+	?Index@CImageInfo@@QBEHXZ @ 6 NONAME ; int CImageInfo::Index(void) const
+	??0CImageInfo@@QAE@ABV0@@Z @ 7 NONAME ; CImageInfo::CImageInfo(class CImageInfo const &)
+	?EncodeFileNameL@CImageInfo@@AAEXAAVTDes8@@@Z @ 8 NONAME ; void CImageInfo::EncodeFileNameL(class TDes8 &)
+	?EncodeUriL@CImageInfo@@QAEXABVTDesC16@@AAVTDes8@@@Z @ 9 NONAME ; void CImageInfo::EncodeUriL(class TDesC16 const &, class TDes8 &)
+	?GetFilePath@CImageInfo@@QBEXAAVTDes8@@@Z @ 10 NONAME ; void CImageInfo::GetFilePath(class TDes8 &) const
+	?EncodeUriL@CImageInfo@@QAEXABVTDesC8@@AAVTDes8@@@Z @ 11 NONAME ; void CImageInfo::EncodeUriL(class TDesC8 const &, class TDes8 &)
+	?PixelToUnit@CXhtmlFileComposer@@AAE?AVTSizeReal@@V2@@Z @ 12 NONAME ; class TSizeReal CXhtmlFileComposer::PixelToUnit(class TSizeReal)
+	?ConvertToUnicodeL@CImageInfo@@SAXABVTDesC8@@AAVTDes16@@@Z @ 13 NONAME ; void CImageInfo::ConvertToUnicodeL(class TDesC8 const &, class TDes16 &)
+	?GetUriL@CImageInfo@@QBEXAAVTDes16@@@Z @ 14 NONAME ; void CImageInfo::GetUriL(class TDes16 &) const
+	?SetId@CImageInfo@@QAEXH@Z @ 15 NONAME ; void CImageInfo::SetId(int)
+	?Id@CImageInfo@@QBEHXZ @ 16 NONAME ; int CImageInfo::Id(void) const
+	?UriLog@CImageInfo@@SAXABVTDesC8@@@Z @ 17 NONAME ; void CImageInfo::UriLog(class TDesC8 const &)
+	?UriLog@CImageInfo@@SAXABVTDesC16@@@Z @ 18 NONAME ; void CImageInfo::UriLog(class TDesC16 const &)
+	?SetUriL@CImageInfo@@QAEXABVTDesC16@@@Z @ 19 NONAME ; void CImageInfo::SetUriL(class TDesC16 const &)
+	?ConstructL@CImageInfo@@IAEXXZ @ 20 NONAME ; void CImageInfo::ConstructL(void)
+	?Copies@CImageInfo@@QBEHXZ @ 21 NONAME ; int CImageInfo::Copies(void) const
+	?GetEncodedUriL@CImageInfo@@QAEXAAVTDes8@@@Z @ 22 NONAME ; void CImageInfo::GetEncodedUriL(class TDes8 &)
+	?NewL@CImageInfo@@SAPAV1@ABV1@@Z @ 23 NONAME ; class CImageInfo * CImageInfo::NewL(class CImageInfo const &)
+	?UnitToPixel@CXhtmlFileComposer@@AAE?AVTSizeReal@@V2@@Z @ 24 NONAME ; class TSizeReal CXhtmlFileComposer::UnitToPixel(class TSizeReal)
+	??1CImageInfo@@UAE@XZ @ 25 NONAME ; CImageInfo::~CImageInfo(void)
+	?SetFilePath@CImageInfo@@QAEXABVTDesC8@@@Z @ 26 NONAME ; void CImageInfo::SetFilePath(class TDesC8 const &)
+	?CompareUri@CImageInfo@@QAEHABVTDesC8@@@Z @ 27 NONAME ; int CImageInfo::CompareUri(class TDesC8 const &)
+	?NewLC@CImageInfo@@SAPAV1@ABV1@@Z @ 28 NONAME ; class CImageInfo * CImageInfo::NewLC(class CImageInfo const &)
+	?NewLC@CXhtmlFileComposer@@SAPAV1@ABVTDesC16@@@Z @ 29 NONAME ; class CXhtmlFileComposer * CXhtmlFileComposer::NewLC(class TDesC16 const &)
+	?SetUri@CImageInfo@@QAEXABVTDesC8@@H@Z @ 30 NONAME ; void CImageInfo::SetUri(class TDesC8 const &, int)
+	?SetCopies@CImageInfo@@QAEXH@Z @ 31 NONAME ; void CImageInfo::SetCopies(int)
+	?GetFilePathL@CImageInfo@@QBEXAAVTDes16@@@Z @ 32 NONAME ; void CImageInfo::GetFilePathL(class TDes16 &) const
+	?SetFilePathL@CImageInfo@@QAEXABVTDesC16@@@Z @ 33 NONAME ; void CImageInfo::SetFilePathL(class TDesC16 const &)
+	?CompareFilePath@CImageInfo@@QAEHABVTDesC8@@@Z @ 34 NONAME ; int CImageInfo::CompareFilePath(class TDesC8 const &)
+	?CompareUri@CImageInfo@@QAEHABVTDesC16@@@Z @ 35 NONAME ; int CImageInfo::CompareUri(class TDesC16 const &)
+	?NewL@CXhtmlFileComposer@@SAPAV1@ABVTDesC16@@@Z @ 36 NONAME ; class CXhtmlFileComposer * CXhtmlFileComposer::NewL(class TDesC16 const &)
+	?ConvertToUTF8L@CImageInfo@@SAXABVTDesC16@@AAVTDes8@@@Z @ 37 NONAME ; void CImageInfo::ConvertToUTF8L(class TDesC16 const &, class TDes8 &)
+	?NewL@CImageInfo@@SAPAV1@XZ @ 38 NONAME ; class CImageInfo * CImageInfo::NewL(void)
+	?SetIndex@CImageInfo@@QAEXH@Z @ 39 NONAME ; void CImageInfo::SetIndex(int)
+	?GetUri@CImageInfo@@QBEXAAVTDes8@@@Z @ 40 NONAME ; void CImageInfo::GetUri(class TDes8 &) const
+	?NewLC@CImageInfo@@SAPAV1@XZ @ 41 NONAME ; class CImageInfo * CImageInfo::NewLC(void)
+	?UriLog@CImageInfo@@SAXABVTDesC8@@AAVTDes8@@@Z @ 42 NONAME ; void CImageInfo::UriLog(class TDesC8 const &, class TDes8 &)
+	?CompareFilePath@CImageInfo@@QAEHABVTDesC16@@@Z @ 43 NONAME ; int CImageInfo::CompareFilePath(class TDesC16 const &)
+	?PixelToUnit@CXhtmlFileComposer@@AAENN@Z @ 44 NONAME ; double CXhtmlFileComposer::PixelToUnit(double)
+	?AppendL@CImageInfo@@SAXPAVHBufC8@@ABVTDesC8@@@Z @ 45 NONAME ; void CImageInfo::AppendL(class HBufC8 *, class TDesC8 const &)
+

@@ -1,0 +1,42 @@
+/*
+* Copyright (c) 2006-2007 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*
+*/
+
+
+#ifndef __INTERNETRADIO_IBY__
+#define __INTERNETRADIO_IBY__
+
+ECOM_PLUGIN(irfilerecognizer.dll, 2002ffb8.rsc)
+ECOM_PLUGIN(irpresetplugin.dll, 2002ffc7.rsc)
+ECOM_PLUGIN(irrfsplugin.dll, 2002ffaf.rsc)
+
+data=ZPRIVATE\2002ffac\backup_registration.xml                  private\2002ffac\backup_registration.xml
+
+file=ABI_DIR\BUILD_DIR\irdatastructures.dll                      SHARED_LIB_DIR\irdatastructures.dll
+file=ABI_DIR\BUILD_DIR\irdataprovider.dll			 SHARED_LIB_DIR\irdataprovider.dll
+file=ABI_DIR\BUILD_DIR\irxmlparser.dll				 SHARED_LIB_DIR\irxmlparser.dll
+file=ABI_DIR\BUILD_DIR\isdsclientinterface.dll                   SHARED_LIB_DIR\isdsclientinterface.dll
+file=ABI_DIR\BUILD_DIR\irfavoritesdb.dll                         SHARED_LIB_DIR\irfavoritesdb.dll
+file=ABI_DIR\BUILD_DIR\ircachemgmt.dll                           SHARED_LIB_DIR\ircachemgmt.dll
+file=ABI_DIR\BUILD_DIR\irnetworkcontroller.dll                   SHARED_LIB_DIR\irnetworkcontroller.dll
+file=ABI_DIR\BUILD_DIR\irsettings.dll                          SHARED_LIB_DIR\irsettings.dll
+file=ABI_DIR\BUILD_DIR\irsessionlog.dll                          SHARED_LIB_DIR\irsessionlog.dll
+
+data=DATAZ_\RESOURCE_FILES_DIR\plugins\irpresetplugin.rsc         	RESOURCE_FILES_DIR\plugins\irpresetplugin.rsc
+data=DATAZ_\RESOURCE_FILES_DIR\plugins\irrfsplugin.rsc  			RESOURCE_FILES_DIR\plugins\irrfsplugin.rsc
+data=DATAZ_\RESOURCE_FILES_DIR\plugins\irfilerecognizer.rsc			RESOURCE_FILES_DIR\plugins\irfilerecognizer.RSC
+
+#endif  // __INTERNETRADIO_IBY__

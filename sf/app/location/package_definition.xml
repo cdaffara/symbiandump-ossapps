@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SystemDefinition schema="3.0.0" xmlns:qt="http://www.nokia.com/qt">
+ <package id="location" name="Location Apps" levels="ui events loc api">
+  <collection id="location_plat" name="Location Apps Platform Interfaces" level="api">
+   <component id="location_picker_service_api" name="Location Picker Service API" introduced="^4" class="api" filter="s60">
+    <unit bldFile="location_plat/location_picker_service_api"/>
+   </component>
+   <component id="location_data_harvester_api" name="Location Data Harvester API" introduced="^4" class="api" filter="s60">
+    <unit bldFile="location_plat/location_data_harvester_api"/>
+   </component>
+  </collection>
+  <collection id="locationpickerservice" name="Location Picker Service" level="loc">
+	<!--collection is really a component. Should move down a directory -->
+   <component id="locationpickerservice_build" filter="s60" name="Location Picker Service Build" introduced="^4">
+    <unit bldFile="locationpickerservice" qt:proFile="locationpickerservice.pro"/>
+   </component>
+  </collection>
+  <collection id="locationdataharvester" name="Location Data Harvester" level="events">
+	<!--collection is really a component. Should move down a directory -->
+     <component id="locationdataharvester_build" name="Location Data Harvester Build" filter="s60" introduced="^4">
+      <unit bldFile="locationdataharvester" qt:proFile="locationdataharvester.pro"/>
+     </component>
+  </collection>
+ </package>
+</SystemDefinition>

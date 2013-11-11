@@ -1,0 +1,49 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+#include <registryinfo.rh>
+#include "iruid3.hrh"
+
+// ---------------------------------------------------------------------------
+// r_ir_preset_plugin_registry_info
+// Registry info for the preset ECOM plugin.
+// ---------------------------------------------------------------------------
+//
+RESOURCE REGISTRY_INFO r_ir_preset_plugin_registry_info
+    {
+    dll_uid     = UID3_IRPRESETPLUGIN_DLL;
+    interfaces  =
+        {
+        INTERFACE_INFO
+            {
+            interface_uid   = 0x10281CB6;
+            implementations =
+                {
+                IMPLEMENTATION_INFO
+                    {
+                    //implementation_uid  = 0xA0001D79;
+                    implementation_uid  = UID3_IRPRESETPLUGIN_DLL_IMPLEMENTATION_UID;
+
+                    version_no          = 1;
+                    display_name        = "Internet Radio Preset Plugin";
+                    default_data        = "";
+                    opaque_data         = "";
+                    }
+                };
+            }
+        };        
+    }

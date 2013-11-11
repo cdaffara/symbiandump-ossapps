@@ -1,0 +1,241 @@
++OK demon POP3 server ready (demon.co.uk)
++OK 
++OK 
++OK 2 872441
++OK 2 messages
+1 1612
+2 1708
+.
++OK 2 messages
+1 psion7.951310332:10:28042:25
+2 psion7.951310765:10:16898:10
+.
+-ERR Unknown Command "CAPA"
++OK 
+Return-Path: <test@psion9.demon.co.uk>
+Received: from punt-1.mail.demon.net by mailstore for test@psion7.demon.co.uk
+          id 951310765:10:16898:10; Wed, 23 Feb 2000 12:59:25 GMT
+Received: from anchor-post-31.mail.demon.net ([194.217.242.89])
+          by punt-1.mail.demon.net  id aa1113314; 23 Feb 2000 12:47 GMT
+Received: from psion4.demon.co.uk ([194.222.246.223])
+	by anchor-post-31.mail.demon.net with smtp (Exim 2.12 #1)
+	id 12NbCm-000Cct-0V
+	for test@psion7.demon.co.uk; Wed, 23 Feb 2000 12:47:49 +0000
+From: SMTP Test1 <test@psion9.demon.co.uk>
+Reply-to: SMTP Test1 <test@psion9.demon.co.uk>
+To: <test@psion7.demon.co.uk>
+Subject: Test message No.1 - 1000 character line in message
+Date: Wed, 23 Feb 2000 12:50:16 +0000
+Disposition-Notification-To: SMTP Test1 <test@psion9.demon.co.uk>
+Priority: high
+Importance: high
+Message-ID: <kthpHxNs4KQV.KPrYQKzX@smtp.demon.co.uk>
+X-Mailer:EPOC Email Version 2.00
+MIME-Version: 1.0
+Content-Language: i-default
+Content-Disposition: inline
+
+The line in the following 3 paragraphs each contain 1000 characters: the =
+.
++OK 
+Return-Path: <test@psion9.demon.co.uk>
+Received: from punt-1.mail.demon.net by mailstore for test@psion7.demon.co.uk
+          id 951310332:10:28042:25; Wed, 23 Feb 2000 12:52:12 GMT
+Received: from anchor-post-31.mail.demon.net ([194.217.242.89])
+          by punt-1.mail.demon.net  id aa1112623; 23 Feb 2000 12:47 GMT
+Received: from psion4.demon.co.uk ([194.222.246.223])
+	by anchor-post-31.mail.demon.net with smtp (Exim 2.12 #1)
+	id 12NbCX-000Cct-0V
+	for test@psion7.demon.co.uk; Wed, 23 Feb 2000 12:47:34 +0000
+From: SMTP Test1 <test@psion9.demon.co.uk>
+Reply-to: SMTP Test1 <test@psion9.demon.co.uk>
+To: test@psion7.demon.co.uk
+Subject: Test message No. 7 - MIME text and attachment
+Date: Wed, 23 Feb 2000 12:50:02 +0000
+Disposition-Notification-To: SMTP Test1 <test@psion9.demon.co.uk>
+Priority: high
+Importance: high
+Message-ID: <hfHW0mhhZkpd.ssvKWbvf@smtp.demon.co.uk>
+X-Mailer:EPOC Email Version 2.00
+MIME-Version: 1.0
+Content-Language: i-default
+Content-Type: multipart/mixed;
+  boundary="EPOC32=_)-Jl-z_bhpq/sbcSLr5/))(my0q3+ky,rC3TdZ1/)LHDMgy"
+
+This is a MIME Message
+.
+** Read cancelled
++OK   
+Return-Path: <test@psion9.demon.co.uk>
+Received: from punt-1.mail.demon.net by mailstore for test@psion7.demon.co.uk
+          id 951310765:10:16898:10; Wed, 23 Feb 2000 12:59:25 GMT
+Received: from anchor-post-31.mail.demon.net ([194.217.242.89])
+          by punt-1.mail.demon.net  id aa1113314; 23 Feb 2000 12:47 GMT
+Received: from psion4.demon.co.uk ([194.222.246.223])
+	by anchor-post-31.mail.demon.net with smtp (Exim 2.12 #1)
+	id 12NbCm-000Cct-0V
+	for test@psion7.demon.co.uk; Wed, 23 Feb 2000 12:47:49 +0000
+From: SMTP Test1 <test@psion9.demon.co.uk>
+Reply-to: SMTP Test1 <test@psion9.demon.co.uk>
+To: <test@psion7.demon.co.uk>
+Subject: Test message No.1 - 1000 character line in message
+Date: Wed, 23 Feb 2000 12:50:16 +0000
+Disposition-Notification-To: SMTP Test1 <test@psion9.demon.co.uk>
+Priority: high
+Importance: high
+Message-ID: <kthpHxNs4KQV.KPrYQKzX@smtp.demon.co.uk>
+X-Mailer:EPOC Email Version 2.00
+MIME-Version: 1.0
+Content-Language: i-default
+Content-Disposition: inline
+
+The line in the following 3 paragraphs each contain 1000 characters: the =
+maximum limit of linelength for SMTP mail. Each should arrive as one =
+wrapped paragraph in the received message. The dot-stuffed paragraph is the =
+absolute maximum line length permissable in SMTP protocol - although in =
+practice IMCV wraps the data into shorter lines before it is actually =
+sent.
+
+1234567890123456789012345678901234567890123456789012345678901234567
+8901234567890123456789012345678901234567890123456789012345678901234567890123
+4567890123456789012345678901234567890123456789012345678901234567890123456789
+0123456789012345678901234567890123456789012345678901234567890123456789012345
+6789012345678901234567890123456789012345678901234567890123456789012345678901
+2345678901234567890123456789012345678901234567890123456789012345678901234567
+8901234567890123456789012345678901234567890123456789012345678901234567890123
+4567890123456789012345678901234567890123456789012345678901234567890123456789
+0123456789012345678901234567890123456789012345678901234567890123456789012345
+6789012345678901234567890123456789012345678901234567890123456789012345678901
+2345678901234567890123456789012345678901234567890123456789012345678901234567
+8901234567890123456789012345678901234567890123456789012345678901234567890123
+4567890123456789012345678901234567890123456789012345678901234567890123456789
+012345678901234567890
+
+The following paragraph will be dot stuffed into =
+1001 =
+characters:
+
+..123456789012345678901234567890123456789012345678901234567890
+1234567890123456789012345678901234567890123456789012345678901234567890123456
+7890123456789012345678901234567890123456789012345678901234567890123456789012
+3456789012345678901234567890123456789012345678901234567890123456789012345678
+9012345678901234567890123456789012345678901234567890123456789012345678901234
+5678901234567890123456789012345678901234567890123456789012345678901234567890
+1234567890123456789012345678901234567890123456789012345678901234567890123456
+7890123456789012345678901234567890123456789012345678901234567890123456789012
+3456789012345678901234567890123456789012345678901234567890123456789012345678
+9012345678901234567890123456789012345678901234567890123456789012345678901234
+5678901234567890123456789012345678901234567890123456789012345678901234567890
+1234567890123456789012345678901234567890123456789012345678901234567890123456
+7890123456789012345678901234567890123456789012345678901234567890123456789012
+345678901234567890123456789
+
+Start6789012345678901234567890123456789012345
+6789012345678901234567890123456789012345678901234567890123456789012345678901
+2345678901234567890123456789012345678901234567890123456789012345678901234567
+8901234567890123456789012345678901234567890123456789012345678901234567890123
+4567890123456789012345678901234567890123456789012345678901234567890123456789
+0123456789012345678901234567890123456789012345678901234567890123456789012345
+6789012345678901234567890123456789012345678901234567890123456789012345678901
+2345678901234567890123456789012345678901234567890123456789012345678901234567
+8901234567890123456789012345678901234567890123456789012345678901234567890123
+4567890123456789012345678901234567890123456789012345678901234567890123456789
+0123456789012345678901234567890123456789012345678901234567890123456789012345
+6789012345678901234567890123456789012345678901234567890123456789012345678901
+2345678901234567890123456789012345678901234567890123456789012345678901234567
+8901234567890123456789012345678901234567End
+
+End of message.
+
+.
++OK 
+Return-Path: <test@psion9.demon.co.uk>
+Received: from punt-1.mail.demon.net by mailstore for test@psion7.demon.co.uk
+          id 951310332:10:28042:25; Wed, 23 Feb 2000 12:52:12 GMT
+Received: from anchor-post-31.mail.demon.net ([194.217.242.89])
+          by punt-1.mail.demon.net  id aa1112623; 23 Feb 2000 12:47 GMT
+Received: from psion4.demon.co.uk ([194.222.246.223])
+	by anchor-post-31.mail.demon.net with smtp (Exim 2.12 #1)
+	id 12NbCX-000Cct-0V
+	for test@psion7.demon.co.uk; Wed, 23 Feb 2000 12:47:34 +0000
+From: SMTP Test1 <test@psion9.demon.co.uk>
+Reply-to: SMTP Test1 <test@psion9.demon.co.uk>
+To: test@psion7.demon.co.uk
+Subject: Test message No. 7 - MIME text and attachment
+Date: Wed, 23 Feb 2000 12:50:02 +0000
+Disposition-Notification-To: SMTP Test1 <test@psion9.demon.co.uk>
+Priority: high
+Importance: high
+Message-ID: <hfHW0mhhZkpd.ssvKWbvf@smtp.demon.co.uk>
+X-Mailer:EPOC Email Version 2.00
+MIME-Version: 1.0
+Content-Language: i-default
+Content-Type: multipart/mixed;
+  boundary="EPOC32=_)-Jl-z_bhpq/sbcSLr5/))(my0q3+ky,rC3TdZ1/)LHDMgy"
+
+This is a MIME Message
+
+--EPOC32=_)-Jl-z_bhpq/sbcSLr5/))(my0q3+ky,rC3TdZ1/)LHDMgy
+Content-Type: multipart/mixed;
+  boundary="EPOC32=_)-Jl-z_bhpq/sbcSLr5/))(my0q3+ky,rC3TdZ1/)LHDMgy"
+
+VGhpcyBpcyBhIE1JTUUgbWVzc2FnZQ0KDQo=
+
+--EPOC32=_)-Jl-z_bhpq/sbcSLr5/))(my0q3+ky,rC3TdZ1/)LHDMgy
+Content-Type: text/plain; charset=UTF-8
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+here is some text
+
+--EPOC32=_)-Jl-z_bhpq/sbcSLr5/))(my0q3+ky,rC3TdZ1/)LHDMgy
+Content-Description: deisl1.isu
+Content-Type:  application/octet-stream
+Content-Disposition: attachment;
+	filename="deisl1.isu"
+Content-Transfer-Encoding: base64
+
+cagAAAECqE4CACkAU3RpcmxpbmcgVGVjaG5vbG9naWVzLCBJbmMuIChjKSAx
+OTkwLTE5OTUeANzQzSjj0Mwm6tDMJvHQzib40Dsr/9AhJwbRzCafhygA3tDP
+JjAjGCjq0MyJ9dDMifzQzIv/08x7WBzOJg3RIysU0SMrG9EwJ4AAAAD/AAD/
+AAAA//8A/wAAAP8A/wD//wAA////AHd3d3d3d3d3d3d3d3d3d3d3d3d3d3d3
+d3d3d3d3d3d3d3d3d3AAAAAAAAAAB3d3d3d3d3d4d3d3d3d3dwd3d3d3d3d3
+eP////////cHd3d3d3d3d3j////////3B3d3d3d3d3d4////////9wd3d3d3
+d3d3eP////////cHd3d3d3d3d3j4AAAAD//3B3d3d3d3d3d4+HgI9w//9wd3
+d3d3d3d3ePh4iIcP//cHd3d3d3d3d3j4d3d3ARERF3d3d3d3d3d4+H//9wzM
+zMd3d3d3d3d3ePh///cP//cHd3d3d3d3d3j4f//3D//3B3d3d3d3d3d494iI
+iP//9wd3d3d3d3d3eP////////cHd3d3d3d3d3j////////3B3d3d3d3d3d4
+//////+IiAd3d3d3d3d3eP//////j3h3d3d3d3d3d3j//////4eHd3d3d3d3
+d3d4//////+Id3d3d3d3d3d3eIiIiIiIh3d3d3d3d3d3d3d3d3d3d3d3d3d3
+d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3dwAAAAd3d3d3d3d3d3d3d3cIiIgHd3
+d3d3d3d3d3d3d3CIiIB3d3d3d3d3d3d3d3dwiIiAd3d3d3d3d3d3d3d3cIiI
+gHd3d3d3d3d3d3dwAACIiIAAAHd3d3d3d3d3cIiIiIiIiIB3d3d3d3d3d3cI
+iIiIiIgHd3d3d3d3d3d3cIiIiIiAd3d3d3d3d3d3d3cIiIiIB3d3d3d3d3d3
+d3d3cIiIgHd3d3d3d3d3d3d3d3cIiAd3d3d3d3d3d3d3d3d3cIB3d3d3d3d3
+d3d3d3d3d3cHd3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3
+d3d3d3d3AAAAAAAAAAAAAAAHd3d3eDMzMzMzMzMzMzMzMHd3d3i3t7e3t7e3
+t7e3tzAHd3eIe3t7e3t7e3t7e3swB3d3h7e3t7e3t7e3t7e3AAd3d4t7e3t7
+e3t7e3t7eAMHd3eHt7e3t7e3t7e3t7gDB3d4e3t7e3t7e3t7e3twgwd3eLe3
+t7e3t7e3t7e3sIMHd3h7e3t7e3t7e3t7e4CzB3d4t7e3t7e3t7e3t7eAcwd3
+eP//////////////CLMHd3eId3d3d3d3d3d3d3tzB3d3d4+3t7e3t7e3t7e3
+swd3d3ePe3t7e3t7e3t7e3MHd3d3j7e3t7e3t7e3t7ezB3d3d497e3t7e3t7
+////8Hd3d3ePt7e3t7e3uIiIiId3d3d3j/t7e3t7ewoA3NDMJkfRzSafhwoA
+3NDMJkjRzSafhz0A5NAgnFU/PZBVNs4mItHMJ/jS1CZTRj+Vdjo4jBnRQJyG
+Pz2Qhjb7i5o23iZ9Rj+VoDo4jHs2NpWxRRiMAA==
+
+--EPOC32=_)-Jl-z_bhpq/sbcSLr5/))(my0q3+ky,rC3TdZ1/)LHDMgy
+Content-Type: text/plain; charset=UTF-8
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+Here is some more text. The attachment is above. --=20
+
+he curator
+
+--EPOC32=_)-Jl-z_bhpq/sbcSLr5/))(my0q3+ky,rC3TdZ1/)LHDMgy--
+
+--EPOC32=_)-Jl-z_bhpq/sbcSLr5/))(my0q3+ky,rC3TdZ1/)LHDMgy--
+
+.
+** Read cancelled
++OK

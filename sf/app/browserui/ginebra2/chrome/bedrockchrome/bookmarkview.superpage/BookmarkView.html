@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-EN">
+<head>
+    <script src="../../js/3rdparty/jquery-1.4.2.min.js" type="text/javascript"></script>
+    <script src="../../js/3rdparty/jquery-ui/ui.core.js" type="text/javascript"></script>
+    <script src="../../js/3rdparty/jquery-ui/ui.sortable.js" type="text/javascript"></script>
+  <script src="../../js/LongPress.js" type="text/javascript"></script>
+  <script src="../../js/Bind.js" type="text/javascript"></script>
+  <script src="bookmarkview.js" type="text/javascript"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" id="CSSLink" type="text/css" href="bookmarkview.css"/>
+  <meta name = "viewport" content = "width = device-width, height = device-height, initial-scale = 1.0, user-scalable = no">
+    <title>Bookmark View</title>
+
+  <script type="text/javascript">
+  		function scrollToTop()
+  		{
+				  if(__prevOpenedBookmarkControl)
+				  	_bookmarkHideControl(__prevOpenedBookmarkControl);
+  			
+		    	$('html, body').attr({scrollTop: 0});
+					
+					_updateBookmarkViewGoemetry(0);
+  		}
+  		
+      function updateBookmakrView()
+      {
+    		window.views.WebView.BookmarkTreeView.shown.connect(scrollToTop);
+        
+        launchBookmarkView();
+
+
+      //set the Width & Height
+          if (!window.views.WebView.bedrockTiledBackingStoreEnabled()) 
+              $("#bookmarkListId").css({"width": window.innerWidth+"px", "height": window.innerHeight+"px"});
+      
+      }
+
+    var __sortingEnabled = false;
+    var __sortEleOffsetTop = 0;
+    window.onresize = function(){
+
+
+        if (!window.views.WebView.bedrockTiledBackingStoreEnabled())
+            $("#bookmarkListId").css({"width": window.innerWidth+"px", "height": window.innerHeight+"px"});
+
+        if (__sortingEnabled)
+        {
+            $('html, body').animate({
+                                scrollTop: parseInt(__sortEleOffsetTop)}, 1000);
+        }
+    }
+
+  </script>
+
+</head>
+
+<body onload=updateBookmakrView()>
+<div id="bookmarkListId" class="bookmarkList">
+        <ul id="bookmarkListTree"></ul>
+        <div id="BottomPad"></div>
+    </div>
+
+<div class="hiddenLoadImages"></div>
+
+</body>
+</html>

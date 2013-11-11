@@ -1,0 +1,98 @@
+EXPORTS
+	??1CMmsMessageOperation@@UAE@XZ @ 1 NONAME ; CMmsMessageOperation::~CMmsMessageOperation(void)
+	?AddTypedAddresseeL@CMmsHeaders@@QAEXABVTDesC16@@K@Z @ 2 NONAME ; void CMmsHeaders::AddTypedAddresseeL(class TDesC16 const &, unsigned long)
+	?AppendKeywordItemL@CMmsMMBoxMessageHeaders@@QAEXHABVTDesC16@@@Z @ 3 NONAME ; void CMmsMMBoxMessageHeaders::AppendKeywordItemL(int, class TDesC16 const &)
+	?AppendPreviouslySentItemL@CMmsHeaders@@QAEX_JABVTDesC16@@@Z @ 4 NONAME ; void CMmsHeaders::AppendPreviouslySentItemL(long long, class TDesC16 const &)
+	?ApplicId@CMmsHeaders@@QBE?AVTPtrC16@@XZ @ 5 NONAME ; class TPtrC16 CMmsHeaders::ApplicId(void) const
+	?AttachmentsSizeL@CMmsAttachmentHandler@@SAHAAVCMsvStore@@@Z @ 6 NONAME ABSENT ; int CMmsAttachmentHandler::AttachmentsSizeL(class CMsvStore &)
+	?AuxApplicInfo@CMmsHeaders@@QBE?AVTPtrC8@@XZ @ 7 NONAME ; class TPtrC8 CMmsHeaders::AuxApplicInfo(void) const
+	?ContentLocation@CMmsDeleteResultArray@@QBE?AVTPtrC8@@XZ @ 8 NONAME ; class TPtrC8 CMmsDeleteResultArray::ContentLocation(void) const
+	?ContentLocation@CMmsHeaders@@QBE?AVTPtrC8@@XZ @ 9 NONAME ; class TPtrC8 CMmsHeaders::ContentLocation(void) const
+	?ContentReference@CMmsElementDescriptor@@QBE?AVTPtrC16@@XZ @ 10 NONAME ; class TPtrC16 CMmsElementDescriptor::ContentReference(void) const
+	?ContentType@CMmsElementDescriptor@@QBE?AVTPtrC8@@XZ @ 11 NONAME ; class TPtrC8 CMmsElementDescriptor::ContentType(void) const
+	?CopyL@CMmsHeaders@@QAEPAV1@IH@Z @ 12 NONAME ; class CMmsHeaders * CMmsHeaders::CopyL(unsigned int, int)
+	?CreateAttachmentL@CMmsAttachmentHandler@@SAXAAVCMsvStore@@AAVRFile@@AAVRFs@@VTDriveUnit@@AAVTDesC8@@AAVCMsvMimeHeaders@@PAVCMsvAttachment@@AAI@Z @ 13 NONAME ABSENT ; void CMmsAttachmentHandler::CreateAttachmentL(class CMsvStore &, class RFile &, class RFs &, class TDriveUnit, class TDesC8 &, class CMsvMimeHeaders &, class CMsvAttachment *, unsigned int &)
+	?CreateContentId@CMmsHeaders@@SAXAAVTDes8@@@Z @ 14 NONAME ; void CMmsHeaders::CreateContentId(class TDes8 &)
+	?CreateForwardL@CMmsMessageOperation@@SAPAV1@AAVTRequestStatus@@AAVCMsvSession@@JJIJHH@Z @ 15 NONAME ; class CMmsMessageOperation * CMmsMessageOperation::CreateForwardL(class TRequestStatus &, class CMsvSession &, long, long, unsigned int, long, int, int)
+	?CreateForwardWithoutRetrievalL@CMmsMessageOperation@@SAJAAVCMsvSession@@ABVCMmsHeaders@@JJJHH@Z @ 16 NONAME ; long CMmsMessageOperation::CreateForwardWithoutRetrievalL(class CMsvSession &, class CMmsHeaders const &, long, long, long, int, int)
+	?CreateNewL@CMmsMessageOperation@@SAPAV1@AAVTRequestStatus@@AAVCMsvSession@@JJHH@Z @ 17 NONAME ; class CMmsMessageOperation * CMmsMessageOperation::CreateNewL(class TRequestStatus &, class CMsvSession &, long, long, int, int)
+	?CreateReplyL@CMmsMessageOperation@@SAPAV1@AAVTRequestStatus@@AAVCMsvSession@@JJIJHH@Z @ 18 NONAME ; class CMmsMessageOperation * CMmsMessageOperation::CreateReplyL(class TRequestStatus &, class CMsvSession &, long, long, unsigned int, long, int, int)
+	?CreateTextAttachmentL@CMmsAttachmentHandler@@SAXAAVCMsvStore@@AAIABVTDesC16@@2AAVRFs@@VTDriveUnit@@H@Z @ 19 NONAME ABSENT; void CMmsAttachmentHandler::CreateTextAttachmentL(class CMsvStore &, unsigned int &, class TDesC16 const &, class TDesC16 const &, class RFs &, class TDriveUnit, int)
+	?CreateUTF8TextAttachmentFromFileL@CMmsAttachmentHandler@@SAXAAVCMsvStore@@AAIAAVRFile@@AAVRFs@@VTDriveUnit@@@Z @ 20 NONAME ABSENT ; void CMmsAttachmentHandler::CreateUTF8TextAttachmentFromFileL(class CMsvStore &, unsigned int &, class RFile &, class RFs &, class TDriveUnit)
+	?DeleteKeywordItem@CMmsMMBoxMessageHeaders@@QAEXABVTDesC16@@@Z @ 21 NONAME ; void CMmsMMBoxMessageHeaders::DeleteKeywordItem(class TDesC16 const &)
+	?DeliveryDate@CMmsHeaders@@QAE_JXZ @ 22 NONAME ; long long CMmsHeaders::DeliveryDate(void)
+	?DeliveryTimeInterval@CMmsHeaders@@QAEHXZ @ 23 NONAME ; int CMmsHeaders::DeliveryTimeInterval(void)
+	?ElementDescriptorL@CMmsHeaders@@QAEAAVCMmsElementDescriptor@@XZ @ 24 NONAME ; class CMmsElementDescriptor & CMmsHeaders::ElementDescriptorL(void)
+	?ExpiryDate@CMmsHeaders@@QAE_JXZ @ 25 NONAME ; long long CMmsHeaders::ExpiryDate(void)
+	?ExpiryInterval@CMmsHeaders@@QAEHXZ @ 26 NONAME ; int CMmsHeaders::ExpiryInterval(void)
+	?ExtendedNotification@CMmsHeaders@@QBE?AVTPtrC16@@XZ @ 27 NONAME ; class TPtrC16 CMmsHeaders::ExtendedNotification(void) const
+	?ExternalizeL@CMmsHeaders@@ABEXAAVRMsvWriteStream@@@Z @ 28 NONAME ; void CMmsHeaders::ExternalizeL(class RMsvWriteStream &) const
+	?FinalProgress@CMmsMessageOperation@@UAEABVTDesC8@@XZ @ 29 NONAME ; class TDesC8 const & CMmsMessageOperation::FinalProgress(void)
+	?FindItemWithKeyword@CMmsMMBoxMessageHeaders@@QAEHABVTDesC16@@@Z @ 30 NONAME ; int CMmsMMBoxMessageHeaders::FindItemWithKeyword(class TDesC16 const &)
+	?GetLoggingSettings@CMmsAttachmentHandler@@SAXAAH0@Z @ 31 NONAME ABSENT ; void CMmsAttachmentHandler::GetLoggingSettings(int &, int &)
+	?GetMaximumImage@CMmsHeaders@@QBEXAAH0@Z @ 32 NONAME ; void CMmsHeaders::GetMaximumImage(int &, int &) const
+	?InsertDeleteContentLocationL@CMmsHeaders@@QAEXIABVTDesC8@@@Z @ 33 NONAME ; void CMmsHeaders::InsertDeleteContentLocationL(unsigned int, class TDesC8 const &)
+	?InsertDeleteResponseTextL@CMmsHeaders@@QAEXIABVTDesC16@@@Z @ 34 NONAME ; void CMmsHeaders::InsertDeleteResponseTextL(unsigned int, class TDesC16 const &)
+	?InsertDeleteStatusL@CMmsHeaders@@QAEXIJ@Z @ 35 NONAME ; void CMmsHeaders::InsertDeleteStatusL(unsigned int, long)
+	?InsertPreviouslySentByL@CMmsHeaders@@QAEXHABVTDesC16@@@Z @ 36 NONAME ; void CMmsHeaders::InsertPreviouslySentByL(int, class TDesC16 const &)
+	?InsertPreviouslySentDateL@CMmsHeaders@@QAEXH_J@Z @ 37 NONAME ; void CMmsHeaders::InsertPreviouslySentDateL(int, long long)
+	?InternalizeL@CMmsHeaders@@AAEXAAVRMsvReadStream@@@Z @ 38 NONAME ; void CMmsHeaders::InternalizeL(class RMsvReadStream &)
+	?IsValidFilename@CMmsAttachmentHandler@@SAHAAVRFs@@ABVTPtrC16@@@Z @ 39 NONAME ABSENT ; int CMmsAttachmentHandler::IsValidFilename(class RFs &, class TPtrC16 const &)
+	?MMBoxMessageHeadersL@CMmsHeaders@@QAEAAVCMmsMMBoxMessageHeaders@@XZ @ 40 NONAME ; class CMmsMMBoxMessageHeaders & CMmsHeaders::MMBoxMessageHeadersL(void)
+	?MMBoxViewHeadersL@CMmsHeaders@@QAEAAVCMmsMMBoxViewHeaders@@XZ @ 41 NONAME ; class CMmsMMBoxViewHeaders & CMmsHeaders::MMBoxViewHeadersL(void)
+	?MessageId@CMmsHeaders@@QBE?AVTPtrC8@@XZ @ 42 NONAME ; class TPtrC8 CMmsHeaders::MessageId(void) const
+	?MmsStoreStatusText@CMmsMMBoxMessageHeaders@@QBE?AVTPtrC16@@XZ @ 43 NONAME ; class TPtrC16 CMmsMMBoxMessageHeaders::MmsStoreStatusText(void) const
+	?NewL@CMmsAttachmentHandler@@SAPAV1@XZ @ 44 NONAME ABSENT ; class CMmsAttachmentHandler * CMmsAttachmentHandler::NewL(void)
+	?NewL@CMmsClientEntry@@SAPAV1@AAVRFs@@AAVCMsvEntry@@J@Z @ 45 NONAME ; class CMmsClientEntry * CMmsClientEntry::NewL(class RFs &, class CMsvEntry &, long)
+	?NewL@CMmsHeaders@@SAPAV1@XZ @ 46 NONAME ; class CMmsHeaders * CMmsHeaders::NewL(void)
+	?NewL@CMmsServerEntry@@SAPAV1@AAVRFs@@AAVCMsvServerEntry@@J@Z @ 47 NONAME ; class CMmsServerEntry * CMmsServerEntry::NewL(class RFs &, class CMsvServerEntry &, long)
+	?RemoveAddressee@CMmsHeaders@@QAEHABVTDesC16@@@Z @ 48 NONAME ; int CMmsHeaders::RemoveAddressee(class TDesC16 const &)
+	?ReplyApplicId@CMmsHeaders@@QBE?AVTPtrC16@@XZ @ 49 NONAME ; class TPtrC16 CMmsHeaders::ReplyApplicId(void) const
+	?ReplyChargingDate@CMmsHeaders@@QAE_JXZ @ 50 NONAME ; long long CMmsHeaders::ReplyChargingDate(void)
+	?ReplyChargingId@CMmsHeaders@@QBE?AVTPtrC8@@XZ @ 51 NONAME ; class TPtrC8 CMmsHeaders::ReplyChargingId(void) const
+	?ReplyChargingInterval@CMmsHeaders@@QAEHXZ @ 52 NONAME ; int CMmsHeaders::ReplyChargingInterval(void)
+	?Reset@CMmsHeaders@@QAEXPAVCMmsSettings@@@Z @ 53 NONAME ; void CMmsHeaders::Reset(class CMmsSettings *)
+	?ResponseText@CMmsDeleteResultArray@@QBE?AVTPtrC16@@XZ @ 54 NONAME ; class TPtrC16 CMmsDeleteResultArray::ResponseText(void) const
+	?ResponseText@CMmsHeaders@@QBE?AVTPtrC16@@XZ @ 55 NONAME ; class TPtrC16 CMmsHeaders::ResponseText(void) const
+	?RestoreL@CMmsHeaders@@QAEXAAVCMsvStore@@@Z @ 56 NONAME ; void CMmsHeaders::RestoreL(class CMsvStore &)
+	?RootContentId@CMmsHeaders@@QBE?AVTPtrC8@@XZ @ 57 NONAME ; class TPtrC8 CMmsHeaders::RootContentId(void) const
+	?Sender@CMmsHeaders@@QBE?AVTPtrC16@@XZ @ 58 NONAME ; class TPtrC16 CMmsHeaders::Sender(void) const
+	?Sender@CMmsSendingChain@@QBE?AVTPtrC16@@XZ @ 59 NONAME ; class TPtrC16 CMmsSendingChain::Sender(void) const
+	?SetApplicIdL@CMmsHeaders@@QAEXABVTDesC16@@@Z @ 60 NONAME ; void CMmsHeaders::SetApplicIdL(class TDesC16 const &)
+	?SetAuxApplicInfoL@CMmsHeaders@@QAEXABVTDesC8@@@Z @ 61 NONAME ; void CMmsHeaders::SetAuxApplicInfoL(class TDesC8 const &)
+	?SetContentLocationL@CMmsDeleteResultArray@@QAEXABVTDesC8@@@Z @ 62 NONAME ; void CMmsDeleteResultArray::SetContentLocationL(class TDesC8 const &)
+	?SetContentLocationL@CMmsHeaders@@QAEXABVTDesC8@@@Z @ 63 NONAME ; void CMmsHeaders::SetContentLocationL(class TDesC8 const &)
+	?SetContentReferenceL@CMmsElementDescriptor@@QAEXABVTDesC16@@@Z @ 64 NONAME ; void CMmsElementDescriptor::SetContentReferenceL(class TDesC16 const &)
+	?SetContentTypeL@CMmsElementDescriptor@@QAEXABVTDesC8@@@Z @ 65 NONAME ; void CMmsElementDescriptor::SetContentTypeL(class TDesC8 const &)
+	?SetDeliveryDate@CMmsHeaders@@QAEX_J@Z @ 66 NONAME ; void CMmsHeaders::SetDeliveryDate(long long)
+	?SetDeliveryTimeInterval@CMmsHeaders@@QAEXH@Z @ 67 NONAME ; void CMmsHeaders::SetDeliveryTimeInterval(int)
+	?SetExpiryDate@CMmsHeaders@@QAEX_J@Z @ 68 NONAME ; void CMmsHeaders::SetExpiryDate(long long)
+	?SetExpiryInterval@CMmsHeaders@@QAEXH@Z @ 69 NONAME ; void CMmsHeaders::SetExpiryInterval(int)
+	?SetExtendedNotificationL@CMmsHeaders@@QAEXABVTDesC16@@@Z @ 70 NONAME ; void CMmsHeaders::SetExtendedNotificationL(class TDesC16 const &)
+	?SetMaximumImage@CMmsHeaders@@QAEXHH@Z @ 71 NONAME ; void CMmsHeaders::SetMaximumImage(int, int)
+	?SetMessageIdL@CMmsHeaders@@QAEXABVTDesC8@@@Z @ 72 NONAME ; void CMmsHeaders::SetMessageIdL(class TDesC8 const &)
+	?SetMmsStoreStatusTextL@CMmsMMBoxMessageHeaders@@QAEXABVTDesC16@@@Z @ 73 NONAME ; void CMmsMMBoxMessageHeaders::SetMmsStoreStatusTextL(class TDesC16 const &)
+	?SetReplyApplicIdL@CMmsHeaders@@QAEXABVTDesC16@@@Z @ 74 NONAME ; void CMmsHeaders::SetReplyApplicIdL(class TDesC16 const &)
+	?SetReplyChargingDate@CMmsHeaders@@QAEX_J@Z @ 75 NONAME ; void CMmsHeaders::SetReplyChargingDate(long long)
+	?SetReplyChargingIdL@CMmsHeaders@@QAEXABVTDesC8@@@Z @ 76 NONAME ; void CMmsHeaders::SetReplyChargingIdL(class TDesC8 const &)
+	?SetReplyChargingInterval@CMmsHeaders@@QAEXH@Z @ 77 NONAME ; void CMmsHeaders::SetReplyChargingInterval(int)
+	?SetResponseTextL@CMmsDeleteResultArray@@QAEXABVTDesC16@@@Z @ 78 NONAME ; void CMmsDeleteResultArray::SetResponseTextL(class TDesC16 const &)
+	?SetResponseTextL@CMmsHeaders@@QAEXABVTDesC16@@@Z @ 79 NONAME ; void CMmsHeaders::SetResponseTextL(class TDesC16 const &)
+	?SetRootContentIdL@CMmsHeaders@@QAEXABVTDesC8@@@Z @ 80 NONAME ; void CMmsHeaders::SetRootContentIdL(class TDesC8 const &)
+	?SetSenderL@CMmsHeaders@@QAEXABVTDesC16@@@Z @ 81 NONAME ; void CMmsHeaders::SetSenderL(class TDesC16 const &)
+	?SetSenderL@CMmsSendingChain@@QAEXABVTDesC16@@@Z @ 82 NONAME ; void CMmsSendingChain::SetSenderL(class TDesC16 const &)
+	?SetSettings@CMmsHeaders@@QAEXPAVCMmsSettings@@@Z @ 83 NONAME ; void CMmsHeaders::SetSettings(class CMmsSettings *)
+	?SetSubjectL@CMmsHeaders@@QAEXABVTDesC16@@@Z @ 84 NONAME ; void CMmsHeaders::SetSubjectL(class TDesC16 const &)
+	?SetTidL@CMmsHeaders@@QAEXABVTDesC8@@@Z @ 85 NONAME ; void CMmsHeaders::SetTidL(class TDesC8 const &)
+	?Size@CMmsHeaders@@QBEHXZ @ 86 NONAME ; int CMmsHeaders::Size(void) const
+	?StoreL@CMmsHeaders@@QAEXAAVCMsvStore@@@Z @ 87 NONAME ; void CMmsHeaders::StoreL(class CMsvStore &)
+	?Subject@CMmsHeaders@@QBE?AVTPtrC16@@XZ @ 88 NONAME ; class TPtrC16 CMmsHeaders::Subject(void) const
+	?Tid@CMmsHeaders@@QBE?AVTPtrC8@@XZ @ 89 NONAME ; class TPtrC8 CMmsHeaders::Tid(void) const
+	?TypedAddresseeList@CMmsHeaders@@QAEABVCDesC16Array@@K@Z @ 90 NONAME ; class CDesC16Array const & CMmsHeaders::TypedAddresseeList(unsigned long)
+	?CopyL@CMmsHeaders@@QAEPAV1@IHAAVRFs@@@Z @ 91 NONAME ; class CMmsHeaders * CMmsHeaders::CopyL(unsigned int, int, class RFs &)
+	?NewL@CMmsHeaders@@SAPAV1@F@Z @ 92 NONAME ; class CMmsHeaders * CMmsHeaders::NewL(short)
+	?RecommendedRetrievalModeText@CMmsHeaders@@QBE?AVTPtrC16@@XZ @ 93 NONAME ; class TPtrC16 CMmsHeaders::RecommendedRetrievalModeText(void) const
+	?ReplaceCancelId@CMmsHeaders@@QBE?AVTPtrC8@@XZ @ 94 NONAME ; class TPtrC8 CMmsHeaders::ReplaceCancelId(void) const
+	?SetRecommendedRetrievalModeTextL@CMmsHeaders@@QAEXABVTDesC16@@@Z @ 95 NONAME ; void CMmsHeaders::SetRecommendedRetrievalModeTextL(class TDesC16 const &)
+	?SetReplaceCancelIdL@CMmsHeaders@@QAEXABVTDesC8@@@Z @ 96 NONAME ; void CMmsHeaders::SetReplaceCancelIdL(class TDesC8 const &)
+

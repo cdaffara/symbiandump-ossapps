@@ -1,0 +1,1542 @@
+// Copyright (c) 2004-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+// Call the setup script to copy any necessary config files...
+RUN_SCRIPT z:\TestData\Scripts\TE_CntSync_setup.script
+LOAD_SUITE TE_CntSync
+
+START_TESTCASE PIM-PHBKSYNC-NA-2000
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2000
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test reading of an ICC entry - normal case. Check group 
+//!                 membership is correct and relevant number of fields have 
+//!                 been created
+//!@SYMTestPriority High
+//!@SYMTestActions Reads an ICC entry - normal case, checks group membership is
+//!                correct and relevant number of fields have been created
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync ReadICCContactTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2000
+
+START_TESTCASE PIM-PHBKSYNC-NA-2109
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2109
+//!@SYMDEF INC090628
+//!@SYMTestCaseDesc Test synchronisation of contacts with international numbers.
+//!                 Clears out the contacts database, perform a synchronisation.
+//!                 The contact on the ICC has international phone numbers some
+//!                 of which already contain a leading '+' prefix, some of which
+//!                 do not.  Extract the contact's phone numbers from the contacts
+//!                 database after the sync. and check that a leading '+' has
+//!                 been added to numbers which do not already have one and
+//!                 that numbers which do already have a prefix, still only have
+//!                 one leading '+'.
+//!@SYMTestPriority High
+//!@SYMTestActions  Clear out the contacts database. Perform a sync. Extract a
+//!                 known contact from the Contacts Database which has
+//!                 international phone numbers. Check the phone numbers against
+//!                 expected values.
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave.
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync ReadInternationalNumberTest
+END_TESTCASE PIM-PHBKSYNC-NA-2109
+
+START_TESTCASE PIM-PHBKSYNC-NA-2001
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2001
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test reading of ICC entries with additional numbers and 
+//!                 alpha tags
+//!@SYMTestPriority High
+//!@SYMTestActions Reads ICC entries with additional numbers and alpha tags
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync ReadAdditionalNumTagsTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2001
+
+START_TESTCASE PIM-PHBKSYNC-NA-2002
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2002
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test reading of a sequence of ICC entries - full phonebook
+//!                 case
+//!@SYMTestPriority High
+//!@SYMTestActions Reads a sequence of ICC entries - full phonebook case
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync ReadSequenceOfICCEntriesTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2002
+
+START_TESTCASE PIM-PHBKSYNC-NA-2003
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2003
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test reading of a number of ICC entries - invalid UID
+//!@SYMTestPriority High
+//!@SYMTestActions Reads a number of ICC entries - invalid UID
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync ReadContactInvalidUIDTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2003
+
+START_TESTCASE PIM-PHBKSYNC-NA-2004
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2004
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test reading of a sequence of ICC entries - empty field 
+//!                 case. Name, number or email fields are empty. Check group 
+//!                 membership is correct and relevant number of fields have 
+//!                 been created
+//!@SYMTestPriority High
+//!@SYMTestActions Reads of a sequence of ICC entries - empty field case, checks
+//!                that group membership is correct and relevant number of 
+//!                fields have been created
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync ReadContactsEmptyFieldTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2004
+
+START_TESTCASE PIM-PHBKSYNC-NA-2005
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2005
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test reading of ICC entry - entry not available as the ICC 
+//!                 becomes locked
+//!@SYMTestPriority High
+//!@SYMTestActions Reads ICC entry - entry not available as the ICC becomes 
+//!                locked
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 900 TE_CntSync ReadContactFullViewICCLockedTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2005
+
+START_TESTCASE PIM-PHBKSYNC-NA-2006
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2006
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test reading of an ICC entry - specify full view, full view
+//!                 for non-existent entry, name, number and invalid view
+//!@SYMTestPriority High
+//!@SYMTestActions Reads an ICC entry - specify full view
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync ReadContactDiffViewsTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2006
+
+START_TESTCASE PIM-PHBKSYNC-NA-2007
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2007
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test reading of an ICC entry - minimal read operation
+//!@SYMTestPriority High
+//!@SYMTestActions Reads an ICC entry - minimal read operation
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync ReadICCMinimalContactTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2007
+
+START_TESTCASE PIM-PHBKSYNC-NA-2008
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2008
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test reading of an ICC entry - minimal read operation with 
+//!                 invalid UID
+//!@SYMTestPriority High
+//!@SYMTestActions Reads an ICC entry - minimal read operation with invalid UID
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync ReadMinimalContactInvalidUIDTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2008
+
+START_TESTCASE PIM-PHBKSYNC-NA-2009
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2009
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test reading of a sequence of ICC entries - minimal read 
+//!                 with missing fields. Name, number or email fields are empty
+//!@SYMTestPriority High
+//!@SYMTestActions Reads a sequence of ICC entries - minimal read with missing 
+//!                fields
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync ReadMinimalContactEmptyFieldTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2009
+
+START_TESTCASE PIM-PHBKSYNC-NA-2010
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2010
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test reading of a number of ICC entries - minimal read, 
+//!                 entry not available as the ICC becomes locked
+//!@SYMTestPriority High
+//!@SYMTestActions Reads a number of ICC entries - minimal read, entry not 
+//!                available as the ICC becomes locked
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 800 TE_CntSync ReadMinimalContactICCLockedTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2010
+
+START_TESTCASE PIM-PHBKSYNC-NA-2011
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2011
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test reading of an ICC entry - create string from contact 
+//!                 info (full view)
+//!@SYMTestPriority High
+//!@SYMTestActions Reads an ICC entry - create string from contact info 
+//!                (full view)
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync ReadContactTextDefFullViewTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2011
+
+START_TESTCASE PIM-PHBKSYNC-NA-2012
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2012
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test reading of an ICC entry - create name string from 
+//!                 contact info
+//!@SYMTestPriority High
+//!@SYMTestActions Reads an ICC entry - create name string from contact info
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync ReadContactNameTextDefTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2012
+
+START_TESTCASE PIM-PHBKSYNC-NA-2013
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2013
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test reading of an ICC entry - create number string from 
+//!                 contact info
+//!@SYMTestPriority High
+//!@SYMTestActions Reads an ICC entry - create number string from contact info
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync ReadContactNumberTextDefTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2013
+
+START_TESTCASE PIM-PHBKSYNC-NA-2014
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2014
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test reading of an ICC entry - invalid string specification
+//!@SYMTestPriority High
+//!@SYMTestActions Reads an ICC entry - invalid string specification
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync ReadContactInvalidTextDefTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2014
+
+START_TESTCASE PIM-PHBKSYNC-NA-2015
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2015
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test reading of an ICC entry using text definition when ICC 
+//!                 is locked
+//!@SYMTestPriority High
+//!@SYMTestActions Reads an ICC entry using text definition when ICC is locked
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync ReadContactICCLockedTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2015
+
+START_TESTCASE PIM-PHBKSYNC-NA-2016
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2016
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test reading operation - stress test. Read a full phonebook 
+//!                 with the name view
+//!@SYMTestPriority High
+//!@SYMTestActions Reads a full phonebook with the name view
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync ReadFullICCNameViewTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2016
+
+START_TESTCASE PIM-PHBKSYNC-NA-2017
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2017
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test reading operation - stress test. Read a full phonebook
+//!                 with the number view. It is necessary to view the 
+//!                 Contacts DB using the development UI to ensure that these 
+//!                 test cases pass
+//!@SYMTestPriority High
+//!@SYMTestActions Reads a full phonebook with the number view
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync ReadFullICCNumberViewTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2017
+
+START_TESTCASE PIM-PHBKSYNC-NA-2018
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2018
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test reading a full phonebook with the full view
+//!@SYMTestPriority High
+//!@SYMTestActions Reads a full phonebook with the full view
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync ReadFullICCFullViewTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2018
+
+START_TESTCASE PIM-PHBKSYNC-NA-2019
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2019
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test reading a full phonebook - create name string from 
+//!                 contact info
+//!@SYMTestPriority High
+//!@SYMTestActions Reads a full phonebook, creates name string from contact info
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync ReadFullICCNameTextDefTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2019
+
+START_TESTCASE PIM-PHBKSYNC-NA-2020
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2020
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test reading of a full phonebook - create number string 
+//!                 from contact info
+//!@SYMTestPriority High
+//!@SYMTestActions Reads a full phonebook, creates number string from contact 
+//!                info
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync ReadFullICCNumberTextDefTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2020
+
+START_TESTCASE PIM-PHBKSYNC-NA-2021
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2021
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test reading of a full phonebook - create string from 
+//!                 contact info (full view)
+//!@SYMTestPriority High
+//!@SYMTestActions Reads a full phonebook, creates string from contact info 
+//!                (full view)
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync ReadFullICCFullViewTextDefTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2021
+
+
+START_TESTCASE PIM-PHBKSYNC-NA-2115
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2115
+//!@SYMDEF INC126806 
+//!@SYMTestCaseDesc Tests that an ICC contact can be read without starting PhBkSync first.
+//!@SYMTestPriority High
+//!@SYMTestActions Read the first ICC contact as possible without opening a PhBkSync session.
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave or abort.
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync ReadWithOutOpeningPhBkSyncFirstTest
+END_TESTCASE PIM-PHBKSYNC-NA-2115
+
+
+START_TESTCASE PIM-PHBKSYNC-NA-2022
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2022
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test situation when we are unsynchronised and we set the 
+//!                 mode to automatic same ICC, we wait until the next client to
+//!                 connect before synchronising
+//!@SYMTestPriority High
+//!@SYMTestActions Sets the mode to automatic same ICC, and waits until the next
+//!                client to connect before synchronising 
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync SyncAutomaticSameICCTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2022
+
+START_TESTCASE PIM-PHBKSYNC-NA-2023
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2023
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test situation when we are unsynchronised and we set the 
+//!                 mode to automatic current, we wait until the next client to
+//!                 connect before synchronising
+//!@SYMTestPriority High
+//!@SYMTestActions Sets the mode to automatic current, and waits until the next
+//!                client to connect before synchronising
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync SyncAutomaticCurrentICCTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2023
+
+START_TESTCASE PIM-PHBKSYNC-NA-2024
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2024
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test Re-Synchronisation (Manual)
+//!@SYMTestPriority High
+//!@SYMTestActions Re-Synchronises manualy
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync SyncManualTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2024
+
+START_TESTCASE PIM-PHBKSYNC-NA-2025
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2025
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Try to open a new session and attempt a manual sync before 
+//!                 the device has time to get the SubscriberId. The Server 
+//!                 should wait untill the SubscriberID is known before 
+//!                 continuing
+//!@SYMTestPriority High
+//!@SYMTestActions Opens a new session and attempts a manual sync before the 
+//!                device has time to get the SubscriberId
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync SyncManualNotReadyTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2025
+
+START_TESTCASE PIM-PHBKSYNC-NA-2026
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2026
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test synchronising a SIM with a different number of slots
+//!@SYMTestPriority High
+//!@SYMTestActions Synchronises a SIM with a different number of slots
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync SyncManualDiffSizeSIMTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2026
+
+START_TESTCASE PIM-PHBKSYNC-NA-2027
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2027
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test that initial synchronisation is successful. Then test 
+//!                 that a subsequent "SIM toolkit refresh" notification leads 
+//!                 to a  second synchronisation
+//!@SYMTestPriority High
+//!@SYMTestActions Re-Synchronises
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync SyncSATUpdatesTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2027
+
+START_TESTCASE PIM-PHBKSYNC-NA-2028
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2028
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test consecutive calls to DoSync()
+//!@SYMTestPriority High
+//!@SYMTestActions Constantly calls DoSync()
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync SyncConsecutiveTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2028
+
+START_TESTCASE PIM-PHBKSYNC-NA-2029
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2029
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test handling of the multiple phonebook synchronisation 
+//!                 requests
+//!@SYMTestPriority High
+//!@SYMTestActions Performs multiple phonebook synchronisation requests
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync SyncMultipleRequestsTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2029
+
+START_TESTCASE PIM-PHBKSYNC-NA-2030
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2030
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test synchronising a SIM with a different number of slots 
+//!                 such that the PBS Server uses a CIdle object to complete the
+//!                 operation in the background. It should be possible for the 
+//!                 PBS Server to handle requests frequently before the sync 
+//!                 completes
+//!@SYMTestPriority High
+//!@SYMTestActions Synchronises a SIM with a different number of slots such that
+//!                the PBS Server uses a CIdle object to complete the operation
+//!                in the background
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync SyncGeneralResponseTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2030
+
+START_TESTCASE PIM-PHBKSYNC-NA-2031
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2031
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test synchronisation when ICC is locked. Synchroniser is 
+//!                 initially unable to perform synchronisation because ICC is 
+//!                 locked, but when ICC becomes unlocked the synchronisation 
+//!                 completes successfully
+//!@SYMTestPriority High
+//!@SYMTestActions Synchronises when ICC is locked
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync SyncICCLockedTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2031
+
+START_TESTCASE PIM-PHBKSYNC-NA-2032
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2032
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test synchronisation Failure. SIM is wearing out. 
+//!                 Synchronisation mode is "Auto Sync, Current ICC". 
+//!                 Synchronisation starts but one of the reads fails halfway 
+//!                 through
+//!@SYMTestPriority High
+//!@SYMTestActions Synchronises, and simulates synchronization failure
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync SyncFailureTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2032
+
+START_TESTCASE PIM-PHBKSYNC-NA-2033
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2033
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test synchronisation Failure. SIM is wearing out. 
+//!                 Synchronisation mode is "Auto Sync, Current ICC". 
+//!                 Synchronisation starts but one of the reads fails halfway 
+//!                 through
+//!@SYMTestPriority High
+//!@SYMTestActions Starts synchronisation but one of the reads fails halfway 
+//!                through
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync SyncFailureAndCheckErrorTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2033
+
+START_TESTCASE PIM-PHBKSYNC-NA-2034
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2034
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test synchronisation notification
+//!@SYMTestPriority High
+//!@SYMTestActions Synchronises, checks synchronisation notification
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync SyncNotificationTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2034
+
+START_TESTCASE PIM-PHBKSYNC-NA-2035
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2035
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test deleting Contacts DB and requesting manual 
+//!                 synchronisation
+//!@SYMTestPriority High
+//!@SYMTestActions Deletes Contacts DB and requests manual synchronisation
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync SyncDeleteDBTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2035
+
+START_TESTCASE PIM-PHBKSYNC-NA-2036
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2036
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test syncing to Empty ICC
+//!@SYMTestPriority High
+//!@SYMTestActions Synchronises to empty ICC
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync SyncEmptyICCTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2036
+
+START_TESTCASE PIM-PHBKSYNC-NA-2037
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2037
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test syncing and condition of free slots
+//!@SYMTestPriority High
+//!@SYMTestActions Synchronises and conditions of free slots
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync SyncICCSlotsManipulationTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2037
+
+START_TESTCASE PIM-PHBKSYNC-NA-2038
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2038
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test syncing and writing to free slots
+//!@SYMTestPriority High
+//!@SYMTestActions Synchronises and writes to free slots
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync SyncICCSlotsManipulationAndWriteTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2038
+
+START_TESTCASE PIM-PHBKSYNC-NA-2039
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2039
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test GetContactFormat and GetNumSlots
+//!@SYMTestPriority High
+//!@SYMTestActions Calls GetContactFormat and GetNumSlots functions
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync SyncAndGetContactFormatTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2039
+
+START_TESTCASE PIM-PHBKSYNC-NA-2105
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2105
+//!@SYMREQ DEF067688
+//!@SYMTestCaseDesc Test SetSyncMode causes an autosync if needed.
+//!@SYMTestPriority High
+//!@SYMTestActions Sets Sync Mode and expects a sync to occur.
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync SetSyncModeAndAutoSyncTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2105
+
+START_TESTCASE PIM-PHBKSYNC-NA-2107
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2107
+//!@SYMDEF INC082959
+//!@SYMTestCaseDesc Sync a phonebook that that has been removed.
+//!@SYMTestPriority High
+//!@SYMTestActions Auto-sync all 5 phonebooks, change SIM for one without 3 of them.
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync SyncUnsupportedPhonebook
+
+END_TESTCASE PIM-PHBKSYNC-NA-2107
+
+START_TESTCASE PIM-PHBKSYNC-NA-2111
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2111
+//!@SYMDEF INC098859
+//!@SYMTestCaseDesc Sync phonebooks with different number types.
+//!@SYMTestPriority High
+//!@SYMTestActions Performs repeated syncs to ensure that the UID list does not overflow.
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync SyncDiffNumberTypesRepeatedly
+
+END_TESTCASE PIM-PHBKSYNC-NA-2111
+
+START_TESTCASE PIM-PHBKSYNC-NA-2112
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2112
+//!@SYMDEF INC103118
+//!@SYMTestCaseDesc Sync phonebooks with international numbers
+//!@SYMTestPriority High
+//!@SYMTestActions Performs a sync on a contact that uses '+'s in the number lists.
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync SyncInternationalNumbers
+
+END_TESTCASE PIM-PHBKSYNC-NA-2112
+
+START_TESTCASE PIM-PHBKSYNC-NA-2114
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2114
+//!@SYMDEF INC111673 
+//!@SYMTestCaseDesc Checks that unsupported auto-syncs return a Last Sync Error.
+//!@SYMTestPriority High
+//!@SYMTestActions Sets all phonebooks to Manual, then to AutoSync and checks that missing phonebooks
+//!                reports an error.
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync SyncAutomaticWithUnsupportedPhonebook
+
+END_TESTCASE PIM-PHBKSYNC-NA-2114
+
+START_TESTCASE PIM-PHBKSYNC-NA-2040
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2040
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test adding of an ICC entry to each of the supported 
+//!                 phonebooks - normal case
+//!@SYMTestPriority High
+//!@SYMTestActions Adds an ICC entry to each of the supported phonebooks - 
+//!                normal case
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync AddICCContactTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2040
+
+START_TESTCASE PIM-PHBKSYNC-NA-2041
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2041
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test adding of an ICC entry to each of the supported 
+//!                 phonebooks - name field is empty
+//!@SYMTestPriority High
+//!@SYMTestActions Adds an ICC entry to each of the supported phonebooks - name
+//!                field is empty
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync AddEntryEmptyNameTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2041
+
+START_TESTCASE PIM-PHBKSYNC-NA-2042
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2042
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test adding of an ICC entry to each of the supported 
+//!                 phonebooks - number field is empty
+//!@SYMTestPriority High
+//!@SYMTestActions Adds an ICC entry to each of the supported phonebooks - 
+//!                number field is empty
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync AddEntryEmptyNumberTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2042
+
+START_TESTCASE PIM-PHBKSYNC-NA-2043
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2043
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test adding of contacts to the ICC & database with 
+//!                 additional number plus alpha tag
+//!@SYMTestPriority High
+//!@SYMTestActions Adds contacts to the ICC & database
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync AddAdditionalNumWithTagTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2043
+
+START_TESTCASE PIM-PHBKSYNC-NA-2044
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2044
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test adding of an ICC entry to each of the supported 
+//!                 phonebooks - fails because phonebook is full
+//!@SYMTestPriority High
+//!@SYMTestActions Adds an ICC entry to each of the supported phonebooks, fails
+//!                because phonebook is full
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync AddPhonebookFullTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2044
+
+START_TESTCASE PIM-PHBKSYNC-NA-2045
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2045
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test adding of an ICC entry to each of the supported 
+//!                 phonebooks - there are two email fields, the first of which is empty.
+//!@SYMTestPriority High
+//!@SYMTestActions Adds an ICC entry to each of the supported phonebooks - 
+//!                two email fields, the first one is empty. Syncs and reads back the entry,
+//!				   then checks that the comparison of the two is successful
+//!				   (i.e. that the empty email field is ignored).
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync AddEntryEmptyEmailTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2045
+
+START_TESTCASE PIM-PHBKSYNC-NA-2106
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2106
+//!@SYMREQ DEF072678
+//!@SYMTestCaseDesc Test boundary condition of data added to ICC.
+//!                 Add contacts to ICC which will satisfy boundary criteria.
+//!		    It will test the behavior of boundry data added.
+//!@SYMTestPriority High
+//!@SYMTestActions Add an ICC entry
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync AddBoundaryConditionsTest
+
+//RUN_TEST_STEP 500 TE_CntSync AddNameBoundaryExceededTest
+//RUN_TEST_STEP 500 TE_CntSync AddNumberBoundaryExceededTest
+END_TESTCASE PIM-PHBKSYNC-NA-2106
+
+START_TESTCASE PIM-PHBKSYNC-NA-2110
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2110
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test adding of sequence of ICC entries - Fill ICC
+//!@SYMTestPriority High
+//!@SYMTestActions Add sequence of ICC entries, and fills ICC
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync AddSequenceOfEntriesTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2110
+
+START_TESTCASE PIM-PHBKSYNC-NA-2046
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2046
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test adding of an ICC entry to each of the supported 
+//!                 phonebooks - ICC locked
+//!@SYMTestPriority High
+//!@SYMTestActions Adds an ICC entry to each of the supported phonebooks - ICC 
+//!                locked
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync AddEntryICCLockedTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2046
+
+START_TESTCASE PIM-PHBKSYNC-NA-2047
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2047
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test adding of an ICC entry to each of the supported 
+//!                 phonebooks - ICC write fails
+//!@SYMTestPriority High
+//!@SYMTestActions Adds an ICC entry to each of the supported phonebooks, ICC 
+//!                writing fails
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync AddEntryICCWriteFailsTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2047
+
+START_TESTCASE PIM-PHBKSYNC-NA-2048
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2048
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test adding an ICC entry to each of the supported phonebooks
+//!                 - invalid field included
+//!@SYMTestPriority High
+//!@SYMTestActions Adds an ICC entry to each of the supported phonebooks
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync AddEntryInvalidFieldTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2048
+
+START_TESTCASE PIM-PHBKSYNC-NA-2049
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2049
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test adding of sequence of ICC entries - Fill ICC
+//!@SYMTestPriority High
+//!@SYMTestActions Adds sequence of ICC entries, fills ICC
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync AddEntryNumberWithDTMFTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2049
+
+START_TESTCASE PIM-PHBKSYNC-NA-2050
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2050
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test adding of an ICC entry to each of the supported 
+//!                 phonebooks - read-only phonebook
+//!@SYMTestPriority High
+//!@SYMTestActions  Adds an ICC entry to each of the supported phonebooks
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync AddEntryReadOnlyAccessTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2050
+
+START_TESTCASE PIM-PHBKSYNC-NA-2108
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2108
+//!@SYMREQ DEF078313
+//!@SYMTestCaseDesc Test addition of a contact to a group with zero as template
+//!                 ID reading of a sequence of ICC entries - full phonebook
+//!@SYMTestPriority High
+//!@SYMTestActions Creates a group, sets its template ref ID to zero, adds a
+//!                contact to it and force a synchronisation.  
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync AddEntryWithNoTemplate
+
+END_TESTCASE PIM-PHBKSYNC-NA-2108
+
+START_TESTCASE PIM-PHBKSYNC-NA-2051
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2051
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test opening an ICC entry for edit - normal case
+//!@SYMTestPriority High
+//!@SYMTestActions  Opens an ICC entry for edit
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync OpenICCContactTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2051
+
+START_TESTCASE PIM-PHBKSYNC-NA-2052
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2052
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test opening an ICC entry for edit - invalid UID
+//!@SYMTestPriority High
+//!@SYMTestActions  Opens an ICC entry for edit
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync OpenContactInvalidUIDTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2052
+
+START_TESTCASE PIM-PHBKSYNC-NA-2053
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2053
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test editing of an ICC entry - normal case
+//!@SYMTestPriority High
+//!@SYMTestActions  Edits an ICC entry
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync EditICCContactTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2053
+
+START_TESTCASE PIM-PHBKSYNC-NA-2054
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2054
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test editing of an ICC entry twice
+//!@SYMTestPriority High
+//!@SYMTestActions  Edits an ICC entry twice
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync EditICCContactTwiceTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2054
+
+START_TESTCASE PIM-PHBKSYNC-NA-2055
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2055
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test of editing an ICC entry - empty name field
+//!@SYMTestPriority High
+//!@SYMTestActions  Edits an ICC entry
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync EditContactEmptyNameTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2055
+
+START_TESTCASE PIM-PHBKSYNC-NA-2056
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2056
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test editing of an ICC entry - empty number field
+//!@SYMTestPriority High
+//!@SYMTestActions  Edits an ICC entry
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync EditContactEmptyNumberTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2056
+
+START_TESTCASE PIM-PHBKSYNC-NA-2057
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2057
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test editing of an ICC entry - name boundary condition 
+//!                 exceeded
+//!@SYMTestPriority High
+//!@SYMTestActions  Edits an ICC entry
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync EditContactNameExceededTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2057
+
+START_TESTCASE PIM-PHBKSYNC-NA-2058
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2058
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test of editing an ICC entry - number boundary condition 
+//!                 exceeded
+//!@SYMTestPriority High
+//!@SYMTestActions  Edits an ICC entry
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync EditContactNumberExceededTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2058
+
+START_TESTCASE PIM-PHBKSYNC-NA-2059
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2059
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test editing of an ICC entry - ICC locked
+//!@SYMTestPriority High
+//!@SYMTestActions  Edits an ICC entry
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync EditContactICCLockedTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2059
+
+START_TESTCASE PIM-PHBKSYNC-NA-2060
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2060
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test editing of an ICC entry - ICC write fails
+//!@SYMTestPriority High
+//!@SYMTestActions  Edits an ICC entry, ICC writing fails
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync EditContactICCWriteFailsTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2060
+
+START_TESTCASE PIM-PHBKSYNC-NA-2061
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2061
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test opening and editing of an ICC entry - empty name and 
+//!                 number fields
+//!@SYMTestPriority High
+//!@SYMTestActions  Opens and edits an ICC entry
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync EditContactEmptyFieldsTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2061
+
+START_TESTCASE PIM-PHBKSYNC-NA-2062
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2062
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test editing of entry based on slot number
+//!@SYMTestPriority High
+//!@SYMTestActions  Edits entry based on slot number
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync EditSlotWriteTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2062
+
+START_TESTCASE PIM-PHBKSYNC-NA-2063
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2063
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test opening of an ICC entry - ICC locked
+//!@SYMTestPriority High
+//!@SYMTestActions  Opens an ICC entry
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync OpenContactICCLockedTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2063
+
+START_TESTCASE PIM-PHBKSYNC-NA-2064
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2064
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test opening of an ICC entry - read-only phonebook
+//!@SYMTestPriority High
+//!@SYMTestActions  Opens an ICC entry
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync OpenEntryReadOnlyAccessTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2064
+
+START_TESTCASE PIM-PHBKSYNC-NA-2065
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2065
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test opening and closing each ICC entry in a full phonebook
+//!@SYMTestPriority High
+//!@SYMTestActions  Opens and closes each ICC entry
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync OpenFullICCTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2065
+
+START_TESTCASE PIM-PHBKSYNC-NA-2066
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2066
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test deleting of an ICC entry - normal case
+//!@SYMTestPriority High
+//!@SYMTestActions  Deletes an ICC entry
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync DeleteICCContactTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2066
+
+START_TESTCASE PIM-PHBKSYNC-NA-2067
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2067
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test deleting of an ICC entry - invalid UID
+//!@SYMTestPriority High
+//!@SYMTestActions  Deletes an ICC entry - invalid UID
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync DeleteEntryInvalidUIDTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2067
+
+START_TESTCASE PIM-PHBKSYNC-NA-2068
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2068
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test of deleting an ICC entry - ICC locked
+//!@SYMTestPriority High
+//!@SYMTestActions  Deletes an ICC entry
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync DeleteEntryICCLockedTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2068
+
+START_TESTCASE PIM-PHBKSYNC-NA-2069
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2069
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test deleting of an ICC entry - ICC delete fails
+//!@SYMTestPriority High
+//!@SYMTestActions  Deletes an ICC entry - ICC delete fails
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync DeleteEntryICCDeleteFailsTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2069
+
+START_TESTCASE PIM-PHBKSYNC-NA-2070
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2070
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test deleting of an ICC entry - read-only phonebook
+//!@SYMTestPriority High
+//!@SYMTestActions  Deletes an ICC entry
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync DeleteEntryReadOnlyAccessTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2070
+
+START_TESTCASE PIM-PHBKSYNC-NA-2071
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2071
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test deleting of an array of ICC entries - one entry in the
+//!                 array
+//!@SYMTestPriority High
+//!@SYMTestActions  Deletes an array of ICC entries
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync DeleteArrayOneEntryTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2071
+
+START_TESTCASE PIM-PHBKSYNC-NA-2072
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2072
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test deleting of an array of ICC entries - invalid ID added
+//!                 to the array
+//!@SYMTestPriority High
+//!@SYMTestActions  Deletes an array of ICC entries
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync DeleteArrayInvalidIdTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2072
+
+START_TESTCASE PIM-PHBKSYNC-NA-2073
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2073
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test deleting of an array of ICC entries - multiple entries
+//!                 in the array
+//!@SYMTestPriority High
+//!@SYMTestActions  Deletes an array of ICC entries
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync DeleteArrayMultipleEntriesTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2073
+
+START_TESTCASE PIM-PHBKSYNC-NA-2074
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2074
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test deleting of an array of ICC entries - ICC locked
+//!@SYMTestPriority High
+//!@SYMTestActions  Deletes an array of ICC entries - ICC locked
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync DeleteArrayICCLockedTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2074
+
+START_TESTCASE PIM-PHBKSYNC-NA-2075
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2075
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test deleting of an array of ICC entries - Read-only Access
+//!@SYMTestPriority High
+//!@SYMTestActions  Deletes an array of ICC entries
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync DeleteArrayReadOnlyAccessTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2075
+
+START_TESTCASE PIM-PHBKSYNC-NA-2076
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2076
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test deleting of an array of ICC entries - ICC delete fails
+//!@SYMTestPriority High
+//!@SYMTestActions  Deletes an array of ICC entries
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync DeleteArrayICCDeleteFailsTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2076
+
+START_TESTCASE PIM-PHBKSYNC-NA-2077
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2077
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test deleting of an array of ICC entries - array contains 
+//!                 both valid and invalid UIDs
+//!@SYMTestPriority High
+//!@SYMTestActions  Deletes an array of ICC entries
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync DeleteArrayInvalidUIDTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2077
+
+START_TESTCASE PIM-PHBKSYNC-NA-2078
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2078
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test deleting of an array of ICC entries - all entries in 
+//!                 full phonebook
+//!@SYMTestPriority High
+//!@SYMTestActions  Deletes an array of ICC entries
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync DeleteArrayFullPhonebookTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2078
+
+START_TESTCASE PIM-PHBKSYNC-NA-2079
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2079
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test deleting of all ICC entries one at a time
+//!@SYMTestPriority High
+//!@SYMTestActions  Deletes all ICC entries one at a time
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync DeleteAllEntriesTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2079
+
+START_TESTCASE PIM-PHBKSYNC-NA-2080
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2080
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test deleting of from a given slot, twice
+//!@SYMTestPriority High
+//!@SYMTestActions  Deletes from a given slot, twice
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync DeleteSlotEntryTwiceTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2080
+
+START_TESTCASE PIM-PHBKSYNC-NA-2081
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2081
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test finding of an ICC entry by name - normal case
+//!@SYMTestPriority High
+//!@SYMTestActions  Finds an ICC entry by name
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync FindByNameTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2081
+
+START_TESTCASE PIM-PHBKSYNC-NA-2082
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2082
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test finding of an ICC entry by number - normal case
+//!@SYMTestPriority High
+//!@SYMTestActions  Finds an ICC entry by number
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync FindByNumberTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2082
+
+START_TESTCASE PIM-PHBKSYNC-NA-2083
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2083
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test finding of an ICC entry by name - name does not exist
+//!@SYMTestPriority High
+//!@SYMTestActions  Finds an ICC entry by name - name does not exist
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync FindByNonExistingNameTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2083
+
+START_TESTCASE PIM-PHBKSYNC-NA-2084
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2084
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test finding of an ICC entry by number - number does not 
+//!                 exist
+//!@SYMTestPriority High
+//!@SYMTestActions  Finds an ICC entry by number
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync FindByNonExistingNumberTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2084
+
+START_TESTCASE PIM-PHBKSYNC-NA-2085
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2085
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test finding of an ICC entry by number - asynchronous search
+//!@SYMTestPriority High
+//!@SYMTestActions  Finds an ICC entry by number, performs asynchronous search
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync FindByNumberAsyncSearchTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2085
+
+START_TESTCASE PIM-PHBKSYNC-NA-2086
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2086
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test finding of an ICC entry by name - asynchronous search
+//!@SYMTestPriority High
+//!@SYMTestActions  Finds an ICC entry by name
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync FindByNameAsyncSearchTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2086
+
+START_TESTCASE PIM-PHBKSYNC-NA-2087
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2087
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test finding of an ICC entry by number - asynchronous search
+//!                 for number that does not exist
+//!@SYMTestPriority High
+//!@SYMTestActions  Finds an ICC entry by number; performs asynchronous search 
+//!                 for number that does not exist
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync FindByNonExistNumAsyncSearchTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2087
+
+START_TESTCASE PIM-PHBKSYNC-NA-2088
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2088
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test finding of an ICC entry by name - ICC locked
+//!@SYMTestPriority High
+//!@SYMTestActions  Finds an ICC entry by name - ICC locked
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync FindByNameICCLockedTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2088
+
+START_TESTCASE PIM-PHBKSYNC-NA-2089
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2089
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test finding of an ICC entry by number - ICC locked
+//!@SYMTestPriority High
+//!@SYMTestActions  Finds an ICC entry by number
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync FindByNumberICCLockedTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2089
+
+START_TESTCASE PIM-PHBKSYNC-NA-2090
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2090
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test finding of an ICC entry by number - asynchronous search
+//!                 when ICC is locked
+//!@SYMTestPriority High
+//!@SYMTestActions  Finds an ICC entry by number
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync FindByNumICCLockedAsyncSearchTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2090
+
+START_TESTCASE PIM-PHBKSYNC-NA-2091
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2091
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test finding of an ICC entry by number - international 
+//!                 format
+//!@SYMTestPriority High
+//!@SYMTestActions  Finds an ICC entry by number
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync FindByInternationalPrefixTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2091
+
+START_TESTCASE PIM-PHBKSYNC-NA-2092
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2092
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test finding of an ICC entry by number - asynchronous search
+//!                 of international format
+//!@SYMTestPriority High
+//!@SYMTestActions  Finds an ICC entry by number, performs asynchronous search 
+//!                 of international format
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync FindByInterPrefixAsyncSearchTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2092
+
+START_TESTCASE PIM-PHBKSYNC-NA-2093
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2093
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test creating of two threads which simultaneously attempt to
+//!                 connect to the Phonebook Server
+//!@SYMTestPriority High
+//!@SYMTestActions  Creates two threads which simultaneously attempt to connect 
+//!                 to the Phonebook Server
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync LaunchServerSimultaneouslyTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2093
+
+START_TESTCASE PIM-PHBKSYNC-NA-2094
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2094
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test requesting of two simultaneous synchronisations. Two 
+//!                 threads try to do a Synchronisation at once
+//!@SYMTestPriority High
+//!@SYMTestActions  Requests two simultaneous synchronisations
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync RequestDoSyncSimultaneouslyTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2094
+
+START_TESTCASE PIM-PHBKSYNC-NA-2095
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2095
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test creating of three threads which simultaneously attempt 
+//!                 to request Read from the Phonebook Server
+//!@SYMTestPriority High
+//!@SYMTestActions  Creates of three threads which simultaneously attempt to 
+//!                 request Read from the Phonebook Server
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync RequestReadSimultaneouslyTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2095
+
+START_TESTCASE PIM-PHBKSYNC-NA-2096
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2096
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test creating of three threads which simultaneously attempt 
+//!                 to request Write from the Phonebook Server
+//!@SYMTestPriority High
+//!@SYMTestActions  Creates of three threads which simultaneously attempt to 
+//!                 request Write from the Phonebook Server
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync RequestWriteSimultaneouslyTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2096
+
+START_TESTCASE PIM-PHBKSYNC-NA-2097
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2097
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test creating of three threads which simultaneously attempt 
+//!                 to request Delete from the Phonebook Server
+//!@SYMTestPriority High
+//!@SYMTestActions  Creates three threads which simultaneously attempt to 
+//!                 request Delete from the Phonebook Server
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync RequestDeleteSimultaneouslyTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2097
+
+START_TESTCASE PIM-PHBKSYNC-NA-2098
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2098
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test requesting of a synch and read simultaneously
+//!@SYMTestPriority High
+//!@SYMTestActions  Requests a synch and read simultaneously
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync RequestSyncAndReadSimultaneouslyTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2098
+
+START_TESTCASE PIM-PHBKSYNC-NA-2099
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2099
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test confirming of server thread priority
+//!@SYMTestPriority High
+//!@SYMTestActions  Confirms server thread priority
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync CheckServerThreadPriorityTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2099
+
+START_TESTCASE PIM-PHBKSYNC-NA-2100
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2100
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test server recovery after losing config files
+//!@SYMTestPriority High
+//!@SYMTestActions Recovers server after losing config files
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync ServerLostFileRecoveryTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2100
+
+START_TESTCASE PIM-PHBKSYNC-NA-2101
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2101
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Simulate a backup and restore of the Contacts DB.  This will
+//!                 require the PhBkSync server to unconfigure and close its 
+//!                 connection to the Contacts database
+//!@SYMTestPriority High
+//!@SYMTestActions Backups and restores of the Contacts DB
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync IntegrationBackupTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2101
+
+START_TESTCASE PIM-PHBKSYNC-NA-2102
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2102
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test of synchronisation of normal, unlocked, ICC.  Creates a
+//!                 Contacts View with ICC entries only
+//!@SYMTestPriority High
+//!@SYMTestActions Synchronises normal, unlocked, ICC, and creates a Contacts 
+//!                View with ICC entries only
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync ViewICCSyncTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2102
+
+START_TESTCASE PIM-PHBKSYNC-NA-2103
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2103
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test of synchronisation when ICC is locked.  Creates a 
+//!                 Contacts View of ICC entries only
+//!@SYMTestPriority High
+//!@SYMTestActions Synchronises when ICC is locked, and creates a Contacts View 
+//!                of ICC entries only
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync ViewICCLockedICCTest
+
+END_TESTCASE PIM-PHBKSYNC-NA-2103
+
+START_TESTCASE PIM-PHBKSYNC-NA-2104
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2104
+//!@SYMREQ REQ0000
+//!@SYMTestCaseDesc Test synchronisation of when ICC is locked.  Creates a 
+//!                 Contacts View of Contacts and ICC entries.  This is similar 
+//!                 to the ICC entries only test, but timing and behaviour of 
+//!                 Contacts model is different
+//!@SYMTestPriority High
+//!@SYMTestActions Synchronises of when ICC is locked, and  creates a Contacts 
+//!                View of Contacts and ICC entries
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync ViewICCLockedMixedTest
+END_TESTCASE PIM-PHBKSYNC-NA-2104
+
+START_TESTCASE PIM-PHBKSYNC-NA-2113
+//!@SYMTestCaseID PIM-PHBKSYNC-NA-2113
+//!@SYMDEF INC111036
+//!@SYMTestCaseDesc Test Contact View of a single phonebook (not FDN).
+//!@SYMTestPriority High
+//!@SYMTestActions Synchronises ADN phonebook and creates a view.
+//!@SYMTestExpectedResults Pass, if any APIs fail the step will leave
+//!@SYMTestType CT
+RUN_TEST_STEP 500 TE_CntSync ViewICCSinglePhonebookTest
+END_TESTCASE PIM-PHBKSYNC-NA-2113
+

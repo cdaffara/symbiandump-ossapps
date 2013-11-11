@@ -1,0 +1,178 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+PRINT Run Alarms Test
+
+LOAD_SUITE TestCalInterimApiSuite
+
+// Preliminary steps
+RUN_TEST_STEP	100	TestCalInterimApiSuite	TestCalInterimApiDeleteAlarms
+RUN_TEST_STEP	100	TestCalInterimApiSuite	TestCalInterimApiSetTz		\CITCalInterimApi\TestCalInterimApiAlarm.ini	london
+RUN_TEST_STEP	100	TestCalInterimApiSuite	TestCalInterimApiSetSysTime	\CITCalInterimApi\TestCalInterimApiAlarm.ini	jan011998_12am
+RUN_TEST_STEP	190	TestCalInterimApiSuite	TestCalInterimApiReadData	\CITCalInterimApi\TestCalInterimApiAlarm.ini	addentries
+
+START_TESTCASE PIM-APPENG-CalInterimAPI-Alarms-I-004-HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CalInterimAPI-Alarms-I-004-HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - REQ5770: Calendar Non-functional maintainability, REQ5771: Calendar Non-functional architecture
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Time change tests on entries with and without repeat rule
+//! @SYMTestActions 
+//!1.	Add entries with alarm (fixed and floating), and set repeat rules for some of the entries. Create some entries with (fixed and floating) alarms that start on the DST threshold, of a given time zone. For example, 29 Oct 2006, 1.59 A.M, for London. 
+//!2.	Query for individual instances and check if they have the correct alarm that was added
+
+//!4.	Modify the alarm time of an instance and an entry so that, their alarm time now becomes imminent. Wait and check if the alarms expire in the expected time.
+//!5.	Repeat the system time change and alarm time change tests for a couple of times 
+//!6.	Change the system time such that, a DST update becomes imminent. For example, 29 Oct 2006, 1.59 A.M, for London
+//!7.	Verify the status of the alarms that were on the DST threshold
+//! @SYMTestExpectedResults Setting and expiry of alarms, work correctly. Alarms that become imminent after alarm-time change, system time change, or time-zone change (in case of floating alarms), expire immediately as expected
+
+RUN_TEST_STEP	100	TestCalInterimApiSuite	TestCalInterimApiDeleteAgendaServers
+
+// Modify alarm time and check alarm expiry
+RUN_TEST_STEP	100	TestCalInterimApiSuite	TestCalInterimApiUpdateEntry	\CITCalInterimApi\TestCalInterimApiAlarm.ini	advancealarmtime1
+RUN_TEST_STEP	100	TestCalInterimApiSuite	TestCalInterimApiUpdateEntry	\CITCalInterimApi\TestCalInterimApiAlarm.ini	advancealarmtime2
+
+// Set system time and check alarm expiry (fixed and floating)
+RUN_TEST_STEP	100	TestCalInterimApiSuite	TestCalInterimApiSetSysTime	\CITCalInterimApi\TestCalInterimApiAlarm.ini	nov162003_1159pm
+RUN_TEST_STEP	100	TestCalInterimApiSuite	TestCalInterimApiCheckAlarm	\CITCalInterimApi\TestCalInterimApiAlarm.ini	nov172003_1200am_1
+RUN_TEST_STEP	100	TestCalInterimApiSuite	TestCalInterimApiCheckAlarm	\CITCalInterimApi\TestCalInterimApiAlarm.ini	nov172003_1200am_2
+
+RUN_TEST_STEP	100	TestCalInterimApiSuite	TestCalInterimApiCheckAlarm	\CITCalInterimApi\TestCalInterimApiAlarm.ini	nov172003_1200am_3
+RUN_TEST_STEP	100	TestCalInterimApiSuite	TestCalInterimApiCheckAlarm	\CITCalInterimApi\TestCalInterimApiAlarm.ini	nov172003_1200am_4
+
+
+// Delete all the alarms so far
+RUN_TEST_STEP	100	TestCalInterimApiSuite	TestCalInterimApiDeleteAlarms
+
+// Set system time to DST threshold
+RUN_TEST_STEP	100	TestCalInterimApiSuite	TestCalInterimApiSetSysTime	\CITCalInterimApi\TestCalInterimApiAlarm.ini	mar282004_1259am
+END_TESTCASE PIM-APPENG-CalInterimAPI-Alarms-I-004-HP
+
+
+START_TESTCASE PIM-APPENG-CalInterimAPI-Alarms-I-005-HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CalInterimAPI-Alarms-I-005-HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - REQ5770: Calendar Non-functional maintainability, REQ5771: Calendar Non-functional architecture
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc  Entries with alarms at the same time
+//! @SYMTestActions 
+//!1.	Create a large number of entries with the same alarm-time.
+//!2.	Query for individual instances and check if they have the correct alarm that was added.
+
+//! @SYMTestExpectedResults Setting and expiry of alarms with same alarm time, work correctly. Alarms that become imminent after alarm-time change, system time change, or time-zone change (in case of floating alarms), expire immediately as expected.
+
+// DST threshold alarms, and also alarms at the same time
+RUN_TEST_STEP	100	TestCalInterimApiSuite	TestCalInterimApiCheckAlarm	\CITCalInterimApi\TestCalInterimApiAlarm.ini	mar282004_0200am_1
+RUN_TEST_STEP	100	TestCalInterimApiSuite	TestCalInterimApiCheckAlarm	\CITCalInterimApi\TestCalInterimApiAlarm.ini	mar282004_0200am_2
+RUN_TEST_STEP	100	TestCalInterimApiSuite	TestCalInterimApiCheckAlarm	\CITCalInterimApi\TestCalInterimApiAlarm.ini	mar282004_0200am_3
+RUN_TEST_STEP	100	TestCalInterimApiSuite	TestCalInterimApiCheckAlarm	\CITCalInterimApi\TestCalInterimApiAlarm.ini	mar282004_0200am_4
+RUN_TEST_STEP	100	TestCalInterimApiSuite	TestCalInterimApiCheckAlarm	\CITCalInterimApi\TestCalInterimApiAlarm.ini	mar282004_0200am_5
+
+// Floating entry
+RUN_TEST_STEP	100	TestCalInterimApiSuite	TestCalInterimApiCheckAlarm	\CITCalInterimApi\TestCalInterimApiAlarm.ini	mar282004_0200am_6
+END_TESTCASE PIM-APPENG-CalInterimAPI-Alarms-I-005-HP
+
+
+START_TESTCASE PIM-APPENG-CalInterimAPI-Alarms-I-006-HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CalInterimAPI-Alarms-I-006-HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090	
+//! @SYMFssID REQs - REQ5770: Calendar Non-functional maintainability, REQ5771: Calendar Non-functional architecture
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Entries with/without sound-names and attachments
+//! @SYMTestActions 
+//!1.	Create a large number of entries with the alarms. Create some of the alarms with different types of attachments (url / inline) and some without attachments. Set alarm sound names for some of the alarms.
+//!2.	Query for individual instances and check if they have the correct alarm that was added.
+//!3.	Query for the sound names of the alarms, and verify the result.
+//!4.	Query for the attachments of the alarms and verify the result.
+//! @SYMTestExpectedResults Alarm sound name and attachments are set and retrieved properly.
+
+RUN_TEST_STEP	300	TestCalInterimApiSuite	TestCalInterimApiAlarmProperties	\CITCalInterimApi\TestCalInterimApiAlarm.ini	alarmproperties1
+RUN_TEST_STEP	300	TestCalInterimApiSuite	TestCalInterimApiAlarmProperties	\CITCalInterimApi\TestCalInterimApiAlarm.ini	alarmproperties2
+END_TESTCASE PIM-APPENG-CalInterimAPI-Alarms-I-006-HP
+
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-PREQ1090-SYSTIMECHANGE-0002-HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CALINTERIMAPI-PREQ1090-SYSTIMECHANGE-0002-HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090	
+//! @SYMFssID REQs - REQ5771
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Add entries and advance system time
+//! @SYMTestActions 
+//!1.	Open a Calendar Session.
+//!2.	Add some events, todos, appointments, reminders, anniversaries
+//!3.	Change the System time i.e. advance time by 2 hours
+//! @SYMTestExpectedResults The entries start & end time will not be altered. Any alarm to be notified within this period will be notified.
+
+// System time change tests
+RUN_TEST_STEP	100	TestCalInterimApiSuite	TestCalInterimApiSetSysTime	\CITCalInterimApi\TestCalInterimApiAlarm.ini	timebefore_1
+
+// Will add all entries again, but so what, let it be a kind of a stress test
+RUN_TEST_STEP	190	TestCalInterimApiSuite	TestCalInterimApiReadData		\CITCalInterimApi\TestCalInterimApiAlarm.ini	add_entries_systime_tests
+
+// Decrease the time
+RUN_TEST_STEP	100	TestCalInterimApiSuite	TestCalInterimApiSetSysTime	\CITCalInterimApi\TestCalInterimApiAlarm.ini	decrease_time
+
+// Alarms should notify
+RUN_TEST_STEP	100	TestCalInterimApiSuite	TestCalInterimApiCheckAlarm	\CITCalInterimApi\TestCalInterimApiAlarm.ini	decrease_time1
+RUN_TEST_STEP	100	TestCalInterimApiSuite	TestCalInterimApiCheckAlarm	\CITCalInterimApi\TestCalInterimApiAlarm.ini	decrease_time2
+RUN_TEST_STEP	100	TestCalInterimApiSuite	TestCalInterimApiCheckAlarm	\CITCalInterimApi\TestCalInterimApiAlarm.ini	decrease_time3
+RUN_TEST_STEP	100	TestCalInterimApiSuite	TestCalInterimApiCheckAlarm	\CITCalInterimApi\TestCalInterimApiAlarm.ini	decrease_time4
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-PREQ1090-SYSTIMECHANGE-0002-HP
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-PREQ1090-SYSTIMECHANGE-0001-HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CALINTERIMAPI-PREQ1090-SYSTIMECHANGE-0001-HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090	
+//! @SYMFssID REQs - REQ5771
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Add entries and advance system time
+//! @SYMTestActions 
+//!1.	Open a Calendar Session.
+//!2.	Add some events, todos, appointments, reminders, anniversaries
+//!3.	Change the System time i.e. decrease time by 2 hours
+//! @SYMTestExpectedResults The entries start & end time will not be altered. Any alarm to be notified within this period will be notified.
+
+// Advance time
+RUN_TEST_STEP	100	TestCalInterimApiSuite	TestCalInterimApiSetSysTime	\CITCalInterimApi\TestCalInterimApiAlarm.ini	advance_time
+
+// Alarms should notify
+RUN_TEST_STEP	100	TestCalInterimApiSuite	TestCalInterimApiCheckAlarm	\CITCalInterimApi\TestCalInterimApiAlarm.ini	advance_time1
+RUN_TEST_STEP	100	TestCalInterimApiSuite	TestCalInterimApiCheckAlarm	\CITCalInterimApi\TestCalInterimApiAlarm.ini	advance_time2
+RUN_TEST_STEP	100	TestCalInterimApiSuite	TestCalInterimApiCheckAlarm	\CITCalInterimApi\TestCalInterimApiAlarm.ini	advance_time3
+RUN_TEST_STEP	100	TestCalInterimApiSuite	TestCalInterimApiCheckAlarm	\CITCalInterimApi\TestCalInterimApiAlarm.ini	advance_time4
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-PREQ1090-SYSTIMECHANGE-0001-HP
+
+PREFIX RUN_UTILS 
+MakeReadWrite 	c:\private\10003a5b\citvcal.datIdx
+DeleteFile		c:\private\10003a5b\citvcal.datIdx
+MakeReadWrite 	c:\private\10003a5b\CITVCal.dat
+DeleteFile		c:\private\10003a5b\CITVCal.dat
+REMOVE_PREFIX

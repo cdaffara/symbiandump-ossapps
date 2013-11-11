@@ -1,0 +1,47 @@
+/*
+* Copyright (c) 2002-2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*
+*/
+
+
+#include <ecom/registryinfo.rh>
+
+// Declares info for UPnP implementation
+RESOURCE REGISTRY_INFO theInfo
+	{
+	// UID for the DLL
+	dll_uid = 0x10208A27;
+	// Declare array of interface info
+	interfaces = 
+		{
+		INTERFACE_INFO
+			{
+			// UID of interface that is implemented
+			interface_uid = 0x10208A1E;
+			implementations = 
+				{
+				// Info for UPnP Protocol Module
+				IMPLEMENTATION_INFO
+					{
+					implementation_uid = 0x10208A28;
+					version_no = 1;
+					display_name = "UPnP";
+					default_data = "UPnP";
+					opaque_data = "";
+					}				
+				};
+			}
+		};
+	}

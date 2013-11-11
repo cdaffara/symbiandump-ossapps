@@ -1,0 +1,28 @@
+/*
+* Copyright (c) 2007-2010 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  IBY file for MMS DS adapter binaries
+*
+*/
+
+
+#ifndef __MMSDSA_IBY__
+#define __MMSDSA_IBY__
+
+ECOM_PLUGIN(mmsdataprovider.dll,mmsdataprovider.rsc)
+data=DATAZ_\RESOURCE_FILES_DIR\mmsdatastore.rsc         RESOURCE_FILES_DIR\mmsdatastore.rsc
+data=DATAZ_\private\101F99F6\capability\101fb0e9.xml    private\101F99F6\capability\101fb0e9.xml
+
+data=ZSYSTEM\install\mmsdsa_stub.sis             	    system\install\mmsdsa_stub.sis
+
+#endif //__MMSDSA_IBY__

@@ -1,0 +1,187 @@
+<< * OK Microsoft Exchange 2000 IMAP4rev1 server version 6.0.6249.0 (lon-cn-exchng2k.msexchange2k.closedtest.intra) ready.
+>> 1 CAPABILITY
+<< * CAPABILITY IMAP4 IMAP4rev1 IDLE LOGIN-REFERRALS MAILBOX-REFERRALS NAMESPACE LITERAL+ UIDPLUS CHILDREN AUTH=NTLM
+<< 1 OK CAPABILITY completed.
+>> 2 LOGIN roberth roberth
+<< 2 OK LOGIN completed.
+>> 3 SELECT "INBOX"
+<< * 1 EXISTS
+<< * 0 RECENT
+<< * FLAGS (\Seen \Answered \Flagged \Deleted \Draft $MDNSent)
+<< * OK [PERMANENTFLAGS (\Seen \Answered \Flagged \Deleted \Draft $MDNSent)] Permanent flags
+<< * OK [UNSEEN 1] Is the first unseen message
+<< * OK [UIDVALIDITY 1913] UIDVALIDITY value
+<< 3 OK [READ-WRITE] SELECT completed.
+>> 4 UID FETCH 1:* (UID FLAGS BODYSTRUCTURE BODY.PEEK[HEADER.FIELDS (Received Date Subject From Priority X-Priority X-MSMail-Priority Importance)])
+<< * 1 FETCH (UID 1 FLAGS () BODYSTRUCTURE (("TEXT" "PLAIN" ("charset" "iso-8859-1") NIL NIL "QUOTED-PRINTABLE" 164 3 NIL NIL NIL)("TEXT" "HTML" ("charset" "iso-8859-1") NIL NIL "QUOTED-PRINTABLE" 785 14 NIL NIL NIL) "alternative" ("boundary" "----=_NextPart_000_0009_01C53F6D.916815F0") NIL NIL) BODY[HEADER.FIELDS (Received Date Subject From)] {315}
+<< Received: from RONMARTINP02 (ron-martinp02.ron.uiq.intra [10.80.181.57])
+<<           by ron-jonasp02 with SMTP (Mailtraq/2.1.0.1302) id ___15151358
+<<           for test@ron-jonasp02; Tue, 12 Apr 2005 05:40:28 -0700
+<< Date: Tue, 12 Apr 2005 14:40:27 +0200
+<< Subject: parser-objekt
+<< From: "JonasP" <test@ron-jonasp02>
+<< 
+<< )
+<< 4 OK FETCH completed.
+>> 5 LIST "" "%"
+<< * LIST (\HasNoChildren) "/" Calendar
+<< * LIST (\HasNoChildren) "/" Contacts
+<< * LIST (\HasNoChildren) "/" "Deleted Items"
+<< * LIST (\Marked \HasNoChildren) "/" Drafts
+<< * LIST (\Marked \HasNoChildren) "/" INBOX
+<< * LIST (\HasNoChildren) "/" Journal
+<< * LIST (\HasNoChildren) "/" Notes
+<< * LIST (\HasNoChildren) "/" Outbox
+<< * LIST (\Marked \HasNoChildren) "/" "Sent Items"
+<< * LIST (\HasNoChildren) "/" Tasks
+<< * LIST (\Noselect) "/" "Public Folders/"
+<< 5 OK LIST completed.
+>> 6 LIST "" "Calendar/%"
+<< 6 OK LIST completed.
+>> 7 LIST "" "Contacts/%"
+<< 7 OK LIST completed.
+>> 8 LIST "" "Deleted Items/%"
+<< 8 OK LIST completed.
+>> 9 LIST "" "Drafts/%"
+<< 9 OK LIST completed.
+>> 10 LIST "" "INBOX/%"
+<< 10 OK LIST completed.
+>> 11 LIST "" "Journal/%"
+<< 11 OK LIST completed.
+>> 12 LIST "" "Notes/%"
+<< 12 OK LIST completed.
+>> 13 LIST "" "Outbox/%"
+<< 13 OK LIST completed.
+>> 14 LIST "" "Sent Items/%"
+<< 14 OK LIST completed.
+>> 15 LIST "" "Tasks/%"
+<< 15 OK LIST completed.
+>> 16 LIST "" "Public Folders//%"
+<< 16 NO This a special mailbox and can not be selected or used as the destination for mailbox operations.
+>> 17 IDLE
+<< + IDLE accepted, awaiting DONE command.
+>> DONE
+<< * 2 EXISTS
+<< * 1 RECENT
+<< 17 OK IDLE completed.
+>> 18 UID FETCH 1:1 (UID FLAGS)
+<< * 1 FETCH (FLAGS (\Seen) UID 1)
+<< 18 OK Completed
+>> 19 UID FETCH 2:* (UID FLAGS BODYSTRUCTURE BODY.PEEK[HEADER.FIELDS (Received Date Subject From Priority X-Priority X-MSMail-Priority Importance)])
+<< * 2 FETCH (UID 2 FLAGS () BODYSTRUCTURE (("TEXT" "PLAIN" ("charset" "iso-8859-1") NIL NIL "QUOTED-PRINTABLE" 164 3 NIL NIL NIL)("TEXT" "HTML" ("charset" "iso-8859-1") NIL NIL "QUOTED-PRINTABLE" 785 14 NIL NIL NIL) "alternative" ("boundary" "----=_NextPart_000_0009_01C53F6D.916815F0") NIL NIL) BODY[HEADER.FIELDS (Received Date Subject From)] {315}
+<< Received: from RONMARTINP02 (ron-martinp02.ron.uiq.intra [10.80.181.57])
+<<           by ron-jonasp02 with SMTP (Mailtraq/2.1.0.1302) id ___15151358
+<<           for test@ron-jonasp02; Tue, 12 Apr 2005 05:40:28 -0700
+<< Date: Tue, 12 Apr 2005 14:40:27 +0200
+<< Subject: parser-objekt
+<< From: "JonasP" <test@ron-jonasp02>
+<< 
+<< )
+<< 19 OK Completed
+>> 20 UID FETCH 1:2 (UID FLAGS)
+<< * 1 FETCH (FLAGS (\Seen) UID 1)
+<< * 2 FETCH (FLAGS (\Seen) UID 2)
+<< 20 OK Completed
+>> 21 LIST "" "%"
+<< * LIST (\HasNoChildren) "/" Calendar
+<< * LIST (\HasNoChildren) "/" Contacts
+<< * LIST (\HasNoChildren) "/" "Deleted Items"
+<< * LIST (\Marked \HasNoChildren) "/" Drafts
+<< * LIST (\Marked \HasNoChildren) "/" INBOX
+<< * LIST (\HasNoChildren) "/" Journal
+<< * LIST (\HasNoChildren) "/" Notes
+<< * LIST (\HasNoChildren) "/" Outbox
+<< * LIST (\Marked \HasNoChildren) "/" "Sent Items"
+<< * LIST (\HasNoChildren) "/" Tasks
+<< * LIST (\Noselect) "/" "Public Folders/"
+<< 21 OK LIST completed.
+>> 22 LIST "" "Calendar/%"
+<< 22 OK LIST completed.
+>> 23 LIST "" "Contacts/%"
+<< 23 OK LIST completed.
+>> 24 LIST "" "Deleted Items/%"
+<< 24 OK LIST completed.
+>> 25 LIST "" "Drafts/%"
+<< 25 OK LIST completed.
+>> 26 LIST "" "INBOX/%"
+<< 26 OK LIST completed.
+>> 27 LIST "" "Journal/%"
+<< 27 OK LIST completed.
+>> 28 LIST "" "Notes/%"
+<< 28 OK LIST completed.
+>> 29 LIST "" "Outbox/%"
+<< 29 OK LIST completed.
+>> 30 LIST "" "Sent Items/%"
+<< 30 OK LIST completed.
+>> 31 LIST "" "Tasks/%"
+<< 31 OK LIST completed.
+>> 32 LIST "" "Public Folders//%"
+<< 32 NO This a special mailbox and can not be selected or used as the destination for mailbox operations.
+>> 33 IDLE
+<< + IDLE accepted, awaiting DONE command.
+>> DONE
+<< * 3 EXISTS
+<< * 1 RECENT
+<< 33 OK IDLE completed.
+>> 34 UID FETCH 1:2 (UID FLAGS)
+<< * 1 FETCH (FLAGS (\Seen) UID 1)
+<< * 2 FETCH (FLAGS (\Seen) UID 2)
+<< 34 OK Completed
+>> 35 UID FETCH 3:* (UID FLAGS BODYSTRUCTURE BODY.PEEK[HEADER.FIELDS (Received Date Subject From Priority X-Priority X-MSMail-Priority Importance)])
+<< * 3 FETCH (UID 3 FLAGS () BODYSTRUCTURE (("TEXT" "PLAIN" ("charset" "iso-8859-1") NIL NIL "QUOTED-PRINTABLE" 164 3 NIL NIL NIL)("TEXT" "HTML" ("charset" "iso-8859-1") NIL NIL "QUOTED-PRINTABLE" 785 14 NIL NIL NIL) "alternative" ("boundary" "----=_NextPart_000_0009_01C53F6D.916815F0") NIL NIL) BODY[HEADER.FIELDS (Received Date Subject From)] {315}
+<< Received: from RONMARTINP02 (ron-martinp02.ron.uiq.intra [10.80.181.57])
+<<           by ron-jonasp02 with SMTP (Mailtraq/2.1.0.1302) id ___15151358
+<<           for test@ron-jonasp02; Tue, 12 Apr 2005 05:40:28 -0700
+<< Date: Tue, 12 Apr 2005 14:40:27 +0200
+<< Subject: parser-objekt
+<< From: "JonasP" <test@ron-jonasp02>
+<< 
+<< )
+<< 35 OK Completed
+>> 36 UID FETCH 1:3 (UID FLAGS)
+<< * 1 FETCH (FLAGS (\Seen) UID 1)
+<< * 2 FETCH (FLAGS (\Seen) UID 2)
+<< * 3 FETCH (FLAGS (\Seen) UID 3)
+<< 36 OK Completed
+>> 37 LIST "" "%"
+<< * LIST (\HasNoChildren) "/" Calendar
+<< * LIST (\HasNoChildren) "/" Contacts
+<< * LIST (\HasNoChildren) "/" "Deleted Items"
+<< * LIST (\Marked \HasNoChildren) "/" Drafts
+<< * LIST (\Marked \HasNoChildren) "/" INBOX
+<< * LIST (\HasNoChildren) "/" Journal
+<< * LIST (\HasNoChildren) "/" Notes
+<< * LIST (\HasNoChildren) "/" Outbox
+<< * LIST (\Marked \HasNoChildren) "/" "Sent Items"
+<< * LIST (\HasNoChildren) "/" Tasks
+<< * LIST (\Noselect) "/" "Public Folders/"
+<< 37 OK LIST completed.
+>> 38 LIST "" "Calendar/%"
+<< 38 OK LIST completed.
+>> 39 LIST "" "Contacts/%"
+<< 39 OK LIST completed.
+>> 40 LIST "" "Deleted Items/%"
+<< 40 OK LIST completed.
+>> 41 LIST "" "Drafts/%"
+<< 41 OK LIST completed.
+>> 42 LIST "" "INBOX/%"
+<< 42 OK LIST completed.
+>> 43 LIST "" "Journal/%"
+<< 43 OK LIST completed.
+>> 44 LIST "" "Notes/%"
+<< 44 OK LIST completed.
+>> 45 LIST "" "Outbox/%"
+<< 45 OK LIST completed.
+>> 46 LIST "" "Sent Items/%"
+<< 46 OK LIST completed.
+>> 47 LIST "" "Tasks/%"
+<< 47 OK LIST completed.
+>> 48 LIST "" "Public Folders//%"
+<< 48 NO This a special mailbox and can not be selected or used as the destination for mailbox operations.
+>> 49 IDLE
+<< + IDLE accepted, awaiting DONE command.
+>> DONE
+<< 49 OK IDLE completed.
+>> 50 LOGOUT
+<< * BYE Microsoft Exchange 2000 IMAP4rev1 server version 6.0.6249.0 signing off.
+<< 50 OK LOGOUT completed.

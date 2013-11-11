@@ -1,0 +1,35 @@
+;
+; Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:
+;
+
+; Language
+&EN
+
+; SIS header: name, uid, version
+#{"t_hshomescreenclientplugin"},(0x20022F73),1,0,0
+
+; Localised Vendor name
+%{"Nokia"}
+
+; Unique Vendor name
+:"Nokia"
+
+; Supports S60 5th Edition
+[0x1028315F], 0, 0, 0, {"S60ProductID"}
+
+; HS Content Publish Plugin tests
+"/epoc32/release/armv5/urel/t_hshomescreenclientplugin.exe"                       - "c:/sys/bin/t_hshomescreenclientplugin.exe"
+"/epoc32/data/z/private/10003a3f/import/apps/t_hshomescreenclientplugin_reg.rsc"  - "c:/private/10003a3f/import/apps/t_hshomescreenclientplugin_reg.rsc"
+"/epoc32/data/z/resource/apps/t_hshomescreenclientplugin.rsc"                     - "c:/resource/apps/t_hshomescreenclientplugin.rsc"

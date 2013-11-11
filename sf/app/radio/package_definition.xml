@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SystemDefinition schema="3.0.0" xmlns:qt="http://www.nokia.com/qt">
+  <package id="radio" name="Radio Apps" levels="engine plugin ui">
+    <collection id="radioengine" name="Radio Engine" level="engine">
+      <component id="radioengineutils" filter="s60" name="Radio Engine Utils" introduced="^4">
+        <unit bldFile="radioengine/utils/group"/>
+      </component>
+      <component id="radioenginesettings" filter="s60" name="Radio Engine Settings" introduced="^4">
+        <unit bldFile="radioengine/settings/group"/>
+      </component>
+      <component id="radioengine_engine" filter="s60" name="Radio Engine" introduced="^4">
+        <unit bldFile="radioengine/engine/group"/>
+      </component>
+    </collection>
+    <collection id="radioapp" name="Radio App" level="ui">
+      <component id="radioenginewrapper" filter="s60" name="Radio Engine Wrapper" introduced="^4">
+        <unit bldFile="radioapp/radioenginewrapper" qt:proFile="radioenginewrapper.pro"/>
+      </component>
+      <component id="radiopresetstorage" filter="s60" name="Radio Preset Storage" introduced="^4">
+        <unit bldFile="radioapp/radiopresetstorage" qt:proFile="radiopresetstorage.pro"/>
+      </component>
+      <component id="radiouiengine" filter="s60" name="Radio UI Engine" introduced="^4">
+        <unit bldFile="radioapp/radiouiengine" qt:proFile="radiouiengine.pro"/>
+      </component>
+      <component id="radiowidgets" filter="s60" name="Radio Widgets" introduced="^4">
+        <unit bldFile="radioapp/radiowidgets" qt:proFile="radiowidgets.pro"/>
+      </component>
+      <component id="radioapplication" filter="s60" name="Radio Application" introduced="^4">
+        <unit bldFile="radioapp/radioapplication" qt:proFile="radioapplication.pro"/>
+      </component>
+      <component id="radio_rom" filter="s60" name="Radio ROM" introduced="^4">
+        <unit bldFile="rom"/>
+      </component>
+      <component id="radiowidgetsplugin" filter="s60" name="Radio Widgets Plugin" introduced="^4" class="plugin">
+        <unit bldFile="radioapp/radiowidgetsplugin" qt:proFile="radiowidgetsplugin.pro"/>
+      </component>      
+    </collection>
+    <collection id="radiohswidget" name="Radio Homescreen Widget" level="plugin">
+		<!-- collection is really a component. Move down a directory -->
+      <component id="radiohswidget_build" filter="s60" name="Radio HS Widget Build" introduced="^4">
+        <unit bldFile="radiohswidget" qt:proFile="radiohswidget.pro"/>
+      </component>
+    </collection>
+    <collection id="radiopresetstorage_tsrc" name="vado.radiopresetstorage_qt.tsrc" level="engine">
+      <component id="radiopresetstorage_qt_tsrc" filter="s60,test,qt_unit_test" name="radiopresetstorage_qt.tsrc" introduced="^4">
+        <meta rel="testbuild">
+         <group name="vado.101_radiopresetstorage_tsrc"/>
+       </meta>
+        <unit bldFile="radioapp/radiopresetstorage/tsrc" qt:proFile="t_radiopresetstorage.pro"/>
+      </component>
+    </collection>
+    <collection id="radiouiengine_tsrc" name="vado.radiouiengine_qt.tsrc" level="engine">
+      <component id="radiouiengine_qt_tsrc" filter="s60,test,qt_unit_test" name="radiouiengine_qt.tsrc" introduced="^4">
+        <meta rel="testbuild">
+         <group name="vado.101_radiouiengine_tsrc"/>
+       </meta>      
+        <unit bldFile="radioapp/radiouiengine/tsrc" qt:proFile="t_radiouiengine.pro"/>
+      </component>
+    </collection>
+    
+    
+  </package>
+</SystemDefinition>

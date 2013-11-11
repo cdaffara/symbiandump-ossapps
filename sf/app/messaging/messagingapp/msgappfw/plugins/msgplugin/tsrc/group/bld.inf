@@ -1,0 +1,36 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  ?Description
+*
+*/
+
+#define BLD_INF_GROUP_0496D339
+
+
+prj_platforms
+
+WINSCW GCCE ARMV5 ARMV6
+
+prj_testmmpfiles
+
+test_plugin.mmp
+
+prj_extensions
+
+
+#if defined(WINSCW)
+#else
+#endif
+
+

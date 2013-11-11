@@ -1,0 +1,84 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Podcast db plugin project specification
+*
+*/
+
+
+#include <bldvariant.hrh>
+#include <data_caging_paths.hrh>
+#include <platform_paths.hrh>
+
+TARGET          mpxsqlitepodcastdbplugin.dll
+TARGETTYPE      PLUGIN
+UID             0x10009D8D 0x101FFC3F
+
+VENDORID        VID_DEFAULT
+CAPABILITY      CAP_ECOM_PLUGIN
+
+VERSION 15.0
+
+MACRO __ENABLE_PODCAST_IN_MUSIC_MENU
+#define __ENABLE_PODCAST_IN_MUSIC_MENU
+
+SOURCEPATH      ../src
+SOURCE          mpxpodcastdbpluginproxy.cpp
+SOURCE          mpxpodcastdbplugin.cpp
+SOURCE          mpxpodcastdbhandler.cpp
+SOURCE          mpxdbutil.cpp
+
+SOURCE          mpxpodcastdbmanager.cpp
+SOURCE          mpxdbpodcast.cpp
+SOURCE          mpxdbcategory.cpp
+SOURCE          mpxdbauxiliary.cpp
+
+SOURCEPATH      ../data
+START RESOURCE  101FFC3F.RSS
+TARGET          mpxsqlitepodcastdbplugin.rsc
+END
+
+START RESOURCE  PCRes.rss
+HEADER
+TARGETPATH      APP_RESOURCE_DIR
+LANGUAGE_IDS 
+END
+
+USERINCLUDE     ../inc
+USERINCLUDE     ../../inc
+
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE   /epoc32/include/ecom
+SYSTEMINCLUDE   /epoc32/include/mmf/common
+
+LIBRARY         euser.lib
+LIBRARY         ecom.lib
+LIBRARY         efsrv.lib
+LIBRARY         estor.lib
+LIBRARY         sqldb.lib
+LIBRARY         bafl.lib
+LIBRARY         apmime.lib
+LIBRARY         sysutil.lib
+#ifdef __MTP_PROTOCOL_SUPPORT
+LIBRARY         centralrepository.lib
+#endif
+#ifdef RD_MULTIPLE_DRIVE
+LIBRARY         PlatformEnv.lib
+#endif //RD_MULTIPLE_DRIVE
+
+LIBRARY         mpxsqlitedbcommon.lib
+LIBRARY         mpxcommon.lib
+
+SMPSAFE
+
+// End of File

@@ -1,0 +1,38 @@
+// Copyright (c) 2001-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+target      vticket.dll
+targettype  DLL
+CAPABILITY   All -TCB
+UID	    0x1000008D 0x101F4FC7
+VENDORID 0x70000001
+
+SOURCEPATH	../Ticket
+
+userinclude     ../inc
+APP_LAYER_SYSTEMINCLUDE
+systeminclude   /epoc32/include
+
+source      	VTicketMaster.CPP
+ 
+library		versit.lib  euser.lib  estor.lib  bafl.lib
+
+deffile		VTicket.DEF
+
+START WINS
+BASEADDRESS     0x80020000
+END
+
+SMPSAFE

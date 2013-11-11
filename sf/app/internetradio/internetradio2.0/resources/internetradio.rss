@@ -1,0 +1,2702 @@
+/*
+* Copyright (c) 2006-2008 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*
+*/
+
+NAME IRAP
+
+#include <eikon.rh>
+#include <eikon.rsg>
+#include <avkon.hrh>
+#include <avkon.rh>
+#include <avkon.rsg>
+#include <appinfo.rh>
+#include <e32keys.h>
+#include <avkon.mbg>        // Icon in save query
+#include <avkonicons.hrh>
+#include <aknsconstants.hrh>
+#include <data_caging_paths_strings.hrh>
+#include <bldvariant.hrh>
+
+
+#include "internetradio.rh"
+#include "ir.hrh"
+#include "internetradio.loc"
+#include "internetradioterms.loc"
+#include <internetradio.mbg>
+
+
+// AVKON status pane heights in portrait and landscape. 
+// Used when calculating layout positions on now playing view. LAF values
+// are defined by using the screen area. To set the layouts on the right
+// places, AVKON status pane height must be subtracted from the top/left
+// y -coordinate. 
+// In code side layout positions are defined relative to the parent layout.
+#define KIRStatusPaneHeightPortrait 47 
+#define KIRStatusPaneHeightLandscape 61 
+// Bitmap file path
+#define KInternetRadioBitmapFile APP_RESOURCE_DIR"\\InternetRadio.mif"
+#define KIntertRadioAifMifFile APP_RESOURCE_DIR"\\InternetRadio_aif.mif"
+
+// ---------------------------------------------------------
+//	
+//    Define the resource file signature 
+//    This resource should be empty.
+//
+// ---------------------------------------------------------
+//
+RESOURCE RSS_SIGNATURE { }
+
+// ---------------------------------------------------------
+//   
+//    Default Document Name
+//
+// ---------------------------------------------------------
+//
+RESOURCE TBUF r_default_document_name { buf=""; }
+
+// ---------------------------------------------------------
+//   
+//    Define default menu and CBA key.
+//
+// ---------------------------------------------------------
+//
+RESOURCE EIK_APP_INFO
+    {
+    menubar = r_main_menubar;
+    cba = r_irapp_softkeys_options_back_cba;        
+    }
+    
+ RESOURCE LOCALISABLE_APP_INFO r_internetradio_localisable_app_info
+	{
+	short_caption = qtn_ir_apps_grid;
+	caption_and_icon = 
+	CAPTION_AND_ICON_INFO
+		{
+		caption = qtn_ir_apps_list;
+		number_of_icons = 1;
+		icon_file = KIntertRadioAifMifFile;
+		};
+	}
+    
+    
+//------------------------------------------
+//    Resource definition for pls view
+//----------------------------------------------------
+RESOURCE AVKON_VIEW r_ir_plsview
+    {
+    menubar = r_ir_menubar_pls;
+    cba = r_irapp_softkeys_options_back_cba;  
+    toolbar =r_now_plslist_white_toolbar;
+    toolbar =r_now_plslist_black_toolbar;   
+    }
+//---------------------------------------------------
+//   Resource definition for Settings View
+//---------------------------------------------------
+RESOURCE AVKON_VIEW r_ir_settingsview
+    {
+    menubar = r_ir_menubar_settings;
+    cba = r_irapp_softkeys_options_back_cba;    
+    }
+
+//----------------------------------------------------
+//    Resource definition for Terms and conditions view
+//----------------------------------------------------
+//
+RESOURCE AVKON_VIEW r_ir_tandcview
+    {
+    cba = r_ir_cba_continue_exit; 
+    cba = r_ir_cba_accept_decline;   
+    }
+    
+RESOURCE TBUF r_ir_now_tooltip_next
+    {
+    buf = qtn_ir_now_tooltip_next;
+    }
+
+RESOURCE TBUF r_ir_now_tooltip_play
+    {
+    buf = qtn_ir_now_tooltip_play;
+    }
+RESOURCE TBUF r_ir_now_tooltip_previous
+    {
+    buf = qtn_ir_now_tooltip_previous;
+    }
+RESOURCE TBUF r_ir_now_tooltip_stop
+    {
+    buf = qtn_ir_now_tooltip_stop;
+    }
+    
+RESOURCE TBUF r_ir_now_artist_song
+    {
+    buf = qtn_ir_now_artist_song;
+    }
+    
+RESOURCE TBUF r_ir_history_artist_song
+    {
+    buf = qtn_ir_history_artist_song;
+    }
+    
+RESOURCE AVKON_TOOLBAR r_now_nameslist_toolbar
+	{
+	flags = KAknToolbarFixed; 
+	items =
+	    {
+	    // Toolbar is currently created dynamically
+	    };
+	}
+    
+//---------------------------------------------------------------
+//    Resource definition for toolbar of pls view for dark theme.
+//----------------------------------------------------------------
+//
+RESOURCE AVKON_TOOLBAR r_now_plslist_white_toolbar 
+	{
+	flags = KAknToolbarTransparent |  KAknToolbarFixed;
+	items =
+		{
+		TBAR_CTRL
+			{
+			type = EAknCtButton;
+			id = ESaveCmd;
+			control = AVKON_BUTTON
+				{
+				states =
+					{
+					AVKON_BUTTON_STATE
+						{
+						bmpfile = KInternetRadioBitmapFile;
+						bmpid = EMbmInternetradioQgn_indi_irradio_tb_addtofav_white;
+						bmpmask = EMbmInternetradioQgn_indi_irradio_tb_addtofav_white_mask;
+						helptxt = qtn_ir_tooltip_addtofav;
+						}  
+					};            
+				};
+			},
+		TBAR_CTRL
+			{
+			type = EAknCtButton;
+			id = EListenCmd;
+			control = AVKON_BUTTON
+				{
+				states =
+					{
+					AVKON_BUTTON_STATE
+						{
+						bmpfile = KInternetRadioBitmapFile;
+						bmpid = EMbmInternetradioQgn_indi_fmradio_tb_listen_white;
+						bmpmask = EMbmInternetradioQgn_indi_fmradio_tb_listen_white_mask;
+						helptxt = qtn_ir_tooltip_listen;
+						}  
+					};            
+				};
+			},
+		TBAR_CTRL
+			{
+			type = EAknCtButton;
+			id = ESaveAllCmd;
+			control = AVKON_BUTTON
+				{
+				states =
+					{
+					AVKON_BUTTON_STATE
+						{
+						bmpfile = KInternetRadioBitmapFile;
+						bmpid = EMbmInternetradioQgn_indi_irradio_tb_saveall_white;
+						bmpmask = EMbmInternetradioQgn_indi_irradio_tb_saveall_white_mask;
+						helptxt = qtn_ir_tooltip_addalltofav;
+						}  
+					};            
+				};
+			}
+		};
+	}
+//---------------------------------------------------------------
+//    Resource definition for toolbar of pls view for light theme.
+//----------------------------------------------------------------
+//
+RESOURCE AVKON_TOOLBAR r_now_plslist_black_toolbar 
+    {
+    flags = KAknToolbarTransparent |  KAknToolbarFixed;
+    items =
+        {
+        TBAR_CTRL
+            {
+            type = EAknCtButton;
+            id = ESaveCmd;
+            control = AVKON_BUTTON
+                {
+                states =
+                    {
+                    AVKON_BUTTON_STATE
+                        {
+                        bmpfile = KInternetRadioBitmapFile;
+                        bmpid = EMbmInternetradioQgn_indi_irradio_tb_addtofav;
+                        bmpmask = EMbmInternetradioQgn_indi_irradio_tb_addtofav_mask;
+                        helptxt = qtn_ir_tooltip_addtofav;
+                        }  
+                    };            
+                };
+            },
+        TBAR_CTRL
+            {
+            type = EAknCtButton;
+            id = EListenCmd;
+            control = AVKON_BUTTON
+                {
+                states =
+                    {
+                    AVKON_BUTTON_STATE
+                        {
+                        bmpfile = KInternetRadioBitmapFile;
+                        bmpid = EMbmInternetradioQgn_indi_fmradio_tb_listen;
+                        bmpmask = EMbmInternetradioQgn_indi_fmradio_tb_listen_mask;
+                        helptxt = qtn_ir_tooltip_listen;
+                        }  
+                    };            
+                };
+            },
+        TBAR_CTRL
+            {
+            type = EAknCtButton;
+            id = ESaveAllCmd;
+            control = AVKON_BUTTON
+                {
+                states =
+                    {
+                    AVKON_BUTTON_STATE
+                        {
+                        bmpfile = KInternetRadioBitmapFile;
+                        bmpid = EMbmInternetradioQgn_indi_irradio_tb_saveall;
+                        bmpmask = EMbmInternetradioQgn_indi_irradio_tb_saveall_mask;
+                        helptxt = qtn_ir_tooltip_addalltofav;
+                        }  
+                    };            
+                };
+            }
+        };
+    }
+ 
+//---------------------------------------------------------------
+//    Resource definition for toolbar of history view for light theme.
+//----------------------------------------------------------------
+//
+RESOURCE AVKON_TOOLBAR r_ir_history_black_toolbar 
+    {
+    flags = KAknToolbarTransparent |  KAknToolbarFixed;
+    items =
+        {
+        TBAR_CTRL
+            {
+            type = EAknCtButton;
+            id = EFindInShop;
+            control = AVKON_BUTTON
+                {
+                states =
+                    {
+                    AVKON_BUTTON_STATE
+                        {
+                        bmpfile = KInternetRadioBitmapFile;
+                        bmpid = EMbmInternetradioQgn_indi_irradio_tb_findnshop;
+                        bmpmask = EMbmInternetradioQgn_indi_irradio_tb_findnshop_mask;
+                        helptxt = qtn_ir_tooltip_findnstore;
+                        }  
+                    };            
+                };
+            },
+        TBAR_CTRL
+            {
+            type = EAknCtButton;
+            id = EListenCmd;
+            control = AVKON_BUTTON
+                {
+                states =
+                    {
+                    AVKON_BUTTON_STATE
+                        {
+                        bmpfile = KInternetRadioBitmapFile;
+                        bmpid = EMbmInternetradioQgn_indi_fmradio_tb_listen;
+                        bmpmask = EMbmInternetradioQgn_indi_fmradio_tb_listen_mask;
+                        helptxt = qtn_ir_tooltip_listen;
+                        }  
+                    };            
+                };
+            },
+        TBAR_CTRL
+            {
+            type = EAknCtButton;
+            id = EAddStationManuallyCmd;
+            control = AVKON_BUTTON
+                {
+                states =
+                    {
+                    AVKON_BUTTON_STATE
+                        {
+                        bmpfile = KInternetRadioBitmapFile;
+                        bmpid = EMbmInternetradioQgn_indi_irradio_tb_addstation;
+                        bmpmask = EMbmInternetradioQgn_indi_irradio_tb_addstation_mask;
+                        helptxt = qtn_ir_tooltip_addstation;
+                        }  
+                    };            
+                };
+            }
+        };
+    }
+//---------------------------------------------------------------
+//    Resource definition for toolbar of history view for dark theme.
+//----------------------------------------------------------------
+//
+RESOURCE AVKON_TOOLBAR r_ir_history_white_toolbar 
+    {
+    flags = KAknToolbarTransparent |  KAknToolbarFixed;
+    items =
+        {
+        TBAR_CTRL
+            {
+            type = EAknCtButton;
+            id = EFindInShop;
+            control = AVKON_BUTTON
+                {
+                states =
+                    {
+                    AVKON_BUTTON_STATE
+                        {
+                        bmpfile = KInternetRadioBitmapFile;
+                        bmpid = EMbmInternetradioQgn_indi_irradio_tb_findnshop_white;
+                        bmpmask = EMbmInternetradioQgn_indi_irradio_tb_addtofav_white_mask;
+                        helptxt = qtn_ir_tooltip_findnstore;
+                        }  
+                    };            
+                };
+            },
+        TBAR_CTRL
+            {
+            type = EAknCtButton;
+            id = EListenCmd;
+            control = AVKON_BUTTON
+                {
+                states =
+                    {
+                    AVKON_BUTTON_STATE
+                        {
+                        bmpfile = KInternetRadioBitmapFile;
+                        bmpid = EMbmInternetradioQgn_indi_fmradio_tb_listen_white;
+                        bmpmask = EMbmInternetradioQgn_indi_fmradio_tb_listen_white_mask;
+                        helptxt = qtn_ir_tooltip_listen;
+                        }  
+                    };            
+                };
+            },
+        TBAR_CTRL
+            {
+            type = EAknCtButton;
+            id = EAddStationManuallyCmd;
+            control = AVKON_BUTTON
+                {
+                states =
+                    {
+                    AVKON_BUTTON_STATE
+                        {
+                        bmpfile = KInternetRadioBitmapFile;
+                        bmpid = EMbmInternetradioQgn_indi_irradio_tb_addstation_white;
+                        bmpmask = EMbmInternetradioQgn_indi_irradio_tb_addstation_white_mask;
+                        helptxt = qtn_ir_tooltip_addstation;
+                        }  
+                    };            
+                };
+            }
+        };
+    }
+//---------------------------------------------------------------
+//    Resource definition for toolbar of searchresults view for dark theme.
+//----------------------------------------------------------------
+//
+RESOURCE AVKON_TOOLBAR r_ir_searchresults_white_toolbar 
+	{
+	flags = KAknToolbarTransparent |  KAknToolbarFixed;
+	items =
+		{
+		TBAR_CTRL
+			{
+			type = EAknCtButton;
+			id = EAddtoFavouritesCmd;
+			control = AVKON_BUTTON
+				{
+				states =
+					{
+					AVKON_BUTTON_STATE
+						{
+						bmpfile = KInternetRadioBitmapFile;
+						bmpid = EMbmInternetradioQgn_indi_irradio_tb_addtofav_white;
+						bmpmask = EMbmInternetradioQgn_indi_irradio_tb_addtofav_white_mask;
+						helptxt = qtn_ir_tooltip_addtofav;
+						}  
+					};            
+				};
+			},
+		TBAR_CTRL
+			{
+			type = EAknCtButton;
+			id = EListenCmd;
+			control = AVKON_BUTTON
+				{
+				states =
+					{
+					AVKON_BUTTON_STATE
+						{
+						bmpfile = KInternetRadioBitmapFile;
+						bmpid = EMbmInternetradioQgn_indi_fmradio_tb_listen_white;
+						bmpmask = EMbmInternetradioQgn_indi_fmradio_tb_listen_white_mask;
+						helptxt = qtn_ir_tooltip_listen;
+						}  
+					};            
+				};
+			},
+		TBAR_CTRL
+			{
+			type = EAknCtButton;
+			id = EAddStationManuallyCmd;
+			control = AVKON_BUTTON
+				{
+				states =
+					{
+					AVKON_BUTTON_STATE
+						{
+						bmpfile = KInternetRadioBitmapFile;
+						bmpid = EMbmInternetradioQgn_indi_irradio_tb_addstation_white;
+						bmpmask = EMbmInternetradioQgn_indi_irradio_tb_addstation_white_mask;
+						helptxt = qtn_ir_tooltip_addstation;
+						}  
+					};            
+				};
+			}
+		};
+	}
+//---------------------------------------------------------------
+//    Resource definition for toolbar of searchresults view for light theme.
+//----------------------------------------------------------------
+//
+RESOURCE AVKON_TOOLBAR r_ir_searchresults_black_toolbar 
+	{
+	flags = KAknToolbarTransparent |  KAknToolbarFixed;
+	items =
+		{
+		TBAR_CTRL
+			{
+			type = EAknCtButton;
+			id = EAddtoFavouritesCmd;
+			control = AVKON_BUTTON
+				{
+				states =
+					{
+					AVKON_BUTTON_STATE
+						{
+						bmpfile = KInternetRadioBitmapFile;
+						bmpid = EMbmInternetradioQgn_indi_irradio_tb_addtofav;
+						bmpmask = EMbmInternetradioQgn_indi_irradio_tb_addtofav_mask;
+						helptxt = qtn_ir_tooltip_addtofav;
+						}  
+					};            
+				};
+			},
+		TBAR_CTRL
+			{
+			type = EAknCtButton;
+			id = EListenCmd;
+			control = AVKON_BUTTON
+				{
+				states =
+					{
+					AVKON_BUTTON_STATE
+						{
+						bmpfile = KInternetRadioBitmapFile;
+						bmpid = EMbmInternetradioQgn_indi_fmradio_tb_listen;
+						bmpmask = EMbmInternetradioQgn_indi_fmradio_tb_listen_mask;
+						helptxt = qtn_ir_tooltip_listen;
+						}  
+					};            
+				};
+			},
+		TBAR_CTRL
+			{
+			type = EAknCtButton;
+			id = EAddStationManuallyCmd;
+			control = AVKON_BUTTON
+				{
+				states =
+					{
+					AVKON_BUTTON_STATE
+						{
+						bmpfile = KInternetRadioBitmapFile;
+						bmpid = EMbmInternetradioQgn_indi_irradio_tb_addstation;
+						bmpmask = EMbmInternetradioQgn_indi_irradio_tb_addstation_mask;
+						helptxt = qtn_ir_tooltip_addstation;
+						}  
+					};            
+				};
+			}
+		};
+	}
+//---------------------------------------------------------------
+//    Resource definition for toolbar of mainview for dark theme.
+//----------------------------------------------------------------
+//
+RESOURCE AVKON_TOOLBAR r_ir_mainview_white_toolbar 
+	{
+	flags = KAknToolbarTransparent |  KAknToolbarFixed;
+	items =
+		{
+		TBAR_CTRL
+			{
+			type = EAknCtButton;
+			id = EFindStationsCmd;
+			control = AVKON_BUTTON
+				{
+				states =
+					{
+					AVKON_BUTTON_STATE
+						{
+						bmpfile = KInternetRadioBitmapFile;
+						bmpid = EMbmInternetradioQgn_indi_tb_find_white;
+						bmpmask = EMbmInternetradioQgn_indi_tb_find_white_mask;
+						helptxt = qtn_ir_tooltip_findst;
+						}  
+					};            
+				};
+			},
+		TBAR_CTRL
+			{
+			type = EAknCtButton;
+			id = EListenCmd;
+			control = AVKON_BUTTON
+				{
+				states =
+					{
+					AVKON_BUTTON_STATE
+						{
+						bmpfile = KInternetRadioBitmapFile;
+						bmpid = EMbmInternetradioQgn_indi_fmradio_tb_listen_white;
+						bmpmask = EMbmInternetradioQgn_indi_fmradio_tb_listen_white_mask;
+						helptxt = qtn_ir_tooltip_listen;
+						}  
+					};            
+				};
+			},
+		TBAR_CTRL
+			{
+			type = EAknCtButton;
+			id = EHistoryCmd;
+			control = AVKON_BUTTON
+				{
+				states =
+					{
+					AVKON_BUTTON_STATE
+						{
+						bmpfile = KInternetRadioBitmapFile;
+						bmpid = EMbmInternetradioQgn_indi_irradio_tb_history_white;
+						bmpmask = EMbmInternetradioQgn_indi_irradio_tb_history_white_mask;
+						helptxt = qtn_ir_tooltip_history;
+						}  
+					};            
+				};
+			}
+		};
+	}
+//---------------------------------------------------------------
+//    Resource definition for toolbar of mainview for light theme.
+//----------------------------------------------------------------
+//
+RESOURCE AVKON_TOOLBAR r_ir_mainview_black_toolbar 
+    {
+    flags = KAknToolbarTransparent |  KAknToolbarFixed;
+    items =
+        {
+        TBAR_CTRL
+            {
+            type = EAknCtButton;
+            id = EFindStationsCmd;
+            control = AVKON_BUTTON
+                {
+                states =
+                    {
+                    AVKON_BUTTON_STATE
+                        {
+                        bmpfile = KInternetRadioBitmapFile;
+                        bmpid = EMbmInternetradioQgn_indi_tb_find;
+                        bmpmask = EMbmInternetradioQgn_indi_tb_find_mask;
+                        helptxt = qtn_ir_tooltip_findst;
+                        }  
+                    };            
+                };
+            },
+        TBAR_CTRL
+            {
+            type = EAknCtButton;
+            id = EListenCmd;
+            control = AVKON_BUTTON
+                {
+                states =
+                    {
+                    AVKON_BUTTON_STATE
+                        {
+                        bmpfile = KInternetRadioBitmapFile;
+                        bmpid = EMbmInternetradioQgn_indi_fmradio_tb_listen;
+                        bmpmask = EMbmInternetradioQgn_indi_fmradio_tb_listen_mask;
+                        helptxt = qtn_ir_tooltip_listen;
+                        }  
+                    };            
+                };
+            },
+        TBAR_CTRL
+            {
+            type = EAknCtButton;
+            id = EHistoryCmd;
+            control = AVKON_BUTTON
+                {
+                states =
+                    {
+                    AVKON_BUTTON_STATE
+                        {
+                        bmpfile = KInternetRadioBitmapFile;
+                        bmpid = EMbmInternetradioQgn_indi_irradio_tb_history;
+                        bmpmask = EMbmInternetradioQgn_indi_irradio_tb_history_mask;
+                        helptxt = qtn_ir_tooltip_history;
+                        }  
+                    };            
+                };
+            }
+        };
+    }
+ 
+//---------------------------------------------------------------
+//    Resource definition for toolbar of topstations view for dark theme.
+//----------------------------------------------------------------
+//
+RESOURCE AVKON_TOOLBAR r_ir_topstations_white_toolbar 
+	{
+	flags = KAknToolbarTransparent |  KAknToolbarFixed;
+	items =
+		{
+		TBAR_CTRL
+			{
+			type = EAknCtButton;
+			id = EAddtoFavouritesCmd;
+			control = AVKON_BUTTON
+				{
+				states =
+					{
+					AVKON_BUTTON_STATE
+						{
+						bmpfile = KInternetRadioBitmapFile;
+						bmpid = EMbmInternetradioQgn_indi_irradio_tb_addtofav_white;
+						bmpmask = EMbmInternetradioQgn_indi_irradio_tb_addtofav_white_mask;
+						helptxt = qtn_ir_tooltip_addtofav;
+						}  
+					};            
+				};
+			},
+		TBAR_CTRL
+			{
+			type = EAknCtButton;
+			id = EListenCmd;
+			control = AVKON_BUTTON
+				{
+				states =
+					{
+					AVKON_BUTTON_STATE
+						{
+						bmpfile = KInternetRadioBitmapFile;
+						bmpid = EMbmInternetradioQgn_indi_fmradio_tb_listen_white;
+						bmpmask = EMbmInternetradioQgn_indi_fmradio_tb_listen_white_mask;
+						helptxt = qtn_ir_tooltip_listen;
+						}  
+					};            
+				};
+			},
+		TBAR_CTRL
+			{
+			type = EAknCtButton;
+			id = EAddStationManuallyCmd;
+			control = AVKON_BUTTON
+				{
+				states =
+					{
+					AVKON_BUTTON_STATE
+						{
+						bmpfile = KInternetRadioBitmapFile;
+						bmpid = EMbmInternetradioQgn_indi_irradio_tb_addstation_white;
+						bmpmask = EMbmInternetradioQgn_indi_irradio_tb_addstation_white_mask;
+						helptxt = qtn_ir_tooltip_addstation;
+						}  
+					};            
+				};
+			}
+		};
+	}
+ 
+//---------------------------------------------------------------
+//    Resource definition for toolbar of topstations view for light theme.
+//----------------------------------------------------------------
+//
+RESOURCE AVKON_TOOLBAR r_ir_topstations_black_toolbar 
+	{
+	flags = KAknToolbarTransparent |  KAknToolbarFixed;
+	items =
+		{
+		TBAR_CTRL
+			{
+			type = EAknCtButton;
+			id = EAddtoFavouritesCmd;
+			control = AVKON_BUTTON
+				{
+				states =
+					{
+					AVKON_BUTTON_STATE
+						{
+						bmpfile = KInternetRadioBitmapFile;
+						bmpid = EMbmInternetradioQgn_indi_irradio_tb_addtofav;
+						bmpmask = EMbmInternetradioQgn_indi_irradio_tb_addtofav_mask;
+						helptxt = qtn_ir_tooltip_addtofav;
+						}  
+					};            
+				};
+			},
+		TBAR_CTRL
+			{
+			type = EAknCtButton;
+			id = EListenCmd;
+			control = AVKON_BUTTON
+				{
+				states =
+					{
+					AVKON_BUTTON_STATE
+						{
+						bmpfile = KInternetRadioBitmapFile;
+						bmpid = EMbmInternetradioQgn_indi_fmradio_tb_listen;
+						bmpmask = EMbmInternetradioQgn_indi_fmradio_tb_listen_mask;
+						helptxt = qtn_ir_tooltip_listen;
+						}  
+					};            
+				};
+			},
+		TBAR_CTRL
+			{
+			type = EAknCtButton;
+			id = EAddStationManuallyCmd;
+			control = AVKON_BUTTON
+				{
+				states =
+					{
+					AVKON_BUTTON_STATE
+						{
+						bmpfile = KInternetRadioBitmapFile;
+						bmpid = EMbmInternetradioQgn_indi_irradio_tb_addstation;
+						bmpmask = EMbmInternetradioQgn_indi_irradio_tb_addstation_mask;
+						helptxt = qtn_ir_tooltip_addstation;
+						}  
+					};            
+				};
+			}
+		};
+	}
+
+//---------------------------------------------------------------
+//    Resource definition for toolbar of stationsview view for dark theme.
+//----------------------------------------------------------------
+//
+RESOURCE AVKON_TOOLBAR r_ir_stationsview_white_toolbar 
+	{
+	flags = KAknToolbarTransparent |  KAknToolbarFixed;
+	items =
+		{
+		TBAR_CTRL
+			{
+			type = EAknCtButton;
+			id = EAddtoFavouritesCmd;
+			control = AVKON_BUTTON
+				{
+				states =
+					{
+					AVKON_BUTTON_STATE
+						{
+						bmpfile = KInternetRadioBitmapFile;
+						bmpid = EMbmInternetradioQgn_indi_irradio_tb_addtofav_white;
+						bmpmask = EMbmInternetradioQgn_indi_irradio_tb_addtofav_white_mask;
+						helptxt = qtn_ir_tooltip_addtofav;
+						}  
+					};            
+				};
+			},
+		TBAR_CTRL
+			{
+			type = EAknCtButton;
+			id = EListenCmd;
+			control = AVKON_BUTTON
+				{
+				states =
+					{
+					AVKON_BUTTON_STATE
+						{
+						bmpfile = KInternetRadioBitmapFile;
+						bmpid = EMbmInternetradioQgn_indi_fmradio_tb_listen_white;
+						bmpmask = EMbmInternetradioQgn_indi_fmradio_tb_listen_white_mask;
+						helptxt = qtn_ir_tooltip_listen;
+						}  
+					};            
+				};
+			},
+		TBAR_CTRL
+			{
+			type = EAknCtButton;
+			id = EStationDetailsCmd;
+			control = AVKON_BUTTON
+				{
+				states =
+					{
+					AVKON_BUTTON_STATE
+						{
+						bmpfile = KInternetRadioBitmapFile;
+						bmpid = EMbmInternetradioQgn_indi_tb_details_white;
+						bmpmask = EMbmInternetradioQgn_indi_tb_details_white_mask;
+						helptxt = qtn_ir_tooltip_stationde;
+						}  
+					};            
+				};
+			}
+		};
+	}
+ 
+//---------------------------------------------------------------
+//    Resource definition for toolbar of stationsview view for light theme.
+//----------------------------------------------------------------
+//
+RESOURCE AVKON_TOOLBAR r_ir_stationsview_black_toolbar 
+	{
+	flags = KAknToolbarTransparent |  KAknToolbarFixed;
+	items =
+		{
+		TBAR_CTRL
+			{
+			type = EAknCtButton;
+			id = EAddtoFavouritesCmd;
+			control = AVKON_BUTTON
+				{
+				states =
+					{
+					AVKON_BUTTON_STATE
+						{
+						bmpfile = KInternetRadioBitmapFile;
+						bmpid = EMbmInternetradioQgn_indi_irradio_tb_addtofav;
+						bmpmask = EMbmInternetradioQgn_indi_irradio_tb_addtofav_mask;
+						helptxt = qtn_ir_tooltip_addtofav;
+						}  
+					};            
+				};
+			},
+		TBAR_CTRL
+			{
+			type = EAknCtButton;
+			id = EListenCmd;
+			control = AVKON_BUTTON
+				{
+				states =
+					{
+					AVKON_BUTTON_STATE
+						{
+						bmpfile = KInternetRadioBitmapFile;
+						bmpid = EMbmInternetradioQgn_indi_fmradio_tb_listen;
+						bmpmask = EMbmInternetradioQgn_indi_fmradio_tb_listen_mask;
+						helptxt = qtn_ir_tooltip_listen;
+						}  
+					};            
+				};
+			},
+		TBAR_CTRL
+			{
+			type = EAknCtButton;
+			id = EStationDetailsCmd;
+			control = AVKON_BUTTON
+				{
+				states =
+					{
+					AVKON_BUTTON_STATE
+						{
+						bmpfile = KInternetRadioBitmapFile;
+						bmpid = EMbmInternetradioQgn_indi_tb_details;
+						bmpmask = EMbmInternetradioQgn_indi_tb_details_mask;
+						helptxt = qtn_ir_tooltip_stationde;
+						}  
+					};            
+				};
+			}
+		};
+	}
+
+//---------------------------------------------------------------
+//    Resource definition for toolbar of addmanually view for dark theme.
+//----------------------------------------------------------------
+//
+RESOURCE AVKON_TOOLBAR r_ir_addmanually_white_toolbar 
+	{
+	flags = KAknToolbarTransparent |  KAknToolbarFixed;
+	items =
+		{
+		TBAR_CTRL
+			{
+			type = EAknCtButton;
+			id = EButton1;
+			control = AVKON_BUTTON
+				{
+				states =
+					{
+					AVKON_BUTTON_STATE
+						{
+						bmpfile = KInternetRadioBitmapFile;
+						bmpid = EMbmInternetradioQgn_indi_tb_copy_white;
+						bmpmask = EMbmInternetradioQgn_indi_tb_copy_white_mask;
+						helptxt = qtn_ir_tooltip_copy;
+						}  
+					};            
+				};
+			},
+		TBAR_CTRL
+			{
+			type = EAknCtButton;
+			id = EButton2;
+			control = AVKON_BUTTON
+				{
+				states =
+					{
+					AVKON_BUTTON_STATE
+						{
+						bmpfile = KInternetRadioBitmapFile;
+						bmpid = EMbmInternetradioQgn_indi_irradio_tb_addtofav_white;
+						bmpmask = EMbmInternetradioQgn_indi_irradio_tb_addtofav_white_mask;
+						helptxt = qtn_ir_tooltip_addtofav;
+						}  
+					};            
+				};
+			},
+		TBAR_CTRL
+			{
+			type = EAknCtButton;
+			id = EButton3;
+			control = AVKON_BUTTON
+				{
+				states =
+					{
+					AVKON_BUTTON_STATE
+						{
+						bmpfile = KInternetRadioBitmapFile;
+						bmpid = EMbmInternetradioQgn_indi_tb_paste_white;
+						bmpmask = EMbmInternetradioQgn_indi_tb_paste_white_mask;
+						helptxt = qtn_ir_tooltip_paste;
+						}  
+					};            
+				};
+			}
+		};
+	}
+ 
+//---------------------------------------------------------------
+//    Resource definition for toolbar of addmanually view for light theme.
+//----------------------------------------------------------------
+//
+RESOURCE AVKON_TOOLBAR r_ir_addmanually_black_toolbar 
+	{
+	flags = KAknToolbarTransparent |  KAknToolbarFixed;
+	items =
+		{
+		TBAR_CTRL
+			{
+			type = EAknCtButton;
+			id = EButton1;
+			control = AVKON_BUTTON
+				{
+				states =
+					{
+					AVKON_BUTTON_STATE
+						{
+						bmpfile = KInternetRadioBitmapFile;
+						bmpid = EMbmInternetradioQgn_indi_tb_copy;
+						bmpmask = EMbmInternetradioQgn_indi_tb_copy_mask;
+						helptxt = qtn_ir_tooltip_copy;
+						}  
+					};            
+				};
+			},
+		TBAR_CTRL
+			{
+			type = EAknCtButton;
+			id = EButton2;
+			control = AVKON_BUTTON
+				{
+				states =
+					{
+					AVKON_BUTTON_STATE
+						{
+						bmpfile = KInternetRadioBitmapFile;
+						bmpid = EMbmInternetradioQgn_indi_irradio_tb_addtofav;
+						bmpmask = EMbmInternetradioQgn_indi_irradio_tb_addtofav_mask;
+						helptxt = qtn_ir_tooltip_addtofav;
+						}  
+					};            
+				};
+			},
+		TBAR_CTRL
+			{
+			type = EAknCtButton;
+			id = EButton3;
+			control = AVKON_BUTTON
+				{
+				states =
+					{
+					AVKON_BUTTON_STATE
+						{
+						bmpfile = KInternetRadioBitmapFile;
+						bmpid = EMbmInternetradioQgn_indi_tb_paste;
+						bmpmask = EMbmInternetradioQgn_indi_tb_paste_mask;
+						helptxt = qtn_ir_tooltip_paste;
+						}  
+					};            
+				};
+			}
+		};
+	}
+
+    
+//----------------------------------------------------
+//    Resource definition for Add url view
+//----------------------------------------------------
+//
+RESOURCE AVKON_VIEW r_ir_addurl
+    {
+    menubar = r_ir_menubar_addurl;
+    cba = r_irapp_softkeys_options_back_cba;
+    toolbar =r_ir_addmanually_white_toolbar;
+    toolbar =r_ir_addmanually_black_toolbar;
+    } 
+    
+//----------------------------------------------------
+//    Resource definition for Search Results view
+//----------------------------------------------------
+//
+RESOURCE AVKON_VIEW r_ir_searchresults
+    {
+    menubar = r_ir_menubar_searchresults;
+    cba = r_irapp_softkeys_options_back_cba;
+    toolbar =r_ir_searchresults_white_toolbar;
+    toolbar =r_ir_searchresults_black_toolbar;
+    }
+//----------------------------------------------------
+//    Resource definition for Category view
+//----------------------------------------------------
+//
+RESOURCE AVKON_VIEW r_ir_category
+    {
+    menubar = r_ir_menubar_category;
+    cba = r_irapp_softkeys_options_back_cba;
+    }
+
+//----------------------------------------------------
+//    Resource definition for Stations view
+//----------------------------------------------------
+//
+RESOURCE AVKON_VIEW r_ir_stations
+    {
+    menubar = r_ir_menubar_stations;
+    cba = r_irapp_softkeys_options_back_cba;
+    toolbar = r_ir_topstations_white_toolbar;
+    toolbar = r_ir_topstations_black_toolbar;
+    toolbar = r_ir_stationsview_white_toolbar;
+    toolbar = r_ir_stationsview_black_toolbar;
+    }
+   
+//----------------------------------------------------
+//    Resource definition for Station information view
+//----------------------------------------------------
+//
+RESOURCE AVKON_VIEW r_ir_stationinfo
+    {
+    menubar = r_ir_menubar_empty;
+    cba = r_irapp_softkey_close_cba;
+    }   
+    
+//----------------------------------------------------
+//    Resource definition for Favourites view
+//----------------------------------------------------
+//
+RESOURCE AVKON_VIEW r_ir_fav
+    {
+    menubar = r_ir_menubar_fav;
+    cba = r_irapp_softkeys_options_back_cba;
+    toolbar = r_ir_mainview_white_toolbar;
+    toolbar = r_ir_mainview_black_toolbar;
+    }
+    
+//----------------------------------------------------
+//    Resource definition for History view
+//----------------------------------------------------
+//
+RESOURCE AVKON_VIEW r_ir_history
+    {
+    menubar = r_ir_menubar_history;
+    cba = r_irapp_softkeys_options_back_cba;
+    toolbar = r_ir_history_white_toolbar;
+    toolbar = r_ir_history_black_toolbar;
+    }  
+
+
+//-----------------------------------------------------
+//    Resource definition for First Time View
+//-----------------------------------------------------
+ RESOURCE AVKON_VIEW r_ir_firsttime_view
+	{
+	menubar = r_ir_firsttime_menu_bar;
+	cba = r_irapp_softkeys_options_back_cba;
+	}   
+ 
+//------------------------------------------------------
+// Menubar for first time view
+//------------------------------------------------------
+RESOURCE MENU_BAR r_ir_firsttime_menu_bar
+	{
+	titles = 
+		{
+		MENU_TITLE
+			{
+			menu_pane = r_ir_firsttime_menu; 
+			}
+		};
+	} 
+   
+RESOURCE MENU_PANE r_ir_firsttime_menu
+	{
+	items = 
+		{
+		MENU_ITEM
+			{
+			command = EFirstTimeSelectCmd;
+			txt = qtn_ir_options_select; 
+			},
+		MENU_ITEM 
+			{
+			command = EGotoNowPlayingViewCmd; 
+			txt = qtn_ir_options_now;
+			},
+		MENU_ITEM
+			{
+			command = EFirstTimeSettingsCmd;
+			txt = qtn_ir_options_settings; 
+			},
+		MENU_ITEM
+			{
+			command = EHelpCmd;   
+			txt = qtn_ir_options_help;
+			},
+		MENU_ITEM
+			{
+			command = EExitCmd; 
+			txt = qtn_ir_options_exit; 
+			}
+		};
+	}   
+    
+        
+       
+// ---------------------------------------------------------
+//   
+//   r_main_menubar
+//   Main menubar
+//
+// ---------------------------------------------------------
+//
+RESOURCE MENU_BAR r_main_menubar
+    {
+    titles =
+        {
+        MENU_TITLE 
+            {
+            menu_pane = r_main_menu;
+            }
+        };
+    }
+
+
+// ---------------------------------------------------------
+//   
+//   r_main_menu
+//   Menu for "Options"
+//   See BookstoreDb.hrh for commands
+//
+// ---------------------------------------------------------
+//
+RESOURCE MENU_PANE r_main_menu
+    {
+    items = 
+        {
+        MENU_ITEM { command = ESelectCmd; txt = qtn_ir_options_select; },
+	MENU_ITEM { command = EExitCmd; txt = qtn_ir_options_exit; }
+        };
+    } 
+/////////////////////////////////////////////////////////////////////////////////
+// EMPTY MENU BAR
+//////////////////////////////////////////////////////////////////////////////////// 
+
+RESOURCE MENU_BAR r_ir_menubar_empty
+    {
+    titles =
+        {
+        MENU_TITLE {menu_pane = r_ir_menu_empty;}
+        };
+    }
+
+RESOURCE MENU_PANE r_ir_menu_empty
+    {
+    items = 
+        {
+        };
+    }
+    
+/////////////////////////////////////////////////////////////////////////////////
+// MENUBAR FOR MAIN CHOICE VIEW;
+//////////////////////////////////////////////////////////////////////////////////// 
+
+RESOURCE MENU_BAR r_ir_menubar_mainchoice
+    {
+    titles =
+        {
+        MENU_TITLE {menu_pane = r_IR_menu_mainchoice;}
+        };
+    }
+
+RESOURCE MENU_PANE r_IR_menu_mainchoice
+    {
+    items = 
+        {
+		MENU_ITEM {command = ESelectCmd; txt = qtn_ir_options_select;},
+        MENU_ITEM {command = EGotoNowPlayingViewCmd;   txt = qtn_ir_options_now;},
+        MENU_ITEM {command = EAddStationManuallyCmd;   txt = qtn_ir_options_add_manually;},
+        MENU_ITEM {command = EAddtoStationsCmd;   txt = qtn_ir_options_add;},
+        MENU_ITEM {command = ESettingsCmd;   txt = qtn_ir_options_settings ;},
+        MENU_ITEM {command = EHelpCmd;   txt = qtn_ir_options_help ;},
+        MENU_ITEM {command = EExitCmd;   txt = qtn_ir_options_exit;}
+        };
+    }
+ 
+/////////////////////////////////////////////////////////////////////////////////
+// MENUBAR FOR PLS VIEW;
+//////////////////////////////////////////////////////////////////////////////////// 
+    
+RESOURCE MENU_BAR r_ir_menubar_pls
+    {
+    titles =
+        {
+        MENU_TITLE {menu_pane = r_IR_menu_pls;}
+        };
+    }
+ RESOURCE MENU_PANE r_IR_menu_pls
+    {
+    items = 
+        {
+    	MENU_ITEM {command = EGotoNowPlayingViewCmd; txt = qtn_ir_options_now;},
+        MENU_ITEM {command = EGotoMainView;   txt = qtn_ir_options_mainview;},
+        MENU_ITEM {command = ESettingsCmd;   txt = qtn_ir_options_settings;},
+        MENU_ITEM {command = EHelpCmd;   txt = qtn_ir_options_help;},
+        MENU_ITEM {command = EExitCmd;   txt = qtn_ir_options_exit;}
+        };
+    }
+//////////////////////////////////////////////////////////////////////////////////// 
+// MENUBAR FOR STATION DIRECTORY VIEW
+//////////////////////////////////////////////////////////////////////////////////// 
+
+RESOURCE MENU_BAR r_ir_menubar_directory
+    {
+    titles =
+        {
+        MENU_TITLE {menu_pane = r_ir_menu_directory;}
+        };
+    }
+
+RESOURCE MENU_PANE r_ir_menu_directory
+    {
+    items = 
+        {
+		MENU_ITEM {command = ESelectCmd; txt = qtn_ir_options_select;},
+        MENU_ITEM {command = EGotoNowPlayingViewCmd;   txt = qtn_ir_options_now;},	
+        MENU_ITEM {command = ESettingsCmd;   txt = qtn_ir_options_settings ;},
+        MENU_ITEM {command = EHelpCmd;   txt = qtn_ir_options_help ;},
+        MENU_ITEM {command = EExitCmd;   txt = qtn_ir_options_exit;}
+        };
+    }
+///////////////////////////////////////////////////////////////////////////////////////////
+// MENUBAR FOR CATEGORY VIEW
+//////////////////////////////////////////////////////////////////////////////////// 
+
+RESOURCE MENU_BAR r_ir_menubar_category
+    {
+    titles =
+        {
+        MENU_TITLE {menu_pane = r_ir_menu_category;}
+        };
+    }
+
+RESOURCE MENU_PANE r_ir_menu_category
+    {
+    items = 
+        {
+		MENU_ITEM {command = ESelectCmd; txt = qtn_ir_options_select;},
+        MENU_ITEM {command = EGotoNowPlayingViewCmd;   txt = qtn_ir_options_now;},
+        MENU_ITEM {command = ESettingsCmd;   txt = qtn_ir_options_settings;},
+        MENU_ITEM {command = EHelpCmd;   txt = qtn_ir_options_help;},
+        MENU_ITEM {command = EExitCmd;   txt = qtn_ir_options_exit;}
+        };
+    } 
+    
+///////////////////////////////////////////////////////////////////////////////////////////
+// MENUBAR FOR STATIONS VIEW
+//////////////////////////////////////////////////////////////////////////////////// 
+
+RESOURCE MENU_BAR r_ir_menubar_stations
+    {
+    titles =
+        {
+        MENU_TITLE {menu_pane = r_ir_menu_stations;}
+        };
+    }
+
+RESOURCE MENU_PANE r_ir_menu_stations
+    {
+    items = 
+        {
+		MENU_ITEM {command = EGotoNowPlayingViewCmd;   txt = qtn_ir_options_now;},	
+        MENU_ITEM {command = ESettingsCmd;   txt = qtn_ir_options_settings ;},
+        MENU_ITEM {command = EHelpCmd;   txt = qtn_ir_options_help ;},
+        MENU_ITEM {command = EExitCmd;   txt = qtn_ir_options_exit;}
+        };
+    }
+    
+///////////////////////////////////////////////////////////////////////////////////////////
+// MENUBAR FOR NOW PLAYING VIEW
+//////////////////////////////////////////////////////////////////////////////////// 
+// ---------------------------------------------------------------------------
+// r_ir_nowplaying_view_ByteCounter_layout
+// Portrait layout for the ByteCounter . 
+// ---------------------------------------------------------------------------
+//
+RESOURCE AVKON_LAYOUT_CONTROL r_ir_nowplaying_view_ByteCounter_layout
+	{
+	l=5; t=56-KIRStatusPaneHeightPortrait; W = 115; H = 30;
+	}
+// ---------------------------------------------------------------------------
+// r_ir_nowplaying_view_ByteCounter_layout_mirrored
+// Portrait layout for the ByteCounter . 
+// ---------------------------------------------------------------------------
+//
+RESOURCE AVKON_LAYOUT_CONTROL r_ir_nowplaying_view_ByteCounter_layout_mirrored
+	{
+	t=56-KIRStatusPaneHeightPortrait; r=120; W = 115; H = 30;
+	}
+
+// ---------------------------------------------------------------------------
+// r_ir_nowplaying_view_ByteCounter_layout_Landscape
+// LandScape layout for the ByteCounter . 
+// ---------------------------------------------------------------------------
+//
+RESOURCE AVKON_LAYOUT_CONTROL r_ir_nowplaying_view_ByteCounter_layout_Landscape
+	{
+	l=275; t=90-KIRStatusPaneHeightLandscape; W = 115; H = 30;
+	}
+// ---------------------------------------------------------------------------
+// r_ir_nowplaying_view_ByteCounter_layout_Landscape_mirrored
+// LandScape layout for the ByteCounter . 
+// ---------------------------------------------------------------------------
+//
+RESOURCE AVKON_LAYOUT_CONTROL r_ir_nowplaying_view_ByteCounter_layout_Landscape_mirrored
+	{
+	t=90-KIRStatusPaneHeightLandscape; r=390; W = 115; H = 30;
+	}
+
+//--------------------------------------------------------------------------
+// r_ir_nowplaying_view_BitRate_layout
+// Portrait layout for the BitRate . 
+// ---------------------------------------------------------------------------
+//
+RESOURCE AVKON_LAYOUT_CONTROL r_ir_nowplaying_view_BitRate_layout
+	{
+	l=255; t=56-KIRStatusPaneHeightPortrait; W = 115; H = 30;
+	}
+// ---------------------------------------------------------------------------
+// r_ir_nowplaying_view_BitRate_layout_mirrored
+// Portrait layout for the Bitrate. 
+// ---------------------------------------------------------------------------
+//
+RESOURCE AVKON_LAYOUT_CONTROL r_ir_nowplaying_view_BitRate_layout_mirrored
+	{
+	t=56-KIRStatusPaneHeightPortrait; r= 385;W = 115; H = 30;
+	}
+
+// r_ir_nowplaying_view_BitRate_layout_LandScape
+// LandScape layout for the BitRate . 
+// ---------------------------------------------------------------------------
+//
+RESOURCE AVKON_LAYOUT_CONTROL r_ir_nowplaying_view_BitRate_layout_LandScape
+	{
+	l=400; t=90-KIRStatusPaneHeightLandscape; W = 115; H = 30;
+	}
+// ---------------------------------------------------------------------------
+// r_ir_nowplaying_view_BitRate_layout_LandScape_mirrored
+// LandScape layout for the Bitrate. 
+// ---------------------------------------------------------------------------
+//
+RESOURCE AVKON_LAYOUT_CONTROL r_ir_nowplaying_view_BitRate_layout_LandScape_mirrored
+	{
+	t=90-KIRStatusPaneHeightLandscape;r=515; W = 115; H = 30;
+	}
+
+// ---------------------------------------------------------------------------
+// r_ir_nowplaying_view_logo_bitmap_layout
+// Portrait layout for the logo bitmap. 
+// ---------------------------------------------------------------------------
+//
+RESOURCE AVKON_LAYOUT_CONTROL r_ir_nowplaying_view_logo_bitmap_layout
+    {
+    l = 0; t = 99 - KIRStatusPaneHeightPortrait; W = 360; H = 360;
+    }
+
+// ---------------------------------------------------------------------------
+// r_ir_nowplaying_view_logo_bitmap_layout_mirrored
+// Mirrored portrait layout for the logo bitmap.
+// ---------------------------------------------------------------------------
+//
+RESOURCE AVKON_LAYOUT_CONTROL r_ir_nowplaying_view_logo_bitmap_layout_mirrored
+    {
+    t = 99 - KIRStatusPaneHeightPortrait; r = 360; W = 360; H = 360; 
+    }
+
+// ---------------------------------------------------------------------------
+// r_ir_nowplaying_view_logo_bitmap_layout_landscape
+// Landscape layout for the logo bitmap.
+// ---------------------------------------------------------------------------
+//
+RESOURCE AVKON_LAYOUT_CONTROL r_ir_nowplaying_view_logo_bitmap_layout_landscape
+    {
+    l = 0; t = 84 - KIRStatusPaneHeightLandscape; W = 265; H = 265;
+    }
+
+// ---------------------------------------------------------------------------
+// r_ir_nowplaying_view_logo_bitmap_layout_landscape_mirrored
+// Mirrored landscape layout for the logo bitmap.
+// ---------------------------------------------------------------------------
+//
+RESOURCE AVKON_LAYOUT_CONTROL r_ir_nowplaying_view_logo_bitmap_layout_landscape_mirrored
+    {
+    t = 84 - KIRStatusPaneHeightLandscape; r = 265; W = 265; H = 265;
+    }
+
+// ---------------------------------------------------------------------------
+// r_ir_nowplaying_view_station_information_layout
+// Portrait layout for the station information container.
+// ---------------------------------------------------------------------------
+//
+RESOURCE AVKON_LAYOUT_CONTROL r_ir_nowplaying_view_station_information_layout
+    {
+    l = 10; t = 460 - KIRStatusPaneHeightPortrait; W = 340; H = 58;
+    }
+
+// ---------------------------------------------------------------------------
+// r_ir_nowplaying_view_station_information_layout_mirrored
+// Mirrored portrait layout for the station information container.
+// ---------------------------------------------------------------------------
+//
+RESOURCE AVKON_LAYOUT_CONTROL r_ir_nowplaying_view_station_information_layout_mirrored
+    {
+    t = 460 - KIRStatusPaneHeightPortrait; r = 350; W = 340; H = 58;
+    }
+
+// ---------------------------------------------------------------------------
+// r_ir_nowplaying_view_station_information_layout_landscape
+// Landscape layout for the station information container.
+// ---------------------------------------------------------------------------
+//
+RESOURCE AVKON_LAYOUT_CONTROL r_ir_nowplaying_view_station_information_layout_landscape
+    {
+    l = 275; t = 174 - KIRStatusPaneHeightLandscape; W = 220; H = 28;
+    }
+
+// ---------------------------------------------------------------------------
+// r_ir_nowplaying_view_station_information_layout_landscape_mirrored
+// Mirrored landscape layout for the station information container.
+// ---------------------------------------------------------------------------
+//
+RESOURCE AVKON_LAYOUT_CONTROL r_ir_nowplaying_view_station_information_layout_landscape_mirrored
+    {
+    t = 174 - KIRStatusPaneHeightLandscape; r = 495; W = 220; H = 28;
+    }
+
+// ---------------------------------------------------------------------------
+// r_ir_nowplaying_view_metadata_layout_landscape
+// Landscape layout for the rds data layout.
+// ---------------------------------------------------------------------------
+//
+RESOURCE AVKON_LAYOUT_CONTROL r_ir_nowplaying_view_metadata_layout_landscape
+    {
+    l = 275; t = 204 - KIRStatusPaneHeightLandscape; W = 220; H = 28;
+    }
+
+// ---------------------------------------------------------------------------
+// r_ir_nowplaying_view_metadata_layout_landscape_mirrored
+// Mirrored landscape layout for the rds data layout.
+// ---------------------------------------------------------------------------
+//
+RESOURCE AVKON_LAYOUT_CONTROL r_ir_nowplaying_view_metadata_layout_landscape_mirrored
+    {
+    t = 204 - KIRStatusPaneHeightLandscape; r = 495; W = 220; H = 27;
+    }
+
+RESOURCE MENU_BAR r_ir_menubar_nowplaying
+    {
+    titles =
+        {
+        MENU_TITLE {menu_pane = r_ir_menu_nowplaying;}
+        };
+    }
+
+RESOURCE MENU_PANE r_ir_menu_nowplaying
+    {
+    items = 
+        {
+        MENU_ITEM {command = EGotoMainView;   txt = qtn_ir_options_mainview;},
+    	MENU_ITEM {command = EStationDetailsCmd;   txt = qtn_ir_options_info;},
+        MENU_ITEM {command = EFmRecOrPhone;   txt = qtn_ir_options_fmtrans;},
+        MENU_ITEM {command = EAddtoStationsCmd;   txt = qtn_ir_options_add ;},
+        MENU_ITEM {command = EStereoMode;   txt = qtn_ir_options_stereowidening;
+        											cascade=R_NOW_SUBMENU;},
+        MENU_ITEM {command = EEqualizer;   txt = qtn_ir_options_equalizer;},
+        MENU_ITEM {command = EHistory;   txt = qtn_ir_options_history;},
+        MENU_ITEM {command = EFindInShop; txt = qtn_ir_options_findnmusicstore;},
+	    MENU_ITEM {command = EGotoMusicStore; txt = qtn_ir_options_gotomusicstore;},//To be included in the code in Now playing view
+        MENU_ITEM {command = ESettingsCmd;   txt = qtn_ir_options_settings;},
+        MENU_ITEM {command = EHelpCmd;   txt = qtn_ir_options_help;},
+        MENU_ITEM {command = EExitCmd;   txt = qtn_ir_options_exit;}
+        };
+    }  
+RESOURCE MENU_PANE R_NOW_SUBMENU
+    {
+    items = 
+        {
+		MENU_ITEM {command = EOnCmd; txt = qtn_ir_options_on; flags=EEikMenuItemCheckBox;},
+		MENU_ITEM {command = EOffCmd; txt = qtn_ir_options_off; flags = EEikMenuItemCheckBox ;}
+        };
+    }
+    
+///////////////////////////////////////////////////////////////////////////////////////////
+// MENUBAR FOR ADD URL VIEW
+//////////////////////////////////////////////////////////////////////////////////// 
+
+RESOURCE MENU_BAR r_ir_menubar_addurl
+    {
+    titles =
+        {
+        MENU_TITLE {menu_pane = r_ir_menu_addurl;}
+        };
+    }
+
+RESOURCE MENU_PANE r_ir_menu_addurl
+    {
+    items = 
+        {
+        MENU_ITEM {command = EGotoNowPlayingViewCmd;   txt = qtn_ir_options_now;},
+        MENU_ITEM {command = ESettingsCmd;   txt = qtn_ir_options_settings ;},
+        MENU_ITEM {command = EHelpCmd;   txt = qtn_ir_options_help ;},
+        MENU_ITEM {command = EExitCmd;   txt = qtn_ir_options_exit;}
+        };
+    } 
+///////////////////////////////////////////////////////////////////////////////////////////
+// MENUBAR FOR SEARCH VIEW
+//////////////////////////////////////////////////////////////////////////////////// 
+
+RESOURCE MENU_BAR r_ir_menubar_search
+    {
+    titles =
+        {
+        MENU_TITLE {menu_pane = r_ir_menu_search;}
+        };
+    }
+
+RESOURCE MENU_PANE r_ir_menu_search
+    {
+    items = 
+        {
+		MENU_ITEM {command = ESearchCmd; txt = qtn_ir_options_search;},
+		MENU_ITEM {command = EGotoNowPlayingViewCmd;   txt = qtn_ir_options_now;},
+		MENU_ITEM {command = EAddStationManuallyCmd;   txt = qtn_ir_options_add_manually;},
+		MENU_ITEM {command = ESettingsCmd;   txt = qtn_ir_options_settings;},
+		MENU_ITEM {command = EHelpCmd;   txt = qtn_ir_options_help;},
+		MENU_ITEM {command = EExitCmd;   txt = qtn_ir_options_exit;}
+        };
+    } 
+
+///////////////////////////////////////////////////////////////////////////////////////////
+// MENUBAR FOR SEARCH RESULTS VIEW
+//////////////////////////////////////////////////////////////////////////////////// 
+
+RESOURCE MENU_BAR r_ir_menubar_searchresults
+    {
+    titles =
+        {
+        MENU_TITLE {menu_pane = r_ir_menu_searchresults;}
+        };
+    }
+
+RESOURCE MENU_PANE r_ir_menu_searchresults
+    {
+    items = 
+        {
+	  	MENU_ITEM {command = ESearchCmd; txt = qtn_ir_options_searchag;},
+        MENU_ITEM {command = EGotoNowPlayingViewCmd;   txt = qtn_ir_options_now;},
+        MENU_ITEM {command = ESettingsCmd;   txt = qtn_ir_options_settings;},
+        MENU_ITEM {command = EHelpCmd;   txt = qtn_ir_options_help;},
+        MENU_ITEM {command = EExitCmd;   txt = qtn_ir_options_exit;}
+        };
+    } 
+/////////////////////////////////////////////////////////////////////////////////
+// MENUBAR FOR SETTINGS VIEW;
+//////////////////////////////////////////////////////////////////////////////////// 
+
+RESOURCE MENU_BAR r_ir_menubar_settings
+    {
+    titles =
+        {
+        MENU_TITLE {menu_pane = r_IR_menu_settings;}
+        };
+    }
+
+RESOURCE MENU_PANE r_IR_menu_settings
+    {
+    items = 
+        {
+		MENU_ITEM {command = EIRCmdChangeSetting; txt = qtn_ir_options_change;},
+		MENU_ITEM {command = EGotoNowPlayingViewCmd; txt = qtn_ir_options_now;},
+		MENU_ITEM {command = EHelpCmd;   txt = qtn_ir_options_help;},
+		MENU_ITEM {command = EExitCmd;   txt = qtn_ir_options_exit;}
+        };
+    }
+
+RESOURCE MENU_BAR r_ir_menubar_fav
+    {
+    titles =
+        {
+         MENU_TITLE {menu_pane = r_ir_menu_fav;}
+        };
+    }
+RESOURCE MENU_PANE r_ir_menu_fav
+    {
+    items = 
+        {
+		MENU_ITEM {command = EGotoNowPlayingViewCmd;   txt = qtn_ir_options_now;},
+	    MENU_ITEM {command = EAddStationManuallyCmd; txt = qtn_ir_options_add_manually;},	
+	    MENU_ITEM {command = EAddtoStationsCmd;   txt = qtn_ir_options_add ;},
+        MENU_ITEM {command = EDeleteCmd;   txt = qtn_ir_suboptions_delete;}	,
+		MENU_ITEM {command = EEditStationsCmd;   txt = qtn_ir_options_editstation;},
+		MENU_ITEM {command = EStationsCmd; txt = qtn_ir_options_station; 
+										cascade = R_IR_MENU_STATIONS_SUB_MENU;},
+		MENU_ITEM {command = EMarkUnmark;cascade = r_ir_menupane_markable_list;
+											txt = qtn_ir_options_markunmark;},
+        MENU_ITEM {command = ESettingsCmd;   txt = qtn_ir_options_settings;},
+        MENU_ITEM {command = EHelpCmd;   txt = qtn_ir_options_help ;},
+        MENU_ITEM {command = EExitCmd;   txt = qtn_ir_options_exit;}        };
+    }
+    
+  
+     
+
+RESOURCE MENU_PANE R_IR_MENU_STATIONS_SUB_MENU
+    {
+    items = 
+        {
+		MENU_ITEM {command = EStationDetailsCmd; txt = qtn_ir_suboptions_details;},
+		MENU_ITEM {command = EMoveCmd; txt = qtn_ir_suboptions_move;},
+        MENU_ITEM {command = EDeleteCmd;   txt = qtn_ir_suboptions_delete;}	
+        };
+    }
+
+////////////////////////////////////////////////////////////////////////////////////////////    
+// CBA for Terms and condtions view
+//////////////////////////////////////////////////////////////////////////////////// 
+
+RESOURCE CBA r_ir_cba_continue_exit
+	{
+	buttons =
+		{ 
+		CBA_BUTTON { txt =qtn_ir_cost_softkey_continue; id = EIRContinue; },
+		CBA_BUTTON { txt =qtn_ir_cost_softkey_exit; id = EIRExit;}
+		};
+	}
+
+RESOURCE CBA r_ir_cba_done_cancel
+	{
+	buttons =
+		{ 
+		CBA_BUTTON { txt =qtn_ir_softkey_done; id = EAknSoftkeyDone; },
+		CBA_BUTTON { txt =qtn_ir_softkey_cancel; id = EAknSoftkeyCancel;}
+		};
+	}
+
+RESOURCE CBA r_ir_cba_accept_decline 
+	{
+	buttons = 
+		{ 
+		CBA_BUTTON { txt =qtn_ir_terms_softkey_accept; id = EIRAccept; },
+		CBA_BUTTON { txt =qtn_ir_terms_softkey_decline; id = EIRExit;}
+		};
+	}
+
+//////////////////////////////////////////////
+////for query dialog
+///////////////////////////////////////////////////
+
+RESOURCE DIALOG R_QUERY_DELETION
+  {
+    flags = EGeneralQueryFlags;
+ 	buttons = R_AVKON_SOFTKEYS_YES_NO;
+    items =
+        {
+        DLG_LINE
+            {
+            type = EAknCtQuery;
+            id = EGeneralQuery;
+            control = AVKON_CONFIRMATION_QUERY
+                {
+                layout = EConfirmationQueryLayout;
+                };
+            }
+        };
+    }
+
+//---------FOR OPERATION SETTINGS
+
+//ISDS BASE URL
+RESOURCE TBUF r_irapp_base_isds_url {buf="http://djmagnus.edelkey.net/isds";}
+//------------------------------
+//Text for Cost warning view
+RESOURCE TBUF r_irapp_cost_warning_title {buf = qtn_ir_cost_title;}
+
+RESOURCE TBUF r_irapp_cost_warning_info {buf = qtn_ir_cost_warning;} 
+RESOURCE TBUF r_irapp_cost_warning_heading {buf = qtn_ir_cost_heading;}
+
+
+//-------Terms&Conditions
+RESOURCE TBUF r_irapp_terms_conditions_heading {buf = qtn_ir_terms_heading;}
+RESOURCE TBUF r_irapp_mainheading {buf= qtn_ir_apps_grid;}
+
+
+//-------Main Menu
+
+RESOURCE TBUF r_irapp_main_menu_title {buf =qtn_ir_main_title;}
+
+RESOURCE TBUF r_irapp_main_discover_expand {buf = qtn_ir_main_discover_expanded;}
+RESOURCE TBUF r_irapp_findstation_directory {buf =qtn_ir_findst_browsesds ;}
+
+RESOURCE TBUF r_irapp_main_menu_search {buf = qtn_ir_main_searchindir;}
+RESOURCE TBUF r_irapp_main_search_expand {buf = qtn_ir_findst_search_ensrhterm;}
+RESOURCE TBUF r_irapp_findstation_search_expand {buf =qtn_ir_findst_search_ensrhterm;}  
+
+RESOURCE TBUF r_irapp_main_menu_last {buf = qtn_ir_main_last;}
+RESOURCE TBUF r_irapp_main_menu_now {buf = qtn_ir_main_now;}
+RESOURCE TBUF r_irapp_findstation_addstationmanually {buf = qtn_ir_options_add_manually ;}
+RESOURCE TBUF r_irapp_findstation_addstationmanually_expand {buf = qtn_ir_findst_addtofav ;}
+RESOURCE TBUF r_irapp_favourites_list_empty {buf = qtn_ir_main_descriptive_text ;}
+RESOURCE TBUF r_irapp_favourites_prog_deleting {buf = qtn_ir_main_prog_deleting ;}
+RESOURCE TBUF r_irapp_stationlist_nomatches {buf = qtn_ir_stationlist_nomatches ;}
+//---------Settings view
+RESOURCE TBUF r_irapp_settings {buf = qtn_ir_settings_title;}
+RESOURCE TBUF r_irapp_settings_accessPoint {buf = qtn_ir_settings_access;}
+RESOURCE TBUF r_irapp_settings_accessPoint_expand {buf = qtn_ir_access_ask;}
+RESOURCE TBUF r_irapp_settings_select_accesspoint {buf = qtn_ir_access_title;}
+
+RESOURCE TBUF r_irapp_settings_gprsbitrate {buf = qtn_ir_settings_gprs;}
+RESOURCE TBUF r_irapp_settings_3gbitrate {buf = qtn_ir_settings_3g;}
+RESOURCE TBUF r_irapp_settings_wifibitrate {buf = qtn_ir_settings_wifi;}
+
+RESOURCE TBUF r_irapp_settings_standardquality {buf = qtn_ir_bitrate_standard;}
+RESOURCE TBUF r_irapp_settings_highquality {buf = qtn_ir_bitrate_high;}
+RESOURCE TBUF r_irapp_settings_bestquality {buf = qtn_ir_bitrate_best;}
+
+
+//--------------------------------New Settings view ---------------------------------------
+
+
+//---------Station Directory
+RESOURCE TBUF r_irapp_stat_dir_title {buf = qtn_ir_discover_title;}
+RESOURCE TBUF r_irapp_stat_dir_genre {buf = qtn_ir_discover_genre;}
+RESOURCE TBUF r_irapp_stat_dir_genre_expand {buf = qtn_ir_discover_genre_expanded;}
+RESOURCE TBUF r_irapp_stat_dir_language {buf = qtn_ir_discover_langauge;}
+RESOURCE TBUF r_irapp_stat_dir_language_Expand {buf = qtn_ir_discover_language_expanded;}
+RESOURCE TBUF r_irapp_stat_dir_country {buf = qtn_ir_discover_country_region;}
+RESOURCE TBUF r_irapp_stat_dir_country_expand {buf = qtn_ir_discover_staticountryreg;}
+RESOURCE TBUF r_irapp_stat_dir_top {buf = qtn_ir_discover_top;}
+RESOURCE TBUF r_irapp_stat_dir_top_expand {buf = qtn_ir_discover_beststations;}
+
+//-----Genre Station List
+RESOURCE TBUF r_irapp_genre_statlist_title {buf = qtn_ir_genre_title;}
+RESOURCE TBUF r_irapp_genre_statlist_title_expand {buf = qtn_ir_genre_list_expanded;}
+RESOURCE TBUF r_irapp_language_statlist_title {buf = qtn_ir_language_title;}
+RESOURCE TBUF r_irapp_language_statlist_title_Expand {buf = qtn_ir_language_list_expanded;}
+RESOURCE TBUF r_irapp_country_statlist_title {buf = qtn_ir_countryregion_title;}
+RESOURCE TBUF r_irapp_country_statlist_title_Expand {buf = qtn_ir_country_list_expanded;}
+RESOURCE TBUF r_irapp_top_statlist_title {buf = qtn_ir_top_title;}
+
+
+//----------Loading Overlay
+RESOURCE TBUF r_irapp_loading_buffering {buf = qtn_ir_now_wait_buffering;}
+RESOURCE TBUF r_irapp_loading_loading {buf = qtn_ir_loading_loading;}
+RESOURCE TBUF r_irapp_loading_searching {buf = qtn_ir_loading_searching;}
+RESOURCE TBUF r_irapp_loading_buffering_percentage {buf = qtn_ir_now_wait_buffering_perc;}
+
+//----------------Now playing
+RESOURCE TBUF r_irapp_nowplaying_title {buf = qtn_ir_main_title;}
+RESOURCE TBUF r_irapp_nowplaying_bitrate {buf = qtn_ir_now_bitrate;}
+RESOURCE TBUF r_irapp_nowplaying_bytecounter {buf = qtn_ir_now_bytecountermb;}
+RESOURCE TBUF r_irapp_nowplaying_bytecounter_deci {buf = qtn_ir_now_deci_bytecountermb;}
+
+
+//--------------Add Manually
+RESOURCE TBUF r_irapp_addmanually_title {buf =  qtn_ir_url_title;}
+RESOURCE TBUF r_irapp_cancel {buf =  qtn_ir_softkey_cancel;}
+RESOURCE TBUF r_irapp_save {buf = qtn_ir_tooltip_addtofav;}
+RESOURCE TBUF r_irapp_copy {buf = qtn_ir_tooltip_copy;}
+RESOURCE TBUF r_irapp_paste {buf = qtn_ir_tooltip_paste;}
+RESOURCE TBUF r_irapp_addmanually_intro {buf = qtn_ir_url_intro;}
+RESOURCE TBUF r_irapp_addmanually_address {buf = qtn_ir_url_address;}
+RESOURCE TBUF r_irapp_addmanually_http {buf = qtn_ir_url_http;}
+RESOURCE TBUF r_irapp_addmanually_name {buf = qtn_ir_url_name;}
+RESOURCE TBUF r_irapp_editstation_title{buf = qtn_ir_edit_title;}
+
+
+//--------------Stations(Favourites)
+RESOURCE TBUF  r_irapp_stations_title {buf =  qtn_ir_stations_title;}
+RESOURCE TBUF  r_irapp_stations_default {buf =  qtn_ir_stations_default;}
+RESOURCE TBUF  r_irapp_stations_find {buf = qtn_ir_stations_find;}
+RESOURCE TBUF  r_irapp_stations_numbering {buf = qtn_ir_list_memory_location;}
+
+//----------Station Information view
+RESOURCE TBUF  r_irapp_stationinfo_title  		{buf = qtn_ir_info_details_title;}
+RESOURCE TBUF  r_irapp_stationinfo_name 		{buf = qtn_ir_info_details_name;}
+RESOURCE TBUF  r_irapp_stationinfo_description  {buf = qtn_ir_info_details_description;}
+RESOURCE TBUF  r_irapp_stationinfo_genre 		{buf = qtn_ir_info_details_genre;}
+RESOURCE TBUF  r_irapp_stationinfo_language 	{buf = qtn_ir_info_details_language;}
+RESOURCE TBUF  r_irapp_stationinfo_country 		{buf = qtn_ir_info_details_countryregi;}
+RESOURCE TBUF  r_irapp_stationinfo_type 		{buf = qtn_ir_info_details_type;}
+RESOURCE TBUF  r_irapp_stationinfo_stream 		{buf = qtn_ir_info_details_streams;}
+RESOURCE TBUF  r_irapp_stationinfo_typemanual 	{buf = qtn_ir_info_details_type_manual;}
+RESOURCE TBUF  r_irapp_stationinfo_typeisds 	{buf = qtn_ir_info_details_type_isds;}
+RESOURCE TBUF  r_irapp_stationinfo_bitrate 		{buf = qtn_ir_info_details_bitrate;}
+RESOURCE TBUF  r_irapp_stationinfo_unnamed 		{buf = qtn_ir_info_details_unnamed;}
+
+RESOURCE TBUF r_irapp_results_none {buf = qtn_ir_results_none;}
+RESOURCE TBUF r_irapp_Search_String{buf = qtn_ir_findst_search_ensrhterm;}
+
+
+//------General
+RESOURCE TBUF r_irapp_continue {buf = qtn_ir_cost_softkey_continue;}
+RESOURCE TBUF r_irapp_exit {buf = qtn_ir_cost_softkey_exit;}
+RESOURCE TBUF r_irapp_accept {buf = qtn_ir_terms_softkey_accept;}
+RESOURCE TBUF r_irapp_decline {buf = qtn_ir_terms_softkey_decline;}
+RESOURCE TBUF r_irapp_options {buf = qtn_ir_softkey_options;}
+RESOURCE TBUF r_irapp_select {buf = qtn_ir_softkey_select;}
+RESOURCE TBUF r_irapp_back {buf = qtn_ir_softkey_back;}
+RESOURCE TBUF r_irapp_close {buf = qtn_ir_info_softkey_close;}
+RESOURCE TBUF r_irapp_yes {buf = qtn_ir_softkey_yes;}
+RESOURCE TBUF r_irapp_no {buf = qtn_ir_softkey_no;}
+RESOURCE TBUF r_irapp_ok {buf = qtn_ir_settings_connec_softkey_ok;}
+RESOURCE TBUF r_irapp_search {buf = qtn_ir_findst_softkey_search;}
+RESOURCE TBUF r_irapp_memlo_ram_out_of_mem {buf = qtn_ir_memlo_ram_out_of_mem;}
+
+//Added for First time/Find stations view
+RESOURCE TBUF r_irapp_firsttime_title {buf = qtn_ir_firstuse_title;}
+RESOURCE TBUF r_irapp_findstations_title {buf = qtn_ir_findstation_title;}
+
+
+//ToolBar resources
+RESOURCE TBUF r_irapp_addtofavorites {buf = qtn_ir_options_add;}
+
+
+
+//--------------Pls Veiw
+RESOURCE TBUF r_irapp_feature_file_title {buf = qtn_ir_playlist_title;}
+RESOURCE TBUF r_irapp_streaming_links { buf = qtn_ir_error_notavailable;}
+RESOURCE TBUF r_irapp_tooltip_addtofav { buf = qtn_ir_tooltip_addtofav;}
+RESOURCE TBUF r_irapp_tooltip_addalltofav { buf = qtn_ir_tooltip_addalltofav;}
+RESOURCE TBUF r_irapp_tooltip_listen { buf = qtn_ir_tooltip_listen;}
+RESOURCE TBUF r_irapp_tooltip_stationde { buf = qtn_ir_tooltip_stationde;}
+RESOURCE TBUF r_irapp_tooltip_addstation { buf = qtn_ir_tooltip_addstation;}
+RESOURCE TBUF r_irapp_station_saved { buf = qtn_ir_station_saved;}
+//--------------Error Notes
+RESOURCE TBUF r_irapp_error_connection {buf =  qtn_ir_error_connection;}
+RESOURCE TBUF r_irapp_mediaengine_buffer_empty {buf = qtn_ir_error_buffer ;}
+RESOURCE TBUF r_irapp_error_address {buf = qtn_ir_error_address ;}
+RESOURCE TBUF r_irapp_error_general {buf = qtn_ir_error_general;}
+RESOURCE TBUF r_irapp_addfavourites_error {buf = qtn_ir_error_favourites;}
+RESOURCE TBUF r_irapp_suboption_delete {buf = qtn_ir_suboptions_delete;}
+RESOURCE TBUF r_irapp_error_notinisds {buf = qtn_ir_error_notinisds; }
+RESOURCE TBUF r_irapp_error_name_already_exists {buf = qtn_ir_name_already_exists;}
+RESOURCE TBUF r_irapp_error_url_unavailable {buf = qtn_ir_err_url_unavail;}
+RESOURCE TBUF r_irapp_error_isds_unavailable {buf = qtn_ir_error_isds_unavailable;}
+RESOURCE TBUF r_irapp_error_operation {buf = qtn_ir_err_operation;}
+
+//Information Note
+RESOURCE TBUF r_irapp_infonote_update  {buf = qtn_ir_favourites_popup_removed;}
+
+//Confirmation Note
+RESOURCE TBUF r_irapp_note_delete {buf = qtn_ir_stations_popup_delete;}
+RESOURCE TBUF r_irapp_note_popup_save {buf = qtn_ir_stations_popup_save;}
+RESOURCE TBUF128 r_irapp_note_removed {buf = qtn_ir_stations_popup_removed;}
+RESOURCE TBUF128 r_irapp_note_removed_many {buf = qtn_ir_stations_popup_removed_many;}
+RESOURCE TBUF r_irapp_confirm_saved {buf = qtn_ir_added_single;}
+RESOURCE TBUF r_irapp_stations_saved {buf = qtn_ir_added_multi;} 
+RESOURCE TBUF r_irapp_note_delete_many {buf = qtn_ir_stations_popup_delete_many;}
+RESOURCE TBUF r_irapp_stations_popup_saved {buf = qtn_ir_added_single;}
+
+//Progress Dialog
+RESOURCE TBUF64 r_irapp_searching_progress{ buf=qtn_ir_loading_searching;}
+
+//----Error Note---Not in UI spec
+RESOURCE TBUF r_irapp_search_error {buf = qtn_ir_error_search;}
+RESOURCE TBUF r_irapp_irgeneral_error {buf =  qtn_ir_app_general_err;}
+RESOURCE TBUF r_irapp_nw_noconn_error {buf =  qtn_ir_nwcontroller_err_noconnectivity;}
+RESOURCE TBUF r_irapp_networkcontroller_noap  {buf = qtn_ir_nwcontroller_err_noaccesspoint; }
+RESOURCE TBUF r_irapp_addmanually_error {buf = qtn_ir_addmanually_err_data;}
+RESOURCE TBUF r_irapp_addmanually_noname {buf = qtn_ir_addmanually_unnamed;}
+RESOURCE TBUF r_irapp_addmanually_notext { buf =qtn_ir_main_unnamed_station ; }
+RESOURCE TBUF r_irapp_play_fail_error {buf = qtn_ir_playfail_err;}
+
+//--------------------History------------------
+RESOURCE TBUF r_irapp_clear_history {buf = qtn_ir_history_no_history;}
+RESOURCE TBUF r_irapp_history_title {buf = qtn_ir_title_history;}
+RESOURCE TBUF r_irapp_history_query {buf = qtn_ir_options_clearhistory;}
+RESOURCE TBUF r_irapp_tooltip_find_in_shop  {buf = qtn_ir_tooltip_findnstore;}
+RESOURCE TBUF r_irapp_history_tooltip {buf = qtn_ir_tooltip_history;}
+RESOURCE TBUF r_irapp_tooltip_findstation {buf = qtn_ir_tooltip_findst;}
+
+
+
+RESOURCE TBUF r_irapp_percentage_loading {buf = qtn_ir_loading_percent_sign;}
+
+
+//-----------------GeneralSettings--------------
+RESOURCE TBUF r_irapp_general_settings_plugin_title{buf = qtn_ir_main_title;}
+RESOURCE TBUF r_irapp_general_settings_plugin_listbox_caption
+{
+buf = qtn_ir_set_folder_internetradio;
+}
+
+
+RESOURCE LABEL r_tc_label
+{
+horiz_align = EEikLabelAlignHLeft;
+vert_align=EEikLabelAlignVTop;
+standard_font=EEikLabelFontNormal;
+reserve_length=0;
+}   
+
+// ---------------------------------------------------------
+//   
+//   SETTING ITEM LIST
+//
+// ---------------------------------------------------------
+//
+RESOURCE AVKON_SETTING_ITEM_LIST r_entry_settings_list
+	{
+	title = qtn_ir_settings_title;
+	}
+
+// ---------------------------------------------------------
+//   
+//   RADIO BUTTON SETTING PAGE
+//
+// ---------------------------------------------------------
+//
+RESOURCE AVKON_SETTING_PAGE r_enumeratedtext_setting_page
+	{
+	type = EAknCtPopupSettingList;
+	editor_resource_id = r_popup_setting_list;
+	}
+	
+RESOURCE POPUP_SETTING_LIST r_popup_setting_list
+    {
+	flags = 0;
+    }
+    
+RESOURCE AVKON_POPUP_SETTING_TEXTS r_popup_setting_texts
+	{
+    setting_texts_resource = r_texts;
+	}
+	
+RESOURCE ARRAY r_texts
+    {
+    items =
+        {
+        AVKON_ENUMERATED_TEXT { value=0; text = "";}
+        };
+    } 
+
+RESOURCE TBUF r_irapp_terms_file {buf = ir_terms_file;}
+
+
+// ---------------------------------------------------------------------------
+//    r_ir_channel_list
+//    List box of channel list view.
+//    Contains the visible items of the view.
+// ---------------------------------------------------------------------------
+//
+RESOURCE LISTBOX r_ir_channel_list
+    {
+     flags = EAknListBoxMarkableList;
+    }
+
+    
+// ---------------------------------------------------------
+//    r_ir_nowplaying_view
+// ---------------------------------------------------------------------------
+RESOURCE AVKON_VIEW r_ir_nowplaying_view
+    {
+    menubar = r_ir_nowplaying_view_menu_bar;
+    cba = r_irapp_softkeys_options_back_cba;
+    toolbar =r_now_nameslist_toolbar;
+    }
+    
+// ---------------------------------------------------------------------------
+//    r_ir_main_view_menu_bar
+// ---------------------------------------------------------------------------
+//
+RESOURCE MENU_BAR r_ir_nowplaying_view_menu_bar
+    {
+    titles=
+        {
+        MENU_TITLE
+            { 
+            menu_pane = r_ir_menu_nowplaying; 
+            }
+        };
+    }
+    
+/////////////////////////////////////////////////////////////////////////////////////////
+///
+///
+///
+///            INTERNET RADIO STATIONS DIRECTORY VIEW RESOURCES -- START
+///
+///
+///
+/////////////////////////////////////////////////////////////////////////////////////////
+
+// ---------------------------------------------------------------------------
+//    r_ir_qtn_station_directory_title
+//    Stations directory view title.
+// ---------------------------------------------------------------------------
+//
+
+RESOURCE TBUF r_ir_station_directory_title { buf = "qtn_ir_discover_title"; }
+  
+
+// ---------------------------------------------------------------------------
+//    r_ir_station_directory_view
+//    Station direcoty view.
+// ---------------------------------------------------------------------------
+//
+
+RESOURCE AVKON_VIEW r_ir_station_directory
+    {
+    menubar = r_ir_station_directory_menu_bar;
+    cba = r_irapp_softkeys_options_back_cba;
+    }
+    
+
+// ---------------------------------------------------------------------------
+//    r_ir_station_directory_menu_bar
+//    Station directory view menu bar.
+// ---------------------------------------------------------------------------
+//
+
+RESOURCE MENU_BAR r_ir_station_directory_menu_bar
+    {
+    titles=
+        {
+        MENU_TITLE
+            { 
+            menu_pane = r_ir_station_directory_menu;
+            }
+        };
+    }
+// ---------------------------------------------------------------------------
+//    r_ir_station_directory_menu
+//    Station directory view menu.
+// ---------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_ir_station_directory_menu
+    {
+    items=
+        {
+        MENU_ITEM { command = ESelectCmd; txt = qtn_ir_options_select; },
+        MENU_ITEM {command = EGotoNowPlayingViewCmd;   txt = qtn_ir_options_now;},
+        MENU_ITEM {command = ESettingsCmd; txt = qtn_ir_options_settings;},
+        MENU_ITEM { command = EHelpCmd; txt = qtn_ir_options_help; },
+        MENU_ITEM { command = EExitCmd; txt = qtn_ir_options_exit; }
+        };
+    }
+    
+    
+///////////////////////////////////////////////////////////////////////////////////////////
+// MENUBAR FOR HISTORY VIEW
+//////////////////////////////////////////////////////////////////////////////////// 
+
+RESOURCE MENU_BAR r_ir_menubar_history
+    {
+    titles =
+        {
+        MENU_TITLE {menu_pane = r_ir_menu_history;}
+        };
+    }
+
+RESOURCE MENU_PANE r_ir_menu_history
+    {
+    items = 
+        {
+	
+		MENU_ITEM {command = EGotoNowPlayingViewCmd;   txt = qtn_ir_options_now;},
+		MENU_ITEM {command = EAddtoFavouritesCmd;   txt = qtn_ir_options_add;},
+		MENU_ITEM {command = EClearCmd; txt = qtn_ir_options_clearhistory;},
+        MENU_ITEM {command = ESettingsCmd;   txt = qtn_ir_options_settings;},
+        MENU_ITEM {command = EHelpCmd;   txt = qtn_ir_options_help ;},
+        MENU_ITEM {command = EExitCmd;   txt = qtn_ir_options_exit;}
+        };
+    }    
+    
+// ---------------------------------------------------------------------------
+//    r_ir_searchresults_list
+//    List box of search results view.
+//    Contains the visible items of the view.
+// ---------------------------------------------------------------------------
+//
+RESOURCE LISTBOX r_ir_searchresults_list
+ {
+    flags = EAknListBoxSelectionList;
+    }   
+
+
+
+RESOURCE LISTBOX r_station_directory
+    {
+    flags = EAknListBoxSelectionList;
+    }   
+//--------------------------------------------------------------------
+//    
+//resource for search results view title pane
+//------------------------------------------------------------------
+RESOURCE TBUF R_IRAPP_SEARCHRESULTS_TITLETEXT { buf = qtn_ir_search_results; }
+
+
+//--------------------------------------------------------------------
+//    
+//resource for search results view title pane
+//------------------------------------------------------------------
+RESOURCE TBUF R_IRAPP_SEARCHRESULT_TITLETEXT { buf = qtn_ir_search_result; }
+
+
+// -----------------------------------------------------------------------------
+//
+//    Resources for PROGRESS DIALOG r_irapp_progress_dialog
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE DIALOG r_irapp_progress_dialog
+    {
+    flags = EAknWaitNoteFlags;
+    buttons = r_irapp_softkey_cancel_cba;
+    items =
+        {
+        DLG_LINE
+            {
+            type = EAknCtNote;
+            id = EProgressDialog;
+            control= AVKON_NOTE 
+                { 
+                layout = EWaitLayout;
+                animation = R_QGN_GRAF_WAIT_BAR_ANIM;
+                };
+            }
+        };
+    }
+// ---------------------------------------------------------------------------
+//    r_ir_findstation
+//    List box of findstations/first time view.
+//    Contains the visible items of the view.
+// ---------------------------------------------------------------------------
+//
+RESOURCE LISTBOX r_ir_findstation
+    {
+    flags = EAknListBoxSelectionList;
+    }  
+
+RESOURCE AVKON_SETTING_ITEM_LIST r_ir_setting_list
+    {
+    title = qtn_ir_options_settings;
+    items =
+        {
+        AVKON_SETTING_ITEM
+            {
+            identifier = EIRSettingItemSnapSelectionID;
+            setting_page_resource = r_snap_selection_setting_page;
+            associated_resource = r_popup_snap_selection_list;
+            name = qtn_ir_settings_network;
+            },
+   
+        AVKON_SETTING_ITEM
+            {
+            identifier = EIRSettingItemGprsConnBitRateID;
+            setting_page_resource = r_gprs_conn_bitrate_setting_page;
+            associated_resource = r_popup_gprs_conn_bitrate_list;
+            name = qtn_ir_settings_gprs;
+            },
+
+        AVKON_SETTING_ITEM
+            {
+            identifier = EIRSettingItem3GConnBitRateID;
+            setting_page_resource = r_3g_conn_bitrate_setting_page;
+            associated_resource = r_popup_3g_conn_bitrate_list;
+            name = qtn_ir_settings_3g;
+            },
+
+        AVKON_SETTING_ITEM
+            {
+            identifier = EIRSettingItemWiFiConnBitRateID;
+            setting_page_resource = r_wifi_conn_bitrate_setting_page;
+            associated_resource = r_popup_wifi_conn_bitrate_list;
+            name = qtn_ir_settings_wifi;
+            }
+        };
+
+
+    }
+
+RESOURCE AVKON_SETTING_PAGE r_snap_selection_setting_page
+    {   
+    softkey_resource    = R_AVKON_SOFTKEYS_OK_CANCEL__OK;
+    type = EAknCtPopupSettingList;
+    editor_resource_id = r_ir_settings_empty_list;
+    }
+
+RESOURCE AVKON_SETTING_PAGE r_gprs_conn_bitrate_setting_page
+    {   
+    softkey_resource    = R_AVKON_SOFTKEYS_OK_CANCEL__OK;
+    label = qtn_ir_settings_gprs;
+    type = EAknCtPopupSettingList;
+    editor_resource_id = r_ir_settings_empty_list;
+    }
+
+RESOURCE AVKON_SETTING_PAGE r_3g_conn_bitrate_setting_page
+    {   
+    softkey_resource    = R_AVKON_SOFTKEYS_OK_CANCEL__OK;
+    label = qtn_ir_settings_3g;
+    type = EAknCtPopupSettingList;
+    editor_resource_id = r_ir_settings_empty_list;
+    }
+
+RESOURCE AVKON_SETTING_PAGE r_wifi_conn_bitrate_setting_page
+    {   
+    softkey_resource    = R_AVKON_SOFTKEYS_OK_CANCEL__OK;
+    label = qtn_ir_settings_wifi;
+    type = EAknCtPopupSettingList;
+    editor_resource_id = r_ir_settings_empty_list;
+    }
+
+
+RESOURCE AVKON_POPUP_SETTING_TEXTS r_popup_snap_selection_list
+    {
+    setting_texts_resource = r_settinglist_snap_page_list;
+    }
+
+RESOURCE AVKON_POPUP_SETTING_TEXTS r_popup_gprs_conn_bitrate_list
+    {
+    setting_texts_resource = r_settinglist_gprs_page_list;
+    }
+
+RESOURCE AVKON_POPUP_SETTING_TEXTS r_popup_3g_conn_bitrate_list
+    {
+    setting_texts_resource = r_settinglist_3g_page_list;
+    }
+
+RESOURCE AVKON_POPUP_SETTING_TEXTS r_popup_wifi_conn_bitrate_list
+    {
+    setting_texts_resource = r_settinglist_wifi_page_list;
+    }
+
+
+RESOURCE ARRAY r_settinglist_snap_page_list
+    {
+    items =
+        {
+  
+        };
+    }
+
+RESOURCE ARRAY r_settinglist_gprs_page_list
+	{
+	items =
+		{
+		AVKON_ENUMERATED_TEXT {value = 0; text = qtn_ir_bitrate_standard;},
+		AVKON_ENUMERATED_TEXT {value = 1; text = qtn_ir_bitrate_high;},
+		AVKON_ENUMERATED_TEXT {value = 2; text = qtn_ir_bitrate_best;}
+		};
+	}
+
+
+RESOURCE ARRAY r_settinglist_3g_page_list
+	{
+	items =
+		{
+		AVKON_ENUMERATED_TEXT {value = 0; text = qtn_ir_bitrate_standard;},
+		AVKON_ENUMERATED_TEXT {value = 1; text = qtn_ir_bitrate_high;},
+		AVKON_ENUMERATED_TEXT {value = 2; text = qtn_ir_bitrate_best;}
+		};
+	}
+
+
+RESOURCE ARRAY r_settinglist_wifi_page_list
+	{
+	items =
+		{
+		AVKON_ENUMERATED_TEXT {value = 0; text = qtn_ir_bitrate_standard;},
+		AVKON_ENUMERATED_TEXT {value = 1; text = qtn_ir_bitrate_high;},
+		AVKON_ENUMERATED_TEXT {value = 2; text = qtn_ir_bitrate_best;}
+		};
+	}
+// ---------------------------------------------------------------------------
+// r_vr_settings_empty_list
+// Empty popup setting list resource.
+// ---------------------------------------------------------------------------
+//
+RESOURCE POPUP_SETTING_LIST r_ir_settings_empty_list
+    {
+    }
+
+RESOURCE CBA r_ir_softkeys_exit
+    {
+    buttons=
+        {
+        CBA_BUTTON { id = EAknSoftkeyExit; txt = qtn_ir_options_exit; },
+        CBA_BUTTON { txt = ""; }
+        };
+	}
+// -----------------------------------------------------------------------------
+//
+//   r_ir_menupane_markable_list
+//   Menu for "Markable List"
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_ir_menupane_markable_list
+	{
+	items =
+		{
+		MENU_ITEM
+			{
+			command = EMark;
+			txt = qtn_ir_options_mark;
+			},
+		MENU_ITEM
+			{
+			command = EMarkAll;
+			txt = qtn_ir_options_markall;
+			},
+		MENU_ITEM
+			{
+			command = EUnmark;
+			txt = qtn_ir_options_unmark;
+			},
+		MENU_ITEM
+			{
+			command = EUnmarkAll;
+			txt = qtn_ir_options_unmarkall;
+			}
+		};
+	}
+     
+ RESOURCE DIALOG r_add_station_form_dialog
+    {
+    flags = EEikDialogFlagNoDrag | EEikDialogFlagFillAppClientRect |
+            EEikDialogFlagNoTitleBar | EEikDialogFlagNoBorder |
+            EEikDialogFlagCbaButtons | EEikDialogFlagWait;
+    buttons = r_addstation_form_cba;
+    form = r_add_station_form;
+    }
+
+// --------------------------------------------------------------------------
+// DIALOG
+// Deletion wait note with cancel button
+// --------------------------------------------------------------------------
+//
+RESOURCE DIALOG r_irapp_progress_dialog_cancel
+    {
+    flags = EAknProgressNoteFlags;
+    buttons = r_irapp_softkeys_empty_cba;
+    items =
+        {
+        DLG_LINE
+            {
+            type = EAknCtNote;
+            id = EDeleteInProgress;
+            control = AVKON_NOTE
+                {
+                layout = EProgressLayout;
+                imagefile = AVKON_ICON_FILE;
+                imageid   = EMbmAvkonQgn_note_erased;
+                imagemask = EMbmAvkonQgn_note_erased_mask;
+                };
+            }
+        };
+    }
+//-----------------------------------------------------------------------------
+//
+// r_eve_newevent_form
+// New event form resource for the dialog
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE FORM r_add_station_form
+    {
+    flags = EEikFormUseDoubleSpacedFormat | EEikFormEditModeOnly;
+   
+    items =
+        {
+        
+        DLG_LINE
+            {
+            type = EEikCtEdwin;
+            prompt = qtn_ir_addst_streamurl;
+            id = EAddStaionURL;
+            itemflags = EEikDlgItemTakesEnterKey  |EEikDlgItemOfferAllHotKeys;
+            control = EDWIN
+                {
+                flags = EEikEdwinNoHorizScrolling | EEikEdwinResizable  |
+                EEikEdwinNoAutoSelection |EEikEdwinJustAutoCurEnd  ;
+                maxlength = 100;
+                };
+            },
+        DLG_LINE
+            {
+            type = EEikCtEdwin;
+            prompt = qtn_ir_url_name;
+            id =EAddStaionName;
+            itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+            control = EDWIN
+                {
+                flags = EEikEdwinNoHorizScrolling | EEikEdwinResizable |
+                EEikEdwinAutoSelection  ;
+                maxlength = 100;
+                };
+            },
+            DLG_LINE
+            {
+            type = EEikCtEdwin;
+            prompt =qtn_ir_addst_description;
+            id = EAddStaionDescription;
+            itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+            control = EDWIN
+                {
+                flags = EEikEdwinNoHorizScrolling | EEikEdwinResizable |EEikEdwinNoAutoSelection;
+                maxlength = 100;
+                };
+            }
+        };
+         
+    }   
+RESOURCE MENU_BAR r_form_menubar
+    {
+    titles =
+        {
+        MENU_TITLE 
+            {
+            menu_pane = r_form_menu;
+            }
+        };
+    }
+
+
+RESOURCE CBA r_addstation_form_cba
+	{
+	buttons =
+		{
+		
+		CBA_BUTTON
+			{
+			id = EAknSoftkeyOptions; 
+			txt = qtn_ir_softkey_options;
+			},
+		CBA_BUTTON 
+			{
+			id = EAddExit;
+			txt = qtn_ir_softkey_cancel;
+			}
+		};
+	}
+RESOURCE MENU_PANE r_form_menu
+	{
+	items = 
+		{
+		MENU_ITEM
+			{
+			command = EGotoNowPlayingViewCmd;  
+			txt = qtn_ir_options_now;
+			},
+		MENU_ITEM
+			{
+			command = EHelpCmd;
+			txt = qtn_ir_options_help;
+			},
+		MENU_ITEM 
+			{
+			command = EExitCmd;
+			txt = qtn_ir_options_exit;
+			}
+		};
+	}
+
+//Added for ALR/SNAP
+
+RESOURCE TBUF r_ir_settings_snap_default
+    {
+    buf = qtn_ir_settings_snap_default;
+    }
+    
+RESOURCE TBUF r_ir_access_ask
+    {
+    buf = qtn_ir_access_ask;
+    }   
+
+RESOURCE CBA r_search_dialog_cba
+	{
+	buttons =
+		{
+		AVKON_CBA_BUTTON { txt=qtn_ir_findst_softkey_search; id=EAknSoftkeyOk; },
+		AVKON_CBA_BUTTON { txt=qtn_ir_softkey_cancel; id=EAknSoftkeyCancel; }
+		};
+	}
+  
+RESOURCE DIALOG R_SEARCH_STRING_DIALOG
+    {
+    flags = EGeneralQueryFlags;
+    buttons = r_search_dialog_cba;
+      
+    items=
+        {
+        DLG_LINE
+            {
+            type = EAknCtQuery;
+            id = EGeneralQuery;
+            control= AVKON_DATA_QUERY 
+                { 
+                layout = EDataLayout;
+                control = EDWIN
+                    { 
+                    flags= EEikEdwinNoHorizScrolling | EEikEdwinResizable; 
+                    maxlength = 250; 
+                    width = 10; 
+                    lines = 1; 
+                    };
+                };
+            }
+        };
+    }
+    
+RESOURCE CBA r_irapp_softkey_cancel_cba
+	{
+	buttons =
+		{
+		
+		CBA_BUTTON
+			{
+			id = EAknSoftkeyEmpty; 
+			txt = "";
+			},
+		CBA_BUTTON 
+			{
+			id = EIRCancel;
+			txt = qtn_ir_softkey_cancel;
+			}
+		};
+	}
+RESOURCE CBA r_irapp_softkeys_options_back_cba
+	{
+	buttons =
+		{
+		
+		CBA_BUTTON
+			{
+			id = EAknSoftkeyOptions; 
+			txt = qtn_ir_softkey_options;
+			},
+		CBA_BUTTON 
+			{
+			id = EAknSoftkeyBack;
+			txt = qtn_ir_softkey_back;
+			}
+		};
+	}
+RESOURCE CBA r_irapp_softkeys_empty_cba
+	{
+	buttons =
+		{
+		
+		CBA_BUTTON
+			{
+			id = EAknSoftkeyEmpty; 
+			txt = "";
+			},
+		CBA_BUTTON 
+			{
+			id = EAknSoftkeyEmpty; 
+			txt = "";
+			}
+		};
+	}
+RESOURCE CBA r_irapp_softkey_close_cba
+	{
+	buttons =
+		{
+		CBA_BUTTON
+			{
+			id = EAknSoftkeyEmpty; 
+			txt = "";
+			},
+		CBA_BUTTON 
+			{
+			id = EIRBack;
+			txt = qtn_ir_info_softkey_close;
+			}
+		};
+	}
+// ---------------------------------------------------------------------------
+//    r_ir_advertisement_size
+//    Size of the advertisement used in station directory
+// ---------------------------------------------------------------------------
+//
+RESOURCE AVKON_LAYOUT_CONTROL r_ir_advertisement_size
+    {
+    l=0; t=0; W = 350; H = 64;
+    }
+
+	

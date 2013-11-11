@@ -1,0 +1,67 @@
+// Copyright (c) 2006-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// btaccesshost.exe Bluetooth Access Host contains Phone Book Access Server
+// 
+//
+
+/**
+ @file
+*/
+
+TARGET	btaccesshost.exe
+CAPABILITY ProtServ LocalServices ReadUserData
+
+TARGETTYPE	exe
+UID	0 0x102825b2
+VENDORID 0x70000001
+
+// Uncomment the macro below to include the SIM1 folders, note that this does
+// not give access to SIM contacts but just populates the virtual tree with the
+// SIM1 directory structure.
+
+// MACRO __INCLUDE_SIM1_FOLDERS__
+
+SOURCEPATH		../server
+USERINCLUDE		../inc ../../../phonebookengines_old/contactsmodel/inc
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+
+SOURCE		pbapserver.cpp
+SOURCE		pbapsession.cpp
+SOURCE		pbapsdp.cpp
+SOURCE		pbapxml.cpp
+SOURCE		pbapappheader.cpp
+SOURCE		pbapfoldertree.cpp
+SOURCE		pbapfolderroot.cpp
+SOURCE		pbapfoldernode.cpp
+SOURCE		pbapfoldernodepb.cpp
+SOURCE		pbapfoldernodech.cpp
+SOURCE		pbapfoldertelecom.cpp
+SOURCE		pbapfoldersim.cpp
+SOURCE		pbappbhandlecache.cpp
+SOURCE		pbappbexporter.cpp
+SOURCE		pbapchexporter.cpp
+SOURCE		pbapcontactdbviews.cpp
+SOURCE		pbapauthpasswordgetter.cpp
+SOURCE		pbapchview.cpp
+SOURCE		pbapvcardexporterutil.cpp
+
+LIBRARY		euser.lib efsrv.lib estor.lib bafl.lib ecom.lib charconv.lib
+LIBRARY		esock.lib bluetooth.lib sdpdatabase.lib obex.lib btextnotifiers.lib
+LIBRARY		pbaplogeng.lib logcli.lib
+LIBRARY		cntmodel.lib cntview.lib
+LIBRARY		versit.lib vcard.lib logwrap.lib
+LIBRARY		centralrepository.lib 
+LIBRARY	btlogger.lib tzclient.lib
+
+SMPSAFE

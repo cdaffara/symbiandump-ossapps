@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<creatorscript schemaVersion="1.0" scriptVersion="1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="creator.xsd">
+
+<!-- Create one missed call -->
+<log>
+   <fields>
+	<direction>missed</direction>
+	<datetime>2008-03-25T13:11:21</datetime>
+	<phonenumber>1115555554112</phonenumber>
+   </fields>
+</log>
+
+<!-- Create one received call -->
+<log>
+   <fields>
+        <direction>in</direction>
+        <datetime>2008-03-24T10:21:56</datetime>
+        <phonenumber>11155554112</phonenumber>
+        <duration>241</duration>
+   </fields>
+</log>
+
+<!-- Create one dialled call -->
+<log>
+   <fields>
+        <direction>out</direction>
+        <datetime>2008-03-22T12:01:06</datetime>
+        <phonenumber>0555554555</phonenumber>
+        <duration>445</duration>
+   </fields>
+</log>
+
+<!-- Create 5 random entries -->
+<log amount="5">
+   <fields>
+        <direction/>
+        <datetime/>
+        <phonenumber/>
+        <duration/>
+   </fields>
+</log>
+
+</creatorscript>

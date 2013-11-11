@@ -1,0 +1,41 @@
+;
+; Copyright (c) 2006-2006 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:  Package file for project PresetServer for 5.0 devices
+;
+
+; -------- general --------
+
+; Languages
+&EN
+
+; Header
+#{"PresetServer"},(0x10281CB5),1,0,0,TYPE=SA,RU
+
+; Localised Vendor name
+%{"Nokia"}
+
+; Unique Vendor name
+:"Nokia"
+
+; -------- files --------
+
+"\epoc32\release\armv5\urel\psserver.exe"-"!:\sys\bin\psserver.exe"
+"\epoc32\release\armv5\urel\psclient100.dll"-"!:\sys\bin\psclient100.dll"
+
+"..\..\group\backup_registration.xml"-"!:\private\10281cb5\backup_registration.xml"
+
+"\epoc32\release\armv5\urel\psrfsplugin.dll"-"!:\sys\bin\psrfsplugin.dll"
+"\epoc32\data\z\resource\plugins\psrfsplugin.rsc"-"!:\resource\plugins\psrfsplugin.rsc"
+
+

@@ -1,0 +1,180 @@
+EXPORTS
+	?minTime@AgendaUtil@@SA?AVQDateTime@@XZ @ 1 NONAME ; class QDateTime AgendaUtil::minTime(void)
+	??4AgendaCategory@@QAEAAV0@ABV0@@Z @ 2 NONAME ; class AgendaCategory & AgendaCategory::operator=(class AgendaCategory const &)
+	??_EAgendaEntry@@UAE@I@Z @ 3 NONAME ; AgendaEntry::~AgendaEntry(unsigned int)
+	??8AgendaEntry@@QBE_NABV0@@Z @ 4 NONAME ; bool AgendaEntry::operator==(class AgendaEntry const &) const
+	??1AgendaAlarm@@QAE@XZ @ 5 NONAME ; AgendaAlarm::~AgendaAlarm(void)
+	?setAlarm@AgendaEntry@@QAEXABVAgendaAlarm@@@Z @ 6 NONAME ; void AgendaEntry::setAlarm(class AgendaAlarm const &)
+	?isNull@AgendaEntry@@QBE_NXZ @ 7 NONAME ; bool AgendaEntry::isNull(void) const
+	?isNull@AgendaCategory@@QBE_NXZ @ 8 NONAME ; bool AgendaCategory::isNull(void) const
+	??8AgendaRepeatRule@@QBE_NABV0@@Z @ 9 NONAME ; bool AgendaRepeatRule::operator==(class AgendaRepeatRule const &) const
+	?entryUpdated@AgendaUtil@@IAEXK@Z @ 10 NONAME ; void AgendaUtil::entryUpdated(unsigned long)
+	?alarmSoundName@AgendaAlarm@@QBE?AVQString@@XZ @ 11 NONAME ; class QString AgendaAlarm::alarmSoundName(void) const
+	?alarm@AgendaEntry@@QBE?AVAgendaAlarm@@XZ @ 12 NONAME ; class AgendaAlarm AgendaEntry::alarm(void) const
+	?responseRequested@AgendaAttendee@@QBE_NXZ @ 13 NONAME ; bool AgendaAttendee::responseRequested(void) const
+	?startTime@AgendaEntry@@QBE?AVQDateTime@@XZ @ 14 NONAME ; class QDateTime AgendaEntry::startTime(void) const
+	?geoValue@AgendaEntry@@QBE?AVAgendaGeoValue@@XZ @ 15 NONAME ; class AgendaGeoValue AgendaEntry::geoValue(void) const
+	?getNextInstanceTimes@AgendaUtil@@QAEXAAVAgendaEntry@@AAVQDateTime@@1@Z @ 16 NONAME ; void AgendaUtil::getNextInstanceTimes(class AgendaEntry &, class QDateTime &, class QDateTime &)
+	?exportAsvCalendar@AgendaUtil@@QAE_NABVQString@@J@Z @ 17 NONAME ; bool AgendaUtil::exportAsvCalendar(class QString const &, long)
+	??_EAgendaAttendee@@UAE@I@Z @ 18 NONAME ; AgendaAttendee::~AgendaAttendee(unsigned int)
+	??9AgendaAlarm@@QBE_NABV0@@Z @ 19 NONAME ; bool AgendaAlarm::operator!=(class AgendaAlarm const &) const
+	?isNull@AgendaAlarm@@QBE_NXZ @ 20 NONAME ; bool AgendaAlarm::isNull(void) const
+	?extendedCategoryName@AgendaCategory@@QBE?AVQString@@XZ @ 21 NONAME ; class QString AgendaCategory::extendedCategoryName(void) const
+	?entryIds@AgendaUtil@@QAE?AV?$QList@K@@W4FilterFlags@1@@Z @ 22 NONAME ; class QList<unsigned long> AgendaUtil::entryIds(enum AgendaUtil::FilterFlags)
+	?isRepeating@AgendaEntry@@QAE_NXZ @ 23 NONAME ; bool AgendaEntry::isRepeating(void)
+	?deleteRepeatedEntry@AgendaUtil@@QAEXAAVAgendaEntry@@W4RecurrenceRange@1@@Z @ 24 NONAME ; void AgendaUtil::deleteRepeatedEntry(class AgendaEntry &, enum AgendaUtil::RecurrenceRange)
+	?tr@AgendaUtil@@SA?AVQString@@PBD0H@Z @ 25 NONAME ; class QString AgendaUtil::tr(char const *, char const *, int)
+	?description@AgendaEntry@@QBE?AVQString@@XZ @ 26 NONAME ; class QString AgendaEntry::description(void) const
+	??0AgendaUtil@@QAE@PAVQObject@@@Z @ 27 NONAME ; AgendaUtil::AgendaUtil(class QObject *)
+	?categories@AgendaEntry@@QAEAAV?$QList@VAgendaCategory@@@@XZ @ 28 NONAME ; class QList<class AgendaCategory> & AgendaEntry::categories(void)
+	?entriesChanged@AgendaUtil@@IAEXV?$QList@K@@@Z @ 29 NONAME ; void AgendaUtil::entriesChanged(class QList<unsigned long>)
+	??0AgendaGeoValue@@QAE@XZ @ 30 NONAME ; AgendaGeoValue::AgendaGeoValue(void)
+	?status@AgendaAttendee@@QBE?AW4StatusType@1@XZ @ 31 NONAME ; enum AgendaAttendee::StatusType AgendaAttendee::status(void) const
+	?markDatesWithEvents@AgendaUtil@@QAEXVQDateTime@@0W4FilterFlags@1@AAV?$QList@VQDate@@@@@Z @ 32 NONAME ; void AgendaUtil::markDatesWithEvents(class QDateTime, class QDateTime, enum AgendaUtil::FilterFlags, class QList<class QDate> &)
+	??9AgendaGeoValue@@QBE_NABV0@@Z @ 33 NONAME ; bool AgendaGeoValue::operator!=(class AgendaGeoValue const &) const
+	??0AgendaAlarm@@QAE@XZ @ 34 NONAME ; AgendaAlarm::AgendaAlarm(void)
+	?byMonth@AgendaRepeatRule@@QBE?AV?$QList@W4Month@AgendaRepeatRule@@@@XZ @ 35 NONAME ; class QList<enum AgendaRepeatRule::Month> AgendaRepeatRule::byMonth(void) const
+	?isNull@AgendaAttendee@@QBE_NXZ @ 36 NONAME ; bool AgendaAttendee::isNull(void) const
+	?areNoEntriesInCalendar@AgendaUtil@@QAE_NXZ @ 37 NONAME ; bool AgendaUtil::areNoEntriesInCalendar(void)
+	?clearGeoValue@AgendaEntry@@QBEXXZ @ 38 NONAME ; void AgendaEntry::clearGeoValue(void) const
+	?setAddress@AgendaAttendee@@QAEXABVQString@@@Z @ 39 NONAME ; void AgendaAttendee::setAddress(class QString const &)
+	?setRepeatRuleStart@AgendaRepeatRule@@QAEXABVQDateTime@@@Z @ 40 NONAME ; void AgendaRepeatRule::setRepeatRuleStart(class QDateTime const &)
+	?trUtf8@AgendaUtil@@SA?AVQString@@PBD0H@Z @ 41 NONAME ; class QString AgendaUtil::trUtf8(char const *, char const *, int)
+	?setLastModifiedDateTime@AgendaEntry@@QAEXABVQDateTime@@@Z @ 42 NONAME ; void AgendaEntry::setLastModifiedDateTime(class QDateTime const &)
+	??0AgendaAlarm@@QAE@ABV0@@Z @ 43 NONAME ; AgendaAlarm::AgendaAlarm(class AgendaAlarm const &)
+	?setSummary@AgendaEntry@@QAEXABVQString@@@Z @ 44 NONAME ; void AgendaEntry::setSummary(class QString const &)
+	?setByMonthDay@AgendaRepeatRule@@QAEXABV?$QList@H@@@Z @ 45 NONAME ; void AgendaRepeatRule::setByMonthDay(class QList<int> const &)
+	??1AgendaEntry@@UAE@XZ @ 46 NONAME ; AgendaEntry::~AgendaEntry(void)
+	?setResponseRequested@AgendaAttendee@@QAEX_N@Z @ 47 NONAME ; void AgendaAttendee::setResponseRequested(bool)
+	??1AgendaRepeatRule@@QAE@XZ @ 48 NONAME ; AgendaRepeatRule::~AgendaRepeatRule(void)
+	?byMonthDay@AgendaRepeatRule@@QBE?AV?$QList@H@@XZ @ 49 NONAME ; class QList<int> AgendaRepeatRule::byMonthDay(void) const
+	?detach@AgendaGeoValue@@AAEXXZ @ 50 NONAME ; void AgendaGeoValue::detach(void)
+	?detach@AgendaEntry@@AAEXXZ @ 51 NONAME ; void AgendaEntry::detach(void)
+	??9AgendaAttendee@@QBE_NABV0@@Z @ 52 NONAME ; bool AgendaAttendee::operator!=(class AgendaAttendee const &) const
+	??9AgendaRepeatRule@@QBE_NABV0@@Z @ 53 NONAME ; bool AgendaRepeatRule::operator!=(class AgendaRepeatRule const &) const
+	?weekStart@AgendaRepeatRule@@QBE?AW4Day@1@XZ @ 54 NONAME ; enum AgendaRepeatRule::Day AgendaRepeatRule::weekStart(void) const
+	??4AgendaAlarm@@QAEAAV0@ABV0@@Z @ 55 NONAME ; class AgendaAlarm & AgendaAlarm::operator=(class AgendaAlarm const &)
+	?lastModifiedDateTime@AgendaEntry@@QBE?AVQDateTime@@XZ @ 56 NONAME ; class QDateTime AgendaEntry::lastModifiedDateTime(void) const
+	?attendees@AgendaEntry@@QBEABV?$QList@VAgendaAttendee@@@@XZ @ 57 NONAME ; class QList<class AgendaAttendee> const & AgendaEntry::attendees(void) const
+	?setInterval@AgendaRepeatRule@@QAEXH@Z @ 58 NONAME ; void AgendaRepeatRule::setInterval(int)
+	??8AgendaGeoValue@@QBE_NABV0@@Z @ 59 NONAME ; bool AgendaGeoValue::operator==(class AgendaGeoValue const &) const
+	?id@AgendaEntry@@QBEKXZ @ 60 NONAME ; unsigned long AgendaEntry::id(void) const
+	?setByDay@AgendaRepeatRule@@QAEXABV?$QList@W4Day@AgendaRepeatRule@@@@@Z @ 61 NONAME ; void AgendaRepeatRule::setByDay(class QList<enum AgendaRepeatRule::Day> const &)
+	?setUntil@AgendaRepeatRule@@QAEXABVQDateTime@@@Z @ 62 NONAME ; void AgendaRepeatRule::setUntil(class QDateTime const &)
+	?setType@AgendaRepeatRule@@QAEXW4RuleType@1@@Z @ 63 NONAME ; void AgendaRepeatRule::setType(enum AgendaRepeatRule::RuleType)
+	?interval@AgendaRepeatRule@@QBEHXZ @ 64 NONAME ; int AgendaRepeatRule::interval(void) const
+	?rDates@AgendaEntry@@QBE?AV?$QList@VQDate@@@@XZ @ 65 NONAME ; class QList<class QDate> AgendaEntry::rDates(void) const
+	?repeatRuleStart@AgendaRepeatRule@@QBE?AVQDateTime@@XZ @ 66 NONAME ; class QDateTime AgendaRepeatRule::repeatRuleStart(void) const
+	??8AgendaAlarm@@QBE_NABV0@@Z @ 67 NONAME ; bool AgendaAlarm::operator==(class AgendaAlarm const &) const
+	??0AgendaRepeatRule@@QAE@ABV0@@Z @ 68 NONAME ; AgendaRepeatRule::AgendaRepeatRule(class AgendaRepeatRule const &)
+	?setStatus@AgendaAttendee@@QAEXW4StatusType@1@@Z @ 69 NONAME ; void AgendaAttendee::setStatus(enum AgendaAttendee::StatusType)
+	?setStatus@AgendaEntry@@QAEXW4Status@1@@Z @ 70 NONAME ; void AgendaEntry::setStatus(enum AgendaEntry::Status)
+	?setExtendedCategoryName@AgendaCategory@@QAEXABVQString@@@Z @ 71 NONAME ; void AgendaCategory::setExtendedCategoryName(class QString const &)
+	?setDescription@AgendaEntry@@QAEXABVQString@@@Z @ 72 NONAME ; void AgendaEntry::setDescription(class QString const &)
+	?recurrenceId@AgendaEntry@@QAE?AVQDateTime@@XZ @ 73 NONAME ; class QDateTime AgendaEntry::recurrenceId(void)
+	?until@AgendaRepeatRule@@QBE?AVQDateTime@@XZ @ 74 NONAME ; class QDateTime AgendaRepeatRule::until(void) const
+	?setByMonth@AgendaRepeatRule@@QAEXABV?$QList@W4Month@AgendaRepeatRule@@@@@Z @ 75 NONAME ; void AgendaRepeatRule::setByMonth(class QList<enum AgendaRepeatRule::Month> const &)
+	?qt_metacall@AgendaUtil@@UAEHW4Call@QMetaObject@@HPAPAX@Z @ 76 NONAME ; int AgendaUtil::qt_metacall(enum QMetaObject::Call, int, void * *)
+	?qt_metacast@AgendaUtil@@UAEPAXPBD@Z @ 77 NONAME ; void * AgendaUtil::qt_metacast(char const *)
+	?isNull@AgendaRepeatRule@@QBE_NXZ @ 78 NONAME ; bool AgendaRepeatRule::isNull(void) const
+	?getStaticMetaObject@AgendaUtil@@SAABUQMetaObject@@XZ @ 79 NONAME ; struct QMetaObject const & AgendaUtil::getStaticMetaObject(void)
+	??8AgendaAttendee@@QBE_NABV0@@Z @ 80 NONAME ; bool AgendaAttendee::operator==(class AgendaAttendee const &) const
+	?addCategory@AgendaEntry@@QAEXABVAgendaCategory@@@Z @ 81 NONAME ; void AgendaEntry::addCategory(class AgendaCategory const &)
+	?setLocation@AgendaEntry@@QAEXABVQString@@@Z @ 82 NONAME ; void AgendaEntry::setLocation(class QString const &)
+	?isTimedEntry@AgendaEntry@@QAE_NXZ @ 83 NONAME ; bool AgendaEntry::isTimedEntry(void)
+	?favourite@AgendaEntry@@QBEIXZ @ 84 NONAME ; unsigned int AgendaEntry::favourite(void) const
+	?entryViewCreationCompleted@AgendaUtil@@IAEXH@Z @ 85 NONAME ; void AgendaUtil::entryViewCreationCompleted(int)
+	?durationInSecs@AgendaEntry@@QBEHXZ @ 86 NONAME ; int AgendaEntry::durationInSecs(void) const
+	??1AgendaUtil@@UAE@XZ @ 87 NONAME ; AgendaUtil::~AgendaUtil(void)
+	?category@AgendaCategory@@QBE?AW4CategoryType@1@XZ @ 88 NONAME ; enum AgendaCategory::CategoryType AgendaCategory::category(void) const
+	?entryAdded@AgendaUtil@@IAEXK@Z @ 89 NONAME ; void AgendaUtil::entryAdded(unsigned long)
+	?role@AgendaAttendee@@QBE?AW4ParticipantRole@1@XZ @ 90 NONAME ; enum AgendaAttendee::ParticipantRole AgendaAttendee::role(void) const
+	?type@AgendaEntry@@QBE?AW4Type@1@XZ @ 91 NONAME ; enum AgendaEntry::Type AgendaEntry::type(void) const
+	??0AgendaEntry@@QAE@W4Type@0@@Z @ 92 NONAME ; AgendaEntry::AgendaEntry(enum AgendaEntry::Type)
+	?detach@AgendaRepeatRule@@AAEXXZ @ 93 NONAME ; void AgendaRepeatRule::detach(void)
+	?error@AgendaUtil@@QBE?AW4Error@1@XZ @ 94 NONAME ; enum AgendaUtil::Error AgendaUtil::error(void) const
+	?trUtf8@AgendaUtil@@SA?AVQString@@PBD0@Z @ 95 NONAME ; class QString AgendaUtil::trUtf8(char const *, char const *)
+	?status@AgendaEntry@@QBE?AW4Status@1@XZ @ 96 NONAME ; enum AgendaEntry::Status AgendaEntry::status(void) const
+	??0AgendaEntry@@QAE@ABV0@@Z @ 97 NONAME ; AgendaEntry::AgendaEntry(class AgendaEntry const &)
+	??4AgendaAttendee@@QAEAAV0@ABV0@@Z @ 98 NONAME ; class AgendaAttendee & AgendaAttendee::operator=(class AgendaAttendee const &)
+	?address@AgendaAttendee@@QBE?AVQString@@XZ @ 99 NONAME ; class QString AgendaAttendee::address(void) const
+	?entryDeleted@AgendaUtil@@IAEXK@Z @ 100 NONAME ; void AgendaUtil::entryDeleted(unsigned long)
+	?summary@AgendaEntry@@QBE?AVQString@@XZ @ 101 NONAME ; class QString AgendaEntry::summary(void) const
+	?priority@AgendaEntry@@QBEHXZ @ 102 NONAME ; int AgendaEntry::priority(void) const
+	?fetchById@AgendaUtil@@QAE?AVAgendaEntry@@K@Z @ 103 NONAME ; class AgendaEntry AgendaUtil::fetchById(unsigned long)
+	?setCommonName@AgendaAttendee@@QAEXABVQString@@@Z @ 104 NONAME ; void AgendaAttendee::setCommonName(class QString const &)
+	?setMethod@AgendaEntry@@QAEXW4Method@1@@Z @ 105 NONAME ; void AgendaEntry::setMethod(enum AgendaEntry::Method)
+	?setRDates@AgendaEntry@@QAEXABV?$QList@VQDate@@@@@Z @ 106 NONAME ; void AgendaEntry::setRDates(class QList<class QDate> const &)
+	?parentEntry@AgendaUtil@@QAE?AVAgendaEntry@@AAV2@@Z @ 107 NONAME ; class AgendaEntry AgendaUtil::parentEntry(class AgendaEntry &)
+	?addAttendee@AgendaEntry@@QAEXABVAgendaAttendee@@@Z @ 108 NONAME ; void AgendaEntry::addAttendee(class AgendaAttendee const &)
+	?setCompleted@AgendaUtil@@QAEXAAVAgendaEntry@@_NAAVQDateTime@@@Z @ 109 NONAME ; void AgendaUtil::setCompleted(class AgendaEntry &, bool, class QDateTime &)
+	??0AgendaCategory@@QAE@XZ @ 110 NONAME ; AgendaCategory::AgendaCategory(void)
+	?timeOffset@AgendaAlarm@@QBEHXZ @ 111 NONAME ; int AgendaAlarm::timeOffset(void) const
+	??0AgendaAttendee@@QAE@XZ @ 112 NONAME ; AgendaAttendee::AgendaAttendee(void)
+	?setAlarmSoundName@AgendaAlarm@@QAEXABVQString@@@Z @ 113 NONAME ; void AgendaAlarm::setAlarmSoundName(class QString const &)
+	?fetchEntriesInRange@AgendaUtil@@QAE?AV?$QList@VAgendaEntry@@@@VQDateTime@@0W4FilterFlags@1@@Z @ 114 NONAME ; class QList<class AgendaEntry> AgendaUtil::fetchEntriesInRange(class QDateTime, class QDateTime, enum AgendaUtil::FilterFlags)
+	?detach@AgendaAlarm@@AAEXXZ @ 115 NONAME ; void AgendaAlarm::detach(void)
+	?setWeekStart@AgendaRepeatRule@@QAEXW4Day@1@@Z @ 116 NONAME ; void AgendaRepeatRule::setWeekStart(enum AgendaRepeatRule::Day)
+	?setFavourite@AgendaEntry@@QAEXI@Z @ 117 NONAME ; void AgendaEntry::setFavourite(unsigned int)
+	?setDTStamp@AgendaEntry@@QAEXABVQDateTime@@@Z @ 118 NONAME ; void AgendaEntry::setDTStamp(class QDateTime const &)
+	?cloneEntry@AgendaUtil@@QAEKABVAgendaEntry@@W4Type@2@@Z @ 119 NONAME ; unsigned long AgendaUtil::cloneEntry(class AgendaEntry const &, enum AgendaEntry::Type)
+	?setRepeatRule@AgendaEntry@@QAEXABVAgendaRepeatRule@@@Z @ 120 NONAME ; void AgendaEntry::setRepeatRule(class AgendaRepeatRule const &)
+	?categories@AgendaEntry@@QBEABV?$QList@VAgendaCategory@@@@XZ @ 121 NONAME ; class QList<class AgendaCategory> const & AgendaEntry::categories(void) const
+	?tr@AgendaUtil@@SA?AVQString@@PBD0@Z @ 122 NONAME ; class QString AgendaUtil::tr(char const *, char const *)
+	??4AgendaRepeatRule@@QAEAAV0@ABV0@@Z @ 123 NONAME ; class AgendaRepeatRule & AgendaRepeatRule::operator=(class AgendaRepeatRule const &)
+	?setCompletedDateTime@AgendaEntry@@QAEXABVQDateTime@@@Z @ 124 NONAME ; void AgendaEntry::setCompletedDateTime(class QDateTime const &)
+	??0AgendaRepeatRule@@QAE@XZ @ 125 NONAME ; AgendaRepeatRule::AgendaRepeatRule(void)
+	?dtStamp@AgendaEntry@@QBE?AVQDateTime@@XZ @ 126 NONAME ; class QDateTime AgendaEntry::dtStamp(void) const
+	?method@AgendaEntry@@QBE?AW4Method@1@XZ @ 127 NONAME ; enum AgendaEntry::Method AgendaEntry::method(void) const
+	?type@AgendaRepeatRule@@QBE?AW4RuleType@1@XZ @ 128 NONAME ; enum AgendaRepeatRule::RuleType AgendaRepeatRule::type(void) const
+	??4AgendaGeoValue@@QAEAAV0@ABV0@@Z @ 129 NONAME ; class AgendaGeoValue & AgendaGeoValue::operator=(class AgendaGeoValue const &)
+	??0AgendaCategory@@QAE@W4CategoryType@0@@Z @ 130 NONAME ; AgendaCategory::AgendaCategory(enum AgendaCategory::CategoryType)
+	?commonName@AgendaAttendee@@QBE?AVQString@@XZ @ 131 NONAME ; class QString AgendaAttendee::commonName(void) const
+	?detach@AgendaCategory@@AAEXXZ @ 132 NONAME ; void AgendaCategory::detach(void)
+	??0AgendaGeoValue@@QAE@ABV0@@Z @ 133 NONAME ; AgendaGeoValue::AgendaGeoValue(class AgendaGeoValue const &)
+	?isWorkdaysRepeatingEntry@AgendaUtil@@SA_NABVAgendaRepeatRule@@@Z @ 134 NONAME ; bool AgendaUtil::isWorkdaysRepeatingEntry(class AgendaRepeatRule const &)
+	?setRole@AgendaAttendee@@QAEXW4ParticipantRole@1@@Z @ 135 NONAME ; void AgendaAttendee::setRole(enum AgendaAttendee::ParticipantRole)
+	?detach@AgendaAttendee@@AAEXXZ @ 136 NONAME ; void AgendaAttendee::detach(void)
+	?getLatLong@AgendaGeoValue@@QBEXAAN0@Z @ 137 NONAME ; void AgendaGeoValue::getLatLong(double &, double &) const
+	?maxTime@AgendaUtil@@SA?AVQDateTime@@XZ @ 138 NONAME ; class QDateTime AgendaUtil::maxTime(void)
+	?setCategory@AgendaCategory@@QAEXW4CategoryType@1@@Z @ 139 NONAME ; void AgendaCategory::setCategory(enum AgendaCategory::CategoryType)
+	?endTime@AgendaEntry@@QBE?AVQDateTime@@XZ @ 140 NONAME ; class QDateTime AgendaEntry::endTime(void) const
+	??9AgendaEntry@@QBE_NABV0@@Z @ 141 NONAME ; bool AgendaEntry::operator!=(class AgendaEntry const &) const
+	??0AgendaRepeatRule@@QAE@W4RuleType@0@@Z @ 142 NONAME ; AgendaRepeatRule::AgendaRepeatRule(enum AgendaRepeatRule::RuleType)
+	??9AgendaCategory@@QBE_NABV0@@Z @ 143 NONAME ; bool AgendaCategory::operator!=(class AgendaCategory const &) const
+	??0AgendaAttendee@@QAE@ABV0@@Z @ 144 NONAME ; AgendaAttendee::AgendaAttendee(class AgendaAttendee const &)
+	??0AgendaAttendee@@QAE@ABVQString@@@Z @ 145 NONAME ; AgendaAttendee::AgendaAttendee(class QString const &)
+	?importvCalendar@AgendaUtil@@QAEHABVQString@@AAVAgendaEntry@@@Z @ 146 NONAME ; int AgendaUtil::importvCalendar(class QString const &, class AgendaEntry &)
+	?instanceViewCreationCompleted@AgendaUtil@@IAEXH@Z @ 147 NONAME ; void AgendaUtil::instanceViewCreationCompleted(int)
+	??_EAgendaUtil@@UAE@I@Z @ 148 NONAME ; AgendaUtil::~AgendaUtil(unsigned int)
+	?setGeoValue@AgendaEntry@@QAEXABVAgendaGeoValue@@@Z @ 149 NONAME ; void AgendaEntry::setGeoValue(class AgendaGeoValue const &)
+	?getPreviousInstanceTimes@AgendaUtil@@QAEXAAVAgendaEntry@@AAVQDateTime@@1@Z @ 150 NONAME ; void AgendaUtil::getPreviousInstanceTimes(class AgendaEntry &, class QDateTime &, class QDateTime &)
+	?attendees@AgendaEntry@@QAEAAV?$QList@VAgendaAttendee@@@@XZ @ 151 NONAME ; class QList<class AgendaAttendee> & AgendaEntry::attendees(void)
+	?staticMetaObject@AgendaUtil@@2UQMetaObject@@B @ 152 NONAME ; struct QMetaObject const AgendaUtil::staticMetaObject
+	?entriesDeleted@AgendaUtil@@IAEXH@Z @ 153 NONAME ; void AgendaUtil::entriesDeleted(int)
+	?fetchAllEntries@AgendaUtil@@QAE?AV?$QList@VAgendaEntry@@@@W4FilterFlags@1@@Z @ 154 NONAME ; class QList<class AgendaEntry> AgendaUtil::fetchAllEntries(enum AgendaUtil::FilterFlags)
+	?setTimeOffset@AgendaAlarm@@QAEXH@Z @ 155 NONAME ; void AgendaAlarm::setTimeOffset(int)
+	??0AgendaEntry@@QAE@XZ @ 156 NONAME ; AgendaEntry::AgendaEntry(void)
+	?setPriority@AgendaEntry@@QAEXH@Z @ 157 NONAME ; void AgendaEntry::setPriority(int)
+	?setType@AgendaEntry@@QAEXW4Type@1@@Z @ 158 NONAME ; void AgendaEntry::setType(enum AgendaEntry::Type)
+	?setStartAndEndTime@AgendaEntry@@QAE_NABVQDateTime@@0@Z @ 159 NONAME ; bool AgendaEntry::setStartAndEndTime(class QDateTime const &, class QDateTime const &)
+	?deleteEntries@AgendaUtil@@QAEXAAVQDateTime@@0W4FilterFlags@1@@Z @ 160 NONAME ; void AgendaUtil::deleteEntries(class QDateTime &, class QDateTime &, enum AgendaUtil::FilterFlags)
+	?metaObject@AgendaUtil@@UBEPBUQMetaObject@@XZ @ 161 NONAME ; struct QMetaObject const * AgendaUtil::metaObject(void) const
+	?location@AgendaEntry@@QBE?AVQString@@XZ @ 162 NONAME ; class QString AgendaEntry::location(void) const
+	??8AgendaCategory@@QBE_NABV0@@Z @ 163 NONAME ; bool AgendaCategory::operator==(class AgendaCategory const &) const
+	??0AgendaCategory@@QAE@ABV0@@Z @ 164 NONAME ; AgendaCategory::AgendaCategory(class AgendaCategory const &)
+	??1AgendaGeoValue@@QAE@XZ @ 165 NONAME ; AgendaGeoValue::~AgendaGeoValue(void)
+	??4AgendaEntry@@QAEAAV0@ABV0@@Z @ 166 NONAME ; class AgendaEntry & AgendaEntry::operator=(class AgendaEntry const &)
+	??_EAgendaCategory@@UAE@I@Z @ 167 NONAME ; AgendaCategory::~AgendaCategory(unsigned int)
+	?createEntryIdListForDay@AgendaUtil@@QAE?AV?$QList@VAgendaEntry@@@@VQDateTime@@W4FilterFlags@1@@Z @ 168 NONAME ; class QList<class AgendaEntry> AgendaUtil::createEntryIdListForDay(class QDateTime, enum AgendaUtil::FilterFlags)
+	?repeatRule@AgendaEntry@@QBE?AVAgendaRepeatRule@@XZ @ 169 NONAME ; class AgendaRepeatRule AgendaEntry::repeatRule(void) const
+	??1AgendaCategory@@UAE@XZ @ 170 NONAME ; AgendaCategory::~AgendaCategory(void)
+	?deleteEntry@AgendaUtil@@QAE_NK@Z @ 171 NONAME ; bool AgendaUtil::deleteEntry(unsigned long)
+	??1AgendaAttendee@@UAE@XZ @ 172 NONAME ; AgendaAttendee::~AgendaAttendee(void)
+	?byDay@AgendaRepeatRule@@QBE?AV?$QList@W4Day@AgendaRepeatRule@@@@XZ @ 173 NONAME ; class QList<enum AgendaRepeatRule::Day> AgendaRepeatRule::byDay(void) const
+	?setLatLong@AgendaGeoValue@@QAEXNN@Z @ 174 NONAME ; void AgendaGeoValue::setLatLong(double, double)
+	?completedDateTime@AgendaEntry@@QBE?AVQDateTime@@XZ @ 175 NONAME ; class QDateTime AgendaEntry::completedDateTime(void) const
+	?setRecurrenceId@AgendaEntry@@QAEXAAVQDateTime@@@Z @ 176 NONAME ; void AgendaEntry::setRecurrenceId(class QDateTime &)
+	?store@AgendaUtil@@QAEKAAVAgendaEntry@@W4RecurrenceRange@1@VQDateTime@@@Z @ 177 NONAME ; unsigned long AgendaUtil::store(class AgendaEntry &, enum AgendaUtil::RecurrenceRange, class QDateTime)
+	?isNull@AgendaGeoValue@@QBE_NXZ @ 178 NONAME ; bool AgendaGeoValue::isNull(void) const
+

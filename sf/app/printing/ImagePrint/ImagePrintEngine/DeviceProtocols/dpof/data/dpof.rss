@@ -1,0 +1,85 @@
+/*
+* Copyright (c) 2002-2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*
+*/
+
+
+#include <eikon.rh>
+#include <imageprintapp.loc>
+
+#include "imageprint.rh"
+#include "printcapabilitycodes.h"
+#include "imageprintvariant.h"
+
+STRUCT STRING
+	{
+	LTEXT text;
+	}
+
+RESOURCE STRING r_qtn_print_dpof_confirmation_dialog {text=qtn_print_dpof_confirmation_dialog;}
+
+
+enum PrinterClass  // should come from ImgPrintKonst.h
+{
+	EDefault = 0,
+	EBigAdaptive = 1,
+	ESmallAdaptive = 2,
+	EDesk = 3,
+	ELinked = 99
+};
+
+RESOURCE RS_CAPABILITIES dpof_Capabilities
+{
+
+	capabilities =
+	{
+		RS_CAPABILITY
+		{
+			printerclass=EDefault;
+			capabilityid=EPrintCapabPaperSize;
+			type=1;
+			defaultvalue=EPrintCapabPaperSizeAuto;
+			low=1;
+			high=400;
+			enumcodes={
+				EPrintCapabPaperSizeAuto,0
+				};
+			linkid=0;
+			printerclass=EDefault;
+		},
+		RS_CAPABILITY
+		{
+			printerclass=EDefault;
+			capabilityid=EPrintCapabLayout;
+			type=1;
+			defaultvalue=EPrintCapabLayout1UpMedium;
+			low=0;
+			high=0;
+			enumcodes={
+				EPrintCapabLayout1UpMedium,0
+				,EPrintCapabLayout2Up,0
+				,EPrintCapabLayout4Up,0
+				,EPrintCapabLayout6Up,0
+				,EPrintCapabLayout9Up,0
+				,EPrintCapabLayout12Up,0
+#ifdef IMG_PRINT_DYNAMIC_PRINT_SETTINGS
+				,EPrintCapabLayout16Up,0
+#endif				
+				};
+			linkid=0;
+		}
+	};
+
+}

@@ -1,0 +1,139 @@
+/*
+* Copyright (c) 2007-2010 Sebastian Brannstrom, Lars Persson, EmbedDev AB
+*
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the License "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* EmbedDev AB - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+RESOURCE AVKON_VIEW r_podcast_queueview
+{
+	menubar = r_podcast_queueview_menubar;
+	cba = R_AVKON_SOFTKEYS_OPTIONS_BACK;
+	toolbar = r_queueview_toolbar;
+}
+
+RESOURCE MENU_BAR r_podcast_queueview_menubar
+    {
+    titles =
+        {
+        MENU_TITLE { menu_pane = r_podcast_queueview_menu; txt = ""; }
+        };
+    }
+
+RESOURCE MENU_PANE r_podcast_queueview_menu
+    {
+    items =
+        {
+ 		MENU_ITEM
+			{
+			command = EPodcastAbout;
+			txt = STRING_r_view_about_cmd;
+			}, 
+		MENU_ITEM
+			{
+			command = EPodcastHelp;
+			txt = STRING_r_view_help;
+			},
+		MENU_ITEM
+			{
+			command = EAknSoftkeyExit;
+			txt = STRING_r_exit_cmd;
+			}
+        };
+    }
+
+RESOURCE AVKON_TOOLBAR r_queueview_toolbar
+    {
+    flags = KAknToolbarFixed;
+    items =
+        {
+
+		TBAR_CTRL
+			{
+			type = EAknCtButton;
+			id =EPodcastSuspendDownloads;
+			control = AVKON_BUTTON
+				{
+				states =
+					{
+					AVKON_BUTTON_STATE
+						{
+						//bmpfile = AVKON_BITMAP_FILE;
+						//bmpid = EMbmAvkonQgn_indi_find_goto;
+						txt = STRING_r_suspend_download_cmd;
+						helptxt = STRING_r_view_stop_downloads_cmd;
+						}  
+					};
+				};
+			},
+		TBAR_CTRL
+			{
+			type = EAknCtButton;
+			id =EPodcastResumeDownloads;
+			control = AVKON_BUTTON
+				{
+				states =
+					{
+					AVKON_BUTTON_STATE
+						{
+						//bmpfile = AVKON_BITMAP_FILE;
+						//bmpid = EMbmAvkonQgn_indi_find_goto;
+						txt = STRING_r_view_resume_short_dls_cmd;
+						helptxt = STRING_r_view_resume_downloads_cmd;
+						}  
+					};
+				};
+			},
+		TBAR_CTRL
+			{
+			type = EAknCtButton;
+			id =EPodcastRemoveAllDownloads;
+			control = AVKON_BUTTON
+				{
+				states =
+					{
+					AVKON_BUTTON_STATE
+						{
+						//bmpfile = AVKON_BITMAP_FILE;
+						//bmpid = EMbmAvkonQgn_indi_find_goto;
+						txt = STRING_r_view_remove_all_downloads_cmd_short;
+						helptxt = STRING_r_view_remove_all_downloads_cmd;
+						}  
+					};
+				};
+			}
+        };
+    }
+
+RESOURCE STYLUS_POPUP_MENU r_queueview_popup_menu
+	{
+		items =
+		{
+			STYLUS_POPUP_MENU_ITEM
+				{
+					txt = STRING_r_view_remove_download_short_cmd;
+					command = EPodcastRemoveDownload;
+				},
+			STYLUS_POPUP_MENU_ITEM
+				{
+					txt = STRING_r_view_move_up_short_cmd;
+					command = EPodcastMoveDownloadUp;
+				},
+			STYLUS_POPUP_MENU_ITEM
+				{
+					txt = STRING_r_view_move_down_short_cmd;
+					command = EPodcastMoveDownloadDown;
+				}
+		};
+	}

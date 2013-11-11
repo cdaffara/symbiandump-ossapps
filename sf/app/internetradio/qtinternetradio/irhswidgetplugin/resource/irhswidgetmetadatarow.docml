@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="1.1">
+    <widget name="metadatarow_layout" type="HbWidget">
+        <widget name="hSeparatorLabel" type="HbLabel">
+            <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+            <icon iconName="qtg_graf_divider_h_thin" name="icon"/>
+            <sizepolicy horizontalPolicy="Preferred" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+            <sizehint height="2" type="PREFERRED"/>
+            <sizehint height="2" type="MINIMUM"/>
+            <contentsmargins bottom="0un" left="1un" right="1un" top="0un"/>
+            <sizehint height="2" type="MAXIMUM"/>
+            <enums name="aspectRatioMode" value="IgnoreAspectRatio"/>
+        </widget>
+        <widget name="lower_side_layout" type="HbWidget">
+            <widget name="vSeparatorRight" type="HbLabel">
+                <icon iconName="qtg_graf_divider_v_thin" name="icon"/>
+                <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Preferred" verticalStretch="0"/>
+                <sizehint type="PREFERRED" width="2"/>
+                <sizehint type="MINIMUM" width="2"/>
+                <contentsmargins bottom="0.25un" left="0un" right="0un" top="0.25un"/>
+                <sizehint type="MAXIMUM" width="2"/>
+                <enums name="aspectRatioMode" value="IgnoreAspectRatio"/>
+            </widget>
+            <widget name="metadata_layout" type="HbWidget">
+                <widget name="metadata_label" type="HbMarqueeItem">
+                    <sizepolicy horizontalPolicy="Preferred" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+                    <sizehint height="expr(var(hb-param-text-height-secondary))" type="PREFERRED"/>
+                    <sizehint height="expr(var(hb-param-text-height-secondary))" type="MINIMUM"/>
+                    <sizehint height="expr(var(hb-param-text-height-secondary))" type="MAXIMUM"/>
+                    <fontspec name="fontSpec" role="Secondary" textheight="expr(var(hb-param-text-height-secondary))"/>
+                </widget>
+                <layout orientation="Vertical" spacing="0un" type="linear">
+                    <contentsmargins bottom="var(hb-param-margin-gene-middle-vertical)" left="expr(var(hb-param-margin-gene-middle-horizontal))" right="expr(var(hb-param-margin-gene-middle-horizontal))" top="var(hb-param-margin-gene-middle-vertical)"/>
+                    <stretchitem stretchfactor="1"/>
+                    <linearitem itemname="metadata_label"/>
+                    <stretchitem stretchfactor="1"/>
+                </layout>
+            </widget>
+            <widget name="control_layout" type="HbWidget">
+                <widget name="control_label" type="HbLabel">
+                    <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+                    <icon iconName="qtg_mono_play" name="icon"/>
+                    <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+                    <sizehint height="6un" type="FIXED" width="6un"/>
+                    <sizehint height="6un" type="MINIMUM" width="6un"/>
+                    <sizehint height="6un" type="MAXIMUM" width="6un"/>
+                </widget>
+                <layout orientation="Vertical" spacing="0un" type="linear">
+                    <contentsmargins bottom="0un" left="expr(var(hb-param-margin-gene-left))" right="expr(var(hb-param-margin-gene-right))" top="0un"/>
+                    <stretchitem stretchfactor="1"/>
+                    <linearitem itemname="control_label"/>
+                    <stretchitem stretchfactor="1"/>
+                </layout>
+            </widget>
+            <layout orientation="Horizontal" spacing="0un" type="linear">
+                <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+                <linearitem itemname="metadata_layout"/>
+                <linearitem itemname="vSeparatorRight"/>
+                <linearitem itemname="control_layout"/>
+            </layout>
+        </widget>
+        <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+        <sizehint height="expr(7.5un+var(hb-param-text-height-secondary))" type="FIXED" width="46un"/>
+        <sizehint height="expr(7.5un+var(hb-param-text-height-secondary))" type="MINIMUM" width="46un"/>
+        <sizehint height="expr(7.5un+var(hb-param-text-height-secondary))" type="MAXIMUM" width="46un"/>
+        <layout orientation="Vertical" spacing="0un" type="linear">
+            <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+            <linearitem itemname="hSeparatorLabel"/>
+            <linearitem itemname="lower_side_layout"/>
+        </layout>
+    </widget>
+    <metadata activeUIState="Common ui state" display="NHD-3.2-inch_portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+    </metadata>
+</hbdocument>

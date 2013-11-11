@@ -1,0 +1,329 @@
+/*
+* Copyright (c) 2004 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  This file contains all the resources for the Podcast Collection
+*
+*/
+
+
+//  INCLUDES
+#include <bldvariant.hrh>
+#include <badef.rh>
+#include <pathconfiguration.hrh>
+#include "mpxpodcastcollectiondb.hrh"
+
+STRUCT MENU_ITEM
+    {
+    LONG   id;
+    STRUCT name;
+    }
+
+STRUCT MENU_ITEM_ARRAY
+    {
+    STRUCT array_of_menu_items[];
+    }
+
+//  RESOURCE IDENTIFIER
+NAME    OAPC // 4 letter ID
+
+//  RESOURCE DEFINITIONS
+
+RESOURCE BA_RSS_SIGNATURE { }
+
+//----------------------------------------------------
+// r_mc_music_library_menu_items
+// Menu items to be displayed in the music library view
+//----------------------------------------------------
+//
+RESOURCE MENU_ITEM_ARRAY r_mc_menu_items_array
+    {
+    array_of_menu_items =
+        {
+        MENU_ITEM {id = EBrowseAll;             name = LBUF {txt = qtn_nmp_all_episodes;};},
+        MENU_ITEM {id = EBrowseTitle;           name = LBUF {txt = qtn_nmp_by_title;};},
+        MENU_ITEM {id = EBrowsePubDate;         name = LBUF {txt = qtn_nmp_by_publish_date;};},
+        MENU_ITEM {id = EBrowseRecentlyAdded;   name = LBUF {txt = qtn_nmp_recently_added;};},
+        MENU_ITEM {id = EBrowseNotPlayed;       name = LBUF {txt = qtn_nmp_not_yet_played;};}
+        };
+    }
+
+//----------------------------------------------------
+// r_mc_music_library_menu_items
+// Menu items to be displayed in the music library view
+//----------------------------------------------------
+//
+RESOURCE MENU_ITEM_ARRAY r_mc_menu_titles_array
+    {
+    array_of_menu_items =
+        {
+        MENU_ITEM {id = EBrowseAll;             name = LBUF {txt = qtn_nmp_title_all_episodes;};},
+        MENU_ITEM {id = EBrowseTitle;           name = LBUF {txt = qtn_mus_title_titles;};},
+        MENU_ITEM {id = EBrowsePubDate;         name = LBUF {txt = qtn_mus_title_publish_date;};},
+        MENU_ITEM {id = EBrowseRecentlyAdded;   name = LBUF {txt = qtn_nmp_title_recently_added;};},
+        MENU_ITEM {id = EBrowseNotPlayed;       name = LBUF {txt = qtn_nmp_unplayed;};}
+        };
+    }
+
+RESOURCE TBUF { buf="PCRES"; }
+
+
+// ** DEFAULT MUSIC FOLDER STRINGS
+
+//----------------------------------------------------
+//
+//    r_mc_default_music_folders
+//
+//----------------------------------------------------
+//
+RESOURCE ARRAY r_mc_default_music_folders
+    {
+    items =
+        {
+        LBUF {txt = text_memory_card_root_path;},
+        LBUF {txt = text_phone_memory_root_path;}
+        };
+    }
+
+//----------------------------------------------------
+// r_mc_music_file_extensions
+// file extensions which be scanned by music collection
+//----------------------------------------------------
+//
+RESOURCE ARRAY r_mc_music_file_extensions
+    {
+    items =
+        {
+#ifdef __WMA
+        LBUF {txt = ".wma";},
+#endif
+        LBUF {txt = ".mp3";},
+        LBUF {txt = ".m4a";},
+        LBUF {txt = ".aac";}
+        };
+    }
+
+//----------------------------------------------------
+// r_mc_file_extensions_mime
+// file extensions which can be scanned by music
+// collection, however, these files types must be
+// checked whether their MIME types match as well
+// because they can be DRM or video files
+//----------------------------------------------------
+//
+RESOURCE ARRAY r_mc_file_extensions_mime
+    {
+    items =
+        {
+        LBUF {txt = "";},
+#ifdef RD_RA_SUPPORT_FOR_MUSIC_PLAYER
+        LBUF {txt = ".ra";},
+        LBUF {txt = ".rm";},
+#endif
+        LBUF {txt = ".mp4";},
+        LBUF {txt = ".3gpp";},
+        LBUF {txt = ".3gp";},
+        LBUF {txt = ".3gpp2";},
+        LBUF {txt = ".3g2";},
+        LBUF {txt = ".dcf";},
+        LBUF {txt = ".odf";}
+        };
+    }
+
+//----------------------------------------------------
+// r_mc_file_extensions_drm
+// file extensions which can be scanned by music
+// collection, however, these files types must be
+// checked which type of DRM is used
+//----------------------------------------------------
+//
+RESOURCE ARRAY r_mc_file_extensions_drm
+    {
+    items =
+        {
+        LBUF {txt = "";},
+        LBUF {txt = ".dcf";},
+        LBUF {txt = ".odf";}
+        };
+    }
+
+//----------------------------------------------------
+// r_mc_mime_types
+// Mime types which be scanned by music collection
+//----------------------------------------------------
+//
+RESOURCE ARRAY r_mc_mime_types
+    {
+    items =
+        {
+#ifdef __WMA
+        LBUF {txt = "audio/x-ms-wma";},
+#endif
+#ifdef RD_RA_SUPPORT_FOR_MUSIC_PLAYER
+        LBUF {txt = "audio/x-pn-realaudio";},
+        LBUF {txt = "audio/x-realaudio";},
+        LBUF {txt = "audio/vnd.rn-realaudio";},
+//        LBUF {txt = "application/vnd.rn-realmedia";}
+#endif
+        LBUF {txt = "audio/mpeg";},
+        LBUF {txt = "audio/aac";},
+        LBUF {txt = "audio/mp3";},
+        LBUF {txt = "audio/x-mp3";},
+        LBUF {txt = "audio/mp4";},
+        LBUF {txt = "audio/3gpp";},
+        LBUF {txt = "audio/m4a";},
+        LBUF {txt = "audio/3gpp2";},
+        LBUF {txt = "audio/mpeg4";}
+        };
+    }
+
+// ---------------------------------------------------------------------------
+// r_mpx_qtn_mp_recently_added
+// Text string for recently added playlist
+// ---------------------------------------------------------------------------
+//
+RESOURCE LBUF r_mpx_qtn_mp_recently_added
+    {
+    txt = qtn_nmp_recently_added;
+    }
+
+// ---------------------------------------------------------------------------
+// r_mpx_qtn_mp_unplayed
+// Text string for not yet played playlist
+// ---------------------------------------------------------------------------
+//
+RESOURCE LBUF r_mpx_qtn_mp_unplayed
+    {
+    txt = qtn_nmp_not_yet_played;
+    }
+
+// ---------------------------------------------------------------------------
+// r_mpx_qtn_mus_podcast_num_episodes
+// Number of episodes text for > 1 episodes or 0
+// ---------------------------------------------------------------------------
+//
+RESOURCE LBUF r_mpx_qtn_mus_podcast_num_episodes
+    {
+    txt = qtn_mus_podcast_num_episodes;
+    }
+
+// ---------------------------------------------------------------------------
+// r_mpx_qtn_mus_podcast_one_episode
+// Number of episodes text for a single episode
+// ---------------------------------------------------------------------------
+//
+RESOURCE LBUF r_mpx_qtn_mus_podcast_one_episode
+    {
+    txt = qtn_mus_podcast_one_episode;
+    }
+
+//----------------------------------------------------
+// r_mpx_qtn_nmp_publish_date_array
+// Menu items to be displayed in the music library view
+//----------------------------------------------------
+//
+RESOURCE MENU_ITEM_ARRAY r_mpx_qtn_nmp_publish_date_array
+    {
+    array_of_menu_items =
+        {
+        MENU_ITEM {id = EMPXPublishToday;       name = LBUF {txt = qtn_nmp_publish_date_today;};},
+        MENU_ITEM {id = EMPXPublishYesterday;   name = LBUF {txt = qtn_nmp_publish_date_yesterday;};},
+        MENU_ITEM {id = EMPXPublishThisWeek;    name = LBUF {txt = qtn_nmp_publish_date_this_week;};},
+        MENU_ITEM {id = EMPXPublishLastWeek;    name = LBUF {txt = qtn_nmp_publish_date_last_week;};},
+        MENU_ITEM {id = EMPXPublish2WeekAgo;    name = LBUF {txt = qtn_nmp_publish_date_2_weeks;};},
+        MENU_ITEM {id = EMPXPublish3WeekAgo;    name = LBUF {txt = qtn_nmp_publish_date_3_weeks;};},
+        MENU_ITEM {id = EMPXPublishLastMonth;   name = LBUF {txt = qtn_nmp_publish_date_last_months;};},
+        MENU_ITEM {id = EMPXPublishEarlier;     name = LBUF {txt = qtn_nmp_publish_date_earlier;};},
+        MENU_ITEM {id = EMPXPublishUnknown;     name = LBUF {txt = qtn_nmp_publish_date_unknown;};}
+        };
+    }
+
+//----------------------------------------------------
+// r_mpx_qtn_nmp_episodes_title_published_date_array
+// Episode View titles to be displayed when Episode view
+// is activated via selecting a Publish Date View category
+//----------------------------------------------------
+//
+RESOURCE MENU_ITEM_ARRAY r_mpx_qtn_nmp_episodes_title_published_date_array
+    {
+    array_of_menu_items =
+        {
+        MENU_ITEM {id = EMPXPublishToday;       name = LBUF {txt = qtn_nmp_episodes_title_published_today;};},
+        MENU_ITEM {id = EMPXPublishYesterday;   name = LBUF {txt = qtn_nmp_episodes_title_published_yesterday;};},
+        MENU_ITEM {id = EMPXPublishThisWeek;    name = LBUF {txt = qtn_nmp_episodes_title_published_this_week;};},
+        MENU_ITEM {id = EMPXPublishLastWeek;    name = LBUF {txt = qtn_nmp_episodes_title_published_last_week;};},
+        MENU_ITEM {id = EMPXPublish2WeekAgo;    name = LBUF {txt = qtn_nmp_episodes_title_published_two_weeks_ago;};},
+        MENU_ITEM {id = EMPXPublish3WeekAgo;    name = LBUF {txt = qtn_nmp_episodes_title_published_three_weeks_ago;};},
+        MENU_ITEM {id = EMPXPublishLastMonth;   name = LBUF {txt = qtn_nmp_episodes_title_published_last_month;};},
+        MENU_ITEM {id = EMPXPublishEarlier;     name = LBUF {txt = qtn_nmp_episodes_title_published_earlier;};},
+        MENU_ITEM {id = EMPXPublishUnknown;     name = LBUF {txt = qtn_nmp_episodes_title_published_date_unknown;};}
+        };
+    }
+
+// r_mpx_qtn_mus_podcasts
+// Text for podcast collection plugin menu item within
+// main music player view
+// ---------------------------------------------------------------------------
+//
+RESOURCE LBUF r_mpx_qtn_mus_podcasts    { txt = qtn_mus_podcasts; }
+
+// ---------------------------------------------------------------------------
+// r_mpx_qtn_mp_title_my_podcast
+// Title text for Podcast Menu View
+// ---------------------------------------------------------------------------
+//
+RESOURCE LBUF r_mpx_qtn_mp_title_my_podcast { txt = qtn_mp_title_my_podcast; }
+
+// ---------------------------------------------------------------------------
+// r_mpx_qtn_mp_title_podcasts
+// Title text for Podcast main view
+// ---------------------------------------------------------------------------
+//
+RESOURCE LBUF r_mpx_qtn_mp_title_podcasts { txt = qtn_vmp_title_podcasts; }
+
+// ---------------------------------------------------------------------------
+// r_mpx_qtn_mp_title_all_episodes
+// Title text Episodes View when accessed via "All episodes"
+// ---------------------------------------------------------------------------
+//
+RESOURCE LBUF r_mpx_qtn_mp_title_all_episodes { txt = qtn_nmp_title_all_episodes; }
+
+// ---------------------------------------------------------------------------
+// r_mpx_qtn_mus_title_publish_date
+// Title text for Publish Date View
+// ---------------------------------------------------------------------------
+//
+RESOURCE LBUF r_mpx_qtn_mus_title_publish_date { txt = qtn_mus_title_publish_date; }
+
+// ---------------------------------------------------------------------------
+// r_mpx_qtn_mus_title_publish_date
+// Title text for Titles View
+// ---------------------------------------------------------------------------
+//
+RESOURCE LBUF r_mpx_qtn_mus_title_titles { txt = qtn_mus_title_titles; }
+
+// ---------------------------------------------------------------------------
+// r_mpx_qtn_mp_title_recently_added
+// Title text Episodes View when accessed via "Recently added"
+// ---------------------------------------------------------------------------
+//
+RESOURCE LBUF r_mpx_qtn_mp_title_recently_added { txt = qtn_nmp_recently_added; }
+
+// ---------------------------------------------------------------------------
+// r_mpx_qtn_mp_title_unplayed
+// Title text Episodes View when accessed via "Not yet played"
+// ---------------------------------------------------------------------------
+//
+RESOURCE LBUF r_mpx_qtn_mp_title_unplayed { txt = qtn_nmp_unplayed; }
+
+
+// End of File

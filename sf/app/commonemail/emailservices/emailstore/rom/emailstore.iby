@@ -1,0 +1,48 @@
+/*
+* Copyright (c) 2007 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   Rom include file for emailstore.
+*
+*/
+
+
+
+#ifndef _EMAILSTORE_IBY_
+#define _EMAILSTORE_IBY_
+
+#include <data_caging_paths_for_iby.hrh>
+
+//----------------------------------------------------
+// Email Store - message store and base email plugin
+//----------------------------------------------------
+
+// Ignore some content when not in a Cmail environment
+//#ifdef FF_EMAIL_FRAMEWORK 
+
+// Base email plugin
+file=ABI_DIR\BUILD_DIR\baseplugin.dll                 SHARED_LIB_DIR\baseplugin.dll
+
+// Message store
+file=ABI_DIR\BUILD_DIR\MessageStoreClient.dll         SHARED_LIB_DIR\MessageStoreClient.dll
+file=ABI_DIR\BUILD_DIR\MessageStoreServer.dll         SHARED_LIB_DIR\MessageStoreServer.dll
+file=ABI_DIR\BUILD_DIR\MessageStoreExe.exe            SHARED_LIB_DIR\MessageStoreExe.exe
+file=ABI_DIR\BUILD_DIR\DebugLog.dll                   SHARED_LIB_DIR\DebugLog.dll
+file=ABI_DIR\BUILD_DIR\ImsPointSecMonitor.dll         SHARED_LIB_DIR\ImsPointSecMonitor.dll
+ECOM_PLUGIN( RfsMsgStorePlugin.dll, RfsMsgStorePlugin.rsc )
+
+//the stub sis.
+data=DATAZ_\system\install\emailstore_stub.sis        system\install\emailstore_stub.sis
+
+//#endif //FF_EMAIL_FRAMEWORK 
+
+#endif //_EMAILSTORE_IBY_

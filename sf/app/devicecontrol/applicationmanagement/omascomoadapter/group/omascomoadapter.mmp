@@ -1,0 +1,82 @@
+/*
+* Copyright (c) 2005 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Implementation of oma scomo adapter
+*
+*/
+  
+
+// To get the APP_LAYER_SYSTEMINCLUDE-definition
+#include <platform_paths.hrh>
+#include "defaultcaps.hrh"
+
+
+TARGET          omascomoadapter.dll
+
+CAPABILITY 	    CAP_GENERAL_DLL -TCB -DRM
+
+TARGETTYPE      PLUGIN
+UID             0x10009D8D 0x20021335
+VENDORID        VID_DEFAULT
+
+MACRO __AM_LASTERROR_NODE // uncomment to enable /SCOMO/Ext/LastError node
+
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE 	/epoc32/include/ecom
+
+#ifdef __TARM_SYMBIAN_CONVERGENCY
+SYSTEMINCLUDE 	/epoc32/include/devman
+#else
+// nothing
+#endif
+
+SOURCEPATH      ../src
+SOURCE          omascomoadapter.cpp
+SOURCE					nsmldmiapmatcher.cpp
+SOURCE					nsmldmuri.cpp
+SOURCE		omascomoadapterdb.cpp
+
+USERINCLUDE     ../inc 
+USERINCLUDE			../../inc
+USERINCLUDE 		../../options/inc // install options
+USERINCLUDE 		../../server/inc  //for amprivateCRKeys.h
+ 
+
+START RESOURCE omascomoadapter.rss
+TARGET omascomoadapter.rsc
+END
+
+
+LIBRARY		euser.lib edbms.lib sysutil.lib 
+LIBRARY		ecom.lib 
+LIBRARY     estor.lib
+LIBRARY		efsrv.lib 
+LIBRARY		applicationmanagementclient.lib
+LIBRARY		centralrepository.lib 
+LIBRARY 	aminstalloptions.lib 
+LIBRARY		featmgr.lib 
+LIBRARY 	flogger.lib
+LIBRARY			syncmlclientapi.lib
+LIBRARY			nsmlprivateapi.lib
+
+#ifdef __TARM_SYMBIAN_CONVERGENCY
+LIBRARY		devmancmdmgr.lib
+LIBRARY		dmtreeclient.lib
+#else
+LIBRARY		nsmldmtreedbclient.lib
+LIBRARY		nsmldmclientserverutils.lib
+LIBRARY		nsmldmiapmatcher.lib apgrfx.lib ws32.lib 
+#endif
+
+	
+// End of File

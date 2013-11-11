@@ -1,0 +1,52 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Client side of sconsyncserver
+*
+*/
+
+
+// To get the APP_LAYER_SYSTEMINCLUDE-definition
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+
+TARGET          sconsyncclient.dll
+TARGETTYPE      dll
+
+CAPABILITY      CAP_CLIENT_DLL
+
+UID             0x1000008d 0x2001A963
+VENDORID        VID_DEFAULT
+
+SOURCEPATH      ../src
+SOURCE          sconsyncclient.cpp
+SOURCE          scondataproviderinfo.cpp
+
+USERINCLUDE     ../inc
+USERINCLUDE     ../../../inc
+
+// Server
+USERINCLUDE     ../../../servers/syncserver/inc
+
+
+// Default system include paths for middleware layer modules.
+APP_LAYER_SYSTEMINCLUDE
+
+LIBRARY         euser.lib
+LIBRARY         estor.lib
+LIBRARY         bafl.lib
+LIBRARY         charconv.lib
+LIBRARY         smlstoreformat.lib
+DEBUGLIBRARY    flogger.lib
+
+

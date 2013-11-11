@@ -1,0 +1,459 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//! @file
+//! @SYMTestSuiteName	TestCalInterimApiSuite 
+//! @SYMScriptTestEnvironment
+
+PRINT Run Notes Outlook Interoperability Test
+
+LOAD_SUITE TestCalInterimApiSuite
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-GEO-0001AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-GEO-0001AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID SGL.GT0284.212 PREQ 1090 Functional Specification GEOProperty.001 GEOProperty.003
+//! @SYMFssID REQs - GEO and TRANSP Property Support Requirements.doc REQ R1, R1.4
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Setting/Getting Valid GEO Property values Test
+//! @SYMTestActions Create entries with valid GEO property values (exploring boundary values and equivalence partition)
+//! @SYMTestActions store entries in database, and then fetch entries, and verify the GEO property values
+//! @SYMTestExpectedResults The GEO property values retrieved should match the values used to set these properties
+
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiReadData \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini readdata
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-GEO-0001AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-GEO-0002AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-GEO-0002AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID SGL.GT0284.212 PREQ 1090 Functional Specification GEOProperty.001 
+//! @SYMFssID REQs - GEO and TRANSP Property Support Requirements.doc REQ R1.4
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Invalid GEO property values Test
+//! @SYMTestActions Create entries with invalid GEO property values, exploring boundary and equivalence values.  Verify that the invalid values are not  
+//! @SYMTestActions stored and the API should return EFalse and KErrArgument when the Lat or/both Long are invalid values
+//! @SYMTestExpectedResults Invalid GEO property values should not be stored and return KErrArgument, and be Initialised to default GEO property value
+
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiReadData \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini readdata
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-GEO-0002AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-GEO-0003AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-GEO-0003AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID SGL.GT0284.212 PREQ 1090 Functional Specification GEOProperty.001 GEOProperty.003
+//! @SYMFssID REQs - GEO and TRANSP Property Support Requirements.doc REQ R1
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Recognition for GEO Property values with a "+" or "-" Test
+//! @SYMTestActions Create entries with the following GEO property values (+37.24, -37.24), (-37.24, +37.24) (+37.24, +37.24) (-37.24, -37.24)
+//! @SYMTestActions Store entries in database, and then fetch the entry as well as the GEO Propery values
+//! @SYMTestExpectedResults The GEO property values retrieved should match the values used to set these property.  The "+" sign should be 
+//! @SYMTestExpectedResults recognised and not raise an error
+
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiReadData \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini readdata
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-GEO-0003AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-GEO-0004AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-GEO-0004AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID SGL.GT0284.212 PREQ 1090 Functional Specification GEOProperty.001 GEOProperty.003
+//! @SYMFssID REQs - GEO and TRANSP Property Support Requirements.doc REQ R1
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Default GEO Property values
+//! @SYMTestActions Create entries without setting the GEO property values, store entry in database, fetch entry and fecth GEO property values
+//! @SYMTestActions Verify that the values are set to the GEO property default value, and the Get GEO property values API returns EFalse
+//! @SYMTestExpectedResults The Get GEO property values API should return EFalse, and the values should be equal to the GEO property default value
+
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiReadData \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini readdata
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-GEO-0004AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-GEO-0005AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-GEO-0005AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - GEO and TRANSP Property Support Requirements.doc REQ R1.3 R1.1
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Maximum precision of GEO Property values Test
+//! @SYMTestActions Create entries where the GEO property values are more than 6 decimal places, store and then fetch entry, together
+//! @SYMTestActions with the GEO property values, and the values should have been truncated to 6 decimal places
+//! @SYMTestExpectedResults The GEO property values should be truncated to 6 decimal places
+
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiReadData \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini readdata
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-GEO-0005AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-GEO-0006AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-GEO-0006AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID SGL.GT0284.212 PREQ 1090 Functional Specification GEOProperty.001 GEOProperty.003
+//! @SYMFssID REQs - GEO and TRANSP Property Support Requirements.doc REQ R1.3 R1.1
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Updating GEO Property values Test
+//! @SYMTestActions Create entries (with GEO property), store in database, and then fetch the entry, and update GEO property values and verify
+//! @SYMTestExpectedResults The GEO property values should have been updated successfully
+
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiReadData \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini childparent
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiUpdateEntry \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini UpdateParent
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiUpdateEntry \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini UpdateParent1
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiUpdateEntry \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini UpdateParent2
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiUpdateEntry \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini UpdateChild
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiFetchEntryAndCheckData \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini FetchAndCheckParentEntry
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiFetchEntryAndCheckData \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini FetchAndCheckParentEntry1
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiFetchEntryAndCheckData \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini FetchAndCheckParentEntry2
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiFetchEntryAndCheckData \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini FetchAndCheckChildEntry
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-GEO-0006AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-GEO-0007AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-GEO-0007AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - GEO and TRANSP Property Support Requirements.doc REQ R1.2
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Importing/Exporting entries with GEO Property values Test
+//! @SYMTestActions Import vcs file (with GEO property specified), store in database, fecth all entries from database, and then export
+//! @SYMTestExpectedResults The import vcs and the exported vcs file should match in regards to the GEO property value
+
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini vCalRpt
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini export
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-GEO-0007AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-GEO-0008AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-GEO-0008AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - GEO and TRANSP Property Support Requirements.doc REQ R1.2
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Importing vCal's with an vCal signed  GEO Property values Test
+//! @SYMTestActions Import vcs file (with signed GEO Property value i.e. -23, +23, store in database, fetch entries, then export
+//! @SYMTestExpectedResults The import vcs and the exported vcs file should match, except for the fact that the '+' sign will not be exported
+
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini vCalRpt
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini export
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-GEO-0008AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-GEO-0009AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-GEO-0009AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - GEO and TRANSP Property Support Requirements.doc REQ R1.2
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Importing vCal's with an invalid vCal GEO Property Format Test
+//! @SYMTestActions Import invalid GEO Property format vcs file, store entries in database, fetch entries 
+//! @SYMTestActions Verify that the GEO properti is set as default values
+//! @SYMTestExpectedResults The GEo property values should be set as default values
+
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini vCalInvalidGEO
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-GEO-0009AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-GEO-0010AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-GEO-0010AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID SGL.GT0284.212 PREQ 1090 Functional Specification GEOProperty.001 GEOProperty.003
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Copying entries from another with GEO Property values Test
+//! @SYMTestActions Create entries (including parent and child), copy some entries (including parent/child entries), and verify that the 
+//! @SYMTestActions GEO Property values have been copied over successfully
+//! @SYMTestExpectedResults The GEO property values should have been copied over successfully
+
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiReadData \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini readparentchilddata
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiCopyEntry \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini copyentry
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiReadData \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini readparentchilddata
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiCopyEntry \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini copychildentry
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-GEO-0010AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-GEO-0022AP-1090
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-GEO-0022AP-1090
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID PREQ 1090 Functional Specification GEOProperty.004 GEOProperty.005
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc GEO comparison test
+//! @SYMTestActions Creates entries (parent and child) and store in database.  And then compares two entries (with same 
+//! @SYMTestActions geo values.  Compare two entires (with different geo values)
+//! @SYMTestExpectedResults The Compare should return TRUE in the first case, and return FALSE in the second case
+
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini vCal46
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiCompare \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini compare
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiCompare \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini compare1
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiCompare \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini compare2
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiCompare \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini compare3
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-GEO-0022AP-1090
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-GEO-0011ON-1090
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-GEO-0011ON-1090
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID SGL.GT0284.212 PREQ 1090 Functional Specification GEOProperty.001 GEOProperty.003
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc OOM for setting/Getting GEO Property values
+//! @SYMTestActions Create parent and child entries (with GEO property values).  API call to fail on the nth allocation
+//! @SYMTestExpectedResults The correct OOM error should be propagated by the API
+
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiReadData \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini readdataoom
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-GEO-0011ON-1090
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TRANSP-0012ON-1090
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-TRANSP-0012ON-1090
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID SGL.GT0284.212 PREQ 1090 Functional Specification GEOProperty.004 GEOProperty.005
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Setting/Getting of TRANSP value
+//! @SYMTestActions Create entries setting the transparency value for some.  Store entries.  Fecth entries and verify all transparency values
+//! @SYMTestExpectedResults The transparency values should match the values used to set these values and 
+
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiReadData \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini readdata
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TRANSP-0012ON-1090
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TRANSP-0013ON-1090
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-TRANSP-0013ON-1090
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID SGL.GT0284.212 PREQ 1090 Functional Specification GEOProperty.004 GEOProperty.005
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Invalid TRANSP values
+//! @SYMTestActions Create entries with invalid TRANSP values
+//! @SYMTestExpectedResults The error code should not be KErrNone, and be KErrArgument.  Should not be able to set invalid transparency.  The busy status
+//! @SYMTestExpectedResults should not change when setting transparency value fails and should be equal to default value (0/Busy)
+
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiReadData \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini readdata
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TRANSP-0013ON-1090
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TRANSP-0014ON-1090
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-TRANSP-0014ON-1090
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - GEO and TRANSP Property Support Requirements.doc REQ R2.1
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Importing/Exporting of TRANSP values
+//! @SYMTestActions Import a vcs file, and then export it, and verify if both of the vcs file match in regards to the transparency value
+//! @SYMTestExpectedResults The imported vcs file and the exported vcs file should match in regards to the transparency value
+
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini vCalRpt
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini export
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TRANSP-0014ON-1090
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TRANSP-0015ON-1090
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-TRANSP-0015ON-1090
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID SGL.GT0284.212 PREQ 1090 Functional Specification GEOProperty.004 GEOProperty.005
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc OOM for setting TRANSP values
+//! @SYMTestActions Create parent and child entries (with TRANSP property).  API call to fail on the nth allocation
+//! @SYMTestExpectedResults The correct OOM error should be propagated by the API
+
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiReadData \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini readdataoom
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TRANSP-0015ON-1090
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TRANSP-0016ON-1090
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-TRANSP-0016ON-1090
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID SGL.GT0284.212 PREQ 1090 Functional Specification GEOProperty.004 GEOProperty.005
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc OOM for fecthing TRANSP values
+//! @SYMTestActions Create parent and child entries (with TRANSP property).  API call to fail on the nth allocation
+//! @SYMTestExpectedResults The correct OOM error should be propagated by the API
+
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiReadData \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini readdataoom
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TRANSP-0016ON-1090
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TRANSP-0017ON-1090
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-TRANSP-0017ON-1090
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID PREQ 1090 Functional Specification GEOProperty.004 GEOProperty.005
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc TRANSP values exception testing
+//! @SYMTestActions Create parent and child entries with transparency values
+//! @SYMTestExpectedResults The values used to set the transparency values of the child and the parent entries should match the values retrieved
+
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiReadData \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini readdata
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TRANSP-0017ON-1090
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TRANSP-0018ON-1090
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-TRANSP-0018ON-1090
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID PREQ 1090 Functional Specification GEOProperty.004 GEOProperty.005
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc TRANSP TimeZone boundary testing
+//! @SYMTestActions Create entries, change time zone then verify the Transp values are uneffected
+//! @SYMTestExpectedResults The transp values should be unaffected regardless of time zone
+
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini london
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiSetSysTime \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini systemTime
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiReadData \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini readdata1
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiFetchEntryAndCheckData \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini CheckTransAfterTZ
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiFetchEntryAndCheckData \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini CheckTransAfterTZ1
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiFetchEntryAndCheckData \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini CheckTransAfterTZ2
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiFetchEntryAndCheckData \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini CheckTransAfterTZ3
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiFetchEntryAndCheckData \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini CheckTransAfterTZ4
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini tirane
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiFetchEntryAndCheckData \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini CheckTransAfterTZ
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiFetchEntryAndCheckData \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini CheckTransAfterTZ1
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiFetchEntryAndCheckData \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini CheckTransAfterTZ2
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiFetchEntryAndCheckData \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini CheckTransAfterTZ3
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiFetchEntryAndCheckData \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini CheckTransAfterTZ4
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini sydney
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiFetchEntryAndCheckData \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini CheckTransAfterTZ
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiFetchEntryAndCheckData \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini CheckTransAfterTZ1
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiFetchEntryAndCheckData \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini CheckTransAfterTZ2
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiFetchEntryAndCheckData \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini CheckTransAfterTZ3
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiFetchEntryAndCheckData \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini CheckTransAfterTZ4
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini stanley
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiFetchEntryAndCheckData \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini CheckTransAfterTZ
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiFetchEntryAndCheckData \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini CheckTransAfterTZ1
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiFetchEntryAndCheckData \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini CheckTransAfterTZ2
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiFetchEntryAndCheckData \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini CheckTransAfterTZ3
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiFetchEntryAndCheckData \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini CheckTransAfterTZ4
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini seoul
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiFetchEntryAndCheckData \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini CheckTransAfterTZ
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiFetchEntryAndCheckData \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini CheckTransAfterTZ1
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiFetchEntryAndCheckData \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini CheckTransAfterTZ2
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiFetchEntryAndCheckData \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini CheckTransAfterTZ3
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiFetchEntryAndCheckData \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini CheckTransAfterTZ4
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TRANSP-0018ON-1090
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TRANSP-0019ON-1090
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-TRANSP-0019ON-1090
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID PREQ 1090 Functional Specification GEOProperty.004 GEOProperty.005
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc TRANSP copy test
+//! @SYMTestActions Create parent and child entries (with TRANSP property), copy the parent and child entry with diffrent uid and recurrence id, 
+//! @SYMTestActions and then verify if the transparency values have been copied successfully
+//! @SYMTestExpectedResults The transparency should match with the original entry and the copied entry
+
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiReadData \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini readparentchilddata
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiCopyEntry \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini copyentry
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiReadData \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini readparentchilddata
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiCopyEntry \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini copychildentry
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TRANSP-0019ON-1090
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TRANSP-0020ON-1090
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-TRANSP-0020ON-1090
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID PREQ 1090 Functional Specification GEOProperty.004 GEOProperty.005
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc TRANSP comparison test
+//! @SYMTestActions Creates entries (parent and child) and store in database.  And then compares two entries (with same 
+//! @SYMTestActions transparency values.  Compare two entires (with different transparency values)
+//! @SYMTestExpectedResults The Compare should return TRUE in the first case, and return FALSE in the second case
+
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini vCal46
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiCompare \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini compare
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiCompare \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini compare1
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiCompare \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini compare2
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiCompare \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini compare3
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TRANSP-0020ON-1090
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TRANSP-0021AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-TRANSP-0021AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID PREQ 1090 Functional Specification GEOProperty.004 GEOProperty.005
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Updating transparency values Test
+//! @SYMTestActions Create entries (with transparency property), store in database, and the fetch, and update transparency values and verify
+//! @SYMTestExpectedResults The transparency property values should have been updated successfully
+
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiReadData \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini childparent
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiUpdateEntry \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini UpdateParent
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiUpdateEntry \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini UpdateParent1
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiUpdateEntry \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini UpdateParent2
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiUpdateEntry \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini UpdateChild
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiFetchEntryAndCheckData \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini FetchAndCheckParentEntry
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiFetchEntryAndCheckData \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini FetchAndCheckParentEntry1
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiFetchEntryAndCheckData \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini FetchAndCheckParentEntry2
+RUN_TEST_STEP 30 TestCalInterimApiSuite TestCalInterimApiFetchEntryAndCheckData \CITCalInterimApi\testdata\TestCalInterimApiNotesOutlookIntero.ini FetchAndCheckChildEntry
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TRANSP-0021AP-1090HP
+
+PRINT Completed Notes Outlook Interoperability Tests
+
+
+

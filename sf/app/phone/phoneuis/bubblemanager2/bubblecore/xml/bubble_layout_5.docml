@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="0.1">
+    <widget name="content" type="HbWidget">
+
+<section name="portrait">    
+        <widget name="mutedIcon" type="HbLabel">
+            <real name="z" value="10.0"/>
+            <icon name="icon" iconName="qtg_large_call_muted"/>
+            <sizehint height="25.5un" width="25.5un" type="PREFERRED"/>
+        </widget>            
+</section>            
+<section name="landscape">    
+        <widget name="mutedIcon" type="HbLabel">
+            <real name="z" value="10.0"/>
+            <icon name="icon" iconName="qtg_large_call_muted"/>
+            <sizehint height="19.0un" width="19.0un" type="PREFERRED"/>
+        </widget>            
+</section>
+    </widget>
+
+<section name="portrait">
+    <layout type="anchor" widget="content">
+        <anchoritem src="mutedIcon" srcEdge="TOP" dst="" dstEdge="TOP" spacing="-26.0un"/>
+        <anchoritem src="mutedIcon" srcEdge="CENTERH" dst="" dstEdge="CENTERH"/>
+    </layout>
+</section>
+
+<section name="landscape">
+    <layout type="anchor" widget="content">
+        <anchoritem src="mutedIcon" srcEdge="TOP" dst="" dstEdge="TOP" spacing="-1.5un"/>
+        <anchoritem src="mutedIcon" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="20.5un"/>        
+    </layout>
+</section>
+
+</hbdocument>

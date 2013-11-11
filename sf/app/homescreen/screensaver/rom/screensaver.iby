@@ -1,0 +1,40 @@
+/*
+* Copyright (c) 2009 - 2010 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+#ifndef __SCREENSAVERAPP_IBY__
+#define __SCREENSAVERAPP_IBY__
+
+// ---- devicedialogplugin --------------------------------------------
+file=ABI_DIR\BUILD_DIR\snsrdevicedialogplugin.dll                                        SHARED_LIB_DIR\snsrdevicedialogplugin.dll
+data=\epoc32\data\z\resource\plugins\devicedialogs\snsrdevicedialogplugin.qtplugin       resource\plugins\devicedialogs\snsrdevicedialogplugin.qtplugin
+
+// ---- screensavermodel ----------------------------------------------
+file=ABI_DIR\BUILD_DIR\screensavermodel.dll                                              SHARED_LIB_DIR\screensavermodel.dll
+
+// ---- screensaverplugins --------------------------------------------
+
+// -------- snsrbigclockscreensaverplugin
+file=ABI_DIR\BUILD_DIR\snsrbigclockscreensaverplugin.dll                                                SHARED_LIB_DIR\snsrbigclockscreensaverplugin.dll
+data=DATAZ_\QT_TRANSLATIONS_DIR\snsrbigclockscreensaverplugin.qm                                        QT_TRANSLATIONS_DIR\snsrbigclockscreensaverplugin.qm
+data=\epoc32\data\z\snsrresources\plugins\snsrplugins\snsrbigclockscreensaverplugin.qtplugin            snsrresources\plugins\snsrplugins\snsrbigclockscreensaverplugin.qtplugin
+data=\epoc32\data\z\snsrresources\plugins\snsrplugins\snsrbigclockscreensaverplugin.xml                 snsrresources\plugins\snsrplugins\snsrbigclockscreensaverplugin.xml
+
+// ---- snsrutils --------------------------------------------
+
+file=ABI_DIR\BUILD_DIR\snsrutils.dll    SHARED_LIB_DIR\snsrutils.dll
+
+#endif //__SCREENSAVERAPP_IBY__

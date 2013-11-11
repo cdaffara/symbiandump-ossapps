@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument context="Calendar" version="0.9">
+    <object name="NewEventAction" type="HbAction">
+        <string locid="txt_calendar_opt_new_event" name="text" value="New Event"/>
+    </object>
+    <object name="goToTodayAction" type="HbAction">
+        <string locid="txt_calendar_opt_go_to_today" name="text" value="Go to today"/>
+    </object>
+    <object name="goToDateAction" type="HbAction">
+        <string locid="txt_calendar_opt_go_to_date" name="text" value="Go to date"/>
+    </object>
+    <object name="settingsAction" type="HbAction">
+        <string locid="txt_calendar_opt_settings" name="text" value="Settings"/>
+    </object>
+    <object name="beforeDateAction" type="HbAction">
+        <string locid="txt_calendar_opt_sub_before_date" name="text" value="Before date"/>
+    </object>
+    <object name="allEntriesAction" type="HbAction">
+        <string locid="txt_calendar_opt_sub_all_entries" name="text" value="All entries"/>
+    </object>
+    <widget name="monthView" type="HbView">
+        <widget name="content" role="HbView:widget" type="HbWidget">
+            <widget name="monthViewExceptPreviewPane" type="HbWidget">
+                <widget name="monthTitle" type="HbLabel">
+                    <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+					<fontspec name="fontSpec" role="Secondary" textheight="var(hb-param-text-height-secondary)"/>
+                    <real name="z" value="6"/>
+                    <sizehint height="expr(var(hb-param-text-height-secondary) + 0.75un + 0.75un)" type="PREFERRED" width="52un"/>
+                    <sizehint height="expr(var(hb-param-text-height-secondary) + 0.75un + 0.75un)" type="MINIMUM" width="52un"/>
+                    <contentsmargins bottom="0.75un" left="var(hb-param-margin-gene-left)" right="var(hb-param-margin-gene-right)" top="0.75un"/>
+                    <sizehint height="expr(var(hb-param-text-height-secondary) + 0.75un + 0.75un)" type="MAXIMUM" width="52un"/>
+                </widget>
+                <widget name="dayNamesWidget" type="HbWidget">
+                    <widget name="firstDayLabel" type="HbLabel">
+                        <enums name="alignment" value="AlignVCenter|AlignHCenter"/>						
+                        <real name="z" value="6"/>
+                        <fontspec name="fontSpec" role="Secondary" textheight="var(hb-param-text-height-tiny)"/>
+                    </widget>
+                    <widget name="secondDayLabel" type="HbLabel">
+                        <enums name="alignment" value="AlignVCenter|AlignHCenter"/>						
+                        <real name="z" value="6"/>
+                        <fontspec name="fontSpec" role="Secondary" textheight="var(hb-param-text-height-tiny)"/>
+                    </widget>
+                    <widget name="thirdDayLabel" type="HbLabel">
+                        <enums name="alignment" value="AlignVCenter|AlignHCenter"/>						
+                        <real name="z" value="6"/>
+                        <fontspec name="fontSpec" role="Secondary" textheight="var(hb-param-text-height-tiny)"/>
+                    </widget>
+                    <widget name="fourthDayLabel" type="HbLabel">
+                        <enums name="alignment" value="AlignVCenter|AlignHCenter"/>						
+                        <real name="z" value="6"/>
+                        <fontspec name="fontSpec" role="Secondary" textheight="var(hb-param-text-height-tiny)"/>
+                    </widget>
+                    <widget name="fifthDayLabel" type="HbLabel">
+                        <enums name="alignment" value="AlignVCenter|AlignHCenter"/>						
+                        <real name="z" value="6"/>
+                        <fontspec name="fontSpec" role="Secondary" textheight="var(hb-param-text-height-tiny)"/>
+                    </widget>
+                    <widget name="sixthDayLabel" type="HbLabel">
+                        <enums name="alignment" value="AlignVCenter|AlignHCenter"/>						
+                        <real name="z" value="6"/>
+                        <fontspec name="fontSpec" role="Secondary" textheight="var(hb-param-text-height-tiny)"/>
+                    </widget>
+                    <widget name="seventhDayLabel" type="HbLabel">
+                        <enums name="alignment" value="AlignVCenter|AlignHCenter"/>						
+                        <real name="z" value="6"/>
+                        <fontspec name="fontSpec" role="Secondary" textheight="var(hb-param-text-height-tiny)"/>
+                    </widget>
+                    <real name="z" value="6"/>
+                        <sizehint height="expr(var(hb-param-text-height-tiny))" type="PREFERRED" width="52un"/>
+                        <sizehint height="expr(var(hb-param-text-height-tiny))" type="MINIMUM" width="52un"/>
+                        <sizehint height="expr(var(hb-param-text-height-tiny))" type="MAXIMUM" width="52un"/>
+                    <layout orientation="Horizontal" spacing="0un" type="linear">
+                        <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+                        <linearitem itemname="firstDayLabel"/>
+                        <linearitem itemname="secondDayLabel"/>
+                        <linearitem itemname="thirdDayLabel"/>
+                        <linearitem itemname="fourthDayLabel"/>
+                        <linearitem itemname="fifthDayLabel"/>
+                        <linearitem itemname="sixthDayLabel"/>
+                        <linearitem itemname="seventhDayLabel"/>
+                    </layout>
+                </widget>
+                <widget name="weekNumbersWidget" type="HbWidget">
+                    <widget name="firstWeekLabel" type="HbLabel">
+                        <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+                        <sizehint height="42.77612un" type="PREFERRED" width="6.41604un"/>
+                        <sizehint height="0un" type="MINIMUM" width="6.41604un"/>
+                        <sizehint height="42.77612un" type="MAXIMUM" width="6.41604un"/>
+                        <fontspec name="fontSpec" role="Secondary" textheight="var(hb-param-text-height-tiny)"/>
+                    </widget>
+                    <widget name="secondWeekLabel" type="HbLabel">
+                        <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+                        <sizehint height="42.77612un" type="PREFERRED" width="6.41604un"/>
+                        <sizehint height="0un" type="MINIMUM" width="6.41604un"/>
+                        <sizehint height="42.77612un" type="MAXIMUM" width="6.41604un"/>
+                        <fontspec name="fontSpec" role="Secondary" textheight="var(hb-param-text-height-tiny)"/>
+                    </widget>
+                    <widget name="thirdWeekLabel" type="HbLabel">
+                        <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+                        <sizehint height="42.77612un" type="PREFERRED" width="6.41604un"/>
+                        <sizehint height="0un" type="MINIMUM" width="6.41604un"/>
+                        <sizehint height="42.77612un" type="MAXIMUM" width="6.41604un"/>
+                        <fontspec name="fontSpec" role="Secondary" textheight="var(hb-param-text-height-tiny)"/>
+                    </widget>
+                    <widget name="fourthWeekLabel" type="HbLabel">
+                        <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+                        <sizehint height="42.77612un" type="PREFERRED" width="6.41604un"/>
+                        <sizehint height="0un" type="MINIMUM" width="6.41604un"/>
+                        <sizehint height="42.77612un" type="MAXIMUM" width="6.41604un"/>
+                        <fontspec name="fontSpec" role="Secondary" textheight="var(hb-param-text-height-tiny)"/>
+                    </widget>
+                    <widget name="fifthWeekLabel" type="HbLabel">
+                        <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+                        <sizehint height="42.77612un" type="PREFERRED" width="6.41604un"/>
+                        <sizehint height="0un" type="MINIMUM" width="6.41604un"/>
+                        <sizehint height="42.77612un" type="MAXIMUM" width="6.41604un"/>
+                        <fontspec name="fontSpec" role="Secondary" textheight="var(hb-param-text-height-tiny)"/>
+                    </widget>
+                    <widget name="sixthWeekLabel" type="HbLabel">
+                        <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+                        <sizehint height="42.77612un" type="PREFERRED" width="6.41604un"/>
+                        <sizehint height="0un" type="MINIMUM" width="6.41604un"/>
+                        <sizehint height="42.77612un" type="MAXIMUM" width="6.41604un"/>
+                        <fontspec name="fontSpec" role="Secondary" textheight="var(hb-param-text-height-tiny)"/>
+                    </widget>
+                    <real name="z" value="3"/>
+                    <sizehint height="43.77612un" type="PREFERRED" width="6.41604un"/>
+                    <sizehint height="43.77612un" type="MINIMUM" width="6.41604un"/>
+                    <sizehint height="62.77612un" type="MAXIMUM" width="6.41604un"/>
+                    <layout orientation="Vertical" spacing="0un" type="linear">
+                        <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+                        <linearitem itemname="firstWeekLabel"/>
+                        <linearitem itemname="secondWeekLabel"/>
+                        <linearitem itemname="thirdWeekLabel"/>
+                        <linearitem itemname="fourthWeekLabel"/>
+                        <linearitem itemname="fifthWeekLabel"/>
+                        <linearitem itemname="sixthWeekLabel"/>
+                    </layout>
+                </widget>
+                <widget name="monthGridWeekNumWidget" type="HbWidget">
+                    <widget name="monthGrid" type="HbGridView">
+                        <integer name="columnCount" value="7"/>
+                        <real name="z" value="4"/>
+                        <enums name="scrollingStyle" value="PanOrFlick"/>
+                        <sizehint height="43.77612un" type="PREFERRED" width="52un"/>
+                        <sizehint height="62.77612un" type="MAXIMUM" width="52un"/>
+                        <sizehint height="43.77612un" type="MINIMUM" width="0un"/>
+                        <integer name="rowCount" value="6"/>
+                    </widget>
+                    <real name="z" value="4"/>
+                    <sizehint height="43.77612un" type="PREFERRED" width="23.8806un"/>
+                    <sizehint height="43.77612un" type="MINIMUM" width="2.68657un"/>
+                    <sizehint height="62.77612un" type="MAXIMUM" width="52un"/>
+                    <layout orientation="Horizontal" spacing="0un" type="linear">
+                        <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+                        <linearitem itemname="monthGrid"/>
+                    </layout>
+                </widget>
+				<widget name="prevPaneWidget" type="HbWidget">
+					<widget name="prevRegionalInfo" type="HbLabel">
+					<enums name="alignment" value="AlignCenter"/>
+					<fontspec name="fontSpec" role="Secondary" textheight="var(hb-param-text-height-secondary)"/>
+					<contentsmargins bottom="0.75un" left="var(hb-param-margin-gene-left)" right="var(hb-param-margin-gene-right)" top="0.75un"/>
+					</widget>
+	                <widget name="prevPaneLayout" type="HbWidget">
+	                    <widget name="prevPaneContainer" type="HbWidget">
+	                        <widget name="prevPreviewPane" type="HbScrollArea">
+	                            <widget name="prevPreviewPaneContents" role="HbScrollArea:contents" type="HbWidget">
+	                                <real name="z" value="0"/>
+	                                <layout orientation="Vertical" spacing="0.75un" type="linear">
+										<contentsmargins bottom="0.75un" left="2un" right="2un" top="0.75un"/>
+									</layout>
+	                            </widget>
+	                            <real name="z" value="1"/>
+								<enums name="verticalScrollBarPolicy" value="ScrollBarAlwaysOff"/>
+	                            <enums name="horizontalScrollBarPolicy" value="ScrollBarAlwaysOff"/>
+	                            <enums name="clampingStyle" value="StrictClamping"/>
+								<enums name="scrollingStyle" value="PanOrFlick"/>
+								<bool name="frictionEnabled" value="TRUE"/>
+	                        </widget>
+	                        <widget name="NoEntriesLabelPrev" type="HbLabel">
+	                            <string locid="txt_calendar_preview_no_entries" name="plainText"/>
+								<bool name="visible" value="FALSE"/>
+								<fontspec name="fontSpec" role="Secondary" textheight="var(hb-param-text-height-secondary)"/>
+								<enums name="textWrapping" value="TextWordWrap"/>
+								<enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+								<enums name="elideMode" value="ElideNone"/>
+	                        </widget>
+	                        <real name="z" value="0"/>
+	                        <sizehint height="23.8806un" type="PREFERRED" width="23.8806un"/>
+	                        <layout type="anchor">
+	                            <anchoritem dst="prevPreviewPane" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+	                            <anchoritem dst="prevPreviewPane" dstEdge="TOP" spacing="0un" src="" srcEdge="TOP"/>
+	                            <anchoritem dst="prevPreviewPane" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+	                            <anchoritem dst="prevPreviewPane" dstEdge="BOTTOM" spacing="0un" src="" srcEdge="BOTTOM"/>
+	                            <anchoritem dst="NoEntriesLabelPrev" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+	                            <anchoritem dst="NoEntriesLabelPrev" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+	                            <anchoritem dst="NoEntriesLabelPrev" dstEdge="TOP" spacing="0un" src="" srcEdge="TOP"/>
+								<anchoritem dst="NoEntriesLabelPrev" dstEdge="BOTTOM" spacing="0un" src="" srcEdge="BOTTOM"/>
+	                        </layout>
+	                    </widget>
+	                    <real name="z" value="0"/>
+	                    <sizehint height="23.8806un" type="PREFERRED" width="11.9403un"/>
+	                    <layout orientation="Vertical" spacing="0un" type="linear">
+	                        <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+	                        <linearitem itemname="prevPaneContainer"/>
+	                    </layout>
+	                </widget>
+	                <real name="z" value="1"/>
+	                <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+	                <layout orientation="Vertical" spacing="0un" type="linear">
+	                    <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+	                    <linearitem itemname="prevPaneLayout"/>
+	                </layout>
+	            </widget>
+                <widget name="currPaneWidget" type="HbWidget">
+					<widget name="currRegionalInfo" type="HbLabel">
+					<enums name="alignment" value="AlignCenter"/>
+					<fontspec name="fontSpec" role="Secondary" textheight="var(hb-param-text-height-secondary)"/>
+					<contentsmargins bottom="0.75un" left="var(hb-param-margin-gene-left)" right="var(hb-param-margin-gene-right)" top="0.75un"/>
+					</widget>
+                    <widget name="currPaneLayout" type="HbWidget">
+                        <widget name="currPaneContainer" type="HbWidget">
+                            <widget name="currPreviewPane" type="HbScrollArea">
+                                <widget name="currPreviewPaneContents" role="HbScrollArea:contents" type="HbWidget">
+                                    <real name="z" value="0"/>
+                                    <layout orientation="Vertical" spacing="0.75un" type="linear">
+										<contentsmargins bottom="0.75un" left="2un" right="2un" top="0.75un"/>
+									</layout>
+                                </widget>
+                                <real name="z" value="1"/>
+								<enums name="verticalScrollBarPolicy" value="ScrollBarAlwaysOff"/>
+	                            <enums name="horizontalScrollBarPolicy" value="ScrollBarAlwaysOff"/>
+	                            <enums name="clampingStyle" value="StrictClamping"/>
+								<enums name="scrollingStyle" value="PanOrFlick"/>
+								<bool name="frictionEnabled" value="TRUE"/>
+                            </widget>
+                            <widget name="NoEntriesLabelCurr" type="HbLabel">
+                                <string locid="txt_calendar_preview_no_entries" name="plainText"/>
+								<bool name="visible" value="FALSE"/>
+								<fontspec name="fontSpec" role="Secondary" textheight="var(hb-param-text-height-secondary)"/>
+								<enums name="textWrapping" value="TextWordWrap"/>
+								<enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+								<enums name="elideMode" value="ElideNone"/>
+                            </widget>
+                            <real name="z" value="0"/>
+                            <sizehint height="23.8806un" type="PREFERRED" width="23.8806un"/>
+                            <layout type="anchor">
+                                <anchoritem dst="currPreviewPane" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                                <anchoritem dst="currPreviewPane" dstEdge="TOP" spacing="0un" src="" srcEdge="TOP"/>
+                                <anchoritem dst="currPreviewPane" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                                <anchoritem dst="currPreviewPane" dstEdge="BOTTOM" spacing="0un" src="" srcEdge="BOTTOM"/>
+                                <anchoritem dst="NoEntriesLabelCurr" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                                <anchoritem dst="NoEntriesLabelCurr" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                                <anchoritem dst="NoEntriesLabelCurr" dstEdge="TOP" spacing="0un" src="" srcEdge="TOP"/>
+								<anchoritem dst="NoEntriesLabelCurr" dstEdge="BOTTOM" spacing="0un" src="" srcEdge="BOTTOM"/>
+                            </layout>
+                        </widget>
+                        <real name="z" value="0"/>
+                        <sizehint height="23.8806un" type="PREFERRED" width="11.9403un"/>
+                        <layout orientation="Vertical" spacing="0un" type="linear">
+                            <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+                            <linearitem itemname="currPaneContainer"/>
+                        </layout>
+                    </widget>
+                    <real name="z" value="1"/>
+                    <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+                    <layout orientation="Vertical" spacing="0un" type="linear">
+                        <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+                        <linearitem itemname="currPaneLayout"/>
+                    </layout>
+                </widget>
+                <widget name="nextPaneWidget" type="HbWidget">
+					<widget name="nextRegionalInfo" type="HbLabel">
+					<enums name="alignment" value="AlignCenter"/>
+					<fontspec name="fontSpec" role="Secondary" textheight="var(hb-param-text-height-secondary)"/>
+					<contentsmargins bottom="0.75un" left="var(hb-param-margin-gene-left)" right="var(hb-param-margin-gene-right)" top="0.75un"/>
+					</widget>
+                    <widget name="nextPaneLayout" type="HbWidget">
+                        <widget name="nextPaneContainer" type="HbWidget">
+                            <widget name="nextPreviewPane" type="HbScrollArea">
+                                <widget name="nextPreviewPaneContents" role="HbScrollArea:contents" type="HbWidget">
+                                    <real name="z" value="0"/>
+                                    <layout orientation="Vertical" spacing="0.75un" type="linear">
+										<contentsmargins bottom="0.75un" left="2un" right="2un" top="0.75un"/>
+									</layout>
+                                </widget>
+                                <real name="z" value="1"/>
+								<enums name="verticalScrollBarPolicy" value="ScrollBarAlwaysOff"/>
+	                            <enums name="horizontalScrollBarPolicy" value="ScrollBarAlwaysOff"/>
+	                            <enums name="clampingStyle" value="StrictClamping"/>
+								<enums name="scrollingStyle" value="PanOrFlick"/>
+								<bool name="frictionEnabled" value="TRUE"/>
+                            </widget>
+                            <widget name="NoEntriesLabelNext" type="HbLabel">
+                                <string locid="txt_calendar_preview_no_entries" name="plainText"/>
+								<bool name="visible" value="FALSE"/>
+								<fontspec name="fontSpec" role="Secondary" textheight="var(hb-param-text-height-secondary)"/>
+								<enums name="textWrapping" value="TextWordWrap"/>
+								<enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+								<enums name="elideMode" value="ElideNone"/>
+                            </widget>
+                            <real name="z" value="0"/>
+                            <sizehint height="23.8806un" type="PREFERRED" width="23.8806un"/>
+                            <layout type="anchor">
+                                <anchoritem dst="nextPreviewPane" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                                <anchoritem dst="nextPreviewPane" dstEdge="TOP" spacing="0un" src="" srcEdge="TOP"/>
+                                <anchoritem dst="nextPreviewPane" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                                <anchoritem dst="nextPreviewPane" dstEdge="BOTTOM" spacing="0un" src="" srcEdge="BOTTOM"/>
+                                <anchoritem dst="NoEntriesLabelNext" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                                <anchoritem dst="NoEntriesLabelNext" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                                <anchoritem dst="NoEntriesLabelNext" dstEdge="TOP" spacing="0un" src="" srcEdge="TOP"/>
+								<anchoritem dst="NoEntriesLabelNext" dstEdge="BOTTOM" spacing="0un" src="" srcEdge="BOTTOM"/>
+                            </layout>
+                        </widget>
+                        <real name="z" value="0"/>
+                        <sizehint height="23.8806un" type="PREFERRED" width="11.9403un"/>
+                        <layout orientation="Vertical" spacing="0un" type="linear">
+                            <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+                            <linearitem itemname="nextPaneContainer"/>
+                        </layout>
+                    </widget>
+                    <real name="z" value="1"/>
+                    <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+                    <layout orientation="Vertical" spacing="0un" type="linear">
+                        <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+                        <linearitem itemname="nextPaneLayout"/>
+		                </layout>
+                </widget>
+                <real name="z" value="2"/>
+                <sizehint height="23.8806un" type="PREFERRED" width="11.9403un"/>
+                <sizehint height="230.8806un" type="MAXIMUM" width="52un"/>
+                <layout orientation="Vertical" spacing="0.75un" type="linear">
+                    <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+                    <linearitem itemname="monthTitle"/>
+                    <linearitem itemname="dayNamesWidget"/>
+                    <linearitem itemname="monthGridWeekNumWidget"/>
+                </layout>
+            </widget>
+            <real name="z" value="0"/>
+            <layout orientation="Horizontal" spacing="0un" type="linear">
+                <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+                <linearitem itemname="monthViewExceptPreviewPane"/>
+            </layout>
+        </widget>
+        <widget name="viewMenu" role="HbView:menu" type="HbMenu">
+            <ref object="NewEventAction" role="HbMenu:addAction"/>
+            <ref object="goToTodayAction" role="HbMenu:addAction"/>
+            <ref object="goToDateAction" role="HbMenu:addAction"/>
+            <widget name="deleteSubMenu" role="HbMenu:menu" type="HbMenu">
+                <ref object="beforeDateAction" role="HbMenu:addAction"/>
+                <ref object="allEntriesAction" role="HbMenu:addAction"/>
+            </widget>
+            <ref object="settingsAction" role="HbMenu:addAction"/>
+        </widget>
+    </widget>
+    <section name="portrait">
+     	<widget name="prevPaneLayout" type="HbWidget">
+            <sizehint height="22un" type="PREFERRED" width="11.9403un"/>
+        </widget>
+	<widget name="prevPaneContainer" type="HbWidget">
+            <sizehint height="22un" type="PREFERRED" width="23.8806un"/>
+        </widget>
+        <widget name="prevPaneWidget" type="HbWidget">
+            <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+            <sizehint height="22un" type="FIXED" width="52un"/>
+        </widget>
+	
+	<widget name="currPaneContainer" type="HbWidget">
+	    <sizehint height="22un" type="PREFERRED" width="23.8806un"/>
+	</widget>
+	<widget name="currPaneLayout" type="HbWidget">
+	    <sizehint height="22un" type="PREFERRED" width="11.9403un"/>
+	</widget>
+	<widget name="currPaneWidget" type="HbWidget">
+	    <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+	    <sizehint height="22un" type="FIXED" width="52un"/>
+	</widget>
+	
+	<widget name="nextPaneLayout" type="HbWidget">
+            <sizehint height="22un" type="PREFERRED" width="11.9403un"/>
+        </widget>
+        <widget name="nextPaneWidget" type="HbWidget">
+            <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+            <sizehint height="22un" type="FIXED" width="52un"/>
+        </widget>
+	<widget name="nextPaneContainer" type="HbWidget">
+            <sizehint height="22un" type="PREFERRED" width="23.8806un"/>
+        </widget>
+        <widget name="content" role="HbView:widget" type="HbWidget">
+            <enums name="focusDelegation" value="FocusDelegationBasedOnDirection"/>
+            <layout orientation="Vertical" spacing="0.75un" type="linear">
+                <contentsmargins bottom="0.75un" left="0.75un" right="0.75un" top="0.75un"/>
+                <linearitem itemname="monthViewExceptPreviewPane"/>
+                <linearitem itemname="currPaneWidget"/>
+            </layout>
+        </widget>
+        <widget name="monthGridWeekNumWidget" type="HbWidget">
+            <sizehint height="42.77612un" type="PREFERRED" width="52un"/>
+            <sizehint height="42.77612un" type="MINIMUM" width="52un"/>
+            <sizehint height="62.77612un" type="MAXIMUM" width="52un"/>
+        </widget>
+        <widget name="monthGrid" type="HbGridView">
+            <sizehint height="43.77612un" type="PREFERRED" width="52un"/>
+            <sizehint height="62.77612un" type="MAXIMUM" width="52un"/>
+            <sizehint height="43.77612un" type="MINIMUM" width="0un"/>
+        </widget>
+        <widget name="weekNumbersWidget" type="HbWidget">
+            <sizehint height="42.77612un" type="PREFERRED" width="6.41604un"/>
+            <sizehint height="42.77612un" type="MINIMUM" width="6.41604un"/>
+            <sizehint height="62.77612un" type="MAXIMUM" width="6.41604un"/>
+        </widget>
+	<widget name="prevPreviewPaneContents" role="HbScrollArea:contents" type="HbWidget">
+            <sizehint type="MINIMUM" width="52un"/>
+            <sizehint type="MAXIMUM" width="52un"/>
+        </widget>
+	<widget name="currPreviewPaneContents" role="HbScrollArea:contents" type="HbWidget">
+            <sizehint type="MINIMUM" width="52un"/>
+            <sizehint type="MAXIMUM" width="52un"/>
+        </widget>
+	<widget name="nextPreviewPaneContents" role="HbScrollArea:contents" type="HbWidget">
+            <sizehint type="MINIMUM" width="52un"/>
+            <sizehint type="MAXIMUM" width="52un"/>
+        </widget>	
+    </section>
+    <section name="landscape">
+     	<widget name="prevPaneLayout" type="HbWidget">
+            <sizehint height="42.8806un" type="PREFERRED" width="11.9403un"/>
+        </widget>
+		<widget name="prevPaneContainer" type="HbWidget">
+            <sizehint height="42.8806un" type="PREFERRED" width="23.8806un"/>
+        </widget>
+		<widget name="prevPaneWidget" type="HbWidget">
+            <sizehint height="42.8806un" type="FIXED" width="40.8un"/>
+		</widget>
+		<widget name="currPaneContainer" type="HbWidget">
+	    <sizehint height="42.8806un" type="PREFERRED" width="23.8806un"/>
+		</widget>
+		<widget name="currPaneLayout" type="HbWidget">
+	    <sizehint height="42.8806un" type="PREFERRED" width="11.9403un"/>
+		</widget>
+		<widget name="currPaneWidget" type="HbWidget">
+            <sizehint height="42.8806un" type="FIXED" width="40.8un"/>
+		</widget>
+		<widget name="nextPaneLayout" type="HbWidget">
+            <sizehint height="42.8806un" type="PREFERRED" width="11.9403un"/>
+        </widget>
+		<widget name="nextPaneContainer" type="HbWidget">
+            <sizehint height="42.8806un" type="PREFERRED" width="11.9403un"/>
+        </widget>
+		<widget name="nextPaneWidget" type="HbWidget">
+            <sizehint height="42.8806un" type="FIXED" width="40.8un"/>
+		</widget>
+		<widget name="prevPreviewPaneContents" type="HbWidget">
+            <sizehint type="MINIMUM" width="40.8un"/>
+            <sizehint type="MAXIMUM" width="40.8un"/>
+		</widget>
+		<widget name="currPreviewPaneContents" type="HbWidget">
+            <sizehint type="MINIMUM" width="40.8un"/>
+            <sizehint type="MAXIMUM" width="40.8un"/>
+		</widget>
+		<widget name="nextPreviewPaneContents" type="HbWidget">
+            <sizehint type="MINIMUM" width="40.8un"/>
+            <sizehint type="MAXIMUM" width="40.8un"/>
+		</widget>
+        <widget name="monthGridWeekNumWidget" type="HbWidget">
+            <sizehint height="33.1un" type="PREFERRED" width="52un"/>
+            <sizehint height="33.1un" type="MAXIMUM" width="52un"/>
+            <sizehint height="33.1un" type="MINIMUM" width="52un"/>
+        </widget>
+        <widget name="monthGrid" type="HbGridView">
+            <sizehint height="33.1un" type="PREFERRED" width="52un"/>
+            <sizehint height="33.1un" type="MAXIMUM" width="52un"/>
+            <sizehint height="33.1un" type="MINIMUM" width="0un"/>
+        </widget>
+        <widget name="weekNumbersWidget" type="HbWidget">
+            <sizehint height="33.1un" type="PREFERRED" width="6.41604un"/>
+            <sizehint height="33.1un" type="MAXIMUM" width="6.41604un"/>
+            <sizehint height="33.1un" type="MINIMUM" width="6.41604un"/>
+        </widget>
+        <widget name="content" role="HbView:widget" type="HbWidget">
+            <layout orientation="Horizontal" spacing="0.75un" type="linear">
+                <contentsmargins bottom="0.75un" left="0.75un" right="0.75un" top="0.75un"/>
+                <linearitem itemname="monthViewExceptPreviewPane"/>
+                <linearitem itemname="currPaneWidget"/>
+            </layout>
+        </widget>
+    </section>
+    <metadata activeUIState="PortraitUiState" display="QHD portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+        <uistate name="landscapeUIState" sections="#common landscape"/>
+        <uistate name="PortraitUiState" sections="#common portrait"/>
+        <uistate name="portrait" sections="#common portrait"/>
+        <uistate name="landscape" sections="#common landscape"/>
+    </metadata>
+</hbdocument>

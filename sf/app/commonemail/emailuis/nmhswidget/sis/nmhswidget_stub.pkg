@@ -1,0 +1,40 @@
+;
+; Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description: 
+;
+;Language - standard language definitions
+&EN
+
+; Package header
+#{"NmHsWidget stub package"}, (0x2002DD15), 1, 0, 0
+
+;Localised Vendor name
+%{"Nokia"}
+
+;Unique Vendor name
+:"Nokia"
+
+;nmhswidget
+""-"z:\sys\bin\nmhswidget.dll"
+""-"z:\private\20022F35\import\widgetregistry\2002DD15\nmhswidget.qtplugin"
+""-"z:\private\20022F35\import\widgetregistry\2002DD15\nmhswidget.xml"
+""-"z:\private\20022F35\import\widgetregistry\2002DD15\nmhswidget.manifest"
+""-"z:\resource\qt\translations\mailwidget*.qm"
+
+
+;nmregister
+""-"z:\sys\bin\nmregister.dll"
+""-"z:\private\2002DD16\import\nmregister.xml"
+""-"z:\resource\qt\plugins\nmregister.qtplugin"
+""-"z:\resource\qt\translations\nmregister*.qm"

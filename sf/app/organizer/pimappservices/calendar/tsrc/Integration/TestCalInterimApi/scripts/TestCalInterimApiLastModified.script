@@ -1,0 +1,112 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+PRINT Run Last Modified Date/Time Test
+
+LOAD_SUITE TestCalInterimApiSuite
+
+START_TESTCASE PIM-APPENGCallnterimAPI-CIT-LastModified-0053AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENGCallnterimAPI-CIT-LastModified-0053AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - Non Functional Requirements Calendar Design R1 R2
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Last Modified Date/Time when storing entry
+//! @SYMTestActions Create entry and store in calendar file.  Verify Last Modified Date/Time, Store same entry in database, check for Last/Modified Date/Time
+//! @SYMTestExpectedResults The Last/Modified Date/Time should equal when the entry was stored second time
+
+RUN_TEST_STEP	100	TestCalInterimApiSuite	TestCalInterimApiDeleteAgendaServers
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\testdata\TestCalInterimApiLastModified.ini london
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetSysTime \CITCalInterimApi\testdata\TestCalInterimApiLastModified.ini systemTime
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiReadData \CITCalInterimApi\testdata\TestCalInterimApiLastModified.ini entry
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiLastModified \CITCalInterimApi\testdata\TestCalInterimApiLastModified.ini verifyLastModified
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetSysTime \CITCalInterimApi\testdata\TestCalInterimApiLastModified.ini systemTime1
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiReadData \CITCalInterimApi\testdata\TestCalInterimApiLastModified.ini entry1
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiLastModified \CITCalInterimApi\testdata\TestCalInterimApiLastModified.ini verifyLastModified1
+END_TESTCASE PIM-APPENGCallnterimAPI-CIT-LastModified-0053AP-1090HP
+
+
+START_TESTCASE PIM-APPENGCallnterimAPI-CIT-LastModified-0054AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENGCallnterimAPI-CIT-LastModified-0054AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - Non Functional Requirements Calendar Design R1 R2
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Last Modified Date/Time when storing entry resulting copying the initial entry.
+//! @SYMTestActions Create entry and store in calendar file.  Copy this entry into a new entry and store.
+//! @SYMTestExpectedResults The Last/Modified Date/Time of the new entry should be equal to the time when stored.
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\testdata\TestCalInterimApiLastModified.ini london
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetSysTime \CITCalInterimApi\testdata\TestCalInterimApiLastModified.ini systemTime
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiReadData \CITCalInterimApi\testdata\TestCalInterimApiLastModified.ini entry
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiLastModified \CITCalInterimApi\testdata\TestCalInterimApiLastModified.ini verifyLastModified
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetSysTime \CITCalInterimApi\testdata\TestCalInterimApiLastModified.ini systemTime1
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCopyEntry \CITCalInterimApi\testdata\TestCalInterimApiLastModified.ini CopyEntry1
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiLastModified \CITCalInterimApi\testdata\TestCalInterimApiLastModified.ini verifyLastModified2
+END_TESTCASE PIM-APPENGCallnterimAPI-CIT-LastModified-0054AP-1090HP
+
+
+START_TESTCASE PIM-APPENGCallnterimAPI-CIT-LastModified-0055AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENGCallnterimAPI-CIT-LastModified-0055AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - Non Functional Requirements Calendar Design R1 R2
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Last Modified Date/Time when updating child entry
+//! @SYMTestActions Create parent and 3 child entries, store in calendar file.  Update one of the child entries, using updateL.
+//!		    Verify if the last modified Date/Time has changed for the parent entry and one child entry
+//! @SYMTestExpectedResults The Last/Modified Date/Time of parent entry and child entry should be equal to the date/time when we updated child entry
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\testdata\TestCalInterimApiLastModified.ini london
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetSysTime \CITCalInterimApi\testdata\TestCalInterimApiLastModified.ini systemTime
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiReadData \CITCalInterimApi\testdata\TestCalInterimApiLastModified.ini childparent
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiLastModified \CITCalInterimApi\testdata\TestCalInterimApiLastModified.ini verifyLastModifiedChildParent
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetSysTime \CITCalInterimApi\testdata\TestCalInterimApiLastModified.ini systemTime1
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiUpdateEntry \CITCalInterimApi\testdata\TestCalInterimApiLastModified.ini updateChildEntry
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiLastModified \CITCalInterimApi\testdata\TestCalInterimApiLastModified.ini verifyLastModifiedChildParent1
+END_TESTCASE PIM-APPENGCallnterimAPI-CIT-LastModified-0055AP-1090HP
+
+
+START_TESTCASE PIM-APPENGCallnterimAPI-CIT-LastModified-0056AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENGCallnterimAPI-CIT-LastModified-0056AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - Non Functional Requirements Calendar Design R1 R2
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Last Modified Date/Time when fecthing child entry
+//! @SYMTestActions Create parent and 3 child entries, store in calendar file.  Fetch one of the child entries, and check for Last Modified Date/Time
+//! @SYMTestExpectedResults The Last Modified date/time of parent and the child entries should be equal to the date/time when stored.
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\testdata\TestCalInterimApiLastModified.ini london
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetSysTime \CITCalInterimApi\testdata\TestCalInterimApiLastModified.ini systemTime
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiReadData \CITCalInterimApi\testdata\TestCalInterimApiLastModified.ini childparent
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiLastModified \CITCalInterimApi\testdata\TestCalInterimApiLastModified.ini verifyLastModifiedChildParent
+END_TESTCASE PIM-APPENGCallnterimAPI-CIT-LastModified-0056AP-1090HP
+
+PREFIX RUN_UTILS 
+MakeReadWrite 	c:\private\10003a5b\citcalinterimlastmodified.datIdx
+DeleteFile		c:\private\10003a5b\citcalinterimlastmodified.datIdx
+MakeReadWrite	c:\private\10003a5b\CITCalInterimLastModified.dat
+DeleteFile		c:\private\10003a5b\CITCalInterimLastModified.dat
+REMOVE_PREFIX

@@ -1,0 +1,913 @@
+EXPORTS
+	_ZN14CPop3ClientMtm4NewLER17CRegisteredMtmDllR11CMsvSession @ 1 NONAME
+	_ZN14CSmtpClientMtm4NewLER17CRegisteredMtmDllR11CMsvSession @ 2 NONAME
+	_ZN15CImap4ClientMtm4NewLER17CRegisteredMtmDllR11CMsvSession @ 3 NONAME
+	_Z13DummyExport01v @ 4 NONAME
+	_ZN13CImMimeHeader12InternalizeLER14RMsvReadStream @ 5 NONAME
+	_ZN13CImMimeHeader13SetContentIDLERK6TDesC8 @ 6 NONAME
+	_ZN13CImMimeHeader14SetMimeCharsetEj @ 7 NONAME
+	_ZN13CImMimeHeader15SetContentBaseLERK6TDesC8 @ 8 NONAME
+	_ZN13CImMimeHeader15SetContentTypeLERK6TDesC8 @ 9 NONAME
+	_ZN13CImMimeHeader16SetRelativePathLERK6TDesC8 @ 10 NONAME
+	_ZN13CImMimeHeader18SetContentSubTypeLERK6TDesC8 @ 11 NONAME
+	_ZN13CImMimeHeader19SetContentLocationLERK7TDesC16 @ 12 NONAME
+	_ZN13CImMimeHeader22SetContentDescriptionLERK6TDesC8 @ 13 NONAME
+	_ZN13CImMimeHeader22SetContentDispositionLERK6TDesC8 @ 14 NONAME
+	_ZN13CImMimeHeader27SetContentTransferEncodingLERK6TDesC8 @ 15 NONAME
+	_ZN13CImMimeHeader4NewLEv @ 16 NONAME
+	_ZN13CImMimeHeader4SizeEv @ 17 NONAME
+	_ZN13CImMimeHeader5NewLCEv @ 18 NONAME
+	_ZN13CImMimeHeader5ResetEv @ 19 NONAME
+	_ZN13CImMimeHeader8RestoreLER9CMsvStore @ 20 NONAME
+	_ZN13CImMimeHeaderD0Ev @ 21 NONAME
+	_ZN13CImMimeHeaderD1Ev @ 22 NONAME
+	_ZN13CImMimeHeaderD2Ev @ 23 NONAME
+	_ZN13CImQueuedList16AppendOperationLERK19CImOffLineOperation @ 24 NONAME
+	_ZN13CImQueuedList16ResetLineCounterEv @ 25 NONAME
+	_ZN13CImQueuedList4NewLEv @ 26 NONAME
+	_ZN13CImQueuedList5ResetEv @ 27 NONAME
+	_ZN13CImQueuedList6DeleteEi @ 28 NONAME
+	_ZN13CImQueuedList7AppendLER16TQueuedOperation @ 29 NONAME
+	_ZN13CImQueuedList9SetFolderEl @ 30 NONAME
+	_ZN13CImQueuedListD0Ev @ 31 NONAME
+	_ZN13CImQueuedListD1Ev @ 32 NONAME
+	_ZN13CImQueuedListD2Ev @ 33 NONAME
+	_ZN13CImQueuedListixEi @ 34 NONAME
+	_ZN14CImEntryFinder4NewLER9CMsvEntry @ 35 NONAME
+	_ZN14CImEntryFinder5NewLCER9CMsvEntry @ 36 NONAME
+	_ZN14CImPOP3GetMail13FinalProgressEv @ 37 NONAME
+	_ZN14CImPOP3GetMail8GetMailLER14CPop3ClientMtmR14TRequestStatusRK18CMsvEntrySelectionR5TDes8NS_18TImPOP3GetMailTypeE @ 38 NONAME
+	_ZN14CImPOP3GetMailD0Ev @ 39 NONAME
+	_ZN14CImPOP3GetMailD1Ev @ 40 NONAME
+	_ZN14CImPOP3GetMailD2Ev @ 41 NONAME
+	_ZN14CPop3ClientMtm12SetSettingsLERK15CImPop3Settings @ 42 NONAME
+	_ZN14CPop3ClientMtm14CreateMessageLEl @ 43 NONAME
+	_ZN14CPop3ClientMtm14StoreSettingsLEv @ 44 NONAME
+	_ZN14CPop3ClientMtm16RestoreSettingsLEv @ 45 NONAME
+	_ZN14CPop3ClientMtm17CreateAttachmentLERlR4TBufILi256EE @ 46 NONAME ABSENT
+	_ZN14CPop3ClientMtm17DeleteAttachmentLEll @ 47 NONAME ABSENT
+	_ZN14CSmtpClientMtm11SetSubjectLERK7TDesC16 @ 48 NONAME
+	_ZN14CSmtpClientMtm12SetSettingsLERK15CImSmtpSettings @ 49 NONAME
+	_ZN14CSmtpClientMtm14CreateMessageLEl @ 50 NONAME
+	_ZN14CSmtpClientMtm14StoreSettingsLEv @ 51 NONAME
+	_ZN14CSmtpClientMtm16RestoreSettingsLEv @ 52 NONAME
+	_ZN14CSmtpClientMtm17CreateAttachmentLERlR4TBufILi256EE @ 53 NONAME ABSENT
+	_ZN14CSmtpClientMtm17DeleteAttachmentLEll @ 54 NONAME ABSENT
+	_ZN14TMsvEmailEntry13GetIMAP4FlagsERiS0_S0_S0_S0_S0_S0_ @ 55 NONAME
+	_ZN14TMsvEmailEntry13SetIMAP4FlagsEiiiiiii @ 56 NONAME
+	_ZN14TMsvEmailEntry20SetMessageFolderTypeE18TImEmailFolderType @ 57 NONAME
+	_ZN14TMsvEmailEntry24SetDisconnectedOperationE28TImDisconnectedOperationType @ 58 NONAME
+	_ZN14TMsvEmailEntryC1ERK9TMsvEntry @ 59 NONAME
+	_ZN14TMsvEmailEntryC1Ev @ 60 NONAME
+	_ZN14TMsvEmailEntryC2ERK9TMsvEntry @ 61 NONAME
+	_ZN14TMsvEmailEntryC2Ev @ 62 NONAME
+	_ZN15CImCacheManager10ConstructLEv @ 63 NONAME
+	_ZN15CImCacheManager4RunLEv @ 64 NONAME
+	_ZN15CImCacheManager6StartLERK18CMsvEntrySelectionR14TRequestStatus @ 65 NONAME
+	_ZN15CImCacheManager6StartLElR14TRequestStatus @ 66 NONAME
+	_ZN15CImCacheManager8DoCancelEv @ 67 NONAME
+	_ZN15CImCacheManager9ProgressLEv @ 68 NONAME
+	_ZN15CImCacheManagerC2ER11CMsvSessionR14TRequestStatus @ 69 NONAME
+	_ZN15CImCacheManagerD0Ev @ 70 NONAME
+	_ZN15CImCacheManagerD1Ev @ 71 NONAME
+	_ZN15CImCacheManagerD2Ev @ 72 NONAME
+	_ZN15CImEmailMessage12GetBodyTextLER14TRequestStatuslNS_17TImEmailEntryTypeER9CRichTextR16CParaFormatLayerR16CCharFormatLayer @ 73 NONAME
+	_ZN15CImEmailMessage12GetBodyTextLElNS_17TImEmailEntryTypeER9CRichTextR16CParaFormatLayerR16CCharFormatLayer @ 74 NONAME
+	_ZN15CImEmailMessage14AddAttachmentLElRK7TDesC16R14TRequestStatus @ 75 NONAME ABSENT
+	_ZN15CImEmailMessage14StoreBodyTextLElR9CRichTextR14TRequestStatus @ 76 NONAME
+	_ZN15CImEmailMessage15AddRelatedPartLElRK7TDesC16R14TRequestStatuslRK6TDesC8 @ 77 NONAME
+	_ZN15CImEmailMessage16GetCharacterSetLElRjRi @ 78 NONAME
+	_ZN15CImEmailMessage16SetCharacterSetLElj @ 79 NONAME
+	_ZN15CImEmailMessage17DeleteAttachmentLEllR14TRequestStatus @ 80 NONAME ABSENT
+	_ZN15CImEmailMessage18FindFirstHTMLPageLElR14TRequestStatus @ 81 NONAME
+	_ZN15CImEmailMessage19GetAttachmentsListLER14TRequestStatuslNS_17TImAttachmentTypeENS_17TImEmailEntryTypeE @ 82 NONAME
+	_ZN15CImEmailMessage19GetAttachmentsListLElNS_17TImAttachmentTypeENS_17TImEmailEntryTypeE @ 83 NONAME
+	_ZN15CImEmailMessage22DeleteAttachedMessageLEllR14TRequestStatus @ 84 NONAME ABSENT
+	_ZN15CImEmailMessage23AddMessageAsAttachmentLEllR14TRequestStatus @ 85 NONAME ABSENT
+	_ZN15CImEmailMessage24GetMessageDigestEntriesLER14TRequestStatusl @ 86 NONAME
+	_ZN15CImEmailMessage32FindUniversalResourceIdentifierLElRK7TDesC16S2_R14TRequestStatus @ 87 NONAME
+	_ZN15CImEmailMessage4NewLER9CMsvEntry @ 88 NONAME
+	_ZN15CImEmailMessage5NewLCER9CMsvEntry @ 89 NONAME
+	_ZN15CImEmailMessageD0Ev @ 90 NONAME
+	_ZN15CImEmailMessageD1Ev @ 91 NONAME
+	_ZN15CImEmailMessageD2Ev @ 92 NONAME
+	_ZN15CImImap4GetMail8GetMailLEiR15CImap4ClientMtmRK18CMsvEntrySelectionR5TDes8R14TRequestStatus @ 93 NONAME
+	_ZN15CImPop3Settings12InternalizeLER14RMsvReadStream @ 94 NONAME ABSENT
+	_ZN15CImPop3Settings12SetPasswordLERK6TDesC8 @ 95 NONAME
+	_ZN15CImPop3Settings13SetLoginNameLERK6TDesC8 @ 96 NONAME
+	_ZN15CImPop3Settings15SetMaxEmailSizeEi @ 97 NONAME
+	_ZN15CImPop3Settings17SetGetMailOptionsE19TPop3GetMailOptions @ 98 NONAME
+	_ZN15CImPop3Settings20SetAutoSendOnConnectEi @ 99 NONAME
+	_ZN15CImPop3Settings22SetAcknowledgeReceiptsEi @ 100 NONAME
+	_ZN15CImPop3Settings23SetDisconnectedUserModeEi @ 101 NONAME
+	_ZN15CImPop3Settings28SetInboxSynchronisationLimitEl @ 102 NONAME
+	_ZN15CImPop3Settings32SetDeleteEmailsWhenDisconnectingEi @ 103 NONAME
+	_ZN15CImPop3Settings5CopyLERKS_ @ 104 NONAME
+	_ZN15CImPop3Settings5ResetEv @ 105 NONAME
+	_ZN15CImPop3Settings7SetApopEi @ 106 NONAME
+	_ZN15CImPop3Settings8RestoreLER9CMsvStore @ 107 NONAME ABSENT
+	_ZN15CImPop3SettingsC1Ev @ 108 NONAME
+	_ZN15CImPop3SettingsC2Ev @ 109 NONAME
+	_ZN15CImPop3SettingsD0Ev @ 110 NONAME
+	_ZN15CImPop3SettingsD1Ev @ 111 NONAME
+	_ZN15CImPop3SettingsD2Ev @ 112 NONAME
+	_ZN15CImPruneMessage4NewLER9CMsvEntryR3RFs @ 113 NONAME
+	_ZN15CImPruneMessage5NewLCER9CMsvEntryR3RFs @ 114 NONAME
+	_ZN15CImPruneMessage6StartLElR14TRequestStatus @ 115 NONAME
+	_ZN15CImSmtpSettings11SetSMTPAuthEi @ 116 NONAME
+	_ZN15CImSmtpSettings12InternalizeLER14RMsvReadStream @ 117 NONAME ABSENT
+	_ZN15CImSmtpSettings12SetPasswordLERK6TDesC8 @ 118 NONAME
+	_ZN15CImSmtpSettings13SetLoginNameLERK6TDesC8 @ 119 NONAME
+	_ZN15CImSmtpSettings14SetEmailAliasLERK7TDesC16 @ 120 NONAME
+	_ZN15CImSmtpSettings15SetBodyEncodingE22TMsgOutboxBodyEncoding @ 121 NONAME
+	_ZN15CImSmtpSettings16SetEmailAddressLERK7TDesC16 @ 122 NONAME
+	_ZN15CImSmtpSettings17SetSendCopyToSelfE21TImSMTPSendCopyToSelf @ 123 NONAME
+	_ZN15CImSmtpSettings18SetAddVCardToEmailEi @ 124 NONAME
+	_ZN15CImSmtpSettings18SetReceiptAddressLERK7TDesC16 @ 125 NONAME
+	_ZN15CImSmtpSettings18SetReplyToAddressLERK7TDesC16 @ 126 NONAME
+	_ZN15CImSmtpSettings18SetRequestReceiptsEi @ 127 NONAME
+	_ZN15CImSmtpSettings20SetDefaultMsgCharSetE4TUid @ 128 NONAME
+	_ZN15CImSmtpSettings20SetInboxLoginDetailsEi @ 129 NONAME
+	_ZN15CImSmtpSettings20SetSendMessageOptionE24TImSMTPSendMessageOption @ 130 NONAME
+	_ZN15CImSmtpSettings22SetAddSignatureToEmailEi @ 131 NONAME
+	_ZN15CImSmtpSettings5CopyLERKS_ @ 132 NONAME
+	_ZN15CImSmtpSettings5ResetEv @ 133 NONAME
+	_ZN15CImSmtpSettings8RestoreLER9CMsvStore @ 134 NONAME ABSENT
+	_ZN15CImSmtpSettingsC1Ev @ 135 NONAME
+	_ZN15CImSmtpSettingsC2Ev @ 136 NONAME
+	_ZN15CImSmtpSettingsD0Ev @ 137 NONAME
+	_ZN15CImSmtpSettingsD1Ev @ 138 NONAME
+	_ZN15CImSmtpSettingsD2Ev @ 139 NONAME
+	_ZN15CImap4ClientMtm10QueueListLER9CMsvEntry @ 140 NONAME
+	_ZN15CImap4ClientMtm14CreateMessageLEl @ 141 NONAME
+	_ZN15CImap4ClientMtm14StoreSettingsLEv @ 142 NONAME
+	_ZN15CImap4ClientMtm16RestoreSettingsLEv @ 143 NONAME
+	_ZN15CImap4ClientMtm17CreateAttachmentLERlR4TBufILi256EE @ 144 NONAME ABSENT
+	_ZN15CImap4ClientMtm17DeleteAttachmentLEll @ 145 NONAME ABSENT
+	_ZN15CImap4ClientMtm17SetImap4SettingsLERK16CImImap4Settings @ 146 NONAME
+	_ZN15TImMessageField13GetValidAliasERK7TDesC16 @ 147 NONAME
+	_ZN15TImMessageField13GetValidAliasERK7TDesC16Ri @ 148 NONAME
+	_ZN15TImMessageField14ValidAliasNameERK7TDesC16 @ 149 NONAME
+	_ZN15TImMessageField14ValidAliasNameERK7TDesC16Ri @ 150 NONAME
+	_ZN15TImMessageField15GetValidCommentERK7TDesC16 @ 151 NONAME
+	_ZN15TImMessageField15GetValidCommentERK7TDesC16Ri @ 152 NONAME
+	_ZN15TImMessageField16ValidSubjectLineERK7TDesC16 @ 153 NONAME
+	_ZN15TImMessageField16ValidSubjectLineERK7TDesC16Ri @ 154 NONAME
+	_ZN15TImMessageField20ValidSubjectLineCharERK5TChar @ 155 NONAME
+	_ZN15TImMessageField25ValidInternetEmailAddressERK7TDesC16 @ 156 NONAME
+	_ZN15TImMessageField25ValidInternetEmailAddressERK7TDesC16Ri @ 157 NONAME
+	_ZN15TImMessageField25ValidInternetEmailAddressERK7TDesC16RiS3_ @ 158 NONAME
+	_ZN15TImMessageField25ValidInternetEmailAddressERK7TDesC16RiS3_S3_ @ 159 NONAME
+	_ZN15TImMessageField29ValidInternetEmailAddressCharERK5TChar @ 160 NONAME
+	_ZN15TImMessageField38GetValidInternetEmailAddressFromStringERK7TDesC16 @ 161 NONAME
+	_ZN15TImMessageField38GetValidInternetEmailAddressFromStringERK7TDesC16Ri @ 162 NONAME
+	_ZN15TImMessageField38GetValidInternetEmailAddressFromStringERK7TDesC16RiS3_ @ 163 NONAME
+	_ZN15TImMessageField38GetValidInternetEmailAddressFromStringERK7TDesC16RiS3_S3_ @ 164 NONAME
+	_ZN15TImSmtpProgress10UpdateSentEv @ 165 NONAME
+	_ZN15TImSmtpProgress12SetServiceIdEl @ 166 NONAME
+	_ZN15TImSmtpProgress15InitialiseTotalERKi @ 167 NONAME
+	_ZN15TImSmtpProgress16SetConnectionIAPEi @ 168 NONAME
+	_ZN15TImSmtpProgress18DecrementSendTotalEv @ 169 NONAME
+	_ZN15TImSmtpProgress18UpdateFailedToSendEv @ 170 NONAME
+	_ZN15TImSmtpProgress8SetErrorEi @ 171 NONAME
+	_ZN15TImSmtpProgress8SetMsgNoEi @ 172 NONAME
+	_ZN15TImSmtpProgress9SetStatusE21TMsgImOutboxSendState @ 173 NONAME
+	_ZN16CImImap4Settings11SetImapIdleEi @ 174 NONAME
+	_ZN16CImImap4Settings12InternalizeLER14RMsvReadStream @ 175 NONAME ABSENT
+	_ZN16CImImap4Settings12SetPasswordLERK6TDesC8 @ 176 NONAME
+	_ZN16CImImap4Settings12SetSubscribeE20TFolderSubscribeType @ 177 NONAME
+	_ZN16CImImap4Settings12SetSyncRateLEi @ 178 NONAME
+	_ZN16CImImap4Settings13SetFetchSizeLEj @ 179 NONAME
+	_ZN16CImImap4Settings13SetLoginNameLERK6TDesC8 @ 180 NONAME
+	_ZN16CImImap4Settings14SetFolderPathLERK6TDesC8 @ 181 NONAME
+	_ZN16CImImap4Settings14SetSynchroniseE15TFolderSyncType @ 182 NONAME
+	_ZN16CImImap4Settings15SetMaxEmailSizeEj @ 183 NONAME
+	_ZN16CImImap4Settings16SetPathSeparatorEh @ 184 NONAME
+	_ZN16CImImap4Settings17SetGetMailOptionsE20TImap4GetMailOptions @ 185 NONAME
+	_ZN16CImImap4Settings19SetImapIdleTimeoutLEi @ 186 NONAME
+	_ZN16CImImap4Settings20SetAutoSendOnConnectEi @ 187 NONAME
+	_ZN16CImImap4Settings20SetUpdatingSeenFlagsEi @ 188 NONAME
+	_ZN16CImImap4Settings22SetAcknowledgeReceiptsEi @ 189 NONAME
+	_ZN16CImImap4Settings23SetDisconnectedUserModeEi @ 190 NONAME
+	_ZN16CImImap4Settings28SetInboxSynchronisationLimitEl @ 191 NONAME
+	_ZN16CImImap4Settings30SetMailboxSynchronisationLimitEl @ 192 NONAME
+	_ZN16CImImap4Settings32SetDeleteEmailsWhenDisconnectingEi @ 193 NONAME
+	_ZN16CImImap4Settings5CopyLERKS_ @ 194 NONAME
+	_ZN16CImImap4Settings5ResetEv @ 195 NONAME
+	_ZN16CImImap4Settings8RestoreLER9CMsvStore @ 196 NONAME ABSENT
+	_ZN16CImImap4SettingsC1Ev @ 197 NONAME
+	_ZN16CImImap4SettingsC2Ev @ 198 NONAME
+	_ZN16CImImap4SettingsD0Ev @ 199 NONAME
+	_ZN16CImImap4SettingsD1Ev @ 200 NONAME
+	_ZN16CImImap4SettingsD2Ev @ 201 NONAME
+	_ZN16CImMessageFinder4NewLER9CMsvEntry @ 202 NONAME
+	_ZN16CImMessageFinder5NewLCER9CMsvEntry @ 203 NONAME
+	_ZN16CImSSmtpSettings12InternalizeLER14RMsvReadStream @ 204 NONAME ABSENT
+	_ZN16CImSSmtpSettings15SetPhoneNumberLERK7TDesC16 @ 205 NONAME ABSENT
+	_ZN16CImSSmtpSettings16SetEmailAddressLERK7TDesC16 @ 206 NONAME ABSENT
+	_ZN16CImSSmtpSettings5CopyLERKS_ @ 207 NONAME ABSENT
+	_ZN16CImSSmtpSettings5ResetEv @ 208 NONAME ABSENT
+	_ZN16CImSSmtpSettings8RestoreLER9CMsvStore @ 209 NONAME ABSENT
+	_ZN16CImSSmtpSettingsC1Ev @ 210 NONAME ABSENT
+	_ZN16CImSSmtpSettingsC2Ev @ 211 NONAME ABSENT
+	_ZN16CImSSmtpSettingsD0Ev @ 212 NONAME ABSENT
+	_ZN16CImSSmtpSettingsD1Ev @ 213 NONAME ABSENT
+	_ZN16CImSSmtpSettingsD2Ev @ 214 NONAME ABSENT
+	_ZN16TQueuedOperation4NewLEliRK19CImOffLineOperation @ 215 NONAME
+	_ZN16TQueuedOperation5CopyLERKS_ @ 216 NONAME
+	_ZN16TQueuedOperationC1Ev @ 217 NONAME
+	_ZN16TQueuedOperationC2Ev @ 218 NONAME
+	_ZN16TQueuedOperationneERKS_ @ 219 NONAME
+	_ZN17CImClientMTMUtils11FindInBodyLERK7TDesC16R9CRichTextj @ 220 NONAME
+	_ZN17CImClientMTMUtils13FindInHeaderLERK7TDesC16R9CImHeaderj @ 221 NONAME
+	_ZN17CImClientMTMUtils4NewLEv @ 222 NONAME
+	_ZN17CImClientMTMUtils5FindLERK7TDesC16R9CRichTextR9CImHeaderjRj @ 223 NONAME
+	_ZN17CImClientMTMUtilsD0Ev @ 224 NONAME
+	_ZN17CImClientMTMUtilsD1Ev @ 225 NONAME
+	_ZN17CImClientMTMUtilsD2Ev @ 226 NONAME
+	_ZN17CImEmailOperation10CreateNewLER14TRequestStatusR11CMsvSessionljRKj4TUid @ 227 NONAME
+	_ZN17CImEmailOperation10CreateNewLER14TRequestStatusR11CMsvSessionlljRKj4TUidi @ 228 NONAME
+	_ZN17CImEmailOperation12CreateReplyLER14TRequestStatusR11CMsvSessionlljRK7TDesC16RKj4TUid @ 229 NONAME
+	_ZN17CImEmailOperation12CreateReplyLER14TRequestStatusR11CMsvSessionlljRKj4TUid @ 230 NONAME
+	_ZN17CImEmailOperation12CreateReplyLER14TRequestStatusR11CMsvSessionlljRKj4TUidi @ 231 NONAME
+	_ZN17CImEmailOperation13FinalProgressEv @ 232 NONAME
+	_ZN17CImEmailOperation14CreateForwardLER14TRequestStatusR11CMsvSessionlljRK7TDesC16RKj4TUid @ 233 NONAME
+	_ZN17CImEmailOperation14CreateForwardLER14TRequestStatusR11CMsvSessionlljRKj4TUid @ 234 NONAME
+	_ZN17CImEmailOperation14CreateForwardLER14TRequestStatusR11CMsvSessionllljRKj4TUidi @ 235 NONAME
+	_ZN17CImEmailOperation14CreateReceiptLER14TRequestStatusR11CMsvSessionlljRK7TDesC16RKj4TUid @ 236 NONAME
+	_ZN17CImEmailOperation14CreateReceiptLER14TRequestStatusR11CMsvSessionlljRKj4TUid @ 237 NONAME
+	_ZN17CImEmailOperation14CreateReceiptLER14TRequestStatusR11CMsvSessionlljRKj4TUidi @ 238 NONAME
+	_ZN17CImEmailOperation26CreateForwardAsAttachmentLER14TRequestStatusR11CMsvSessionlljRKj4TUid @ 239 NONAME
+	_ZN17CImEmailOperation26CreateForwardAsAttachmentLER14TRequestStatusR11CMsvSessionllljRKj4TUidi @ 240 NONAME
+	_ZN17CImEmailOperationD0Ev @ 241 NONAME
+	_ZN17CImEmailOperationD1Ev @ 242 NONAME
+	_ZN17CImEmailOperationD2Ev @ 243 NONAME
+	_ZN17CImIAPPreferences10RemoveIAPLEi @ 244 NONAME
+	_ZN17CImIAPPreferences11ReplaceIAPLEi12TImIAPChoice @ 245 NONAME
+	_ZN17CImIAPPreferences5NewLCEv @ 246 NONAME
+	_ZN17CImIAPPreferences7AddIAPLE12TImIAPChoicei @ 247 NONAME
+	_ZN17CImIAPPreferences8RestoreLER9CMsvStore @ 248 NONAME ABSENT
+	_ZN17CImIAPPreferencesD0Ev @ 249 NONAME
+	_ZN17CImIAPPreferencesD1Ev @ 250 NONAME
+	_ZN17CImIAPPreferencesD2Ev @ 251 NONAME
+	_ZN17CImMessageCounter4NewLER9CMsvEntry @ 252 NONAME
+	_ZN17CImMessageCounter5CountEv @ 253 NONAME
+	_ZN17CImMessageCounter5NewLCER9CMsvEntry @ 254 NONAME
+	_ZN17TImAttachmentFile10CreateFileERK7TDesC16S2_ @ 255 NONAME
+	_ZN17TImAttachmentFile16DeleteAttachmentERK7TDesC16S2_ @ 256 NONAME
+	_ZN17TImAttachmentFile7MakeDirERK7TDesC16 @ 257 NONAME
+	_ZN17TImAttachmentFile8OpenFileERK7TDesC16S2_ @ 258 NONAME
+	_ZN17TImAttachmentFile8ReadFileER5TDes8i @ 259 NONAME
+	_ZN17TImAttachmentFile9CloseFileEv @ 260 NONAME
+	_ZN17TImAttachmentFile9WriteFileERK6TDesC8 @ 261 NONAME
+	_ZN17TImAttachmentFile9WriteFileERK7TDesC16 @ 262 NONAME
+	_ZN17TImAttachmentFileC1ER3RFs @ 263 NONAME
+	_ZN17TImAttachmentFileC2ER3RFs @ 264 NONAME
+	_ZN17TImAttachmentFileD1Ev @ 265 NONAME
+	_ZN17TImAttachmentFileD2Ev @ 266 NONAME
+	_ZN18CImConvertCharconv20ConvertToOurCharsetLERK6TDesC8R6TDes16RiS5_ @ 267 NONAME
+	_ZN18CImConvertCharconv22ConvertFromOurCharsetLERK7TDesC16R5TDes8RiS5_ @ 268 NONAME
+	_ZN18CImConvertCharconv33PrepareToConvertToFromOurCharsetLEj @ 269 NONAME
+	_ZN18CImConvertCharconv4NewLER25CCnvCharacterSetConverterR3RFs @ 270 NONAME
+	_ZN18TImRfc822DateField14ParseDateFieldERK6TDesC8R5TTime @ 271 NONAME
+	_ZN18TImRfc822DateField7SetDateERK5TTimeR5TDes8 @ 272 NONAME
+	_ZN19CImOffLineOperation12DeleteBufferEv @ 273 NONAME
+	_ZN19CImOffLineOperation12InternalizeLER14RMsvReadStream @ 274 NONAME
+	_ZN19CImOffLineOperation12SetOperationENS_14TOffLineOpTypeEll @ 275 NONAME
+	_ZN19CImOffLineOperation12SetOperationENS_14TOffLineOpTypeElliP6HBufC8 @ 276 NONAME
+	_ZN19CImOffLineOperation19DetachMtmParametersEv @ 277 NONAME
+	_ZN19CImOffLineOperation22SetMtmSpecificCommandLElliRK6TDesC8 @ 278 NONAME
+	_ZN19CImOffLineOperation5CopyLERKS_ @ 279 NONAME
+	_ZN19CImOffLineOperationC1Ev @ 280 NONAME
+	_ZN19CImOffLineOperationC2Ev @ 281 NONAME
+	_ZN19CImOffLineOperationD0Ev @ 282 NONAME
+	_ZN19CImOffLineOperationD1Ev @ 283 NONAME
+	_ZN19CImOffLineOperationD2Ev @ 284 NONAME
+	_ZN19TQueuedOperationKeyC1ER13CImQueuedList @ 285 NONAME
+	_ZN19TQueuedOperationKeyC2ER13CImQueuedList @ 286 NONAME
+	_ZN20CImBaseEmailSettings12InternalizeLER14RMsvReadStream @ 287 NONAME ABSENT
+	_ZN20CImBaseEmailSettings13SetSSLWrapperEi @ 288 NONAME
+	_ZN20CImBaseEmailSettings15SetUserAddressLERK7TDesC16 @ 289 NONAME ABSENT
+	_ZN20CImBaseEmailSettings16SetSecureSocketsEi @ 290 NONAME
+	_ZN20CImBaseEmailSettings17SetServerAddressLERK7TDesC16 @ 291 NONAME
+	_ZN20CImBaseEmailSettings5CopyLERKS_ @ 292 NONAME
+	_ZN20CImBaseEmailSettings5ResetEv @ 293 NONAME
+	_ZN20CImBaseEmailSettings7SetPortEj @ 294 NONAME
+	_ZN20CImBaseEmailSettings8RestoreLER9CMsvStore @ 295 NONAME ABSENT
+	_ZN20CImBaseEmailSettingsC1Ev @ 296 NONAME
+	_ZN20CImBaseEmailSettingsC2Ev @ 297 NONAME
+	_ZN20CImBaseEmailSettingsD0Ev @ 298 NONAME
+	_ZN20CImBaseEmailSettingsD1Ev @ 299 NONAME
+	_ZN20CImBaseEmailSettingsD2Ev @ 300 NONAME
+	_ZN20CImOffLineArrayStore12InternalizeLER14RMsvReadStream @ 301 NONAME
+	_ZN20CImOffLineArrayStore8RestoreLERK9CMsvStore @ 302 NONAME
+	_ZN20TQueuedOperationSwapC1ER13CImQueuedList @ 303 NONAME
+	_ZN20TQueuedOperationSwapC2ER13CImQueuedList @ 304 NONAME
+	_ZN21CImOperationQueueList25ExpungeDeletedOperationsLEv @ 305 NONAME
+	_ZN21CImOperationQueueList4NewLER9CMsvEntryP23MImUndoOffLineOperation @ 306 NONAME
+	_ZN21CImOperationQueueList7DeleteLEi @ 307 NONAME
+	_ZN21CImOperationQueueListD0Ev @ 308 NONAME
+	_ZN21CImOperationQueueListD1Ev @ 309 NONAME
+	_ZN21CImOperationQueueListD2Ev @ 310 NONAME
+	_ZN21TImHeaderEncodingInfo12InternalizeLER11RReadStream @ 311 NONAME
+	_ZN21TImHeaderEncodingInfoC1ERKS_ @ 312 NONAME
+	_ZN21TImHeaderEncodingInfoC1Ev @ 313 NONAME
+	_ZN21TImHeaderEncodingInfoC2ERKS_ @ 314 NONAME
+	_ZN21TImHeaderEncodingInfoC2Ev @ 315 NONAME
+	_ZN24CImOffLineOperationArray10ConstructLEv @ 316 NONAME
+	_ZN24CImOffLineOperationArray16InsertOperationLER19CImOffLineOperationi @ 317 NONAME
+	_ZN24CImOffLineOperationArray4NewLEv @ 318 NONAME
+	_ZN24CImOffLineOperationArrayD0Ev @ 319 NONAME
+	_ZN24CImOffLineOperationArrayD1Ev @ 320 NONAME
+	_ZN24CImOffLineOperationArrayD2Ev @ 321 NONAME
+	_ZN24TImEmailTransformingInfo12InternalizeLER11RReadStream @ 322 NONAME
+	_ZN24TImEmailTransformingInfo12SetToDefaultE13TImSendMethod @ 323 NONAME
+	_ZN24TImEmailTransformingInfo13SetSendMethodE13TImSendMethod @ 324 NONAME
+	_ZN24TImEmailTransformingInfo14SetHTMLCharsetEj @ 325 NONAME
+	_ZN24TImEmailTransformingInfo15SetHTMLEncodingE15TImEncodingType @ 326 NONAME
+	_ZN24TImEmailTransformingInfo16SetHeaderCharsetEj @ 327 NONAME
+	_ZN24TImEmailTransformingInfo18SetBodyTextCharsetEj @ 328 NONAME
+	_ZN24TImEmailTransformingInfo18SetHeaderEncodingBEv @ 329 NONAME
+	_ZN24TImEmailTransformingInfo18SetHeaderEncodingQEv @ 330 NONAME
+	_ZN24TImEmailTransformingInfo19SetBodyTextEncodingE15TImEncodingType @ 331 NONAME
+	_ZN24TImEmailTransformingInfo21SetAttachmentEncodingE15TImEncodingType @ 332 NONAME
+	_ZN24TImEmailTransformingInfo23SetHeaderAndBodyCharsetEj @ 333 NONAME
+	_ZN24TImEmailTransformingInfo8RestoreLER9CMsvStore @ 334 NONAME
+	_ZN24TImEmailTransformingInfoaSERKS_ @ 335 NONAME
+	_ZN24TImEmailTransformingInfoeqERKS_ @ 336 NONAME
+	_ZN6CImLog11AppendErrorERK6TDesC8i @ 337 NONAME
+	_ZN6CImLog13AppendCommentERK6TDesC8 @ 338 NONAME
+	_ZN6CImLog14AppendResponseERK6TDesC8 @ 339 NONAME
+	_ZN6CImLog4NewLERK7TDesC1614TImLogOpenMode @ 340 NONAME
+	_ZN6CImLog4NewLEi @ 341 NONAME
+	_ZN6CImLog9AppendOutERK6TDesC8 @ 342 NONAME
+	_ZN6CImLogD0Ev @ 343 NONAME
+	_ZN6CImLogD1Ev @ 344 NONAME
+	_ZN6CImLogD2Ev @ 345 NONAME
+	_ZN9CImFinder10FindFirstLElR14TRequestStatus @ 346 NONAME
+	_ZN9CImFinder9FindNextLER14TRequestStatus @ 347 NONAME
+	_ZN9CImFinderD0Ev @ 348 NONAME
+	_ZN9CImFinderD1Ev @ 349 NONAME
+	_ZN9CImFinderD2Ev @ 350 NONAME
+	_ZN9CImHeader10SetCharsetEj @ 351 NONAME
+	_ZN9CImHeader11SetImMsgIdLERK6TDesC8 @ 352 NONAME
+	_ZN9CImHeader11SetReplyToLERK6TDesC8 @ 353 NONAME
+	_ZN9CImHeader11SetReplyToLERK7TDesC16 @ 354 NONAME
+	_ZN9CImHeader11SetSubjectLERK6TDesC8 @ 355 NONAME
+	_ZN9CImHeader11SetSubjectLERK7TDesC16 @ 356 NONAME
+	_ZN9CImHeader12CreateReplyLERS_NS_8TReplyToER7TDesC16 @ 357 NONAME
+	_ZN9CImHeader12InternalizeLER14RMsvReadStream @ 358 NONAME
+	_ZN9CImHeader13SetInReplyToLERK6TDesC8 @ 359 NONAME
+	_ZN9CImHeader14CreateForwardLERS_R7TDesC16 @ 360 NONAME
+	_ZN9CImHeader14CreateReceiptLERS_R7TDesC16 @ 361 NONAME
+	_ZN9CImHeader14SetResentFromLERK7TDesC16 @ 362 NONAME
+	_ZN9CImHeader15SetBodyEncodingE22TMsgOutboxBodyEncoding @ 363 NONAME
+	_ZN9CImHeader15SetResentMsgIdLERK6TDesC8 @ 364 NONAME
+	_ZN9CImHeader16AddEncodingInfoLER21TImHeaderEncodingInfo @ 365 NONAME
+	_ZN9CImHeader18SetOverrideCharsetEj @ 366 NONAME
+	_ZN9CImHeader18SetReceiptAddressLERK6TDesC8 @ 367 NONAME
+	_ZN9CImHeader18SetReceiptAddressLERK7TDesC16 @ 368 NONAME
+	_ZN9CImHeader19SaveEncodedHeadersLEv @ 369 NONAME
+	_ZN9CImHeader5NewLCEv @ 370 NONAME
+	_ZN9CImHeader5ResetEv @ 371 NONAME
+	_ZN9CImHeader8DataSizeEv @ 372 NONAME
+	_ZN9CImHeader8RestoreLER9CMsvStore @ 373 NONAME
+	_ZN9CImHeader8SetFromLERK6TDesC8 @ 374 NONAME
+	_ZN9CImHeader8SetFromLERK7TDesC16 @ 375 NONAME
+	_ZN9CImHeader9ReDecodeLER3RFs @ 376 NONAME
+	_ZN9CImHeaderD0Ev @ 377 NONAME
+	_ZN9CImHeaderD1Ev @ 378 NONAME
+	_ZN9CImHeaderD2Ev @ 379 NONAME
+	_ZNK13CImMimeHeader11ContentBaseEv @ 380 NONAME
+	_ZNK13CImMimeHeader11ContentTypeEv @ 381 NONAME
+	_ZNK13CImMimeHeader11MimeCharsetEv @ 382 NONAME
+	_ZNK13CImMimeHeader12ExternalizeLER15RMsvWriteStream @ 383 NONAME
+	_ZNK13CImMimeHeader12RelativePathEv @ 384 NONAME
+	_ZNK13CImMimeHeader14ContentSubTypeEv @ 385 NONAME
+	_ZNK13CImMimeHeader15ContentLocationEv @ 386 NONAME
+	_ZNK13CImMimeHeader18ContentDescriptionEv @ 387 NONAME
+	_ZNK13CImMimeHeader18ContentDispositionEv @ 388 NONAME
+	_ZNK13CImMimeHeader19GetContentTypeValueERK6TDesC8 @ 389 NONAME
+	_ZNK13CImMimeHeader19StoreWithoutCommitLER9CMsvStore @ 390 NONAME
+	_ZNK13CImMimeHeader23ContentTransferEncodingER5TDes8 @ 391 NONAME
+	_ZNK13CImMimeHeader23ContentTransferEncodingEv @ 392 NONAME
+	_ZNK13CImMimeHeader6StoreLER9CMsvStore @ 393 NONAME
+	_ZNK13CImMimeHeader9ContentIDEv @ 394 NONAME
+	_ZNK13CImQueuedList15CountOperationsEv @ 395 NONAME
+	_ZNK13CImQueuedList9OperationEi @ 396 NONAME
+	_ZNK13TPop3Progress13ConnectionIAPEv @ 397 NONAME
+	_ZNK13TPop3Progress15ConnectionStateEv @ 398 NONAME
+	_ZNK14CPop3ClientMtm8SettingsEv @ 399 NONAME
+	_ZNK14CSmtpClientMtm8SettingsEv @ 400 NONAME
+	_ZNK14CSmtpClientMtm8SubjectLEv @ 401 NONAME
+	_ZNK14TMsvEmailEntry17MessageFolderTypeEv @ 402 NONAME
+	_ZNK14TMsvEmailEntry21DisconnectedOperationEv @ 403 NONAME
+	_ZNK14TMsvEmailEntryeqERK9TMsvEntry @ 404 NONAME
+	_ZNK14TMsvEmailEntryeqERKS_ @ 405 NONAME
+	_ZNK15CImEmailMessage17GetAttachmentNameEi @ 406 NONAME ABSENT
+	_ZNK15CImEmailMessage19AttachmentSelectionEv @ 407 NONAME ABSENT
+	_ZNK15CImEmailMessage31GetUniversalResourceIdentifierLERlRi @ 408 NONAME
+	_ZNK15CImEmailMessage9ProgressLEv @ 409 NONAME
+	_ZNK15CImEmailMessage9SelectionEv @ 410 NONAME
+	_ZNK15CImPop3Settings12ExternalizeLER15RMsvWriteStream @ 411 NONAME ABSENT
+	_ZNK15CImPop3Settings12MaxEmailSizeEv @ 412 NONAME
+	_ZNK15CImPop3Settings14GetMailOptionsEv @ 413 NONAME
+	_ZNK15CImPop3Settings17AutoSendOnConnectEv @ 414 NONAME
+	_ZNK15CImPop3Settings19AcknowledgeReceiptsEv @ 415 NONAME
+	_ZNK15CImPop3Settings20DisconnectedUserModeEv @ 416 NONAME
+	_ZNK15CImPop3Settings25InboxSynchronisationLimitEv @ 417 NONAME
+	_ZNK15CImPop3Settings29DeleteEmailsWhenDisconnectingEv @ 418 NONAME
+	_ZNK15CImPop3Settings4ApopEv @ 419 NONAME
+	_ZNK15CImPop3Settings6StoreLER9CMsvStore @ 420 NONAME ABSENT
+	_ZNK15CImPop3Settings8PasswordEv @ 421 NONAME
+	_ZNK15CImPop3Settings9LoginNameEv @ 422 NONAME
+	_ZNK15CImPop3SettingseqERKS_ @ 423 NONAME
+	_ZNK15CImSmtpSettings10EmailAliasEv @ 424 NONAME
+	_ZNK15CImSmtpSettings12BodyEncodingEv @ 425 NONAME
+	_ZNK15CImSmtpSettings12EmailAddressEv @ 426 NONAME
+	_ZNK15CImSmtpSettings12ExternalizeLER15RMsvWriteStream @ 427 NONAME ABSENT
+	_ZNK15CImSmtpSettings14ReceiptAddressEv @ 428 NONAME
+	_ZNK15CImSmtpSettings14ReplyToAddressEv @ 429 NONAME
+	_ZNK15CImSmtpSettings14SendCopyToSelfEv @ 430 NONAME
+	_ZNK15CImSmtpSettings15AddVCardToEmailEv @ 431 NONAME
+	_ZNK15CImSmtpSettings15RequestReceiptsEv @ 432 NONAME
+	_ZNK15CImSmtpSettings17DefaultMsgCharSetEv @ 433 NONAME
+	_ZNK15CImSmtpSettings17InboxLoginDetailsEv @ 434 NONAME
+	_ZNK15CImSmtpSettings17SendMessageOptionEv @ 435 NONAME
+	_ZNK15CImSmtpSettings19AddSignatureToEmailEv @ 436 NONAME
+	_ZNK15CImSmtpSettings6StoreLER9CMsvStore @ 437 NONAME ABSENT
+	_ZNK15CImSmtpSettings8PasswordEv @ 438 NONAME
+	_ZNK15CImSmtpSettings8SMTPAuthEv @ 439 NONAME
+	_ZNK15CImSmtpSettings9LoginNameEv @ 440 NONAME
+	_ZNK15CImSmtpSettingseqERKS_ @ 441 NONAME
+	_ZNK15CImap4ClientMtm13Imap4SettingsEv @ 442 NONAME
+	_ZNK15TImSmtpProgress12FailedToSendEv @ 443 NONAME
+	_ZNK15TImSmtpProgress13ConnectionIAPEv @ 444 NONAME
+	_ZNK15TImSmtpProgress15ConnectionStateEv @ 445 NONAME
+	_ZNK15TImSmtpProgress4SentEv @ 446 NONAME
+	_ZNK15TImSmtpProgress5ErrorEv @ 447 NONAME
+	_ZNK15TImSmtpProgress5MsgNoEv @ 448 NONAME
+	_ZNK15TImSmtpProgress6StatusEv @ 449 NONAME
+	_ZNK15TImSmtpProgress7NotSentEv @ 450 NONAME
+	_ZNK15TImSmtpProgress9SendTotalEv @ 451 NONAME
+	_ZNK15TImSmtpProgress9ServiceIdEv @ 452 NONAME
+	_ZNK16CImImap4Settings10FolderPathEv @ 453 NONAME
+	_ZNK16CImImap4Settings11SynchroniseEv @ 454 NONAME
+	_ZNK16CImImap4Settings12ExternalizeLER15RMsvWriteStream @ 455 NONAME ABSENT
+	_ZNK16CImImap4Settings12MaxEmailSizeEv @ 456 NONAME
+	_ZNK16CImImap4Settings13PathSeparatorEv @ 457 NONAME
+	_ZNK16CImImap4Settings14GetMailOptionsEv @ 458 NONAME
+	_ZNK16CImImap4Settings15ImapIdleTimeoutEv @ 459 NONAME
+	_ZNK16CImImap4Settings17AutoSendOnConnectEv @ 460 NONAME
+	_ZNK16CImImap4Settings17UpdatingSeenFlagsEv @ 461 NONAME
+	_ZNK16CImImap4Settings19AcknowledgeReceiptsEv @ 462 NONAME
+	_ZNK16CImImap4Settings20DisconnectedUserModeEv @ 463 NONAME
+	_ZNK16CImImap4Settings25InboxSynchronisationLimitEv @ 464 NONAME
+	_ZNK16CImImap4Settings27MailboxSynchronisationLimitEv @ 465 NONAME
+	_ZNK16CImImap4Settings29DeleteEmailsWhenDisconnectingEv @ 466 NONAME
+	_ZNK16CImImap4Settings6StoreLER9CMsvStore @ 467 NONAME ABSENT
+	_ZNK16CImImap4Settings8ImapIdleEv @ 468 NONAME
+	_ZNK16CImImap4Settings8PasswordEv @ 469 NONAME
+	_ZNK16CImImap4Settings8SyncRateEv @ 470 NONAME
+	_ZNK16CImImap4Settings9FetchSizeEv @ 471 NONAME
+	_ZNK16CImImap4Settings9LoginNameEv @ 472 NONAME
+	_ZNK16CImImap4Settings9SubscribeEv @ 473 NONAME
+	_ZNK16CImImap4SettingseqERKS_ @ 474 NONAME
+	_ZNK16CImSSmtpSettings11PhoneNumberEv @ 475 NONAME ABSENT
+	_ZNK16CImSSmtpSettings12EmailAddressEv @ 476 NONAME ABSENT
+	_ZNK16CImSSmtpSettings12ExternalizeLER15RMsvWriteStream @ 477 NONAME ABSENT
+	_ZNK16CImSSmtpSettings6StoreLER9CMsvStore @ 478 NONAME ABSENT
+	_ZNK16CImSSmtpSettingseqERKS_ @ 479 NONAME ABSENT
+	_ZNK17CImIAPPreferences12NumberOfIAPsEv @ 480 NONAME
+	_ZNK17CImIAPPreferences13IAPPreferenceEi @ 481 NONAME
+	_ZNK17CImIAPPreferences6StoreLER9CMsvStore @ 482 NONAME ABSENT
+	_ZNK17CImIAPPreferences7VersionEv @ 483 NONAME
+	_ZNK17CImIAPPreferences8FindIAPLEmRi @ 484 NONAME
+	_ZNK18CImConvertCharconv14DefaultCharsetEv @ 485 NONAME
+	_ZNK18CImConvertCharconv18GetMimeCharsetUidLERK6TDesC8 @ 486 NONAME
+	_ZNK18CImConvertCharconv20SystemDefaultCharsetEv @ 487 NONAME
+	_ZNK18CImConvertCharconv25GetMimeCharsetTextStringLERKj @ 488 NONAME
+	_ZNK19CImOffLineOperation12ExternalizeLER15RMsvWriteStream @ 489 NONAME
+	_ZNK19CImOffLineOperation6EqualsERKS_ @ 490 NONAME
+	_ZNK19CImOffLineOperationeqERKS_ @ 491 NONAME
+	_ZNK20CImBaseEmailSettings10SSLWrapperEv @ 492 NONAME
+	_ZNK20CImBaseEmailSettings11UserAddressEv @ 493 NONAME ABSENT
+	_ZNK20CImBaseEmailSettings12ExternalizeLER15RMsvWriteStream @ 494 NONAME ABSENT
+	_ZNK20CImBaseEmailSettings13SecureSocketsEv @ 495 NONAME
+	_ZNK20CImBaseEmailSettings13ServerAddressEv @ 496 NONAME
+	_ZNK20CImBaseEmailSettings4PortEv @ 497 NONAME
+	_ZNK20CImBaseEmailSettings6StoreLER9CMsvStore @ 498 NONAME ABSENT
+	_ZNK20CImBaseEmailSettings7VersionEv @ 499 NONAME ABSENT
+	_ZNK20CImBaseEmailSettingseqERKS_ @ 500 NONAME
+	_ZNK20CImOffLineArrayStore12ExternalizeLER15RMsvWriteStream @ 501 NONAME
+	_ZNK20CImOffLineArrayStore6StoreLER9CMsvStore @ 502 NONAME
+	_ZNK21TImHeaderEncodingInfo12ExternalizeLER12RWriteStream @ 503 NONAME
+	_ZNK21TImap4GenericProgress13ConnectionIAPEv @ 504 NONAME
+	_ZNK21TImap4GenericProgress15ConnectionStateEv @ 505 NONAME
+	_ZNK24TImEmailTransformingInfo10SendMethodEv @ 506 NONAME
+	_ZNK24TImEmailTransformingInfo11HTMLCharsetEv @ 507 NONAME
+	_ZNK24TImEmailTransformingInfo12ExternalizeLER12RWriteStream @ 508 NONAME
+	_ZNK24TImEmailTransformingInfo12HTMLEncodingEv @ 509 NONAME
+	_ZNK24TImEmailTransformingInfo13HeaderCharsetEv @ 510 NONAME
+	_ZNK24TImEmailTransformingInfo14HeaderEncodingEv @ 511 NONAME
+	_ZNK24TImEmailTransformingInfo15BodyTextCharsetEv @ 512 NONAME
+	_ZNK24TImEmailTransformingInfo16BodyTextEncodingEv @ 513 NONAME
+	_ZNK24TImEmailTransformingInfo18AttachmentEncodingEv @ 514 NONAME
+	_ZNK24TImEmailTransformingInfo6StoreLER9CMsvStore @ 515 NONAME
+	_ZNK9CImHeader10ResentFromEv @ 516 NONAME
+	_ZNK9CImHeader11ResentMsgIdEv @ 517 NONAME
+	_ZNK9CImHeader12BodyEncodingEv @ 518 NONAME
+	_ZNK9CImHeader12ExternalizeLER15RMsvWriteStream @ 519 NONAME
+	_ZNK9CImHeader14ReceiptAddressEv @ 520 NONAME
+	_ZNK9CImHeader15OverrideCharsetEv @ 521 NONAME
+	_ZNK9CImHeader19StoreWithoutCommitLER9CMsvStore @ 522 NONAME
+	_ZNK9CImHeader4FromEv @ 523 NONAME
+	_ZNK9CImHeader6StoreLER9CMsvStore @ 524 NONAME
+	_ZNK9CImHeader7CharsetEv @ 525 NONAME
+	_ZNK9CImHeader7ImMsgIdEv @ 526 NONAME
+	_ZNK9CImHeader7ReplyToEv @ 527 NONAME
+	_ZNK9CImHeader7SubjectEv @ 528 NONAME
+	_ZNK9CImHeader9InReplyToEv @ 529 NONAME
+	_ZTI13CImQueuedList @ 530 NONAME ; #<TI>#
+	_ZTI14CPop3ClientMtm @ 531 NONAME ; #<TI>#
+	_ZTI14CSmtpClientMtm @ 532 NONAME ; #<TI>#
+	_ZTI15CImCacheManager @ 533 NONAME ; #<TI>#
+	_ZTI15CImEmailMessage @ 534 NONAME ; #<TI>#
+	_ZTI15CImPop3Settings @ 535 NONAME ; #<TI>#
+	_ZTI15CImSmtpSettings @ 536 NONAME ; #<TI>#
+	_ZTI16CImImap4Settings @ 537 NONAME ; #<TI>#
+	_ZTI16CImSSmtpSettings @ 538 NONAME ABSENT ; #<TI>#
+	_ZTI19CImOffLineOperation @ 539 NONAME ; #<TI>#
+	_ZTI19TQueuedOperationKey @ 540 NONAME ; #<TI>#
+	_ZTI20CImBaseEmailSettings @ 541 NONAME ; #<TI>#
+	_ZTI20TQueuedOperationSwap @ 542 NONAME ; #<TI>#
+	_ZTI24CImOffLineOperationArray @ 543 NONAME ; #<TI>#
+	_ZTI9CImFinder @ 544 NONAME ; #<TI>#
+	_ZTV13CImQueuedList @ 545 NONAME ; #<VT>#
+	_ZTV14CPop3ClientMtm @ 546 NONAME ; #<VT>#
+	_ZTV14CSmtpClientMtm @ 547 NONAME ; #<VT>#
+	_ZTV15CImCacheManager @ 548 NONAME ; #<VT>#
+	_ZTV15CImEmailMessage @ 549 NONAME ; #<VT>#
+	_ZTV15CImPop3Settings @ 550 NONAME ; #<VT>#
+	_ZTV15CImSmtpSettings @ 551 NONAME ; #<VT>#
+	_ZTV16CImImap4Settings @ 552 NONAME ; #<VT>#
+	_ZTV16CImSSmtpSettings @ 553 NONAME ABSENT ; #<VT>#
+	_ZTV19CImOffLineOperation @ 554 NONAME ; #<VT>#
+	_ZTV19TQueuedOperationKey @ 555 NONAME ; #<VT>#
+	_ZTV20CImBaseEmailSettings @ 556 NONAME ; #<VT>#
+	_ZTV20TQueuedOperationSwap @ 557 NONAME ; #<VT>#
+	_ZTV24CImOffLineOperationArray @ 558 NONAME ; #<VT>#
+	_ZTV9CImFinder @ 559 NONAME ; #<VT>#
+	_ZThn32_N15CImEmailMessage32FindUniversalResourceIdentifierLElRK7TDesC16S2_R14TRequestStatus @ 560 NONAME ; #<thunk>#
+	_ZThn32_NK15CImEmailMessage31GetUniversalResourceIdentifierLERlRi @ 561 NONAME ; #<thunk>#
+	_ZThn4_N13CImQueuedList16AppendOperationLERK19CImOffLineOperation @ 562 NONAME ; #<thunk>#
+	_ZThn4_N13CImQueuedList6DeleteEi @ 563 NONAME ; #<thunk>#
+	_ZThn4_NK13CImQueuedList15CountOperationsEv @ 564 NONAME ; #<thunk>#
+	_ZThn4_NK13CImQueuedList9OperationEi @ 565 NONAME ; #<thunk>#
+	_ZN14TMsvEmailEntry20SetPartialDownloadedEi @ 566 NONAME
+	_ZN16CImImap4Settings21SetBodyTextSizeLimitLEl @ 567 NONAME
+	_ZN16CImImap4Settings22SetPartialMailOptionsLE26TImImap4PartialMailOptions @ 568 NONAME
+	_ZN16CImImap4Settings23SetAttachmentSizeLimitLEl @ 569 NONAME
+	_ZNK14TMsvEmailEntry17PartialDownloadedEv @ 570 NONAME
+	_ZNK16CImImap4Settings17BodyTextSizeLimitEv @ 571 NONAME
+	_ZNK16CImImap4Settings18PartialMailOptionsEv @ 572 NONAME
+	_ZNK16CImImap4Settings19AttachmentSizeLimitEv @ 573 NONAME
+	_ZN15CImPop3Settings19SetPopulationLimitLEl @ 574 NONAME
+	_ZN22TImPop3PopulateOptions12MaxEmailSizeEv @ 575 NONAME
+	_ZN22TImPop3PopulateOptions15PopulationLimitEv @ 576 NONAME
+	_ZN22TImPop3PopulateOptions15SetMaxEmailSizeEi @ 577 NONAME
+	_ZN22TImPop3PopulateOptions18SetPopulationLimitEi @ 578 NONAME
+	_ZN22TImPop3PopulateOptions7UnpackLERK6TDesC8RS_ @ 579 NONAME
+	_ZN22TImPop3PopulateOptionsC1Ev @ 580 NONAME
+	_ZN22TImPop3PopulateOptionsC2Ev @ 581 NONAME
+	_ZNK15CImPop3Settings15PopulationLimitEv @ 582 NONAME
+	_ZTI11CImMhtmlUri @ 583 NONAME ; #<TI>#
+	_ZTI13CImMimeHeader @ 584 NONAME ; #<TI>#
+	_ZTI13CRefreshTimer @ 585 NONAME ; #<TI>#
+	_ZTI14CImEntryFinder @ 586 NONAME ; #<TI>#
+	_ZTI14CImPOP3GetMail @ 587 NONAME ; #<TI>#
+	_ZTI14CProgressTimer @ 588 NONAME ; #<TI>#
+	_ZTI15CImImap4GetMail @ 589 NONAME ; #<TI>#
+	_ZTI15CImPruneMessage @ 590 NONAME ; #<TI>#
+	_ZTI15CImap4ClientMtm @ 591 NONAME ; #<TI>#
+	_ZTI16CImEmailAutoSend @ 592 NONAME ABSENT ; #<TI>#
+	_ZTI16CImEncodedHeader @ 593 NONAME ; #<TI>#
+	_ZTI16CImHtmlConverter @ 594 NONAME ; #<TI>#
+	_ZTI16CImMessageFinder @ 595 NONAME ; #<TI>#
+	_ZTI16CImStoreResolver @ 596 NONAME ; #<TI>#
+	_ZTI17CImClientMTMUtils @ 597 NONAME ; #<TI>#
+	_ZTI17CImEmailOperation @ 598 NONAME ; #<TI>#
+	_ZTI17CImIAPPreferences @ 599 NONAME ; #<TI>#
+	_ZTI17CImMessageCounter @ 600 NONAME ; #<TI>#
+	_ZTI18CImConvertCharconv @ 601 NONAME ; #<TI>#
+	_ZTI18CImMhtmlFileFinder @ 602 NONAME ; #<TI>#
+	_ZTI19CImMhtmlUriResolver @ 603 NONAME ; #<TI>#
+	_ZTI19CImStoreMessagePart @ 604 NONAME ; #<TI>#
+	_ZTI20CImRemoveMessagePart @ 605 NONAME ; #<TI>#
+	_ZTI21CImOperationQueueList @ 606 NONAME ; #<TI>#
+	_ZTI21CImapConnectAndSyncOp @ 607 NONAME ; #<TI>#
+	_ZTI23CImMhtmlFirstPageFinder @ 608 NONAME ; #<TI>#
+	_ZTI26CImMhtmlChildEntrySearcher @ 609 NONAME ; #<TI>#
+	_ZTI27CImap4ClientSessionObserver @ 610 NONAME ; #<TI>#
+	_ZTI6CImLog @ 611 NONAME ; #<TI>#
+	_ZTI9CImHeader @ 612 NONAME ; #<TI>#
+	_ZTIN9CImFinder13CImEntryStackE @ 613 NONAME ; #<TI>#
+	_ZTV11CImMhtmlUri @ 614 NONAME ; #<VT>#
+	_ZTV13CImMimeHeader @ 615 NONAME ; #<VT>#
+	_ZTV13CRefreshTimer @ 616 NONAME ; #<VT>#
+	_ZTV14CImEntryFinder @ 617 NONAME ; #<VT>#
+	_ZTV14CImPOP3GetMail @ 618 NONAME ; #<VT>#
+	_ZTV14CProgressTimer @ 619 NONAME ; #<VT>#
+	_ZTV15CImImap4GetMail @ 620 NONAME ; #<VT>#
+	_ZTV15CImPruneMessage @ 621 NONAME ; #<VT>#
+	_ZTV15CImap4ClientMtm @ 622 NONAME ; #<VT>#
+	_ZTV16CImEmailAutoSend @ 623 NONAME ABSENT; #<VT>#
+	_ZTV16CImEncodedHeader @ 624 NONAME ; #<VT>#
+	_ZTV16CImHtmlConverter @ 625 NONAME ; #<VT>#
+	_ZTV16CImMessageFinder @ 626 NONAME ; #<VT>#
+	_ZTV16CImStoreResolver @ 627 NONAME ; #<VT>#
+	_ZTV17CImClientMTMUtils @ 628 NONAME ; #<VT>#
+	_ZTV17CImEmailOperation @ 629 NONAME ; #<VT>#
+	_ZTV17CImIAPPreferences @ 630 NONAME ; #<VT>#
+	_ZTV17CImMessageCounter @ 631 NONAME ; #<VT>#
+	_ZTV18CImConvertCharconv @ 632 NONAME ; #<VT>#
+	_ZTV18CImMhtmlFileFinder @ 633 NONAME ; #<VT>#
+	_ZTV19CImMhtmlUriResolver @ 634 NONAME ; #<VT>#
+	_ZTV19CImStoreMessagePart @ 635 NONAME ; #<VT>#
+	_ZTV20CImRemoveMessagePart @ 636 NONAME ; #<VT>#
+	_ZTV21CImOperationQueueList @ 637 NONAME ; #<VT>#
+	_ZTV21CImapConnectAndSyncOp @ 638 NONAME ; #<VT>#
+	_ZTV23CImMhtmlFirstPageFinder @ 639 NONAME ; #<VT>#
+	_ZTV26CImMhtmlChildEntrySearcher @ 640 NONAME ; #<VT>#
+	_ZTV27CImap4ClientSessionObserver @ 641 NONAME ; #<VT>#
+	_ZTV6CImLog @ 642 NONAME ; #<VT>#
+	_ZTV9CImHeader @ 643 NONAME ; #<VT>#
+	_ZTVN9CImFinder13CImEntryStackE @ 644 NONAME ; #<VT>#
+	_ZN14CPop3ClientMtm14AddAttachmentLER5RFileRK6TDesC8R14TRequestStatus @ 645 NONAME ABSENT
+	_ZN14CPop3ClientMtm14AddAttachmentLERK7TDesC16RK6TDesC8R14TRequestStatus @ 646 NONAME ABSENT
+	_ZN14CPop3ClientMtm20AddLinkedAttachmentLERK7TDesC16RK6TDesC8R14TRequestStatus @ 647 NONAME ABSENT
+	_ZN14CPop3ClientMtm21AddEntryAsAttachmentLElR14TRequestStatus @ 648 NONAME
+	_ZN14CSmtpClientMtm14AddAttachmentLER5RFileRK6TDesC8R14TRequestStatus @ 649 NONAME ABSENT
+	_ZN14CSmtpClientMtm14AddAttachmentLERK7TDesC16RK6TDesC8R14TRequestStatus @ 650 NONAME ABSENT
+	_ZN14CSmtpClientMtm20AddLinkedAttachmentLERK7TDesC16RK6TDesC8R14TRequestStatus @ 651 NONAME ABSENT
+	_ZN14CSmtpClientMtm21AddEntryAsAttachmentLElR14TRequestStatus @ 652 NONAME
+	_ZN15CImap4ClientMtm14AddAttachmentLER5RFileRK6TDesC8R14TRequestStatus @ 653 NONAME ABSENT
+	_ZN15CImap4ClientMtm14AddAttachmentLERK7TDesC16RK6TDesC8R14TRequestStatus @ 654 NONAME ABSENT
+	_ZN15CImap4ClientMtm20AddLinkedAttachmentLERK7TDesC16RK6TDesC8R14TRequestStatus @ 655 NONAME ABSENT
+	_ZN15CImap4ClientMtm21AddEntryAsAttachmentLElR14TRequestStatus @ 656 NONAME
+	_ZN17TImAttachmentFile13SetFileHandleER5RFileNS_15TImFileOpenModeE @ 657 NONAME
+	_ZNK15CImEmailMessage17AttachmentManagerEv @ 658 NONAME
+	_ZNK15CImEmailMessage40GetUniversalResourceIdentifierFileHandleERlR5RFile @ 659 NONAME
+	_ZTI20CImAttachmentManager @ 660 NONAME ; #<TI>#
+	_ZTV20CImAttachmentManager @ 661 NONAME ; #<VT>#
+	_ZThn32_NK15CImEmailMessage40GetUniversalResourceIdentifierFileHandleERlR5RFile @ 662 NONAME ; #<thunk>#
+	_ZN14CEmailAccounts16LoadPOPSettingsLERK14TPOP3AccountIdR15CImPop3SettingsR17CImIAPPreferencesR15CImSmtpSettingsS6_ @ 663 NONAME ABSENT
+	_ZN14CEmailAccounts17CreatePOPAccountLERK7TDesC16RK15CImPop3SettingsRK17CImIAPPreferencesRK15CImSmtpSettingsS8_ @ 664 NONAME ABSENT
+	_ZN14CEmailAccounts17DeletePOPAccountLERK14TPOP3AccountId @ 665 NONAME ABSENT
+	_ZN14CEmailAccounts17LoadIMAPSettingsLERK15TIMAP4AccountIdR16CImImap4SettingsR17CImIAPPreferencesR15CImSmtpSettingsS6_ @ 666 NONAME ABSENT
+	_ZN14CEmailAccounts18CreateIMAPAccountLERK7TDesC16R16CImImap4SettingsR17CImIAPPreferencesR15CImSmtpSettingsS6_ @ 667 NONAME ABSENT
+	_ZN14CEmailAccounts18DeleteIMAPAccountLERK15TIMAP4AccountId @ 668 NONAME ABSENT
+	_ZN14CEmailAccounts21SetDefaultPOPAccountLERK14TPOP3AccountId @ 669 NONAME ABSENT
+	_ZN14CEmailAccounts22SetDefaultIMAPAccountLERK15TIMAP4AccountId @ 670 NONAME ABSENT
+	_ZN14CEmailAccounts23LoadPOPServiceSettingsLElR15CImPop3Settings @ 671 NONAME ABSENT
+	_ZN14CEmailAccounts23LoadPOPServiceSettingsLElR15CImPop3SettingsR17CImIAPPreferences @ 672 NONAME ABSENT
+	_ZN14CEmailAccounts24ChangeDefaultPOPServiceLERKl @ 673 NONAME ABSENT
+	_ZN14CEmailAccounts24LoadIMAPServiceSettingsLElR16CImImap4Settings @ 674 NONAME ABSENT
+	_ZN14CEmailAccounts24LoadIMAPServiceSettingsLElR16CImImap4SettingsR17CImIAPPreferences @ 675 NONAME ABSENT
+	_ZN14CEmailAccounts24LoadSMTPServiceSettingsLElR15CImSmtpSettings @ 676 NONAME ABSENT
+	_ZN14CEmailAccounts24LoadSMTPServiceSettingsLElR15CImSmtpSettingsR17CImIAPPreferences @ 677 NONAME ABSENT
+	_ZN14CEmailAccounts24RemoveDefaultPOPServiceLEv @ 678 NONAME ABSENT
+	_ZN14CEmailAccounts25ChangeDefaultIMAPServiceLERKl @ 679 NONAME ABSENT
+	_ZN14CEmailAccounts25ChangeDefaultSMTPServiceLERKl @ 680 NONAME ABSENT
+	_ZN14CEmailAccounts25RemoveDefaultIMAPServiceLEv @ 681 NONAME ABSENT
+	_ZN14CEmailAccounts25RemoveDefaultSMTPServiceLEv @ 682 NONAME ABSENT
+	_ZN14CEmailAccounts27PopulateDefaultPOPSettingsLER15CImPop3SettingsR17CImIAPPreferencesR15CImSmtpSettingsS3_ @ 683 NONAME ABSENT
+	_ZN14CEmailAccounts28PopulateDefaultIMAPSettingsLER16CImImap4SettingsR17CImIAPPreferencesR15CImSmtpSettingsS3_ @ 684 NONAME ABSENT
+	_ZN14CEmailAccounts4NewLEv @ 685 NONAME
+	_ZN14CEmailAccounts5NewLCEv @ 686 NONAME
+	_ZN14CEmailAccountsD0Ev @ 687 NONAME
+	_ZN14CEmailAccountsD1Ev @ 688 NONAME
+	_ZN14CEmailAccountsD2Ev @ 689 NONAME
+	_ZN14CPop3ClientMtm21ChangeDefaultServiceLERKl @ 690 NONAME
+	_ZN14CPop3ClientMtm21RemoveDefaultServiceLEv @ 691 NONAME
+	_ZN14CSmtpClientMtm21ChangeDefaultServiceLERKl @ 692 NONAME
+	_ZN14CSmtpClientMtm21RemoveDefaultServiceLEv @ 693 NONAME
+	_ZN15CImap4ClientMtm21ChangeDefaultServiceLERKl @ 694 NONAME
+	_ZN15CImap4ClientMtm21RemoveDefaultServiceLEv @ 695 NONAME
+	_ZNK14CEmailAccounts15GetPOPAccountsLER6RArrayI14TPOP3AccountIdE @ 696 NONAME ABSENT
+	_ZNK14CEmailAccounts16GetIMAPAccountsLER6RArrayI15TIMAP4AccountIdE @ 697 NONAME ABSENT
+	_ZNK14CEmailAccounts16SavePOPSettingsLERK14TPOP3AccountIdRK15CImPop3SettingsRK17CImIAPPreferencesRK15CImSmtpSettingsS8_ @ 698 NONAME ABSENT
+	_ZNK14CEmailAccounts17SaveIMAPSettingsLERK15TIMAP4AccountIdRK16CImImap4SettingsRK17CImIAPPreferencesRK15CImSmtpSettingsS8_ @ 699 NONAME ABSENT
+	_ZNK14CEmailAccounts18DefaultPOPAccountLEv @ 700 NONAME ABSENT
+	_ZNK14CEmailAccounts18DefaultPOPServiceLEv @ 701 NONAME ABSENT
+	_ZNK14CEmailAccounts19DefaultIMAPAccountLEv @ 702 NONAME ABSENT
+	_ZNK14CEmailAccounts19DefaultIMAPServiceLEv @ 703 NONAME ABSENT
+	_ZNK14CEmailAccounts19DefaultSMTPServiceLEv @ 704 NONAME ABSENT
+	_ZNK14CEmailAccounts23SavePOPServiceSettingsLElRK15CImPop3Settings @ 705 NONAME ABSENT
+	_ZNK14CEmailAccounts23SavePOPServiceSettingsLElRK15CImPop3SettingsRK17CImIAPPreferences @ 706 NONAME ABSENT
+	_ZNK14CEmailAccounts24SaveIMAPServiceSettingsLElRK16CImImap4Settings @ 707 NONAME ABSENT
+	_ZNK14CEmailAccounts24SaveIMAPServiceSettingsLElRK16CImImap4SettingsRK17CImIAPPreferences @ 708 NONAME ABSENT
+	_ZNK14CEmailAccounts24SaveSMTPServiceSettingsLElRK15CImSmtpSettings @ 709 NONAME ABSENT
+	_ZNK14CEmailAccounts24SaveSMTPServiceSettingsLElRK15CImSmtpSettingsRK17CImIAPPreferences @ 710 NONAME ABSENT
+	_ZNK14CPop3ClientMtm15DefaultServiceLEv @ 711 NONAME
+	_ZNK14CSmtpClientMtm15DefaultServiceLEv @ 712 NONAME
+	_ZNK15CImap4ClientMtm15DefaultServiceLEv @ 713 NONAME
+	_ZTI14CEmailAccounts @ 714 NONAME ; #<TI>#
+	_ZTV14CEmailAccounts @ 715 NONAME ; #<VT>#
+	_ZTI19CImAttachmentWaiter @ 716 NONAME ; #<TI>#
+	_ZTV19CImAttachmentWaiter @ 717 NONAME ; #<VT>#
+	_ZN15CImEmailMessage28FindFirstHTMLPageFileHandleLElR14TRequestStatus @ 718 NONAME
+	_ZN15CImEmailMessage42FindUniversalResourceIdentifierFileHandleLElRK7TDesC16S2_R14TRequestStatus @ 719 NONAME
+	_ZThn32_N15CImEmailMessage42FindUniversalResourceIdentifierFileHandleLElRK7TDesC16S2_R14TRequestStatus @ 720 NONAME ; #<thunk>#
+	_ZN14CPop3ClientMtm17CreateAttachmentLERK7TDesC16R5RFileRK6TDesC8R14TRequestStatus @ 721 NONAME ABSENT
+	_ZN14CSmtpClientMtm17CreateAttachmentLERK7TDesC16R5RFileRK6TDesC8R14TRequestStatus @ 722 NONAME ABSENT
+	_ZN15CImap4ClientMtm17CreateAttachmentLERK7TDesC16R5RFileRK6TDesC8R14TRequestStatus @ 723 NONAME ABSENT
+	_ZTI25CMsvSmtpProgressOperation @ 724 NONAME ; #<TI>#
+	_ZTV25CMsvSmtpProgressOperation @ 725 NONAME ; #<VT>#
+	_ZN16CImImap4Settings16SetSearchStringLERK6TDesC8 @ 726 NONAME
+	_ZNK16CImImap4Settings12SearchStringEv @ 727 NONAME
+	_ZN15CImEmailMessage28StoreBodyTextWithMimeHeaderLElR9CRichTextRK13CImMimeHeaderR14TRequestStatus @ 728 NONAME
+	_ZN14CPop3ClientMtm14AddAttachmentLER5RFileRK6TDesC8jR14TRequestStatus @ 729 NONAME
+	_ZN14CPop3ClientMtm14AddAttachmentLERK7TDesC16RK6TDesC8jR14TRequestStatus @ 730 NONAME
+	_ZN14CPop3ClientMtm17CreateAttachmentLERK7TDesC16R5RFileRK6TDesC8jR14TRequestStatus @ 731 NONAME
+	_ZN14CPop3ClientMtm20AddLinkedAttachmentLERK7TDesC16RK6TDesC8jR14TRequestStatus @ 732 NONAME
+	_ZN14CSmtpClientMtm14AddAttachmentLER5RFileRK6TDesC8jR14TRequestStatus @ 733 NONAME
+	_ZN14CSmtpClientMtm14AddAttachmentLERK7TDesC16RK6TDesC8jR14TRequestStatus @ 734 NONAME
+	_ZN14CSmtpClientMtm17CreateAttachmentLERK7TDesC16R5RFileRK6TDesC8jR14TRequestStatus @ 735 NONAME
+	_ZN14CSmtpClientMtm20AddLinkedAttachmentLERK7TDesC16RK6TDesC8jR14TRequestStatus @ 736 NONAME
+	_ZN15CImap4ClientMtm14AddAttachmentLER5RFileRK6TDesC8jR14TRequestStatus @ 737 NONAME
+	_ZN15CImap4ClientMtm14AddAttachmentLERK7TDesC16RK6TDesC8jR14TRequestStatus @ 738 NONAME
+	_ZN15CImap4ClientMtm17CreateAttachmentLERK7TDesC16R5RFileRK6TDesC8jR14TRequestStatus @ 739 NONAME
+	_ZN15CImap4ClientMtm20AddLinkedAttachmentLERK7TDesC16RK6TDesC8jR14TRequestStatus @ 740 NONAME
+	_ZN14CEmailAccounts14GetPopAccountLElR11TPopAccount @ 741 NONAME
+	_ZN14CEmailAccounts15GetImapAccountLElR12TImapAccount @ 742 NONAME
+	_ZN14CEmailAccounts15GetPopAccountsLER6RArrayI11TPopAccountE @ 743 NONAME
+	_ZN14CEmailAccounts15GetSmtpAccountLElR12TSmtpAccount @ 744 NONAME
+	_ZN14CEmailAccounts16GetImapAccountsLER6RArrayI12TImapAccountE @ 745 NONAME
+	_ZN14CEmailAccounts16GetSmtpAccountsLER6RArrayI12TSmtpAccountE @ 746 NONAME
+	_ZN14CEmailAccounts16LoadPopSettingsLERK11TPopAccountR15CImPop3Settings @ 747 NONAME
+	_ZN14CEmailAccounts16SavePopSettingsLERK11TPopAccountRK15CImPop3Settings @ 748 NONAME
+	_ZN14CEmailAccounts17CreatePopAccountLERK7TDesC16RK15CImPop3SettingsRK17CImIAPPreferencesi @ 749 NONAME
+	_ZN14CEmailAccounts17DeletePopAccountLERK11TPopAccount @ 750 NONAME
+	_ZN14CEmailAccounts17LoadImapSettingsLERK12TImapAccountR16CImImap4Settings @ 751 NONAME
+	_ZN14CEmailAccounts17LoadSmtpSettingsLERK12TSmtpAccountR15CImSmtpSettings @ 752 NONAME
+	_ZN14CEmailAccounts17SaveImapSettingsLERK12TImapAccountRK16CImImap4Settings @ 753 NONAME
+	_ZN14CEmailAccounts17SaveSmtpSettingsLERK12TSmtpAccountRK15CImSmtpSettings @ 754 NONAME
+	_ZN14CEmailAccounts18CreateImapAccountLERK7TDesC16RK16CImImap4SettingsRK17CImIAPPreferencesi @ 755 NONAME
+	_ZN14CEmailAccounts18CreateSmtpAccountLER11TPopAccountRK15CImSmtpSettingsRK17CImIAPPreferencesi @ 756 NONAME
+	_ZN14CEmailAccounts18CreateSmtpAccountLER12TImapAccountRK15CImSmtpSettingsRK17CImIAPPreferencesi @ 757 NONAME
+	_ZN14CEmailAccounts18CreateSmtpAccountLERK7TDesC16RK15CImSmtpSettingsRK17CImIAPPreferencesi @ 758 NONAME
+	_ZN14CEmailAccounts18DeleteImapAccountLERK12TImapAccount @ 759 NONAME
+	_ZN14CEmailAccounts18DeleteSmtpAccountLERK12TSmtpAccount @ 760 NONAME
+	_ZN14CEmailAccounts19DefaultSmtpAccountLER12TSmtpAccount @ 761 NONAME
+	_ZN14CEmailAccounts19LoadPopIapSettingsLERK11TPopAccountR17CImIAPPreferences @ 762 NONAME
+	_ZN14CEmailAccounts19SavePopIapSettingsLERK11TPopAccountRK17CImIAPPreferences @ 763 NONAME
+	_ZN14CEmailAccounts20LoadImapIapSettingsLERK12TImapAccountR17CImIAPPreferences @ 764 NONAME
+	_ZN14CEmailAccounts20LoadSmtpIapSettingsLERK12TSmtpAccountR17CImIAPPreferences @ 765 NONAME
+	_ZN14CEmailAccounts20SaveImapIapSettingsLERK12TImapAccountRK17CImIAPPreferences @ 766 NONAME
+	_ZN14CEmailAccounts20SaveSmtpIapSettingsLERK12TSmtpAccountRK17CImIAPPreferences @ 767 NONAME
+	_ZN14CEmailAccounts22SetDefaultSmtpAccountLERK12TSmtpAccount @ 768 NONAME
+	_ZN14CEmailAccounts27PopulateDefaultPopSettingsLER15CImPop3SettingsR17CImIAPPreferences @ 769 NONAME
+	_ZN14CEmailAccounts28PopulateDefaultImapSettingsLER16CImImap4SettingsR17CImIAPPreferences @ 770 NONAME
+	_ZN14CEmailAccounts28PopulateDefaultSmtpSettingsLER15CImSmtpSettingsR17CImIAPPreferences @ 771 NONAME
+	_ZN15CImSmtpSettings20SetToCcIncludeLimitLEi @ 772 NONAME
+	_ZNK15CImSmtpSettings16ToCcIncludeLimitEv @ 773 NONAME
+	_ZN14CEmailAccounts25DeleteDefaultSmtpAccountLEv @ 774 NONAME
+	_ZN15CImEmailMessage19GetBodyTextEntryIdLER14TRequestStatuslNS_17TImEmailEntryTypeE @ 775 NONAME
+	_ZN15CImEmailMessage19GetBodyTextEntryIdLElNS_17TImEmailEntryTypeE @ 776 NONAME
+	_ZN14CEmailAccounts18IsAccountReadOnlyLERK11TPopAccount @ 777 NONAME
+	_ZN14CEmailAccounts18IsAccountReadOnlyLERK12TImapAccount @ 778 NONAME
+	_ZN14CEmailAccounts18IsAccountReadOnlyLERK12TSmtpAccount @ 779 NONAME
+	_ZN14CSmtpClientMtm25CancelAttachmentOperationEv @ 780 NONAME
+	_ZN16CImImap4Settings13SetUseExpungeEi @ 781 NONAME
+	_ZNK16CImImap4Settings10UseExpungeEv @ 782 NONAME
+	_ZN15CImEmailMessage25OpenPlainBodyTextForReadLENS_17TImEmailEntryTypeEi @ 783 NONAME
+	_ZN15CImEmailMessage26OpenPlainBodyTextForWriteLEv @ 784 NONAME
+	_ZN16CImPlainBodyText10NextChunkLER5TDes8 @ 785 NONAME
+	_ZN16CImPlainBodyText10NextChunkLER5TDes8R14TRequestStatus @ 786 NONAME
+	_ZN16CImPlainBodyText10NextChunkLER6TDes16 @ 787 NONAME
+	_ZN16CImPlainBodyText10NextChunkLER6TDes16R14TRequestStatus @ 788 NONAME
+	_ZN16CImPlainBodyText11StoreChunkLERK6TDesC8 @ 789 NONAME
+	_ZN16CImPlainBodyText11StoreChunkLERK6TDesC8R14TRequestStatus @ 790 NONAME
+	_ZN16CImPlainBodyText11StoreChunkLERK7TDesC16 @ 791 NONAME
+	_ZN16CImPlainBodyText11StoreChunkLERK7TDesC16R14TRequestStatus @ 792 NONAME
+	_ZN16CImPlainBodyText14PreviousChunkLER5TDes8 @ 793 NONAME
+	_ZN16CImPlainBodyText14PreviousChunkLER5TDes8R14TRequestStatus @ 794 NONAME
+	_ZN16CImPlainBodyText14PreviousChunkLER6TDes16 @ 795 NONAME
+	_ZN16CImPlainBodyText14PreviousChunkLER6TDes16R14TRequestStatus @ 796 NONAME
+	_ZN16CImPlainBodyText25StoreRichTextAsPlainTextLER9CRichText @ 797 NONAME
+	_ZN16CImPlainBodyText7CommitLER14TRequestStatus @ 798 NONAME
+	_ZN16CImPlainBodyText7CommitLER14TRequestStatusR13CImMimeHeader @ 799 NONAME
+	_ZN16CImPlainBodyTextD0Ev @ 800 NONAME
+	_ZN16CImPlainBodyTextD1Ev @ 801 NONAME
+	_ZN16CImPlainBodyTextD2Ev @ 802 NONAME
+	_ZN17CImEmailOperation10CreateNewLER14TRequestStatusR11CMsvSessionlljRKj4TUidii @ 803 NONAME
+	_ZTI16CImPlainBodyText @ 804 NONAME ; #<TI>#
+	_ZTV16CImPlainBodyText @ 805 NONAME ; #<VT>#
+	_ZN16CImImap4Settings18FolderSyncDisabledEv @ 806 NONAME
+	_ZN16CImImap4Settings21SetFolderSyncDisabledEi @ 807 NONAME
+	_ZN14CEmailAccounts15GetSmtpAccountLEiR12TSmtpAccount @ 808 NONAME
+	_ZN14CEmailAccounts18CreateImapAccountLERK7TDesC16RK16CImImap4SettingsRK17CImIAPPreferencesRK22CImapSyncDownloadRulesi @ 809 NONAME
+	_ZN14CEmailAccounts18IsAccountReadOnlyLERK20TSmtpMobilityAccount @ 810 NONAME
+	_ZN14CEmailAccounts24GetSmtpMobilityAccountsLERK12TSmtpAccountR6RArrayI20TSmtpMobilityAccountE @ 811 NONAME
+	_ZN14CEmailAccounts25LoadSmtpMobilitySettingsLERK20TSmtpMobilityAccountR23CImSmtpMobilitySettings @ 812 NONAME
+	_ZN14CEmailAccounts25LoadSmtpMobilitySettingsLERimR23CImSmtpMobilitySettings @ 813 NONAME
+	_ZN14CEmailAccounts25SaveSmtpMobilitySettingsLERK20TSmtpMobilityAccountRK23CImSmtpMobilitySettings @ 814 NONAME
+	_ZN14CEmailAccounts26CreateSmtpMobilityAccountLERK7TDesC16RK6RArrayImERK12TSmtpAccountRK23CImSmtpMobilitySettingsi @ 815 NONAME
+	_ZN14CEmailAccounts26CreateSmtpMobilityAccountLERK7TDesC16RK6RArrayImERK12TSmtpAccountS9_i @ 816 NONAME
+	_ZN14CEmailAccounts26DeleteSmtpMobilityAccountLERK20TSmtpMobilityAccount @ 817 NONAME
+	_ZN14CEmailAccounts26LoadImapSyncDownloadRulesLERK12TImapAccountR22CImapSyncDownloadRules @ 818 NONAME
+	_ZN14CEmailAccounts26SaveImapSyncDownloadRulesLERK12TImapAccountRK22CImapSyncDownloadRules @ 819 NONAME
+	_ZN14CEmailAccounts29LoadImapTransportBufferSizesLER25CImapTransportBufferSizes @ 820 NONAME
+	_ZN14CEmailAccounts29SaveImapTransportBufferSizesLERK25CImapTransportBufferSizes @ 821 NONAME
+	_ZN14CEmailAccounts31DeleteImapTransportBufferSizesLEv @ 822 NONAME
+	_ZN14CEmailAccounts31LoadSmtpMobilityAccountIapListLERK20TSmtpMobilityAccountR6RArrayImE @ 823 NONAME
+	_ZN14CEmailAccounts31SaveSmtpMobilityAccountIapListLERK20TSmtpMobilityAccountRK6RArrayImE @ 824 NONAME
+	_ZN14CEmailAccounts36PopulateDefaultSmtpMobilitySettingsLER23CImSmtpMobilitySettings @ 825 NONAME
+	_ZN15CImPop3Settings16SetTlsSslDomainLERK6TDesC8 @ 826 NONAME
+	_ZN15CImSmtpSettings16SetTlsSslDomainLERK6TDesC8 @ 827 NONAME
+	_ZN16CImImap4Settings16SetTlsSslDomainLERK6TDesC8 @ 828 NONAME
+	_ZN16CImImap4Settings20UseSyncDownloadRulesEv @ 829 NONAME
+	_ZN16CImImap4Settings23SetUseSyncDownloadRulesEi @ 830 NONAME
+	_ZN17CImIAPPreferences10RemoveSNAPEv @ 831 NONAME
+	_ZN14CEmailAccounts24GetSmtpMobilityAccountsLER6RArrayI20TSmtpMobilityAccountE @ 832 NONAME
+	_ZN17CImIAPPreferences8SetSNAPLEm @ 833 NONAME
+	_ZN20CImBaseEmailSettings17SetBearerMobilityEi @ 834 NONAME
+	_ZN22CImapSyncDownloadRules11DeleteRuleLENS_10TRulesTypeEi @ 835 NONAME
+	_ZN22CImapSyncDownloadRules18DeleteBearerTypesLENS_10TRulesTypeEmRi @ 836 NONAME
+	_ZN22CImapSyncDownloadRules4NewLEv @ 837 NONAME
+	_ZN22CImapSyncDownloadRules5CopyLEv @ 838 NONAME
+	_ZN22CImapSyncDownloadRules5NewLCEv @ 839 NONAME
+	_ZN22CImapSyncDownloadRules5ResetEv @ 840 NONAME
+	_ZN22CImapSyncDownloadRules6CopyLCEv @ 841 NONAME
+	_ZN22CImapSyncDownloadRules8AddRuleLENS_10TRulesTypeEimRK26TImImap4GetPartialMailInfo @ 842 NONAME
+	_ZN23CImSmtpMobilitySettings11SetSMTPAuthEi @ 843 NONAME
+	_ZN23CImSmtpMobilitySettings12SetPasswordLERK6TDesC8 @ 844 NONAME
+	_ZN23CImSmtpMobilitySettings13SetLoginNameLERK6TDesC8 @ 845 NONAME
+	_ZN23CImSmtpMobilitySettings13SetSSLWrapperEi @ 846 NONAME
+	_ZN23CImSmtpMobilitySettings14SetEmailAliasLERK7TDesC16 @ 847 NONAME
+	_ZN23CImSmtpMobilitySettings16SetEmailAddressLERK7TDesC16 @ 848 NONAME
+	_ZN23CImSmtpMobilitySettings16SetSecureSocketsEi @ 849 NONAME
+	_ZN23CImSmtpMobilitySettings16SetTlsSslDomainLERK6TDesC8 @ 850 NONAME
+	_ZN23CImSmtpMobilitySettings17SetServerAddressLERK7TDesC16 @ 851 NONAME
+	_ZN23CImSmtpMobilitySettings20SetDefaultMsgCharSetE4TUid @ 852 NONAME
+	_ZN23CImSmtpMobilitySettings4NewLEv @ 853 NONAME
+	_ZN23CImSmtpMobilitySettings5CopyLEv @ 854 NONAME
+	_ZN23CImSmtpMobilitySettings5NewLCEv @ 855 NONAME
+	_ZN23CImSmtpMobilitySettings5ResetEv @ 856 NONAME
+	_ZN23CImSmtpMobilitySettings6CopyLCEv @ 857 NONAME
+	_ZN23CImSmtpMobilitySettings7SetPortEj @ 858 NONAME
+	_ZN25CImapTransportBufferSizes12DeleteSizesLEi @ 859 NONAME
+	_ZN25CImapTransportBufferSizes18DeleteBearerTypesLEmRi @ 860 NONAME
+	_ZN25CImapTransportBufferSizes4NewLEv @ 861 NONAME
+	_ZN25CImapTransportBufferSizes5CopyLEv @ 862 NONAME
+	_ZN25CImapTransportBufferSizes5NewLCEv @ 863 NONAME
+	_ZN25CImapTransportBufferSizes5ResetEv @ 864 NONAME
+	_ZN25CImapTransportBufferSizes6CopyLCEv @ 865 NONAME
+	_ZN25CImapTransportBufferSizes9AddSizesLEimii @ 866 NONAME
+	_ZNK15CImPop3Settings12TlsSslDomainEv @ 867 NONAME
+	_ZNK15CImSmtpSettings12TlsSslDomainEv @ 868 NONAME
+	_ZNK16CImImap4Settings12TlsSslDomainEv @ 869 NONAME
+	_ZNK17CImIAPPreferences11SNAPDefinedEv @ 870 NONAME
+	_ZNK17CImIAPPreferences14SNAPPreferenceEv @ 871 NONAME
+	_ZNK20CImBaseEmailSettings14BearerMobilityEv @ 872 NONAME
+	_ZNK22CImapSyncDownloadRules12GetMailInfoLENS_10TRulesTypeEmR26TImImap4GetPartialMailInfo @ 873 NONAME
+	_ZNK22CImapSyncDownloadRules8GetRuleLENS_10TRulesTypeEiRmR26TImImap4GetPartialMailInfo @ 874 NONAME
+	_ZNK23CImSmtpMobilitySettings10EmailAliasEv @ 875 NONAME
+	_ZNK23CImSmtpMobilitySettings10SSLWrapperEv @ 876 NONAME
+	_ZNK23CImSmtpMobilitySettings12EmailAddressEv @ 877 NONAME
+	_ZNK23CImSmtpMobilitySettings12TlsSslDomainEv @ 878 NONAME
+	_ZNK23CImSmtpMobilitySettings13SecureSocketsEv @ 879 NONAME
+	_ZNK23CImSmtpMobilitySettings13ServerAddressEv @ 880 NONAME
+	_ZNK23CImSmtpMobilitySettings17DefaultMsgCharSetEv @ 881 NONAME
+	_ZNK23CImSmtpMobilitySettings4PortEv @ 882 NONAME
+	_ZNK23CImSmtpMobilitySettings8PasswordEv @ 883 NONAME
+	_ZNK23CImSmtpMobilitySettings8SMTPAuthEv @ 884 NONAME
+	_ZNK23CImSmtpMobilitySettings9LoginNameEv @ 885 NONAME
+	_ZNK25CImapTransportBufferSizes9GetSizesLEiRmRiS1_ @ 886 NONAME
+	_ZNK25CImapTransportBufferSizes9GetSizesLEmRiS0_ @ 887 NONAME
+	_ZTI22CImapSyncDownloadRules @ 888 NONAME
+	_ZTI23CImSmtpMobilitySettings @ 889 NONAME
+	_ZTI25CImapTransportBufferSizes @ 890 NONAME
+	_ZTV22CImapSyncDownloadRules @ 891 NONAME
+	_ZTV23CImSmtpMobilitySettings @ 892 NONAME
+	_ZTV25CImapTransportBufferSizes @ 893 NONAME
+	_ZN19CImAttachmentWaiter13StartWaitingLER14TRequestStatusP15CImEmailMessagei @ 894 NONAME
+	_ZN19CImAttachmentWaiter4NewLEv @ 895 NONAME
+	_ZN19CImAttachmentWaiterD0Ev @ 896 NONAME
+	_ZN19CImAttachmentWaiterD1Ev @ 897 NONAME
+	_ZN19CImAttachmentWaiterD2Ev @ 898 NONAME
+	_ZN17CImEmailOperation12CreateReplyLER14TRequestStatusR11CMsvSessionlljRKj4TUidii @ 899 NONAME
+	_ZN17CImEmailOperation14CreateForwardLER14TRequestStatusR11CMsvSessionllljRKj4TUidii @ 900 NONAME
+	_ZN17CImEmailOperation14CreateReceiptLER14TRequestStatusR11CMsvSessionlljRKj4TUidii @ 901 NONAME
+	_ZN15CImEmailMessage14StoreBodyTextLElR9CRichTextR14TRequestStatusi @ 902 NONAME
+	_ZN15CImPop3Settings11SetFallBackEi @ 903 NONAME ABSENT
+	_ZN15CImPop3Settings11SetPOP3AuthEi @ 904 NONAME ABSENT
+	_ZNK15CImPop3Settings8FallBackEv @ 905 NONAME ABSENT
+	_ZNK15CImPop3Settings8POP3AuthEv @ 906 NONAME ABSENT
+	_ZN16CImImap4Settings11SetFallBackEi @ 907 NONAME ABSENT
+	_ZN16CImImap4Settings12SetIMAP4AuthEi @ 908 NONAME ABSENT
+	_ZNK16CImImap4Settings8FallBackEv @ 909 NONAME ABSENT
+	_ZNK16CImImap4Settings9IMAP4AuthEv @ 910 NONAME ABSENT
+	
+	

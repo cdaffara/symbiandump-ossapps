@@ -1,0 +1,51 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+#ifndef CXEDISKMONITOR_H
+#define CXEDISKMONITOR_H
+
+#include <QObject>
+
+class CxeSettings;
+class CxeDiskMonitorPrivate;
+
+class CxeDiskMonitor : public QObject
+{
+    Q_OBJECT
+
+public:
+    explicit CxeDiskMonitor(CxeSettings &settings);
+    ~CxeDiskMonitor();
+
+signals:
+    void diskSpaceLow();
+    void diskSpaceChanged();
+
+public slots:
+    void setLowWarningLevel(qint64 bytes);
+    void start();
+    void stop();
+
+public:
+    bool isMonitoring() const;
+    qint64 free(bool cached = true) const;
+
+private:
+    CxeDiskMonitorPrivate *p;
+};
+
+#endif // CXEDISKMONITORPRIVATE_H

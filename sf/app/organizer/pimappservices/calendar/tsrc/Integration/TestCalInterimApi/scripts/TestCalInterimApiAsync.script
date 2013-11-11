@@ -1,0 +1,95 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+PRINT Run Asynchronous Tests
+
+LOAD_SUITE TestCalInterimApiSuite
+
+START_TESTCASE PIM-APPENG-CalInterimAPI-Async-I-003-HP-0001
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CalInterimAPI-Async-I-003-HP-0001
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - REQ5770: Calendar Non-functional maintainability, REQ5771: Calendar Non-functional architecture
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Asynchronous operations from multiple threads
+//! @SYMTestActions 
+//!1.	Open a new session with a calendar file and create an entry view (This builds index asynchronously).
+//!2.	Do the same from another thread simultaneously, for the same calendar file
+//!3.	Verify that the entry view is created properly in both the threads.
+//!4.	Add, Modify, and Delete entries randomly with the entry view from both the threads.
+//!5.	Repeat the above steps on two different calendar files.
+//!6.	Repeat the above steps for creation of instance view.
+//!7.	Perform asynchronous delete from both the threads simultaneously
+//! @SYMTestExpectedResults Entry/Instance view creation and usage works consistently and correctly in both the threads. The addition, update, and deletion of entries are as indicated by the expected results listed in the ini file.
+
+RUN_TEST_STEP				100	TestCalInterimApiSuite	TestCalInterimApiSetSysTime		\CITCalInterimApi\TestCalInterimApiFind.ini	jan011998_12am
+
+CONCURRENT
+RUN_TEST_STEP				100	TestCalInterimApiSuite	TestCalInterimApiReadData			\CITCalInterimApi\TestCalInterimApiFind.ini	addentries
+RUN_TEST_STEP				100	TestCalInterimApiSuite	TestCalInterimApiReadData			\CITCalInterimApi\TestCalInterimApiFind.ini	addentries_2
+
+CONSECUTIVE
+
+CONCURRENT
+RUN_TEST_STEP				300	TestCalInterimApiSuite	TestCalInterimApiFilter			\CITCalInterimApi\TestCalInterimApiFind.ini	beforedelete
+RUN_TEST_STEP				300	TestCalInterimApiSuite	TestCalInterimApiFilter			\CITCalInterimApi\TestCalInterimApiFind.ini	beforedelete
+CONSECUTIVE
+
+START_TESTCASE PIM-APPENG-CalInterimAPI-Async-I-002-HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CalInterimAPI-Async-I-002-HP-0001
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - REQ5770: Calendar Non-functional maintainability, REQ5771: Calendar Non-functional architecture
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Asynchronous deletion of entries.
+//! @SYMTestActions 
+//!1.	Create a session with the calendar server and create a large number (500) of entries (fixed and floating) with data to a calendar file. Create the entries in such a way that there are some entries marginally outside the time-range passed in step 3. Close this session.
+//!2.	Open a new session and create an entry view 
+//!3.	Asynchronously delete a large number of entries by passing a time-range and filter. Pass a time-range in such a way that some floating entries fall within it.
+//!4.	When the above deletion is in progress, test the following:
+//!a.	start another asynchronous deletion for the same set of entries. 
+//!b.	Start another asynchronous deletion for the rest of the entries. Verify that the second simultaneous call to delete on the same calendar file, no matter what is the time-range or filter, leaves with KErrLocked.
+//!c.	Create another entry view (Builds index asynchronously)
+//!d.	Create an instance view.
+//!5.	Verify that the entries are deleted as expected, as provided by a set of expected uids to be deleted, by the ini file. Try fetching these entries and verify they have been deleted.
+//!6.	Repeat steps 1 and 2 and change the time zone, so that some floating entries NOW fall outside the range.
+//!7.	Repeat steps 3 and 4 and verify that the entries are deleted as expected
+//!8.	Repeat all the above steps for floating and fixed time in the time-range passed.
+//!9.	Check the calendar file
+//! @SYMTestExpectedResults Asynchronous deletion works consistently and correctly. The entries expected to be deleted, as indicated by the ini file, are deleted as expected.
+CONCURRENT
+// Deletion. The time range encloses all the entries we created
+RUN_TEST_STEP	300	TestCalInterimApiSuite	TestCalInterimApiDeleteEntryByTimeRange	\CITCalInterimApi\TestCalInterimApiFind.ini	deleteentries
+RUN_TEST_STEP	300	TestCalInterimApiSuite	TestCalInterimApiDeleteEntryByTimeRange	\CITCalInterimApi\TestCalInterimApiFind.ini	deleteentries
+END_TESTCASE PIM-APPENG-CalInterimAPI-Async-I-002-HP
+
+CONSECUTIVE
+// Hence find should yield nothing
+CONCURRENT
+RUN_TEST_STEP				300	TestCalInterimApiSuite	TestCalInterimApiFilter			\CITCalInterimApi\TestCalInterimApiFind.ini	afterdelete
+RUN_TEST_STEP				300	TestCalInterimApiSuite	TestCalInterimApiFilter			\CITCalInterimApi\TestCalInterimApiFind.ini	afterdelete
+END_TESTCASE PIM-APPENG-CalInterimAPI-Async-I-003-HP-0001
+
+PREFIX RUN_UTILS 
+MakeReadWrite 	c:\private\10003a5b\citvcal.datIdx
+DeleteFile		c:\private\10003a5b\citvcal.datIdx
+MakeReadWrite 	c:\private\10003a5b\CITVCal.dat
+DeleteFile		c:\private\10003a5b\CITVCal.dat
+REMOVE_PREFIX

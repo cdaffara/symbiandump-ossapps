@@ -1,0 +1,51 @@
+/*
+* Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Media Audio harvester plugin implementation
+*
+*/
+// Created by TraceCompiler 2.3.0
+// DO NOT EDIT, CHANGES WILL BE LOST
+
+#ifndef __MEDIAPLUGINTRACES_H__
+#define __MEDIAPLUGINTRACES_H__
+
+#define KOstTraceComponentID 0x20029ab9
+
+#define CAUDIOPLUGIN_STARTPLUGINL_ENTRY 0x8a0003
+#define CAUDIOPLUGIN_STARTPLUGINL_EXIT 0x8a0004
+#define CAUDIOPLUGIN_STARTHARVESTINGL_ENTRY 0x8a0005
+#define CAUDIOPLUGIN_STARTHARVESTINGL_EXIT 0x8a0006
+#define CAUDIOPLUGIN_PAUSEPLUGINL_ENTRY 0x8a0007
+#define CAUDIOPLUGIN_PAUSEPLUGINL_EXIT 0x8a0008
+#define CAUDIOPLUGIN_RESUMEPLUGINL_ENTRY 0x8a0009
+#define CAUDIOPLUGIN_RESUMEPLUGINL_EXIT 0x8a000a
+#define CAUDIOPLUGIN_HANDLEMDEITEML 0x860001
+#define DUP1_CAUDIOPLUGIN_HANDLEMDEITEML 0x860002
+#define DUP2_CAUDIOPLUGIN_HANDLEMDEITEML 0x860003
+#define DUP3_CAUDIOPLUGIN_HANDLEMDEITEML 0x860004
+#define DUP4_CAUDIOPLUGIN_HANDLEMDEITEML 0x860005
+#define DUP5_CAUDIOPLUGIN_HANDLEMDEITEML 0x860006
+#define DUP6_CAUDIOPLUGIN_HANDLEMDEITEML 0x860007
+#define DUP7_CAUDIOPLUGIN_HANDLEMDEITEML 0x860008
+#define DUP8_CAUDIOPLUGIN_HANDLEMDEITEML 0x860009
+#define DUP9_CAUDIOPLUGIN_HANDLEMDEITEML 0x86000a
+#define DUP10_CAUDIOPLUGIN_HANDLEMDEITEML 0x86000b
+#define DUP11_CAUDIOPLUGIN_HANDLEMDEITEML 0x86000c
+#define DUP12_CAUDIOPLUGIN_HANDLEMDEITEML 0x86000d
+
+
+#endif
+
+// End of file
+

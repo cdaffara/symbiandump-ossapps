@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE SystemDefinition SYSTEM "sysdef_1_5_1.dtd" [
+  <!ENTITY layer_real_source_path "sf/app/rndtools" >
+]>
+
+<SystemDefinition name="rndtools" schema="1.5.1">
+  <systemModel>
+    <layer name="app_layer">
+      <module name="screengrabber">
+				<unit unitID="tools.screengrabberqt" mrp="" bldFile="&layer_real_source_path;/screengrabber" name="screengrabber" proFile="screengrabber.pro" />
+			</module>
+			<module name="perfmon">
+				<unit unitID="tools.perfmonqt" mrp="" bldFile="&layer_real_source_path;/perfapps/perfmon" name="perfmon" proFile="perfmon.pro" />
+			</module>
+			<module name="creator">
+				<unit unitID="tools.creatorqt" mrp="" bldFile="&layer_real_source_path;/creator" name="creator" proFile="creator.pro" />
+			</module>
+			<module name="filebrowser">
+				<unit unitID="tools.filebrowserqt" mrp="" bldFile="&layer_real_source_path;/filebrowser" name="filebrowser" proFile="filebrowser.pro" />
+			</module>
+			<module name="launcher">
+				<unit unitID="tools.launcherqt" mrp="" bldFile="&layer_real_source_path;/launcher" name="launcher" proFile="launcher.pro" />
+			</module>
+			<module name="loadgen">
+				<unit unitID="tools.loadgenqt" mrp="" bldFile="&layer_real_source_path;/loadgen" name="loadgen" proFile="loadgen.pro" />
+			</module>
+			<module name="memspyui">
+				<unit unitID="tools.memspyuiqt" mrp="" bldFile="&layer_real_source_path;/perfapps/memspyui" name="memspyui" proFile="memspyui.pro" />
+			</module>
+			<module name="piprofilerui">
+				<unit unitID="tools.piprofilerui" mrp="" bldFile="&layer_real_source_path;/perfapps/piprofilerui" name="piprofilerui" proFile="piprofilerui.pro" />
+			</module>
+			<module name="appregexec">
+				<unit unitID="tools.appregexec" mrp="" bldFile="&layer_real_source_path;/debugapps/appregexec/group" name="appregexec" />
+			</module>
+    </layer>
+  </systemModel>
+</SystemDefinition>

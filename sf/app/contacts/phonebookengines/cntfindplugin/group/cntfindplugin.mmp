@@ -1,0 +1,44 @@
+/*
+* Copyright (c) 2002 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: 
+*     Build information file for contact model plugin needed for chinese find
+*
+*/
+
+
+#include "cntfindpluginuid.h"
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+
+TARGET          cntfindplugin.dll
+TARGETTYPE      PLUGIN
+UID             KEComPluginUID2 KCntModelFindPluginDllUID3
+CAPABILITY      CAP_ECOM_PLUGIN
+VENDORID        VID_DEFAULT
+
+SOURCEPATH      ../src
+SOURCE          dllmain.cpp
+SOURCE          cntfindplugin.cpp
+
+USERINCLUDE     ../group
+APP_LAYER_SYSTEMINCLUDE
+
+START RESOURCE  101f85f4.rss
+TARGET          cntfindplugin
+TARGETPATH      resource/plugins
+END
+
+LIBRARY         euser.lib
+LIBRARY         ECom.lib
+LIBRARY         findutil.lib

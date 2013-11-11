@@ -1,0 +1,45 @@
+// Copyright (c) 2006-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// Default implementation of ECOM interface to create the 
+// details and description values for an SMS.
+// 
+//
+
+/**
+ @file
+*/
+
+TARGET		smsgetdetdescdefault.dll
+TARGETTYPE	PLUGIN
+
+// UIDs - UID #2 specifies an ECom dll, UID #3 is implementation specific UID
+UID		0x10009D8D 0x10282FA6
+
+CAPABILITY	All -TCB
+VENDORID 	0x70000001
+
+USERINCLUDE	../inc
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+
+SOURCEPATH	../src
+SOURCE		csmsgetdetdescdefault.cpp
+
+LIBRARY		euser.lib ecom.lib mtur.lib smcm.lib
+
+SOURCEPATH	../src
+start resource 	10282fa6.rss
+TARGET		smsgetdetdescdefault.rsc
+end
+
+SMPSAFE

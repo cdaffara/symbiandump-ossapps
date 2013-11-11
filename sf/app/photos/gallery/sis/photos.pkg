@@ -1,0 +1,131 @@
+;
+; Copyright (c) 2008 - 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:   Package file for project Gallery
+;
+
+; -------- general --------
+
+; Languages
+&EN
+
+; Package header
+#{"photos"},(0x20000A14),2, 1, 0, TYPE=SA ,RU
+
+; Localised Vendor name
+%{"Nokia, Qt"}
+
+; Unique Vendor name
+:"Nokia, Qt"
+
+; Manual PKG pre-rules from PRO files
+; Default dependency to Qt libraries
+(0x2001E61C), 4, 5, 0, {"Qt"}
+
+; Default HW/platform dependencies
+[0x101F7961],0,0,0,{"S60ProductID"}
+[0x102032BE],0,0,0,{"S60ProductID"}
+[0x102752AE],0,0,0,{"S60ProductID"}
+[0x1028315F],0,0,0,{"S60ProductID"}
+ 
+
+; Executable and default resource files
+"\epoc32\release\armv5\urel\photos.exe"    						- "!:\sys\bin\photos.exe"
+"\epoc32\data\z\resource\apps\photos.rsc"    					- "!:\resource\apps\photos.rsc"
+"\epoc32\data\z\private\10003a3f\import\apps\photos_reg.rsc"    - "!:\private\10003a3f\import\apps\photos_reg.rsc"
+
+; -------- files --------
+"\epoc32\release\armv5\urel\glxcommonui.dll"                   		-"!:\sys\bin\glxcommonui.dll"
+"\epoc32\release\armv5\urel\glxcommon.dll"                     		-"!:\sys\bin\glxcommon.dll"
+
+; datasource
+"\epoc32\release\armv5\urel\glxdatasourcemanager.dll"          		-"!:\sys\bin\glxdatasourcemanager.dll"
+"\epoc32\release\armv5\urel\glxdatasourcemde.dll"              		-"!:\sys\bin\glxdatasourcemde.dll"
+"\epoc32\data\Z\resource\plugins\glxdatasourcemde.rsc"              -"!:\resource\plugins\glxdatasourcemde.rsc"
+
+; Collection plugins
+"\epoc32\release\armv5\urel\glxcollectionpluginalbums.dll"      	-"!:\sys\bin\glxcollectionpluginalbums.dll"
+"\epoc32\data\Z\resource\plugins\glxcollectionpluginalbums.rsc" 	-"!:\resource\plugins\glxcollectionpluginalbums.rsc"
+"\epoc32\data\Z\resource\plugins\glxpluginalbums.rsc"  				-"!:\resource\plugins\glxpluginalbums.rsc"
+
+"\epoc32\release\armv5\urel\glxcollectionpluginall.dll"         	-"!:\sys\bin\glxcollectionpluginall.dll"
+"\epoc32\data\Z\resource\plugins\glxcollectionpluginall.rsc"    	-"!:\resource\plugins\glxcollectionpluginall.rsc"
+"\epoc32\data\Z\resource\plugins\glxpluginall.rsc"  				-"!:\resource\plugins\glxpluginall.rsc"
+
+"\epoc32\release\armv5\urel\glxcollectionplugincamera.dll"      	-"!:\sys\bin\glxcollectionplugincamera.dll"
+"\epoc32\data\Z\resource\plugins\glxcollectionplugincamera.rsc" 	-"!:\resource\plugins\glxcollectionplugincamera.rsc"
+"\epoc32\data\Z\resource\plugins\glxplugincamera.rsc"  				-"!:\resource\plugins\glxplugincamera.rsc"
+
+"\epoc32\release\armv5\urel\glxcollectionplugindownloads.dll"   	-"!:\sys\bin\glxcollectionplugindownloads.dll"
+"\epoc32\data\Z\resource\plugins\glxcollectionplugindownloads.rsc"  -"!:\resource\plugins\glxcollectionplugindownloads.rsc"
+"\epoc32\data\Z\resource\plugins\glxplugindownloads.rsc"  			-"!:\resource\plugins\glxplugindownloads.rsc"
+
+"\epoc32\release\armv5\urel\glxcollectionpluginmonths.dll"         -"!:\sys\bin\glxcollectionpluginmonths.dll"
+"\epoc32\data\Z\resource\plugins\glxcollectionpluginmonths.rsc"    -"!:\resource\plugins\glxcollectionpluginmonths.rsc"
+"\epoc32\data\Z\resource\plugins\glxpluginmonths.rsc"  			   -"!:\resource\plugins\glxpluginmonths.rsc"
+
+"\epoc32\release\armv5\urel\glxcollectionplugintags.dll"          	-"!:\sys\bin\glxcollectionplugintags.dll"
+"\epoc32\data\Z\resource\plugins\glxcollectionplugintags.rsc"      	-"!:\resource\plugins\glxcollectionplugintags.rsc"
+"\epoc32\data\Z\resource\plugins\glxplugintags.rsc"  			    -"!:\resource\plugins\glxplugintags.rsc"
+
+"\epoc32\release\armv5\urel\glxcollectionpluginimageviewer.dll"              -"!:\sys\bin\glxcollectionpluginimageviewer.dll"
+"\epoc32\data\Z\resource\plugins\glxcollectionpluginimageviewer.rsc"         -"!:\resource\plugins\glxcollectionpluginimageviewer.rsc"
+
+; Glx logging client
+"\epoc32\release\armv5\urel\glxlogging.dll"					-"!:\sys\bin\glxlogging.dll"
+
+; commandhandler
+"\epoc32\release\armv5\urel\glxcommandhandlerbase.dll"      -"!:\sys\bin\glxcommandhandlerbase.dll"
+"\epoc32\release\armv5\urel\glxcommoncommandhandlers.dll"   -"!:\sys\bin\glxcommoncommandhandlers.dll"
+
+; engines
+"\epoc32\release\armv5\urel\glxtvout.dll"            		-"!:\sys\bin\glxtvout.dll"
+"\epoc32\release\armv5\urel\glxmedialists.dll"            	-"!:\sys\bin\glxmedialists.dll"
+"\epoc32\release\armv5\urel\glxdrmutility.dll"              -"!:\sys\bin\glxdrmutility.dll"
+
+; OOM plugin
+"\epoc32\release\armv5\urel\glxmemoryplugin.dll"            		-"!:\sys\bin\glxmemoryplugin.dll"
+
+; viewmanagement
+"\epoc32\release\armv5\urel\glxstatehandler.dll"        	-"!:\sys\bin\glxstatehandler.dll"
+"\epoc32\release\armv5\urel\glxviewmanager.dll"        		-"!:\sys\bin\glxviewmanager.dll"
+
+;qt dlls
+"\epoc32\release\armv5\urel\glxdrmutilitywrapper.dll"	   -"!:\sys\bin\glxdrmutilitywrapper.dll"
+"\epoc32\release\armv5\urel\glxexternalutility.dll"        -"!:\sys\bin\glxexternalutility.dll"
+"\epoc32\release\armv5\urel\glximagedecoderwrapper.dll"    -"!:\sys\bin\glximagedecoderwrapper.dll"
+"\epoc32\release\armv5\urel\glxtvoutwrapper.dll"           -"!:\sys\bin\glxtvoutwrapper.dll"
+"\epoc32\release\armv5\urel\glxmedialistwrapper.dll"       -"!:\sys\bin\glxmedialistwrapper.dll"
+"\epoc32\release\armv5\urel\glxfavmediamodel.dll"          -"!:\sys\bin\glxfavmediamodel.dll"
+"\epoc32\release\armv5\urel\glxmediamodel.dll"        	   -"!:\sys\bin\glxmediamodel.dll"
+"\epoc32\release\armv5\urel\glxlistmodel.dll"              -"!:\sys\bin\glxlistmodel.dll"
+"\epoc32\release\armv5\urel\glxmodelwrapper.dll"           -"!:\sys\bin\glxmodelwrapper.dll"
+"\epoc32\release\armv5\urel\glxloggerqt.dll"               -"!:\sys\bin\glxloggerqt.dll"
+"\epoc32\release\armv5\urel\glxviews.dll"                  -"!:\sys\bin\glxviews.dll"
+"\epoc32\release\armv5\urel\glxviewutilities.dll"          -"!:\sys\bin\glxviewutilities.dll"
+"\epoc32\release\armv5\urel\glxzoomwidget.dll"             -"!:\sys\bin\glxzoomwidget.dll"
+"\epoc32\release\armv5\urel\glxdetailscustomwidgets.dll"   -"!:\sys\bin\glxdetailscustomwidgets.dll"
+"\epoc32\release\armv5\urel\glxdetailscustomplugin.dll"    -"!:\sys\bin\glxdetailscustomplugin.dll"
+
+
+;translations
+"\epoc32\data\z\resource\qt\translations\photos_en.qm"     -"!:\resource\qt\translations\photos.qm"
+
+;cenrep
+"\epoc32\data\Z\private\10202BE9\20007194.txt"			   -"!:\private\10202BE9\20007194.txt"		
+"\epoc32\data\Z\private\10202BE9\20007193.txt"			   -"!:\private\10202BE9\20007193.txt"		
+
+;splash screen
+"\epoc32\data\z\resource\hb\splashml\photos.splashml"  				-"!:\resource\hb\splashml\photos.splashml"
+"\epoc32\data\z\resource\hb\splashml\photos.docml"  					-"!:\resource\hb\splashml\photos.docml"
+

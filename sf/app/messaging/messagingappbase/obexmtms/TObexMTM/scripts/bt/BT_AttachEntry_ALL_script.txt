@@ -1,0 +1,63 @@
+[main]
+obex_client_test jpeg
+obex_client_test vcal
+obex_client_test vcard
+obex_client_test small
+obex_client_test multi
+
+[jpeg]
+obex_select_mtm bt
+select_root_folder
+create_service
+create_message
+set_bt_recipient "0002EE30467A"
+add_attachment_as_entry "c:\msgtest\obexsmoke\mediaobjects\Photo.jpg"
+// to get the BT device address from a 7650, type *#2820#
+send_message succeed
+wait 10
+
+[vcal]
+obex_select_mtm bt
+select_root_folder
+create_service
+create_message
+// to get the BT device address from a 7650, type *#2820#
+set_bt_recipient "0002EE30467A"
+add_attachment_as_entry "c:\msgtest\obexsmoke\mediaobjects\Nokia.vcs"
+send_message succeed
+wait 10
+ 
+[vcard]
+obex_select_mtm bt
+select_root_folder
+create_service
+create_message
+// to get the BT device address from a 7650, type *#2820#
+set_bt_recipient "0002EE30467A"
+add_attachment_as_entry "c:\msgtest\obexsmoke\mediaobjects\symtest.vcf"
+send_message succeed
+wait 10
+
+[small]
+obex_select_mtm bt
+select_root_folder
+create_service
+create_message
+// to get the BT device address from a 7650, type *#2820#
+set_bt_recipient "0002EE30467A"
+add_attachment_as_entry "c:\msgtest\obexsmoke\mediaobjects\obextestsmallpic.bmp"
+send_message succeed
+wait 10
+
+[multi]
+obex_select_mtm bt
+select_root_folder
+create_service
+create_message
+add_attachment_as_entry "c:\msgtest\obexsmoke\mediaobjects\symtest.vcf"
+add_attachment_as_entry "c:\msgtest\obexsmoke\mediaobjects\Photo.jpg"
+add_attachment_as_entry "c:\msgtest\obexsmoke\mediaobjects\obextestsmallpic.bmp"
+// to get the BT device address from a 7650, type *#2820#
+set_bt_recipient "0002EE30467A"
+send_message succeed
+wait 10

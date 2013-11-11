@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<relnotes name="OBEX MTMs">
+  <purpose>
+    Message Type Module (MTM) plugins to Messaging Framework supporting OBEX over Bluetooth and Infrafred, client / server MTM implementation for each carrier with supporting utilities.
+  </purpose>
+	
+ <defect number="DEF144349" title="convert SFL to EPL " revision="011">
+    Converting SFL licence to EPL license.
+  </defect>
+  
+  <deliverystep number="1462" name="Splitting mixed header files for Messaging" osproject="SymTB92" revision="010">
+   <preq number="2510" title=" Splitting mixed header files for Messaging">
+    Mixed header files will now contain only published All or published Partner or internal
+   </preq>
+    <milestone project="GT0465" number="3.5"/>
+  </deliverystep>
+
+  <defect number="DEF138039" title="[StrayScanner]CBtSrvMtm::StartCommandL race condition - E32USER-CBase 46 " revision="009">
+    resolved stray event posibility for CBtSrvMtm::StartCommandL.
+  </defect>
+
+  <defect number="DEF138037" title="[StrayScanner]CObexServerSendOperation::ConstructL suggestive of stray events " revision="008">
+    resolved stray event posibility for CObexServerSendOperation::ConstructL.   
+  </defect>
+
+  <defect number="DEF133878" title="System build:Elfe32 warning in OBEX MTMs in M04835 vFuture build  " revision="007">
+    Added EXPORT_C for definitions of functions whose declaration has IMPORT_C in btHeader.h but definition does not have EXPORT_C. Followed by abld freeze to freeze the new exported functions.  
+  </defect>
+
+  <defect number="DEF127379" title="Many (simple) syntax errors in messaging code " revision="006">
+    Removed the class prefix to the operator and constructor functions.   
+  </defect>
+
+  <defect number="DEF113048" title="KERN-EXEC 3 in !MsvServer when pushing object to challenging push server" revision="005">
+    Returning the new error code KErrIrObexPassWordEmpty, if password is provided empty.
+  </defect>
+
+  <defect number="PDEF111172" title="Use of LC function in TRAP in CBaseTestHarness::RunError  " revision="004">
+    Replaced the LC function with L function in TRAP.
+  </defect>
+
+  <defect number="DEF108002" title="Warnings generated with checksource build  " revision="003">
+    Added condition to differentiate the winscw and armv5 def files for case sensitive 
+  </defect>
+
+  <defect number="DEF105400" title="Add missing IM tags to Messaging public header files" revision="002">
+    Added IM tag for all given header files.
+  </defect>
+
+  <deliverystep number="500" name="Messaging file name changes to support GNU compiler for Linux" osproject="Oghma" revision="001">
+    <preq number="1182" title="GNU Make-based build system">
+    GNU Make-based build system
+  </preq>
+    <milestone project="GT0342" number="3.3"/>
+  </deliverystep>
+</relnotes>

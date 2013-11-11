@@ -1,0 +1,22 @@
+SettingsCustomItem[!hasIcon][expandItem]:landscape
+{
+    layout:layout_portrait_without_icon;
+}
+
+SettingsCustomItem[hasIcon][expandItem]:landscape
+{
+    layout:layout_portrait_with_icon;
+}
+
+SettingsCustomItem[expandItem]::dataItem_Label:landscape
+{
+    size-policy-horizontal:preferred;
+}
+
+SettingsCustomItem[expandItem]::DataItem_ContentWidget:landscape
+{
+    top: -var(hb-param-margin-gene-top);
+    left:-var(hb-param-margin-gene-left);
+    right:var(hb-param-margin-gene-right);
+    bottom:var(hb-param-margin-gene-bottom);
+}

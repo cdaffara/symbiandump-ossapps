@@ -1,0 +1,135 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+REM
+REM T_IMCM.IBY
+REM
+
+
+REM data
+data=EPOCROOT##epoc32\wins\C\system\data\Contacts.cdb		System\MsgTest\system\data\Contacts.cdb
+
+data=EPOCROOT##epoc32\wins\C\system\mtm\popc.dat	  		System\MsgTest\system\popc.dat
+data=EPOCROOT##epoc32\wins\C\system\mtm\smtp.dat	  		System\MsgTest\system\smtp.dat
+
+data=EPOCROOT##epoc32\wins\C\msgtest\imcm\T_IMCM02a_Entry_Structure.txt	  		System\MsgTest\MsgTest\imcm\T_IMCM02a_Entry_Structure.txt						
+data=EPOCROOT##epoc32\wins\C\msgtest\imcm\T_IMCM02b1_Entry_Structure.txt	  	System\MsgTest\MsgTest\imcm\T_IMCM02b1_Entry_Structure.txt 
+data=EPOCROOT##epoc32\wins\C\msgtest\imcm\T_IMCM02b2_Entry_Structure.txt	  	System\MsgTest\MsgTest\imcm\T_IMCM02b2_Entry_Structure.txt 
+data=EPOCROOT##epoc32\wins\C\msgtest\imcm\T_IMCM02b_Entry_Structure.txt	  		System\MsgTest\MsgTest\imcm\T_IMCM02b_Entry_Structure.txt  
+data=EPOCROOT##epoc32\wins\C\msgtest\imcm\T_IMCM02c1_Entry_Structure.txt	  	System\MsgTest\MsgTest\imcm\T_IMCM02c1_Entry_Structure.txt 
+data=EPOCROOT##epoc32\wins\C\msgtest\imcm\T_IMCM02c2_Entry_Structure.txt	  	System\MsgTest\MsgTest\imcm\T_IMCM02c2_Entry_Structure.txt 
+data=EPOCROOT##epoc32\wins\C\msgtest\imcm\T_IMCM02c_Entry_Structure.txt	  		System\MsgTest\MsgTest\imcm\T_IMCM02c_Entry_Structure.txt  
+data=EPOCROOT##epoc32\wins\C\msgtest\imcm\T_IMCM02d1_Entry_Structure.txt	  	System\MsgTest\MsgTest\imcm\T_IMCM02d1_Entry_Structure.txt 
+data=EPOCROOT##epoc32\wins\C\msgtest\imcm\T_IMCM02d2_Entry_Structure.txt	  	System\MsgTest\MsgTest\imcm\T_IMCM02d2_Entry_Structure.txt 
+data=EPOCROOT##epoc32\wins\C\msgtest\imcm\T_IMCM02d_Entry_Structure.txt	  		System\MsgTest\MsgTest\imcm\T_IMCM02d_Entry_Structure.txt  
+data=EPOCROOT##epoc32\wins\C\msgtest\imcm\T_IMCM02e1_Entry_Structure.txt	  	System\MsgTest\MsgTest\imcm\T_IMCM02e1_Entry_Structure.txt 
+data=EPOCROOT##epoc32\wins\C\msgtest\imcm\T_IMCM02e2_Entry_Structure.txt	  	System\MsgTest\MsgTest\imcm\T_IMCM02e2_Entry_Structure.txt 
+data=EPOCROOT##epoc32\wins\C\msgtest\imcm\T_IMCM02e_Entry_Structure.txt	  		System\MsgTest\MsgTest\imcm\T_IMCM02e_Entry_Structure.txt  
+data=EPOCROOT##epoc32\wins\C\msgtest\imcm\T_IMCM03_Entry_Structure.txt	  		System\MsgTest\MsgTest\imcm\T_IMCM03_Entry_Structure.txt   
+
+data=EPOCROOT##epoc32\wins\C\mailtest\mainpic.msg	  		System\MsgTest\mailtest\mainpic.msg
+
+data=EPOCROOT##epoc32\wins\C\mailtest\imcm\rfc82201.txt		System\MsgTest\mailtest\imcm\rfc82201.txt
+data=EPOCROOT##epoc32\wins\C\mailtest\imcm\rfc82202.txt		System\MsgTest\mailtest\imcm\rfc82202.txt
+data=EPOCROOT##epoc32\wins\C\mailtest\imcm\rfc82203.txt		System\MsgTest\mailtest\imcm\rfc82203.txt
+data=EPOCROOT##epoc32\wins\C\mailtest\imcm\rfc82204.txt		System\MsgTest\mailtest\imcm\rfc82204.txt
+data=EPOCROOT##epoc32\wins\C\mailtest\imcm\rfc82205.txt		System\MsgTest\mailtest\imcm\rfc82205.txt
+data=EPOCROOT##epoc32\wins\C\mailtest\imcm\rfc82206.txt   	System\MsgTest\mailtest\imcm\rfc82206.txt
+data=EPOCROOT##epoc32\wins\C\mailtest\imcm\rfc82207.txt		System\MsgTest\mailtest\imcm\rfc82207.txt
+data=EPOCROOT##epoc32\wins\C\mailtest\imcm\rfc82208.txt		System\MsgTest\mailtest\imcm\rfc82208.txt
+data=EPOCROOT##epoc32\wins\C\mailtest\imcm\rfc82209.txt   	System\MsgTest\mailtest\imcm\rfc82209.txt
+
+data=EPOCROOT##epoc32\wins\C\mailtest\rfc822\html_with_attachment.txt	System\MsgTest\mailtest\rfc822\html_with_attachment.txt
+data=EPOCROOT##epoc32\wins\C\mailtest\rfc822\mhtml1.eml		System\MsgTest\mailtest\rfc822\mhtml1.eml    
+data=EPOCROOT##epoc32\wins\C\mailtest\rfc822\mhtml2.eml		System\MsgTest\mailtest\rfc822\mhtml2.eml    
+data=EPOCROOT##epoc32\wins\C\mailtest\rfc822\mhtml3.eml		System\MsgTest\mailtest\rfc822\mhtml3.eml    
+data=EPOCROOT##epoc32\wins\C\mailtest\rfc822\mhtml4.eml		System\MsgTest\mailtest\rfc822\mhtml4.eml    
+data=EPOCROOT##epoc32\wins\C\mailtest\rfc822\mhtml5.eml		System\MsgTest\mailtest\rfc822\mhtml5.eml    
+data=EPOCROOT##epoc32\wins\C\mailtest\rfc822\plain_text.txt	System\MsgTest\mailtest\rfc822\plain_text.txt
+data=EPOCROOT##epoc32\wins\C\mailtest\rfc822\rfc82201.jig	System\MsgTest\mailtest\rfc822\rfc82201.jig  
+
+data=EPOCROOT##epoc32\wins\C\mailtest\rfct_imcm06\rfc82201.txt		System\MsgTest\mailtest\rfct_imcm06\rfc82201.txt
+data=EPOCROOT##epoc32\wins\C\mailtest\rfct_imcm06\rfc82202.txt		System\MsgTest\mailtest\rfct_imcm06\rfc82202.txt
+data=EPOCROOT##epoc32\wins\C\mailtest\rfct_imcm06\rfc82203.txt		System\MsgTest\mailtest\rfct_imcm06\rfc82203.txt
+data=EPOCROOT##epoc32\wins\C\mailtest\rfct_imcm06\rfc82204.txt		System\MsgTest\mailtest\rfct_imcm06\rfc82204.txt
+data=EPOCROOT##epoc32\wins\C\mailtest\rfct_imcm06\rfc82205.txt		System\MsgTest\mailtest\rfct_imcm06\rfc82205.txt
+data=EPOCROOT##epoc32\wins\C\mailtest\rfct_imcm06\rfc82206.txt		System\MsgTest\mailtest\rfct_imcm06\rfc82206.txt
+data=EPOCROOT##epoc32\wins\C\mailtest\rfct_imcm06\rfc82207.txt		System\MsgTest\mailtest\rfct_imcm06\rfc82207.txt
+data=EPOCROOT##epoc32\wins\C\mailtest\rfct_imcm06\rfc82208.txt		System\MsgTest\mailtest\rfct_imcm06\rfc82208.txt
+data=EPOCROOT##epoc32\wins\C\mailtest\rfct_imcm06\rfc82209.txt		System\MsgTest\mailtest\rfct_imcm06\rfc82209.txt
+data=EPOCROOT##epoc32\wins\C\mailtest\rfct_imcm06\rfc82210.txt		System\MsgTest\mailtest\rfct_imcm06\rfc82210.txt
+data=EPOCROOT##epoc32\wins\C\mailtest\rfct_imcm06\rfc82211.txt		System\MsgTest\mailtest\rfct_imcm06\rfc82211.txt
+data=EPOCROOT##epoc32\wins\C\mailtest\rfct_imcm06\rfc82212.txt		System\MsgTest\mailtest\rfct_imcm06\rfc82212.txt
+data=EPOCROOT##epoc32\wins\C\mailtest\rfct_imcm06\rfc82213.txt		System\MsgTest\mailtest\rfct_imcm06\rfc82213.txt
+data=EPOCROOT##epoc32\wins\C\mailtest\rfct_imcm06\rfc82214.txt		System\MsgTest\mailtest\rfct_imcm06\rfc82214.txt
+data=EPOCROOT##epoc32\wins\C\mailtest\rfct_imcm06\rfc82215.txt		System\MsgTest\mailtest\rfct_imcm06\rfc82215.txt
+data=EPOCROOT##epoc32\wins\C\mailtest\rfct_imcm06\rfc82216.txt		System\MsgTest\mailtest\rfct_imcm06\rfc82216.txt
+data=EPOCROOT##epoc32\wins\C\mailtest\rfct_imcm06\rfc82217.txt		System\MsgTest\mailtest\rfct_imcm06\rfc82217.txt
+data=EPOCROOT##epoc32\wins\C\mailtest\rfct_imcm06\rfc82218.txt		System\MsgTest\mailtest\rfct_imcm06\rfc82218.txt
+data=EPOCROOT##epoc32\wins\C\mailtest\rfct_imcm06\rfc82219.txt		System\MsgTest\mailtest\rfct_imcm06\rfc82219.txt
+data=EPOCROOT##epoc32\wins\C\mailtest\rfct_imcm06\rfc82220.txt		System\MsgTest\mailtest\rfct_imcm06\rfc82220.txt
+data=EPOCROOT##epoc32\wins\C\mailtest\rfct_imcm06\rfc82221.txt		System\MsgTest\mailtest\rfct_imcm06\rfc82221.txt
+data=EPOCROOT##epoc32\wins\C\mailtest\rfct_imcm06\rfc82222.txt		System\MsgTest\mailtest\rfct_imcm06\rfc82222.txt
+data=EPOCROOT##epoc32\wins\C\mailtest\rfct_imcm06\rfc82223.txt		System\MsgTest\mailtest\rfct_imcm06\rfc82223.txt
+data=EPOCROOT##epoc32\wins\C\mailtest\rfct_imcm06\rfc82224.txt		System\MsgTest\mailtest\rfct_imcm06\rfc82224.txt
+data=EPOCROOT##epoc32\wins\C\mailtest\rfct_imcm06\rfc82225.txt		System\MsgTest\mailtest\rfct_imcm06\rfc82225.txt
+data=EPOCROOT##epoc32\wins\C\mailtest\rfct_imcm06\rfc82226.txt		System\MsgTest\mailtest\rfct_imcm06\rfc82226.txt
+data=EPOCROOT##epoc32\wins\C\mailtest\rfct_imcm06\rfc82227.txt		System\MsgTest\mailtest\rfct_imcm06\rfc82227.txt
+
+data=EPOCROOT##epoc32\wins\C\mailtest\rfct_imcm07\rfc82202.txt		System\MsgTest\mailtest\rfct_imcm07\rfc82202.txt
+data=EPOCROOT##epoc32\wins\C\mailtest\rfct_imcm07\rfc82203.txt		System\MsgTest\mailtest\rfct_imcm07\rfc82203.txt
+data=EPOCROOT##epoc32\wins\C\mailtest\rfct_imcm07\rfc82204.txt		System\MsgTest\mailtest\rfct_imcm07\rfc82204.txt
+data=EPOCROOT##epoc32\wins\C\mailtest\rfct_imcm07\rfc82205.txt		System\MsgTest\mailtest\rfct_imcm07\rfc82205.txt
+data=EPOCROOT##epoc32\wins\C\mailtest\rfct_imcm07\rfc82206.txt		System\MsgTest\mailtest\rfct_imcm07\rfc82206.txt
+
+
+REM harnesses
+file=ABI_DIR\BUILD_DIR\T_MIUT01.exe				System\MsgTest\T_MIUT01.exe
+file=ABI_DIR\BUILD_DIR\T_MIUT02.exe				System\MsgTest\T_MIUT02.exe
+file=ABI_DIR\BUILD_DIR\T_MIUT03.exe				System\MsgTest\T_MIUT03.exe
+file=ABI_DIR\BUILD_DIR\T_MIUT04.exe				System\MsgTest\T_MIUT04.exe
+file=ABI_DIR\BUILD_DIR\T_MIUT05.exe				System\MsgTest\T_MIUT05.exe
+file=ABI_DIR\BUILD_DIR\T_MIUT06.exe				System\MsgTest\T_MIUT06.exe
+file=ABI_DIR\BUILD_DIR\T_MIUT07.exe				System\MsgTest\T_MIUT07.exe
+file=ABI_DIR\BUILD_DIR\T_MIUT09.exe				System\MsgTest\T_MIUT09.exe
+file=ABI_DIR\BUILD_DIR\T_MIUT10.exe				System\MsgTest\T_MIUT10.exe
+file=ABI_DIR\BUILD_DIR\T_IMCM01.exe 			System\MsgTest\T_IMCM01.exe 				
+file=ABI_DIR\BUILD_DIR\T_IMCM02A.exe 	   		System\MsgTest\T_IMCM02A.exe 	
+file=ABI_DIR\BUILD_DIR\T_IMCM02B.exe 	   		System\MsgTest\T_IMCM02B.exe 	
+file=ABI_DIR\BUILD_DIR\T_IMCM02B1.exe	   		System\MsgTest\T_IMCM02B1.exe	
+file=ABI_DIR\BUILD_DIR\T_IMCM02B2.exe 	   		System\MsgTest\T_IMCM02B2.exe 	
+file=ABI_DIR\BUILD_DIR\T_IMCM02C.exe 	   		System\MsgTest\T_IMCM02C.exe 	
+file=ABI_DIR\BUILD_DIR\T_IMCM02C1.exe	   		System\MsgTest\T_IMCM02C1.exe	
+file=ABI_DIR\BUILD_DIR\T_IMCM02C2.exe 	   		System\MsgTest\T_IMCM02C2.exe 	
+file=ABI_DIR\BUILD_DIR\T_IMCM02D.exe 	   		System\MsgTest\T_IMCM02D.exe 	
+file=ABI_DIR\BUILD_DIR\T_IMCM02D1.exe 	   		System\MsgTest\T_IMCM02D1.exe 	
+file=ABI_DIR\BUILD_DIR\T_IMCM02D2.exe 	   		System\MsgTest\T_IMCM02D2.exe 	
+file=ABI_DIR\BUILD_DIR\T_IMCM02E.exe 	   		System\MsgTest\T_IMCM02E.exe 	
+file=ABI_DIR\BUILD_DIR\T_IMCM02E1.exe 	   		System\MsgTest\T_IMCM02E1.exe 	
+file=ABI_DIR\BUILD_DIR\T_IMCM02E2.exe 	   		System\MsgTest\T_IMCM02E2.exe 	
+file=ABI_DIR\BUILD_DIR\T_IMCM02_HEAP.exe   		System\MsgTest\T_IMCM02_HEAP.exe
+file=ABI_DIR\BUILD_DIR\T_IMCM03.exe 	   		System\MsgTest\T_IMCM03.exe 	
+file=ABI_DIR\BUILD_DIR\T_IMCM03_HEAP.exe   		System\MsgTest\T_IMCM03_HEAP.exe
+file=ABI_DIR\BUILD_DIR\T_IMCM05.exe 	   		System\MsgTest\T_IMCM05.exe 	
+file=ABI_DIR\BUILD_DIR\T_IMCM06.exe 	   		System\MsgTest\T_IMCM06.exe 	
+file=ABI_DIR\BUILD_DIR\T_IMCM07.exe 	   		System\MsgTest\T_IMCM07.exe 	
+file=ABI_DIR\BUILD_DIR\T_IMCM07_IMAP.exe 	 	System\MsgTest\T_IMCM07_IMAP.exe 
+file=ABI_DIR\BUILD_DIR\T_POPC.exe	 	   		System\MsgTest\T_POPC.exe	 	
+file=ABI_DIR\BUILD_DIR\T_IMPC.exe   	   		System\MsgTest\T_IMPC.exe   	
+file=ABI_DIR\BUILD_DIR\T_SMTC.exe	 	   		System\MsgTest\T_SMTC.exe	 	
+file=ABI_DIR\BUILD_DIR\T_SMTSND.exe 	   		System\MsgTest\T_SMTSND.exe 	
+file=ABI_DIR\BUILD_DIR\T_IMCM_ASYNCHRONOUS_OPERATION_CANCELLATION_TEST.exe 	   		System\MsgTest\T_IMCM_ASYNCHRONOUS_OPERATION_CANCELLATION_TEST.exe 	

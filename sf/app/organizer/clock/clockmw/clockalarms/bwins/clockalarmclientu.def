@@ -1,0 +1,28 @@
+EXPORTS
+	?deleteSnoozedAlarm@AlarmClient@@QAEHH@Z @ 1 NONAME ; int AlarmClient::deleteSnoozedAlarm(int)
+	?setAlarmRepeatType@AlarmClient@@AAEXW4AlarmRepeatType@@AAW4TAlarmRepeatDefinition@@@Z @ 2 NONAME ; void AlarmClient::setAlarmRepeatType(enum AlarmRepeatType, enum TAlarmRepeatDefinition &)
+	?staticMetaObject@AlarmClient@@2UQMetaObject@@B @ 3 NONAME ; struct QMetaObject const AlarmClient::staticMetaObject
+	?metaObject@AlarmClient@@UBEPBUQMetaObject@@XZ @ 4 NONAME ; struct QMetaObject const * AlarmClient::metaObject(void) const
+	?trUtf8@AlarmClient@@SA?AVQString@@PBD0H@Z @ 5 NONAME ; class QString AlarmClient::trUtf8(char const *, char const *, int)
+	?startListener@AlarmClient@@QAEXXZ @ 6 NONAME ; void AlarmClient::startListener(void)
+	?alarmStateChanged@AlarmClient@@IAEXH@Z @ 7 NONAME ; void AlarmClient::alarmStateChanged(int)
+	?toggleAlarmStatus@AlarmClient@@QAEXHH@Z @ 8 NONAME ; void AlarmClient::toggleAlarmStatus(int, int)
+	?notifyChange@AlarmClient@@QAEXH@Z @ 9 NONAME ; void AlarmClient::notifyChange(int)
+	?tr@AlarmClient@@SA?AVQString@@PBD0@Z @ 10 NONAME ; class QString AlarmClient::tr(char const *, char const *)
+	?setAlarmState@AlarmClient@@AAEXW4AlarmState@@AAW4TAlarmState@@@Z @ 11 NONAME ; void AlarmClient::setAlarmState(enum AlarmState, enum TAlarmState &)
+	?getStaticMetaObject@AlarmClient@@SAABUQMetaObject@@XZ @ 12 NONAME ; struct QMetaObject const & AlarmClient::getStaticMetaObject(void)
+	?trUtf8@AlarmClient@@SA?AVQString@@PBD0@Z @ 13 NONAME ; class QString AlarmClient::trUtf8(char const *, char const *)
+	?qt_metacast@AlarmClient@@UAEPAXPBD@Z @ 14 NONAME ; void * AlarmClient::qt_metacast(char const *)
+	??0AlarmClient@@QAE@PAVQObject@@@Z @ 15 NONAME ; AlarmClient::AlarmClient(class QObject *)
+	??1AlarmClient@@UAE@XZ @ 16 NONAME ; AlarmClient::~AlarmClient(void)
+	?tr@AlarmClient@@SA?AVQString@@PBD0H@Z @ 17 NONAME ; class QString AlarmClient::tr(char const *, char const *, int)
+	?setAlarm@AlarmClient@@QAEXAAUAlarmInfo@@@Z @ 18 NONAME ; void AlarmClient::setAlarm(struct AlarmInfo &)
+	?deleteAlarm@AlarmClient@@QAEXH@Z @ 19 NONAME ; void AlarmClient::deleteAlarm(int)
+	?stopListener@AlarmClient@@QAEXXZ @ 20 NONAME ; void AlarmClient::stopListener(void)
+	??_EAlarmClient@@UAE@I@Z @ 21 NONAME ; AlarmClient::~AlarmClient(unsigned int)
+	?getAlarmList@AlarmClient@@QAEXAAV?$QList@UAlarmInfo@@@@@Z @ 22 NONAME ; void AlarmClient::getAlarmList(class QList<struct AlarmInfo> &)
+	?setAlarmState@AlarmClient@@AAEXW4TAlarmState@@AAW4AlarmState@@@Z @ 23 NONAME ; void AlarmClient::setAlarmState(enum TAlarmState, enum AlarmState &)
+	?setAlarmRepeatType@AlarmClient@@AAEXW4TAlarmRepeatDefinition@@AAW4AlarmRepeatType@@@Z @ 24 NONAME ; void AlarmClient::setAlarmRepeatType(enum TAlarmRepeatDefinition, enum AlarmRepeatType &)
+	?getAlarmInfo@AlarmClient@@QAEHHAAUAlarmInfo@@@Z @ 25 NONAME ; int AlarmClient::getAlarmInfo(int, struct AlarmInfo &)
+	?qt_metacall@AlarmClient@@UAEHW4Call@QMetaObject@@HPAPAX@Z @ 26 NONAME ; int AlarmClient::qt_metacall(enum QMetaObject::Call, int, void * *)
+

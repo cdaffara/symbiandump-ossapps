@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SystemDefinition schema="3.0.0" xmlns:qt="http://www.nokia.com/qt">
+ <package id="photos" name="Photos" version="12.0.0" levels="util support ui app">
+  <collection id="photos_group" name="Photos Group" level="support">
+   <component id="photos_group_build" filter="s60" name="Photos Group Build" introduced="^4">
+    <!--<unit bldFile="group" qt:proFile="group.pro"/> -->
+   </component>
+  </collection>
+  <collection id="photos_loggers" name="Photos Loggers" level="util">
+   <component id="photos_loggerqt" filter="s60" name="Photos Logger Qt" introduced="^4">
+    <!--<unit bldFile="loggers/loggerqt" qt:proFile="loggerqt.pro"/> -->
+   </component>
+  </collection>
+  <collection id="photos_commonutilities" name="Photos Common Utilities" level="util">
+   <component id="photos_externalutility" filter="s60" name="Photos External Utility" introduced="^4">
+    <!--<unit bldFile="commonutilities/externalutility" qt:proFile="externalutility.pro"/> -->
+   </component>
+   <component id="imagedecoderwrapper" filter="s60" name="Image Decoder Wrapper" introduced="^4">
+    <!--<unit bldFile="commonutilities/imagedecoderwrapper" qt:proFile="imagedecoderwrapper.pro"/> -->
+   </component>
+  </collection>
+  <collection id="photos_ui" name="Photos UI" level="ui">
+	<!-- need to move exports from ui.pro into separate .pro or bld.inf -->
+   <component id="detailscustomwidget " filter="s60" name="Details Custom Widget" introduced="^4">
+    <!--<unit bldFile="ui/detailscustomwidget " qt:proFile="detailscustomwidget.pro"/> -->
+   </component>
+   <component id="photos_uiengine" filter="s60" name="Photos UI Engine" introduced="^4">
+    <!--<unit bldFile="ui/uiengine" qt:proFile="uiengine.pro"/> -->
+   </component>
+   <component id="photos_commandhandlers" filter="s60" name="Photos Command Handlers" introduced="^4">
+    <!--<unit bldFile="ui/commandhandlers" qt:proFile="commandhandlers.pro"/> -->
+   </component>
+   <component id="photos_viewutilities" filter="s60" name="Photos View Utilities" introduced="^4">
+    <!--<unit bldFile="ui/viewutilities" qt:proFile="commandhandlers.pro"/> -->
+   </component>
+   <component id="photos_widgets" filter="s60" name="Photos Widgets" introduced="^4">
+    <!--<unit bldFile="ui/widgets" qt:proFile="widgets.pro"/> -->
+   </component>
+   <component id="photos_views" filter="s60" name="Photos Views" introduced="^4">
+    <!--<unit bldFile="ui/views" qt:proFile="views.pro"/> -->
+   </component>
+   <component id="photos_viewmanagement" filter="s60" name="Photos View Management" introduced="^4">
+    <!--<unit bldFile="ui/viewmanagement" qt:proFile="viewmanagement.pro"/> -->
+   </component>
+  </collection>
+  <collection id="photos_main" name="Photos Main" level="support">
+   <component id="photos_main_build" filter="s60" name="Photos Main Build" introduced="^4">
+    <!--<unit bldFile="main" qt:proFile="main.pro"/> -->
+   </component>
+  </collection>
+  <collection id="gallery" name="Gallery" level="ui">
+   <component id="gallery_build" filter="s60" name="Gallery Build" introduced="^4">
+    <!--<unit bldFile="gallery" qt:proFile="gallery.pro"/> -->
+   </component>
+  </collection>
+  <collection id="imageviewerapp" name="Image Viewer App" level="support">
+   <component id="imageviewerapp_build" filter="s60" name="Image Viewer App Build" introduced="^4">
+    <!--<unit bldFile="imageviewerapp" qt:proFile="imageviewerapp.pro"/> -->
+   </component>
+  </collection>
+  <collection id="photos_info" name="Photos Info" level="support">
+   <component id="photos_build" filter="s60" name="Photos Build" introduced="^4">
+    <!--  split this up into the above components  -->
+    <unit bldFile="." qt:proFile="photos.pro"/>
+   </component>
+  </collection>
+ </package>
+</SystemDefinition>

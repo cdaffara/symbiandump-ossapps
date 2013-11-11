@@ -1,0 +1,33 @@
+/*
+* Copyright (c) 2005-2008 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Image description file for project PCCONNClientServer
+*
+*/
+
+
+#ifndef __SCONPCCONNCLIENTSERVER_IBY__
+#define __SCONPCCONNCLIENTSERVER_IBY__
+//file content
+
+file=ABI_DIR\BUILD_DIR\sconconmlhandler.dll		SHARED_LIB_DIR\sconconmlhandler.dll
+
+file=ABI_DIR\BUILD_DIR\sconpcconnserver.exe		PROGRAMS_DIR\sconpcconnserver.exe
+file=ABI_DIR\BUILD_DIR\sconpcconnclient.dll		SHARED_LIB_DIR\sconpcconnclient.dll
+
+// stub files
+data=ZSYSTEM\install\secon_stub.sis             system\install\secon_stub.sis
+data=ZSYSTEM\install\sconpcconnplugin_stub.sis  system\install\sconpcconnplugin_stub.sis
+data=ZSYSTEM\install\sconftpplugin_stub.sis     system\install\sconftpplugin_stub.sis
+
+#endif

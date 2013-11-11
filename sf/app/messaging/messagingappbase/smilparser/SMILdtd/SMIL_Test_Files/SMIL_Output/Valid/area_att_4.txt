@@ -1,0 +1,45 @@
+<?XML version="1.0" ?>
+<!DOCTYPE SMIL PUBLIC "-//W3C//DTD SMIL 2.0 Basic//EN"
+"http://www.w3.org/TR/REC-smil/2000/SMIL20Basic.dtd">
+
+<!-- Focus of this test: area element, attribute variations -->
+<!-- Focus of this test: area element, attribute variations -->
+<!-- href SPECIFIED for most areas, IMPLIED for one -->
+<!-- nohref SPECIFIED="nohref" for one area, IMPLIED for the rest -->
+<!-- target SPECIFIED -->
+<!-- dur, begin, end, id IMPLIED for some areas -->
+<!-- repeatCount, repeatDur, min, max, accesskey, tabindex, alt, class, title, xml:lang IMPLIED -->
+<!-- coords SPECIFIED in the Spatial areas, & IMPLIED in the Temporal ones -->
+<!-- sourceLevel, destinationLevel DEFAULT='100&amp;#37;' -->
+<!-- fill SPECIFIED="transition" -->
+<!-- skip-content DEFAULT='true' -->
+<!-- sourcePlaystate IMPLIED -->
+<!-- destinationPlaystate DEFAULT='play' -->
+<!-- show DEFAULT='replace' -->
+<!-- external DEFAULT='false' -->
+<!-- actuate DEFAULT='onRequest' -->
+<!-- shape SPECIFIED="default" in the Spatial areas -->
+<smil xmlns="http://www.w3.org/TR/REC-smil/2000/SMIL20/Basic">
+   <head>
+      <!-- This is a "landscape" screen -->
+      <layout>
+         <root-layout width="352" height="144"/>
+         <region id="source" width="176" height="144" left="0" top="0"/>
+         <region id="destination" width="176" height="144" left="176" top="0"/>
+      </layout>
+   </head>
+   <body>
+      <seq>
+         <!-- Temporal areas -->
+         <video src="video" region="source" title="Interview">
+            <area dur="20s" begin="0s" end="20s" fill="transition" target="destination" href="http://www.example.org/AudioVideo" id="firstQ"/>
+            <area dur="50s" begin="prev.end" end="70s" target="destination" href="http://www.example.org/Style" id="firstA"/>
+         </video>
+         <!-- Spatial areas -->
+         <video src="video" region="source" title="Interview">
+            <area shape="default" coords="5,5,50,50" target="destination" href="http://www.example.org/AudioVideo"/>
+            <area shape="default" coords="60,5,100,50" target="destination" nohref="nohref"/>
+         </video>
+      </seq>
+   </body>
+</smil>

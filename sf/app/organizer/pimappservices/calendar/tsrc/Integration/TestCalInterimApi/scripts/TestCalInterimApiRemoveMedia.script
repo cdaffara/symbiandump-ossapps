@@ -1,0 +1,388 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//! @file
+//! @SYMTestSuiteName	TestCalInterimApiSuite 
+//! @SYMScriptTestEnvironment
+// 
+PRINT Run all TestCalInterimApi Suite Removeable Media Tests
+
+LOAD_SUITE TestCalInterimApiSuite
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-0001
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-0001
+//! @SYMTestCaseDesc 		Create entries in the Removable drive
+//! @SYMREQ 			REQ5765 & REQ5766
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Create entries in a calendar file placed on Removable media.
+//!				In general there should not be any panic while performing calendar operations in the Removable Media
+//!                             Nor invalid errors must not be thrown 
+//!	
+//! @SYMTestExpectedResults 	It should be possible to create entries in a calendar file placed on Removable media.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiConcurrentFileAccess	\CITCalInterimApi\TestCalInterimApiRemoveMedia.ini  AddEntries_R1
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-0001
+
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-0002
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-0002
+//! @SYMTestCaseDesc 		update entries in the Removable drive
+//! @SYMREQ 			REQ5765 & REQ5766
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Update entries in a calendar file placed on Removable media.
+//!	
+//! @SYMTestExpectedResults 	It should be possible to update entries in a calendar file placed on Removable media.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiConcurrentFileAccess	\CITCalInterimApi\TestCalInterimApiRemoveMedia.ini  UpdateEntries_R1
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-0002
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-0003
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-0003
+//! @SYMTestCaseDesc 		update entries in the Removable drive
+//! @SYMREQ 			REQ5765 & REQ5766
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Delete entries in a calendar file placed on Removable media.
+//! 				While deleting, specify calendar entries UID list
+//!	
+//! @SYMTestExpectedResults 	It should be possible to delete entries in a calendar file placed on Removable media as per the above mentioned criteria.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiConcurrentFileAccess	\CITCalInterimApi\TestCalInterimApiRemoveMedia.ini  DeleteEntries_R1
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-0003
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-0004
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-0004
+//! @SYMTestCaseDesc 		delete entries in the Removable drive
+//! @SYMREQ 			REQ5765 & REQ5766
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Delete entries in a calendar file placed on Removable media.
+				While deleting, specify reference to calendar entries.
+//!	
+//! @SYMTestExpectedResults 	It should be possible to delete entries in a calendar file placed on Removable media as per the above mentioned criteria.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiConcurrentFileAccess	\CITCalInterimApi\TestCalInterimApiRemoveMedia.ini  DeleteEntries_R2
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-0004
+
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-0005
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-0005
+//! @SYMTestCaseDesc 		delete entries in the Removable drive
+//! @SYMREQ 			REQ5765 & REQ5766
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Delete entries in a calendar file placed on Removable media.
+				While deleting entries, specifying a wide Time Range and entry type as all.
+//!	
+//! @SYMTestExpectedResults 	It should be possible to delete entries in a calendar file placed on Removable media as per the above mentioned criteria.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiConcurrentFileAccess	\CITCalInterimApi\TestCalInterimApiRemoveMedia.ini  DeleteEntries_R3
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-0005
+
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-0006
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-0006
+//! @SYMTestCaseDesc 		delete entries in the Removable drive
+//! @SYMREQ 			REQ5765 & REQ5766
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Delete instances in a calendar file placed on Removable media.
+				While deleting, specifying a valid calendar instance and recurrence range as all.
+//!	
+//! @SYMTestExpectedResults 	It should be possible to delete instances in a calendar file placed on Removable media as per the above mentioned criteria.
+//! @SYMTestType 		CIT
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiConcurrentFileAccess	\CITCalInterimApi\TestCalInterimApiRemoveMedia.ini  DeleteEntries_R4
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-0006
+
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-0007
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-0007
+//! @SYMTestCaseDesc 		update entries in the Removable drive
+//! @SYMREQ 			REQ5765 & REQ5766
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Delete entries in a calendar file placed on Removable media.
+				While deleting, specify array of local UIDs of Calendar entries 
+//!	
+//! @SYMTestExpectedResults 	It should be possible to delete entries in a calendar file placed on Removable media as per the above mentioned criteria.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiConcurrentFileAccess	\CITCalInterimApi\TestCalInterimApiRemoveMedia.ini  DeleteEntries_R5
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-0007
+
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-0008
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-0008
+//! @SYMTestCaseDesc 		Find calendar Instances in a calendar
+//! @SYMREQ 			REQ5765 & REQ5766
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Find calendar instances in a calendar file placed on the Removable drive.
+//!	
+//! @SYMTestExpectedResults 	It should be possible to find calendar instances in a calendar file placed on Removable drive.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiConcurrentFileAccess	\CITCalInterimApi\TestCalInterimApiRemoveMedia.ini  FindInstances_R1
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-0008
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-0009
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-0009
+//! @SYMTestCaseDesc 		Find calendar Instances in a calendar
+//! @SYMREQ 			REQ5765 & REQ5766
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Fetch entries in a calendar file placed on the Removable drive
+//!	
+//! @SYMTestExpectedResults 	It should be possible to fetch entries in a calendar file placed on Removable media.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiConcurrentFileAccess	\CITCalInterimApi\TestCalInterimApiRemoveMedia.ini  FetchEntries_R1
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-0009
+
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-0010
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-0010
+//! @SYMTestCaseDesc 		Find calendar Instances in a calendar
+//! @SYMREQ 			REQ5765 & REQ5766
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Add Category details to entries in  calendar file placed on the Removable drive
+//!	
+//! @SYMTestExpectedResults 	It should be possible to add category information to entries in a calendar file placed on  Removable drive.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiConcurrentFileAccess	\CITCalInterimApi\TestCalInterimApiRemoveMedia.ini  AddCategories_R1
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-0010
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-0011
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-0011
+//! @SYMTestCaseDesc 		Find calendar Instances in a calendar
+//! @SYMREQ 			REQ5765 & REQ5766
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Remove Category details from entries in a calendar file placed on the Removable drive
+//!	
+//! @SYMTestExpectedResults 	It should be possible to delete category information of entries in a calendar file placed on the Removable drive.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiConcurrentFileAccess	\CITCalInterimApi\TestCalInterimApiRemoveMedia.ini  RemoveCategories_R1
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-0011
+
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-00012
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-00012
+//! @SYMTestCaseDesc 		Create entries in the Removable drive and remove the drive during the operation
+//! @SYMREQ 			REQ5765 & REQ5766
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Create entries in a calendar file placed on Removable media and remove the drive during the operation.
+//!				Restore the media and repeat the operation
+//!	
+//! @SYMTestExpectedResults 	On removal of media, KErrNotReady is returned. Further on replacing the media the operation can be successfully carried out.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiRemoveMedia	\CITCalInterimApi\TestCalInterimApiRemoveMedia.ini  AddEntries_R1_1
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-00012
+
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-00013
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-00013
+//! @SYMTestCaseDesc 		update entries in the Removable drive
+//! @SYMREQ 			REQ5765 & REQ5766
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Update entries in a calendar file placed on Removable media and remove the drive during the operation.
+//!				Restore the media and repeat the operation
+//! @SYMTestExpectedResults 	On removal of media, KErrNotReady is returned. Further on replacing the media the operation can be successfully carried out.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiRemoveMedia	\CITCalInterimApi\TestCalInterimApiRemoveMedia.ini  UpdateEntries_R1_1
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-00013
+
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-00014
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-00014
+//! @SYMTestCaseDesc 		delete entries in the Removable drive
+//! @SYMREQ 			REQ5765 & REQ5766
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Delete entries in a calendar file placed on Removable media and remove the drive during the operation.
+//!				Restore the media and repeat the operation
+				While deleting, specify array of UIDs of Calendar entries 
+//!	
+//! @SYMTestExpectedResults 	On removal of media, KErrNotReady is returned. Further on replacing the media the operation can be successfully carried out.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiRemoveMedia	\CITCalInterimApi\TestCalInterimApiRemoveMedia.ini  DeleteEntries_R1_1
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-00014
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-00015
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-00015
+//! @SYMTestCaseDesc 		delete entries in the Removable drive
+//! @SYMREQ 			REQ5765 & REQ5766
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Delete entries in a calendar file placed on Removable media and remove the drive during the operation.
+//!				Restore the media and repeat the operation
+				While deleting, specifying reference to calendar entries.
+//!	
+//! @SYMTestExpectedResults 	On removal of media, KErrNotReady is returned. Further on replacing the media the operation can be successfully carried out.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiRemoveMedia	\CITCalInterimApi\TestCalInterimApiRemoveMedia.ini  DeleteEntries_R2_1
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-00015
+
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-00016
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-00016
+//! @SYMTestCaseDesc 		delete entries in the Removable drive
+//! @SYMREQ 			REQ5765 & REQ5766
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Delete entries in a calendar file placed on Removable media and remove the drive during the operation.
+//!				Restore the media and repeat the operation
+				While deleting, specifying a wide Time Range.
+//!	
+//! @SYMTestExpectedResults 	On removal of media, KErrNotReady is returned. Further on replacing the media the operation can be successfully carried out.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiRemoveMedia	\CITCalInterimApi\TestCalInterimApiRemoveMedia.ini  DeleteEntries_R3_1
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-00016
+
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-00017
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-00017
+//! @SYMTestCaseDesc 		delete entries in the Removable drive
+//! @SYMREQ 			REQ5765 & REQ5766
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Delete calendar instances in a calendar file placed on Removable media and remove the drive during the operation.
+//!				Restore the media and repeat the operation
+				While deleting, specifying recurrance range as EThisAndAll.
+//!	
+//! @SYMTestExpectedResults 	On removal of media, KErrNotReady is returned. Further on replacing the media the operation can be successfully carried out.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiRemoveMedia	\CITCalInterimApi\TestCalInterimApiRemoveMedia.ini  DeleteEntries_R4_1
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-00017
+
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-00018
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-00018
+//! @SYMTestCaseDesc 		delete entries in the Removable drive
+//! @SYMREQ 			REQ5765 & REQ5766
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Delete entries in a calendar file placed on Removable media and remove the drive during the operation.
+//!				Restore the media and repeat the operation
+				While deleting, specify an array of Local Uids .
+//!	
+//! @SYMTestExpectedResults 	On removal of media, KErrNotReady is returned. Further on replacing the media the operation can be successfully carried out.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiRemoveMedia	\CITCalInterimApi\TestCalInterimApiRemoveMedia.ini  DeleteEntries_R5_1
+END_TESTCASE	RemovableMedia_4.2.7
+
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-00019
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-00019
+//! @SYMTestCaseDesc 		Find calendar Instances in a calendar (RemovableMedia_4.2.8)
+//! @SYMREQ 			REQ5765 & REQ5766
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Find calendar Instances in a calendar file placed on the Removable drive and remove the drive during the operation.
+//!				Restore the media and repeat the operation
+//!	
+//! @SYMTestExpectedResults 	On removal of media, KErrNotReady is returned. Further on replacing the media the operation can be successfully carried out.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiRemoveMedia	\CITCalInterimApi\TestCalInterimApiRemoveMedia.ini  FindInstances_R1_1
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-00019
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-0020
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-0020
+//! @SYMTestCaseDesc 		Find calendar Instances in a calendar (RemovableMedia_4.2.9)
+//! @SYMREQ 			REQ5765 & REQ5766
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Fetch entries in a calendar file placed on the Removable drive and remove the drive during the operation.
+//!				Restore the media and repeat the operation
+//!	
+//! @SYMTestExpectedResults 	On removal of media, KErrNotReady is returned. Further on replacing the media the operation can be successfully carried out.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiRemoveMedia	\CITCalInterimApi\TestCalInterimApiRemoveMedia.ini  FetchEntries_R1_1
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-0020
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-0021
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-0021
+//! @SYMTestCaseDesc 		Find calendar Instances in a calendar
+//! @SYMREQ 			REQ5765 & REQ5766
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Add Category details in the entries in a calendar file placed on the Removable drive and remove the drive during the operation.
+//!				Restore the media and repeat the operation
+//!	
+//! @SYMTestExpectedResults 	On removal of media, KErrNotReady is returned. Further on replacing the media the operation can be successfully carried out.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiRemoveMedia	\CITCalInterimApi\TestCalInterimApiRemoveMedia.ini  AddCategories_R1_1
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-0021
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-0022
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-0022
+//! @SYMTestCaseDesc 		Find calendar Instances in a calendar
+//! @SYMREQ 			REQ5765 & REQ5766
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		Remove Category details in the entries in a calendar file placed on the Removable drive 
+//!				and remove the drive during the operation. Restore the media and repeat the operation.
+//!	
+//! @SYMTestExpectedResults 	On removal of media, KErrNotReady is returned. Further on replacing the media the operation can be successfully carried out.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 300 TestCalInterimApiSuite TestCalInterimApiRemoveMedia	\CITCalInterimApi\TestCalInterimApiRemoveMedia.ini  RemoveCategories_R1_1
+END_TESTCASE	PIM-APPENG-CALINTERIMAPI-PREQ1090-RemovableMedia-0022
+
+PRINT Completed TestCalInterimApi Suite Remove Media Tests

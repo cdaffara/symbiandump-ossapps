@@ -1,0 +1,23 @@
+AnalogClockWidget {
+	layout: layout_1;
+}
+
+AnalogClockWidget::clock_background { 
+  size-policy: expanding expanding;
+  zvalue: 0;
+}
+
+AnalogClockWidget::clock_minute_hand {
+  size-policy:expanding expanding;
+  zvalue: 2;
+}
+
+AnalogClockWidget::clock_hour_hand {
+  size-policy:expanding expanding;
+  zvalue: 3;
+}
+
+AnalogClockWidget::clock_second_hand {
+  size-policy:expanding expanding;
+  zvalue: 1;
+}

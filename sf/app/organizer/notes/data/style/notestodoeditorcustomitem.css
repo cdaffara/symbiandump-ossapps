@@ -1,0 +1,22 @@
+NotesTodoEditorCustomItem[!hasIcon][alarmdateItem]:landscape
+{
+    layout:layout_portrait_without_icon;
+}
+
+NotesTodoEditorCustomItem[hasIcon][alarmdateItem]:landscape
+{
+    layout:layout_portrait_with_icon;
+}
+
+NotesTodoEditorCustomItem[alarmdateItem]::dataItem_Label:landscape
+{
+    size-policy-horizontal:preferred;
+}
+
+NotesTodoEditorCustomItem[alarmdateItem]::dataItem_ContentWidget:landscape
+{
+    top: -var(hb-param-margin-gene-top);
+    left:-var(hb-param-margin-gene-left);
+    right:var(hb-param-margin-gene-right);
+    bottom:var(hb-param-margin-gene-bottom);
+}

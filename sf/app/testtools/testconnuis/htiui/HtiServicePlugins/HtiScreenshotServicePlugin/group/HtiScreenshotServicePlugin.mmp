@@ -1,0 +1,64 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  HTI service plugin for taking screenshot.
+*
+*/
+
+
+#include <platform_paths.hrh>
+#include "../../../symbian_version.hrh"
+
+TARGET          HtiScreenshotServicePlugin.dll
+TARGETTYPE      PLUGIN
+
+// ECom Dll recognition UID followed by the unique UID for this dll
+UID             0x10009D8D 0x1020DEC2
+
+VENDORID        0x101FB657
+
+CAPABILITY      ALL -TCB
+
+SOURCEPATH      ../src
+SOURCE          proxy.cpp
+SOURCE          HtiScreenshotServicePlugin.cpp
+SOURCE          HtiTextRcg.cpp
+
+USERINCLUDE     ../inc
+APP_LAYER_SYSTEMINCLUDE
+
+START RESOURCE  ../data/1020DEC2.rss
+TARGET          HtiScreenshotServicePlugin.rsc
+END
+
+#if ( SYMBIAN_VERSION_SUPPORT < SYMBIAN_4 )
+LIBRARY         alfclient.lib
+#endif
+LIBRARY         avkon.lib
+LIBRARY         bitgdi.lib
+LIBRARY         ecom.lib
+LIBRARY         efsrv.lib
+LIBRARY         egul.lib
+LIBRARY         euser.lib
+LIBRARY         ezlib.lib
+LIBRARY         fbscli.lib
+LIBRARY         gdi.lib
+LIBRARY         hal.lib
+LIBRARY         imageconversion.lib
+LIBRARY         ws32.lib
+LIBRARY         flogger.lib
+LIBRARY         apgrfx.lib
+
+SMPSAFE
+
+// End of file

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="0.9">
+    <object name="newEventAction" type="HbAction">
+        <string locid="txt_calendar_opt_new_event" name="text"/>
+    </object>
+	<object name="todayAction" type="HbAction">
+        <string locid="txt_calendar_opt_go_to_today" name="text"/>
+    </object>
+    <object name="goToDateAction" type="HbAction">
+        <string locid="txt_calendar_opt_go_to_date" name="text"/>
+    </object>
+	<object name="switchToDayViewAction" type="HbAction">
+        <string locid="txt_calendar_opt_switch_to_day_view" name="text"/>
+    </object>
+    <object name="settingsAction" type="HbAction">
+        <string locid="txt_calendar_opt_settings" name="text"/>
+    </object>    
+    <widget name="agendaView" type="HbView">
+        <widget name="agendaViewWidget" role="HbView:widget" type="HbWidget">
+			<widget name="headingRegionalPluginWidget" type="HbWidget">
+	            <widget name="headingWidget" type="HbGroupBox">
+	                <string name="heading" value=""/>
+	                <real name="z" value="1"/>
+	                <sizehint type="PREFERRED" width="53.43284un"/>
+	                <bool name="collapsable" value="FALSE"/>
+	            </widget>
+				<layout orientation="Vertical" spacing="0un" type="linear">
+					<contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+					<linearitem itemname="headingWidget"/>
+				</layout>
+			</widget>
+            <widget name="noEventsLabel" type="HbLabel">
+                <real name="z" value="2"/>
+                <string locid="txt_calendar_empty_list_no_entries" name="plainText"/>
+                <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+                <enums name="textWrapping" value="TextWordWrap"/>
+                <fontspec name="fontSpec" role="Undefined" textheight="var(hb-param-text-height-primary)"/>
+            </widget>
+			<widget name="eventsList" type="HbListView">
+                <widget name="listItemPrototype" role="HbListView:prototype" type="HbListViewItem"/>
+                <real name="z" value="2"/>
+                <sizehint height="47.7612un" type="PREFERRED" width="35.8209un"/>
+            </widget>
+            <layout type="anchor">
+                <anchoritem dst="headingRegionalPluginWidget" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="headingRegionalPluginWidget" dstEdge="TOP" spacing="0un" src="" srcEdge="TOP"/>
+                <anchoritem dst="headingRegionalPluginWidget" dstEdge="RIGHT" spacing="-0un" src="" srcEdge="RIGHT"/>
+            </layout>
+        </widget>
+        <widget name="viewMenu" role="HbView:menu" type="HbMenu"/>
+		<widget name="viewMenu" role="HbView:menu" type="HbMenu">
+	            <ref object="newEventAction" role="HbMenu:addAction"/>
+	            <ref object="todayAction" role="HbMenu:addAction"/>
+	            <ref object="goToDateAction" role="HbMenu:addAction"/>
+				<ref object="switchToDayViewAction" role="HbMenu:addAction"/>
+	            <ref object="settingsAction" role="HbMenu:addAction"/>
+	        </widget>
+        <string locid="txt_calendar_title_calendar" name="title"/>
+    </widget>
+    <section name="emptyList">
+        <widget name="agendaViewWidget" role="HbView:widget" type="HbWidget">
+            <layout type="anchor">
+                <anchoritem dst="headingRegionalPluginWidget" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="headingRegionalPluginWidget" dstEdge="TOP" spacing="0un" src="" srcEdge="TOP"/>
+                <anchoritem dst="headingRegionalPluginWidget" dstEdge="RIGHT" spacing="-0un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="noEventsLabel" dstEdge="LEFT" spacing="var(hb-param-margin-gene-left)" src="" srcEdge="LEFT"/>
+                <anchoritem dst="noEventsLabel" dstEdge="RIGHT" spacing="-var(hb-param-margin-gene-left)" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="noEventsLabel" dstEdge="TOP" spacing="38un" src="" srcEdge="TOP"/>
+            </layout>
+        </widget>
+    </section>
+    <section name="nonEmptyList">
+        <widget name="agendaViewWidget" role="HbView:widget" type="HbWidget">
+            <layout type="anchor">
+                <anchoritem dst="headingRegionalPluginWidget" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="headingRegionalPluginWidget" dstEdge="TOP" spacing="0un" src="" srcEdge="TOP"/>
+                <anchoritem dst="headingRegionalPluginWidget" dstEdge="RIGHT" spacing="-0un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="eventsList" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="eventsList" dstEdge="TOP" spacing="0un" src="headingRegionalPluginWidget" srcEdge="BOTTOM"/>
+                <anchoritem dst="eventsList" dstEdge="RIGHT" spacing="-0un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="eventsList" dstEdge="BOTTOM" spacing="-0un" src="" srcEdge="BOTTOM"/>
+            </layout>
+        </widget>
+    </section>
+    <section name="emptyLandscape">
+        <widget name="agendaViewWidget" role="HbView:widget" type="HbWidget">
+            <layout type="anchor">
+                <anchoritem dst="headingRegionalPluginWidget" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="headingRegionalPluginWidget" dstEdge="TOP" spacing="0un" src="" srcEdge="TOP"/>
+                <anchoritem dst="headingRegionalPluginWidget" dstEdge="RIGHT" spacing="-0un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="noEventsLabel" dstEdge="LEFT" spacing="var(hb-param-margin-gene-left)" src="" srcEdge="LEFT"/>
+                <anchoritem dst="noEventsLabel" dstEdge="RIGHT" spacing="-var(hb-param-margin-gene-left)" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="noEventsLabel" dstEdge="TOP" spacing="21.8806un" src="" srcEdge="TOP"/>
+            </layout>
+        </widget>
+    </section>
+    <metadata activeUIState="emptyListState" display="QHD portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+        <uistate name="emptyListState" sections="#common emptyList"/>
+        <uistate name="nonEmptyListState" sections="#common nonEmptyList"/>
+        <uistate name="emptyListLandscapeState" sections="#common emptyList emptyLandscape"/>
+        <dummydata objectName="eventsList" section="nonEmptyList" value="0"/>
+    </metadata>
+</hbdocument>

@@ -1,0 +1,72 @@
+/*
+* Copyright (c) 2006-2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   Build information file for project AlmAlert.
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+
+// iby files export
+../rom/AlmAlert.iby CORE_APP_LAYER_IBY_EXPORT_PATH(AlmAlert.iby)
+../rom/AlmAlertResources.iby LANGUAGE_APP_LAYER_IBY_EXPORT_PATH(AlmAlertResources.iby)
+
+//loc file export
+../loc/AlmAlert.loc				APP_LAYER_LOC_EXPORT_PATH(AlmAlert.loc)
+
+../inc/alarmsourcecontextdef.h  |../../inc/alarmsourcecontextdef.h
+
+// context framework scripts
+alarmuisnooze.rul           /epoc32/release/winscw/udeb/z/private/10282bc4/rules/alarmuisnooze.rul
+alarmuisnooze.rul           /epoc32/release/winscw/urel/z/private/10282bc4/rules/alarmuisnooze.rul
+alarmuisnooze.rul           /epoc32/data/z/private/10282bc4/rules/alarmuisnooze.rul
+
+
+// alarm tones
+// wins
+../datasrc/alarm.aac        /epoc32/release/wins/udeb/z/data/sounds/digital/alarm.aac
+../datasrc/clock.aac        /epoc32/release/wins/udeb/z/data/sounds/digital/clock.aac
+../datasrc/alarm.aac        /epoc32/release/wins/urel/z/data/sounds/digital/alarm.aac
+../datasrc/clock.aac        /epoc32/release/wins/urel/z/data/sounds/digital/clock.aac
+// winscw
+../datasrc/alarm.aac        /epoc32/release/winscw/udeb/z/data/sounds/digital/alarm.aac
+../datasrc/clock.aac        /epoc32/release/winscw/udeb/z/data/sounds/digital/clock.aac
+../datasrc/alarm.aac        /epoc32/release/winscw/urel/z/data/sounds/digital/alarm.aac
+../datasrc/clock.aac        /epoc32/release/winscw/urel/z/data/sounds/digital/clock.aac
+// thumb
+../datasrc/alarm.aac        /epoc32/release/thumb/udeb/z/data/sounds/digital/alarm.aac
+../datasrc/clock.aac        /epoc32/release/thumb/udeb/z/data/sounds/digital/clock.aac
+../datasrc/alarm.aac        /epoc32/release/thumb/urel/z/data/sounds/digital/alarm.aac
+../datasrc/clock.aac        /epoc32/release/thumb/urel/z/data/sounds/digital/clock.aac
+// armv5
+../datasrc/alarm.aac        /epoc32/data/z/data/sounds/digital/alarm.aac
+../datasrc/clock.aac        /epoc32/data/z/data/sounds/digital/clock.aac
+
+//stubsis is added to provide IAD
+../stubsis/alarmui_stub.sis   										/epoc32/data/z/system/install/alarmui_stub.sis
+
+PRJ_MMPFILES
+almalert.mmp
+aknalarmservice.mmp
+
+PRJ_TESTMMPFILES
+// none
+
+
+//  End of File

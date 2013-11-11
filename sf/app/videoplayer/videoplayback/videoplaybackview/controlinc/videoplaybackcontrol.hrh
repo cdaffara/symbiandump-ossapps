@@ -1,0 +1,105 @@
+/*
+* Copyright (c) 2008 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  header file of VideoPlaybackControl
+*
+*/
+
+// Version : %version:  9 %
+
+
+#ifndef VIDEOPLAYBACKCONTROL_HRH_
+#define VIDEOPLAYBACKCONTROL_HRH_
+
+// DATA TYPES
+
+enum TVideoPlaybackControlProperties
+{
+    EShownWhenInitializing = 0x1,
+    EShownWhenBuffering = 0x2,
+    EShownWhenPlaying =  0x4,
+    EShownWhenPaused = 0x8,
+    EShownWhenSeeking = 0x10,
+    EAllProperties = 0xffffffff
+};
+
+enum TVideoPlaybackControls
+{
+    EStatusPane,
+    EControlBar,
+
+    // Only for streaming case
+    // Can handle from NotInitilized state
+    //
+    EBufferingAnimation,
+
+    //
+    // For details view and audio only view
+    //
+    EFileDetailsWidget,
+
+    //
+    // For details view
+    //
+    EDetailsViewPlaybackWindow,
+
+    //
+    //  Bitmaps
+    //
+    EIndicatorBitmap,
+    ERealLogoBitmap,
+
+    EDownloadPausedIcon,
+
+    EControlsCount  // has to be last
+};
+
+/** Command ID's. */
+enum TVideoPlaybackControlCommandIds
+{
+    EControlCmdPluginInitialized,
+    EControlCmdTvOutConnected,
+    EControlCmdTvOutDisconnected,
+    EControlCmdSetAspectRatio,
+    EControlCmdSetVolume,
+    EControlCmdSetDuration,
+    EControlCmdSetPosition,
+    EControlCmdStateChanged,
+    EControlCmdDownloadUpdated,
+    EControlCmdSetDownloadSize,
+    EControlCmdDownloadComplete,
+    EControlCmdSetDownloadPaused,
+    EControlCmdClearDownloadPaused,
+    EControlCmdHandleBackgroundEvent,
+    EControlCmdHandleForegroundEvent,
+    EControlCmdHandleErrors,
+    EControlCmdShowVolumeControls,
+    EControlCmdSoftKeyPressed,
+    EControlCmdFullScreenViewOpened,
+    EControlCmdDetailsViewOpened,
+    EControlCmdAudionOnlyViewOpened,
+    EControlCmdRemoveRNLogo,
+    EControlCmdSurfaceAttached,
+    EControlCmdSurfaceDetached
+};
+
+enum TVideoUserInputType
+{
+    EVideoKeyboard,
+    EVideoTouch,
+    EVideoMediaKeys,
+    EVideoSpecialHWKeys,
+    EVideoNone
+};
+
+#endif /*VIDEOPLAYBACKCONTROL_HRH_*/

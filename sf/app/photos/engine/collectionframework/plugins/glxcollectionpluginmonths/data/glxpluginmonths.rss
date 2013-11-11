@@ -1,0 +1,79 @@
+/*
+* Copyright (c) 2009-2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   Resource definitions for Cloud View
+*
+*/
+
+
+
+//	RESOURCE IDENTIFIER
+NAME	PMON
+
+#include <badef.rh>
+#include <glxgallery.loc>
+#include <avkon.loc>
+
+//	RESOURCE DEFINITIONS 
+
+RESOURCE BA_RSS_SIGNATURE { }
+
+RESOURCE TBUF { buf="PMON"; }
+
+RESOURCE LBUF r_months_general_title 								{ txt=qtn_lgal_view_title_months; }
+RESOURCE LBUF r_months_sub_title_single      				{ txt=qtn_lgal_view_subtitle_all_single; }
+RESOURCE LBUF r_months_sub_title_multi       				{ txt=qtn_lgal_view_subtitle_all_multi; }
+RESOURCE LBUF r_months_sub_title_no_image_no_video  { txt=qtn_lgal_list_detail_no_img_vid_nseries; }
+RESOURCE LBUF r_months_item_title       						{ txt=qtn_lgal_view_months_title; }
+RESOURCE LBUF r_months_sub_title      							{	txt=qtn_lgal_view_subtitle_months; }
+
+
+RESOURCE LBUF r_months_title_jan      { txt=qtn_month_three_chars_jan; }
+RESOURCE LBUF r_months_title_feb      { txt=qtn_month_three_chars_feb; }
+RESOURCE LBUF r_months_title_mar      { txt=qtn_month_three_chars_mar; }
+RESOURCE LBUF r_months_title_apr      { txt=qtn_month_three_chars_apr; }
+RESOURCE LBUF r_months_title_may      { txt=qtn_month_three_chars_may; }
+RESOURCE LBUF r_months_title_jun      { txt=qtn_month_three_chars_jun; }
+RESOURCE LBUF r_months_title_jul      { txt=qtn_month_three_chars_jul; }
+RESOURCE LBUF r_months_title_aug      { txt=qtn_month_three_chars_aug; }
+RESOURCE LBUF r_months_title_sep      { txt=qtn_month_three_chars_sep; }
+RESOURCE LBUF r_months_title_oct      { txt=qtn_month_three_chars_oct; }
+RESOURCE LBUF r_months_title_nov      { txt=qtn_month_three_chars_nov; }
+RESOURCE LBUF r_months_title_dec      { txt=qtn_month_three_chars_dec; }
+
+
+#ifdef GLX_SUB_TITLE_REL8
+
+RESOURCE LBUF r_months_sub_title_single_by_month    				{ txt=qtn_lgal_list_detail_single_by_month_nseries; }
+RESOURCE LBUF r_months_sub_title_multi_by_month    					{ txt=qtn_lgal_list_detail_multi_by_month_nseries; }
+RESOURCE LBUF r_months_sub_title_no_image_no_video          { txt=qtn_lgal_list_detail_no_img_vid_nseries; }
+RESOURCE LBUF r_months_sub_title_one_image_multi_video      { txt=qtn_lgal_list_detail_one_img_multi_vid_nseries; }
+RESOURCE LBUF r_months_sub_title_multi_image_one_video      { txt=qtn_lgal_list_detail_multi_image_one_vid_nseries; }
+RESOURCE LBUF r_months_sub_title_multi_image_multi_video    { txt=qtn_lgal_list_detail_multi_img_vid_nseries; }
+
+#else
+
+RESOURCE LBUF r_months_sub_title_jan  { txt=qtn_month_three_chars_jan; }
+RESOURCE LBUF r_months_sub_title_feb  { txt=qtn_month_three_chars_feb; }
+RESOURCE LBUF r_months_sub_title_mar  { txt=qtn_month_three_chars_mar; }
+RESOURCE LBUF r_months_sub_title_apr  { txt=qtn_month_three_chars_apr; }
+RESOURCE LBUF r_months_sub_title_may  { txt=qtn_month_three_chars_may; }
+RESOURCE LBUF r_months_sub_title_jun  { txt=qtn_month_three_chars_jun; }
+RESOURCE LBUF r_months_sub_title_jul  { txt=qtn_month_three_chars_jul; }
+RESOURCE LBUF r_months_sub_title_aug  { txt=qtn_month_three_chars_aug; }
+RESOURCE LBUF r_months_sub_title_sep  { txt=qtn_month_three_chars_sep; }
+RESOURCE LBUF r_months_sub_title_oct  { txt=qtn_month_three_chars_oct; }
+RESOURCE LBUF r_months_sub_title_nov  { txt=qtn_month_three_chars_nov; }
+RESOURCE LBUF r_months_sub_title_dec  { txt=qtn_month_three_chars_dec; }
+
+#endif

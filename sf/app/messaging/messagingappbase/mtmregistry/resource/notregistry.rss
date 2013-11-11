@@ -1,0 +1,79 @@
+/*
+* Copyright (c) 2002-2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*     This file contains Notification MTM info resource.
+*
+*/
+
+
+
+//  INCLUDES
+#include <mtmconfig.rh>
+
+
+//  CONSTANTS  
+// none
+
+//  MACROS  
+// none
+
+
+//  RESOURCE DEFINITIONS 
+// ---------------------------------------------------------
+//   
+//    
+//    MTM info resource for MMS
+//
+// ---------------------------------------------------------
+//
+#include <e32capability.h>
+
+RESOURCE MTM_INFO_FILE
+    {
+    mtm_type_uid = 0x100059C8;
+    technology_type_uid = 0x100058E2;
+    components = 
+        {
+        MTM_COMPONENT_V2
+            {
+            human_readable_name = "Multimedia message";
+            component_uid = KUidMtmServerComponentVal;
+            entry_point = 1;
+            version = VERSION_V2 {};
+            filename = "mmssrv.dll";
+            },
+        MTM_COMPONENT_V2
+            {
+            human_readable_name = "Multimedia message";
+            component_uid = KUidMtmClientComponentVal;
+            entry_point = 2;
+            version = VERSION_V2 {};
+            filename = "mmscli.dll";
+            }
+        };
+    }
+
+RESOURCE MTM_CAPABILITIES
+    {
+    send_capability = 1;
+    body_capability = 0;
+    }
+
+RESOURCE MTM_SECURITY_CAPABILITY_SET
+    {
+    capabilities = { ECapabilityNetworkServices };
+    }
+
+
+// End of File

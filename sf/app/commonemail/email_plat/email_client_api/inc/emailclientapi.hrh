@@ -1,0 +1,44 @@
+/*
+* Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: Interface IDs for sub interfaces
+*
+*/
+
+#ifndef __EMAILCLIENTAPI_HRH
+#define __EMAILCLIENTAPI_HRH
+
+// ECom interface UID for email API
+#define KEmailClientFactoryApiUid 0x20022D62
+
+
+// Interface ids (not ECom) for accessing "sub interfaces" via
+// MEmailInterface* CEmailInterfaceFactory::InterfaceL( const TInt aInterfaceId )
+// to be checked if all should be published to clients (some are not
+// meant to be instantiated via factory method but by other means, e.g. 
+// user never instantiates mailbox from scratch but asks it from MEmailClientApi
+
+#define KEmailClientApiInterface 0x20022D63
+#define KEmailIFUidMailbox 0x20022D64
+#define KEmailIFUidMessage 0x20022D65
+#define KEmailIFUidFolder 0x20022D66
+#define KEmailIFUidAddress 0x20022D67
+#define KEmailIFUidMessageContent 0x20022D68
+#define KEmailIFUidSearch 0x20022D69
+#define KEmailIFUidTextContent 0x20022D6B
+#define KEmailIFUidMessageIterator 0x20022D6C
+#define KEmailIFUidMultipart 0x20022D6D
+#define KEmailIFUidAttachment 0x20022D6E
+
+
+#endif // __EMAILCLIENTAPI_HRH

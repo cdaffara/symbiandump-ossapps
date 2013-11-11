@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE SystemDefinition SYSTEM "sysdef_1_5_1.dtd" [
+  <!ENTITY layer_real_source_path "sf/app/organizer" >
+]>
+<SystemDefinition name="organizer" schema="1.5.1">
+  <systemModel>
+    <layer name="app_layer">
+    	<module name="organizer">
+		<unit unitID="orgdo.organizer.bldinf" mrp="" bldFile="&layer_real_source_path;/group" name="organizer_bldinf"/>
+		<unit unitID="orgdo.organizer.pro" mrp="" bldFile="&layer_real_source_path;" name="organizer_pro" proFile="organizer.pro"/>
+    <unit unitID="calendar" bldFile="&layer_real_source_path;/pimappservices/calendar/group" name="appengines_calendar" mrp="../../pimappservices/calendar/group/app-engines_calendar.mrp"/>
+    <unit unitID="calendarvcalplugin" bldFile="&layer_real_source_path;/pimappservices/calendarvcalplugin/group" name="calendarvcalplugin" mrp=""/>
+    <unit unitID="vcardandvcal" bldFile="&layer_real_source_path;/pimappsupport/vcardandvcal/group"  name="vcardandvcal" mrp=""/>
+    <unit unitID="chinesecalendarconverter" bldFile="&layer_real_source_path;/pimappsupport/chinesecalendarconverter/group" name="chinesecalendarconverter" mrp=""/>
+    <unit unitID="mtppimproxy" bldFile="&layer_real_source_path;/organizerdataproviders/mtppimproxy/group" mrp="../../organizerdataproviders/mtppimproxy/group/mtp_pimproxy.mrp" name="mtppimproxy"/>
+    <unit unitID="mtptaskdp" bldFile="&layer_real_source_path;/organizerdataproviders/mtptaskdp/group" mrp="../../organizerdataproviders/mtptaskdp/group/mtp_taskdp.mrp" name="mtptaskdp"/>
+    <unit unitID="mtpcalendardp" bldFile="&layer_real_source_path;/organizerdataproviders/mtpcalendardp/group" mrp="../../organizerdataproviders/mtpcalendardp/group/mtp_calendardp.mrp" name="mtpcalendardp"/>
+    <unit unitID="chinesecalendaralg" bldFile="&layer_real_source_path;/pimappsupport/chinesecalendaralg/group" mrp="../../pimappsupport/chinesecalendaralg/group/app-services_chinesecalendaralgorithm.mrp" name="chinesecalendaralg"/>
+
+
+      </module>
+    </layer>
+  </systemModel>
+</SystemDefinition>

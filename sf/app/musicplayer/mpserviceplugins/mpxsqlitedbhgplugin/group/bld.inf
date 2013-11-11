@@ -1,0 +1,42 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Build information file for project Sqlite Collection plugin.
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+
+../rom/mpxsqlitedbhgplugin.iby CORE_APP_LAYER_IBY_EXPORT_PATH(mpxsqlitedbhgplugin.iby)
+../rom/mpxsqlitedbhgpluginrsc.iby CORE_APP_LAYER_IBY_EXPORT_PATH(mpxsqlitedbhgpluginrsc.iby)
+
+
+PRJ_EXTENSIONS
+START EXTENSION s60/mifconv
+OPTION TARGETFILE mpxdbhgplugin.mif
+OPTION HEADERFILE mpxdbhgplugin.mbg
+OPTION SOURCES -c8,8 qgn_graf_mup_dlst_music
+END
+
+
+PRJ_MMPFILES
+
+mpxsqlitedbhgplugin.mmp
+
+// End of File

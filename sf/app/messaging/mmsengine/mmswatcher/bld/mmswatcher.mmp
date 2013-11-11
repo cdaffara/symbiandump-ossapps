@@ -1,0 +1,97 @@
+/*
+* Copyright (c) 2002-2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*     This is project specification file for the mmswatcher.dll
+*
+*/
+
+
+
+#include <platform_paths.hrh>
+
+#include "../../group/mmsopt.mph"
+
+TARGET          mmswatcher.dll
+
+TARGETTYPE		PLUGIN
+// UIDs - 2nd UID specifies an ECom dll, 3rd UID is unique identifier
+UID		0x10009D8D 0x10005948
+CAPABILITY      CAP_GENERAL_DLL    
+
+VENDORID        VID_DEFAULT
+VERSION 	10.0
+PAGED
+
+SOURCEPATH      ../src
+
+// Macro to get rid of all logging
+// uncomment to delete logs, comment out to enable logs
+// Master control _MMS_ALL_LOGGING_OFF_
+// is in file mmsengine/group/mmsopt.mph
+// Comment out _MMS_ALL_LOGGING_OFF_ in that file to enable logging
+// in all mms components
+#ifdef _MMS_ALL_LOGGING_OFF_
+MACRO _NO_MMSS_LOGGING_
+#define _NO_MMSS_LOGGING_
+#endif
+
+SOURCE        mmswatcher.cpp
+SOURCE        mmscenrepobserver.cpp
+#ifdef WINS
+SOURCE        mmspollingtimer.cpp
+#endif
+
+USERINCLUDE   ../inc
+USERINCLUDE   ../../inc
+USERINCLUDE   ../../mmsserver/inc
+USERINCLUDE   ../../mmsserversettings/inc
+
+SYSTEMINCLUDE ../../../inc
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE /epoc32/include/ecom
+SYSTEMINCLUDE /epoc32/include/libc
+
+
+LIBRARY       euser.lib
+LIBRARY       msgs.lib
+LIBRARY       efsrv.lib
+LIBRARY       estor.lib
+LIBRARY       centralrepository.lib
+LIBRARY       bafl.lib
+LIBRARY       mmsserversettings.lib
+
+#ifndef _NO_MMSS_LOGGING_
+LIBRARY         flogger.lib
+#else
+DEBUGLIBRARY    flogger.lib
+#endif
+
+/*#if defined(ARMCC)
+deffile       ../eabi/mmswatcher.def
+#elif defined( WINSCW )
+deffile       ../bwinscw/mmswatcher.def
+#elif defined( WINS )
+DEFFILE       ../bwins/wins.def
+#elif defined( MARM )
+DEFFILE       ../bmarm/marm.def
+#endif*/
+
+start resource 10005948.rss
+TARGET		mmswatcher.rsc
+end
+
+SMPSAFE
+
+
+// End of file

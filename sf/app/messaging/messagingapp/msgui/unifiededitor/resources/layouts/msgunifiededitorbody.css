@@ -1,0 +1,104 @@
+HbWidget {
+    margin-left: 0un;
+    margin-top: 0un;
+}
+
+/********************************* LAYOUTS ***********************************/
+MsgUnifiedEditorBody:portrait {
+	layout: layout-portrait;
+}
+
+MsgUnifiedEditorBody[hasImage="false"]:landscape {
+	layout: layout-landscape-no-image;
+}
+
+MsgUnifiedEditorBody[hasImage="true"]:landscape {
+	layout: layout-landscape-image;
+}
+
+/**************************** Text field margin ******************************/
+MsgUnifiedEditorBody::textEdit:portrait {
+    left: -var(hb-param-margin-gene-left);
+    right: var(hb-param-margin-gene-right);
+}
+
+MsgUnifiedEditorBody[hasImage="true"][hasAudio="true"]::textEdit:portrait {
+    top: -var(hb-param-margin-gene-middle-vertical);
+}
+
+MsgUnifiedEditorBody[hasImage="true"][hasAudio="false"]::textEdit:portrait {
+    top: -var(hb-param-margin-gene-middle-vertical);
+}
+
+MsgUnifiedEditorBody[hasImage="false"][hasAudio="true"]::textEdit:portrait {
+    top: -var(hb-param-margin-gene-middle-vertical);
+}
+
+MsgUnifiedEditorBody[hasImage="false"][hasAudio="false"]::textEdit:portrait {
+    top: 0.0un;
+}
+
+MsgUnifiedEditorBody::textEdit:landscape {
+    right: var(hb-param-margin-gene-right);
+}
+
+MsgUnifiedEditorBody[hasImage="true"]::textEdit:landscape {
+    left: -1.0un;
+}
+
+MsgUnifiedEditorBody[hasImage="false"]::textEdit:landscape {
+    left: -var(hb-param-margin-gene-left);
+}
+
+MsgUnifiedEditorBody[hasAudio="true"]::textEdit:landscape {
+    top: -var(hb-param-margin-gene-middle-vertical);
+}
+
+MsgUnifiedEditorBody[hasAudio="false"]::textEdit:landscape {
+    top: 0.0un;
+}
+
+/*************************** Image field margin ******************************/
+MsgUnifiedEditorBody::pixmap {
+    left: -var(hb-param-margin-gene-left);
+}
+
+MsgUnifiedEditorBody::pixmap:portrait {
+    right: var(hb-param-margin-gene-right);
+}
+
+MsgUnifiedEditorBody::pixmap:landscape {
+    right: 1.0un;
+}
+
+MsgUnifiedEditorBody[hasAudio="true"]::pixmap {
+    top: -var(hb-param-margin-gene-middle-vertical);
+}
+
+MsgUnifiedEditorBody[hasAudio="false"]::pixmap {
+    top: 0.0un;
+}
+
+/*************************** Audio field margin ******************************/
+
+MsgUnifiedEditorBody::audioItem {
+    left: -var(hb-param-margin-gene-left);
+    right: var(hb-param-margin-gene-right);
+}
+
+/*************************** Character Counter ******************************/
+
+MsgUnifiedEditorBody::charCounter
+{
+    text-height:var(hb-param-text-height-tiny);
+    text-align:centre;
+    text-line-count-min: 1;
+    text-line-count-max: 1;
+}
+
+MsgUnifiedEditorBody::charCounterFrame
+{
+    size-policy: fixed, fixed ;
+    pref-height: expr(var(hb-param-text-height-tiny)+2*var(hb-param-margin-gene-middle-vertical));
+    pref-width: expr(var(hb-param-text-height-tiny)*3 + 2*var(hb-param-margin-gene-middle-horizontal));
+}

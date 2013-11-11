@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<service>
+  <name>phonebookservices</name>
+  <filepath>No path</filepath>
+  <description>xPhonebook services</description>
+  <interface>
+    <name>com.nokia.symbian.IContactsFetch</name>
+    <version>1.0</version>
+    <description>Fetch interface</description>
+  </interface>
+  <interface>
+    <name>phonebookservices.Fetch</name>
+    <version>1.0</version>
+    <description>Fetch interface</description>
+  </interface>
+  <interface>
+    <name>Fetch</name>
+    <version>1.0</version>
+    <description>Fetch interface</description>
+    <customproperty key="deprecatedsn">com.nokia.services.phonebookservices</customproperty>
+  </interface>
+  <interface>
+    <name>com.nokia.symbian.IContactsView</name>
+    <version>1.0</version>
+    <description>Contact viewing interface</description>
+  </interface>
+  <interface>
+    <name>com.nokia.symbian.IContactsEdit</name>
+    <version>1.0</version>
+    <description>Contact editing interface</description>
+  </interface>
+</service>

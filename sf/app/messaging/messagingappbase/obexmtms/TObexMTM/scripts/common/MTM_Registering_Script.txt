@@ -1,0 +1,16 @@
+// *****************************************
+//  OBEX Test Script GT0133UT2201
+//  This test is expected to succeed.
+// *****************************************
+
+[main]
+obex_client_test registermtms
+
+[registermtms]
+register_mtm ir
+register_mtm bt
+add_comment "Registered IR MTM"
+add_comment "Registered BT MTM"
+add_comment "Test complete: IR MTM registered"
+
+

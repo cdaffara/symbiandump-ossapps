@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="1.0">
+    <widget name="view" type="HbView">
+        <widget name="content" role="HbView:widget" type="HbWidget">
+            <widget name="textLabel" type="HbLabel">
+                <enums name="textWrapping" value="TextWordWrap"/>
+                <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+                <enums name="elideMode" value="ElideNone"/>
+                <string value="Presence feeder not active." name="plainText"/>
+                <fontspec name="fontSpec" role="Primary"/>
+            </widget>
+            <widget name="createContactsButton" type="HbPushButton">
+                <string value="Create contacts with accounts" name="text"/>
+            </widget>
+            <widget name="startButton" type="HbPushButton">
+                <string value="Start Presence feeder" name="text"/>
+            </widget>
+            <widget name="stopButton" type="HbPushButton">
+                <string locid="Stop Presence feeder" name="text"/>
+            </widget>
+            <layout orientation="Vertical" type="linear">
+                <linearitem itemname="createContactsButton"/>
+                <linearitem itemname="startButton"/>
+                <linearitem itemname="stopButton"/>
+                <linearitem itemname="textLabel"/>
+            </layout>
+        </widget>
+        <string name="title" value="Presence feed demo"/>
+    </widget>
+    <metadata activeUIState="Common ui state" display="NHD portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+    </metadata>
+</hbdocument>

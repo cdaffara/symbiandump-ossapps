@@ -1,0 +1,67 @@
+/*
+* Copyright (c) 2005 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  This is the project specification file for audio effect engine.
+*
+*/
+
+
+
+#include <bldvariant.hrh>
+#include <data_caging_paths.hrh>
+#include <platform_paths.hrh>
+
+TARGET          mpxaudioeffectengine.dll
+TARGETTYPE      dll
+UID             0x1000006C 0x101FFC10
+
+VENDORID        VID_DEFAULT
+
+VERSION 15.0
+
+SOURCEPATH      ../src
+SOURCE          mpxaudioeffectengine.cpp
+
+USERINCLUDE     ../inc
+USERINCLUDE     ../../inc
+
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE   /epoc32/include/mmf/common
+
+CAPABILITY      CAP_GENERAL_DLL
+
+LIBRARY         euser.lib
+LIBRARY         SysUtil.lib
+LIBRARY         bafl.lib
+LIBRARY         charconv.lib
+LIBRARY         efsrv.lib
+LIBRARY         estor.lib
+LIBRARY         environmentalreverbutility.lib
+LIBRARY         stereowideningeffect.lib
+LIBRARY         bassboosteffect.lib
+LIBRARY         mediaclientaudio.lib 
+LIBRARY         loudnesseffect.lib
+LIBRARY         audioequalizerutility.lib
+LIBRARY         customcommandutility.lib
+LIBRARY         mpxcommon.lib
+LIBRARY         centralrepository.lib
+
+#if defined(ARMCC)
+deffile ../eabi/ 
+#elif defined(WINSCW)
+deffile ../bwinscw/ 
+#endif
+
+SMPSAFE
+
+// End of File

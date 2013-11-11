@@ -1,0 +1,32 @@
+<repository xmlns="http://www.s60.com/xml/cenrep/1" uidName="CxRuntimeFeaturesCrUid" uidValue="0x20027018" owner="0x20027018" rfs="true">
+  <access type="R" capabilities="AlwaysPass"/>
+
+  <key ref="CxRuntimeFeaturesCrUid/PrimaryCameraCaptureKeysCr" name="PrimaryCameraCaptureKeysCr" int="0x1" type="string" readOnly="true">
+    <access type="R" capabilities="AlwaysPass"/>
+  </key>
+
+  <key ref="CxRuntimeFeaturesCrUid/SecondaryCameraCaptureKeysCr" name="SecondaryCameraCaptureKeysCr" int="0x2" type="string" readOnly="true">
+    <access type="R" capabilities="AlwaysPass"/>
+  </key>
+
+  <key ref="CxRuntimeFeaturesCrUid/PrimaryCameraAutofocusKeysCr" name="PrimaryCameraAutofocusKeysCr" int="0x3" type="string" readOnly="true">
+    <access type="R" capabilities="AlwaysPass"/>
+  </key>
+
+  <key ref="CxRuntimeFeaturesCrUid/FreeMemoryLevelsCr" name="FreeMemoryLevelsCr" int="0x4" type="string" readOnly="true">
+    <access type="R" capabilities="AlwaysPass"/>
+  </key>
+
+  <key ref="CxRuntimeFeaturesCrUid/StillMaxZoomValuesCr" name="Maximum still zoom values" int="0x5" type="string" readOnly="true">
+    <access type="R" capabilities="AlwaysPass"/>
+  </key>
+
+  <key ref="CxRuntimeFeaturesCrUid/VideoMaxZoomValuesCr" name="Maximum video zoom values" int="0x6" type="string" readOnly="true">
+    <access type="R" capabilities="AlwaysPass"/>
+  </key>
+
+  <key ref="CxRuntimeFeaturesCrUid/UseRasterGraphicsSystemCr" name="Use Qt raster graphics system" int="0x7" type="int" readOnly="true">
+    <access type="R" capabilities="AlwaysPass"/>
+  </key>
+
+</repository>

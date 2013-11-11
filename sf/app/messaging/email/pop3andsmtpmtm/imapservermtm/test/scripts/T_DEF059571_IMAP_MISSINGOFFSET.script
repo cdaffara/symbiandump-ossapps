@@ -1,0 +1,39 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//! @file
+//! @SYMTestCaseID DEF059571
+//! @SYMTestType UT
+//! @SYMTestPriority High
+//! @SYMDEF DEF062024
+//! @SYMDEF T_DEF062024_Imap_MissingOffsetInfiniteLoop.exe
+//! @SYMTestCaseDesc Implements an IMAP server to facilitate offline testing of imap parsing. 
+//! The sever contains and retrieves an email with two body parts the second being HTML. The fetch resonse from the server
+//! is missing the offset parameter ie 
+//!         << * 1 FETCH (BODY[2] {785}         is received, rather than the more typical:
+//!         << * 1 FETCH (BODY[2] <0> {785}  
+//! The aim of the test is to check that the bodydata is correctly fetched, specifically in the case that the body data
+//! is HTML starting with the "<" character. The size of the received data is compared to confirm correct download.
+//! @SYMTestActions  1. The Server is started and listens on port 143.
+//! 				 2. The client connects to the server, requests a sync and a populate
+//! 				 3. The server reads the protocol information from a file specified in the ini file (ImapMissingOffsetTest.ini).
+//! 				 4. The client disconnects.
+//! 				 5. The size of the bodyparts downloaded is compared with known correct values.
+//! @SYMTestExpectedResults The bodyparts should have the same size source file originally attached.
+
+PRINT Run T_DEF059571_Imap_MissingOffset Test 
+LOAD_SUITE T_DEF059571_Imap_MissingOffset -SharedData
+
+RUN_TEST_STEP 1000 T_DEF059571_Imap_MissingOffset TestImapMissingOffset c:\msgtest\imap\ImapMissingOffsetTest.ini Section1

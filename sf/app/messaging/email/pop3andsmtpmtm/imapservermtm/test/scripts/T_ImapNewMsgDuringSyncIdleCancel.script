@@ -1,0 +1,39 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//! @file
+//! @SYMTestCaseID DEF067159
+//! @SYMTestType UT
+//! @SYMTestPriority High
+//! @SYMDEF DEF067159
+//! @SYMTestCaseDesc IMAP spoof server test that checks that a new message indication is correctly handled if idle read is being cancelled during a sync
+//! The server waits for the idle read to be cancelled by the sync command, and then sends a '* 2 EXISTS' command to indicate that
+//! a new message has arrived.
+//! @SYMTestActions 1. The Server is started and listens on port 143.
+//! 2. The client connects to the server, requests a sync and a populate.
+//! 3. Client / server interact to complete the sync and populate. One message is fetched.
+//! 4. The client requests a full sync (causing the idle read cancel).
+//! 5. The server indicates a new message has arrived
+//! 6. Client / server interact to complete the full sync. The new message is fetched
+//! 7. The client requests a full sync (causing the idle read cancel).
+//! 8. The server indicates a new message has arrived
+//! 9. Client / server interact to complete the full sync. The new message is fetched
+//! 10. The client disconnects.
+//! @SYMTestExpectedResults Client should have fetched three messages
+
+PRINT Run T_ImapNewMsgDuringSyncIdleCancel Test 
+LOAD_SUITE T_ImapNewMsgDuringSyncIdleCancel -SharedData
+
+RUN_TEST_STEP 1000 T_ImapNewMsgDuringSyncIdleCancel TestImapNewMsgDuringSyncIdleCancel c:\msgtest\imap\ImapNewMsgDuringSyncIdleCancelTest.ini Section1

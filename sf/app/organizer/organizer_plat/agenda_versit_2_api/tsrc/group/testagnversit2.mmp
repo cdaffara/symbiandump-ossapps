@@ -1,0 +1,65 @@
+/*
+* Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   Project definition file for project testagnversit2
+*
+*/
+
+
+
+#include <platform_paths.hrh>
+
+TARGET         testagnversit2.dll
+TARGETTYPE      dll
+TARGETPATH      /DigiaEUnit/Tests 
+UID             0x1000af5a 0x01700000
+
+CAPABILITY          CAP_GENERAL_DLL
+VENDORID            VID_DEFAULT
+
+SOURCEPATH          ../src
+SOURCE              testagnversit2dllmain.cpp
+SOURCE              testversit2.cpp
+SOURCE              testagnversit2.cpp
+
+USERINCLUDE         ../inc                          //basic/inc
+
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE       ../../../../inc
+SYSTEMINCLUDE       ../../../../calendarui/inc
+SYSTEMINCLUDE	    ../../../../calendarengines/inc
+SYSTEMINCLUDE       /epoc32/include/platform/Digia/EUnit
+SYSTEMINCLUDE       /epoc32/include/ecom
+SYSTEMINCLUDE       /epoc32/include/test
+SYSTEMINCLUDE		/epoc32/include/mw/Qt
+SYSTEMINCLUDE		/epoc32/include/stdapis
+SYSTEMINCLUDE		/epoc32/include/stdapis/sys
+
+LIBRARY             agnmodel.lib
+LIBRARY             CalInterimApi.lib
+LIBRARY             charconv.lib
+LIBRARY             ECOM.LIB
+LIBRARY             EFSRV.LIB
+LIBRARY             EUnit.lib
+LIBRARY             euser.lib
+LIBRARY             ESTOR.LIB
+LIBRARY             versit2.lib
+LIBRARY             CalenGlobalData.lib
+LIBRARY             eikcore.lib
+LIBRARY             cone.lib 
+LIBRARY 			bafl.lib 
+LIBRARY 			tzclient.lib
+LIBRARY				timezonelocalization.lib
+LIBRARY 			swinstcli.lib
+
+// End of file

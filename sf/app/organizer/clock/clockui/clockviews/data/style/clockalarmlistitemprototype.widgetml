@@ -1,0 +1,28 @@
+<hbwidget version="0.1">
+    <layout name="layout-alarmlist" type="mesh">
+ 		<!-- For the alarm time item -->
+		<meshitem src="text-1" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+		<meshitem src="text-1" srcEdge="TOP" dst="" dstEdge="TOP" />
+        <meshitem src="text-1" srcEdge="RIGHT" dst="text-2" dstEdge="LEFT" />
+ 
+		<!-- For the alarm repeat icon item -->
+		<meshitem src="icon-1" srcEdge="BOTTOM" dst="text-4" dstEdge="BOTTOM" />
+		<meshitem src="icon-1" srcEdge="RIGHT" dst="text-1" dstEdge="RIGHT" />
+		
+		<!-- For the alarm remiainting time item -->
+        <meshitem src="text-2" srcEdge="TOP" dst="" dstEdge="TOP" />
+		
+        <!-- For the alarm description item -->
+        <meshitem src="text-3" srcEdge="TOP" dst="text-2" dstEdge="BOTTOM" />
+        <meshitem src="text-3" srcEdge="LEFT" dst="text-2" dstEdge="LEFT" />
+     
+        <!-- For the alarm repeat type item -->
+        <meshitem src="text-4" srcEdge="TOP" dst="text-3" dstEdge="BOTTOM" />
+        <meshitem src="text-4" srcEdge="LEFT" dst="text-2" dstEdge="LEFT" />
+        <meshitem src="text-4" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+
+        <!-- For the alarm icon item  -->
+		<meshitem src="alarmIconItem" srcEdge="TOP" dst="" dstEdge="TOP" />
+        <meshitem src="alarmIconItem" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+	</layout>
+</hbwidget>

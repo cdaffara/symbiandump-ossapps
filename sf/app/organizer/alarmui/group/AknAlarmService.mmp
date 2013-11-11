@@ -1,0 +1,106 @@
+/*
+* Copyright (c) 2006-2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   Project definition file for project AknAlarmService.
+*
+*/
+
+
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+#include "../inc/AlmAlertVariant.hrh"
+
+// activate this macro to enable debug traces
+//MACRO           TRACE_ENTRY_EXIT_POINT
+//MACRO           TRACE_ENTRY_AKNALARMSERVICE
+
+TARGET          aknalarmservice.dll
+TARGETTYPE      DLL
+LANGUAGE_IDS
+
+UID             0x1000008D 0x102072D4
+
+VENDORID        VID_DEFAULT
+
+APP_LAYER_SYSTEMINCLUDE
+START RESOURCE  ../DataSrc/AlmAlert.rss
+HEADER
+TARGETPATH      RESOURCE_FILES_DIR
+END
+
+USERINCLUDE     .
+USERINCLUDE     ../inc
+USERINCLUDE     ../AppServerStuff/Inc
+USERINCLUDE		../alarmalertwidget/alarmalertinterface/inc
+
+SYSTEMINCLUDE   /epoc32/include/ecom
+SYSTEMINCLUDE   /epoc32/include/connect
+SYSTEMINCLUDE   /epoc32/include/remcon
+
+SOURCEPATH      ../src
+SOURCE          alarmutils.cpp
+SOURCE          AlmAlarmControl.cpp
+SOURCE          AlmAlarmInfo.cpp
+SOURCE          AlmAlarmPlayer.cpp
+SOURCE          PropertyObserver.cpp
+SOURCE          alarmremconeventshandler.cpp
+#ifdef RD_ALMALERT__SENSOR_SUPPORT
+SOURCE          alarmcontextfwsupport.cpp
+#endif // RD_ALMALERT__SENSOR_SUPPORT
+
+SOURCEPATH      ../AppServerStuff/Src
+SOURCE          AlarmService.cpp
+
+
+LIBRARY         aknnotifierwrapper.lib
+LIBRARY         aknnotifyplugin.lib
+LIBRARY         alarmclient.lib
+LIBRARY         alarmshared.lib
+LIBRARY         apgrfx.lib
+LIBRARY         apmime.lib
+LIBRARY         apparc.lib
+LIBRARY         avkon.lib
+LIBRARY         bafl.lib
+LIBRARY         calinterimapi.lib
+LIBRARY         centralrepository.lib
+LIBRARY         commonengine.lib
+LIBRARY         cone.lib
+LIBRARY         efsrv.lib
+LIBRARY         eikcore.lib
+LIBRARY         eiksrv.lib
+LIBRARY         euser.lib
+LIBRARY         mediaclientaudio.lib
+LIBRARY         profileeng.lib
+LIBRARY         sysutil.lib
+LIBRARY         remconinterfacebase.lib
+LIBRARY         remconextensionapi.lib
+LIBRARY         platformenv.lib
+LIBRARY         featmgr.lib
+
+//MPIN-73VCR2
+// For cover display support:
+LIBRARY			eikdlg.lib
+LIBRARY			estor.lib
+LIBRARY         starterclient.lib
+
+#ifdef RD_ALMALERT__SENSOR_SUPPORT
+LIBRARY			cfclient.lib
+LIBRARY			cfservices.lib
+#endif // RD_ALMALERT__SENSOR_SUPPORT
+
+LIBRARY			alarmalertwidget.lib
+
+CAPABILITY      CAP_GENERAL_DLL
+
+
+// End of File

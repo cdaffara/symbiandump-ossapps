@@ -1,0 +1,49 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description: pkg file  of Notes Application for IAD.
+;
+
+; Language
+&EN
+
+; standard SIS file header
+#{"Notes"}, (0x20029F80), 1, 0, 0, TYPE=SA, RU
+
+; Localised vendor name
+%{"Nokia"}
+
+; Unique vendor name
+:"Nokia"
+
+
+; Notes executable and default resource files
+
+"/epoc32/release/armv5/urel/notes.exe"							- "!:/sys/bin/notes.exe"
+"/epoc32/data/Z/private/10003a3f/import/apps/notes_reg.rsc"		- "!:/private/10003a3f/import/apps/notes_reg.rsc"
+"/epoc32/data/z/resource/apps/notes.rsc"                          - "!:/resource/apps/notes.rsc"
+"/epoc32/data/z/resource/qt/translations/notes_en.qm"            - "!:/resource/qt/translations/notes_en.qm"
+
+
+"/epoc32/release/armv5/urel/notesmodel.dll"						- "!:/sys/bin/notesmodel.dll"
+"/epoc32/release/armv5/urel/noteseditor.dll"				    - "!:/sys/bin/noteseditor.dll"
+"/epoc32/release/armv5/urel/notesviews.dll"					    - "!:/sys/bin/notesviews.dll"
+"/epoc32/release/armv5/urel/notesviewmanager.dll"			    - "!:/sys/bin/notesviewmanager.dll"
+"/epoc32/release/armv5/urel/notesappcontroller.dll"             - "!:/sys/bin/notesappcontroller.dll"
+"/epoc32/release/armv5/urel/notesmodelhandler.dll"				- "!:/sys/bin/notesmodelhandler.dll"
+
+;Qt plugin files to be installed
+"/epoc32/release/armv5/urel/noteseditorplugin.dll"			- "!:/sys/bin/noteseditorplugin.dll"
+"/epoc32/data/z/resource/qt/plugins/notes/noteseditorplugin.qtplugin"		- "!:/resource/qt/plugins/notes/noteseditorplugin.qtplugin"
+
+;END OF FILE

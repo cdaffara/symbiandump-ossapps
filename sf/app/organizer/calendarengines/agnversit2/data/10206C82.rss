@@ -1,0 +1,41 @@
+/*
+* Copyright (c) 2005 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   Declares ECom registration information for AgnVersit2
+*
+*/
+
+
+#include <ecom/registryinfo.rh>		//REGISTRY_INFO
+
+RESOURCE REGISTRY_INFO theInfo
+{
+dll_uid = 0x10206C82;
+interfaces = 
+    {
+    INTERFACE_INFO
+        {
+        interface_uid = 0x10206C81;
+        implementations = 
+            {
+            IMPLEMENTATION_INFO
+                {
+                implementation_uid = 0x10206C80;
+                version_no = 1;
+                display_name = "iCalendar";
+                default_data = "text/calendar";
+                }
+            };
+        }
+    };
+}

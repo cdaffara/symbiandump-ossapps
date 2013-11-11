@@ -1,0 +1,53 @@
+// Copyright (c) 2001-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// $Workfile: btcmtm.mmp $
+// $Author: Stevep $
+// $Revision: 10 $
+// $Date: 19/11/01 11:55 $
+// btcmtm.dll Bluetooth client MTM for OBEX beaming
+// 
+//
+
+/**
+ @file
+*/
+
+
+TARGET		btcmtm.dll
+TARGETTYPE	dll
+
+CAPABILITY All -TCB
+TARGETPATH	/system/libs
+UID		0x10003C5F 0x10009ED3	// 0x10003C5F = KUidMtmClientComponent
+VENDORID 0x70000001
+								// 0x10009ED3 = KBtClientMtmV1DllUid
+
+SOURCEPATH	../source
+SOURCE		btcmtm.cpp btcmain.cpp btHeader.cpp
+
+USERINCLUDE	../Include ../../../../../../../mw/messagingmw/messagingfw/msgsrvnstore/server/inc
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+
+LIBRARY		euser.lib msgs.lib
+LIBRARY		obexclientmtm.lib
+LIBRARY		bluetooth.lib
+LIBRARY		obexmtmutil.lib
+
+#ifdef WINSCW
+DEFFILE		BTCMTM.DEF   
+#else
+DEFFILE		btcmtm.def
+#endif
+
+SMPSAFE

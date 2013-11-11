@@ -1,0 +1,29 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+[List1]
+SmsParamMaxEntries= 3
+SmsParamEntry= 1, Vodaphone, 00, 00, 24, 07747747747, 07785016005
+SmsParamEntry= 2, BT, 00, 00, 12, 07747747747, +447802000332
+
+[List2]
+SmsParamMaxEntries= 3
+SmsParamEntry= 1, Vodaphone, , , 24, 07747747747, 07785016005
+SmsParamEntry= 2, BT, 00, , , 07747747747, +447802000332
+
+endscript
+
+# SmsParamEntry = <Index>, <Name>, <PID>, <DCS>, <Validity Period(hour)> <DA> <SCA>

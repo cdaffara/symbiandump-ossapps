@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="1.1">
+    <widget name="dayView" type="HbView">
+        <widget name="dayViewDayInfo" type="HbGroupBox">
+            <bool name="collapsable" value="FALSE"/>
+            <real name="z" value="4"/>
+        </widget>
+        <widget name="dayViewContentWidget" type="HbWidget">
+			<widget name="dayViewHourScrollArea" type="HbScrollArea">
+				<enums name="verticalScrollBarPolicy" value="ScrollBarAlwaysOff"/>
+				<real name="z" value="3"/>
+			</widget>
+			<widget name="dayViewContentScrollArea" type="HbScrollArea">
+				<enums name="scrollDirections" value="Horizontal"/>
+				<enums name="horizontalScrollBarPolicy" value="ScrollBarAlwaysOff"/>
+				<enums name="clampingStyle" value="StrictClamping"/>
+				<real name="z" value="2"/>
+			</widget>
+			<real name="z" value="1"/>
+			<layout orientation="Horizontal" spacing="0un" type="linear">
+				<contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+				<linearitem itemname="dayViewHourScrollArea"/>
+				<linearitem itemname="dayViewContentScrollArea"/>
+			</layout>
+		</widget>
+        <real name="z" value="0"/>
+        <layout orientation="Vertical" spacing="0un" type="linear">
+            <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+            <linearitem itemname="dayViewDayInfo"/>
+            <linearitem itemname="dayViewContentWidget"/>
+        </layout>
+    </widget>
+    <metadata activeUIState="Common ui state" display="QHD portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+    </metadata>
+</hbdocument>

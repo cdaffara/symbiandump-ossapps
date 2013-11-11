@@ -1,0 +1,100 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//
+PRINT Run TestCalIndexFile Backup&Restore Tests
+//
+// set up the directories needed
+RUN_UTILS MkDir C:\private\10003a5b\
+RUN_UTILS MkDir E:\CalBackup\
+
+// NOTE: This test case requires the presence of a removable drive, specifically E. This must be set up (a) for the H4 board by having an MMC
+//       card in the proper slot or (b) for WINSCW by having the following line in the epoc.ini "_EPOC_DRIVE_E \\epoc32\\winscw\\e" and having
+//       the mapped drive created.
+//       If this is NOT done, then the test will fail with -18 (KErrNotReady)
+//
+// NOTE; IN addition to the calendar test executables, this test requires the a test build be done in
+//       ....src\common\testtools\burtestserver\Group
+
+START_TESTCASE PIM-CT-PERFIDX-DEV-0007
+// NOTE: This test case requires the presence of a removable drive, specifically E. This must be set up (a) for the H4 board by having an MMC
+//       card in the proper slot or (b) for WINSCW by having the following line in the epoc.ini "_EPOC_DRIVE_E \\epoc32\\winscw\\e" and having
+//       the mapped drive created.
+//       If this is NOT done, then the test will fail with -18 (KErrNotReady)
+//
+
+//! @SYMTestCaseID		PIM-CT-PERFIDX-DEV-0007
+//! @SYMTestCaseDesc 		Ensure that the presence of the index file does not interfere with the back-up of the calendar database.
+//!				Ensure that the index file is backed up and restored
+//!
+//! @SYMFssID			<App-Engines><AgnModel>SM9
+//! @SYMREQ			REQ6105
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		Medium
+//! @SYMTestActions		1.Ensure that the private data folder used by the calendar contains a known calendar and a corresponding valid index file.
+//!				2.Start a backup of the calendar file
+//!				3.Check that file has been backed up.
+//!				4.Restore the calendar file
+//!				5.Check that calendar file is restored and that no index file is present
+//!			
+//! @SYMTestExpectedResults	In step 2, the calendar file should be in the destination for the backup.
+//!				In step 4, the calendar file should be in the private directory in which contains the calendar file but no index file.
+//! @SYMTestType 		CT
+
+
+// copy calendar DB and index files to place from which they will be backed up
+// and to which they will be restored
+// We want to check on Calendar0 with an index and Calendar1 without an index - 
+// therefore we try to delete the Calendar1 index just in case it is already there
+// from a previous test.
+RUN_UTILS CopyFile \CalIndexFileTestData\Calendar0 c:\private\10003a5b\Calendar0
+RUN_UTILS CopyFile \CalIndexFileTestData\Calendar0Idx c:\private\10003a5b\Calendar0Idx
+RUN_UTILS CopyFile \CalIndexFileTestData\Calendar1 c:\private\10003a5b\Calendar1
+RUN_UTILS DeleteFile c:\private\10003a5b\Calendar1Idx
+
+
+LOAD_SUITE BURTestServer
+//
+
+// CT-PIM-PERFIDX-DEV-0007
+PRINT Backup Starts
+RUN_TEST_STEP -1 BURTestServer TestBackup  \CalIndexFileTestData\burtest.ini default 
+PRINT Backup Ended
+
+// delete files in source so that we know that they have been restored and not just left
+// in place
+PRINT Cleaning files so that restore operation is confirmed
+RUN_UTILS DeleteFile c:\private\10003a5b\Calendar0
+RUN_UTILS DeleteFile c:\private\10003a5b\Calendar0Idx
+RUN_UTILS DeleteFile c:\private\10003a5b\Calendar1
+
+
+PRINT Restore Starts
+RUN_TEST_STEP -1 BURTestServer TestRestore \CalIndexFileTestData\burtest.ini default 
+PRINT Restore Ended 
+
+// now check that the files are still useful
+LOAD_SUITE TestCalIndexFileSuite
+PRINT Verifying calendar and index file contents after restore
+// uses Calendar1 and assumes no index file present
+RUN_TEST_STEP 100 TestCalIndexFileSuite TestCalIndexFileOpenStep  \CalIndexFileTestData\opentest.ini test2 
+
+// uses Calendar0 and assumes an index file is present
+RUN_TEST_STEP 100 TestCalIndexFileSuite TestCalIndexFileOpenwithIndexStep  \CalIndexFileTestData\opentest.ini test1 
+END_TESTCASE PIM-CT-PERFIDX-DEV-0007
+
+
+
+PRINT Completed TestCalIndexFile Backup&Restore Tests

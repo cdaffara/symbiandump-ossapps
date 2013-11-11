@@ -1,0 +1,67 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  ECOM implementation of PIM service
+*
+*/
+
+
+#include <platform_paths.hrh>
+#include "../../../symbian_version.hrh"
+
+TARGET          HtiPIMServicePlugin.dll
+TARGETTYPE      PLUGIN
+
+// ECom Dll recognition UID followed by the unique UID for this dll
+UID             0x10009D8D 0x200212C3
+
+VENDORID        0x101FB657
+
+CAPABILITY      ALL -TCB
+
+SOURCEPATH      ../src
+SOURCE          proxy.cpp
+SOURCE          HtiPIMServicePlugin.cpp
+SOURCE          PIMHandler.cpp
+SOURCE          HtiSimDirHandler.cpp
+#if ( SYMBIAN_VERSION_SUPPORT < SYMBIAN_4 )
+SOURCE          HtiBookmarkHandler.cpp 
+#endif
+
+USERINCLUDE     ../inc
+APP_LAYER_SYSTEMINCLUDE
+
+START RESOURCE  ../data/200212C3.rss
+TARGET          HtiPIMServicePlugin.rsc
+END
+
+LIBRARY         cmmanager.lib
+LIBRARY         apgrfx.lib
+LIBRARY         calinterimapi.lib
+LIBRARY         charconv.lib
+LIBRARY         ecom.lib
+LIBRARY         estor.lib
+LIBRARY         euser.lib
+LIBRARY         ws32.lib
+LIBRARY         flogger.lib
+LIBRARY         cntmodel.lib
+LIBRARY			etelmm.lib
+LIBRARY			etel.lib 
+
+#if ( SYMBIAN_VERSION_SUPPORT < SYMBIAN_4 )
+LIBRARY         favouritesengine.lib
+#endif
+
+SMPSAFE
+
+// End of file

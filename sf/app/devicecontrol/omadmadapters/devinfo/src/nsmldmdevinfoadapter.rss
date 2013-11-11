@@ -1,0 +1,66 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: Implementation of dm adapters
+* 	This is part of omadmextensions.
+*
+*/
+
+
+CHARACTER_SET UTF8
+
+/*
+* ============================================================================
+*  Name     : 101f6de8.rss
+*  Part of  : SyncMl
+*  Origin   : SyncML Phase 2 
+*  Created  : 06.03.2003
+*  Implementation notes:
+*     
+*  Version  : 0.1
+*   $Revision: 2 $, $Modtime: 10.05.05 11:06 $ by $Author: Kollasep $
+*  ---------------------------------------------------------------------------
+*  Version history:
+*  Template version: 1.02, 21.6.2000 by maparnan
+*  <ccm_history>
+*  </ccm_history>
+* ============================================================================
+*/
+
+
+
+#include <registryinfo.rh>
+#include <nsmldmconstants.h>
+
+RESOURCE REGISTRY_INFO theRegistryInfo
+  {
+  dll_uid = 0x101F6DE8; //The DLL's 3rd UID.
+  interfaces = 
+      {
+      INTERFACE_INFO
+          {
+          interface_uid = KNSmlDMInterfaceUid; // DM interface UID
+          implementations = 
+            {
+            IMPLEMENTATION_INFO
+                {
+                implementation_uid = 0x101F6DEE; // DM devinfo implementation UID
+                version_no = 1; 
+                display_name = "";
+                default_data = "";
+                opaque_data = "";
+                }
+            };
+          }
+      };
+    }

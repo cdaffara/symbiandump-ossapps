@@ -1,0 +1,50 @@
+/*
+* Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   Project definition file for project testcalenexporter
+*
+*/
+
+#include <platform_paths.hrh>
+
+TARGET          calenexportertest.dll
+TARGETTYPE      dll
+UID             0x1000af5a 0x01700000
+
+CAPABILITY              All -TCB
+VENDORID                VID_DEFAULT
+
+//TARGETPATH      ?target_path
+DEFFILE         calenexportertest.def
+
+SOURCEPATH              ../src
+SOURCE                  calenexportertest.cpp
+SOURCE                  calenexportertestblocks.cpp
+
+USERINCLUDE             ../inc
+
+APP_LAYER_SYSTEMINCLUDE
+
+LIBRARY         				stiftestinterface.lib
+LIBRARY         				stiftestengine.lib
+LIBRARY                 euser.lib
+LIBRARY                 EFSRV.LIB
+LIBRARY                 ESTOR.LIB
+LIBRARY                 InetProtUtil.lib //DelimitedParser8
+LIBRARY                 charconv.lib
+LIBRARY                 calinterimapi.lib 
+LIBRARY                 CalenImp.lib
+
+LANG            SC
+
+// End of file

@@ -1,0 +1,3972 @@
+/*
+* Copyright (c) 2008 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   Contains mapping from MCC to timezone id.
+*
+*/
+
+// Resource Identifier
+NAME MCCT
+
+// INCLUDES
+#include <uikon.rh>
+#include "mcc.rh" 
+
+RESOURCE RSS_SIGNATURE { }
+
+RESOURCE MCC_ARRAY r_array
+	{
+	mcc = 
+		{
+		// CET
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 8;
+			mcc		= -1;
+			},
+		// EET
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 24;
+			mcc		= -1;
+			},
+		// MET
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 56;
+			mcc		= -1;
+			},
+		// WET
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 88;
+			mcc		= -1;
+			},
+		// Africa/Abidjan
+		// Côte d'Ivoire
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 96;
+			mcc		= 612;
+			},
+		// Africa/Accra
+		// Ghana
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 96;
+			mcc		= 620;
+			},
+		// Africa/Addis_Ababa
+		// Ethiopia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 112;
+			mcc		= 636;
+			},
+		// Africa/Algiers
+		// Algeria
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 120;
+			mcc		= 603;
+			},
+		// Africa/Asmera
+		// Eritrea
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 128;
+			mcc		= 657;
+			},
+		// Africa/Bamako
+		// Mali
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 136;
+			mcc		= 610;
+			},
+		// Africa/Bangui
+		// Central African Republic
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 144;
+			mcc		= 623;
+			},
+		// Africa/Banjul
+		// Gambia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 152;
+			mcc		= 607;
+			},
+		// Africa/Bissau
+		// Guinea-Bissau
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 160;
+			mcc		= 632;
+			},
+		//Africa/Blantyre
+		//Malawi
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 168;
+			mcc		= 650;
+			},
+		// Africa/Brazzaville
+		// Congo
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 176;
+			mcc		= 629;
+			},
+		// Africa/Bujumbura
+		// Burundi
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 184;
+			mcc		= 642;
+			},
+		// Africa/Cairo
+		// Egypt
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 192;
+			mcc		= 602;
+			},
+		// Africa/Casablanca
+		// Morocco
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 200;
+			mcc		= 604;
+			},
+		// Africa/Ceuta
+		// Autonomous community, Spain?
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 208;
+			mcc		= -1;
+			},
+		// Africa/Conakry
+		// Guinea
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 216;
+			mcc		= 611;
+			},
+		// Africa/Dakar
+		// Senegal
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 224;
+			mcc		= 608;
+			},
+		// Africa/Dar_es_Salaam
+		// Tanzania
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 232;
+			mcc		= 640;
+			},
+		// Africa/Djibouti
+		// Djibouti
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 240;
+			mcc		= 638;
+			},
+		// Africa/Douala
+		// Cameroon
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 248;
+			mcc		= 624;
+			},
+		// Africa/El_Aaiun
+		// Western Sahara (disputed), Morocco
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 256;
+			mcc		= -1;
+			},
+		// Africa/Freetown
+		// Sierra Leone
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 264;
+			mcc		= 619;
+			},
+		// Africa/Gaborone
+		// Botswana
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 272;
+			mcc		= 652;
+			},
+		// Africa/Harare
+		// Zimbabwe
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 280;
+			mcc		= 648;
+			},
+		// Africa/Johannesburg
+		// South Africa
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 288;
+			mcc		= 655;
+			},
+		// Africa/Kampala
+		// Uganda
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 296;
+			mcc		= 641;
+			},
+		// Africa/Khartoum
+		// Sudan
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 304;
+			mcc		= 634;
+			},
+		// Africa/Kigali
+		// Rwanda
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 312;
+			mcc		= 635;
+			},
+		// Africa/Kinshasa
+		// Congo (DRC)
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 320;
+			mcc		= 630;
+			},
+		// Africa/Lagos
+		// Nigeria
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 328;
+			mcc		= 621;
+			},
+		// Africa/Libreville
+		// Gabon
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 336;
+			mcc		= 628;
+			},
+		// Africa/Lome
+		// Togo
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 344;
+			mcc		= 615;
+			},
+		// Africa/Luanda
+		// Angola
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 352;
+			mcc		= 631;
+			},
+		// Africa/Lubumbashi
+		// Congo (DRC)
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 360;
+			mcc		= 630;
+			},
+		// Africa/Lusaka
+		// Zambia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 368;
+			mcc		= 645;
+			},
+		// Africa/Malabo
+		// Equatorial Guinea
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 376;
+			mcc		= 627;
+			},
+		// Africa/Maputo
+		// Mozambique
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 384;
+			mcc		= 643;
+			},
+		// Africa/Maseru
+		// Lesotho
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 392;
+			mcc		= 651;
+			},
+		//Africa/Mbabane
+		//Swaziland
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 400;
+			mcc		= 653;
+			},
+		// Africa/Mogadishu
+		// Somalia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 408;
+			mcc		= 637;
+			},
+		// Africa/Monrovia
+		// Liberia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 416;
+			mcc		= 618;
+			},
+		// Africa/Nairobi
+		// Kenya
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 424;
+			mcc		= 639;
+			},
+		// Africa/Ndjamena
+		// Chad
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 432;
+			mcc		= 622;
+			},
+		// Africa/Niamey
+		// Niger
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 440;
+			mcc		= 614;
+			},
+		// Africa/Nouakchott
+		// Mauritania
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 448;
+			mcc		= 609;
+			},
+		// Africa/Ouagadougou
+		// Burkina Faso
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 456;
+			mcc		= 613;
+			},
+		// Africa/Porto-Novo
+		// Benin
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 464;
+			mcc		= 616;
+			},
+		// Africa/Sao_Tome
+		// São Tomé and Príncipe
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 472;
+			mcc		= 626;
+			},
+		// Africa/Timbuktu
+		// Mali
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 136;
+			mcc		= 610;
+			},
+		// Africa/Tripoli
+		// Libya (Libyan Arab Jamahiriya)
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 480;
+			mcc		= 606;
+			},
+		// Africa/Tunis
+		// Tunisia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 488;
+			mcc		= 605;
+			},
+		// Africa/Windhoek
+		// Namibia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 496;
+			mcc		= 649;
+			},
+		// America/Adak
+		// Aleutians West, Alaska, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 504;
+			mcc		= 310;
+			},
+		// America/Anchorage
+		// Alaska, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 512;
+			mcc		= 310;
+			},
+		// America/Anguilla
+		// Anguilla (dependency), North America ?
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 520;
+			mcc		= 310;
+			},
+		// America/Antigua
+		// Barbuda (island(s)), Antigua and Barbuda
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 528;
+			mcc		= 344;
+			},
+		// America/Araguaina
+		// Araguaína, Tocantins, Brazil
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 536;
+			mcc		= 724;
+			},
+		// America/Argentina/Buenos_Aires
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 544;
+			mcc		= 722;
+			},
+		// America/Argentina/Catamarca
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 552;
+			mcc		= 722;
+			},
+		// America/Argentina/ComodRivadavia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 552;
+			mcc		= 722;
+			},
+		// America/Argentina/Cordoba
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 560;
+			mcc		= 722;
+			},
+		// America/Argentina/Jujuy
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 568;
+			mcc		= 722;
+			},
+		// America/Argentina/La_Rioja
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 576;
+			mcc		= 722;
+			},
+		// America/Argentina/Mendoza
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 584;
+			mcc		= 722;
+			},
+		// America/Argentina/Rio_Gallegos
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 592;
+			mcc		= 722;
+			},
+		// America/Argentina/San_Juan
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 608;
+			mcc		= 722;
+			},
+		// America/Argentina/Tucuman
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 624;
+			mcc		= 722;
+			},
+		// America/Argentina/Ushuaia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 632;
+			mcc		= 722;
+			},
+		// America/Aruba
+		// Aruba (dependency),(Netherlands Antilles)
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 640;
+			mcc		= 363;
+			},
+		// America/Asuncion
+		// Paraguay
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 648;
+			mcc		= 744;
+			},
+		// America/Bahia
+		// Brazil
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 664;
+			mcc		= 724;
+			},
+		// America/Barbados
+		// Barbados, Caribbean
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 672;
+			mcc		= 342;
+			},
+		// America/Belem
+		// Brazil
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 680;
+			mcc		= 724;
+			},
+		// America/Belize
+		// Belize
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 688;
+			mcc		= 702;
+			},
+		// America/Boa_Vista
+		// Brazil
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 704;
+			mcc		= 724;
+			},
+		// America/Bogota
+		// Colombia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 712;
+			mcc		= 732;
+			},
+		// America/Boise
+		// Boise, Idaho, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 720;
+			mcc		= 310;
+			},
+		// America/Cambridge_Bay
+		// Canada
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 728;
+			mcc		= 302;
+			},
+		// America/Campo_Grande
+		// Brazil
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 736;
+			mcc		= 724;
+			},
+		// America/Cancun
+		// Mexico
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 744;
+			mcc		= 334;
+			},
+		// America/Caracas
+		// Venezuela
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 752;
+			mcc		= 734;
+			},
+		// America/Cayenne
+		// French Guiana
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 760;
+			mcc		= 742;
+			},
+		// America/Cayman
+		// Cayman Islands
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 768;
+			mcc		= 346;
+			},
+		// America/Chicago
+		// Chicago, Illinois, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 776;
+			mcc		= 310;
+			},
+		// America/Chihuahua
+		// Mexico
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 784;
+			mcc		= 334;
+			},
+		// America/Costa_Rica
+		// Costa Rica
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 792;
+			mcc		= 712;
+			},
+		// America/Cuiaba
+		// Brazil
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 800;
+			mcc		= 724;
+			},
+		// America/Curacao
+		// Curaçao (island(s)), Caribbean Sea (Netherlands Antilles)
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 808;
+			mcc		= 362;
+			},
+		// America/Danmarkshavn
+		// Greenland?
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 816;
+			mcc		= 290;
+			},
+		// America/Dawson
+		// United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 824;
+			mcc		= 310;
+			},
+		// America/Dawson_Creek
+		// Dawson Creek, British Columbia, Canada
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 832;
+			mcc		= 302;
+			},
+		// America/Denver
+		// Denver, Colorado, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 840;
+			mcc		= 310;
+			},
+		// America/Detroit
+		// Detroit, Michigan, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 848;
+			mcc		= 310;
+			},
+		// America/Dominica
+		// Dominica, Caribbean
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 856;
+			mcc		= 366;
+			},
+		// America/Edmonton
+		// Edmonton, Alberta, Canada
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 864;
+			mcc		= 302;
+			},
+		// America/Eirunepe
+		// Brazil
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 872;
+			mcc		= 724;
+			},
+		// America/El_Salvador
+		// El Salvador, El Salvador
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 880;
+			mcc		= 706;
+			},
+		// America/Fortaleza
+		// Fortaleza, Ceará, Brazil
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 888;
+			mcc		= 724;
+			},
+		// America/Glace_Bay
+		// Glace Bay, Nova Scotia, Canada
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 896;
+			mcc		= 302;
+			},
+		// America/Godthab
+		// Godthåb [Nuuk], Greenland
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 904;
+			mcc		= 290;
+			},
+		// America/Goose_Bay
+		// Canada
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 912;
+			mcc		= 302;
+			},
+		// America/Grand_Turk
+		// Turks and Caicos Islands
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 920;
+			mcc		= 376;
+			},
+		// America/Grenada
+		// Grenada, Caribbean
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 928;
+			mcc		= 352;
+			},
+		// America/Guadeloupe
+		// Guadeloupe (dependency), North America
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 936;
+			mcc		= 340;
+			},
+		// America/Guatemala
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 944;
+			mcc		= 704;
+			},
+		// America/Guayaquil
+		// Guayaquil, Guayas, Ecuador
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 952;
+			mcc		= 740;
+			},
+		// America/Guyana
+		// Guyana, South America
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 960;
+			mcc		= 738;
+			},
+		// America/Halifax
+		// Halifax, Nova Scotia, Canada
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 968;
+			mcc		= 302;
+			},
+		// America/Havana
+		// Havana, Cuba
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 976;
+			mcc		= 368;
+			},
+		// America/Hermosillo
+		// Hermosillo, Sonora, Mexico
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 984;
+			mcc		= 334;
+			},
+		// America/Indiana/Knox
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1000;
+			mcc		= 310;
+			},
+		// America/Indiana/Marengo
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1008;
+			mcc		= 310;
+			},
+		// America/Indiana/Vevay
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1032;
+			mcc		= 310;
+			},
+		// America/Indianapolis
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 992;
+			mcc		= 310;
+			},
+		// America/Inuvik
+		// Inuvik, Northwest Territories, Canada
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1056;
+			mcc		= 302;
+			},
+		// America/Iqaluit
+		// Iqaluit, Nunavut, Canada
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1064;
+			mcc		= 302;
+			},
+		// America/Jamaica
+		// Jamaica, Caribbean
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1072;
+			mcc		= 338;
+			},
+		// America/Juneau
+		// Juneau, Alaska, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1080;
+			mcc		= 310;
+			},
+		// America/Kentucky/Monticello
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1096;
+			mcc		= 310;
+			},
+		// America/La_Paz
+		// La Paz, Bolivia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1104;
+			mcc		= 736;
+			},
+		// America/Lima
+		// Peru
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1112;
+			mcc		= 716;
+			},
+		// America/Los_Angeles
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1120;
+			mcc		= 310;
+			},
+		// America/Louisville
+		// Louisville, Kentucky, United States          
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1088;
+			mcc		= 310;
+			},
+		// America/Maceio
+		// Maceió, Alagoas, Brazil
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1128;
+			mcc		= 724;
+			},
+		// America/Managua
+		// Managua, Nicaragua
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1136;
+			mcc		= 710;
+			},
+		// America/Manaus
+		// Manaus, Amazonas, Brazil
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1144;
+			mcc		= 724;
+			},
+		// America/Martinique
+		// Martinique (dependency), North America
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1152;
+			mcc		= 340;
+			},
+		// America/Mazatlan
+		// Mazatlán, Sinaloa, Mexico
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1160;
+			mcc		= 334;
+			},
+		// America/Menominee
+		// Menominee, Michigan, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1168;
+			mcc		= 310;
+			},
+		// America/Merida
+		// Mérida, Yucatán, Mexico
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1176;
+			mcc		= 334;
+			},
+		// America/Mexico_City
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1184;
+			mcc		= 334;
+			},
+		// America/Miquelon
+		// Miquelon, Saint Pierre and Miquelon
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1192;
+			mcc		= 308;
+			},
+		// America/Monterrey
+		// Monterrey, Nuevo León, Mexico
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1208;
+			mcc		= 334;
+			},
+		// America/Montevideo
+		// Montevideo, Uruguay
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1216;
+			mcc		= 748;
+			},
+		// America/Montreal
+		// Montréal, Québec, Canada
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1224;
+			mcc		= 302;
+			},
+		// America/Montserrat
+		// Montserrat (dependency), North America
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1232;
+			mcc		= 354;
+			},
+		// America/Nassau
+		// Nassau, The Bahamas
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1240;
+			mcc		= 364;
+			},
+		// America/New_York
+		// New Yoik, New Yoik
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1248;
+			mcc		= 310;
+			},
+		// America/Nipigon
+		// Nipigon , Ontario, Canada
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1256;
+			mcc		= 302;
+			},
+		// America/Nome
+		// Nome, Nome, Alaska, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1264;
+			mcc		= 310;
+			},
+		// America/Noronha
+		// Noroña, Havana, Cuba
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1272;
+			mcc		= 368;
+			},
+		// America/North_Dakota/Center
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1280;
+			mcc		= 310;
+			},
+		// America/Panama
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1296;
+			mcc		= 714;
+			},
+		// America/Pangnirtung
+		// Pangnirtung, Nunavut, Canada
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1304;
+			mcc		= 302;
+			},
+		// America/Paramaribo
+		// Paramaribo, Suriname
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1312;
+			mcc		= 746;
+			},
+		// America/Port-au-Prince
+		// Port-au-Prince, Haiti
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1328;
+			mcc		= 372;
+			},
+		// America/Port_of_Spain
+		// Port-of-Spain, Trinidad and Tobago
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1336;
+			mcc		= 374;
+			},
+		// America/Porto_Velho
+		// Porto Velho, Rondônia, Brazil
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1344;
+			mcc		= 724;
+			},
+		// America/Puerto_Rico
+		// Puerto Rico (dependency), North America
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1352;
+			mcc		= 330;
+			},
+		// America/Rainy_River
+		// Rainy River, Ontario, Canada
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1360;
+			mcc		= 302;
+			},
+		// America/Rankin_Inlet
+		// Rankin Inlet, Nunavut, Canada
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1368;
+			mcc		= 302;
+			},
+		// America/Recife
+		// Recife, Pernambuco, Brazil
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1376;
+			mcc		= 724;
+			},
+		// America/Regina
+		// Regina, Saskatchewan, Canada
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1384;
+			mcc		= 302;
+			},
+		// America/Rio_Branco
+		// Rio Branco, Acre, Brazil
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1400;
+			mcc		= 724;
+			},
+		// America/Santiago
+		// Santiago, Chile
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1416;
+			mcc		= 730;
+			},
+		// America/Santo_Domingo
+		// Santo Domingo, Dominican Republic
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1424;
+			mcc		= 370;
+			},
+		// America/Sao_Paulo
+		// São Paulo, São Paulo, Brazil
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1432;
+			mcc		= 724;
+			},
+		// America/Scoresbysund
+		// Scoresbysund, Greenland
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1440;
+			mcc		= 290;
+			},
+		// America/St_Johns
+		// St. John’s, Newfoundland and Labrador, Canada
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1448;
+			mcc		= 302;
+			},
+		// America/St_Kitts
+		// St. Kitts (island(s)), St. Kitts and Nevis
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1456;
+			mcc		= 356;
+			},
+		// America/St_Lucia
+		// St. Lucia, Caribbean
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1464;
+			mcc		= 358;
+			},
+		// America/St_Thomas
+		// St. Thomas, Ontario, Canada
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1472;
+			mcc		= 302;
+			},
+		// America/St_Vincent
+		// St. Vincent (island(s)), St. Vincent and the Grenadines
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1480;
+			mcc		= 360;
+			},
+		// America/Swift_Current
+		// Swift Current, Saskatchewan, Canada
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1488;
+			mcc		= 302;
+			},
+		// America/Tegucigalpa
+		// Tegucigalpa, Honduras
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1496;
+			mcc		= 708;
+			},
+		// America/Thule
+		// Thule, Greenland
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1504;
+			mcc		= 290;
+			},
+		// America/Thunder_Bay
+		// Thunder Bay, Ontario, Canada
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1512;
+			mcc		= 302;
+			},
+		// America/Tijuana
+		// Tijuana, Baja California, Mexico
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1520;
+			mcc		= 334;
+			},
+		// America/Toronto
+		// Toronto, Ontario, Canada
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1528;
+			mcc		= 302;
+			},
+		// America/Tortola
+		// Tortola (island(s)), British Virgin Islands
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1536;
+			mcc		= 348;
+			},
+		// America/Vancouver
+		// Vancouver, British Columbia, Canada
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1544;
+			mcc		= 302;
+			},
+		// America/Whitehorse
+		// Whitehorse, Yukon Territory, Canada
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1552;
+			mcc		= 302;
+			},
+		// America/Winnipeg
+		// Winnipeg, Manitoba, Canada
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1560;
+			mcc		= 302;
+			},
+		// America/Yakutat
+		// Yakutat (borough), Alaska, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1568;
+			mcc		= 310;
+			},
+		// America/Yellowknife
+		// Yellowknife, Northwest Territories, Canada
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1576;
+			mcc		= 302;
+			},
+		// Antarctica/Casey
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1584;
+			mcc		= -1;
+			},
+		// Antarctica/Davis
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1592;
+			mcc		= -1;
+			},
+		// Antarctica/DumontDUrville
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1600;
+			mcc		= -1;
+			},
+		// Antarctica/Mawson
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1608;
+			mcc		= -1;
+			},
+		// Antarctica/McMurdo
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1616;
+			mcc		= -1;
+			},
+		// Antarctica/Palmer
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1624;
+			mcc		= -1;
+			},
+		// Antarctica/Rothera
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1632;
+			mcc		= -1;
+			},
+		// Antarctica/Syowa
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1640;
+			mcc		= -1;
+			},
+		// Antarctica/Vostok
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1648;
+			mcc		= -1;
+			},
+		// Asia/Aden
+		// Aden, Yemen
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1656;
+			mcc		= 421;
+			},
+		// Asia/Almaty
+		// Almaty, Kazakhstan
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1664;
+			mcc		= 401;
+			},
+		// Asia/Amman
+		// Amman, Jordan
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1672;
+			mcc		= 416;
+			},
+		// Asia/Anadyr
+		// Anadyr’, Chukot, Russia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1680;
+			mcc		= 250;
+			},
+		// Asia/Aqtau
+		// Aqtau, Kazakhstan
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1688;
+			mcc		= 401;
+			},
+		// Asia/Aqtobe
+		// Aqtöbe, Kazakhstan
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1696;
+			mcc		= 401;
+			},
+		// Asia/Ashgabat
+		// Ashgabat, Turkmenistan
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1704;
+			mcc		= 438;
+			},
+		// Asia/Baghdad
+		// Baghdad, Iraq
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1712;
+			mcc		= 418;
+			},
+		// Asia/Bahrain
+		// Bahrain, Middle East
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1720;
+			mcc		= 426;
+			},
+		// Asia/Baku
+		// Baku, Azerbaijan
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1728;
+			mcc		= 400;
+			},
+		// Asia/Bangkok
+		// Bangkok, Thailand
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1736;
+			mcc		= 520;
+			},
+		// Asia/Beirut
+		// Beirut, Lebanon
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1744;
+			mcc		= 415;
+			},
+		// Asia/Bishkek
+		// Bishkek, Kyrgyzstan
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1752;
+			mcc		= 437;
+			},
+		// Asia/Brunei
+		// Brunei, Asia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1760;
+			mcc		= 528;
+			},
+		// Asia/Calcutta
+		// Calcutta [Kolkata], West Bengal, India
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1944;
+			mcc		= 404;
+			},
+			
+		// Asia/Choibalsan
+		// Choibalsan [Choybalsan], Mongolia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1768;
+			mcc		= 428;
+			},
+		// Asia/Chongqing
+		// Chongqing, Chongqing, China
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1776;
+			mcc		= 460;
+			},
+		// Asia/Colombo
+		// Colombo, Sri Lanka
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1784;
+			mcc		= 413;
+			},
+		// Asia/Damascus
+		// Damascus, Syria
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1792;
+			mcc		= 417;
+			},
+		// Asia/Dhaka
+		// Dhaka, Bangladesh
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1800;
+			mcc		= 470;
+			},
+		// Asia/Dili
+		// Timor-Leste
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1808;
+			mcc		= 514;
+			},
+		// Asia/Dubai
+		// Dubai (emirate), United Arab Emirates
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1816;
+			mcc		= 424;
+			},
+		// Asia/Dushanbe
+		// Dushanbe, Tajikistan
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1824;
+			mcc		= 436;
+			},
+		// Asia/Gaza
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1832;
+			mcc		= -1;
+			},
+		// Asia/Harbin
+		// Harbin, Heilongjiang, China
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1840;
+			mcc		= 460;
+			},
+		// Asia/Hong_Kong
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1856;
+			mcc		= 454;
+			},
+		// Asia/Hovd
+		// Hovd [Dund-Us], Mongolia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1864;
+			mcc		= 428;
+			},
+		// Asia/Irkutsk
+		// Irkutsk, Russia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1872;
+			mcc		= 250;
+			},
+		// Asia/Jakarta
+		// Jakarta, Indonesia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1880;
+			mcc		= 510;
+			},
+		// Asia/Jayapura
+		// Jayapura, Papua, Indonesia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1888;
+			mcc		= 510;
+			},
+		// Asia/Jerusalem
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1896;
+			mcc		= 425;
+			},
+		// Asia/Kabul
+		// Kabul, Afghanistan
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1904;
+			mcc		= 412;
+			},
+		// Asia/Kamchatka
+		// Kamchatka , Russia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1912;
+			mcc		= 250;
+			},
+		// Asia/Karachi
+		// Karachi, Sind, Pakistan
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1920;
+			mcc		= 410;
+			},
+		// Asia/Kashgar
+		// Kashgar, Xinjiang Uygur, China
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1928;
+			mcc		= 460;
+			},
+		// Asia/Katmandu
+		// Kathmandu, Nepal
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1936;
+			mcc		= 429;
+			},
+		// Asia/Krasnoyarsk
+		// Krasnoyarsk, Russia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1952;
+			mcc		= 250;
+			},
+		// Asia/Kuala_Lumpur
+		// Kuala Lumpur, Malaysia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1960;
+			mcc		= 502;
+			},
+		// Asia/Kuching
+		// Kuching, Sarawak, Malaysia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1968;
+			mcc		= 502;
+			},
+		// Asia/Kuwait
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1976;
+			mcc		= 419;
+			},
+		// Asia/Macau
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1984;
+			mcc		= 455;
+			},
+		// Asia/Magadan
+		// Magadan, Russia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1992;
+			mcc		= 250;
+			},
+		// Asia/Makassar
+		// Makassar, South Sulawesi, Indonesia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2000;
+			mcc		= 510;
+			},
+		// Asia/Manila
+		// Manila, Philippines
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2008;
+			mcc		= 515;
+			},
+		// Asia/Muscat
+		// Muscat [Masqat], Oman
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2016;
+			mcc		= 422;
+			},
+		// Asia/Nicosia
+		// Nicosia, Cyprus
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2024;
+			mcc		= 280;
+			},
+		// Asia/Novosibirsk
+		// Novosibirsk, Novosibirsk, Russia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2032;
+			mcc		= 250;
+			},
+		// Asia/Omsk
+		// Omsk, Omsk, Russia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2040;
+			mcc		= 250;
+			},
+		// Asia/Oral
+		// Oral, Kazakhstan
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2048;
+			mcc		= 401;
+			},
+		// Asia/Phnom_Penh
+		// Phnom Penh, Cambodia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2056;
+			mcc		= 456;
+			},
+		// Asia/Pontianak
+		// Pontianak, West Kalimantan, Indonesia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2064;
+			mcc		= 510;
+			},
+		// Asia/Pyongyang
+		// Pyong Kang, Kangwon,Democratic People's Republic of Korea 
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2072;
+			mcc		= 467;
+			},
+		// Asia/Qatar
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2080;
+			mcc		= 427;
+			},
+		// Asia/Qyzylorda
+		// Qyzylorda, Kazakhstan
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2088;
+			mcc		= 401;
+			},
+		// Asia/Rangoon
+		// Rangoon [Yangon], Myanmar
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2096;
+			mcc		= 414;
+			},
+		// Asia/Riyadh
+		// Riyadh, Saudi Arabia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2104;
+			mcc		= 420;
+			},
+		// Asia/Saigon
+		// Saigon [Ho Chi Minh City], Vietnam
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1848;
+			mcc		= 452;
+			},
+		// Asia/Sakhalin
+		// Sakhalin, Russia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2112;
+			mcc		= 250;
+			},
+		// Asia/Samarkand
+		// Samarkand, Uzbekistan
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2120;
+			mcc		= 434;
+			},
+		// Asia/Seoul
+		// Seoul, South Korea
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2128;
+			mcc		= 450;
+			},
+		// Asia/Shanghai
+		// Shanghai, Shanghai, China
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2136;
+			mcc		= 460;
+			},
+		// Asia/Singapore
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2144;
+			mcc		= 525;
+			},
+		// Asia/Taipei
+		// Taipei, Taiwan
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2152;
+			mcc		= 466;
+			},
+		// Asia/Tashkent
+		// Tashkent [Toshkent], Uzbekistan
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2160;
+			mcc		= 434;
+			},
+		// Asia/Tbilisi
+		// Tbilisi, Georgia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2168;
+			mcc		= 282;
+			},
+		// Asia/Tehran
+		// Tehran, Iran
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2176;
+			mcc		= 432;
+			},
+		// Asia/Thimphu
+		// Thimphu, Bhutan
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2184;
+			mcc		= 402;
+			},
+		// Asia/Tokyo
+		// Tokyo, Japan
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2192;
+			mcc		= 440;
+			},
+						
+		// Asia/Ulaanbaatar
+		// Ulaanbaatar, Mongolia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2200;
+			mcc		= 428;
+			},
+		// Asia/Urumqi
+		// Ürümqi, Xinjiang Uygur, China
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2208;
+			mcc		= 460;
+			},
+		// Asia/Vientiane
+		// Vientiane, Laos
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2216;
+			mcc		= 457;
+			},
+		// Asia/Vladivostok
+		// Vladivostok, Primorskiy, Russia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2224;
+			mcc		= 250;
+			},
+		// Asia/Yakutsk
+		// Yakutsk, Sakha, Russia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2232;
+			mcc		= 250;
+			},
+		// Asia/Yekaterinburg
+		// Yekaterinburg, Sverdlovsk, Russia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2240;
+			mcc		= 250;
+			},
+		// Asia/Yerevan
+		// Yerevan, Armenia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2248;
+			mcc		= 283;
+			},
+		// Atlantic/Azores
+		// Azores (autonomous region), Portugal
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2256;
+			mcc		= -1;
+			},
+		// Atlantic/Bermuda
+		// Bermuda (dependency), Atlantic Ocean
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2264;
+			mcc		= 350;
+			},
+		// Atlantic/Canary
+		// Canary Islands?
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2272;
+			mcc		= -1;
+			},
+		// Atlantic/Cape_Verde
+		// Cape Verde, Africa
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2280;
+			mcc		= 625;
+			},
+		// Atlantic/Faeroe
+		// Faeroes [Faroe Islands] (dependency), Europe
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2288;
+			mcc		= 288;
+			},
+		// Atlantic/Madeira
+		// Madeira (autonomous region), Portugal
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2296;
+			mcc		= -1;
+			},
+		// Atlantic/Reykjavik
+		// Reykjavík, Iceland
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2304;
+			mcc		= 274;
+			},
+		// Atlantic/South_Georgia
+		// South Georgia [South Georgia and South Sandwich Islands] (dependency), Atlantic Ocean
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2312;
+			mcc		= -1;
+			},
+		// Atlantic/St_Helena
+		// St. Helena (dependency), Atlantic Ocean
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2320;
+			mcc		= -1;
+			},
+		// Atlantic/Stanley
+		// Falklands
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2328;
+			mcc		= 750;
+			},
+		// Australia/Adelaide
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2336;
+			mcc		= 505;
+			},
+		// Australia/Brisbane
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2344;
+			mcc		= 505;
+			},
+		// Australia/Broken_Hill
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2352;
+			mcc		= 505;
+			},
+		// Australia/Darwin
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2368;
+			mcc		= 505;
+			},
+		// Australia/Hobart
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2384;
+			mcc		= 505;
+			},
+		// Australia/Lindeman
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2392;
+			mcc		= 505;
+			},
+		// Australia/Lord_Howe
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2400;
+			mcc		= 505;
+			},
+		// Australia/Melbourne
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2408;
+			mcc		= 505;
+			},
+		// Australia/Perth
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2416;
+			mcc		= 505;
+			},
+		// Australia/Sydney
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2424;
+			mcc		= 505;
+			},
+		// Etc/GMT+1
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2440;
+			mcc		= -1;
+			},
+		// Etc/GMT+10
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2448;
+			mcc		= -1;
+			},
+		// Etc/GMT+11
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2456;
+			mcc		= -1;
+			},
+		// Etc/GMT+12
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2464;
+			mcc		= -1;
+			},
+		// Etc/GMT+2
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2472;
+			mcc		= -1;
+			},
+		// Etc/GMT+3
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2480;
+			mcc		= -1;
+			},
+		// Etc/GMT+4
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2488;
+			mcc		= -1;
+			},
+		// Etc/GMT+5
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2496;
+			mcc		= -1;
+			},
+		// Etc/GMT+6
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2504;
+			mcc		= -1;
+			},
+		// Etc/GMT+7
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2512;
+			mcc		= -1;
+			},
+		// Etc/GMT+8
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2520;
+			mcc		= -1;
+			},
+		// Etc/GMT+9
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2528;
+			mcc		= -1;
+			},
+		// Etc/GMT-1
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2536;
+			mcc		= -1;
+			},
+		// Etc/GMT-10
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2544;
+			mcc		= -1;
+			},
+		// Etc/GMT-11
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2552;
+			mcc		= -1;
+			},
+		// Etc/GMT-12
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2560;
+			mcc		= -1;
+			},
+		// Etc/GMT-13
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2568;
+			mcc		= -1;
+			},
+		// Etc/GMT-2
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2584;
+			mcc		= -1;
+			},
+		// Etc/GMT-3
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2592;
+			mcc		= -1;
+			},
+		// Etc/GMT-4
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2600;
+			mcc		= -1;
+			},
+		// Etc/GMT-5
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2608;
+			mcc		= -1;
+			},
+		// Etc/GMT-6
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2616;
+			mcc		= -1;
+			},
+		// Etc/GMT-7
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2624;
+			mcc		= -1;
+			},
+		// Etc/GMT-8
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2632;
+			mcc		= -1;
+			},
+		// Etc/GMT-9
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2640;
+			mcc		= -1;
+			},
+		// Etc/UCT
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2648;
+			mcc		= -1;
+			},
+		// Etc/UTC
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2656;
+			mcc		= -1;
+			},
+		// Europe/Amsterdam
+		// Amsterdam, Netherlands
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2664;
+			mcc		= 204;
+			},
+		// Europe/Andorra
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2672;
+			mcc		= 213;
+			},
+		// Europe/Athens
+		// Athens, Greece
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2680;
+			mcc		= 202;
+			},
+		// Europe/Belfast                
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2744;
+			mcc		= 234;
+			},
+		// Europe/Belgrade
+		// Belgrade, Serbia and Montenegro
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2688;
+			mcc		= 220;
+			},
+		// Europe/Podgorica
+		// Podgorica, Montenegro
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3424;
+			mcc		= 220;
+			},
+		// Europe/Berlin
+		// Germany
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2696;
+			mcc		= 262;
+			},
+		// Europe/Brussels
+		// Belgium
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2704;
+			mcc		= 206;
+			},
+		// Europe/Bucharest
+		// Romania
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2712;
+			mcc		= 226;
+			},
+		// Europe/Budapest
+		// Hungary
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2720;
+			mcc		= 216;
+			},
+		// Europe/Chisinau
+		// Moldova
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2728;
+			mcc		= 259;
+			},
+		// Europe/Copenhagen
+		// Denamrk
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2736;
+			mcc		= 238;
+			},
+		// Europe/Dublin
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2744;
+			mcc		= 272;
+			},
+		// Europe/Gibraltar
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2752;
+			mcc		= 266;
+			},
+		// Europe/Helsinki
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2760;
+			mcc		= 244;
+			},
+		// Europe/Istanbul
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2768;
+			mcc		= 286;
+			},
+		// Europe/Kaliningrad
+		// Russia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2776;
+			mcc		= 250;
+			},
+		// Europe/Kiev
+		// Kiev [Kyiv], Ukraine
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2784;
+			mcc		= 255;
+			},
+		// Europe/Lisbon
+		// Portugal
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2792;
+			mcc		= 268;
+			},
+		// Europe/London
+		// UK
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2800;
+			mcc		= 234;
+			},
+		// Europe/Luxembourg
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2808;
+			mcc		= 270;
+			},
+		// Europe/Madrid
+		// Spain
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2816;
+			mcc		= 214;
+			},
+		// Europe/Malta
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2824;
+			mcc		= 278;
+			},
+		// Europe/Minsk
+		// Minsk, Belarus
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2832;
+			mcc		= 257;
+			},
+		// Europe/Monaco
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2840;
+			mcc		= 212;
+			},
+		// Europe/Moscow
+		// Russia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2848;
+			mcc		= 250;
+			},
+		// Europe/Oslo
+		// Norway
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2856;
+			mcc		= 242;
+			},
+		// Europe/Paris
+		// France
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2864;
+			mcc		= 208;
+			},
+		// Europe/Prague
+		// Czech Republic
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2872;
+			mcc		= 230;
+			},
+		// Europe/Riga
+		// Latvia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2880;
+			mcc		= 247;
+			},
+		// Europe/Rome
+		// Italy
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2888;
+			mcc		= 222;
+			},
+		// Europe/Samara
+		// Russia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2896;
+			mcc		= 250;
+			},
+		// Europe/Simferopol
+		// Simferopol, Crimea, Ukraine
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2904;
+			mcc		= 255;
+			},
+		// Europe/Sofia
+		// Bulgaria
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2912;
+			mcc		= 284;
+			},
+		// Europe/Stockholm
+		// Sweden
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2920;
+			mcc		= 240;
+			},
+		// Europe/Tallinn
+		// Tallinn, Estonia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2928;
+			mcc		= 248;
+			},
+		// Europe/Tirane
+		// Tirané, Albania
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2936;
+			mcc		= 276;
+			},
+		// Europe/Uzhgorod
+		// Uzhhorod, Zakarpatska, Ukraine
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2944;
+			mcc		= 255;
+			},
+		// Europe/Vaduz
+		// Vaduz, Liechtenstein
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2952;
+			mcc		= 295;
+			},
+		// Europe/Vienna
+		// Austria
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2960;
+			mcc		= 232;
+			},
+		// Europe/Vilnius
+		// Vilnius, Lithuania
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2968;
+			mcc		= 246;
+			},
+		// Europe/Warsaw
+		// Poland
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2984;
+			mcc		= 260;
+			},
+		// Europe/Zaporozhye
+		// Zaporizhzhya, Ukraine
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2992;
+			mcc		= 255;
+			},
+		// Europe/Zurich
+		// Switzerland
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3000;
+			mcc		= 228;
+			},
+		// Indian/Antananarivo
+		// Antananarivo, Madagascar
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3008;
+			mcc		= 646;
+			},
+		// Indian/Chagos
+		// Chagos Archipelago (archipelago), British Indian Ocean Territory
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3016;
+			mcc		= -1;
+			},
+		// Indian/Christmas
+		// Christmas Island (dependency), Indian Ocean
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3024;
+			mcc		= -1;
+			},
+		// Indian/Cocos
+		// Cocos Islands [Cocos (Keeling) Islands] (dependency), Indian Ocean
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3032;
+			mcc		= -1;
+			},
+		// Indian/Comoro
+		// Comoro Island [Grande Comore] (island(s)), Comoros
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3040;
+			mcc		= 654;
+			},
+		// Indian/Kerguelen
+		// Kerguelen [Kerguelen Island] (island(s)), French Southern and Antarctic Lands
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3048;
+			mcc		= -1;
+			},
+		// Indian/Mahe
+		// Mahe, Seychelles
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3056;
+			mcc		= 633;
+			},		
+		// Indian/Maldives
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3064;
+			mcc		= 472;
+			},
+		// Indian/Mauritius
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3072;
+			mcc		= 617;
+			},
+		// Indian/Mayotte
+		// Mayotte (dependency), Africa
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3080;
+			mcc		= -1;
+			},
+		// Indian/Reunion
+		// Reunion [Réunion] (dependency), Indian Ocean
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3088;
+			mcc		= 647;
+			},
+		// Pacific/Apia
+		// Somoa
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3096;
+			mcc		= 549;
+			},
+		// Pacific/Auckland
+		// New Zealand
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3104;
+			mcc		= 530;
+			},
+		// Pacific/Chatham
+		// Chatham Islands (island(s)), New Zealand
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3112;
+			mcc		= 530;
+			},
+		// Pacific/Easter
+		// Easter Island (island(s)), Pacific Ocean
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3120;
+			mcc		= -1;
+			},
+		// Pacific/Efate
+		// Éfaté (island(s)), Vanuatu
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3128;
+			mcc		= 541;
+			},
+		// Pacific/Enderbury
+		// Enderbury Atoll [Enderbury Island] (island(s)), Kiribati
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3136;
+			mcc		= 545;
+			},
+		// Pacific/Fakaofo
+		// Fakaofo (island(s)), Tokelau
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3144;
+			mcc		= -1;
+			},
+		// Pacific/Fiji
+		// Fiji [Fiji Islands], Pacific Ocean
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3152;
+			mcc		= 542;
+			},
+		// Pacific/Funafuti
+		// Funafuti, Tuvalu
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3160;
+			mcc		= -1;
+			},
+		// Pacific/Galapagos
+		// Galápagos Islands, Pacific Ocean
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3168;
+			mcc		= 740;
+			},
+		// Pacific/Gambier
+		// Gambier Islands, French Polynesia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3176;
+			mcc		= 547;
+			},
+		// Pacific/Guadalcanal
+		// Guadalcanal (island(s)), Solomon Islands
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3184;
+			mcc		= 540;
+			},
+		// Pacific/Guam
+		// Guam (dependency), Pacific Ocean
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3192;
+			mcc		= 535;
+			},
+		// Pacific/Honolulu
+		// Honolulu, Hawaii, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3200;
+			mcc		= 310;
+			},
+		// Pacific/Johnston
+		// Johnston Atoll (dependency), Pacific Ocean
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3208;
+			mcc		= 310;
+			},
+		// Pacific/Kiritimati
+		// Kiritimati (atoll), Kiribati
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3216;
+			mcc		= 545;
+			},
+		// Pacific/Kosrae
+		// Kosrae (state), Federated States of Micronesia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3224;
+			mcc		= 550;
+			},
+		// Pacific/Kwajalein
+		// Kwajalein [Kwajalein Atoll] (atoll), Marshall Islands
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3232;
+			mcc		= -1;
+			},
+		// Pacific/Majuro
+		// Majuro, Marshall Islands
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3240;
+			mcc		= 551;
+			},
+		// Pacific/Marquesas
+		// Marquesas Islands (island(s)), French Polynesia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3248;
+			mcc		= 547;
+			},
+		// Pacific/Midway
+		// Midway [Midway Islands] (dependency), Pacific Ocean
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3256;
+			mcc		= -1;
+			},
+		// Pacific/Nauru
+		// Nauru, Pacific Ocean
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3264;
+			mcc		= 536;
+			},
+		// Pacific/Niue
+		// Niue (dependency), Pacific Ocean
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3272;
+			mcc		= -1;
+			},
+		// Pacific/Norfolk
+		// Norfolk Island (dependency), Pacific Ocean
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3280;
+			mcc		= -1;
+			},
+		// Pacific/Noumea
+		// Nouméa, New Caledonia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3288;
+			mcc		= 546;
+			},
+		// Pacific/Pago_Pago
+		// Pago Pago, American Samoa
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3296;
+			mcc		= 544;
+			},
+		// Pacific/Palau
+		// Palau, Pacific Ocean
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3304;
+			mcc		= 552;
+			},
+		// Pacific/Pitcairn
+		// Pitcairn [Pitcairn Island] (dependency), Pacific Ocean
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3312;
+			mcc		= -1;
+			},
+		// Pacific/Ponape
+		// Ponape [Pohnpei] (island(s)), Federated States of Micronesia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3320;
+			mcc		= 550;
+			},
+		// Pacific/Port_Moresby
+		// Port Moresby, Papua New Guinea
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3328;
+			mcc		= 537;
+			},
+		// Pacific/Rarotonga
+		// Rarotonga (island(s)), Cook Islands
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3336;
+			mcc		= 548;
+			},
+		// Pacific/Saipan
+		// Saipan (island(s)), Northern Mariana Islands
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3344;
+			mcc		= 534;
+			},
+		// Pacific/Tahiti
+		// Tahiti (island(s)), French Polynesia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3352;
+			mcc		= 547;
+			},
+		// Pacific/Tarawa
+		// Tarawa [Tarawai Island], Papua New Guinea
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3360;
+			mcc		= 537;
+			},
+		// Pacific/Tongatapu
+		// Tongatapu Group (island(s)), Tonga
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3368;
+			mcc		= 539;
+			},
+		// Pacific/Truk
+		// Truk Islands [Chuuk Islands] (island(s)), Federated States of Micronesia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3376;
+			mcc		= 550;
+			},
+		// Pacific/Wake
+		// Wake, Okayama, Japan
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3384;
+			mcc		= 440;
+			},
+		// Pacific/Wallis
+		// Wallis and Futuna (dependency), Pacific Ocean
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3392;
+			mcc		= 543;
+			},
+		// Pacific/Yap
+		// Yap, Papua New Guinea
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3328;
+			mcc		= 537;
+			},
+		// S60Zone/Bosnia_and_Herzegovina
+		// Series60 specific mapping for Bosnia and Herzegovina
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3400;
+			mcc		= 218;
+			},
+		// S60Zone/Croatia
+		// Series60 specific mapping for Croatia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3408;
+			mcc		= 219;
+			},
+		// S60Zone/Macedonia
+		// Series60 specific mapping for Macedonia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3416;
+			mcc		= 294;
+			},
+		// S60Zone/Slovakia
+		// Series60 specific mapping for Slovakia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3432;
+			mcc		= 231;
+			},
+		// S60Zone/Slovenia
+		// Series60 specific mapping for Slovenia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3440;
+			mcc		= 293;
+			},
+			
+		// Added to fix nitz not working error.
+		// Phoenix time zone id for all US MCC's
+		// America/Arizona
+		// Phoenix,United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 64;
+			mcc	= 310;
+			},
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 64;
+			mcc	= 311;
+			},
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 64;
+			mcc	= 312;
+			},
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 64;
+			mcc	= 313;
+			},
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 64;
+			mcc	= 314;
+			},
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 64;
+			mcc	= 315;
+			},
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 64;
+			mcc	= 316;
+			},
+		// Phoenix time zone id for all US MCC's
+		// America/Adak
+		// Aleutians West, Alaska, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 504;
+			mcc		= 311;
+			},
+		// America/Anchorage
+		// Alaska, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 512;
+			mcc		= 311;
+			},
+		// America/Anguilla
+		// Anguilla (dependency), North America ?
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 520;
+			mcc		= 311;
+			},
+		// America/Boise
+		// Boise, Idaho, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 720;
+			mcc		= 311;
+			},
+		// America/Chicago
+		// Chicago, Illinois, United States	
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 776;
+			mcc		= 311;
+			},
+		// America/Dawson
+		// United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 824;
+			mcc		= 311;
+			},
+		// America/Denver
+		// Denver, Colorado, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 840;
+			mcc		= 311;
+			},
+		// America/Detroit
+		// Detroit, Michigan, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 848;
+			mcc		= 311;
+			},
+		// America/Indiana/Knox
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1000;
+			mcc		= 311;
+			},
+		// America/Indiana/Marengo
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1008;
+			mcc		= 311;
+			},
+		// America/Indiana/Vevay
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1032;
+			mcc		= 311;
+			},
+		// America/Indianapolis
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 992;
+			mcc		= 311;
+			},
+		// America/Juneau
+		// Juneau, Alaska, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1080;
+			mcc		= 311;
+			},
+		// America/Kentucky/Monticello
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1096;
+			mcc		= 311;
+			},
+		// America/Los_Angeles
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1120;
+			mcc		= 311;
+			},
+		// America/Louisville                            
+		// Louisville, Kentucky, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1088;
+			mcc		= 311;
+			},
+		// America/Menominee
+		// Menominee, Michigan, United States	
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1168;
+			mcc		= 311;
+			},
+		// America/New_York
+		// New Yoik, New Yoik
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1248;
+			mcc		= 311;
+			},
+		// America/Nome
+		// Nome, Nome, Alaska, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1264;
+			mcc		= 311;
+			},
+		// America/North_Dakota/Center
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1280;
+			mcc		= 311;
+			},
+		// America/Yakutat
+		// Yakutat (borough), Alaska, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1568;
+			mcc		= 311;
+			},
+		// America/Adak
+		// Aleutians West, Alaska, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 504;
+			mcc		= 312;
+			},
+		// America/Anchorage
+		// Alaska, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 512;
+			mcc		= 312;
+			},
+		// America/Anguilla
+		// Anguilla (dependency), North America ?
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 520;
+			mcc		= 312;
+			},
+		// America/Boise
+		// Boise, Idaho, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 720;
+			mcc		= 312;
+			},
+		// America/Chicago
+		// Chicago, Illinois, United States	
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 776;
+			mcc		= 312;
+			},
+		// America/Dawson
+		// United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 824;
+			mcc		= 312;
+			},
+		// America/Denver
+		// Denver, Colorado, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 840;
+			mcc		= 312;
+			},
+		// America/Detroit
+		// Detroit, Michigan, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 848;
+			mcc		= 312;
+			},
+		// America/Indiana/Knox
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1000;
+			mcc		= 312;
+			},
+		// America/Indiana/Marengo
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1008;
+			mcc		= 312;
+			},
+		// America/Indiana/Vevay
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1032;
+			mcc		= 312;
+			},
+		// America/Indianapolis
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 992;
+			mcc		= 312;
+			},
+		// America/Juneau
+		// Juneau, Alaska, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1080;
+			mcc		= 312;
+			},
+		// America/Kentucky/Monticello
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1096;
+			mcc		= 312;
+			},
+		// America/Los_Angeles
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1120;
+			mcc		= 312;
+			},
+		// America/Louisville
+		// Louisville, Kentucky, United States     
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1088;                      
+			mcc		= 312;
+			},
+		// America/Menominee
+		// Menominee, Michigan, United States	
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1168;
+			mcc		= 312;
+			},
+		// America/New_York
+		// New Yoik, New Yoik
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1248;
+			mcc		= 312;
+			},
+		// America/Nome
+		// Nome, Nome, Alaska, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1264;
+			mcc		= 312;
+			},
+		// America/North_Dakota/Center
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1280;
+			mcc		= 312;
+			},
+		// America/Yakutat
+		// Yakutat (borough), Alaska, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1568;
+			mcc		= 312;
+			},
+		// America/Adak
+		// Aleutians West, Alaska, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 504;
+			mcc		= 313;
+			},
+		// America/Anchorage
+		// Alaska, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 512;
+			mcc		= 313;
+			},
+		// America/Anguilla
+		// Anguilla (dependency), North America ?
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 520;
+			mcc		= 313;
+			},
+		// America/Boise
+		// Boise, Idaho, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 720;
+			mcc		= 313;
+			},
+		// America/Chicago
+		// Chicago, Illinois, United States	
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 776;
+			mcc		= 313;
+			},
+		// America/Dawson
+		// United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 824;
+			mcc		= 313;
+			},
+		// America/Denver
+		// Denver, Colorado, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 840;
+			mcc		= 313;
+			},
+		// America/Detroit
+		// Detroit, Michigan, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 848;
+			mcc		= 313;
+			},
+		// America/Indiana/Knox
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1000;
+			mcc		= 313;
+			},
+		// America/Indiana/Marengo
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1008;
+			mcc		= 313;
+			},
+		// America/Indiana/Vevay
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1032;
+			mcc		= 313;
+			},
+		// America/Indianapolis
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 992;
+			mcc		= 313;
+			},
+		// America/Juneau
+		// Juneau, Alaska, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1080;
+			mcc		= 313;
+			},
+		// America/Kentucky/Monticello
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1096;
+			mcc		= 313;
+			},
+		// America/Los_Angeles
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1120;
+			mcc		= 313;
+			},
+		// America/Louisville
+		// Louisville, Kentucky, United States      
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1088;
+			mcc		= 313;
+			},
+		// America/Menominee
+		// Menominee, Michigan, United States	
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1168;
+			mcc		= 313;
+			},
+		// America/New_York
+		// New Yoik, New Yoik
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1248;
+			mcc		= 313;
+			},
+		// America/Nome
+		// Nome, Nome, Alaska, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1264;
+			mcc		= 313;
+			},
+		// America/North_Dakota/Center
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1280;
+			mcc		= 313;
+			},
+		// America/Yakutat
+		// Yakutat (borough), Alaska, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1568;
+			mcc		= 313;
+			},
+		// America/Adak
+		// Aleutians West, Alaska, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 504;
+			mcc		= 314;
+			},
+		// America/Anchorage
+		// Alaska, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 512;
+			mcc		= 314;
+			},
+		// America/Anguilla
+		// Anguilla (dependency), North America ?
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 520;
+			mcc		= 314;
+			},
+		// America/Boise
+		// Boise, Idaho, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 720;
+			mcc		= 314;
+			},
+		// America/Chicago
+		// Chicago, Illinois, United States	
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 776;
+			mcc		= 314;
+			},
+		// America/Dawson
+		// United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 824;
+			mcc		= 314;
+			},
+		// America/Denver
+		// Denver, Colorado, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 840;
+			mcc		= 314;
+			},
+		// America/Detroit
+		// Detroit, Michigan, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 848;
+			mcc		= 314;
+			},
+		// America/Indiana/Knox
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1000;
+			mcc		= 314;
+			},
+		// America/Indiana/Marengo
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1008;
+			mcc		= 314;
+			},
+		// America/Indiana/Vevay
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1032;
+			mcc		= 314;
+			},
+		// America/Indianapolis
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 992;
+			mcc		= 314;
+			},
+		// America/Juneau
+		// Juneau, Alaska, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1080;
+			mcc		= 314;
+			},
+		// America/Kentucky/Monticello
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1096;
+			mcc		= 314;
+			},
+		// America/Los_Angeles
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1120;
+			mcc		= 314;
+			},
+		// America/Louisville
+		// Louisville, Kentucky, United States     
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1088;
+			mcc		= 314;
+			},
+		// America/Menominee
+		// Menominee, Michigan, United States	
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1168;
+			mcc		= 314;
+			},
+		// America/New_York
+		// New Yoik, New Yoik
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1248;
+			mcc		= 314;
+			},
+		// America/Nome
+		// Nome, Nome, Alaska, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1264;
+			mcc		= 314;
+			},
+		// America/North_Dakota/Center
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1280;
+			mcc		= 314;
+			},
+		// America/Yakutat
+		// Yakutat (borough), Alaska, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1568;
+			mcc		= 314;
+			},
+		// America/Adak
+		// Aleutians West, Alaska, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 504;
+			mcc		= 315;
+			},
+		// America/Anchorage
+		// Alaska, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 512;
+			mcc		= 315;
+			},
+		// America/Anguilla
+		// Anguilla (dependency), North America ?
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 520;
+			mcc		= 315;
+			},
+		// America/Boise
+		// Boise, Idaho, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 720;
+			mcc		= 315;
+			},
+		// America/Chicago
+		// Chicago, Illinois, United States	
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 776;
+			mcc		= 315;
+			},
+		// America/Dawson
+		// United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 824;
+			mcc		= 315;
+			},
+		// America/Denver
+		// Denver, Colorado, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 840;
+			mcc		= 315;
+			},
+		// America/Detroit
+		// Detroit, Michigan, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 848;
+			mcc		= 315;
+			},
+		// America/Indiana/Knox
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1000;
+			mcc		= 315;
+			},
+		// America/Indiana/Marengo
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1008;
+			mcc		= 315;
+			},
+		// America/Indiana/Vevay
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1032;
+			mcc		= 315;
+			},
+		// America/Indianapolis
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 992;
+			mcc		= 315;
+			},
+		// America/Juneau
+		// Juneau, Alaska, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1080;
+			mcc		= 315;
+			},
+		// America/Kentucky/Monticello
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1096;
+			mcc		= 315;
+			},
+		// America/Los_Angeles
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1120;
+			mcc		= 315;
+			},
+		// America/Louisville
+		// Louisville, Kentucky, United States   
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1088;
+			mcc		= 315;
+			},
+		// America/Menominee
+		// Menominee, Michigan, United States	
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1168;
+			mcc		= 315;
+			},
+		// America/New_York
+		// New Yoik, New Yoik
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1248;
+			mcc		= 315;
+			},
+		// America/Nome
+		// Nome, Nome, Alaska, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1264;
+			mcc		= 315;
+			},
+		// America/North_Dakota/Center
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1280;
+			mcc		= 315;
+			},
+		// America/Yakutat
+		// Yakutat (borough), Alaska, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1568;
+			mcc		= 315;
+			},
+		// America/Adak
+		// Aleutians West, Alaska, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 504;
+			mcc		= 316;
+			},
+		// America/Anchorage
+		// Alaska, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 512;
+			mcc		= 316;
+			},
+		// America/Anguilla
+		// Anguilla (dependency), North America ?
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 520;
+			mcc		= 316;
+			},
+		// America/Boise
+		// Boise, Idaho, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 720;
+			mcc		= 316;
+			},
+		// America/Chicago
+		// Chicago, Illinois, United States	
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 776;
+			mcc		= 316;
+			},
+		// America/Dawson
+		// United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 824;
+			mcc		= 316;
+			},
+		// America/Denver
+		// Denver, Colorado, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 840;
+			mcc		= 316;
+			},
+		// America/Detroit
+		// Detroit, Michigan, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 848;
+			mcc		= 316;
+			},
+		// America/Indiana/Knox
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1000;
+			mcc		= 316;
+			},
+		// America/Indiana/Marengo
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1008;
+			mcc		= 316;
+			},
+		// America/Indiana/Vevay
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1032;
+			mcc		= 316;
+			},
+		// America/Indianapolis
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 992;
+			mcc		= 316;
+			},
+		// America/Juneau
+		// Juneau, Alaska, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1080;
+			mcc		= 316;
+			},
+		// America/Kentucky/Monticello
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1096;
+			mcc		= 316;
+			},
+		// America/Los_Angeles
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1120;
+			mcc		= 316;
+			},
+		// America/Louisville
+		// Louisville, Kentucky, United States   
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1088;
+			mcc		= 316;
+			},
+		// America/Menominee
+		// Menominee, Michigan, United States	
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1168;
+			mcc		= 316;
+			},
+		// America/New_York
+		// New Yoik, New Yoik
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1248;
+			mcc		= 316;
+			},
+		// America/Nome
+		// Nome, Nome, Alaska, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1264;
+			mcc		= 316;
+			},
+		// America/North_Dakota/Center
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1280;
+			mcc		= 316;
+			},
+		// America/Yakutat
+		// Yakutat (borough), Alaska, United States
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1568;
+			mcc		= 316;
+			},
+		// Europe/Belfast            
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2744;
+			mcc		= 235;
+			},
+		// Europe/London
+		// UK
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2800;
+			mcc		= 235;
+			},
+		// Asia/Dubai
+		// Dubai (emirate), United Arab Emirates
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1816;
+			mcc		= 430;
+			},
+		// Asia/Dubai
+		// Dubai (emirate), United Arab Emirates
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1816;
+			mcc		= 431;
+			},
+		// Asia/Calcutta
+		// Calcutta [Kolkata], West Bengal, India
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1800;
+			mcc		= 405;
+			},
+		// Asia/Tokyo
+		// Tokyo, Japan
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2192;
+			mcc		= 441;
+			},
+		// Pacific/Wake
+		// Wake, Okayama, Japan
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3384;
+			mcc		= 441;
+			},
+		// Asia/Chongqing
+		// Chongqing, Chongqing, China
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1776;
+			mcc		= 461;
+			},
+		// Asia/Harbin
+		// Harbin, Heilongjiang, China
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1840;
+			mcc		= 461;
+			},
+		// Asia/Kashgar
+		// Kashgar, Xinjiang Uygur, China
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1928;
+			mcc		= 461;
+			},
+		// Asia/Shanghai
+		// Shanghai, Shanghai, China
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2136;
+			mcc		= 461;
+			},
+		// Asia/Urumqi
+		// Ürümqi, Xinjiang Uygur, China
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2208;
+			mcc		= 461;
+			},		
+		// Europe/Rome
+		// Vatican City State
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2888;
+			mcc		= 225;
+			},
+		// Vatican City State
+		// San Marino (Republic of)		
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2888;
+			mcc		= 292;
+			},
+		// America/Anguilla	
+		// Anguilla
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 520;
+			mcc		= 365;
+			},
+		// America/Puerto_Rico
+		// Puerto Rico (dependency), U.S Virgin Islands
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1472;
+			mcc		= 332;
+			},	
+		// CST6CDT
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 16;
+			mcc		= -1;
+			},	
+		// EST
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 32;
+			mcc		= -1;
+			},
+		// EST5EDT
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 40;
+			mcc		= -1;
+			},
+		// HST
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 48;
+			mcc		= -1;
+			},
+		// MST
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 64;
+			mcc		= -1;
+			},
+		// MST7MDT
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 72;
+			mcc		= -1;
+			},
+		// PST8PDT
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 80;
+			mcc		= -1;
+			},
+		// America/Coral_Harbour
+		// Nunavut Canada
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2608;
+			mcc		= 302;
+			},
+		// America/Kentucky/Louisville
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1088;
+			mcc		= 310;
+			},
+		// Australia/Currie
+		// Tasmania Australia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2360;
+			mcc		= 505;
+			},
+		// America/Atikokan
+		// Ontario, Canada
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 656;
+			mcc		= 302;
+			},
+		// America/Blanc-Sablon
+		// Quebec, Canada.
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 696;
+			mcc		= 302;
+			},
+		// America/Indiana/Petersburg
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1016;
+			mcc		= 310;
+			},
+		// America/Indiana/Vincennes
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1040;
+			mcc		= 310;
+			},
+		// America/Moncton
+		// Canada
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1200;
+			mcc		= 302;
+			},
+		// America/North_Dakota/New_Salem
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1288;
+			mcc		= 310;
+			},
+		// America/Phoenix
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1320;
+			mcc		= 310;
+			},
+		// Etc/GMT
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2432;
+			mcc		=-1;
+			},
+		// Etc/GMT-14
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2576;
+			mcc		=-1;
+			},
+		// Europe/Volgograd
+		// Oblast, Russia
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2976;
+			mcc		=250;
+			},
+		// S60Zone/Montenegro
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 3424;
+			mcc		=220;
+			},
+		// Africa/Asmara
+		// Eritrea
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 128;
+			mcc		=657;
+			},
+		// America/Indiana/Winamac
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1048;
+			mcc		=310;
+			},
+		// Atlantic/Faroe
+		MOBILE_COUNTRY_CODE 
+			{
+			tzid	= 2288;
+			mcc		=288;
+			},
+		// Australia/Eucla
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 2376;
+			mcc		=505;
+			},
+		// America/Resolute
+		// Nunavut Canada
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1392;
+			mcc		=302;
+			},
+		// America/Indiana/Tell_City
+		MOBILE_COUNTRY_CODE
+			{
+			tzid	= 1024;
+			mcc		=310;
+			}
+		};
+	}
+
+// End of file

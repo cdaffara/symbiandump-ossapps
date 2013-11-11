@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="1.0">
+    <object name="cxui_action_post_photos" type="HbAction">
+        <icon iconName="qtg_mono_photos" name="icon"/>
+    </object>
+    <object name="cxui_action_post_videos" type="HbAction">
+        <icon iconName="qtg_mono_photos" name="icon"/>
+    </object>
+    <object name="cxui_action_post_share" type="HbAction">
+        <icon iconName="qtg_mono_share" name="icon"/>
+    </object>
+    <object name="cxui_action_post_delete" type="HbAction">
+        <icon iconName="qtg_mono_delete" name="icon"/>
+    </object>
+    <object name="cxui_action_post_play" type="HbAction">
+        <icon iconName="qtg_mono_play" name="icon"/>
+    </object>
+    <object name="cxui_action_post_select" type="HbAction">
+        <icon iconName="qtg_mono_tick" name="icon"/>
+    </object>
+    <widget name="postcapture_view" type="HbView">
+        <widget name="postcapture_container" role="HbView:widget" type="HbWidget">
+            <widget name="snapshot_label" type="HbLabel">
+                <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+                <real name="z" value="1"/>
+                <sizepolicy horizontalPolicy="Preferred" horizontalStretch="0" verticalPolicy="Preferred" verticalStretch="0"/>
+                <sizehint height="var(hb-param-screen-height)" type="PREFERRED" width="var(hb-param-screen-width)"/>
+                <sizehint height="250un" type="MAXIMUM" width="250un"/>
+            </widget>
+            <widget name="video_postcapture_toolbar" type="HbToolBar">
+                <enums name="layoutDirection" value="RightToLeft"/>
+                <real name="z" value="3"/>
+                <sizehint type="PREFERRED" width="var(hb-param-widget-toolbar-height)"/>
+                <enums name="orientation" value="Vertical"/>
+                <bool name="visible" value="FALSE"/>
+                <ref object="cxui_action_post_videos" role="HbToolBar:addAction"/>
+                <ref object="cxui_action_post_share" role="HbToolBar:addAction"/>
+                <ref object="cxui_action_post_play" role="HbToolBar:addAction"/>
+                <ref object="cxui_action_post_delete" role="HbToolBar:addAction"/>
+            </widget>
+            <widget name="still_postcapture_toolbar" type="HbToolBar">
+                <enums name="layoutDirection" value="RightToLeft"/>
+                <real name="z" value="3"/>
+                <sizehint type="PREFERRED" width="var(hb-param-widget-toolbar-height)"/>
+                <enums name="orientation" value="Vertical"/>
+                <bool name="visible" value="FALSE"/>
+                <ref object="cxui_action_post_photos" role="HbToolBar:addAction"/>
+                <ref object="cxui_action_post_share" role="HbToolBar:addAction"/>
+                <ref object="cxui_action_post_delete" role="HbToolBar:addAction"/>
+            </widget>
+            <widget name="embedded_postcapture_toolbar" type="HbToolBar">
+                <enums name="layoutDirection" value="RightToLeft"/>
+                <real name="z" value="3"/>
+                <sizehint type="PREFERRED" width="var(hb-param-widget-toolbar-height)"/>
+                <enums name="orientation" value="Vertical"/>
+                <bool name="visible" value="FALSE"/>
+                <ref object="cxui_action_post_select" role="HbToolBar:addAction"/>
+                <ref object="cxui_action_post_delete" role="HbToolBar:addAction"/>
+            </widget>
+            <real name="z" value="1"/>
+            <layout type="anchor">
+                <anchoritem dst="snapshot_label" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="snapshot_label" dstEdge="TOP" spacing="0un" src="" srcEdge="TOP"/>
+                <anchoritem dst="video_postcapture_toolbar" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="video_postcapture_toolbar" dstEdge="TOP" spacing="var(hb-param-widget-chrome-height)" src="" srcEdge="TOP"/>
+                <anchoritem dst="video_postcapture_toolbar" dstEdge="BOTTOM" spacing="0un" src="" srcEdge="BOTTOM"/>
+                <anchoritem dst="still_postcapture_toolbar" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="still_postcapture_toolbar" dstEdge="TOP" spacing="var(hb-param-widget-chrome-height)" src="" srcEdge="TOP"/>
+                <anchoritem dst="still_postcapture_toolbar" dstEdge="BOTTOM" spacing="0un" src="" srcEdge="BOTTOM"/>
+                <anchoritem dst="embedded_postcapture_toolbar" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="embedded_postcapture_toolbar" dstEdge="TOP" spacing="var(hb-param-widget-chrome-height)" src="" srcEdge="TOP"/>
+                <anchoritem dst="embedded_postcapture_toolbar" dstEdge="BOTTOM" spacing="0un" src="" srcEdge="BOTTOM"/>
+                <anchoritem dst="snapshot_label" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="snapshot_label" dstEdge="BOTTOM" spacing="0un" src="" srcEdge="BOTTOM"/>
+            </layout>
+        </widget>
+        <string locid="txt_cam_title_camera" name="title" value="Camera"/>
+        <bool name="contentFullScreen" value="TRUE"/>
+        <bool name="visible" value="TRUE"/>
+        <enums name="viewFlags" value="ViewTitleBarTransparent|ViewTitleBarFloating|ViewTitleBarHidden|ViewStatusBarTransparent|ViewStatusBarFloating|ViewStatusBarHidden"/>
+    </widget>
+    <connect receiver="postcapture_view" sender="cxui_action_post_delete" signal="triggered(bool)" slot="showDeleteNote()"/>
+    <connect receiver="postcapture_view" sender="cxui_action_post_play" signal="triggered(bool)" slot="playVideo()"/>
+    <connect receiver="postcapture_view" sender="cxui_action_post_share" signal="triggered(bool)" slot="launchShare()"/>
+    <connect receiver="postcapture_view" sender="cxui_action_post_photos" signal="triggered(bool)" slot="launchPhotosApp()"/>
+    <connect receiver="postcapture_view" sender="cxui_action_post_videos" signal="triggered(bool)" slot="launchVideosApp()"/>
+    <connect receiver="postcapture_view" sender="cxui_action_post_select" signal="triggered(bool)" slot="select()"/>
+    <metadata activeUIState="Common ui state" display="NHD landscape" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+    </metadata>
+</hbdocument>

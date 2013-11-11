@@ -1,0 +1,23 @@
+<?XML version="1.0" ?>
+<!DOCTYPE smil SYSTEM "mms_smil.dtd">
+
+<!-- Focus of this test: ref element, attribute variations -->
+<!-- Focus of this test: ref element, attribute variations -->
+<!-- src, region, alt, clipBegin SPECIFIED -->
+<smil>
+   <head>
+      <layout>
+         <!-- This is a "landscape" screen -->
+         <root-layout width="352" height="144"/>
+         <region id="Image" width="176" height="144" left="0" top="0"/>
+         <region id="Text" width="176" height="144" left="176" top="0"/>
+      </layout>
+   </head>
+   <body>
+      <par dur="8s">
+         <ref src="SomeMedia.abc" region="Image" alt="Some media" clipBegin="npt=123.45s"/>
+         <text src="FirstText.txt" region="Text"/>
+         <audio src="FirstSound.amr"/>
+      </par>
+   </body>
+</smil>

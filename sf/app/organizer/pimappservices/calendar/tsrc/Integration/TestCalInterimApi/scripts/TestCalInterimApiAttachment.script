@@ -1,0 +1,1244 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//! @file
+//! @SYMTestSuiteName	TestCalInterimApiSuite 
+//! @SYMScriptTestEnvironment
+
+PRINT Run all TestCalInterimApi 
+
+LOAD_SUITE TestCalInterimApiSuite
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-Sec-4.1-0001
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-Sec-4.1-0001
+//! @SYMTestCaseDesc 		Create entries with different types of attachment like Inline, Uri and content ID
+//! @SYMFssID			App-Engines/<CalInterimApi/Attachment.001 
+//! @SYMREQ			REQ5745		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Creates entries with attachment based on the data read from the text file 
+//!				TestCalInterimApiAttachData.txt
+//! @SYMTestExpectedResults 	Entries with attachment are created successfully
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiReadData \CITCalInterimApi\TestCalInterimApiAttachmentData.ini AddAttachment
+
+// This is manual testing. It will work only on emulator. To run on Hardware pls. comment this test step
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiReadData \CITCalInterimApi\TestCalInterimApiAttachmentData.ini AddAttachment1
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-Sec-4.1-0001
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0001
+
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0001
+//! @SYMTestCaseDesc 		Add a file attachment by passing the binary data
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.001
+//! @SYMREQ			REQ5745		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a Session. Create and open the calendar file.
+//!				2. Create an entry with/ without repeat rule and add the file attachment
+//!				   by passing the binary data
+//!				3. Store the entry with attachment in the calendar file.
+//!				4. Verify that the attachment is added by fetching the entry, its attachment, attachment
+//!				properties like mimetype, drive,name,value and comparing it with the expected data.
+//!				5. Close the calendar file and the session.
+//! @SYMTestExpectedResults 	Entries with file attachment is created successfully
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCheckAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini CheckEntry_4.1.1
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0001
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0002
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0002
+//! @SYMTestCaseDesc 		Add a file attachment by passing the large binary data
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.001
+//! @SYMREQ			REQ5745		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session.Open the calendar file.
+//!				2. Add an entry with file by passing the large binary data.
+//!				3. Store the entry with attachment in the calendar file.
+//!				4. Verify that the attachment is added by fetching the entry, its attachment, attachment
+//!				properties and comparing it with the expected data.
+//! @SYMTestExpectedResults 	Entries with file attachment is created successfully
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCheckAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini CheckEntry_4.1.2
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0002
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0003
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0003
+//! @SYMTestCaseDesc 		Add a file attachment by passing the binary data of different character set
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.001
+//! @SYMREQ			REQ5745		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session.Open the calendar file.
+//!				2. Add an entry with file by passing the large binary data.
+//!				3. Store the entry with attachment in the calendar file.
+//!				4. Verify that the attachment is added by fetching the entry, its attachment, attachment
+//!				properties and comparing it with the expected data.
+//! @SYMTestExpectedResults 	Entries with file attachment is created successfully
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCheckAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini CheckEntry_4.1.3
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0003
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0004
+
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0004
+//! @SYMTestCaseDesc 		Create an entry by passing NULL attachment value
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.001
+//! @SYMREQ			REQ5745		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session.Open the calendar file.
+//!				2. Create an entry and try to add a file attachment without passing any value
+//! @SYMTestExpectedResults 	The NewFileL() API leaves with error code KErrArgument.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCheckAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini CheckEntry_4.1.4
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0004
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0005
+
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0005
+//! @SYMTestCaseDesc 		Create entries with different types of attachment like Inline, Uri and content ID
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.001
+//! @SYMREQ			REQ5745		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Creates entries with attachment based on the data read from the text file 
+//!				TestCalInterimApiAttachData.txt
+//! @SYMTestExpectedResults 	Entries with different types of attachment are created successfully
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCheckAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini CheckEntry_4.1.5
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0005
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0006
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0006
+//! @SYMTestCaseDesc 		Add the same binary data file attachment to the same entry more than once
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.001
+//! @SYMREQ			REQ5745		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session.Create and open the calendar file.
+//!				2. Create an entry and add the binary data attachment more than once to the same entry
+//!				3. Store the entry in the calendar file.
+//!				4. Verify that the attachment are added by fetching the entry, its attachment, attachment
+//!				properties and comparing it with the expected data.
+//! @SYMTestExpectedResults 	Entry with multiple binary data attachments are added successfully
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCheckAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini CheckEntry_4.1.6
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0006
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0007
+
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0007
+//! @SYMTestCaseDesc 		Add different binary data attachments to the same entry
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.001
+//! @SYMREQ			REQ5745		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Create and open the calendar file.
+//!				2. Create an entry and add different binary data attachments to the same entry
+//!				3. Store the entry in the calendar file. 
+//!				4. Verify that all the binary data attachments are added by fetching the entry, its attachment, attachment
+//!				properties and comparing it with the expected data.
+//! @SYMTestExpectedResults 	Entry with different binary data attachments are added successfully.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCheckAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini CheckEntry_4.1.7
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0007
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0008
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0008
+//! @SYMTestCaseDesc 		Add the binary data file attachment to the child entry
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.001 
+//! @SYMREQ			REQ5745		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Create and open the calendar file.
+//!				2. Create an entry and store it. 
+//!				3. Create a child entry and add the file attachment by passing the binary data. Store the entry.
+//!				4. Verify that the attachment is added by fetching the child entry, its attachment, attachment
+//!				properties and comparing it with the expected data.
+//! @SYMTestExpectedResults 	Child entry with binary data file attachment is added successfully
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCheckAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini CheckEntry_4.1.8
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCheckAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini CheckEntry_Child1_4.1.8
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCheckAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini CheckEntry_Child2_4.1.8
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0008
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0009
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0009
+//! @SYMTestCaseDesc 		Add a file attachment by passing the file handle for the attachment
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.001
+//! @SYMREQ			REQ5745		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Create and open the calendar file.
+//!				2. Create an entry and add the file attachment by passing the file handle for the attachment
+//!				3. Store the entry in the calendar file.
+//!				4. Verify that the attachment is added by fetching the entry, its attachment, attachment
+//!				properties and comparing it with the expected data.
+//! @SYMTestExpectedResults 	Entry with file attachment is added successfully
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCheckAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini CheckEntry_4.1.9
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0009
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0010
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0010
+//! @SYMTestCaseDesc 		Add entry with multiple file attachments
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.001
+//! @SYMREQ			REQ5745		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Create and open the calendar file.
+//!				2. Create an entry and add the file attachments to the entry. Store the entry.
+//!				3. Verify that the file attachments are added by fetching the entry, its attachment, attachment
+//!				properties and comparing it with the expected data.
+//! @SYMTestExpectedResults 	Entry with multiple file attachments are added successfully.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCheckAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini CheckEntry_4.1.10
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0010
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0011
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0011
+//! @SYMTestCaseDesc 		Add the file attachment to the child entry
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.001
+//! @SYMREQ			REQ5745		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Create and open the calendar file.
+//!				2. Create an entry with repeat rule and store it.
+//!				3. Create a child entry and add the file attachment to the child entry. Store it in the calendar file.
+//!				4. Verify that the file attachment is added to the child entry by fetching the entry, its attachment, attachment
+//!				properties and comparing it with the expected data.
+//! @SYMTestExpectedResults 	Child entry with file attachment is added successfully
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCheckAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini CheckEntry_child1_4.1.11
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0011
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0012
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0012
+//! @SYMTestCaseDesc 		Add entry with multiple URI attachments
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.001
+//! @SYMREQ			REQ5745		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Create and open the calendar file.
+//!				2. Create an entry and add multiple URI attachments to the entry.
+//!				3. Store the entry with attachment in the calendar file.
+//!				4. Verify that the multiple URI attachments are added by fetching the entry, its attachment, attachment
+//!				properties and comparing it with the expected data.
+//! @SYMTestExpectedResults 	Entry with multiple URI attachments are created successfully
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCheckAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini CheckEntry_4.1.12
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0012
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0013
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0013
+//! @SYMTestCaseDesc 		Create entries with different types of attachment like Inline, Uri and content ID
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.001
+//! @SYMREQ			REQ5745		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Create and open the calendar file.
+//!				2. Create an entry and add multiple URI attachments to the entry.
+//!				3. Store the entry with attachment in the calendar file.
+//!				4. Verify that the multiple URI attachments are added by fetching the entry, its attachment, attachment
+//!				properties and comparing it with the expected data.
+//! @SYMTestExpectedResults 	Entries with different types of attachment are created successfully
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCheckAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini CheckEntry_4.1.13
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0013
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0014
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0014
+//! @SYMTestCaseDesc 		Add a long label to the attachment
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.001
+//! @SYMREQ			REQ5745		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Create and open the calendar file.
+//!				2. Create an entry. Set the label longer than the maxlength 
+//!				and add single/multiple attachments to the entry.
+//! @SYMTestExpectedResults 	The SetLable API leaves with KErrArgument if the label is longer than the maximum length
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCheckAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini CheckEntry_4.1.14
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0014
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0015
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0015
+//! @SYMTestCaseDesc 		Update the binary data attachment with the file attachment
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.001
+//! @SYMREQ			REQ5745		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Create and open the calendar file.
+//!				2. Create an entry and add a binary data attachment. Store the calendar entry.
+//!				3. Create another entry with same uid as above but with the file attachment and store it.
+//!				4. Verify if the attachment is replaced with the new attachment by fetching the entry, its attachment, attachment
+//!				properties and comparing it with the expected data.
+//! @SYMTestExpectedResults 	The binary data attachment is replaced with the file attachment
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCheckAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini CheckEntry_4.1.15
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0015
+
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0016
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0016
+//! @SYMTestCaseDesc 		Update the URI attachment entry with the file attachment
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.001
+//! @SYMREQ			REQ5745		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Create and open the calendar file.
+//!				2. Create an entry and add URI attachment to the entry.
+//!				3. Store the entry with attachment in the calendar file.
+//!				4. Verify that the URI attachments is added by fetching the entry and
+//!				checking the attachments of the entry.
+//!				5. Add another entry with same Guid as the above entry but with file attachment.
+//!				6. Store the entry and verify if the new attachment is added by fetching the entry, its attachment, attachment
+//!				properties and comparing it with the expected data.
+//! @SYMTestExpectedResults 	The first entry's URI attachment is replaced with the new file attachment successfully
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCheckAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini CheckEntry_4.1.15
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0016
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0017
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0017
+//! @SYMTestCaseDesc 		Update the child entry's attachment with the new attachment
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.001 
+//! @SYMREQ			REQ5745		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Create and open the calendar file.
+//!				2. Create an entry and add File/Uri attachments to the entry.
+//!				3. Store the entry with attachment in the calendar file.Create child entry with attachment and store it
+//!				4. Verify that the attachments are added by fetching the entry and
+//!				checking the attachments of the entry.
+//!				5. Add another child entry with same recurrenceid as above but with different attachment and store it.
+//!				6. Verify that the new attachment is added by fetching the entry, its attachment, attachment
+//!				properties and comparing it with the expected data.
+//! @SYMTestExpectedResults 	The first child entry is replaced with the new child entry and the new attachment successfully
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCheckAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini CheckEntry_child_4.1.16
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0017
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0018
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0018
+//! @SYMTestCaseDesc 		Add the same attachment to the alarm and the entry
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.001 
+//! @SYMREQ			REQ5745		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Create and open the calendar file.
+//!				2. Create an entry and Set the alarm. Add the attachment to the alarm. Add the same attachment to the entry also.
+//!				3. Store the entry with attachment in the calendar file.
+//!				4. Verify that both the entry and the alarm has the attachment by fetching the entry, its attachment, attachment
+//!				properties and comparing it with the expected data.
+//! @SYMTestExpectedResults 	Attachment is added to both the alarm and the entry successfully
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCheckAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini CheckEntry_4.1.17
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0018
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0019
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0019
+//! @SYMTestCaseDesc 		Add a large file attachment to the entry
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.001
+//! @SYMREQ			REQ5750	
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Create and open the calendar file.
+//!				2. Create an entry and add the file attachment to the entry.
+//!				3. Store the entry with attachment in the calendar file.
+//!				4. Verify that the attachment is added to the entry by fetching the entry and
+//!				checking the attachment of the entry.
+//! @SYMTestExpectedResults 	The file attachment is added succesfully to entry.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCheckAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini CheckEntry_4.1.18
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0019
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0020
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0020
+//! @SYMTestCaseDesc 		Add an attachment and store the attachment in different drive
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.001
+//! @SYMREQ			REQ5745		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Create and open the calendar file.
+//!				2. Create an entry and add the attachment to the entry.Set the drive of the attachment as H: in epoc.ini
+//!				3. Store the entry with attachment in the calendar file.
+//!				4. Verify that the attachment is added by fetching the entry, its attachment, attachment
+//!				properties and comparing it with the expected data.
+//! @SYMTestExpectedResults 	Entries with file attachment is created successfully
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCheckAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini CheckEntry_4.1.19
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0020
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0021
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0021
+//! @SYMTestCaseDesc 		Add an attachment and store the attachment in invalid drive
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.001
+//! @SYMREQ			REQ5745		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Create and open the calendar file.
+//!				2. Create an entry and add the attachment to the entry.Set the drive of the attachment as r: which is not set in epoc.ini
+//!				3. Store the entry with attachment in the calendar file.
+//! @SYMTestExpectedResults 	The StoreL() API leaves with error code KErrNotReady
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCheckAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini CheckEntry_4.1.20
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0021
+
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0022
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0022
+//! @SYMTestCaseDesc 		Set the long Mime type of the attachment
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.001
+//! @SYMREQ			REQ5745		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Create and open the calendar file.
+//!				2. Create an entry.Create an attachment and Set the long mime type of the attachment.
+//! @SYMTestExpectedResults 	The set API leaves with error code KErrArgument if the mime type is longer than the maximum length
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCheckAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini CheckEntry_4.1.21
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0022
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0023
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0023
+//! @SYMTestCaseDesc 		Set the invalid drive to the attachment
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.001
+//! @SYMREQ			REQ5745		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Create and open the calendar file.
+//!				2. Create an entry and add an attachment. Set the drive for storing the attachment without drive letter say :
+//!				3. Store the entry with attachment
+//! @SYMTestExpectedResults 	The SetDrive() API leaves with error code KErrArgument.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCheckAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini CheckEntry_4.1.22
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0023
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0024
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0024
+//! @SYMTestCaseDesc 		Copy the entry with binary data attachment with copyType as EDontCopyId
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.001
+//! @SYMREQ			REQ5745		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Open the calendar file.
+//!				2. Fetch the entry with binary data file attachment and copy that entry to another entry
+//!				3. Store the copied entry with attachment.
+//!				4. verify that the entry with attachments is copied by comparing the entry and its attachment properties.
+//! @SYMTestExpectedResults 	Entry with binary data attachment is copied to another entry successfully and a new entry with attachment is created successfully.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCopyEntry \CITCalInterimApi\TestCalInterimApiAttachmentData.ini CopyEntry_4.1.23
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0024
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0025
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0025
+//! @SYMTestCaseDesc 		Copy the entry with file attachment with copyType as EDontCopyId
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.001
+//! @SYMREQ			REQ5745		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Open the calendar file.
+//!				2. Fetch the entry with file attachment and copy that entry to another entry
+//!				3. Store the copied entry with attachment.
+//!				4. verify that the entry with attachments is copied by comparing the entry and its attachment properties.
+//! @SYMTestExpectedResults 	Entry with file attachment is copied to another entry successfully and a new entry with attachment is created successfully.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCopyEntry \CITCalInterimApi\TestCalInterimApiAttachmentData.ini CopyEntry_4.1.24
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0025
+
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0026
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0026
+//! @SYMTestCaseDesc 		Copy the entry with URI attachment with copyType as EDontCopyId
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.001
+//! @SYMREQ			REQ5745		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Open the calendar file.
+//!				2. Fetch the entry with URI attachment and copy that entry to another entry
+//!				3. Store the copied entry with attachment.
+//!				4. verify that the entry with attachments is copied by comparing the entry and its attachment properties.
+//! @SYMTestExpectedResults 	Entry with URI attachment is copied to another entry successfully and a new entry with attachment is created successfully.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCopyEntry \CITCalInterimApi\TestCalInterimApiAttachmentData.ini CopyEntry_4.1.25
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0026
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0027
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0027
+//! @SYMTestCaseDesc 		Import the entry with content id attachment
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.011,Attachment.010
+//! @SYMREQ			REQ5747		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Create and open the calendar file.
+//!				2. Import the entry with CID attachments. Set the file handle for the CID attachment.
+//!				3. Store the imported entries in the calendar file.Export the same entries to the vcs file.
+//!				4. Verify that the entries with attachment are imported by fetching the entries and checking
+//!				the attachments.
+//! @SYMTestExpectedResults 	Entry with CID attachment is imported and exported successfully.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCalAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini Import_CID
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\TestCalInterimApiAttachmentData.ini Export_203
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCheckAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini Verify_203
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0027
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0028
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0028
+//! @SYMTestCaseDesc 		Export the entries with file and URI attachments
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.012
+//! @SYMREQ			REQ5747		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Create and open the calendar file.
+//!				2. Export the calendar file containing entries with File and URI attachments
+//!				3. Verify that the entries with attachment are exported by fetching the entries and checking
+//!				the attachments.Also check by importing the entry.
+//! @SYMTestExpectedResults 	Entries with attachment are exported & imported successfully
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\TestCalInterimApiAttachmentData.ini Export_allEntries
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCalAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini Import_AllEntries
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0028
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0029
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0029
+//! @SYMTestCaseDesc 		Import and export the CID attachment with attribute set to EExportInline
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.011,Attachment.010,Attachment.012
+//! @SYMREQ			REQ5747		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Create and open the calendar file.
+//!				2. Import the entry with CID attachments. Set the file handle for the CID attachment and the attribute
+//!				of the attachment as EExportInline.
+//!				3. Store the imported entry in the calendar file.Export the same to the vcs file.
+//!				4. Verify that the entry with attachment is imported and exported by fetching the entries and checking
+//!				the attachments.
+//! @SYMTestExpectedResults 	Entry with attachment is imported and exported successfully and the binary data is imported.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCalAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini Import_CIDAttach
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\TestCalInterimApiAttachmentData.ini Export_204
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0029
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0030
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0030
+//! @SYMTestCaseDesc 		Import parent and child entry with attachments and export the file
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.011
+//! @SYMREQ			REQ5747		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Create and open the calendar file.
+//!				2. Import the parent and child entry with attachments
+//!				3. Store the imported entries in the calendar file.
+//!				4. Verify that the entries with attachment are imported by fetching the entries and checking
+//!				the attachments.
+//!				5. Export the calendar file and check the exported entries with attachment
+//! @SYMTestExpectedResults 	Parent and child entry with attachments are imported and exported successfully
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCalAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini Import_205
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCheckAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini verifyattach_205
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\TestCalInterimApiAttachmentData.ini Export_205
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0030
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0031
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0031
+//! @SYMTestCaseDesc 		Import the entries with empty attachment ie. attachment without value
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.011,Attachment.012
+//! @SYMREQ			REQ5747		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Create and open the calendar file.
+//!				2. Import the entries with empty attachment i.e attachment without any value
+//!				3. Store the imported entries in the calendar file.
+//!				4. Verify that the entries with attachment are imported by fetching the entries and checking
+//!				the attachments.
+//!				5. Export the calendar file and check the exported entries with attachment
+//! @SYMTestExpectedResults 	Entries are imported and exported successfully and the attachments are not imported and exported
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCalAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini Import_206
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\TestCalInterimApiAttachmentData.ini Export_206
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0031
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0032
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0032
+//! @SYMTestCaseDesc 		Import the entries with empty attach value
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.011,Attachment.012
+//! @SYMREQ			REQ5747		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Create and open the calendar file.
+//!				2. Import the entries with empty attach value
+//!				3. Store the imported entries in the calendar file.
+//!				4. Verify that the entries with attachment are imported by fetching the entries and checking
+//!				the attachments.
+//!				5. Export the calendar file and check the exported entries with attachment
+//! @SYMTestExpectedResults 	Entries are imported and exported successfully and the attachments are not imported and exported
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCalAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini Import_207
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\TestCalInterimApiAttachmentData.ini Export_207
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0032
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0033
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0033
+//! @SYMTestCaseDesc 		Import the entries with same guid but with different attachments 
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.011,Attachment.012
+//! @SYMREQ			REQ5745		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Create and open the calendar file.
+//!				2. Import the entries with same uid but with differnt attachments
+//!				3. Store the imported entries in the calendar file.
+//!				4. Verify that only one entry is added and the first entry is updated with the last entry and its attachment
+//!				by fetching it and checking
+//!				5. Export the calendar file and check the exported entries with attachment
+//! @SYMTestExpectedResults 	Entries are imported and exported successfully and the entry is updated successfully
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCalAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini Import_208
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\TestCalInterimApiAttachmentData.ini Export_208
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0033
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0034
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0034
+//! @SYMTestCaseDesc 		Update the child entry by importing many entries with same guid and recurr id but with different attachment
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.011,Attachment.012
+//! @SYMREQ			REQ5745		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Create and open the calendar file.
+//!				2. Import the entries with same uid but with different attachments
+//!				3. Store the imported entries in the calendar file.
+//!				4. Verify that only one child entry is added and the first entry is updated with the last entry and its attachment
+//!				by fetching it and checking
+//!				5. Export the calendar file and check the exported entries with attachment
+//! @SYMTestExpectedResults 	Entries are imported and exported successfully and the entry is updated successfully
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCalAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini Import_209
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\TestCalInterimApiAttachmentData.ini Export_209
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0034
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0035
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0035
+//! @SYMTestCaseDesc 		Delete the attachment present in the entry
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.003
+//! @SYMREQ			REQ5745		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Open the calendar file.
+//!				2. Fetch the entry and get the attachment count of the entry.
+//!				3. Get the name of the attachment and delete the specified attachment from the entry.
+//!				4. Store the entry after deleting the attachment and verify that the attachment count is
+//!				reduced by one by getting the attachment count and comparing it with the expected
+//! @SYMTestExpectedResults 	The attachment is deleted successfully from the entry
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiDeleteAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini DeleteAttach1
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCheckAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini verify_delete1
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0035
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0036
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0036
+//! @SYMTestCaseDesc 		Delete the attachment present in the entry and Call the function in the OOM loop
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.003
+//! @SYMREQ			REQ5745		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Open the calendar file.
+//!				2. Fetch the entry and get the attachment count of the entry.
+//!				3. Get the name of the attachment and delete the specified attachment from the entry.
+//!				4. Call the function in the OOM loop and Store the entry after deleting the attachment and verify that the attachment count is
+//!				reduced by one by getting the attachment count and comparing it with the expected
+//! @SYMTestExpectedResults 	The correct OOM error should be propagated by the API
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiDeleteAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini DeleteAttach2
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCheckAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini verify_delete2
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0036
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0037
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0037
+//! @SYMTestCaseDesc 		Pass the invalid attachment and try to delete it
+//! @SYMFssID			<App-Engines/CalInterimApi/Attachment.003
+//! @SYMREQ			REQ5745		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Open the calendar file.
+//!				2. Fetch the entry and get the attachment count of the entry.
+//!				3. Get the name of the attachment and delete the specified attachment from the entry.
+//!				4. Store the entry and verify that the attachment is deleted by counting the number of attachments
+//! @SYMTestExpectedResults 	The attachment count remains same before and after delete attachment
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiDeleteAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini DeleteAttach3
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCheckAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini verify_delete3
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0037
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0038
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0038
+//! @SYMTestCaseDesc 		Update the mimetype and name of the attachment
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.001, Attachment.002
+//! @SYMREQ			REQ5745		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Open the calendar file.
+//!				2. Fetch the entry and get the attachment count of the entry.
+//!				3. Get the name of the attachment and update the mimetype and name of that attachment
+//!				4. Store the entry and verify that the attachment is updated by fetching the entry and checking the attachment properties
+//! @SYMTestExpectedResults 	The mimetype and the name of the attachment are updated successfully.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiUpdateEntry \CITCalInterimApi\TestCalInterimApiAttachmentData.ini updateAttach1
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCheckAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini verify_updateattach1
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0038
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0039
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0039
+//! @SYMTestCaseDesc 		Update the drive for storing the file attachment
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.001, Attachment.002
+//! @SYMREQ			REQ5745		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Open the calendar file.
+//!				2. Fetch the entry and get the attachment count of the entry.
+//!				3. Get the name of the attachment and update the drive of that file attachment. To update the drive, we need to set the removable drive that we require in epoc.ini file
+//!				4. Store the entry and verify that the attachment is updated by fetching the entry and checking the attachment properties
+//! @SYMTestExpectedResults 	The drive of the attachment is updated successfully and the attachment is moved to the new drive.
+//! @SYMTestType 		CIT
+
+//These are manual tests. It will run only on emulator. Pls. comment these test steps to run on Hardware
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiUpdateEntry \CITCalInterimApi\TestCalInterimApiAttachmentData.ini updateAttach2
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCheckAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini verify_updateattach2
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0039
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0040
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0040
+//! @SYMTestCaseDesc 		Get the list of file attachments based on the size of the attachment
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.005 
+//! @SYMREQ			REQ5746		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Open the calendar file.
+//!				2. Get the list of the file attachments based on the size of the attachment
+//!				3. Verify whether the file attachments are retrieved correctly by fetching the entry and comparing it with the expected attachment
+//! @SYMTestExpectedResults 	The file attachments are listed according to the size.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiAttachmentManager \CITCalInterimApi\TestCalInterimApiAttachmentData.ini AttachMan1
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0040
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0041
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0041
+//! @SYMTestCaseDesc 		Get the list of file attachments based on the last modified date and time with the oldest first
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.005 
+//! @SYMREQ			REQ5746		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Open the calendar file.
+//!				2. Get the list of the file attachments based on the last modified date and time with the oldest first
+//!				3. Verify whether the file attachments are retrieved correctly by fetching the entry and comparing it with the expected attachment
+//! @SYMTestExpectedResults 	The file attachments are listed according to the last modified with the oldest first
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiAttachmentManager \CITCalInterimApi\TestCalInterimApiAttachmentData.ini AttachMan2
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0041
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0042
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0042
+//! @SYMTestCaseDesc 		Get the list of file attachments based on the last modified date and time with the newest first
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.005 
+//! @SYMREQ			REQ5746			
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Open the calendar file.
+//!				2. Get the list of the file attachments based on the last modified date and time with the newest first
+//!				3. Verify whether the file attachments are retrieved correctly by fetching the entry and comparing it with the expected attachment
+//! @SYMTestExpectedResults 	The file attachments are listed according to the last modified with the newest first
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiAttachmentManager \CITCalInterimApi\TestCalInterimApiAttachmentData.ini AttachMan2b
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0042
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0043
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0043
+//! @SYMTestCaseDesc 		Get the entries associated with the file attachment
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.005 
+//! @SYMREQ			REQ5746			
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Open the calendar file.
+//!				2. Get the file attachments based on the sort size or by last modified date
+//!				3. Get the specified file attachment and retrieve the entries associated with that file attachment
+//!				4. Verify the entries local id with the expected localids and check if they are retrieved correctly.
+//! @SYMTestExpectedResults 	The entries associated with the file attachment are retrieved successfully
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiAttachmentManager \CITCalInterimApi\TestCalInterimApiAttachmentData.ini AttachMan4
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiAttachmentManager \CITCalInterimApi\TestCalInterimApiAttachmentData.ini AttachMan6
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0043
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0044
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0044
+//! @SYMTestCaseDesc 		Store the entry with attachment in the removable drive which is not ready.
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.001 
+//! @SYMREQ			REQ5764
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a Session. Create and open the calendar file.
+//!				2. Create an entry and Set the properties of the attachment.
+//!				3. Add the file attachment to the entry.
+//!				4. Set the error condition of the StoreL () API to KErrNotReady using 			
+//!				RFs::SetErrorCondition ().
+//!				5. Store the entry in the calendar file.
+//!				6. Close the session.
+//! @SYMTestExpectedResults 	The storeL() function leaves with error code KErrNotReady and the attachment will be deleted 
+//!				from the calendar directory and the entry is not stored.
+//! @SYMTestType 		CIT
+
+// This is manual testing.It runs only on emulator. COmment this to run it on Hardware.
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiRemoveMedia \CITCalInterimApi\TestCalInterimApiAttachmentData.ini Transactional
+
+END_TESTCASE  PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0044
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0045
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0045
+//! @SYMTestCaseDesc 		Log the time taken for storing the entries with attachment
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.001 
+//! @SYMREQ			REQ5749		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a Session. Create and open the calendar file.
+//!				2. Create large number of entries Say, around 50 entries without attachments.
+//!				3. Register the time taken for storing the 50 entries and store it in a variable maxtimelimit.
+//!				4. Create the same entries as above but with single/ multiple attachments added in all the entries.
+//!				5. Register the Current time. Store the entries with attachment in the calendar file. Register the current time again
+//!				5. Compute the time difference before and after storing the entry with attachments and compare it with the time taken for storing the same entries without attach in v9.2.
+//!				6. Close the session.
+//! @SYMTestExpectedResults 	The time taken for storing the attachment is logged.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCalPerformance \CITCalInterimApi\TestCalInterimApiAttachmentData.ini PerformanceAddEntryWithAttach 
+
+END_TESTCASE  PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0045
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0046
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0046
+//! @SYMTestCaseDesc 		Log the time taken for fetching the entry with attachment
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.002 
+//! @SYMREQ			REQ5749		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a Session. Create and open the calendar file.
+//!				2. Create large number of entries Say, around 50 entries without attachments.Store them.
+//!				3. Register the time taken for fetching the 50 entries and store it in a variable maxtimelimit.
+//!				4. Create the same entries as above but with single/ multiple attachments added in all the entries.
+//!				5. Store all the entries with attachment in the calendar file.
+//!				6. Register the Current time. Fetch the entry from the calendar file. Register the current time again
+//!				7. Compute the time difference before and after fetching the entry with attachment and compare it with the time taken for fetching the same entries without attach in v9.2..
+//!				8. Close the session.
+//! @SYMTestExpectedResults 	The time taken for fetching the attachment is logged.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCalPerformance \CITCalInterimApi\TestCalInterimApiAttachmentData.ini PerformanceFetchEntryWithAttach
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCalPerformance \CITCalInterimApi\TestCalInterimApiAttachmentData.ini PerformanceFetchAttach
+
+END_TESTCASE  PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0046
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0047
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0047
+//! @SYMTestCaseDesc 		Log the time taken for the instanceview creation
+//! @SYMFssID			<App-Engines>/<CalInterimApi> 
+//! @SYMREQ			REQ5749		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a Session. Create and open the calendar file.
+//!				2. Create large number of entries Say, around 50 entries with/without repeat rule and without attachments.
+//!				3. Register the time taken for creating an instance view and store it in a variable maxtimelimit.
+//!				4. Create the same entries as above but with single/ multiple attachments added in all the entries.
+//!				5. Register the Current time.Create the instance view.Register the current time again
+//!				6. Compute the time difference before and after creation of instance view and compare them against the time taken for creating
+//!				the instance view in v9.2
+//!				7. Close the session.
+//! @SYMTestExpectedResults 	The time taken for creating the instance view is logged.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFilter \CITCalInterimApi\TestCalInterimApiAttachmentData.ini Performance_instanceViewCreation
+
+END_TESTCASE  PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0047
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0048
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0048
+//! @SYMTestCaseDesc 		Delete the entry with attachment
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.003 
+//! @SYMREQ			REQ5749		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a Session. Create and open the calendar file.
+//!				2. Delete the entry with attachment.
+//!				3. Verify that the entry and the attachment are deleted by trying to fetch the entry and its attachment
+//!				4. Close the session.
+//! @SYMTestExpectedResults 	The entry with the attachment is deleted successfully
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiDeleteData \CITCalInterimApi\TestCalInterimApiAttachmentData.ini DeleteEntryWithAttach
+
+END_TESTCASE  PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0048
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0049
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0049
+//! @SYMTestCaseDesc 		Import the entry with CID attachment. Store the entry without setting the file handle for CID attachment
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.0011  
+//! @SYMREQ			REQ5747		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Create and open the calendar file.
+//!				2. Import the entry with CID attachment 
+//!				3. Store the imported entries in the calendar file.
+//! @SYMTestExpectedResults 	StoreL() API leaves with error code KErrArgument when the file handle is not set for CID attachment
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP !Error=-6 100 TestCalInterimApiSuite TestCalInterimApiImportvCalAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini Import_CIDWithoutFileHandle
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0049
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0050
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0050
+//! @SYMTestCaseDesc 		Update the lastmodified datetime of the file attachment
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.002 
+//! @SYMREQ			REQ5745		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Open the calendar file.
+//!				2. Fetch the entry and get the attachment count of the entry.
+//!				3. Get the name of the attachment and update the last modified datetime of that file attachment
+//!				4. Store the entry and verify that the attachment is updated by fetching the entry and checking the attachment properties
+//! @SYMTestExpectedResults 	The last modified datetime of the attachment is updated successfully.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiUpdateEntry \CITCalInterimApi\TestCalInterimApiAttachmentData.ini updateAttach3
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCheckAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini verify_updateattach3
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0050
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0051
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0051
+//! @SYMTestCaseDesc 		Clear the attribute of the attachment and export the entry.
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.002 
+//! @SYMREQ			REQ5747		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Open the calendar file.
+//!				2. Import the entry with file attachment. Set the attribute to EExportInline.
+//!				3. Store the entry in the calendar file. Fetch the entry and clear the attribute of the attachment. 
+//!				4. Store the entry again.
+//!				5. Export the same entry and check that the binary data of the attachment is not exported.
+//! @SYMTestExpectedResults 	The binary data of the attachment is not exported to the file.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiUpdateEntry \CITCalInterimApi\TestCalInterimApiAttachmentData.ini updateAttribute
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\TestCalInterimApiAttachmentData.ini Export_allEntriesagain
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0051
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0052
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0052
+//! @SYMTestCaseDesc 		Import the CID attachment with attribute EExportInline. Set the CID, Store it and Export the same.
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.011,Attachment.010,Attachment.012
+//! @SYMREQ			REQ5747		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Open the calendar file.
+//!				2. Import the entry with file attachment. Set the attribute to EExportInline.
+//!				3. Store the entry in the calendar file. Fetch the entry and clear the attribute of the attachment. 
+//!				4. Store the entry again.
+//!				5. Export the same entry and check that the binary data of the attachment is not exported.
+//! @SYMTestExpectedResults 	The CID of the attachment is exportedThe binary data of the attachment is not exported to the file.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCalAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini ImportCID1
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0052
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0053
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0053
+//! @SYMTestCaseDesc 		update the name,mimetype, last modified date of the attachment and export the file
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.001,Attachment.0011,Attachment.0012
+//! @SYMREQ			REQ5747		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Open the calendar file.
+//!				2. Fetch the entry and update the attachment properties like mimetype, name, lastmodified date of the attachment.
+//!				3. Store the entry in the calendar file. 
+//!				4. Export the calendar file to the vcs file and check that the attachment with the properties like name, mimetype, last modified date are exported.
+//!				5. Import and export the same and compare the entries with attachment.
+//! @SYMTestExpectedResults 	Attachment properties like name, mimetype, lastmodified date are exported and imported successfully
+//! @SYMTestType 		CIT
+
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiUpdateEntry \CITCalInterimApi\TestCalInterimApiAttachmentData.ini updateCID
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\TestCalInterimApiAttachmentData.ini ExportCID1
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCalAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini ImportCID1again
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiExport \CITCalInterimApi\TestCalInterimApiAttachmentData.ini ExportCID1again
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0053
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0054
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0054
+//! @SYMTestCaseDesc 		Create CID attachment and Store it without setting the file handle
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.001,Attachment.003
+//! @SYMREQ			REQ5747		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Open the calendar file.
+//!				2. Fetch the entry and create a CID attachment for the entry.Don't set the file handle for the attachment
+//!				3. Store the entry in the calendar file. 
+//! @SYMTestExpectedResults 	The storeL() API leaves with KErrArgument.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP !Error=-6 100 TestCalInterimApiSuite TestCalInterimApiUpdateEntry \CITCalInterimApi\TestCalInterimApiAttachmentData.ini CreateCIDAttach
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0054
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0055
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0055
+//! @SYMTestCaseDesc 		Update and delete the same attachment concurrently
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.001,Attachment.003
+//! @SYMREQ			REQ5747		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Open the calendar file.
+//!				2. Fetch the entry and update the attachment properties like mimetype and name.
+//!				3. Store the entry in the calendar file. 
+//!				4. Parallely, fetch the same entry as above in step 2 and delete the same attachment and store the entry
+//! @SYMTestExpectedResults 	The concurrent operation should not panic and leave with proper error code if there is any failure.
+//! @SYMTestType 		CIT
+
+CONCURRENT
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiUpdateEntry \CITCalInterimApi\TestCalInterimApiAttachmentData.ini updateAttachment
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiDeleteAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini DeleteAttachment
+CONSECUTIVE
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0055
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0056
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0056
+//! @SYMTestCaseDesc 		Delete the attachment and Iterate through the attachment list parallely
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.003,Attachment.005
+//! @SYMREQ			REQ5747		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Open the calendar file.
+//!				2. Get the file attachments present in the session and parallely delete the attachments present in the entry
+//!				3. Store the entry in the calendar file. 
+//! @SYMTestExpectedResults 	The concurrent operation should not panic and leave with proper error code if there is any failure.
+//! @SYMTestType 		CIT
+
+CONCURRENT
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiDeleteAttachment \CITCalInterimApi\TestCalInterimApiAttachmentData.ini DeleteAttachment1
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiAttachmentManager \CITCalInterimApi\TestCalInterimApiAttachmentData.ini AttachMan3
+
+
+CONSECUTIVE
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiAttachmentManager \CITCalInterimApi\TestCalInterimApiAttachmentData.ini AttachMan5
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0056
+
+START_TESTCASE	PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0057
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0057
+//! @SYMTestCaseDesc 		Copy the entry with attachment to another entry and check that the attachment is listed only once by the iterator
+//! @SYMFssID			App-Engines/CalInterimApi/Attachment.005
+//! @SYMREQ			REQ5747		
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1. Create a session. Open the calendar file.
+//!				2. Create an entry with file attachment and store the entry in the calendar file. 
+//!				3. Copy the entry with attachment to another entry.
+//!				4. Fetch the file attachments present in the session using CCalAttachmentManager and check that the attachment is listed only
+//!				once by the iterator.
+//!				5. Verify it by checking the returned attachment count with the expected count.
+//! @SYMTestExpectedResults 	The file attachment is listed only once by the iterator.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiCopyEntry \CITCalInterimApi\TestCalInterimApiAttachmentData.ini copyEntry_attach
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiAttachmentManager \CITCalInterimApi\TestCalInterimApiAttachmentData.ini AttachMan7
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-ATTACHMENT-0057
+
+
+PRINT Completed TestCalInterimApi_Tests

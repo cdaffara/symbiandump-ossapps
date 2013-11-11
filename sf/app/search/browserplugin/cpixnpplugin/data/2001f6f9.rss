@@ -1,0 +1,57 @@
+/*
+* Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   Registry file for Ecom style Browser Windowless Plugin.
+*
+*/
+
+
+#include "RegistryInfo.rh"
+#include "CPixNPPlugin.rls"
+
+//  RESOURCE DEFINITIONS 
+// -----------------------------------------------------------------------------
+//   
+// Registry info
+// The UIDs for the filters implemented in this DLL
+// -----------------------------------------------------------------------------
+
+RESOURCE REGISTRY_INFO theInfo
+    {
+    dll_uid = 0x2001f6f9;   // should match the name of the file. 
+                            // 3rd Uid of associated plugin dll (declared in the dll mmp file)
+    interfaces =
+        {
+        INTERFACE_INFO
+            { 
+            // Identifies plugin type (used by ECom)
+            interface_uid = 0x101F8810;
+                            
+            implementations = 
+                {
+                IMPLEMENTATION_INFO
+                    {
+                    // Specific implementation (must match an implementation entry in the dll)
+                    implementation_uid = 0x2001f6f9;
+                    version_no = 1;
+                    // File name;Plugin's name
+                    display_name = STRING_r_cpixnpplugin_name;
+                    // Mimetypes and mime extensions
+                    default_data = STRING_r_cpixnpplugin_mime;
+                    // Plugin's description
+                    opaque_data = STRING_r_cpixnpplugin_desc;
+                    }
+                };
+            }
+        };
+    }

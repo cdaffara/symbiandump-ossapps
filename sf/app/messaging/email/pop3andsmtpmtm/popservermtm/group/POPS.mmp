@@ -1,0 +1,65 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+/**
+@file
+
+@SYMPurpose pops.dll POP3 server MTM
+*/
+
+TARGET          pops.dll
+TARGETPATH	/system/libs
+TARGETTYPE      dll
+
+CAPABILITY ReadDeviceData WriteDeviceData ProtServ NetworkControl NetworkServices LocalServices ReaduserData WriteUserData
+UID	    0x10003C5E 0x10003C77
+VENDORID 0x70000001
+SOURCEPATH	../src
+USERINCLUDE	    ../inc ../../servermtmutils/inc ../../servermtmutils/mobilitytestframework/inc
+USERINCLUDE		../../clientmtms/inc
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+
+#if (defined SYMBIAN_USER_PROMPT_SERVICE)
+#endif
+
+SOURCE          POPS.CPP POPSOP.CPP POPSRFSH.CPP POPSCPMV.CPP POPSDELE.CPP
+SOURCE			POPSOFFL.CPP POPSMTM.CPP popstran.cpp POPSTOPPOP.CPP cpopsessionmanager.cpp 
+
+#if (defined SYMBIAN_EMAIL_CAPABILITY_SUPPORT)
+SOURCE			cpopsaslauthhelper.cpp
+#endif
+
+#if (defined SYMBIAN_USER_PROMPT_SERVICE) 
+SOURCE			cpopupsresponsewaiter.cpp
+#endif
+
+LIBRARY	    	euser.lib efsrv.lib etext.lib bafl.lib
+LIBRARY		estor.lib imut.lib msgs.lib imcm.lib hash.lib netmeta.lib esock.lib
+
+#if (defined SYMBIAN_USER_PROMPT_SERVICE)
+LIBRARY upsclient.lib
+#endif
+
+#ifdef __MOBILITY_TEST_FRAMEWORK
+LIBRARY mobilitytestframework.lib
+#endif //__MOBILITY_TEST_FRAMEWORK
+
+START WINS
+	baseaddress     0x4AC80000
+END
+
+SMPSAFE

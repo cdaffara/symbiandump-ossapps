@@ -1,0 +1,674 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<relnotes name="POP3 MTM"> 
+  <purpose>
+    Message Type Module (MTM) plugin to Messaging Framework supporting send/receive/edit of POP3 email messages.
+  </purpose>
+   <defect number="PDEF144737" title=" Previously retrieved mails stay in inbox after changing the amount to a smaller " revision="157">
+    Modified IMAP/POP server MTM API to delete the old messages for new CMail  UI. 
+  </defect>
+ 
+  <defect number="PDEF145102" title="Mail connection is disconnected with mVPN in MCL follow up" revision="157">
+   Handling cancel in   CAPA command 
+  </defect>
+  <defect number="PDEF137958" title="Denial of Service vulnerability in mail retrieval" revision="156">
+   Restricting the field size of the header to 5000, to avoid DOS condition.
+  </defect>
+  
+  <defect number="DEF143244" title="UNINIT checker error in MSF00264 vtb101sf " revision="155">
+   Handling error condtion, if filename buffer is empty.
+  </defect>
+
+  <defect number="DEF142572" title="Linux BFC: case inconsistencies in USERINCLUDE " revision="154">
+    Updated mmp files.
+  </defect>
+  
+ <defect number="DEF142209" title="[System Build] components go influenced by sytem marco in MSF00202 tb101sf" revision="153">
+    Included missing header file.
+  </defect>
+  
+  <defect number="DEF141567" title="T_IMCV_TRANSFORM_RECEIVE.winscw.REL.txt test case is failing on Tb92 winscw" revision="152">
+   	Changed the test data.
+  </defect>
+  
+  <defect number="DEF139419" title="Adding attachment to an already composed email panics with MSGS:39" revision= "151">
+   	Added code to set InPreparation flag to true the state machine corresponding to AddAttachemnt starts in miutmsg.cpp
+  </defect>
+  
+  <defect number="DEF141458" title="IMPC01 tests are failing on Tb92" revision="150">
+   	In T_IMPC01.cpp,  CreateReplyEmailMessage() and CreateForwardEmailMessage() has been updated accordingly.
+  </defect>
+
+ <defect number="DEF141458" title="IMPC01 tests are failing on Tb92" revision="150">
+   	In T_IMPC01.cpp,  CreateReplyEmailMessage() and CreateForwardEmailMessage() has been updated accordingly.
+  </defect>
+
+ <defect number="PDEF140407" title="Genius Case #110577: Nokia E71: Nokia E71: E-mails issue with E71" revision="149">
+   	Inserted space before encoded words.
+  </defect>
+
+  <defect number="DEF139418" title="Forwarded email contains only junk characters in it" revision="148">
+   	In MIUTMSG.CPP,  CImEmailOperation::NeedMultipartMixedFolder - create mixed folder if msg has a attachment.
+  </defect>
+
+  <defect number="DEF140111" title="SAN:Comparing an email message" revision="147">
+   	In MIUTHDR.CPP,  CImMimeHeader::ReStoreMimeDBL has been updated.
+  </defect>
+
+  <deliverystep number="1365" name="Store Message content in SQL" osproject="SymTB101" revision="147">
+   <preq number="2073" title="Store Message content in SQL">
+    Migration of Email and SMS headers to SQL.
+   </preq>
+    <milestone project="GT0478" number="3.3.2"/>
+  </deliverystep>
+
+  
+ <defect number="DEF139287 " title="S60 build breaks due to PREQ2510 submission  " revision="146">
+   modified .h files in clientmts
+  </defect>
+
+  <defect number="DEF137138" title="Attachment missing in the recevied email" revision="145">  
+   Updated the state machine in CImRemoveMessagePart    
+  </defect> 
+
+   <deliverystep number="1462" name="Splitting mixed header files for Messaging" osproject="SymTB92" revision="144">
+   <preq number="2510" title=" Splitting mixed header files for Messaging">
+    Mixed header files will now contain only published All or published Partner or internal
+   </preq>
+    <milestone project="GT0465" number="3.5"/>
+  </deliverystep>
+
+   <defect number="DEF138029" title="[StrayScanner]CPop3ClientMtm::InvokeSyncFunctionL stray event " revision="143"> 
+	resolved stray event posibility for CPop3ClientMtm::InvokeSyncFunctionL.
+   </defect>
+
+   <defect number="DEF138026" title="[StrayScanner]CImPop3SetOfflineOps::AddOfflineOperationL stray events " revision="142"> 
+	resolved stray event posibility for CImPop3SetOfflineOps::AddOfflineOperationL.
+   </defect>
+
+   <defect number="DEF138013" title="Typo in CImAttachmentWaiter::StartWaitingL" revision="141"> 
+	typo text corrected.
+   </defect>
+
+   <defect number="PDEF137958" title="Denial of Service vulnerability in mail retrieval " revision="140"> 
+	Replaced ReAlloc call with ReAllocL to get error code.
+   </defect>
+
+   <defect number="DEF137833" title="MUP doest not work as expected with POP when ENever or ESessionNo is selected " revision="139"> 
+	ENever and ESessionNo is now handled in pop server mtm.
+   </defect>
+
+   <defect number="PDEF135201" title="When storing plain body text, the email size is not stored" revision="138"> 
+	Email Size is stored.
+   </defect>
+
+   <defect number="PDEF134706" title="Project Loki - Unabomber Manifesto text" revision="137"> 
+       replaced file contents with internal data.  
+   </defect>
+
+    <deliverystep number="1472" name="Removal of CDMA support" osproject="Sphinx" revision="136">
+    <preq number="2002" title="Removal of CDMA support">
+    Removed BiowatchersCdma and multimode component.
+    </preq>
+    <milestone project="GT0358" number="3.6"/>
+    </deliverystep>
+
+    <defect number="PDEF133889" title=" Message reader: E-mail contains no text is shown if e-mail is too big" revision="135">
+    Updated the if condition in the API CImEmailMessage::DoComplete    
+    </defect>
+
+    <defect number="DEF133283" title="system build: elfe32 warnings in POP3 and SMTP MTM in M04816vFuture with ARMV7 " revision="134">
+      Added EXPORT_C for destructor of CImSendMessage in IMCVSEND.CPP. Followed by abld freeze to freeze the new export function. 
+    </defect>
+
+    <defect number="DEF133389" title="TRUE - email close automaticlly when retreive" revision="133"> 
+        The current body text is a RichText, since content sub-type is rfc822 for inline message.  
+    </defect>
+
+    <defect number="PDEF133444" title="E-mail: The wma music file cannot be played in attachment of e-mail" revision="132">
+      After creating the new file handle, append/write the data.
+ 	</defect>
+
+ 	<defect number="PDEF133509" title="Phone crashes after pressing 'options' in an e-mail screen that has a calendar a " revision="131">
+      Added check if the body text entry store is available .
+ 	</defect>
+
+	<defect number="DEF130076" title="Receiving email over POP using SNAP is panicking on H4 board " revision="130">
+     Ignore Comms mobility notifications when our mobility manager is closing down.
+	</defect>
+	
+	<defect number="DEF133273" title="ICC Codenomicon: Messaging POP - user21 panic while executing codenomicon TCs" revision="129">
+     Added a check for mimeheader length for encoding type
+	</defect>
+	
+    <defect number="DEF132637" title="Message UPS fails with the decision of KSessionYes and KAlways(SMTP Service)" revision="128">
+     Added a check for EUpsDecSessionYes in DoRunL
+	</defect>
+
+    <defect number="PDEF132548" title="Some of the Legacy test cases are Failing after migration. " revision="127">
+     Added Fix for T_IMCM02_HEAP, T_SMTC, T_IMCV_TRANSFORM_RECEIVE  
+    </defect>
+
+  <deliverystep number="1397" name="Secure IMAP4 and POP3 Authentication using CRAM-MD5 as specified in RFC 2195" osproject="Emin" revision="126">
+   <preq number="1119" title="To prevent sending username and password in readable or easily de-cryptable form during authentication">
+    To prevent sending username and password in readable or easily de-cryptable form during authentication
+   </preq>
+    <milestone project="GT0478" number="3.2"/>
+  </deliverystep>
+    
+    <defect number="DEF130787" title="[Coverity]-DEADCODE,FORWARD_NULL,MISSING_BREAK,REVERSE_INULL,UNINIT,USE_AFTER_FR" revision="125">
+     Added break to switch case in KSMTPMTMCreateReceiptEmailMessage SMTCMtm.CPP 
+    </defect>
+
+  <defect number="DEF131766" title="move CAPA functionality from CImPop3RefreshOperation to CImPop3Session" revision="124">
+    moved POP3 CAPABILITY functionality from CImPop3RefreshOperation to CImPop3Session
+   </defect>
+
+  <defect number="INC129887" title="Email crashes, when trying to open email with lots of text, retrieval size limit " revision="123">
+ 	Using CMsvPlainBodyText to add partial footer info for plainbody text
+  </defect>
+
+  <defect number="PDEF127404" title="Inserted confirmation Japanese text is not shown when partial retrieve is activa" revision="122">
+    Japanese text is converted to 8-bit before it is inserted to the 8-bit buffer 
+   </defect>
+ 
+  <defect number="DEF128374" title="  ICC Codenomicon: Panic 89 while executing codenomicon testcases     " revision="121">
+    Handled when server sends  literals expected is more than zero
+  </defect>
+
+  <defect number="DEF129214" title="  ICC: SMTP Client closes the session without sending QUIT command    " revision="120">
+    Issued QUit command to server if we get SMTP error before closing socket
+  </defect>
+
+  <defect number="DEF128432" title=" ICC Codenomicon: Panic 6001 while executing codenomicon testcases   " revision="119">
+    Checked iState while using outputstream APIS
+  </defect>
+
+  <defect number="DEF128373" title="ICC Codenomicon: Panic 116 while executing codenomicon testcases  " revision="118">
+    Added if condition for SelectedFolderData->Exists() 
+  </defect>
+ 
+  <defect number="PDEF128998 " title="Feature not supported when sending email with incorrect username or password. " revision="117">
+    Added a condition to check the SMTP response code is 535
+  </defect>
+
+  <defect number="PDEF128142" title="Inc11 MS: Email with OD2 WMDRM song as attachment cannot be fetched. " revision="116">
+    Added a condition to check the error so that it doesn;t panic
+  </defect>
+ 
+  <defect number="DEF128077" title="@prototype tags in messaging" revision="115">
+    Added IM tag message server.
+  </defect>
+
+  <defect number="DEF127579" title="emailerr.ra and emailerr.rls should be moved to messaging\email tree" revision="114">
+    Moved emailerr.ra and emailerr.rls resource files from messaging/group to messaging_email/group
+  </defect>
+
+  <defect number="DEF127379" title="Many (simple) syntax errors in messaging code " revision="113">
+    Removed the class prefix to the operator and constructor functions.   
+  </defect>
+
+  <defect number="DEF126019" title="POP Unit test fails with incorrect MTM value" revision="112">
+    POP Unit test fails with incorrect MTM value.   
+  </defect>
+
+  <defect number="DEF126849" title="[Coverity] - SYMBIAN.CLEANUP -messaging/framework/" revision="111">
+    Initialized the declared variable, removed the double push into the cleanupstack, removed the dead code, checked the function return valure.   
+  </defect>
+
+  <defect number="DEF126851" title="[Coverity]-UNUSED_VALUE,DEADCODE,PASS_BY_VALUE -messaging/framework/" revision="110">
+    Initialized the declared variable, removed the double push into the cleanupstack, removed the dead code, checked the function return valure.
+  </defect>
+
+  <defect number="DEF122754" title="if dependence UPS error,sendas server will try to using an un initialize buffer." revision="109"> 
+   Stray signal is avoided by queuing status after connecting to ups serrver 
+  </defect>
+
+  <defect number="DEF126017" title="T_Email tests are failing in ONB," revision="108"> 
+   Script file change.
+  </defect>
+  
+  <defect number="DEF126182" title="Extra member qualifactions" revision="107"> 
+   Removed the class qualification for CImHtmlConverter.
+  </defect>
+
+  <defect number="DEF125631" title="email_clientmtms unit test case fail in UDEB mode" revision="106"> 
+   Created new mmp file for t_imcm07 IMAP tests and addded code to connect to IMAP Server.
+  </defect>
+
+  <defect number="DEF125918" title="[coverity] - EVALUATION_ORDER-messaging/email/servermtmutils" revision="105">
+   Recoded to avoid the evaluation order error
+  </defect>
+
+  <defect number="DEF125557" title="Dead code in messaging sub-system" revision="104"> 
+   Removed the class TImImapUtil which has function declaration and defination, but not referred.
+  </defect>
+
+  <defect number="PDEF124476" title="leaked handles in msvserver" revision="103">
+   Closed RThread handle to avoid leak
+  </defect>
+
+  <defect number="PDEF124769" title="messaging_email should not require patching" revision="102">
+    Removed email mtm configuration files from clientmtms\group to messaging_config component
+  </defect>
+
+  <defect number="PDEF124769" title="messaging_email should not require patching" revision="101">
+    Created a new messaging_config component
+  </defect>
+ 
+   <defect number="PDEF125546" title="SBTM: Panic occurs when sending a new email in an OOM situation." revision="100">
+    SBTM: Panic occurs when sending a new email in an OOM situation. 
+   </defect>
+
+  <defect number=" DEF125443 " title="Coverity Errors 9.5 " revision="099">
+    Removed Unused variables.
+  </defect>
+  <defect number=" DEF125424 " title="Possible Memory leak in IMAP " revision="098">
+    Not creating a new iEntrySelection since it can be directly assigned value of aEntrySelection.
+  </defect>
+  
+  <defect number="DEF124049" title="ICC-Codenomicon:" revision="097">
+     POP3 STAT Response sent by the server to the client. Modified CImPop3List::DoRunL() method for handling multiple 	     	     responses from codenomicon tool
+  </defect>
+
+  <defect number="PDEF125297" title="Email: Partial retrieval crashes messaging " revision="096">
+    Using the same UID for storing and restoring msg body text from the store
+  </defect>
+
+  <defect number="DEF124048" title="ICC-Codenomicon:" revision="095">
+     POP3 UIDL Response sent by the server to the client. Modified CImPop3Capa::DoRunL()method for handling negative text
+     respose from codenomicon tool
+     </defect>
+		
+  <defect number="DEF125037" title="[coverity] - FORWARD_NULL - messaging/email/clientmtms/src/miutrslv.cpp" revision="094">
+    Checked the if condition is not false
+  </defect>
+
+  <defect number="DEF124091" title="Email can not reconnect" revision="093">
+    The transport manager is deleted when closing the current network connection
+  </defect>
+     
+  <defect number="PDEF123863" title="Message attachment is not included in forwarded email" revision="092">
+    Updated the code that calculates the size of embedded plain text mails
+  </defect>  
+
+  <defect number="DEF121485" title="No error information when allowing to send a deleted message in UPS dialog." revision="091">
+    Sending request will complete with KErrNotFound when trying to send non-existant email.
+  </defect>  
+
+   <defect number="PDEF122944" title="V=?? string in subject field crash MMS application when receiving MMS notification" revision="090">
+    Added checks for EOS condition before incrementing the variable
+   </defect>
+
+  <defect number="DEF122538" title="Case issues causing build failure on Linux with Raptor" revision="089">
+   used small letter to include the mtclbase.h file
+  </defect>
+
+  <defect number="PDEF122381" title="Sending e-mail: Mail is not sent and user is not notified" revision="088">
+   The SMTP response code 435 is now handled in SmtpServerMtm
+  </defect>
+
+  <defect number="PDEF121852" title="imap idle does not terminate" revision="087">
+   A timer is started when a DONE command is send to the server, if the server does not respond in 10 seconds the socket is closed by imap transporthandler
+  </defect>
+
+  <deliverystep number="835" name="Messaging: New advanced APIs for searching and sorting for Message store" osproject="Sphinx" revision="086">
+   <preq number="1667" title="Enhanced search capabilities for message store">
+    For supportong new advanced APIs for searching and sorting for Message store, changes done in smtp,pop,Imap::Find
+   </preq>
+    <milestone project="GT0358" number="3.2.2"/>
+  </deliverystep>
+  
+  <defect number="PDEF121712" title="[Email][blocking][Boundary]Application crash while sending a large attachment..." revision="085">
+   Added a condition which checks that it doesn't shutdown the socket which is already been closed
+  </defect>
+
+  <defect number="PDEF121714" title="EMAIL: Not possible to send mail using POP3 account" revision="084">
+   Re-Initialise the encoder so that the next reply is decoded correctly
+  </defect>
+  <defect number="PDEF121525" title=" [Regression] BlackBerry 4.90 MpeWatcherSrv USER 9 Setup App Crash - emails st" revision="083">
+   This is an out-of-bounds operator[] access on a 16-bit descriptor. Changed the boundaries.
+  </defect>
+
+  <defect number="PDEF120835" title="Email: Reply with history removes the formatting for rich text..." revision="082">
+   If data/information needs to stored in plain text format, then the new exported API's needed to be called
+  </defect>
+
+  <defect number="PDEF121242" title="SP-S60 5.0 2008wk08 Mail: Phone crashes when retrieval a large mount mails." revision="081">
+   The compulsion that the imap FETCH response from the server should comply the RFC standard has been removed in CImapBodyStructureBuilder::ParseBodyFieldsL().
+  </defect>
+
+  <defect number="PDEF119701" title="correcting offline operation for pop and imap.." revision="080">
+   Reverted old imap and pop3 changes for offline operations
+  </defect>
+
+  <defect number="DEF118860" title="Panics for negative values of syncrate" revision="079">
+	Added a check which leaves for -ve values of sync rate	
+  </defect>
+
+  <defect number="PDEF119208" title="APV-Email: Can't send email with a especial symbol ">" in Your name field." revision="078">
+	If display-name containing ">" symbol The function ValidInternetEmailAddress() returning EFalse  . To avoid this needs to again search for > from the position after first >.."
+  </defect>
+	
+  <defect number="PDEF119120" title="Retrieve Yahoo Shopping-Auction mail via e-mail, Japanese character become jargo" revision="077">
+	Adding MimeHeaderinfo with HTML entry also
+  </defect>
+
+   <defect number="PDEF118734" title="PBGC-APV: Messaging - Can't display email message's body content" revision="076">
+	Used FetchBody and FetchBodyPeek commands to fetching 1 parts body from server.	
+  </defect>
+
+   <defect number="PDEF118829" title="Not found when saving push email" revision="075">
+	Checking of HasStore is added before calling  iMsvEntry.ReadStoreL
+  </defect>
+
+   <defect number="PDEF118702" title="HIQTC:IOP:EMAIL - Letters are replaced with other characters when receiving e..." revision="074">
+ Used condition in TImCodecQP::Decode to check for newline character(\n) if it is not the usual carriage return(\r).
+  </defect>
+
+  <defect number="PDEF118224" title="SBTM Argus: Email: Embedded MHTHL images not shown" revision="073">
+   Added condition added to find ampersign and treat as special char in URL.
+  </defect>
+
+  <defect number="PDEF117941" title="CImAttachmentWaiter.h missing" revision="072">
+   Added CImAttachmentWaiter.h file in epoc32\include
+  </defect>
+
+  <defect number="DEF117895" title="Filename case issues cause build failure on Linux with Raptor" revision="071">
+   Changing the syntax of the SQLite__Contacts.cdb to small case in accordance with linux build
+  </defect>
+	
+  <defect number="DEF117027" title="Messaging component is not case-sensitive compliant for building on Linux" revision="070">
+   Changing the syntax of the header file included in miutmsg.cpp as include numberconversion.h in between angle braces
+  </defect>
+
+  <defect number="PDEF116342" title="Elena, Email IMAP 4- Email present in the remote Draft folder disappears a." revision="069">
+   There is pending opertions are availble on folder/s, do pending opertions and re-sync the Inbox.
+  </defect>
+
+  <defect number="DEF116398" title="Errors and Warnings in GT and CBR stages in M04450 v9.5" revision="068">
+   New def generated with the code changes in mobilitypolicyprovideru.def
+  </defect>
+
+ <defect number="INC114358" title="Fails to create/reply entry belonging to non symbian email MTM." revision="067">
+   Replace the variable KMsvUnknownServiceIndexEntryId instead of KMsvNullIndexEntryId in  CImEmailOperation constructor.
+  </defect>
+
+  <defect number="PDEF115920" title="Mail: Headers are removed from inbox instead of being marked for" revision="066">
+   Used SetPendingdelete instead of Setinvisible flag fopr moving messages to Userfolder
+  </defect>
+
+  <defect number="PDEF115921" title="Progressbar in Messaging does not show 100" revision="065">
+    Added a check for testing if the last operation is completed successfully and if its copying or moving then the no of msgs to process =0
+  </defect>
+
+  <defect number="PDEF115922" title="When replying to sender, date and time of original message is shown in English" revision="064">
+   Number conversion added after the date format. (Same fix applied as that of INC) 
+  </defect>
+
+  <defect number="PDEF111414" title="Getting more emails than was actually sent" revision="063">
+   For offline deleted mails, the message entries were getting deleted from the INDEX entry list (mail2) file.
+  </defect>
+
+  <defect number="INC114360" title="CImAttachmentWaiter methods are not exported" revision="062">
+    CImAttachmentWaiter API's are exported as per requirement.
+  </defect>
+
+  <defect number="PDEF115351" title="New emails are not found on a server while memory is full " revision="061">
+	Progress info is captured, instead of setting it KErrNone, we refresh mailbox then update error code.
+  </defect>
+
+  <defect number="PDEF115645" title="Email: A file named containing the special letters is incorrect." revision="060">
+	Added checks that enables the special letters for file names
+  </defect>
+
+  <defect number="PDEF115644" title="Not possible to forward IMAP emails with attachment on emulator " revision="059">
+    As per RFC-2821(Section: 4.5.3.2 Timeouts) Maximum time out for Data termination is increased  to 10 minutes
+  </defect>
+
+  <defect number="INC114684" title="Forwarding e-mail with attachment corrupts the sent e-mail " revision="058">
+    Added a condition which checks if the attachment is vcard, and then sets the email entry for it
+  </defect>
+
+  <defect number="PDEF114439" title="Scandinavian characters are not sent correctly with MIME" revision="057">
+    Changes made in IMCVSEND.CPP with condition (aCharset== KCharacterSetIdentifierAscii) same fix as that of INC111266
+  </defect>
+
+  <defect number="PDEF114441" title="Klocwork issues in messaging email" revision="056">
+   changes made in imcvrecv.cpp - (continuation=ETrue) same fix as that of INC114083
+  </defect>
+
+  <defect number="PDEF113520" title="PBGC-APV:Default charset is wrong when language is English on a China phone" revision="055">
+    Minor change in Gtemailmtm.iby file for PDEF113520.
+  </defect>
+
+  <defect number="PDEF113520" title="PBGC-APV:Default charset is wrong when language is English on a China phone" revision="054">
+    Enumeration data is modified.
+  </defect>
+
+   <defect number="DEF112512" title=" Duplicate recipient address in BCC field, results multiple send operation" revision="053">
+    Before sending EMAIL to BCC receipients remove the duplicates . 
+  </defect>
+
+  <defect number="PDEF112854" title=" Feature 431: Attach owner card visible in Options menu" revision="052">
+    The vcard is set on the actual email entry. 
+  </defect>
+
+  <defect number="PDEF112362" title=" ST: crash on forwarding email with video in attachment in full memory" revision="051">
+    It doesn't crash now, on forwarding email with video in attachment on full memory. 
+  </defect>
+
+  <defect number="PDEF112237" title="SWSV_612_91_R26C01_CONT Not possible to send a contact to an email address vi..." revision="050">
+    Added another case which enables to send a contact to an email via MMS. 
+  </defect>
+
+  <defect number="PDEF112179" title="no response when selecting moved to Draft in A Sync mail" revision="049">
+    Added resetting the attachment state for a sync mail. 
+  </defect>
+  
+  <defect number="PDEF111810" title="Unexpected dialog appears when downloading email body during..." revision="048">
+    Added an error code to progress on offline operation in POP3server. 
+  </defect>
+  
+  <defect number="DEF110467" title="Redundancy in IMAP settings in file IMAPSET.cpp" revision="047">
+    Removed few lines of redundant code in void CImImap4Settings::Reset().
+  </defect>
+  
+  <defect number="DEF109533" title="CImRecvConvert panics in parsing meeting messages on 9.4 and 9.5" revision="046">
+    Writing of plainbody text into a file is made synchronous in CMsvPlainBodyTextEntry.CPP. 
+  </defect>
+
+  <defect number="PDEF110767" title="Phone crash and then reboots after opening an undelivered mail" revision="045">
+    The server sends clipped versions of undelivered emails, which does not have closing boundary. 
+  </defect>
+  
+  <defect number="PDEF110766" title="Danish national characters wrongly encoded in HTML subject lines for emails" revision="044">
+    The header fields are parsed even if it does not have the MIME information 
+  </defect>
+
+  <defect number="PDEF110777" title="Forwarding while sending hangs Messaging" revision="043">
+    If the smpt server did not respond within 10 seconds, the socket is timed out and a timed out dialog is launched
+  </defect>
+
+  <defect number="DEF110569" title="IMPORT_C/EXPORT_C CImapFolderInfo::SetNameL" revision="042">
+    Added IMPORT_C to SetNameL() function in its class declaration.
+  </defect>
+
+  <defect number="DEF110273" title="Reduce the capability of bearer mobility dlls added as part of PREQ 1307" revision="041">
+    Reduced capability of mobilitypolicydefault.dll from ALL -TCB to same capabilities as Message Server.
+  </defect>
+
+  <deliverystep number="602" name="Submit PREQ1307 to MCL" osproject="Oghma" revision="040">
+    <preq number="1307" title="Non-Seamless Network Bearer Mobility for Messaging">
+    Non-Seamless Network Bearer Mobility for Messaging
+    </preq>
+    <milestone project="GT0342" number="3.2.1"/>
+  </deliverystep>
+
+  <defect number="DEF108002" title="Warnings generated with checksource build  " revision="039">
+    Added condition to differentiate the winscw and armv5 def files for case sensitive 
+  </defect>
+
+  <defect number="INC108709" title="Unable to send SyncML Emails from the device " revision="038">
+    Selection array should not be empty before using it. 
+  </defect>
+
+  <deliverystep number="601" name="Implemented user prompting while sending/recieving the messages" osproject="Oghma" revision="037">
+    <preq number="1678" title="Messaging User Prompting">
+    Messaging User Prompting
+  </preq>
+    <milestone project="GT0342" number="3.4"/>
+  </deliverystep>
+  	
+  <defect number="PDEF108921" title="Remote mailbox settings are not saved when Arabic characters are in the name." revision="036">
+    Added checks to save mailbox settings even when the name of the mailbox is in Arabic characters
+  </defect>
+
+  <defect number="PDEF107771" title="Klocwork errors: messaging_email" revision="035">
+    Buffer overflow, array index of ’AsciiToBase64’ access was out of bounds, it is fixed so that access is within bounds
+  </defect>
+
+  <defect number="DEF105400" title="Add missing IM tags to Messaging public header files" revision="034">
+    Added IM tag for all given header files.
+  </defect>
+
+  <defect number="PDEF107239" title="Maximum amount of character is wrong in Reply-to field. Reply-to item is opened" revision="033">
+    Make sure that the reply to field in a sent email wraps at the correct position for long email addresses
+  </defect>
+
+  <defect number="PDEF107189" title="Messaging server crash when downloading with POP3 under low memory" revision="032">
+    Stop crash caused by POP3 server attempting to complete an operation twice under low memory conditions
+  </defect>
+
+  <defect number="PDEF106951" title="RFile ownership during AddAttachmentL" revision="031">
+    Ensure file handle is closed when cancelling adding an attachment to an email
+  </defect>
+
+  <defect number="DEF105749" title="CompareEmail is failing with UNKNOWN Code = -1." revision="030">
+    Store header information for multipart alternative email parts when using chunk storage mechanism
+  </defect>
+
+  <defect number="PDEF105688" title="Email (3SK): icon.statusbar.temp.message.email is still displayed if email..." revision="029">
+    Hide emails in remote folders during offline move operations
+  </defect>
+
+  <defect number="DEF105394" title="CMsvPlainBodyText and CImPlainBodyText should have a DoCancel() method" revision="028">
+    Add cancellation routines for plain body text handlers
+  </defect>
+
+  <defect number="PDEF106701" title="The e-mail should be correctly retrieved." revision="027">
+    Fix storage of rtf text attachments downloaded from email servers
+  </defect>
+
+  <deliverystep number="603" name="Only Download IMAP4 Personal Folders when Requested" osproject="Oghma" revision="026">
+    <preq number="1120" title="Synchronising the IMAP4 Folder Tree">
+    Synchronising the IMAP4 Folder Tree
+  </preq>
+    <milestone project="GT0342" number="3.2.2"/>
+  </deliverystep>
+
+  <defect number="PDEF105931" title="Performance and behaviour problem in CImAttachmentManager" revision="025">
+    ClientMtms: Attachment manager no longer changes context of client owned CMsvEntry object
+  </defect>
+
+  <defect number="PDEF105030" title="Email(3sk) Cancelling a [Move to] from Inbox to User def. folder deletes email." revision="024">
+    PopServer: Removed the unmoved messages from array for delete
+  </defect>
+
+  <defect number="PDEF105415" title="SWSV_612_R7B01_MESS-MAIL: Not possible to open a E-mail message with characte..." revision="023">
+    ClientMtms: Fix problem decoding emails that use UTF-16 big endian encoding.
+  </defect>
+
+  <defect number="PDEF105336" title="Long name for messaging settings makes messaging unusable" revision="022">
+    ClientMtms: Added checks to the create accounts functions in CEmailAccounts
+  </defect>
+
+  <deliverystep number="500" name="Messaging file name changes to support GNU compiler for Linux" osproject="Oghma" revision="021">
+    <preq number="1182" title="GNU Make-based build system">
+    GNU Make-based build system
+  </preq>
+    <milestone project="GT0342" number="3.3"/>
+  </deliverystep>
+
+  <deliverystep number="501" name="RAM improvement" osproject="Oghma" revision="020">
+    <preq number="1432" title="Improve Messaging Subsystem RAM Usage">
+    Improve messaging subsystem RAM usage.
+  </preq>
+    <milestone project="GT0342" number="3.1"/>
+  </deliverystep>
+
+  <defect number="PDEF104082" title="RSendAs::FilteredMessageTypesL leaves with KErrOverflow when language is chinese" revision="019">
+    ClientMtms: over flow elimination in Chinese language.
+  </defect>
+
+  <defect number="DEF102133" title="IMAP rewrite rereview comments: cimapprotocolcontroller.cpp" revision="018">
+    Issue number 6 and 8 of the Imap Review comments addressed. Check if selected folder info is NULL Pointer or Not , if it is Null then we complete and return.
+  </defect>
+
+  <defect number="PDEF104078" title="Phone crashes when trying to forward sent email with attachment" revision="017">
+    Link Attachment wasn't handled before in forwarding. Now a separate function call is added to handle link attachment as well as message entry.
+  </defect>
+
+  <defect number="PDEF104075" title="Messaging client crashes after TMO mailbox POP3 synchronisation" revision="016">
+    Limited the string operation only up to the length of the descriptor, which was overflowing
+  </defect>
+
+  <defect number="PDEF104080" title="Email attachment with 100 contact cards cant be opened in proper time." revision="015">
+    Prevented the framework server message handling routines from setting the parent of the email as the context entry everytime
+  </defect>
+
+  <defect number="DEF100854" title="SST: Agenda, received invitation, shows attachments with incorrect file names" revision="014">
+    Non compliance of RFC-2047 for ContentType or Content Disposition fixed
+  </defect>
+
+  <defect number="DEF102076" title="IMAP rewrite rereview comments: cimapsessionmanager.cpp" revision="013">
+    Inserted Assert and initialized the automatic variable to zero as per Review Comments.
+  </defect>
+
+  <defect number="PDEF100128" title="CEmailAccounts: Saving settings consumes very much memory on large accounts." revision="012">
+    Avoid duplicate change entry call, by checking if the account name already exists in the repository. This was consuming RAM.
+  </defect>
+
+  <defect number="PDEF100178" title="Panic in MsvServer when downloading thousands of email" revision="011">
+    Complete the operation without calling MessageCompleteL in CImPop3RefreshOperation::DoComplete, if no memory
+  </defect>
+
+  <defect number="DEF101481" title="New IMAP: Use of EXPUNGE to delete messages should be optional" revision="010">
+    use the CLOSE command instead of EXPUNGE for deletion. The classes effected are updated with a new flag to allow different state machines.
+  </defect>
+
+  <defect number="DEF100588" title="Email(SBTM):Panic when adding maximum amount of characters in Subject-field." revision="009">
+    introduced new check and throwing new SMTP error code, if it exceed the Line Length Limit. As per RFC2822 (section 2.1.1)
+  </defect>
+
+  <defect number="PDEF100180" title="TImMessageField::GetValidAlias does not handle aliases with &lt; or &gt; correctly" revision="008">
+    Function changed to handle angled brackets in Aliases
+  </defect>
+
+  <defect number="PDEF101462" title="Phone freezes when trying to open a mail that has been deleted from server" revision="007">
+    Phone no longer freezes when trying to open a mail that has been deleted from server.
+  </defect>
+
+  <cr number="0971" title="Email MTM client utilities to support third-party MTMs" revision="006">
+    Add third party MTM support to email client utilities by defining a standard system progress structure and methods to retrieve it.
+  </cr>
+
+  <defect number="INC099409" title="Maximum amount of character is wrong in Reply-to field. Reply-to item is opened" revision="005">
+    Added check for a too long email address, as well as the next email address not fitting into a line.
+  </defect>
+
+  <defect number="PDEF100752" title="MR2 Lily - OA M600: T-Mobile(DE) Issue 27051 Email client become unstable whe..." revision="004">
+    Email client is now stable when phone memory is nearly full
+  </defect>
+
+  <defect number="DEF100358" title="same password different accounts id considered the same when comparing setting." revision="003">
+    same password different accounts id considered the same when comparing setting
+  </defect>
+
+  <defect number="PDEF099251" title="AH: Panic disconnect during fetching of emails" revision="002">
+    Panic disconnect during fetching of emails
+  </defect>
+
+  <defect number="INC096883" title="Weird behaviour with Own name and Reply-to setting" revision="001">
+    Fix for own name setting in SMTP email account appearing as reply-to address after cancelling sending an email
+  </defect>
+</relnotes>

@@ -1,0 +1,73 @@
+/*
+* Copyright (c) 2005 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  mmp file for Notepad DS adapter
+*
+*/
+
+
+#include <data_caging_paths.hrh>
+#include <platform_paths.hrh>
+
+CAPABILITY CAP_ECOM_PLUGIN
+
+TARGET          nsmlnotepaddataprovider.dll
+TARGETPATH		PLUGINS_1_DIR
+TARGETTYPE      PLUGIN
+UID             0x10009D8D 0x101F8612
+VENDORID		VID_DEFAULT
+
+#if defined(EABI)
+DEFFILE		./def/eabinotepaddataprovider
+#elif defined(WINSCW)
+DEFFILE		./def/bwinscwnotepaddataprovider
+#endif
+
+//MACRO _DEBUG_
+
+SOURCEPATH      ../src
+SOURCE          NSmlNotepadDataProvider.cpp
+SOURCE          NSmlNotepadDataStore.cpp
+SOURCE			nsmlnotepadDatabase.cpp
+
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE 	/epoc32/include/ecom
+SYSTEMINCLUDE 	/epoc32/include/syncml
+
+MW_LAYER_SYSTEMINCLUDE
+
+USERINCLUDE     ../inc 
+
+START RESOURCE nsmlnotepaddataprovider.rss
+HEADER
+TARGET 		nsmlnotepaddataprovider.rsc       
+TARGETPATH	ECOM_RESOURCE_DIR
+END 
+
+START RESOURCE NSmlNotepadDataStoreFormat.rss
+HEADER
+TARGET 		nsmlnotepaddatastoreformat.rsc       
+TARGETPATH  RESOURCE_FILES_DIR 
+END 
+
+
+LIBRARY		ecom.lib bafl.lib euser.lib efsrv.lib estor.lib sysutil.lib
+LIBRARY		nsmlchangefinder.lib etext.lib wbxmllib.lib
+LIBRARY		smlstoreformat.lib smldataprovider.lib
+LIBRARY		nsmldshostclient.lib
+LIBRARY		calinterimapi.lib caleninterimutils2.lib
+LIBRARY		nsmldebug.lib
+
+
+
+SMPSAFE

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="0.9">
+    <widget name="todoEditorview" type="HbView">
+        <widget name="todoEditorwidget" role="HbView:widget" type="HbWidget">
+            <widget name="subHeading" type="HbGroupBox">
+                <string locid="txt_notes_subhead_new_todo" name="heading" value="New To-do"/>
+                <bool name="collapsable" value="FALSE"/>
+            </widget>
+            <widget name="todoEditorDataForm" type="HbDataForm">
+                <string name="description" value=""/>
+                <string name="heading" value=""/>
+            </widget>
+            <layout type="anchor">
+                <anchoritem dst="subHeading" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="subHeading" dstEdge="TOP" spacing="0un" src="" srcEdge="TOP"/>
+                <anchoritem dst="subHeading" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="todoEditorDataForm" dstEdge="TOP" spacing="0un" src="subHeading" srcEdge="BOTTOM"/>
+                <anchoritem dst="todoEditorDataForm" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="todoEditorDataForm" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="todoEditorDataForm" dstEdge="BOTTOM" spacing="0un" src="" srcEdge="BOTTOM"/>
+            </layout>
+        </widget>
+        <string locid="txt_notes_title_notes" name="title" value="Notes"/>
+    </widget>
+    <metadata activeUIState="Common ui state" display="NHD portriat" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+    </metadata>
+</hbdocument>

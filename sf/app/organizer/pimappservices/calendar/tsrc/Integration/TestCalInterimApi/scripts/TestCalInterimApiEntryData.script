@@ -1,0 +1,562 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//
+PRINT Run all TestCalInterimApi recurrence entry tests
+//
+//RUN_UTILS DeleteFile c:\private\101f5027\AlarmServer.ini
+
+
+LOAD_SUITE TestCalInterimApiSuite
+//
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-Sec_4.2-0001
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-Sec_4.2-0001
+//! @SYMTestCaseDesc 		This test step creates entries which are required for section 4.4 based on the data 
+//!				read from the text file.(CIT-PREQ1090-Sec_4.2)
+//! @SYMFssID			<App-Engines>/<CalInterimApi>
+//! @SYMREQ			REQ5770: Calendar Non-functional maintainability, REQ5771: Calendar Non-functional
+//!				architecture
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Create entries based on the data read from the text file
+//!					TestCalInterimApiEntryData.txt
+//! @SYMTestExpectedResults 	All the entries are created successfully
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiReadData	\CITCalInterimApi\TestCalInterimApiEntryData.ini	RecurrenceEntry
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-Sec_4.2-0001
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0007
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0007
+//! @SYMTestCaseDesc 		Create an entry with repeat rule and Rdates set. Set the exception date for the entry (CIT-PREQ1090-Sec_4.2.1)
+//! @SYMFssID			<App-Engines>/<CalInterimApi>
+//! @SYMREQ			REQ5770: Calendar Non-functional maintainability, REQ5771: Calendar Non-functional 
+//!				architecture			
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Create an entry with repeat rule and Rdates set.
+//!				2.	Set the exception dates for the entry both from the repeat rule dates and from the 
+//!					Rdates and store the entry.
+//!				3.	Verify that the dates are excluded by finding the number of instances of the entry 
+//!					and comparing it with the expected count.
+//!
+//! @SYMTestExpectedResults 	The specified dates in the list are excluded from the entry
+//! @SYMTestType 		CIT
+
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFilter \CITCalInterimApi\TestCalInterimApiEntryData.ini	FindInstances_4.2.1
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0007
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0008
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0008
+//! @SYMTestCaseDesc 		Create an entry with Rdates set. Set the exception date for the entry by giving the same 
+//!				start date but different time of one of the instance (CIT-PREQ1090-Sec_4.2.2)
+//! @SYMFssID			<App-Engines>/<CalInterimApi>
+//! @SYMREQ			REQ5770: Calendar Non-functional maintainability, REQ5771: Calendar Non-functional 
+//!				architecture			
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Create an entry with Rdates set (Say the Rdates are 5th dec, 2005 10am, 6thDec and 
+//!					8th dec).
+//!				2.	Set the exception date for the entry by giving the same start date but different 	
+//!					time. I.e. the exception date will be 5th dec, 2005 10.30am. and store the entry.
+//!				3.	Verify that the date is excluded or not by finding the instances of the entry and 	
+//!					comparing it with the expected count
+//! @SYMTestExpectedResults 	The specified date is not excluded from the entry
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFilter \CITCalInterimApi\TestCalInterimApiEntryData.ini	FindInstances_4.2.2
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0008
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0009
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0009
+//! @SYMTestCaseDesc 		Create an entry with Rdates set. Set the exception date as entry’s start time and end time (CIT-PREQ1090-Sec_4.2.3)
+//! @SYMFssID			<App-Engines>/<CalInterimApi>
+//! @SYMREQ			REQ5770: Calendar Non-functional maintainability, REQ5771: Calendar Non-functional
+//!				architecture			
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Create an entry with Rdates set.
+//!				2.	Set the exception date as entry’s start date time.
+//!				3.	Store the entry.
+//!				4.	Verify that the entry’s start date is excluded by finding the number of instances of 	
+//!				that entry.
+//! @SYMTestExpectedResults 	The entry’s start date time is excluded successfully
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFilter \CITCalInterimApi\TestCalInterimApiEntryData.ini	FindInstances_4.2.3
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0009
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0010
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0010
+//! @SYMTestCaseDesc 		Set the invalid exception date for the entry (CIT-PREQ1090-Sec_4.2.4)
+//! @SYMFssID			<App-Engines>/<CalInterimApi>
+//! @SYMREQ			REQ5770: Calendar Non-functional maintainability, REQ5771: Calendar Non-functional
+//!				architecture			
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Create an entry and set the instances using RDates
+//!				2.	Set the exception date for the entry by passing an invalid date and time which is not 
+//!					in the instance list.
+//!				3.	Store the entry.
+//!				4.	Verify that the instance is not excluded by finding the instances of the entry
+//!
+//! @SYMTestExpectedResults 	The date is not excluded from the entry and the number of instances remains the same
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFilter \CITCalInterimApi\TestCalInterimApiEntryData.ini	FindInstances_4.2.4
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0010
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0011-0012
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0011-0012
+//! @SYMTestCaseDesc 		Set the RDate for the child entry, Set the exception date for the child entry (CIT-PREQ1090-Sec_4.2.5)
+//! @SYMFssID			<App-Engines>/<CalInterimApi>
+//! @SYMREQ			REQ5770: Calendar Non-functional maintainability, REQ5771: Calendar Non-functional 
+//!				architecture			
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Create an entry and set the repeat rule for the entry.
+//!				2.	Create a child entry and set RDate and exception date for the child entry. Store the
+//!					entry.
+//!				3.	Verify that the instances are created or not by finding the number of instances of 
+//!					the entry.
+//! @SYMTestExpectedResults 	New instances will be created successfully on the specified RDates and excluded for exdates.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFilter \CITCalInterimApi\TestCalInterimApiEntryData.ini	FindInstances_4.2.5
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0011-0012
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0013
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0013
+//! @SYMTestCaseDesc 		Set the Exception date for the entry which doesn’t have repeat rule (CIT-PREQ1090-Sec_4.2.7)
+//! @SYMFssID			<App-Engines>/<CalInterimApi>
+//! @SYMREQ			REQ5770: Calendar Non-functional maintainability, REQ5771: Calendar Non-functional
+//!				architecture			
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Create a non-repeating entry.
+//!				2.	Set the exception date for the entry 
+//! @SYMTestExpectedResults 	The SetExceptiondate function leaves with error code KErrNotFound
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFilter \CITCalInterimApi\TestCalInterimApiEntryData.ini	FindInstances_4.2.7
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0013
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0014
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0014
+//! @SYMTestCaseDesc 		Set the Exception date for the entry which includes all the instances of the entry
+//! @SYMFssID			<App-Engines>/<CalInterimApi>
+//! @SYMREQ			REQ5770: Calendar Non-functional maintainability, REQ5771: Calendar Non-functional 
+//!				architecture			
+//! @SYMPREQ			1090
+//! @SYMDEF			DEF077163
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Create an entry with Rdates Set. 
+//!				2.	Set the exception date for all the instances of the entry.
+//!				3.	Store the entry.
+//!				4.	Verify that the entry is deleted by fetching the entry.
+//! @SYMTestExpectedResults 	The entry is deleted successfully as all the instances of the entry are excluded.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFilter \CITCalInterimApi\TestCalInterimApiEntryData.ini	FindInstances_4.2.8
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFetchEntryAndCheckData \CITCalInterimApi\TestCalInterimApiEntryData.ini FetchEntry_4.2.8
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0014
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0015
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0015
+//! @SYMTestCaseDesc 		Set the exception date for the entry and create an RDate on the same exception date
+//! @SYMFssID			<App-Engines>/<CalInterimApi>
+//! @SYMREQ			REQ5770: Calendar Non-functional maintainability, REQ5771: Calendar Non-functional 
+//!				architecture			
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Create an entry with repeat rule. Set the exception date for the entry.
+//!				2.	Create an RDate on the same exception date and store the entry.
+//!				3.	Verify that the instance is added or not by finding the number of instances of the 
+//!					entry.
+//! @SYMTestExpectedResults 	The instance will not be created on that date as the instance is already excluded
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFilter \CITCalInterimApi\TestCalInterimApiEntryData.ini	FindInstances_4.2.9
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0015
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0016
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0016
+//! @SYMTestCaseDesc 		Set the recurrence id of the child entry on one of the RDate instance of the parent entry
+//! @SYMFssID			<App-Engines>/<CalInterimApi>
+//! @SYMREQ			REQ5770: Calendar Non-functional maintainability, REQ5771: Calendar Non-functional 
+//!				architecture			
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Create a parent entry and set the Rdate for the entry.
+//!				2.	Create a child entry with recurrence id set on one of the Rdate instances and store 
+//!					the entry.
+//!				3.	Verify that the instance is modified with the new instance of the child entry by 	
+//!					finding the instances of the parent entry.
+//! @SYMTestExpectedResults 	The particular Rdate instance will be excluded and the instance will be created on the start date time of the child entry. 
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFilter \CITCalInterimApi\TestCalInterimApiEntryData.ini	FindInstances_4.2.10
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0016
+
+START_TESTCASE   PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0017
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0017
+//! @SYMTestCaseDesc 		Set the recurrence id of the child entry on one of the excluded dates of the parent entry
+//! @SYMFssID			<App-Engines>/<CalInterimApi>
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Create a parent entry with repeat rule set. Set the exception date for the entry and
+//!					store the entry.
+//!				2.	Create a non-repeating child with recurrence id as one of the exception dates.
+//! @SYMTestExpectedResults 	Child entry is created successfully.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFilter \CITCalInterimApi\TestCalInterimApiEntryData.ini	FindInstances_4.2.11
+
+END_TESTCASE   PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0017
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0018
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0018
+//! @SYMTestCaseDesc 		Set the exception date for the parent entry and create an Rdate for the child entry on that 
+//!				excluded date
+//! @SYMFssID			<App-Engines>/<CalInterimApi>
+//! @SYMREQ			REQ5770: Calendar Non-functional maintainability, REQ5771: Calendar Non-functional 
+//!				architecture			
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Create a parent entry with repeat rule. Set the exception date for some of 		//!					the instances of the parent entry. Store the entry.
+//!				2.	Create a child entry and set the Rdate for the child entry on the same excluded date 	//!				in the parent entry. Store the entry.
+//!				3.	Verify that the instance is created or not on that particular date by finding the 	//!				number of instances of the entry.
+//! @SYMTestExpectedResults 	A new instance will be created successfully on the particular day.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFilter \CITCalInterimApi\TestCalInterimApiEntryData.ini	FindInstances_4.2.12
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0018
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-TIME1-0020
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-TIME1-0020
+//! @SYMTestCaseDesc 		Set the Rdate for the entry with Rdate same as instance date but differs only by time
+//! @SYMFssID			<App-Engines>/<CalInterimApi>
+//! @SYMREQ			REQ5770: Calendar Non-functional maintainability, REQ5771: Calendar Non-functional 
+//!				architecture			
+//! @SYMPREQ			1090
+//! @SYMDEF			DEF079846
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Create an entry with repeat rule, Say daily repeat from 1st Nov, 2005, 10 am 		
+//!					to 5th Nov, 2005.
+//!				2.	Set the Rdate for the entry on any one of the instance date with different start time 
+//!					i.e Say, the rdate is on 2nd Nov, 2005, 10.30am
+//!				3.	Store the entry.
+//!				4.	Verify whether the rdate is added by finding the number of instances.
+//! @SYMTestExpectedResults 	The rdate instance is also added along with the repeat rule instances
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFilter \CITCalInterimApi\TestCalInterimApiEntryData.ini	FindInstances_4.2.14
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFilter \CITCalInterimApi\TestCalInterimApiEntryData.ini	FindInstancesTodo_4.2.14
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-TIME1-0020
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-TIME2-0020
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-TIME2-0020
+//! @SYMTestCaseDesc 		Set the exception date for the repeating entry and change the timezone. Check the number of instances
+//! @SYMFssID			<App-Engines>/<CalInterimApi>
+//! @SYMREQ			REQ5770: Calendar Non-functional maintainability, REQ5771: Calendar Non-functional 
+//!				architecture			
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Create an entry with monthly repeat rule and set the count as 12 and the interval as 1.
+//!				2.	Set some valid exception dates for the entry and store it.
+//!				3.	Verify that the instances are excluded by finding the number of instances. For eg. If the number of exceptions is 2, then the number of instances should be 10.
+//!				4.	Repeat the above steps for different time zones like Stockholm, Berlin, Melbourne, Chicago, Dallas and so.
+//!				5.	Verify that the instances are excluded by finding the number of instances in the entry
+//! @SYMTestExpectedResults 	In all the time zones, the number of instances should be 10
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFilter \CITCalInterimApi\TestCalInterimApiEntryData.ini	FindInstances_4.2.15
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\TestCalInterimApiEntryData.ini	SetTimeZone1
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFilter \CITCalInterimApi\TestCalInterimApiEntryData.ini	FindInstancesAgain_4.2.15
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-TIME2-0020
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-TIME3-0020
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-TIME3-0020
+//! @SYMTestCaseDesc 		Set the Rdate for the entry with Rdate same as instance date but differs only by time
+//! @SYMFssID			<App-Engines>/<CalInterimApi>
+//! @SYMREQ			REQ5770: Calendar Non-functional maintainability, REQ5771: Calendar Non-functional 
+//!				architecture			
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Set the initial time zone to London.
+//!				2.	Create a monthly repeating entry and set the start and end date time in UTC using SetTimeUTCL, set the count as 12 and interval as 1. Store the entry.
+//!				3.	Now, Change the time zone to Chicago.
+//!				4.	Verify the number of instances are same and start and end time of the instances are not changed with respect to UTC
+//! @SYMTestExpectedResults 	In all the time zones, the number of instances are same and the start, end date are not changes with respect toUTC.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\TestCalInterimApiEntryData.ini	SetTimeZone2
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFilter \CITCalInterimApi\TestCalInterimApiEntryData.ini	FindInstances_4.2.16
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\TestCalInterimApiEntryData.ini	SetTimeZone3
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-TIME3-0020
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-Sec_4.2-0002
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-Sec_4.2-0002
+//! @SYMTestCaseDesc 		Updating the parent entry using StoreL()
+//! @SYMFssID			<App-Engines>/<CalInterimApi>
+//! @SYMREQ			REQ5770: Calendar Non-functional maintainability, REQ5771: Calendar Non-functional 
+//!				architecture			
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Create entries based on the data read from the text file.
+//! @SYMTestExpectedResults 	All the entries are created successfully
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiUpdateEntry \CITCalInterimApi\TestCalInterimApiEntryData.ini	UpdateParentEntry1
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFetchEntryAndCheckData \CITCalInterimApi\TestCalInterimApiEntryData.ini FetchAndCheckParentEntry1
+
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-Sec_4.2-0002
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-Sec_4.2-0003
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-Sec_4.2-0003
+//! @SYMTestCaseDesc 		Updating the parent entry using UpdateL()
+//! @SYMFssID			<App-Engines>/<CalInterimApi>
+//! @SYMREQ			REQ5770: Calendar Non-functional maintainability, REQ5771: Calendar Non-functional 
+//!				architecture			
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Create entries based on the data read from the text file.
+//! @SYMTestExpectedResults 	All the entries are created successfully
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiUpdateEntry \CITCalInterimApi\TestCalInterimApiEntryData.ini	UpdateParentEntry2
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFetchEntryAndCheckData \CITCalInterimApi\TestCalInterimApiEntryData.ini	FetchAndCheckParentEntry2
+
+END_TESTCASE UPIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-Sec_4.2-0003
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0024
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0024
+//! @SYMTestCaseDesc 		Updating the child entry using StoreL()
+//! @SYMFssID			<App-Engines>/<CalInterimApi>
+//! @SYMREQ			REQ5770: Calendar Non-functional maintainability, REQ5771: Calendar Non-functional 
+//!				architecture			
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Create an entry.
+//!				2.	Create a child entry for the existing entry.
+//!				3.	Set the summary, description for the entry. 
+//!				4.	Update the entry by using StoreL in the calendar file.
+//!				5.	Verify that the entry is updated by getting the properties and comparing them with 	
+//!					the set values
+//! @SYMTestExpectedResults 	The entry is updated successfully
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiUpdateEntry \CITCalInterimApi\TestCalInterimApiEntryData.ini	UpdateChildEntry1
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFetchEntryAndCheckData \CITCalInterimApi\TestCalInterimApiEntryData.ini	FetchAndCheckChildEntry1
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0024
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0025
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0025
+//! @SYMTestCaseDesc 		Updating the child entry using UpdateL()
+//! @SYMFssID			<App-Engines>/<CalInterimApi>
+//! @SYMREQ			REQ5770: Calendar Non-functional maintainability, REQ5771: Calendar Non-functional 
+//!				architecture			
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Create an entry.
+//!				2.	Create a child entry for the existing entry.
+//!				3.	Set the summary, description for the entry. 
+//!				4.	Update the entry by using UpdateL in the calendar file
+//! @SYMTestExpectedResults 	The update function leaves with error code KErrArgument
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiUpdateEntry \CITCalInterimApi\TestCalInterimApiEntryData.ini	UpdateChildEntry2
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0025
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0030
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0030
+//! @SYMTestCaseDesc 		Update the summary of the entry and find the instances of the entry with search text as 
+//!				entry’s original summary property
+//! @SYMFssID			<App-Engines>/<CalInterimApi>
+//! @SYMREQ			REQ5770: Calendar Non-functional maintainability, REQ5771: Calendar Non-functional 
+//!				architecture			
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Open the session with the calendar file.
+//!				2.	Create an entry and Set the summary, description for the entry. 
+//!				3.	Store the entry in the calendar file.
+//!				4.	Fetch the entry from the file and update the summary of the entry using UpdateL() 
+//!				5.	Find the instances of the entry by specifying the search text as entry’s summary 	//!					field before modifying and verify that the instance is not fetched.
+//!				6.	Close the session
+//! @SYMTestExpectedResults 	The instances with that original summary field are not found
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiUpdateEntry \CITCalInterimApi\TestCalInterimApiEntryData.ini	UpdateEntry3
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFetchEntryAndCheckData \CITCalInterimApi\TestCalInterimApiEntryData.ini	FetchAndCheckEntry3
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFilter \CITCalInterimApi\TestCalInterimApiEntryData.ini	FindInstances_4.3.5
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0030
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0044
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0044
+//! @SYMTestCaseDesc 		Repeat the fetching of entry many times
+//! @SYMFssID			<App-Engines>/<CalInterimApi>
+//! @SYMREQ			REQ5770: Calendar Non-functional maintainability, REQ5771: Calendar Non-functional 
+//!				architecture			
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Fetch the entry by passing the uid of the entry.
+//!				2.	Repeat the step1 for many times.
+//!				3.	Verify that the entries are fetched by checking the count in the array of fetch //!					function and verify that the fuunction does not leave with error code other than //!					KErrNone
+//! @SYMTestExpectedResults 	Entries are fetched successfully.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFetchEntryAndCheckData \CITCalInterimApi\TestCalInterimApiEntryData.ini	FetchEntry_soak
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-0044
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-Sec_4.2.18-0024
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-Sec_4.2.18-0024
+//! @SYMTestCaseDesc 		Set the RDate of the child entry same as recurrence id
+//! @SYMFssID			<App-Engines>/<CalInterimApi>
+//! @SYMREQ			REQ5770: Calendar Non-functional maintainability, REQ5771: Calendar Non-functional 
+//!				architecture			
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Open the session with the calendar file.
+//!				2.	Create a repeating parent entry and store the entry in the calendar file.
+//!				3.	Create a child entry and set the rdate of the child entry same as the recurrence Id.
+//!				4.	Verify that the rdate is set or not by counting the number of instances with the 	//!					expected instances.
+//!				5.	Close the session.
+//! @SYMTestExpectedResults 	Rdate will be set successfully and the instance will be created on that date
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFilter \CITCalInterimApi\TestCalInterimApiEntryData.ini	FindInstances_4.2.18
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-Sec_4.2.18-0024
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-Sec_4.2.19-0024
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-Sec_4.2.19-0024
+//! @SYMTestCaseDesc 		Create a repeating entry and set the start date of the entry same as recurrenceid but with //! 				different time
+//! @SYMFssID			<App-Engines>/<CalInterimApi>
+//! @SYMREQ			REQ5770: Calendar Non-functional maintainability, REQ5771: Calendar Non-functional 
+//!				architecture			
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Open the session with the calendar file.
+//!				2.	Create a repeating entry and store it in the calendar file.
+//!				3.	Create a child entry with start date of the entry same as recurrenceId but with //!					different time. Store the entry.
+//!				4.	Verify that the instance is created on that date by finding the number of instances //!					and comparing it with the expected instances.
+//!				5.	Close the session.
+//! @SYMTestExpectedResults 	Child entry will be created successfully.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFilter \CITCalInterimApi\TestCalInterimApiEntryData.ini	FindInstances_4.2.19
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-Sec_4.2.19-0024
+
+START_TESTCASE PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-Sec_4.2.20-0024
+//! @file			
+//! @SYMTestCaseID		PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-Sec_4.2.20-0024
+//! @SYMTestCaseDesc 		Create a monthly repeating entry by passing the last day of the month and repeat the entry //!				for a year
+//! @SYMFssID			<App-Engines>/<CalInterimApi>
+//! @SYMREQ			REQ5770: Calendar Non-functional maintainability, REQ5771: Calendar Non-functional 
+//!				architecture			
+//! @SYMPREQ			1090
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Open the session with the calendar file.
+//!				2.	Create a repeating parent entry and store it.
+//!				3.	Create a repeating child entry with start date of the entry same as the recurrence id //!					but at different time.
+//!				4.	Verify that the instance is created on that date by finding the number of instances 	//!					and comparing it with the expected instances.
+//!				5.	Close the session
+//! @SYMTestExpectedResults 	The instances will repeat on last day of every month and the dates will be adjusted //!						accordingly
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiFilter \CITCalInterimApi\TestCalInterimApiEntryData.ini	FindInstances_4.2.20
+
+END_TESTCASE PIM-APPENG-CALINTERIMAPI-CALENTRYVIEW-CIT-Sec_4.2.20-0024
+
+PRINT Completed TestCalInterimApi_Tests

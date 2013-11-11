@@ -1,0 +1,71 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  engine macro define
+*
+*/
+
+
+#ifndef VTDEFS_HRH
+#define VTDEFS_HRH
+
+
+// DATA TYPES
+// MACROS
+
+
+#if defined(_DEBUG) || defined(WINS)
+/**
+* Debugging enabled always in debug builds
+*/
+#define VTDEBUG
+#else
+/**
+* Define here for release builds (disabled by default)
+* Uncomment VTDEBUG below if you want to enable logging in UREL.
+*/
+//#define VTDEBUG
+#endif
+
+#ifdef VTDEBUG
+/** 
+* 0 = No logging
+* 1 = File logging
+* 2 = RDebug
+*/
+#if defined(__WINSCW) || defined(__WINS__) || defined (WINS)
+// In emulator log to output window
+#define VTLOGGING 1
+#else
+/**
+* In HW to which ever is desired (File (1) by default)
+* Change VTLOGGING to 1 (file) or 2 (RDebug) as desired.
+*/
+#define VTLOGGING 1
+#endif
+
+#else // !VTDEBUG
+
+// no logging
+#define VTLOGGING 0
+
+#endif //VTDEBUG
+
+#if VTLOGGING == 1
+#define VTFILELOGGING 1
+#else
+#define VTFILELOGGING 0
+#endif
+ 
+#endif // VTDEFS_HRH
+// End of File

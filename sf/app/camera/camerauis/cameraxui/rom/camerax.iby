@@ -1,0 +1,47 @@
+/*
+* Copyright (c) 2009-2010 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+#ifndef CAMERAX_IBY
+#define CAMERAX_IBY
+
+#include <data_caging_paths_for_iby.hrh>
+
+// Ui
+S60_APP_EXE(cxui)
+data = DATAZ_\private\10003a3f\import\apps\cxui_reg.rsc    \private\10003a3f\import\apps\cxui_reg.rsc
+
+// Sounds
+data = DATAZ_\system\sounds\digital\capture.wav      system\sounds\digital\capture.wav
+data = DATAZ_\system\sounds\digital\videoStart.wav   system\sounds\digital\videoStart.wav
+data = DATAZ_\system\sounds\digital\videoStop.wav    system\sounds\digital\videoStop.wav
+data = DATAZ_\system\sounds\digital\autoFocus.wav    system\sounds\digital\autoFocus.wav
+data = DATAZ_\system\sounds\digital\selftimer.wav    system\sounds\digital\selftimer.wav
+
+// CR key files
+data = DATAZ_\private\10202be9\20027017.txt    private\10202be9\20027017.txt
+data = DATAZ_\private\10202be9\20027018.txt    private\10202be9\20027018.txt
+
+// Engine
+file = ABI_DIR\BUILD_DIR\cxengine.dll    SHARED_LIB_DIR\cxengine.dll
+
+// Stub sis for update support
+data = DATAZ_\system\install\camerax_stub.sis    \system\install\camerax_stub.sis
+
+// register for backup/restore of settings.
+data = DATAZ_\private\20027017\backup_registration.xml  private\20027017\backup_registration.xml
+
+#endif // CAMERAX_IBY

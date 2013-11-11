@@ -1,0 +1,29 @@
+/*
+* Copyright (c) 2008 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  IBY file
+ *
+*/
+
+
+#ifndef __VIDEOTELUI_RESOURCES_IBY__
+#define __VIDEOTELUI_RESOURCES_IBY__
+
+#include <data_caging_paths_for_iby.hrh> 
+
+#ifdef __CS_VIDEO_TELEPHONY
+data=DATAZ_\APP_RESOURCE_DIR\videotelui.rsc                             APP_RESOURCE_DIR\videotelui.rsc
+data=DATAZ_\QT_TRANSLATIONS_DIR\video_telephone.qm QT_TRANSLATIONS_DIR\video_telephone.qm
+#endif // __CS_VIDEO_TELEPHONY
+
+#endif

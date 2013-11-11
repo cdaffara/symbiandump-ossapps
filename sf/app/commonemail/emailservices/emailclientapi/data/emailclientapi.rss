@@ -1,0 +1,52 @@
+/*
+* Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Declares ECom registration information for email client api
+*     
+*
+*/
+
+#include <ecom/registryinfov2.rh>		//REGISTRY_INFO
+#include "emailclientapiimpl.hrh" 
+
+/** ECom version number to be used in Cmail related ECom registeration
+ *  resource files.
+ *  NOTE: Version number in ECom registeration resource file is saved as one
+ *  byte, so 255 is the maximum version number.
+ */
+#define KEmailEcomVersionNumber 7
+
+RESOURCE REGISTRY_INFO theInfo
+    {    
+    dll_uid = 0x20022D63;
+    resource_format_version = RESOURCE_FORMAT_VERSION_2;
+    interfaces =
+        {
+        INTERFACE_INFO
+            {
+            interface_uid = 0x20022D62;
+            implementations =
+                {
+                IMPLEMENTATION_INFO
+                    {
+                    implementation_uid = 0x20022D61;
+                    version_no = KEmailEcomVersionNumber;
+                    display_name = "email client api";
+                    default_data = "";
+    				opaque_data = "";
+    				rom_only=0;
+                    }
+                };
+            }
+        };
+    }

@@ -1,0 +1,16 @@
+// *****************************************
+//  OBEX Test Script GT0133UT2201
+//  This test is expected to succeed.
+// *****************************************
+
+[main]
+obex_client_test unregistermtms
+
+[unregistermtms]
+unregister_mtm ir
+unregister_mtm bt
+add_comment "UnRegistered IR MTM"
+add_comment "UnRegistered BT MTM"
+add_comment "Test complete: MTMs unregistered"
+
+

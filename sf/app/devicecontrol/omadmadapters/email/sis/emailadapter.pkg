@@ -1,0 +1,35 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description: Implementation of dm adapters
+; 	This is part of omadmextensions.
+;
+&EN
+
+; standard SIS file header
+#{"nsmlemailadapter"},(0x101F6E34),2,0,0,TYPE=SA
+
+;Localised Vendor name
+%{"Nokia-EN"}
+
+;Unique Vendor name
+:"Nokia"
+
+;Supports Series 60 v 3.0
+;[0x101F6E34], 0, 0, 0, {"Series60ProductID"}
+
+;Files to install
+;Exes  to be installed 
+"\EPOC32\RELEASE\ARMV5\UREL\nsmldmemailadapter.dll"                            -"!:\sys\bin\nsmldmemailadapter.dll"
+; Application resource files to be installed 
+"\EPOC32\data\z\resource\plugins\nsmldmemailadapter.Rsc"             -"!:\resource\plugins\nsmldmemailadapter.Rsc"

@@ -1,0 +1,338 @@
+// Copyright (c) 1999-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// VCard/vCal converters
+// 
+//
+
+#include <platform_paths.hrh>
+
+PRJ_PLATFORMS
+DEFAULT WINC
+
+PRJ_EXPORTS
+// specify the source file followed by its destination here
+// copy will be used to copy the source file to its destination
+// If there's no destination then the source file will be copied
+// to the same name in \epoc32\include
+
+../inc/VCAL.H SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(vcal.h)
+../inc/VCAL.INL SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(vcal.inl)
+../inc/VCARD.H SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(vcard.h)
+../inc/VCARD.INL SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(vcard.inl)
+../inc/VERSIT.H SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(versit.h)
+../inc/VERSIT.INL SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(versit.inl)
+../inc/VPROP.H SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(vprop.h)
+../inc/VPROP.INL SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(vprop.inl)
+../inc/VTOKEN.H SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(vtoken.h)
+../inc/VUID.H SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(vuid.h)
+../inc/VRECUR.H SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(vrecur.h)
+../inc/VRECUR.INL SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(vrecur.inl)
+../inc/vstaticutils.h SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(vstaticutils.h)
+../inc/VUTIL.H SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(vutil.h)
+../inc/VersitTls.h SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(versittls.h)
+../inc/VObserv.H SYMBIAN_APP_LAYER_PUBLIC_EXPORT_PATH(vobserv.h)
+#ifdef SYMBIAN_ENABLE_SPLIT_HEADERS
+../inc/versitlinereaderext.h SYMBIAN_APP_LAYER_PLATFORM_EXPORT_PATH(versitlinereaderext.h)
+../inc/vpropbinaryfile.h SYMBIAN_APP_LAYER_PLATFORM_EXPORT_PATH(vpropbinaryfile.h)
+../inc/vcard3.h          SYMBIAN_APP_LAYER_PLATFORM_EXPORT_PATH(vcard3.h)
+#endif
+
+./versit.iby		 	/epoc32/rom/include/versit.iby
+./versitrecognizer.iby	/epoc32/rom/include/versitrecognizer.iby
+./versitrecognizer.iby	CORE_APP_LAYER_IBY_EXPORT_PATH(versitrecognizer.iby)
+
+PRJ_MMPFILES
+
+./VERSIT.MMP
+./VCal.MMP
+./VCard.MMP
+#ifndef WINC
+../rec/VersitRecog.mmp
+#endif
+
+PRJ_TESTMMPFILES
+// specify the .mmp files required for building any test programs here
+//
+// you can specify "manual" to denote that a test should be listed in a generated
+// batch file for running a group of tests which require user input during testing.
+// you can specify "support" to denote that a file is a test support file and shouldn't
+// be listed in a batch file for running a group of tests
+// By default, each test will be listed in a batch file for running a group of tests
+// which can be left to run without requiring watching over by the person running the tests,
+// i.e. tests where no user input is required.  The default will apply if neither "manual"
+// or "support" is specified.
+../tsrc/TVERSIT.MMP
+../tsrc/tvgen.mmp
+../tsrc/TCharsetvCard.mmp
+../tsrc/TBugFix.MMP
+../tsrc/toom.mmp
+../tsrc/tPerformance.mmp
+../tsrc/TDefaultCharset.mmp
+../tsrc/Test_saveloadbin.mmp
+../tsrc/Test_saveloadbinoom.mmp
+../Ticket/VTicket.MMP support
+../tsrc/TJapaneseSoundProperty.mmp
+../tsrc/Test_recognizer.mmp
+
+// PREQ1375 Unit tests for PBAPSupport
+../tsrc/UnitTest_PBAPSupport/group/TestExternalize.mmp
+
+
+PRJ_TESTEXPORTS 
+
+../group/VersitTest.iby				/epoc32/rom/include/versittest.iby
+
+// WINSCW UDEB Z
+
+../TestvCards/Encoded/1.vcf				z:/testvcards/encoded/1.vcf
+../TestvCards/Encoded/2.vcf				z:/testvcards/encoded/2.vcf
+../TestvCards/Encoded/3.vcf				z:/testvcards/encoded/3.vcf
+../TestvCards/Encoded/4.vcf				z:/testvcards/encoded/4.vcf
+../TestvCards/Encoded/5.vcf				z:/testvcards/encoded/5.vcf
+../TestvCards/Encoded/6.vcf				z:/testvcards/encoded/6.vcf
+../TestvCards/Encoded/7.vcf				z:/testvcards/encoded/7.vcf
+
+../TestvCards/Epoc/1.vcf				z:/testvcards/epoc/1.vcf
+../TestvCards/Epoc/2.vcf				z:/testvcards/epoc/2.vcf
+../TestvCards/Epoc/3.vcf				z:/testvcards/epoc/3.vcf
+../TestvCards/Epoc/4.vcf				z:/testvcards/epoc/4.vcf
+../TestvCards/Epoc/5.vcf				z:/testvcards/epoc/5.vcf
+../TestvCards/Epoc/6.vcf				z:/testvcards/epoc/6.vcf
+../TestvCards/Epoc/7.vcf				z:/testvcards/epoc/7.vcf
+../TestvCards/Epoc/8.vcf				z:/testvcards/epoc/8.vcf
+
+../TestvCards/ER5Regression/1.vcf		z:/testvcards/er5regression/1.vcf
+../TestvCards/ER5Regression/2.vcf		z:/testvcards/er5regression/2.vcf
+../TestvCards/ER5Regression/3.vcf		z:/testvcards/er5regression/3.vcf
+../TestvCards/ER5Regression/4.vcf		z:/testvcards/er5regression/4.vcf
+../TestvCards/ER5Regression/5.vcf		z:/testvcards/er5regression/5.vcf
+
+../TestvCards/Invalid/1.vcf				z:/testvcards/invalid/1.vcf
+../TestvCards/Invalid/2.vcf				z:/testvcards/invalid/2.vcf
+../TestvCards/Invalid/3.vcf				z:/testvcards/invalid/3.vcf
+../TestvCards/Invalid/4.vcf				z:/testvcards/invalid/4.vcf
+../TestvCards/Invalid/5.vcf				z:/testvcards/invalid/5.vcf
+../TestvCards/Invalid/6.vcf				z:/testvcards/invalid/6.vcf
+../TestvCards/Invalid/7.vcf				z:/testvcards/invalid/7.vcf
+../TestvCards/Invalid/8.vcf				z:/testvcards/invalid/8.vcf
+
+../TestvCards/Various/1.vcf				z:/testvcards/various/1.vcf
+../TestvCards/Various/2.vcf				z:/testvcards/various/2.vcf
+../TestvCards/Various/3.vcf				z:/testvcards/various/3.vcf
+../TestvCards/Various/4.vcf				z:/testvcards/various/4.vcf
+../TestvCards/Various/5.vcf				z:/testvcards/various/5.vcf
+../TestvCards/Various/6.vcf				z:/testvcards/various/6.vcf
+../TestvCards/Various/7.vcf				z:/testvcards/various/7.vcf
+../TestvCards/Various/8.vcf				z:/testvcards/various/8.vcf
+../TestvCards/Various/9.vcf				z:/testvcards/various/9.vcf
+../TestvCards/Various/10.vcf			z:/testvcards/various/10.vcf
+../TestvCards/Various/11.vcf			z:/testvcards/various/11.vcf
+../TestvCards/Various/12.vcf			z:/testvcards/various/12.vcf
+../TestvCards/Various/nulldate.vcf		z:/testvcards/various/nulldate.vcf
+../TestvCards/Various/HugeVCard.vcf		z:/testvcards/various/HugeVCard.vcf
+
+// TBugfix the number of files=82
+../TestvCals/Various/6.vcs				z:/testvcards/various/6.vcs
+../TestFiles/CShJisEs.VCF				z:/testfiles/cshjises.vcf
+../TestFiles/CTabs.VCS					z:/testfiles/ctabs.vcs
+../TestFiles/IShJisEs.VCF				z:/testfiles/ishjises.vcf
+../TestFiles/ITabs.VCS					z:/testfiles/itabs.vcs
+../TestFiles/ITimePer.VCS				z:/testfiles/itimeper.vcs
+../TestFiles/iDalarm.vcs				z:/testfiles/idalarm.vcs
+../TestFiles/cDalarm.vcs				z:/testfiles/cdalarm.vcs
+../TestFiles/IAgent.VCF				    	z:/testfiles/iagent.vcf
+../TestFiles/IBase64.VCF				z:/testfiles/ibase64.vcf
+../TestFiles/IBase64ws.vcf				z:/testfiles/ibase64ws.vcf
+../TestFiles/IDalarm2.VCS				z:/testfiles/idalarm2.vcs
+../TestFiles/IWrap.VCS				    	z:/testfiles/iwrap.vcs
+../TestFiles/CAgent.VCF		    			z:/testfiles/cagent.vcf
+../TestFiles/CBase64.VCF				z:/testfiles/cbase64.vcf
+../TestFiles/CBase64ws.vcf				z:/testfiles/cbase64ws.vcf
+../TestFiles/CDalarm2.VCS				z:/testfiles/cdalarm2.vcs
+../TestFiles/CWrap.VCS			    		z:/testfiles/cwrap.vcs
+../TestFiles/Test5_ASCII_Input.vcf			z:/testfiles/test5_ascii_input.vcf
+../TestFiles/iAsciiLineFolding.vcf			z:/testfiles/iasciilinefolding.vcf
+../TestFiles/cAsciiLineFolding.vcf			z:/testfiles/casciilinefolding.vcf
+../TestFiles/iBase64LineFolding.vcf			z:/testfiles/ibase64linefolding.vcf
+../TestFiles/cBase64LineFolding.VCF			z:/testfiles/cbase64linefolding.vcf
+../TestFiles/cBase64NoSpaceLineFolding.vcf		z:/testfiles/cbase64nospacelinefolding.vcf
+../TestFiles/iQPLineFolding.vcf				z:/testfiles/iqplinefolding.vcf
+../TestFiles/cQPLineFolding.VCF				z:/testfiles/cqplinefolding.vcf
+../TestFiles/iTest7.vcf					z:/testfiles/itest7.vcf
+../TestFiles/iTestVcard.vcf				z:/testfiles/itestvcard.vcf
+../TestFiles/iTestVcal.vcs				z:/testfiles/itestvcal.vcs
+../TestFiles/cTestVCard.vcf				z:/testfiles/ctestvcard.vcf
+../TestFiles/cTestVCal.vcs				z:/testfiles/ctestvcal.vcs
+../TestFiles/iGroupedProperty.vcf			z:/testfiles/igroupedproperty.vcf
+../TestFiles/iTimeZoneN.vcs				z:/testfiles/itimezonen.vcs
+../TestFiles/cTimeZoneN.VCS				z:/testfiles/ctimezonen.vcs
+../TestFiles/iTimeZoneP.vcs				z:/testfiles/itimezonep.vcs
+../TestFiles/cTimeZoneP.VCS				z:/testfiles/ctimezonep.vcs
+../TestFiles/IGBK.VCF					z:/testfiles/igbk.vcf
+../TestFiles/IShiftJis.VCS				z:/testfiles/ishiftjis.vcs
+../TestFiles/CShiftJis.VCS				z:/testfiles/cshiftjis.vcs
+../TestFiles/IvCard.VCF					z:/testfiles/ivcard.vcf
+../TestFiles/CvCard.VCF					z:/testfiles/cvcard.vcf
+../TestFiles/IvCal.VCS					z:/testfiles/ivcal.vcs
+../TestFiles/IRDailyVCal.VCS				z:/testfiles/irdailyvcal.vcs
+../TestFiles/CvCal.VCS					z:/testfiles/cvcal.vcs
+../TestFiles/NoEnd.VCF					z:/testfiles/noend.vcf
+../TestFiles/HalfLine.VCF				z:/testfiles/halfline.vcf
+../TestFiles/Feb29.VCS					z:/testfiles/feb29.vcs
+../TestFiles/EnName1.VCS				z:/testfiles/enname1.vcs
+../TestFiles/EnName2.VCS				z:/testfiles/enname2.vcs
+../TestFiles/EnName3.VCF				z:/testfiles/enname3.vcf
+../TestFiles/EnName4.VCF				z:/testfiles/enname4.vcf
+../TestFiles/Begin2.VCF					z:/testfiles/begin2.vcf
+../TestFiles/Begin3.VCS					z:/testfiles/begin3.vcs
+../TestFiles/End2.VCF					z:/testfiles/end2.vcf
+../TestFiles/IEndBa64.VCS				z:/testfiles/iendba64.vcs
+../TestFiles/CEndBa64.VCS				z:/testfiles/cendba64.vcs
+../TestFiles/CNullPar.VCS	 			z:/testfiles/cnullpar.vcs
+../TestFiles/CTZone.VCS					z:/testfiles/ctzone.vcs
+../TestFiles/CTZone2.VCS	 			z:/testfiles/ctzone2.vcs
+../TestFiles/CWrap2.VCS					z:/testfiles/cwrap2.vcs
+../TestFiles/IESlash.VCF	 			z:/testfiles/ieslash.vcf
+../TestFiles/CESlash.VCF				z:/testfiles/ceslash.vcf
+../TestFiles/INullPar.VCS	 			z:/testfiles/inullpar.vcs
+../TestFiles/ITZone.VCS					z:/testfiles/itzone.vcs
+../TestFiles/ITZone2.VCS	 			z:/testfiles/itzone2.vcs
+../TestFiles/IWrap2.VCS					z:/testfiles/iwrap2.vcs
+../TestFiles/Base64.VCF					z:/testfiles/base64.vcf
+../TestFiles/vCard.VCF					z:/testfiles/vcard.vcf
+../TestFiles/IAutoD.VCF					z:/testfiles/iautod.vcf
+../TestFiles/IAutoD2.VCS				z:/testfiles/iautod2.vcs
+../TestFiles/CAutoD.VCF					z:/testfiles/cautod.vcf
+../TestFiles/CAutoD2.VCS				z:/testfiles/cautod2.vcs
+../TestFiles/IYenEsc1.VCF				z:/testfiles/iyenesc1.vcf
+../TestFiles/IYenEsc2.VCF				z:/testfiles/iyenesc2.vcf
+../TestFiles/IParamE.VCF				z:/testfiles/iparame.vcf
+../TestFiles/CYenEsc1.VCF				z:/testfiles/cyenesc1.vcf
+../TestFiles/CYenEsc2.VCF				z:/testfiles/cyenesc2.vcf
+../TestFiles/CParamE.VCF				z:/testfiles/cparame.vcf
+../TestFiles/IUK.VCS					z:/testfiles/iuk.vcs
+../TestFiles/INewYork.VCS				z:/testfiles/inewyork.vcs
+../TestFiles/IJapan.VCS					z:/testfiles/ijapan.vcs
+../TestFiles/CUK.VCS					z:/testfiles/cuk.vcs
+../TestFiles/CNewYork.VCS				z:/testfiles/cnewyork.vcs
+../TestFiles/CJapan.VCS					z:/testfiles/cjapan.vcs
+../TestFiles/IFred.VCF					z:/testfiles/ifred.vcf
+../TestFiles/iNonStandardAgent.vcf			z:/testfiles/inonstandardagent.vcf
+../TestFiles/cNonStandardAgent.vcf			z:/testfiles/cnonstandardagent.vcf
+../TestFiles/iRRule.vcs					z:/testfiles/irrule.vcs
+../TestFiles/iBlankLines.vcf				z:/testfiles/iblanklines.vcf
+../TestFiles/cBlankLines.VCF				z:/testfiles/cblanklines.vcf
+../TestFiles/iLineFeed.vcs				z:/testfiles/ilinefeed.vcs
+../TestFiles/cLineFeed.VCS				z:/testfiles/clinefeed.vcs
+../TestFiles/IJunkLine.VCS				z:/testfiles/ijunkline.vcs
+../TestFiles/CJunkLine.VCS				z:/testfiles/cjunkline.vcs
+../TestFiles/iattachment.vcs			z:/testfiles/iattachment.vcs
+../TestFiles/cattachment.vcs			z:/testfiles/cattachment.vcs
+../TestFiles/iAlarmRepeatCount.vcs		z:/testfiles/ialarmrepeatcount.vcs
+../TestFiles/DefaultCharSetInput.vcf	z:/testfiles/defaultcharsetinput.vcf
+../TestFiles/inewbase64.vcf				z:/testfiles/inewbase64.vcf
+../TestFiles/inewbase64.vcs				z:/testfiles/inewbase64.vcs
+../TestFiles/ivtrigger.vcf				z:/testfiles/ivtrigger.vcf
+../TestFiles/cnewbase64.VCF				z:/testfiles/cnewbase64.vcf	
+../TestFiles/cnewbase64.VCS				z:/testfiles/cnewbase64.vcs	
+../TestFiles/cvtrigger.VCF				z:/testfiles/cvtrigger.vcf	
+../TestFiles/nolf.vcs					z:/testfiles/nolf.vcs
+../TestFiles/nestedagent.vcf			z:/testfiles/nestedagent.vcf
+
+// TPerformance muber of files=21
+../TPerformance/iLine_short.vcf				z:/tperformance/inputfile/line_short.vcf
+../TPerformance/iLine_photo.vcf				z:/tperformance/inputfile/line_photo.vcf
+../TPerformance/iLine_long.vcf				z:/tperformance/inputfile/line_long.vcf
+../TPerformance/iLine_alarm.vcs				z:/tperformance/inputfile/line_alarm.vcs
+../TPerformance/iFileUTF8_QP.vcf			z:/tperformance/inputfile/fileutf8_qp.vcf
+../TPerformance/iFileUTF8_Base64.vcf			z:/tperformance/inputfile/fileutf8_base64.vcf
+../TPerformance/iFileShiftJIS_QP.vcf			z:/tperformance/inputfile/fileshiftjis_qp.vcf
+../TPerformance/iFileShiftJIS_Base64.vcf		z:/tperformance/inputfile/fileshiftjis_base64.vcf
+../TPerformance/iFileGBK_QP.vcf				z:/tperformance/inputfile/filegbk_qp.vcf
+../TPerformance/iFileGBK_Base64.vcf			z:/tperformance/inputfile/filegbk_base64.vcf
+../TPerformance/iFileASCII_QP.vcf			z:/tperformance/inputfile/fileascii_qp.vcf
+../TPerformance/iFileASCII_None.vcf			z:/tperformance/inputfile/fileascii_none.vcf
+../TPerformance/iFileASCII_Base64.vcf			z:/tperformance/inputfile/fileascii_base64.vcf
+../TPerformance/iFile05entity.vcs			z:/tperformance/inputfile/file05entity.vcs
+../TPerformance/iFile10entity.vcs			z:/tperformance/inputfile/file10entity.vcs
+../TPerformance/iFile15entity.vcs			z:/tperformance/inputfile/file15entity.vcs
+../TPerformance/iFile20entity.vcs			z:/tperformance/inputfile/file20entity.vcs
+../TPerformance/iFile25entity.vcs			z:/tperformance/inputfile/file25entity.vcs
+../TPerformance/iFile30entity.vcs			z:/tperformance/inputfile/file30entity.vcs
+../TPerformance/iFile35entity.vcs			z:/tperformance/inputfile/file35entity.vcs
+../TPerformance/iFile40entity.vcs			z:/tperformance/inputfile/file40entity.vcs
+
+// Shift-JIS and other data files=34
+../TestFiles/K3Data/ITest01.VCF			z:/k3data/itest01.vcf
+../TestFiles/K3Data/ITest02.VCF			z:/k3data/itest02.vcf
+../TestFiles/K3Data/ITest03.VCS			z:/k3data/itest03.vcs
+../TestFiles/K3Data/ITest04.VCF			z:/k3data/itest04.vcf
+../TestFiles/K3Data/ITest05.VCF			z:/k3data/itest05.vcf
+../TestFiles/K3Data/ITest06.VCF			z:/k3data/itest06.vcf
+../TestFiles/K3Data/ITest07.VCF			z:/k3data/itest07.vcf
+../TestFiles/K3Data/ITest08.VCF			z:/k3data/itest08.vcf
+../TestFiles/K3Data/ITest09.VCF			z:/k3data/itest09.vcf
+../TestFiles/K3Data/ITest10.VCF			z:/k3data/itest10.vcf
+../TestFiles/K3Data/ITest11.VCF			z:/k3data/itest11.vcf
+../TestFiles/K3Data/STest01.VCF			z:/k3data/stest01.vcf
+../TestFiles/K3Data/STest02.VCF			z:/k3data/stest02.vcf
+../TestFiles/K3Data/STest03.VCS			z:/k3data/stest03.vcs
+../TestFiles/K3Data/STest04.VCF			z:/k3data/stest04.vcf
+../TestFiles/K3Data/STest05.VCF			z:/k3data/stest05.vcf
+../TestFiles/K3Data/STest06.VCF			z:/k3data/stest06.vcf
+../TestFiles/K3Data/STest07.VCF			z:/k3data/stest07.vcf
+../TestFiles/K3Data/STest08.VCF			z:/k3data/stest08.vcf
+../TestFiles/K3Data/STest09.VCF			z:/k3data/stest09.vcf
+../TestFiles/K3Data/STest10.VCF			z:/k3data/stest10.vcf
+../TestFiles/K3Data/STest11.VCF			z:/k3data/stest11.vcf
+
+// Japanese SOUND vCard test files (WINSCW UDEB)
+../TestvCards/VersitJapaneseVCards/amano.vcf		           	z:/versitjapanesevcards/amano.vcf
+../TestvCards/VersitJapaneseVCards/aoki.vcf		            	z:/versitjapanesevcards/aoki.vcf
+../TestvCards/VersitJapaneseVCards/barbara.vcf		        	z:/versitjapanesevcards/barbara.vcf
+../TestvCards/VersitJapaneseVCards/Digit1.vcf		        	z:/versitjapanesevcards/digit1.vcf
+../TestvCards/VersitJapaneseVCards/Digit2.vcf		        	z:/versitjapanesevcards/digit2.vcf
+../TestvCards/VersitJapaneseVCards/haga.vcf			            z:/versitjapanesevcards/haga.vcf
+../TestvCards/VersitJapaneseVCards/kasai.vcf			        z:/versitjapanesevcards/kasai.vcf
+../TestvCards/VersitJapaneseVCards/kitajima.vcf		        	z:/versitjapanesevcards/kitajima.vcf
+../TestvCards/VersitJapaneseVCards/Longest.vcf		        	z:/versitjapanesevcards/longest.vcf
+../TestvCards/VersitJapaneseVCards/matsui.vcf		        	z:/versitjapanesevcards/matsui.vcf
+../TestvCards/VersitJapaneseVCards/miyazaki.vcf		        	z:/versitjapanesevcards/miyazaki.vcf
+../TestvCards/VersitJapaneseVCards/nakai.vcf			        z:/versitjapanesevcards/nakai.vcf
+../TestvCards/VersitJapaneseVCards/powell.vcf			        z:/versitjapanesevcards/powell.vcf
+../TestvCards/VersitJapaneseVCards/prolongedsound.vcf			z:/versitjapanesevcards/prolongedsound.vcf
+../TestvCards/VersitJapaneseVCards/SpecialCharacter1.vcf	    z:/versitjapanesevcards/specialcharacter1.vcf
+../TestvCards/VersitJapaneseVCards/SpecialCharacter2.vcf		z:/versitjapanesevcards/specialcharacter2.vcf
+../TestvCards/VersitJapaneseVCards/takashiro.vcf		        z:/versitjapanesevcards/takashiro.vcf
+../TestvCards/VersitJapaneseVCards/escaped.vcf		            z:/versitjapanesevcards/escaped.vcf
+../TestvCards/VersitJapaneseVCards/Multiplesounds.vcf		    z:/versitjapanesevcards/multiplesounds.vcf
+
+// PREQ1375 Unit testdata for PBAPSupport
+../tsrc/UnitTest_PBAPSupport/testdata/CBase64LineFolding.vcf			z:/pbapsupport/cbase64linefolding.vcf
+../tsrc/UnitTest_PBAPSupport/testdata/CBinaryEncoding.vcf				z:/pbapsupport/cbinaryencoding.vcf
+../tsrc/UnitTest_PBAPSupport/testdata/CDisableCharset.vcf				z:/pbapsupport/cdisablecharset.vcf
+../tsrc/UnitTest_PBAPSupport/testdata/CEscapeBackslash.vcf				z:/pbapsupport/cescapebackslash.vcf
+../tsrc/UnitTest_PBAPSupport/testdata/CEscapeComma.vcf					z:/pbapsupport/cescapecomma.vcf
+../tsrc/UnitTest_PBAPSupport/testdata/CEscapeSemicolon.vcf				z:/pbapsupport/cescapesemicolon.vcf
+../tsrc/UnitTest_PBAPSupport/testdata/CLongPropertyName.vcf				z:/pbapsupport/clongpropertyname.vcf
+../tsrc/UnitTest_PBAPSupport/testdata/CLongPropertyParam.vcf			z:/pbapsupport/clongpropertyparam.vcf
+../tsrc/UnitTest_PBAPSupport/testdata/CLongPropertyValue.vcf			z:/pbapsupport/clongpropertyvalue.vcf
+../tsrc/UnitTest_PBAPSupport/testdata/CQPEncodingTest1.vcf				z:/pbapsupport/cqpencodingtest1.vcf
+../tsrc/UnitTest_PBAPSupport/testdata/CQPEncodingTest2.vcf				z:/pbapsupport/cqpencodingtest2.vcf
+../tsrc/UnitTest_PBAPSupport/testdata/CShortAsciiLine.vcf				z:/pbapsupport/cshortasciiline.vcf
+../tsrc/UnitTest_PBAPSupport/testdata/CUseUTF8.vcf						z:/pbapsupport/cuseutf8.vcf
+../tsrc/UnitTest_PBAPSupport/testdata/IBase64LineFolding.vcf			z:/pbapsupport/ibase64linefolding.vcf
+
+
+

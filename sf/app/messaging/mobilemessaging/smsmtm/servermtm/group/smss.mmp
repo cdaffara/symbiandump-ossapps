@@ -1,0 +1,102 @@
+// Copyright (c) 1999-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// smss.dll SMS Server MTM
+// smss.rsc SMS Server MTM resource defining error actions
+//
+
+
+
+/**
+ @file
+*/
+
+#include "../../../../../../mw/messagingmw/messagingfw/msgtests/group/msgopt.mph"
+
+TARGET		smss.dll
+CAPABILITY ReadDeviceData WriteDeviceData ProtServ NetworkControl NetworkServices LocalServices ReadUserData WriteUserData
+TARGETPATH	/system/libs
+TARGETTYPE	dll
+
+#if defined(WINS)
+UID	0x10003C5E 0x10003C72
+VENDORID 0x70000001
+#else
+UID	0x10003C5E 0x10003C72
+VENDORID 0x70000001
+#endif
+
+SOURCEPATH	../src
+USERINCLUDE	../inc 
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+
+#if (defined SYMBIAN_USER_PROMPT_SERVICE)
+#endif
+
+SOURCE		SMSSMAIN.CPP
+SOURCE		SMSSSEND.CPP
+SOURCE		SMSSOUTB.CPP
+SOURCE		SMSSERV.CPP
+SOURCE		SMSSchSend.cpp
+SOURCE		SMSSendSession.cpp
+SOURCE		SMSRecipientSend.cpp
+SOURCE		TextRecipientSend.cpp
+SOURCE		WapRecipientSend.cpp
+SOURCE		smssactive.cpp
+SOURCE		SmssSimUtils.cpp
+
+LIBRARY		euser.lib
+LIBRARY		etext.lib
+LIBRARY		c32.lib
+LIBRARY		smcm.lib
+LIBRARY		msgs.lib
+LIBRARY		gsmu.lib
+LIBRARY		esock.lib
+LIBRARY		estor.lib
+LIBRARY		smsu.lib
+LIBRARY		biodb.lib
+LIBRARY		bifu.lib
+LIBRARY		etelmm.lib
+LIBRARY		centralrepository.lib
+LIBRARY		ecom.lib 
+
+#if (defined SYMBIAN_USER_PROMPT_SERVICE)
+LIBRARY upsclient.lib
+#endif
+
+#ifdef WINSCW
+DEFFILE 	SMSS.DEF
+#else
+DEFFILE		smss.DEF
+#endif
+
+#ifdef _MSG_NO_LOGGING_DEFINE
+DEBUGLIBRARY		flogger.lib
+#else
+LIBRARY		flogger.lib
+#endif
+
+LIBRARY		schsend.lib
+
+SOURCEPATH	.
+START RESOURCE	SMSS.rss
+TARGETPATH resource/messaging
+LANG	SC
+HEADER
+END
+
+START WINS
+   BASEADDRESS 0x4AB20000
+END
+
+SMPSAFE

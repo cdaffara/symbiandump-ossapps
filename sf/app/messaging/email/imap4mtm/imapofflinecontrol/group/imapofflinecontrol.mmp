@@ -1,0 +1,37 @@
+// Copyright (c) 2006-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// imapofflinecontrol.dll IMAP settings object
+// 
+//
+
+/**
+ @file
+*/
+
+TARGET			imapofflinecontrol.dll
+TARGETTYPE		dll
+
+CAPABILITY 		ReadDeviceData WriteDeviceData ProtServ NetworkControl NetworkServices LocalServices ReaduserData WriteUserData
+TARGETPATH		/system/libs
+UID			0x1000008d 0x10281D22
+VENDORID		0x70000001
+SOURCEPATH		../src
+SOURCE			cimapofflinecontrol.cpp
+USERINCLUDE		../inc ../../../pop3andsmtpmtm/clientmtms/inc
+USERINCLUDE		../../imaputils/inc
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+LIBRARY			euser.lib msgs.lib imcm.lib
+LIBRARY			imaputils.lib
+
+SMPSAFE

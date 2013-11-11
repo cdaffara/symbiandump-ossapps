@@ -1,0 +1,78 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  ECOM implementation of HtiMessagesServicePlugin service
+*
+*/
+
+
+#include <platform_paths.hrh>
+#include "../../../symbian_version.hrh"
+
+TARGET          HtiMessagesServicePlugin.dll
+TARGETTYPE      PLUGIN
+
+UID             0x10009D8D 0x200212C5
+
+VENDORID        0x101FB657
+
+CAPABILITY      ALL -TCB
+
+SOURCEPATH      ../src
+SOURCE          proxy.cpp
+SOURCE          HtiMessagesServicePlugin.cpp
+SOURCE          MessageMgmntHandler.cpp
+SOURCE          HtiIAPHandler.cpp
+SOURCE          HtiMailboxHandler.cpp
+SOURCE          HtiMsgSettingsHandler.cpp
+#if ( SYMBIAN_VERSION_SUPPORT < SYMBIAN_4 )
+SOURCE          HtiNotificationHandler.cpp
+#endif
+
+USERINCLUDE     ../inc
+APP_LAYER_SYSTEMINCLUDE
+
+START RESOURCE  ../data/200212C5.rss
+TARGET          HtiMessagesServicePlugin.rsc
+END
+
+LIBRARY         apgrfx.lib
+LIBRARY         apmime.lib
+LIBRARY         bafl.lib
+LIBRARY         centralRepository.lib
+LIBRARY         charconv.lib
+LIBRARY         cmmanager.lib
+LIBRARY         connmon.lib
+LIBRARY         ecom.lib
+LIBRARY         efsrv.lib
+LIBRARY         euser.lib
+LIBRARY         gsmu.lib
+LIBRARY         imcm.lib
+LIBRARY         msgs.lib
+LIBRARY         smcm.lib
+LIBRARY         etel.lib
+LIBRARY         etelmm.lib
+LIBRARY         etext.lib
+LIBRARY         mmsserversettings.lib
+LIBRARY         flogger.lib
+
+#if ( SYMBIAN_VERSION_SUPPORT < SYMBIAN_4 )
+// For CHtiNotificationHandler to create voice message notification
+LIBRARY         avkon.lib
+LIBRARY         aknnotify.lib
+LIBRARY         aknnotifyplugin.lib
+#endif
+
+SMPSAFE
+
+// End of file

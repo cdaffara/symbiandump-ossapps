@@ -1,0 +1,63 @@
+// Copyright (c) 2002-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+
+  TARGET        thelpview.exe
+  TARGETTYPE    exe
+
+TARGETPATH	/sys/bin
+epocstacksize 0x5000
+
+
+
+CAPABILITY		None
+UID			0x100039CE	0x100068D3
+VENDORID		0x70000001
+
+SOURCEPATH		../tsrc
+
+SOURCE			THelpView.cpp
+SOURCE			thelpviewctrls.cpp
+
+start resource	THelpView.rss
+header
+targetpath	/resource/apps
+lang            SC
+end
+
+start resource	THelpView_reg.rss
+targetpath	/private/10003a3f/apps
+lang		sc
+end
+
+
+
+USERINCLUDE		.
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+
+LIBRARY			euser.lib	
+LIBRARY			cone.lib
+LIBRARY			apparc.lib
+LIBRARY			hlpmodel.lib
+LIBRARY			gdi.lib
+LIBRARY			bafl.lib
+LIBRARY			form.lib
+
+
+LIBRARY			eikcore.lib		// - Concrete app framework classes
+LIBRARY			eikcoctl.lib	// - Core controls that will be present in every DFRD
+LIBRARY			eikctl.lib		// - Other common controls
+
+SMPSAFE

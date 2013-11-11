@@ -1,0 +1,63 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   This is project specification file for the clockserver.
+*
+*/
+
+// System includes
+#include <platform_paths.hrh>
+
+// Target information
+TARGET				clockserver.exe
+TARGETTYPE			exe
+TARGETPATH			/sys/bin
+
+// Uid and Capability information
+UID					0x1000008C 0x200159A2
+CAPABILITY			CAP_SERVER
+
+// Source information
+SOURCEPATH			../src
+SOURCE				clockservermain.cpp
+SOURCE				clockserver.cpp
+SOURCE				clockserversession.cpp
+SOURCE				clockserverimpl.cpp
+SOURCE				clockservermcclistener.cpp
+
+// System include information
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE		/epoc32/include/ecom
+
+// User include information
+USERINCLUDE			../inc
+USERINCLUDE			../../../clocktimesourceinterface/inc
+USERINCLUDE			../../../clocktimezoneresolver/inc
+USERINCLUDE			../../../utilities/clockecomlistener/inc
+USERINCLUDE			../../../inc
+USERINCLUDE			../../../../inc
+
+// Library information
+LIBRARY				euser.lib
+LIBRARY				clocktimesourceinterface.lib
+LIBRARY         	etelmm.lib
+LIBRARY				etel.lib
+LIBRARY				flogger.lib
+LIBRARY				clocktimezoneresolver.lib
+LIBRARY				clockecomlistener.lib
+LIBRARY				tzclient.lib
+LIBRARY				centralrepository.lib
+LIBRARY				ecom.lib
+LIBRARY                       efsrv.lib
+
+// End of file

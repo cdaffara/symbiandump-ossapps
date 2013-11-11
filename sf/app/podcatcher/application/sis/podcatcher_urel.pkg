@@ -1,0 +1,29 @@
+&EN
+:"Symbian Foundation"
+%{"Podcatcher"}
+#{"Podcatcher"},(0xA0009D00), 1, 00, 0, TYPE=SA
+
+;Supports S60 3rd edition
+[0x101F7961], 0, 0, 0, {"Series60ProductID"}
+
+;Supports Symbian^1
+[0x1028315F], 0, 0, 0, {"Series60ProductID"}
+
+; resources
+"\epoc32\data\z\resource\apps\Podcast.RSC"-"!:\resource\apps\Podcast.rsc"
+"\epoc32\data\z\resource\apps\Podcast.mif"-"!:\resource\apps\Podcast.mif"
+"\epoc32\data\z\private\10003a3f\import\apps\Podcast_reg.rsc"-"!:\private\10003a3f\import\apps\Podcast_reg.rsc"
+"..\help\podcatcher.hlp"-"!:\resource\help\podcatcher.hlp"
+
+; configuration and DB
+"../../engine/config/defaultfeeds.xml"-"c:\private\A0009D00\defaultfeeds.xml"
+"../../engine/config/podcatcher.sqlite"-"c:\private\A0009D00\podcatcher.sqlite.template"
+
+; backup
+"./backup_registration.xml" - "c:\private\A0009D00\backup_registration.xml"
+
+; app DLL
+;"\epoc32\release\gcce\urel\podcastengine.dll"-"!:\sys\bin\podcastengine.dll"
+
+; application UI - note that FR,RI does not work when SIS is self signed
+"\epoc32\release\gcce\urel\Podcast.exe"-"!:\sys\bin\Podcast.exe",FR,RI

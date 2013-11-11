@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="1.0">
+    <widget name="dialog" type="HbDialog">
+        <widget name="container" role="HbDialog:contentWidget" type="HbWidget">
+            <widget name="dataForm" type="HbDataForm">
+                <widget name="dataformviewItemPrototype" role="HbAbstractView:prototype" type="HbDataFormViewItem"/>
+                <enums name="verticalScrollBarPolicy" value="ScrollBarAutoHide"/>
+                <string name="description" value=""/>
+                <string name="heading" value=""/>
+            </widget>
+            <layout type="grid">
+                <griditem column="0" itemname="dataForm" row="0"/>
+            </layout>
+        </widget>
+        <size height="expr(var(hb-param-screen-height)-(var(hb-param-margin-gene-screen)*2  )  )" name="size" width="expr(var(hb-param-screen-width)-(var(hb-param-margin-gene-screen)*2   ) )"/>
+        <sizehint height="expr(var(hb-param-screen-height) -2*var(hb-param-margin-gene-screen) )" type="PREFERRED" width="expr(var(hb-param-screen-width) - 2*var(hb-param-margin-gene-screen) )"/>
+        <sizehint height="expr(var(hb-param-screen-height) - 2*var(hb-param-margin-gene-screen))" type="MINIMUM" width="expr(var(hb-param-screen-width) -2*var(hb-param-margin-gene-screen) )"/>
+        <sizehint height="expr(var(hb-param-screen-height) - 2*var(hb-param-margin-gene-screen) )" type="MAXIMUM" width="expr(var(hb-param-screen-width) - 2*var(hb-param-margin-gene-screen) )"/>
+        <enums name="dismissPolicy" value="NoDismiss"/>
+        <rect height="var(hb-param-screen-height)" name="geometry" width="var(hb-param-screen-width)" x="2un" y="2un"/>
+    </widget>
+    <metadata activeUIState="Common ui state" display="NHD landscape" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+    </metadata>
+</hbdocument>

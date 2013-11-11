@@ -1,0 +1,84 @@
+/*
+* Copyright (c) 2004-2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*
+*/
+
+
+#include <platform_paths.hrh>
+#include <bldvariant.hrh>
+
+#include "../../inc/logdef.h"
+
+deffile imgpprintdll.def
+
+TARGET  imgpprintdll.dll
+TARGETTYPE  dll
+
+CAPABILITY CAP_GENERAL_DLL
+UID  0x1000008d 0x101FFAA1
+VENDORID VID_DEFAULT
+
+SOURCEPATH ../src 
+SOURCE	cimgpprintdlgmanager.cpp
+SOURCE	imgpprintapputil.cpp
+SOURCE  cimgpprintprogressdlg.cpp
+SOURCE  cimgpprintutils.cpp
+SOURCE  cdiscoverydlgmanager.cpp
+SOURCE  cuiprotocolcontroller.cpp
+SOURCE  ccustomnotedialog.cpp
+
+USERINCLUDE . ../inc ../../inc
+USERINCLUDE ../../imageprintapp/inc
+USERINCLUDE ../../imageprintprovider/inc
+USERINCLUDE ../../imageprinteng/inc
+USERINCLUDE ../../../ImagePrintEngine/ImagePrintServer/inc
+USERINCLUDE ../../../ImagePrintEngine/ImagePrintLibrary/inc
+USERINCLUDE ../../../clog/inc
+
+APP_LAYER_SYSTEMINCLUDE	
+
+STATICLIBRARY   clog.lib
+DEBUGLIBRARY	flogger.lib
+
+LIBRARY			euser.lib 
+LIBRARY 		avkon.lib 
+LIBRARY 		eikcore.lib 
+LIBRARY 		cone.lib
+LIBRARY 		eikcoctl.lib
+LIBRARY	 		commonengine.lib 
+LIBRARY 		fbscli.lib 
+LIBRARY 		aknskins.lib
+LIBRARY 		efsrv.lib 
+LIBRARY 		eikctl.lib 
+LIBRARY 		eikdlg.lib 
+LIBRARY 		bafl.lib
+LIBRARY 		imageprintengine.lib
+LIBRARY 		usbman.lib
+LIBRARY 		aknicon.lib
+LIBRARY 		egul.lib
+LIBRARY 		imageconversion.lib
+LIBRARY 		imageprintclient.lib
+LIBRARY 		aknnotify.lib                   // CAknGlobalMsgQuery
+LIBRARY 		eiksrv.lib                      // CAknGlobalMsgQuery
+LIBRARY 		apgrfx.lib                      // RApaLsSession
+LIBRARY 		platformenv.lib
+LIBRARY 		apparc.lib 
+
+LIBRARY 	centralrepository.lib           // Repository
+LIBRARY 	ecom.lib                        // WLAN wizard
+LIBRARY 	upnpapplicationengine.lib
+LIBRARY 	upnpcommand.lib
+
+// End of File

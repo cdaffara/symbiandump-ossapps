@@ -1,0 +1,30 @@
+EXPORTS
+	??0RPSServ@@QAE@XZ @ 1 NONAME ; RPSServ::RPSServ(void)
+	??1CPSPresetInterface@@UAE@XZ @ 2 NONAME ; CPSPresetInterface::~CPSPresetInterface(void)
+	??1CPSPresetNotifier@@UAE@XZ @ 3 NONAME ; CPSPresetNotifier::~CPSPresetNotifier(void)
+	??1CPSTransaction@@UAE@XZ @ 4 NONAME ; CPSTransaction::~CPSTransaction(void)
+	?BaseConstructL@CPSPresetInterface@@IAEXPAX@Z @ 5 NONAME ; void CPSPresetInterface::BaseConstructL(void *)
+	?BeginTransactionL@CPSPresetInterface@@EAEXXZ @ 6 NONAME ; void CPSPresetInterface::BeginTransactionL(void)
+	?Close@RPSServ@@QAEXXZ @ 7 NONAME ; void RPSServ::Close(void)
+	?CommitL@CPSPresetInterface@@EAEXXZ @ 8 NONAME ; void CPSPresetInterface::CommitL(void)
+	?CommitL@CPSTransaction@@QAEXXZ @ 9 NONAME ; void CPSTransaction::CommitL(void)
+	?Connect@RPSServ@@QAEHXZ @ 10 NONAME ; int RPSServ::Connect(void)
+	?CreatePresetL@RPSServ@@QAEPAVCPSPresetInterface@@HVTUid@@@Z @ 11 NONAME ; class CPSPresetInterface * RPSServ::CreatePresetL(int, class TUid)
+	?CreateTransactionL@CPSPresetInterface@@QAEPAVCPSTransaction@@XZ @ 12 NONAME ; class CPSTransaction * CPSPresetInterface::CreateTransactionL(void)
+	?CreateTransactionLC@CPSPresetInterface@@QAEPAVCPSTransaction@@XZ @ 13 NONAME ; class CPSTransaction * CPSPresetInterface::CreateTransactionLC(void)
+	?DataHandler@CPSPresetInterface@@QBE?AVTUid@@XZ @ 14 NONAME ; class TUid CPSPresetInterface::DataHandler(void) const
+	?DeletePresetL@RPSServ@@QAEXH@Z @ 15 NONAME ; void RPSServ::DeletePresetL(int)
+	?GetPresetsL@RPSServ@@QAEXAAV?$RPointerArray@VCPSPresetInterface@@@@@Z @ 16 NONAME ; void RPSServ::GetPresetsL(class RPointerArray<class CPSPresetInterface> &)
+	?HandlePresetChangedL@CPSPresetInterface@@EAEXHVTUid@@W4TPSReason@MPSPresetObserver@@@Z @ 17 NONAME ; void CPSPresetInterface::HandlePresetChangedL(int, class TUid, enum MPSPresetObserver::TPSReason)
+	?Id@CPSPresetInterface@@QBEHXZ @ 18 NONAME ; int CPSPresetInterface::Id(void) const
+	?Index@CPSPresetInterface@@QBEHXZ @ 19 NONAME ; int CPSPresetInterface::Index(void) const
+	?MovePresetL@RPSServ@@QAEXHH@Z @ 20 NONAME ; void RPSServ::MovePresetL(int, int)
+	?Name@CPSPresetInterface@@QBEABVTDesC16@@XZ @ 21 NONAME ; class TDesC16 const & CPSPresetInterface::Name(void) const
+	?NewL@CPSPresetNotifier@@SAPAV1@AAVRPSServ@@AAVMPSPresetObserver@@@Z @ 22 NONAME ; class CPSPresetNotifier * CPSPresetNotifier::NewL(class RPSServ &, class MPSPresetObserver &)
+	?OpenPresetL@RPSServ@@QAEPAVCPSPresetInterface@@H@Z @ 23 NONAME ; class CPSPresetInterface * RPSServ::OpenPresetL(int)
+	?Rollback@CPSPresetInterface@@EAEXXZ @ 24 NONAME ; void CPSPresetInterface::Rollback(void)
+	?Rollback@CPSTransaction@@QAEXXZ @ 25 NONAME ; void CPSTransaction::Rollback(void)
+	?SetIndex@CPSPresetInterface@@QAEXH@Z @ 26 NONAME ; void CPSPresetInterface::SetIndex(int)
+	?SetNameL@CPSPresetInterface@@QAEXABVTDesC16@@@Z @ 27 NONAME ; void CPSPresetInterface::SetNameL(class TDesC16 const &)
+	?ValidateDataChange@CPSPresetInterface@@IAEXXZ @ 28 NONAME ; void CPSPresetInterface::ValidateDataChange(void)
+

@@ -1,0 +1,32 @@
+/*
+* Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: The registration resource for ConnTest
+*
+*/
+
+#include <appinfo.rh>
+#include <conntest.rsg>
+
+UID2 KUidAppRegistrationResourceFile
+UID3 0x101F6D2B // application UID
+
+RESOURCE APP_REGISTRATION_INFO
+	{
+	app_file="ConnTest"; // filename of application binary (minus extension)
+    localisable_resource_file = "\\resource\\apps\\ConnTest";
+    localisable_resource_id = R_CONNTEST_LOCALISABLE_APP_INFO;
+    group_name = "RnD Tools";
+	}
+
+//    localisable_resource_file = "\\resource\\apps\\localisablefiles\\ConnTest";

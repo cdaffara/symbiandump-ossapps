@@ -1,0 +1,18 @@
+EXPORTS
+	?AddMML@CMmsCodecClient@@QAEXAAVCBufFlat@@JKHAAJAAVTRequestStatus@@@Z @ 1 NONAME ; void CMmsCodecClient::AddMML(class CBufFlat &, long, unsigned long, int, long &, class TRequestStatus &)
+	?CreateNewMessageEntryL@CMmsCodecClient@@QAEHJAAJ@Z @ 2 NONAME ; int CMmsCodecClient::CreateNewMessageEntryL(long, long &)
+	?DeleteMM@CMmsCodecClient@@QAEHJ@Z @ 3 NONAME ; int CMmsCodecClient::DeleteMM(long)
+	?DiskSpaceBelowCriticalLevelL@CMmsCodecClient@@QAEHH@Z @ 4 NONAME ; int CMmsCodecClient::DiskSpaceBelowCriticalLevelL(int)
+	?MoveMML@CMmsCodecClient@@QAEXJJAAVTRequestStatus@@@Z @ 5 NONAME ; void CMmsCodecClient::MoveMML(long, long, class TRequestStatus &)
+	?NewL@CMmsCodecClient@@SAPAV1@AAVCMsvSession@@@Z @ 6 NONAME ; class CMmsCodecClient * CMmsCodecClient::NewL(class CMsvSession &)
+	?ReplaceMML@CMmsCodecClient@@QAEXAAJAAVCBufFlat@@KHAAVTRequestStatus@@@Z @ 7 NONAME ; void CMmsCodecClient::ReplaceMML(long &, class CBufFlat &, unsigned long, int, class TRequestStatus &)
+	?RetrieveMML@CMmsCodecClient@@QAEXJAAVCBufFlat@@AAJAAKAAHAAVTRequestStatus@@@Z @ 8 NONAME ; void CMmsCodecClient::RetrieveMML(long, class CBufFlat &, long &, unsigned long &, int &, class TRequestStatus &)
+	?SendMML@CMmsCodecClient@@QAEPAVCMsvOperation@@JAAVTRequestStatus@@@Z @ 9 NONAME ; class CMsvOperation * CMmsCodecClient::SendMML(long, class TRequestStatus &)
+	?SetFlags@CMmsCodecClient@@QAEHJKH@Z @ 10 NONAME ; int CMmsCodecClient::SetFlags(long, unsigned long, int)
+	?GetNextDataPart@CMmsCodecClient@@QAEHAAVTPtrC8@@AAH@Z @ 11 NONAME ; int CMmsCodecClient::GetNextDataPart(class TPtrC8 &, int &)
+	?InitializeChunkedAddingL@CMmsCodecClient@@QAEXJAAJKH@Z @ 12 NONAME ; void CMmsCodecClient::InitializeChunkedAddingL(long, long &, unsigned long, int)
+	?InitializeChunkedReplacingL@CMmsCodecClient@@QAEXJKH@Z @ 13 NONAME ; void CMmsCodecClient::InitializeChunkedReplacingL(long, unsigned long, int)
+	?InitializeChunkedRetrievingL@CMmsCodecClient@@QAEXJAAJAAKAAH2AAVTRequestStatus@@@Z @ 14 NONAME ; void CMmsCodecClient::InitializeChunkedRetrievingL(long, long &, unsigned long &, int &, int &, class TRequestStatus &)
+	?NextDataPart@CMmsCodecClient@@QAEHAAVTPtrC8@@H@Z @ 15 NONAME ; int CMmsCodecClient::NextDataPart(class TPtrC8 &, int)
+	?ReleaseData@CMmsCodecClient@@QAEHXZ @ 16 NONAME ; int CMmsCodecClient::ReleaseData(void)
+

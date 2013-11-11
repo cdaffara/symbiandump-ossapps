@@ -1,0 +1,33 @@
+// Copyright (c) 1997-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+TARGET			t_vcal_tz_rules.exe
+
+TARGETTYPE		exe
+CAPABILITY   		WriteUserData ReadUserData WriteDeviceData
+
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+USERINCLUDE		.
+
+SOURCEPATH		.
+SOURCE			t_vcal_tz_rules.cpp
+
+LIBRARY			efsrv.lib estor.lib calinterimapi.lib
+LIBRARY			euser.lib fbscli.lib caltestlib.lib
+LIBRARY			ecom.lib tzclient.lib pimtestclient.lib bafl.lib
+
+VENDORID 		0x70000001
+
+SMPSAFE

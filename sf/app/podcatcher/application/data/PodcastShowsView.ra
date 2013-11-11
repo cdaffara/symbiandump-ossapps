@@ -1,0 +1,185 @@
+/*
+* Copyright (c) 2007-2010 Sebastian Brannstrom, Lars Persson, EmbedDev AB
+*
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the License "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* EmbedDev AB - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+RESOURCE AVKON_VIEW r_podcast_showsview
+{
+	menubar = r_podcast_showsview_menubar;
+	cba = R_AVKON_SOFTKEYS_OPTIONS_BACK;
+	toolbar = r_showsview_toolbar;
+}
+
+RESOURCE MENU_BAR r_podcast_showsview_menubar
+    {
+    titles =
+        {
+        MENU_TITLE { menu_pane = r_podcast_showsview_menu; txt = "Shows"; }
+        };
+    }
+
+RESOURCE MENU_PANE r_podcast_showsview_menu
+    {
+    items =
+        {
+        MENU_ITEM
+			{
+			command = EPodcastMarkAllPlayed;
+			txt = STRING_r_view_mark_all_played_cmd;
+			},
+		MENU_ITEM
+			{
+			command = EPodcastAbout;
+			txt = STRING_r_view_about_cmd;
+			}, 
+		MENU_ITEM
+			{
+			command = EPodcastHelp;
+			txt = STRING_r_view_help;
+			},
+		MENU_ITEM
+			{
+			command = EAknSoftkeyExit;
+			txt = STRING_r_exit_cmd;
+			}
+        };
+    }
+
+RESOURCE AVKON_TOOLBAR r_showsview_toolbar
+    {
+    flags = KAknToolbarFixed;
+    items =
+        {
+        TBAR_CTRL
+            {
+            type = EAknCtButton;
+            id = EPodcastUpdateFeed;
+            control = AVKON_BUTTON
+                {
+                states =
+                    {
+                    AVKON_BUTTON_STATE
+                        {
+                        //bmpfile = AVKON_BITMAP_FILE;
+                        //bmpid = EMbmAvkonQgn_indi_find_goto;
+                        txt = STRING_r_update_feed_short_cmd;
+                        helptxt = STRING_r_update_feed_cmd;
+                        }  
+                    };
+                };
+            },
+            TBAR_CTRL
+                {
+                type = EAknCtButton;
+                id = EPodcastCancelUpdateAllFeeds;
+                control = AVKON_BUTTON
+                    {
+                    states =
+                        {
+                        AVKON_BUTTON_STATE
+                            {
+                            //bmpfile = AVKON_BITMAP_FILE;
+                            //bmpid = EMbmAvkonQgn_indi_find_goto;
+                            txt = STRING_r_cancel_update_all_feeds_short_cmd;
+                            helptxt = STRING_r_cancel_update_all_feeds_cmd;
+                           }  
+                        };
+                    };
+                },
+// we keep the download toolbar button in S^3, but always disable it
+// because there are drawing issues with only one item in the toolbar
+            TBAR_CTRL
+			{
+			type = EAknCtButton;
+			id = EPodcastDownloadShow;
+			control = AVKON_BUTTON
+				{
+				states =
+					{
+					AVKON_BUTTON_STATE
+						{
+						//bmpfile = AVKON_BITMAP_FILE;
+						//bmpid = EMbmAvkonQgn_indi_find_goto;
+						txt = STRING_r_view_download_show_cmd;
+						helptxt = STRING_r_view_download_show_cmd;
+						}  
+					};
+				};
+			}
+        };
+    }
+
+RESOURCE STYLUS_POPUP_MENU r_showview_popup_menu
+	{
+		items =
+		{
+			STYLUS_POPUP_MENU_ITEM
+				{
+					txt = STRING_r_view_show_info_cmd;
+					command = EPodcastShowInfo;
+				}
+			,STYLUS_POPUP_MENU_ITEM
+				{
+					txt = STRING_r_view_mark_as_unplayed_cmd_short;
+					command = EPodcastMarkAsUnplayed;
+				},
+			STYLUS_POPUP_MENU_ITEM
+				{
+					txt = STRING_r_view_mark_as_played_cmd_short;
+					command = EPodcastMarkAsPlayed;
+				},
+			STYLUS_POPUP_MENU_ITEM
+				{
+					txt = STRING_r_view_download_show_cmd;
+					command = EPodcastDownloadShow;
+				},
+			STYLUS_POPUP_MENU_ITEM
+				{
+					txt = STRING_r_view_delete_show_cmd;
+					command = EPodcastDeleteShow;
+				}
+		};
+	}
+
+RESOURCE DIALOG r_show_info_note
+{
+   flags = EAknDialogGenericQueryFlags | EEikDialogFlagNoBorder | EEikDialogFlagNoShadow;
+   buttons = R_AVKON_SOFTKEYS_OK_EMPTY;
+   items=
+   {
+  
+      DLG_LINE 
+      {
+      	 type = EAknCtPopupHeadingPane;
+      	 id = EAknMessageQueryHeaderId;
+         itemflags = EEikDlgItemNonFocusing;
+         control = AVKON_HEADING
+         {
+		headinglayout=R_AVKON_LIST_HEADING_PANE_POPUPS;		
+         };
+      },  
+      DLG_LINE
+      {
+         type = EAknCtMessageQuery;
+         id = EAknMessageQueryContentId;
+         control = AVKON_MESSAGE_QUERY
+         {
+          
+         };
+      }
+   };
+}
+

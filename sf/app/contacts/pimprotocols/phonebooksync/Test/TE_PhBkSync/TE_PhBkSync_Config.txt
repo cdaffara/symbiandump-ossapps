@@ -1,0 +1,1354 @@
+# SIM TSY configuration file for TE_PHBKSYNC
+# 
+
+# following constants have been defined in etelmm.h and published
+#_LIT(KETelIccSdnPhoneBook,S9);
+#_LIT(KETelIccLndPhoneBook,S11);
+
+[test0]
+# This is a dummy one which contains all supported phonebooks
+
+ICCLockedAtStart= 0,0,1,0,0,0,0
+# 9 / 5,1,2 = PIN2 verified / PIN2 enabled & unlocked
+ICCStatus= 0, 9
+ICCSetting=0, 5, 1, 2
+
+USimAppInfo= App1, an_app1
+
+
+PhBkUSimStore= T2, S7, 20, 41, 47, 3, 3
+PhBkUSimStoreEntry= T2, S7, App1,  1, +447700900000, Test Name01, name C.01, (Home);02079460001, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 12, +447700900012, Test Name12, name C.12, (Home);02079460002, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 13, +447700900345, Test Name13, name C.13, (Home);02079460003, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 14, +447700900329, Test Name14, name C.14, (Home);02079460004, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 15, +447700900333, Test Name15, Name C.15, (Home);02079460005, name@somecompany.com; example@somecompany.com,Work,0
+
+#PhBkStore= S7, 100, 41, 47
+#PhBkStoreEntry= S7, 1, 07747065416, NameLocal
+#PhBkStoreEntry= S7, 2, +447747065416, NameInternet
+#PhBkStoreEntry= S7, 3, 077470654566, Name
+#PhBkStoreEntry= S7, 4, +4477470657816, Example2
+#PhBkStoreEntry= S7, 5, 0774706541905, Test3
+#PhBkStoreEntry= S7, 6, +447557065416, Example
+#PhBkStoreEntry= S7, 7, 07747065676416, Hello
+#PhBkStoreEntry= S7, 8, +44774557065416, Someone
+#PhBkStoreEntry= S7, 9, 07747065416, Example2 Mobile
+#PhBkStoreEntry= S7, 10, +447747066565416, Test3 Mobile
+#PhBkStoreEntry= S7, 11, 077470654543516, Example Mobile
+
+PhBkUSimStore= T3, S7, 20, 41, 47, 3, 3
+PhBkUSimStoreEntry= T3, S7, App1, 1, +447700900704, Test Name01, Name C.01, (Home);02079460010, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T3, S7, App1, 2, +447700900093, Test Name02, Name C.02, (Home);02079460320, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T3, S7, App1, 3, +447700900322, Test Name03, Name C.03, (Home);02079460600, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T3, S7, App1, 4, +447700900323, Test Name04, Name C.04, (Home);02079460700, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T3, S7, App1, 5, +447700900324, Test Name05, Name C.05, (Home);02079460800, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T3, S7, App1, 6, +447700900325, Test Name05, Name C.06, (Home);02079460900, name@somecompany.com; example@somecompany.com,Work,0
+
+PhBkStore= S8, 20, 41, 47
+PhBkStoreEntry= S8, 1, 22345011, bbcdefghijk011
+PhBkStoreEntry= S8, 2, 22345012, bbcdefghijk012
+PhBkStoreEntry= S8, 3, 22345013, bbcdefghijk013
+PhBkStoreEntry= S8, 4, 22345014, bbcdefghijk014
+PhBkStoreEntry= S8, 5, 22345015, bbcdefghijk015
+PhBkStoreEntry= S8, 6, 22345016, bbcdefghijk016
+
+PhBkStore= S9, 20, 41, 47
+PhBkStoreEntry= S9, 1, 32345011, cbcdefghijk011
+PhBkStoreEntry= S9, 2, 32345012, cbcdefghijk012
+PhBkStoreEntry= S9, 3, 32345013, cbcdefghijk013
+PhBkStoreEntry= S9, 4, 32345014, cbcdefghijk014
+PhBkStoreEntry= S9, 5, 32345015, cbcdefghijk015
+PhBkStoreEntry= S9, 6, 32345016, cbcdefghijk016
+
+PhBkStore= S11, 20, 41, 47
+PhBkStoreEntry= S11, 1, 42345011, dbcdefghijk011
+PhBkStoreEntry= S11, 2, 42345012, dbcdefghijk012
+PhBkStoreEntry= S11, 3, 42345013, dbcdefghijk013
+PhBkStoreEntry= S11, 4, 42345014, dbcdefghijk014
+PhBkStoreEntry= S11, 5, 42345015, dbcdefghijk015
+PhBkStoreEntry= S11, 6, 42345016, dbcdefghijk016
+PhBkStoreEntry= S11, 7, 42345017, dbcdefghijk017
+
+PhBkStoreIndividualReqPause= 1
+PhBkStoreBatchReqPause= 1
+
+SubscriberId= 56789012340000
+
+[test2]
+USimAppInfo= App1, an_app1
+
+PhBkUSimStore= T2, S7, 20, 20, 20, 3, 3
+PhBkUSimStoreEntry= T2, S7, App1, 12, +447700900329, Test Name12, Name C.12, (Home);02079460120, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 13, +447700900329, Test Name13, Name C.13, (Home);02079460130, name@somecompany.com; example@somecompany.com,Work,0
+
+PhBkUSimStore= T3, S7, 20, 20, 20, 3, 3
+PhBkUSimStoreEntry= T3, S7, App1, 1, +447700900300, Test Name01, Name C.01, (Home);02079460140, name@somecompany.com; example@somecompany.com,Work,0
+
+PhBkStore= S9, 20, 20, 20
+PhBkStoreEntry= S9, 1, 32345011, cbcdefghijk011
+PhBkStoreEntry= S9, 3, 32345013, cbcdefghijk013
+PhBkStoreEntry= S9, 4, 32345014, cbcdefghijk014
+PhBkStoreEntry= S9, 5, 32345015, cbcdefghijk015
+
+PhBkStore= S11, 20, 20, 20
+PhBkStoreEntry= S11, 1, 42345011, dbcdefghijk011
+PhBkStoreEntry= S11, 2, 42345012, dbcdefghijk012
+PhBkStoreEntry= S11, 3, 42345013, dbcdefghijk013
+PhBkStoreEntry= S11, 4, 42345014, dbcdefghijk014
+
+PhBkStore= S8, 20, 20, 20
+PhBkStoreEntry= S8, 1, 52345011, bbcdefghijk011
+PhBkStoreEntry= S8, 3, 52345013, bbcdefghijk013
+PhBkStoreEntry= S8, 4, 52345014, bbcdefghijk014
+PhBkStoreEntry= S8, 5, 52345015, bbcdefghijk015
+
+PhBkStoreIndividualReqPause= 1
+PhBkStoreBatchReqPause= 1
+
+SubscriberId= 111222333444
+
+[test3]
+PhBkStore= S11, 50, 10, 10
+ 
+PhBkEntry= S11, 1,  12345001, abcdefghijk001
+PhBkEntry= S11, 6,  12345006, abcdefghijk006
+PhBkEntry= S11, 7,  12345007, abcdefghijk007
+PhBkEntry= S11, 8,  12345008, abcdefghijk008
+PhBkEntry= S11, 9,  12345009, abcdefghijk009
+PhBkEntry= S11, 10, 12345010, abcdefghijk010
+
+PhBkStoreIndividualReqPause= 1
+PhBkStoreBatchReqPause= 1
+
+SubscriberId= 56789012340001
+
+[test8]
+USimAppInfo= App1, an_app1
+
+PhBkUSimStore= T2, S7, 20, 20, 20, 3, 3
+PhBkUSimStoreEntry= T2, S7, App1, 12, +447700900301, Test Name12, Name C.12, (Home);02079460010, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 13, +447700900389, Test Name13, Name C.13, (Home);02079460020, name@somecompany.com; example@somecompany.com,Work,0
+
+PhBkUSimStore= T3, S7, 20, 20, 20, 3, 3
+PhBkUSimStoreEntry= T3, S7, App1, 1, +447700900345, Test Name01, Name C.01, (Home);02079460030, name@somecompany.com; example@somecompany.com,Work,0
+
+PhBkStore= S9, 20, 20, 20
+PhBkStoreEntry= S9, 1, 32345011, cbcdefghijk011
+PhBkStoreEntry= S9, 3, 32345013, cbcdefghijk013
+PhBkStoreEntry= S9, 4, 32345014, cbcdefghijk014
+PhBkStoreEntry= S9, 5, 32345015, cbcdefghijk015
+
+PhBkStore= S11, 20, 20, 20
+PhBkStoreEntry= S11, 1, 42345011, dbcdefghijk011
+PhBkStoreEntry= S11, 2, 42345012, dbcdefghijk012
+PhBkStoreEntry= S11, 3, 42345013, dbcdefghijk013
+PhBkStoreEntry= S11, 4, 42345014, dbcdefghijk014
+
+PhBkStoreIndividualReqPause= 1
+PhBkStoreBatchReqPause= 1
+
+SubscriberId= 56789012340002
+
+# KErrBadHandle -- the first read of T2, S7 will fail
+# KErrBadHandle -- the second fail is used to test the retry mechanism supported in phbksync
+PhBkError= 1, -8, S7, T2
+PhBkError= 2, -8, S7, T2
+
+[test10]
+#test partially full Global/GSM ADN phonebook
+USimAppInfo= App1, an_app1
+PhBkUSimStore= T2, S7, 150, 20, 20, 3, 3
+PhBkUSimStoreEntry= T2, S7, App1, 11, +447700900344, Test Name11, Name C.11, (Home);02079460011, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 22, +447700900367, Test Name22, Name C.22, (Home);02079460012, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 33, +447700900309, Test Name33, Name C.33, (Home);02079460003, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 44, +447700900312, Test Name44, Name C.44, (Home);02079460004, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 55, +447700900329, Test Name55, Name C.55, (Home);02079460050, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 67, +447700900329, Test Name67, Name C.67, (Home);02079460060, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 78, +447700900329, Test Name78, Name C.78, (Home);02079460070, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 89, +447700900329, Test Name89, Name C.89, (Home);02079460080, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 99, +447700900329, Test Name99, Name C.99, (Home);02079460090, name@somecompany.com; example@somecompany.com,Work,0
+
+PhBkStoreIndividualReqPause= 1
+PhBkStoreBatchReqPause= 1
+
+SubscriberId= 56789012340003
+
+#[test10]
+# test partially full Global/GSM ADN phonebook
+#PhBkStore= S7, 20, 45, 46
+#PhBkStoreEntry= S7,  1, 32345011, cbcdefghijk011
+#PhBkStoreEntry= S7,  2, 32345012, cbcdefghijk012
+#PhBkStoreEntry= S7,  3, 32345013, cbcdefghijk013
+#PhBkStoreEntry= S7,  4, 32345014, cbcdefghijk014
+#PhBkStoreEntry= S7,  5, 32345015, cbcdefghijk015
+
+PhBkStoreIndividualReqPause= 1
+PhBkStoreBatchReqPause= 1
+
+SubscriberId= 56789012340004
+
+[test11]
+# test partially full USIM App ADN phonebook
+
+USimAppInfo= App1, an_app1
+
+PhBkUSimStore= T3, S7, 140, 20, 20, 3, 3
+PhBkUSimStoreEntry= T3, S7, App1, 14, +447700900329, Test Name31, Name C.31, (Home);02079460100, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T3, S7, App1, 44, +447700900129, Test Name52, Name C.52, (Home);02079460200, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T3, S7, App1, 53, +447700900229, Test Name63, Name C.63, (Home);02079460300, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T3, S7, App1, 66, +447700900429, Test Name14, Name C.14, (Home);02079460400, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T3, S7, App1, 95, +447700900529, Test Name95, Name C.95, (Home);02079460500, name@somecompany.com; example@somecompany.com,Work,0
+
+PhBkStoreIndividualReqPause= 1
+PhBkStoreBatchReqPause= 1
+
+SubscriberId= 56789012340050
+
+[test12]
+# test partially full Global/GSM SDN phonebook
+
+PhBkStore= S9, 100, 20, 20
+PhBkStoreEntry= S9, 31,  32345001, cbcdefghijk001
+PhBkStoreEntry= S9, 32,  32345002, cbcdefgjijk002
+PhBkStoreEntry= S9, 33,  32345003, cbcdefghijk003
+PhBkStoreEntry= S9, 34,  32345004, cbcdefghijk004
+PhBkStoreEntry= S9, 35,  32345005, cbcdefghijk005
+PhBkStoreEntry= S9, 36,  32345006, cbcdefghijk006
+PhBkStoreEntry= S9, 37,  32345007, cbcdefghijk007
+PhBkStoreEntry= S9, 38,  32345008, cbcdefghijk008
+PhBkStoreEntry= S9, 39,  32345009, cbcdefghijk009
+PhBkStoreEntry= S9, 40,  32345010, cbcdefghijk010
+
+PhBkStoreIndividualReqPause= 1
+PhBkStoreBatchReqPause= 1
+
+SubscriberId= 56789012340051
+
+[test13]
+# test partially full Global/GSM LND phonebook
+
+PhBkStore= S11, 100, 20, 20
+
+PhBkStoreEntry= S11, 51,  42345001, dbcdefghijk001
+PhBkStoreEntry= S11, 52,  42345002, dbcdefgjijk002
+PhBkStoreEntry= S11, 53,  42345003, dbcdefghijk003
+PhBkStoreEntry= S11, 54,  42345004, dbcdefghijk004
+PhBkStoreEntry= S11, 55,  42345005, dbcdefghijk005
+PhBkStoreEntry= S11, 56,  42345006, dbcdefghijk006
+PhBkStoreEntry= S11, 57,  42345007, dbcdefghijk007
+PhBkStoreEntry= S11, 58,  42345008, dbcdefghijk008
+PhBkStoreEntry= S11, 59,  42345009, dbcdefghijk009
+PhBkStoreEntry= S11, 60,  42345010, dbcdefghijk010
+
+PhBkStoreIndividualReqPause= 1
+PhBkStoreBatchReqPause= 1
+
+SubscriberId= 56789012340052
+
+[test14]
+# test full Global/GSM LND phonebook
+
+USimAppInfo= App1, an_app1
+PhBkUSimStore= T2, S7, 25, 20, 20, 3, 3
+
+PhBkUSimStoreEntry= T2, S7, App1,  1, +447700900129, Test Name01, Name C.01, (Home);02079460123, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1,  2, +447700900139, Test Name02, Name C.02, (Home);02079460122, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1,  3, +447700900149, Test Name03, Name C.03, (Home);02079460121, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1,  4, +447700900159, Test Name04, Name C.04, (Home);02079460342, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1,  5, +447700900169, Test Name05, Name C.05, (Home);02079460234, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1,  6, +447700900179, Test Name06, Name C.06, (Home);02079460233, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1,  7, +447700900189, Test Name07, Name C.07, (Home);02079460765, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1,  8, +447700900199, Test Name08, Name C.08, (Home);02079460655, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1,  9, +447700900219, Test Name09, Name C.09, (Home);02079460567, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 10, +447700900229, Test Name10, Name C.10, (Home);02079460560, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 11, +447700900249, Test Name11, Name C.11, (Home);02079460535 name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 12, +447700900259, Test Name12, Name C.12, (Home);02079460435, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 13, +447700900326, Test Name13, Name C.13, (Home);02079460340, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 14, +447700900328, Test Name14, Name C.14, (Home);02079460300, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 15, +447700900329, Test Name15, Name C.15, (Home);02079460080, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 16, +447700900331, Test Name16, Name C.16, (Home);02079460760, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 17, +447700900324, Test Name17, Name C.17, (Home);02079460767, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 18, +447700900333, Test Name18, Name C.18, (Home);02079460550, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 19, +447700900345, Test Name19, Name C.19, (Home);02079460550, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 20, +447700900334, Test Name20, Name C.20, (Home);02079460440, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 21, +447700900329, Test Name21, Name C.21, (Home);02079460330, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 22, +447700900319, Test Name22, Name C.22, (Home);02079460220, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 23, +447700900329, Test Name23, Name C.23, (Home);02079460110, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 24, +447700900429, Test Name24, Name C.24, (Home);02079460033, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 25, +447700900529, Test Name25, Name C.25, (Home);02079460080, name@somecompany.com; example@somecompany.com,Work,0
+
+PhBkStoreIndividualReqPause= 1
+PhBkStoreBatchReqPause= 1
+
+SubscriberId= 56789012340532
+
+[test15]
+# test full USIM App ADN phonebook
+
+USimAppInfo= App1, an_app1
+PhBkUSimStore= T3, S7, 10, 20, 20, 3, 3
+PhBkUSimStoreEntry= T3, S7, App1,  1, +447700900129, Test Name01, Name C.01, (Home);02079460011, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T3, S7, App1,  2, +447700900329, Test Name02, Name C.02, (Home);02079460022, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T3, S7, App1,  3, +447700900329, Test Name03, Name C.03, (Home);02079460022, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T3, S7, App1,  4, +447700900349, Test Name04, Name C.04, (Home);02079460030, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T3, S7, App1,  5, +447700900359, Test Name05, Name C.05, (Home);02079460044, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T3, S7, App1,  6, +447700900369, Test Name06, Name C.06, (Home);02079460032, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T3, S7, App1,  7, +447700900379, Test Name07, Name C.07, (Home);02079460066, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T3, S7, App1,  8, +447700900389, Test Name08, Name C.08, (Home);02079460077, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T3, S7, App1,  9, +447700900399, Test Name09, Name C.09, (Home);02079460088, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T3, S7, App1, 10, +447700900319, Test Name10, Name C.10, (Home);02079460099, name@somecompany.com; example@somecompany.com,Work,0
+
+PhBkStoreIndividualReqPause= 1
+PhBkStoreBatchReqPause= 1
+
+[test16]
+# test full Global/GSM SDN phonebook
+
+PhBkStore= S9, 20, 20, 20
+PhBkStoreEntry= S9, 1, 00000000000000000051, AAAAAAAAAAAAAAAAA051
+PhBkStoreEntry= S9, 2, 00000000000000000052, AAAAAAAAAAAAAAAAA052
+PhBkStoreEntry= S9, 3, 00000000000000000053, AAAAAAAAAAAAAAAAA053
+PhBkStoreEntry= S9, 4, 00000000000000000054, AAAAAAAAAAAAAAAAA054
+PhBkStoreEntry= S9, 5, 00000000000000000055, AAAAAAAAAAAAAAAAA055
+PhBkStoreEntry= S9, 6, 00000000000000000056, AAAAAAAAAAAAAAAAA056
+PhBkStoreEntry= S9, 7, 00000000000000000057, AAAAAAAAAAAAAAAAA057
+PhBkStoreEntry= S9, 8, 00000000000000000058, AAAAAAAAAAAAAAAAA058
+PhBkStoreEntry= S9, 9, 00000000000000000059, AAAAAAAAAAAAAAAAA059
+PhBkStoreEntry= S9, 10, 00000000000000000060, AAAAAAAAAAAAAAAAA060
+PhBkStoreEntry= S9, 11, 00000000000000000061, AAAAAAAAAAAAAAAAA061
+PhBkStoreEntry= S9, 12, 00000000000000000062, AAAAAAAAAAAAAAAAA062
+PhBkStoreEntry= S9, 13, 00000000000000000063, AAAAAAAAAAAAAAAAA063
+PhBkStoreEntry= S9, 14, 00000000000000000064, AAAAAAAAAAAAAAAAA064
+PhBkStoreEntry= S9, 15, 00000000000000000065, AAAAAAAAAAAAAAAAA065
+PhBkStoreEntry= S9, 16, 00000000000000000066, AAAAAAAAAAAAAAAAA066
+PhBkStoreEntry= S9, 17, 00000000000000000067, AAAAAAAAAAAAAAAAA067
+PhBkStoreEntry= S9, 18, 00000000000000000068, AAAAAAAAAAAAAAAAA068
+PhBkStoreEntry= S9, 19, 00000000000000000069, AAAAAAAAAAAAAAAAA069
+PhBkStoreEntry= S9, 20, 00000000000000000070, AAAAAAAAAAAAAAAAA070
+
+PhBkStoreIndividualReqPause= 1
+PhBkStoreBatchReqPause= 1
+
+SubscriberId= 56789012340537
+ 
+[test17]
+# test full Global/GSM LND phonebook
+
+PhBkStore= S11, 15, 20, 20
+PhBkStoreEntry= S11, 1, 00000000000000000076, AAAAAAAAAAAAAAAAA076
+PhBkStoreEntry= S11, 2, 00000000000000000077, AAAAAAAAAAAAAAAAA077
+PhBkStoreEntry= S11, 3, 00000000000000000078, AAAAAAAAAAAAAAAAA078
+PhBkStoreEntry= S11, 4, 00000000000000000079, AAAAAAAAAAAAAAAAA079
+PhBkStoreEntry= S11, 5, 00000000000000000080, AAAAAAAAAAAAAAAAA080
+PhBkStoreEntry= S11, 6, 00000000000000000081, AAAAAAAAAAAAAAAAA081
+PhBkStoreEntry= S11, 7, 00000000000000000082, AAAAAAAAAAAAAAAAA082
+PhBkStoreEntry= S11, 8, 00000000000000000083, AAAAAAAAAAAAAAAAA083
+PhBkStoreEntry= S11, 9, 00000000000000000084, AAAAAAAAAAAAAAAAA084
+PhBkStoreEntry= S11, 10, 00000000000000000085, AAAAAAAAAAAAAAAAA085
+PhBkStoreEntry= S11, 11, 00000000000000000086, AAAAAAAAAAAAAAAAA086
+PhBkStoreEntry= S11, 12, 00000000000000000087, AAAAAAAAAAAAAAAAA087
+PhBkStoreEntry= S11, 13, 00000000000000000088, AAAAAAAAAAAAAAAAA088
+PhBkStoreEntry= S11, 14, 00000000000000000089, AAAAAAAAAAAAAAAAA089
+PhBkStoreEntry= S11, 15, 00000000000000000090, AAAAAAAAAAAAAAAAA090
+
+PhBkStoreIndividualReqPause= 1
+PhBkStoreBatchReqPause= 1
+
+SubscriberId= 56789012340589
+
+[test18]
+# test full supported phonebooks (GlobalAdn, UsimAppAdn, GlobalSdn, GlobalLnd,GlobalFdn)
+ICCLockedAtStart= 0,0,1,0,0,0,0
+# 9 / 5,1,2 = PIN2 verified / PIN2 enabled & unlocked
+ICCStatus= 0, 9
+ICCSetting=0, 5, 1, 2
+
+# full Global/GSM LND phonebook
+USimAppInfo= App1, an_app1
+
+PhBkUSimStore= T2, S7, 8, 20, 20, 3, 3
+PhBkUSimStoreEntry= T2, S7, App1, 1, +447700900229, Test Name01, Name C.01, (Home);02079460999, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 2, +447700900329, Test Name02, Name C.02, (Home);02079460888, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 3, +447700900429, Test Name03, Name C.03, (Home);02079460776, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 4, +447700900529, Test Name04, Name C.04, (Home);02079460666, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 5, +447700900629, Test Name05, Name C.05, (Home);02079460555, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 6, +447700900329, Test Name06, Name C.06, (Home);02079460444, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 7, +447700900529, Test Name07, Name C.07, (Home);02079460333, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 8, +447700900629, Test Name08, Name C.08, (Home);02079460222, name@somecompany.com; example@somecompany.com,Work,0
+
+
+PhBkUSimStore= T3, S7, 6, 20, 20, 3, 3
+PhBkUSimStoreEntry= T3, S7, App1, 1, +447700900729, Test Name01, Name C.01, (Home);02079460555, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T3, S7, App1, 2, +447700900829, Test Name02, Name C.02, (Home);02079460232, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T3, S7, App1, 3, +447700900629, Test Name03, Name C.03, (Home);02079460342, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T3, S7, App1, 4, +447700900529, Test Name04, Name C.04, (Home);02079460643, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T3, S7, App1, 5, +447700900429, Test Name05, Name C.05, (Home);02079460446, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T3, S7, App1, 6, +447700900329, Test Name06, Name C.06, (Home);02079460463, name@somecompany.com; example@somecompany.com,Work,0
+
+PhBkStore= S8, 5, 20, 20
+PhBkStoreEntry= S8, 1, 00000000000000000031, AAAAAAAAAAAAAAAAA041
+PhBkStoreEntry= S8, 2, 00000000000000000032, AAAAAAAAAAAAAAAAA042
+PhBkStoreEntry= S8, 3, 00000000000000000033, AAAAAAAAAAAAAAAAA043
+PhBkStoreEntry= S8, 4, 00000000000000000034, AAAAAAAAAAAAAAAAA044
+PhBkStoreEntry= S8, 5, 00000000000000000035, AAAAAAAAAAAAAAAAA045
+
+PhBkStore= S9, 5, 20, 20
+PhBkStoreEntry= S9, 1, 00000000000000000051, AAAAAAAAAAAAAAAAA051
+PhBkStoreEntry= S9, 2, 00000000000000000052, AAAAAAAAAAAAAAAAA052
+PhBkStoreEntry= S9, 3, 00000000000000000053, AAAAAAAAAAAAAAAAA053
+PhBkStoreEntry= S9, 4, 00000000000000000054, AAAAAAAAAAAAAAAAA054
+PhBkStoreEntry= S9, 5, 00000000000000000055, AAAAAAAAAAAAAAAAA055
+ 
+PhBkStore= S11, 9, 20, 20
+PhBkStoreEntry= S11, 1, 00000000000000000076, AAAAAAAAAAAAAAAAA076
+PhBkStoreEntry= S11, 2, 00000000000000000077, AAAAAAAAAAAAAAAAA077
+PhBkStoreEntry= S11, 3, 00000000000000000078, AAAAAAAAAAAAAAAAA078
+PhBkStoreEntry= S11, 4, 00000000000000000079, AAAAAAAAAAAAAAAAA079
+PhBkStoreEntry= S11, 5, 00000000000000000080, AAAAAAAAAAAAAAAAA080
+PhBkStoreEntry= S11, 6, 00000000000000000081, AAAAAAAAAAAAAAAAA081
+PhBkStoreEntry= S11, 7, 00000000000000000082, AAAAAAAAAAAAAAAAA082
+PhBkStoreEntry= S11, 8, 00000000000000000083, AAAAAAAAAAAAAAAAA083
+PhBkStoreEntry= S11, 9, 00000000000000000084, AAAAAAAAAAAAAAAAA084
+
+PhBkStoreIndividualReqPause= 1
+PhBkStoreBatchReqPause= 1
+
+SubscriberId= 56789012340567
+
+[test19]
+# test all supported phonebooks, but one of them (GlobalLND) will fail
+
+USimAppInfo= App1, an_app1
+
+PhBkUSimStore= T2, S7, 20, 20, 20, 3, 3
+PhBkUSimStoreEntry= T2, S7, App1, 4, +447700900929, Test Name04, Name C.04, (Home);02079460967, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 5, +447700900399, Test Name05, Name C.05, (Home);02079460575, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 6, +447700900999, Test Name06, Name C.06, (Home);02079460976, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 7, +447700900989, Test Name07, Name C.07, (Home);02079460657, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 8, +447700900979, Test Name08, Name C.08, (Home);02079460567, name@somecompany.com; example@somecompany.com,Work,0
+
+PhBkUSimStore= T3, S7, 20, 20, 20, 3, 3
+PhBkUSimStoreEntry= T3, S7, App1, 1, +447700900969, Test Name01, Name C.01, (Home);02079460676, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T3, S7, App1, 2, +447700900959, Test Name02, Name C.02, (Home);02079460567, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T3, S7, App1, 3, +447700900949, Test Name03, Name C.03, (Home);02079460364, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T3, S7, App1, 5, +447700900939, Test Name05, Name C.05, (Home);02079460345, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T3, S7, App1, 6, +447700900099, Test Name06, Name C.06, (Home);02079460856, name@somecompany.com; example@somecompany.com,Work,0
+
+PhBkStore= S8, 20, 20, 20
+PhBkStoreEntry= S8, 1, 22345011, bbcdefghijk011
+PhBkStoreEntry= S8, 2, 22345012, bbcdefghijk012
+PhBkStoreEntry= S8, 3, 22345013, bbcdefghijk013
+PhBkStoreEntry= S8, 4, 22345014, bbcdefghijk014
+PhBkStoreEntry= S8, 5, 22345015, bbcdefghijk015
+
+PhBkStore= S9, 20, 20, 20
+PhBkStoreEntry= S9, 1, 32345011, cbcdefghijk011
+PhBkStoreEntry= S9, 2, 32345012, cbcdefghijk012
+PhBkStoreEntry= S9, 3, 32345013, cbcdefghijk013
+PhBkStoreEntry= S9, 4, 32345014, cbcdefghijk014
+PhBkStoreEntry= S9, 5, 32345015, cbcdefghijk015
+
+PhBkStore= S11, 20, 20, 20
+PhBkStoreEntry= S11, 11, 42345011, dbcdefghijk011
+PhBkStoreEntry= S11, 12, 42345012, dbcdefghijk012
+PhBkStoreEntry= S11, 13, 42345013, dbcdefghijk013
+PhBkStoreEntry= S11, 14, 42345014, dbcdefghijk014
+PhBkStoreEntry= S11, 15, 42345015, dbcdefghijk015
+
+PhBkStoreIndividualReqPause= 1
+PhBkStoreBatchReqPause= 1
+
+SubscriberId= 56789012340568
+
+# KErrBadHandle -- the first read of LND phonebook will fail
+# KErrBadHandle -- the second fail is used to test the retry mechanism supported in phbksync
+PhBkError= 1, -8, S11
+PhBkError= 2, -8, S11
+
+[test20]
+# test Global/GSM ADN phonebook that contains an entry which
+# has >512 characters. This will lead to overflow error. 
+
+USimAppInfo= App1, an_app1
+PhBkUSimStore= T2, S7, 20, 99, 240, 3, 3
+PhBkUSimStoreEntry= T2, S7, App1, 5, +447700900779, Test Name05, Name C.05, (Home);02079460010, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 6, +447700900769, Test Name06, Name C.06, (Home);02079460030, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 7, +123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890, 01ABCDEFGHIJ1234567890ABCDEFGHIJ1234567890ABCDEFGHIJ1234567890ABCDEFGHIJ1234567890ABCDEFGHIJ1234567890ABCDEFGHIJ1234567890ABCDEFGHIJ1234567890ABCDEFGHIJ1234567890ABCDEFGHIJ1234567890ABCDEFGHIJ1234567890, ABCDEFGHIJ1234567890ABCDEFGHIJ1234567890ABCDEFGHIJ1234567890ABCDEFGHIJ1234567890ABCDEFGHIJ1234567890ABCDEFGHIJ1234567890ABCDEFGHIJ1234567890ABCDEFGHIJ1234567890ABCDEFGHIJ1234567890ABCDEFGHIJ1234567890, (Home);02081289371201;(Office);02081289371331;(School);0208128937113, name@somecompany.com; example@somecompany.com,Work; GroupA,0
+
+PhBkStoreIndividualReqPause= 1
+PhBkStoreBatchReqPause= 1
+
+SubscriberId= 56789012340569
+
+[test21]
+# test USim App ADN phonebook that contains an entry which
+# has >512 characters. This will lead to overflow error. 
+
+USimAppInfo= App1, an_app1
+PhBkUSimStore= T3, S7, 20, 99, 240, 3, 3
+PhBkUSimStoreEntry= T3, S7, App1, 5, +447700900629, Test Name05, Name C.05, (Home);02079460001, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T3, S7, App1, 6, +447700900729, Test Name06, Name C.06, (Home);02079460002, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T3, S7, App1, 7, +123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890, 01ABCDEFGHIJ1234567890ABCDEFGHIJ1234567890ABCDEFGHIJ1234567890ABCDEFGHIJ1234567890ABCDEFGHIJ1234567890ABCDEFGHIJ1234567890ABCDEFGHIJ1234567890ABCDEFGHIJ1234567890ABCDEFGHIJ1234567890ABCDEFGHIJ1234567890, Name C.07, (Home);+12345678901234567890123456789012345678901234567890123456789012345678901234567890;(Office);+1234567890123456789012345678901234567890123456789012345678901234567890;(School);+12345678901234567890123456789012345678901234567890123456, name@somecompany.com; example@somecompany.com,Work; GroupA,0
+
+PhBkStoreIndividualReqPause= 1
+PhBkStoreBatchReqPause= 1
+
+SubscriberId= 56789012340570
+
+[test22]
+# test USIM App ADN phonebook that is corrupted.
+# Note I was told the corruption should be simulated using tag PhBkError ???
+
+USimAppInfo= App1, an_app1
+PhBkUSimStore= T3, S7, 20, 20, 20, 3, 3
+PhBkUSimStoreEntry= T3, S7, App1, 1, +447700900329, Test Name01, Name C.01, (Home);02079460002, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T3, S7, App1, 2, +447700900929, Test Name02, Name C.02, (Home);02079460003, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T3, S7, App1, 3, +447700900829, Test Name03, Name C.03, (Home);02079460004, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T3, S7, App1, 5, +447700900729, Test Name05, Name C.05, (Home);02079460005, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T3, S7, App1, 6, +447700900729, Test Name06, Name C.06, (Home);02079460006, name@somecompany.com; example@somecompany.com,Work,0
+
+PhBkStoreIndividualReqPause= 1
+PhBkStoreBatchReqPause= 1
+
+SubscriberId= 56789012340571
+
+# KErrBadHandle -- the first read will fail
+# KErrBadHandle -- the second fail is used to test the retry mechanism supported in phbksync
+PhBkError=1, -8, S7, T3
+PhBkError=2, -8, S7, T3
+
+[test24]
+# simulate the situation where UICC is not present (I was told) using 
+# empty phonebooks and make the first request fail ???
+
+# KErrNotReady
+# The second fail for each phonebook is used to test the retry mechanism supported in phbksync
+PhBkError= 1, -18, S7, T2
+PhBkError= 2, -18, S7, T2
+PhBkError= 1, -18, S7, T3
+PhBkError= 2, -18, S7, T3
+PhBkError= 1, -18, S8
+PhBkError= 2, -18, S8
+PhBkError= 1, -18, S9
+PhBkError= 2, -18, S9
+PhBkError= 1, -18, S11
+PhBkError= 2, -18, S11
+
+# all phonebooks are empty
+PhBkUSimStore= T2, S7, 20, 45, 46, 3, 3
+PhBkUSimStore= T3, S7, 20, 45, 46, 3, 3
+PhBkStore= S8, 20, 45, 46
+PhBkStore= S9, 20, 45, 46
+PhBkStore= S11, 20, 45, 46
+
+PhBkStoreIndividualReqPause= 1
+PhBkStoreBatchReqPause= 1
+
+SubscriberId= 56789012340572
+
+[test25]
+# simulate the situation where UICC is not ready
+
+[test26]
+# test synchronisation when the UICC is blocked
+
+[test27]
+# test synchronisation when the UICC is PIN protected
+
+# see TSY design document for the meaning of following values
+SecurityCodes=111, 222, 333, 444, 555, 666, 777, 888, 999, 000
+ICCLockedAtStart=1, 0, 0, 0, 0, 0, 1
+
+#Global/GSM ADN
+USimAppInfo= App1, an_app1
+
+PhBkUSimStore= T2, S7, 20, 50, 60, 3, 3
+PhBkUSimStoreEntry= T2, S7, App1, 2, +447700900229, Test Name02, Name C.02, (Home);02079460010, name@somecompany.com; example@somecompany.com,Work,1
+PhBkUSimStoreEntry= T2, S7, App1, 5, +447700900429, Test Name05, Name C.05, (Home);02079460020, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 6, +447700900529, Test Name06, Name C.06, (Home);02079460030, name@somecompany.com; example@somecompany.com,Work,1
+
+#USim App ADN
+PhBkUSimStore= T3, S7, 100, 50, 60, 3, 3
+PhBkUSimStoreEntry= T3, S7, App1, 1, +447700900129, Name5 xxxxx01, Name C.01, (Home);02079460040, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T3, S7, App1, 2, +447700900149, Test Name02, Name C.02, (Home);02079460050, name@somecompany.com; example@somecompany.com,Work,1
+
+#Global/GSM FDN
+PhBkStore= S8, 20, 20, 20
+PhBkStoreEntry= S8, 1, 22345011, bbcdefghijk011
+PhBkStoreEntry= S8, 2, 22345012, bbcdefghijk012
+PhBkStoreEntry= S8, 3, 22345013, bbcdefghijk013
+PhBkStoreEntry= S8, 4, 22345014, bbcdefghijk014
+PhBkStoreEntry= S8, 5, 22345015, bbcdefghijk015
+
+PhBkStoreIndividualReqPause= 1
+PhBkStoreBatchReqPause= 1
+
+SubscriberId= 56789012340573
+
+[test28]
+# test a phonebook that contains entries with Name field set
+# and number field blank
+
+PhBkStore= S9, 100, 20, 20
+PhBkStoreEntry= S9, 2,  , abcdefghijk002
+PhBkStoreEntry= S9, 12, 12345012, abcdefghijk012
+PhBkStoreEntry= S9, 56, , abcdefghijk056
+PhBkStoreEntry= S9, 20, , abcdefghijk020
+PhBkStoreEntry= S9, 34, 12345034, abcdefghijk034
+
+PhBkStoreIndividualReqPause= 1
+PhBkStoreBatchReqPause= 1
+
+SubscriberId= 56789012340574
+
+[test29]
+# test a phonebook that contains entries with number field set
+# and name field blank
+
+PhBkStore= S9, 100, 20, 20
+PhBkStoreEntry= S9, 2,  12345002, 
+PhBkStoreEntry= S9, 12, 12345012, abcdefghijk012
+PhBkStoreEntry= S9, 56, 12345056, abcdefghijk056
+PhBkStoreEntry= S9, 20, 12345020, 
+PhBkStoreEntry= S9, 34, 12345034, abcdefghijk034
+
+PhBkStoreIndividualReqPause= 1
+PhBkStoreBatchReqPause= 1
+
+SubscriberId= 56789012340575
+
+[test30]
+# test a phonebook that contains entries that have letters in
+# the number field
+
+PhBkStore= S9, 100, 20, 20
+PhBkStoreEntry= S9, 2,  123AA0002, abcdefghijk002
+PhBkStoreEntry= S9, 12, BB45012, abcdefghijk012
+PhBkStoreEntry= S9, 56, 123450CC, abcdefghijk056
+PhBkStoreEntry= S9, 20, 12345020, abcdefghijk020
+PhBkStoreEntry= S9, 34, gjlkfdgjf, abcdefghijk034
+
+PhBkStoreIndividualReqPause= 1
+PhBkStoreBatchReqPause= 1
+
+SubscriberId= 56789012340576
+
+[test31]
+# test a phonebook that contains entries with +, p and w
+# in the number field
+
+PhBkStore= S9, 100, 20, 20
+PhBkStoreEntry= S9, 2,  123+0002, abcdefghijk002
+PhBkStoreEntry= S9, 12, +1240p12, abcdefghijk012
+PhBkStoreEntry= S9, 56, w3450433, abcdefghijk056
+PhBkStoreEntry= S9, 20, 1+3p0202, abcdefghijk020
+PhBkStoreEntry= S9, 34, 3456775p, abcdefghijk034
+
+PhBkStoreIndividualReqPause= 1
+PhBkStoreBatchReqPause= 1
+
+SubscriberId= 56789012340577
+
+[test32]
+# test a phonebook that has an entry with the location number 0
+
+PhBkStore= S9, 100, 20, 20
+PhBkStoreEntry= S9, 2,  12345002, abcdefghijk002
+PhBkStoreEntry= S9, 0,  12345010, abcdefghijk000
+PhBkStoreEntry= S9, 56, 12345056, abcdefghijk056
+
+PhBkStoreIndividualReqPause= 1
+PhBkStoreBatchReqPause= 1
+
+SubscriberId= 56789012340578
+
+[test33]
+# test a phonebook that has entries with negative location numbers
+
+PhBkStore= S9, 100, 20, 20
+PhBkStoreEntry= S9, -2,  12345002, abcdefghijk002
+PhBkStoreEntry= S9, 10,  12345010, abcdefghijk01
+PhBkStoreEntry= S9, -45, 12345056, abcdefghijk045
+PhBkStoreEntry= S9, 56,  12345056, abcdefghijk056
+
+PhBkStoreIndividualReqPause= 1
+PhBkStoreBatchReqPause= 1
+
+SubscriberId= 56789012340579
+
+[test36]
+# ETel SAT Notifications
+USimAppInfo= App1, an_app1
+
+#Global/GSM ADN
+PhBkUSimStore= T2, S7, 20, 50, 60, 3, 3
+PhBkUSimStoreEntry= T2, S7, App1, 4, +447700900429, Test Name04, Name C.04, (Home);02079460200, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 5, +447700900529, Test Name05, Name C.05, (Home);02079460300, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 6, +447700900629, Test Name06, Name C.06, (Home);02079460500, name@somecompany.com; example@somecompany.com,Work,0
+
+#USim App ADN
+PhBkUSimStore= T3, S7, 100, 50, 60, 3, 3
+PhBkUSimStoreEntry= T3, S7, App1, 1, +447700900329, Name5 xxxx,  Name C.01, (Home);02079460020, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T3, S7, App1, 2, +447700900329, Test Name, Name C.02, (Home);02079460040, name@somecompany.com; example@somecompany.com,Work,0
+
+#FDN
+PhBkStore= S8, 20, 20, 20
+PhBkStoreEntry= S8, 1, 22345011, bbcdefghijk011
+PhBkStoreEntry= S8, 2, 22345012, bbcdefghijk012
+PhBkStoreEntry= S8, 3, 22345013, bbcdefghijk013
+PhBkStoreEntry= S8, 4, 22345014, bbcdefghijk014
+PhBkStoreEntry= S8, 5, 22345015, bbcdefghijk015
+
+#SDN
+PhBkStore= S9, 20, 20, 20
+PhBkStoreEntry= S9, 1, 32345011, cbcdefghijk011
+PhBkStoreEntry= S9, 2, 32345012, cbcdefghijk012
+PhBkStoreEntry= S9, 3, 32345013, cbcdefghijk013
+PhBkStoreEntry= S9, 4, 32345014, cbcdefghijk014
+PhBkStoreEntry= S9, 5, 32345015, cbcdefghijk015
+
+#LND
+PhBkStore= S11, 20, 20, 20
+PhBkStoreEntry= S11, 1, 42345011, dbcdefghijk011
+PhBkStoreEntry= S11, 2, 42345012, dbcdefghijk012
+PhBkStoreEntry= S11, 3, 42345013, dbcdefghijk013
+PhBkStoreEntry= S11, 4, 42345014, dbcdefghijk014
+PhBkStoreEntry= S11, 5, 42345015, dbcdefghijk015
+
+PhBkStoreIndividualReqPause= 1
+PhBkStoreBatchReqPause= 1
+
+SubscriberId= 56789012340580
+
+# SatRefresh = <duration>, <TRefreshType>, <TRefreshFileList> 
+SatRefresh= 12, 2, 6F3A6F496F446F3B2F00
+# SatRefresh= 5, 1, 6F4A
+# SatRefresh= 7, 3, 6F3A6F4A
+
+[test37]
+# Global/GSM ADN and USim App ADN phonebooks contain some hidden entries
+
+ICCLockedAtStart= 0,2,1,0,0,0,0
+# 9 / 5,1,2 = PIN2 verified / PIN2 enabled & unlocked
+ICCStatus= 0, 9
+ICCSetting=0, 5, 1, 2
+
+USimAppInfo= App1, an_app1
+
+#Global/GSM ADN
+PhBkUSimStore= T2, S7, 20, 50, 60, 3, 3
+PhBkUSimStoreEntry= T2, S7, App1, 4, +447700900129, Test Name04, Name C.04, (Home);02079460001, name@somecompany.com; example@somecompany.com,Work,1
+PhBkUSimStoreEntry= T2, S7, App1, 5, +447700900229, Test Name05, Name C.05, (Home);02079460002, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 6, +447700900329, Test Name06, Name C.06, (Home);02079460003, name@somecompany.com; example@somecompany.com,Work,1
+
+#USim App ADN
+PhBkUSimStore= T3, S7, 100, 50, 60, 3, 3
+PhBkUSimStoreEntry= T3, S7, App1, 1, +447700900529, Name5 xxxx,  Name C.01, (Home);02079460001, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T3, S7, App1, 2, +447700900629, Test Name, Name C.02, (Home);02079460002, name@somecompany.com; example@somecompany.com,Work,1
+
+#FDN
+PhBkStore= S8, 20, 20, 20
+PhBkStoreEntry= S8, 1, 22345011, bbcdefghijk011
+PhBkStoreEntry= S8, 2, 22345012, bbcdefghijk012
+PhBkStoreEntry= S8, 3, 22345013, bbcdefghijk013
+PhBkStoreEntry= S8, 4, 22345014, bbcdefghijk014
+PhBkStoreEntry= S8, 5, 22345015, bbcdefghijk015
+
+#SDN
+PhBkStore= S9, 20, 20, 20
+PhBkStoreEntry= S9, 1, 32345011, cbcdefghijk011
+PhBkStoreEntry= S9, 2, 32345012, cbcdefghijk012
+PhBkStoreEntry= S9, 3, 32345013, cbcdefghijk013
+PhBkStoreEntry= S9, 4, 32345014, cbcdefghijk014
+PhBkStoreEntry= S9, 5, 32345015, cbcdefghijk015
+
+#LND
+PhBkStore= S11, 20, 20, 20
+PhBkStoreEntry= S11, 1, 42345011, dbcdefghijk011
+PhBkStoreEntry= S11, 2, 42345012, dbcdefghijk012
+PhBkStoreEntry= S11, 3, 42345013, dbcdefghijk013
+PhBkStoreEntry= S11, 4, 42345014, dbcdefghijk014
+PhBkStoreEntry= S11, 5, 42345015, dbcdefghijk015
+
+PhBkStoreIndividualReqPause= 1
+PhBkStoreBatchReqPause= 1
+
+SubscriberId= 56789012340581
+
+# same phonebooks as [test37], but are locked/blocked
+[test38]
+
+SecurityCodes=111, 222, 333, 444, 555, 666, 777, 888, 999, 000
+ICCLockedAtStart= 0,1,1,1,1,1,0
+# 2 / 1,1,1 = PIN1 required / PIN1 enabled & locked
+ICCStatus= 30, 2
+ICCSetting=30, 1, 1, 1
+# 4 / 5,1,1 = PIN2 required / PIN2 enabled & locked
+ICCStatus= 30, 4
+ICCSetting=30, 5, 1, 1
+# 8 / 1,1,2 = PIN1 verified / PIN1 enabled & unlocked
+ICCStatus= 10, 8
+ICCSetting=10, 1, 1, 2
+# 9 / 5,1,2 = PIN2 verified / PIN2 enabled & unlocked
+ICCStatus= 10, 9
+ICCSetting=10, 5, 1, 2
+
+USimAppInfo= App1, an_app1
+
+#Global/GSM ADN
+PhBkUSimStore= T2, S7, 20, 50, 60, 3, 3
+PhBkUSimStoreEntry= T2, S7, App1, 4, +447700900429, Test Name04, Name C.04, (Home);02079460020, name@somecompany.com; example@somecompany.com,Work,1
+PhBkUSimStoreEntry= T2, S7, App1, 5, +447700900429, Test Name05, Name C.05, (Home);02079460003, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 6, +447700900429, Test Name06, Name C.06, (Home);02079460004, name@somecompany.com; example@somecompany.com,Work,1
+
+#USim App ADN
+PhBkUSimStore= T3, S7, 100, 50, 60, 3, 3
+PhBkUSimStoreEntry= T3, S7, App1, 1, +447700900429, Name5 xxxx,  Name C.01, (Home);02079460020, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T3, S7, App1, 2, +447700900429, Test Name, Name C.02, (Home);02079460009, name@somecompany.com; example@somecompany.com,Work,1
+
+#FDN
+PhBkStore= S8, 20, 20, 20
+PhBkStoreEntry= S8, 1, 22345011, bbcdefghijk011
+PhBkStoreEntry= S8, 2, 22345012, bbcdefghijk012
+PhBkStoreEntry= S8, 3, 22345013, bbcdefghijk013
+PhBkStoreEntry= S8, 4, 22345014, bbcdefghijk014
+PhBkStoreEntry= S8, 5, 22345015, bbcdefghijk015
+
+#SDN
+PhBkStore= S9, 20, 20, 20
+PhBkStoreEntry= S9, 1, 32345011, cbcdefghijk011
+PhBkStoreEntry= S9, 2, 32345012, cbcdefghijk012
+PhBkStoreEntry= S9, 3, 32345013, cbcdefghijk013
+PhBkStoreEntry= S9, 4, 32345014, cbcdefghijk014
+PhBkStoreEntry= S9, 5, 32345015, cbcdefghijk015
+
+#LND
+PhBkStore= S11, 20, 20, 20
+PhBkStoreEntry= S11, 1, 42345011, dbcdefghijk011
+PhBkStoreEntry= S11, 2, 42345012, dbcdefghijk012
+PhBkStoreEntry= S11, 3, 42345013, dbcdefghijk013
+PhBkStoreEntry= S11, 4, 42345014, dbcdefghijk014
+PhBkStoreEntry= S11, 5, 42345015, dbcdefghijk015
+
+PhBkStoreIndividualReqPause= 1
+PhBkStoreBatchReqPause= 1
+
+SubscriberId= 56789012340594
+
+[test39]
+# test partially full Global/GSM FDN phonebook
+
+PhBkStore= S8, 100, 20, 20
+PhBkStoreEntry= S8, 31,  22345001, bbcdefghijk001
+PhBkStoreEntry= S8, 32,  22345002, bbcdefgjijk002
+PhBkStoreEntry= S8, 33,  22345003, bbcdefghijk003
+PhBkStoreEntry= S8, 34,  22345004, bbcdefghijk004
+PhBkStoreEntry= S8, 35,  22345005, bbcdefghijk005
+PhBkStoreEntry= S8, 36,  22345006, bbcdefghijk006
+PhBkStoreEntry= S8, 37,  22345007, bbcdefghijk007
+PhBkStoreEntry= S8, 38,  22345008, bbcdefghijk008
+PhBkStoreEntry= S8, 39,  22345009, bbcdefghijk009
+PhBkStoreEntry= S8, 40,  22345010, bbcdefghijk010
+
+PhBkStoreIndividualReqPause= 1
+PhBkStoreBatchReqPause= 1
+
+SubscriberId= 56789012340051
+
+[test40]
+# test full Global/GSM FDN phonebook
+
+PhBkStore= S8, 20, 20, 20
+PhBkStoreEntry= S8, 1, 00000000000000000051, AAAAAAAAAAAAAAAAA051
+PhBkStoreEntry= S8, 2, 00000000000000000052, AAAAAAAAAAAAAAAAA052
+PhBkStoreEntry= S8, 3, 00000000000000000053, AAAAAAAAAAAAAAAAA053
+PhBkStoreEntry= S8, 4, 00000000000000000054, AAAAAAAAAAAAAAAAA054
+PhBkStoreEntry= S8, 5, 00000000000000000055, AAAAAAAAAAAAAAAAA055
+PhBkStoreEntry= S8, 6, 00000000000000000056, AAAAAAAAAAAAAAAAA056
+PhBkStoreEntry= S8, 7, 00000000000000000057, AAAAAAAAAAAAAAAAA057
+PhBkStoreEntry= S8, 8, 00000000000000000058, AAAAAAAAAAAAAAAAA058
+PhBkStoreEntry= S8, 9, 00000000000000000059, AAAAAAAAAAAAAAAAA059
+PhBkStoreEntry= S8, 10, 00000000000000000060, AAAAAAAAAAAAAAAAA060
+PhBkStoreEntry= S8, 11, 00000000000000000061, AAAAAAAAAAAAAAAAA061
+PhBkStoreEntry= S8, 12, 00000000000000000062, AAAAAAAAAAAAAAAAA062
+PhBkStoreEntry= S8, 13, 00000000000000000063, AAAAAAAAAAAAAAAAA063
+PhBkStoreEntry= S8, 14, 00000000000000000064, AAAAAAAAAAAAAAAAA064
+PhBkStoreEntry= S8, 15, 00000000000000000065, AAAAAAAAAAAAAAAAA065
+PhBkStoreEntry= S8, 16, 00000000000000000066, AAAAAAAAAAAAAAAAA066
+PhBkStoreEntry= S8, 17, 00000000000000000067, AAAAAAAAAAAAAAAAA067
+PhBkStoreEntry= S8, 18, 00000000000000000068, AAAAAAAAAAAAAAAAA068
+PhBkStoreEntry= S8, 19, 00000000000000000069, AAAAAAAAAAAAAAAAA069
+PhBkStoreEntry= S8, 20, 00000000000000000070, AAAAAAAAAAAAAAAAA070
+
+PhBkStoreIndividualReqPause= 1
+PhBkStoreBatchReqPause= 1
+
+SubscriberId= 56789012340537
+
+[test41]
+
+SecurityCodes=111, 222, 333, 444, 555, 666, 777, 888, 999, 000
+ICCLockedAtStart= 0,2,1,1,1,1,0
+# 4 / 5,1,1 = PIN2 required / PIN2 enabled & locked
+ICCStatus= 30, 4
+ICCSetting=30, 5, 1, 1
+# 9 / 5,1,2 = PIN2 verified / PIN2 enabled & unlocked
+ICCStatus= 10, 9
+ICCSetting=10, 5, 1, 2
+
+USimAppInfo= App1, an_app1
+
+#Global/GSM ADN
+PhBkUSimStore= T2, S7, 20, 50, 60, 3, 3
+PhBkUSimStoreEntry= T2, S7, App1, 4, +447700900421, Test Name04, Name C.04, (Home);02079460001, name@somecompany.com; example@somecompany.com,Work,1
+PhBkUSimStoreEntry= T2, S7, App1, 5, +447700900422, Test Name05, Name C.05, (Home);02079460003, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 6, +447700900423, Test Name06, Name C.06, (Home);02079460004, name@somecompany.com; example@somecompany.com,Work,1
+
+#USim App ADN
+PhBkUSimStore= T3, S7, 100, 50, 60, 3, 3
+PhBkUSimStoreEntry= T3, S7, App1, 1, +447700900424, Name5 xxxx,  Name C.01, (Home);02079460001, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T3, S7, App1, 2, +447700900425, Test Name, Name C.02, (Home);02079460009, name@somecompany.com; example@somecompany.com,Work,1
+
+#FDN
+PhBkStore= S8, 20, 20, 20
+PhBkStoreEntry= S8, 1, 22345011, bbcdefghijk011
+PhBkStoreEntry= S8, 2, 22345012, bbcdefghijk012
+PhBkStoreEntry= S8, 3, 22345013, bbcdefghijk013
+PhBkStoreEntry= S8, 4, 22345014, bbcdefghijk014
+PhBkStoreEntry= S8, 5, 22345015, bbcdefghijk015
+
+#SDN
+PhBkStore= S9, 20, 20, 20
+PhBkStoreEntry= S9, 1, 32345011, cbcdefghijk011
+PhBkStoreEntry= S9, 2, 32345012, cbcdefghijk012
+PhBkStoreEntry= S9, 3, 32345013, cbcdefghijk013
+PhBkStoreEntry= S9, 4, 32345014, cbcdefghijk014
+PhBkStoreEntry= S9, 5, 32345015, cbcdefghijk015
+
+#LND
+PhBkStore= S11, 20, 20, 20
+PhBkStoreEntry= S11, 1, 42345011, dbcdefghijk011
+PhBkStoreEntry= S11, 2, 42345012, dbcdefghijk012
+PhBkStoreEntry= S11, 3, 42345013, dbcdefghijk013
+PhBkStoreEntry= S11, 4, 42345014, dbcdefghijk014
+PhBkStoreEntry= S11, 5, 42345015, dbcdefghijk015
+
+PhBkStoreIndividualReqPause= 1
+PhBkStoreBatchReqPause= 1
+
+SubscriberId= 56789012340599
+
+[test50]
+# simulate the situation where the USIM application terminated
+USIMAppInfo=App1, Application1UniqueId
+USIMAppInfo=App2, Application2UniqueId
+
+USIMappSwitching=30, App2
+
+PhBkUSimStore= T2, S7, 20, 50, 60, 3, 3
+PhBkUSimStoreEntry= T2, S7, App1, 4, +447700900129, Test Name04, Name C.04, (Home);02079460100, name@somecompany.com; example@somecompany.com,Work,1
+PhBkUSimStoreEntry= T2, S7, App1, 5, +447700900229, Test Name05, Name C.05, (Home);02079460200, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 6, +447700900329, Test Name06, Name C.06, (Home);02079460300, name@somecompany.com; example@somecompany.com,Work,1
+
+
+PhBkUSimStore= T3, S7, 100, 50, 60, 3, 3
+
+PhBkUSimStoreEntry= T3, S7, App1, 1, +447700900429, Name5 xxxx,  Name C.01, (Home);02079460400, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T3, S7, App1, 2, +447700900429, Test Name, Name C.02, (Home);02079460500, name@somecompany.com; example@somecompany.com,Work,1
+
+PhBkUSimStoreEntry= T3, S7, App2, 2, +447700900429, Test Name, Name C.02, (Home);02079460700, name@somecompany.com; example@somecompany.com,Work,1
+PhBkUSimStoreEntry= T3, S7, App2, 4, +447700900429, Test Name04, Name C.04, (Home);02079460770, name@somecompany.com; example@somecompany.com,Work,1
+PhBkUSimStoreEntry= T3, S7, App2, 5, +447700900429, Test Name05, Name C.05, (Home);02079460780, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T3, S7, App2, 6, +447700900429, Test Name06, Name C.06, (Home);02079460880, name@somecompany.com; example@somecompany.com,Work,1
+
+PhBkStoreIndividualReqPause= 1
+PhBkStoreBatchReqPause= 1
+
+SubscriberId= 56789012340595
+
+[test54]
+ICCLockedAtStart= 0,0,1,0,0,0,0
+# 9 / 5,1,2 = PIN2 verified / PIN2 enabled & unlocked
+ICCStatus= 0, 9
+ICCSetting=0, 5, 1, 2
+
+USimAppInfo= App1, an_app1
+
+#Global/GSM ADN
+PhBkUSimStore= T2, S7, 60, 20, 20, 3, 3
+PhBkUSimStoreEntry= T2, S7, App1, 44, +447700900229, Test Name, Name C.44, (Home);02079460010, name@somecompany.com; example@somecompany.com,Work,1
+
+#USim App ADN
+PhBkUSimStore= T3, S7, 40, 19, 20, 3, 3
+PhBkUSimStoreEntry= T3, S7, App1, 19, +447700900329, Name5 xxxx, Name C.19, (Home);02079460020, name@somecompany.com; example@somecompany.com,Work,0
+
+#FDN
+PhBkStore= S8, 50, 20, 20
+PhBkStoreEntry= S8, 21, 22345013, bbcdefghijk013
+
+#SDN
+PhBkStore= S9, 50, 20, 20
+PhBkStoreEntry= S9, 31, 32345013, cbcdefghijk013
+
+#LND
+PhBkStore= S11, 51, 20, 20
+PhBkStoreEntry= S11, 41, 42345015, dbcdefghijk015
+
+PhBkStoreIndividualReqPause= 1
+PhBkStoreBatchReqPause= 1
+
+SubscriberId= 56789012340596
+
+[test67]
+# set SDN and LND phonebooks as read-only
+PhBkPhoneStoreCaps=0x60000000
+
+#SDN
+PhBkStore= S9, 50, 20, 20
+PhBkStoreEntry= S9, 31, 32345013, cbcdefghijk013
+
+#LND
+PhBkStore= S11, 51, 20, 20
+PhBkStoreEntry= S11, 41, 42345015, dbcdefghijk015
+
+PhBkStoreIndividualReqPause= 1
+PhBkStoreBatchReqPause= 1
+
+[test70]
+# test write when the hidden entry has not been verified
+
+# see TSY design document for the meaning of following values
+SecurityCodes="111", "222", "333", "444", "555", "666", "777", "888", "999", "000"
+ICCLockedAtStart=0, 0, 0, 0, 0, 0, 0
+
+# 14 / 6,1,1 = Hidden Key required / Hidden Key enabled & locked
+ICCStatus= 20, 14
+ICCSetting=20, 6, 1, 1
+
+USimAppInfo= App1, an_app1
+
+#Global/GSM ADN
+PhBkUSimStore= T2, S7, 60, 20, 20, 3, 3
+PhBkUSimStoreEntry= T2, S7, App1, 44, +447700900419, Test Name, Name C.44, (Home);02079460099, name@somecompany.com; example@somecompany.com,Work,0
+
+#USim App ADN
+PhBkUSimStore= T3, S7, 40, 19, 20, 3, 3
+PhBkUSimStoreEntry= T3, S7, App1, 19, +447700900429, Name5 xxxx, Name C.19, (Home);02079460008, name@somecompany.com; example@somecompany.com,Work,0
+
+PhBkStoreIndividualReqPause= 1
+PhBkStoreBatchReqPause= 1
+
+[test71]
+# test write when the hidden entry has been verified
+
+# see TSY design document for the meaning of following values
+SecurityCodes="111", "222", "333", "444", "555", "666", "777", "888", "999", "000"
+ICCLockedAtStart=0, 0, 0, 0, 0, 0, 1
+
+# 15 / 6,1,2 = Hidden Key verified / Hidden Key enabled & unlocked
+ICCStatus= 20, 15
+ICCSetting=20, 6, 1, 2
+
+USimAppInfo= App1, an_app1
+
+#Global/GSM ADN
+PhBkUSimStore= T2, S7, 60, 20, 20, 3, 3
+PhBkUSimStoreEntry= T2, S7, App1, 44, +447700900129, Test Name, Name C.44, (Home);02079460001, name@somecompany.com; example@somecompany.com,Work,0
+
+#USim App ADN
+PhBkUSimStore= T3, S7, 40, 19, 20, 3, 3
+PhBkUSimStoreEntry= T3, S7, App1, 19, +447700900229, Name5 xxxx, Name C.19, (Home);02079460020, name@somecompany.com; example@somecompany.com,Work,0
+
+PhBkStoreIndividualReqPause= 1
+PhBkStoreBatchReqPause= 1
+
+[test76]
+# set SDN and LND phonebooks as read-only
+PhBkPhoneStoreCaps=0x60000000
+
+USimAppInfo= App1, an_app1
+
+#Global/GSM ADN
+PhBkUSimStore= T2, S7, 20, 50, 60, 3, 3
+PhBkUSimStoreEntry= T2, S7, App1, 4, +447700900129, Test Name04, Name C.04, (Home);02079460030, name@somecompany.com; example@somecompany.com,Work,1
+PhBkUSimStoreEntry= T2, S7, App1, 5, +447700900229, Test Name05, Name C.05, (Home);02079460050, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 6, +447700900329, Test Name06, Name C.06, (Home);02079460060, name@somecompany.com; example@somecompany.com,Work,1
+
+#USim App ADN
+PhBkUSimStore= T3, S7, 100, 50, 60, 3, 3
+PhBkUSimStoreEntry= T3, S7, App1, 1, +447700900429, Name5 xxxx,  Name C.01, (Home);02079460060, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T3, S7, App1, 2, +447700900529, Test Name, Name C.02, (Home);02079460070, name@somecompany.com; example@somecompany.com,Work,1
+PhBkUSimStoreEntry= T3, S7, App1, 3, +447700900629, Name5 xxxx,  Name C.01, (Home);02079460080, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T3, S7, App1, 5, +447700900729, Name5 xxxx,  Name C.01, (Home);02079460090, name@somecompany.com; example@somecompany.com,Work,0
+
+#FDN
+PhBkStore= S8, 20, 20, 20
+PhBkStoreEntry= S8, 1, 22345011, bbcdefghijk011
+PhBkStoreEntry= S8, 2, 22345012, bbcdefghijk012
+PhBkStoreEntry= S8, 3, 22345013, bbcdefghijk013
+PhBkStoreEntry= S8, 4, 22345014, bbcdefghijk014
+PhBkStoreEntry= S8, 5, 22345015, bbcdefghijk015
+
+#SDN
+PhBkStore= S9, 20, 20, 20
+PhBkStoreEntry= S9, 1, 32345011, cbcdefghijk011
+PhBkStoreEntry= S9, 2, 32345012, cbcdefghijk012
+PhBkStoreEntry= S9, 3, 32345013, cbcdefghijk013
+PhBkStoreEntry= S9, 4, 32345014, cbcdefghijk014
+PhBkStoreEntry= S9, 5, 32345015, cbcdefghijk015
+
+#LND
+PhBkStore= S11, 20, 20, 20
+PhBkStoreEntry= S11, 1, 42345011, dbcdefghijk011
+PhBkStoreEntry= S11, 2, 42345012, dbcdefghijk012
+PhBkStoreEntry= S11, 3, 42345013, dbcdefghijk013
+PhBkStoreEntry= S11, 4, 42345014, dbcdefghijk014
+PhBkStoreEntry= S11, 5, 42345015, dbcdefghijk015
+
+PhBkStoreIndividualReqPause= 1
+PhBkStoreBatchReqPause= 1
+
+[test77]
+# test delete when the hidden entry has been verified
+
+# see TSY design document for the meaning of following values
+SecurityCodes="111", "222", "333", "444", "555", "666", "777", "888", "999", "000"
+ICCLockedAtStart=0, 0, 0, 0, 0, 0, 1
+
+# 10 seconds after start up, the hidden entries in the phonebook will be verified so that all
+# hidden entries should be synchronised.
+# Then, after another 40 seconds, the verified hidden entry event is trigged which make all 
+# hidden entries become unverified (i.e. access denied). 
+
+# 15 / 6,1,2 = Hidden Key verified / Hidden Key enabled & unlocked
+ICCStatus= 10, 15
+ICCSetting=10, 6, 1, 2
+# 14 / 6,1,1 = Hidden Key required / Hidden Key enabled & locked
+ICCStatus= 40, 14
+ICCSetting=40, 6, 1, 1
+
+USimAppInfo= App1, an_app1
+
+#USim App ADN
+PhBkUSimStore= T3, S7, 100, 50, 60, 3, 3
+PhBkUSimStoreEntry= T3, S7, App1, 2, +447700900429, Test Name02, Name C.02, (Home);02079460330, name@somecompany.com; example@somecompany.com,Work,1
+PhBkUSimStoreEntry= T3, S7, App1, 4, +447700900428, Test Name04,  Name C.04, (Home);02079460440, name@somecompany.com; example@somecompany.com,Work,1
+PhBkUSimStoreEntry= T3, S7, App1, 6, +447700900427, Test Name06, Name C.06, (Home);02079460660, name@somecompany.com; example@somecompany.com,Work,1
+
+PhBkStoreIndividualReqPause= 1
+PhBkStoreBatchReqPause= 1
+
+[test78]
+SecurityCodes="111", "222", "333", "444", "555", "666", "777", "888", "999", "000"
+ICCLockedAtStart=0, 0, 0, 0, 0, 0, 0
+
+# ICCStatus::= <duration> <Event EnumId>
+# At beginning, all phonebooks are accessible.
+# After 20 seconds, the ICCStatus event will be trigged that will lock all phonebooks. That is, all
+# access to phonebooks should be denied.
+
+# 2 / 1,1,1 = PIN1 required / PIN1 enabled & locked
+ICCStatus= 20, 2
+ICCSetting=20, 1, 1, 1
+
+USimAppInfo= App1, an_app1
+
+#Global/GSM ADN
+PhBkUSimStore= T2, S7, 20, 50, 60, 3, 3
+PhBkUSimStoreEntry= T2, S7, App1, 4, +447700900229, Test Name04, Name C.04, (Home);02079460000, name@somecompany.com; example@somecompany.com,Work,1
+PhBkUSimStoreEntry= T2, S7, App1, 5, +447700900329, Test Name05, Name C.05, (Home);02079460000, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 6, +447700900429, Test Name06, Name C.06, (Home);02079460020, name@somecompany.com; example@somecompany.com,Work,1
+
+#USim App ADN
+PhBkUSimStore= T3, S7, 100, 50, 60, 3, 3
+PhBkUSimStoreEntry= T3, S7, App1, 1, +447700900429, Name5 xxxx,  Name C.01, (Home);02079460030, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T3, S7, App1, 2, +447700900429, Test Name, Name C.02, (Home);02079460050, name@somecompany.com; example@somecompany.com,Work,1
+
+#FDN
+PhBkStore= S8, 20, 20, 20
+PhBkStoreEntry= S8, 1, 22345011, bbcdefghijk011
+PhBkStoreEntry= S8, 2, 22345012, bbcdefghijk012
+PhBkStoreEntry= S8, 3, 22345013, bbcdefghijk013
+PhBkStoreEntry= S8, 4, 22345014, bbcdefghijk014
+PhBkStoreEntry= S8, 5, 22345015, bbcdefghijk015
+
+#SDN
+PhBkStore= S9, 20, 20, 20
+PhBkStoreEntry= S9, 1, 32345011, cbcdefghijk011
+PhBkStoreEntry= S9, 2, 32345012, cbcdefghijk012
+PhBkStoreEntry= S9, 3, 32345013, cbcdefghijk013
+PhBkStoreEntry= S9, 4, 32345014, cbcdefghijk014
+PhBkStoreEntry= S9, 5, 32345015, cbcdefghijk015
+
+#LND
+PhBkStore= S11, 20, 20, 20
+PhBkStoreEntry= S11, 1, 42345011, dbcdefghijk011
+PhBkStoreEntry= S11, 2, 42345012, dbcdefghijk012
+PhBkStoreEntry= S11, 3, 42345013, dbcdefghijk013
+PhBkStoreEntry= S11, 4, 42345014, dbcdefghijk014
+PhBkStoreEntry= S11, 5, 42345015, dbcdefghijk015
+
+PhBkStoreIndividualReqPause= 1
+PhBkStoreBatchReqPause= 1
+
+[test79]
+# test for all supported phonebooks
+ICCLockedAtStart= 0,0,1,0,0,0,0
+# 9 / 5,1,2 = PIN2 verified / PIN2 enabled & unlocked
+ICCStatus= 0, 9
+ICCSetting=0, 5, 1, 2
+
+USimAppInfo= App1, an_app1
+
+PhBkUSimStore= T2, S7, 20, 20, 20, 3, 3
+PhBkUSimStoreEntry= T2, S7, App1, 4, +447700900429, Test Name04, Name C.04, (Home);02079460033, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 5, +447700900421, Test Name05, Name C.05, (Home);02079460032, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 6, +447700900423, Test Name06, Name C.06, (Home);02079460064, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 7, +447700900424, Test Name07, Name C.07, (Home);02079460063, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 8, +447700900425, Test Name08, Name C.08, (Home);02079460073, name@somecompany.com; example@somecompany.com,Work,0
+
+PhBkUSimStore= T3, S7, 20, 20, 20, 3, 3
+PhBkUSimStoreEntry= T3, S7, App1, 1, +447700900427, Test Name01, Name C.01, (Home);02079460053, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T3, S7, App1, 2, +447700900428, Test Name02, Name C.02, (Home);02079460074, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T3, S7, App1, 3, +447700900429, Test Name03, Name C.03, (Home);02079460073, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T3, S7, App1, 5, +447700900424, Test Name05, Name C.05, (Home);02079460074, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T3, S7, App1, 6, +447700900421, Test Name06, Name C.06, (Home);02079460075, name@somecompany.com; example@somecompany.com,Work,0
+
+PhBkStore= S8, 20, 20, 20
+PhBkStoreEntry= S8, 1, 22345011, bbcdefghijk011
+PhBkStoreEntry= S8, 2, 22345012, bbcdefghijk012
+PhBkStoreEntry= S8, 3, 22345013, bbcdefghijk013
+PhBkStoreEntry= S8, 4, 22345014, bbcdefghijk014
+PhBkStoreEntry= S8, 5, 22345015, bbcdefghijk015
+
+PhBkStore= S9, 20, 20, 20
+PhBkStoreEntry= S9, 1, 32345011, cbcdefghijk011
+PhBkStoreEntry= S9, 2, 32345012, cbcdefghijk012
+PhBkStoreEntry= S9, 3, 32345013, cbcdefghijk013
+PhBkStoreEntry= S9, 4, 32345014, cbcdefghijk014
+PhBkStoreEntry= S9, 5, 32345015, cbcdefghijk015
+
+PhBkStore= S11, 20, 20, 20
+PhBkStoreEntry= S11, 11, 42345011, dbcdefghijk011
+PhBkStoreEntry= S11, 12, 42345012, dbcdefghijk012
+PhBkStoreEntry= S11, 13, 42345013, dbcdefghijk013
+PhBkStoreEntry= S11, 14, 42345014, dbcdefghijk014
+PhBkStoreEntry= S11, 15, 42345015, dbcdefghijk015
+
+PhBkStoreIndividualReqPause= 1
+PhBkStoreBatchReqPause= 1
+
+SubscriberId= 59989012340568
+
+[test80]
+# all phonebooks are empty
+PhBkUSimStore= T2, S7, 20, 45, 46, 3, 3
+PhBkUSimStore= T3, S7, 20, 45, 46, 3, 3
+PhBkStore= S8, 20, 45, 46
+PhBkStore= S9, 20, 45, 46
+PhBkStore= S11, 20, 45, 46
+
+PhBkStoreIndividualReqPause= 1
+PhBkStoreBatchReqPause= 1
+
+[test81]
+# all phonebooks are empty
+PhBkUSimStore= T2, S7, 20, 45, 46, 3, 3
+PhBkUSimStoreEntry= T2, S7, App1, 4, +447700900429, Test Name04, Name C.04, (Home);02079460000, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStore= T3, S7, 20, 45, 46, 3, 3
+PhBkStore= S9, 20, 45, 46
+PhBkStore= S11, 20, 45, 46
+
+PhBkStoreIndividualReqPause= 1
+PhBkStoreBatchReqPause= 1
+
+[test90]
+# A simple config which returns the IMSI as an empty string.
+SubscriberId=
+PhBkStore=S7, 100, 99, 235
+
+[test91]
+ICCLockedAtStart= 0,0,1,0,0,0,0
+# 9 / 5,1,2 = PIN2 verified / PIN2 enabled & unlocked
+ICCStatus= 0, 9
+ICCSetting=0, 5, 1, 2
+
+USimAppInfo= App1, an_app1
+
+#Global/GSM ADN
+PhBkUSimStore= T2, S7, 60, 20, 20, 3, 3, 20, 0
+PhBkUSimStoreEntry= T2, S7, App1, 44, +447700900439, Test Name, Name C.44, (Home);02079460009, name@somecompany.com; example@somecompany.com,Work,1
+
+#USim App ADN
+PhBkUSimStore= T3, S7, 40, 19, 20, 3, 3, 19, 0
+PhBkUSimStoreEntry= T3, S7, App1, 19, +447700900449, Name5 xxxx, Name C.19, (Home);02079460080, name@somecompany.com; example@somecompany.com,Work,0
+
+#FDN
+PhBkStore= S8, 50, 20, 20
+PhBkStoreEntry= S8, 21, 22345013, bbcdefghijk013
+
+#SDN
+PhBkStore= S9, 50, 20, 20
+PhBkStoreEntry= S9, 31, 32345013, cbcdefghijk013
+
+#LND
+PhBkStore= S11, 51, 20, 20
+PhBkStoreEntry= S11, 41, 42345015, dbcdefghijk015
+
+PhBkStoreIndividualReqPause= 1
+PhBkStoreBatchReqPause= 1
+
+SubscriberId= 56789012340596
+
+
+[test101]
+# CPhbkSyncDoSynchronisationTest_30
+
+ICCLockedAtStart= 1,0,0,0,0,0,0
+
+# 8 / 1,1,2 = PIN1 verified / PIN1 enabled & unlocked
+ICCStatus= 60, 8
+ICCSetting=60, 1, 1, 2
+
+USimAppInfo= App1, an_app1
+
+#Global/GSM ADN
+PhBkUSimStore= T2, S7, 20, 50, 60, 3, 3
+PhBkUSimStoreEntry= T2, S7, App1, 4, +447700900529, Test Name04, Name C.04, (Home);02079460001, name@somecompany.com; example@somecompany.com,Work,1
+PhBkUSimStoreEntry= T2, S7, App1, 5, +447700900629, Test Name05, Name C.05, (Home);02079460002, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T2, S7, App1, 6, +447700900729, Test Name06, Name C.06, (Home);02079460003, name@somecompany.com; example@somecompany.com,Work,1
+
+#USim App ADN
+PhBkUSimStore= T3, S7, 100, 50, 60, 3, 3
+PhBkUSimStoreEntry= T3, S7, App1, 1, +447700900829, Name5 xxxx,  Name C.01, (Home);02079460020, name@somecompany.com; example@somecompany.com,Work,0
+PhBkUSimStoreEntry= T3, S7, App1, 2, +447700900929, Test Name, Name C.02, (Home);02079460003, name@somecompany.com; example@somecompany.com,Work,1
+
+#FDN
+PhBkStore= S8, 20, 20, 20
+PhBkStoreEntry= S8, 1, 22345011, bbcdefghijk011
+PhBkStoreEntry= S8, 2, 22345012, bbcdefghijk012
+PhBkStoreEntry= S8, 3, 22345013, bbcdefghijk013
+PhBkStoreEntry= S8, 4, 22345014, bbcdefghijk014
+PhBkStoreEntry= S8, 5, 22345015, bbcdefghijk015
+
+#SDN
+PhBkStore= S9, 20, 20, 20
+PhBkStoreEntry= S9, 1, 32345011, cbcdefghijk011
+PhBkStoreEntry= S9, 2, 32345012, cbcdefghijk012
+PhBkStoreEntry= S9, 3, 32345013, cbcdefghijk013
+PhBkStoreEntry= S9, 4, 32345014, cbcdefghijk014
+PhBkStoreEntry= S9, 5, 32345015, cbcdefghijk015
+
+#LND
+PhBkStore= S11, 20, 20, 20
+PhBkStoreEntry= S11, 1, 42345011, dbcdefghijk011
+PhBkStoreEntry= S11, 2, 42345012, dbcdefghijk012
+PhBkStoreEntry= S11, 3, 42345013, dbcdefghijk013
+PhBkStoreEntry= S11, 4, 42345014, dbcdefghijk014
+PhBkStoreEntry= S11, 5, 42345015, dbcdefghijk015
+
+PhBkStoreIndividualReqPause= 1
+PhBkStoreBatchReqPause= 1
+
+SubscriberId= 56789012340594
+

@@ -1,0 +1,46 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+* Iby file for FMRadio
+*
+*/
+
+
+#ifndef FMRADIO_IBY
+#define FMRADIO_IBY
+
+// Use standard macros
+#include <data_caging_paths_for_iby.hrh>
+
+S60_APP_EXE(fmradio)
+data=ZRESOURCE\apps\fmradio.mif                                     APP_RESOURCE_DIR\fmradio.mif
+data=ZRESOURCE\hb\splashml\fmradio.splashml                         RESOURCE_FILES_DIR/hb/splashml/fmradio.splashml
+data=ZRESOURCE\hb\splashml\fmradio.docml                            RESOURCE_FILES_DIR/hb/splashml/fmradio.docml
+data=ZPRIVATE\10003a3f\import\apps\fmradio_reg.rsc                  private\10003a3f\import\apps\fmradio_reg.rsc
+
+file=ABI_DIR\BUILD_DIR\fmradioenginewrapper.dll                     SHARED_LIB_DIR\fmradioenginewrapper.dll       PAGED
+file=ABI_DIR\BUILD_DIR\fmradiopresetstorage.dll                     SHARED_LIB_DIR\fmradiopresetstorage.dll       PAGED
+file=ABI_DIR\BUILD_DIR\fmradiouiengine.dll                          SHARED_LIB_DIR\fmradiouiengine.dll            PAGED
+file=ABI_DIR\BUILD_DIR\fmradiowidgets.dll                           SHARED_LIB_DIR\fmradiowidgets.dll             PAGED
+
+file=ABI_DIR\BUILD_DIR\fmradioengine.dll                            SHARED_LIB_DIR\fmradioengine.dll              PAGED
+file=ABI_DIR\BUILD_DIR\fmradioengineutils.dll                       SHARED_LIB_DIR\fmradioengineutils.dll         PAGED
+file=ABI_DIR\BUILD_DIR\fmradioenginesettings.dll                    SHARED_LIB_DIR\fmradioenginesettings.dll      PAGED
+
+data=ZPRIVATE\10202be9\2002FF52.txt                                 private\10202be9\2002FF52.txt
+data=\epoc32\data\z\resource\fmradioenginesettings.rsc              \resource\fmradioenginesettings.rsc
+
+data=\epoc32\data\z\system\install\fmradio_stub.sis                 system\install\fmradio_stub.sis
+
+#endif

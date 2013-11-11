@@ -1,0 +1,45 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+#ifndef __PHONEBOOK_IBY__
+#define __PHONEBOOK_IBY__
+
+#include <bldvariant.hrh>
+#include <data_caging_paths_for_iby.hrh>
+
+#define UPGRADABLE_APP_REG_RSC(NAME) data=DATAZ_\PRIVATE\10003A3F\IMPORT\APPS\ ## NAME ## _reg.rsc        Private\10003a3f\import\apps\ ## NAME ## _reg.rsc
+
+// Engine
+file=ABI_DIR\BUILD_DIR\cntlistmodel.dll             SHARED_LIB_DIR\cntlistmodel.dll UNPAGED
+file=ABI_DIR\BUILD_DIR\cnthistorymodel.dll               SHARED_LIB_DIR\cnthistorymodel.dll UNPAGED
+file=ABI_DIR\BUILD_DIR\cntactionsplugin.dll          	   SHARED_LIB_DIR\cntactionsplugin.dll UNPAGED
+file=ABI_DIR\BUILD_DIR\cntsimutility.dll            		SHARED_LIB_DIR\cntsimutility.dll UNPAGED
+file=ABI_DIR\BUILD_DIR\cntimageutility.dll            	SHARED_LIB_DIR\cntimageutility.dll UNPAGED
+
+// UI
+file=ABI_DIR\BUILD_DIR\cntcommonui.dll                	SHARED_LIB_DIR\cntcommonui.dll UNPAGED
+file=ABI_DIR\BUILD_DIR\phonebook.exe                  	SHARED_LIB_DIR\phonebook.exe
+
+UPGRADABLE_APP_REG_RSC(phonebook)
+
+data=DATAZ_\RESOURCE_FILES_DIR\qt\plugins\contacts\cntactionsplugin.qtplugin         				RESOURCE_FILES_DIR\qt\plugins\contacts\cntactionsplugin.qtplugin
+
+data=ZRESOURCE\hb\splashml\phonebook.splashml          RESOURCE_FILES_DIR\hb\splashml\phonebook.splashml
+data=ZRESOURCE\hb\splashml\phonebook.docml             RESOURCE_FILES_DIR\hb\splashml\phonebook.docml
+data=ZSYSTEM\install\contacts_stub.sis    System\Install\contacts_stub.sis
+
+#endif

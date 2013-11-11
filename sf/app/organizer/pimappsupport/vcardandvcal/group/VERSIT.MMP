@@ -1,0 +1,47 @@
+// Copyright (c) 1997-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// versit.dll VCard/vCalendar parser support
+// 
+//
+
+target          versit.dll
+targettype              DLL
+CAPABILITY   All -TCB
+UID              0x1000008D 0x101F4FC4
+VENDORID 0x70000001
+
+SOURCEPATH	../group
+DOCUMENT	BLD.INF
+DOCUMENT	RELEASE.TXT
+
+SOURCEPATH	../src
+userinclude     ../inc
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+
+source      VERSIT.CPP
+source      VPROP.CPP
+source      VUTIL.CPP
+source      vstaticutils.cpp
+source      VersitTls.cpp
+source      VersitAdditionalStorage.cpp
+ 
+library euser.lib  efsrv.lib  estor.lib  bafl.lib  conarc.lib  charconv.lib
+
+DEFFILE			VERSITv2.DEF
+
+START WINS
+BASEADDRESS     0x7d310000
+END
+
+SMPSAFE

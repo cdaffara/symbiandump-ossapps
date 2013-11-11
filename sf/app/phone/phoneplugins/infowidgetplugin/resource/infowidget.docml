@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="1.1">
+    <widget name="id:content" type="HbWidget">
+        <widget name="id:container" type="HbWidget">
+                <widget name="id:spnIcon" type="HbLabel">
+                    <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+                    <icon iconName="qtg_large_network" name="icon"/>
+                    <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+                    <sizehint height="var(hb-param-graphic-size-primary-small)" type="FIXED" width="var(hb-param-graphic-size-primary-small)"/>
+                    <contentsmargins bottom="0un" left="0un" right="var(hb-param-margin-gene-middle-horizontal)" top="0un"/>
+                </widget>
+                <widget name="id:mcnIcon" type="HbLabel">
+                    <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+                    <icon iconName="qtg_large_cellinfo" name="icon"/>
+                    <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+                    <sizehint height="var(hb-param-graphic-size-primary-small)" type="FIXED" width="var(hb-param-graphic-size-primary-small)"/>
+                    <contentsmargins bottom="0un" left="0un" right="var(hb-param-margin-gene-middle-horizontal)" top="0un"/>
+                </widget>
+                <widget name="id:satTextIcon" type="HbLabel">
+                    <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+                    <icon iconName="qtg_large_sat" name="icon"/>
+                    <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+                    <sizehint height="var(hb-param-graphic-size-primary-small)" type="FIXED" width="var(hb-param-graphic-size-primary-small)"/>
+                    <contentsmargins bottom="0un" left="0un" right="var(hb-param-margin-gene-middle-horizontal)" top="0un"/>
+                </widget>
+                <widget name="id:spnMarqueeItem" type="HbMarqueeItem">
+                    <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+                    <sizehint height="var(hb-param-graphic-size-primary-small)" type="FIXED" width="24un"/>
+                    <contentsmargins bottom="0un" left="0un" right="0un" top="0un"/>
+                    <fontspec name="fontSpec" role="Secondary" textheight="var(hb-param-text-height-secondary)"/>
+                    <string name="colorId" value="tc_hs_list_item_title"/>
+                </widget>
+                <widget name="id:mcnMarqueeItem" type="HbMarqueeItem">
+                    <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+                    <sizehint height="var(hb-param-graphic-size-primary-small)" type="FIXED" width="24un"/>
+                    <fontspec name="fontSpec" role="Secondary" textheight="var(hb-param-text-height-secondary)"/>
+                    <string name="colorId" value="tc_hs_list_item_title"/>
+                </widget>
+                <widget name="id:satMarqueeItem" type="HbMarqueeItem">
+                    <sizepolicy horizontalPolicy="Fixed" horizontalStretch="0" verticalPolicy="Fixed" verticalStretch="0"/>
+                    <sizehint height="var(hb-param-graphic-size-primary-small)" type="FIXED" width="24un"/>
+                    <fontspec name="fontSpec" role="Secondary" textheight="var(hb-param-text-height-secondary)"/>
+                    <string name="colorId" value="tc_hs_list_item_title"/>
+                </widget>
+                <enums name="layoutDirection" value="LeftToRight"/>
+                <real name="z" value="0"/>
+                <contentsmargins bottom="var(hb-param-margin-gene-middle-vertical)" left="var(hb-param-margin-gene-middle-horizontal)" right="var(hb-param-margin-gene-middle-horizontal)" top="var(hb-param-margin-gene-center-align)"/>
+                <layout spacing="0un" type="grid">
+                    <contentsmargins bottom="var(hb-param-margin-gene-middle-vertical)" left="var(hb-param-margin-gene-middle-horizontal)" right="var(hb-param-margin-gene-middle-horizontal)" top="var(hb-param-margin-gene-middle-vertical)"/>
+                    <griditem column="0" itemname="id:satTextIcon" row="2"/>
+                    <griditem column="1" itemname="id:satMarqueeItem" row="2"/>
+                    <griditem column="0" itemname="id:spnIcon" row="0"/>
+                    <griditem column="1" itemname="id:mcnMarqueeItem" row="1"/>
+                    <griditem column="0" itemname="id:mcnIcon" row="1"/>
+                    <griditem column="1" itemname="id:spnMarqueeItem" row="0"/>
+                </layout>
+        </widget>
+        <sizepolicy horizontalPolicy="Preferred" horizontalStretch="0" verticalPolicy="Preferred" verticalStretch="0"/>
+        <sizehint height="5.75un" type="MINIMUM" width="32un"/>
+        <sizehint height="25un" type="MAXIMUM" width="32un"/>
+        <layout type="anchor">
+            <anchoritem dst="id:container" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+            <anchoritem dst="id:container" dstEdge="TOP" spacing="0un" src="" srcEdge="TOP"/>
+            <anchoritem dst="id:container" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+            <anchoritem dst="id:container" dstEdge="BOTTOM" spacing="0un" src="" srcEdge="BOTTOM"/>
+        </layout>
+    </widget>
+    <metadata activeUIState="Common ui state" display="NHD-3.2-inch_portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+    </metadata>
+</hbdocument>

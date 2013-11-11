@@ -1,0 +1,41 @@
+// Copyright (c) 1999-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// T_IMCM02c.mmp
+//
+
+TARGET			t_imcm02c.exe
+TARGETTYPE		exe
+
+CAPABILITY All -TCB
+UID				0x1000007A 0x10274048
+SOURCEPATH		../src
+SOURCE			T_imcm02c.cpp
+USERINCLUDE   	../../inc ../inc 
+USERINCLUDE		../../../../pop3andsmtpmtm/servermtmutils/inc
+USERINCLUDE		../../../../../../../mw/messagingmw/messagingfw/msgsrvnstore/server/inc
+USERINCLUDE		../../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/base/inc
+USERINCLUDE		../../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/email/inc
+USERINCLUDE		../../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/server/inc
+USERINCLUDE		../../../../../../../mw/messagingmw/messagingfw/msgtest/testutils/sms/inc
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+LIBRARY			euser.lib msgs.lib efsrv.lib imcm.lib etext.lib bafl.lib
+LIBRARY			emailtestutils.lib msvtestutils.lib
+LIBRARY			estor.lib
+LIBRARY			cntmodel.lib
+
+EPOCSTACKSIZE	0x8000
+EPOCHEAPSIZE	0x4000 0x330000
+VENDORID 0x70000001
+
+SMPSAFE

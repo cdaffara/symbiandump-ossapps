@@ -1,0 +1,77 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+#include <data_caging_paths.hrh>
+#include <platform_paths.hrh>
+
+TARGET          ut_cphonesingleandalerting.dll
+TARGETTYPE      dll
+UID             0x1000af5a 0x01700000
+
+CAPABILITY      ALL -TCB
+VENDORID        VID_DEFAULT
+
+SOURCEPATH      ../../common
+SOURCE          cphonestatemachinestub.cpp
+SOURCE          cphonestateincallstub.cpp
+SOURCE          cphonegsmincallstub.cpp
+SOURCE          cphonestatestub.cpp 
+SOURCE          phoneuiutils.cpp
+SOURCE          stubs.cpp
+
+SOURCEPATH      ../../../../internal/mocks/phoneuiutils
+SOURCE          mock_tphonetouchbuttonconfig.cpp
+
+SOURCEPATH      ../src
+SOURCE          ut_cphonesingleandalerting.cpp
+
+SOURCEPATH      ../../../../phoneuistates/src
+SOURCE          cphonesingleandalerting.cpp
+SOURCE          cphonealerting.cpp
+
+SOURCEPATH      ../../../../../internal/mocks/phoneapp/phoneuicontrol
+SOURCE          mock_cphonenumberentrymanager.cpp
+ 
+
+// Sources required by the test suite
+SOURCEPATH      ../src
+SOURCE          ut_cphonesingleandalerting_DllMain.cpp
+
+USERINCLUDE    ../../common
+USERINCLUDE    ../../../../phoneuicontrol/inc
+USERINCLUDE    ../../../../phoneuistates/inc
+USERINCLUDE    ../../../../phonemediatorcenter/inc
+USERINCLUDE    ../../../../phoneuiutils/inc
+USERINCLUDE    ../../../../phoneui2/srcdata
+USERINCLUDE    ../../../../phoneuiqtviewadapter/inc
+
+ 
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE   /epoc32/include/Digia/EUnit
+SYSTEMINCLUDE   ../../../../../inc
+
+
+LIBRARY         EUnit.lib
+LIBRARY         EUnitUtil.lib
+LIBRARY         euser.lib
+LIBRARY         FeatMgr.lib         // FeatureManager
+LIBRARY         avkon.lib             // AknTextUtils
+LIBRARY         CommonEngine.lib     //StringLoader 
+LIBRARY         cone.lib
+LIBRARY         symbianmock.lib
+
+
+

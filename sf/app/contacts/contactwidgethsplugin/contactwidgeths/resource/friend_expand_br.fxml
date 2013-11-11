@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://www.nokia.com/FXML/10.1">
+	<comment>Created using carbide.fx 1.5.0;  FxML revision 0.84; Platform 10.1 </comment>
+	<visual src="Item">
+		<param name="scale_x" type="anim">
+			<duration>0.3</duration>
+			<style>outback</style>
+			<keyframe at="0.0">0</keyframe>
+			<keyframe at="1.0">1</keyframe>
+		</param>
+		<param name="scale_y" type="anim">
+			<duration>0.3</duration>
+			<style>outback</style>
+			<keyframe at="0.0">0</keyframe>
+			<keyframe at="1.0">1</keyframe>
+		</param>
+		<param name="opacity" type="anim">
+			<duration>0.3</duration>
+			<style>outback</style>
+			<keyframe at="0.0">0.0</keyframe>
+			<keyframe at="1.0">1.0</keyframe>
+		</param>
+		<param name="scale_origin_x" ref="visual.width">0.0</param>
+		<param name="scale_origin_y" ref="visual.height">0.0</param>
+	</visual>
+</layers>
+

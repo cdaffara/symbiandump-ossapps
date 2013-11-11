@@ -1,0 +1,38 @@
+/*
+* Copyright (c) 2005-2008 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Build information file for project ConnTest
+*
+*/
+
+#include <platform_paths.hrh>
+#include "../probe/group/bld.inf"
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+../rom/ConnTest.iby CORE_IBY_EXPORT_PATH(tools,ConnTest.iby)
+../rom/conntest_stub.sis  /epoc32/data/z/system/install/conntest_stub.sis
+
+PRJ_MMPFILES
+ConnTest.mmp
+
+PRJ_EXTENSIONS
+START EXTENSION s60/mifconv
+OPTION TARGETFILE conntest_aif.mif
+OPTION SOURCEDIR ../aif
+OPTION SOURCES -c8,1 list_icon -c8,1 context_pane_icon
+END
+
+// End of File

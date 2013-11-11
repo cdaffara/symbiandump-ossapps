@@ -1,0 +1,53 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Message store server process project file.
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+//<qmail>
+//#include "../../../../../inc/emailversionnumbers.hrh" // KEmailBinaryVersionNumber
+//</qmail>
+#include "../../../inc/EmailStoreUids.hrh"
+
+TARGET        MessageStoreExe.exe
+TARGETTYPE    exe
+UID           0 KUidMessageStoreExe
+SECUREID      KUidMessageStoreExe
+VENDORID      VID_DEFAULT
+CAPABILITY    CAP_SERVER
+
+//<qmail>
+//VERSION       KEmailBinaryVersionNumber
+//</qmail>
+KEmailBinaryDemandPaging
+
+EPOCHEAPSIZE 	1024 2097152
+
+USERINCLUDE   ../../common/inc
+USERINCLUDE   ../../server/inc
+
+USERINCLUDE ../../../../../inc
+
+APP_LAYER_SYSTEMINCLUDE
+
+SOURCEPATH    ../src
+SOURCE        MessageStoreExe.cpp
+
+LIBRARY euser.lib 
+LIBRARY MessageStoreServer.lib
+
+SMPSAFE

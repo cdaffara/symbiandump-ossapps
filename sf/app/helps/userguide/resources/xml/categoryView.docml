@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="1.0">
+    <object name="action_expand_collapse_all" type="HbAction">
+        <string locid="txt_user_guide_opt_expand_all" name="text" value="Action01"/>
+    </object>
+  
+    <widget name="view_help" type="HbView">
+        <widget name="content" role="HbView:widget" type="HbWidget">
+            <widget name="list_category_all" type="HbTreeView">
+                <widget name="treeItemPrototype" role="HbAbstractView:prototype" type="HbTreeViewItem"/>
+                <sizehint height="47.7612un" type="PREFERRED" width="35.8209un"/>
+            </widget>
+            <real name="z" value="0"/>
+            <layout orientation="Vertical" type="linear">
+                <contentsmargins bottom="0px" left="0px" right="0px" top="0px"/>
+                <linearitem itemname="list_category_all"/>
+            </layout>
+        </widget>
+        <widget name="menu" type="HbMenu" role="HbView:menu">
+            <ref object="action_expand_collapse_all" role="HbMenu:addAction" />
+        </widget>
+        <string locid="txt_user_guide_title_user_guide" name="title" value="View"/>
+    </widget>
+
+  <connect sender="action_expand_collapse_all" signal="triggered(bool)" receiver="view_help" slot="onExpandOrCollapseAll()" />
+  
+</hbdocument>

@@ -1,0 +1,154 @@
+/*
+* Copyright (c) 2004 - 2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  This is project specification file for the Videoteleng.
+*
+*/
+
+#include <platform_paths.hrh>
+#include "../Inc/Base/VtEngDefs.hrh"
+
+// Capability assignment.
+CAPABILITY CAP_GENERAL_DLL
+
+// default vendor id
+VENDORID VID_DEFAULT
+
+TARGET          videoteleng.dll
+TARGETTYPE      dll
+UID             0x1000008d 0x101F867F
+
+SOURCEPATH      ../Src/Audio
+SOURCE          CVtEngAudioHandler.cpp
+
+SOURCEPATH      ../Src/Base
+SOURCE          CVtEngModel.cpp
+SOURCE          CVtEngEventManager.cpp
+SOURCE          CVtEngHandlerContainer.cpp
+SOURCE          CVtEngSettings.cpp
+SOURCE          CVtEngPubSubsListener.cpp
+SOURCE			cvtengincomingcallmonitor.cpp
+
+SOURCE			cvtengmdtrcommandsender.cpp
+SOURCE			cvtengmdtrmessagelistener.cpp
+SOURCE			cvtengmediatorservice.cpp
+SOURCE          CVtEngAccessoryHandler.cpp
+
+SOURCE          CVtEngCRProxy.cpp
+SOURCE			CVtEngCRObserverItem.cpp
+SOURCE          CVtEngInitializer.cpp
+SOURCE          CVtEngSATClient.cpp
+SOURCE          CVtEngDeviceLockMonitor.cpp
+SOURCE          VtEngUtils.cpp
+
+SOURCEPATH      ../Src/Commands
+SOURCE          CVtEngCommandHandler.cpp
+SOURCE          CVtEngOperation.cpp
+SOURCE          cvtenginternaloperation.cpp
+SOURCE          TVtEngOperationUtils.cpp
+
+SOURCEPATH      ../Src/Extensions
+SOURCE          CVtEngExtensions.cpp
+SOURCE          CVtEngExtensionBase.cpp
+SOURCE          CVtEngCameraPreferences.cpp
+#if defined (RD_VT_RTF)
+SOURCE			cvtengrecord2file.cpp
+SOURCE  		cvtengr2ftoneplayer.cpp
+#endif // RD_VT_RTF
+
+
+SOURCEPATH      ../Src/Media
+SOURCE          CVtEngMediaHandler.cpp
+SOURCE          CVtEngDrawDP.cpp
+SOURCE          CVtEngDrawDSA.cpp
+SOURCE          CVtEngDrawNGA.cpp
+SOURCE          CVtEngDtmfHandler.cpp
+SOURCE          CVtEngLocalVideo.cpp
+SOURCE          CVtEngRemoteVideo.cpp
+SOURCE          CVtEngImageScaler.cpp
+
+SOURCEPATH      ../Src/Session
+SOURCE          CVtEngSessionHandler.cpp
+
+SOURCEPATH      ../Src/State
+SOURCE          CVtEngStateManager.cpp
+SOURCE          CVtEngStateAlerting.cpp
+SOURCE          CVtEngStateBase.cpp
+SOURCE          CVtEngStateClearing.cpp
+SOURCE          CVtEngStateConnected.cpp
+SOURCE          CVtEngStateIdle.cpp
+SOURCE          CVtEngStateInitializing.cpp
+SOURCE          CVtEngStateNegotiating.cpp
+SOURCE          CVtEngStateOpen.cpp
+SOURCE          CVtEngStateRinging.cpp
+SOURCE          CVtEngDtmfState.cpp
+SOURCE          CVtEngDtmfIdle.cpp
+SOURCE          CVtEngDtmfSending.cpp
+SOURCE          CVtEngDtmfBuffered.cpp
+
+DOCUMENT        ../../Group/bld.inf
+
+USERINCLUDE     ../Inc/Base
+USERINCLUDE     ../Inc/Audio
+USERINCLUDE     ../Inc/Commands
+USERINCLUDE     ../Inc/Session
+USERINCLUDE     ../Inc/Media
+USERINCLUDE     ../Inc/State
+USERINCLUDE     ../Inc/Extensions
+USERINCLUDE     ../CallCtrl/Inc
+
+
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE   ../../../inc
+SYSTEMINCLUDE   /epoc32/include/mmf/common
+SYSTEMINCLUDE   /epoc32/include/mmf/server
+
+LIBRARY euser.lib
+LIBRARY fbscli.lib
+LIBRARY ws32.lib
+LIBRARY videosource.lib
+LIBRARY bitgdi.lib
+LIBRARY displaysink.lib
+LIBRARY featmgr.lib
+LIBRARY phoneclient.lib
+LIBRARY dsclient.lib
+LIBRARY efsrv.lib
+LIBRARY bafl.lib
+LIBRARY sysutil.lib
+LIBRARY centralrepository.lib
+LIBRARY cenrepnotifhandler.lib
+
+LIBRARY	commonengine.lib
+LIBRARY mediaclientaudio.lib
+
+LIBRARY accclient.lib
+LIBRARY telephonyaudiorouting.lib
+
+LIBRARY vtimagetransforms.lib
+
+DEBUGLIBRARY vtlogger.lib
+
+
+LIBRARY satclient.lib
+
+LIBRARY esock.lib // BigEndian
+
+LIBRARY mmfdevsound.lib
+
+LIBRARY gdi.lib
+
+LIBRARY mediatorclient.lib
+LIBRARY videotelproto.lib
+LIBRARY surfaceupdateclient.lib
+LIBRARY surfacemanager.lib
+// End of File

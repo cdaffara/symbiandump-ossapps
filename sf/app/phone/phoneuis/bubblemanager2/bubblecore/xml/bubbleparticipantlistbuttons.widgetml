@@ -1,0 +1,30 @@
+<hbwidget version="0.1" type="bl">
+
+  <layout name="default" type="mesh">
+
+    <meshitem src="button-1" srcEdge="TOP" dst="" dstEdge="TOP"/>    
+    <meshitem src="button-1" srcEdge="LEFT" dst="" dstEdge="LEFT" spacing="-var(hb-param-margin-gene-left)"/>
+    <meshitem src="button-1" srcEdge="RIGHT" dst="button-2" dstEdge="LEFT" spacing="var(hb-param-margin-gene-middle-horizontal)"/>
+    <meshitem src="button-1" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM"/>
+    
+    <meshitem src="button-2" srcEdge="TOP" dst="" dstEdge="TOP"/>    
+    <meshitem src="button-2" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="var(hb-param-margin-gene-right)"/>
+    <meshitem src="button-2" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM"/>    
+    
+  </layout>
+  
+</hbwidget>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

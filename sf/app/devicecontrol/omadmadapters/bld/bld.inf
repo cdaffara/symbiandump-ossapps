@@ -1,0 +1,56 @@
+/*
+* Copyright (c) 2002 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:    for building DM adapters
+*
+*/
+
+PRJ_PLATFORMS
+DEFAULT   
+PRJ_EXPORTS
+../rom/omadmadapters.iby			CORE_APP_LAYER_IBY_EXPORT_PATH(omadmadapters.iby)
+
+#include "../devinfo/bld/bld.inf"
+#include "../devdetail/bld/bld.inf"
+#include "../syncmldm/bld/bld.inf"
+#include "../syncmldm12/bld/bld.inf"
+//#include "../browseradapter/bld/bld.inf"
+#include "../streamingadapter/bld/bld.inf"
+
+#include "../globalwlansettings/group/bld.inf"
+#include "../nsmldminternet/group/bld.inf"
+#include "../nsmldmalwaysonadapter/group/bld.inf"
+#include "../nsmldmbmadapter/group/bld.inf"
+#include "../connmoadapter/group/bld.inf"
+
+#ifdef __SYNCML_DM_DS
+#include "../syncmlds/bld/bld.inf"
+#endif
+
+#ifdef __SYNCML_DM_EMAIL
+#include "../email/bld/bld.inf"
+#endif
+
+#ifdef __SYNCML_DM_MMS
+#include "../mms/bld/bld.inf"
+#endif
+
+#ifdef __SYNCML_DM_FOTA
+#include "../fota/bld/bld.inf"
+#endif
+
+#ifdef __SYNCML_DM_IMPS
+//#include "../imps/bld/bld.inf"
+#endif
+
+#include "../dcmodmadapter/group/bld.inf"

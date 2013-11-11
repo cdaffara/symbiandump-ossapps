@@ -1,0 +1,9 @@
+#include <platform_paths.hrh>
+
+PRJ_EXPORTS
+// Export IBY files
+../rom/lcvt.iby                   CORE_APP_LAYER_IBY_EXPORT_PATH(lcvt.iby)
+../data/lcvtplugin_stub.sis      /epoc32/data/z/system/install/lcvtplugin_stub.sis
+
+PRJ_MMPFILES
+lcvt.mmp

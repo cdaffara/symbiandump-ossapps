@@ -1,0 +1,962 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   
+*
+*/
+
+
+
+
+NAME PIPR
+
+#include <eikon.rh>
+#include <eikon.rsg>
+#include <avkon.rh>
+#include <avkon.rsg>
+#include <avkon.mbg>
+#include <CommonDialogs.hrh>
+#include <CommonDialogs.rh>
+#include <pathconfiguration.hrh>
+
+#include "profiler_gui.hrh"
+#include "profiler_gui_std.h"
+#include <data_caging_paths_strings.hrh>
+#include <appinfo.rh>
+
+
+// ---------------------------------------------------------
+//   
+//    Define the resource file signature 
+//    This resource should be empty.
+//
+// ---------------------------------------------------------
+//
+RESOURCE RSS_SIGNATURE { }
+
+// ---------------------------------------------------------
+//   
+//    Default Document Name
+//
+// ---------------------------------------------------------
+//
+RESOURCE TBUF r_default_document_name { buf=""; }
+
+// ---------------------------------------------------------
+//   
+//    Define default menu and CBA key.
+//
+// ---------------------------------------------------------
+//
+RESOURCE EIK_APP_INFO { }
+	
+//----------------------------------------------------
+//   
+//    r_profiler_gui_hotkeys
+//
+//----------------------------------------------------
+//
+RESOURCE HOTKEYS r_profiler_gui_hotkeys
+    {
+    control=
+        {
+        HOTKEY { command=EAknCmdExit; key='e'; }
+        };
+    }
+
+
+//----------------------------------------------------
+//    r_profiler_gui_view_main
+//----------------------------------------------------
+//
+RESOURCE AVKON_VIEW r_profiler_gui_view_main
+    {
+    hotkeys=r_profiler_gui_hotkeys;
+    menubar=r_profiler_gui_menubar_view_main;  
+    cba=R_AVKON_SOFTKEYS_OPTIONS_EXIT;    
+    }
+
+//----------------------------------------------------
+//    r_profiler_gui_menubar_view_main
+//----------------------------------------------------
+//
+RESOURCE MENU_BAR r_profiler_gui_menubar_view_main
+    {
+    titles=
+        {
+        MENU_TITLE { menu_pane=r_profiler_gui_app_menu; txt="App"; },
+        MENU_TITLE { menu_pane=r_profiler_gui_view_main_menu; txt="Main"; }
+        };
+    }
+
+//----------------------------------------------------
+//    r_profiler_gui_view_main_menu
+//----------------------------------------------------
+//
+
+RESOURCE MENU_PANE r_profiler_gui_view_main_menu
+    {
+    items=
+        {
+        };
+    }
+
+           
+        
+//----------------------------------------------------
+//    r_profiler_gui_app_menu
+//----------------------------------------------------
+//
+RESOURCE MENU_PANE r_profiler_gui_app_menu
+    {
+    items=
+        {
+        MENU_ITEM { command=EProfilerGuiCmdStartAll;cascade = r_profiler_start_submenu; txt="Start"; },
+        MENU_ITEM { command=EProfilerGuiCmdStopAll; txt="Stop profiling"; },
+        MENU_ITEM { command=EProfilerGuiCmdSamplerControl; txt="Sampler control"; cascade=r_profiler_sampler_control_menu; }, 
+        MENU_ITEM { command=EProfilerGuiCmdSettings; txt="Settings"; },
+        MENU_ITEM { command=EProfilerGuiCmdAbout; txt="About"; },
+        MENU_ITEM { command=EAknCmdExit; txt="Exit"; }
+        };
+    }
+
+//----------------------------------------------------
+//    r_profiler_start_submenu
+//----------------------------------------------------
+//
+RESOURCE MENU_PANE r_profiler_start_submenu
+    {
+    items = 
+        {
+        MENU_ITEM 
+            {
+            command = EProfilerGuiCmdStartAll;
+            txt = "Profiling";
+            }
+        };
+    }
+
+//----------------------------------------------------
+//    r_profiler_sampler_control_menu
+//----------------------------------------------------
+//
+RESOURCE MENU_PANE r_profiler_sampler_control_menu
+    {
+    items=
+        {
+        MENU_ITEM { command=EProfilerGuiCmdSamplerEnable; txt="Enable"; },
+        MENU_ITEM { command=EProfilerGuiCmdSamplerDisable; txt="Disable"; },
+        MENU_ITEM { command=EProfilerGuiCmdSamplerSettings; txt="Sampler settings"; },
+        MENU_ITEM { command=EProfilerGuiCmdSamplerInfo; txt="Sampler info"; }
+        };
+    }
+
+
+//----------------------------------------------------
+//    r_profiler_gui_settings_dialog
+//    Dialog for setting list
+//----------------------------------------------------
+//
+RESOURCE DIALOG r_profiler_gui_settings_dialog
+    {
+    flags =
+        EEikDialogFlagNoDrag | EEikDialogFlagFillAppClientRect |
+        EEikDialogFlagButtonsRight | EEikDialogFlagCbaButtons |
+        EEikDialogFlagWait | EEikDialogFlagNoTitleBar;
+    buttons = R_AVKON_SOFTKEYS_OPTIONS_BACK;
+    items =
+        {
+        DLG_LINE
+            {
+            type = EAknCtSettingListBox;
+            id = EProfilerGuiSettingItemList;
+            itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+            control = LISTBOX
+                {
+                flags = EAknListBoxSelectionList;
+                };
+            }
+        };
+    }
+
+// generic resources
+RESOURCE POPUP_SETTING_LIST r_popup_setting_list_editor
+	{
+	}
+RESOURCE AVKON_SETTING_PAGE r_binary_setting_page
+    {   
+    number = EAknSettingPageNoOrdinalDisplayed;
+    type = EAknCtPopupSettingList;
+	editor_resource_id = r_popup_setting_list_editor;
+    }
+RESOURCE AVKON_POPUP_SETTING_TEXTS r_yesno_binaryselection_texts
+	{
+	setting_texts_resource = r_yesno_binaryselection_text_array;
+	}
+RESOURCE ARRAY r_yesno_binaryselection_text_array
+	{
+	items =
+		{
+		AVKON_ENUMERATED_TEXT { value=0; text = "No"; },
+		AVKON_ENUMERATED_TEXT { value=1; text = "Yes"; }
+		};
+	}
+
+
+//
+// resources for plugin name mode selection
+//
+RESOURCE TBUF r_plugin_name_mode_setting_title
+    {
+    buf = "Sampler name length";
+    }
+RESOURCE AVKON_SETTING_PAGE r_plugin_name_mode_setting_page
+	{
+    number = EAknSettingPageNoOrdinalDisplayed; 
+	type = EAknCtPopupSettingList;
+	editor_resource_id = r_popup_setting_list_editor;
+	}
+RESOURCE AVKON_POPUP_SETTING_TEXTS r_plugin_name_mode_setting_texts
+	{
+	setting_texts_resource = r_plugin_name_mode_text_array;
+	}
+RESOURCE ARRAY r_plugin_name_mode_text_array
+	{
+	items =
+		{
+		AVKON_ENUMERATED_TEXT { value=ESamplerNameShort; text = "Short"; },
+		AVKON_ENUMERATED_TEXT { value=ESamplerNameMedium; text = "Medium"; },
+		AVKON_ENUMERATED_TEXT { value=ESamplerNameLong; text = "Long"; }
+		};
+	}
+
+
+//
+// resources for trace output selection
+//
+RESOURCE TBUF r_trace_output_setting_title
+    {
+    buf = "Output to";
+    }
+RESOURCE AVKON_SETTING_PAGE r_trace_output_setting_page
+	{
+    number = EAknSettingPageNoOrdinalDisplayed; 
+	type = EAknCtPopupSettingList;
+	editor_resource_id = r_popup_setting_list_editor;
+	}
+RESOURCE AVKON_POPUP_SETTING_TEXTS r_trace_output_setting_texts
+	{
+	setting_texts_resource = r_trace_output_text_array;
+	}
+RESOURCE ARRAY r_trace_output_text_array
+	{
+	items =
+		{
+		AVKON_ENUMERATED_TEXT { value=EOutputToDebugPort; text = "Debug output"; },
+		AVKON_ENUMERATED_TEXT { value=EOutputToFileSystem; text = "File system"; }
+		};
+	}
+
+
+//
+// resources for save_file_prefix selection
+//
+RESOURCE TBUF r_save_file_prefix_setting_title
+    {
+    buf = "File prefix";
+    }
+RESOURCE AVKON_SETTING_PAGE r_save_file_prefix_setting_page
+	{
+	type = EEikCtEdwin;
+	editor_resource_id = r_save_file_prefix_text_editor;
+	}
+
+RESOURCE EDWIN r_save_file_prefix_text_editor
+	{
+	lines = 0;  // expanding to multiple rows
+	maxlength = 63;
+	flags = EEikEdwinNoLineOrParaBreaks;
+	}
+
+//
+// resources for save file drive selection
+//
+RESOURCE TBUF r_save_file_drive_setting_title
+    {
+    buf = "Save file in";
+    }
+RESOURCE AVKON_SETTING_PAGE r_save_file_drive_setting_page
+	{
+	type = EEikCtEdwin;
+	editor_resource_id = r_save_file_drive_text_editor;
+	}
+
+RESOURCE EDWIN r_save_file_drive_text_editor
+	{
+	lines = 0;  // expanding to multiple rows
+	maxlength = 63;	
+	flags = EEikEdwinNoLineOrParaBreaks;
+	}
+
+//
+// resources for trace mode selection
+//
+RESOURCE TBUF r_trace_mode_setting_title
+    {
+    buf = "Trace mode";
+    }
+RESOURCE AVKON_SETTING_PAGE r_trace_mode_setting_page
+	{
+    number = EAknSettingPageNoOrdinalDisplayed; 
+	type = EAknCtPopupSettingList;
+	editor_resource_id = r_popup_setting_list_editor;
+	}
+RESOURCE AVKON_POPUP_SETTING_TEXTS r_trace_mode_setting_texts
+	{
+	setting_texts_resource = r_trace_mode_text_array;
+	}
+RESOURCE ARRAY r_trace_mode_text_array
+	{
+	items =
+		{
+		AVKON_ENUMERATED_TEXT { value=ETraceModeStream; text = "Stream"; },
+		AVKON_ENUMERATED_TEXT { value=ETraceModeBuffer; text = "Memory buffer"; }
+		};
+	}
+
+//
+// resources for timed_sampling_period selection
+//
+RESOURCE TBUF r_timed_sampling_period_setting_title
+    {
+    buf = "Profiling period (sec.)";
+    }
+RESOURCE AVKON_SETTING_PAGE r_timed_sampling_period_setting_page
+    {
+    type = EAknCtIntegerEdwin;
+    editor_resource_id = r_timed_sampling_period_integer_editor;
+    }
+
+RESOURCE AVKON_INTEGER_EDWIN r_timed_sampling_period_integer_editor
+    {
+    maxlength = 6;
+    min = 1;
+    max = 999999;
+    }
+
+
+//----------------------------------------------------
+//    r_profiler_gui_settings_menubar
+//----------------------------------------------------
+//
+
+RESOURCE MENU_BAR r_profiler_gui_settings_menubar
+    {
+    titles =
+        {
+        MENU_TITLE
+            {
+            menu_pane = r_profiler_gui_settings_menupane;
+            txt = " ";   // dummy
+            }
+        };
+    }
+
+RESOURCE MENU_PANE r_profiler_gui_settings_menupane
+    {
+    items =
+        {
+        MENU_ITEM
+            {
+            command = EProfilerGuiCmdSettingsChange;
+            txt = "Change";
+            },
+        MENU_ITEM
+            {
+            command = EProfilerGuiCmdSettingsExit;
+            txt = "Exit";
+            }
+        };
+    }
+
+//----------------------------------------------------
+//    r_profiler_gui_settings_dialog
+//    Dialog for setting list
+//----------------------------------------------------
+//
+RESOURCE DIALOG r_profiler_sampler_settings_dialog
+    {
+    flags =
+        EEikDialogFlagNoDrag | EEikDialogFlagFillAppClientRect |
+        EEikDialogFlagButtonsRight | EEikDialogFlagCbaButtons |
+        EEikDialogFlagWait | EEikDialogFlagNoTitleBar;
+    buttons = R_AVKON_SOFTKEYS_OPTIONS_BACK;
+    items =
+        {
+        DLG_LINE
+            {
+            type = EAknCtSettingListBox;
+            id = EProfilerSamplerSettingItemList;
+            itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+            control = LISTBOX
+                {
+                flags = EAknListBoxSelectionList;
+                };
+            }
+        };
+    }
+
+//----------------------------------------------------
+//    r_profiler_sampler_settings_menubar
+//----------------------------------------------------
+//
+
+RESOURCE MENU_BAR r_profiler_sampler_settings_menubar
+    {
+    titles =
+        {
+        MENU_TITLE
+            {
+            menu_pane = r_profiler_sampler_settings_menupane;
+            txt = "Sampler settings";
+            }
+        };
+    }
+
+RESOURCE MENU_PANE r_profiler_sampler_settings_menupane
+    {
+    items =
+        {
+        MENU_ITEM
+            {
+            command = EProfilerGuiCmdSettingsChange;
+            txt = "Change";
+            },
+        MENU_ITEM
+            {
+            command = EProfilerGuiCmdSettingsExit;
+            txt = "Exit";
+            }
+        };
+    }
+
+  
+// ---------------------------------------------------------
+//   
+//   r_profiler_gui_about_dialog
+//   About dialog - show version and copyright info etc.
+//
+// ---------------------------------------------------------
+//
+RESOURCE DIALOG r_profiler_gui_about_dialog
+    {
+    flags = EGeneralQueryFlags | EEikDialogFlagNoBorder | EEikDialogFlagNoShadow;
+    buttons = R_AVKON_SOFTKEYS_OK_EMPTY;
+    items=
+        {
+        DLG_LINE
+            {
+            type = EAknCtPopupHeadingPane;
+            id = EAknMessageQueryHeaderId;
+            control = AVKON_HEADING
+                {
+                label = "About Profiler";
+                headinglayout = R_AVKON_WML_SIGN_QUERY_HEADING_PANE;
+                };
+            },
+        DLG_LINE
+            {
+            type = EAknCtMessageQuery;
+            id = EAknMessageQueryContentId;
+            control = AVKON_MESSAGE_QUERY
+                {
+               	message = "Version 2.2.1 - 10th August 2010. Copyright © 2010 Nokia Corporation and/or its subsidiary(-ies). All rights reserved.";
+                };
+            }
+        };
+    }
+
+// ---------------------------------------------------------
+//   r_sampler_rate_setting_page
+// ---------------------------------------------------------
+//
+RESOURCE AVKON_SETTING_PAGE r_sampler_rate_setting_page
+    {
+    type = EAknCtIntegerEdwin;
+    editor_resource_id = r_sampler_rate_integer_editor;
+    }
+RESOURCE AVKON_INTEGER_EDWIN r_sampler_rate_integer_editor
+    {
+    maxlength = 6;
+    min = 250;
+    max = 999999;
+    }    
+
+// ---------------------------------------------------------
+//   r_cpu_sampler_rate_setting_page
+// ---------------------------------------------------------
+//
+RESOURCE AVKON_SETTING_PAGE r_cpu_sampler_rate_setting_page
+    {
+    type = EAknCtIntegerEdwin;
+    editor_resource_id = r_cpu_sampler_rate_integer_editor;
+    }
+RESOURCE AVKON_INTEGER_EDWIN r_cpu_sampler_rate_integer_editor
+    {
+    maxlength = 5;
+    min = 1;
+    max = 10000;
+    } 
+
+// ---------------------------------------------------------
+//   
+//   r_generic_sampler_dlg_line_sample_rate
+//   Empty about dialog - show sampler plugin info in this
+//
+// ---------------------------------------------------------
+//
+RESOURCE DLG_LINE r_generic_sampler_dlg_line_sample_rate
+    {
+    type = EEikCtNumberEditor;
+    prompt = "Sample rate (ms)";
+    id = EProfilerGuiGenericSamplerQuerySampleRate;
+    itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+    control = NUMBER_EDITOR
+        {
+        min = 1000;    
+        max = 10000;    
+        };
+    }
+
+// ---------------------------------------------------------
+//   
+//   r_profiler_gui_empty_about_dialog
+//   Empty about dialog - show sampler plugin info in this
+//
+// ---------------------------------------------------------
+//
+RESOURCE DIALOG r_profiler_gui_empty_about_dialog
+    {
+    flags = EGeneralQueryFlags | EEikDialogFlagNoBorder | EEikDialogFlagNoShadow;
+    buttons = R_AVKON_SOFTKEYS_OK_EMPTY;
+    items=
+        {
+        DLG_LINE
+            {
+            type = EAknCtPopupHeadingPane;
+            id = EAknMessageQueryHeaderId;
+            control = AVKON_HEADING
+                {
+                label = "About";
+                headinglayout = R_AVKON_WML_SIGN_QUERY_HEADING_PANE;
+                };
+            },
+        DLG_LINE
+            {
+            type = EAknCtMessageQuery;
+            id = EAknMessageQueryContentId;
+            control = AVKON_MESSAGE_QUERY
+                {
+                message = "";
+                };
+            }
+        };
+    }
+
+
+RESOURCE TBUF r_dummy_setting_title
+    {
+    buf = "";
+    }
+
+RESOURCE TBUF r_sample_rate_setting_title
+    {
+    buf = "Sample rate (ms)";
+    }
+
+RESOURCE TBUF r_item1_setting_title
+    {
+    buf = "Item1";
+    }
+
+RESOURCE TBUF r_item2_setting_title
+    {
+    buf = "Item2";
+    }
+
+RESOURCE TBUF r_item3_setting_title
+    {
+    buf = "Item3";
+    }
+
+RESOURCE TBUF r_item4_setting_title
+    {
+    buf = "Item4";
+    }
+
+RESOURCE TBUF r_item5_setting_title
+    {
+    buf = "Item5";
+    }
+
+RESOURCE TBUF r_item6_setting_title
+    {
+    buf = "Item6";
+    }
+
+RESOURCE AVKON_SETTING_PAGE r_numeric_setting_page
+	{
+	type = EAknCtIntegerEdwin;
+	editor_resource_id = r_numeric_integer_editor;
+	}
+RESOURCE AVKON_INTEGER_EDWIN r_numeric_integer_editor
+	{
+	maxlength = 5;
+	min = 0;
+	max = 10000;
+	}    
+
+//
+// resources for text selection
+//
+RESOURCE AVKON_SETTING_PAGE r_generic_text_setting_page
+	{
+	type = EEikCtEdwin;
+	editor_resource_id = r_generic_text_editor;
+	}
+
+RESOURCE EDWIN r_generic_text_editor
+	{
+	lines = 0;  // expanding to multiple rows
+	maxlength = 63;	
+	flags = EEikEdwinNoLineOrParaBreaks;
+	}
+
+
+// ---------------------------------------------------------
+//   r_general_confirmation_query
+// ---------------------------------------------------------
+//
+
+RESOURCE DIALOG r_general_confirmation_query
+	{
+	flags = EGeneralQueryFlags;
+	buttons = R_AVKON_SOFTKEYS_YES_NO;
+	items =
+		{
+		DLG_LINE
+			{
+			type = EAknCtQuery;
+			id = EGeneralQuery;
+			control = AVKON_CONFIRMATION_QUERY
+				{
+				layout = EConfirmationQueryLayout;
+				};
+			}
+		};
+	}
+
+// ---------------------------------------------------------
+//   r_general_text_query
+// ---------------------------------------------------------
+//
+RESOURCE DIALOG r_general_text_query
+    {
+    flags = EGeneralQueryFlags;
+    buttons = R_AVKON_SOFTKEYS_OK_CANCEL;
+    items=
+        {
+        DLG_LINE
+            {
+            type = EAknCtQuery;
+            id = EGeneralQuery;
+            control = AVKON_DATA_QUERY
+                {
+                layout = EDataLayout;
+                control = EDWIN
+                    {
+                    width = 256;
+                    lines = 3;
+                    maxlength = 256;
+                    };
+                };
+            }
+        };
+    }
+
+// ---------------------------------------------------------
+//   r_general_text_query
+// ---------------------------------------------------------
+//
+RESOURCE DIALOG r_general_numeric_query
+    {
+    flags = EGeneralQueryFlags;
+    buttons = R_AVKON_SOFTKEYS_OK_CANCEL;
+    items =
+        {
+        DLG_LINE
+            {
+            type = EAknCtQuery;
+            id = EGeneralQuery;
+            control= AVKON_DATA_QUERY
+                {
+                layout = ENumberLayout;
+                control = AVKON_INTEGER_EDWIN
+                    {
+                    min = -999999;
+                    max = 999999;
+                    };
+                };
+            }
+        };
+    }
+
+
+// ---------------------------------------------------------
+//   r_item_action_query
+// ---------------------------------------------------------
+//
+RESOURCE DIALOG r_item_action_query_enabled
+    {
+    flags = EGeneralQueryFlags;
+    buttons = R_AVKON_SOFTKEYS_OK_CANCEL;
+    items =
+        {
+        AVKON_LIST_QUERY_DLG_LINE
+            {
+            control= AVKON_LIST_QUERY_CONTROL
+                {
+				listtype = EAknCtSinglePopupMenuListBox;
+				listbox = AVKON_LIST_QUERY_LIST
+					{
+					array_id = r_item_action_query_array_enabled;
+					};
+				heading = "Sampler controls";
+			    };
+            }
+        };
+    }
+
+RESOURCE DIALOG r_item_action_query_disabled
+    {
+    flags = EGeneralQueryFlags;
+    buttons = R_AVKON_SOFTKEYS_OK_CANCEL;
+    items =
+        {
+        AVKON_LIST_QUERY_DLG_LINE
+            {
+            control= AVKON_LIST_QUERY_CONTROL
+                {
+				listtype = EAknCtSinglePopupMenuListBox;
+				listbox = AVKON_LIST_QUERY_LIST
+					{
+					array_id = r_item_action_query_array_disabled;
+					};
+				heading = "Sampler controls";
+			    };
+            }
+        };
+    }
+
+RESOURCE DIALOG r_item_action_query_hidden_settings_enabled
+    {
+    flags = EGeneralQueryFlags;
+    buttons = R_AVKON_SOFTKEYS_OK_CANCEL;
+    items =
+        {
+        AVKON_LIST_QUERY_DLG_LINE
+            {
+            control= AVKON_LIST_QUERY_CONTROL
+                {
+                listtype = EAknCtSinglePopupMenuListBox;
+                listbox = AVKON_LIST_QUERY_LIST
+                    {
+                    array_id = r_item_action_query_array_hidden_settings_enabled;
+                    };
+                heading = "Sampler controls";
+                };
+            }
+        };
+    }
+
+RESOURCE DIALOG r_item_action_query_hidden_settings_disabled
+    {
+    flags = EGeneralQueryFlags;
+    buttons = R_AVKON_SOFTKEYS_OK_CANCEL;
+    items =
+        {
+        AVKON_LIST_QUERY_DLG_LINE
+            {
+            control= AVKON_LIST_QUERY_CONTROL
+                {
+                listtype = EAknCtSinglePopupMenuListBox;
+                listbox = AVKON_LIST_QUERY_LIST
+                    {
+                    array_id = r_item_action_query_array_hidden_settings_disabled;
+                    };
+                heading = "Sampler controls";
+                };
+            }
+        };
+    }
+
+RESOURCE DIALOG r_item_action_query_hidden_start_stop
+    {
+    flags = EGeneralQueryFlags;
+    buttons = R_AVKON_SOFTKEYS_OK_CANCEL;
+    items =
+        {
+        AVKON_LIST_QUERY_DLG_LINE
+            {
+            control= AVKON_LIST_QUERY_CONTROL
+                {
+				listtype = EAknCtSinglePopupMenuListBox;
+				listbox = AVKON_LIST_QUERY_LIST
+					{
+					array_id = r_item_action_query_array_hidden_start_stop;
+					};
+				heading = "Sampler controls";
+			    };
+            }
+        };
+    }
+
+RESOURCE ARRAY r_item_action_query_array_disabled
+	{
+	items =
+		{
+		LBUF {txt = "Enable"; },
+		LBUF {txt = "Sampler settings"; },
+		LBUF {txt = "Sampler info"; }
+		};
+	} 	
+
+RESOURCE ARRAY r_item_action_query_array_enabled
+	{
+	items =
+		{
+		LBUF {txt = "Disable"; },
+		LBUF {txt = "Sampler settings"; },
+		LBUF {txt = "Sampler info"; }
+		};
+	} 
+
+RESOURCE ARRAY r_item_action_query_array_hidden_settings_disabled
+    {
+    items =
+        {
+        LBUF {txt = "Enable"; },
+        LBUF {txt = "Sampler info"; }
+        };
+    } 
+
+RESOURCE ARRAY r_item_action_query_array_hidden_settings_enabled
+    {
+    items =
+        {
+        LBUF {txt = "Disable"; },
+        LBUF {txt = "Sampler info"; }
+        };
+    } 
+
+RESOURCE ARRAY r_item_action_query_array_hidden_start_stop
+	{
+	items =
+		{
+		LBUF {txt = "Sampler settings"; },
+		LBUF {txt = "Sampler info"; }
+		};
+	} 
+
+RESOURCE STATUS_PANE_APP_MODEL r_profiler_gui_status_pane
+	{
+	panes = 
+		{
+		SPANE_PANE
+			{
+			id = EEikStatusPaneUidTitle;
+			type = EAknCtTitlePane;
+			resource = r_profiler_gui_title_resource;
+			},
+		SPANE_PANE
+			{
+			id = EEikStatusPaneUidNavi;
+			type = EAknCtNaviPane;
+			resource = r_profiler_gui_navi_text_idle;
+			}
+		};
+	}
+
+RESOURCE TITLE_PANE r_profiler_gui_title_resource
+	{
+	txt = "PI Profiler";
+	}
+
+RESOURCE TBUF r_profiler_gui_navi_text_idle
+	{
+	buf = "Idle";
+	}
+
+RESOURCE TBUF r_profiler_gui_navi_text_initializing
+	{
+	buf = "Initializing...";
+	}
+
+RESOURCE TBUF r_profiler_gui_navi_text_running
+	{
+	buf = "Profiling...";
+	}
+
+RESOURCE TBUF r_profiler_gui_navi_text_stopping
+	{
+	buf = "Stopping...";
+	}
+
+RESOURCE DIALOG r_profiler_gui_conf_query
+	{
+	flags = EAknGeneralQueryFlags;
+	buttons = R_AVKON_SOFTKEYS_YES_NO;
+	items = 
+		{
+		DLG_LINE
+			{
+			type = EAknCtQuery;
+			id = EProfilerGuiViewConfQuery;
+			control = AVKON_CONFIRMATION_QUERY
+				{
+				layout = EConfirmationQueryLayout;
+				label = "Leave profiling on?";
+				};
+			}
+		};
+	}
+
+//   
+//    RESOURCE LOCALISABLE_APP_INFO
+//
+// ---------------------------------------------------------
+//
+RESOURCE LOCALISABLE_APP_INFO r_profiler_gui_localisable_app_info
+    {
+    short_caption = "PI Profiler";
+    caption_and_icon = 
+    CAPTION_AND_ICON_INFO
+        {
+        caption = "PI Profiler";
+
+        number_of_icons = 1;
+
+        // Note for ROM-based apps it is recommended to add the drive letter
+        icon_file = APP_BITMAP_DIR"\\piprofilerui_aif.mif";
+        };
+    }

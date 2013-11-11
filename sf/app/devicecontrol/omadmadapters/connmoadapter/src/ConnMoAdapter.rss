@@ -1,0 +1,42 @@
+/** @file
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies  this distribution, and is available 
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  ConnMO resources
+*
+*/
+
+#include <registryinfo.rh>
+#include "nsmldmconstants.h"
+
+RESOURCE REGISTRY_INFO theRegistryInfo
+  {
+  dll_uid = 0x2001FE5E; //The DLL's 3rd UID.
+  interfaces = 
+      {
+      INTERFACE_INFO
+          {
+          interface_uid = KNSmlDMInterfaceUid; // DM interface UID
+          implementations = 
+            {
+            IMPLEMENTATION_INFO
+                {
+                implementation_uid = 0x2001FE5F; // DM ConnMO Adapter
+                version_no = 1; 
+                display_name = "";
+                default_data = "";
+                opaque_data = "";
+                }
+            };
+          }
+      };
+    }

@@ -1,0 +1,16 @@
+<hbwidget version="0.1">
+  <layout name="indicatorlayout" type="mesh">
+    <meshitem src="icon1" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+    <meshitem src="icon1" srcEdge="LEFT" dst="" dstEdge="LEFT" />   
+    <meshitem src="icon2" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+    <meshitem src="icon2" srcEdge="LEFT" dst="icon1" dstEdge="RIGHT" spacing="-var(hb-param-margin-gene-middle-horizontal)" />   
+    <meshitem src="icon3" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+    <meshitem src="icon3" srcEdge="LEFT" dst="icon2" dstEdge="RIGHT" spacing="-var(hb-param-margin-gene-middle-horizontal)" />   
+    <meshitem src="icon4" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+    <meshitem src="icon4" srcEdge="LEFT" dst="icon3" dstEdge="RIGHT" spacing="-var(hb-param-margin-gene-middle-horizontal)" />   
+    <meshitem src="icon5" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+    <meshitem src="icon5" srcEdge="LEFT" dst="icon4" dstEdge="RIGHT" spacing="-var(hb-param-margin-gene-middle-horizontal)" />
+    <meshitem src="icon6" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+    <meshitem src="icon6" srcEdge="LEFT" dst="icon5" dstEdge="RIGHT" spacing="-var(hb-param-margin-gene-middle-horizontal)" />
+  </layout>  
+</hbwidget>

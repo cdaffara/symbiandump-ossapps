@@ -1,0 +1,28 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Build information file for project mpxlocalaudioplayback.
+*
+*/
+
+
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+../rom/mpxlocalaudioplugin.iby CORE_APP_LAYER_IBY_EXPORT_PATH(mpxlocalaudioplugin.iby)
+
+
+PRJ_MMPFILES
+mpxlocalaudioplayback.mmp

@@ -1,0 +1,141 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+PRINT Run Import/Export Asynchronously Operations Test
+
+LOAD_SUITE TestCalInterimApiSuite
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0031AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0031AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Asynchronously Importing Test 1
+//! @SYMTestActions Import 24 vCal's Asynchronously into entries, and then import 18 vCals into entries
+//! @SYMTestExpectedResults There should be 42 entries are present in database.
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportExportAsyncTest \CITCalInterimApi\testdata\TestCalInterimApiImportExportAsync.ini importAsyncTest1
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0031AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0032AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0032AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Asynchronously Importing Test 2
+//! @SYMTestActions Import 24 vCal's Asynchronously into entries.  EXport 5 entries and then import
+//! @SYMTestExpectedResults There should be 29 entries present in datanbase.
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiReadData \CITCalInterimApi\testdata\TestCalInterimApiImportExportAsync.ini entries
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportExportAsyncTest \CITCalInterimApi\testdata\TestCalInterimApiImportExportAsync.ini importAsyncTest2
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0032AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0033AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0033AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Asynchronously Exporting Test 1
+//! @SYMTestActions Export 5 entires Asynchronously , and export the same 5 entries into a different vcs file
+//! @SYMTestExpectedResults There should be 2 vcs files exported, with 5 vcals in each
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiReadData \CITCalInterimApi\testdata\TestCalInterimApiImportExportAsync.ini entries1
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportExportAsyncTest \CITCalInterimApi\testdata\TestCalInterimApiImportExportAsync.ini importAsyncTest3
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0033AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0034AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0034AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Asynchronously Exporting Test 2
+//! @SYMTestActions Export 5 entries Asynchronously into a vcs file, and import 18 vCal's into entries, and then export these entries
+//! @SYMTestExpectedResults There should be 23 entries present in database.
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiReadData \CITCalInterimApi\testdata\TestCalInterimApiImportExportAsync.ini entries1
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportExportAsyncTest \CITCalInterimApi\testdata\TestCalInterimApiImportExportAsync.ini importAsyncTest4
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0034AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0035AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0035AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Asynchronously Exporting/Importing Test 1
+//! @SYMTestActions Export 5 entries Asynchronously into vCal's, and import 24 vcal's Asynchronously 
+//! @SYMTestExpectedResults There should be 29 entries present in database
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiReadData \CITCalInterimApi\testdata\TestCalInterimApiImportExportAsync.ini entries1
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportExportAsyncTest \CITCalInterimApi\testdata\TestCalInterimApiImportExportAsync.ini importAsyncTest5
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0035AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0036AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-IE-0036AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID <App-Engines>/<CalInterimAPI>/Import/Export 3.3.8
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Asynchronously Exporting/Importing Test 2
+//! @SYMTestActions Import 24 vCal's Asynchronously, and export 5 entries Asynchronously 
+//! @SYMTestExpectedResults There should be 29 entires present in database.
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiReadData \CITCalInterimApi\testdata\TestCalInterimApiImportExportAsync.ini entries1
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportExportAsyncTest \CITCalInterimApi\testdata\TestCalInterimApiImportExportAsync.ini importAsyncTest6
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-IE-0036AP-1090HP
+
+
+PREFIX RUN_UTILS 
+MakeReadWrite 	c:\citcalinterimapi\testdata\vcals\importvcals\vCal31.vcs
+DeleteFile		c:\citcalinterimapi\testdata\vcals\importvcals\vCal31.vcs
+MakeReadWrite 	c:\citcalinterimapi\testdata\vcals\importvcals\vCal34.vcs
+DeleteFile		c:\citcalinterimapi\testdata\vcals\importvcals\vCal34.vcs
+MakeReadWrite 	c:\citcalinterimapi\testdata\vcals\importvcals\vCal32.vcs
+DeleteFile		c:\citcalinterimapi\testdata\vcals\importvcals\vCal32.vcs
+MakeReadWrite 	c:\citcalinterimapi\testdata\vcals\importvcals\vCal35.vcs
+DeleteFile		c:\citcalinterimapi\testdata\vcals\importvcals\vCal35.vcs
+MakeReadWrite 	c:\private\10003a5b\CITCalAsync1.dat
+DeleteFile		c:\private\10003a5b\CITCalAsync1.dat
+MakeReadWrite 	c:\private\10003a5b\CITCalAsync.dat
+DeleteFile		c:\private\10003a5b\CITCalAsync.dat
+MakeReadWrite 	c:\citcalinterimapi\testdata\vcals\importvcals\vCal33.vcs
+DeleteFile		c:\citcalinterimapi\testdata\vcals\importvcals\vCal33.vcs
+MakeReadWrite 	c:\citcalinterimapi\testdata\vcals\importvcals\vCal29.vcs
+DeleteFile		c:\citcalinterimapi\testdata\vcals\importvcals\vCal29.vcs
+MakeReadWrite 	c:\citcalinterimapi\testdata\vcals\importvcals\vCal30.vcs
+DeleteFile		c:\citcalinterimapi\testdata\vcals\importvcals\vCal30.vcs
+REMOVE_PREFIX

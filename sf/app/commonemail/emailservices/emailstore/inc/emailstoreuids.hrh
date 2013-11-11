@@ -1,0 +1,46 @@
+/*
+* Copyright (c) 2007 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  List of UIDs used by emailstore modules.
+*
+*/
+
+
+
+#ifndef EMAILSTOREUIDS_HRH
+#define EMAILSTOREUIDS_HRH
+
+// Reserved Uids for emailstore modules
+#define KUidBasePlugin 	            0x2001FDA9 // baseplugin DLL
+#define KUidDebugLog 	            0x2001FDA1 // debuglog DLL
+#define KUidMessageStoreClient      0x2001FDA2 // client DLL
+#define KUidMessageStoreServer      0x2001FDA3 // server DLL
+#define KUidMessageStoreExe         0x2001FDA4 // server EXE
+#define KUidImsPointSecMonitor      0x2001FDA5 // ImsMonitor DLL
+#define KUidEmailStorePreInstallExe 0x20021190 // EmailStore PreInstall EXE
+
+#define KRfsMsgStorePluginDllUid    0x2000C8D3 // MsgStore RfsPlugin DLL
+#define KRfsMsgStorePluginImpUid    0x2000C8D4 // MsgStore RfsPlugin Implementation Uid
+#define KRfsMsgStoreVersionNumber   1          // MsgStore RfsPlugin version number
+#define KRfsMsgStoreMMPVersionNumber 1.0       // MsgStore version number for MMP file (major.minor)
+
+// These should be defined in Symbian OS headers, but aren't
+#ifndef KUidEPOCApp       
+#define KUidEPOCApp       0x100039ce
+#endif
+
+#ifndef KUidSharedLibrary 
+#define KUidSharedLibrary 0x1000008d
+#endif
+
+#endif //EMAILSTOREUIDS_HRH

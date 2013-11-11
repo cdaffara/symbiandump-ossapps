@@ -1,0 +1,25 @@
+EXPORTS
+	?GetUAProfString@CIRNetworkController@@QAEPAVHBufC8@@XZ @ 1  NONAME ; class HBufC8 * CIRNetworkController::GetUAProfString(void)
+	?GetWapProfString@CIRNetworkController@@QAEPAVHBufC8@@XZ @ 2  NONAME ; class HBufC8 * CIRNetworkController::GetWapProfString(void)
+	?IsOfflineMode@CIRNetworkController@@QAEHXZ @ 3  NONAME ; int CIRNetworkController::IsOfflineMode(void)
+	?GetIRSocketServer@CIRNetworkController@@QAEAAVRSocketServ@@XZ @ 4  NONAME ; class RSocketServ & CIRNetworkController::GetIRSocketServer(void)
+	?IsHandingOverConnection@CIRNetworkController@@QAEHXZ @ 5  NONAME ; int CIRNetworkController::IsHandingOverConnection(void)
+	?GetIAPId@CIRNetworkController@@QBEHAAK@Z @ 6  NONAME ; int CIRNetworkController::GetIAPId(unsigned long &) const
+	?RegisterActiveNetworkObserverL@CIRNetworkController@@QAEXAAVMIRActiveNetworkObserver@@@Z @ 7  NONAME ; void CIRNetworkController::RegisterActiveNetworkObserverL(class MIRActiveNetworkObserver &)
+	?IdentifyConnectionType@CIRNetworkController@@QBE?AW4TIRConnectionType@@XZ @ 8  NONAME ; enum TIRConnectionType CIRNetworkController::IdentifyConnectionType(void) const
+	?GetNetworkStatus@CIRNetworkController@@QBEHXZ @ 9  NONAME ; int CIRNetworkController::GetNetworkStatus(void) const
+	?ResetConnectionStatus@CIRNetworkController@@QAEXXZ @ 10  NONAME ; void CIRNetworkController::ResetConnectionStatus(void)
+	?DeleteActiveNetworkObserver@CIRNetworkController@@QAEXAAVMIRActiveNetworkObserver@@@Z @ 11  NONAME ; void CIRNetworkController::DeleteActiveNetworkObserver(class MIRActiveNetworkObserver &)
+	?GetIRConnection@CIRNetworkController@@QAEAAVRConnection@@XZ @ 12  NONAME ; class RConnection & CIRNetworkController::GetIRConnection(void)
+	?OpenL@CIRNetworkController@@SAPAV1@PAVMIRNetworkController@@@Z @ 13  NONAME ; class CIRNetworkController * CIRNetworkController::OpenL(class MIRNetworkController *)
+	?NewL@CIRNetworkObserver@@SAPAV1@PAVCIRNetworkController@@@Z @ 14  NONAME ; class CIRNetworkObserver * CIRNetworkObserver::NewL(class CIRNetworkController *)
+	?CancelConnecting@CIRNetworkController@@QAEXXZ @ 15  NONAME ; void CIRNetworkController::CancelConnecting(void)
+	?ChooseAccessPointL@CIRNetworkController@@QAEXH@Z @ 16  NONAME ; void CIRNetworkController::ChooseAccessPointL(int)
+	?DataTransferTracker@CIRNetworkController@@QAEAAVMIRDataTransferTracker@@XZ @ 17  NONAME ; class MIRDataTransferTracker & CIRNetworkController::DataTransferTracker(void)
+	?NotifyActiveNetworkObserversL@CIRNetworkController@@QAEXW4TIRNetworkEvent@@@Z @ 18  NONAME ; void CIRNetworkController::NotifyActiveNetworkObserversL(enum TIRNetworkEvent)
+	?InitializeHttpSessionL@CIRNetworkController@@QAEXABVRHTTPSession@@W4TIRTransferCategory@MIRDataTransferTracker@@@Z @ 19  NONAME ; void CIRNetworkController::InitializeHttpSessionL(class RHTTPSession const &, enum MIRDataTransferTracker::TIRTransferCategory)
+	?IsWlanSupported@CIRNetworkController@@QBEHXZ @ 20  NONAME ; int CIRNetworkController::IsWlanSupported(void) const
+	?Close@CIRNetworkController@@QAEXXZ @ 21  NONAME ; void CIRNetworkController::Close(void)
+	?RegisterLogoDataTransferTrackerL@CIRNetworkController@@QAEXAAVRHTTPSession@@@Z @ 22  NONAME ; void CIRNetworkController::RegisterLogoDataTransferTrackerL(class RHTTPSession &)
+	?LogoDataTransferTracker@CIRNetworkController@@QAEAAVMIRDataTransferTracker@@XZ @ 23  NONAME ; class MIRDataTransferTracker & CIRNetworkController::LogoDataTransferTracker(void)
+

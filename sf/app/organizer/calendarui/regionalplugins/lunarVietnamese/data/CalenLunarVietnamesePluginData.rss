@@ -1,0 +1,116 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: This file contains all the resources for the Vietnamese plugin.
+*
+*/
+
+
+#include <eikon.rh>
+#include <avkon.hrh>
+#include <avkon.rh>
+#include <avkon.rsg>
+
+#include <Calendar.loc>
+
+NAME CLVT
+
+RESOURCE RSS_SIGNATURE { }
+
+
+//----------------------------------------------------
+//----------------------------------------------------
+//
+RESOURCE DIALOG r_calen_lunar_details_dialog
+     {
+     flags = EGeneralQueryFlags;
+     buttons = R_AVKON_SOFTKEYS_OK_EMPTY;
+     items = 
+         {
+         DLG_LINE 
+             {
+             type = EAknCtPopupHeadingPane;
+             id = EAknMessageQueryHeaderId;
+             control = AVKON_HEADING
+                {
+                 label = qtn_chi_cale_lunar_calendar;
+                 headinglayout = R_AVKON_LIST_HEADING_PANE;
+                };
+             },
+         DLG_LINE
+             {
+             type = EAknCtMessageQuery;
+             id = EAknMessageQueryContentId;
+             control = AVKON_MESSAGE_QUERY
+                 {
+                 };
+             }
+         };
+     }
+
+
+//----------------------------------------------------
+// Menu item text "Show lunar details"
+//----------------------------------------------------
+//
+RESOURCE TBUF r_calendar_show_lunar_data
+    {
+    buf = qtn_chi_cale_lunar_data;
+    }
+
+
+//----------------------------------------------------
+// Details dialog item headers
+//----------------------------------------------------
+//
+RESOURCE TBUF r_calendar_lunar_info_festival
+    {
+    buf = qtn_cale_lunar_info_festival;
+    }
+
+RESOURCE TBUF r_calendar_lunar_info_solar
+    {
+    buf = qtn_cale_lunar_info_solar;
+    }
+
+RESOURCE TBUF r_calendar_lunar_info_date
+    {
+    buf = qtn_cale_info_lunar_date;
+    }
+
+RESOURCE TBUF r_calendar_lunar_info_animal_year
+    {
+    buf = qtn_cale_info_animal_year;
+    }
+
+RESOURCE TBUF r_calendar_lunar_info_western_date
+    {
+    buf = qtn_cale_info_western_date;
+    }
+
+RESOURCE TBUF r_cale_lunar_date
+    {
+    buf = qtn_cale_lunar_date;
+    }
+
+RESOURCE TBUF r_cale_lunar_leap_date
+    {
+    buf = qtn_cale_lunar_leap_date;
+    }
+
+RESOURCE TBUF r_cale_year_of_cat
+    {
+    buf = qtn_chi_cale_animal_cat;
+    }
+
+

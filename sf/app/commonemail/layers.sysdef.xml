@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE SystemDefinition SYSTEM "sysdef_1_5_1.dtd" [
+  <!ENTITY layer_real_source_path "sf/app/commonemail" >
+]>
+
+<SystemDefinition name="commonemail" schema="1.5.1">
+  <systemModel>
+    <layer name="app_layer">
+      <module name="commonemail">
+        <unit unitID="EDo.commonemail.nmail" mrp="" bldFile="&layer_real_source_path;" proFile="nmail.pro" name="commonemail.nmail" qmakeArgs="-r"/>
+      </module>
+<!-- Internal code -->
+      <module name="nmail_tools">
+        <unit unitID="nmail.tools" mrp="" bldFile="&layer_real_source_path;\ipsservices\nmipssettings\tsrc\tools\extendedkeygen" name="qtdemos" proFile="extendedkeygenerator.pro" qmakeArgs="-r" filter="nmail_tools"/>
+     </module>
+<!-- Internal code widget-->
+<!-- temporary built from nmail.pro as a workaround to ServiceFW bug on service regisrtations, fix expected on wk18 MCL
+      <module name="widget_tools">
+        <unit unitID="widget.tools" mrp="" bldFile="&layer_real_source_path;\emailuis\nmhswidget\tsrc\nmhswidgettestapp" name="widgetestapp" proFile="nmhswidgettestapp.pro" qmakeArgs="-r" filter="widget_tools"/>
+     </module>
+-->     
+    </layer>
+  </systemModel>
+</SystemDefinition>

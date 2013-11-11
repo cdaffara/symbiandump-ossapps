@@ -1,0 +1,65 @@
+/*
+* Copyright (c) 2000 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: ECOM plugin resource definition.
+*
+*/
+
+
+#include <registryinfo.rh>
+//<cmail>
+#include "CFSMailPlugin.hrh" // fsmailplugininterface
+//</cmail>
+#include "ipsplgsosbaseplugin.hrh"
+// <qmail> emailversionnumbers removed
+
+// ---------------------------------------------------------------------------
+// theInfo
+// Defines the ecom plugin for IPSSosPlugin
+// ---------------------------------------------------------------------------
+//
+RESOURCE REGISTRY_INFO theInfo
+	{
+	dll_uid = IPSSOSPLUGIN_DLL_UID;
+	interfaces =
+		{
+		INTERFACE_INFO
+			{
+			interface_uid = FSMAILPLUGININTERFACE;
+			implementations =
+				{
+				IMPLEMENTATION_INFO
+					{
+					implementation_uid = IPSSOSIMAP4PLUGIN_IMPLEMENTATION_UID;
+					// <qmail>
+					version_no = 1;
+					// </qmail>
+					display_name = "FSEmail ECom plugin for imap4";
+					default_data = "";
+					opaque_data  = " ";
+					},
+				IMPLEMENTATION_INFO
+					{
+					implementation_uid = IPSSOSPOP3PLUGIN_IMPLEMENTATION_UID;
+					// <qmail>
+					version_no = 1;
+					// </qmail>
+					display_name = "FSEmail ECom plugin for pop3";
+					default_data = "";
+					opaque_data  = " ";
+					}
+				};
+			}
+		};
+	}
+

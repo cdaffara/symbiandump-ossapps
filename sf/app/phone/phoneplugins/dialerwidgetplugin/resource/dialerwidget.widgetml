@@ -1,0 +1,45 @@
+<hbwidget version="0.1" type="HsShortcutWidget">
+  
+  <layout name="layout-1" type="mesh">    
+  
+    <meshitem src="background" srcEdge="TOP" dst="" dstEdge="TOP"/>
+    <meshitem src="background" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM"/>
+    <meshitem src="background" srcEdge="LEFT" dst="" dstEdge="LEFT"/>
+    <meshitem src="background" srcEdge="RIGHT" dst="" dstEdge="RIGHT"/>    
+    
+    <meshitem src="badgeBackground" srcEdge="TOP" dst="" dstEdge="TOP"/>
+    <meshitem src="badgeBackground" srcEdge="RIGHT" dst="" dstEdge="RIGHT"/>
+    
+    <meshitem src="badgeText" srcEdge="CENTERV" dst="badgeBackground" dstEdge="CENTERV" spacing="0.10un"/>
+    <meshitem src="badgeText" srcEdge="LEFT" dst="badgeBackground" dstEdge="LEFT"/>
+    <meshitem src="badgeText" srcEdge="RIGHT" dst="badgeBackground" dstEdge="RIGHT"/>
+    
+    <meshitem src="touchArea" srcEdge="TOP" dst="" dstEdge="TOP"/>
+    <meshitem src="touchArea" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM"/>
+    <meshitem src="touchArea" srcEdge="LEFT" dst="" dstEdge="LEFT"/>
+    <meshitem src="touchArea" srcEdge="RIGHT" dst="" dstEdge="RIGHT"/>    
+    
+  </layout>  
+  
+  <layout name="layout-2" type="mesh">    
+  
+    <meshitem src="background" srcEdge="TOP" dst="" dstEdge="TOP" spacing="-0.75un"/>
+    <meshitem src="background" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+    <meshitem src="background" srcEdge="LEFT" dst="" dstEdge="LEFT"/>
+    <meshitem src="background" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="0.75un"/>    
+    
+    <meshitem src="badgeBackground" srcEdge="TOP" dst="" dstEdge="TOP"/>
+    <meshitem src="badgeBackground" srcEdge="RIGHT" dst="" dstEdge="RIGHT"/>
+    
+    <meshitem src="badgeText" srcEdge="CENTERV" dst="badgeBackground" dstEdge="CENTERV" spacing="0.10un"/>
+    <meshitem src="badgeText" srcEdge="LEFT" dst="badgeBackground" dstEdge="LEFT"/>
+    <meshitem src="badgeText" srcEdge="RIGHT" dst="badgeBackground" dstEdge="RIGHT"/>
+    
+    <meshitem src="touchArea" srcEdge="TOP" dst="" dstEdge="TOP" spacing="-0.75un"/>
+    <meshitem src="touchArea" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM"/>
+    <meshitem src="touchArea" srcEdge="LEFT" dst="" dstEdge="LEFT"/>
+    <meshitem src="touchArea" srcEdge="RIGHT" dst="" dstEdge="RIGHT" spacing="0.75un"/>    
+    
+  </layout>  
+  
+</hbwidget>

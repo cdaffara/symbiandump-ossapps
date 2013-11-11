@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<container xmlns="http://www.symbianfoundation.org/xml/implml/1">
+  <tag name="target" value="rofs2"/> 
+  <tag name="target" value="rofs3"/> 
+  
+    <!--
+    Override the setting refs so that modifying HomeScreenDbSettings
+    causes the execution of both the TemplateML and CommandML
+    implementations. Otherwise the TemplateML implementation would be
+    executed only if the settings have been changed, and the CommandML
+    implementation would be executed every time.
+    -->
+    <settingRefsOverride>
+        <settingRef value="HomeScreenDbSettings"/>
+    </settingRefsOverride>
+    
+    <!-- TemplateML implementation to create the .sql files -->
+    <templateml xmlns="http://www.s60.com/xml/templateml/1">
+    
+    <!-- just to create empty folder -->
+    <output dir="content/private/20022f35/" file="homescreen.db" encoding="UTF-8"></output>
+    
+        <output dir="private/20022f35/sql/" file="create.sql" encoding="UTF-8">
+            <template file="homescreendb_templates/create.sql"></template>
+        </output>
+        <output dir="private/20022f35/sql/" file="fill.sql" encoding="UTF-8">
+            <template file="homescreendb_templates/fill.sql"/>
+        </output>
+    </templateml>
+    
+    <!-- CommandML implementation to create the database using the .sql files -->
+    <commandml xmlns="http://www.s60.com/xml/commandml/1">
+        <command executable="sqlite3" shell="true" cwd="%CONE_OUT_ABSOLUTE%/private/20022f35/sql">
+            <argument value='%CONE_OUT_ABSOLUTE%/content/private/20022f35/homescreen.db ".read create.sql"'/>
+        </command>
+        <command executable="sqlite3" shell="true" cwd="%CONE_OUT_ABSOLUTE%/private/20022f35/sql">
+            <argument value='%CONE_OUT_ABSOLUTE%/content/private/20022f35/homescreen.db ".genfkey --exec"'/>
+        </command>
+        <command executable="sqlite3" shell="true" cwd="%CONE_OUT_ABSOLUTE%/private/20022f35/sql">
+            <argument value='%CONE_OUT_ABSOLUTE%/content/private/20022f35/homescreen.db ".read fill.sql"'/>
+        </command>
+    </commandml>
+</container>

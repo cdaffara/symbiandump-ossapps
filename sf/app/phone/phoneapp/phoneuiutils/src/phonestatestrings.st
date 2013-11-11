@@ -1,0 +1,9 @@
+# Phone UI Logger UI Command String Table
+fstringtable PhoneStateStrings
+EPhoneStateNull EPhoneStateNull
+EPhoneStateStartup EPhoneStateStartup
+EPhoneStateIdle EPhoneStateIdle
+EPhoneStateCallSetup EPhoneStateCallSetup
+EPhoneStateSingle EPhoneStateSingle
+EPhoneStateIncoming EPhoneStateIncoming
+EPhoneStateEmergency EPhoneStateEmergency

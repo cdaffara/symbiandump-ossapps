@@ -1,0 +1,49 @@
+// Copyright (c) 1998-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+/**
+ @file
+ @publishedAll
+ @released
+*/
+
+#if !defined(__MIUTSTD_HRH__)
+#define __MIUTSTD_HRH__
+
+//Email-specific TMsvEntry type associated with an entry which contains a CRichText store.
+
+/**
+* @publishedPartner
+* @released
+*/
+#define KUidMsvEmailTextEntryValue		0x100038F1
+/**
+* @publishedPartner
+* @released
+*/
+#define KUidMsvEmailHtmlEntryValue		0x100057C0 // 268457920
+/**
+* @publishedPartner
+* @released
+*/
+#define KUidMsvEmailExternalBodyEntryValue	0x100057C1 // 268457921
+/**
+* @publishedPartner
+* @released
+*/
+#define KUidMsvEmailRtfEntryValue  		    0x1028368F // 271070863
+
+
+#endif

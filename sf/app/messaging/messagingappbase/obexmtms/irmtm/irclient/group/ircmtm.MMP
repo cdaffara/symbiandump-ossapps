@@ -1,0 +1,52 @@
+// Copyright (c) 2001-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// $Workfile: ircmtm.MMP $
+// $Author: Stevep $
+// $Revision: 10 $
+// $Date: 22/03/02 10:38 $
+// irc.dll IrDA client MTM for OBEX beaming
+// 
+//
+
+/**
+ @file
+*/
+
+
+TARGET			irc.dll
+TARGETTYPE		dll
+
+CAPABILITY All -TCB
+TARGETPATH      /system/libs
+UID		0x10003C5F 0x100053A1 // 0x10003C5F = KUidMtmClientComponent
+VENDORID 0x70000001
+
+SOURCEPATH	../source
+SOURCE			Ircmtm.cpp IRCMAIN.CPP irHeader.cpp
+SOURCE		CIRCancelObserver.cpp
+
+USERINCLUDE		../include ../../../../../../../mw/messagingmw/messagingfw/msgsrvnstore/server/inc
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+
+LIBRARY			euser.lib msgs.lib  // imcm.lib etext.lib  
+LIBRARY         irda.lib//-- Obex object send
+LIBRARY			obexclientmtm.lib obexmtmutil.lib
+
+#ifdef WINSCW
+DEFFILE		IRC.DEF 
+#else
+DEFFILE		IRc.def
+#endif
+
+SMPSAFE

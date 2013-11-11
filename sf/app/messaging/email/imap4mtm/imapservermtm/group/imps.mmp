@@ -1,0 +1,52 @@
+// Copyright (c) 2006-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// imps.mmp
+//
+
+TARGET			imps.dll
+TARGETTYPE		dll
+
+CAPABILITY 		ReadDeviceData WriteDeviceData ProtServ NetworkControl NetworkServices LocalServices ReaduserData WriteUserData
+TARGETPATH		/system/libs
+UID			0x10003C5E 0x10003C4E
+VENDORID		0x70000001
+SOURCEPATH		../src
+SOURCE			cimap4servermtm.cpp
+
+#if (defined SYMBIAN_USER_PROMPT_SERVICE)
+SOURCE 			cimapupsresponsewaiter.cpp 
+#endif
+
+USERINCLUDE		../inc ../../../pop3andsmtpmtm/clientmtms/inc
+USERINCLUDE		../../imaputils/inc 
+USERINCLUDE     	../../imapprotocolcontroller/inc
+USERINCLUDE		../../imapofflinecontrol/inc
+USERINCLUDE		../../imapsettings/inc
+USERINCLUDE		../../../pop3andsmtpmtm/servermtmutils/inc
+USERINCLUDE		../../../pop3andsmtpmtm/servermtmutils/mobilitytestframework/inc
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+
+#if (defined SYMBIAN_USER_PROMPT_SERVICE)
+#endif
+
+LIBRARY			euser.lib msgs.lib impapprotocolcontroller.lib imapofflinecontrol.lib imapsettings.lib
+LIBRARY			imcm.lib
+LIBRARY			imaputils.lib
+LIBRARY 		netmeta.lib
+
+#if (defined SYMBIAN_USER_PROMPT_SERVICE)
+LIBRARY			upsclient.lib
+#endif
+
+SMPSAFE

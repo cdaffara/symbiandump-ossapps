@@ -1,0 +1,75 @@
+// Copyright (c) 2006-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// imapsession.mmp
+//
+
+TARGET			imapsession.dll
+TARGETTYPE		dll
+
+CAPABILITY		ReadDeviceData WriteDeviceData ProtServ NetworkControl NetworkServices LocalServices ReadUserData WriteUserData
+TARGETPATH		/system/libs
+UID			0x1000008d 0x10281D20
+VENDORID		0x70000001
+SOURCEPATH		../src
+SOURCE			cimapsession.cpp 
+SOURCE			cimapsessionmanager.cpp
+SOURCE			cimapcommand.cpp
+SOURCE			cimapservergreeting.cpp cimapservergreetinginfo.cpp
+SOURCE			cimapcapability.cpp cimapcapabilityinfo.cpp
+SOURCE			cimapnoop.cpp cimaplogout.cpp cimaplogin.cpp cimapstarttls.cpp
+SOURCE			cimapselect.cpp cimapexamine.cpp cimapfolderinfo.cpp
+SOURCE			cimapcreate.cpp cimapdelete.cpp cimaprename.cpp
+SOURCE			cimapsubscribe.cpp cimapunsubscribe.cpp
+SOURCE			cimaplistbase.cpp cimaplist.cpp cimaplsub.cpp cimaplistfolderinfo.cpp
+SOURCE			cimapstatus.cpp cimapappend.cpp cimapclose.cpp
+SOURCE			cimapsearch.cpp cimapexpunge.cpp cimapcheck.cpp
+SOURCE			cimapfetchresponse.cpp cimapfetchbodyresponse.cpp
+SOURCE			cimapbodystructure.cpp cimapenvelope.cpp
+SOURCE			cimapbodystructurebuilder.cpp 
+SOURCE			cimapatom.cpp cimapatomparser.cpp cimapatomwalker.cpp
+SOURCE			cimapstore.cpp cimapcopy.cpp cimapidle.cpp cimapservereventwait.cpp
+SOURCE			tmessageflaginfo.cpp cimapfetchflags.cpp  cimapfetchbody.cpp
+SOURCE			cimapheaderfields.cpp cimapheaderfieldsparser.cpp
+SOURCE			cimaprfc822headerfields.cpp cimaprfc822headerfieldsparser.cpp
+SOURCE			cimapmimeheaderfields.cpp cimapmimeheaderfieldsparser.cpp
+SOURCE			cimapfetchbodystructurebase.cpp
+SOURCE			cimapfetchsinglebodystructure.cpp cimapfetchmultibodystructures.cpp
+
+#if (defined SYMBIAN_EMAIL_CAPABILITY_SUPPORT)
+SOURCE			cimapauthhelpers.cpp 
+#endif
+  
+#if (defined SYMBIAN_EMAIL_CAPABILITY_SUPPORT)
+			DEFFILE		v2_imapsession.DEF
+#else
+			DEFFILE		imapsession.DEF
+#endif
+
+USERINCLUDE		../inc ../../imaptransporthandler/inc ../../../pop3andsmtpmtm/servermtmutils/inc
+USERINCLUDE		../../imapsyncmanager/inc	../../imapsettings/inc
+USERINCLUDE		../../imapmailstore/inc		../../imaputils/inc
+USERINCLUDE     ../../../pop3andsmtpmtm/clientmtms/inc
+
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+
+LIBRARY			euser.lib
+LIBRARY			msgs.lib imcm.lib 
+LIBRARY			transporthandler.lib
+LIBRARY			charconv.lib imut.lib
+LIBRARY			imaputils.lib
+LIBRARY			imapsettings.lib
+LIBRARY			imapmailstore.lib
+LIBRARY			esock.lib hash.lib
+
+SMPSAFE

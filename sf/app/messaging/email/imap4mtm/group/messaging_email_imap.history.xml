@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<relnotes name="IMAP4 MTM">
+  <purpose>
+    Message Type Module (MTM) plugin to Messaging Framework supporting send/receive/edit of IMAP4 email messages.
+  </purpose>
+ 
+  <defect number="DEF144650" title="Gmail freezes when cancelling connection " revision="080">
+    added CMsgActive::DoCancel() in CImapUpsResponseWaiter::DoCancel() 
+  </defect>
+  
+  <defect number="DEF144494" title="when finish the mailbox configure, connet manually, after sync commpleted, Unable to perform operations pops up " revision="079">
+    Moved MarkOnOrOfflineL() API down
+  </defect>
+  
+  <defect number="PDEF143414" title="TRUE - IMAP4 not fully supporting standard email " revision="078">
+    Parsing the server response without [ ].
+  </defect>
+
+ <defect number="DEF142209" title="[System Build] components go influenced by sytem marco in MSF00202 tb101sf" revision="077">
+    Included missing header file.
+  </defect>
+
+  <deliverystep number="1462" name="Splitting mixed header files for Messaging" osproject="SymTB92" revision="076">
+   <preq number="2510" title=" Splitting mixed header files for Messaging">
+    Mixed header files will now contain only published All or published Partner or internal
+   </preq>
+    <milestone project="GT0465" number="3.5"/>
+  </deliverystep>
+
+  <defect number="PDEF138350" title="imapsession TryFindLineL USER 21 " revision="075">
+    Checking for the out of boundary condition.
+  </defect>
+
+  <defect number="DEF138022" title="[StrayScanner]CImapOfflineControl::DoLocalOpL stray events " revision="074">
+    resolved stray event posibility for CImapOfflineControl::DoLocalOpL. 
+  </defect>
+
+  <defect number="DEF137733" title="Coverity - SymTB9.2 M04900 - Messaging " revision="073">
+    resolved coverity issue. 
+  </defect>
+
+  <defect number="DEF137837" title="MUP doest not work as expected with Imap when ENever or ESessionNo is selected" revision="072">
+    ENever and ESessionNo is now handled in IMAP4 server mtm. 
+  </defect>
+
+  <defect number="PDEF135874" title="Unread mail changed to read after sync" revision="071">
+    Added API for syncing the flag Read/Unread status. 
+  </defect>
+
+   <defect number="DEF135128" title="Add/Remove MMC card while downloading a bulk message" revision="070">
+     Handled error condition when store is not available.
+   </defect>
+   
+   <defect number="PDEF135344" title="Email: IMAP : RpointerArray used after doing ResetAndDestroy" revision="069">
+     Added else condition
+   </defect>
+
+   <defect number="DEF133554" title="[Coverity]-REVERSE_INULL -messaging/email/imap  " revision="068">
+     Pointer was deferenced without checking for NULL. Added check for NULL.
+   </defect>
+
+<defect number="DEF131930" title=" ICC Codenomicon: Panic Imapserver 77 while executing codenomicon testcases" revision="067">
+   Check TRequeststatus before adding session report to queue.  
+ </defect>
+
+ <defect number="DEF131927" title=" ICC Codenomicon: Panic user 21 while executing codenomicon testcases " revision="066">
+   	when we recieve data from codenomicon server we are checking length of unparsed data 	  
+ </defect>
+
+  <defect number="DEF131926" title=" ICC Codenomicon: Panic user 0 while executing codenomicon testcases " revision="065">
+	we are checking ibodystructure,return  if it is already set  
+  </defect>
+
+ <defect number="PDEF132916" title="HTML message part download not working properly" revision="064">
+	Updated the CImapCompoundBase::CheckSelectionL function with KUidMsvEmailHtmlEntry KUidMsvEmailExternalBodyEntry and KUidMsvEmailRtfEntry
+  </defect>
+
+  <defect number="PDEF132593" title="IMAP mailbox not showing all messages" revision="063">
+	Updated the parser function
+  </defect>
+
+ <deliverystep number="1397" name="To prevent sending username and password in readable or easily de-cryptable form during authentication" osproject="Emin" revision="062">
+   <preq number="1119" title=" Secure IMAP4 and POP3 Authentication using CRAM-MD5 as specified in RFC 2195">
+    To prevent sending username and password in readable or easily de-cryptable form during authentication
+   </preq>
+    <milestone project="GT0478" number="3.2"/>
+  </deliverystep>
+  
+  <deliverystep number="1394" name="To improve performance, processing power and memory usage while downloading body of the message" osproject="Emin" revision="061">
+   <preq number="758" title="IMAP4 Binary Content Extension">
+    To improve performance, processing power and memory usage while downloading body of the message
+   </preq>
+    <milestone project="GT0478" number="3.1"/>
+  </deliverystep>
+ 
+  <defect number="DEF130808" title="[Coverity]-SYMBIAN.CLEANUP_STACK -generic/messaging " revision="060">
+    The push and pop of array were moved out of the if condition so that this operation happens anyway
+  </defect>
+
+ <defect number="PDEF130162" title="IMAP problem in S60 3rd ed. fp2 devices" revision="059">
+    Added condition to check the mime present rather than checking its length with the defined literal length
+  </defect>
+
+ <defect number="DEF127083" title="Receiving Email over secure connection returns KErrEof " revision="058">
+    Added a condition to check the error code 
+  </defect>
+
+ <defect number="DEF126669 " title=" ICC Codenomicon: User panic while executing testcase " revision="057">
+    Initialised folder id
+  </defect>
+
+ <defect number="DEF125919 " title=" Coverity messaging " revision="056">
+    Initialised folder id
+  </defect> 
+
+  <defect number="DEF125560" title=" t_unit_imapsession test case failure." revision="055">
+     Updated with port 143
+   </defect>
+
+ <defect number="DEF125600" title=" t_unit_imapservermtm test case fails" revision="054">
+    MOdified test code and test data
+  </defect>
+
+  <defect number="PDEF124476" title="leaked handles in msvserver" revision="053">
+    Closed RThread handle to avoid leak
+  </defect>
+
+  <defect number=" DEF125424 " title="Possible Memory leak in IMAP " revision="052">
+   Not creating a new iEntrySelection since it can be directly assigned value of aEntrySelection.
+  </defect>
+
+  <defect number=" PDEF123699 " title="Characters are missing when receive a forwarded plain text email with " revision="051">
+    The fix is  a workaround to send a fetchsize of 20k irrespective of mail body size.
+  </defect>
+
+  <defect number="PDEF119705" title="Extra SELECT INBOX messages sent when opening email" revision="050">
+    Avoiding calling Select Inbox, If its already selected the Inbox.
+  </defect>  
+  
+  <defect number=" DEF122100 " title="No destination in ups request CPromptRequest, when retrieveing mails via Imap " revision="049">
+    LoadSettings is called before destination is passed to UPS server.
+  </defect>
+
+   <defect number="PDEF121906" title="IMAP log file should take server port no as its filename" revision="048">
+    Instead of using the default name, we append the IMAP server port no to the logfile name.
+   </defect>
+
+  <defect number="PDEF121527" title="Program closed when save email setting." revision="047">
+   Checking iServiceId = 0,Which indicates connection is already disconnected.
+  </defect>
+
+  <defect number="PDEF120949" title="Email IMAP emails downloaded with imap idle while outside messaging is Locked" revision="046">
+  Set the current id to null so that we aren't locking any folders
+  </defect>
+
+  <defect number="PDEF120946" title="messaging_email_imap component is not filename policy compliant" revision="045">
+  Changed the file name as per the policy
+  </defect>
+
+  <defect number="PDEF120351" title="Messaging: Messaging crash when receiving plain text message" revision="044">
+     assert debugs commented in cimapsyncmanager.cpp
+  </defect>
+
+  <defect number="PDEF119705" title="Extra SELECT INBOX messages sent when opening email" revision="043">
+     If the INBOX folder is selected while doing get and send, then in Idle state it need not to send SELECT INBOX command to fetch the body of mails. 
+  </defect>
+
+  <defect number="PDEF118849" title="Dubious use of TDesC8::Alloc() in IMAP mtm" revision="042">
+    Initialized the buffer (iBuf=NULL) and replaced Alloc with AllocL
+  </defect>
+
+  <defect number="PDEF118461" title="Yahoo!Shopping/Auction mail via e-mail, Japanese character become jargon." revision="041">
+    System Default charset is used if email header does not have the charset value
+  </defect>
+
+  <defect number="PDEF118553" title="st-messaging-imap fails with UNKNOWN Code = -15" revision="040">
+  After deleting the iImConnect in CImapSessionManager::CloseNetworkConnection() assign this with NULL.
+  </defect>
+
+  <defect number="PDEF116651" title="Email can not connect again after delete the connection from Connection manager" revision="039">
+   Added a new API in session manager that closes the current network connection and the socket server. The call tio this API happens from DisconnectAll in CImapProtocolController after having disconnected all the sessions for the socket. 
+  </defect>
+
+  <defect number="PDEF116346" title="Panic creating remote folders" revision="038">
+   New default argument added for GetFolder api which allows to subscribe to the list occordingly.
+  </defect>
+
+  <defect number="PDEF116345" title="431 Wrong icon after local delete and get and send in IMAP account" revision="037">
+   Changed  flags in sync with the UIQ flags for new use case.
+  </defect>
+
+  <defect number="PDEF115994" title="Email IMAP:Low priority emails and invitations not received, if received wrong" revision="036">
+    After commiting the entries for the mail, we reset the value of iIsICalendar and iIsVCalendar to false.
+  </defect>
+
+  <defect number="PDEF115925" title="Added receipt request for sent email is ignored and never sent for IMAP accounts" revision="035">
+    Added a call to the function iServerEntry.ChangeEntry(entry), so that it updates the entry with receipt request.
+  </defect>
+
+  <defect number="PDEF115643" title="Panic IMAPServer:7011 when closing connection while receiving emails " revision="034">
+    Made changes to cancel the CImapSession properly.
+  </defect>
+
+  <defect number="PDEF112853" title="Imap does not download the body of messages" revision="033">
+    When server responses with no body length
+  </defect>
+
+  <deliverystep number="602" name="Submit PREQ1307 to MCL" osproject="Oghma" revision="032">
+    <preq number="1307" title="Non-Seamless Network Bearer Mobility for Messaging">
+    Non-Seamless Network Bearer Mobility for Messaging
+    </preq>
+    <milestone project="GT0342" number="3.2.1"/>
+  </deliverystep>
+
+  <deliverystep number="601" name="Implemented user prompting while sending/recieving the messages" osproject="Oghma" revision="031">
+    <preq number="1678" title="Messaging User Prompting">
+    Messaging User Prompting
+  </preq>
+    <milestone project="GT0342" number="3.4"/>
+  </deliverystep>
+
+  <defect number="DEF108055" title="preq1307: KIMAP4MTMFolderFullSync syncs headers for Inbox when applied only to.." revision="030">
+    Only sync inbox when IMAP IDLE enabled in IMAP settings
+  </defect>
+
+  <defect number="DEF107867" title="IMAP: Move within service does not remove emails from source folder" revision="029">
+    The State machine method is updated to delete the local copy of messages that have been expunged on the remote server.
+  </defect>
+
+  <defect number="PDEF106937" title="MsvServer crashes due to panic and unhandled exception with automatic retrieval" revision="028">
+    Fix fetching progress at the start of an IMAP folder sync operation
+  </defect>
+
+  <defect number="PDEF105688" title="Email (3SK): icon.statusbar.temp.message.email is still displayed if email..." revision="027">
+    Hide emails in remote folders during offline move operations
+  </defect>
+
+  <defect number="PDEF106701" title="The e-mail should be correctly retrieved." revision="026">
+    Fix storage of rtf text attachments downloaded from email servers
+  </defect>
+
+  <defect number="PDEF105314" title="Synchronising folders between phone and server is very slow" revision="025">
+    Improve performance when synchronising folders on an IMAP server
+  </defect>
+
+  <deliverystep number="603" name="Only Download IMAP4 Personal Folders when Requested" osproject="Oghma" revision="024">
+    <preq number="1120" title="Synchronising the IMAP4 Folder Tree">
+    Synchronising the IMAP4 Folder Tree
+  </preq>
+    <milestone project="GT0342" number="3.2.2"/>
+  </deliverystep>
+
+  <defect number="DEF103626" title="IMAP rewrite rereview comments: cimapfetchbody.cpp (part 3)" revision="023">
+    Cleanup of IMAP fetch body code
+  </defect>
+
+  <defect number="PDEF105426" title="Out of memory error when downloading many IMAP folders" revision="022">
+    CImapFolder uses the character converter classes from the CImapUtils. Header converter moved to CImapUtils.
+  </defect>
+
+  <defect number="DEF103621" title="IMAP rewrite rereview comments: cimapfetchbody.cpp (part 2)" revision="021">
+    Corrected TagID usage when pipelining fetch commands
+  </defect>
+
+  <defect number="DEF103632" title="IMAP rewrite rereview comments: cimapfolder.cpp (part 2)" revision="020">
+    Progress Fields iMsgs, iMsgToDo, iHedersFetched, etc updated as per old IMAP
+  </defect>
+
+  <defect number="DEF103952" title="IMAP rewrite rereview comments: cimapsyncmanager.cpp (part 3)" revision="019">
+    Full folder path now set in the constructor of cimapfolder, formerly cimapsyncmanager
+  </defect>
+
+  <defect number="DEF103951" title="IMAP rewrite rereview comments: cimapsyncmanager.cpp (part 2)" revision="018">
+    Changes are made as per the review comments provided in DEF103951
+  </defect>
+
+  <defect number="DEF103950" title="IMAP rewrite rereview comments: cimapsyncmanager.cpp (part 1)" revision="017">
+    Changes are made as per the re-review comments provided in DEF103950.
+  </defect>
+
+  <deliverystep number="500" name="Messaging file name changes to support GNU compiler for Linux" osproject="Oghma" revision="016">
+    <preq number="1182" title="GNU Make-based build system">
+    GNU Make-based build system
+  </preq>
+    <milestone project="GT0342" number="3.3"/>
+  </deliverystep>
+
+  <deliverystep number="501" name="RAM improvement" osproject="Oghma" revision="015">
+    <preq number="1432" title="Improve Messaging Subsystem RAM Usage">
+    Improve messaging subsystem RAM usage.
+  </preq>
+    <milestone project="GT0342" number="3.1"/>
+  </deliverystep>
+
+  <defect number="DEF104999" title="st_messaging_IMAP fails with UNKNOWN Code = -15" revision="014">
+    Fixed problem where IMAP idle controller was deleted while it was handling an error.
+  </defect>
+
+  <defect number="PDEF104435" title="New IMAP - UI deadlock during Populate cancellation" revision="013">
+    Deadlock during Populate cancellation is removed.
+  </defect>
+
+  <defect number="DEF103630" title="IMAP rewrite rereview comments: cimapfolder.cpp (part 1)" revision="012">
+    Changes made based on review comments 1,5,6,10,15,24 on imap/imapsyncmanager/src/cimapfolder.cpp
+  </defect>
+
+  <defect number="PDEF102763" title="New IMAP: Cancelling background sync not working correctly" revision="011">
+    Flag value is updated correctly, to prevent unwanted disconnection. The idle controller object is also deleted appropriately.
+  </defect>
+
+  <defect number="DEF102340" title="IMAP rewrite rereview comments: cimapfetchbody.cpp (part 1)" revision="010">
+    Review comments implemented.
+  </defect>
+
+  <defect number="DEF100622" title="IMAP rewrite rereview comments: cimapcompoundsyncservice.cpp" revision="009">
+    IMAP rewrite rereview comments executed for cimapcompoundsyncservice.
+  </defect>
+
+  <defect number="PDEF100746" title="New IMAP: IMAP settings FolderPath not correctly supported" revision="008">
+    Support added to IMAP settings for FolderPath information.
+  </defect>
+
+  <cr number="0971" title="Email MTM client utilities to support third-party MTMs" revision="007">
+    Add third party MTM support to email client utilities by defining a standard system progress structure and methods to retrieve it.
+  </cr>
+
+  <defect number="DEF100618" title="IMAP rewrite rereview comments: cimapappend.cpp" revision="006">
+    Fixed memory leak that occurs when code leaves.
+  </defect>
+
+  <defect number="DEF100624" title="IMAP rewrite rereview comments: cimapfetchbodystructurebase.cpp" revision="005">
+    Fixed memory leak that occurs when code leaves.
+  </defect>
+
+  <defect number="INC096164" title="MsvServer crashes when cancelling connecting (SSL/TLS) (New IMAP Stack)" revision="004">
+    There was a stray signal, while cancelling connecting to SSL/TLS. Now it's handled in SessionManager.
+  </defect>
+
+  <defect number="INC099717" title="Mail editor jams when user tries to forward email with another email attached" revision="003">
+    Errors from CopyMessage() were not handled properly, sending the imap protocol into an infinite loop. This is fixed by leaving if an error occurs. Moving an attached email would fail because the email was not recognised as a child of the relevant folder. This was fixed by making the IsAChild() function recursive - checking parents of parents for ownership
+  </defect>
+
+  <defect number="INC099394" title="New Imap stack reuses ECommandInvalidParseState panic code" revision="002">
+    New Imap stack reuses ECommandInvalidParseState panic code
+  </defect>
+
+  <defect number="INC098962" title="Can not get connection to mailbox after cancelled Access point selection" revision="001">
+    Can not get connection to mailbox after cancelled Access point selection
+  </defect>
+</relnotes>

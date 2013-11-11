@@ -1,0 +1,79 @@
+/*
+* Copyright (c) 2005-2006 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Header file for Device Manager UI Menu and Other enumerations
+*
+*/
+
+
+#ifndef NSMLDMSYNCUI_HRH
+#define NSMLDMSYNCUI_HRH
+
+#include "NSmlDMUIDefines.h"
+enum TNSmlMenuCommands
+    {
+    ENSmlMenuDummy = 0x6000,    // Large enough to prevent confusion
+    ENSmlMenuCmdNewProfile,     // with avkon and eikon enumerations.
+    ENSmlMenuCmdOpenLog,
+    ENSmlMenuCmdOpenSettings,
+    ENSmlMenuCmdEraseProfile,
+    ENSmlMenuCmdStartSync,
+    ENSmlMenuCmdCancelSync,
+    ENSmlMenuCmdMainHelp,
+    ENSmlMenuCmdFotaCheck,
+    ENSmlMenuCmdFotaInstall,
+    ENSmlMenuCmdFotaContinue,
+    ENSmlMenuCmdFotaSettings,
+    ENSmlMenuCmdFotaSettChange,
+    ENSmlMenuCmdFotaServers
+   
+    };
+
+enum TNSmlTabViewId
+    {
+    ENSmlFotaViewTab = 1,
+    ENSmlProfilesViewTab
+    };
+
+enum TNSmlNotesQueriesAndLists
+    {
+    ENSmlProgressNote = 1,
+    ENSmlWaitNote,
+    ENSmlSettingList = 100,
+    ENSmlFotaSettList,
+    ENSmlMainViewList
+    };
+
+enum TNSmlSetting
+    {
+    ENSmlSettChange = 1,
+    ENSmlSettHelp,
+    ENSmlSettExit
+    };
+
+enum TNSmlSyncButtons
+    {
+    ENSmlSyncCancel = 1,
+    ENSmlSyncSelect
+    };
+
+enum TNSmlFotaPkgState
+    {
+    EGenericSession,
+    EFotaPkgFound,
+    EFotaPkgNotFound
+    };
+    
+#endif      //  NSMLDMSYNCUI_HRH
+
+// End of file

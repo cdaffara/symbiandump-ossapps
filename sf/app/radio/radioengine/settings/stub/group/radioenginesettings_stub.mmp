@@ -1,0 +1,71 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+
+#include "../../../group/buildflags.hrh"
+
+#include <platform_paths.hrh>
+
+#include <data_caging_paths.hrh>
+
+TARGET                  fmradioenginesettings_stub.dll
+TARGETTYPE              DLL
+UID                     0x1000008D 0x01000012
+VERSION                 10.0
+
+CAPABILITY              CAP_GENERAL_DLL
+VENDORID                VID_DEFAULT
+PAGED
+SMPSAFE
+LANG SC
+
+SOURCEPATH              ../../data
+START RESOURCE          fmradioenginesettings.rss
+HEADER
+TARGETPATH              RESOURCE_FILES_DIR
+END // RESOURCE
+
+USERINCLUDE             ../../api
+USERINCLUDE             ../../inc
+USERINCLUDE             ../../../utils/api
+USERINCLUDE             ../../../utils/inc
+USERINCLUDE             /sf/mw/mmmw/mmserv/radioutility/radio_utility/stub/src
+USERINCLUDE             /sf/mw/mmmw/mmserv/radioutility/radio_utility/src
+USERINCLUDE             /sf/mw/mmmw/mmserv/radioutility/inc
+USERINCLUDE             /sf/mw/mmmw/mmserv/inc
+USERINCLUDE             /sf/mw/mmmw/inc
+
+APP_LAYER_SYSTEMINCLUDE
+
+SOURCEPATH              ../../src
+SOURCE                  cradioregion.cpp
+SOURCE                  cradiosettings.cpp
+SOURCE                  cradiosettingsimp.cpp
+SOURCE                  cradioenginesettings.cpp
+SOURCE                  cradioapplicationsettings.cpp
+
+LIBRARY                 fmradioengineutils_stub.lib
+LIBRARY                 bafl.lib
+LIBRARY                 commonengine.lib
+LIBRARY                 cone.lib
+LIBRARY                 efsrv.lib
+LIBRARY                 estor.lib
+LIBRARY                 euser.lib
+LIBRARY                 flogger.lib 
+LIBRARY                 RadioSession_Stub.lib // SRadioStubManager functions
+LIBRARY                 centralrepository.lib
+MACRO STUB_CONSTELLATION

@@ -1,0 +1,26 @@
+EXPORTS
+	?closeInstance@IRQStatisticsReporter@@QAEXXZ @ 1  NONAME ; void IRQStatisticsReporter::closeInstance(void)
+	?markSessionStart@IRQStatisticsReporter@@QAEXXZ @ 2  NONAME ; void IRQStatisticsReporter::markSessionStart(void)
+	?suspendSession@IRQStatisticsReporter@@QAEXXZ @ 3  NONAME ; void IRQStatisticsReporter::suspendSession(void)
+	?mMutex@IRQStatisticsReporter@@0VQMutex@@A @ 4  NONAME ; class QMutex IRQStatisticsReporter::mMutex
+	?trUtf8@IRQStatisticsReporter@@SA?AVQString@@PBD0H@Z @ 5  NONAME ; class QString IRQStatisticsReporter::trUtf8(char const *, char const *, int)
+	?sessionStarted@IRQStatisticsReporter@@QAEXHW4IRConnectedFrom@1@@Z @ 6  NONAME ; void IRQStatisticsReporter::sessionStarted(int, enum IRQStatisticsReporter::IRConnectedFrom)
+	?restartSession@IRQStatisticsReporter@@QAEXXZ @ 7  NONAME ; void IRQStatisticsReporter::restartSession(void)
+	?logNmsEvent@IRQStatisticsReporter@@QAEXW4IRNmsType@1@H@Z @ 8  NONAME ; void IRQStatisticsReporter::logNmsEvent(enum IRQStatisticsReporter::IRNmsType, int)
+	??1IRQStatisticsReporter@@EAE@XZ @ 9  NONAME ; IRQStatisticsReporter::~IRQStatisticsReporter(void)
+	?staticMetaObject@IRQStatisticsReporter@@2UQMetaObject@@B @ 10  NONAME ; struct QMetaObject const IRQStatisticsReporter::staticMetaObject
+	?logSongRecogEvent@IRQStatisticsReporter@@QAEXXZ @ 11  NONAME ; void IRQStatisticsReporter::logSongRecogEvent(void)
+	?qt_metacall@IRQStatisticsReporter@@UAEHW4Call@QMetaObject@@HPAPAX@Z @ 12  NONAME ; int IRQStatisticsReporter::qt_metacall(enum QMetaObject::Call, int, void * *)
+	??0IRQStatisticsReporter@@AAE@XZ @ 13  NONAME ; IRQStatisticsReporter::IRQStatisticsReporter(void)
+	?mInstance@IRQStatisticsReporter@@0PAV1@A @ 14  NONAME ; class IRQStatisticsReporter * IRQStatisticsReporter::mInstance
+	?sessionEnded@IRQStatisticsReporter@@QAEXW4IRTerminatedType@1@@Z @ 15  NONAME ; void IRQStatisticsReporter::sessionEnded(enum IRQStatisticsReporter::IRTerminatedType)
+	?mRef@IRQStatisticsReporter@@0HA @ 16  NONAME ; int IRQStatisticsReporter::mRef
+	?tr@IRQStatisticsReporter@@SA?AVQString@@PBD0@Z @ 17  NONAME ; class QString IRQStatisticsReporter::tr(char const *, char const *)
+	??_EIRQStatisticsReporter@@UAE@I@Z @ 18  NONAME ; IRQStatisticsReporter::~IRQStatisticsReporter(unsigned int)
+	?getStaticMetaObject@IRQStatisticsReporter@@SAABUQMetaObject@@XZ @ 19  NONAME ; struct QMetaObject const & IRQStatisticsReporter::getStaticMetaObject(void)
+	?tr@IRQStatisticsReporter@@SA?AVQString@@PBD0H@Z @ 20  NONAME ; class QString IRQStatisticsReporter::tr(char const *, char const *, int)
+	?qt_metacast@IRQStatisticsReporter@@UAEPAXPBD@Z @ 21  NONAME ; void * IRQStatisticsReporter::qt_metacast(char const *)
+	?logServerResult@IRQStatisticsReporter@@QAEXABVQString@@W4IRServerResult@1@@Z @ 22  NONAME ; void IRQStatisticsReporter::logServerResult(class QString const &, enum IRQStatisticsReporter::IRServerResult)
+	?trUtf8@IRQStatisticsReporter@@SA?AVQString@@PBD0@Z @ 23  NONAME ; class QString IRQStatisticsReporter::trUtf8(char const *, char const *)
+	?openInstance@IRQStatisticsReporter@@SAPAV1@XZ @ 24  NONAME ; class IRQStatisticsReporter * IRQStatisticsReporter::openInstance(void)
+	?metaObject@IRQStatisticsReporter@@UBEPBUQMetaObject@@XZ @ 25  NONAME ; struct QMetaObject const * IRQStatisticsReporter::metaObject(void) const

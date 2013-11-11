@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="0.9">
+    <object name="alarmsAction" type="HbAction">
+        <icon iconName="qtg_mono_alarm" name="icon"/>
+    </object>
+    <object name="worldClockAction" type="HbAction">
+        <icon iconName="qtg_mono_world_clock" name="icon"/>
+    </object>
+    <object name="addCityAction" type="HbAction">
+        <icon iconName="qtg_mono_addcity" name="icon"/>
+    </object>
+    <widget name="worldClockView" type="HbView">
+        <widget name="worldClockViewWidget" role="HbView:widget" type="HbWidget">
+            <widget name="subtitleGroupBox" type="HbGroupBox">
+                <real name="z" value="1"/>
+                <bool name="collapsable" value="FALSE"/>
+                <string locid="txt_clock_subhead_world_clock" name="heading" value="World clock"/>
+            </widget>
+            <widget name="worldClockCityListView" type="HbListView">
+                <widget name="listItemPrototype" role="HbListView:prototype" type="HbListViewItem">
+                    <string name="state" value="normal"/>
+                </widget>
+                <real name="z" value="2"/>
+                <sizehint height="47.7612un" type="PREFERRED" width="35.8209un"/>
+            </widget>
+            <widget name="homeCityWidget" type="HbWidget">
+                <real name="z" value="3"/>
+                <sizehint height="47.7612un" type="PREFERRED" width="35.8209un"/>
+            </widget>
+            <layout type="anchor">
+                <anchoritem dst="worldClockCityListView" dstEdge="LEFT" spacing="4.47761un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="worldClockCityListView" dstEdge="BOTTOM" spacing="-11.35075un" src="" srcEdge="BOTTOM"/>
+                <anchoritem dst="homeCityWidget" dstEdge="RIGHT" spacing="0.74627un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="homeCityWidget" dstEdge="BOTTOM" spacing="-5.67911un" src="" srcEdge="BOTTOM"/>
+                <anchoritem dst="subtitleGroupBox" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="subtitleGroupBox" dstEdge="TOP" spacing="0un" src="" srcEdge="TOP"/>
+                <anchoritem dst="subtitleGroupBox" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+            </layout>
+        </widget>
+        <widget name="viewToolbar" role="HbView:toolBar" type="HbToolBar">
+            <enums name="orientation" value="Horizontal"/>
+            <ref object="alarmsAction" role="HbToolBar:addAction"/>
+            <ref object="worldClockAction" role="HbToolBar:addAction"/>
+            <ref object="addCityAction" role="HbToolBar:addAction"/>
+        </widget>
+        <widget name="viewMenu" role="HbView:menu" type="HbMenu"/>
+        <string locid="txt_clock_main_view_title_clock" name="title" value="Clock"/>
+    </widget>
+    <section name="portrait-homecity">
+        <widget name="worldClockViewWidget" role="HbView:widget" type="HbWidget">
+            <layout type="anchor">
+                <anchoritem dst="subtitleGroupBox" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="subtitleGroupBox" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="subtitleGroupBox" dstEdge="TOP" spacing="0un" src="" srcEdge="TOP"/>
+                <anchoritem dst="worldClockCityListView" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="worldClockCityListView" dstEdge="TOP" spacing="0un" src="homeCityWidget" srcEdge="BOTTOM"/>
+                <anchoritem dst="worldClockCityListView" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="worldClockCityListView" dstEdge="BOTTOM" spacing="0un" src="" srcEdge="BOTTOM"/>
+                <anchoritem dst="homeCityWidget" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="homeCityWidget" dstEdge="TOP" spacing="0un" src="subtitleGroupBox" srcEdge="BOTTOM"/>
+                <anchoritem dst="homeCityWidget" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="homeCityWidget" dstEdge="BOTTOM" spacing="expr(var(hb-param-margin-gene-top) + var(hb-param-text-height-tiny) + var(hb-param-margin-gene-middle-vertical) +  var(hb-param-text-height-primary) + var(hb-param-margin-gene-bottom))" src="homeCityWidget" srcEdge="TOP"/>
+            </layout>
+        </widget>
+    </section>
+    <section name="portrait-nohomecity">
+        <widget name="worldClockViewWidget" role="HbView:widget" type="HbWidget">
+            <layout type="anchor">
+                <anchoritem dst="subtitleGroupBox" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="subtitleGroupBox" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="subtitleGroupBox" dstEdge="TOP" spacing="0un" src="" srcEdge="TOP"/>
+                <anchoritem dst="homeCityWidget" dstEdge="RIGHT" spacing="0.74627un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="homeCityWidget" dstEdge="BOTTOM" spacing="-5.67911un" src="" srcEdge="BOTTOM"/>
+                <anchoritem dst="worldClockCityListView" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="worldClockCityListView" dstEdge="TOP" spacing="0un" src="subtitleGroupBox" srcEdge="BOTTOM"/>
+                <anchoritem dst="worldClockCityListView" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="worldClockCityListView" dstEdge="BOTTOM" spacing="0un" src="" srcEdge="BOTTOM"/>
+            </layout>
+        </widget>
+    </section>
+    <section name="landscape-nohomecity">
+        <widget name="worldClockViewWidget" role="HbView:widget" type="HbWidget">
+            <layout type="anchor">
+                <anchoritem dst="subtitleGroupBox" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="subtitleGroupBox" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="subtitleGroupBox" dstEdge="TOP" spacing="0un" src="" srcEdge="TOP"/>
+                <anchoritem dst="homeCityWidget" dstEdge="RIGHT" spacing="0.74627un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="homeCityWidget" dstEdge="BOTTOM" spacing="-5.67911un" src="" srcEdge="BOTTOM"/>
+                <anchoritem dst="worldClockCityListView" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="worldClockCityListView" dstEdge="TOP" spacing="0un" src="subtitleGroupBox" srcEdge="BOTTOM"/>
+                <anchoritem dst="worldClockCityListView" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="worldClockCityListView" dstEdge="BOTTOM" spacing="0un" src="" srcEdge="BOTTOM"/>
+            </layout>
+        </widget>
+    </section>
+    <section name="landscape-homecity">
+        <widget name="worldClockViewWidget" role="HbView:widget" type="HbWidget">
+            <layout type="anchor">
+                <anchoritem dst="subtitleGroupBox" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="subtitleGroupBox" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="subtitleGroupBox" dstEdge="TOP" spacing="0un" src="" srcEdge="TOP"/>
+                <anchoritem dst="worldClockCityListView" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="worldClockCityListView" dstEdge="TOP" spacing="0un" src="homeCityWidget" srcEdge="BOTTOM"/>
+                <anchoritem dst="worldClockCityListView" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="worldClockCityListView" dstEdge="BOTTOM" spacing="0un" src="" srcEdge="BOTTOM"/>
+                <anchoritem dst="homeCityWidget" dstEdge="LEFT" spacing="0un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="homeCityWidget" dstEdge="TOP" spacing="0un" src="subtitleGroupBox" srcEdge="BOTTOM"/>
+                <anchoritem dst="homeCityWidget" dstEdge="RIGHT" spacing="0un" src="" srcEdge="RIGHT"/>
+                <anchoritem dst="homeCityWidget" dstEdge="BOTTOM" spacing="12un" src="homeCityWidget" srcEdge="TOP"/>
+            </layout>
+        </widget>
+    </section>
+    <metadata activeUIState="Common ui state" display="NHD portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+        <uistate name="portrait" sections="#common portrait-nohomecity"/>
+        <uistate name="landscape" sections="#common landscape-nohomecity"/>
+        <uistate name="portrait-homecity" sections="#common portrait-homecity"/>
+        <uistate name="landscape-homecity" sections="#common landscape-homecity"/>
+        <dummydata objectName="worldClockCityListView" section="#common" value="app_list_template5"/>
+    </metadata>
+</hbdocument>

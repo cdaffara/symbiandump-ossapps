@@ -1,0 +1,39 @@
+/* css for download dialogs */
+
+#downloadDialogId {
+	height: 50px;
+}
+
+.downloadDialogBox {
+    background-color: #253148;
+    opacity: 0.9;
+
+    height: 50px;
+
+    -webkit-user-select: none;
+
+    padding: 15px;
+
+    border-radius: 15px;
+
+    border-style: solid;
+    border-width: 4px;
+    border-color: gray;
+}
+
+.downloadDialogIcon {
+    vertical-align: middle;
+
+    height: 24px;
+    width:  24px;
+}
+
+.downloadDialogText {
+    vertical-align: middle;
+
+    color: #ffffff;
+
+    font-size: 16px;
+    font-family: Verdana;
+    font-weight: bold;
+}

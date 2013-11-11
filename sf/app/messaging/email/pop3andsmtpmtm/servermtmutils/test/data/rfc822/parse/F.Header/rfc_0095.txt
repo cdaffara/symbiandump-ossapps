@@ -1,0 +1,88 @@
+Return-Path: <keval.pindoria@internet-test.plc.psion.com>
+Received: from lon-kevalp ([10.151.12.95]) by internet-test.plc.psion.com
+          (Netscape Messaging Server 3.56)  with SMTP id 370
+          for <keval.pindoria@internet-test.plc.psion.com>;
+          Wed, 13 Oct 1999 12:16:30 +0100
+Message-ID: <026501bf156c$e5666ed0$5f0c970a@lon-kevalp.plc.psion.com>
+From: "Keval Pindoria" <keval.pindoria@internet-test.plc.psion.com>
+To: "Keval Pindoria" <keval.pindoria@internet-test.plc.psion.com>
+Subject: Testing filename parameter encoding/decoding
+Date: Wed, 13 Oct 1999 12:20:03 +0100
+MIME-Version: 1.0
+Content-Type: multipart/mixed;
+	boundary="bbbB"
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook Express 4.72.2106.4
+X-MimeOLE: Produced By Microsoft MimeOLE V4.72.2106.4
+
+This is a multi-part message in MIME format.
+
+--bbbB	
+Content-Type: application/octet-stream;
+	name="=?iso-8859-1?q?=c1=c2=c3.doc?="
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment;
+	filename="=?iso-8859-1?q?=c1=c2=c3=c4.doc?="
+
+0M8R4KGxGuEAAAAAAAAAAAAAAAAAAAAAPgADAP7/CQAGAAAAAAAAAAAAAAABAAAACwAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
+
+--bbbB
+Content-Type: application/octet-stream;
+	name="Word file.doc"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment;
+	filename==?ISO-8859-1?B?wcLD?= .doc
+
+0M8R4KGxGuEAAAAAAAAAAAAAAAAAAAAAPgADAP7/CQAGAAAAAAAAAAAAAAABAAAACwAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
+
+--bbbB
+Content-Type: application/octet-stream;
+        name="=?iso-8859-1?B?w8TFxi5kYXQ=?="
+Content-Disposition: attachment;
+        filename="=?iso-8859-1?B?w8TFxi5kYXQ=?="
+Content-Transfer-Encoding: base64
+
+Q2hhbmdlIDExODQ1IG9uIDE5OTkvMTIvMjAgYnkgSWJyYWhpbVJAbG9uLWVuZ2J1aWxkMDFfbWFp
+bmxpbmUgJ01vdmVkIEhMUE1PREVMIGZyb20gQ3J5c3RhbC50eHQnDQpDaGFuZ2UgMTE4MzMgb24g
+MTk5OS8xMi8yMCBieSB3aWxsckBsb24td2lsbHJfbWFpbmxpbmUgJ1JldmlzZSBidWlsZHJvbS5j
+bWQgdG8gY2FsbCBhIG4nDQpDaGFuZ2UgMTE4MjQgb24gMTk5OS8xMi8yMCBieSBWZWlra29QQGxv
+bi12ZWlra29wICdNb3ZlZCBobHBtb2RlbCBmcm9tIENyeXN0YWwgYnJhJw0KQ2hhbmdlIDExNzk0
+IG9uIDE5OTkvMTIvMjAgYnkgTEFORVJAbG9uLWxhbmVyX2Vwb2MgJ0FkZGVkIGEgbmV3IGZ1bmN0
+aW9uIENGYnNCaXRHYzonDQpDaGFuZ2UgMTE3NzEgb24gMTk5OS8xMi8yMCBieSBDaHJpc0RAbG9u
+LWNocmlzZC1hZ25tb2RlbCAnRml4ZWQgIk1lbW9yeSBsZWFrIGluIFJBZ2VuZGFTZScNCkNoYW5n
+ZSAxMTc2OCBvbiAxOTk5LzEyLzIwIGJ5IEdyYWhhbUFAbG9uLWdyYWhhbWEgJ0ZpeGVkIEVURVhU
+IGRlZmVjdCBFRE5DRFVHLTRFTk0nDQpDaGFuZ2UgMTE2NzAgb24gMTk5OS8xMi8xNyBieSBWQU1T
+SUtAbG9uLWJtZXRlc3QwMSAnQ2hhbmdlIDExNjM5IG9uIDE5OTkvMTIvMTcgYnkgVicNCkNoYW5n
+ZSAxMTY2OSBvbiAxOTk5LzEyLzE3IGJ5IEFuZHJld0Bsb24tYW5kcmV3X2phdmFwaG9uZSAnRml4
+ZWQgcHJvYmxlbXMgd2l0aCB0aGUgY29tbW9uICcNCkNoYW5nZSAxMTY0MiBvbiAxOTk5LzEyLzE3
+IGJ5IERvdWdGQExvbi1Eb3VnRl9XU0VSViAnR2VuZXJhbCByZWxlYXNlIHdpdGggYSBmZXcgYnVn
+ICcNCkNoYW5nZSAxMTYyOSBvbiAxOTk5LzEyLzE3IGJ5IEJpbGxCQGxvbi1iaWxsYm9uICctIEZp
+cnN0IFJlbGVhc2Ugb2YgSXJUcmFucCBDb2RlJw0K
+
+--bbbB
+Content-Type: application/octet-stream;
+        name="=?iso-8859-1?q?=07=08=09?="
+Content-Transfer-Encoding: base64
+
+Q2hhbmdlIDExODQ1IG9uIDE5OTkvMTIvMjAgYnkgSWJyYWhpbVJAbG9uLWVuZ2J1aWxkMDFfbWFp
+bmxpbmUgJ01vdmVkIEhMUE1PREVMIGZyb20gQ3J5c3RhbC50eHQnDQpDaGFuZ2UgMTE4MzMgb24g
+MTk5OS8xMi8yMCBieSB3aWxsckBsb24td2lsbHJfbWFpbmxpbmUgJ1JldmlzZSBidWlsZHJvbS5j
+bWQgdG8gY2FsbCBhIG4nDQpDaGFuZ2UgMTE4MjQgb24gMTk5OS8xMi8yMCBieSBWZWlra29QQGxv
+bi12ZWlra29wICdNb3ZlZCBobHBtb2RlbCBmcm9tIENyeXN0YWwgYnJhJw0KQ2hhbmdlIDExNzk0
+IG9uIDE5OTkvMTIvMjAgYnkgTEFORVJAbG9uLWxhbmVyX2Vwb2MgJ0FkZGVkIGEgbmV3IGZ1bmN0
+aW9uIENGYnNCaXRHYzonDQpDaGFuZ2UgMTE3NzEgb24gMTk5OS8xMi8yMCBieSBDaHJpc0RAbG9u
+LWNocmlzZC1hZ25tb2RlbCAnRml4ZWQgIk1lbW9yeSBsZWFrIGluIFJBZ2VuZGFTZScNCkNoYW5n
+ZSAxMTc2OCBvbiAxOTk5LzEyLzIwIGJ5IEdyYWhhbUFAbG9uLWdyYWhhbWEgJ0ZpeGVkIEVURVhU
+IGRlZmVjdCBFRE5DRFVHLTRFTk0nDQpDaGFuZ2UgMTE2NzAgb24gMTk5OS8xMi8xNyBieSBWQU1T
+SUtAbG9uLWJtZXRlc3QwMSAnQ2hhbmdlIDExNjM5IG9uIDE5OTkvMTIvMTcgYnkgVicNCkNoYW5n
+ZSAxMTY2OSBvbiAxOTk5LzEyLzE3IGJ5IEFuZHJld0Bsb24tYW5kcmV3X2phdmFwaG9uZSAnRml4
+ZWQgcHJvYmxlbXMgd2l0aCB0aGUgY29tbW9uICcNCkNoYW5nZSAxMTY0MiBvbiAxOTk5LzEyLzE3
+IGJ5IERvdWdGQExvbi1Eb3VnRl9XU0VSViAnR2VuZXJhbCByZWxlYXNlIHdpdGggYSBmZXcgYnVn
+ICcNCkNoYW5nZSAxMTYyOSBvbiAxOTk5LzEyLzE3IGJ5IEJpbGxCQGxvbi1iaWxsYm9uICctIEZp
+cnN0IFJlbGVhc2Ugb2YgSXJUcmFucCBDb2RlJw0K
+
+
+--bbbB--

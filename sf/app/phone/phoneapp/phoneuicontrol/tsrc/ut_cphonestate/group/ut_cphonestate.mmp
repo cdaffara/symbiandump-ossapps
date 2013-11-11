@@ -1,0 +1,135 @@
+/*
+* Copyright (c) 2005-2007 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*
+*/
+
+
+#include <platform_paths.hrh>
+#include <digia/eunit/eunitcaps.h>
+
+TARGET          ut_cphonestate.dll
+TARGETTYPE      dll
+UID             0x1000af5a 0x01710000
+
+CAPABILITY      EUNIT_CAPS
+VENDORID        VID_DEFAULT
+
+SOURCEPATH        ../src
+SOURCE          ut_cphonestate.cpp           // need to be first because of == operator
+
+// Sources required by the test suite
+SOURCEPATH      ../src
+SOURCE          ut_cphonestate_DllMain.cpp
+
+
+SOURCEPATH      ../../../../../internal/mocks/phoneengine/engineinfo
+SOURCE          mock_cpeengineinfoimpl.cpp
+ 
+SOURCEPATH      ../../../../internal/mocks/phoneuicontrol
+SOURCE          mock_cphonestateincall.cpp
+SOURCE          mock_cphonestatemachine.cpp
+SOURCE          mock_cphoneaccessorybthandler.cpp
+SOURCE          mock_phonenoteutil.cpp
+SOURCE          mock_phoneaudioutil.cpp
+ 
+SOURCEPATH      ../../../../../internal/mocks/phoneapp/phoneuicontrol
+SOURCE          mock_cphoneuicommandmanager.cpp
+SOURCE          mock_cphonenumberentrymanager.cpp
+
+SOURCEPATH      ../../../../internal/mocks/phoneuistates
+SOURCE          mock_cphonegsmincall.cpp
+SOURCE          mock_cphonestatemachinegsm.cpp
+ 
+SOURCEPATH      ../../../../internal/mocks/phoneuiutils
+SOURCE          mock_cphonelogger.cpp
+SOURCE          mock_cphonepubsubproxy.cpp
+SOURCE          mock_cphonecenrepproxy.cpp
+SOURCE          mock_cphonemainresourceresolver.cpp
+SOURCE          mock_cphonekeys.cpp
+SOURCE          mock_tphonecmdparamglobalnote.cpp
+SOURCE          mock_tphonecmdparamcallstatedata.cpp
+SOURCE          mock_tphonecmdparamnote.cpp
+SOURCE          mock_cphoneclearblacklist.cpp
+
+SOURCEPATH      ../../../../../internal/mocks/eikmenupane
+SOURCE          mock_eikmenup.cpp
+SOURCE          mock_eikmenub.cpp
+SOURCE          mock_coecntrl.cpp
+SOURCE          mock_eikbctrl.cpp
+SOURCE          mock_coemop.cpp
+SOURCE          mock_coeinput.cpp
+SOURCE          mock_gulbordr.cpp
+SOURCE          mock_akncontrol.cpp
+SOURCE          mock_eikcmobs.cpp
+SOURCE          mock_coemain.cpp
+SOURCE          mock_eikenv.cpp
+SOURCE          mock_eikvcurs.cpp
+
+SOURCEPATH      ../../../../internal/mocks/
+SOURCE          mock_featmgr.cpp
+SOURCE          mock_StringLoader.cpp
+SOURCE          mock_cphonebtaadisconnecthandler.cpp
+
+SOURCEPATH      ../../../../internal/mocks/phonemediatorcenter
+SOURCE          mock_cphonemediatorfactory.cpp
+SOURCE          mock_cphonemediatorsender.cpp
+SOURCE          mock_cphonereleasecommand.cpp
+SOURCE          mock_cphonecontinueemergencycallcommand.cpp
+ 
+// Code under test
+SOURCEPATH      ../../../src
+SOURCE          CPhoneState.cpp
+SOURCE          CPhoneStateHandle.cpp
+
+SOURCEPATH      ../../../../../phoneengine/engineinfo/src
+SOURCE          cpeengineinfo.cpp
+ 
+  
+USERINCLUDE     ../../../../../phoneengine/engineinfo/inc
+USERINCLUDE     ../inc
+USERINCLUDE     ../../../../internal/mocks/phoneengine
+USERINCLUDE     ../../../../phoneuiview/inc
+USERINCLUDE     ../../../../phoneuicontrol/inc
+USERINCLUDE     ../../../../phoneuistates/inc
+USERINCLUDE     ../../../../phonemediatorcenter/inc
+USERINCLUDE     ../../../../phoneuiutils/inc
+USERINCLUDE     ../../../../phoneui2/srcdata
+USERINCLUDE     ../../../../phoneuivoipextension/inc
+USERINCLUDE     ../../../../phoneuiqtviewadapter/inc
+
+APP_LAYER_SYSTEMINCLUDE // Application layer domain APIs
+SYSTEMINCLUDE   /epoc32/include/platform/mw/graphics/uigraphicsutils/
+SYSTEMINCLUDE   ../../../inc        // phoneuicontrol internal headers
+SYSTEMINCLUDE   ../../../../../inc    // phone internal headers
+SYSTEMINCLUDE   /epoc32/include/Digia/EUnit 
+
+LIBRARY         phoneuiutils.lib
+LIBRARY         gdi.lib          // TZoomFactor
+LIBRARY         ws32.lib         // RWsSession
+LIBRARY         apgrfx.lib
+LIBRARY         EUnit.lib
+LIBRARY         EUnitUtil.lib
+LIBRARY         euser.lib
+LIBRARY         fbscli.lib
+LIBRARY         ConnMon.lib // RConnectionMonitor
+LIBRARY         avkon.lib // AknTextUtils
+LIBRARY         SSSettings.lib
+LIBRARY         bafl.lib // Descriptor arrays
+LIBRARY         starterclient.lib
+LIBRARY         charconv.lib
+LIBRARY         efsrv.lib
+LIBRARY         symbianmock.lib
+LIBRARY         hal.lib
+

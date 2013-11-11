@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<category>
+	<name>Calendar</name>
+	<mime>application/v-calendar</mime>
+	<licon>qtg_large_calendar</licon>
+	<baseapp>root calendar</baseapp>
+	<lname>txt_search_list_calendarnotes</lname>
+	<displayorder>4</displayorder>
+	<exceptionstring>txt_calendar_preview_unnamed</exceptionstring>
+	<tsfile>Z:/resource/qt/translations/calendar_</tsfile>
+	<actionuri>
+		<uri>
+			<uristring></uristring>
+			<lname></lname>
+			<licon></licon>
+			<uriref></uriref>
+			<action></action><!-- primary action or default action. alternatively, we could always use first entry as this one -->
+		</uri>		
+	</actionuri>
+  <fieldmap>
+  	<resulthit>
+  		<field>Summary</field>
+  		<auri></auri><!-- alternatively <auriorder>1,2,3,4</auriorder> instead of four lines -->  		
+  	</resulthit>
+  </fieldmap>
+ <indexcontentsize>L</indexcontentsize> <!-- possible values S, M, L, XL, XXL. or scale of 1 to 10. -->
+ <policy>
+ 	<capability>WriteDeviceData<!-- Allow search on my data from clients with only Write Device Data capability it is combination of SID/VID/capability --></capability>
+ </policy>
+ <resultfirstline>
+ 	<list>
+ 	<field>Description</field><!-- commo seperated list, if there is a chance that certain field could be empty -->
+ 	<field>Summary</field>
+ 	</list>
+ 	</resultfirstline> 
+ <relevancy>
+ 	<boost>
+ 		<field>Description</field>
+ 		<boostvalue>10</boostvalue><!-- on scale 1-10 -->
+ 	</boost>
+ 	<boost>
+ 		<field>Summary</field>
+ 		<boostvalue>5</boostvalue>
+  </boost>
+ </relevancy>
+</category>

@@ -1,0 +1,78 @@
+<< * OK Microsoft Exchange 2000 IMAP4rev1 server version 6.0.6249.0 (lon-cn-exchng2k.msexchange2k.closedtest.intra) ready.
+>> 1 CAPABILITY
+<< * CAPABILITY IMAP4 IMAP4rev1 IDLE LOGIN-REFERRALS MAILBOX-REFERRALS NAMESPACE LITERAL+ UIDPLUS CHILDREN AUTH=NTLM
+<< 1 OK CAPABILITY completed.
+>> 2 LOGIN roberth roberth
+<< 2 OK LOGIN completed.
+>> 3 SELECT "INBOX"
+<< * 2 EXISTS
+<< * 0 RECENT
+<< * FLAGS (\Seen \Answered \Flagged \Deleted \Draft $MDNSent)
+<< * OK [PERMANENTFLAGS (\Seen \Answered \Flagged \Deleted \Draft $MDNSent)] Permanent flags
+<< * OK [UNSEEN 1] Is the first unseen message
+<< * OK [UIDVALIDITY 1913] UIDVALIDITY value
+<< 3 OK [READ-WRITE] SELECT completed.
+>> 4 UID FETCH 1:* (UID FLAGS BODYSTRUCTURE BODY.PEEK[HEADER.FIELDS (Received Date Subject From Priority X-Priority X-MSMail-Priority Importance)])
+<< * 1 FETCH (UID 1 FLAGS () BODYSTRUCTURE (("TEXT" "PLAIN" ("CHARSET" "us-ascii") NIL NIL "QUOTED-PRINTABLE" 958 56 NIL NIL NIL)("TEXT" "HTML" ("CHARSET" "us-ascii") NIL NIL "QUOTED-PRINTABLE" 12432 27 NIL NIL NIL) "ALTERNATIVE" ("BOUNDARY" "----=_NextPart_000_0001_01C620EC.AE94DD00") NIL NIL) BODY[HEADER.FIELDS ("RECEIVED" "DATE" "SUBJECT" "FROM")] {319}
+<< Received: from localhost (S0106009027a555bb.vc.shawcable.net [24.87.43.86])
+<< 	by moonlight.nebula.fi (8.11.6/8.11.6) with SMTP id k0O8lPE26127
+<< 	for <johannes@nomasi.com>; Tue, 24 Jan 2006 10:47:32 +0200
+<< From: "Damien Gray" <bmo@beadedbottlecovers.com>
+<< Subject: 0EM Software
+<< Date: Tue, 24 Jan 2006 00:47:28 -0800
+<< 
+<< )
+<< * OK [PARSE] Unterminated mailbox: jasonvor3e-mail@toggo.de
+<< * OK [PARSE] Unexp)cted char]cters at end of address: @k.st>
+<< * 2 FETCH (UID 2 FLAGS () BODYSTRUCTURE (("TEXT" "PLAIN" ("CHARSET" "us-ascii") NIL NIL "QUOTED-PRINTABLE" 958 56 NIL NIL NIL)("TEXT" "HTML" ("CHARSET" "us-ascii") NIL NIL "QUOTED-PRINTABLE" 12432 27 NIL NIL NIL) "ALTERNATIVE" ("BOUNDARY" "----=_NextPart_000_0001_01C620EC.AE94DD00") NIL NIL) BODY[HEADER.FIELDS ("RECEIVED" "DATE" "SUBJECT" "FROM")] {332}
+<< Received: from localhost (S0106009027a555bb.vc.shawcable.net [24.87.43.86])
+<< 	by moonlight.nebula.fi (8.11.6/8.11.6) with SMTP id k0O8lPE26127
+<< 	for <jasonvor3e-mail@toggo.de@k.st>; Tue, 24 Jan 2006 10:47:32 +0200
+<< From: "Damien Gray" <jasonvor3e-mail@toggo.de@k.st>
+<< Subject: 0EM Software
+<< Date: Tue, 24 Jan 2006 00:47:28 -0800
+<< 
+<< )
+<< 4 OK FETCH completed.
+>> 5 LIST "" "%"
+<< * LIST (\HasNoChildren) "/" Calendar
+<< * LIST (\HasNoChildren) "/" Contacts
+<< * LIST (\HasNoChildren) "/" "Deleted Items"
+<< * LIST (\Marked \HasNoChildren) "/" Drafts
+<< * LIST (\Marked \HasNoChildren) "/" INBOX
+<< * LIST (\HasNoChildren) "/" Journal
+<< * LIST (\HasNoChildren) "/" Notes
+<< * LIST (\HasNoChildren) "/" Outbox
+<< * LIST (\Marked \HasNoChildren) "/" "Sent Items"
+<< * LIST (\HasNoChildren) "/" Tasks
+<< * LIST (\Noselect) "/" "Public Folders/"
+<< 5 OK LIST completed.
+>> 6 LIST "" "Calendar/%"
+<< 6 OK LIST completed.
+>> 7 LIST "" "Contacts/%"
+<< 7 OK LIST completed.
+>> 8 LIST "" "Deleted Items/%"
+<< 8 OK LIST completed.
+>> 9 LIST "" "Drafts/%"
+<< 9 OK LIST completed.
+>> 10 LIST "" "INBOX/%"
+<< 10 OK LIST completed.
+>> 11 LIST "" "Journal/%"
+<< 11 OK LIST completed.
+>> 12 LIST "" "Notes/%"
+<< 12 OK LIST completed.
+>> 13 LIST "" "Outbox/%"
+<< 13 OK LIST completed.
+>> 14 LIST "" "Sent Items/%"
+<< 14 OK LIST completed.
+>> 15 LIST "" "Tasks/%"
+<< 15 OK LIST completed.
+>> 16 LIST "" "Public Folders//%"
+<< 16 NO This a special mailbox and can not be selected or used as the destination for mailbox operations.
+>> 17 IDLE
+<< + IDLE accepted, awaiting DONE command.
+>> DONE
+<< 17 OK IDLE completed.
+>> 18 LOGOUT
+<< * BYE Microsoft Exchange 2000 IMAP4rev1 server version 6.0.6249.0 signing off.
+<< 18 OK LOGOUT completed.

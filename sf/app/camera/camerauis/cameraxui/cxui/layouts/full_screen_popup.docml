@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="1.1">
+    <widget name="full_screen_popup" type="HbWidget">
+        <widget name="full_screen_popup_text" type="HbLabel">
+            <enums name="alignment" value="AlignVCenter|AlignHCenter"/>
+            <real name="z" value="0.2"/>
+            <sizehint height="360" type="MINIMUM" width="640"/>
+        </widget>
+        <widget name="full_screen_popup_button" type="HbPushButton">
+            <real name="z" value="0.3"/>
+        </widget>
+        <real name="z" value="0.1"/>
+        <sizehint height="360" type="MINIMUM" width="640"/>
+        <layout type="anchor">
+            <anchoritem dst="full_screen_popup_button" dstEdge="BOTTOM" spacing="expr(-var(hb-param-margin-gene-bottom) )" src="" srcEdge="BOTTOM"/>
+            <anchoritem dst="full_screen_popup_button" dstEdge="CENTERH" spacing="0" src="" srcEdge="CENTERH"/>
+        </layout>
+    </widget>
+    <connect receiver="full_screen_popup" sender="full_screen_popup_button" signal="released()" slot="close()"/>
+    <metadata activeUIState="Common ui state" display="NHD-3.2-inch_landscape" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+    </metadata>
+</hbdocument>

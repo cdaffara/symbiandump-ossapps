@@ -1,0 +1,51 @@
+// Copyright (c) 2005-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// smildtd.dll SMIL DTD support
+// 
+//
+
+/**
+ @file
+*/
+
+
+TARGET			smildtd.dll
+TARGETTYPE			dll
+
+CAPABILITY All -TCB
+UID				0x1000008d 0x101F9116
+VENDORID 0x70000001
+
+SOURCEPATH		../SRC
+SOURCE			Smildtd.cpp
+
+USERINCLUDE		../INC 
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+LIBRARY			euser.lib    
+LIBRARY         	bafl.lib 
+
+DEFFILE			V2_SMILDTD.DEF
+
+SOURCEPATH	../STRINGS
+START STRINGTABLE SMILElements.st
+	EXPORTPATH	/epoc32/include
+END
+START STRINGTABLE SMILGenericElements.st
+	EXPORTPATH	/epoc32/include
+END
+START STRINGTABLE SMILAttributes.st
+	EXPORTPATH	/epoc32/include
+END
+
+SMPSAFE

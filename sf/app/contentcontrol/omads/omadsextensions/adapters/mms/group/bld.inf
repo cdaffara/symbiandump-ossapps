@@ -1,0 +1,30 @@
+/*
+* Copyright (c) 2007-2010 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  build info file for MMS DS adapter
+*
+*/
+
+#include <platform_paths.hrh>
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+./101fb0e9.xml      Z:/private/101F99F6/capability/101fb0e9.xml
+./mmsdsa_stub.sis   /epoc32/data/z/system/install/mmsdsa_stub.sis
+../rom/mmsdsa.iby   CORE_APP_LAYER_IBY_EXPORT_PATH(mmsdsa.iby)
+
+PRJ_MMPFILES
+./mmsdataprovider.mmp
+

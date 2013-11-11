@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<api id="38720e61c89a6a831119b5cb07378457" dataversion="2.0">
+  <name>Calendar Importer API</name>
+  <description>Converts vCalendars and iCalendars to agenda entries</description>
+  <type>c++</type>
+  <collection>calendarengines</collection>
+  <libs>
+    <lib name="CalenImp.lib" />
+  </libs>
+  <release category="platform"/>
+  <attributes>
+     <!-- This indicates wether the api provedes separate html documentation -->
+     <!-- or is the additional documentation generated from headers. -->
+     <!-- If you are unsuere then the value is "no" -->
+     <htmldocprovided>no</htmldocprovided>
+     <adaptation>no</adaptation>
+  </attributes>
+</api>

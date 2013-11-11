@@ -1,0 +1,69 @@
+HgMediawall#location[scrollBarPolicy="ScrollBarAlwaysOff"]
+{
+    layout:layout-noscrollbar;
+    front-cover-elevation-factor:0.5;
+}
+
+HgMediawall#location[!scrollBarPolicy="ScrollBarAlwaysOff"]
+{
+    layout:layout-scrollbar;
+    front-cover-elevation-factor:0.5;
+}
+
+HgMediawall#location::title
+{
+	font-variant:secondary;
+    text-align: center center;
+	left:-var(hb-param-margin-gene-screen);
+	right:var(hb-param-margin-gene-screen);
+	top:-var(hb-param-margin-gene-middle-vertical);
+	bottom:0un;
+	text-line-count-min:1;
+	text-line-count-max:1;
+	zvalue: 2;
+    size-policy: preferred preferred;
+}
+
+HgMediawall#location::description
+{
+	font-variant:primary-small;
+    text-align: center center;
+	left:-var(hb-param-margin-gene-screen);
+	right:var(hb-param-margin-gene-screen);
+	top:-var(hb-param-margin-gene-middle-vertical);
+	bottom:0un;
+	text-line-count-min:1;
+	text-line-count-max:1;
+	zvalue: 2;
+    size-policy: preferred preferred;
+}
+
+HgMediawall#location::scrollbar-vertical
+{
+	left:-var(hb-param-margin-gene-screen);
+	right:var(hb-param-margin-gene-screen);
+	top:-var(hb-param-margin-gene-top);
+	bottom:0.5 un;
+	zvalue: 2;
+    size-policy: preferred preferred;
+}
+
+HgMediawall#location::content
+{
+    size-policy: minimum-expanding minimum-expanding;
+	left:0un;
+	right:0un;
+	top:0un;
+	bottom:0un;
+	zvalue: 0;
+}
+
+HgMediawall#location::centeritem
+{
+    size-policy: minimum-expanding minimum-expanding;
+	left:-var(hb-param-touch-area-gene-primary-medium);
+	right:var(hb-param-touch-area-gene-primary-medium);
+	top:0un;
+	bottom:1un;
+	zvalue: 2;
+}

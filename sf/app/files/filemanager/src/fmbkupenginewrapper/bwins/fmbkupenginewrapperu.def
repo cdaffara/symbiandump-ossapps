@@ -1,0 +1,69 @@
+EXPORTS
+	??0FmRestoreSettings@@QAE@AAVFmBkupEngine@@@Z @ 1 NONAME ; FmRestoreSettings::FmRestoreSettings(class FmBkupEngine &)
+	?tr@FmBkupEngine@@SA?AVQString@@PBD0@Z @ 2 NONAME ; class QString FmBkupEngine::tr(char const *, char const *)
+	?getStaticMetaObject@FmBkupEngine@@SAABUQMetaObject@@XZ @ 3 NONAME ; struct QMetaObject const & FmBkupEngine::getStaticMetaObject(void)
+	?trUtf8@FmBkupEngine@@SA?AVQString@@PBD0H@Z @ 4 NONAME ; class QString FmBkupEngine::trUtf8(char const *, char const *, int)
+	?error@FmBkupEngine@@QBEHXZ @ 5 NONAME ; int FmBkupEngine::error(void) const
+	?availableTargetDrive@FmBackupSettings@@QBE?AVQString@@XZ @ 6 NONAME ; class QString FmBackupSettings::availableTargetDrive(void) const
+	?GetSelectionL@FmRestoreSettings@@QBEXAAV?$QList@VFmRestoreInfo@@@@@Z @ 7 NONAME ; void FmRestoreSettings::GetSelectionL(class QList<class FmRestoreInfo> &) const
+	?content@FmBackupSettings@@QBEIXZ @ 8 NONAME ; unsigned int FmBackupSettings::content(void) const
+	?getBackupDriveList@FmBkupEngine@@QAEXAAVQStringList@@@Z @ 9 NONAME ; void FmBkupEngine::getBackupDriveList(class QStringList &)
+	?resetAndDestoryRestoreEntry@FmRestoreSettings@@AAEXXZ @ 10 NONAME ; void FmRestoreSettings::resetAndDestoryRestoreEntry(void)
+	?targetDriveToString@FmBackupSettings@@QAE?AVQString@@ABV2@@Z @ 11 NONAME ; class QString FmBackupSettings::targetDriveToString(class QString const &)
+	?setScheduling@FmBackupSettings@@QAEXW4TFileManagerBackupSchedule@1@@Z @ 12 NONAME ; void FmBackupSettings::setScheduling(enum FmBackupSettings::TFileManagerBackupSchedule)
+	?notifyFinish@FmBkupEngine@@IAEXH@Z @ 13 NONAME ; void FmBkupEngine::notifyFinish(int)
+	?qt_metacast@FmBkupEngine@@UAEPAXPBD@Z @ 14 NONAME ; void * FmBkupEngine::qt_metacast(char const *)
+	??0FmBackupSettings@@QAE@PAVFmBkupEngine@@@Z @ 15 NONAME ; FmBackupSettings::FmBackupSettings(class FmBkupEngine *)
+	?SetSelection@FmRestoreSettings@@QAEXAB_K@Z @ 16 NONAME ; void FmRestoreSettings::SetSelection(unsigned long long const &)
+	?startBackup@FmBkupEngine@@QAE_NV?$QList@PAVFmBkupDrivesAndOperation@@@@V?$QList@PAVFmBkupBackupCategory@@@@VQString@@I@Z @ 17 NONAME ; bool FmBkupEngine::startBackup(class QList<class FmBkupDrivesAndOperation *>, class QList<class FmBkupBackupCategory *>, class QString, unsigned int)
+	?notifyMemoryLow@FmBkupEngine@@IAEXHAAH@Z @ 18 NONAME ; void FmBkupEngine::notifyMemoryLow(int, int &)
+	?CreateEntry@FmRestoreSettings@@AAEPAVFmRestoreEntry@@ABVFmRestoreInfo@@@Z @ 19 NONAME ; class FmRestoreEntry * FmRestoreSettings::CreateEntry(class FmRestoreInfo const &)
+	?startRestore@FmBkupEngine@@QAE_NV?$QList@PAVFmBkupDrivesAndOperation@@@@@Z @ 20 NONAME ; bool FmBkupEngine::startRestore(class QList<class FmBkupDrivesAndOperation *>)
+	?resetAndDestoryBackupEntry@FmBackupSettings@@AAEXXZ @ 21 NONAME ; void FmBackupSettings::resetAndDestoryBackupEntry(void)
+	?weekdayToString@FmBackupSettings@@SA?AVQString@@W4TFileManagerBackupWeekday@1@@Z @ 22 NONAME ; class QString FmBackupSettings::weekdayToString(enum FmBackupSettings::TFileManagerBackupWeekday)
+	?tr@FmBkupEngine@@SA?AVQString@@PBD0H@Z @ 23 NONAME ; class QString FmBkupEngine::tr(char const *, char const *, int)
+	?contentToString@FmBackupSettings@@SA?AVQString@@I@Z @ 24 NONAME ; class QString FmBackupSettings::contentToString(unsigned int)
+	?RestoreSettingsL@FmBkupEngine@@QAEPAVFmRestoreSettings@@XZ @ 25 NONAME ; class FmRestoreSettings * FmBkupEngine::RestoreSettingsL(void)
+	?createBackupDateEntry@FmBackupSettings@@AAEPAVFmBackupEntry@@XZ @ 26 NONAME ; class FmBackupEntry * FmBackupSettings::createBackupDateEntry(void)
+	?GetRestoreInfoArray@FmBkupEngine@@QAEXAAV?$QList@PAVFmBkupDrivesAndOperation@@@@AAV?$QList@VFmRestoreInfo@@@@ABVQString@@@Z @ 27 NONAME ; void FmBkupEngine::GetRestoreInfoArray(class QList<class FmBkupDrivesAndOperation *> &, class QList<class FmRestoreInfo> &, class QString const &)
+	?time@FmBackupSettings@@QBEABVQTime@@XZ @ 28 NONAME ; class QTime const & FmBackupSettings::time(void) const
+	?createWeekdayEntry@FmBackupSettings@@AAEPAVFmBackupEntry@@XZ @ 29 NONAME ; class FmBackupEntry * FmBackupSettings::createWeekdayEntry(void)
+	?cancelBackup@FmBkupEngine@@QAEXXZ @ 30 NONAME ; void FmBkupEngine::cancelBackup(void)
+	?notifyUpdate@FmBkupEngine@@IAEXH@Z @ 31 NONAME ; void FmBkupEngine::notifyUpdate(int)
+	?save@FmBackupSettings@@QAEXXZ @ 32 NONAME ; void FmBackupSettings::save(void)
+	??_EFmBkupEngine@@UAE@I@Z @ 33 NONAME ; FmBkupEngine::~FmBkupEngine(unsigned int)
+	?restoreEntryList@FmRestoreSettings@@QAE?AV?$QList@PAVFmRestoreEntry@@@@XZ @ 34 NONAME ; class QList<class FmRestoreEntry *> FmRestoreSettings::restoreEntryList(void)
+	?createTimeEntry@FmBackupSettings@@AAEPAVFmBackupEntry@@XZ @ 35 NONAME ; class FmBackupEntry * FmBackupSettings::createTimeEntry(void)
+	?weekday@FmBackupSettings@@QBE?AW4TFileManagerBackupWeekday@1@XZ @ 36 NONAME ; enum FmBackupSettings::TFileManagerBackupWeekday FmBackupSettings::weekday(void) const
+	?deleteBackup@FmBkupEngine@@QAEHV?$QList@PAVFmBkupDrivesAndOperation@@@@@Z @ 37 NONAME ; int FmBkupEngine::deleteBackup(class QList<class FmBkupDrivesAndOperation *>)
+	??1FmBackupSettings@@QAE@XZ @ 38 NONAME ; FmBackupSettings::~FmBackupSettings(void)
+	?setTime@FmBackupSettings@@QAEXABVQTime@@@Z @ 39 NONAME ; void FmBackupSettings::setTime(class QTime const &)
+	?backupEntryList@FmBackupSettings@@QAE?AV?$QList@PAVFmBackupEntry@@@@XZ @ 40 NONAME ; class QList<class FmBackupEntry *> FmBackupSettings::backupEntryList(void)
+	?contentsSelected@FmBackupSettings@@ABEHXZ @ 41 NONAME ; int FmBackupSettings::contentsSelected(void) const
+	?refreshList@FmBackupSettings@@AAEXXZ @ 42 NONAME ; void FmBackupSettings::refreshList(void)
+	?trUtf8@FmBkupEngine@@SA?AVQString@@PBD0@Z @ 43 NONAME ; class QString FmBkupEngine::trUtf8(char const *, char const *)
+	?CreateEntry@FmBackupSettings@@AAEPAVFmBackupEntry@@ABVQString@@0W4TSettingType@2@@Z @ 44 NONAME ; class FmBackupEntry * FmBackupSettings::CreateEntry(class QString const &, class QString const &, enum FmBackupEntry::TSettingType)
+	?targetDrive@FmBackupSettings@@QBE?AVQString@@XZ @ 45 NONAME ; class QString FmBackupSettings::targetDrive(void) const
+	??0FmBkupEngine@@QAE@PAVQObject@@@Z @ 46 NONAME ; FmBkupEngine::FmBkupEngine(class QObject *)
+	?notifyPreparing@FmBkupEngine@@IAEX_N@Z @ 47 NONAME ; void FmBkupEngine::notifyPreparing(bool)
+	?load@FmRestoreSettings@@QAEXV?$QList@PAVFmBkupDrivesAndOperation@@@@@Z @ 48 NONAME ; void FmRestoreSettings::load(class QList<class FmBkupDrivesAndOperation *>)
+	?setWeekday@FmBackupSettings@@QAEXW4TFileManagerBackupWeekday@1@@Z @ 49 NONAME ; void FmBackupSettings::setWeekday(enum FmBackupSettings::TFileManagerBackupWeekday)
+	??1FmRestoreSettings@@QAE@XZ @ 50 NONAME ; FmRestoreSettings::~FmRestoreSettings(void)
+	?createContentsEntry@FmBackupSettings@@AAEPAVFmBackupEntry@@XZ @ 51 NONAME ; class FmBackupEntry * FmBackupSettings::createContentsEntry(void)
+	?notifyBackupFilesExist@FmBkupEngine@@IAEXAA_N@Z @ 52 NONAME ; void FmBkupEngine::notifyBackupFilesExist(bool &)
+	?updateBackupDate@FmBackupSettings@@QAEXXZ @ 53 NONAME ; void FmBackupSettings::updateBackupDate(void)
+	?createSchedulingEntry@FmBackupSettings@@AAEPAVFmBackupEntry@@XZ @ 54 NONAME ; class FmBackupEntry * FmBackupSettings::createSchedulingEntry(void)
+	?metaObject@FmBkupEngine@@UBEPBUQMetaObject@@XZ @ 55 NONAME ; struct QMetaObject const * FmBkupEngine::metaObject(void) const
+	?createTargetDriveEntry@FmBackupSettings@@AAEPAVFmBackupEntry@@XZ @ 56 NONAME ; class FmBackupEntry * FmBackupSettings::createTargetDriveEntry(void)
+	?load@FmBackupSettings@@QAEXXZ @ 57 NONAME ; void FmBackupSettings::load(void)
+	??1FmBkupEngine@@UAE@XZ @ 58 NONAME ; FmBkupEngine::~FmBkupEngine(void)
+	?BackupSettingsL@FmBkupEngine@@QAEPAVFmBackupSettings@@XZ @ 59 NONAME ; class FmBackupSettings * FmBkupEngine::BackupSettingsL(void)
+	?setContent@FmBackupSettings@@QAEXI@Z @ 60 NONAME ; void FmBackupSettings::setContent(unsigned int)
+	?schedulingToString@FmBackupSettings@@QAE?AVQString@@W4TFileManagerBackupSchedule@1@@Z @ 61 NONAME ; class QString FmBackupSettings::schedulingToString(enum FmBackupSettings::TFileManagerBackupSchedule)
+	?setTargetDrive@FmBackupSettings@@QAEXABVQString@@@Z @ 62 NONAME ; void FmBackupSettings::setTargetDrive(class QString const &)
+	?staticMetaObject@FmBkupEngine@@2UQMetaObject@@B @ 63 NONAME ; struct QMetaObject const FmBkupEngine::staticMetaObject
+	?refreshList@FmRestoreSettings@@AAEXAAV?$QList@PAVFmBkupDrivesAndOperation@@@@@Z @ 64 NONAME ; void FmRestoreSettings::refreshList(class QList<class FmBkupDrivesAndOperation *> &)
+	?notifyStart@FmBkupEngine@@IAEX_NH@Z @ 65 NONAME ; void FmBkupEngine::notifyStart(bool, int)
+	?scheduling@FmBackupSettings@@QBE?AW4TFileManagerBackupSchedule@1@XZ @ 66 NONAME ; enum FmBackupSettings::TFileManagerBackupSchedule FmBackupSettings::scheduling(void) const
+	?qt_metacall@FmBkupEngine@@UAEHW4Call@QMetaObject@@HPAPAX@Z @ 67 NONAME ; int FmBkupEngine::qt_metacall(enum QMetaObject::Call, int, void * *)
+

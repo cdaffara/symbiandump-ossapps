@@ -1,0 +1,80 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+#include <data_caging_paths.hrh>
+#include <platform_paths.hrh>
+ 
+TARGET          ut_cphoneringingtonecontroller.dll
+TARGETTYPE      dll
+UID             0x1000af5a 0x01700000
+
+CAPABILITY      ALL -TCB -DRM
+VENDORID        VID_DEFAULT
+
+SOURCEPATH              ../src
+SOURCE                  ut_cphoneringingtonecontroller.cpp
+SOURCE                  ut_cphoneringingtonecontroller_dllmain.cpp
+
+// Code under test
+SOURCEPATH              ../../../src
+SOURCE                  cphoneringingtonecontroller.cpp
+SOURCE                  cphoneringingtone.cpp
+
+SOURCEPATH              ../mocks
+SOURCE                  mock_cphoneringingtoneplayer.cpp
+SOURCE                  mock_cphonettsplayer.cpp 
+
+USERINCLUDE             ../src
+USERINCLUDE             ../../../inc
+USERINCLUDE             ../../../../phoneuiqtviewadapter/inc
+USERINCLUDE             ../../../../phoneuicontrol/inc
+USERINCLUDE             ../../../../phoneuiutils/inc
+USERINCLUDE             ../../../../phoneui2/srcdata
+USERINCLUDE             ../../../../phonemediatorcenter/inc
+
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE           /epoc32/include/digia/eunit
+SYSTEMINCLUDE           /epoc32/include/mda/client
+SYSTEMINCLUDE           /epoc32/include/ecom
+SYSTEMINCLUDE           /epoc32/include/mmf/common
+SYSTEMINCLUDE           /epoc32/include/mmf/server
+SYSTEMINCLUDE           ../../../../../inc    // phone internal headers
+
+LIBRARY                 eunit.lib
+LIBRARY                 eunitutil.lib
+LIBRARY                 symbianmock.lib
+LIBRARY                 phoneuiutils.lib
+LIBRARY                 euser.lib
+LIBRARY                 efsrv.lib                           // TParse
+LIBRARY                 ecom.lib                // for CSFIUtilsPhoneInterface plugin
+LIBRARY                 apgrfx.lib              // Apa server
+LIBRARY                 mediaclient.lib
+LIBRARY                 mediaclientaudio.lib
+LIBRARY                 drmhelper.lib
+LIBRARY                 apmime.lib
+LIBRARY                 caf.lib
+LIBRARY                 charconv.lib            // UTF-8 conversion for the TTS
+LIBRARY                 featmgr.lib             // FeatureManager
+LIBRARY                 mediatorclient.lib
+LIBRARY                 audiooutputrouting.lib  // Ringingtone output
+LIBRARY                 platformenv.lib                 // PathInfo
+LIBRARY                 cone.lib
+
+EPOCALLOWDLLDATA
+
+
+SMPSAFE

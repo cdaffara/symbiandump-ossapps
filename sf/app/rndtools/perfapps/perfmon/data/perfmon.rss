@@ -1,0 +1,702 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*
+*/
+
+
+
+NAME MATT
+
+#include <eikon.rh>
+#include <eikon.rsg>
+#include <avkon.rh>
+#include <avkon.rsg>
+#include <avkon.mbg>
+#include <CommonDialogs.hrh>
+#include <CommonDialogs.rh>
+#include <pathconfiguration.hrh>
+
+#include "perfmon.hrh"
+#include "perfmon_std.h"
+#include <data_caging_paths_strings.hrh>
+#include <appinfo.rh>
+
+
+// ---------------------------------------------------------
+//   
+//    Define the resource file signature 
+//    This resource should be empty.
+//
+// ---------------------------------------------------------
+//
+RESOURCE RSS_SIGNATURE { }
+
+// ---------------------------------------------------------
+//   
+//    Default Document Name
+//
+// ---------------------------------------------------------
+//
+RESOURCE TBUF r_default_document_name { buf=""; }
+
+// ---------------------------------------------------------
+//   
+//    Define default menu and CBA key.
+//
+// ---------------------------------------------------------
+//
+RESOURCE EIK_APP_INFO
+    {
+	status_pane = r_perfmon_status_pane;
+    //menubar = r_perfmon_menubar;
+    //cba = R_AVKON_SOFTKEYS_OPTIONS_EXIT;
+    }
+
+//----------------------------------------------------
+//    r_perfmon_status_pane
+//----------------------------------------------------
+//   
+RESOURCE STATUS_PANE_APP_MODEL r_perfmon_status_pane
+    {
+	panes=
+		{
+		SPANE_PANE
+			{
+			id = EEikStatusPaneUidNavi;
+			type = EAknCtNaviPane;
+			resource = r_perfmon_navi_decorator;
+			}
+		};
+    }
+    
+//----------------------------------------------------
+//    r_perfmon_navi_decorator
+//----------------------------------------------------
+//
+RESOURCE NAVI_DECORATOR r_perfmon_navi_decorator
+    {
+    type = ENaviDecoratorControlTabGroup;
+    control = TAB_GROUP
+		{
+		tab_width = EAknTabWidthWithTwoTabs;
+		active = 0;
+		tabs = {
+			TAB
+				{
+                id = ETabMainViewValues;
+                txt = "Values";
+                },
+			TAB
+				{
+                id = ETabMainViewGraphs;
+                txt = "Graphs";
+				}
+			};
+		};
+	}
+	
+//----------------------------------------------------
+//   
+//    r_perfmon_hotkeys
+//
+//----------------------------------------------------
+//
+RESOURCE HOTKEYS r_perfmon_hotkeys
+    {
+    control=
+        {
+        HOTKEY { command=EAknCmdExit; key='e'; }
+        };
+    }
+
+
+//----------------------------------------------------
+//    r_perfmon_view_values
+//----------------------------------------------------
+//
+RESOURCE AVKON_VIEW r_perfmon_view_values
+    {
+    hotkeys=r_perfmon_hotkeys;
+    menubar=r_perfmon_menubar_view_values;  
+    cba=R_AVKON_SOFTKEYS_OPTIONS_EXIT;    
+    }
+
+//----------------------------------------------------
+//    r_perfmon_menubar_view_values
+//----------------------------------------------------
+//
+RESOURCE MENU_BAR r_perfmon_menubar_view_values
+    {
+    titles=
+        {
+        MENU_TITLE { menu_pane=r_perfmon_app_menu; txt="App"; },
+        MENU_TITLE { menu_pane=r_perfmon_view_values_menu; txt="Values"; }
+        };
+    }
+
+//----------------------------------------------------
+//    r_perfmon_view_values_menu
+//----------------------------------------------------
+//
+
+RESOURCE MENU_PANE r_perfmon_view_values_menu
+    {
+    items=
+        {
+        };
+    }
+
+//----------------------------------------------------
+//    r_perfmon_view_graphs
+//----------------------------------------------------
+//
+RESOURCE AVKON_VIEW r_perfmon_view_graphs
+    {
+    hotkeys=r_perfmon_hotkeys;
+    menubar=r_perfmon_menubar_view_graphs;  
+    cba=R_AVKON_SOFTKEYS_OPTIONS_EXIT;    
+    }
+
+//----------------------------------------------------
+//    r_perfmon_menubar_view_graphs
+//----------------------------------------------------
+//
+RESOURCE MENU_BAR r_perfmon_menubar_view_graphs
+    {
+    titles=
+        {
+        MENU_TITLE { menu_pane=r_perfmon_app_menu; txt="App"; },
+        MENU_TITLE { menu_pane=r_perfmon_view_graphs_menu; txt="graphs"; }
+        };
+    }
+
+//----------------------------------------------------
+//    r_perfmon_view_graphs_menu
+//----------------------------------------------------
+//
+
+RESOURCE MENU_PANE r_perfmon_view_graphs_menu
+    {
+    items=
+        {
+        };
+    }
+           
+        
+//----------------------------------------------------
+//    r_perfmon_app_menu
+//----------------------------------------------------
+//
+RESOURCE MENU_PANE r_perfmon_app_menu
+    {
+    items=
+        {
+        MENU_ITEM { command=EPerfMonCmdEnableLogging; txt="Enable Logging"; },
+        MENU_ITEM { command=EPerfMonCmdDisableLogging; txt="Disable Logging"; },
+        MENU_ITEM { command=EPerfMonCmdSettings; txt="Settings"; },
+        MENU_ITEM { command=EPerfMonCmdAbout; txt="About"; },
+        MENU_ITEM { command=EAknCmdExit; txt="Exit"; }
+        };
+    }
+
+//----------------------------------------------------
+//    r_perfmon_settings_dialog
+//    Dialog for setting list
+//----------------------------------------------------
+//
+RESOURCE DIALOG r_perfmon_settings_dialog
+    {
+    flags =
+        EEikDialogFlagNoDrag | EEikDialogFlagFillAppClientRect |
+        EEikDialogFlagButtonsRight | EEikDialogFlagCbaButtons |
+        EEikDialogFlagWait | EEikDialogFlagNoTitleBar;
+    buttons = R_AVKON_SOFTKEYS_OPTIONS_BACK;
+    items =
+        {
+        DLG_LINE
+            {
+            type = EAknCtSettingListBox;
+            id = EPerfMonSettingItemList;
+            itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+            control = LISTBOX
+                {
+                flags = EAknListBoxSelectionList;
+                };
+            }
+        };
+    }
+
+//----------------------------------------------------
+//    r_perfmon_settings_menubar
+//----------------------------------------------------
+//
+
+RESOURCE MENU_BAR r_perfmon_settings_menubar
+    {
+    titles =
+        {
+        MENU_TITLE
+            {
+            menu_pane = r_perfmon_settings_menupane;
+            txt = " ";   // dummy
+            }
+        };
+    }
+
+RESOURCE MENU_PANE r_perfmon_settings_menupane
+    {
+    items =
+        {
+        MENU_ITEM
+            {
+            command = EPerfMonCmdSettingsChange;
+            txt = "Change";
+            },
+        MENU_ITEM
+            {
+            command = EPerfMonCmdSettingsExit;
+            txt = "Exit";
+            }
+        };
+    }
+
+
+//----------------------------------------------------
+//   
+//    Setting item resources
+//
+//----------------------------------------------------
+//
+
+// generic resources
+RESOURCE POPUP_SETTING_LIST r_popup_setting_list_editor
+	{
+	}
+RESOURCE AVKON_SETTING_PAGE r_binary_setting_page
+    {   
+    number = EAknSettingPageNoOrdinalDisplayed;
+    type = EAknCtPopupSettingList;
+	editor_resource_id = r_popup_setting_list_editor;
+    }
+RESOURCE AVKON_POPUP_SETTING_TEXTS r_yesno_binaryselection_texts
+	{
+	setting_texts_resource = r_yesno_binaryselection_text_array;
+	}
+RESOURCE ARRAY r_yesno_binaryselection_text_array
+	{
+	items =
+		{
+		AVKON_ENUMERATED_TEXT { value=0; text = "No"; },
+		AVKON_ENUMERATED_TEXT { value=1; text = "Yes"; }
+		};
+	}
+
+//
+// resources for heartbeat selection
+//
+RESOURCE TBUF r_heartbeat_setting_title
+    {
+    buf = "Heart beat (ms)";
+    }
+RESOURCE AVKON_SETTING_PAGE r_heartbeat_setting_page
+	{
+	type = EAknCtIntegerEdwin;
+	editor_resource_id = r_heartbeat_integer_editor;
+	}
+RESOURCE AVKON_INTEGER_EDWIN r_heartbeat_integer_editor
+	{
+	maxlength = 5;
+	min = 1;
+	max = 99999;
+	}    
+    
+
+//
+// resources for maxsamples selection
+//
+RESOURCE TBUF r_maxsamples_setting_title
+    {
+    buf = "Max samples";
+    }
+RESOURCE AVKON_SETTING_PAGE r_maxsamples_setting_page
+	{
+	type = EAknCtIntegerEdwin;
+	editor_resource_id = r_maxsamples_integer_editor;
+	}
+RESOURCE AVKON_INTEGER_EDWIN r_maxsamples_integer_editor
+	{
+	maxlength = 4;
+	min = 1;
+	max = 9999;
+	} 
+
+
+//
+// resources for priority selection
+//
+RESOURCE TBUF r_priority_setting_title
+    {
+    buf = "Priority";
+    }
+RESOURCE AVKON_SETTING_PAGE r_priority_setting_page
+	{
+    number = EAknSettingPageNoOrdinalDisplayed; 
+	type = EAknCtPopupSettingList;
+	editor_resource_id = r_popup_setting_list_editor;
+	}
+RESOURCE AVKON_POPUP_SETTING_TEXTS r_priority_setting_texts
+	{
+	setting_texts_resource = r_priority_text_array;
+	}
+RESOURCE ARRAY r_priority_text_array
+	{
+	items =
+		{
+		AVKON_ENUMERATED_TEXT { value=EThreadPriorityTypeMuchLess; text = "Much less"; },
+		AVKON_ENUMERATED_TEXT { value=EThreadPriorityTypeLess; text = "Less"; },
+		AVKON_ENUMERATED_TEXT { value=EThreadPriorityTypeNormal; text = "Normal"; },
+		AVKON_ENUMERATED_TEXT { value=EThreadPriorityTypeMore; text = "More"; },
+		AVKON_ENUMERATED_TEXT { value=EThreadPriorityTypeMuchMore; text = "Much more"; },
+		AVKON_ENUMERATED_TEXT { value=EThreadPriorityTypeRealTime; text = "Real time"; },
+		AVKON_ENUMERATED_TEXT { value=EThreadPriorityTypeAbsoluteVeryLow; text = "Abs. very low"; },
+		AVKON_ENUMERATED_TEXT { value=EThreadPriorityTypeAbsoluteLow; text = "Abs. low"; },
+		AVKON_ENUMERATED_TEXT { value=EThreadPriorityTypeAbsoluteBackground; text = "Abs. background"; },
+		AVKON_ENUMERATED_TEXT { value=EThreadPriorityTypeAbsoluteForeground; text = "Abs. foreground"; },
+		AVKON_ENUMERATED_TEXT { value=EThreadPriorityTypeAbsoluteHigh; text = "Abs. high"; }
+		};
+	}
+
+
+//
+// resources for cpumode selection
+//
+RESOURCE TBUF r_cpumode_setting_title
+    {
+    buf = "CPU sampling mode";
+    }
+RESOURCE AVKON_SETTING_PAGE r_cpumode_setting_page
+	{
+    number = EAknSettingPageNoOrdinalDisplayed; 
+	type = EAknCtPopupSettingList;
+	editor_resource_id = r_popup_setting_list_editor;
+	}
+RESOURCE AVKON_POPUP_SETTING_TEXTS r_cpumode_setting_texts
+	{
+	setting_texts_resource = r_cpumode_text_array;
+	}
+RESOURCE ARRAY r_cpumode_text_array
+	{
+	items =
+		{
+		AVKON_ENUMERATED_TEXT { value=ECPUModeCPUTime; text = "CPU Time"; },
+		AVKON_ENUMERATED_TEXT { value=ECPUModeNOPs; text = "NOPs"; }
+		};
+	}
+
+
+//
+// resources for keepbacklighton selections
+//
+RESOURCE TBUF r_keepbacklighton_setting_title
+    {
+    buf = "Keep backlight on";
+    }
+
+
+//
+// resources for enablepowermonitoring selections
+//
+RESOURCE TBUF r_powermonitoringenabled_setting_title
+    {
+    buf = "Enable power monitoring";
+    }
+
+
+//
+// resources for datapopupvisibility selection
+//
+RESOURCE TBUF r_datapopupvisibility_setting_title
+    {
+    buf = "Visibility";
+    }
+RESOURCE AVKON_SETTING_PAGE r_datapopupvisibility_setting_page
+	{
+    number = EAknSettingPageNoOrdinalDisplayed; 
+	type = EAknCtPopupSettingList;
+	editor_resource_id = r_popup_setting_list_editor;
+	}
+RESOURCE AVKON_POPUP_SETTING_TEXTS r_datapopupvisibility_setting_texts
+	{
+	setting_texts_resource = r_datapopupvisibility_text_array;
+	}
+RESOURCE ARRAY r_datapopupvisibility_text_array
+	{
+	items =
+		{
+		AVKON_ENUMERATED_TEXT { value=EDataPopupVisbilityAlwaysOn; text = "On"; },
+		AVKON_ENUMERATED_TEXT { value=EDataPopupVisbilityBackgroundOnly; text = "Backgr. only"; },
+		AVKON_ENUMERATED_TEXT { value=EDataPopupVisbilityAlwaysAlwaysOff; text = "Off"; }
+		};
+	}    
+
+//
+// resources for datapopuplocation selection
+//
+RESOURCE TBUF r_datapopuplocation_setting_title
+    {
+    buf = "Location";
+    }
+RESOURCE AVKON_SETTING_PAGE r_datapopuplocation_setting_page
+	{
+    number = EAknSettingPageNoOrdinalDisplayed; 
+	type = EAknCtPopupSettingList;
+	editor_resource_id = r_popup_setting_list_editor;
+	}
+RESOURCE AVKON_POPUP_SETTING_TEXTS r_datapopuplocation_setting_texts
+	{
+	setting_texts_resource = r_datapopuplocation_text_array;
+	}
+RESOURCE ARRAY r_datapopuplocation_text_array
+	{
+	items =
+		{
+		AVKON_ENUMERATED_TEXT { value=EDataPopupLocationTopRight; text = "Top right"; },
+		AVKON_ENUMERATED_TEXT { value=EDataPopupLocationBottomMiddle; text = "Bottom middle"; }
+		};
+	}
+
+//
+// resources for sources selection
+//
+RESOURCE TBUF r_sources_setting_title
+    {
+    buf = "Sources";
+    }
+RESOURCE AVKON_SETTING_PAGE r_sources_setting_page
+	{
+	type = EAknSetListBox;
+	editor_resource_id = r_sources_items_listbox;
+	label = "Sources";
+	}	
+RESOURCE LISTBOX r_sources_items_listbox
+	{
+	flags = EAknListBoxMultipleSelection;
+	}	
+
+
+//
+// resources for graphsverticalbar selection
+//
+RESOURCE TBUF r_graphsverticalbar_setting_title
+    {
+    buf = "Vertical bar period (s)";
+    }
+RESOURCE AVKON_SETTING_PAGE r_graphsverticalbar_setting_page
+	{
+	type = EAknCtIntegerEdwin;
+	editor_resource_id = r_graphsverticalbar_integer_editor;
+	}
+RESOURCE AVKON_INTEGER_EDWIN r_graphsverticalbar_integer_editor
+	{
+	maxlength = 3;
+	min = 0;
+	max = 999;
+	} 
+
+
+//
+// resources for loggingmode selection
+//
+RESOURCE TBUF r_loggingmode_setting_title
+    {
+    buf = "Mode";
+    }
+RESOURCE AVKON_SETTING_PAGE r_loggingmode_setting_page
+	{
+    number = EAknSettingPageNoOrdinalDisplayed; 
+	type = EAknCtPopupSettingList;
+	editor_resource_id = r_popup_setting_list_editor;
+	}
+RESOURCE AVKON_POPUP_SETTING_TEXTS r_loggingmode_setting_texts
+	{
+	setting_texts_resource = r_loggingmode_text_array;
+	}
+RESOURCE ARRAY r_loggingmode_text_array
+	{
+	items =
+		{
+		AVKON_ENUMERATED_TEXT { value=ELoggingModeRDebug; text = "RDebug"; },
+		AVKON_ENUMERATED_TEXT { value=ELoggingModeLogFile; text = "Log file"; },
+		AVKON_ENUMERATED_TEXT { value=ELoggingModeRDebugLogFile; text = "RDebug & log file"; }
+		};
+	}
+
+
+//
+// resources for loggingfilepath selection
+//
+RESOURCE TBUF r_loggingfilepath_setting_title
+    {
+    buf = "Log file path";
+    }
+RESOURCE AVKON_SETTING_PAGE r_loggingfilepath_setting_page
+	{
+	type = EEikCtEdwin;
+	editor_resource_id = r_loggingfilepath_text_editor;
+	}
+
+RESOURCE EDWIN r_loggingfilepath_text_editor
+	{
+	lines = 0;  // expanding to multiple rows
+	maxlength = 63;
+	flags = EEikEdwinNoLineOrParaBreaks;
+	}
+
+  
+// ---------------------------------------------------------
+//   
+//   r_perfmon_about_dialog
+//   About dialog - show version and copyright info etc.
+//
+// ---------------------------------------------------------
+//
+RESOURCE DIALOG r_perfmon_about_dialog
+    {
+    flags = EGeneralQueryFlags | EEikDialogFlagNoBorder | EEikDialogFlagNoShadow;
+    buttons = R_AVKON_SOFTKEYS_OK_EMPTY;
+    items=
+        {
+        DLG_LINE
+            {
+            type = EAknCtPopupHeadingPane;
+            id = EAknMessageQueryHeaderId;
+            control = AVKON_HEADING
+                {
+                label = "About PerfMon";
+                headinglayout = R_AVKON_WML_SIGN_QUERY_HEADING_PANE;
+                };
+            },
+        DLG_LINE
+            {
+            type = EAknCtMessageQuery;
+            id = EAknMessageQueryContentId;
+            control = AVKON_MESSAGE_QUERY
+                {
+                message = "Version 1.2.2 - 24th September 2010. Copyright © 2009 Nokia Corporation and/or its subsidiary(-ies). All rights reserved. Licensed under Eclipse Public License v1.0.";
+                };
+            }
+        };
+    }
+
+// ---------------------------------------------------------
+//   r_general_confirmation_query
+// ---------------------------------------------------------
+//
+
+RESOURCE DIALOG r_general_confirmation_query
+	{
+	flags = EGeneralQueryFlags;
+	buttons = R_AVKON_SOFTKEYS_YES_NO;
+	items =
+		{
+		DLG_LINE
+			{
+			type = EAknCtQuery;
+			id = EGeneralQuery;
+			control = AVKON_CONFIRMATION_QUERY
+				{
+				layout = EConfirmationQueryLayout;
+				};
+			}
+		};
+	}
+
+// ---------------------------------------------------------
+//   r_general_text_query
+// ---------------------------------------------------------
+//
+RESOURCE DIALOG r_general_text_query
+    {
+    flags = EGeneralQueryFlags;
+    buttons = R_AVKON_SOFTKEYS_OK_CANCEL;
+    items=
+        {
+        DLG_LINE
+            {
+            type = EAknCtQuery;
+            id = EGeneralQuery;
+            control = AVKON_DATA_QUERY
+                {
+                layout = EDataLayout;
+                control = EDWIN
+                    {
+                    width = 256;
+                    lines = 3;
+                    maxlength = 256;
+                    };
+                };
+            }
+        };
+    }
+
+// ---------------------------------------------------------
+//   r_general_numeric_query
+// ---------------------------------------------------------
+//
+RESOURCE DIALOG r_general_numeric_query
+    {
+    flags = EGeneralQueryFlags;
+    buttons = R_AVKON_SOFTKEYS_OK_CANCEL;
+    items =
+        {
+        DLG_LINE
+            {
+            type = EAknCtQuery;
+            id = EGeneralQuery;
+            control= AVKON_DATA_QUERY
+                {
+                layout = ENumberLayout;
+                control = AVKON_INTEGER_EDWIN
+                    {
+                    min = -999999;
+                    max = 999999;
+                    };
+                };
+            }
+        };
+    }
+
+
+// ---------------------------------------------------------
+//   
+//    RESOURCE LOCALISABLE_APP_INFO
+//
+// ---------------------------------------------------------
+//
+RESOURCE LOCALISABLE_APP_INFO r_perfmon_localisable_app_info
+    {
+    short_caption = "PerfMon";
+    caption_and_icon = 
+    CAPTION_AND_ICON_INFO
+        {
+        caption = "PerfMon";
+
+        number_of_icons = 1;
+
+        // Note for ROM-based apps it is recommended to add the drive letter
+        // icon_file = "z:"APP_BITMAP_DIR"\\myapp_aif.mif";
+        icon_file = APP_BITMAP_DIR"\\perfmon_aif.mif";
+        };
+    }

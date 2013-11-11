@@ -1,0 +1,163 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+PRINT Run TZ Changes Test
+
+LOAD_SUITE TestCalInterimApiSuite
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TZ-0037AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-TZ-0037AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - Non Functional Requirements Calendar Design R1 R2
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Verifying fixed entry after TZ changes, DST changes and System Time changes
+//! @SYMTestActions To create fixed entry, and verifying times of entry after time zone changes, DST changes and System Time Changes
+//! @SYMTestExpectedResults UTC times of entry should always be constant regardless of TZ change, DST change and System Time Changes
+//			    and be in Fixed Utc mode
+
+RUN_TEST_STEP	100	TestCalInterimApiSuite	TestCalInterimApiDeleteAgendaServers
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini london
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetSysTime \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini systemTime
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini vCal24
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini tirane
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiTZChange \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini timesTimeZone
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiDSTChange 
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiTZChange \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini timesTimeZone
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini sydney
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiTZChange \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini timesTimeZone
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetSysTime \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini systemTime1
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiTZChange \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini timesTimeZone
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiDSTChange 
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiTZChange \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini timesTimeZone
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini london
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiTZChange \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini timesTimeZone
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetSysTime \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini systemTime2
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiTZChange \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini timesTimeZone
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiDSTChange 
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiTZChange \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini timesTimeZone
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini stanley
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiTZChange \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini timesTimeZone
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetSysTime \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini systemTime3
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiTZChange \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini timesTimeZone
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiDSTChange 
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiTZChange \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini timesTimeZone
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini seoul
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiTZChange \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini timesTimeZone
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetSysTime \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini systemTime4
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiTZChange \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini timesTimeZone
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiDSTChange 
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiTZChange \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini timesTimeZone
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TZ-0037AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TZ-0038AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-TZ-0038AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - Non Functional Requirements Calendar Design R1 R2
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Verifying repeating fixed entry after TZ changes, DST changes and System Time changes
+//! @SYMTestActions To create repeating fixed entry, and verifying times of instances after time zone changes, DST changes and System Time Changes
+//! @SYMTestExpectedResults UTC times of instances should always be constant regardless of TZ change, DST change and System Time Changes
+//			     and be in Fixed Utc mode
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini london
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetSysTime \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini systemTime
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini vCal24
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini tirane
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiTZChange \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini timesTimeZone
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TZ-0038AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TZ-0039AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-TZ-0039AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - Non Functional Requirements Calendar Design R1 R2
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Verifying floating entry after TZ changes, DST changes and System Time changes
+//! @SYMTestActions To create floating entry, and verifying times of entry after time zone changes, DST changes and System Time Changes
+//! @SYMTestExpectedResults Local times of entry should always be constant regardless of TZ change, DST change and System Time Changes
+//			    and be in Floating mode
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini london
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetSysTime \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini systemTime
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini vCal50
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini tirane
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiTZChange \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini timesTimeZone1
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiDSTChange 
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiTZChange \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini timesTimeZone1
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini sydney
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiTZChange \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini timesTimeZone1
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetSysTime \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini systemTime1
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiTZChange \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini timesTimeZone1
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiDSTChange 
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiTZChange \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini timesTimeZone1
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini london
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiTZChange \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini timesTimeZone1
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetSysTime \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini systemTime2
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiTZChange \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini timesTimeZone1
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiDSTChange 
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiTZChange \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini timesTimeZone1
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini stanley
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiTZChange \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini timesTimeZone1
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetSysTime \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini systemTime3
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiTZChange \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini timesTimeZone1
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiDSTChange 
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiTZChange \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini timesTimeZone1
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini seoul
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiTZChange \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini timesTimeZone1
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetSysTime \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini systemTime4
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiTZChange \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini timesTimeZone1
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiDSTChange 
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiTZChange \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini timesTimeZone1
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TZ-0039AP-1090HP
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TZ-0040AP-1090HP
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-TZ-0040AP-1090HP
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1090
+//! @SYMFssID REQs - Non Functional Requirements Calendar Design R1 R2
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Verifying repeating floating entry after TZ changes, DST changes and System Time changes
+//! @SYMTestActions To create repeating floating entry, and verifying times of instances after time zone changes, DST changes and System Time Changes
+//! @SYMTestExpectedResults Local times of instances should always be constant regardless of TZ change, DST change and System Time Changes
+//			     and be in Floating mode
+
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini london
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetSysTime \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini systemTime
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiImportvCal \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini vCal50
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiSetTz \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini tirane
+RUN_TEST_STEP 100 TestCalInterimApiSuite TestCalInterimApiTZChange \CITCalInterimApi\testdata\TestCalInterimApiTZChanges.ini timesTimeZone1
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TZ-0040AP-1090HP
+
+PREFIX RUN_UTILS 
+MakeReadWrite 	c:\private\10003a5b\citcalinterim.datIdx
+DeleteFile		c:\private\10003a5b\citcalinterim.datIdx
+MakeReadWrite 	c:\private\10003a5b\CITCalInterim.dat
+DeleteFile		c:\private\10003a5b\CITCalInterim.dat
+REMOVE_PREFIX

@@ -1,0 +1,59 @@
+/* Network status (error) dialog styles. */
+
+.networkStatusBox {
+    background: -webkit-gradient(linear, left top, left bottom, from(#546b8f), to(#3b4c69), color-stop(0.0, #aab));
+    -webkit-user-select: none;
+
+    padding: 10px;
+    color: #fff;
+
+    border-radius: 7px;
+
+    border-style: solid;
+    border-width: 4px;
+    border-color: #243447;
+}
+
+.networkStatusBox img {
+    vertical-align: middle;
+    padding: 0px;
+}
+
+.networkStatusBox ul {
+	margin: 0px; 
+    padding: 0px;
+}
+
+.networkStatusBox li {
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+.networkStatusBox li:first-child {
+    margin-top: 0px;
+}
+
+.networkStatusBox li:last-child {
+    margin-top: 4px;
+	margin-bottom: 0px;
+}
+
+.networkStatusText {
+    vertical-align: middle;
+    white-space: nowrap;  
+    overflow: hidden;
+    //border: solid 1px #f00;  
+}
+
+.networkErrorMessage {
+    vertical-align: middle;
+}
+
+/* Second line of URL text, truncate the text and append an ellipsis. */
+.networkStatusText2 {  
+    vertical-align: middle;
+    white-space: nowrap;
+    overflow: hidden;  
+    text-overflow: ellipsis;
+} 
+

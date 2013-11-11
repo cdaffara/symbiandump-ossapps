@@ -1,0 +1,48 @@
+/*
+* Copyright (c) 2002-2004 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  This is project specification for blacklist window server plug-
+*                in. The plug-in provides service for phone application to clear
+*                blacklist upon next keypress.
+*
+*/
+
+#include <platform_paths.hrh>
+
+// Capability assignment.
+CAPABILITY CAP_GENERAL_DLL
+
+TARGET          phoneanimdll.dll
+TARGETTYPE      ANI
+UID             0x10003B22 0x100059FE
+
+VERSION         10.0
+
+SOURCEPATH      ../src
+
+USERINCLUDE     ../inc
+APP_LAYER_SYSTEMINCLUDE
+
+SOURCE          cphoneanimdll.cpp
+SOURCE          cphoneblacklistanim.cpp
+
+LIBRARY         euser.lib 
+LIBRARY         etel.lib 
+LIBRARY         etelmm.lib 
+LIBRARY         customapi.lib
+
+
+// End of File
+
+
+SMPSAFE
